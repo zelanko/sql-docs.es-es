@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a98567d42b701178f0996a82e563e5655a062dac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e78d4d7fd52e018d4224726c82f1251bb1fe22a1
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762451"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554658"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Devuelve el anillo interior especificado de una instancia de **geometry** de Pol
 .STInteriorRingN ( expression )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *expression*  
  Es una expresión **int** entre 1 y el número de anillos interiores en la instancia de **geometry**.  
   

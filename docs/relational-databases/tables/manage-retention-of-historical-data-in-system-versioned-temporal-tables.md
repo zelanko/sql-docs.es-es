@@ -11,16 +11,16 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f58db948bbe7b6fe03f895dacc5fca0b74cc1c54
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 01ca3494bce1f392757206a5ae68ae736d0f9a95
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977900"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552714"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Administración de la retención de datos históricos en las tablas temporales con versiones del sistema
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Con las tablas temporales con versiones del sistema, la tabla de historial puede aumentar el tamaño de la base de datos más que las tablas normales, especialmente en las siguientes condiciones:
 
@@ -42,11 +42,13 @@ Una vez que determine el período de retención de datos, el siguiente paso es d
 
  Con cada uno de estos enfoques, la lógica para la migración o limpieza de datos del historial se basa en la columna que se corresponde con el final del período en la tabla actual. El final del valor del período para cada fila determina el momento en el que la versión de fila se "cierra", es decir, cuando llega a la tabla de historial. Por ejemplo, la condición `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` especifica que esos datos históricos anteriores a un mes tienen quitarse o extraerse de la tabla de historial.
 
-> **NOTA:** Los ejemplos de este tema usan este [ejemplo de tabla temporal](creating-a-system-versioned-temporal-table.md).
+> [!NOTE]
+> Los ejemplos de este tema usan este [ejemplo de tabla temporal](creating-a-system-versioned-temporal-table.md).
 
 ## <a name="using-stretch-database-approach"></a>Uso del enfoque de Stretch Database
 
-> **NOTA:** El uso del enfoque de Stretch Database solo se aplica a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y no se aplica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> [!NOTE]
+> El uso del enfoque de Stretch Database solo se aplica a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y no se aplica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 [Stretch Database](../../sql-server/stretch-database/stretch-database.md) en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migra los datos históricos de forma transparente a Azure. Para obtener seguridad adicional, puede cifrar los datos en movimiento con la característica [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) de SQL Server. Además, puede usar [Seguridad de nivel de fila](../../relational-databases/security/row-level-security.md) y otras características de seguridad avanzadas de SQL Server con Temporal y Stretch Database para proteger los datos.
 
@@ -58,7 +60,8 @@ Con el enfoque de Stretch Database, puede ajustar algunas o todas las tablas de 
 
   Utilice una función de predicado determinista para mantener una parte del historial en la misma base de datos con los datos actuales, mientras el resto se migra a Azure. Para ver ejemplos y limitaciones, consulte [Selección de las filas que se van a migrar mediante una función de filtro (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Puesto que las funciones no determinista no son válidas, si desea transferir datos de historial al estilo de ventana deslizante, necesitaría alterar regularmente la definición de las funciones de predicado en línea de manera que la ventana de filas que mantenga localmente sea constante en términos de edad. La ventana deslizante le permite mover constantemente datos históricos con una antigüedad superior a un mes a Azure. A continuación, aparece un ejemplo de este enfoque.
 
-> **NOTA:** Stretch Database migra los datos a Azure. Por lo tanto, necesita una cuenta de Azure y una suscripción para la facturación. Para obtener una cuenta de Azure de evaluación gratuita, haga clic en [Evaluación gratuita de un mes](https://azure.microsoft.com/pricing/free-trial/).
+> [!NOTE]
+> Stretch Database migra los datos a Azure. Por lo tanto, necesita una cuenta de Azure y una suscripción para la facturación. Para obtener una cuenta de Azure de evaluación gratuita, haga clic en [Evaluación gratuita de un mes](https://azure.microsoft.com/pricing/free-trial/).
 
 Puede configurar una tabla de historial temporal para Stretch con el Asistente de Stretch o Transact-SQL, y puede habilitar el ajuste para una tabla de historial temporal mientras la versión del sistema se establece en **ON**. El ajuste de la tabla actual no está permitido porque no tiene sentido aplicarlo.
 
@@ -81,7 +84,8 @@ El método más sencillo para los principiantes es usar el Asistente de Stretch 
     ![Página Seleccionar dirección IP del Asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Seleccionar dirección IP del Asistente para Stretch Database")
 6. Cuando se complete el asistente, compruebe que se haya habilitado el ajuste correctamente para la base de datos. Vea los iconos del Explorador de objetos que indican que se ha ajustado la base de datos.
 
-> **NOTA:** Si se produce un error en Habilitar base de datos para Stretch, revise el registro de errores. Un error común consiste en configurar incorrectamente la regla de firewall.
+> [!NOTE]
+> Si se produce un error en Habilitar base de datos para Stretch, revise el registro de errores. Un error común consiste en configurar incorrectamente la regla de firewall.
 
 Consulte también:
 
@@ -159,7 +163,8 @@ La[partición de tabla](../partitions/create-partitioned-tables-and-indexes.md) 
 
 Con la partición de tabla, puede implementar un enfoque de ventana deslizante para extraer la parte más antigua de los datos históricos de la tabla de historial y mantener el tamaño de la parte retenida constante en términos de edad: manteniendo los datos en la tabla de historial igual que en el período de retención requerido. Se admite la operación de conmutación de datos fuera de la tabla de historial cuando SYSTEM_VERSIONING está activado, lo que significa que puede limpiar una parte de los datos del historial sin introducir una ventana de mantenimiento o bloquear las cargas de trabajo normales.
 
-> **NOTA:** Para realizar la conmutación de particiones, el índice agrupado en la tabla de historial debe alinearse con el esquema de partición (debe contener SysEndTime). La tabla de historial predeterminada creada por el sistema contiene un índice agrupado que incluye las columnas SysEndTime y SysStartTime, que es óptimo para la creación de particiones, la inserción de nuevos datos de historial y la típica consulta temporal. Para obtener más información, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
+> [!NOTE]
+> Para realizar la conmutación de particiones, el índice agrupado en la tabla de historial debe alinearse con el esquema de partición (debe contener SysEndTime). La tabla de historial predeterminada creada por el sistema contiene un índice agrupado que incluye las columnas SysEndTime y SysStartTime, que es óptimo para la creación de particiones, la inserción de nuevos datos de historial y la típica consulta temporal. Para obtener más información, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 Un enfoque de ventana deslizante tiene dos conjuntos de tareas que tiene que realizar:
 
@@ -174,7 +179,8 @@ En la siguiente imagen se muestra la configuración inicial de la creación de p
 
 ![Partitioning](../../relational-databases/tables/media/partitioning.png "Creación de particiones")
 
-> **NOTA:** Vea las consideraciones de rendimiento con las particiones de tabla siguientes para las implicaciones de rendimiento de uso de la opción RANGE LEFT frente a la opción RANGE RIGHT al configurar la creación de particiones.
+> [!NOTE]
+> Vea las consideraciones de rendimiento con las particiones de tabla siguientes para las implicaciones de rendimiento de uso de la opción RANGE LEFT frente a la opción RANGE RIGHT al configurar la creación de particiones.
 
 La primera y última partición están "abiertas" en los límites inferior y superior respectivamente para asegurarse de que cada fila nueva tiene la partición de destino con independencia del valor de la columna de partición. A medida que pasa el tiempo, las nuevas filas de la tabla del historial se dirigirán a particiones superiores. Cuando se llene la partición 6ª, se habrá alcanzado el período de retención de destino. Este es el momento en el que se debe iniciar la tarea de mantenimiento periódico de la partición por primera vez (debe programarse para ejecutarse periódicamente; una vez al mes en este ejemplo).
 
@@ -410,7 +416,8 @@ COMMIT;
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>Uso del enfoque de la directiva de retención de historial temporal
 
-> **NOTA:** El uso de la directiva de retención de historial temporal se aplica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y SQL Server 2017 a partir de CTP 1.3.
+> [!NOTE]
+> El uso de la directiva de retención de historial temporal se aplica a [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y SQL Server 2017 a partir de CTP 1.3.
 
 La retención de historial temporal se puede configurar en el nivel de tabla individual, lo que permite a los usuarios crear directivas de vencimiento flexibles. Aplicar la retención temporal es muy sencillo: solo requiere establecer un parámetro al cambiar el esquema o al crear la tabla.
 

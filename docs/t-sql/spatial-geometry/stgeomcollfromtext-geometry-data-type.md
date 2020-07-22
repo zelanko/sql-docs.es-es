@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9619cc90513771fa7b5a131ed4203fa2e617d836
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fd31568d26945bf27e73850f6dccfbd45df1701
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762496"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554309"
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Devuelve una instancia de **geometry** a partir de una representación Well-Know
 STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *geometrycollection_tagged_text*  
  Es la representación WKT de la instancia de **geometry** que se quiere devolver. *geometry_tagged_text* es una expresión **nvarchar(max)** .  
   

@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 8a341ebc8ba5b80b61cbc5c9337b4ea6ad41f34c
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 346eccd3668808225a707233703117736928502d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85011269"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554250"
 ---
 # <a name="title-transact-sql"></a>Título (Transact-SQL)
 
@@ -29,15 +29,13 @@ Haga clic en una de las pestañas siguientes para obtener la sintaxis, los argum
 
 Para obtener más información sobre las convenciones de sintaxis, vea [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Haga clic en un producto.
-
-En la siguiente fila, haga clic en cualquier nombre de producto que le interese. Al hacer clic, en esta página web se muestra otro contenido, adecuado para el producto que seleccione.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > |||||
 > |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](pick-a-product-template.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](pick-a-product-template.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](pick-a-product-template.md?view=azure-sqldw-latest)|||
+> |**_\* SQL Server \*_** &nbsp;|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](pick-a-product-template.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](pick-a-product-template.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](pick-a-product-template.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -49,7 +47,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Base de datos única/grupo elástico de<br />SQL Database \*_** &nbsp;|[Instancia administrada de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Base de datos única/grupo elástico de<br />SQL Database \*_** &nbsp;|[Instancia administrada de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -62,7 +60,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instancia administrada de <br />SQL Database \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instancia administrada de <br />SQL Database \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 

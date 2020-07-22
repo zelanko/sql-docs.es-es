@@ -10,15 +10,15 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87bdd407e59a1c019e2878971d3044deb777755b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f75bd6226c66b77a9933cf083123c5725f57aa5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725215"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86900323"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al Motor de base de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Al instalar [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], las herramientas instaladas dependen de la edición y de las opciones que seleccione al realizar la instalación. En esta lección se revisan las herramientas principales y se muestra cómo conectarse y realizar una función básica (autorizar a más usuarios).  
 

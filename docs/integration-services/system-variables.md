@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0b29d0e74d25739b72e712080d2f379ae3be437
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db0b1644491562c1d564a3df08da1b52eb69e947
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296723"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912711"
 ---
 # <a name="system-variables"></a>Variables del sistema
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  

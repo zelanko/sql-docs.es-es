@@ -22,12 +22,12 @@ ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6ad2f4cd1c650831415eb4fea8182eaf5fb81fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b861cd60c915c289022300136bad343ff857ee9e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68122088"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86905538"
 ---
 # <a name="-multiplication-assignment-transact-sql"></a>*= (Asignación de multiplicación) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,9 @@ Multiplica dos números y establece un valor como resultado de la operación. Po
 expression *= expression  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 _expression_  
 Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo de datos válida, excepto el tipo **bit** de la categoría numérica.  
   

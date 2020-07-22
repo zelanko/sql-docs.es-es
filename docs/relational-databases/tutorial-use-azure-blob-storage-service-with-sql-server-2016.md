@@ -14,16 +14,16 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4143785a4789dd2f9dd2510b96bcc4de3a21c82e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd01280d2777fdab926c2e733224dc94b5fef834
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753771"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86906051"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Bienvenido al tutorial del servicio Trabajar con SQL Server 2016 en Microsoft Azure Blob Storage. Este tutorial le ayudará a saber cómo usar el servicio Microsoft Azure Blob Storage para archivos de datos de SQL Server y copias de seguridad de SQL Server.  
   
 La compatibilidad de integración de SQL Server para el servicio Microsoft Azure Blob Storage comenzó como una mejora de SQL Server 2012 Service Pack 1 CU2 y se ha mejorado aún más con SQL Server 2014 y SQL Server 2016. Para obtener información general sobre la funcionalidad y las ventajas de usar esta característica, consulte [Archivos de datos de SQL Server en Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Para obtener una demostración en vivo, consulte [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)(Demostración de restauración a un momento dado).  

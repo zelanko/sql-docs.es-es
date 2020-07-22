@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 0c71bda5a459c7993de824cdb6665978ba57166f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1ac71b9cf171e66486c40310bfd8be0e7bc6ae91
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892460"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86911615"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>Tecnologías y sistemas de base de datos en memoria
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Esta página está pensada para servir como página de referencia para las tecnologías y características en memoria de SQL Server. El concepto de un sistema de base de datos en memoria hace referencia a un sistema de base de datos diseñado para aprovechar las mayores capacidades de memoria disponibles en los sistemas de base de datos modernos. Una base de datos en memoria puede ser relacional o no relacional.
 
@@ -36,19 +36,19 @@ Una memoria caché volátil rápida que se enfrenta a un medio considerablemente
 
 ## <a name="hybrid-buffer-pool"></a>Grupo de búferes híbrido
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [El grupo de búferes híbridos](../database-engine/configure-windows/hybrid-buffer-pool.md) expande el grupo de búferes para los archivos de base de datos que residen en dispositivos de almacenamiento de memoria persistente direccionables en byte para plataformas Windows y Linux con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadatos `tempdb` optimizados para memoria
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una nueva característica, [metadatos tempdb optimizados para memoria](./databases/tempdb-database.md#memory-optimized-tempdb-metadata), que quita de forma eficaz algunos cuellos de botella de contención y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de tempdb.
 
 ## <a name="in-memory-oltp"></a>OLTP en memoria (optimización en memoria
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [OLTP en memoria](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) es una tecnología de base de datos disponible en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../includes/sssds-md.md)] para optimizar el rendimiento de escenarios de datos transitorios, carga de datos, ingesta de datos y procesamiento de transacciones.
 

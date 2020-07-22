@@ -23,12 +23,12 @@ ms.assetid: 1783352b-6852-4658-9d94-51963c59b9bf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 885327b1ce2cf6662ff74fef755f3d78ba05a667
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 78118290ef95e73046818af2ab81afdb38770e35
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010897"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465262"
 ---
 # <a name="lower-transact-sql"></a>LOWER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "86010897"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 LOWER ( character_expression )  
 ```  
   
@@ -53,7 +53,7 @@ LOWER ( character_expression )
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se utiliza la función `LOWER` y la función `UPPER`, y se anida la función `UPPER` en la función `LOWER` al seleccionar títulos de libros cuyos precios sean entre 11$ y 20$.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LOWER(SUBSTRING(EnglishProductName, 1, 20)) AS Lower,   

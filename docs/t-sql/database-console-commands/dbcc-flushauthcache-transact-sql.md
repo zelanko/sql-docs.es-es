@@ -1,5 +1,5 @@
 ---
-title: DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs
+title: DBCC FLUSHAUTHCACHE (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -18,14 +18,15 @@ ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 08e28c4ded842a27d69d23de530345cdbf4ffa79
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0a4ee56dcb1edbeba870aac79d9d64d569b6e7c
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85686206"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484306"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
+
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Vacía la caché de autenticación de base de datos que contiene información sobre los inicios de sesión y las reglas de firewall para la base de datos de usuario actual en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Esta instrucción no se aplica a la base de datos maestra lógica, dado que la base de datos maestra contiene el almacenamiento físico de la información sobre los inicios de sesión y las reglas de firewall. El usuario que ejecuta la instrucción y otros usuarios conectados permanecen conectados. (DBCC FLUSHAUTHCACHE no se admite actualmente para [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]).
@@ -36,8 +37,8 @@ Vacía la caché de autenticación de base de datos que contiene información so
   
 ```syntaxsql
 DBCC FLUSHAUTHCACHE [ ; ]  
-```  
-  
+```
+
 ## <a name="arguments"></a>Argumentos  
 Ninguno.
   

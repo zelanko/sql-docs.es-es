@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2a1c3460d3633ddb8b17582eea53a2c8d740b2ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78e081b5f684751e23efab27acac38e5413f9845
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899901"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483908"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "85899901"
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **'** *username* **'**  
  Es el nombre de un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de Windows en la base de datos actual al que se suplanta. Cuando no se especifica el parámetro *username*, se restablece la identidad original del administrador del sistema o propietario de la base de datos que suplantaba al usuario.  
   

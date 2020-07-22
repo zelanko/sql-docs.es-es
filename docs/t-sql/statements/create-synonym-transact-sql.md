@@ -1,5 +1,5 @@
 ---
-title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
+title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f4fd357cb833832beb03e23e3b7ba6e1f26fb03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d4131868fbaf40c59be2b55aad5fe078490c824
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766965"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484576"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crea un nuevo sinónimo.  
@@ -61,7 +62,9 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *schema_name_1*  
  Especifica el esquema en el que se crea el sinónimo. Si no se especifica *schema*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el esquema predeterminado del usuario actual.  
   
@@ -89,15 +92,19 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  Se pueden crear sinónimos para los siguientes tipos de objetos:  
   
-|||  
-|-|-|  
-|Procedimiento almacenado del ensamblado (CLR)|Función con valores de tabla del ensamblado (CLR)|  
-|Función escalar del ensamblado (CLR)|Funciones de agregado del ensamblado (CLR)|  
-|Procedimiento de filtro de replicación|Procedimiento almacenado extendido|  
-|Función escalar de SQL|Función con valores de tabla de SQL|  
-|Función SQL con valores de tabla insertados|Procedimiento almacenado de SQL|  
-|Ver|Tabla<sup>1</sup> (definida por el usuario)|  
-  
+- Procedimiento almacenado del ensamblado (CLR)
+- Función con valores de tabla del ensamblado (CLR)
+- Función escalar del ensamblado (CLR)
+- Funciones de agregado del ensamblado (CLR)
+- Procedimiento de filtro de replicación
+- Procedimiento almacenado extendido
+- Función escalar de SQL
+- Función con valores de tabla de SQL
+- Función SQL con valores de tabla insertados
+- Procedimiento almacenado de SQL
+- Tabla<sup>1</sup> (definida por el usuario)
+- Ver
+
  <sup>1 Incluye tablas temporales locales y globales</sup>  
   
  No pueden usarse nombres de cuatro partes para objetos base de función.  

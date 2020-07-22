@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56a071487c2cd3f6a6116c3d90d1572a450aa73d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20eaa69a9c0f07926d937128a7fc10c43d4128ef
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765759"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484336"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "85765759"
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *value*  
  Es un valor numérico o entero que especifica el tiempo máximo que puede durar la ejecución de una consulta. Los valores se redondean por defecto al entero más próximo. Los valores negativos se redondean a 0. El regulador de consultas no permite la ejecución de consultas que tengan un costo estimado superior a ese valor. Si especifica 0 (el valor predeterminado) en esta opción, se desactiva el regulador de consultas y se permite que todas las consultas se ejecuten de manera indefinida.  
   

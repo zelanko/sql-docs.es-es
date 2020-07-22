@@ -21,19 +21,21 @@ ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8013a0a8cefc9623500a65df5560333a63632af
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f267da97eeb409be81bfcca71af602ebce1ffe1c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002539"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86548750"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary y varbinary (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Tipos de datos binarios de longitud fija o variable.
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
+
 **binary** [ (_n_) ] Datos binarios de longitud fija con una longitud de _n_ bytes, donde _n_ es un valor que oscila entre 1 y 8000. El tamaño de almacenamiento es de _n_ bytes.
   
 **varbinary** [ (_n_ | **max**) ] Datos binarios de longitud variable. _n_ puede ser un valor de 1 a 8000. **max** indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes. El tamaño de almacenamiento es la longitud real de los datos especificados + 2 bytes. Los datos especificados pueden tener una longitud de 0 bytes. El sinónimo de ANSI SQL para **varbinary** es **binary varying**.

@@ -1,5 +1,5 @@
 ---
-title: DENY (Transact-SQL) | Microsoft Docs
+title: DENY (Transact-SQL)
 ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
@@ -27,14 +27,15 @@ ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0b77901f1a4c625f241c057f22af6b5fd437f10
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e146021bf3bd601e01f6220ffcf42de970e63657
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012567"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484846"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Deniega un permiso a una entidad de seguridad. Evita que la entidad de seguridad herede permisos por su pertenencia a grupos o roles. DENY tiene prioridad sobre todos los permisos, salvo que DENY no se aplique a los propietarios de objetos o miembros del rol fijo de servidor sysadmin.
@@ -86,7 +87,9 @@ DENY
 }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  ALL  
  Esta opción no deniega todos los permisos posibles. Al denegar ALL se deniegan los permisos siguientes.  
   
@@ -153,11 +156,12 @@ El uso de AS en esta instrucción no implica la capacidad de suplantar a otro us
   
  Los beneficiarios del permiso CONTROL SERVER, por ejemplo, los miembros del rol fijo de servidor sysadmin, pueden denegar cualquier permiso sobre cualquier elemento protegible en el servidor. Los beneficiarios del permiso CONTROL en la base de datos, por ejemplo, los miembros del rol fijo de base de datos db_owner, pueden denegar cualquier permiso sobre cualquier elemento protegible en la base de datos. Los beneficiarios del permiso CONTROL sobre un esquema pueden denegar cualquier permiso sobre cualquier objeto en el esquema. Si se usa la cláusula AS, la entidad de seguridad especificada debe ser propietaria del elemento protegible cuyos permisos que se van a denegar.  
   
-## <a name="examples"></a>Ejemplos  
+## <a name="examples"></a>Ejemplos
+
  En esta tabla se enumeran los elementos protegibles y los temas donde se describe la sintaxis específica de los mismos.  
   
-|||  
-|-|-|  
+|Elementos protegibles|Sintaxis|
+|----------|------|
 |Rol de aplicación|[DENY &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)|  
 |Assembly|[DENY &#40;permisos de ensamblado de Transact-SQL&#41;](../../t-sql/statements/deny-assembly-permissions-transact-sql.md)|  
 |Clave asimétrica|[DENY &#40;permisos de clave asimétrica de Transact-SQL&#41;](../../t-sql/statements/deny-asymmetric-key-permissions-transact-sql.md)|  

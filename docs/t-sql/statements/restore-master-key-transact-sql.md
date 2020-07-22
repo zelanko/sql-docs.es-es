@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bb448b310a71230ef37789671667b4a2a7f52209
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 101b4a941f355891a7e7e6aa9578998f2d8efc4c
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897847"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483582"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,9 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
     [ FORCE ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  FILE ='*path_to_file*'  
  Especifica la ruta completa, incluido el nombre de archivo, de acceso a la clave maestra de la base de datos almacenada. *path_to_file* puede ser una ruta de acceso local o una ruta UNC a una ubicación de red.  
   

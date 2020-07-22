@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0f885f15371460e79df287738fce96ac9ce2d7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8aa04b27ec929809e55896421f9f0656fbf9b44
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766887"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485018"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,9 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  [PRIMARY] XML  
  Crea un índice XML en la columna **xml** especificada. Cuando se especifica PRIMARY, se crea un índice clúster con la clave clúster formada a partir de la clave de agrupación en clústeres de la tabla de usuario y un identificador del nodo XML. Cada tabla puede tener hasta 249 índices XML. Observe lo siguiente cuando cree un índice XML:  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 18c9c3f647bd2121ac7edf65011e0ac6a0038789
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61c72f4953bfad6d54c46b3b710d2f9c0b9f98d7
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762423"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552467"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Devuelve 1 si el punto inicial y el punto final de la instancia de **geometry** 
 .STIsClosed ( )  
 ```  
   
-## <a name="return-types"></a>Tipos de valor devuelto  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipos de valor devuelto
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  

@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ba9a1a0b2922cba5c2aadef862bec56bbc66666b
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: 692bd0bf6bd493ee8133e9c428670d5c46829780
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032451"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554820"
 ---
 # <a name="restore-statements-transact-sql"></a>Instrucciones RESTORE (Transact-SQL)
 
@@ -55,9 +55,7 @@ Haga clic en una de las pestañas siguientes para obtener la sintaxis, los argum
 
 Para obtener más información sobre las convenciones de sintaxis, vea [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Haga clic en un producto.
-
-En la siguiente fila, haga clic en cualquier nombre de producto que le interese. Al hacer clic, aquí se muestra otro contenido, adecuado para el producto que seleccione:
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 

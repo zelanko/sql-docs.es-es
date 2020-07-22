@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2881ad1cc83e7916c325c0492c8243d09833c3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95d3209fd08f08820966294b96b0fd11831e73ea
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734214"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555940"
 ---
 # <a name="ntext-text-and-image-transact-sql"></a>ntext, text e image (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,7 @@ Tipos de datos de longitud fija y variable para almacenar valores de gran tamañ
   
 >**IMPORTANTE:**  Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de SQL Server. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)y [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) en su lugar.  
   
-  
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
 **ntext**  
 Datos Unicode de longitud variable con una longitud máxima de cadena de 2^30 - 1 (1.073.741.823) bytes. El tamaño de almacenamiento, en bytes, es dos veces la longitud de cadena especificada. El sinónimo en ISO de **ntext** es **national text**.
   

@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdc73ac23a6d95d46b6ec02bb1aeb194df96422a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c73969d5bd4b02373d9a16d292504530a626650b
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731335"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555873"
 ---
 # <a name="hints-transact-sql---table"></a>Sugerencias (Tabla de Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -120,7 +120,9 @@ WITH  ( <table_hint> [ [, ]...n ] )
 }   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 Con algunas excepciones, las sugerencias de tabla se admiten en la cláusula FROM únicamente cuando las sugerencias se especifican con la palabra clave WITH. Las sugerencias de tabla deben especificarse también con paréntesis.  
   
@@ -393,18 +395,20 @@ El optimizador de consultas no considerará una sugerencia de índice si las opc
 NOEXPAND solo se aplica a las *vistas indizadas*. Una vista indizada es una vista con un único índice clúster creado en ella. Si una consulta tiene referencias a columnas que están presentes en una vista indizada y en tablas base, y el optimizador de consultas determina que el uso de vistas indizadas proporciona el mejor método para ejecutar la consulta, el optimizador de consultas utiliza el índice en la vista. Esta funcionalidad se denomina *coincidencia de vista indizada*. Antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, el uso automático de una vista indizada por parte del optimizador de consultas solo se admite en determinadas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 Sin embargo, para que el optimizador considere las vistas indizadas para establecer coincidencias o utilice una vista indizada a la que se hace referencia con una sugerencia NOEXPAND, las siguientes opciones SET deben estar establecidas en ON.  
- 
-> [!NOTE]  
+
+> [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el uso automático de vistas indexadas sin especificar la sugerencia NOEXPAND.
-  
-||||  
-|-|-|-|  
-|ANSI_NULLS|ANSI_WARNINGS|CONCAT_NULL_YIELDS_NULL|  
-|ANSI_PADDING|ARITHABORT<sup>1</sup>|QUOTED_IDENTIFIER|  
-  
- <sup>1</sup> ARITHABORT se establece de forma implícita en ON cuando ANSI_WARNINGS está establecido en ON. Por lo tanto, no es necesario ajustar manualmente este valor.  
-  
- Asimismo, la opción NUMERIC_ROUNDABORT debe establecerse en OFF.  
+
+- ANSI_NULLS
+- ANSI_PADDING
+- ANSI_WARNINGS
+- ARITHABORT<sup>1</sup>
+- CONCAT_NULL_YIELDS_NULL
+- QUOTED_IDENTIFIER
+
+<sup>1</sup> ARITHABORT se establece de forma implícita en ON cuando ANSI_WARNINGS está establecido en ON. Por lo tanto, no es necesario ajustar manualmente este valor.  
+
+Asimismo, la opción NUMERIC_ROUNDABORT debe establecerse en OFF.  
   
  Para exigir que el optimizador utilice un índice para una vista indizada, especifique la opción NOEXPAND. Esta sugerencia solo se puede usar si la vista también aparece en la consulta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporciona ninguna sugerencia que obligue a usar una vista indizada determinada en una consulta que no mencione la vista directamente en la cláusula FROM. Sin embargo, el optimizador de consultas considera el uso de vistas indizadas, incluso aunque no se haga referencia directa a ellas en la consulta. SQL Server solo creará automáticamente las estadísticas en una vista indexada cuando se usa una sugerencia de tabla NOEXPAND. La omisión de esta sugerencia puede provocar advertencias del plan de ejecución sobre estadísticas que faltan que no se pueden resolver mediante la creación manual de estadísticas. Durante la optimización de consultas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará las estadísticas de vista creadas de forma automática o manual cuando la consulta hace referencia directamente a la vista y se usa la sugerencia NOEXPAND.    
   

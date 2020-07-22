@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 608b4f6238ab53d97a80f79c4586c36d79f4086f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0244ff677c11d40153afb302243bd714e3438480
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748728"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556009"
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains (tipo de datos geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Devuelve 1 si una instancia de **geometry** contiene en su totalidad otra instan
 .STContains ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *other_geometry*  
  Es otra instancia de **geometry** con la que se compara la instancia en la que se invoca `STContains()`.  
   

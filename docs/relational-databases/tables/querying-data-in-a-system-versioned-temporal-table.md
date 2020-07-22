@@ -11,16 +11,16 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ed4bcd1fb72c25520e935879305ff1c7d894707
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 878db75acb871faa3f76ef6b3d3264c1bd78766e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002331"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554810"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Consulta de los datos de una tabla temporal con control de versiones del sistema
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Cuando quiera obtener el último estado de datos (actual) de una tabla temporal, puede consultarlo de la misma manera que lo haría en una tabla no temporal. Si no se ocultan las columnas PERIOD, sus valores se mostrarán en una consulta SELECT \* . Si especificó las columnas **PERIOD** como ocultas, sus valores no se mostrarán en una consulta SELECT \*. Cuando las columnas de **PERIOD** están ocultas, haga referencia a las columnas de **PERIOD** específicamente en la cláusula SELECT para devolver los valores de estas columnas.
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9e5a0920c0e56685885345d730f481bb7eba1ee8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f70cbf47179d9f8fadf2bf121520df0707881ab3
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736200"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555505"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,9 @@ Este método del tipo de datos geography admite instancias de **FullGlobe** o in
 .BufferWithTolerance ( distance, tolerance, relative )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 _distance_  
 Es una expresión **float** que especifica la distancia desde la instancia de **geography** en torno a la que se va a calcular el búfer.  
   

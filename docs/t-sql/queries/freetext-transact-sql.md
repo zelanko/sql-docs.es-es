@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a60d8a2605d9b2533869b6f1c95922107c7d0aa0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b363a773404b28a1c2eaedcd6297d4f5b75f85f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736311"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555234"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,9 @@ FREETEXT ( { column_name | (column_list) | * }
           , 'freetext_string' [ , LANGUAGE language_term ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *column_name*  
  Es el nombre de una o varias columnas indizadas de texto completo de la tabla especificada en la cláusula FROM. Las columnas pueden ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)** .  
   

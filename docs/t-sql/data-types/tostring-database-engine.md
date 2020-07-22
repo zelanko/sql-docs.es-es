@@ -1,5 +1,5 @@
 ---
-title: ToString (motor de base de datos) | Microsoft Docs
+title: ToString (motor de base de datos)
 ms.custom: ''
 ms.date: 07/23/2017
 ms.prod: sql
@@ -17,14 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9b08bb0737507f6d4fbeb8ec62b932fa6e674b08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c1bf4c72881482ed1b4d99224554576f6a7a3cc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729653"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555933"
 ---
 # <a name="tostring-database-engine"></a>ToString (motor de base de datos)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve una cadena con la representación lógica de *this*. Se llama implícitamente a ToString cuando se produce una conversión de **hierarchyid** en un tipo de cadena. Tiene el efecto contrario de [Parse &#40;motor de base de datos&#41;](../../t-sql/data-types/parse-database-engine.md).
@@ -43,8 +44,11 @@ CAST(node AS nvarchar(4000))
 -- CLR syntax  
 string ToString  ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>Tipos de valores devueltos
+
 **Tipo de valor devuelto de SQL Server: nvarchar(4000)**
   
 **Tipo de valor devuelto de CLR: String**

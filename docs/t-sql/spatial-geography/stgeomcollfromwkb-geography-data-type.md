@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bae3ccf4e9eadc6e0df1843753cc38d8fceec7be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4ec65b0dd5ccae1a727d10b83ff51e06c0d29084
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703688"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555425"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Devuelve una instancia de **GeometryCollection** a partir de una representación
 STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *WKB_geometrycollection*  
  Es la representación WKB de la instancia de **GeometryCollection** que se quiere devolver. *WKB_geometrycollection* es una expresión **varbinary(max)** .  
   

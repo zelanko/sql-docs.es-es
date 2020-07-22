@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: aa9e059d2fbfb2e2ef3cb1b9d41f865f31c52cd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38f600215710efc1886e93a8eb4941f6996f195e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85702981"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556080"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Devuelve una instancia de **geography** a partir de una representación Well-Kno
 STMLineFromText ( 'multilinestring_tagged_text' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *texto_etiquetado_de_cadena_de_varias_líneas*  
  Es la representación WKT de la instancia de **geographyMultiLineString** que se quiere devolver. *texto_etiquetado_de_cadena_de_varias_líneas* es una expresión **nvarchar(max)** .  
   

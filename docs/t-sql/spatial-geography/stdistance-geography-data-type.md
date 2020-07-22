@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c958f789e1c8eadc027c4144bae711b1288599c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 795fa917f598ed1dd477916f42808d4abb0c8a69
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85703749"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555160"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (tipo de datos geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85703749"
 .STDistance ( other_geography )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *other_geography*  
  Es otra instancia de **geography** a partir de la que medir la distancia entre la instancia en la que se invoca a STDistance(). Si *other_geography* está vacío, STDistance() devuelve null.  
   

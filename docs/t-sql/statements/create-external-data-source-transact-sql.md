@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25574476947c3232c8491923d1e5c69b87c43960
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 561235acc489c60742a393e444621c9dd7504d04
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902251"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555300"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -34,9 +34,7 @@ En este artículo se proporciona la sintaxis, argumentos, comentarios, permisos 
 
 Para obtener más información sobre las convenciones de sintaxis, vea [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Haga clic en un producto.
-
-En la siguiente fila, haga clic en cualquier nombre de producto que le interese. Al hacer clic, en esta página web se muestra otro contenido, adecuado para el producto que seleccione.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 

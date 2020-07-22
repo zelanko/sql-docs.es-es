@@ -16,19 +16,19 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5661008bcb550461466deddea947f205639ae98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008000"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555610"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar y nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Los tipos de datos de caracteres son de tamaño fijo, **nchar**, o de tamaño variable, **nvarchar**. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cuando se usa una intercalación con [carácter complementario (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-16](https://www.wikipedia.org/wiki/UTF-16). Si se especifica una intercalación que no es de tipo SC, estos tipos de datos almacenan solo el subconjunto de datos de caracteres admitidos por la codificación de caracteres [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
-  
-## <a name="arguments"></a>Argumentos  
+
+## <a name="arguments"></a>Argumentos
 **nchar** [ ( n ) ]  
 Datos de cadena de tamaño fijo. *n* define el tamaño de la cadena en pares de bytes y debe ser un valor entre 1 y 4000. El tamaño de almacenamiento es dos veces *n* bytes. Para la codificación [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), el tamaño de almacenamiento es el doble de *n* bytes y el número de caracteres que se pueden almacenar también en *n*. Para la codificación UTF-16, el tamaño de almacenamiento sigue siendo el doble de *n* bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n* porque los caracteres complementarios usan dos pares de bytes (también denominados [par suplente](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Los sinónimos ISO de **nchar** son **national char** y **national character**.
   

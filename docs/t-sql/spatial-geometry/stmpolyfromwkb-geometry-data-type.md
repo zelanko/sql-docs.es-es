@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8957857f11f993a09cae4604a89178ef66856b86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e551d74df5418ca16c4428531ea1d4beeed6f478
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762304"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554970"
 ---
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ Devuelve una instancia de **geometryMultiPolygon** a partir de una representaci�
 STMPolyFromWKB ( 'WKB_multipolygon' , SRID )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *WKB_multipolygon*  
  Es la representación WKB de la instancia de **geometryMultiPolygon** que se quiere devolver. *WKB_multipolygon* es una expresión **varbinary(max)** .  
   

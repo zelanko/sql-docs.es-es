@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 66d6044a5263d69aeb81769d2fb1453e0674fbaa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7cb1cccba4c880fd2e92d707e51c8c4e324fba9c
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759564"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555690"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,9 @@ El tipo de una instancia de **geometry** es NULL. Devuelve 0 si la instancia no 
 .IsNull  
 ```  
   
-## <a name="return-types"></a>Tipos de valor devuelto  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Tipos de valor devuelto
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Tipo de CLR: **SqlBoolean**  

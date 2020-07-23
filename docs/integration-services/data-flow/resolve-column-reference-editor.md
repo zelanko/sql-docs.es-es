@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4340dfcaa7807616ccd8c3cdf4e504d0e33423c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28ff4c49c2b1dadcde15171a2a5102f29e3ff438
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298117"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915361"
 ---
 # <a name="resolve-column-reference-editor"></a>Resolver el editor de referencias de columna
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Cuando una ruta de acceso de entrada está desconectada o si hay columnas no asignadas en la ruta de acceso, se muestra un icono de error al lado de la ruta de acceso de datos correspondiente. Para simplificar la resolución de los errores de referencia de columna, el editor de resolución de referencias permite vincular las columnas de salida no asignadas con las columnas de entrada no asignadas para todas las rutas de acceso en el árbol de ejecución. El editor de resolución de referencias también resaltará las rutas de acceso para indicar cuáles de ellas se están resolviendo.  

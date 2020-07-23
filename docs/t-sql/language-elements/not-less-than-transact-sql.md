@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ecbb598e-58a2-4b6c-90b4-3ad5bdfcae39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efb3b0d7a6422575df0d13bd15dccdf75834707d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0e41f3afc5a48e1150d8b8997bd2377f1483ec3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706280"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915121"
 ---
 # <a name="lt-not-less-than-transact-sql"></a>!&lt; (No menor que) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "85706280"
 expression !< expression  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *expression*  
  Es cualquier [expresión](../../t-sql/language-elements/expressions-transact-sql.md) válida. Ambas expresiones deben tener tipos de datos que se puedan convertir implícitamente. La conversión depende de las reglas de [prioridad de tipo de datos](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   

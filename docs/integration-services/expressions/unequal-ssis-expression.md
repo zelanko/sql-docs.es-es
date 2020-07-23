@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 67aa61e65bc89246cfb0c685d08a32371a5fc4df
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f0b5ac96de291ac5fb9d452bd6ad8a10a9832f5f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287903"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915197"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Diferente) (expresión de SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Realiza una comparación para determinar si dos expresiones con tipos de datos compatibles no son iguales. El evaluador de expresiones convierte automáticamente muchos tipos de datos antes de realizar la comparación.  

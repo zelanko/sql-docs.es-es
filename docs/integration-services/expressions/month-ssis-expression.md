@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29e4b7af3c9799f5b0c396c8b66aa4f7caa5804f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9229a514045f303c651dd71a5ab8837a31632e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297476"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915235"
 ---
 # <a name="month-ssis-expression"></a>MONTH (expresión de SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Devuelve un entero que representa la parte del mes de una fecha.  

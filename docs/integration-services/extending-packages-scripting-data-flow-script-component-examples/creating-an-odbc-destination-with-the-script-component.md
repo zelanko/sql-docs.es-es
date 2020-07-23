@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb28965af992a19864ccf2e6959decd778468403
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c1b434486cb27d5a001e0b185ed6c637e1ca45d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296498"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916330"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Crear un destino ODBC con el componente de script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], normalmente se guardan los datos en un destino ODBC mediante un destino [!INCLUDE[vstecado](../../includes/vstecado-md.md)] y el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para ODBC. Sin embargo, también se puede crear un destino ODBC ad hoc para utilizar en un paquete único. Para crear este destino ODBC ad hoc, use el componente de script como se muestra en el ejemplo siguiente.  

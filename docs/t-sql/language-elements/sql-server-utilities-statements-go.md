@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd28aae90386501e49513551def97e3fea8f5574
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4bb3a16211ce138ab2c0dd861dc10a679d27446
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892113"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915625"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instrucciones de utilidades de SQL Server: GO
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85892113"
 GO [count]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *count*  
  Es un entero positivo. El lote que precede a GO se ejecutará el número especificado de veces.  
   

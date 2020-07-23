@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b6f11ac0a41b52f6b8e197b21279a22df46703d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7290cc15e5721918af9eaa3507465db222f812cf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903758"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915778"
 ---
 # <a name="aggregate-values-in-a-dataset-with-the-aggregate-transformation"></a>Adición de valores en un conjunto de datos mediante la transformación Agregado
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Para agregar y configurar una transformación Agregado, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  

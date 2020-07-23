@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: eec13d8d-c15a-4542-bfc4-da66b1a6bfe0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5dc1ae24d927247a1af61ff974a535b6bdb48502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b777b6d9bbf6cbdf42436876b20a08ffd032c80a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298671"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917163"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Tipos de datos de la instancia CDC de Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La instancia CDC de Oracle admite la mayoría de los tipos de datos de Oracle. En las secciones siguientes se describen los tipos de datos admitidos y los tipos de datos no admitidos.  

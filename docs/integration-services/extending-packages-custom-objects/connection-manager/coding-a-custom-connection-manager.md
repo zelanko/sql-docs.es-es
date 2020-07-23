@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c3f0545a3c72627bc45ab40003522d4f3ac1da5c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3c53711952ce405befe2575471e676ffd2297b67
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287789"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918162"
 ---
 # <a name="coding-a-custom-connection-manager"></a>Codificar un administrador de conexiones personalizado
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Una vez que haya creado una clase que herede de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> y haya aplicado el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> a la clase, debe invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar su funcionalidad personalizada.  

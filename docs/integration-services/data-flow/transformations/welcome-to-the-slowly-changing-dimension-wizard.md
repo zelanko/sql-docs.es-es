@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f989a68f104387095f4b834a2152fc1fc04f9c8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08748714d12da9866821bf39f1a10c3614f24daa
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290957"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916685"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>Asistente para dimensiones variables (página de bienvenida)
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Utilice el **Asistente para dimensiones variables** para configurar la carga de datos en diferentes tipos de dimensiones de variación lenta.  

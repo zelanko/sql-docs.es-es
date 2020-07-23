@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e154659500155a2a171f03ee18f5c62319142a8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99a15645e037e578e1594142b9869ef5d92860af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297562"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916978"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (Mayor que) (expresión de SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Realiza una comparación para determinar si la primera expresión es mayor que la segunda. El evaluador de expresiones convierte automáticamente muchos tipos de datos antes de realizar la comparación.  

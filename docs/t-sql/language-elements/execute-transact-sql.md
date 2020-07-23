@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74ab018b017b675e08abb53036f88c3eaf2e5618
-ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
+ms.openlocfilehash: 1d4e9130ac3a22da474b7ce576969e26bd9205ac
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84748594"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917945"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -269,7 +269,9 @@ Execute a character string
 
 
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  @*return_status*  
  Es una variable entera opcional que almacena el estado de retorno de un módulo. Esta variable debe declararse en el proceso por lotes, en el procedimiento almacenado o en la función para que se pueda utilizar en una instrucción EXECUTE.  
   

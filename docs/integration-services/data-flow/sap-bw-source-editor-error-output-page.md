@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9973a785efd0e3327ac7fe1e12360bd202601f1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9114c301168b55a09859069b6052b67fb03ec6b2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291828"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917835"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>Editor de origen de SAP BW (página Salida de error)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Utilice la página **Salida de error** del **Editor de origen de SAP BW** para seleccionar las opciones de control de errores y para establecer las propiedades en las columnas de salida de errores.  

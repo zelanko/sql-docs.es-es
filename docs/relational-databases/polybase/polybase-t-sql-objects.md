@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 0e2ea6896d8ffc3450a57a44ea10c30ac6890d92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a282ceacba0c767ce2130cd3e7f8708e244bf473
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773061"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914464"
 ---
 # <a name="polybase-transact-sql-reference"></a>Referencia de Transact-SQL de PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Para usar PolyBase, debe crear tablas externas para hacer referencia a los datos externos.  
   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82bebe29ff6fe9eb385a078aa762d5b8f171783a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 190762cad4b58f5a1c127a664b901530dbaee68a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292605"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914421"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extraer datos mediante el origen de OLE DB
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Para agregar y configurar un origen de OLE DB, el paquete ya debe incluir por lo menos una tarea Flujo de datos.  

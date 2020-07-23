@@ -10,15 +10,15 @@ ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e25cbe03721070bddf4c079118a74ab9bceeeff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 465b78999808a8b44f05861251da43a2e6f0ee72
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666229"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913931"
 ---
 # <a name="sql-server-express-localdb-reference"></a>Referencia de SQL Server Express LocalDB
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   Esta sección contiene información acerca de SQL Server Express LocalDB:  
   
 -   [Referencia de mensajes de error de SQL Server Express LocalDB](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  

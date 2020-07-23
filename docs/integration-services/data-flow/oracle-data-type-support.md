@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c28efd8106056ea900fef0cd57791837cf79e21a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abbcea42546421fb7c0d3fef9824ef8ef56d2a0c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "69553230"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913791"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Compatibilidad de tipos de datos con Microsoft Connector for Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Los componentes de SSIS para Oracle no admiten todos los tipos de datos de Oracle. Las columnas con tipos de datos no compatibles tendrán una advertencia al diseñar paquetes en SSDT y se eliminarán de las columnas de asignación. Los datos no se pueden cargar en una columna con un tipo de datos no compatible.
 

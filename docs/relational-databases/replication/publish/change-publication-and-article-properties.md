@@ -17,15 +17,15 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f2cea103f2bc9f19d06f19a1258b84d617957cc7
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 8d2da3afadaf9dc56a7003b007be28cf6c3f1c63
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159913"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914454"
 ---
 # <a name="change-publication-and-article-properties"></a>Cambiar las propiedades de la publicación y de los artículos
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Una vez creada una publicación, la mayoría de las propiedades de la publicación y de los artículos se pueden cambiar, aunque algunas requieren la regeneración de la instantánea o la reinicialización de las suscripciones. En este tema se ofrece información sobre todas las propiedades que requieren una de estas acciones o las dos si se cambian.  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Propiedades de la publicación para replicación de instantáneas y replicación transaccional.  

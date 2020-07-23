@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a945c51a5ba75c20a0925a4f548d98765379459b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e37b76232b76590593c384da8e83bc099ce6c11
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296364"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913361"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Finalización del asistente (Asistente para importación y exportación de SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Después de especificar si quiere ejecutar la operación de copia inmediatamente (y, de manera opcional, después de guardar el paquete que creó el asistente), el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Finalización del asistente**. En esta página, revise las opciones que ha realizado en el asistente y, después, haga clic en **Finalizar** para iniciar la operación de copia.

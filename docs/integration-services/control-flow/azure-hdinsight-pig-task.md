@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44d6fd9052b2f36381b95223222ec9008a8e4728
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c38e669cc39a2dc0d1f4c6426ff9cc307e7a007c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298406"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913869"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Tarea de Pig de Azure HDInsight
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Utilice la **tarea de Pig de Azure HDInsight** para ejecutar el script de Pig en un clúster de Azure HDInsight.

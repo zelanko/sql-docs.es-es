@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4a35fad106dfac49d0e2f227c506658d91c420b2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290618"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914401"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Referencia de errores y eventos (Integration Services)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Esta sección de la documentación contiene información sobre varios errores y eventos relacionados con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se incluye información sobre las causas y la forma de resolver los mensajes de error.  

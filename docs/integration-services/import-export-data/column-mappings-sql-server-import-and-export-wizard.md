@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 144476d52d8577d59691a42b12a276f5cfc080b2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285930"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913371"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Asignaciones de columnas (Asistente para importación y exportación de SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Después de seleccionar las tablas y vistas existentes para copiar o revisar la consulta que ha proporcionado, si hace clic en **Editar asignaciones**, el Asistente para importar y exportar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el cuadro de diálogo **Asignaciones de columnas** . En esta página puede especificar y configurar columnas de destino para recibir los datos copiados de las columnas de origen. A menudo no tiene que cambiar nada en esta página.

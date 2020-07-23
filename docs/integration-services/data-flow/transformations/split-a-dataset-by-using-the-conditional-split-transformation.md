@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bd315c62eee3bc26fe858f194cbc851ced8feef0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d69be64aeb9c60ff4f72e735ff1c8e61a676b05
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291194"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914291"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Dividir un conjunto de datos usando la transformación División condicional
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Para agregar y configurar una transformación División condicional, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  

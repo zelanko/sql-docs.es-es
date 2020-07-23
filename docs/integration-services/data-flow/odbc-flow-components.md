@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7035802b5b4e13c2696af9d76c6a2904547ea25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 339d8c68dcafba40b73edbc8c003376a20ae8822
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292286"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914767"
 ---
 # <a name="odbc-flow-components"></a>Componentes del flujo de ODBC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   En este tema se describen los conceptos necesarios para crear un flujo de datos ODBC mediante [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  

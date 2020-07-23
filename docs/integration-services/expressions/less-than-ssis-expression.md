@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f28079a72c76fdbadfc2561541750dd7d82ef5fb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8efba30e4b670768104d63ab8f29889e020d28c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297515"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914501"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (Menor que) (expresión de SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Realiza una comparación para determinar si la primera expresión es menor que la segunda. El evaluador de expresiones convierte automáticamente muchos tipos de datos antes de realizar la comparación.  

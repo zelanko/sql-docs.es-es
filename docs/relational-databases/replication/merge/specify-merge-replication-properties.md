@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc784bc678dd5ebf52b06edc2af99e7efac08aaf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4bedac84834f0b8cf4dda7ad22a097e82508983
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882244"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942632"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificación de las propiedades de replicación de mezcla
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -169,8 +169,8 @@ En este tema se describe cómo especificar el seguimiento de conflictos y el niv
   
 En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique un valor de **false** para `@delete_tracking`. Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).
   
-    > [!NOTE]  
-    >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
+> [!NOTE]  
+>  Si la tabla de origen de un artículo ya está publicada en otra publicación, el valor de **delete_tracking** debe ser el mismo en los dos artículos.  
   
 ### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Especificación de la omisión de las eliminaciones para un artículo de mezcla existente  
   

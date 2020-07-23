@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c2a89293e0cfa3428723a19e7ee2938fd7e8ca6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: caa4c63f44fb1b1a9fd13b0a557cc76dfeec408b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294841"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924019"
 ---
 # <a name="change-data-capture-ssis"></a>Captura de datos modificados (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la captura de datos modificados ofrece una solución efectiva al desafío de realizar eficazmente las cargas incrementales de las tablas de origen a los data mart y a los almacenamientos de datos.  

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e0ce4f9888602ef8083dc4f64e98ac4ad6154e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a8e210af11fbb79a63fb5406bda2ac434c21c81
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294592"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923884"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Seleccionar tablas de Oracle para capturar cambios
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use este cuadro de diálogo para seleccionar las tablas incluidas en la instancia CDC. Las tablas seleccionadas se agregarán a la lista de la página **Seleccionar tablas y columnas** del Asistente para nueva instancia. Puede hacer lo siguiente en este cuadro de diálogo.  

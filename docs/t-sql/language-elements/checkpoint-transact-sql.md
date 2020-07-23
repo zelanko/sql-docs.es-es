@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: edb989e798274860359a89d4a7a184ba19fd04b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706652"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923381"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "85706652"
 CHECKPOINT [ checkpoint_duration ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *duración_del_punto_de_comprobación*  
  Especifica la cantidad de tiempo necesaria, en segundos, para que se complete el punto de comprobación manual. Cuando se especifica *duración_del_punto_de_comprobación*, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] intenta realizar el punto de comprobación dentro de la duración solicitada. *duración_del_punto_de_comprobación* debe ser una expresión de tipo **int** y debe ser mayor que cero. Cuando se omite este parámetro, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ajusta la duración del punto de comprobación para minimizar el impacto en el rendimiento de las aplicaciones de base de datos. *duración_del_punto_de_comprobación* es una opción avanzada.  
   

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2de7acdd60a4d88c6523929615541cbed7674d12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f647bc913a52539992f3d6dcbb74b0dde1ff175
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294576"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923902"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Revisar y generar scripts de registro complementario
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use la pestaña **Scripts** para ejecutar o volver a ejecutar un script en la base de datos de origen de Oracle que configura el registro complementario.  

@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c1912b398ca0d5db28bef668572a3a07d752694e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d819dc54c992c20d8558860420d27e4b54b09760
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287945"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923746"
 ---
 # <a name="developing-a-custom-destination-component"></a>Desarrollar un componente de destino personalizado
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite a los desarrolladores escribir componentes de destino personalizados que pueden conectarse a cualquier origen de datos personalizado y almacenar datos en él. Los componentes de destino personalizados resultan útiles si necesitar conectarse a orígenes de datos a los que no se puede tener acceso mediante uno de los componentes de origen existentes incluidos con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

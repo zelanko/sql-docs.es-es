@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0d28fec80479a8eec877452763e78d4fadfa3d2c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896814"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942845"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Crear una suscripción actualizable en una publicación transaccional
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
     * `sync tran` : habilita la suscripción de actualización inmediata.
     * `failover` : habilita la suscripción de actualización inmediata con la actualización en cola como opción de conmutación por error.
     > [!NOTE]  
->  `failover` requiere que la publicación también esté habilitada para las suscripciones de actualización en cola. 
+    >  `failover` requiere que la publicación también esté habilitada para las suscripciones de actualización en cola. 
  
 4. En el suscriptor, ejecute [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique lo siguiente:
 
@@ -150,7 +150,7 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
     * Las credenciales de Windows con las que se ejecuta el Agente de distribución en el distribuidor para `@job_login` y `@job_password`. 
 
     > [!NOTE]  
->  Las conexiones que se realicen con la autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por `@job_login` y `@job_password`. El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows. 
+    >  Las conexiones que se realicen con la autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por `@job_login` y `@job_password`. El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows. 
 
     * (Opcional) Un valor de `0` para `@subscriber_security_mode` y la información de inicio de sesión de SQL Server para `@subscriber_login` y `@subscriber_password`, en caso de que necesite usar Autenticación de SQL Server cuando se conecte al suscriptor. 
     * Una programación para el trabajo del Agente de distribución de esta suscripción.
@@ -180,7 +180,7 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
     * `queued failover` : habilita la compatibilidad con la actualización en cola con actualización inmediata como opción de conmutación por error.
 
     > [!NOTE]  
->  `queued failover` requiere que la publicación también esté habilitada para la suscripción de actualización inmediata. Para conmutar por error a la actualización inmediata, debe usar [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) para definir las credenciales bajo las que se replican en el publicador los cambios realizados en el suscriptor.
+    >  `queued failover` requiere que la publicación también esté habilitada para la suscripción de actualización inmediata. Para conmutar por error a la actualización inmediata, debe usar [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) para definir las credenciales bajo las que se replican en el publicador los cambios realizados en el suscriptor.
  
 4. En el suscriptor, ejecute [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique los parámetros siguientes:
 

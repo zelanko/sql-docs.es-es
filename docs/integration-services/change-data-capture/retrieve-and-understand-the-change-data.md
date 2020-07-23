@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 83df88c61e99d4d13c4b5bc866aa8f1dff5d5b1a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ee6e9fa54a7050f2ef529749aa53019ca507fd8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294597"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923928"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Recuperar y describir datos modificados
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   En el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la primera tarea consiste en ejecutar la consulta que recupera los datos modificados. Esta consulta se ejecuta dentro de un componente de origen en una tarea Flujo de Datos. A continuación, pueden utilizarse transformaciones y destinos de nivel inferior para aplicar los datos modificados a un destino.  

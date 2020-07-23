@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f81dd17da405d1fe9b3dd6e73e569df91e10d4e2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e33ca36bc30cd5f2420ca67db94bba3163cc5156
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898941"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923419"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,9 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *transaction_name*  
  Se trata de un nombre de transacción definida por el usuario que se utiliza para realizar el seguimiento de la transacción distribuida en las utilidades de MS DTC. *transaction_name* debe seguir las reglas de los identificadores y ser \<= 32 caracteres.  
   

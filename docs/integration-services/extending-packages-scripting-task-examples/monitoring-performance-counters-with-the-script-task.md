@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed4bca496d48e5fe268c1a425223fe03c8fcc6e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a58e920e749709097ef70a0a6eac49acf8cb056b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297038"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923801"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Supervisar los contadores de rendimiento con la tarea Script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Los administradores quizá tengan que supervisar el rendimiento de los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realizan transformaciones complejas en grandes volúmenes de datos. El espacio de nombres **System.Diagnostics** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona las clases para utilizar los contadores de rendimiento existentes y para crear sus propios contadores de rendimiento.  

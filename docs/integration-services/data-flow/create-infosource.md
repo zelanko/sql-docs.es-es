@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1556a98ad812c32c514b8e55ab1ece3e6d7a40e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a81bf2cef2329853df05eda97e2ce53501369c8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293259"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923555"
 ---
 # <a name="create-infosource"></a>Crear InfoSource
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use el cuadro de diálogo **Crear InfoSource** para crear un InfoSource nuevo. Para crear un InfoSource nuevo, puede usar el cuadro de diálogo **Crear InfoSource para los datos de transacción** o **Crear InfoSource para datos maestros** .  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f3aef5f587e590dcad0ab0490679a480529387a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9959b1b8c4628ec171b82b895f648c44037218c9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290506"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923550"
 ---
 # <a name="add-or-change-a-property-expression"></a>Agregar o cambiar una expresión de propiedad
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Puede crear expresiones de propiedad para paquetes, tareas, contenedores de bucles ForEach, contenedores de bucles For, contenedores de secuencias, controladores de eventos, administradores de conexión de paquetes y proyectos, y proveedores de registro.  

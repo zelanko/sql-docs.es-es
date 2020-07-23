@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6ea77000e660405d9be5086d7d85625bcdd7ed99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f54c4a0e32effba84652514844b16754f5dacdd2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293989"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921141"
 ---
 # <a name="select-objects-to-transfer"></a>Seleccionar objetos para transferir
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Utilice este cuadro de diálogo para seleccionar los objetos que se van a transferir desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra mediante una tarea de transferencia de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

@@ -16,16 +16,16 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: ef0b7952cd589592f6ad6798e4d6f7720b368619
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a02f34464c19bd51af0e68a1385b223e1c9d669
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633425"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920121"
 ---
 # <a name="edge-constraints"></a>Restricciones perimetrales
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
 Las restricciones perimetrales se pueden usar para aplicar la integridad de datos y una semántica específica en las tablas perimetrales de una base de datos de grafos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

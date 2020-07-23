@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718596"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942196"
 ---
 # <a name="wideworldimporters-data-generation"></a>Generación de datos de WideWorldImporters
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -69,11 +69,11 @@ Puede utilizar el `Application.Configuration_PopulateLargeSaleTable` procedimien
 
 #### <a name="name"></a>Nombre
 
-    Application.Configuration_PopulateLargeSaleTable
+`Application.Configuration_PopulateLargeSaleTable`
 
 #### <a name="parameters"></a>Parámetros
 
-  `@EstimatedRowsFor2012`**BIGINT** (con un valor predeterminado de 12 millones)
+`@EstimatedRowsFor2012`**BIGINT** (con un valor predeterminado de 12 millones)
 
 #### <a name="result"></a>Resultado
 

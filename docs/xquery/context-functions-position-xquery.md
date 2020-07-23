@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 82774aa6d515d7056f59e432807c6560ecb70772
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 83f744f2b9361a81afada82245bf2d4265cea833
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783578"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923661"
 ---
 # <a name="context-functions---position-xquery"></a>Funciones de contexto: position (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Esta función devuelve un valor entero que indica la posición del elemento de contexto dentro de la secuencia de elementos que se está procesando.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "85783578"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , **FN: Position ()** solo se puede usar en el contexto de un predicado dependiente del contexto. Concretamente, solo se puede utilizar entre corchetes ([ ]). Las comparaciones con esta función no reducen la cardinalidad durante una inferencia de tipo estático.  
   
 ## <a name="examples"></a>Ejemplos  

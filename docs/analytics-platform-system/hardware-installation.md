@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e6a0d89b4976076f14fe567b7a95e7cbb47c9f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401125"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942337"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Instalación de hardware para el dispositivo de Analytics Platform System (APS)
 En este artículo se describe cómo migrar, desempaquetar e instalar el hardware para el dispositivo PDW de SQL Server. Este artículo es meramente informativo y está pensado para ayudarle a comprender el proceso. El dispositivo debe desempaquetarse, instalarse y comprobarse antes de que se le convierta. La participación del cliente es necesaria para elementos como el acceso al centro de datos, la alimentación eléctrica y las conexiones Ethernet.  
@@ -54,12 +54,12 @@ Use la siguiente lista de comprobación para desplace cada bastidor del disposit
 ## <a name="install-additional-components"></a><a name="AfterMoving"></a>Instalar componentes adicionales  
 Use la siguiente lista de comprobación para instalar los componentes adicionales.  
   
-|Tarea|Descripción||  
-|--------|---------------|-|  
-|Desempaquetar y conmutadores de red en bastidor y PDU|Use los diagramas de bastidor para colocar los conmutadores de red y PDU en la ubicación adecuada del bastidor.||  
-|Conexión de los cables de InfiniBand y Ethernet según las etiquetas de cable|Vea el diagrama de cableado. Cada cable tiene una etiqueta en cada extremo que especifica dónde debe estar conectado.||  
-|Conectar todos los cables de alimentación|Vea el diagrama de cableado.||  
-|Encienda la fuente de alimentación en los bastidores y las PDU|Conecte la fuente de alimentación a los bastidores y desde los bastidores a las PDU. **En este momento, no encienda ninguno de los demás componentes del dispositivo.**||  
+|Tarea|Descripción|
+|--------|---------------|
+|Desempaquetar y conmutadores de red en bastidor y PDU|Use los diagramas de bastidor para colocar los conmutadores de red y PDU en la ubicación adecuada del bastidor.|
+|Conexión de los cables de InfiniBand y Ethernet según las etiquetas de cable|Vea el diagrama de cableado. Cada cable tiene una etiqueta en cada extremo que especifica dónde debe estar conectado.|
+|Conectar todos los cables de alimentación|Vea el diagrama de cableado.|
+|Encienda la fuente de alimentación en los bastidores y las PDU|Conecte la fuente de alimentación a los bastidores y desde los bastidores a las PDU. **En este momento, no encienda ninguno de los demás componentes del dispositivo.**|
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

@@ -1,5 +1,5 @@
 ---
-title: Supervisión con SCOM
+title: Usar System Center Operations Manager para supervisar APS
 description: Use System Center Operations Manager (SCOM) para supervisar el dispositivo de Analytics Platform System (APS).
 author: mzaman1
 ms.prod: sql
@@ -9,19 +9,19 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 539c18efe43afcf5436c6913c20cab081974b7f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400969"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941127"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Supervisión con System Center Operations Manager-Analytics Platform System
 Use System Center Operations Manager (SCOM) para supervisar el dispositivo de Analytics Platform System (APS).
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-### <a name="prerequisites"></a>Prerrequisitos  
+### <a name="prerequisites"></a>Requisitos previos  
   
 1.  System Center Operations Manager 2007 R2, 2012 o 2012 SP1 debe estar instalado y en ejecución.  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a3615703ceada10f627cc2378aab2511c7a8f883
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c07990c5e564c12a072b9326611473663b81a686
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903843"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922639"
 ---
 # <a name="integration-services-ssis-catalog-transact-sql-reference"></a>Referencia de Transact-SQL de catálogo de Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [Views &#40;Integration Services Catalog&#41;](../../integration-services/system-views/views-integration-services-catalog.md) (Vistas [catálogo de Integration Services])  

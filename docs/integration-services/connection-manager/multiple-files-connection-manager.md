@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d84724471eba8f1b5215a976e51e8c498352e05
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294368"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923155"
 ---
 # <a name="multiple-files-connection-manager"></a>administrador de conexiones de varios archivos
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Un administrador de conexiones de varios archivos habilita un paquete para que haga referencia a los archivos y carpetas existentes o para crear archivos y carpetas en tiempo de ejecución.  
@@ -61,7 +61,7 @@ ms.locfileid: "71294368"
   
  Si el administrador de conexiones de varios archivos hace referencia a varios archivos y carpetas, las rutas de los archivos y carpetas se separan con la barra vertical (|). La propiedad **ConnectionString** del administrador de conexiones tiene el formato siguiente:  
   
- \<*ruta de acceso*>|\<*ruta de acceso*>  
+ \<*path*>|\<*path*>  
   
  También puede especificar varios archivos o carpetas mediante caracteres comodín. Por ejemplo, para hacer referencia a todos los archivos de texto de la unidad C, el valor de la propiedad **ConnectionString** se puede establecer en C:\\*.txt.  
   

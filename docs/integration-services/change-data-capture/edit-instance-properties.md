@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f1e80f153b8bf8b6e5b37ea6dd11811f3994106f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 69eff5afd66fb7167d894e116e5a5b1f21bf9b81
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298807"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921681"
 ---
 # <a name="edit-instance-properties"></a>Editar propiedades de la instancia
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use el editor de propiedades para realizar cambios en la instancia CDC después de crear las configuraciones iniciales. Puede hacer lo siguiente en el editor de propiedades.  

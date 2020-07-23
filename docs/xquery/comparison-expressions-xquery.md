@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729507"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922329"
 ---
 # <a name="comparison-expressions-xquery"></a>Expresiones de comparación (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery proporciona los siguientes tipos de operadores de comparación:  
   
@@ -45,10 +45,10 @@ ms.locfileid: "85729507"
   
  Los operadores generales se definen en la tabla siguiente.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |=|Igual|  
-|!=|No igual|  
+|!=|No es igual|  
 |\<|Menor que|  
 |>|Mayor que|  
 |\<=|Menor o igual que|  
@@ -140,10 +140,10 @@ WHERE ContactID=1
   
  Los operadores de comparación de valores se definen en la tabla siguiente.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |eq|Igual|  
-|ne|No igual|  
+|ne|No es igual|  
 |lt|Menor que|  
 |gt|Mayor que|  
 |le|Menor o igual que|  

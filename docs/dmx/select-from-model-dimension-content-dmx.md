@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7ffc372ad0c44208d246a2afc9259428e354e480
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: d16b8b01251be6703350a1a64bb9cdd2bdc5cadb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669585"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970593"
 ---
 # <a name="select-from-ltmodelgtdimension_content-dmx"></a>Seleccione del &lt; modelo &gt; . DIMENSION_CONTENT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Un modelo de minería de datos se puede utilizar como una dimensión en un cubo OLAP, donde cada nodo del modelo se representa como un miembro de la dimensión. **> seleccionar del \< modelo. Dimension_CONTENT** instrucción devuelve el contenido del modelo que pertenece a su uso como una dimensión.  
+  Un modelo de minería de datos se puede utilizar como una dimensión en un cubo OLAP, donde cada nodo del modelo se representa como un miembro de la dimensión. **Select from \<model> . Dimension_CONTENT** instrucción devuelve el contenido del modelo que pertenece a su uso como una dimensión.  
   
 ## <a name="syntax"></a>Sintaxis  
   

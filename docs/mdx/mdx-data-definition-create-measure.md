@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02c6d29bbebcc794e72f4ca960e3d9259de7205b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bac5d7d067186e2b84277a5c0dc02cd31cba011
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892141"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967386"
 ---
 # <a name="mdx-data-definition---create-measure"></a>Definición de datos de MDX: CREATE MEASURE
 
@@ -42,7 +42,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ## <a name="remarks"></a>Observaciones  
  El *Measure_Name* debe ir entre paréntesis.  
   
- La instrucción CREATE MEASURE solo se puede usar dentro de una definición de script MDX; Vea el [elemento MdxScript &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl).  
+ La instrucción CREATE MEASURE solo se puede usar dentro de una definición de script MDX; Vea el [elemento MdxScript &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
   
  También puede definir un miembro calculado para su uso en una sola consulta. Para definir un miembro calculado limitado a una sola consulta, use la cláusula WITH de la instrucción SELECT. Para obtener más información, vea [crear medidas en MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-building-measures).  
   

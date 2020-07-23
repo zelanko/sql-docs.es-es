@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cceeac44646b904a7d7e1b45bd3c92d4ad07a0d5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669842"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969943"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve, en orden creciente de rango, las filas inferiores de una tabla cuyo total acumulado sea al menos un valor especificado.  
   
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Expresión que devuelve una tabla, como una referencia de \< columna de tabla>, o una función que devuelve una tabla.  
+ Expresión que devuelve una tabla, como \<table column reference> , o una función que devuelve una tabla.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- \<> de expresión de tabla  
+ \<table expression>  
   
 ## <a name="remarks"></a>Observaciones  
- La función **BottomSum** devuelve las filas inferiores en orden creciente de rango. El rango se basa en el valor evaluado de la \< expresión de rango> argumento de cada fila, de modo que la suma de la \< expresión de rango> valores sea al menos el total especificado por el \< argumento SUM>. **BottomSum** devuelve el menor número posible de elementos mientras se cumple el valor de suma especificado.  
+ La función **BottomSum** devuelve las filas inferiores en orden creciente de rango. El rango se basa en el valor evaluado del \<rank expression> argumento de cada fila, de modo que la suma de los \<rank expression> valores sea al menos el total especificado por el \<sum> argumento. **BottomSum** devuelve el menor número posible de elementos mientras se cumple el valor de suma especificado.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una consulta de predicción con el modelo de asociación que se genera mediante el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

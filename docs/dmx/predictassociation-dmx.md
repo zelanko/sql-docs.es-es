@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668762"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968261"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Predice los miembros de asociaciones.  
   
@@ -33,7 +33,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
  Algoritmos que contienen tablas anidadas de predicción, incluidos algoritmos de asociación y de clasificación. Los algoritmos de clasificación que admiten tablas anidadas incluyen los [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de árboles de decisión, [!INCLUDE[msCoName](../includes/msconame-md.md)] Bayes Naive y de [!INCLUDE[msCoName](../includes/msconame-md.md)] red neuronal.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- \<> de expresión de tabla  
+ \<table expression>  
   
 ## <a name="remarks"></a>Observaciones  
  Entre las opciones de la función **PredictAssociation** se incluyen EXCLUDE_NULL, INCLUDE_NULL, inclusive, Exclusive (valor predeterminado), INPUT_ONLY, INCLUDE_STATISTICS y INCLUDE_NODE_ID.  

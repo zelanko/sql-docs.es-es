@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0d4c83626c11def14f1ed9f745fca54e94995c97
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669951"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970275"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve el número especificado de filas superiores en orden decreciente de rango, como lo especifica una expresión.  
   
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Expresión que devuelve una tabla, como una referencia de \< columna de tabla>, o una función que devuelve una tabla.  
+ Expresión que devuelve una tabla, como \<table column reference> , o una función que devuelve una tabla.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- \<> de expresión de tabla  
+ \<table expression>  
   
 ## <a name="remarks"></a>Observaciones  
- El valor proporcionado por la expresión de \< rango> argumento determina el orden decreciente de rango para las filas que se proporcionan en la \< expresión de tabla> argumento, y se devuelve el número de filas de nivel superior que se especifica en el \< argumento Count>.  
+ El valor proporcionado por el \<rank expression> argumento determina el orden decreciente de rango para las filas que se proporcionan en el \<table expression> argumento, y se devuelve el número de filas de nivel superior que se especifica en el \<count> argumento.  
   
  La función Topcount se introdujo originalmente para habilitar las predicciones asociativas y, en general, genera los mismos resultados que una instrucción que incluye las cláusulas **Select Top** y **order by** . Obtendrá un mejor rendimiento para las predicciones asociativas si usa la función **PREDICT (DMX)** , que admite la especificación de un número de predicciones para devolver.  
   

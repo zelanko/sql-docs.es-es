@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 0cd7b2e0a78f2d47349de2701572b2f9dc4b0095
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669825"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969931"
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve el clúster que tiene la mayor probabilidad de contener el caso de entrada.  
   
@@ -33,7 +33,7 @@ Cluster()
 ## <a name="return-type"></a>Tipo de valor devuelto  
  La función de **clúster** no requiere parámetros.  
   
- La función de **clúster** devuelve un valor escalar de un nombre de clúster. Sin embargo, si usa esta función como argumento de otra función, debe tener en cuenta como una \< referencia de columna de clúster>.  
+ La función de **clúster** devuelve un valor escalar de un nombre de clúster. Sin embargo, si usa esta función como argumento de otra función, debe tener en cuenta como \<cluster column reference> .  
   
 ## <a name="remarks"></a>Observaciones  
  El **clúster** también se puede usar como `<` referencia de columna `>` de clúster para una función **PredictHistogram** .  

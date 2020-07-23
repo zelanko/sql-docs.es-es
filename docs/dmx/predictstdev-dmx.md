@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: def9b352b97921b080e379d235972bb9dfc84510
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 25dde754c2e71c6aa40d763d7e3a81c3edca6938
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666755"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970727"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve la desviación estándar predicha para la columna especificada.  
   
@@ -31,7 +31,7 @@ PredictStdev(<scalar column reference>)
  Una columna escalar.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- Valor escalar del tipo especificado por la referencia de * \< columna escalar>*.  
+ Valor escalar del tipo especificado por *\<scalar column reference>* .  
   
 ## <a name="remarks"></a>Observaciones  
  Si la referencia de columna es discreta, **PredictStdev** devuelve 0 porque la desviación estándar no se puede calcular a partir de valores discretos.  

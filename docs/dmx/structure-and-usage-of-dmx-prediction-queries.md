@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669988"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970293"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Estructura y uso de las consultas de predicción DMX
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   En [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puede utilizar la consulta de predicción de extensiones de minería de datos (DMX) para predecir valores de columna desconocidos en un nuevo conjunto de datos, en función de los resultados de un modelo de minería de datos.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "83669988"
   
 -   **TOP**  
   
--   **Del*** \< modelo>* **combinación de predicción**      
+-   **Desde** *\<model>* **combinación de predicción**      
   
 -   **ON**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "83669988"
   
 -   Funciones que devuelven una columna de datos.  
   
- El elemento **del** * \< modelo>* **combinación de predicción** define los datos de origen que se van a usar para crear la predicción. Para una consulta singleton, se trata de una serie de valores que se asignan a columnas. Para una combinación de predicción vacía, se deja en blanco.  
+ El elemento **from** *\<model>* **join de predicción** define los datos de origen que se van a utilizar para crear la predicción. Para una consulta singleton, se trata de una serie de valores que se asignan a columnas. Para una combinación de predicción vacía, se deja en blanco.  
   
  El elemento **on** asigna las columnas definidas en el modelo de minería de datos a las columnas de un conjunto de datos externo. No es necesario incluir este elemento si se va a crear una consulta de combinación de predicción vacía o una combinación de predicción natural.  
   

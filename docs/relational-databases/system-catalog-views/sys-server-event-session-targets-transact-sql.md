@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2dde670bb6a52bbfd103200112caaa6de09e74c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1053382a7236794cadd6637d6e19091cf7508496
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893765"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86908629"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada destino de evento de una sesión de eventos.  
   
@@ -37,18 +37,17 @@ ms.locfileid: "85893765"
 |event_session_id|**int**|Identificador de la sesión de eventos. No admite valores NULL.|  
 |target_id|**int**|Id. del destino. El Id. es único dentro del objeto de sesión de evento. No admite valores NULL.|  
 |name|**sysname**|Nombre del destino del evento. No admite valores NULL.|  
-|paquete|**sysname**|Nombre del paquete de eventos que contiene el destino de evento. No admite valores NULL.|  
+|Paquete|**sysname**|Nombre del paquete de eventos que contiene el destino de evento. No admite valores NULL.|  
 |module|**sysname**|Nombre del módulo que contiene el destino de evento. No admite valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta vista tiene las siguientes cardinalidades de relación.  
   
-||||  
-|-|-|-|  
-|De|En|Relación|  
+| De | A | Relación |
+| ---- | -- | ------------ |
 |sys.server_event_session_targets.event_session_id|Sys. server_event_sessions. event_session_id|Varios a uno|  
   
 ## <a name="see-also"></a>Consulte también  

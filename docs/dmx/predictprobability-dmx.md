@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d6f5d30d107bb2011a470849dd78e940b74a38d6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e2933700c24e34748d2c0d6593d5f34eb8e69bc2
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666954"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970855"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve la probabilidad de un estado especificado.  
   
@@ -34,7 +34,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  Un valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
- Si se omite el estado predicho, se usa el estado que tenga la mayor probabilidad de predicción, sin incluir el depósito de estados que faltan. Para incluir el depósito de Estados que faltan, establezca el \<> de estado de predicción en **INCLUDE_NULL**. Para devolver la probabilidad de los Estados que faltan, establezca el \<> de estado de predicción en NULL.  
+ Si se omite el estado predicho, se usa el estado que tenga la mayor probabilidad de predicción, sin incluir el depósito de estados que faltan. Para incluir el depósito de Estados que faltan, establezca \<predicted state> en **INCLUDE_NULL**. Para devolver la probabilidad de los Estados que faltan, establezca \<predicted state> en NULL.  
   
 > [!NOTE]  
 >  Algunos modelos de minería de datos no proporcionan los valores de probabilidad y, por consiguiente, no pueden utilizar esta función. Además, los valores de probabilidad de cualquier valor del objetivo determinado se calcula de manera diferente o podría tener una interpretación distinta que dependa del tipo de modelo que esté consultando. Para obtener más información sobre cómo se calcula la probabilidad para un tipo de modelo determinado, vea el tema sobre el algoritmo individual del [contenido del modelo de minería de datos &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  

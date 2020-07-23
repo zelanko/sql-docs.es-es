@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670010"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970297"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de datos de origen&gt;
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Para entrenar un modelo de minería de datos y crear predicciones a partir de un modelo de minería de datos, tiene que tener acceso a los datos externos a la base de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Utilice la \< cláusula de> de consultas de datos de origen en extensiones de minería de datos (DMX) para definir estos datos externos. La [inserción en &#40;dmx&#41;](../dmx/insert-into-dmx.md), [Seleccione entre &#60;modelo&#62; combinación de predicción &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)y [Seleccione de las instrucciones de combinación de predicción natural](../dmx/select-from-model-prediction-join-dmx.md) todos usan la ** \< consulta de datos de origen>**.  
+  Para entrenar un modelo de minería de datos y crear predicciones a partir de un modelo de minería de datos, tiene que tener acceso a los datos externos a la base de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Utilice la \<source data query> cláusula en extensiones de minería de datos (DMX) para definir estos datos externos. La [inserción en &#40;dmx&#41;](../dmx/insert-into-dmx.md), [Seleccione entre &#60;modelo&#62; combinación de predicción &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)y [Seleccione las instrucciones de combinación de predicción natural](../dmx/select-from-model-prediction-join-dmx.md) que se usan **\<source data query>** .  
   
 ## <a name="query-types"></a>Tipos de consulta  
  Las tres formas más habituales de especificar datos de origen son:  

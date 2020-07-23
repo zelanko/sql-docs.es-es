@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669454"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971823"
 ---
 # <a name="create-mining-structure-dmx"></a>CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Crea una nueva estructura de minería de datos en una base de datos y, opcionalmente, define las particiones de aprendizaje y de pruebas. Después de crear la estructura de minería de datos, puede usar la instrucción [ALTER Mining structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) para agregar modelos a la estructura de minería de datos.  
   
@@ -34,7 +34,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *structure*  
+ *estructuras*  
  Nombre único de la estructura.  
   
  *lista de definiciones de columna*  
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Puede definir varios valores de marcas de modelado para una columna. Sin embargo, solo puede haber un tipo de contenido y un tipo de datos para cada columna.  
   
 ### <a name="column-relationships"></a>Relaciones entre columnas  
- Puede agregar una cláusula a cualquier instrucción de definición de columna para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de la siguiente \< cláusula de relación de columna>.  
+ Puede agregar una cláusula a cualquier instrucción de definición de columna para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de la siguiente \<column relationship> cláusula.  
   
  **RELACIONADO CON**  
  Indica una jerarquía de valores. El destino de una columna RELATED TO puede ser una columna de clave de una tabla anidada, una columna de valores discretos en la fila de caso u otra columna con una cláusula RELATED TO, que indica una jerarquía de más niveles.  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 564f09564349fa5709cefa87eca8fe847638b9b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ea3cacd8fe2d80e6037cf83df9eea1fd112a4b05
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669860"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971838"
 ---
 # <a name="and-dmx"></a>AND (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Realiza una conjunción lógica de dos expresiones numéricas.  
   
@@ -42,10 +42,10 @@ Expression1 AND Expression2
   
 |Si Expression1 es|Si Expression2 es|El valor devuelto es|  
 |-----------------------|-----------------------|---------------------|  
-|VERDADERO|TRUE|TRUE|  
-|TRUE|FALSO|FALSO|  
-|FALSO|VERDADERO|FALSO|  
-|FALSO|FALSO|FALSO|  
+|VERDADERO|VERDADERO|VERDADERO|  
+|TRUE|FALSE|FALSE|  
+|FALSO|VERDADERO|FALSE|  
+|FALSE|FALSE|FALSO|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de operadores &#40;DMX&#41; de extensiones de minería de datos](../dmx/data-mining-extensions-dmx-operator-reference.md)   

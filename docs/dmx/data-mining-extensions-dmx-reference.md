@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 02c7185ebbf264ebf8ed8adda4915170f888e74b
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670401"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971793"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Referencia de Extensiones de minería de datos (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Extensiones de minería de datos (DMX) es un lenguaje que puede usar para crear y trabajar con modelos de minería de datos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede usar DMX para crear la estructura de modelos de minería de datos nuevos, para entrenar esos modelos y para explorar, administrar y realizar predicciones con ellos. DMX se compone de instrucciones de lenguaje de definición de datos (DDL), instrucciones de lenguaje de manipulación de datos (DML), y funciones y operadores.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "83670401"
   
  Puede realizar las siguientes tareas con las instrucciones de manipulación de datos de DMX:  
   
--   Entrenar un modelo de minería de datos mediante la instrucción [Insert Into](../dmx/insert-into-dmx.md) . Esta instrucción no inserta los datos de origen reales en un objeto de modelo de minería de datos de origen, sino que, en su lugar, crea una abstracción que describe el modelo de minería que crea el algoritmo. La consulta de origen de una instrucción INSERT INTO se describe en [ \<>de consultas de datos de origen ](../dmx/source-data-query.md).  
+-   Entrenar un modelo de minería de datos mediante la instrucción [Insert Into](../dmx/insert-into-dmx.md) . Esta instrucción no inserta los datos de origen reales en un objeto de modelo de minería de datos de origen, sino que, en su lugar, crea una abstracción que describe el modelo de minería que crea el algoritmo. La consulta de origen de una instrucción INSERT INTO se describe en [\<source data query>](../dmx/source-data-query.md) .  
   
 -   Extienda la instrucción SELECT para examinar la información que se calcula durante el entrenamiento del modelo y se almacena en el modelo de minería de datos, como las estadísticas de los datos de origen. A continuación se indican las cláusulas que puede incluir para ampliar la eficacia de la instrucción SELECT:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "83670401"
   
     -   [Seleccione entre &#60;modelo&#62;. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   Cree predicciones basadas en un modelo de minería de datos existente mediante la cláusula de [combinación de predicción](../dmx/select-from-model-prediction-join-dmx.md) de la instrucción SELECT. La consulta de origen de una instrucción de combinación de predicción se describe en [ \<>de consultas de datos de origen ](../dmx/source-data-query.md).  
+-   Cree predicciones basadas en un modelo de minería de datos existente mediante la cláusula de [combinación de predicción](../dmx/select-from-model-prediction-join-dmx.md) de la instrucción SELECT. La consulta de origen de una instrucción de combinación de predicción se describe en [\<source data query>](../dmx/source-data-query.md) .  
   
 -   Quite todos los datos entrenados de un modelo o una estructura mediante la instrucción [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md) .  
   

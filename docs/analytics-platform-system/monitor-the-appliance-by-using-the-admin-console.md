@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 88e1619ce37de7c7a334ee7d915115f2deef47ef
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400943"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941077"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Supervisar el dispositivo con la consola de administración-Analytics Platform System
 La consola de administración es una PDW de SQL Server aplicación web que muestra la información sobre el estado, el estado y el rendimiento del dispositivo. Los usuarios se conectan a la consola de administración a través de Internet Explorer.  
@@ -23,10 +23,10 @@ La consola de administración es una PDW de SQL Server aplicación web que muest
 ![Inicio de la consola del dispositivo](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Dispositivo**  
-Inicio  
+Página principal  
 Proporciona un resumen rápido del estado del dispositivo.  
   
-Health  
+Sanidad  
 Muestra la topología del dispositivo con indicadores que muestran el estado de cada componente supervisado dentro de cada nodo. Permite ver el estado actual de los nodos y propiedades individuales de los componentes de nodo.  
   
 Muestra alertas de hardware y software.  
@@ -35,7 +35,7 @@ Monitor de rendimiento
 Muestra gráficos del monitor de rendimiento.  
   
 **Almacenamiento de datos paralelos**  
-Inicio  
+Página principal  
 Proporciona un resumen rápido del estado de PDW.  
   
 Sesiones  
@@ -50,7 +50,7 @@ Muestra los planes de carga, el estado actual de las cargas de PDW y los errores
 Copias de seguridad y restauraciones  
 Muestra un registro de las operaciones de restauración y copia de seguridad de PDW.  
   
-Health  
+Sanidad  
 Muestra la topología de PDW con indicadores que muestran el estado de cada componente supervisado dentro de cada nodo. Permite ver el estado actual de los nodos y propiedades individuales de los componentes de nodo.  
   
 Muestra alertas de hardware y software.  
@@ -76,14 +76,13 @@ Para conectarse a la consola de administración, requiere:
   
 -   Dirección IP del clúster de nodo de control.  Obtenerlo del administrador de PDW de SQL Server.  
   
-Para conectarse a la consola de administración, use Internet Explorer y https para ir a la dirección IP del clúster de nodo de control. Por ejemplo, si la dirección IP del clúster de nodo de control `10.192.63.102`es, `https://10.192.63.102` escriba en la barra de direcciones del explorador. La primera pantalla solicitará el **Inicio de sesión** y la **contraseña**. Proporcione un inicio de sesión de autenticación de SQL Server y una contraseña, o un inicio de sesión de autenticación de Windows y una contraseña de Windows. Si usa un inicio de sesión de autenticación de Windows, la consola de administración utilizará la suplantación.  
+Para conectarse a la consola de administración, use Internet Explorer y https para ir a la dirección IP del clúster de nodo de control. Por ejemplo, si la dirección IP del clúster de nodo de control es `10.192.63.102` , escriba `https://10.192.63.102` en la barra de direcciones del explorador. La primera pantalla solicitará el **Inicio de sesión** y la **contraseña**. Proporcione un inicio de sesión de autenticación de SQL Server y una contraseña, o un inicio de sesión de autenticación de Windows y una contraseña de Windows. Si usa un inicio de sesión de autenticación de Windows, la consola de administración utilizará la suplantación.  
   
 ## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>Tareas de la consola de administración  
 La consola de administración de proporciona la capacidad de supervisar lo siguiente:  
   
-|||  
-|-|-|  
-|**Tipo de información**|**Cómo obtener acceso en la consola de administración**|  
+|Tipo de información|Cómo obtener acceso en la consola de administración|
+|-|-|
 |Estado general del dispositivo|Haga clic en **Estado del dispositivo** en el menú superior o en **Inicio**.|  
 |Alertas|Haga clic en **Alertas**. Para obtener más información, consulte Descripción de las alertas de la [consola de administración &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Componentes del dispositivo y su estado|Haga clic en **Estado del dispositivo** en el menú superior o en **Inicio**.|  

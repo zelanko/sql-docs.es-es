@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666797"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967929"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve una tabla que representa un histograma para la predicción de una columna determinada.  
   
@@ -37,7 +37,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Los histogramas generan columnas de estadísticas. La estructura de columnas del histograma devuelto depende del tipo de referencia de columna que se usa con la función **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Columnas escalares  
- En el caso de una \< referencia de columna escalar>, el histograma que devuelve la función **PredictHistogram** consta de las siguientes columnas:  
+ En el caso de \<scalar column reference> , el histograma que devuelve la función **PredictHistogram** consta de las siguientes columnas:  
   
 -   El valor que se predice.  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      La columna **$AdjustedProbability** es una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensión del [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para la especificación de minería de datos.  
   
 ## <a name="cluster-columns"></a>Columnas de clúster  
- El histograma que devuelve la función **PredictHistogram** para una \< referencia de columna de clúster> consta de las siguientes columnas:  
+ El histograma que devuelve la función **PredictHistogram** para un \<cluster column reference> consta de las siguientes columnas:  
   
 -   **$Cluster** (representa el nombre del clúster)  
   

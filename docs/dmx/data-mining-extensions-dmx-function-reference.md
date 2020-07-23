@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c296948a41096c5c63b0e7019649d48bac8a23ca
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7b25146ce36a0b58bb46bcacb4348f8e34221068
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669436"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971827"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Referencia de funciones de Extensiones de minería de datos (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite varias funciones en lenguaje DMX (Extensiones de minería de datos). Las funciones expanden los resultados de una consulta de predicción a fin de incluir información que permita describir la predicción con mayor nivel de detalle. Las funciones también brindan mayor control sobre la manera en la que se devuelven los resultados de la predicción. En la tabla siguiente se proporcionan vínculos a recursos para ayudarle a entender cómo utilizar las funciones en DMX.  
   

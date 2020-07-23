@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 647f0cdaaef28f1da7ca51157388288cfdd729dc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669828"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969967"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve, en orden creciente de rango, las filas inferiores de una tabla cuyo total acumulado sea al menos un porcentaje especificado.  
   
@@ -28,20 +28,20 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *\<>de expresión de tabla*  
+ *\<Table expression>*  
  Nombre de una columna de tabla anidada o expresión de valores de tabla.  
   
- *\<>de expresión de rango*  
+ *\<rank expression>*  
  Columna de la tabla anidada o expresión que se evalúa como una columna.  
   
- *\<porcentaje>*  
+ *\<percent>*  
  Valor doble que indica el porcentaje de destino total.  
   
 ## <a name="result-type"></a>Tipo de resultado  
  Tabla.  
   
 ## <a name="remarks"></a>Observaciones  
- La función **BottomPercent** devuelve las filas inferiores en orden creciente de rango. El rango se basa en el valor evaluado de la \< expresión de rango> argumento de cada fila, de modo que la suma de la \< expresión de rango> valores sea al menos el porcentaje especificado por el \< argumento Percent>. **BottomPercent** devuelve el menor número posible de elementos mientras se cumple el valor de porcentaje especificado.  
+ La función **BottomPercent** devuelve las filas inferiores en orden creciente de rango. El rango se basa en el valor evaluado del \<rank expression> argumento de cada fila, de modo que la suma de los \<rank expression> valores sea al menos el porcentaje especificado por el \<percent> argumento. **BottomPercent** devuelve el menor número posible de elementos mientras se cumple el valor de porcentaje especificado.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una consulta de predicción con el modelo de asociación creado en el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

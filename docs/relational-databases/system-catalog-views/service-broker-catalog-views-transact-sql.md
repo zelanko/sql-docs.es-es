@@ -15,27 +15,50 @@ helpviewer_keywords:
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e9e5f16f1d9482d24b9ac6f4712c9d5b1edb106
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2c6e6f6569cd20f893e38ef161ef6fa7a4d0fd90
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896035"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913542"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Vistas de catálogo de Service Broker (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Esta sección contiene las siguientes vistas de catálogo:  
-  
-|||  
-|-|-|  
-|[sys.conversation_endpoints](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)|[sys.service_contract_usages](../../relational-databases/system-catalog-views/sys-service-contract-usages-transact-sql.md)|  
-|[sys.conversation_groups](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)|[Sys. service_contracts &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)|  
-|[sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)|[sys.service_message_types](../../relational-databases/system-catalog-views/sys-service-message-types-transact-sql.md)|  
-|[Sys. message_type_xml_schema_collection_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-message-type-xml-schema-collection-usages-transact-sql.md)|[sys.service_queue_usages](../../relational-databases/system-catalog-views/sys-service-queue-usages-transact-sql.md)|  
-|[sys.remote_service_bindings](../../relational-databases/system-catalog-views/sys-remote-service-bindings-transact-sql.md)|[sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)|  
-|[sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)|[sys.services](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)|  
-|[sys.service_contract_message_usages](../../relational-databases/system-catalog-views/sys-service-contract-message-usages-transact-sql.md)|[sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)|  
+Esta sección contiene las siguientes vistas de catálogo:  
+
+:::row:::
+    :::column:::
+        [sys.conversation_endpoints](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)
+        
+        [sys.conversation_groups](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)
+        
+        [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)
+        
+        [Sys. message_type_xml_schema_collection_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-message-type-xml-schema-collection-usages-transact-sql.md)
+        
+        [sys.remote_service_bindings](../../relational-databases/system-catalog-views/sys-remote-service-bindings-transact-sql.md)
+        
+        [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)
+        
+        [sys.service_contract_message_usages](../../relational-databases/system-catalog-views/sys-service-contract-message-usages-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.service_contract_usages](../../relational-databases/system-catalog-views/sys-service-contract-usages-transact-sql.md)
+        
+        [Sys. service_contracts &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)
+        
+        [sys.service_message_types](../../relational-databases/system-catalog-views/sys-service-message-types-transact-sql.md)
+        
+        [sys.service_queue_usages](../../relational-databases/system-catalog-views/sys-service-queue-usages-transact-sql.md)
+        
+        [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)
+        
+        [sys.services](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)
+        
+        [sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

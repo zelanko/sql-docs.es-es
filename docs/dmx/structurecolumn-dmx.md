@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669982"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970322"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve el valor de la columna de estructura que corresponde al caso especificado o el valor de tabla para una tabla anidada en el caso especificado.  
   
@@ -32,7 +32,7 @@ StructureColumn('structure column name')
  Nombre de una columna de estructura de minería de datos de tabla anidada o caso.  
   
 ## <a name="result-type"></a>Tipo de resultado  
- El tipo que se devuelve depende del tipo de la columna a la que se hace referencia en el nombre de la \< columna de estructura> parámetro. Por ejemplo, si la columna de estructura de minería de datos a la que se hace referencia contiene un valor escalar, la función devuelve un valor escalar.  
+ El tipo que se devuelve depende del tipo de la columna a la que se hace referencia en el \<structure column name> parámetro. Por ejemplo, si la columna de estructura de minería de datos a la que se hace referencia contiene un valor escalar, la función devuelve un valor escalar.  
   
  Si es una tabla anidada, la función devuelve un valor de tabla. El valor de tabla devuelto se puede utilizar en la cláusula FROM de una instrucción sub-SELECT.  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 1b8fe4c8a83eaf56aea70abc810e7dc45f35eebb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670414"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971785"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Instrucciones de Extensiones de minería de datos (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Trabajar con modelos de minería de datos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] implica las siguientes tareas principales:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "83670414"
  Use la instrucción [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md) para copiar la estructura de un modelo de minería de datos existente en un nuevo modelo de minería de datos y para entrenar el nuevo modelo con los mismos datos.  
   
  Examinar modelos de minería de datos  
- Use la instrucción [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) para examinar la información que el algoritmo de minería de datos calcula y almacena en el modelo de minería de datos durante el entrenamiento del modelo. Al igual [!INCLUDE[tsql](../includes/tsql-md.md)] que con, puede usar varias cláusulas con la instrucción SELECT para ampliar su capacidad. Estas cláusulas incluyen [distintas del \< modelo>](../dmx/select-distinct-from-model-dmx.md), [del \< modelo>. CASOS](../dmx/select-from-model-cases-dmx.md), [desde el \<> del modelo. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [del \<> del modelo. CONTENIDO](../dmx/select-from-model-content-dmx.md) y [del \<> del modelo. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
+ Use la instrucción [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) para examinar la información que el algoritmo de minería de datos calcula y almacena en el modelo de minería de datos durante el entrenamiento del modelo. Al igual [!INCLUDE[tsql](../includes/tsql-md.md)] que con, puede usar varias cláusulas con la instrucción SELECT para ampliar su capacidad. Estas cláusulas incluyen [DISTINCT \<model> from ](../dmx/select-distinct-from-model-dmx.md), [from \<model> . CASOS](../dmx/select-from-model-cases-dmx.md), [desde \<model> . SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [desde \<model> . CONTENIDO](../dmx/select-from-model-content-dmx.md) y [de \<model> . DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
   
  Realizar predicciones con modelos de minería de datos  
  Utilice la cláusula de [combinación de predicción](../dmx/select-from-model-prediction-join-dmx.md) de la instrucción SELECT para crear predicciones basadas en un modelo de minería de datos existente.  

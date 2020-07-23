@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670110"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970519"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>Seleccione del &lt; modelo &gt; . SAMPLE_CASES (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve ejemplos de casos que son representativos de los casos que se emplean para entrenar el modelo de minería de datos.  
   
@@ -49,7 +49,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
 ## <a name="remarks"></a>Observaciones  
  Pueden generarse casos de ejemplo que podrían no existir en los datos de entrenamiento. El caso devuelto es representativo del nodo de contenido especificado.  
   
- Aunque el [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de clústeres de secuencia es el único [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo que admite el uso de SELECT FROM \< Model>. SAMPLE_CASES, los algoritmos de terceros también pueden admitirlo.  
+ Aunque el [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de clústeres de secuencia es el único [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo que admite el uso de Select from \<model> . SAMPLE_CASES, los algoritmos de terceros también pueden admitirlo.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se devuelven casos de ejemplo que sirven para entrenar el modelo de minería de datos Target Mail. El uso de la función [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) en la cláusula **Where** solo devuelve los casos que están asociados al nodo ' 000000003 '. La cadena de nodo se encuentra en la columna NODE_UNIQUE_NAME del conjunto de filas de esquema.  

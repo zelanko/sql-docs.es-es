@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 149285ac5888d6b23272b40fbbb1aef9cf55909e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5a4e589455a86f4ffe47e34a6d74d0b6890a5528
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669810"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969986"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   La función **ClusterDistance** devuelve la distancia del caso de entrada del clúster especificado o, si no se especifica ningún clúster, la distancia del caso de entrada del clúster más probable.  
   
@@ -75,7 +75,7 @@ NATURAL PREDICTION JOIN
   
  Resultados de ejemplo:  
   
-|Expresión|  
+|Expression|  
 |----------------|  
 |0.0477390930705145|  
   

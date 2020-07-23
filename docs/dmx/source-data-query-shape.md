@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 4d5d93d4236b3cf86719c416ba87517401e4b4f5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881804"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970312"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;consulta de datos &gt; de origen-forma
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Combina consultas de varios orígenes de datos en una única tabla jerárquica (es decir, una tabla con tablas anidadas), que se convierte en la tabla de caso para el modelo de minería de datos.  
   
@@ -54,7 +54,7 @@ APPEND ({ <child table query> }
  *nombre de la tabla de columnas*  
  Nombre de columna que se acaba de anexar en la tabla primaria para la tabla anidada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Debe ordenar las consultas por la columna que relaciona la tabla primaria con la tabla secundaria.  
   
 ## <a name="examples"></a>Ejemplos  

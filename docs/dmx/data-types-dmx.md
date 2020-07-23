@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e45433b1a7e031c0aa5e549f9b2d48c036ef91c6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4da4243aaf7592e7c5a8a9df63ed1aea352448f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669784"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969886"
 ---
 # <a name="data-types-dmx"></a>Tipos de datos (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Al utilizar extensiones de minería de datos (DMX) para definir un nuevo modelo de minería de datos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , debe proporcionar un tipo de datos para cada columna del modelo. El tipo de datos describe los datos que usará el algoritmo de minería de datos al generar el modelo.  
   
@@ -24,7 +24,7 @@ ms.locfileid: "83669784"
   
 -   Texto  
   
--   Long  
+-   long  
   
 -   Boolean  
   

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fdf58a943986dc43f82ef7023b68a2c6168a5518
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670242"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971723"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve **true** si la subconsulta especificada devuelve al menos una fila.  
   
@@ -28,8 +28,8 @@ EXISTS(<subquery>)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *subconsulta*  
- Una instrucción SELECT con el formato SELECT * FROM \< Column name> [where \< Predicate List>].  
+ *subquery*  
+ Una instrucción SELECT con el formato SELECT * FROM \<column name> [where \<predicate list> ].  
   
 ## <a name="result-type"></a>Tipo de resultado  
  Devuelve **true** si el conjunto de resultados devuelto por la subconsulta contiene al menos una fila; de lo contrario, devuelve **false**.  

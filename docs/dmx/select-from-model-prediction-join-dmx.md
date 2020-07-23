@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: e3e4e9a4d929d9533b10d87654f685e45dafd238
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670128"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970517"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>Seleccionar de &lt; la &gt; combinación de predicción de modelo (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Usa un modelo de minería de datos para predecir los estados de las columnas de un origen de datos externo. La instrucción de **combinación de predicción** coincide con cada caso de la consulta de origen con el modelo.  
   
@@ -57,7 +57,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
- La cláusula ON define la asignación entre las columnas de la consulta de origen y las columnas del modelo de minería. Esta asignación sirve para unir columnas de la consulta de origen con columnas del modelo de minería de datos de forma que las columnas se puedan usar como entradas para crear las predicciones. Las columnas de la \< *lista de asignación de combinación*> están relacionadas mediante el uso de un signo igual (=), como se muestra en el ejemplo siguiente:  
+ La cláusula ON define la asignación entre las columnas de la consulta de origen y las columnas del modelo de minería. Esta asignación sirve para unir columnas de la consulta de origen con columnas del modelo de minería de datos de forma que las columnas se puedan usar como entradas para crear las predicciones. Las columnas de \<*join mapping list*> están relacionadas mediante el uso de un signo igual (=), como se muestra en el ejemplo siguiente:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  La columna de origen de la combinación de predicción puede ser una tabla o una consulta singleton.  
   
- Puede especificar funciones de predicción que no devuelven una expresión de tabla en la \< *lista de expresiones SELECT*> y la \< *expresión de condición*>.  
+ Puede especificar funciones de predicción que no devuelven una expresión de tabla en \<*select expression list*> y \<*condition expression*> .  
   
  La **combinación de predicción natural** asigna automáticamente nombres de columna de la consulta de origen que coinciden con los nombres de columna del modelo. Si usa la **predicción natural**, puede omitir la cláusula ON.  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61769119b041f629884b99660a5937b72a83acbd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c2ea09a98128ff5d4c1df9ba61c918360613641
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880677"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918481"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, clase
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Proporciona las propiedades para ver los eventos en un archivo de registro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,18 +41,18 @@ class SQLErrorLogEvent
 ## <a name="properties"></a>Propiedades  
  La clase SQLErrorLogEvent define las siguientes propiedades.  
   
-|||  
-|-|-|  
+| Propiedad | Descripción |
+| -------- | ----------- |
 |FileName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> El nombre del archivo de registro de errores.|  
 |InstanceName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
 |LogDate|Tipo de datos: **DateTime**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> Fecha y hora en que el evento se grabó en el archivo de registro.|  
 |Message|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
 |ProcessInfo|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
-|||  
-|-|-|  
+| Tipo | Nombre |
+| ---- | ---- |
 |MOF|Sqlmgmproviderxpsp2up.mof|  
 |Archivo DLL|Sqlmgmprovider.dll|  
 |Espacio de nombres|\raíz\Microsoft\SqlServer\ComputerManagement10|  

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49ed0f26f20d081f4f9b307e6be90a3f5bd8c372
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401444"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942207"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Instalación y configuración del dispositivo de Analytics Platform System
 Recorra a los administradores de dispositivos de Analytics Platform System (APS) a través de los pasos iniciales para configurar y empezar a usar el nuevo dispositivo.  
@@ -35,25 +35,21 @@ El nuevo dispositivo se entregará en los palets en el Dock del centro de datos.
   
 Si el IHV no está realizando la instalación de hardware, siga estos pasos para instalar el hardware.  
   
-|||  
+|Tarea|Descripción|  
 |-|-|  
-|**Task**|**Descripción**|  
 |Confirmar documentación|Confirme que ha recibido todos los documentos e información necesarios de su proveedor de hardware independiente (IHV). Consulte [la información que se obtiene de la&#41;del sistema IHV &#40;Analytics Platform System ](information-to-obtain-from-your-ihv.md).|  
 |Instalar hardware|Compruebe que el centro de datos puede alojar el dispositivo. Mueva los componentes del dispositivo al centro de datos. Bastidor de conmutadores de red, PDU y cableado. Consulte [instalación de Hardware &#40;Analytics Platform System&#41;](hardware-installation.md).|  
   
 ## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. encender el dispositivo  
   
-|||  
+|Tarea|Descripción|  
 |-|-|  
-|**Task**|**Descripción**|  
 |Encender el dispositivo|Encienda cada nodo del componente del dispositivo en el orden requerido, en espera según sea necesario para confirmar que no se producen errores.|  
   
 ## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. configurar el dispositivo  
   
-|||  
+|Tarea|Descripción|  
 |-|-|  
-|**Task**|**Descripción**|  
-|||  
 |Configure el dispositivo mediante el PDW de SQL Server**Configuration Manager**|Use el Configuration Manager para establecer contraseñas de aplicación, zonas horarias, configuración de red y firewall, certificados de seguridad y rendimiento y otras opciones de configuración en el dispositivo. Consulte [configuración del dispositivo &#40;Analytics Platform System&#41;](appliance-configuration.md).|  
   
 > [!WARNING]  
@@ -61,18 +57,16 @@ Si el IHV no está realizando la instalación de hardware, siga estos pasos para
   
 ## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. configurar el servicio de software  
   
-|||  
+|Tarea|Descripción|  
 |-|-|  
-|**Task**|**Descripción**|  
 |Aplicar actualizaciones de PDW de SQL Server|Opta Es posible que tenga que aplicar una o varias actualizaciones de PDW de SQL Server para actualizar el software de PDW de SQL Server a la versión más reciente. Consulte [Apply Analytics Platform System revisations &#40;Analytics Platform system&#41;](apply-analytics-platform-system-hotfixes.md).|  
 |Configuración de Windows Server Update Services|Configure el dispositivo para recibir actualizaciones de Windows Server Update Services para el software auxiliar. Consulte [Descargar y aplicar actualizaciones de Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md).|  
   
 ## <a name="next-steps"></a><a name="NextSteps"></a>Pasos siguientes  
 Una vez completados todos los pasos anteriores, el dispositivo está listo para su uso. Usted u otro personal de su ubicación puede continuar con las siguientes tareas.  
   
-|||  
+|Tarea|Descripción|  
 |-|-|  
-|**Task**|**Descripción**|  
 |Instalación de controladores de PDW de SQL Server y configuración de la conectividad|Configure los equipos locales para que se conecten a PDW de SQL Server mediante SQL Server Data Tools, SQLCMD, software de Business Intelligence u otras herramientas. <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |Crear inicios de sesión y roles de servidor y asignar permisos|Planee y cree inicios de sesión y roles de servidor que permitirán a los usuarios iniciar sesión en PDW de SQL Server con los permisos adecuados. <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Configuración de Azure Data Management Gateway|La puerta de enlace permite a los usuarios de Azure acceder a datos de APS locales mediante la exposición de datos de APS como fuentes de OData seguras. La puerta de enlace ya está instalada en el nodo de control. Pida ayuda a Microsoft para la configuración.|  

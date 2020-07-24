@@ -30,7 +30,7 @@ ms.locfileid: "86969886"
   
 -   Double  
   
--   Fecha  
+-   Date  
   
  Para obtener más información sobre los tipos de datos que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite, vea [tipos de datos &#40;&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining).  
   

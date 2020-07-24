@@ -64,7 +64,7 @@ INSERT INTO [MINING MODEL] <model>
 ||La estructura de minería de datos no está procesada.|Se procesan el modelo y la estructura de minería de datos.|  
 ||La estructura de minería de datos contiene modelos de minería de datos adicionales.|Se produce un error en el proceso. Deberá volver a procesar la estructura y los modelos de minería de datos asociados.|  
 |INSERTAR EN ESTRUCTURA DE MINERÍA DE DATOS*\<structure>*|La estructura de minería de datos está procesada o sin procesar.|Se procesan la estructura de minería de datos y los modelos de minería de datos asociados.|  
-|INSERTAR en el modelo *\<model>* de minería de datos que contiene una consulta de origen<br /><br /> or<br /><br /> INSERTAR en la estructura *\<structure>* de minería de datos que contiene una consulta de origen|La estructura o el modelo ya tienen contenido.|Se produce un error en el proceso. Debe borrar los objetos antes de realizar esta operación, mediante [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERTAR en el modelo *\<model>* de minería de datos que contiene una consulta de origen<br /><br /> o<br /><br /> INSERTAR en la estructura *\<structure>* de minería de datos que contiene una consulta de origen|La estructura o el modelo ya tienen contenido.|Se produce un error en el proceso. Debe borrar los objetos antes de realizar esta operación, mediante [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Columnas de modelo asignadas  
  Mediante el \<mapped model columns> elemento, puede asignar las columnas del origen de datos a las columnas del modelo de minería de datos. El \<mapped model columns> elemento tiene el formato siguiente:  

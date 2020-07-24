@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5f04017124520f6e2acd0669946d5d43d4e83f4
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: d400e0e19d381c3cce2ebfeffd9f97abe16354b9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160173"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921886"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restricciones del modelo de programación de la integración CLR
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Al compilar un procedimiento almacenado administrado u otro objeto de base de datos administrado, se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deben tener en cuenta ciertas comprobaciones de código. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]realiza comprobaciones en el ensamblado de código administrado cuando se registra por primera vez en la base de datos, mediante la instrucción **Create Assembly** y también en tiempo de ejecución. El código administrado también se comprueba en tiempo de ejecución porque en un ensamblado puede haber rutas de acceso al código que nunca se hayan alcanzado realmente en tiempo de ejecución.  Esto proporciona flexibilidad para registrar ensamblados de terceros, de manera especial, de forma que no se debe bloquear un ensamblado donde haya un código 'no seguro' diseñado para que se ejecute en un entorno cliente pero nunca se ejecutaría en el CLR hospedado. Los requisitos que debe cumplir el código administrado dependen de si el ensamblado está registrado como **seguro**, **external_access**o no **seguro**, **seguro** que es el más estricto y se enumeran a continuación.  
   
  Además de las restricciones que se ubican en los ensamblados de código administrado, también hay permisos de seguridad de código que se conceden. Common Language Runtime (CLR) admite un modelo de seguridad denominado seguridad de acceso del código (CAS) para el código administrado. En este modelo, se conceden permisos a los ensamblados basados en la identidad del código. Los ensamblados **Safe**, **external_access**y **Unsafe** tienen permisos CAS diferentes. Para obtener más información, vea [seguridad de acceso del código de integración CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
@@ -98,7 +98,7 @@ ms.locfileid: "86160173"
   
 -   SelfAffectingThreading  
   
--   Sincronización  
+-   Synchronization  
   
 -   SharedState  
   

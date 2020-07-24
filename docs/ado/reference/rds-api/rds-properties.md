@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0250875bfaa9d23d483b4e95e0d8949e2a907a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d868aaeb917c446e9f345924ab37c0b887dad3a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758541"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942997"
 ---
 # <a name="rds-properties"></a>Propiedades de RDS
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|||  
+|Propiedad|Descripción|  
 |-|-|  
 |[Conectar (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|Indica el nombre de la base de datos desde la que se ejecutan las operaciones de consulta y actualización.|  
 |[ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|Indica si la ejecución asincrónica está habilitada.|  

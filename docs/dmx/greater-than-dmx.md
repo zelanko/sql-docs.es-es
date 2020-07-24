@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae24b0195beab2b34804a14e5e105e6e277f3529
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 67ba5385ab11091ca45b50556fe63983fee01aac
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669303"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971703"
 ---
 # <a name="gt-greater-than-dmx"></a>&gt;(Mayor que) DMX
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Realiza una operación de comparación que determina si el valor de una expresión DMX (Extensiones de minería de datos) es mayor que el valor de otra expresión DMX.  
   

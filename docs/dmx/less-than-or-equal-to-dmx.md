@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2c100153cde8c282b089b142c6fcc473c4b99aec
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ee38c26240392e634ce4ffa9644313a43f90bf16
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669681"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971657"
 ---
 # <a name="lt-less-than-or-equal-to-dmx"></a>&lt;= (Menor o igual que) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Realiza una operación de comparación que determina si el valor de una expresión DMX (Extensiones de minería de datos) es menor o igual que el valor de otra expresión DMX.  
   

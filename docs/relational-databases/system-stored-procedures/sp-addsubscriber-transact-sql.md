@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 462fe9e3634ea1dfa844fe4a97f1086bdef82cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f83d85ab2a79a4f5f27143de655f7748fe7f0fd4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716358"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915307"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Agrega un suscriptor nuevo a un publicador, habilitándolo para recibir publicaciones. Para las publicaciones de instantáneas y transaccionales, este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones; para las publicaciones de combinación que utilizan un distribuidor remoto, lo hace en el distribuidor.  
   
@@ -124,8 +124,8 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1** (predeterminado)|First|  
-|**2**|Second|  
+|**1** (predeterminado)|Primero|  
+|**2**|Segundo|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
 |**16**|Último|  
@@ -143,9 +143,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
-|**2**|Second|  
+|**2**|Segundo|  
 |**4** (valor predeterminado)|Minute|  
-|**8**|Hora|  
+|**8**|Hour|  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
@@ -192,7 +192,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_addsubscriber** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
  **sp_addsubscriber** no es necesario cuando el suscriptor solo tendrá suscripciones anónimas a publicaciones de combinación.  
@@ -203,7 +203,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_addsubscriber**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear una suscripción de extracción](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   

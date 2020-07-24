@@ -42,9 +42,9 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
 |.|Resultado|  
 |---------------|------------|  
-|ELIMINAR DE LA ESTRUCTURA DE MINERÍA DE DATOS*\<structure>*<br /><br /> or<br /><br /> ELIMINAR de la estructura de minería de datos *\<structure>* . CONTENT|Realiza ProcessClear en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y sus modelos de minería de datos asociados.|  
+|ELIMINAR DE LA ESTRUCTURA DE MINERÍA DE DATOS*\<structure>*<br /><br /> o<br /><br /> ELIMINAR de la estructura de minería de datos *\<structure>* . CONTENT|Realiza ProcessClear en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y sus modelos de minería de datos asociados.|  
 |ELIMINAR de la estructura de minería de datos *\<structure>* . VECES|Realiza ProcessClearStructureOnly en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y se dejan intactos sus modelos de minería de datos asociados. La obtención de detalles de los modelos de minería de datos asociados produce un error tras el borrado de la estructura de minería de datos.|  
-|ELIMINAR DEL MODELO DE MINERÍA DE DATOS*\<model>*<br /><br /> or<br /><br /> ELIMINAR del modelo de minería de datos *\<model>* . CONTENT|Realiza ProcessClear en el modelo de minería de datos, pero deja intactos los valores de estado. Los valores de estado son los estados posibles de una columna. Por ejemplo, los valores de estado de una columna de género serían masculino y femenino.|  
+|ELIMINAR DEL MODELO DE MINERÍA DE DATOS*\<model>*<br /><br /> o<br /><br /> ELIMINAR del modelo de minería de datos *\<model>* . CONTENT|Realiza ProcessClear en el modelo de minería de datos, pero deja intactos los valores de estado. Los valores de estado son los estados posibles de una columna. Por ejemplo, los valores de estado de una columna de género serían masculino y femenino.|  
   
  Para obtener más información sobre los tipos de procesamiento, vea [elemento Type &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/type-element-xmla).  
   

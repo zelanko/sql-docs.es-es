@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 53a391ccb25a32d628703543d95dc8e24668fcd5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748851"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942497"
 ---
 # <a name="createrecordset-method-rds"></a>Ejemplo del método CreateRecordset (RDS)
 Crea un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)vacío y desconectado.  
@@ -40,7 +40,7 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Objeto*  
+ *Object*  
  Variable de objeto que representa un objeto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *ColumnsInfos*  
@@ -50,13 +50,13 @@ object.CreateRecordset(ColumnInfos)
 |---------------|-----------------|  
 |Nombre|Nombre del encabezado de columna.|  
 |Tipo|Entero del tipo de datos.|  
-|Tamaño|Entero del ancho en caracteres, independientemente del tipo de datos.|  
+|Size|Entero del ancho en caracteres, independientemente del tipo de datos.|  
 |Nulabilidad|Valor booleano.|  
 |Escala (opcional)|Este atributo opcional define la escala de los campos numéricos. Si no se especifica este valor, los valores numéricos se truncarán en una escala de tres. La precisión no se ve afectada, pero el número de dígitos que siguen al separador decimal se truncará en tres.|  
   
  Después, el conjunto de matrices de columnas se agrupa en una matriz, que define el **conjunto de registros**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El objeto comercial del lado servidor puede rellenar el **conjunto de registros** resultante con datos de un proveedor de datos no OLE DB, como un archivo del sistema operativo que contiene cotizaciones bursátiles.  
   
  En la tabla siguiente se enumeran los valores de [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) admitidos por el método **CreateRecordset** . El número mostrado es el número de referencia que se usa para definir los campos.  
@@ -65,28 +65,28 @@ object.CreateRecordset(ColumnInfos)
   
  En algunos de los tipos de datos de variable, el tipo se puede convertir al tipo indicado en la columna de sustitución. No verá las sustituciones hasta que el conjunto de **registros** se haya creado y rellenado. A continuación, puede comprobar el tipo de datos real, si es necesario.  
   
-|Length|Constante|Number|Substitution|  
+|Length|Constante|Number|Sustitución|  
 |------------|--------------|------------|------------------|  
-|Fijo|**adTinyInt**|16||  
-|Fijo|**adSmallInt**|2||  
-|Fijo|**adInteger**|3||  
-|Fijo|**adBigInt**|20||  
-|Fijo|**adUnsignedTinyInt**|17||  
-|Fijo|**adUnsignedSmallInt**|18||  
-|Fijo|**adUnsignedInt**|19||  
-|Fijo|**adUnsignedBigInt**|21||  
-|Fijo|**adSingle**|4||  
-|Fijo|**adDouble**|5||  
-|Fijo|**adCurrency**|6||  
-|Fijo|**adDecimal**|14||  
-|Fijo|**adNumeric**|131||  
-|Fijo|**adBoolean**|11||  
-|Fijo|**adError**|10||  
-|Fijo|**adGuid**|72||  
-|Fijo|**adDate**|7||  
-|Fijo|**adDBDate**|133||  
-|Fijo|**adDBTime**|134||  
-|Fijo|**adDBTimestamp**|135|7|  
+|Corregido|**adTinyInt**|16||  
+|Corregido|**adSmallInt**|2||  
+|Corregido|**adInteger**|3||  
+|Corregido|**adBigInt**|20||  
+|Corregido|**adUnsignedTinyInt**|17||  
+|Corregido|**adUnsignedSmallInt**|18||  
+|Corregido|**adUnsignedInt**|19||  
+|Corregido|**adUnsignedBigInt**|21||  
+|Corregido|**adSingle**|4||  
+|Corregido|**adDouble**|5||  
+|Corregido|**adCurrency**|6||  
+|Corregido|**adDecimal**|14||  
+|Corregido|**adNumeric**|131||  
+|Corregido|**adBoolean**|11||  
+|Corregido|**adError**|10||  
+|Corregido|**adGuid**|72||  
+|Corregido|**adDate**|7||  
+|Corregido|**adDBDate**|133||  
+|Corregido|**adDBTime**|134||  
+|Corregido|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
 |Variable|**adChar**|129|200|  
 |Variable|**adVarChar**|200||  
@@ -99,11 +99,16 @@ object.CreateRecordset(ColumnInfos)
 |Variable|**adLongVarBinary**|205|204|  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo del método CreateRecordset (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [Ejemplo del método CreateRecordset (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   

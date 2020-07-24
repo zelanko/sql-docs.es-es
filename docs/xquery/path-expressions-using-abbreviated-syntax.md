@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83dab3384810943901813b90286674253b88b8f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b8270babb8fe592c050a9352a7fd687660b178e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765630"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920101"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>Expresiones de ruta de acceso: Usar una sintaxis abreviada
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Todos los ejemplos de [comprensión de las expresiones de ruta de acceso en XQuery](../xquery/path-expressions-xquery.md) usan sintaxis no abreviada para las expresiones de ruta de acceso. La sintaxis no abreviada para un paso de eje en una expresión de ruta de acceso incluye el nombre del eje y la prueba de nodo, separados por dos puntos dobles, y seguidos por cero o más calificadores de paso.  
   

@@ -8,21 +8,21 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9055cc483cc306e039f893bcb80554718092a2a7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5dd4df26faad2c52a803db90122e6bb78a3f1a75
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669644"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971610"
 ---
 # <a name="operators---unary"></a>Operadores: unarios
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Los operadores unarios realizan una operación en un solo operando, como devolver el valor positivo o negativo de una expresión numérica.  
   
  La tabla siguiente describe los operadores unarios que admite DMX.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |[-&#40;negativo&#41; &#40;&#41;MDX](../mdx/negative-mdx.md)|Devuelve el valor negativo de una expresión numérica.|  
 |[+ &#40;positivo&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|Devuelve el valor positivo de una expresión numérica.|  

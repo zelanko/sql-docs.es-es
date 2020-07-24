@@ -20,12 +20,12 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2b473019a20a962a41c44aade08e4a1daa2a765
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f97f23edb38e7d97a6da19860cf49ca4fdb1182d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820876"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941387"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,26 +52,86 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>Argumentos    
- *database_id* | NULL | 0 | PREDETERMINADA    
- Identificador de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
+
+:::row:::
+    :::column:::
+        *database_id*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
+  Identificador de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
     
  Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar null para *object_id*, *index_id*y *partition_number*.    
     
  Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md).    
-    
- *object_id* | NULL | 0 | PREDETERMINADA    
+
+:::row:::
+    :::column:::
+        *object_id*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  Identificador de objeto de la tabla o vista donde está activado el índice. *object_id* es **int**.    
     
  Las entradas válidas son el número de identificador de una tabla o vista, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
     
  Especifique NULL para devolver información en memoria caché de todas las tablas y vistas de la base de datos especificada. Si especifica NULL para *object_id*, también debe especificar null para *index_id* y *partition_number*.    
-    
- *index_id* | 0 | NULL | -1 | PREDETERMINADA    
+
+:::row:::
+    :::column:::
+        *index_id*
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        -1
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  Id. del índice. *index_id* es de **tipo int**. Las entradas válidas son el número de identificación de un índice, 0 si *object_id* es un montón, null,-1 o default. El valor predeterminado es -1. NULL, -1 y DEFAULT son valores equivalentes en este contexto.    
     
  Especifique NULL para devolver información en memoria caché de todos los índices de una tabla o vista base. Si especifica NULL para *index_id*, también debe especificar null para *partition_number*.    
-    
- *partition_number* | NULL | 0 | PREDETERMINADA    
+
+:::row:::
+    :::column:::
+        *partition_number*
+    :::column-end:::
+    :::column:::
+        NULL
+    :::column-end:::
+    :::column:::
+        0
+    :::column-end:::
+    :::column:::
+        DEFAULT
+    :::column-end:::
+:::row-end:::
+
  Número de partición en el objeto. *partition_number* es de **tipo int**. Las entradas válidas son las *partion_number* de un índice o montón, null, 0 o default. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
     
  Especifique NULL para devolver información en memoria caché de todas las particiones del índice o montón.    
@@ -128,7 +188,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|Número de páginas que se evaluaron para la compresión en el nivel de página para particiones específicas de una tabla, un índice o una vista indizada. Incluye páginas que no se comprimieron porque no se consiguieron ahorros de espacio significativos. Siempre es 0 para el índice de almacén de columnas.|    
 |**page_compression_success_count**|**bigint**|Número de páginas de datos que se comprimieron utilizando la compresión de páginas para particiones específicas de una tabla, un índice o una vista indizada. Siempre es 0 para el índice de almacén de columnas.|    
     
-## <a name="remarks"></a>Comentarios    
+## <a name="remarks"></a>Observaciones    
  Este objeto de administración dinámica no acepta parámetros correlacionado de CROSS APPLY y OUTER APPLY.    
     
  Puede utilizar **sys.dm_db_index_operational_stats** para realizar el seguimiento del tiempo que los usuarios tienen que esperar para leer o escribir en una tabla, índice o partición, e identificar las tablas o índices que tienen puntos o actividades de E/S importantes.    
@@ -243,7 +303,7 @@ GO
  [Sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)     
  [Sys. dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)     
  [Sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)     
- [Sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)    
     
   

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e1182d174e3281fda944c0b6490b114d4b6f2244
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a4936aeb696f8cca36cad419d7c64198d4b290
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401244"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942544"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Conexión a los nodos del dispositivo en Analytics Platform System
 En este artículo se explican las distintas formas de conectarse a cada nodo en el dispositivo de sistema de plataforma de análisis.  
@@ -30,10 +30,9 @@ Solo se tiene acceso a cada uno de los nodos del dispositivo directamente en esc
 > [!WARNING]  
 > Cambiar la configuración de la base de datos o de la tabla en los nodos de control o de proceso sin el consentimiento explícito del equipo de producto o del equipo de soporte técnico al cliente de APS puede dejar el dispositivo APS fuera del soporte técnico.
   
-|||  
-|-|-|  
-|**Nodo**|**Escenarios de acceso**|  
-|Nodo de control|Use un explorador Web para tener acceso a la consola de administración de, que se ejecuta en el nodo de control. Para más información, consulte [supervisión del dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Todas las herramientas y aplicaciones cliente se conectan al nodo de control, independientemente de si la conexión usa Ethernet o InfiniBand.<br /><br />Para configurar una conexión Ethernet al nodo de control, use la dirección IP del clúster del nodo de control y el puerto **17001**. Por ejemplo, "192.168.0.1, 17001".<br /><br />Para configurar una conexión de InfiniBand al nodo de control, use <strong> *appliance_domain*-SQLCTL01</strong> y el puerto **17001**. Mediante el uso <strong>de *appliance_domain*-SQLCTL01</strong>, el servidor DNS del dispositivo conectará el servidor a la red InfiniBand activa. Para configurar el servidor que no es de dispositivo para usarlo, consulte [configuración de adaptadores de red InfiniBand](configure-infiniband-network-adapters.md).<br /><br />El administrador del dispositivo se conecta al nodo de control para realizar las operaciones de administración. Por ejemplo, el administrador del dispositivo realiza las siguientes operaciones desde el nodo de control:<br /><br />Configure Analytics Platform System con la herramienta de configuración **dwconfig. exe** .|  
+|Nodo|Escenarios de acceso|
+|-|-|
+|Nodo de control|Use un explorador Web para tener acceso a la consola de administración de, que se ejecuta en el nodo de control. Para más información, consulte [supervisión del dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).<br /><br />Todas las herramientas y aplicaciones cliente se conectan al nodo de control, independientemente de si la conexión usa Ethernet o InfiniBand.<br /><br />Para configurar una conexión Ethernet al nodo de control, use la dirección IP del clúster del nodo de control y el puerto **17001**. Por ejemplo, "192.168.0.1, 17001".<br /><br />Para configurar una conexión de InfiniBand al nodo de control, use <strong> *appliance_domain*-SQLCTL01</strong> y el puerto **17001**. Mediante el uso <strong>de *appliance_domain*-SQLCTL01</strong>, el servidor DNS del dispositivo conectará el servidor a la red InfiniBand activa. Para configurar el servidor que no es de dispositivo para usarlo, consulte [configuración de adaptadores de red InfiniBand](configure-infiniband-network-adapters.md).<br /><br />El administrador del dispositivo se conecta al nodo de control para realizar las operaciones de administración. Por ejemplo, el administrador del dispositivo realiza las siguientes operaciones desde el nodo de control:<br /><br />Configure Analytics Platform System con la herramienta de configuración de **dwconfig.exe** .|  
 |Nodo de ejecución|El nodo de control dirige las conexiones del nodo de proceso. Las direcciones IP de los nodos de proceso nunca se escriben en los comandos de la aplicación como parámetros.<br /><br />En el caso de carga, copia de seguridad, copia de tabla remota y Hadoop, PDW de SQL Server envía o recibe datos directamente en paralelo entre los nodos de proceso y los nodos o servidores que no son del dispositivo. Estas aplicaciones se conectan con PDW de SQL Server mediante la conexión al nodo de control y, a continuación, el nodo de control dirige PDW de SQL Server para establecer la comunicación entre los nodos de proceso y el servidor que no es de la aplicación.<br /><br />Por ejemplo, estas operaciones de transferencia de datos se producen en paralelo con conexiones directas a los nodos de proceso:<br /><br />Cargando del servidor de carga a PDW de SQL Server.<br /><br />Realizar una copia de seguridad de una base de datos de PDW de SQL Server en el servidor de copia de seguridad.<br /><br />Restaurar una base de datos del servidor de copia de seguridad en PDW de SQL Server.<br /><br />Consultar datos de Hadoop desde PDW de SQL Server.<br /><br />Exportar datos de PDW de SQL Server a una tabla de Hadoop externa.<br /><br />Copiar una tabla de PDW de SQL Server en una base de datos de SQL Server SMP remota.|  
   
 ## <a name="connecting-to-the-ethernet-and-infiniband-networks"></a>Conexión a las redes Ethernet e InfiniBand  

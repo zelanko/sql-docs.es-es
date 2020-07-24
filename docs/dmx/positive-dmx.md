@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0af6adc37c178b4a218fb98f8c846f1e265a523
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 15ad0b4e96eed91830f1d27c324671bc74bf25ed
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669222"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971617"
 ---
 # <a name="-positive-dmx"></a>+ (Positivo) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Realiza una operación unaria que devuelve el valor positivo de una expresión numérica.  
   

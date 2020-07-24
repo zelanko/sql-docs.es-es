@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dc1ae000166f075a3c6bac347cd7e3e8a605042b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cdbefcfeb6d638998ec2e0a01b8da5ca40f2aeaf
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670372"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971583"
 ---
 # <a name="usage-dmx"></a>Uso (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Al utilizar extensiones de minería de datos (DMX) para definir un nuevo modelo de minería de datos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , debe especificar cómo usará cada columna el algoritmo de minería de datos que genera el modelo. Puede especificar los siguientes tipos para una columna:  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716348"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918949"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Agrega una suscripción a una publicación y define el estado del suscriptor. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -96,7 +96,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|ninguno|El suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas.<br /><br /> Nota: esta opción está en desuso. En su lugar, utilice replication support only.|  
+|Ninguna|El suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas.<br /><br /> Nota: esta opción está en desuso. En su lugar, utilice replication support only.|  
 |automatic (predeterminado)|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
 |replication support only|Proporciona la generación automática en el suscriptor de los desencadenadores y procedimientos almacenados personalizados de artículos que admiten las suscripciones de actualización, si es apropiado. Supone que el suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas. Al configurar una topología de replicación transaccional punto a punto, asegúrese de que los datos de todos los nodos de la topología son idénticos. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *No se admite para las suscripciones a publicaciones que no son de SQL Server.*|  
 |initialize with backup|El esquema y los datos iniciales de las tablas publicadas se obtienen de una copia de seguridad de la base de datos de publicaciones. Se da por supuesto que el suscriptor tiene acceso a una copia de seguridad de la base de datos de publicaciones. La ubicación de la copia de seguridad y el tipo de medio para la copia de seguridad se especifican mediante *backupdevicename* y *backupdevicetype*. Cuando se utiliza esta opción, la topología de replicación transaccional punto a punto no debe detenerse durante la configuración.<br /><br /> *No se admite para las suscripciones a publicaciones que no son de SQL Server.*|  
@@ -163,8 +163,8 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|1|First|  
-|2|Second|  
+|1|Primero|  
+|2|Segundo|  
 |4|Tercero|  
 |8|Cuarto|  
 |16|Último|  
@@ -179,9 +179,9 @@ sp_addsubscription [ @publication = ] 'publication'
 |Valor|Descripción|  
 |-----------|-----------------|  
 |1|Una sola vez|  
-|2|Second|  
+|2|Segundo|  
 |4|Minute|  
-|8|Hora|  
+|8|Hour|  
 |NULL||  
   
  [ @frequency_subday_interval =] *frequency_subday_interval*  
@@ -295,7 +295,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>Observaciones  
  sp_addsubscription se utiliza en la replicación de instantáneas y transaccional.  
   
- Cuando un miembro del rol fijo de servidor sysadmin ejecuta sp_addsubscription para crear una suscripción de inserción, se crea implícitamente el trabajo del Agente de distribución y se ejecuta en la cuenta de servicio del Agente SQL Server. Se recomienda ejecutar [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) y especificar las credenciales de una cuenta de Windows diferente específica del agente para @job_login y @job_password . Para obtener más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Cuando un miembro del rol fijo de servidor sysadmin ejecuta sp_addsubscription para crear una suscripción de inserción, se crea implícitamente el trabajo del Agente de distribución y se ejecuta en la cuenta de servicio del Agente SQL Server. Se recomienda ejecutar [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) y especificar las credenciales de una cuenta de Windows diferente específica del agente para @job_login y @job_password . Para más información, consulte [Modelo de seguridad del agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  sp_addsubscription impide que los suscriptores ODBC y OLE DB tengan acceso a publicaciones que:  
   
@@ -320,7 +320,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear una suscripción de extracción](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Crear una suscripción para un suscriptor que no sea de SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   

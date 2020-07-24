@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666696"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970693"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve valores futuros de predicción para datos de series temporales. Los datos de series temporales son continuos y pueden almacenarse en una tabla anidada o en una tabla de casos. La función **PredictTimeSeries** siempre devuelve una tabla anidada.  
   
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- * \<>de referencia de columna de tabla *,>de referencia de * \< columna escalar*  
+ *\<table column reference>*, *\<scalar column referenc>*  
  Especifica el nombre de la columna que se va a predecir. La columna puede contener datos escalares o tabulares.  
   
  *n*  
@@ -52,7 +52,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n-end* debe ser un entero mayor que *n-Start*.  
   
- *\<>de consulta de origen*  
+ *\<source query>*  
  Define los datos externos que se utilizan para realizar las predicciones.  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -65,7 +65,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Estos argumentos solo se pueden utilizar cuando se agregan datos nuevos mediante una instrucción PREDICTION JOIN. Si usa una consulta PREDICTION JOIN y no especifica un argumento, el valor predeterminado es EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- > una \< *expresión de tabla* .  
+ Un objeto \<*table expression*>.  
   
 ## <a name="remarks"></a>Observaciones  
  El algoritmo de serie temporal [!INCLUDE[msCoName](../includes/msconame-md.md)] no admite la predicción histórica cuando se utiliza la instrucción PREDICTION JOIN para agregar datos.  

@@ -20,12 +20,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717448"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943072"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,17 +60,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *schema_name. referenciado*_*entity_name*  
- Es el nombre de la entidad a la que se hace referencia.  
+ `schema_name.referenced_entity_name`Es el nombre de la entidad a la que se hace referencia.  
   
- *schema_name* es necesario excepto cuando se PARTITION_FUNCTION la clase a la que se hace referencia.  
+ `schema_name` se requiere excepto cuando la clase a la que se hace referencia es PARTITION_FUNCTION.  
   
- *schema_name. referenced_entity_name* es **nvarchar**.  
+ `schema_name.referenced_entity_name`es de tipo **nvarchar (**-bajo).  
   
- *<referenced_class>* :: = {Object | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
- Es la clase de la entidad a la que se hace referencia. Solo se puede especificar una clase por instrucción.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`Es la clase de la entidad a la que se hace referencia. Solo se puede especificar una clase por instrucción.  
   
- *<referenced_class>* es **nvarchar**(60).  
+ `<referenced_class>`es de tipo **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
@@ -96,7 +94,7 @@ sys.dm_sql_referencing_entities (
   
  Devuelve un error si la entidad especificada a la que se hace referencia es un procedimiento almacenado numerado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La tabla siguiente enumera los tipos de entidades para las que se crea y mantiene la información de dependencia. La información de dependencia no se crea ni mantiene para reglas, valores predeterminados, tablas temporales, procedimientos almacenados temporales u objetos del sistema.  
   
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  

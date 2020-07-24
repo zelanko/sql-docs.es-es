@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68e9625b1e5acb7ef0d7b8d1389895d8a96dcbef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 24d86b384a1eb2916e488c17c99e4b9b5962dd1a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763826"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942727"
 ---
 # <a name="name-property-adox"></a>Name (propiedad, ADOX)
 Indica el nombre del objeto.  
@@ -65,13 +65,25 @@ Indica el nombre del objeto.
 >  En el caso de las claves, esta propiedad es de solo lectura en objetos de **clave** ya anexados a una colección. En el caso de las tablas, esta propiedad es de solo lectura para los objetos de **tabla** ya anexados a una colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-||||  
-|-|-|-|  
-|[Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-|[Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+        [Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+        [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+        [Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de propiedad Name, métodos Append de columnas y tablas (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Ejemplo de las propiedades de método Append, tipo de clave, RelatedColumn, RelatedTable y UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

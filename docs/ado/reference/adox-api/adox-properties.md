@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6441c637b371cb059ebaad94380d6bfd4f24c8f9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764106"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942820"
 ---
 # <a name="adox-properties"></a>Propiedades ADOX
 
-|||  
+|Propiedad|Descripción|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica el objeto de **conexión** ADO al que pertenece el catálogo.|  
 |[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Describe las características de las columnas.|  
-|[Agrupado](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica si el índice está agrupado.|  
+|[En clúster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica si el índice está agrupado.|  
 |[Comando](../../../ado/reference/adox-api/command-property-adox.md)|Especifica un objeto **Command** de ADO que se puede utilizar para crear o ejecutar el procedimiento.|  
 |[Recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica la fecha de creación del objeto.|  

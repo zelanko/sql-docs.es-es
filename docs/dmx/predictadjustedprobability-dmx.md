@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 735df047307f78c238fbf29669f0e0b1e0933e37
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669293"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971571"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Devuelve la probabilidad ajustada de un estado especificado.  
   
@@ -34,9 +34,9 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
  Un valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
- Si se omite el estado predicho, se usa el estado que tiene la mayor probabilidad de predicción, sin incluir el depósito de estados que falta. Para incluir el depósito de Estados que faltan, establezca el \<> de estado de predicción en **INCLUDE_NULL**.  
+ Si se omite el estado predicho, se usa el estado que tiene la mayor probabilidad de predicción, sin incluir el depósito de estados que falta. Para incluir el depósito de Estados que faltan, establezca \<predicted state> en **INCLUDE_NULL**.  
   
- Para devolver la probabilidad ajustada de los Estados que faltan, establezca el \<> de estado de predicción en NULL.  
+ Para devolver la probabilidad ajustada para los Estados que faltan, establezca \<predicted state> en NULL.  
   
  La función **PredictAdjustedProbability** es una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensión del [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para la especificación de minería de datos.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8862cc58889c4446c23e994a9c8e0f6a54a50d38
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 30de657985eafdc5a601d61fedbd666455f3dbc9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751967"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941067"
 ---
 # <a name="internettimeout-property-rds"></a>Propiedad InternetTimeout (RDS)
 Indica el número de milisegundos que hay que esperar antes de que se agote el tiempo de espera de una solicitud.  
@@ -29,17 +29,22 @@ Indica el número de milisegundos que hay que esperar antes de que se agote el t
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor **Long** que representa el número de milisegundos antes de que se agote el tiempo de espera de una solicitud.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta propiedad solo se aplica a las solicitudes enviadas con los protocolos HTTP o HTTPS.  
   
  Las solicitudes en un entorno de tres niveles pueden tardar varios minutos en ejecutarse. Utilice esta propiedad para especificar el tiempo adicional para las solicitudes de ejecución prolongada.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de la propiedad InternetTimeout (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [Ejemplo de la propiedad InternetTimeout (VC ++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   

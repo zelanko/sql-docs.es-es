@@ -22,7 +22,7 @@ ms.locfileid: "86968745"
   
  En la siguiente tabla se describen los operadores de comparación que admite DMX.  
   
-|Operador|Descripción|  
+|Operator|Descripción|  
 |--------------|-----------------|  
 |[&#60; &#40;menor que&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|En el caso de argumentos que se evalúan como un valor no NULL, devuelve TRUE si el valor del argumento de la izquierda es menor que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  
 |[&#62; &#40;mayor que&#41; &#40;DMX&#41;](../dmx/greater-than-dmx.md)|En el caso de argumentos que se evalúan como un valor no NULL, devuelve TRUE si el valor del argumento de la izquierda es mayor que el valor del argumento de la derecha; de lo contrario, devuelve FALSE. Si un argumento o ambos argumentos se evalúan como un valor NULL, el operador devuelve un valor NULL.|  

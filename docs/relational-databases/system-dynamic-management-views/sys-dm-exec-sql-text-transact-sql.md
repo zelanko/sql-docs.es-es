@@ -20,12 +20,12 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ee50d943daf4f5970c162788659092ad31ef8c6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734657"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943109"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,7 +85,7 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE` en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 En el caso de las consultas ad hoc, los identificadores SQL son valores hash basados en el texto SQL que se envía al servidor y pueden proceder de cualquier base de datos. 
 
 Para los objetos de base de datos, como procedimientos almacenados, desencadenadores o funciones, los identificadores SQL se derivan del identificador de base de datos, del identificador de objeto y del número de objeto. 
@@ -110,7 +110,7 @@ Ejecute el siguiente T-SQL en una nueva ventana de consulta de [!INCLUDE[ssManSt
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  Usar **Cross Apply**.  
+  2.  Usar **Cross Apply**.  
     La sql_handle de **Sys. dm_exec_requests** se pasará a **Sys. DM_EXEC_SQL_TEXT** mediante **Cross Apply**. Abra una nueva ventana de consulta y pase el SPID identificado en el paso 1. En este ejemplo, el SPID es `59` .
 
         ```sql
@@ -120,7 +120,7 @@ Ejecute el siguiente T-SQL en una nueva ventana de consulta de [!INCLUDE[ssManSt
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  Pasar **sql_handle** directamente.  
+  2.  Pasar **sql_handle** directamente.  
 Adquiera el **sql_handle** de **Sys. dm_exec_requests**. A continuación, pase el **sql_handle** directamente a **Sys. dm_exec_sql_text**. Abra una nueva ventana de consulta y pase el SPID identificado en el paso 1 a **Sys. dm_exec_requests**. En este ejemplo, el SPID es `59` . A continuación, pase el **sql_handle** devuelto como argumento a **Sys. dm_exec_sql_text**.
 
         ```sql
@@ -178,11 +178,11 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulta también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [Sys. dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [Sys. dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [Sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   

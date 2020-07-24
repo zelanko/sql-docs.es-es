@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94cc5b07c97bd5c8d7c7ae6c30c179e2555b95d5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4287e836dd46c579ee81a4baf0e175e8b49acf67
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762786"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942643"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions (método, ADOX)
 Especifica los permisos para un [Grupo](../../../ado/reference/adox-api/group-object-adox.md) o [usuario](../../../ado/reference/adox-api/user-object-adox.md) en un objeto.  
@@ -39,7 +39,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *Nombre*  
  Valor de **cadena** que especifica el nombre del objeto para el que se van a establecer los permisos.  
   
- *Tipodeobjeto*  
+ *ObjectType*  
  Un valor **Long** que puede ser una de las constantes [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , que especifica el tipo del objeto para el que se van a obtener permisos.  
   
  *Acción*  
@@ -61,11 +61,16 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 >  Al llamar a **SetPermissions**, al establecer Actions en **adAccessRevoke** se invalida cualquier configuración del parámetro *Rights* . No establezca *acciones* en **adAccessRevoke** si quiere que los derechos especificados en el parámetro *Rights* surtan efecto.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de métodos GetPermissions y SetPermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [GetPermissions (método) (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   

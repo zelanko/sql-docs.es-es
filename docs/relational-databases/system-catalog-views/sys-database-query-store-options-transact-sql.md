@@ -21,19 +21,19 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce2cbf99a62ca8515e596bf4b392315c6b5945b2
-ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+ms.openlocfilehash: 6673b9d0c235f7a38e04d534bf4358585a5b0bd2
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84112317"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942580"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>Sys. database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Devuelve las opciones de Almacén de consultas para esta base de datos.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -45,8 +45,8 @@ ms.locfileid: "84112317"
 |**current_storage_size_mb**|**bigint**|Tamaño de Almacén de consultas en el disco en megabytes.|  
 |**flush_interval_seconds**|**bigint**|El período de vaciado normal de Almacén de consultas datos en el disco en segundos. El valor predeterminado es **900** (15 min).<br /><br /> Cambie mediante la `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` instrucción.|  
 |**interval_length_minutes**|**bigint**|El intervalo de agregación de estadísticas en minutos. No se permiten valores arbitrarios. Use uno de los siguientes: 1, 5, 10, 15, 30, 60 y 1440 minutos. El valor predeterminado es de **60** minutos.|  
-|**max_storage_size_mb**|**bigint**|Tamaño máximo del disco para la Almacén de consultas en megabytes (MB). El valor predeterminado es **100** MB.<br />Para la [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Edición Premium, el valor predeterminado es 1 GB y, para la [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edición Basic, el valor predeterminado es 10 MB.<br /><br /> Cambie mediante la `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` instrucción.|  
-|**stale_query_threshold_days**|**bigint**|Número de días que las consultas sin configuración de directivas se mantienen en Almacén de consultas. El valor predeterminado es **30**. Establézcalo en 0 para deshabilitar la Directiva de retención.<br />En la edición básica de [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] , el valor predeterminado es 7 días.<br /><br /> Cambie mediante la `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` instrucción.|  
+|**max_storage_size_mb**|**bigint**|Tamaño máximo del disco para la Almacén de consultas en megabytes (MB). El valor predeterminado es **100** MB hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y **1 GB** a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br />Para la [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Edición Premium, el valor predeterminado es 1 GB y, para la [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] edición Basic, el valor predeterminado es 10 MB.<br /><br /> Cambie mediante la `ALTER DATABASE <database> SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <size>)` instrucción.|  
+|**stale_query_threshold_days**|**bigint**|Número de días que se conserva la información de una consulta en el Almacén de consultas. El valor predeterminado es **30**. Establézcalo en 0 para deshabilitar la Directiva de retención.<br />En la edición básica de [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] , el valor predeterminado es 7 días.<br /><br /> Cambie mediante la `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` instrucción.|  
 |**max_plans_per_query**|**bigint**|Limita el número máximo de planes almacenados. El valor predeterminado es **200**. Si se alcanza el valor máximo, Almacén de consultas deja de capturar nuevos planes para esa consulta. Si se establece en 0, se quita la limitación con respecto al número de planes capturados.<br /><br /> Cambie mediante la `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` instrucción.|  
 |**query_capture_mode**|**smallint**|El modo de captura de consulta actualmente activo:<br /><br /> **1** = todas las consultas se capturan. Este es el valor de configuración predeterminado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores).<br /><br /> 2 = captura automática de consultas relevantes según el recuento de ejecución y el consumo de recursos. Es el valor de configuración predeterminado para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = ninguno: detiene la captura de nuevas consultas. El almacén de consultas seguirá recopilando estadísticas de compilación y tiempo de ejecución para las consultas que ya se capturaron. Use esta configuración con precaución, ya que puede que se pierda la captura de consultas importantes.|  
 |**query_capture_mode_desc**|**nvarchar(60)**|Descripción textual del modo de captura real de Almacén de consultas:<br /><br /> TODOS (valor predeterminado para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /><br /> **Auto** (valor predeterminado para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> Ninguno|  

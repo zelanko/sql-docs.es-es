@@ -1,1 +1,0 @@
-Almacenamiento de datos paralelo de SQL Server 2008 R2

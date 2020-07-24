@@ -1,1 +1,0 @@
-Esta característica se quitará en la versión siguiente de Microsoft SQL Server. No utilice esta característica en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que actualmente la utilizan.

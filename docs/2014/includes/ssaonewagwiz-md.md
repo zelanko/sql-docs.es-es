@@ -1,1 +1,0 @@
-Asistente para nuevo grupo de disponibilidad

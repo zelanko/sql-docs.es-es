@@ -1,1 +1,0 @@
-Asistente para grupo de disponibilidad de conmutación por error

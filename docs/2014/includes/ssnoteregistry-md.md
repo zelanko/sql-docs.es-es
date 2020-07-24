@@ -1,1 +1,0 @@
-Una modificación incorrecta del Registro puede provocar daños graves en el sistema. Antes de efectuar cambios en el Registro, es recomendable que realice una copia de seguridad de los datos importantes del equipo.

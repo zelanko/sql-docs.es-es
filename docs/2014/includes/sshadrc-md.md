@@ -1,1 +1,0 @@
-Grupos de disponibilidad AlwaysOn

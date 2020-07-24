@@ -1,5 +1,5 @@
 ---
-title: Supervisión con SCOM
+title: Configurar System Center Operations Manager para supervisar APS
 description: Siga estos pasos para configurar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System. Los módulos de administración son necesarios para supervisar Analytics Platform System desde SCOM.
 author: mzaman1
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0786cbc8230ecf29dd377a35fefc6969072512b3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401298"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942217"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configuración de System Center Operations Manager (SCOM) para supervisar el sistema de análisis de plataforma
 Siga estos pasos para configurar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System. Los módulos de administración son necesarios para supervisar Analytics Platform System desde SCOM.  
@@ -37,7 +37,7 @@ Aquí encontrará instrucciones detalladas sobre cómo realizar las tareas:
   
 1.  Cree la cuenta de ejecución del **monitor APS** con el tipo de cuenta de **Windows** para el usuario del dominio del **monitor APS** .  
   
-    1.  Vaya al panel **Administración** , haga clic con el botón derecho en**las cuentas** de **configuración** -> de ejecución y seleccione **crear cuenta de ejecución..** .  
+    1.  Vaya al panel **Administración** , haga clic con el botón derecho en las cuentas de **configuración de ejecución**  ->  **Accounts** y seleccione **crear cuenta de ejecución..** .  
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
@@ -61,7 +61,7 @@ Aquí encontrará instrucciones detalladas sobre cómo realizar las tareas:
   
 2.  Establezca el perfil de **cuenta del observador de Microsoft APS** para usar la cuenta de ejecución del **monitor APS** .  
   
-    1.  Vaya a **Administración** -> **Ejecutar como perfiles de configuración** -> **Profiles**.  
+    1.  Vaya a **Administración**  ->  **Ejecutar como perfiles de configuración**  ->  **Profiles**.  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
@@ -81,7 +81,7 @@ Aquí encontrará instrucciones detalladas sobre cómo realizar las tareas:
   
 3.  Espere hasta que se complete la detección de dispositivos APS.  
   
-    1.  Navegue hasta el panel **supervisión** y abra la vista**de estado de** la **aplicación** -> SQL Server**Microsoft Analytics Platform System** -> Appliances.  
+    1.  Navegue hasta el panel **supervisión** y abra la vista de estado de la **aplicación SQL Server**  ->  **Microsoft Analytics Platform System**  ->  **Appliances** .  
   
         ![SqlServerApplianceMicrosoftApsAppliances](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "SqlServerApplianceMicrosoftApsAppliances")  
   

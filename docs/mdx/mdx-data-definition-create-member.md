@@ -1,6 +1,6 @@
 ---
 title: CREATE MEMBER (instrucción, MDX) | Microsoft Docs
-ms.date: 06/04/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ca2c664246dfeab8070337a0daf818fb0a3327c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69494073"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110154"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definición de datos de MDX: CREATE MEMBER
 
@@ -105,7 +105,7 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>Propiedades estándar  
- Cada miembro calculado tiene un conjunto de propiedades predeterminadas. Cuando una aplicación cliente se conecta a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], se admiten las propiedades predeterminadas o están disponibles para admitirse, como elige el administrador.  
+ Cada miembro calculado tiene un conjunto de propiedades predeterminadas. Cuando una aplicación cliente se conecta a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , se admiten las propiedades predeterminadas o están disponibles para admitirse, como elige el administrador.  
   
  Puede haber otras propiedades de miembro adicionales disponibles, según la definición del cubo. Las siguientes propiedades representan información relevante para el nivel de dimensión del cubo.  
   
@@ -114,9 +114,9 @@ WHERE ProfitRatio
 |SOLVE_ORDER|Orden de resolución del miembro calculado en aquellos casos en los que un miembro calculado haga referencia a otro miembro calculado (es decir, cuando exista una intersección de miembros calculados).|  
 |FORMAT_STRING|Cadena de formato de estilo de Office que la aplicación cliente puede usar al mostrar valores de celda.|  
 |VISIBLE|Valor que indica si el miembro calculado es visible en el conjunto de filas del esquema. Los miembros calculados visibles se pueden agregar a un conjunto con la función [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Un valor distinto de cero indica que el miembro calculado es visible. El valor predeterminado de esta propiedad es *visible*.<br /><br /> Los miembros calculados no visibles (cuando el valor se establece en cero) suelen utilizarse como pasos intermedios en miembros calculados más complejos. También otros tipos de miembro, como las medidas, pueden hacer referencia a estos miembros calculados.|  
-|NON_EMPTY_BEHAVIOR|Medida o conjunto utilizados para determinar el comportamiento de los miembros calculados al resolver celdas vacías.<br /><br /> ** \* ADVERTENCIA de \* \* ** Esta propiedad está en desuso. No la active. Consulte [características Desusadas Analysis Services en SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) para obtener más información.|  
+|NON_EMPTY_BEHAVIOR|Medida o conjunto utilizados para determinar el comportamiento de los miembros calculados al resolver celdas vacías.<br /><br /> ADVERTENCIA: esta propiedad está en desuso. ** \* \* \* \* ** No la active. Consulte [características Desusadas Analysis Services en SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) para obtener más información.|  
 |CAPTION|Cadena que utiliza la aplicación cliente como título para el miembro.|  
-|DISPLAY_FOLDER|Cadena que identifica la ruta de la carpeta que usa la aplicación cliente para mostrar el miembro. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]por, la barra diagonal\\inversa () es el separador de nivel. Si va a asignar varias carpetas para mostrar a un miembro definido, utilice un punto y coma (;) para separar las carpetas.|  
+|DISPLAY_FOLDER|Cadena que identifica la ruta de la carpeta que usa la aplicación cliente para mostrar el miembro. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barra diagonal inversa ( \\ ) es el separador de nivel. Si va a asignar varias carpetas para mostrar a un miembro definido, utilice un punto y coma (;) para separar las carpetas.|  
 |ASSOCIATED_MEASURE_GROUP|Nombre del grupo de medida al que se asocia el miembro.|  
   
 ## <a name="see-also"></a>Consulte también  

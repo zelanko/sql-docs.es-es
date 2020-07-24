@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a11adb93f3de8f0887eefe964f1c85836ccc43e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3291b5ca72ab984ecd8487612384ece6d5b76f9a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750585"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942282"
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
 Envía los cambios pendientes del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) actualizado en caché local al origen de datos especificado en la propiedad [Connect](../../../ado/reference/rds-api/connect-property-rds.md) o la propiedad [URL](../../../ado/reference/rds-api/url-property-rds.md) .  
@@ -46,7 +46,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataRecordsets*  
  Variable de objeto que representa un objeto de **conjunto de registros** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Se deben establecer las propiedades [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md)y [SQL](../../../ado/reference/rds-api/sql-property.md) antes de poder utilizar el método **SubmitChanges** con **RDS. Objeto DataControl** .  
   
  Si llama al método [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) después de haber llamado a **SubmitChanges** para el mismo objeto de **conjunto de registros** , se produce un error en la llamada a **CancelUpdate** porque los cambios ya se han confirmado.  
@@ -58,11 +58,16 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  Si se ha establecido la propiedad **URL** , **SubmitChanges** enviará los cambios a la ubicación especificada por la dirección URL.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo del método SubmitChanges (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [Botones de comando de la libreta de direcciones](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

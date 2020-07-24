@@ -58,7 +58,7 @@ Muestra alertas de hardware y software.
 Recursos  
 Muestra una lista de bloqueos de recursos de PDW y su estado actual.  
   
-Storage  
+Almacenamiento  
 Resume el uso del almacenamiento de PDW.  
   
 Monitor de rendimiento  

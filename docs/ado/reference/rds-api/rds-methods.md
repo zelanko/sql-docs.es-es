@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97af6e8394ac8371f2ddd1baff2363079c898f84
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c178bae1f3da5ccc6ca4cfdd6b5645335141908f
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758551"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942307"
 ---
 # <a name="rds-methods"></a>Métodos RDS
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|||  
+|Método|Descripción|  
 |-|-|  
 |[Cancelar (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Cancela la ejecución de una llamada de método pendiente y asincrónica.|  
 |[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Cancela los cambios realizados en la fila actual o nueva de un objeto de **conjunto de registros** .|  

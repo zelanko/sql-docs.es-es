@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21d6e73f79c2cb8c1c0a749f4d8e849d644c8291
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 400d6f484ee80d9b4b1244aad6b91c8836aa95d4
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891587"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977724"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_monitor
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |**last_run**|Hora **sp_monitor** la última vez que se ejecutó.|  
 |**current_run**|Tiempo **sp_monitor** se está ejecutando.|  
-|**segundos**|Número de segundos transcurridos desde que se ejecutó **sp_monitor** .|  
+|**s**|Número de segundos transcurridos desde que se ejecutó **sp_monitor** .|  
 |**cpu_busy**|Número de segundos durante los que la CPU del equipo servidor ha realizado trabajos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**io_busy**|Número de segundos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha invertido en realizar operaciones de E/S.|  
 |**activos**|Número de segundos durante los que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha estado inactivo.|  
@@ -59,7 +59,7 @@ sp_monitor
 |**total_errors**|Número de errores que ha encontrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al leer y escribir.|  
 |**connections**|Número de inicios de sesión o intentos de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  A través de una serie de funciones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza el seguimiento del trabajo que ha realizado. Al ejecutar **sp_monitor** se muestran los valores actuales devueltos por estas funciones y se muestra cuánto han cambiado desde la última vez que se ejecutó el procedimiento.  
   
  Para cada columna, la estadística se imprime con el formato *número*(*número*)-*número*% o *número*(*número*). El primer *número* hace referencia al número de segundos (por **cpu_busy**, **io_busy**e **inactivo**) o el número total (para las demás variables) desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinició. El *número* entre paréntesis hace referencia al número de segundos o al número total transcurridos desde la última vez que se ejecutó **sp_monitor** . El porcentaje es el porcentaje de tiempo transcurrido desde la última vez que se ejecutó **sp_monitor** . Por ejemplo, si el informe muestra **cpu_busy** como 4250 (215)-68%, la CPU ha estado ocupada 4250 segundos desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez, 215 segundos desde la última vez que se ejecutó **sp_monitor** , y el 68% del tiempo total transcurrido desde la última vez que se ejecutó la **sp_monitor** .  
@@ -70,32 +70,30 @@ sp_monitor
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se informa acerca la ocupación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```console
 USE master  
 EXEC sp_monitor  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-||||  
-|-|-|-|  
-|**last_run**|**current_run**|**segundos**|  
-|29 mar 1998 11:55 a. m.|4 abr 1998 2:22 p. m.|561|  
-  
-||||  
-|-|-|-|  
-|**cpu_busy**|**io_busy**|**activos**|  
-|190 (0)-0%|187 (0)-0%|148 (556): 99%|  
-  
-||||  
-|-|-|-|  
-|**packets_received**|**packets_sent**|**packet_errors**|  
-|16 (1)|20 (2)|0 (0)|  
-  
-|||||  
-|-|-|-|-|  
-|**total_read**|**total_write**|**total_errors**|**connections**|  
-|141 (0)|54920 (127)|0 (0)|4 (0)|  
+
+```console
+last_run       current_run                   seconds
+-----------    --------------------------    ---------
+Mar 29 1998    11:55AM Apr 4 1998 2:22 PM    561
+
+cpu_busy           io_busy     idle
+---------------    ---------   --------------
+190(0)-0%          187(0)-0%   148(556)-99%
+
+packets_received       packets_sent    packet_errors
+----------------       ------------    -------------
+16(1)                  20(2)           0(0)
+
+total_read     total_write   total_errors    connections
+-----------    -----------   -------------   -----------
+141(0)         54920(127)    0(0)            4(0)
+```
   
 ## <a name="see-also"></a>Consulte también  
  [sp_who &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   

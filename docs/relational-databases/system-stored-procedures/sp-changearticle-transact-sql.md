@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717398"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977558"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -70,7 +70,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**Ninguna**|No usa ningún comando.|  
 ||**omisiones**|Quita la tabla de destino.|  
 ||**delete**|Elimina la tabla de destino.|  
-||**truncar**|Trunca la tabla de destino.|  
+||**truncate**|Trunca la tabla de destino.|  
 |**pub_identity_range**||Controla el tamaño de los intervalos de identidad asignados en el suscriptor. No se admite para la replicación punto a punto.|  
 |**schema_option**||Especifica el mapa de bits de la opción de generación del esquema para el artículo especificado. *schema_option* es **binario (8)**. Para obtener más información, vea la sección Comentarios más adelante en este tema.|  
 ||**0x00**|Deshabilita el scripting del Agente de instantáneas.|  
@@ -165,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changearticle** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
  Cuando un artículo pertenece a una publicación que admite la replicación transaccional punto a punto, solo se pueden cambiar las propiedades **Description**, **ins_cmd**, **upd_cmd**y **del_cmd** .  
@@ -210,9 +210,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>Opciones de esquema válidas  
  En la tabla siguiente se describen los valores permitidos de *schema_option* en función del tipo de replicación (que se muestra en la parte superior) y el tipo de artículo (que se muestra en la primera columna).  
   
-|Tipo de artículo|Tipo de replicación||  
-|------------------|----------------------|------|  
-||Transaccional|Depurador de|  
+| Tipo de artículo | Tipo de replicación: transaccional | Tipo de replicación: instantánea |
+| ------------ | -------------------------------- | --------------------------- |
 |**logbased**|Todas las opciones|Todas las opciones pero **0x02**|  
 |**logbased manualfilter**|Todas las opciones|Todas las opciones pero **0x02**|  
 |**logbased manualview**|Todas las opciones|Todas las opciones pero **0x02**|  
@@ -238,11 +237,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del artículo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [Cambiar las propiedades de la publicación y del artículo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

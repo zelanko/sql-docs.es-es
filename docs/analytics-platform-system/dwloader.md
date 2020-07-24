@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401174"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942347"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de línea de comandos de dwloader para almacenamiento de datos paralelos
 **dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga masivamente filas de tabla en una tabla existente. Al cargar filas, puede agregar todas las filas al final de la tabla (modo*Append* o *modo fastappend*), anexar nuevas filas y actualizar las filas existentes (*modo Upsert*) o eliminar todas las filas existentes antes de cargarlas y, a continuación, insertar todas las filas en una tabla vacía (*modo de recarga*).  
@@ -43,7 +43,7 @@ ms.locfileid: "74401174"
   
 5.  Ejecute **dwloader**.  
   
-    Inicie sesión en el servidor de carga y ejecute el archivo ejecutable **dwloader. exe** con las opciones de línea de comandos adecuadas.  
+    Inicie sesión en el servidor de carga y ejecute el **dwloader.exe** ejecutable con las opciones de línea de comandos adecuadas.  
   
 6.  Compruebe los resultados.  
   
@@ -123,7 +123,7 @@ Muestra información de ayuda sencilla sobre el uso del cargador. La ayuda solo 
 **-U** *login_name*  
 Un inicio de sesión de autenticación de SQL Server válido con los permisos adecuados para realizar la carga.  
   
-**-P** *contraseña*  
+**-P** *password*  
 La contraseña de un *login_name*de autenticación de SQL Server.  
   
 **-W**  
@@ -136,7 +136,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 Use un archivo de parámetros, *parameter_file_name*, en lugar de los parámetros de línea de comandos. *parameter_file_name* puede contener cualquier parámetro de línea de comandos excepto *user_name* y *contraseña*. Si se especifica un parámetro en la línea de comandos y en el archivo de parámetros, la línea de comandos invalida el parámetro de archivo.  
   
-El archivo de parámetros contiene un parámetro, sin **-** el prefijo, por línea.  
+El archivo de parámetros contiene un parámetro, sin el **-** prefijo, por línea.  
   
 Ejemplos:  
   
@@ -195,21 +195,21 @@ Para cargar varios archivos con un comando:
   
 Ejemplos:  
   
--   -i \\\loadserver\loads\daily\\*. gz  
+-   -i \\ \loadserver\loads\daily \\ *. gz  
   
--   -i \\\loadserver\loads\daily\\*. txt  
+-   -i \\ \loadserver\loads\daily \\ *. txt  
   
--   -i \\\loadserver\loads\daily\monday. *  
+-   -i \\ \loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
--   -i \\\loadserver\loads\daily\\*  
+-   -i \\ \loadserver\loads\daily\\*  
   
 **-R** *load_failure_file_name*  
 Si hay errores de carga, **dwloader** almacena la fila que no se pudo cargar y la descripción del error en un archivo denominado *load_failure_file_name*. Si este archivo ya existe, dwloader sobrescribirá el archivo existente. *load_failure_file_name* se crea cuando se produce el primer error. Si todas las filas se cargan correctamente, no se crea *load_failure_file_name* .  
   
 **-fh** *number_header_rows*  
-Número de líneas (filas) que se van a omitir al principio de *source_data_file_name*. El valor predeterminado es 0.  
+Número de líneas (filas) que se van a omitir al principio de *source_data_file_name*. El valor predeterminado es 0.  
   
 <variable_length_column_options>  
 Opciones de un *source_data_file_name* que tiene columnas de longitud variable delimitada por caracteres. De forma predeterminada, *source_data_file_name* contiene caracteres ASCII en columnas de longitud variable.  
@@ -290,9 +290,9 @@ Ruta de acceso y nombre del archivo de configuración que especifica el número 
   
 Este archivo debe residir en el servidor de carga. La ruta de acceso puede ser una ruta de acceso UNC, relativa o absoluta. Cada línea de *fixed_width_config_file* contiene el nombre de una columna y el número de caracteres de dicha columna. Hay una línea por columna, como se indica a continuación, y el orden del archivo debe coincidir con el orden de la tabla de destino:  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
-*column_name*=*num_chars*  
+*column_name* = *num_chars*  
   
 Ejemplo de archivo de configuración de ancho fijo:  
   
@@ -340,17 +340,17 @@ Ejemplos de LF:
   
 Se requiere un LF para UNIX. Se requiere un CR para Windows.  
   
-**-D** { **AMD** | ydm | MDA | Mad |  DMY | Dam | *custom_date_format* }  
+**-D** { **AMD** \| ydm \| MDA \| Mad \| DMY \| Dam \| *custom_date_format* }  
 Especifica el orden de mes (m), día (d) y año (y) de todos los campos de fecha y hora del archivo de entrada. El orden predeterminado es AMD. Para especificar varios formatos de orden para el mismo archivo de código fuente, use la opción-DT.  
   
-AMD | DMY  
+AMD \| DMY  
 ydm y DMY permiten los mismos formatos de entrada. Ambos permiten que el año esté al principio o al final de la fecha. Por ejemplo, para los formatos de fecha **ydm** y **DMY** , podría tener 2013-02-03 o 02-03-2013 en el archivo de entrada.  
   
 ydm  
 Solo puede cargar entradas con formato de ydm en columnas de tipo de datos datetime y smalldatetime. No se pueden cargar valores de ydm en una columna de tipo de datos datetime2, Date o DateTimeOffset.  
   
 mdy  
-<month> <space> <day>MDA permite <comma>. <year>  
+MDA permite \<month> \<space> \<day> \<comma> \<year> .  
   
 Ejemplos de datos de entrada de MDA para el 1 de enero de 1975:  
   
@@ -443,7 +443,7 @@ Cuando se usa con el valor-RT, el cargador detiene la carga cuando el recuento d
 Cuando se usa con el porcentaje de-RT, el cargador calcula el porcentaje a intervalos (opción-RS). Por lo tanto, el porcentaje de filas con errores puede superar *reject_value*.  
   
 **-rs** *reject_sample_size*  
-Se utiliza con `-rt percentage` la opción para especificar las comprobaciones de porcentaje incremental. Por ejemplo, si reject_sample_size es 1000, el cargador calculará el porcentaje de filas con errores después de intentar cargar 1000 filas. Vuelve a calcular el porcentaje de filas con errores después de intentar cargar cada 1000 filas adicionales.  
+Se utiliza con la `-rt percentage` opción para especificar las comprobaciones de porcentaje incremental. Por ejemplo, si reject_sample_size es 1000, el cargador calculará el porcentaje de filas con errores después de intentar cargar 1000 filas. Vuelve a calcular el porcentaje de filas con errores después de intentar cargar cada 1000 filas adicionales.  
   
 **-c**  
 Quita los caracteres de espacio en blanco situados a la izquierda y a la derecha de los campos Char, nchar, VARCHAR y nvarchar. Convierte cada campo que solo contiene caracteres de espacio en blanco en la cadena vacía.  
@@ -490,7 +490,7 @@ Disponible con la actualización CU 7.4, especifica la longitud máxima de fila 
 ## <a name="return-code-values"></a>Valores de código de retorno  
 0 (correcto) u otro valor entero (error)  
   
-En una ventana de comandos o un archivo por `errorlevel` lotes, use para mostrar el código de retorno. Por ejemplo:  
+En una ventana de comandos o un archivo por lotes, use `errorlevel` para mostrar el código de retorno. Por ejemplo:  
   
 ```  
 dwloader  
@@ -499,7 +499,7 @@ if not %errorlevel%==0 echo Fail
 if %errorlevel%==0 echo Success  
 ```  
   
-Al usar PowerShell, use `$LastExitCode`.  
+Al usar PowerShell, use `$LastExitCode` .  
   
 ## <a name="permissions"></a>Permisos  
 Requiere permiso LOAD y permisos aplicables (INSERT, UPDATE y DELETE) en la tabla de destino. Requiere el permiso CREATE (para crear una tabla temporal) en la base de datos de ensayo. Si no se utiliza una base de datos de ensayo, se requiere el permiso CREATE en la base de datos de destino. 
@@ -568,7 +568,7 @@ En la tabla anterior se muestra **dwloader** mediante la carga del modo Append e
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-simple-dwloader-example"></a>A. Ejemplo de dwloader simple  
-En el ejemplo siguiente se muestra la iniciación del **cargador** solo con las opciones requeridas seleccionadas. Otras opciones se toman del archivo de configuración global, *loadparamfile. txt*.  
+En el ejemplo siguiente se muestra la iniciación del **cargador** solo con las opciones requeridas seleccionadas. Otras opciones se toman del archivo de configuración global, *loadparamfile.txt*.  
   
 Ejemplo de uso de la autenticación de SQL Server.  
   
@@ -598,13 +598,13 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 ```  
   
 ### <a name="b-load-data-into-an-adventureworks-table"></a>B. Cargar datos en una tabla de AdventureWorks  
-El ejemplo siguiente forma parte de un script de Batch que carga datos en **AdventureWorksPDW2012**.  Para ver el script completo, abra el archivo aw_create. bat que se incluye con el paquete de instalación de **AdventureWorksPDW2012** . 
+El ejemplo siguiente forma parte de un script de Batch que carga datos en **AdventureWorksPDW2012**.  Para ver el script completo, abra el archivo aw_create.bat que se incluye con el paquete de instalación de **AdventureWorksPDW2012** . 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-El siguiente fragmento de script usa dwloader para cargar datos en las tablas DimAccount y DimCurrency. Este script usa una dirección Ethernet. Si estaba usando InfiniBand, el servidor se *<appliance_name>* `-SQLCTL01`.  
+El siguiente fragmento de script usa dwloader para cargar datos en las tablas DimAccount y DimCurrency. Este script usa una dirección Ethernet. Si estaba usando InfiniBand, el servidor se *<appliance_name>* `-SQLCTL01` .  
   
 ```  
 set server=10.193.63.134  
@@ -646,7 +646,7 @@ with (CLUSTERED INDEX(AccountKey),
 DISTRIBUTION = REPLICATE);  
 ```  
   
-A continuación se muestra un ejemplo del archivo de datos, DimAccount. txt, que contiene los datos que se van a cargar en la tabla DimAccount.  
+A continuación se muestra un ejemplo del archivo de datos, DimAccount.txt, que contiene los datos que se van a cargar en la tabla DimAccount.  
   
 ```  
 --Sample of data in the DimAccount.txt load file.  
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 Descripción de los parámetros de la línea de comandos:  
   
--   *C:\Archivos de programa\microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* es la ubicación de instalación de dwloader. exe.  
+-   *C:\Archivos de programa\microsoft SQL Server Warehouse\100\dwloader.exede datos paralelos* es la ubicación instalada de dwloader.exe.  
   
 -   *-S* va seguido de la dirección IP del nodo de control.  
   
@@ -685,15 +685,15 @@ Descripción de los parámetros de la línea de comandos:
   
 -   *-e UTF16* indica que el archivo de origen usa el tipo de codificación de caracteres Little Endian.  
   
--   *-i .\DimAccount.txt* especifica que los datos están en un archivo denominado DimAccount. txt que existe en el directorio actual.  
+-   *-i .\DimAccount.txt* especifica que los datos están en un archivo denominado DimAccount.txt que existe en el directorio actual.  
   
 -   *-T AdventureWorksPDW2012. DBO. DimAccount* especifica el nombre de tres partes de la tabla que va a recibir los datos.  
   
 -   *-R DimAccount. Bad* especifica que las filas que no se cargan se escribirán en un archivo denominado DimAccount. Bad.  
   
--   *-t "|"* indica que los campos del archivo de entrada, DimAccount. txt, se separan con el carácter de barra vertical.  
+-   *-t "|"* indica que los campos del archivo de entrada, DimAccount.txt, se separan con el carácter de barra vertical.  
   
--   *-r \r\n* especifica que cada fila de DimAccount. txt finaliza con un retorno de carro y un carácter de avance de línea.  
+-   *-r \r\n* especifica que cada fila de DimAccount.txt finaliza con un retorno de carro y un carácter de avance de línea.  
   
 -   *-U <login_name>-P <password> * especifica el inicio de sesión y la contraseña para el inicio de sesión que tiene permisos para realizar la carga.  
   

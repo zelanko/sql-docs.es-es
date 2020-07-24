@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8374beba2eda97df3817dc27c337e46f9ba57780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890919"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122710"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,9 +49,8 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve un conjunto de resultados que contiene las columnas que se indican a continuación.  
   
-||||  
-|-|-|-|  
-|Nombre de la columna|Tipo de datos|Descripción|  
+| Nombre de la columna | Tipo de datos | Descripción |
+| ----------- | --------- | ----------- |
 |**account_id**|**int**|Id. de la cuenta.|  
 |**name**|**sysname**|El nombre de la cuenta.|  
 |**description**|**nvarchar(256)**|Descripción de la cuenta.|  
@@ -65,7 +64,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**use_default_credentials**|**bit**|Especifica si se debe enviar el correo al servidor SMTP con las credenciales de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de bits y no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos utiliza las credenciales del servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cuando este parámetro es 0, Correo electrónico de base de datos usa el ** \@ nombre de usuario** y la ** \@ contraseña** para la autenticación en el servidor SMTP. Si el ** \@ nombre de usuario** y la ** \@ contraseña** son NULL, correo electrónico de base de datos usa la autenticación anónima. Consulte al administrador de SMTP antes de especificar este parámetro.|  
 |**enable_ssl**|**bit**|Especifica si Correo electrónico de base de datos cifra la comunicación mediante la seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL). Utilice esta opción si se requiere TLS en el servidor SMTP. **enable_ssl** es de bits y no tiene ningún valor predeterminado. 1 indica Correo electrónico de base de datos cifra la comunicación mediante TLS. 0 indica Correo electrónico de base de datos envía el correo sin cifrado TLS.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando no se proporciona ningún *ACCOUNT_ID* o *account_name* , **sysmail_help_account** muestra información sobre todas las cuentas de correo electrónico de base de datos en la instancia de Microsoft SQL Server.  
   
  El procedimiento almacenado **sysmail_help_account_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  

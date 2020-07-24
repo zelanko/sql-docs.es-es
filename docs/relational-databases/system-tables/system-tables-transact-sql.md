@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fca3884763f0b58c1c8382f1c588f47307bc744d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bcd2869c583f51b5ab9d00a7bbb68e9dd47b534d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752677"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122771"
 ---
 # <a name="system-tables-transact-sql"></a>Tablas del sistema (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,15 +52,32 @@ ms.locfileid: "85752677"
   
 ## <a name="in-this-section"></a>En esta sección  
  Los temas relacionados con las tablas del sistema se organizan según las siguientes áreas de características:  
-  
-|||  
-|-|-|  
-|[Copias de seguridad y restauración de tablas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[Tablas de trasvase de registros &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
-|[Tablas de captura de datos de cambio &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)|[Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)|  
-|[Tablas de planes de mantenimiento de bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)|[Tablas de Agente SQL Server &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)|  
-|[Tablas de eventos extendidos de SQL Server &#40;Transact-SQL&#41;](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)|[sys.sysoledbusers &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)|  
-|[Tablas de Integration Services &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)|[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Copias de seguridad y restauración de tablas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)
+
+        [Tablas de captura de datos de cambio &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)
+
+        [Tablas de planes de mantenimiento de bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)
+
+        [Tablas de eventos extendidos de SQL Server &#40;Transact-SQL&#41;](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)
+
+        [Tablas de Integration Services &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [Tablas de trasvase de registros &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)
+
+        [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)
+
+        [Tablas de Agente SQL Server &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)
+
+        [sys.sysoledbusers &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)
+
+        [systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Vistas de compatibilidad &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

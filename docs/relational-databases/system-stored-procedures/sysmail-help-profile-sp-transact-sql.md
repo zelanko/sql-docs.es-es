@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 061016b3a9f1283f82263a4f89fdb81acfc86889
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890917"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122749"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,14 +49,13 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve un conjunto de resultados con las columnas siguientes:  
   
-||||  
-|-|-|-|  
-|Nombre de la columna|Tipo de datos|Descripción|  
+| Nombre de la columna | Tipo de datos | Descripción |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|Id. del perfil.|  
 |**name**|**sysname**|Nombre del perfil.|  
 |**description**|**nvarchar(256)**|La descripción del perfil.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se especifica un nombre de perfil o un identificador de perfil, **sysmail_help_profile_sp** devuelve información acerca de ese perfil. De lo contrario, **sysmail_help_profile_sp** devuelve información sobre cada perfil de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.  
   
  El procedimiento almacenado **sysmail_help_profile_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  

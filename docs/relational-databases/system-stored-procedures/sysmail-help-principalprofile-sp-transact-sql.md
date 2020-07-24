@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 024eec5c9e74eb48ac57dcf16a40a7783d79f5b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890897"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122751"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,16 +55,15 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve un conjunto de resultados que contiene las columnas que se indican en la siguiente tabla.  
   
-||||  
-|-|-|-|  
-|Nombre de la columna|Tipo de datos|Descripción|  
+| Nombre de la columna | Tipo de datos | Descripción |
+| ----------- | --------- | ----------- |
 |**principal_id**|**int**|Id. del usuario de la base de datos.|  
 |**principal_name**|**sysname**|Nombre del usuario de la base de datos.|  
 |**profile_id**|**int**|Número de Id. del perfil de Correo electrónico de base de datos.|  
 |**profile_name**|**sysname**|Nombre del perfil de Correo electrónico de base de datos.|  
 |**is_default**|**bit**|Marca que indica si el perfil es el perfil predeterminado del usuario.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si **sysmail_help_principalprofile_sp** se invoca sin parámetros, el conjunto de resultados devuelto enumera todas las asociaciones de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En caso contrario, el conjunto de resultados contiene información para las asociaciones que coincidan con los parámetros suministrados. Por ejemplo, en el procedimiento se muestran todas las asociaciones para un perfil cuando se proporciona el nombre del perfil.  
   
  **sysmail_help_principalprofile_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  

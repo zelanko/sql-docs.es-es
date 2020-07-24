@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08b90446625fb2d2f8375c44d2854f3f679cea32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890568"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123026"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tablas de aplicación de capa de datos: sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "85890568"
 |**dac_object_type**|**tinyint**|Identificador del tipo de objeto afectado por la acción:<br /><br /> **0** = dacpac<br /><br /> **1** = inicio de sesión<br /><br /> **2** = base de datos|  
 |**dac_object_type_name**|**VARCHAR (8)**|Nombre del tipo de objeto afectado por la acción:<br /><br /> **dacpac** = instancia de DAC<br /><br /> **Inicio**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Código que identifica el estado actual de la acción:<br /><br /> **0** = pendiente<br /><br /> **1** = correcto<br /><br /> **2** = error|  
-|**action_status_name**|**VARCHAR (11)**|Estado actual de la acción:<br /><br /> **pending**<br /><br /> **realizado**<br /><br /> **puedan**|  
+|**action_status_name**|**VARCHAR (11)**|Estado actual de la acción:<br /><br /> **pendientes**<br /><br /> **realizado**<br /><br /> **puedan**|  
 |**Requerido**|**bit**|Lo utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] al revertir una operación DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nombre del objeto antes de que se confirme la transacción que contiene la acción. Solo se utiliza para las bases de datos e inicios de sesión.|  
 |**dac_object_name_posttran**|**sysname**|Nombre del objeto después de que se confirme la transacción que contiene la acción. Solo se utiliza para las bases de datos e inicios de sesión.|  
@@ -51,12 +51,11 @@ ms.locfileid: "85890568"
 |**date_created**|**datetime**|Fecha y hora en que se creó esta entrada.|  
 |**date_modified**|**datetime**|Fecha y hora en la que se modificó por última vez la entrada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las acciones de administración de una DAC, por ejemplo su implementación o eliminación, generan varios pasos. A cada acción se le asigna un identificador de acción. A cada paso se le asigna un número de secuencia y una fila en **sysdac_history_internal**, donde se registra el estado del paso. Cada fila se crea cuando el paso de la acción comienza y se actualiza según convenga para reflejar el estado de la operación. Por ejemplo, se puede asignar una acción de implementación de DAC **action_id** 12 y obtener cuatro filas en **sysdac_history_internal**:  
   
-|||||  
-|-|-|-|-|  
-|**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
+| action_id | sequence_id | action_type_name | dac_object_type_name |
+| --------- | ----------- | ---------------- | -------------------- |
 |12|0|create|dacpac|  
 |12|1|create|login|  
 |12|2|create|database|  

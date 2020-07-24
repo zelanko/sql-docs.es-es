@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8fae7b7f9ec0fbd5a8310bcbdacc6a436dd232c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890869"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122713"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,16 +57,15 @@ sysmail_help_profileaccount_sp
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve un conjunto de resultados con las columnas siguientes:  
   
-||||  
-|-|-|-|  
-|Nombre de la columna|Tipo de datos|Descripción|  
+| Nombre de la columna | Tipo de datos | Descripción |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|Id. de perfil del perfil.|  
 |**profile_name**|**sysname**|Nombre del perfil.|  
 |**account_id**|**int**|Id. de cuenta de la cuenta.|  
 |**account_name**|**sysname**|El nombre de la cuenta.|  
 |**sequence_number**|**int**|Número de secuencia de la cuenta en el perfil.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando no se especifica ningún *profile_id* o *profile_name* , este procedimiento almacenado devuelve información para cada perfil de la instancia.  
   
  El procedimiento almacenado **sysmail_help_profileaccount_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  

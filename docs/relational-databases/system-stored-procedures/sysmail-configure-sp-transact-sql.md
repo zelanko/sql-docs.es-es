@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3156ac4443bd116767ece63c37cbe0ff51198984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: df5b364408b012a186ca090b6d3a6d7de77119cf
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890990"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122462"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,9 +59,8 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>Observaciones  
  El Correo electrónico de base de datos utiliza los siguientes parámetros:  
   
-||||  
-|-|-|-|  
-|Nombre de parámetro|Descripción|Valor predeterminado|  
+| Nombre de parámetro | Descripción | Valor predeterminado |
+| -------------- | ----------- | ------------- |
 |*AccountRetryAttempts*|Número de veces que el proceso de correo electrónico externo intenta enviar el mensaje de correo electrónico con cada cuenta del perfil especificado.|**1**|  
 |*AccountRetryDelay*|Cantidad de tiempo en segundos que el proceso de correo electrónico externo espera entre cada intento de envío de un mensaje.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|Cantidad de tiempo mínima en segundos que el proceso de correo electrónico externo permanece activo. Si el Correo electrónico de base de datos está enviando muchos mensajes, aumente este valor para mantener activo el Correo electrónico de base de datos y evitar una sobrecarga de inicios y detenciones frecuentes.|**600**|  

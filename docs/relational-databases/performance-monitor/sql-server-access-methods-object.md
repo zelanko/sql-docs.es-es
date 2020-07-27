@@ -1,5 +1,6 @@
 ---
 title: Access Methods (objeto de SQL Server) | Microsoft Docs
+description: Obtenga más información sobre los contadores de Access Method, que también se pueden usar para supervisar la cantidad de datos, los índices y el espacio disponible en una base de datos de SQL Server.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 485e7e4d762b415ad4a0d140a631e99b4c79983b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787405"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458463"
 ---
 # <a name="sql-server-access-methods-object"></a>Access Methods (objeto de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85787405"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access Methods**de**.  
+ En esta tabla se describen los contadores de **Access Methods** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores de Access Methods de SQL Server|Descripción|  
 |----------------------------------------|-----------------|  

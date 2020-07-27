@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94be603d8982e4c05baed997b1072afbe66c2eec
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294098"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915261"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La tarea Cola de mensajes le permite usar Message Queue Server (que también recibe el nombre de MSMQ) para enviar y recibir mensajes entre paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o enviar mensajes a una cola de aplicaciones procesada por una aplicación personalizada. Estos mensajes pueden adoptar la forma de texto simple, archivos o variables y sus valores.  
@@ -120,7 +120,7 @@ ms.locfileid: "71294098"
  Indica si se va a utilizar el formato 2000 de Message Queue Server (que también recibe el nombre de MSMQ). El valor predeterminado es **False**.  
   
  **MSMQConnection**  
- Seleccione un administrador de conexiones MSMQ existente o haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones MSMQ existente o haga clic en \<**New connection...**> para crear uno.  
   
  **Temas relacionados**: [Administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Editor del administrador de conexiones MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -230,7 +230,7 @@ ms.locfileid: "71294098"
 |**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
  **Variable**  
- Escriba el nombre de la variable, o bien haga clic en \<**Nueva variable…** > y configure una nueva variable.  
+ Escriba el nombre de la variable o haga clic en \<**New variable...**> para configurar una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -275,7 +275,7 @@ ms.locfileid: "71294098"
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
  **Variable**  
- Escriba el nombre de la variable para retener el mensaje recibido, o bien haga clic en \<**Nueva variable…** > y configure una nueva variable.  
+ Escriba el nombre de la variable para conservar el mensaje recibido, o haga clic en \<**New variable...**> y, después, configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

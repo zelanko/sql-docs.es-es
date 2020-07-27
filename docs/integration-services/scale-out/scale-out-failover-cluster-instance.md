@@ -10,16 +10,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 00a31303aac5f562462cf6950e233fa84be31215
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924892"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922113"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out support for high availability via SQL Server failover cluster instance (Compatibilidad con la escalabilidad horizontal para una alta disponibilidad mediante Instancia de clústeres de conmutación por error de SQL Server).
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -47,7 +47,7 @@ Durante la instalación, incluya el nombre de red de SQL Server en los nombres c
 Siga [3. Instalación del Servicio principal de escalabilidad horizontal en el nodo secundario](scale-out-support-for-high-availability.md#3-install-scale-out-master-on-the-secondary-node)
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Actualizar el archivo de configuración del servicio de patrón de escalabilidad horizontal
-Actualice el archivo de configuración del servicio del patrón de escalabilidad horizontal, \<unidad\>:\Archivos de programa\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config, en los nodos principal y secundario. Actualice **SqlServerName** a [nombre de red de SQL Server]//[nombre de instancia] o [nombre de red de SQL Server] para la instancia predeterminada.
+Actualice el archivo de configuración del servicio del patrón de escalabilidad horizontal, \<drive\>:\Archivos de programa\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config, en los nodos principal y secundario. Actualice **SqlServerName** a [nombre de red de SQL Server]//[nombre de instancia] o [nombre de red de SQL Server] para la instancia predeterminada.
 
 ## <a name="6-add-scale-out-master-service-to-sql-server-role-in-windows-failover-cluster"></a>6. Agregar el Servicio principal de escalabilidad horizontal al rol de SQL Service del clúster de conmutación por error de Windows
 En el Administrador de clústeres de conmutación por error, conéctese al clúster de escalabilidad horizontal. Seleccione Roles en el explorador, haga clic con el botón derecho en el rol de SQL Server y seleccione Agregar recurso, Servicio genérico. 

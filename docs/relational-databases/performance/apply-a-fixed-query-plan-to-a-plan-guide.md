@@ -1,5 +1,6 @@
 ---
 title: Aplicar un plan de consulta fijo a una guía de plan | Microsoft Docs
+description: Obtenga información sobre cómo aplicar un plan de consulta fijo a una guía de plan del tipo OBJECT o SQL en SQL Server. En este ejemplo se crea una guía de plan para una instrucción SQL ad hoc sencilla.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 49ca6572768c0f52688fdacecdc8a0fcf2ee01fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b39441ba86d8337fd4a59d9ffbc1f27a68c569ca
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773130"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458632"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>Aplicar un plan de consulta fijo a una guía de plan
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

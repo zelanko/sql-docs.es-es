@@ -1,5 +1,6 @@
 ---
 title: Herramientas de supervisión y optimización del rendimiento | Microsoft Docs
+description: Obtenga información sobre las herramientas de supervisión y optimización de SQL Server, y cómo elegir la herramienta adecuada según el tipo de supervisión y los eventos que se van a supervisar.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 30cc668487299677bb2874300d660d09d1dedd22
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13b974b37202a41f333e7d94104eccbee4c72d5c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635450"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457673"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Herramientas de supervisión y optimización del rendimiento
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

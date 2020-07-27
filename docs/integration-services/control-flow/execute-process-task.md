@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 214f28fbb977414d4e14fdd14f2be53e9b705bc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a47088f610dc016fe904b9b772e261b9bd2adcf0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298337"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920691"
 ---
 # <a name="execute-process-task"></a>Tarea Ejecutar proceso
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La tarea Ejecutar proceso ejecuta una aplicación o un archivo por lotes como parte de un flujo de trabajo de paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Aunque puede utilizar la tarea Ejecutar proceso para abrir cualquier aplicación estándar, como [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o [!INCLUDE[ofprword](../../includes/ofprword-md.md)], normalmente la utilizará para ejecutar aplicaciones empresariales o archivos por lotes que trabajen con un origen de datos. Por ejemplo, puede utilizar la tarea Ejecutar proceso para expandir un archivo de texto comprimido. Una vez hecho esto, el paquete puede usar el archivo de texto como origen de datos para el flujo de datos. Otro ejemplo sería utilizar la tarea Ejecutar proceso para ejecutar una aplicación de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizada que genera un informe de ventas diario. Se puede adjuntar este informe a una tarea Enviar correo para reenviarlo a una lista de distribución.  
@@ -116,15 +116,15 @@ ms.locfileid: "71298337"
  Escriba la ruta de acceso de la carpeta que contiene el ejecutable, o bien haga clic en el botón Examinar **(…)** y busque la carpeta.  
   
  **StandardInputVariable**  
- Seleccione una variable para proporcionar la entrada al proceso o haga clic en \<**Nueva variable…** > para crear una:  
+ Seleccione una variable para proporcionar la entrada al proceso o haga clic en \<**New variable...**> para crear una:  
   
  **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- Seleccione una variable para capturar la salida del proceso o haga clic en \<**Nueva variable…** > para crear una.  
+ Seleccione una variable para capturar la salida del proceso o haga clic en \<**New variable...**> para crear una.  
   
  **StandardErrorVariable**  
- Seleccione una variable para capturar la salida de error del procesador o haga clic en \<**Nueva variable…** > para crear una.  
+ Seleccione una variable para capturar la salida del error del procesador o haga clic en \<**New variable...**> para crear una.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Esta opción indica si la tarea genera un error porque el código de salida del proceso es diferente del valor especificado en **SuccessValue**.  

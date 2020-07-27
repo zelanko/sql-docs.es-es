@@ -1,5 +1,6 @@
 ---
 title: CLR (objeto de SQL Server) | Microsoft Docs
+description: Obtenga información sobre el objeto SQLServer:CLR, que proporciona contadores para supervisar la ejecución de Common Language Runtime en Microsoft SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9936cf11b0b8a71989f41cf6e7834bfe845cf7ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3748641366e41a44845084ef6b5f487f1465178d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656280"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458649"
 ---
 # <a name="sql-server-clr-object"></a>CLR (objeto de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **SQLServer:CLR** proporciona contadores para supervisar la ejecución de Common Language Runtime (CLR) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR**de**.  
+ En esta tabla se describen los contadores de **CLR** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores de CLR|Descripción|  
 |------------------|-----------------|  

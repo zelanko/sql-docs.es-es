@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d49ffcf03fab810eefd190ffea91aa3e5ff38cfe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2fbae89e26f240c05848fda10f37240f7977de49
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298847"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86924036"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar con una base de datos de origen de Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use la página Oracle Source para proporcionar la información necesaria para conectarse a la base de datos de origen de Oracle. La instancia CDC leerá los registros Rehacer de la base de datos de Oracle a la que está conectado.  

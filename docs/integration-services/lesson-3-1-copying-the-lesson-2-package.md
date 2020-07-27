@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f30cba22276d467c218da4d09749fccb464ac5d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9448dada6a93e4cda928f75e06862ad42ee2eee5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296001"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922241"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>Lección 3-1: Copia del paquete de la lección 2
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -45,7 +45,7 @@ Siga estos pasos si va a copiar la lección 2 completada.  Para copiar el ejempl
 
 7.  En la ventana **Propiedades**, cambie la propiedad **Nombre** a **Lesson 3**.
 
-8.  Haga clic en el cuadro de la propiedad **ID**, haga clic en la flecha desplegable y después seleccione **\<Generar nuevo Id>** .
+8.  Seleccione el cuadro de la propiedad **Id.** , seleccione la flecha desplegable y, después, seleccione **\<Generate New ID>** .
 
 ## <a name="add-the-completed-lesson-2-package"></a>Adición del paquete de la lección 2 completada
 

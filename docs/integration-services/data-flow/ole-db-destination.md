@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a81d65cfd0716ba386db98b3d9973fb4e57876a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298190"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86908474"
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   El destino de OLE DB carga datos en una serie de bases de datos compatibles con OLE DB que usan una tabla o vista de base de datos o un comando SQL. Por ejemplo, un origen de OLE DB puede cargar datos en tablas en bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -95,9 +95,9 @@ ms.locfileid: "71298190"
   
 |Opción de carga rápida|Descripción|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene el formato **KILOBYTES_PER_BATCH** = \<valor de entero positivo **>** .|  
+|KILOBYTES_PER_BATCH|Especifica el tamaño en kilobytes para insertar. La opción tiene el formulario **KILOBYTES_PER_BATCH** = \<positive integer value**>**.|  
 |FIRE_TRIGGERS|Especifica si se activan los desencadenadores en la tabla de inserción. La opción tiene la forma **FIRE_TRIGGERS**. La presencia de la opción indica que se activan los desencadenadores.|  
-|ORDER|Especifica cómo se ordenan los datos de entrada. La opción tiene el formato ORDER \<nombre de columna> ASC&#124;DESC. Se puede enumerar cualquier cantidad de columnas (el orden es opcional). Si se omite el orden, la operación de inserción presupone que los datos no están ordenados.<br /><br /> Nota: El rendimiento puede mejorar si se utiliza la opción ORDER para ordenar los datos de entrada según el índice clúster de la tabla.|  
+|ORDER|Especifica cómo se ordenan los datos de entrada. La opción tiene el formulario ORDER \<column name> ASC&#124;DESC. Se puede enumerar cualquier cantidad de columnas (el orden es opcional). Si se omite el orden, la operación de inserción presupone que los datos no están ordenados.<br /><br /> Nota: El rendimiento puede mejorar si se utiliza la opción ORDER para ordenar los datos de entrada según el índice clúster de la tabla.|  
   
  Las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] se suelen escribir en mayúsculas, aunque las palabras clave no distinguen entre mayúsculas y minúsculas.  
   

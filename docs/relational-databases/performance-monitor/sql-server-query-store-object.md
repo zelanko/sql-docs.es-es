@@ -1,5 +1,6 @@
 ---
 title: Query Store (objeto de SQL Server) | Microsoft Docs
+description: Obtenga información sobre el objeto Almacén de consultas (Query Store), que proporciona contadores para supervisar el uso de recursos de SQL Server para almacenar textos de consulta, planes de ejecución y estadísticas del entorno de ejecución.
 ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e9d94bb7b7002b1e83a6e5dbc5566f77a4093274
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28a4a3a1711a72f7944dc48b12add759160d1dc9
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775772"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458759"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, objeto Query Store
 

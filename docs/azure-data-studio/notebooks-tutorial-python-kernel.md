@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
-ms.date: 04/27/2020
-ms.openlocfilehash: e4c431cba395b8e0c732fa7ac4ab96942cac7144
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/01/2020
+ms.openlocfilehash: 7eb7af0577cb74f180991bf455c36c9122972643
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728861"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920475"
 ---
 # <a name="create-and-run-a-python-notebook"></a>Creación y ejecución de un cuaderno de Python
 
@@ -26,7 +26,7 @@ En este tutorial se muestra cómo crear y ejecutar un cuaderno en Azure Data Stu
 
 - [Azure Data Studio instalado](download-azure-data-studio.md)
 
-## <a name="new-notebook"></a>Nuevo cuaderno
+## <a name="create-a-notebook"></a>Creación de un cuaderno
 
 En los pasos siguientes, se muestra cómo crear un archivo de cuaderno en Azure Data Studio:
 
@@ -34,57 +34,64 @@ En los pasos siguientes, se muestra cómo crear un archivo de cuaderno en Azure 
 
 1. Seleccione **Nuevo cuaderno** en el menú **Archivo**.
 
-1. Seleccione **Python 3** para **Kernel**.
+1. Seleccione **Python 3** para **Kernel**. **Adjuntar a** está establecido en "localhost".
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="Establecimiento del kernel":::
 
-1. Si se le pide que configure Python, en **Configurar Python para Notebooks**, seleccione una de las dos opciones siguientes:
+Puede guardar el cuaderno mediante los comandos **Guardar** o **Guardar como...** del menú **Archivo**. 
 
-   - **Nueva instalación de Python**, para instalar una nueva copia de Python para Azure Data Studio;
-   - **Usar la instalación de Python existente**, para especificar la ruta de acceso a una instalación existente de Python.
+Para abrir un cuaderno, puede usar el comando **Abrir archivo...** del menú **Archivo**, seleccionar **Abrir archivo** en la página de **bienvenida** o usar el comando **Archivo: Abrir** de la paleta de comandos.
 
-## <a name="run-a-notebook-cell"></a>Ejecución de una celda del cuaderno
+## <a name="change-the-python-kernel"></a>Cambio del kernel de Python
 
-Puede crear celdas que contengan código o texto. Puede ejecutar una celda de código en contexto; los resultados se mostrarán en el cuaderno cuando la celda haya terminado de ejecutarse. Las celdas de texto permiten intercalar documentación con formato con el código.
+La primera vez que se conecta al kernel de Python en un cuaderno, se muestra la página **Configurar Python para Notebooks**. Puede seleccionar una de las dos opciones siguientes:
 
-### <a name="code"></a>Código
+- **Nueva instalación de Python**, para instalar una nueva copia de Python para Azure Data Studio;
+- **Usar la instalación de Python existente**, para especificar la ruta de acceso a una instalación existente de Python para que Azure Data Studio la use.
 
-Puede agregar una nueva celda de código de Python seleccionando el comando **+Código** de la barra de herramientas.
-
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Barra de herramientas del cuaderno":::
-
-En este ejemplo se realiza una sencilla operación matemática.
+Para ver la ubicación y la versión del kernel de Python activo, cree una celda de código y ejecute los siguientes comandos de Python:
 
 ```python
-a = 1
-b = 2
-c = a/b
-print(c)
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
 ```
-Ejecute la celda haciendo clic en el botón de reproducción situado a la izquierda de la celda. Los resultados aparecen en la parte inferior.
 
-:::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Ejecución de la celda del cuaderno":::
+Para conectarse a otra instalación de Python:
 
-### <a name="text"></a>Texto
+1. En el menú **Archivo**, seleccione **Preferencias** y, después, **Configuración**.
+1. Desplácese hasta **Configuración de Notebook** en **Extensiones**.
+1. En **Usar la instalación de Python existente**, desactive la opción "Ruta de acceso local a una instalación de Python preexistente utilizada por Notebooks".
+1. Reinicie Azure Data Studio.
 
-Para agregar una nueva celda de texto, seleccione el comando **+Texto** de la barra de herramientas.
+Cuando se inicia Azure Data Studio y se conecta al kernel de Python, se muestra la página **Configurar Python para Notebooks**. Ahí podrá crear una instalación de Python o especificar una ruta de acceso a una instalación existente.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python-text.png" alt-text="Barra de herramientas del cuaderno":::
+## <a name="run-a-code-cell"></a>Ejecución de una celda de código
 
-La celda cambia al modo de edición y ahora se puede escribir Markdown y ver la versión preliminar al mismo tiempo.
+Puede crear celdas que contengan código SQL que puede ejecutar de forma local. Para ello, haga clic en el botón **Ejecutar celda** (la flecha redonda de color negro) a la izquierda de la celda. Cuando la celda termine de ejecutarse, los resultados se mostrarán en el cuaderno.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-cell-python.png" alt-text="Celda de Markdown":::
+Por ejemplo:
 
-Al seleccionar fuera de la celda de texto, solo se muestra el texto de Markdown.
+1. Puede agregar una nueva celda de código de Python seleccionando el comando **+Código** de la barra de herramientas.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-preview-python.png" alt-text="Texto de Markdown":::
+   :::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Barra de herramientas del cuaderno":::
+
+1. Copie y pegue el ejemplo siguiente en la celda y haga clic en **Ejecutar celda**. En este ejemplo se realizan cálculos simples y el resultado se muestra debajo.
+
+   ```python
+   a = 1
+   b = 2
+   c = a/b
+   print(c)
+   ```
+
+   :::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Ejecución de la celda del cuaderno":::
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 Obtenga más información sobre los cuadernos:
 
-- [Cómo usar cuadernos con SQL Server](notebooks-guidance.md)
-
+- [Extensión de Python con Kqlmagic](notebooks-kqlmagic.md)
+- [Uso de cuadernos en Azure Data Studio](notebooks-guidance.md)
 - [Creación y ejecución de un cuaderno de SQL Server](notebooks-tutorial-sql-kernel.md)
-
-- [Cómo se administran los cuadernos en Azure Data Studio](notebooks-manage-sql-server.md)

@@ -12,12 +12,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05dcd994a1cf2387bfe7e1a1be46e7a95d24249d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2eb2a150921c613019894e34e2859fa9adcf9137
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723369"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483723"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
 
@@ -33,17 +33,17 @@ Este tema describe instrucciones para llamar a procedimientos almacenados compil
 
 ### <a name="sqlclient"></a>SqlClient
 
-- Para SqlClient, no se distingue entre la ejecución *preparada* y la *directa*. Ejecute los procedimientos almacenados con SqlCommand y CommandType = CommandType.StoredProcedure.
+- Para SqlClient, no se distingue entre la ejecución *preparada* y la *directa*. Ejecute los procedimientos almacenados mediante SqlCommand con `CommandType = CommandType.StoredProcedure`.
 
 - SqlClient no admite las llamadas a procedimiento RPC preparadas.
 
-- SqlClient no admite la recuperación de información solo de esquema (detección de metadatos) sobre los conjuntos de resultados devueltos por un procedimiento almacenado compilado de forma nativa (CommandType.SchemaOnly).
+- SqlClient no admite la recuperación de información solo de esquema (detección de metadatos) sobre los conjuntos de resultados devueltos por un procedimiento almacenado compilado de forma nativa (`CommandType.SchemaOnly`).
   - Use en su lugar [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
-### <a name="ssnoversion-native-client"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client
+### <a name="sql-server-native-client"></a>SQL Server Native Client
 
 - La versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no permiten recuperar información solo de esquema (detección de metadatos) sobre los conjuntos de resultados devueltos por un procedimiento almacenado compilado de forma nativa.
-  - Use en su lugar [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
+- Use en su lugar [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
 ### <a name="odbc"></a>ODBC
 
@@ -111,11 +111,11 @@ Para ejecutar este ejemplo:
 5. Compruebe que el programa se está ejecutando correctamente; para ello, consulte el contenido de las tablas:
 
     ```sql
-    SELECT * FROM dbo.Ord
+    SELECT * FROM dbo.Ord;
     ```
 
     ```sql
-    SELECT * FROM dbo.Item
+    SELECT * FROM dbo.Item;
     ```
 
 ## <a name="preliminary-transact-sql"></a>Transact-SQL preliminar
@@ -124,16 +124,16 @@ A continuación se muestra el código de [!INCLUDE[tsql](../../includes/tsql-md.
 
 ```sql
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.OrderInsert'))
-  DROP PROCEDURE dbo.OrderInsert  
+DROP PROCEDURE dbo.OrderInsert;  
 GO
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.ItemInsert'))
-  DROP PROCEDURE dbo.ItemInsert  
+DROP PROCEDURE dbo.ItemInsert;  
 GO  
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.Ord'))
-  DROP TABLE dbo.Ord  
+DROP TABLE dbo.Ord;  
 GO  
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.Item'))
-  DROP TABLE dbo.Item  
+DROP TABLE dbo.Item;  
 GO
 
 CREATE TABLE dbo.Ord  
@@ -141,7 +141,7 @@ CREATE TABLE dbo.Ord
    OrdNo INTEGER NOT NULL PRIMARY KEY NONCLUSTERED,  
    OrdDate DATETIME NOT NULL,   
    CustCode VARCHAR(5) NOT NULL)   
- WITH (MEMORY_OPTIMIZED=ON)  
+ WITH (MEMORY_OPTIMIZED=ON);  
 GO  
   
 CREATE TABLE dbo.Item  
@@ -151,31 +151,29 @@ CREATE TABLE dbo.Item
    ProdCode INTEGER NOT NULL,   
    Qty INTEGER NOT NULL,  
    CONSTRAINT PK_Item PRIMARY KEY NONCLUSTERED (OrdNo,ItemNo))  
-   WITH (MEMORY_OPTIMIZED=ON)  
+   WITH (MEMORY_OPTIMIZED=ON);  
 GO  
   
 CREATE PROCEDURE dbo.OrderInsert(
     @OrdNo INTEGER, @CustCode VARCHAR(5))  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH  
-(   TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
-   LANGUAGE = 'english')  
+   (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = 'english')  
   
   DECLARE @OrdDate datetime = GETDATE();  
   INSERT INTO dbo.Ord (OrdNo, CustCode, OrdDate)
-      VALUES (@OrdNo, @CustCode, @OrdDate);
-END  
+  VALUES (@OrdNo, @CustCode, @OrdDate);
+END;  
 GO  
   
 CREATE PROCEDURE dbo.ItemInsert(
     @OrdNo INTEGER, @ItemNo INTEGER, @ProdCode INTEGER, @Qty INTEGER)
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH  
-(   TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
-   LANGUAGE = N'us_english')  
+   (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'us_english')  
   
   INSERT INTO dbo.Item (OrdNo, ItemNo, ProdCode, Qty)
-      VALUES (@OrdNo, @ItemNo, @ProdCode, @Qty)
+  VALUES (@OrdNo, @ItemNo, @ProdCode, @Qty)
 END  
 GO  
 ```
@@ -435,5 +433,4 @@ int _tmain() {
 ```
 
 ## <a name="see-also"></a>Consulte también
-
 [Procedimientos almacenados compilados de forma nativa](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

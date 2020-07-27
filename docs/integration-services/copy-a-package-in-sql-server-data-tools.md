@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b374955ea4a07cd94de88202fe02ffbb572d0a1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52368632a7e2d871f91f4e7c60aad0a7f03dbcf9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293648"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923271"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copiar un paquete en herramientas de datos de SQL Server
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   En este tema se explica cómo crear un nuevo paquete [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mediante la copia de un paquete existente y cómo actualizar las propiedades **Nombre** y **GUID** del nuevo paquete.  
@@ -37,7 +37,7 @@ ms.locfileid: "71293648"
   
 3.  Compruebe que el paquete que desea copiar está seleccionado en el Explorador de soluciones o que la pestaña del Diseñador SSIS que contiene el paquete es una pestaña activa.  
   
-4.  En el menú **Archivo**, haga clic en **Guardar \<nombre del paquete> Como**.  
+4.  En el menú **Archivo** , haga clic en **Guardar \<package name> como**.  
   
     > [!NOTE]  
     >  El paquete se debe abrir en el Diseñador SSIS para que la opción **Guardar como** aparezca en el menú **Archivo** .  
@@ -52,7 +52,7 @@ ms.locfileid: "71293648"
   
 9. También puede hacer clic en el fondo de la pestaña **Flujo de control** y luego hacer clic en **Propiedades**.  
   
-10. En la ventana Propiedades, haga clic en el valor de la propiedad ID y luego, en la lista desplegable, haga clic en **\<Generar nuevo Id.>** .  
+10. En la ventana Propiedades, haga clic en el valor de la propiedad Id. y luego, en la lista desplegable, haga clic en **\<Generate New ID>** .  
   
 11. En el menú **Archivo** , haga clic en **Guardar los elementos seleccionados** para guardar el nuevo paquete.  
   

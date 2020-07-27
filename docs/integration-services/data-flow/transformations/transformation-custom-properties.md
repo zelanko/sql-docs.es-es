@@ -41,16 +41,16 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4046228f4b0d37e72949f9bc87eac13786e6bba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291131"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916691"
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -264,7 +264,7 @@ ms.locfileid: "71291131"
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|Delimitadores|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;), signo de número (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
+|Delimitadores|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), greater than (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;), signo de número (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
 |Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de **True** está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es **False**.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MaxMemoryUsage|Entero|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MinSimilarity|Double|Umbral de similitud que la transformación utiliza para identificar los duplicados, expresado como un valor entre 0 y 1.  El valor predeterminado de esta propiedad es 0.8.|  
@@ -298,7 +298,7 @@ ms.locfileid: "71291131"
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Especifica si se debería crear una copia de la tabla de referencia para la construcción del índice de búsqueda aproximada y las búsquedas subsiguientes. El valor predeterminado de esta propiedad es **True**.|  
-|Delimitadores|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;). almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
+|Delimitadores|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), greater than (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;). almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
 |DropExistingMatchIndex|Boolean|Valor que especifica si el índice de coincidencia especificado en MatchIndexName se elimina cuando MatchIndexOptions no se establece en ReuseExistingIndex. El valor predeterminado de esta propiedad es **True**.|  
 |Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de **True** está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es **False**.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MatchIndexName|String|Nombre del índice de coincidencia. El índice de coincidencia es la tabla en la que la transformación crea y guarda el índice que utiliza. Si se reutiliza el índice de coincidencia, MatchIndexName especifica el índice que se reutilizará. MatchIndexName debe ser un nombre de identificador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] válido. Por ejemplo, si el nombre contiene espacios, debe escribirse entre corchetes.|  

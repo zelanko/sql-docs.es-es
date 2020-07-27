@@ -1,5 +1,6 @@
 ---
 title: SQL Server:Buffer Node | Microsoft Docs
+description: Obtenga información sobre el objeto Buffer Node, que proporciona contadores para supervisar la distribución de páginas del grupo de búferes de SQL Server para cada uno de los nodos NUMA.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1e16fa2868c0d9896f56b87988d5af3047c810fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce9d30b4d7f8716dc256d1ea640924af7945d8fd
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656408"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457447"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **Buffer Node** proporciona contadores que complementan a los contadores proporcionados por el objeto **Buffer Manager** . Este objeto permite supervisar la distribución de páginas del grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada nodo de acceso no uniforme a memoria (NUMA). Existe una instancia del objeto **Buffer Node** para cada nodo NUMA que está en uso. En la arquitectura no NUMA, habrá una sola instancia del objeto **Buffer Node** .  
   
 ## <a name="buffer-node-performance-objects"></a>Objetos de rendimiento Buffer Node  
- En esta tabla se describen los objetos de rendimiento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Buffer Node**de**.  
+ En esta tabla se describen los objetos de rendimiento **Buffer Node** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores de SQLServer:Buffer Node|Descripción|  
 |-------------------------------------|-----------------|  

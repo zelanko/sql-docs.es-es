@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e26918f5b545068ad5e121452dc704f7d72abe35
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297876"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919520"
 ---
 # <a name="script-component"></a>Componente de script
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   El componente de script hospeda el script y permite a un paquete incluir y ejecutar código personalizado de script. Puede usar el componente de script en paquetes para los siguientes fines:  
@@ -133,7 +133,7 @@ ms.locfileid: "71297876"
  Escriba un nombre único y descriptivo para la conexión.  
   
  **Connection Manager**  
- Seleccione un administrador de conexiones disponible de la lista o seleccione **\<Nueva conexión>** para abrir el cuadro de diálogo **Agregar administrador de conexiones SSIS**.  
+ Seleccione un administrador de conexiones disponible de la lista o seleccione **\<New connection>** para abrir el cuadro de diálogo **Agregar administrador de conexiones SSIS**.  
   
  **Descripción**  
  Escriba la descripción de la conexión.  

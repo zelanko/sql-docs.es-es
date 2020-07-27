@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60ec7105d0942383ad1ebcd963665a8a47eab60c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669912"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913771"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generar archivos de volcado para la ejecución de paquetes
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede crear archivos de volcado de depuración que proporcionen información sobre la ejecución de un paquete. La información de estos archivos puede ayudarle a solucionar los problemas de ejecución del paquete.  
   
@@ -44,7 +44,7 @@ En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede crear ar
   
 -   El archivo de volcado de depuración .tmp. Es un archivo de texto con formato.  
   
- De forma predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena estos archivos en la carpeta *\<unidad>:* \Archivos de programa\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ De forma predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena estos archivos en la carpeta *\<drive>:* \Archivos de programa\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  En la tabla siguiente solo se describen determinadas secciones del archivo .tmp. El archivo .tmp incluye datos adicionales que no se incluyen en la tabla.  
   

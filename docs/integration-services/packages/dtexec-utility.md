@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53a05fea022a2ea0232bc44646509ee3a84028af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761859"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919232"
 ---
 # <a name="dtexec-utility"></a>dtexec (utilidad)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La utilidad del símbolo del sistema **dtexec** se usa para configurar y ejecutar paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La utilidad **dtexec** otorga acceso a todas las características de configuración y ejecución de paquetes, como parámetros, conexiones, propiedades, variables, registro e indicadores de progreso. La utilidad **dtexec** permite cargar paquetes desde estos orígenes: el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], un archivo de proyecto .ispac, una base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
@@ -68,22 +68,22 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> Consideraciones sobre la instalación en equipos de 64 bits  
  En un equipo de 64 bits, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala una versión de 64 bits de la utilidad **dtexec** (dtexec.exe). Si tiene que ejecutar paquetes específicos en el modo de 32 bits, tendrá que instalar la versión de 32 bits de la utilidad **dtexec** . Para instalar la versión de 32 bits de la utilidad **dtexec** , seleccione Herramientas cliente o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante la instalación.  
   
- De forma predeterminada, si un equipo de 64 bits tiene instaladas tanto las versiones de 64 bits como las de 32 bits de una utilidad de líneas de comandos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ejecutará la versión de 32 bits en el símbolo del sistema. La versión de 32 bits se ejecuta porque la ruta de acceso del directorio para la versión de 32 bits aparece en la variable de entorno PATH antes que la ruta de acceso del directorio para la versión de 64 bits. (Normalmente, la ruta de acceso al directorio de 32 bits es *\<unidad>* :\Archivos de programa (x86)\Microsoft SQL Server\110\DTS\Binn, mientras que la ruta de acceso al directorio de 64 bits es *\<unidad>* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn).  
+ De forma predeterminada, si un equipo de 64 bits tiene instaladas tanto las versiones de 64 bits como las de 32 bits de una utilidad de líneas de comandos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ejecutará la versión de 32 bits en el símbolo del sistema. La versión de 32 bits se ejecuta porque la ruta de acceso del directorio para la versión de 32 bits aparece en la variable de entorno PATH antes que la ruta de acceso del directorio para la versión de 64 bits. (Normalmente, la ruta de acceso del directorio de 32 bits es *\<drive>* :\Archivos de programa(x86)\Microsoft SQL Server\110\DTS\Binn, mientras que la ruta de acceso del directorio de 64 bits es *\<drive>* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn).  
   
 > **NOTA:** Si usa el Agente SQL Server para ejecutar la utilidad, el Agente SQL Server usa la versión de 64 bits de la utilidad automáticamente. El Agente SQL Server usa el Registro, no la variable de entorno PATH, para buscar la aplicación ejecutable correcta para la utilidad.  
   
  Para garantizar que se ejecuta la versión de 64 bits de la utilidad en el símbolo del sistema, puede realizar una de las siguientes acciones:  
   
--   Abra una ventana del símbolo del sistema, cambie al directorio que contiene la versión de 64 bits de la utilidad ( *\<unidad>* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn) y, después, ejecute la utilidad desde esa ubicación.  
+-   Abra una ventana del símbolo del sistema, cambie al directorio que contiene la versión de 64 bits de la utilidad ( *\<drive>* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn) y, después, ejecute la utilidad desde esa ubicación.  
   
--   En el símbolo del sistema, escriba la ruta de acceso completa de la versión de 64 bits ( *\<unidad>* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn) para ejecutar la utilidad.  
+-   En el símbolo del sistema, escriba la ruta de acceso completa ( *\<drive>* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn) para ejecutar la versión de 64 bits de la utilidad.  
   
--   Para cambiar de forma permanente el orden de las rutas de acceso en la variable de entorno PATH, coloque la ruta de acceso de 64 bits ( *\<unidad>* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn) antes que la ruta de acceso de 32 bits ( *\<unidad>* :\Archivos de programa (x86)\Microsoft SQL Server\110\DTS\Binn) en la variable.  
+-   Cambie de forma permanente el orden de las rutas de acceso en la variable de entorno PATH colocando la ruta de acceso de 64 bits ( *\<drive>* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn) en la variable antes que la ruta de acceso de 32 bits ( *\<drive>* :\Archivos de programa(x86)\Microsoft SQL Server\110\DTS\Binn).  
   
 ##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> Consideraciones sobre los equipos con instalaciones en paralelo  
  Cuando [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] se instala en un equipo que tiene [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] instalado, se instalan varias versiones de la utilidad **dtexec** .  
   
- Para asegurarse de que ejecuta la versión correcta de la utilidad, escriba la ruta de acceso completa en el símbolo del sistema ( *\<unidad>:* \Archivos de programa\Microsoft SQL Server\\<versión\>\DTS\Binn) para ejecutar la utilidad.  
+ Para asegurarse de que está ejecutando la versión correcta de la utilidad, ejecútela en el símbolo del sistema escribiendo la ruta de acceso completa ( *\<drive>* :\Archivos de programa\Microsoft SQL Server\\<versión\>\DTS\Binn).  
   
 ##  <a name="phases-of-execution"></a><a name="phases"></a> Fases de ejecución  
  La utilidad tiene cuatro fases por las que pasa durante su ejecución. Las fases son las siguientes:  
@@ -243,7 +243,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _error code_: De manera predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena los archivos de volcado de depuración en la carpeta *\<unidad>* :\Archivos de programa\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/Dump** _error code_: De forma predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena los archivos de volcado de depuración en la carpeta *\<drive>* :\Archivos de programa\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **NOTA:** Los archivos de volcado de depuración pueden contener información confidencial. Utilice una lista de control de acceso (ACL) para restringir el acceso a los archivos, o cópielos en una carpeta con acceso restringido. Por ejemplo, antes de enviar los archivos de depuración a los servicios de soporte técnico de Microsoft, se recomienda quitar la información importante o confidencial.  
   
@@ -255,7 +255,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (Opcional) Crea los archivos de volcado de depuración, .mdmp y .tmp, cuando se produce un error mientras el paquete se está ejecutando.  
   
-     De forma predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena los archivos de volcado de depuración en la carpeta *\<unidad>* :\Archivos de programa\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     De forma predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena los archivos de volcado de depuración en la carpeta *\<drive>* :\Archivos de programa\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **NOTA:** Los archivos de volcado de depuración pueden contener información confidencial. Utilice una lista de control de acceso (ACL) para restringir el acceso a los archivos, o cópielos en una carpeta con acceso restringido. Por ejemplo, antes de enviar los archivos de depuración a los servicios de soporte técnico de Microsoft, se recomienda quitar la información importante o confidencial.  
   

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9acb58bf89d23e58ac23f96141f2a5b4dd551019
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 351f5be7bdeddb93618d2a31098f44969b2d79a7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294120"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918171"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
@@ -89,7 +89,7 @@ ms.locfileid: "71294120"
   
 2.  Agregue un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al paquete. Configure dicho administrador de conexiones de forma que use el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) y se conecte a una instancia disponible de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     De forma predeterminada, el administrador de conexiones tiene el nombre siguiente: \<nombre de servidor>.AdventureWorks1.  
+     De forma predeterminada, el administrador de conexiones tiene el nombre siguiente: \<server name>.AdventureWorks1.  
   
 3.  Agregue un administrador de conexiones de archivos al paquete. Configure este administrador de conexiones con objeto de crear el archivo de resultados para la tarea de generación de perfiles de datos.  
   

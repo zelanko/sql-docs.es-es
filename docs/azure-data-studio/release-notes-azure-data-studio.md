@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/15/2020
-ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.date: 07/17/2020
+ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406258"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458890"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](download.md)** .
+
+## <a name="july-2020-hotfix"></a>Julio de 2020 (revisión, hotfix)
+
+17 de julio de 2020 &nbsp; / &nbsp; versión: 1.20.1
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Corrección del error #11372. Al arrastrar y colocar una tabla en el Explorador de objetos, los nombres de tabla se ajustan de manera incorrecta. | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
+| Corrección del error #11356. El tema oscuro es ahora el tema predeterminado. | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>Problema conocido
+
+- Algunos usuarios han detectado errores de conexión del nuevo Microsoft.Data.SqlClient v2.0.0 incluido en esta versión. Los usuarios han comprobado que las [siguientes instrucciones](https://github.com/microsoft/azuredatastudio/issues/11367#issuecomment-659614111) permiten conectarse correctamente.
 
 ## <a name="july-2020"></a>Julio de 2020
 

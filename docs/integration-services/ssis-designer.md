@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4941e8bfbb47a5d4d4e7139a6c761483dec7ad8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295665"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921972"
 ---
 # <a name="ssis-designer"></a>Diseñador SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../includes/ssis-md.md)] es una herramienta gráfica que se puede usar para crear y mantener paquetes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] está disponible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] como parte de un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -158,7 +158,7 @@ Utilice la pestaña **Flujo de datos** del Diseñador [!INCLUDE[ssIS](../include
  **Eliminar**  
  Seleccione un controlador de eventos y elimínelo del paquete haciendo clic en **Eliminar**.  
   
- **Haga clic aquí para crear un \<nombre de controlador de eventos\> para el ejecutable \<nombre del archivo ejecutable\>**  
+ **Haga clic aquí para crear un \<event handler name\> para el ejecutable \<executable name\>** .  
  Haga clic aquí para crear el controlador de eventos.  
   
  Cree el flujo de control arrastrando objetos gráficos que representan contenedores y tareas de [!INCLUDE[ssIS](../includes/ssis-md.md)] desde el **Cuadro de herramientas** a la superficie de diseño de la pestaña **Controladores de eventos** y, a continuación, conecte los objetos utilizando las restricciones de precedencia para definir la secuencia en que se ejecutan.  

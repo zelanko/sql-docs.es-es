@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52b4f561f29d78c170b334a4ea97486a30ba41c4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947196"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918901"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tarea de carga de Azure SQL DW
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -61,7 +61,7 @@ RetainFiles|Especifica si se deben conservar los archivos cargados en Azure Stor
 CompressionType|Especifica el formato de compresión que se usará al cargar archivos en Azure Storage. El origen local no se verá afectado.
 CompressionLevel|Especifica el nivel de compresión que se usará para el formato de compresión.
 AzureDwConnection|Especifica un administrador de conexión de ADO.NET para Azure SQL DW.
-TableName|Especifica el nombre de la tabla de destino. Elija un nombre de tabla existente o cree uno eligiendo **\<Nueva tabla ...>** .
+TableName|Especifica el nombre de la tabla de destino. Elija un nombre de tabla existente o cree una con **\<New Table ...>** .
 TableDistribution|Especifica el método de distribución para la tabla nueva. Se aplica si se especifica un nuevo nombre de tabla para **TableName**.
 HashColumnName|Especifica la columna usada para la distribución de la tabla hash. Se aplica si **HASH** se ha especificado para **TableDistribution**.
 
@@ -76,7 +76,7 @@ RowDelimiter|Especifica los caracteres que marcan el final de cada fila.
 ColumnDelimiter|Especifica uno o más caracteres que marcan el final de cada columna. Por ejemplo, &#124; (barra vertical), \t (tabulación), ' (comilla simple), " (comilla doble) y 0x5c (barra diagonal inversa).
 CompressionType|Especifica el formato de compresión que se usa para los datos de origen.
 AzureDwConnection|Especifica un administrador de conexión de ADO.NET para Azure SQL DW.
-TableName|Especifica el nombre de la tabla de destino. Elija un nombre de tabla existente o cree uno eligiendo **\<Nueva tabla ...>** .
+TableName|Especifica el nombre de la tabla de destino. Elija un nombre de tabla existente o cree una con **\<New Table ...>** .
 TableDistribution|Especifica el método de distribución para la tabla nueva. Se aplica si se especifica un nuevo nombre de tabla para **TableName**.
 HashColumnName|Especifica la columna usada para la distribución de la tabla hash. Se aplica si **HASH** se ha especificado para **TableDistribution**.
 

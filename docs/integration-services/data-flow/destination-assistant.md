@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 10a40921-a2c2-4ac8-be28-311f8500fbf6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5f302227746b0479f096fbfc29e50c328b61f114
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b36cd33f3d9cc0b18c0454abe393e8e68e96c644
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292909"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916727"
 ---
 # <a name="destination-assistant"></a>Asistente de destinos
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   El componente Asistente de destinos ayuda a crear un administrador de conexiones y componentes de destino. El componente está ubicado en la sección **Favoritos** del cuadro de herramientas de SSIS.  
@@ -39,11 +39,11 @@ En este tema se proporcionan los pasos para agregar un nuevo destino mediante el
   
 3.  Seleccione el tipo de destino en la lista **Tipos** .  
   
-4.  Seleccione un administrador de conexiones existente en la lista **Administradores de conexiones** o seleccione **\<Nuevo>** para crear un administrador de conexiones.  
+4.  Seleccione un administrador de conexiones existente en la lista **Administradores de conexiones** o seleccione **\<New>** para crear uno.  
   
 5.  Si selecciona un administrador de conexiones existente, haga clic **Aceptar** para cerrar el cuadro de diálogo **Agregar nuevo destino** . Debería ver el destino y los administradores de conexiones agregados al flujo de datos.  
   
-6.  Si hace clic en **\<Nuevo>** para crear un administrador de conexiones, verá el cuadro de diálogo **Administrador de conexiones**, que permite especificar los parámetros de la conexión. Después de que finalice la creación del nuevo administrador de conexiones, verá el destino y el administrador de conexiones en el Diseñador SSIS. 
+6.  Si hace clic en **\<New>** para crear un nuevo administrador de conexiones, aparecerá el cuadro de diálogo **Administrador de conexión**, que permite especificar parámetros para la conexión. Después de que finalice la creación del nuevo administrador de conexiones, verá el destino y el administrador de conexiones en el Diseñador SSIS. 
   
 ## <a name="add-new-destination-dialog-box"></a>Cuadro de diálogo Agregar nuevo destino
 En la tabla siguiente se enumeran las opciones disponibles en el cuadro de diálogo **Agregar nuevo destino**.  
@@ -51,6 +51,6 @@ En la tabla siguiente se enumeran las opciones disponibles en el cuadro de diál
 |Opción|Descripción|  
 |------------|-----------------|  
 |Tipos|Seleccione el tipo de destino al que desea conectarse.|  
-|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en **\<Nuevo>** para crear uno.|  
+|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en **\<New>** para crear uno.|  
 |Mostrar solo elementos instalados|Especifique si desea ver solo los destinos instalados.|  
 |Aceptar|Haga clic para guardar los cambios y a abrir los cuadros de diálogo siguientes para configurar opciones adicionales.|  

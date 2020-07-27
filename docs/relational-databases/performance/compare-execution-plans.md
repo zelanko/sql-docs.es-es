@@ -1,5 +1,6 @@
 ---
 title: Comparación de los planes de ejecución | Microsoft Docs
+description: Obtenga información sobre cómo comparar las similitudes y las diferencias entre los planes de ejecución gráfica reales usando la función Comparación de planes de SQL Server Management Studio.
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: a7e1b2c3b56086e6b08e0f14c49505796921faeb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 855d893ddde9c3eba9f9197c510ed0d03bc658ce
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655737"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457393"
 ---
 # <a name="compare-execution-plans"></a>Comparación de los planes de ejecución
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

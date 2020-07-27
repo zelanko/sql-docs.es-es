@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ab34cf592628a92f2dcf536e2eda400aecf80ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293528"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920892"
 ---
 # <a name="ado-net-destination"></a>Destino ADO NET
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   El destino ADO NET carga datos en una serie de bases de datos compatibles con [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que usan una tabla o vista de base de datos. Tiene la opción de cargar estos datos en una tabla o vista existente, o bien puede crear una nueva tabla y cargar los datos en ella.  

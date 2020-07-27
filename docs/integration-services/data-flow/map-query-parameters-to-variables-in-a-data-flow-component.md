@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0eef24cbeac94a6447c2cd6b4f5a43fd0ca93657
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 54581ad36eea167316d9e6c4cdb68b23e69a1cbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292296"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916477"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Asignar parámetros de consulta a variables en un componente de flujo de datos
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Al configurar el origen de OLE DB para utilizar las consultas parametrizadas, puede asignar los parámetros a las variables.  
@@ -47,7 +47,7 @@ ms.locfileid: "71292296"
   
 7.  Haga clic en **Parámetros**.  
   
-8.  En el cuadro de diálogo **Establecer parámetros de consulta**, asigne cada parámetro de la lista **Parámetros** a una variable de la lista **Variables** o cree una variable haciendo clic en **\<Nueva variable>** . Haga clic en **OK**.  
+8.  En el cuadro de diálogo **Establecer parámetros de consulta**, asigne cada parámetro de la lista **Parámetros** a una variable de la lista **Variables** o cree una variable haciendo clic en **\<New variable>** . Haga clic en **OK**.  
   
     > [!NOTE]  
     >  Solo están disponibles para su asignación las variables del sistema y las variables definidas por el usuario que están en el ámbito del paquete, un contenedor principal como un bucle Foreach, o la tarea Flujo de datos que contiene el componente de flujo de datos. La variable debe tener un tipo de datos compatible con la columna en la cláusula WHERE a la que se asigna el parámetro.  

@@ -1,5 +1,6 @@
 ---
 title: Broker - DBM Transport (objeto de SQL Server) | Microsoft Docs
+description: Obtenga información sobre el objeto de rendimiento Broker / DBM Transport, que contiene contadores de rendimiento que proporcionan información de red sobre Service Broker y sobre la creación de reflejo de la base de datos.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bf22e4f825d29a107f86fb486924b40da5af3752
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 218fd5f50061161c1b94bc22cdaf94c3202cfb6a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787322"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458677"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>Broker - DBM Transport (objeto de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

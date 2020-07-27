@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a01b75cc3d3e804d9329b57676eecc28d17c121c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284168"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917467"
 ---
 # <a name="integration-services-user-interface"></a>Interfaz de usuario de Integration Services
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Además de las superficies de diseño de las pestañas del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la interfaz de usuario proporciona acceso a las siguientes ventanas y cuadros de diálogo para agregar características a paquetes y configurar las propiedades de los objetos de paquete:  
@@ -51,7 +51,7 @@ ms.locfileid: "71284168"
 |**Firma digital**|Firmar un paquete o quitar la firma del paquete.|En el menú **SSIS** , haga clic en **Firma digital**.<br /><br /> O bien<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Firma digital**.|  
 |**Establecimiento de puntos de interrupción**|Habilitar puntos de interrupción en tareas y establecer las propiedades de los puntos de interrupción.|En la superficie de diseño de la pestaña **Flujo de control** , haga clic con el botón derecho en una tarea o contenedor y, luego, haga clic en **Editar puntos de interrupción**. Para establecer un punto de interrupción en el paquete, haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Editar puntos de interrupción**.|  
   
- La ventana de **Introducción** proporciona vínculos a ejemplos, tutoriales y vídeos. Para agregar vínculos al contenido adicional, modifique el archivo SamplesSites.xml que se incluye con la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se recomienda que no modifique el valor del elemento \<GettingStartedSamples> que especifica la dirección URL de la fuente RSS. El archivo se encuentra en la carpeta *unidad>\<* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn. En un equipo de 64 bits, el archivo se encuentra en la carpeta *\<unidad>* :\Archivos de programa(x86)\Microsoft SQL Server\110\DTS\Binn.  
+ La ventana de **Introducción** proporciona vínculos a ejemplos, tutoriales y vídeos. Para agregar vínculos al contenido adicional, modifique el archivo SamplesSites.xml que se incluye con la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se recomienda que no modifique el valor del elemento \<GettingStartedSamples> que especifica la dirección URL de la fuente RSS. El archivo se encuentra en la carpeta *\<drive>* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn. En un equipo de 64 bits, el archivo se encuentra en la carpeta *\<drive>* :\Archivos de programa(x86)\Microsoft SQL Server\110\DTS\Binn.  
   
  Si el archivo SamplesSites.xml se daña, reemplace el XML del archivo por el XML predeterminado siguiente.  
   

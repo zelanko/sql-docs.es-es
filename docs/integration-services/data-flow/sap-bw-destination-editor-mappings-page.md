@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2878b4691515c835165f764e09735bafb617b0f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298100"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917875"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Editor de destino de SAP BW (página Asignaciones)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destino de SAP BW** para asignar columnas de entrada a columnas de destino.  
@@ -77,7 +77,7 @@ ms.locfileid: "71298100"
  **Columna de entrada**  
  Permite ver las columnas de entrada que ha seleccionado.  
   
- Para asignar una columna de entrada a la misma columna de destino, seleccione una columna de entrada diferente de la lista. Para quitar una asignación, seleccione **\<omitir>** con el fin de excluir la columna de entrada de los resultados.  
+ Para asignar una columna de entrada a la misma columna de destino, seleccione una columna de entrada diferente de la lista. Para quitar una asignación, seleccione **\<ignore>** con el fin de excluir la columna de entrada de la salida.  
   
  **Columna de destino**  
  Permite ver todas las columnas de destino disponibles, tanto si las columnas están asignadas como si no lo están.  

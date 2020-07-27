@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cdeab9ba00b4c498970ebac378c4abe53f4fbd2c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e16612058617d324d0b3c0e4534716b39a09527f
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628615"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552430"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opciones File y Filegroup de ALTER DATABASE (Transact-SQL)
 
@@ -57,15 +57,13 @@ Modifica los archivos y los grupos de archivos asociados a la base de datos. Agr
 
 Para obtener más información sobre las convenciones de sintaxis, vea [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## <a name="click-a-product"></a>Clic en un producto
-
-En la siguiente fila, haga clic en cualquier nombre de producto que le interese. Al hacer clic, en esta página web se muestra otro contenido, adecuado para el producto que seleccione.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 |||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**_\* SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -163,7 +161,7 @@ Para un grupo de archivos FILESTREAM, NAME se puede modificar en línea. Aunque 
 Puede establecer un archivo FILESTREAM en OFFLINE. Cuando un archivo FILESTREAM está sin conexión, su grupo de archivos principal se marcará internamente como sin conexión; por consiguiente, se producirá un error en cualquier intento de acceso a los datos FILESTREAM situados dentro de ese grupo de archivos.
 
 > [!NOTE]
-> No hay opciones \<add_or_modify_files>disponibles en una base de datos independiente.
+> Las opciones \<add_or_modify_files> no están disponibles en una base de datos independiente.
 
 **\<filespec>::=**
 
@@ -256,7 +254,7 @@ OFFLINE Establece el archivo en modo sin conexión e impide el acceso a todos lo
 > [!CAUTION]
 > Utilice esta opción solo si el archivo está dañado y se puede restaurar. Un archivo establecido en OFFLINE solo se puede establecer como en línea mediante la restauración del archivo a partir de una copia de seguridad. Para más información sobre cómo restaurar un único archivo, vea [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md).
 >
-> No hay opciones \<filespec> disponibles en una base de datos independiente.
+> Las opciones \<filespec> no están disponibles en una base de datos independiente.
 
 **\<add_or_modify_filegroups>::=**
 

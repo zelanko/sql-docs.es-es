@@ -1,5 +1,6 @@
 ---
 title: Planes de ejecución | Microsoft Docs
+description: Obtenga información sobre los planes de ejecución o los planes de consulta, los cuales crea el optimizador de consultas para que el Motor de base de datos de SQL Server ejecute consultas.
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 8f9a92ee9ac1ed87a20515a267a80b8372c95366
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b0f95a4afa1397783547f2804d92dd3fc37b357
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751789"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457265"
 ---
 # <a name="execution-plans"></a>Planes de ejecución
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

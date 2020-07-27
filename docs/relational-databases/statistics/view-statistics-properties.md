@@ -1,5 +1,6 @@
 ---
 title: Ver propiedades de estadísticas | Microsoft Docs
+description: Obtenga más información sobre cómo mostrar estadísticas de optimización de consultas actuales para una tabla o vista indizada en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fc876283635f3a3015efa957b90cf0d9d938386
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ab4cc68a4fbc9e737498d68433de2effd9fe805
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001058"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457259"
 ---
 # <a name="view-statistics-properties"></a>Ver propiedades de estadísticas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ ms.locfileid: "86001058"
      Muestra el nombre del objeto de base de datos donde se almacenan las estadísticas.  
   
      **Estadísticas para INDEXnombre_de_estadísticas**  
-     Este cuadro de texto muestra las propiedades devueltas del objeto de estadísticas. Estas propiedades se dividen en tres secciones: encabezado de estadísticas, vector de densidad e histograma.  
+     Este cuadro de texto muestra las propiedades devueltas del objeto de estadísticas. Estas propiedades se dividen en tres secciones: Encabezado de estadísticas, Vector de densidad e Histograma.  
   
      La siguiente información se describen las columnas devueltas en el conjunto de resultados para el encabezado de estadísticas.  
   
@@ -107,7 +108,7 @@ ms.locfileid: "86001058"
      La siguiente información describe las columnas devueltas en el conjunto de resultados del vector de densidad.  
   
      **Toda la densidad**  
-     La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Con el prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6) (4, 4, 6) (4, 5, 6) (4, 5, 7). Con el prefijo (A, B), los mismos valores de columna tienen estas listas de valores distintos: (3, 5), (4, 4) y (4, 5).  
+     La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Si se usa el prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Si se usa el prefijo (A, B) los valores de la misma columna tendrán estas listas de valores distintos: (3, 5), (4, 4) y (4, 5).  
   
      **Promedio de longitud**  
      Promedio de longitud, en bytes, para almacenar una lista de los valores de columna del prefijo de columna. Por ejemplo, si cada valor de la lista (3, 5, 6) necesita 4 bytes, la longitud es 12 bytes.  

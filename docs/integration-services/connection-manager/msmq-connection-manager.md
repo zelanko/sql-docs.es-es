@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a99770eded434ef15966535f082bbd25e07aece7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298528"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923128"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ, administrador de conexiones
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Un administrador de conexiones MSMQ permite a un paquete conectarse a una cola de mensajes que usa Message Queue Server (que también recibe el nombre de MSMQ). La tarea Cola de mensajes que incluye [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa un administrador de conexiones MSMQ.  
@@ -43,8 +43,8 @@ ms.locfileid: "71298528"
   
 |Tipo de cola|Ruta de acceso de ejemplo|  
 |----------------|-----------------|  
-|Público|\<nombre del equipo>\\<nombre de la cola\>|  
-|Privada|\<nombre del equipo>\Private$\\<nombre de la cola\>|  
+|Público|\<computer name>\\<queue name\>|  
+|Privada|\<computer name>\Private$\\<queue name\>|  
   
  Puede usar un punto (.) para representar el equipo local.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "71298528"
   
 |Tipo de cola|Ruta de acceso de ejemplo|  
 |----------------|-----------------|  
-|Público|\<nombre del equipo>\\<nombre de la cola\>|  
-|Privada|\<nombre del equipo>\Private$\\<nombre de la cola\>|  
+|Público|\<computer name>\\<queue name\>|  
+|Privada|\<computer name>\Private$\\<queue name\>|  
   
  Puede utilizar "." para representar el equipo local.  
   

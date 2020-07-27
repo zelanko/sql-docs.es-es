@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 581cdcddc2138b2d5cd78790be412e0ad0a9fdda
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293927"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920481"
 ---
 # <a name="send-mail-task"></a>Enviar correo, tarea
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La tarea Enviar correo envía un mensaje de correo electrónico. Un paquete puede utilizar la tarea Enviar correo para enviar mensajes si las tareas del paquete de flujo de trabajo finalizan correctamente o si se producen errores, o para enviar mensajes en respuesta a eventos provocados por el paquete en tiempo de ejecución. Por ejemplo, la tarea puede notificar a un administrador de base de datos si la tarea Copia de seguridad de la base de datos se realizó correctamente o no.  
@@ -105,7 +105,7 @@ ms.locfileid: "71293927"
   
 ### <a name="options"></a>Opciones  
  **SMTPConnection**  
- Seleccione un administrador de conexiones SMTP de la lista, o bien haga clic en **\<Nueva conexión…>** para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones SMTP de la lista o haga clic en **\<New connection...>** para crear un nuevo administrador de conexiones.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones SMTP solo es compatible con la autenticación anónima y la autenticación de Windows. No admite la autenticación básica.  
@@ -153,13 +153,13 @@ ms.locfileid: "71293927"
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexión de archivos  
  **MessageSource**  
- Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos de la lista o haga clic en \<**New connection...**> para crear uno.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
- Seleccione una variable de la lista, o bien haga clic en \<**Nueva variable…** > para crear una.  
+ Seleccione una variable de la lista o haga clic en \<**New variable...**> para crear una nueva variable.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

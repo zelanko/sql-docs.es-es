@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e265f95741ba3957902e7f502232bc4c08bbcbd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286589"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914241"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Descripción del modelo de objetos del componente de script
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Tal y como se explicó en [Programar y depurar el componente de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md), el proyecto del componente de script contiene tres elementos de proyecto:  
@@ -130,14 +130,14 @@ public override void PreExecute()
   
 -   Una implementación invalidada del método **ProcessInput**. Este es el método al que el motor de flujo de datos llama en tiempo de ejecución después del método **PreExecute** y al que se puede llamar varias veces. El método **ProcessInput** entrega el procesamiento al método **\<inputbuffer>_ProcessInput**. A continuación, el método **ProcessInput** comprueba el fin del búfer de entrada y, si se ha alcanzado, llama al método reemplazable **FinishOutputs** y al método privado **MarkOutputsAsFinished**. A continuación, el método **MarkOutputsAsFinished** llama a **SetEndOfRowset** en el último búfer de salida.  
   
--   Una implementación reemplazable del método **\<inputbuffer>_ProcessInput**. Esta implementación predeterminada, simplemente, recorre en bucle cada fila de entrada y llama a **\<inputbuffer>_ProcessInputRow**.  
+-   Una implementación que se puede invalidar del método **\<inputbuffer>_ProcessInput**. Esta implementación predeterminada, simplemente, recorre en bucle cada fila de entrada y llama a **\<inputbuffer>_ProcessInputRow**.  
   
--   Una implementación reemplazable del método **\<inputbuffer>_ProcessInputRow**. La implementación predeterminada está vacía. Éste es el método que normalmente invalidará para escribir el código personalizado de procesamiento de datos.  
+-   Una implementación que se puede invalidar del método **\<inputbuffer>_ProcessInputRow**. La implementación predeterminada está vacía. Éste es el método que normalmente invalidará para escribir el código personalizado de procesamiento de datos.  
   
 #### <a name="what-your-custom-code-should-do"></a>Qué debe hacer el código personalizado  
  Puede utilizar los métodos siguientes para procesar la entrada en la clase **ScriptMain**:  
   
--   Invalide **\<inputbuffer>_ProcessInputRow** para procesar los datos de cada fila de entrada cuando el código pase por ellos.  
+-   Invalide **\<inputbuffer>_ProcessInputRow** para procesar los datos de cada fila de entrada cuando se pase por ellos.  
   
 -   Invalide **\<inputbuffer>_ProcessInput** solamente si es necesaria alguna acción adicional mientras se recorren en bucle las filas de entrada. (Por ejemplo, si tiene que probar **EndOfRowset** para realizar alguna otra acción una vez procesadas todas las filas). Llame a **\<inputbuffer>_ProcessInputRow** para realizar el procesamiento de filas.  
   

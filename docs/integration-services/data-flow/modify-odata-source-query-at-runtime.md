@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d98222a9f8663dfb2495220ee43af34c1f0c02d9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298211"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920815"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Proporcionar una consulta de origen OData en tiempo de ejecución
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  Puede modificar la consulta de origen OData en tiempo de ejecución si agrega una *expresión* a la propiedad **[OData Source].[Query]** de la tarea Flujo de datos.  
@@ -33,7 +33,7 @@ ms.locfileid: "71298211"
   
 1.  Haga clic con el botón derecho en **Tarea Flujo de datos** y seleccione la opción **Parametrizar…** .  
   
-2.  En el diálogo **Parametrizar**, seleccione **[\<Nombre del componente de origen OData>].[Query]** para **Propiedad**.  
+2.  En el cuadro de diálogo **Parametrizar**, seleccione **[\<Name of the OData Source Component>].[Query]** para **Propiedad**.  
   
 3.  Elija si se va a **Crear nuevo parámetro** o **Usar un parámetro existente**.  
   

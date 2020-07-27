@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 663ecd4dba689f394af61c4a26ff8edc1c241703
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295119"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86900183"
 ---
 # <a name="debugging-data-flow"></a>Depurar el flujo de datos
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluyen características y herramientas que puede usar para solucionar los problemas de los flujos de datos en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -172,7 +172,7 @@ order by source_component_name desc
   
 4.  Haga clic con el botón derecho en el componente cuyas columnas de salida de error quiere configurar y haga clic en **Mostrar editor avanzado**.  
   
-5.  Haga clic en la pestaña **Propiedades de entrada y salida** y expanda **Salida de error de \<nombre de componente>** y, después, expanda **Columnas de salida**.  
+5.  Haga clic en la pestaña **Propiedades de entrada y salida** y expanda **Salida de error de \<component name>** y, después, expanda **Columnas de salida**.  
   
 6.  Haga clic en una columna y actualice sus propiedades.  
   
@@ -249,7 +249,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  El parámetro dataflow_path_id_string del procedimiento almacenado add_data_tap corresponde a la propiedad IdentificationString de la ruta de flujo de datos a la que desea agregar una derivación de datos. Para obtener dataflow_path_id_string, haga clic en la ruta de flujo de datos (flecha entre las tareas del flujo de datos) y anote el valor de la propiedad **IdentificationString** de la ventana Propiedades.  
   
- Cuando se ejecuta el script, el archivo de salida se almacena en \<Archivos de programa>\Microsoft SQL Server\110\DTS\DataDumps. Si ya existe un archivo con ese nombre, se crea un archivo nuevo con un sufijo (por ejemplo: output[1].txt).  
+ Cuando se ejecuta el script, el archivo de salida se almacena en \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps. Si ya existe un archivo con ese nombre, se crea un archivo nuevo con un sufijo (por ejemplo: output[1].txt).  
   
  Como se ha indicado anteriormente, también puede usar el procedimiento almacenado [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md), en lugar de usar el procedimiento almacenado add_data_tap. Este procedimiento almacenado toma como parámetro el identificador de la tarea Flujo de datos en lugar de task_package_path. Puede obtener el identificador de la tarea Flujo de datos de la ventana Propiedades en Visual Studio.  
   

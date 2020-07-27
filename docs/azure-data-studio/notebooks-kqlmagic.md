@@ -9,12 +9,12 @@ ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: 2ee07ea6d3999d7ab3f0c32f7d5d47e1429f844d
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: ef59ecb200b30af6c30a5ea602cd89bc2c951e24
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091875"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920473"
 ---
 # <a name="kqlmagic-extension-in-azure-data-studio"></a>Extensión Kqlmagic en Azure Data Studio
 
@@ -255,5 +255,4 @@ Obtenga más información sobre los cuadernos y Kqlmagic:
 - [Extensión (magic) en Jupyter Notebook y Jupyter Lab, que habilita la experiencia del cuaderno al trabajar con datos de Kusto, Application Insights y LogAnalytics](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
-- [Procedimiento para usar cuadernos](notebooks-guidance.md)
-- [Cómo se administran los cuadernos en Azure Data Studio](notebooks-manage-sql-server.md)
+- [Uso de cuadernos en Azure Data Studio](notebooks-guidance.md)

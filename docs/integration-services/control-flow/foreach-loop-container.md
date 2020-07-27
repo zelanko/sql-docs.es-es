@@ -30,16 +30,16 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 176e5f4d638f6093f7239c347cbc0d3e0e5b75bb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298301"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918256"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   El contenedor de bucles Foreach define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **Foreach** de los lenguajes de programación. En un paquete, los bucles se habilitan mediante un enumerador Foreach.  El contenedor de bucles Foreach repite el flujo de control para cada miembro de un enumerador especificado.  
@@ -168,7 +168,7 @@ Este procedimiento describe cómo configurar un contenedor de bucles Foreach, in
   
 7.  Si quiere, puede hacer clic en **Asignaciones de variables** para asignar propiedades de objetos al valor de la colección y, luego, haga lo siguiente:  
   
-    1.  En la lista **Variables**, seleccione una variable o haga clic en **\<Nueva variable>** para crear una.  
+    1.  En la lista **Variables**, seleccione una variable o haga clic en **\<New Variable>** para crear una.  
   
     2.  Si agrega una nueva variable, establezca las propiedades de la variable en el cuadro de diálogo **Agregar variable** y haga clic en **Aceptar**.  
   
@@ -294,7 +294,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  El enumerador de ADO para Foreach se utiliza para enumerar filas o tablas de un objeto ADO o ADO.NET que está almacenado en una variable. Por ejemplo, si el bucle Foreach incluye una tarea Script que escribe un conjunto de datos en una variable, puede utilizar el enumerador de ADO para Foreach para enumerar las filas del conjunto de datos. Si la variable contiene un conjunto de datos ADO.NET, el enumerador puede configurarse para enumerar filas en varias tablas o para enumerar tablas.  
   
  **Variable de origen de objeto ADO**  
- Seleccione en la lista una variable definida por el usuario o haga clic en \<**Nueva variable...** > para crear una.  
+ Seleccione en la lista una variable definida por el usuario o haga clic en \<**New variable...**> para crear una nueva variable.  
   
 > [!NOTE]  
 >  La variable debe tener el tipo de datos Object o, de lo contrario, se producirán errores.  
@@ -314,7 +314,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  El enumerador de conjunto de filas del esquema para Foreach de ADO.NET se utiliza para enumerar un esquema para un origen de datos especificado. Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL, puede utilizar el enumerador de conjunto de filas del esquema para Foreach de ADO.NET para enumerar esquemas, como las columnas de la base de datos **AdventureWorks** , y la tarea Ejecutar SQL para obtener los permisos de esquema.  
   
  **Connection**  
- Seleccione en la lista un administrador de conexiones ADO.NET o haga clic en \<**Nueva conexión...** > para crear un administrador de conexiones ADO.NET.  
+ Seleccione un administrador de conexiones ADO.NET de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones ADO.NET.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones ADO.NET debe utilizar un proveedor .NET para OLE DB. Si se conecta a SQL Server, el proveedor recomendado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, que aparece enumerado en la sección **Proveedores .NET de OleDb** del cuadro de diálogo **Administrador de conexiones** .  
@@ -333,7 +333,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  El enumerador de variable para Foreach se utiliza para enumerar los objetos enumerables incluidos en una variable especificada. Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL que ejecuta una consulta y almacena el resultado en una variable, puede utilizar el enumerador de variable para Foreach para enumerar los resultados de la consulta.  
   
  **Variable**  
- Seleccione una variable de la lista o haga clic en \<**Nueva variable…** > para crear una.  
+ Seleccione una variable de la lista o haga clic en \<**New variable...**> para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -356,11 +356,11 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **DocumentSource**  
  Si **DocumentSourceType** se establece en **Entrada directa**, escriba el código XML o haga clic en el botón de puntos suspensivos (…) para escribir el código XML mediante el cuadro de diálogo **Editor de origen del documento**.  
   
- Si **DocumentSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión…** > para crear uno.  
+ Si **DocumentSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**New connection...**> para crear uno.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **DocumentSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…** > para crear una.  
+ Si **DocumentSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**New variable...**> para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -386,11 +386,11 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **OuterXPathString**  
  Si **OuterXPathStringSourceType** está establecido en **Entrada directa**, debe proporcionar la cadena XPath.  
   
- Si **OuterXPathStringSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión…** > para crear uno.  
+ Si **OuterXPathStringSourceType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**New connection...**> para crear uno nuevo.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **OuterXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…** > para crear una.  
+ Si **OuterXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**New variable...**> para crear una nueva.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -409,11 +409,11 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **InnerXPathString**  
  Si **InnerXPathStringSourceType** está establecido en **Entrada directa**, debe proporcionar la cadena XPath.  
   
- Si **InnerXPathStringSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión…** > para crear uno.  
+ Si **InnerXPathStringSourceType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**New connection...**> para crear uno nuevo.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **InnerXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…** > para crear una nueva.  
+ Si **InnerXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**New variable...**> para crear una nueva.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -421,7 +421,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  El enumerador de SMO para Foreach se utiliza para enumerar objetos de Objetos de administración de SQL Server (SMO). Por ejemplo, si el bucle Para cada uno incluye una tarea Ejecutar SQL, puede utilizar el enumerador de SMO para Para cada uno para enumerar las tablas de la base de datos **AdventureWorks** y ejecutar las consultas que realizan el recuento de filas de cada tabla.  
   
  **Connection**  
- Seleccione un administrador de conexiones ADO.NET existente o haga clic en \<**Nueva conexión…** > para crear uno.  
+ Seleccione un administrador de conexiones ADO.NET o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  Temas relacionados: [Administrador de conexiones de ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configurar el administrador de conexiones de ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   

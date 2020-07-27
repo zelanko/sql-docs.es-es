@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95f2fc808723fa3a69222ead3f362007585231f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc7afe35c99a12e8e92111d05e62d9d0a5dd9c9c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288239"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922806"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabajar con el servicio CDC de Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   En esta sección se describen algunos conceptos importantes del servicio CDC de Oracle. Los conceptos incluidos en esta sección son:  

@@ -1,5 +1,6 @@
 ---
 title: 'Recomendaciones de índice de almacén de columnas: Asistente para la optimización de motor de base de datos (DTA)'
+description: Obtenga más información sobre el Asistente para la optimización de motor de base de datos, que puede analizar la carga de trabajo y recomendar índices de almacén y de columnas para crear la base de datos en SQL Server.
 ms.custom: seo-dt-2019
 ms.date: 01/09/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a115a1135ab0b7ded6bdde57e50ce1be190953b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f534e88529564f2fcb01c61911e291eaa7f99c30
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655881"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457385"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

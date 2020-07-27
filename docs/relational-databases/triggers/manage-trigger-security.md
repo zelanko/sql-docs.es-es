@@ -12,12 +12,12 @@ ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de347e9f950c16ccbbe014a9b2c07a76aaf168a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bdbc04c4a1294605b59c04fb9df9a3c44b1f077f
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881178"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483696"
 ---
 # <a name="manage-trigger-security"></a>Administrar la seguridad de los desencadenadores
 
@@ -60,7 +60,7 @@ Este desencadenador significa que cuando un usuario con permiso para ejecutar un
     ```  
 
    > [!NOTE]
-   > Solo **sys.triggers** está disponible para Azure SQL Database, a menos que se use Instancia administrada.
+   > Solo **sys.triggers** está disponible para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a menos que se esté usando [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 ::: moniker-end
 
@@ -124,5 +124,4 @@ Este desencadenador significa que cuando un usuario con permiso para ejecutar un
  [Desencadenadores DML](../../relational-databases/triggers/dml-triggers.md)   
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)  
  [Desencadenadores logon](../../relational-databases/triggers/logon-triggers.md)  
-  
   

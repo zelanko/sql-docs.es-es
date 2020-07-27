@@ -1,5 +1,6 @@
 ---
 title: Habilitar o deshabilitar una guía de plan | Microsoft Docs
+description: Obtenga información sobre cómo deshabilitar y habilitar las guías de plan mediante SQL Server Management Studio o Transact-SQL. Deshabilite o habilite una o todas las guías de plan en una base de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3bd43f7ae13f2c107915ef2e37655b5b7fe16b7f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04180f951747b7517775ec7c222f679d043286c3
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655395"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457277"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Habilitar o deshabilitar una guía de plan
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

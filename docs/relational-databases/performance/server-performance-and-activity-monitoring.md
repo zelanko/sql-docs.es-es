@@ -1,5 +1,6 @@
 ---
 title: Supervisión de la actividad y rendimiento del servidor | Microsoft Docs
+description: Estos recursos explican cómo evaluar el funcionamiento de un servidor mediante las herramientas de supervisión de actividad y rendimiento de SQL Server y Windows.
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1690e0022ae45444f8f25f9a7704622e55c0a06c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8da66c6aeaa1466e570839e4721e1545a46124b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716899"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457886"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Supervisión de la actividad y rendimiento del servidor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85716899"
  
  -   [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)
  
- -   [Quick Start: Extended events in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [Inicio rápido: eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
  
  -   [Administrar sesiones de eventos en el Explorador de objetos](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
  
@@ -70,7 +71,7 @@ ms.locfileid: "85716899"
 > En las secciones siguientes se describen los métodos de uso de Seguimiento de SQL y [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 > Seguimiento de SQL y [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] están en desuso. El espacio de nombres *Microsoft.SqlServer.Management.Trace* que contiene los objetos Trace y Replay de Microsoft SQL Server también están en desuso.   
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-> Use eventos extendidos en su lugar. Para obtener más información sobre [Eventos extendidos ](../../relational-databases/extended-events/extended-events.md), vea [Inicio rápido: Eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) y [Uso de XEvent Profiler de SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> Use eventos extendidos en su lugar. Para más información sobre los [eventos extendidos](../../relational-databases/extended-events/extended-events.md), vea [Inicio rápido: Eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) y [Generador de perfiles XEvent de SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE] 
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para las cargas de trabajo de Analysis Services NO está en desuso y seguirá siendo compatible.

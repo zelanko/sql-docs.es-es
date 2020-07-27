@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f145b536072314594af473488bc0b933c443230e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294689"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922534"
 ---
 # <a name="manage-a-cdc-instance"></a>Administrar una instancia CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Puede usar la Consola del diseñador CDC para ver información acerca de las instancias que crea y para administrar el funcionamiento de las instancias.  
@@ -107,17 +107,17 @@ ms.locfileid: "71294689"
     -   **Cambios escritos**: número de cambios escritos en las tablas de cambios de SQL Server.  
   
  **Oracle**  
- Muestra información sobre la instancia CDC y su conexión con la base de datos de Oracle. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic con el botón derecho en la instancia del panel izquierdo y seleccione **Propiedades** o haga clic en **Propiedades** en el panel derecho para abrir el cuadro de diálogo Propiedades de \<instancia>.  
+ Muestra información sobre la instancia CDC y su conexión con la base de datos de Oracle. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic con el botón derecho en la instancia del panel izquierdo y seleccione **Propiedades**, o haga clic en **Propiedades** en el panel derecho para abrir el cuadro de diálogo Propiedades de \<instance>.  
   
  Para obtener información acerca de estas propiedades y cómo editarlas, vea [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
  **Tablas**  
- Muestra información sobre las tablas incluidas en la instancia CDC. La información de columna también está disponible aquí. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic con el botón derecho en la instancia del panel izquierdo y seleccione **Propiedades** o haga clic en **Propiedades** en el panel derecho para abrir el cuadro de diálogo Propiedades de \<instancia>.  
+ Muestra información sobre las tablas incluidas en la instancia CDC. La información de columna también está disponible aquí. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic con el botón derecho en la instancia del panel izquierdo y seleccione **Propiedades**, o haga clic en **Propiedades** en el panel derecho para abrir el cuadro de diálogo Propiedades de \<instance>.  
   
  Para obtener información acerca de estas propiedades y cómo editarlas, vea [Edit Tables](../../integration-services/change-data-capture/edit-tables.md).  
   
  **Avanzadas**  
- Muestra las propiedades avanzadas para la instancia CDC y los valores de propiedad. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic con el botón derecho en la instancia del panel izquierdo y seleccione **Propiedades** o haga clic en **Propiedades** en el panel derecho para abrir el cuadro de diálogo Propiedades de \<instancia>.  
+ Muestra las propiedades avanzadas para la instancia CDC y los valores de propiedad. Esta pestaña es de solo lectura. Para editar estas propiedades, haga clic con el botón derecho en la instancia del panel izquierdo y seleccione **Propiedades**, o haga clic en **Propiedades** en el panel derecho para abrir el cuadro de diálogo Propiedades de \<instance>.  
   
  Para obtener información acerca de estas propiedades y cómo editarlas, vea [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   

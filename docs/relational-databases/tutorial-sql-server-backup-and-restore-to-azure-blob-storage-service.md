@@ -1,5 +1,6 @@
 ---
 title: 'Inicio rápido: Copia de seguridad y restauración en el servicio Azure Blob Storage'
+description: 'Inicio rápido: información sobre cómo escribir copias de seguridad en el servicio Azure Blob Storage y cómo restaurar desde este servicio. Cree un contenedor de blobs de Azure, escriba una copia de seguridad y, después, lleve a cabo la restauración.'
 ms.custom: seo-dt-2019
 ms.date: 04/09/2018
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24847d7b14341e9a1d5a4d874eb0046f53261fea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 59968cad65f3a80c2d511dad3dc804d151d33095
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165524"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458047"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Inicio rápido: Copia de seguridad y restauración de SQL en el servicio Azure Blob Storage
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 Con este inicio rápido, entenderá mejor cómo escribir copias de seguridad en el servicio Azure Blob Storage y cómo restaurar desde este servicio.  En el artículo se explica cómo crear un contenedor de blobs de Azure, escribir una copia de seguridad en el Blob service y, luego, realizar una restauración.
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
 Para completar este inicio rápido, debe estar familiarizado con los conceptos de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y con la sintaxis de T-SQL.  Necesita una cuenta de Azure Storage, SQL Server Management Studio (SSMS) y acceso a un servidor que ejecute SQL Server o a una instancia administrada de Azure SQL Database. Además, la cuenta que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **db_backupoperator** con permisos **Modificar cualquier credencial**. 
 
 - Obtenga una [cuenta de Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratis.

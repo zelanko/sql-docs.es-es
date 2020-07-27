@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 395d639cd62894c91fbf0690467e60aaeac57bea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727087"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484426"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
@@ -29,7 +29,7 @@ ms.locfileid: "85727087"
 En este artículo se presenta Inserción de UDF escalar, una característica del conjunto de características de [procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md). Esta característica mejora el rendimiento de las consultas que llaman a UDF escalares en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funciones escalares definidas por el usuario de T-SQL
-Las funciones definidas por el usuario (UDF) que se implementan en [!INCLUDE[tsql](../../includes/tsql-md.md)] y que devuelven un único valor de datos se conocen como Funciones escalares definidas por el usuario de T-SQL. Las UDF de T-SQL son una forma elegante de lograr la reutilización y modularidad del código en todas las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Algunos cálculos (como las reglas de negocios complejas) son más fáciles de expresar en forma de UDF imperativa. Las UDF ayudan a crear una lógica compleja, sin necesidad de tener experiencia en escribir consultas de SQL complejas.
+Las funciones definidas por el usuario (UDF) que se implementan en [!INCLUDE[tsql](../../includes/tsql-md.md)] y que devuelven un único valor de datos se conocen como Funciones escalares definidas por el usuario de T-SQL. Las UDF de T-SQL son una forma elegante de lograr la reutilización y modularidad del código en todas las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Algunos cálculos (como las reglas de negocios complejas) son más fáciles de expresar en forma de UDF imperativa. Las UDF ayudan a crear una lógica compleja, sin necesidad de tener experiencia en escribir consultas de SQL complejas. Para obtener más información sobre las UDF, vea [Creación de funciones definidas por el usuario (motor de base de datos)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
 
 ## <a name="performance-of-scalar-udfs"></a>Rendimiento de las UDF escalares
 Las UDF escalares suelen tener un rendimiento deficiente debido a las razones siguientes:
@@ -144,7 +144,7 @@ Según la complejidad de la lógica de la UDF, es posible que el plan de consult
     - `UDF`: llamadas de función anidadas o recursivas<sup>2</sup>.
     - Otros: operaciones relacionales como `EXISTS`, `ISNULL`.
 - La UDF no invoca ninguna función intrínseca que dependa de la hora (como `GETDATE()`) o que tenga efectos secundarios<sup>3</sup> (como `NEWSEQUENTIALID()`).
-- La UDF usa la cláusula `EXECUTE AS CALLER` (el comportamiento predeterminado si no se especifica la cláusula `EXECUTE AS`).
+- La UDF usa la cláusula `EXECUTE AS CALLER` (comportamiento predeterminado si no se especifica la cláusula `EXECUTE AS`).
 - La UDF no hace referencia a variables de tabla ni a parámetros con valores de tabla.
 - La consulta que invoca una UDF escalar no hace referencia a una llamada a la UDF escalar en su cláusula `GROUP BY`.
 - La consulta que invoca una UDF escalar en su lista de selección con la cláusula `DISTINCT` no contiene la cláusula `ORDER BY`.
@@ -155,24 +155,30 @@ Según la complejidad de la lógica de la UDF, es posible que el plan de consult
 - No se agrega ninguna firma a la UDF.
 - La UDF no es una función de partición.
 - La UDF no contiene referencias a expresiones de tabla comunes (CTE).
-- La UDF no contiene referencias a funciones intrínsecas (por ejemplo, @@ROWCOUNT) que pueden modificar los resultados cuando están insertadas (la restricción se ha agregado en Microsoft SQL Server 2019 CU2).
-- La UDF no contiene funciones de agregado que se pasan como parámetros a una UDF escalar (la restricción se ha agregado en Microsoft SQL Server 2019 CU2).
-- La UDF no hace referencia a vistas integradas (por ejemplo, OBJECT_ID; la restricción se ha agregado en Microsoft SQL Server 2019 CU2).
--   La UDF no hace referencia a métodos XML (la restricción se ha agregado en Microsoft SQL Server 2019 CU4).
--   La UDF no contiene una instrucción SELECT con ORDER BY sin "TOP 1" (la restricción se ha agregado en Microsoft SQL Server 2019 CU4).
--   La UDF no contiene una consulta SELECT que realice una asignación junto con la cláusula ORDER BY (por ejemplo, SELECT @x = @x +1 FROM table ORDER BY column_name; la restricción se ha agregado en Microsoft SQL Server 2019 CU4).
-- La UDF no contiene varias instrucciones RETURN (la restricción se ha agregado en Microsoft SQL Server 2019 CU5).
-- La UDF no se llama desde una instrucción RETURN (la restricción se ha agregado en Microsoft SQL Server 2019 CU5).
-- La UDF no hace referencia a la función STRING_AGG (la restricción se ha agregado en Microsoft SQL Server 2019 CU5). 
+- La UDF no contiene referencias a funciones intrínsecas que puedan modificar los resultados cuando están insertadas (como `@@ROWCOUNT`)<sup>4</sup>.
+- La UDF no contiene funciones de agregado que se pasan como parámetros a una UDF escalar<sup>4</sup>.
+- La UDF no hace referencia a las vistas integradas (como `OBJECT_ID`)<sup>4</sup>.
+- La UDF no hace referencia a métodos XML<sup>5</sup>.
+- La UDF no contiene un SELECT con `ORDER BY` sin una cláusula `TOP 1`<sup>5</sup>.
+- La UDF no contiene una consulta SELECT que realice una asignación junto con la cláusula `ORDER BY` (como `SELECT @x = @x + 1 FROM table1 ORDER BY col1`)<sup>5</sup>.
+- La UDF no contiene varias instrucciones RETURN<sup>6</sup>.
+- No se llama a la UDF desde una instrucción RETURN<sup>6</sup>.
+- La UDF no hace referencia a la función `STRING_AGG`<sup>6</sup>. 
 
-<sup>1</sup> `SELECT` con acumulación o agregación de variables (por ejemplo, `SELECT @val += col1 FROM table1`) no se admite para la inserción.
+<sup>1</sup> `SELECT` con acumulación o agregación de variables no se admite para la inserción (por ejemplo, `SELECT @val += col1 FROM table1`).
 
 <sup>2</sup> Las UDF recursivas solo se insertan hasta una profundidad concreta.
 
 <sup>3</sup> Las funciones intrínsecas cuyos resultados dependen de la hora actual del sistema son dependientes de la hora. Una función intrínseca que puede actualizar algún estado global interno es un ejemplo de una función con efectos secundarios. Estas funciones devuelven resultados diferentes cada vez que se llaman, según el estado interno.
 
+<sup>4</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2
+
+<sup>5</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
+
+<sup>6</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+
 > [!NOTE]
-> Para obtener información sobre las correcciones más recientes de la inserción de UDF escalares de T-SQL y los cambios en escenarios de elegibilidad de inserción, vea el artículo de Knowledge Base: [FIX: Problemas de inserción de UDF escalares en SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
+> Para obtener información sobre las correcciones más recientes de la inserción de UDF escalares de T-SQL y los cambios en escenarios de elegibilidad de inserción, vea el artículo de Knowledge Base: [FIX: Problemas de inserción de UDF escalares en SQL Server 2019](https://support.microsoft.com/help/4538581).
 
 ### <a name="checking-whether-or-not-a-udf-can-be-inlined"></a>Comprobación de si una UDF se puede insertar o no
 Para todas las UDF escalares de T-SQL, la vista de catálogo [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) incluye una propiedad denominada `is_inlineable`, que indica si una UDF se puede insertar o no. 
@@ -233,7 +239,8 @@ GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
 
-Una sugerencia de consulta `USE HINT` tiene prioridad sobre una configuración de ámbito de base de datos o una opción de nivel de compatibilidad.
+> [!TIP]
+> Una sugerencia de consulta `USE HINT` tiene prioridad sobre una configuración de ámbito de base de datos o una opción de nivel de compatibilidad.
 
 La inserción de UDF escalares también se puede deshabilitar para una UDF específica mediante la cláusula INLINE en la instrucción `CREATE FUNCTION` o `ALTER FUNCTION`.
 Por ejemplo:
@@ -271,13 +278,14 @@ Como se describe en este artículo, la inserción de UDF escalar transforma una 
 1. Es posible que las sugerencias de combinación de nivel de consulta ya no sean válidas, ya que la inserción puede introducir nuevas combinaciones. En su lugar será necesario usar sugerencias de combinación locales.
 1. Las vistas que hacen referencia a UDF escalares insertadas no se pueden indexar. Si tiene que crear un índice en esas vistas, deshabilite la inserción para las UDF a las que se hace referencia.
 1. Puede haber algunas diferencias en el comportamiento del [enmascaramiento dinámico de datos](../security/dynamic-data-masking.md) con la inserción de UDF. En determinadas situaciones (en función de la lógica de la UDF), es posible que la inserción sea más conservadora que el enmascaramiento de las columnas de salida. En escenarios donde las columnas a las que se hace referencia en una UDF no son columnas de salida, no se enmascararán. 
-1. Si una UDF hace referencia a funciones integradas como `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, con la inserción se cambiará el valor devuelto por la función integrada. Este cambio de comportamiento se debe a que la inserción modifica el ámbito de las instrucciones dentro de la UDF. A partir de Microsoft SQL Server 2019 CU2, se bloqueará la inserción si la UDF hace referencia a determinadas funciones intrínsecas (por ejemplo, @@ROWCOUNT).
+1. Si una UDF hace referencia a funciones integradas como `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, con la inserción se cambiará el valor devuelto por la función integrada. Este cambio de comportamiento se debe a que la inserción modifica el ámbito de las instrucciones dentro de la UDF. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2, la inserción se bloquea si la UDF hace referencia a determinadas funciones intrínsecas (por ejemplo `@@ROWCOUNT`).
 
 ## <a name="see-also"></a>Consulte también
+[Creación de funciones definidas por el usuario (motor de base de datos)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)    (Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database)  
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)    (Guía de arquitectura de procesamiento de consultas)  
 [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Combinaciones](../../relational-databases/performance/joins.md)     
 [Demostración del procesamiento de consultas inteligentes](https://aka.ms/IQPDemos)     
-[FIX: Problemas de inserción de UDF escalares en SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+[FIX: Problemas de inserción de UDF escalares en SQL Server 2019](https://support.microsoft.com/help/4538581)     
 

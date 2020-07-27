@@ -1,6 +1,6 @@
 ---
 title: 'Creación y prueba de la función clasificadora de regulación de recursos definida por el usuario: Resource Governor'
-description: En este tema se muestra cómo crear y probar una función clasificadora definida por el usuario (UDF).
+description: Obtenga información sobre cómo crear y probar una función clasificadora definida por el usuario que implique ejecutar instrucciones Transact-SQL en el editor de consultas de SQL Server Management Studio.
 ms.custom: seo-dt-2019
 ms.date: 07/11/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 405e99a8cfda0792b29da8ff40ab6e8d7687a706
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5b1b0accf599793fdaac0bd492b648d1b302cae
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720492"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457892"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Crear y probar una función clasificadora definida por el usuario
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,5 +1,6 @@
 ---
 title: Cursores XTP de SQL Server | Microsoft Docs
+description: Obtenga información sobre el objeto de rendimiento Cursores XTP de SQL Server, que contiene contadores relacionados con los cursores internos del motor OLTP en memoria.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: afe09ef4736425943b5a7e31e74ca202155173fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b140d5efbe33b2c274b50eb34c6ee601a347e09
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730304"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458104"
 ---
 # <a name="sql-server-xtp-cursors"></a>Cursores SQL Server XTP
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

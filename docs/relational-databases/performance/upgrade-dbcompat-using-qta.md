@@ -1,5 +1,6 @@
 ---
 title: Actualización de bases de datos con el Asistente para la optimización de consultas
+description: Obtenga información sobre el Asistente para la optimización de consultas y cómo le guía por el flujo de trabajo recomendado para mantener la estabilidad del rendimiento durante las actualizaciones a versiones más recientes de SQL Server.
 ms.custom: seo-dt-2019
 ms.date: 02/13/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 3113caec4026547fcf2dca940a3908f64b6efa44
-ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
+ms.openlocfilehash: 25083a6254d05abb44a4df3e96d5b070c3d0ba37
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82598751"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457579"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Actualización de bases de datos mediante el Asistente para la optimización de consultas
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -185,7 +186,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
     -  **Id. de consulta** 
     -  **Texto de consulta**: instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se puede expandir al hacer clic en el botón **...**
     -  **Estado**: muestra el estado de experimentación actual de la consulta.
-    -  **Métrica de línea de base**: métrica seleccionada (Duración o Tiempo de CPU) en milisegundos para la consulta tal y como se ha ejecutado en el **Paso 2: subpaso 3**, que representa la consulta con regresión después de la actualización de compatibilidad de base de datos.
+    -  **Métrica de línea de base**: métrica seleccionada (Duración o Tiempo de CPU) en milisegundos para la consulta tal como se ha ejecutado en el **Paso 2: subpaso 3**, que representa la consulta con regresión después de la actualización de compatibilidad de base de datos.
     -  **Métrica observada**: métrica seleccionada (Duración o Tiempo de CPU) en milisegundos para la consulta después de la experimentación, para una optimización propuesta lo suficientemente buena.
     -  **% cambio**: cambio porcentual de la métrica seleccionada entre el antes y el después del estado de experimentación, que representa la cantidad de mejora medida para la consulta con la optimización propuesta.
     -  **Opción de consulta**: vínculo a la sugerencia propuesta que mejora la métrica de ejecución de consulta.

@@ -31,16 +31,16 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ab6bc0a45ec2ac3b72fb029e6ef3ec74601c183
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287399"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919219"
 ---
 # <a name="legacy-package-deployment-ssis"></a>Implementación de paquetes heredada (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye herramientas y asistentes para facilitar la implementación de paquetes del equipo de desarrollo en el servidor de producción o en otros equipos.  
@@ -149,7 +149,7 @@ ms.locfileid: "79287399"
 #### <a name="registry-entry"></a>Entrada del Registro  
  Si desea usar una entrada del Registro para guardar la configuración, puede usar una clave existente o crear otra en HKEY_CURRENT_USER. La clave del Registro que utilice debe tener un valor denominado **Value**. El valor puede ser un valor de tipo DWORD o una cadena.  
   
- Si selecciona el tipo de configuración **Entrada del Registro** , debe escribir el nombre de la clave del Registro en el cuadro de texto del Registro. El formato es \<clave del Registro>. Si quiere usar una clave del Registro que no está en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\...> para identificarla. Por ejemplo, para usar la clave MyPackage de SSISPackages, escriba **SSISPackages\MyPackage**.  
+ Si selecciona el tipo de configuración **Entrada del Registro** , debe escribir el nombre de la clave del Registro en el cuadro de texto del Registro. El formato es \<registry key>. Si quiere usar una clave del Registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<Registry key\registry key\\...> para identificarla. Por ejemplo, para usar la clave MyPackage de SSISPackages, escriba **SSISPackages\MyPackage**.  
   
 #### <a name="sql-server"></a>SQL Server  
  Si selecciona el tipo de configuración **SQL Server** , debe especificar la conexión a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que desee almacenar las configuraciones. Puede guardar las configuraciones en una tabla existente o crear una tabla nueva en la base de datos especificada.  
@@ -360,7 +360,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Entrada del Registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<clave del Registro>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si quiere usar una clave del Registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\…> para identificarla.|  
+|**Entrada del Registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<registry key>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si quiere usar una clave del Registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<Registry key\registry key\\...> para identificarla.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde debe almacenarse la configuración.  
@@ -488,7 +488,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 |CreateDeploymentUtility|Valor que especifica si se creará una utilidad de implementación de paquetes al generar el proyecto. Esta propiedad debe estar establecida en **True** para crear una utilidad de implementación.|  
 |DeploymentOutputPath|Ubicación, respecto al proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , de la utilidad de implementación.|  
   
- Al generar un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], se crea un archivo de manifiesto, \<nombre del proyecto>.SSISDeploymentManifest.xml, junto con las copias de los paquetes del proyecto y las dependencias del paquete, y se agrega a la carpeta bin\Deployment del proyecto o a la ubicación especificada en la propiedad DeploymentOutputPath. El archivo de manifiesto muestra los paquetes, las configuraciones de paquetes y todos los demás archivos del proyecto.  
+ Al generar un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], se crea un archivo de manifiesto, \<project name>.SSISDeploymentManifest.xml, junto con las copias de los paquetes del proyecto y las dependencias del paquete, y se agrega a la carpeta bin\Deployment del proyecto o a la ubicación especificada en la propiedad DeploymentOutputPath. El archivo de manifiesto muestra los paquetes, las configuraciones de paquetes y todos los demás archivos del proyecto.  
   
  El contenido de la carpeta de implementación se actualiza cada vez que genera el proyecto. Esto significa que se eliminará cualquier archivo guardado en esta carpeta que no se copie nuevamente en el proceso de generación. Por ejemplo, se eliminarán archivos de configuración de paquetes guardados en las carpetas de implementación.  
   
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  Haga clic con el botón derecho en el proyecto y haga clic en **Propiedades**.  
   
-3.  En el cuadro de diálogo **\<nombre del proyecto> Páginas de propiedades**, haga clic en **Utilidad de implementación**.  
+3.  En el cuadro de diálogo **Página de propiedades de \<project name>** , haga clic en **Utilidad de implementación**.  
   
 4.  Para actualizar las configuraciones de paquetes al implementar los paquetes, establezca **AllowConfigurationChanges** en **True**.  
   
@@ -517,7 +517,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  La ruta de acceso a la carpeta de implementación se especifica en la propiedad DeploymentOutputPath del proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para el que ha creado la utilidad de implementación. La ruta predeterminada es bin\Deployment, relativa al proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para más información, consulte [Create a Deployment Utility](../../integration-services/packages/create-a-deployment-utility.md).  
   
- Para instalar los paquetes, puede utilizar el Asistente para la instalación de paquetes. Para iniciar el asistente, haga doble clic en el archivo de la utilidad de implementación una vez copiada la carpeta de implementación en el servidor. El archivo recibe el nombre \<nombre del proyecto>.SSISDeploymentManifest, y se puede buscar en la carpeta de implementación del equipo de destino.  
+ Para instalar los paquetes, puede utilizar el Asistente para la instalación de paquetes. Para iniciar el asistente, haga doble clic en el archivo de la utilidad de implementación una vez copiada la carpeta de implementación en el servidor. El archivo recibe el nombre \<project name>.SSISDeploymentManifest, y se puede buscar en la carpeta de implementación del equipo de destino.  
   
 > [!NOTE]  
 >  Dependiendo de la versión del paquete que esté implementando, puede encontrar un error si tiene varias versiones diferentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas en paralelo. Este error puede producirse porque la extensión de nombre de archivo .SSISDeploymentManifest es la misma para todas las versiones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Al hacer doble clic en el archivo, se llama al instalador (dtsinstall.exe) para la versión instalada más recientemente de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], que podría no ser la misma versión que la del archivo de la utilidad de implementación. Para evitar este problema, ejecute la versión correcta de dtsinstall.exe desde la línea de comandos y proporcione la ruta de acceso al archivo de la utilidad de implementación.  
@@ -540,7 +540,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 1.  Abra la carpeta de implementación en el equipo de destino.  
   
-2.  Haga doble clic en el archivo de manifiesto \<nombre del proyecto>.SSISDeploymentManifest para iniciar el Asistente para la instalación de paquetes.  
+2.  Haga doble clic en el archivo de manifiesto \<project name>.SSISDeploymentManifest para iniciar el Asistente para la instalación de paquetes.  
   
 3.  En la página **Implementar paquetes SSIS** , seleccione la opción **Implementación en SQL Server** .  
   

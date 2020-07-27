@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216904"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920346"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Tutorial: Publicar un paquete SSIS como una vista SQL
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   En este tutorial se explica detalladamente cómo publicar un paquete SSIS como una vista SQL en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -164,9 +164,9 @@ ms.locfileid: "80216904"
   
 1.  Inicie SQL Server Management Studio.  
   
-2.  Expanda \<**nombre de la máquina**>, **Bases de datos**, \<**base de datos seleccionada en el asistente**> y **Vistas**.  
+2.  Expanda \<**machine name**>, **Bases de datos**, \<**database you selected in the wizard**> y **Vistas**.  
   
-3.  Haga clic con el botón derecho en \<**vista creada por el asistente**> y haga clic en **Seleccionar las primeras 1000 filas**.  
+3.  Haga clic con el botón derecho en el elemento \<**view created by the wizard**> creado por el asistente y haga clic en **Seleccionar las primeras 1000 filas**.  
   
 4.  Confirme que ve los resultados del paquete SSIS.  
   

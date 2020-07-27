@@ -27,16 +27,16 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7121efa290a8cea45804467243e11dbfd98f275
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296877"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922001"
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La administración de paquetes incluye la supervisión, administración, importación y exportación de paquetes.  
@@ -130,7 +130,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
     -   En el cuadro **Tipo de servidor** , seleccione **Integration Services**.  
   
-    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más…>** y busque el servidor que quiera usar.  
+    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Browse for more...>** y busque el servidor que quiera usar.  
   
 3.  Si el Explorador de objetos no está abierto, en el menú **Ver** , haga clic en **Explorador de objetos**.  
   
@@ -166,7 +166,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
     -   En el cuadro **Tipo de servidor** , seleccione **Integration Services**.  
   
-    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más…>** y busque el servidor que quiera usar.  
+    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Browse for more...>** y busque el servidor que quiera usar.  
   
 3.  Si el Explorador de objetos no está abierto, en el menú **Ver** , haga clic en **Explorador de objetos**.  
   

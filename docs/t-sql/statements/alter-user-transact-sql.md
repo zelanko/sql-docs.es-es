@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6db50af7454526c910b3c2688e0a81fe261c2167
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a486cc868c445e664977e67fd108aaca2873a595
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632205"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552750"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -38,9 +38,7 @@ Cambia el nombre de un usuario de base de datos o cambia su esquema predetermina
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## <a name="click-a-product"></a>Haga clic en un producto.
-
-En la siguiente fila, haga clic en cualquier nombre de producto que le interese. Al hacer clic, en esta página web se muestra otro contenido, adecuado para el producto que seleccione.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -95,7 +93,7 @@ NAME = newUserName
 > [!NOTE]
 > Esta opción solo está disponible para los usuarios contenidos.
 
- DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<nombre de lenguaje> | \<alias de lenguaje> }_ **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y posterior.
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_ **Se aplica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
 
  Especifica el idioma predeterminado que debe asignarse al usuario. Si esta opción se establece en NONE, el idioma predeterminado se establece en el de la base de datos. Si el idioma predeterminado de la base de datos se cambia más tarde, el idioma predeterminado del usuario no se modificará. *DEFAULT_LANGUAGE* puede ser el identificador local (lcid), el nombre del idioma o el alias del idioma.
 

@@ -1,5 +1,5 @@
 ---
-title: DBCC CLEANTABLE (Transact-SQL) | Microsoft Docs
+title: DBCC CLEANTABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -26,14 +26,15 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 706025b8be4a8b48f022a752ac60686e51cc7692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8294877bd557ae29ebc39b5b55534ed69088e29
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738183"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485266"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Recupera el espacio de columnas de longitud variable quitadas de tablas o vistas indizadas.
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -51,11 +52,13 @@ DBCC CLEANTABLE
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
- *database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
+ *database_name* \| *database_id* \| 0  
  Es la base de datos a la que pertenece la tabla que se va a limpiar. Si se especifica 0, se utiliza la base de datos actual. Los nombres de las bases de datos deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- *table_name* | *table_id* | *view_name*| *view_id*  
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  Es la tabla o la vista indizada que se va a limpiar.  
   
  *batch_size*  
@@ -159,8 +162,7 @@ FROM sys.dm_db_index_physical_stats(@db_id, @object_id, NULL, NULL , 'Detailed')
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
-[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>Consulte también
+
+- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
+- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)

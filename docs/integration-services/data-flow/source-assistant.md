@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0312349652ad1854efdeacdbfc25726e1766862f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a445bafcb6182f4af0d6089085c5a579b9109d7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298035"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917801"
 ---
 # <a name="source-assistant"></a>Asistente de orígenes
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   El componente Asistente de orígenes ayuda a crear un componente de origen y un administrador de conexiones. El componente está ubicado en la sección **Favoritos** del cuadro de herramientas de SSIS.  
@@ -39,11 +39,11 @@ En esta sección se proporcionan los pasos para agregar un nuevo origen con el A
   
 3.  Seleccione el tipo de destino en la lista **Tipos** .  
   
-4.  Seleccione un administrador de conexiones existente en la lista **Administradores de conexiones** o seleccione **\<Nuevo>** para crear un administrador de conexiones.  
+4.  Seleccione un administrador de conexiones existente en la lista **Administradores de conexiones** o seleccione **\<New>** para crear uno.  
   
 5.  Si selecciona un administrador de conexiones existente, haga clic **Aceptar** para cerrar el cuadro de diálogo **Agregar nuevo destino** . Debería ver el destino y los administradores de conexiones agregados al flujo de datos.  
   
-6.  Si hace clic en **\<Nuevo>** para crear un administrador de conexiones, verá el cuadro de diálogo **Administrador de conexiones**, que permite especificar los parámetros de la conexión. Después de que finalice la creación del nuevo administrador de conexiones, verá el destino y el administrador de conexiones en el Diseñador SSIS.  
+6.  Si hace clic en **\<New>** para crear un nuevo administrador de conexiones, aparecerá el cuadro de diálogo **Administrador de conexión**, que permite especificar parámetros para la conexión. Después de que finalice la creación del nuevo administrador de conexiones, verá el destino y el administrador de conexiones en el Diseñador SSIS.  
 
 ## <a name="add-new-source-dialog-box"></a>Cuadro de diálogo Agregar nuevo origen
 En la tabla siguiente se enumeran las opciones disponibles en el cuadro de diálogo **Agregar nuevo origen**.  
@@ -51,7 +51,7 @@ En la tabla siguiente se enumeran las opciones disponibles en el cuadro de diál
 |Opción|Descripción|  
 |------------|-----------------|  
 |Tipos|Seleccione el tipo de origen al que desea conectarse.|  
-|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en **\<Nuevo>** para crear uno.|  
+|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en **\<New>** para crear uno.|  
 |Mostrar solo elementos instalados|Especifique si desea ver solo los orígenes instalados.|  
 |Aceptar|Haga clic para guardar los cambios y a abrir los cuadros de diálogo siguientes para configurar opciones adicionales.| 
   

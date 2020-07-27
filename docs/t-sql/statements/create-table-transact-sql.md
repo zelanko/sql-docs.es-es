@@ -1,5 +1,5 @@
 ---
-title: CREATE TABLE (Transact-SQL) | Microsoft Docs
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/24/2020
 ms.prod: sql
@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 384b474180e17eaed9827da2d2e2b2f9157c6f4b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766961"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482166"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -343,6 +343,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos
 
 *database_name* Es el nombre de la base de datos en la que se crea la tabla. *database_name* debe especificar el nombre de una base de datos existente. Si no se especifica, *database_name* usa de manera predeterminada la base de datos actual. El inicio de sesión de la conexión actual debe estar asociado a un identificador de usuario existente en la base de datos especificada por *database_name*, y ese identificador de usuario debe tener permisos CREATE TABLE.
@@ -578,7 +580,7 @@ FOREIGN KEY REFERENCES Es una restricción que proporciona integridad referencia
 
 **(** *ref_column* [ **,** ... *n* ] **)** Es una columna o lista de columnas de la tabla a la que hace referencia la restricción FOREIGN KEY.
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } Especifica la acción que tiene lugar en las filas de la tabla creada si dichas filas tienen una relación referencial y la fila a la que se hace referencia se elimina de la tabla primaria. El valor predeterminado es NO ACTION.
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT } Especifica la acción que tiene lugar en las filas de la tabla creada si dichas filas tienen una relación referencial y la fila a la que se hace referencia se elimina de la tabla primaria. El valor predeterminado es NO ACTION.
 
 NO ACTION [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error y se revierte la acción de eliminación de la fila de la tabla primaria.
 
@@ -598,7 +600,7 @@ Si se ejecuta una instrucción `DELETE` en una fila de la tabla **Vendor** y se 
 
 Por el contrario, si se especifica `NO ACTION`, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error y revierte la acción de eliminación de la fila **Vendor** si hay al menos una fila en la tabla **ProductVendor** que hace referencia a ella.
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT } Especifica la acción que se produce en las filas de la tabla modificada cuando esas filas tienen una relación referencial y la fila a la que se hace referencia se actualiza en la tabla primaria. El valor predeterminado es NO ACTION.
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT } Especifica la acción que se produce en las filas de la tabla modificada cuando esas filas tienen una relación referencial y la fila a la que se hace referencia se actualiza en la tabla primaria. El valor predeterminado es NO ACTION.
 
 NO ACTION [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error y se revierte la acción de actualización de la fila de la tabla primaria.
 

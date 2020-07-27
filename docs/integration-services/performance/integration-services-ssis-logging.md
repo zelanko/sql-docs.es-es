@@ -29,16 +29,16 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba8e26a75af5508e2fe18390e92fda3aea73c648
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287889"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918361"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
@@ -230,7 +230,7 @@ ms.locfileid: "79287889"
   
 3.  Seleccione un proveedor de registro en la lista **Tipo de proveedor** y a continuación, haga clic en **Agregar**.  
   
-4.  En la columna **Configuración**, seleccione un administrador de conexiones o haga clic en **\<Nueva conexión>** para crear un nuevo administrador de conexiones del tipo apropiado para el proveedor de registro. En función del proveedor seleccionado, utilice uno de los siguientes administradores de conexión:  
+4.  En la columna **Configuración**, seleccione un administrador de conexiones o haga clic en **\<New connection>** para crear un nuevo administrador de conexiones del tipo apropiado para el proveedor de registro. En función del proveedor seleccionado, utilice uno de los siguientes administradores de conexión:  
   
     -   Para archivos de texto, utilice un administrador de conexiones de archivos. Para más información, vea [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -312,7 +312,7 @@ ms.locfileid: "79287889"
  El campo de la descripción se puede modificar. Haga clic en la descripción predeterminada del registro y, a continuación, modifíquela.  
   
  **Configuración**  
- Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones nuevo. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no requiere conexión.  
+ Seleccione un administrador de conexiones existente de la lista o haga clic en \<**New connection...**> para crear uno nuevo. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no requiere conexión.  
   
  Temas relacionados: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) , [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   

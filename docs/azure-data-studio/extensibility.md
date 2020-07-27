@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774657"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483863"
 ---
 # <a name="azure-data-studio-extensibility"></a>Extensibilidad de Azure Data Studio
 
@@ -48,9 +48,9 @@ En esta sección se tratan los distintos puntos de contribución que se definen 
 
 IntelliSense se admite en azuredatastudio.
 
-## <a name="contributes-dashboard"></a>Panel de contribuciones
+### <a name="dashboard-contribution-points"></a>Puntos de contribución del panel
 
-Pestaña Contribuir, contenedor, widget de información en el panel.
+Aporte al panel un contenedor o un widget de información.
 
 ![Panel](media/extensibility/dashboard-page.png)
 

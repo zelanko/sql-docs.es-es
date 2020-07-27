@@ -1,5 +1,6 @@
 ---
 title: Centro de rendimiento
+description: Encuentre la información que necesita sobre rendimiento en el Motor de base de datos de SQL Server y Azure SQL Database.
 ms.custom: seo-dt-2019
 ms.date: 12/11/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e5149d0b1128b2ecb0c934ad9abf3ec7979e532e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a0a4e7305ec54193b933f7360c32ef864f0c6ec
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758859"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457675"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro de rendimiento para el motor de base de datos de SQL Server y Base de datos SQL de Azure
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,5 +1,6 @@
 ---
 title: Combinaciones (SQL Server) | Microsoft Docs
+description: Obtenga información sobre los tipos de operaciones de combinación que emplea SQL Server. Mediante operaciones de combinación, SQL Server admite el particionamiento de tabla vertical o el almacenamiento en columnas.
 ms.custom: ''
 ms.date: 07/19/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009679"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915851"
 ---
 # <a name="joins-sql-server"></a>Combinaciones (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -245,7 +246,7 @@ Algunas condiciones convierten a una combinación lógica en apta como combinaci
 - El nivel de compatibilidad de la base de datos es 140 o superior.
 - La consulta es una instrucción `SELECT` (las instrucciones de modificación de datos no son aptas actualmente).
 - La combinación puede ser ejecutada tanto por una combinación de bucles anidados indexada como por un algoritmo físico de combinación hash.
-- La combinación hash usa el [modo por lotes](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution), ya sea mediante la presencia de un índice de almacén de columnas en la consulta global o una referencia directa a la tabla con índice de almacén de columnas por parte de la combinación.
+- La combinación hash usa el modo por lotes, habilitado mediante la presencia de un índice de almacén de columnas en la consulta global, una referencia directa a la tabla con índice de almacén de columnas por parte de la combinación, o mediante el uso del [modo por lotes en la característica de almacén de filas](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
 - Las soluciones alternativas generadas de la combinación de bucles anidados y la combinación hash deben tener el mismo primer elemento secundario (referencia externa).
 
 ### <a name="adaptive-threshold-rows"></a>Filas de umbral adaptable

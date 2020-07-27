@@ -1,5 +1,6 @@
 ---
 title: Compresión de datos | Microsoft Docs
+description: Aplique la compresión de datos de filas y páginas, o la compresión de archivo de almacén de columnas mediante SQL Server y Azure SQL Database.
 ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 464f83e573f76bb74158fc8eee6a798089734006
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5da071f378edb771d4b1dc70ac8257febd78a522
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679723"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459017"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -186,7 +187,7 @@ La tabla siguiente muestra los valores de replicación que controlan la compresi
 |Intento del usuario|Replicar el esquema de partición para una tabla o índice|Replicar los valores de compresión|Comportamiento de creación de script|  
 |-----------------|-----------------------------------------------------|------------------------------------|------------------------|  
 |Replicar el esquema de partición y habilitar la compresión en el suscriptor en la partición.|True|True|Se crean scripts tanto para el esquema de partición como para los valores de compresión.|  
-|Replicar el esquema de partición pero no comprimir los datos en el suscriptor.|True|False|Se crean scripts para el esquema de partición pero no para los valores de compresión para la partición.|  
+|Replicar el esquema de partición pero no comprimir los datos en el suscriptor.|Verdadero|Falso|Se crean scripts para el esquema de partición pero no para los valores de compresión para la partición.|  
 |No replicar el esquema de partición y no comprimir los datos en el suscriptor.|False|False|No se crean scripts para la partición o para los valores de compresión.|  
 |Comprimir la tabla en el suscriptor si todas las particiones se comprimen en el publicador, pero no replicar el esquema de partición.|False|True|Comprueba si todas las particiones están habilitadas para la compresión.<br /><br /> Se crean scripts para la compresión en el nivel de tabla.|  
   

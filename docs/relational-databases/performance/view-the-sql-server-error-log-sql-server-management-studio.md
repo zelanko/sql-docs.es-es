@@ -1,6 +1,6 @@
 ---
 title: Consulta del registro de errores de SQL Server(SSMS)
-description: Consulte el registro de errores de SQL Server en SQL Server Management Studio (SSMS).
+description: Obtenga información sobre el registro de errores de SQL Server, que contiene eventos definidos por el usuario y determinados eventos del sistema que puede usar para solucionar problemas.
 ms.custom: seo-dt-2019
 ms.date: 09/29/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a10948a63d119ec86c156b79d925f1b905b152f4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54aa4b48837f171406edbbe4cbadcacf5b910a99
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737078"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458057"
 ---
 # <a name="view-the-sql-server-error-log-in-sql-server-management-studio-ssms"></a>Consulta del registro de errores de SQL Server en SQL Server Management Studio (SSMS)
 

@@ -1,5 +1,6 @@
 ---
 title: Modificación de estadísticas | Microsoft Docs
+description: Obtenga información sobre cómo modificar estadísticas en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: b06299ca-ed52-411a-b245-45eac4628c99
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89497335ff395d3235f4bc59e1b0e86a11def404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d39e99b4c50d1b077cf3871ba5d89b7a170d2f16
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012226"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458107"
 ---
 # <a name="modify-statistics"></a>Modificar estadísticas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

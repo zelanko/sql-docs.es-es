@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 260babc5be248cc07b90001c2bb63fa7a6439a05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731305"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552963"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,9 @@ Sugerencias de consulta especifica que en toda la consulta se deben utilizar las
 }  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 { HASH | ORDER } GROUP  
 Especifica que las agregaciones que la cláusula GROUP BY o DISTINCT de la consulta describe deben usar hash o un orden.  
   
@@ -359,11 +361,11 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
  Al especificar _exposed\_object\_name_ sin especificar también una sugerencia de tabla, se descartan todos los índices que especifique en la consulta como parte de una sugerencia de tabla para el objeto. Después, el optimizador de consultas determina el uso de los índices. Puede emplear esta técnica para eliminar el efecto de una sugerencia de tabla INDEX cuando no se puede modificar la consulta original. Vea el ejemplo J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Es la sugerencia de tabla que se aplica a la tabla o vista que corresponde a *exposed_object_name* como una sugerencia de consulta. Para obtener una descripción de estas sugerencias, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) \| INDEX = ( _index\_value_ ) \| FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK } Es la sugerencia de tabla que se aplica a la tabla o vista que corresponde a *exposed_object_name* como una sugerencia de consulta. Para obtener una descripción de estas sugerencias, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Las sugerencias de tabla distintas de INDEX, FORCESCAN y FORCESEEK no están permitidas como sugerencias de consulta, a menos que la consulta ya tenga una cláusula WITH que especifique la sugerencia de tabla. Para obtener más información, vea la sección Comentarios.  
   
-> [!CAUTION] 
+> [!CAUTION]
 > Al especificar FORCESEEK con parámetros se limita el número de planes que el optimizador puede considerar en comparación con cuando se especifica FORCESEEK sin parámetros. Esto puede producir un error "No se puede generar el plan" en más casos. En una versión futura, las modificaciones internas realizadas en el optimizador pueden permitir que se consideren más planes.  
   
 ## <a name="remarks"></a>Observaciones  

@@ -1,5 +1,6 @@
 ---
 title: Latches (objeto de SQL Server) | Microsoft Docs
+description: Obtenga información sobre el objeto SQLServer:Latches, que proporciona contadores para supervisar los bloqueos de recursos internos de SQL Server, denominados bloqueos temporales.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e2bcb6b6eb5558a3fed212bc281ccf74a42516cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d57998b2bbc83a231cd82ceef8846ef21902eccb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775849"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458819"
 ---
 # <a name="sql-server-latches-object"></a>Latches (objeto de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **SQLServer:Latches** en Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar los bloqueos de recursos internos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , denominados bloqueos temporales. La supervisión de los bloqueos temporales para determinar la actividad de los usuarios y el uso de los recursos puede ayudar a identificar puntos de congestión en el rendimiento.  
   
- En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bloqueos temporales**de**.  
+ En esta tabla se describen los contadores de **bloqueos temporales** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores de bloqueos temporales de SQL Server|Descripción|  
 |---------------------------------|-----------------|  

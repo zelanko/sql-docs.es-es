@@ -1,5 +1,6 @@
 ---
 title: Optimización de la base de datos mediante carga de trabajo del Almacén de consultas | Microsoft Docs
+description: El Asistente para la optimización de motor de base de datos es compatible con la opción de usar el Almacén de consultas para seleccionar automáticamente una carga de trabajo adecuada para la optimización.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d7e279c7fe8cb6dd1ea2a716cd2a7a15d73c68e2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737128"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457587"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Optimización de la base de datos mediante carga de trabajo del Almacén de consultas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ En la interfaz gráfica de usuario del DTA, seleccione el botón de radio **Alma
 Desde la línea de comandos (dta.exe), elija la opción **-iq** para seleccionar la carga de trabajo del Almacén de consultas. 
 
 Hay dos opciones adicionales disponibles a través de la línea de comandos que ayudan a optimizar el comportamiento del DTA al seleccionar la carga de trabajo en el Almacén de consultas. Estas opciones no están disponibles a través de la interfaz gráfica de usuario:
-  1. **Número de eventos de carga de trabajo para optimizar**: esta opción, especificada mediante el argumento de línea de comandos **-n**, permite al usuario controlar el número de eventos del Almacén de consultas que se optimizan. De forma predeterminada, DTA usa un valor de 1000 para esta opción. Tenga en cuenta que DTA siempre elige los eventos más costosos por duración total. 
+  1. **Número de eventos de carga de trabajo para optimizar**: esta opción, que se especifica mediante el argumento de línea de comandos **-n**, permite al usuario controlar el número de eventos del Almacén de consultas que se optimizan. De forma predeterminada, DTA usa un valor de 1000 para esta opción. Tenga en cuenta que DTA siempre elige los eventos más costosos por duración total. 
   
   2. **Ventanas de tiempo de los eventos que se van a optimizar**: como el almacén de consultas puede contener consultas que se han ejecutado hace mucho tiempo, esta opción permite al usuario especificar una ventana de tiempo pasada (en horas) en la que es necesario que se ejecute una consulta para que DTA la considere para la optimización. Esta opción se especifica con el argumento de línea de comandos **-I**. 
 

@@ -1,6 +1,6 @@
 ---
 title: Virtualizar datos externos
-description: En esta página se detallan los pasos para usar al Asistente para crear tablas externas para orígenes de datos relacionales
+description: En esta página se detallan los pasos para usar el asistente de creación de tablas externas para orígenes de datos ODBC
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
@@ -10,14 +10,14 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: c01095e77fa974088f8a10669aecf1a8c53fd11d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588100"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943016"
 ---
-# <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Uso del Asistente para tablas externas con orígenes de datos relacionales
+# <a name="use-the-external-table-wizard-with-odbc-data-sources"></a>Uso del asistente para tablas externas con orígenes de datos ODBC
 
 Uno de los escenarios clave de SQL Server 2019 es la posibilidad de virtualizar datos. Este proceso permite que los datos permanezcan en su ubicación original. Puede *virtualizar* los datos de una instancia de SQL Server para que se puedan consultar como cualquier otra tabla de SQL Server. Este proceso minimiza la necesidad de procesos ETL. Este proceso es posible gracias a los conectores de PolyBase. Para obtener más información sobre la virtualización de datos, vea [Introducción a PolyBase](polybase-guide.md).
 
@@ -33,7 +33,7 @@ Conéctese a la instancia maestra mediante el número de puerto o la dirección 
 ![Asistente para virtualizar datos](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Selección de un origen de datos
 
-Si ha iniciado el asistente desde una de las bases de datos, el cuadro de lista desplegable de destino se rellena automáticamente. También tiene la opción de especificar o cambiar la base de datos de destino en esta página. Los tipos de orígenes de datos externos compatibles con el asistente son SQL Server y Oracle.
+Si ha iniciado el asistente desde una de las bases de datos, el cuadro de lista desplegable de destino se rellena automáticamente. También tiene la opción de especificar o cambiar la base de datos de destino en esta página. Los tipos de orígenes de datos externos compatibles con el asistente son SQL Server, Oracle, MongoDB y Teradata.
 
 > [!NOTE]
 >SQL Server aparece resaltado de forma predeterminada.
@@ -56,7 +56,7 @@ En este paso, se crea una clave maestra de base de datos. Es necesario crear una
 
 En este paso, especifique el origen de datos externo y los detalles de las credenciales para crear un objeto de origen de datos externo. Las credenciales se usan para que el objeto de base de datos se conecte al origen de datos. Escriba un nombre para el origen de datos externo. Un ejemplo es Test. Proporcione los detalles de conexión de SQL Server del origen de datos externo. Escriba el **Nombre del servidor** y el **Nombre de la base de datos** donde quiere crear el origen de datos externo.
 
-El siguiente paso es configurar una credencial. Escriba un nombre para la credencial. Este nombre es la credencial de ámbito de base de datos que se usa para almacenar de forma segura la información de inicio de sesión del origen de datos externo que crea. Un ejemplo es TestCred. Escriba un nombre de usuario y una contraseña para conectarse al origen de datos.
+El siguiente paso es configurar una credencial. Escriba un nombre para la credencial. Este nombre es la credencial de ámbito de base de datos que se usa para almacenar de forma segura la información de inicio de sesión del origen de datos externo que crea. Un ejemplo es `TestCred`. Escriba un nombre de usuario y una contraseña para conectarse al origen de datos.
 
 ![Credenciales del origen de datos externo](media/data-virtualization/data-source-credentials.png)
 

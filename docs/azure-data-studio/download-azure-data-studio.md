@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 7/15/2020
-ms.openlocfilehash: 793dde7b683f5e66a6841367e82c78d64bf01f86
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.date: 7/17/2020
+ms.openlocfilehash: 367711588e9a58358abff972a8f8637aefdf013a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406268"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86459037"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Descarga e instalación de Azure Data Studio
 
@@ -27,9 +27,9 @@ Descargue e instale la versión más reciente:
 
 |Plataforma|Descargar|Fecha de la versión| Versión |
 |:---|:---|:---|:---|
-| Windows | [Instalador de usuario (recomendado)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[Instalador del sistema](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | 15 de julio de 2020 | 1.20.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | 15 de julio de 2020 | 1.20.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | 15 de julio de 2020| 1.20.0 |
+| Windows | [Instalador de usuario (recomendado)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[Instalador del sistema](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | 17 de julio de 2020 | 1.20.1 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | 17 de julio de 2020 | 1.20.1 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | 17 de julio de 2020| 1.20.1 |
 
 Para más información sobre la última versión, consulte las [notas de la versión](release-notes.md).
 

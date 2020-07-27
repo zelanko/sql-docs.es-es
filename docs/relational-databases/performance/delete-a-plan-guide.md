@@ -1,5 +1,6 @@
 ---
 title: Eliminación de una guía de plan | Microsoft Docs
+description: Obtenga más información sobre cómo eliminar o colocar una guía de plan en SQL Server mediante SQL Server Management Studio o Transact-SQL. Use Transact-SQL para eliminar todas las guías de una base de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3138d4fcda123d56af975b2f2cfd5d5e4c76536b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93982c0ad59b7016902c64cd4dd81d0f81c270f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655618"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457318"
 ---
 # <a name="delete-a-plan-guide"></a>Eliminar una guía de plan
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

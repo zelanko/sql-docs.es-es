@@ -1,5 +1,6 @@
 ---
 title: Configuración del regulador de recursos utilizando una plantilla | Microsoft Docs
+description: Obtenga información sobre cómo configurar Resource Governor mediante una plantilla proporcionada en SQL Server Management Studio. Debe tener el permiso CONTROL SERVER.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb17a0d2b42528d886430e92b82908a3e08b5694
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b815330ad5088ca449ab3b73f540b3ec2e521629
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720524"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458240"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurar el regulador de recursos utilizando una plantilla
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

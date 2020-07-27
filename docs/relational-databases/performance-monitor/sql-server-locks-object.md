@@ -1,5 +1,6 @@
 ---
 title: Locks (objeto de SQL Server) | Microsoft Docs
+description: Obtenga información sobre el objeto SQLServer:Locks, que proporciona información acerca de los bloqueos de SQL Server en tipos de recursos individuales.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 853a19af5644e9c29659c5595a8ce9ee6357f499
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775821"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458134"
 ---
 # <a name="sql-server-locks-object"></a>Locks (objeto de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **SQLServer:Locks** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona información acerca de los bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tipos de recursos individuales. Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como filas leídas o modificadas durante una transacción, para evitar que varias transacciones utilicen simultáneamente los recursos. Por ejemplo, si una transacción mantiene un bloqueo exclusivo (X) en una fila de una tabla, ninguna otra transacción podrá modificar esa fila hasta que se libere el bloqueo. La reducción de bloqueos aumenta la simultaneidad, lo que puede mejorar el rendimiento. Se pueden supervisar al mismo tiempo varias instancias del objeto **Locks** ; cada instancia representa un bloqueo en un tipo de recurso.  
   
- En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bloqueos**de**.  
+ En esta tabla se describen los contadores de **bloqueos** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores de bloqueos de SQL Server|Descripción|  
 |-------------------------------|-----------------|  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c58323e0684b7b3e0397854cf6abec148f616248
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287709"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914021"
 ---
 # <a name="the-oracle-cdc-databases"></a>Las bases de datos CDC de Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Una instancia CDC de Oracle está asociada a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el mismo nombre en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Esta base de datos se denomina la base de datos CDC de Oracle (o la base de datos CDC).  
@@ -49,7 +49,7 @@ ms.locfileid: "79287709"
  Cuando se crea una base de datos CDC y se configuran tablas CDC de Oracle de origen, el propietario de la base de datos CDC puede conceder el permiso SELECT para las tablas reflejadas y definir roles de acceso CDC de SQL Server para controlar quién tiene acceso a los datos modificados.  
   
 ## <a name="mirror-tables"></a>Tablas reflejadas  
- Para cada tabla capturada, \<schema-name>.\<table-name>, en la base de datos de origen de Oracle, se crea una tabla vacía similar en la base de datos CDC, con el mismo nombre de esquema y de tabla. Las tablas de origen de Oracle con el nombre de esquema `cdc` (no distingue entre mayúsculas y minúsculas) no se pueden capturar porque el esquema `cdc` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está reservado para CDC de SQL Server.  
+ Para cada tabla capturada, que en la base de datos de Oracle es \<schema-name>.\<table-name>, se crea una tabla vacía similar en la base de datos CDC, con el mismo nombre de esquema y de tabla. Las tablas de origen de Oracle con el nombre de esquema `cdc` (no distingue entre mayúsculas y minúsculas) no se pueden capturar porque el esquema `cdc` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está reservado para CDC de SQL Server.  
   
  Las tablas reflejadas están vacías; no se almacena ningún dato en ellas. Se usan para habilitar la infraestructura estándar CDC de SQL Server que usa la instancia CDC de Oracle. Para evitar que se inserten o actualicen datos en las tablas reflejadas, se deniegan todas las operaciones UPDATE, DELETE e INSERT para PUBLIC. Esto garantiza que no se puedan modificar.  
   

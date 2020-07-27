@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e3602a8e21d6d7fd9371331914c6157c5db2ca4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295132"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920796"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluyen características y herramientas que se pueden utilizar para solucionar los problemas del flujo de control en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -135,7 +135,7 @@ ms.locfileid: "71295132"
   
     -   Para establecer puntos de interrupción en un controlador de eventos, haga clic en la pestaña **Controlador de eventos** , haga clic con el botón derecho en una tarea, un contenedor de bucles For o Foreach o un contenedor de secuencias y, después, haga clic en **Editar puntos de interrupción**.  
   
-4.  En el cuadro de diálogo **Establecer puntos de interrupción \<nombre de contenedor>** , seleccione los puntos de interrupción que quiere habilitar.  
+4.  En el cuadro de diálogo **Establecer puntos de interrupción \<container name>** , seleccione los puntos de interrupción que quiera habilitar.  
   
 5.  Opcionalmente, modifique el tipo y la cantidad de número de llamadas para cada punto de interrupción.  
   

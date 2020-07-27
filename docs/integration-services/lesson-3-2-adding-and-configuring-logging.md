@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283268"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922231"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Lección 3-2: Adición y configuración del registro
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,7 +39,7 @@ En esta tarea, habilitará el registro del flujo de datos del paquete Lesson 3.d
   
 5.  Si lo desea, modifique el campo **Descripción**.  
   
-6.  En la columna **Configuración**, seleccione **\<Nueva conexión>** para especificar dónde escribe [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] la información de registro.  
+6.  En la columna **Configuración**, seleccione **\<New Connection>** para especificar dónde escribe [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] la información de registro.  
   
     En el cuadro de diálogo **Editor del administrador de conexiones de archivos**, en **Tipo de uso**, haga clic en **Crear archivo** y después en **Examinar**. De forma predeterminada, el cuadro de diálogo **Seleccionar archivo** abre la carpeta del proyecto, pero puede guardar la información de registro en cualquier ubicación.  
   

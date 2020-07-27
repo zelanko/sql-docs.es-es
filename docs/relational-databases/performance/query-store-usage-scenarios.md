@@ -1,5 +1,6 @@
 ---
 title: Escenarios de uso del Almacén de consultas | Microsoft Docs
+description: Obtenga información sobre cómo se puede usar el Almacén de consultas para realizar un seguimiento y garantizar un rendimiento predecible de la carga de trabajo. Considere varios ejemplos en SQL Server.
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a694e18dd4ade720283beea6fc57d5dd4e919d7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0d1da7312c338a866b4fb22df94175a7500d8f7c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85989799"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457647"
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85989799"
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>Identificación y optimización de las consultas que consumen más recursos  
  Aunque la carga de trabajo puede generar miles de consultas, normalmente solo unas pocas usan realmente la mayor parte de los recursos del sistema y, por tanto, requieren su atención. Entre las consultas que más recursos consumen suelen estar las consultas devueltas o aquellas que se pueden ajustar para mejorarlas.  
   
- La forma más sencilla de empezar a explorar es abrir **Principales consultas que consumen recursos** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La interfaz de usuario se divide en tres paneles: un histograma con las consultas que consumen más recursos (a la izquierda), un resumen del plan para la consulta seleccionada (a la derecha) y un plan de consulta visual para el plan seleccionado (abajo). Haga clic en el botón **Configurar** para controlar la cantidad de consultas que quiere analizar y el intervalo de tiempo que le interesa. También puede elegir entre diferentes dimensiones de consumo de recursos (duración, CPU, memoria, E/S, número de ejecuciones) y la base (promedio, mínima, máxima, total, desviación estándar).  
+ La forma más sencilla de empezar a explorar es abrir **Principales consultas que consumen recursos** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La interfaz de usuario se divide en tres paneles: un histograma con las consultas que consumen más recurso (izquierda), un resumen del plan para la consulta seleccionada (derecha) y un plan de consulta visual para el plan seleccionado (abajo). Haga clic en el botón **Configurar** para controlar la cantidad de consultas que quiere analizar y el intervalo de tiempo que le interesa. También puede elegir entre diferentes dimensiones de consumo de recursos (duración, CPU, memoria, E/S, número de ejecuciones) y la base (promedio, mínima, máxima, total, desviación estándar).  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   

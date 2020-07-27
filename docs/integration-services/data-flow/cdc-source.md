@@ -15,16 +15,16 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 668b7343ae893d302a27c0a68aec58e536cffcc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 397936fb2bd6314c83460b233a59ef6e72e113d7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293277"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915494"
 ---
 # <a name="cdc-source"></a>origen de CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
@@ -45,7 +45,7 @@ ms.locfileid: "71293277"
   
 -   Nombre de la variable de paquete de estado CDC basado en lo que determina el intervalo de procesamiento CDC. El origen CDC no modifica esa variable.  
   
- Los datos devueltos por el origen CDC son los mismos que los devueltos por las funciones CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**cdc.fn_cdc_get_all_changes_\<capture-instance-name>** o **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (si estuvieran disponibles). La única adición opcional es la columna **__$initial_processing** , que indica si el intervalo de procesamiento actual puede solaparse con una carga inicial de la tabla. Para obtener más información acerca del procesamiento inicial, vea [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
+ Los datos devueltos por el origen CDC son los mismos que los devueltos por las funciones CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** o **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (si está disponible). La única adición opcional es la columna **__$initial_processing** , que indica si el intervalo de procesamiento actual puede solaparse con una carga inicial de la tabla. Para obtener más información acerca del procesamiento inicial, vea [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).  
   
  El origen de CDC tiene una salida normal y una salida de error.  
   
@@ -82,7 +82,7 @@ use <cdc-enabled-database-name>
   
  donde:  
   
--   \<cdc-enabled-database-name> es del nombre de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene las tablas de cambios.  
+-   \<cdc-enabled-database-name> es el nombre de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene las tablas de cambios.  
   
 -   \<value-from-state-cs> es el valor que aparece en la variable de estado CDC como CS/\<value-from-state-cs>/ (CS representa el inicio del intervalo de procesamiento actual [Current-processing-range-Start]).  
   
@@ -151,7 +151,7 @@ use <cdc-enabled-database-name>
  **Instancia de captura**  
  Seleccione o escriba el nombre de la instancia de captura CDC con la tabla CDC que se va a leer.  
   
- Una tabla de origen capturada puede tener una o dos instancias capturadas para controlar que la transición de una definición de tabla a través de los cambios en el esquema se realice sin problemas. Si se define más de una instancia de captura para la tabla de origen que se va a capturar, seleccione aquí la instancia de captura que desee usar. El nombre predeterminado de la instancia de captura para una tabla [esquema].[tabla] es \<schema>_\<table>, pero los nombres de instancia de captura reales en uso podrían ser distintos. La tabla real de la que se lee es la tabla CDC **cdc.\<capture-instance>_CT**.  
+ Una tabla de origen capturada puede tener una o dos instancias capturadas para controlar que la transición de una definición de tabla a través de los cambios en el esquema se realice sin problemas. Si se define más de una instancia de captura para la tabla de origen que se va a capturar, seleccione aquí la instancia de captura que desee usar. El nombre predeterminado de la instancia de captura para una tabla [schema].[table] es \<schema>_\<table>, pero los nombres de instancia de captura reales en uso podrían ser distintos. La tabla real desde la que se lee es la tabla de CDC **cdc.\<capture-instance>_CT**.  
   
  **Modo de procesamiento CDC**  
  Seleccione el modo de procesamiento que mejor controle las necesidades de procesamiento. Las opciones posibles son:  
@@ -162,7 +162,7 @@ use <cdc-enabled-database-name>
   
 -   **Neto**: devuelve una sola fila de cambios por cada fila de origen modificada en el intervalo de procesamiento de CDC actual. Si una fila de origen se actualizó varias veces, se genera el cambio combinado (por ejemplo, se genera insertar+actualizar como una actualización única y se genera actualizar+eliminar como una eliminación única). Al trabajar en el modo de procesamiento de cambios Neto, es posible dividir los cambios en salidas de eliminar, insertar y actualizar y controlarlos todos en paralelo, ya que la fila de origen única aparece en más de un resultado.  
   
--   **Neto con máscara de actualización**: este modo es similar al modo Neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indica las columnas modificadas en la fila de cambio actual.  
+-   **Neto con máscara de actualización**: Este modo es similar al modo neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indican las columnas modificadas en la fila de cambio actual.  
   
 -   **Neto con combinación**: este modo es similar al modo Neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
   

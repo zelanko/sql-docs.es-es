@@ -1,5 +1,6 @@
 ---
 title: Configurar una alerta de base de datos de SQL Server (Windows) | Microsoft Docs
+description: Obtenga información sobre cómo crear una alerta que se activará al alcanzar un valor de umbral de un contador del Monitor del sistema. En respuesta, el Monitor del sistema puede iniciar una aplicación.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1a4cb551f72b408210064f88e0387c2fc4f3d638
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 982feaae1638250c80091778cdbacbfc21b0b3af
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716887"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458709"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Configurar una alerta de base de datos de SQL Server (Windows)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

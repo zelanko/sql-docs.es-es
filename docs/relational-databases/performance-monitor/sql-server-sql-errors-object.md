@@ -1,5 +1,6 @@
 ---
 title: SQL Errors (objeto de SQL Server) | Microsoft Docs
+description: Obtenga información sobre el objeto SQLServer:SQL Errors, que proporciona contadores para supervisar errores de SQL en SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b8f99ab36545778981ed509ed0575c039916d42f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d2b511f76fd659f1fcb3bd37d4041d57603b3cd
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758933"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457977"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Errors (objeto de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   El objeto **SQLServer:SQL Errors** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar los **errores de SQL**.  
   
- En esta tabla se describen los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]errores de SQL**de**.  
+ En esta tabla se describen los contadores de **errores de SQL** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Contadores de errores de SQL de SQL Server|Descripción|  
 |------------------------------------|-----------------|  

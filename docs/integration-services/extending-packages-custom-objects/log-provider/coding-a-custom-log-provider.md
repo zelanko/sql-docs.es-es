@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c6c5cdc269c757b8578314d39fd07f9f947a5e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4f1eec14ca75ed6f878a7bdb077b899ea05993d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287145"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920801"
 ---
 # <a name="coding-a-custom-log-provider"></a>Codificar un proveedor de registro personalizado
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Una vez que haya creado una clase que herede de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> y haya aplicado el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> a la clase, debe invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar su funcionalidad personalizada.  
@@ -136,7 +136,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Escribir entradas del registro  
- Se llama al método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> cada vez que un objeto del paquete provoca un evento llamando a un método Fire\<event> en una de las interfaces de eventos. Cada evento se provoca con información sobre su contexto y normalmente un mensaje explicativo. Sin embargo, no todas las llamadas al método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> incluyen información de todos los parámetros de método. Por ejemplo, algunos eventos estándar cuyos nombres son autoexplicativos no proporcionan MessageText, y DataCode y DataBytes están pensados para la información complementaria opcional.  
+ Se llama al método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> cada vez que un objeto del paquete provoca un evento mediante la llamada a un método Fire\<event> en una de las interfaces de eventos. Cada evento se provoca con información sobre su contexto y normalmente un mensaje explicativo. Sin embargo, no todas las llamadas al método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> incluyen información de todos los parámetros de método. Por ejemplo, algunos eventos estándar cuyos nombres son autoexplicativos no proporcionan MessageText, y DataCode y DataBytes están pensados para la información complementaria opcional.  
   
  En el ejemplo de código siguiente se implementa el método <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> y se escriben los eventos en el flujo que se abrió en la sección anterior.  
   

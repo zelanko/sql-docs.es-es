@@ -1,5 +1,6 @@
 ---
 title: Actualizar estadísticas | Microsoft Docs
+description: Obtenga más información sobre cómo actualizar las estadísticas de optimización de consultas en una tabla o vista indizada en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebc6222f85e452c8ec9d371365f9f60fcacd5234
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a4836b0ab47d31fac081ec95c21ef139d3da7e03
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012184"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458543"
 ---
 # <a name="update-statistics"></a>Actualizar estadísticas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

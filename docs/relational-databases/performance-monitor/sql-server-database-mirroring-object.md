@@ -1,5 +1,6 @@
 ---
 title: Database Mirroring (objeto de SQL Server) | Microsoft Docs
+description: Obtenga información sobre el objeto de rendimiento SQLServer:Database Mirroring, que contiene contadores de rendimiento que proporcionan información acerca de la creación de reflejo de la base de datos de SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c2d3dd59f6e2736938bfc9880e7258cf81dfafb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760558"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458037"
 ---
 # <a name="sql-server-database-mirroring-object"></a>Database Mirroring (objeto de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

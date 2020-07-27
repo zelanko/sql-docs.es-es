@@ -1,5 +1,6 @@
 ---
 title: Databases (objeto de SQL Server) | Microsoft Docs
+description: Obtenga información sobre el objeto SQLServer:Databases, que proporciona contadores para supervisar las operaciones de copia masiva, el rendimiento de las copias de seguridad y restauración, y las actividades del registro de transacciones.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: da5bdd3fe0ea6e53e3943054470011040e9fe0c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d775ca3158b642c6184f9d6c909b349d49d779ef
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655960"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457987"
 ---
 # <a name="sql-server-databases-object"></a>Databases (objeto de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

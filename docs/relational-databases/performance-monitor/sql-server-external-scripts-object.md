@@ -1,5 +1,6 @@
 ---
 title: SQL Server, objeto External Scripts | Microsoft Docs
+description: Obtenga información sobre el objeto SQLServer:External Scripts, que proporciona contadores para supervisar las acciones asociadas a la ejecución de scripts externos.
 ms.custom: ''
 ms.date: 03/21/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 3d1a481dfc14e3c84df78f2950a140f1bb14c059
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb8ded658e80c3530b916ea81595ac5fa5c99f52
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775874"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457432"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, objeto External Scripts
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

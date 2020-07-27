@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb26be1034632ce747c21239636f9b0a4ec08114
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295741"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913271"
 ---
 # <a name="save-packages"></a>Guardar paquetes
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , se generan los paquetes con el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] y se guardan en el sistema de archivos como archivos XML (archivos .dtsx). También puede guardar copias del archivo XML de paquete en la base de datos msdb, en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o en el almacén de paquetes. El almacén de paquetes representa las carpetas en la ubicación del sistema de archivos que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administra.  
@@ -60,7 +60,7 @@ ms.locfileid: "71295741"
   
 1.  En el Explorador de soluciones, haga doble clic en el paquete cuya copia desea guardar.  
   
-2.  En el menú **Archivo**, haga clic en **Guardar copia de \<archivo de paquete> como**.  
+2.  En el menú **Archivo**, haga clic en **Guardar copia de \<package file> como**.  
   
 3.  En el cuadro de diálogo **Guardar copia del paquete** , seleccione una ubicación de paquete en la lista **Ubicación del paquete** . Están disponibles las siguientes opciones:  
     -   SQL Server
@@ -110,7 +110,7 @@ ms.locfileid: "71295741"
   
 2.  En el Explorador de soluciones, haga clic con el botón derecho en el proyecto, seleccione **Agregar** y, después, haga clic en **Nuevo elemento**.  
   
-3.  En el cuadro de diálogo **Agregar nuevo elemento -\<nombre de proyecto>** , haga clic en el paquete que quiera usar como plantilla.  
+3.  En el cuadro de diálogo **Agregar nuevo elemento - \<project name>** , haga clic en el paquete que desea usar como plantilla.  
   
      La lista de plantillas incluye la plantilla de paquetes predeterminada denominada Nuevo paquete de SSIS. El icono de paquete identifica plantillas que se pueden utilizar como plantillas de paquetes.  
   

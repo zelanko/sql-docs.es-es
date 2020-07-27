@@ -15,15 +15,15 @@ ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e863a04214a27f61581f10c4a2610671bde43635
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e992a6629f3dbff2e8ed5e3b2b9cc568a7b8811
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787261"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918071"
 ---
 # <a name="synonyms-database-engine"></a>Usar sinónimos (motor de base de datos)
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Un sinónimo es un objeto de base de datos que sirve para los siguientes objetivos:  
   
 -   Proporciona un nombre alternativo para otro objeto de base de datos, denominado objeto base, que puede existir en un servidor local o remoto.  
@@ -35,17 +35,37 @@ Por ejemplo, suponga la tabla **Employee** de [!INCLUDE[ssSampleDBCoShort](../..
 Para solucionar ambas cosas, puede crear un sinónimo, **EmpTable**, en **Server2** para la tabla **Employee** en **Server1**. Ahora la aplicación cliente solo tiene que usar el nombre de una parte, **EmpTable**, para hacer referencia a la tabla **Employee** . Además, si la ubicación de la tabla **Employee** cambia, tendrá que modificar el sinónimo, **EmpTable**, para que apunte a la nueva ubicación de la tabla **Employee** . Puesto que no hay ninguna instrucción ALTER SYNONYM, primero tiene que quitar el sinónimo, **EmpTable**y, luego, volver a crearlo con el mismo nombre, pero apuntando a la nueva ubicación de **Employee**.  
   
 Un sinónimo pertenece a un esquema y, al igual que otros objetos de un esquema, el nombre de un sinónimo debe ser único. Puede crear sinónimos para los siguientes objetos de base de datos:  
-  
-|||  
-|-|-|  
-|Procedimiento almacenado del ensamblado (CLR)|Función con valores de tabla del ensamblado (CLR)|  
-|Función escalar del ensamblado (CLR)|Función de agregado del ensamblado (CLR)|  
-|Procedimiento de filtro de replicación|Procedimiento almacenado extendido|  
-|Función escalar de SQL|Función con valores de tabla de SQL|  
-|Función SQL insertada con valores de tabla|Procedimiento almacenado de SQL|  
-|Ver|Tabla* (definida por el usuario)|  
-  
- *Incluye tablas temporales locales y globales  
+
+:::row:::
+    :::column:::
+        Procedimiento almacenado del ensamblado (CLR)
+
+        Función escalar del ensamblado (CLR)
+
+        Procedimiento de filtro de replicación
+
+        Función escalar de SQL
+
+        Función SQL insertada con valores de tabla
+
+        Ver
+    :::column-end:::
+    :::column:::
+        Función con valores de tabla del ensamblado (CLR)
+
+        Función de agregado del ensamblado (CLR)
+
+        Función de agregado del ensamblado (CLR)
+
+        Función con valores de tabla de SQL
+
+        Procedimiento almacenado de SQL
+
+        Tabla* (definida por el usuario)
+    :::column-end:::
+:::row-end:::
+
+*Incluye tablas temporales locales y globales  
   
 > [!NOTE]  
 > No pueden usarse nombres de cuatro partes para objetos base de función.  
@@ -63,23 +83,48 @@ Si tiene un esquema predeterminado que no posee y desea crear un sinónimo, debe
 Solo los propietarios de los sinónimos, miembros de **db_owner**o miembros de **db_ddladmin** pueden conceder permiso para un sinónimo.  
   
 Puede usar `GRANT`, `DENY` y `REVOKE` en todos o cualquiera de los permisos siguientes para un sinónimo:  
-  
-|||  
-|-|-|  
-|CONTROL|Delete|  
-|Ejecute|INSERT|  
-|SELECT|TAKE OWNERSHIP|  
-|UPDATE|VIEW DEFINITION|  
-  
+
+:::row:::
+    :::column:::
+      CONTROL
+
+      Ejecute
+
+      SELECT
+
+      UPDATE
+    :::column-end:::
+    :::column:::
+      Delete
+
+      INSERT
+
+      TAKE OWNERSHIP
+
+      VIEW DEFINITION
+    :::column-end:::
+:::row-end:::
+
 ## <a name="using-synonyms"></a>Usar sinónimos  
- Puede usar sinónimos en lugar de los objetos base a los que se hace referencia en varias instrucciones SQL y contextos de expresión. La siguiente tabla contiene una lista de estas instrucciones y contextos de expresiones:  
-  
-|||  
-|-|-|  
-|SELECT|INSERT|  
-|UPDATE|Delete|  
-|Ejecute|Subselecciones|  
-  
+ Puede usar sinónimos en lugar de los objetos base a los que se hace referencia en varias instrucciones SQL y contextos de expresión. Las columnas siguientes contienen una lista de estas instrucciones y contextos de expresiones:  
+
+:::row:::
+    :::column:::
+        SELECT
+
+        UPDATE
+
+        Ejecute
+    :::column-end:::
+    :::column:::
+        INSERT
+
+        Delete
+
+        Subselecciones
+    :::column-end:::
+:::row-end:::
+ 
  Al trabajar con sinónimos en los contextos indicados anteriormente, el objeto base se ve afectado. Por ejemplo, si un sinónimo hace referencia a un objeto base que es una tabla e inserta una fila en el sinónimo, realmente está insertando una fila en la tabla a la que se hace referencia.  
   
 > [!NOTE]  
@@ -97,19 +142,36 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ```  
   
 Las siguientes instrucciones de permisos solo están asociadas al sinónimo, no al objeto base:  
-  
-|||  
-|-|-|  
-|GRANT|DENEGAR|  
-|REVOKE||  
-  
+
+:::row:::
+    :::column:::
+        GRANT
+
+        REVOKE
+    :::column-end:::
+    :::column:::
+        DENEGAR
+    :::column-end:::
+:::row-end:::
+
 Los sinónimos no están enlazados al esquema, por lo que los siguientes contextos de expresión enlazados al esquema no pueden hacer referencia a sinónimos:  
-  
-|||  
-|-|-|  
-|CHECK, restricciones|Columnas calculadas|  
-|Expresiones predeterminadas|Expresiones de reglas|  
-|Vistas enlazadas a esquema|Funciones enlazadas a esquema|  
+
+:::row:::
+    :::column:::
+        CHECK, restricciones
+
+        Expresiones predeterminadas
+
+        Vistas enlazadas a esquema
+    :::column-end:::
+    :::column:::
+        Columnas calculadas
+
+        Expresiones de reglas
+
+        Funciones enlazadas a esquema
+    :::column-end:::
+:::row-end:::
   
 Para obtener más información sobre las funciones enlazadas a esquema, vea [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   

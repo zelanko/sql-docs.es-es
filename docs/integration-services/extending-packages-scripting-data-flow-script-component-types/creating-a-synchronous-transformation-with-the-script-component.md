@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa19857dc7c0651beeaedfdef8b843fcfc58c62
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 43629b22e6aca90065c139fb35d460384ad1ef1b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296421"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923864"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Crear una transformación sincrónica con el componente de script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Un componente de transformación se utiliza en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar y analizar los datos cuando pasan del origen al destino. Una transformación con salidas sincrónicas procesa cada fila de entrada a medida que pasa por el componente. Una transformación con salidas asincrónicas espera hasta que haya recibido todas las filas de entrada para completar su procesamiento. En este tema se describe una transformación sincrónica. Para obtener información sobre transformaciones asincrónicas, vea [Crear una transformación asincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, vea [Descripción de las transformaciones sincrónicas y asincrónicas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "71296421"
 -   Cree una o varias salidas adicionales, como una salida de error simulada para las filas que contienen valores inesperados. Utilice los botones **Agregar salida** y **Quitar salida** para administrar las salidas del componente de transformación sincrónica. Todas las filas de entrada se dirigen a todas las salidas disponibles a menos que indique que desea redirigir cada fila a una salida u otra. Para indicar que desea redirigir las filas, debe especificar un valor entero distinto de cero para la propiedad **ExclusionGroup** en las salidas. El valor entero concreto escrito en **ExclusionGroup** para identificar las salidas no es significativo, pero debe utilizar el mismo entero de forma coherente para el grupo de salidas especificado.  
   
     > [!NOTE]  
-    >  También puede utilizar un valor de la propiedad **ExclusionGroup** distinto de cero con una salida única si no desea generar la salida de todas las filas. Sin embargo, en este caso, debe llamar explícitamente al método **DirectRowTo\<outputbuffer>** para cada fila que desee enviar a la salida.  
+    >  También puede utilizar un valor de la propiedad **ExclusionGroup** distinto de cero con una salida única si no desea generar la salida de todas las filas. No obstante, en este caso, debe llamar explícitamente al método **DirectRowTo\<outputbuffer>** para cada fila que quiera enviar a la salida.  
   
 -   Asigne un nombre más descriptivo a la entrada y las salidas. El componente de script utiliza estos nombres para generar las propiedades de descriptor de acceso con tipo que se usarán para hacer referencia a la entrada y las salidas en el script.  
   

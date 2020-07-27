@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe82e7d6746f3a5fc76fda3f960f069ef4345525
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29d9fce968a000a2212ada9776d1b5f3a812c25f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287389"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919182"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Ejecutar paquetes de Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Para ejecutar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede utilizar una de las herramientas en función de dónde se almacenan los paquetes. Las herramientas se enumeran en la tabla a continuación.  
@@ -85,7 +85,7 @@ ms.locfileid: "79287389"
   
 1.  En el Explorador de soluciones, haga clic con el botón derecho en la carpeta del proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contiene el paquete que quiera ejecutar y, después, haga clic en **Propiedades**.  
   
-2.  En el cuadro de diálogo **\<nombre del proyecto> Página de propiedades**, haga clic en **Compilar**.  
+2.  En el cuadro de diálogo **Página de propiedades de \<project name>** , haga clic en **Compilar**.  
   
 3.  Actualice el valor de la propiedad OutputPath para especificar la carpeta que quiere usar para la implementación en tiempo de diseño y haga clic en **Aceptar**.  
 

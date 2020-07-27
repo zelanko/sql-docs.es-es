@@ -1,5 +1,6 @@
 ---
 title: Wait Statistics (objeto de SQL Server) | Microsoft Docs
+description: Obtenga información sobre el objeto de rendimiento SQLServer:Wait Statistics, que contiene contadores de rendimiento que ofrecen información sobre el estado de la espera.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b5b9a2ccdd73150eeaa1dda8403c4b73aed03009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64a21ac3072869f74c71997be5160b55758fc917
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758911"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457411"
 ---
 # <a name="sql-server-wait-statistics-object"></a>Wait Statistics (objeto de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

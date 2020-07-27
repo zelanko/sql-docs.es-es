@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81ac32f8fff04a1a81d4397cc196c506eab164d2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294331"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923318"
 ---
 # <a name="bulk-insert-task"></a>Inserción masiva, tarea
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La tarea Inserción masiva proporciona una forma muy eficaz de copiar grandes cantidades de datos a una tabla o vista de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, suponga que su empresa almacena una lista de productos de un millón de filas en un sistema central, pero el sistema de comercio electrónico de la empresa usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para rellenar páginas web. Debe actualizar la tabla de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas las noches con la lista maestra de productos del gran sistema. Para ello, debe guardar la lista de productos con un formato delimitado por tabuladores y utilizar la tarea Inserción masiva para copiar los datos directamente a la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -125,7 +125,7 @@ ms.locfileid: "71294331"
   
 ### <a name="options"></a>Opciones  
  **Connection**  
- Seleccione un administrador de conexiones OLE DB de la lista, o bien haga clic en \<**Nueva conexión…** > para crear una conexión.  
+ Seleccione un administrador de conexiones OLE DB de la lista o haga clic en \<**New connection...**> para crear una conexión nueva.  
   
  **Temas relacionados:** [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71294331"
 |**Especificar**|Especifique el formato. Si se selecciona esta opción, se muestran las opciones dinámicas **RowDelimiter** y **ColumnDelimiter**.|  
   
  **Archivo**  
- Seleccione un administrador de conexiones de archivos o archivos planos de la lista, o bien haga clic en \<**Nueva conexión…** > para crear una conexión.  
+ Seleccione un administrador de conexiones de archivo o de archivo plano de la lista o haga clic en \<**New connection...**> para crear una conexión nueva.  
   
  La ubicación del archivo es relativa al motor de base de datos de SQL Server especificado en el administrador de conexiones para esta tarea. Es preciso que el motor de base de datos de SQL Server tenga acceso al archivo de texto en un disco duro local en el servidor o mediante una unidad compartida o asignada a SQL Server. El tiempo de ejecución de SSIS no tiene acceso al archivo.  
   

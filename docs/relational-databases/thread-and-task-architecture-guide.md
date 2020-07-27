@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df923a4a1509520b95e5efcf87e9eac51497e4a8
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86158923"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485586"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -111,6 +111,9 @@ ORDER BY parent_task_address, scheduler_id;
 > [!TIP]
 > La columna `parent_task_address` siempre es NULL para la tarea primaria. 
 
+> [!TIP]
+> En un [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] muy ocupado, es posible ver una cantidad de tareas activas superior al límite establecido por los subprocesos reservados. Estas tareas pueden pertenecer a una rama que ya no se está usando y que se encuentra en un estado transitorio, esperando la limpieza. 
+
 [!INCLUDE[ssResult](../includes/ssresult-md.md)] Observe que hay 17 tareas activas para las ramas que se están ejecutando actualmente: 16 tareas secundarias correspondientes a los subprocesos reservados, más la tarea primaria o tarea de coordinación.
 
 |parent_task_address|task_address|task_state|scheduler_id|worker_address|
@@ -133,9 +136,6 @@ ORDER BY parent_task_address, scheduler_id;
 |0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
 |0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
 
-> [!TIP]
-> En un [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] muy ocupado, es posible ver una cantidad de tareas activas superior al límite establecido por los subprocesos reservados. Estas tareas pueden pertenecer a una rama que ya no se está usando y que se encuentra en un estado transitorio, esperando la limpieza. 
-
 Observe que cada una de las 16 tareas secundarias tiene un subproceso de trabajo diferente asignado (indicado en la columna `worker_address`), pero que todos los trabajos están asignados al mismo grupo de ocho programadores (0, 5, 6, 7, 8, 9, 10, 11) y que la tarea primaria está asignada a un programador fuera de este grupo (3).
 
 > [!IMPORTANT]
@@ -147,7 +147,7 @@ Un subproceso de trabajo solo puede permanecer activo en el programador mientras
 > [!TIP] 
 > Para la salida de la DMV anterior, todas las tareas activas están en estado SUSPENDIDO. Para obtener más información sobre las tareas en espera, consulte la DMV [sys. dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md). 
 
-En resumen, una solicitud paralela generará varias tareas, donde cada tarea debe estar asignada a un único subproceso de trabajo y cada subproceso de trabajo debe estar asignado a un solo programador. Por lo tanto, el número de programadores en uso no puede superar el número de tareas paralelas por rama, establecido por MaxDOP. 
+En resumen, una solicitud paralela generará varias tareas. Cada tarea debe estar asignada a un único subproceso de trabajo. Cada subproceso de trabajo debe estar asignado a un único programador. Por lo tanto, el número de programadores en uso no puede superar el número de tareas paralelas por rama, establecido por la configuración de MaxDOP o la sugerencia de consulta. El subproceso de coordinación no contribuye al límite de MaxDOP. 
 
 ### <a name="allocating-threads-to-a-cpu"></a>Asignación de subprocesos a una CPU
 De manera predeterminada, cada instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inicia cada subproceso, y el sistema operativo distribuye los subprocesos de las instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre los procesadores (las CPU) de un equipo en función de la carga. Si se ha habilitado la afinidad de proceso en el nivel de sistema operativo, el sistema operativo asigna cada subproceso a una CPU concreta. Por el contrario, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna los **subprocesos de trabajo** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a los **programadores** que distribuyen los subprocesos de manera uniforme entre las CPU, en modo Round-Robin.

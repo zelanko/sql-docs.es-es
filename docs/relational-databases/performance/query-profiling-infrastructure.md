@@ -1,5 +1,6 @@
 ---
 title: Infraestructura de generación de perfiles de consultas | Microsoft Docs
+description: Obtenga más información sobre cómo el Motor de base de datos de SQL Server accede a información del entorno de ejecución en planes de ejecución de consultas para comprender la carga de trabajo y cómo se controla el uso de recursos.
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 099bf39d869caf8e42575393276e1a7e5ddadb68
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279641"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457267"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

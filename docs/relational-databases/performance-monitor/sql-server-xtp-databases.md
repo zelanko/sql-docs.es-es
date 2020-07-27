@@ -1,5 +1,6 @@
 ---
 title: Base de datos XTP de SQL Server | Microsoft Docs
+description: Obtenga información sobre el objeto de rendimiento SQL Server XTP Databases, que contiene contadores específicos de las bases de datos de OLTP en memoria.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f40d6d4afd6195e65ded4e010268251a5bda8b0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dea94fe092f4481386a9fd8a5649d0ea4dd18c2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774243"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457404"
 ---
 # <a name="sql-server-xtp-databases"></a>SQL Server XTP Databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

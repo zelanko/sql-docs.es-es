@@ -1,5 +1,6 @@
 ---
 title: Grupo de recursos del regulador de recursos | Microsoft Docs
+description: Resource Governor de SQL Server especifica los límites en cuanto a la cantidad de CPU, E/S física y memoria del grupo de recursos de servidor que pueden usar las solicitudes entrantes procedentes de las aplicaciones.
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0236841f3f3c6944d411fd18cb0222afb1802947
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bfc4c3eb6562c6424ecff4cfa8f311afe0a3510c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729284"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457835"
 ---
 # <a name="resource-governor-resource-pool"></a>Grupo de recursos de servidor del regulador de recursos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

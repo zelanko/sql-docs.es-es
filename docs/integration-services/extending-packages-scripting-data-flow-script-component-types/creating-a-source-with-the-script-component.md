@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b3362c4761d6ad17618a2c390ada247be9071f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e936a0afefa71969cf9e27c2c222d8780532610
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296445"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914151"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Crear un origen con el componente de script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Los componentes de origen del flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se usan para cargar datos de un origen de datos y pasarlos a transformaciones y destinos de nivel inferior. Normalmente la conexión al origen de datos se realiza a través de un administrador de conexiones existente.  
@@ -64,7 +64,7 @@ ms.locfileid: "71296445"
 -   Puede crear una o varias salidas adicionales, como una salida de error simulada para las filas que contienen valores inesperados. Utilice los botones **Agregar salida** y **Quitar salida** para administrar las salidas del componente de origen. Todas las filas de entrada se dirigen a todas las salidas disponibles a menos que también especifique un valor distinto de cero idéntico para la propiedad **ExclusionGroup** de las salidas si desea dirigir cada fila a solo una de las salidas que comparten el mismo valor de **ExclusionGroup**. El valor entero determinado seleccionado para identificar el elemento **ExclusionGroup** no es significativo.  
   
     > [!NOTE]  
-    >  También puede utilizar un valor de la propiedad **ExclusionGroup** distinto de cero con una salida única si no desea generar la salida de todas las filas. Sin embargo, en este caso, debe llamar explícitamente al método **DirectRowTo\<outputbuffer>** para cada fila que desee enviar a la salida.  
+    >  También puede utilizar un valor de la propiedad **ExclusionGroup** distinto de cero con una salida única si no desea generar la salida de todas las filas. No obstante, en este caso, debe llamar explícitamente al método **DirectRowTo\<outputbuffer>** para cada fila que quiera enviar a la salida.  
   
 -   Puede asignar un nombre descriptivo a las salidas. Después, hará referencia a las salidas en el script por sus nombres, mediante las propiedades de descriptor de acceso con tipo creadas en el código generado automáticamente.  
   

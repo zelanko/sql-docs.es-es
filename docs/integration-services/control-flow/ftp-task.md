@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c33ec0b3d8b597e46403337a11b4f3d99bc3393
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294142"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918246"
 ---
 # <a name="ftp-task"></a>Tarea FTP
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La tarea FTP descarga y carga archivos de datos, y administra directorios en servidores. Por ejemplo, un paquete puede descargar archivos de datos de un servidor remoto o de una ubicación de Internet como parte de un flujo de trabajo de paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Puede usar la tarea FTP para los siguientes fines:  
@@ -85,7 +85,7 @@ ms.locfileid: "71294142"
   
 ### <a name="options"></a>Opciones  
  **FtpConnection**  
- Seleccione un administrador de conexiones FTP existente o haga clic en \<**Nueva conexión...** > para crear uno nuevo.  
+ Seleccione un administrador de conexiones FTP existente o haga clic en \<**New connection...**> para crear uno.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones FTP solo admite la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
@@ -148,13 +148,13 @@ ms.locfileid: "71294142"
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Seleccione una variable existente definida por el usuario o haga clic en \<**Nueva variable...** > para crear una.  
+ Seleccione una variable existente definida por el usuario o haga clic en \<**New variable...**> para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Agregar variable  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Seleccione un administrador de conexiones FTP existente o haga clic en \<**Nueva conexión...** > para crear uno nuevo.  
+ Seleccione un administrador de conexiones FTP existente o haga clic en \<**New connection...**> para crear uno.  
   
  **Temas relacionados:** [Administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Editor del administrador de conexiones FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -162,13 +162,13 @@ ms.locfileid: "71294142"
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Seleccione una variable existente definida por el usuario o haga clic en \<**Nueva variable...** > para crear una.  
+ Seleccione una variable existente definida por el usuario o haga clic en \<**New variable...**> para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), Agregar variable  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Seleccione un administrador de conexiones de archivos existente, o bien haga clic en \<**Nueva conexión…** > para crear uno.  
+ Seleccione un administrador de conexiones de archivos existente o haga clic en \<**New connection...**> para crear uno.  
   
  **Temas relacionados**: [Administrador de conexiones de archivos planos](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

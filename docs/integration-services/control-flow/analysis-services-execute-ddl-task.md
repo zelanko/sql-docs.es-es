@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a160e61e390f58dc640a5d1da265cdb77d5d9be1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9823a3075e1b333bfbe7c0f68e2f5cdedec6c979
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294341"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86899653"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tarea Ejecutar DDL de Analysis Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   La tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ejecuta instrucciones del lenguaje de definición de datos (DDL) que pueden crear, quitar o modificar modelos de minería de datos y objetos multidimensionales, como cubos y dimensiones. Por ejemplo, una instrucción DDL puede crear una partición en el cubo de **Adventure Works** o eliminar una dimensión de [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], la base de datos de ejemplo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluida en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -253,7 +253,7 @@ ms.locfileid: "71294341"
   
 ### <a name="static-options"></a>Opciones estáticas  
  **Connection**  
- Seleccione un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o un administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la lista, o bien haga clic en \<**Nueva conexión…** > y use el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** para crear una conexión.  
+ Seleccione un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o un administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la lista, o bien haga clic en \<**New connection...**> y use el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** para crear una conexión.  
   
  **Temas relacionados:** [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -274,13 +274,13 @@ ms.locfileid: "71294341"
   
 #### <a name="sourcetype--file-connection"></a>SourceType = Conexión de archivos  
  **Origen**  
- Seleccione una conexión de archivos de la lista, o bien haga clic en \<**Nueva conexión…** > y use el cuadro de diálogo **Administrador de conexiones de archivos** para crear una conexión.  
+ Seleccione una conexión de archivos de la lista, o bien haga clic en \<**New connection...**> y use el cuadro de diálogo **Administrador de conexiones de archivos** para crear una conexión.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Origen**  
- Seleccione una variable de la lista, o bien haga clic en \<**Nueva variable…** > y use el cuadro de diálogo **Agregar variable** para crear una variable.  
+ Seleccione una variable de la lista, o bien haga clic en \<**New variable...**> y use el cuadro de diálogo **Agregar variable** para crear una variable.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   

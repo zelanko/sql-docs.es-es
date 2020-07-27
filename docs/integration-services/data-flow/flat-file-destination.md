@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bf49a6cd604350ca9b3e73ee96bb6c61b1977a60
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292531"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920889"
 ---
 # <a name="flat-file-destination"></a>Destino de archivo plano
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   El destino de archivo plano escribe datos en un archivo de texto. El archivo de texto puede tener formato delimitado, de ancho fijo, de ancho fijo con delimitador de filas o desigual a la derecha.  
@@ -91,7 +91,7 @@ ms.locfileid: "71292531"
  Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles a columnas de entrada.  
   
  **Columna de entrada**  
- Muestra las columnas de entrada seleccionadas anteriormente en este tema. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**. Seleccione **\<omitir>** para excluir la columna de los resultados.  
+ Muestra las columnas de entrada seleccionadas anteriormente en este tema. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**. Seleccione **\<ignore>** para excluir la columna de la salida.  
   
  **Columna de destino**  
  Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  

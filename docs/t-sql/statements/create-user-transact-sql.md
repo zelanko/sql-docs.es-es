@@ -1,5 +1,5 @@
 ---
-title: CREATE USER (Transact-SQL) | Microsoft Docs
+title: CREATE USER (Transact-SQL)
 ms.custom: ''
 ms.date: 11/06/2019
 ms.prod: sql
@@ -29,14 +29,15 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2790ce463d7ff6114bf96726d899cbe5d65f01f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5873b926d56c07523d759e1383fbb101a1cfa6e1
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004729"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485059"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Agrega un usuario a la base de datos actual. Los 12 tipos de usuarios se enumeran a continuación con un ejemplo de la sintaxis más sencilla:  
@@ -171,7 +172,9 @@ CREATE USER user_name
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *user_name*  
  Especifica el nombre por el que se identifica al usuario en esta base de datos. *user_name* es **sysname**. Puede tener una longitud máxima de 128 caracteres. Cuando se crea un usuario basado en una entidad de seguridad de Windows, el nombre de esta entidad se convierte en el nombre de usuario a menos que se especifique otro nombre de usuario.  
   
@@ -222,7 +225,7 @@ ASYMMETRIC KEY *asym_key_name*
   
  Especifica la clave asimétrica del usuario de la base de datos que se crea.  
   
-DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*  
+DEFAULT_LANGUAGE = *{ NONE \| \<lcid> \| \<language name> \| \<language salias> }*  
  **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  Especifica el idioma predeterminado del nuevo usuario. Si se especifica un idioma predeterminado para el usuario y el idioma de la base de datos se cambia posteriormente, el idioma predeterminado de los usuarios se mantiene como se especificó. Si no se especifica ningún idioma predeterminado, el idioma predeterminado del usuario será el idioma predeterminado de la base de datos. Si no se especificó ningún idioma predeterminado para el usuario y el idioma predeterminado de la base de datos se cambia posteriormente, el idioma predeterminado del usuario se cambiará al nuevo idioma predeterminado de la base de datos.  

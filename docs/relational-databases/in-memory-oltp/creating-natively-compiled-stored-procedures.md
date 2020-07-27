@@ -12,29 +12,29 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ef2ee1bbc863de8f3be94733beac3f04fa90b3c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2ce0672c59a10e22131effacededf87db25bdb92
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723287"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484616"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Crear procedimientos almacenados compilados de forma nativa
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Los procedimientos almacenados compilados de forma nativa no implementan el área expuesta completa de programación y consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Hay ciertas construcciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que no se pueden usar en los procedimientos almacenados compilados de forma nativa. Para obtener más información, vea [Características admitidas en los módulos T-SQL compilados de forma nativa](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
-Sin embargo, hay varias características de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se admiten solo para los procedimientos almacenados compilados de forma nativa:  
+Las siguientes características [!INCLUDE[tsql](../../includes/tsql-md.md)] solo se admiten en procedimientos almacenados compilados de forma nativa:  
   
 -   Bloques atomic. Para obtener más información, consulte [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
   
--   Restricciones **NOT NULL** en parámetros y variables. No se pueden asignar valores **NULL** a los parámetros o variables declarados como **NOT NULL**. Para obtener más información, vea [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+-   Restricciones `NOT NULL` en parámetros y variables. No se pueden asignar valores **NULL** a los parámetros o variables declarados como **NOT NULL**. Para obtener más información, vea [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
-    -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) ...  
+    -   `CREATE PROCEDURE dbo.myproc (@myVarchar VARCHAR(32) NOT NULL) AS (...)`  
   
-    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(debe inicializarse en un valor)* .  
+    -   `DECLARE @myVarchar VARCHAR(32) NOT NULL = "Hello"; -- Must initialize to a value.`  
   
-    -   SET @myVarchar **= null**; -- *(compila, pero se produce un error durante el tiempo de ejecución)* .  
+    -   `SET @myVarchar = NULL; -- Compiles, but fails during run time.`  
   
 -   Enlace de esquema de los procedimientos almacenados compilados de forma nativa.  
   

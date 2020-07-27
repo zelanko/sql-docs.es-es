@@ -1,5 +1,6 @@
 ---
 title: JobSteps (objeto del Agente SQL Server) | Microsoft Docs
+description: Obtenga información sobre el objeto de rendimiento JobSteps del Agente SQL Server, que contiene contadores de rendimiento que proporcionan información acerca de los pasos de trabajos del Agente SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b3d0c8197f275801140bec48ab05dc6bc19324eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 14a13671c5447872e1c4c0030c8717e471d8114f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787383"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457457"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>JobSteps (objeto del Agente SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

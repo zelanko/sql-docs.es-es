@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfef4a0f2bf65166193e28610d5869e65c1023cb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296214"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917578"
 ---
 # <a name="integration-services-programming-overview"></a>Información general sobre la programación de Integration Services
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tiene una arquitectura que separa el movimiento y la transformación de datos del flujo de control y la administración de paquetes. Existen dos motores distintos que definen esta arquitectura y que se pueden automatizar y extender al programar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. El motor en tiempo de ejecución implementa la infraestructura de administración de flujo de control y paquetes que permite a los programadores controlar el flujo de ejecución y establecer opciones de para registro, controladores de eventos y variables. El motor de flujo de datos es un motor especializado de alto rendimiento que se dedica exclusivamente a extraer, transformar y cargar datos. Al programar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], estará programando en estos dos motores.  
@@ -62,9 +62,9 @@ ms.locfileid: "71296214"
 >  Las interfaces de programación de aplicaciones de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] son incompatibles con lenguajes de scripting basados en COM como VBScript.  
   
 ## <a name="locating-assemblies"></a>Buscar ensamblados  
- En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], los ensamblados de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se actualizaron a .NET 4.0. Hay una memoria caché global de ensamblados diferente para .NET 4, que se encuentra en *\<unidad>* :\Windows\Microsoft.NET\assembly. Puede buscar todos los ensamblados de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bajo esta ruta de acceso, normalmente en la carpeta GAC_MSIL.  
+ En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], los ensamblados de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se actualizaron a .NET 4.0. Hay una caché global de ensamblados diferente para .NET 4, que se encuentra en *\<drive>* :\Windows\Microsoft.NET\assembly. Puede buscar todos los ensamblados de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bajo esta ruta de acceso, normalmente en la carpeta GAC_MSIL.  
   
- Como ocurre en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], los archivos básicos de extensibilidad .dll de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] también se encuentran en *\<unidad>* :\Archivos de programa\Microsoft SQL Server\100\SDK\Assemblies.  
+ Como ocurre en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], los archivos básicos de extensibilidad .dll de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] también se encuentran en *\<drive>* :\Archivos de programa\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Ensamblados de uso frecuente  
  En la tabla siguiente se enumeran los ensamblados que se suelen usar al programar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  

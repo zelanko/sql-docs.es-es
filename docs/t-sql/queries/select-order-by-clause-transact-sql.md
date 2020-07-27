@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 296616f71102f5a5c68fe817b409273f6bf9428a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ebb1f9b6a1d2b9651b26c8649db89c0ca89fc5fa
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999773"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554760"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT: Cláusula ORDER BY (Transact-SQL)
 
@@ -92,7 +92,9 @@ ORDER BY order_by_expression
 ]   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *order_by_expression*  
  Especifica una columna o expresión según la que se ordenará el conjunto de resultados de la consulta. Una columna de ordenación se puede especificar como un nombre o un alias de columna, o un entero no negativo que representa la posición de la columna en la lista de selección.  
   
@@ -124,7 +126,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  En los planes de ejecución de consultas, el valor de recuento de filas de desplazamiento se muestra en el atributo **Offset** del operador de consulta TOP.  
   
- FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
+ FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY  
  Especifica el número de filas que se devolverán después de procesar la cláusula OFFSET. El valor puede ser una expresión o constante entera mayor o igual que uno.  
   
 **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  

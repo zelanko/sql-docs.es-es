@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243892"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236970"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Ventanas de herramientas de SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] proporciona un gran número de eficaces ventanas de herramientas para todas las fases del desarrollo y la administración. Algunas herramientas se pueden utilizar en cualquier componente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mientras que otras son solo para ciertos componentes. En la tabla siguiente se identifican las herramientas que se pueden utilizar con todos los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-|||  
-|-|-|  
-|**Herramienta**|**Propósito**|  
+|Herramienta|Propósito|  
+|-|-|   
 |[Explorador de objetos](../ssms/object/object-explorer.md)|Examinar servidores, crear y ubicar objetos, administrar orígenes de datos y ver registros. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
 |[Explorador de soluciones](../ssms/solution/solution-explorer.md)|Almacenar y organizar scripts e información de conexión relacionada en proyectos denominados Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Es posible almacenar varios Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como Soluciones y utilizar el control de código fuente para administrar los scripts a medida que evolucionan. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
 |[Explorador de plantillas](../ssms/template/template-explorer.md)|Crear consultas basadas en las plantillas existentes. También es posible crear consultas personalizadas o modificar las plantillas existentes de modo que se ajusten a su situación. A esta herramienta se obtiene acceso desde el menú **Ver** .|  

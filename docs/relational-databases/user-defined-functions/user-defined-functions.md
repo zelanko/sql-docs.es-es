@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 362cb5e43414e6f43453f8efe201d8e4a2369f6d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8deea6a37a8aca7791d84d9d32d9735525305913
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727084"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247258"
 ---
 # <a name="user-defined-functions"></a>Funciones definidas por el usuario
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -89,27 +89,111 @@ Entre los tipos de instrucciones válidos en una función se incluyen:
 -   Instrucciones `EXECUTE` que llaman a un procedimiento almacenado extendido.  
   
 ### <a name="built-in-system-functions"></a>Funciones del sistema integradas  
- Las siguientes funciones integradas no deterministas se pueden usar en funciones Transact-SQL definidas por el usuario.  
+ Las siguientes funciones integradas no deterministas se pueden usar en funciones Transact-SQL definidas por el usuario.
   
-|||  
-|-|-|  
-|CURRENT_TIMESTAMP|@@MAX_CONNECTIONS|  
-|GET_TRANSMISSION_STATUS|@@PACK_RECEIVED|  
-|GETDATE|@@PACK_SENT|  
-|GETUTCDATE|@@PACKET_ERRORS|  
-|@@CONNECTIONS|@@TIMETICKS|  
-|@@CPU_BUSY|@@TOTAL_ERRORS|  
-|@@DBTS|@@TOTAL_READ|  
-|@@IDLE|@@TOTAL_WRITE|  
-|@@IO_BUSY||  
-  
+:::row:::
+    :::column:::
+        CURRENT_TIMESTAMP
+    :::column-end:::
+    :::column:::
+        @@MAX_CONNECTIONS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GET_TRANSMISSION_STATUS
+    :::column-end:::
+    :::column:::
+        @@PACK_RECEIVED
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GETDATE
+    :::column-end:::
+    :::column:::
+        @@PACK_SENT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GETUTCDATE
+    :::column-end:::
+    :::column:::
+        @@PACKET_ERRORS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@CONNECTIONS
+    :::column-end:::
+    :::column:::
+        @@TIMETICKS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@CPU_BUSY
+    :::column-end:::
+    :::column:::
+        @@TOTAL_ERRORS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@DBTS
+    :::column-end:::
+    :::column:::
+        @@TOTAL_READ
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IDLE
+    :::column-end:::
+    :::column:::
+        @@TOTAL_WRITE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IO_BUSY
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
  Las siguientes funciones integradas no deterministas **no** se pueden usar en funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] definidas por el usuario.  
   
-|||  
-|-|-|  
-|NEWID|RAND|  
-|NEWSEQUENTIALID|TEXTPTR|  
-  
+:::row:::
+    :::column:::
+        NEWID
+    :::column-end:::
+    :::column:::
+        RAND
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        NEWSEQUENTIALID
+    :::column-end:::
+    :::column:::
+        TEXTPTR
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
  Para consultar una lista de las funciones de sistema integradas deterministas y no deterministas, vea [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> Funciones enlazadas a esquema  
@@ -130,9 +214,8 @@ Entre los tipos de instrucciones válidos en una función se incluyen:
   
 ##  <a name="more-examples"></a><a name="Tasks"></a> Más ejemplos  
   
-|||  
-|-|-|  
-|**Descripción de la tarea**|**Tema.**|  
+|Descripción de la tarea|Tema|  
+|-|-|    
 |Describe cómo se crea una función Transact-SQL definida por el usuario.|[Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Describe cómo se crea una función CLR.|[Crear funciones CLR](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |Describe cómo se crea una función de agregado definida por el usuario|[Crear funciones de agregado definidas por el usuario](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  

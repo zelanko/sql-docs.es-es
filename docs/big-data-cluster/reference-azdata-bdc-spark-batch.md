@@ -1,29 +1,29 @@
 ---
 title: Referencia de azdata bdc spark batch
+titleSuffix: SQL Server big data clusters
 description: Artículo de referencia sobre los comandos de azdata bdc spark batch.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d141669313a90bd04cda2e54d5a9e9d5a3c68f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2921a1855ed02779bc30602c5b87ed4914d11f3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258632"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243064"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En el artículo siguiente se proporciona una referencia de los comandos `bdc spark batch` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos:
-|     |     |
+| Comando | Descripción |
 | --- | --- |
 [azdata bdc spark batch create](#azdata-bdc-spark-batch-create) | Cree una sesión de Spark.
 [azdata bdc spark batch list](#azdata-bdc-spark-batch-list) | Enumere todos los lotes de Spark.
@@ -36,19 +36,32 @@ Este comando crea un nuevo trabajo de Spark de Batch que ejecuta el código prop
 ```bash
 azdata bdc spark batch create --file -f 
                               [--class-name -c]  
-                              [--arguments -a]  
-                              [--jar-files -j]  
-                              [--py-files -p]  
-                              [--files]  
-                              [--driver-memory]  
-                              [--driver-cores]  
-                              [--executor-memory]  
-                              [--executor-cores]  
-                              [--executor-count]  
-                              [--archives]  
-                              [--queue -q]  
-                              [--name -n]  
-                              [--config]
+                              
+[--arguments -a]  
+                              
+[--jar-files -j]  
+                              
+[--py-files -p]  
+                              
+[--files]  
+                              
+[--driver-memory]  
+                              
+[--driver-cores]  
+                              
+[--executor-memory]  
+                              
+[--executor-cores]  
+                              
+[--executor-count]  
+                              
+[--archives]  
+                              
+[--queue -q]  
+                              
+[--name -n]  
+                              
+[--config]
 ```
 ### <a name="examples"></a>Ejemplos
 Cree una sesión de Spark.
@@ -95,7 +108,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-batch-list"></a>azdata bdc spark batch list
@@ -116,16 +129,17 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-batch-info"></a>azdata bdc spark batch info
 Este comando obtiene la información de un lote de Spark con el identificador especificado.  El identificador de lote se devuelve de "spark batch create".
 ```bash
 azdata bdc spark batch info --batch-id -i 
-          ```
-### Examples
-Get batch info for batch with ID of 0.
+                            
+```
+### <a name="examples"></a>Ejemplos
+Obtenga la información de lote del lote con el identificador 0.
 ```bash
 azdata spark batch info --batch-id 0
 ```
@@ -140,16 +154,17 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-batch-log"></a>azdata bdc spark batch log
 Este comando obtiene las entradas del registro por lotes de un lote de Spark con el identificador especificado.  El identificador de lote se devuelve de "spark batch create".
 ```bash
 azdata bdc spark batch log --batch-id -i 
-         ```
-### Examples
-Get batch log for batch with ID of 0.
+                           
+```
+### <a name="examples"></a>Ejemplos
+Obtenga el registro de lote del lote con el identificador 0.
 ```bash
 azdata spark batch log --batch-id 0
 ```
@@ -164,16 +179,17 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-batch-state"></a>azdata bdc spark batch state
 Este comando obtiene el estado de lote de un lote de Spark con el identificador especificado.  El identificador de lote se devuelve de "spark batch create".
 ```bash
 azdata bdc spark batch state --batch-id -i 
-           ```
-### Examples
-Get batch state for batch with ID of 0.
+                             
+```
+### <a name="examples"></a>Ejemplos
+Obtenga el estado de lote del lote con el identificador 0.
 ```bash
 azdata spark batch state --batch-id 0
 ```
@@ -188,16 +204,17 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-batch-delete"></a>azdata bdc spark batch delete
 Este comando elimina un lote de Spark. El identificador de lote se devuelve de "spark batch create".
 ```bash
 azdata bdc spark batch delete --batch-id -i 
-            ```
-### Examples
-Delete a batch.
+                              
+```
+### <a name="examples"></a>Ejemplos
+Elimine un lote.
 ```bash
 azdata spark batch delete --batch-id 0
 ```
@@ -212,7 +229,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 

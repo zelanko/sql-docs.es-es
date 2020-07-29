@@ -21,12 +21,12 @@ ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d1dac16634cea0de24e405a3d8017f80ee9a151
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: efa759a700a092a78d13bf3e7a9f299939152e40
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007974"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113229"
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,9 @@ Función matemática que devuelve el valor absoluto positivo de una expresión n
 ABS ( numeric_expression )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *numeric_expression*  
 Una expresión de la categoría de tipo de datos numérico exacto o numérico aproximado.
   

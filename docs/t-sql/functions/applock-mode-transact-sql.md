@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba622c928d2ec1300dbe9eec29ea3a249b7ca89a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3d171d77cf3462eb68893f4ac5f6230d73b8b11
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684963"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113184"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ Esta función devuelve el modo de bloqueo mantenido por el propietario del bloqu
 APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 '*database_principal*'  
 Es el usuario, el rol o el rol de aplicación al que se pueden conceder permisos para los objetos de la base de datos. Para llamar a la función correctamente, el autor de la llamada a la función debe ser miembro de *database_principal*, de dbo o del rol fijo de base de datos db_owner.
   

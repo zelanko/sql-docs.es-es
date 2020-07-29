@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0967c82b537bb733bce8933f379320ceb37511d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 690d3f570d34461c876a812251ac9a25cf1bc7b5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251949"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999587"
 ---
 # <a name="copy-items-in-a-solution"></a>Copiar elementos de una solución
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Se pueden copiar elementos mediante el Explorador de soluciones o el Explorador de Windows.  
   
 ### <a name="to-copy-items-within-solution-explorer"></a>Para copiar elementos en el Explorador de soluciones  

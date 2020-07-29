@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fac8e4cdb99d19da39f60585db3f77a27975983a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245726"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011832"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opciones (Entorno -página Fuentes y colores)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 El cuadro de diálogo **Opciones** permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la interfaz de usuario de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
   
 Los cambios en la combinación de colores no surtirán efecto durante la sesión en la que los realice. Puede evaluar los cambios de color abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y creando las condiciones bajo las cuales espera que se apliquen los cambios.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
 **Mostrar valores para**  
 Muestra todos los elementos de la interfaz de usuario en los que puede modificar combinaciones de fuentes y colores. Después de seleccionar un elemento de esta lista puede personalizar la configuración del color para el elemento seleccionado en **Mostrar los elementos**.  
   

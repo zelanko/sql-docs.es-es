@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a02f50ed88a2883d0149dbbd37df63b27e87dfa4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: daab193798d2d9b2d8a8571d3bb6cd71ac52b542
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247614"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243586"
 ---
 # <a name="organize-jobs"></a>organizar los trabajos
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
@@ -35,9 +34,8 @@ Las categorías de trabajo le ayudan a organizar los trabajos para poder filtrar
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
+|Descripción|Tema|  
 |-|-|  
-|**Descripción**|**Tema.**|  
 |Describe cómo crear una categoría de trabajo.|[Crear una categoría de trabajo](../../ssms/agent/create-a-job-category.md)|  
 |Describe cómo eliminar una categoría de trabajo.|[Eliminar una categoría de trabajo](../../ssms/agent/delete-a-job-category.md)|  
 |Describe cómo asignar un trabajo a una categoría de trabajo.|[Asignar un trabajo a una categoría de trabajo](../../ssms/agent/assign-a-job-to-a-job-category.md)|  

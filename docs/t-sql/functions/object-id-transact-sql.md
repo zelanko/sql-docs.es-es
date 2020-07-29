@@ -26,12 +26,12 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c926d7ecebea11ea054b2a63ddb1e7b62d9cb84f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f2ae4289776787d2e91b3c9c911629b38ced975d
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010865"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112669"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,9 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   object_name' [ ,'object_type' ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **'** *object_name* **'**  
  Es el objeto que va a utilizarse. *object_name* es **varchar** o **nvarchar**. Si *object_name* es **varchar**, se convierte implícitamente a **nvarchar**. Especificar los nombres de la base de datos y del esquema es opcional.  
   

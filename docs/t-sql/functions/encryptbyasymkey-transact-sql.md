@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de84d9fd01f49661dc099d166829d19e39559904
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9695a2cec375cf2eb5a69bbe210478b9d0fa1e6
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682051"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113547"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ Esta función cifra los datos con una clave asimétrica.
 EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *asym_key_ID*  
 Id. de una clave asimétrica en la base de datos. *asym_key_ID* tiene un tipo de datos **int**.  
   

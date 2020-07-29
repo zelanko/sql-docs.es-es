@@ -2,22 +2,22 @@
 title: 'Tutorial de R: Implementación del modelo'
 description: Tutorial donde se muestra cómo implementar un modelo de R en SQL Server para el análisis en bases de datos.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781788"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implementación del modelo de R y su uso en SQL Server (tutorial)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En esta lección, aprenderá a implementar modelos de R en un entorno de producción mediante una llamada a un modelo entrenado desde un procedimiento almacenado. Puede invocar el procedimiento almacenado de R o de cualquier lenguaje de programación de aplicaciones compatible con [!INCLUDE[tsql](../../includes/tsql-md.md)] (como C#, Java, Python, etc.) y usar el modelo para realizar predicciones a partir de observaciones nuevas.
 

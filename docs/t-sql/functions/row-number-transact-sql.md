@@ -21,12 +21,12 @@ ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed067b55bf96a50f612370ce2d3caa56f9be728b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 283e82c1476d49d847333a7c03e05c06aa6f3b41
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003698"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111360"
 ---
 # <a name="row_number-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,9 @@ ROW_NUMBER ( )
     OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  PARTITION BY *value_expression*  
  Divide el conjunto de resultados generado por la cláusula [FROM](../../t-sql/queries/from-transact-sql.md) en particiones a las que se aplica la función ROW_NUMBER. *value_expression* especifica la columna a partir de la cual se particiona el conjunto de resultados. Si no se especifica `PARTITION BY`, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   

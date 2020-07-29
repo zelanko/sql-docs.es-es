@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 12de5cfddd99d6f25745e5b682b7f645dbbadb8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2cef30d8155c0a44820b9ab639c2a28964b02f76
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734197"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112170"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,9 @@ Esta función devuelve las propiedades de una clave asimétrica.
 ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *Key_ID*  
 Valor Key_ID de una clave asimétrica en la base de datos. Para buscar el valor Key_ID cuando solo se conoce el nombre de la clave, utilice ASYMKEY_ID. *Key_ID* tiene un tipo de datos **int**.
   

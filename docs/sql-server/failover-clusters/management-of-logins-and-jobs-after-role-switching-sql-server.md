@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68b46562968cd53b0fb12f13cc82fd0b83f6e192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230220"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729021"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administración de inicios de sesión y trabajos tras la conmutación de roles (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Al implementar una solución de alta disponibilidad o de recuperación ante desastres para una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es importante reproducir información relevante que se almacena para dicha base de datos en las bases de datos **master** o **msdb** . Generalmente, la información relevante incluye los trabajos de la base de datos principal y los inicios de sesión de los usuarios o los procesos que necesitan conectarse con la base de datos. Debe duplicar esta información en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeden una base de datos reflejada o secundaria. Si es posible, tras la conmutación de roles es mejor reproducir mediante programación la información en la nueva base de datos principal.  
   
 ## <a name="logins"></a>Inicios de sesión  

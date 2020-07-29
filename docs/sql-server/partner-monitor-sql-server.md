@@ -1,22 +1,22 @@
 ---
 title: Asociados de supervisión de SQL Server | Microsoft Docs
 description: Listas de asociados externos que cuentan con soluciones para supervisar Server.
-services: sql-server
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 11/02/2017
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: acecd9a5ef362f591d71eee15550ee7daa96dfc4
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 5b2ea5e22800d2fc8f65282f62fa52ce19e87722
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002809"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921778"
 ---
 # <a name="sql-server-monitoring-partners"></a>Asociados de supervisión de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Para supervisar los servicios de SQL Server, elija entre una amplia variedad de herramientas líderes del sector. En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de supervisión compatibles con Microsoft SQL Server.
 
 ## <a name="microsoft-monitoring-partners"></a>Asociados de supervisión de Microsoft

@@ -2,22 +2,22 @@
 title: Creación de un grupo de recursos
 description: Obtenga información sobre cómo crear y usar un grupo de recursos para administrar cargas de trabajo de Python o R en SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 02/28/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f8661101fa5b0f859723a168e149ae9747b3da4
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 5679a02542777e2302dcefc98274957b2f837445
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81119038"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902321"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>Crear un grupo de recursos para SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Obtenga información sobre cómo crear y usar un grupo de recursos para administrar cargas de trabajo de Python o R en SQL Server Machine Learning Services. 
 

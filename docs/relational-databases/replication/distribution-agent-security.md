@@ -15,15 +15,15 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91b5915324fc95d9199b4ec1d9aaa2ca0fee89d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653673"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111050"
 ---
 # <a name="distribution-agent-security"></a>Seguridad del Agente de distribución
-::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 El cuadro de diálogo **Seguridad del Agente de distribución** permite especificar la cuenta de Windows con la que se ejecuta el Agente de distribución. El Agente de distribución se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. La cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows se denomina también *cuenta de proceso*porque el proceso del agente se ejecuta con dicha cuenta. Las opciones adicionales disponibles en el cuadro de diálogo dependen de cómo se tenga acceso al mismo:  
   

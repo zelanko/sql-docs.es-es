@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: cd6f71f5c42418ab9357a9aaeec9788ae3ea0d65
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920960"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243429"
 ---
 # <a name="sql-server-express-security"></a>Seguridad de SQL Server Express
 
@@ -40,7 +40,7 @@ Cada instancia de usuario está aislada de la instancia principal y de las demá
 ## <a name="external-resources"></a>Recursos externos  
 Para más información acerca de SQL Server Express, consulte los recursos siguientes.  
   
-|||  
+|Recurso|Descripción|
 |-|-|  
 |[Libros en pantalla de Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentación completa de SQL Server 2005 Express Edition.|  
 |[Instancias de usuario para usuarios que no son administradores](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) en los Libros en pantalla de SQL Server|Describe cómo crear e implementar instancias de usuario.|  

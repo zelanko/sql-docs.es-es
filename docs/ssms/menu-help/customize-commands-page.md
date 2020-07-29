@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c4e138eb6b530377b76fcb6e6fb21a2694bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df3c48dcab1ee71f8cfee1932099b034729451e3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255698"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000410"
 ---
 # <a name="customize-commands-page"></a>Personalizar (página Comandos)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Este cuadro de diálogo permite agregar comandos en las barras de herramientas y menús, y eliminarlos de éstos; también permite cambiar las imágenes que se utilizan para los botones de barra de herramientas o los comandos de los menús. Para tener acceso a la página **Comandos** , haga clic en **Personalizar** en el menú **Herramientas** y, a continuación, haga clic en **Comandos**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
 **Categorías**  
 Especifica el conjunto de comandos que se muestran en el cuadro de lista **Comandos** . Las categorías de los comandos se basan en los títulos de menú proporcionados por las herramientas y los diseñadores admitidos por el entorno. Esta lista de títulos es dinámica, por lo que el orden de las categorías y los títulos de los menús cambian en función de las herramientas y del diseñador, así como de las personalizaciones que hayan podido efectuarse. Por consiguiente, es posible que dos menús de dos diseñadores distintos tengan el mismo nombre y que el mismo título aparezca dos veces, pero ofrezca distintos conjuntos de comandos.  
   

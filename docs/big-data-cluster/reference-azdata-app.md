@@ -5,25 +5,25 @@ description: Artículo de referencia de comandos de la aplicación de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7cb67f55af03fc8c948df6f17ee2924dea12825f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10885da7ad9033f8060192820e653e688e8e2e93
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820970"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942957"
 ---
 # <a name="azdata-app"></a>aplicación de azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En el artículo siguiente se proporciona una referencia de los comandos `app` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos:
-|     |     |
+| Comando | Descripción |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | Plantillas.
 [azdata app init](#azdata-app-init) | Inicio rápido de un nuevo esqueleto de la aplicación.
@@ -38,10 +38,14 @@ Le permite iniciar rápidamente un nuevo esqueleto de la aplicación o archivos 
 ```bash
 azdata app init [--spec -s] 
                 [--name -n]  
-                [--version -v]  
-                [--template -t]  
-                [--destination -d]  
-                [--url -u]
+                
+[--version -v]  
+                
+[--template -t]  
+                
+[--destination -d]  
+                
+[--url -u]
 ```
 ### <a name="examples"></a>Ejemplos
 Aplica scaffolding solo en el archivo `spec.yaml` de una aplicación nueva.
@@ -81,13 +85,14 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-app-create"></a>azdata app create
 Crea una aplicación.
 ```bash
 azdata app create --spec -s 
+                  
 ```
 ### <a name="examples"></a>Ejemplos
 Crea una aplicación desde un directorio que contenga un archivo spec.yaml de especificación de implementación válido.
@@ -105,7 +110,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-app-update"></a>azdata app update
@@ -132,7 +137,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-app-list"></a>azdata app list
@@ -167,7 +172,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-app-delete"></a>azdata app delete
@@ -194,7 +199,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-app-run"></a>azdata app run
@@ -202,7 +207,8 @@ Ejecuta una aplicación.
 ```bash
 azdata app run --name -n 
                --version -v  
-               [--inputs]
+               
+[--inputs]
 ```
 ### <a name="examples"></a>Ejemplos
 Ejecuta una aplicación sin parámetros de entrada.
@@ -233,7 +239,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-app-describe"></a>azdata app describe
@@ -241,7 +247,8 @@ Describe una aplicación.
 ```bash
 azdata app describe [--spec -s] 
                     [--name -n]  
-                    [--version -v]
+                    
+[--version -v]
 ```
 ### <a name="examples"></a>Ejemplos
 Describe la aplicación.
@@ -263,7 +270,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 

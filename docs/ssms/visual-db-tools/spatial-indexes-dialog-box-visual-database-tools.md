@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 40e3625aee9da35d2c29d495346386768b41aee8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ffbabe94a55328a4de6bd6c85bcaa5af01b3fa8c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254970"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999308"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Cuadro de diálogo Índices espaciales (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use el cuadro de diálogo **Índices espaciales** para crear índices para las columnas del tipo de datos **geometry** o **geography** (*columnas espaciales*) que no pueden indizarse mediante el cuadro de diálogo **Índice y claves** . Cada columna espacial puede tener más de un índice espacial, pero se deben crear de uno en uno.  
   
 Para más información sobre las restricciones de la creación de índices espaciales, consulte [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  

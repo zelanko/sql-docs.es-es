@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: beb3e7ed1733bc3cb2f7a3c136de1168e3722df9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1cd6899dfdb19dad3b1f1c95ec12ffe67ab8e9da
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858438"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112442"
 ---
 # <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,9 @@ Esta función devuelve el número de identificación (id.) del grupo de archivos
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *filegroup_name* expresión de tipo **sysname** que representa el nombre del grupo de archivos cuyo identificador de grupo de archivos `FILEGROUP_ID` va a devolver.  
   
 ## <a name="return-types"></a>Tipos de valor devuelto  

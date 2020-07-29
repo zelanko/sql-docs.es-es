@@ -2,22 +2,22 @@
 title: Modelado de predicción con R
 description: En este artículo se describen las mejoras en el proceso de ciencia de datos que se pueden realizar a través de la integración con SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 40dadfebdb37ca9be0d220a8f63cfba6021a7c90
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f3c5b72f562f4ba90de68f53911c067baa37189
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735073"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Exploración de datos y modelado de predicción con R en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se describen las mejoras en el proceso de ciencia de datos que se pueden realizar a través de la integración con SQL Server.
 

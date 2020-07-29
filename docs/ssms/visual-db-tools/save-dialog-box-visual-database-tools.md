@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 161621a6ac3df5c27cb7285febe9f4758d4be59b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44dfeb0dada34945a6c6407ed2c78ab21b789312
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255127"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010658"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>Guardar (cuadro de diálogo, Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Aparece cuando guarda el trabajo en el Diseñador de tablas y ese trabajo afecta a otras tablas. Este cuadro de diálogo permite confirmar las tablas que se van a guardar.  
   
 > [!NOTE]  

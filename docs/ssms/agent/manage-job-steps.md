@@ -23,18 +23,17 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256112"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247400"
 ---
 # <a name="manage-job-steps"></a>Administrar pasos de trabajo
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
@@ -203,9 +202,8 @@ Para más información sobre cómo crear pasos de trabajo que ejecutan paquetes 
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
+|Descripción|Tema|  
 |-|-|  
-|**Descripción**|**Tema.**|  
 |Describe cómo crear un paso de trabajo con un programa ejecutable.|[Crear un paso de trabajo CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Describe cómo restablecer los permisos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Configurar un usuario para crear y administrar trabajos del Agente SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Describe cómo crear un paso de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  

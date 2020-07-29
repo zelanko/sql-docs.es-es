@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbe6eaed0482642e8200b26561e3b2bb473bfa9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e98abae6a85c885bf667e75e2a0f5353c18c6704
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255880"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007823"
 ---
 # <a name="options-environment---keyboard-page"></a>Opciones (Entorno - Página Teclado)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 El cuadro de diálogo **Opciones** permite personalizar el esquema de teclado para [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Utilice esta opción para elegir un esquema de teclado. Para obtener acceso a esta página, haga clic en **Opciones** en el menú **Herramientas** , seleccione la carpeta **Entorno** y, a continuación, haga clic en **Teclado**.  
   
 La lista desplegable **Esquema de teclado** proporciona las colecciones disponibles de teclas de método abreviado. Para cargar un esquema específico, selecciónelo en la lista. Cuando esté preparado para dejar el cuadro de diálogo **Opciones** , haga clic en **Aceptar**. El esquema que haya seleccionado se cargará en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

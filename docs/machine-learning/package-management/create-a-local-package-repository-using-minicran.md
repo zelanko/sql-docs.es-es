@@ -4,21 +4,21 @@ description: Obtenga información sobre cómo instalar paquetes de R sin conexi�
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a980e356496e3e2e1cdbc5010e8f1c6f7ec7d8c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783504"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Creación de un repositorio de paquetes de R local mediante miniCRAN
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 En este artículo se describe cómo instalar paquetes de R sin conexión mediante [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) para crear un repositorio local de paquetes y dependencias. **miniCRAN** identifica y descarga paquetes y dependencias en una única carpeta que se copia en otros equipos para la instalación de paquetes de R sin conexión.
 
@@ -112,7 +112,7 @@ pdb[, c("Package", "Version", "License")]
 
 Una vez que tenga un repositorio local con los paquetes que necesita, mueva el repositorio de paquetes al equipo con SQL Server. En el procedimiento siguiente se describe cómo instalar los paquetes mediante herramientas de R.
 
-::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 > [!NOTE]
 > El método recomendado para instalar paquetes es usar **sqlmlutils**. Consulte [Instalación de nuevos paquetes de R con sqlmlutils](install-additional-r-packages-on-sql-server.md).
 ::: moniker-end

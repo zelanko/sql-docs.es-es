@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25a6b733eed0611b43fb1f17ad0fe8a0cc1d690a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 688031d9301710ada0ba5952ab45dba02bf46de0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75720864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774532"
 ---
 # <a name="deploy-hdfs-name-node-and-shared-spark-services-in-a-highly-available-configuration"></a>Implementación del nodo de nombre de HDFS y de los servicios de Spark compartidos en una configuración de alta disponibilidad
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Además de implementar la instancia maestra de SQL Server en una configuración de alta disponibilidad usando grupos de disponibilidad, se pueden implementar otros servicios críticos en el clúster de macrodatos para garantizar un mayor nivel de confiabilidad. Puede configurar `HDFS name node` y los servicios de Spark compartidos agrupados en `sparkhead` con una réplica adicional. En este caso, `Zookeeper` también se implementa en el clúster de macrodatos en el servidor como coordinador de clústeres y almacén de metadatos de los siguientes servicios: 
 

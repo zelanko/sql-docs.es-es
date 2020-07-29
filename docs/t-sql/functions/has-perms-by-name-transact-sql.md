@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 944b3e02894e86de9ff5c0f2254b71de7b76bd2f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752365"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113527"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,9 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
     [ , sub-securable ] [ , sub-securable_class ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *securable*  
  Es el nombre del elemento protegible. Si el elemento protegible es el servidor mismo, este valor debe establecerse en NULL. *securable* es una expresión escalar de tipo **sysname**. No tiene ningún valor predeterminado.  
   

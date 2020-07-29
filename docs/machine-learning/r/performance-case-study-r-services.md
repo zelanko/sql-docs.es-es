@@ -2,22 +2,22 @@
 title: Optimización del rendimiento de los resultados
 description: En este artículo se resumen los métodos, los resultados y las conclusiones de dos casos prácticos que han probado varios métodos de optimización.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1313cc2074058b104ea0939d02cdac30ddf28595
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486784"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242335"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de R Services: resultados y recursos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Este artículo es el cuarto y último de una serie que describe la optimización del rendimiento de R Services. En este artículo se resumen los métodos, los resultados y las conclusiones de dos casos prácticos que han probado varios métodos de optimización.
 
@@ -337,7 +337,7 @@ Le recomendamos que lea este artículo del blog y el tutorial que lo acompaña p
 
 Muchos usuarios han observado que se produce una pequeña pausa cuando se carga el runtime de R (o Python) por primera vez. Por esta razón, como se describe en estas pruebas, el tiempo de la primera ejecución suele medirse, pero después se descarta. El almacenamiento en caché posterior puede dar lugar a diferencias notables de rendimiento entre la primera y la segunda ejecución. También se produce cierta sobrecarga cuando los datos se mueven entre SQL Server y el runtime externo, especialmente si los datos se pasan a través de la red en lugar de cargarse directamente desde SQL Server.
 
-Por todas estas razones, no existe una sola solución única para reducir este tiempo de carga inicial, ya que el impacto en el rendimiento varía significativamente en función de la tarea. Por ejemplo, el almacenamiento en caché se realiza para la puntuación de fila única en lotes; por lo tanto, las operaciones de puntuación sucesivas son mucho más rápidas y ni el modelo ni el runtime de R se vuelven a cargar. También puede usar [puntuación nativa](../sql-native-scoring.md) para evitar que el runtime de R se cargue por completo.
+Por todas estas razones, no existe una sola solución única para reducir este tiempo de carga inicial, ya que el impacto en el rendimiento varía significativamente en función de la tarea. Por ejemplo, el almacenamiento en caché se realiza para la puntuación de fila única en lotes; por lo tanto, las operaciones de puntuación sucesivas son mucho más rápidas y ni el modelo ni el runtime de R se vuelven a cargar. También puede usar [puntuación nativa](../predictions/native-scoring-predict-transact-sql.md) para evitar que el runtime de R se cargue por completo.
 
 En el caso del entrenamiento de modelos grandes, o la puntuación de lotes grandes, la sobrecarga puede ser mínima en comparación con las ventajas de evitar el movimiento de datos o el streaming y el procesamiento paralelo. Consulte esta entrada de blog para obtener más información sobre el rendimiento:
 

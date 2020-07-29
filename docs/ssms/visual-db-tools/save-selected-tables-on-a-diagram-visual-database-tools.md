@@ -11,17 +11,16 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 9a5e54642e5ee6250d8c01294f7f618288236cc3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c3ee3f8f844358d4662364d3f874b126a2c1cc9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255079"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010620"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Guardar tablas seleccionadas en un diagrama (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Puede guardar una tabla específica o un conjunto de tablas si no desea guardar todos los cambios que haya realizado en un diagrama de base de datos.  
   
 ### <a name="to-save-selected-tables"></a>Para guardar tablas seleccionadas  

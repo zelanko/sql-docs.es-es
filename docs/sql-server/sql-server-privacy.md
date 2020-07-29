@@ -2,6 +2,7 @@
 title: Complemento de privacidad de SQL Server | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
@@ -9,16 +10,16 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761811"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916916"
 ---
 # <a name="sql-server-privacy-supplement"></a>Complemento de privacidad de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se resumen las características habilitadas para Internet que pueden recopilar y enviar datos anónimos sobre el uso de características a Microsoft. SQL Server puede recopilar información estándar del equipo y datos sobre el uso y el rendimiento que se podría transmitir a Microsoft y analizarse a fin de mejorar la calidad, la seguridad y la confiabilidad del producto. Si instala SQL Server en una máquina virtual en el servicio de Microsoft Azure, se puede enviar información del entorno a Microsoft para que pueda registrar el recurso de máquina virtual de SQL Server con el proveedor de recursos dentro de la suscripción de Azure, como se describe con mayor detalle [aquí](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). Como parte del registro del recurso de máquina virtual de SQL Server, la extensión del agente de IaaS de SQL Server se puede instalar en la máquina virtual, como se describe con mayor detalle [aquí](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). Este artículo es un anexo a la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) general. La clasificación de datos de este artículo solo se aplica a versiones del producto local de SQL Server. No se aplica a los elementos:
 

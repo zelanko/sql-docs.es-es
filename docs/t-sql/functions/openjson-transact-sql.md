@@ -17,12 +17,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: cd78371a838d257065eece76d69e1c3e89acc1f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28a61eb05b015be7eee85a7376a3c0ce84cac27f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738092"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112861"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -64,6 +64,8 @@ De forma predeterminada, la función con valores de tabla **OPENJSON** devuelve 
 ![Sintaxis de la cláusula WITH en TVF OPENJSON](../../relational-databases/json/media/openjson-shema-syntax.png "Sintaxis de WITH de OPENJSON")
 
 La *cláusula_with* contiene una lista de columnas con sus tipos que **OPENJSON** tiene que devolver. De forma predeterminada, **OPENJSON** hace coincidir las claves en *expresiónJSON* con los nombres de columna en la *cláusula_with* (en este caso, la coincidencia de claves implica que distingue mayúsculas de minúsculas). Si un nombre de columna no coincide con un nombre de clave, se puede proporcionar una función opcional *column_path*, que es una [expresión de ruta de acceso JSON](../../relational-databases/json/json-path-expressions-sql-server.md) que hace referencia a una clave en la *expresiónJSON*. 
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
 

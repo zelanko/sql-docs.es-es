@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6baeb311e52588c63fc24d38143a0e5a54c96801
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 528f02ccc8e341700b64cc0a73e0e3185d16a8ee
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85714530"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113267"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE: funciones de desencadenador (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,9 @@ ms.locfileid: "85714530"
 UPDATE ( column )   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *column*  
  Es el nombre de la columna que se va a probar para una acción INSERT o UPDATE. Debido a que el nombre de la tabla se especifica en la cláusula ON del desencadenador, no lo incluya antes del nombre de la columna. Esta columna puede ser de cualquier [tipo de datos](../../t-sql/data-types/data-types-transact-sql.md) admitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No obstante, no se pueden utilizar columnas calculadas en este contexto.  
   

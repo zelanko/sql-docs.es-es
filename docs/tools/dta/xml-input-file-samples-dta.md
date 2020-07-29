@@ -8,20 +8,19 @@ ms.topic: conceptual
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: ee25d62dcfee23facfb8c4aecb87e5880a100d23
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: acfc7ece997debd1ca77ec8441907ab4e99d0dcd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731975"
 ---
 # <a name="xml-input-file-samples-dta"></a>Ejemplos de archivos de entrada XML (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En esta sección, se incluyen archivos de entrada XML de ejemplo que se pueden utilizar con la herramienta de línea de comandos **dta** . Esta herramienta es una de las interfaces de usuario del Asistente para la optimización de motor de base de datos, una herramienta que se puede utilizar para optimizar las bases de datos y conseguir un mejor rendimiento de las consultas. El Asistente para la optimización de motor de base de datos analiza los efectos de una carga de trabajo sobre una o varias bases de datos. Una carga de trabajo es un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecuta en las bases de datos que se desean optimizar. Una vez que el Asistente para la optimización de motor de base de datos termina de analizar los efectos de la carga de trabajo, genera una recomendación para agregar índices, vistas indizadas o estrategias de partición que mejoren el rendimiento de las consultas en las bases de datos.
 

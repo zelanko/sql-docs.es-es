@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6584b472749d1e0e773e4d0fee6bfc45d98db95f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daf9effbc4c130b4783500014554c4512b6581d1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894304"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113451"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (Función) (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "85894304"
 IDENTITY (data_type [ , seed , increment ] ) AS column_name  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *data_type*  
  Se trata del tipo de datos de la columna de identidad. Los tipos de datos válidos para una columna de identidad son cualquier tipo de datos de la categoría de los enteros, excepto el tipo de datos **bit** o el tipo de datos **decimal**.  
   

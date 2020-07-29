@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 32e7daca1fb5f79f8ac110a28f8b70731349c62d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 64755a8f4f40939c2c20419576c984fce61cb11c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241239"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005171"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Selección de columnas (cuadro de diálogo, Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Permite cambiar la vista Personalizada de las tablas en el diagrama de base de datos. La vista Personalizada solo muestra las propiedades de columna identificadas por el usuario.  
   
 Este cuadro de diálogo aparece cuando se hace clic con el botón derecho en una tabla y después se elige **Modificar vista personalizada** en el menú contextual.  

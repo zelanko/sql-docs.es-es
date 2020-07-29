@@ -5,18 +5,18 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 09/17/2017
 ms.prod: sql
-ms.technology: ''
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: f483b643d2d1b1c8ec1e58c0772de021092b2594
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 026ad974a3b743283d2d2810a2e0a4fdf8588ff2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75656959"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923041"
 ---
 # <a name="sql-server-managing-partners"></a>Asociados de administración de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Para administrar los servicios de SQL Server, elija entre una amplia variedad de herramientas líderes del sector.  En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de administración compatibles con Microsoft SQL Server.
 
 ## <a name="our-management-partners"></a>Nuestros asociados de administración

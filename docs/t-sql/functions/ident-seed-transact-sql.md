@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cdc1a0feb05b46e9daa4f7eb54b9d3a22e1cbced
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4682d0ecd3b1eeeac2b92d5e76beb0ca2355f3f4
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784514"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113463"
 ---
 # <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85784514"
 IDENT_SEED ( 'table_or_view' )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **'** *table_or_view* **'**  
  Se trata de una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que especifica la tabla o vista en la que se va a comprobar un valor de inicialización de identidad. *table_or_view* puede ser una constante de cadena de caracteres entre comillas, un nombre de variable, un nombre de función o un nombre de columna. *table_or_view* es **char**, **nchar**, **varchar** o **nvarchar**.  
   

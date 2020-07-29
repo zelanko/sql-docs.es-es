@@ -20,12 +20,12 @@ ms.assetid: 6256dd7d-83d5-486e-a933-1d59afc7e417
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 572936a187f4331744ead22ec7790c57bcd0e32d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 79988d91775fb7ae1bda2734148e434e5c161723
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002274"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113142"
 ---
 # <a name="asin-transact-sql"></a>ASIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,9 @@ Una función que devuelve el ángulo, expresado en radianes, cuyo seno es la exp
 ASIN ( float_expression )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *float_expression*  
 Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) o bien de tipo **float** o bien de un tipo que se puede convierte en float de manera implícita. Solo se admite un valor comprendido entre -1,00 y 1,00. Con valores fuera de este intervalo se devuelve NULL, y ASIN notifica un error del dominio.
   

@@ -2,22 +2,22 @@
 title: Instalación de Machine Learning Server (independiente)
 description: Configure un servidor de aprendizaje automático independiente para Python y R. Un servidor instalar instalado mediante el programa de instalación de SQL Server equivale funcionalmente a las versiones de Microsoft Machine Learning Server que no son de marca SQL.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e614579b3d4e64a73e5896c1be946cdb38d21dcf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 15280d88b2219587ee63b15e8e98421be2734fab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118318"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885939"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalación de Machine Learning Server (independiente) o R Server (independiente) con el programa de instalación de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 El programa de instalación de SQL Server incluye una opción de **características compartidas** para instalar un servidor aprendizaje automático independiente que se ejecuta fuera de SQL Server. Se denomina **Machine Learning Server (independiente)** e incluye Python y R. 

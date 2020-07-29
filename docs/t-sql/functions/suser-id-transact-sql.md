@@ -23,12 +23,12 @@ ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8ebf42b9f8495690472e57baf6ccde33ef94aefd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a9328a48066848228533866547590a2e0e803df2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897950"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110778"
 ---
 # <a name="suser_id-transact-sql"></a>SUSER_ID (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85897950"
 SUSER_ID ( [ 'login' ] )   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **'** *login* **'**  
  Nombre de inicio de sesión del usuario. *login* es **nchar**. Si se especifica *login* como **char**, *login* se convierte implícitamente en **nchar**. *login* puede ser cualquier inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o cualquier grupo o usuario de Windows con permiso para conectarse con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se especifica *login*, se devuelve el número de identificación de inicio de sesión para el usuario actual. Si el parámetro contiene la palabra NULL, se devolverá NULL.  
   

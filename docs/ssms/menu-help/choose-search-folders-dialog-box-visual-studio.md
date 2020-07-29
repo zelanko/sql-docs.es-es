@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a31e9e898101c15c032db1be5f348bf28267d52c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15d6c1e0cf13da4b8dd0fe38ffcf57e555bdd650
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253288"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85983722"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Cuadro de diálogo Elegir carpetas de búsqueda (Visual Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Le permite reunir, guardar y revisar sus propios conjuntos con nombre de carpetas de búsqueda, y especificar el orden en que deben realizarse las búsquedas. Para que se muestre este cuadro de diálogo, seleccione el botón **Examinar (...)** situado junto a la lista desplegable **Buscar en** en Buscar en archivos o Reemplazar en archivos, en la ventana Buscar y reemplazar.  
   
 Agregue carpetas a la lista **Carpetas seleccionadas** , escriba un nombre para este conjunto de carpetas en el campo **Conjunto de carpetas** y haga clic en **Aplicar** para guardarlo. Este ámbito personalizado de búsqueda podrá seleccionarse por nombre posteriormente en las listas desplegables **Buscar en** , en **Buscar en archivos** y **Reemplazar en archivos**. Para quitar un conjunto de carpetas personalizado de las listas **Buscar en** , seleccione su nombre en el campo **Conjunto de carpetas** y haga clic en **Eliminar**.  

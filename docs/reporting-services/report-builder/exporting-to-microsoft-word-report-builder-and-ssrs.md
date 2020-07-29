@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8b0085829346cd09f813e62fe50b1ce22f85b7f5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: afcafeeb554e60c84c3d5e5051db354721371416
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342878"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86972133"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
 
@@ -151,7 +151,7 @@ ms.locfileid: "80342878"
 > [!IMPORTANT]  
 >  La extensión de representación de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) está en desuso. Para más información, vea [Características obsoletas de SQL Server Reporting Services en SQL Server 2016](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
- El representador de Word es compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 si se instala el Paquete de compatibilidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel y PowerPoint. Para obtener más información, consulte [Paquete de compatibilidad de Microsoft Office para formatos de archivo de Word, Excel y PowerPoint](https://www.microsoft.com/download/details.aspx?id=1285).
+ El representador de Word es compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 si se instala el Paquete de compatibilidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel y PowerPoint. Para obtener más información, consulte [Paquete de compatibilidad de Microsoft Office para formatos de archivo de Word, Excel y PowerPoint](https://www.microsoft.com/download/office.aspx).
   
  El nombre de la versión anterior de la extensión de representación de Word, solo compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, cambia a Word 2003. Solo la extensión de representación de Word está disponible de forma predeterminada. Debe actualizar los archivos de configuración de Reporting Services para que la extensión de representación de Word 2003 esté disponible. El tipo de contenido de los archivos generados por el representador de Word 2003 es **application/vnd.ms-word** y la extensión de nombre de archivo es .doc.  
   

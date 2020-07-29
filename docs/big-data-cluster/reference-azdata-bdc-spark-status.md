@@ -5,25 +5,25 @@ description: Artículo de referencia de los comandos azdata bdc status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fdd6e3d9920c2674f9cfe9cd34b5bfa5e071b682
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 971854997519e4ef9b1e11d0063da1bbc2c583e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821235"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243503"
 ---
 # <a name="azdata-bdc-spark-status"></a>azdata bdc spark status
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En el artículo siguiente se proporciona una referencia de los comandos `bdc spark status` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos:
-|     |     |
+| Comando | Descripción |
 | --- | --- |
 [azdata bdc spark status show](#azdata-bdc-spark-status-show) | Estado del servicio de Spark.
 ## <a name="azdata-bdc-spark-status-show"></a>azdata bdc spark status show
@@ -58,7 +58,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 

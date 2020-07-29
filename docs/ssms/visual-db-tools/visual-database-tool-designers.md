@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 183ea6523015835a49e3b9d6c5f3db8786d15551
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d35ac179c26c768a3ffb7b9427b9ffeca1ad597
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246261"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002643"
 ---
 # <a name="visual-database-tool-designers"></a>Diseñadores de Visual Database Tools
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Visual Database Tools es una combinación de herramientas de diseño que se pueden utilizar para trabajar con un origen de datos. Puede utilizar estas herramientas para crear consultas, diseñar o modificar la estructura de una base de datos o actualizar datos. Estas herramientas son: Diseñador de diagramas de base de datos, Diseñador de tablas y Diseñador de consultas y vistas.  
   
 ## <a name="properties-window"></a>Ventana Propiedades  

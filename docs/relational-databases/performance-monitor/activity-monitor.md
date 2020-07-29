@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ad03ee3c5c9cc0128bb281ff695c1f51cc518d6e
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d634a2e790edb01747014e930e677e18a1f8b0a3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457797"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243816"
 ---
 # <a name="activity-monitor"></a>Monitor de actividad
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ En las columnas incluidas en los paneles **Procesos**, **Esperas de recursos**, 
 
 ## <a name="more-information"></a>Más información  
    
-|||  
+|Descripción|Tema|  
 |-|-|  
 |Describe cómo abrir el Monitor de actividad y la forma en que se establece el intervalo de actualización del Monitor de actividad.|[Abrir el Monitor de actividad &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|  
 |Vínculos a temas de supervisión de la actividad y el rendimiento del servidor.|[Supervisión de la actividad y rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|  

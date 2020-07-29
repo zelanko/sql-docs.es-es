@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6926c31163108da988338920ce77389e9300a0aa
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: af98af52bfe6416c489be821fa2d8b27092fac27
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151596"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918371"
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   La aplicación **sqllogship** realiza una operación de copia de seguridad, copia o restauración y las tareas de limpieza asociadas en una configuración de trasvase de registros. La operación se realiza en una instancia específica de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para una base de datos determinada.  
   
  ![Icono de vínculo a tema](../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") Para las convenciones de sintaxis, vea [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md).  

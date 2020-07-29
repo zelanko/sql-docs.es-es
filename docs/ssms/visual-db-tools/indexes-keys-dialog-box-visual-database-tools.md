@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f251517d488324028af33e2749955cbb91c1193e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224922"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85981164"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Índices o claves (cuadro de diálogo, Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Utilice este cuadro de diálogo para crear o modificar índices, claves principales y claves únicas. Para tener acceso a este cuadro de diálogo, abra la definición de la tabla que tiene el índice o la clave, haga clic con el botón derecho en la cuadrícula de la definición de tabla y, a continuación, haga clic en **Índices o claves**.  
   
 > [!NOTE]  

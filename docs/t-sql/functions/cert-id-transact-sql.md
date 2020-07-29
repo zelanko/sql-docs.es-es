@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8c3c6361737f8aefd3e6e9eac0af7caf29684b97
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 07c8a6220ae5c9b20b659bbb791407fc4dd1aa09
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732750"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111103"
 ---
 # <a name="cert_id-transact-sql"></a>CERT_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,9 @@ Esta función devuelve el valor de identificador de un certificado.
 Cert_ID ( 'cert_name' )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 **'** *cert_name* **'**  
 
 El nombre de un certificado de la base de datos.

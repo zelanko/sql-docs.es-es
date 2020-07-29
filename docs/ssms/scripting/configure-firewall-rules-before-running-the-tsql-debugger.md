@@ -23,16 +23,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de184b30270ff301e343b1598327a449907fb508
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d48e64edfaaa1c3f5506f8c2c674101616254000
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75558270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718430"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurar reglas de firewall antes de ejecutar al depurador de TSQL
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Se deben configurar reglas del Firewall de Windows para habilitar la depuración en [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se establezca conexión con una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se esté ejecutando en un equipo distinto del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .
 

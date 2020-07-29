@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 41cf0607ae8d308d4d1f243e8b987ca6c9d541fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1985ba159951718772d6a7bc16b4ea76f59d5686
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737962"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111913"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85737962"
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *objectid*  
  Es el Id. de un elemento protegible. Si no se especifica *objectid*, el valor de mapa de bits contiene permisos de instrucción para el usuario actual; en caso contrario, contiene permisos sobre el elemento protegible para el usuario actual. El elemento protegible especificado se debe encontrar en la base de datos actual. Use la función [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) para averiguar el valor de *objectid*.  
   

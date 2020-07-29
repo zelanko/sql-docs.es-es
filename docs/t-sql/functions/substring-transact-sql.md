@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cecc99e2612acb17013f47619f32d64b7968ebc9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 571cd20813376fd3ed25bb89cf49890f8d75f718
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85994239"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111850"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,9 @@ Devuelve parte de una expresión de caracteres, binaria, de texto o de imagen en
 SUBSTRING ( expression ,start , length )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo **character**, **binary**, **text**, **ntext** o **image**.  
   

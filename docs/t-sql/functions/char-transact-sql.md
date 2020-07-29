@@ -27,12 +27,12 @@ ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0a56a5c8cc76ab2358d2a89d2b5290905092bf6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: af2e71a4b4851e61176235b5615f0b7adbd553e2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002204"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112150"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,9 @@ Esta función convierte un código ASCII **int** en un valor de carácter.
 CHAR ( integer_expression )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 *integer_expression*  
 Un entero entre 0 y 255. `CHAR` devuelve un valor `NULL` para las expresiones de entero fuera de este intervalo, o cuando el entero expresa solo el primer byte de un carácter de doble byte.
 

@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 7b6e3847aa5471b757333a4ec7ff1964acabf0e1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 40d205f0f1f638814b8b2c91efaf18c26473eda8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255264"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999455"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Quitar tablas de diagramas de base de datos (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Puede quitar una tabla del diagrama de base de datos. Cuando se quita una tabla, no se modifica la base de datos. La tabla y sus relaciones con otras tablas continúan existiendo en la base de datos.  
   
 ### <a name="to-remove-a-table-from-a-database-diagram"></a>Para quitar una tabla de un diagrama de base de datos  

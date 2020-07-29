@@ -22,12 +22,12 @@ ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f2cda4a044f6980a5998371f1a7b0f70397e259
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 915cf95799a80a0d8841206f4b23b04fba5fec5f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737987"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112378"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -45,6 +45,8 @@ ms.locfileid: "85737987"
 PARSENAME ('object_name' , object_piece )
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Argumentos
 
 *"object_name"* Es el parámetro que contiene el nombre del objeto para el que se va a recuperar la parte de objeto especificada. Este parámetro es un nombre de objeto completo opcionalmente. Si todas las partes del nombre de objeto están completas, este nombre puede tener cuatro partes: el nombre del servidor, el de la base de datos, el del esquema y el del propio objeto.  Cada parte de la cadena "object_name" es de tipo *sysname*, que es equivalente a nvarchar (128) o 256 bytes. Si alguna parte de la cadena supera los 256 bytes, PARSENAME devolverá NULL para esa parte, ya que no es un tipo sysname válido.

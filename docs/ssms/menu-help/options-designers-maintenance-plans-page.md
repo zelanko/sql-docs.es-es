@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1a6da50988a372514cf613f16896aea966fd153
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cf4513c4094798f72b6e3f5012fd47afb29bdae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245759"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001628"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Opciones (Diseñadores - página Planes de mantenimiento)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Utilice el cuadro de diálogo **Opciones** para determinar el comportamiento predeterminado del diseñador cuando se agregan nuevas formas a la superficie de diseño. En el menú **Herramientas** , haga clic en **Opciones**, expanda **Diseñadores**y seleccione **Planes de mantenimiento**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
 **Conectar una nueva forma a la forma seleccionada de manera predeterminada**  
 Cuando se selecciona esta casilla, las nuevas formas se conectan automáticamente a otras formas cuando se agregan a la superficie de diseño. Cuando esta casilla está desactivada, las nuevas formas no se conectan al agregarse. Al activar esta casilla, se habilitan los siguientes cuadros.  
   

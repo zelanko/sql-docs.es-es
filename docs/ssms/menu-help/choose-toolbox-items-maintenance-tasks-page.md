@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: decc1918fbc8da03ce4724dfb0dd5ec69f8fed35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0924181e87591db6ac7ac21fd8f70429802a19e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257736"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001673"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Esta pestaña del cuadro de diálogo **Personalizar el cuadro de herramientas** muestra una lista de todos los componentes de tareas de mantenimiento registrados en el equipo y permite cambiar los que muestra el cuadro de herramientas. Puede abrir el cuadro de diálogo **Personalizar el cuadro de herramientas** en el menú **Herramientas** . Para ordenar la lista de componentes, seleccione un encabezado de columna.  
   
 ## <a name="options"></a>Opciones  

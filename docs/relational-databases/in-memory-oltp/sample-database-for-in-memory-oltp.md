@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735036"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245214"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Base de datos de ejemplo para OLTP en memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -465,14 +465,12 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  Instantánea justo después de crearse la base de datos:  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Valor predeterminado|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
-||||
   
  Los distribuidores de memoria predeterminados contienen estructuras de memoria de todo el sistema y son relativamente pequeños. El distribuidor de memoria para la base de datos de usuario (en este caso, la base de datos con el identificador 5) tiene unos 900 MB.  
   
@@ -490,9 +488,8 @@ WHERE t.type='U'
   
  La tabla siguiente muestra los resultados de esta consulta para una instalación nueva del ejemplo:  
   
-||||  
-|-|-|-|  
-|**Nombre de tabla**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| Nombre de la tabla | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SpecialOfferProduct_inmem|64|3840|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
@@ -500,7 +497,6 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-||||
 
  Como puede ver, las tablas son bastante pequeñas: SalesOrderHeader_inmem tiene unos 7 MB de tamaño y SalesOrderDetail_inmem, unos 15 MB.  
   
@@ -516,14 +512,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Valor predeterminado|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
-||||
 
  Como puede ver, SQL Server usa un bit por debajo de 8 GB para las tablas y los índices optimizados para memoria de la base de datos de ejemplo.  
   
@@ -538,9 +532,8 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
-||||  
-|-|-|-|  
-|**Nombre de tabla**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| Nombre de la tabla | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
 |SpecialOffer_inmem|2|8192|  
@@ -548,7 +541,6 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-||||
 
  Podemos ver un total de unos 6,5 GB de datos. Observe que el tamaño de los índices de la tabla SalesOrderHeader_inmem y SalesOrderDetail_inmem es el mismo que el tamaño de los índices antes de insertar los pedidos de venta. El tamaño del índice no cambió porque ambas tablas emplean índices hash y los índices hash son estáticos.  
   
@@ -564,14 +556,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Valor predeterminado|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
-||||
 
  Esto es lo esperado: la memoria se recuperará cuando se ejecute la carga de trabajo transaccional.  
   
@@ -584,14 +574,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|Valor predeterminado|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
 |MEMORYCLERK_XTP|Valor predeterminado|0|  
-||||
 
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Uso de disco para las tablas optimizadas para memoria  
  El tamaño total en disco de los archivos de punto de comprobación de una base de datos en un momento dado se puede averiguar con la consulta:  
@@ -616,11 +604,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**Tamaño en disco en MB**|  
+| On-disk size in MB |
+| ------------------ |
 |2312|  
-||
 
  Como puede ver, hay una gran discrepancia entre el tamaño en disco de los archivos de punto de comprobación, que es de 2,3 GB, y el tamaño de datos real, que es más cercano a 30 MB.  
   
@@ -643,14 +629,12 @@ ORDER BY state, file_type
   
  Para el estado inicial del ejemplo, el resultado será similar al de un servidor con 16 procesadores lógicos:  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Tamaño en disco en MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  Como puede ver, la mayor parte del espacio la usan archivos de datos y delta creados previamente. SQL Server creó previamente un par de archivos (datos, delta) por procesador lógico. Además, los archivos de datos tienen un tamaño previo de 128 MB, y los archivos delta, de 8 MB, para que la inserción de datos en estos archivos sea más eficaz.  
   
@@ -666,11 +650,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**Tamaño en disco en MB**|  
+| On-disk size in MB |
+| ------------------ |
 |8828|
-||
   
  El tamaño en disco es cercano a 9 GB, que es parecido al tamaño en memoria de los datos.  
   
@@ -691,14 +673,12 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Tamaño en disco en MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  Todavía tenemos 16 pares de archivos creados previamente, listos a medida que se cierran los puntos de comprobación.  
   
@@ -716,11 +696,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**Tamaño en disco en MB**|  
+| On-disk size in MB |
+| ------------------ |
 |11839|
-||
   
  Con casi 12 GB, esto es mucho más significativo que los 9 GB teníamos antes de restablecer la demostración. Esto se debe a que se han iniciado algunas combinaciones de archivos de punto de comprobación, pero algunos destinos de mezcla todavía no se han instalado, y algunos de los archivos de origen de mezcla todavía no se han limpiado, como se puede ver aquí:  
   
@@ -739,9 +717,8 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Tamaño en disco en MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVO|DATA|38|5152|  
@@ -750,7 +727,6 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-|||||
 
  Los destinos de mezcla se instalan y el origen de mezcla se limpia mientras la realiza actividad transaccional en el sistema.  
   
@@ -773,16 +749,14 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Tamaño en disco en MB**|  
+| state_desc | file_type_desc | count | on-disk size MB |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVO|DATA|41|5608|  
 |ACTIVO|DELTA|41|328|  
-|||||
 
  En este caso, hay dos pares de archivos de punto de comprobación en el estado "under construction", lo que significa que varios pares de archivos pasaron por el estado "under construction", probablemente debido al elevado nivel de simultaneidad de la carga de trabajo. Varios subprocesos simultáneos necesitaron un nuevo par de archivos al mismo tiempo, por lo que se movió un par de "precreated" a "under construction".  
   

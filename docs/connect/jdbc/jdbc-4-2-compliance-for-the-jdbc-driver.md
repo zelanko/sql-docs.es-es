@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51e9e14fc53c4b9904e64180307f7da8939408ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ff264c620123dcbb73c58373871f568ff1d249e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924636"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243406"
 ---
 # <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>Cumplimiento de JDBC 4.2 con el controlador JDBC
 
@@ -59,14 +59,12 @@ ms.locfileid: "80924636"
   
 ## <a name="sqlserverresultset-class"></a>clase SQLServerResultSet
   
-||||  
-|-|-|-|  
 |Nuevos métodos|Descripción|Implementación importante|  
+|-|-|-|  
 ||Actualiza la columna designada con un valor de objeto. Hay 4 nuevos métodos (sobrecargados) para admitir la nueva interfaz SQLType.|Se implementa como se describe en la interfaz java.sql.ResultSet. Para obtener más información, consulte [java.sql.ResultSet](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html).|  
   
  La especificación de la API de Java Database Connectivity 4.2 es compatible con Microsoft JDBC Driver 4.2 para SQL Server, con las siguientes asignaciones de tipo de datos.  
   
-|||  
-|-|-|  
 |Nuevas asignaciones de tipo de datos|Descripción|  
+|-|-|  
 |**Nuevas clases de Java en Java 8:** <br /> <br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **Nuevos tipos JDBC:**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|REF_CURSOR no es compatible con SQL Server. El controlador produce una excepción de SQLFeatureNotSupportedException si se usa este tipo. El controlador es compatible con todas las demás asignaciones de tipo de Java y JDBC nuevas como se especifica en la especificación de JDBC 4.2.|  

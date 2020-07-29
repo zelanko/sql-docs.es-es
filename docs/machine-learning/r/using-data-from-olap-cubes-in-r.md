@@ -2,22 +2,22 @@
 title: Uso de datos de cubos OLAP en R
 description: Este artículo describe la API de olapR, junto con una introducción a OLAP y MDX para los usuarios de R que podrían ser nuevos en las bases de datos de cubos multidimensionales.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 99f67fb0fb52717eaa42e229a1b60c82f6223fad
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f27866a242cb03839a67a8f68478bc786222aa64
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117238"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968057"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Uso de datos de cubos OLAP en R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 El paquete de **OLAP** es un paquete de R, proporcionado por Microsoft para su uso con Machine Learning Server y SQL Server, que le permite ejecutar consultas MDX para obtener datos de cubos OLAP. Con este paquete, no necesita crear servidores vinculados ni limpiar conjuntos de filas planas; se pueden obtener datos OLAP directamente de R.
 
@@ -99,7 +99,7 @@ Vea el artículo siguiente para obtener información general sobre los dos tipos
 
 Vea el siguiente artículo para obtener información acerca de las propiedades del servidor:
 
-+ [OLE DB para los conjuntos de filas de esquema OLAP](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [OLE DB para los conjuntos de filas de esquema OLAP](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>No se admite la reescritura
 

@@ -2,7 +2,7 @@
 title: Funcionalidad del motor de base de datos no incluida
 description: Obtenga información sobre la funcionalidad y las características del motor de base de datos que se han suspendido en SQL Server 2019 (15.x), SQL Server 2016 (13.x) y versiones anteriores.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -36,12 +36,12 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2137021617ecf15375be480021ca54b50627464d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0aada5da9da6b0eadb1c190690f98c4a3d3cb3b8
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920291"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110241"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Funcionalidad del motor de base de datos no incluida en SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -69,13 +69,13 @@ Para obtener las opciones de configuración actuales, vea [ALTER DATABASE SCOPED
 
 - No se incluye el subsistema Active X. En su lugar, use scripts de PowerShell o la línea de comandos.
 
-- Parámetros de inicio **-h** y **-g**. Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
+- Parámetros de inicio **-h** y **-g**. Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](/previous-versions/sql/2014/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
 
 - Ya no se incluye el cifrado de Capa de sockets seguros (SSL). En su lugar use Seguridad de la capa de transporte (TLS). Para más información, vea [Habilitación de conexiones cifradas en el motor de base de datos](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
 
 ## <a name="previous-versions"></a>Versiones anteriores
 
-- [Funcionalidad del motor de base de datos no incluida en SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
+- [Funcionalidad del motor de base de datos no incluida en SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
 ### <a name="see-also"></a>Consulte también
 

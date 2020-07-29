@@ -19,16 +19,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 22864ca365917d295f8111580cb833097fb31c46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3720799e0af4dbd7d01b6703be87bd9ac16b0587
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247190"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001530"
 ---
 # <a name="template-explorer"></a>Template Explorer
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una variedad de plantillas. Las plantillas son archivos estereotipados que contienen scripts SQL que ayudan a crear objetos en una base de datos. La primera vez que se abre el explorador de plantillas, se coloca una copia de las plantillas en la carpeta del usuario C:\Users, en AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates.  
   
 Puede examinar las plantillas disponibles en el explorador de plantillas; a continuación abra una plantilla para escribir el código en una ventana del editor de código. También puede crear plantillas personalizadas.  

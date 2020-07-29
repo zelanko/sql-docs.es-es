@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 971432a363eb18129c560c5738a9cc65e77b01a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 608c24801a19e003751d6455f86cd11e4c053719
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257597"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001838"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar informes personalizados con las propiedades de nodo del Explorador de objetos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Los informes personalizados se pueden ejecutar en el contexto de un nodo del Explorador de objetos si los informes personalizados hacen referencia a los parámetros de informe de dicho nodo. Esto permite que los informes usen el contexto actual como, por ejemplo, la base de datos actual o un objeto de la base de datos o del servidor.  
   
 ## <a name="object-explorer-node-report-parameters"></a>Parámetros del informe de un nodo del Explorador de objetos  

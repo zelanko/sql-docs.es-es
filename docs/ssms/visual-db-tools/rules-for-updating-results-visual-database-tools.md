@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 95d22a06194bfd4121eff4ba01cb2788cf095bf8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b71d1e6324465df97a174134463f8d5759a2d06a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255162"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010708"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Reglas para actualizar resultados (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 En muchos casos, puede actualizar el conjunto de resultados mostrado en el [panel Resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). Sin embargo, en algunos casos no es posible realizar esta actualización.  
   
 En general, para actualizar resultados, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) debe tener información suficiente para identificar de forma exclusiva la fila en la tabla. Por ejemplo, si la consulta incluye una clave principal en la lista de resultados. Además, debe tener permisos suficientes para actualizar la base de datos.  

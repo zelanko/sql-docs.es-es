@@ -1,7 +1,7 @@
 ---
 title: Instalar SQL Server mediante un archivo de configuración | Microsoft Docs
 description: Puede usar el programa de instalación de SQL Server para generar un archivo de configuración a fin de implementar SQL Server en la organización mediante una configuración uniforme.
-ms.date: 09/07/2017
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 800be0666d97ea1503fa5b1a8dd261543d0b4a10
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899675"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110216"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Instalar SQL Server mediante un archivo de configuración
 
@@ -23,7 +23,7 @@ ms.locfileid: "85899675"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación permite generar un archivo de configuración basado en las entradas de tiempo de ejecución y en la configuración predeterminada del sistema. Puede usar el archivo de configuración para implementar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en toda la empresa con la misma configuración. También puede normalizar las instalaciones manuales en toda la empresa mediante la creación de un archivo por lotes que inicie Setup.exe. 
  
-Este artículo se mantiene para SQL Server 2016 y versiones posteriores. En cuanto a las versiones anteriores de SQL Server, vea [Instalar SQL Server 2014 mediante un archivo de configuración](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014).
+Este artículo se mantiene para SQL Server 2016 y versiones posteriores. En cuanto a las versiones anteriores de SQL Server, vea [Instalar SQL Server 2014 mediante un archivo de configuración](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014).
  
 El programa de instalación admite el uso del archivo de configuración solamente a través del símbolo del sistema. A continuación se indica el orden de procesamiento de los parámetros cuando se usa el archivo de configuración:  
   

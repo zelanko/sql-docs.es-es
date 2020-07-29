@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 808fcde7587a68f45bda472ba51e03bddc0884af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1370fcb02e75a5ed9173c8111a79ce17eea8490
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245738"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007867"
 ---
 # <a name="options-environment---general-page"></a>Opciones (Entorno - Página General)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use el cuadro de diálogo **Opciones** para configurar las acciones de inicio de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], opciones generales de administración de ventanas y otros valores de configuración generales. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** y haga clic en **General**.
 
-## <a name="uielement-list"></a>Lista de UIElement
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario
 
 **El botón Cerrar afecta solo a la ventana de herramientas activa**
 

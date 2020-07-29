@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 2d47d5e77e341863ae2d7af9ad078183964282f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e21318c245ab43b288ac4784289a62673e7e94a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256163"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004161"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propiedades de objeto con valores de tabla (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Estas propiedades aparecen en la ventana Propiedades cuando selecciona un objeto con valores de tabla en el **Diseñador de vistas y de consultas**. El objeto con valores de tabla puede ser una vista, un sinónimo, una tabla derivada o una función con valores de tabla. A menos que se indique lo contrario, estas propiedades son de solo lectura en la ventana **Propiedades** .  
   
 > [!NOTE]  

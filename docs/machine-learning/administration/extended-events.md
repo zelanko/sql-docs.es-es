@@ -2,22 +2,22 @@
 title: Supervisar scripts con eventos extendidos
 description: Obtenga información sobre cómo usar eventos extendidos para supervisar y solucionar problemas de operaciones relacionadas con los scripts externos de trabajos de Python o R, SQL Server Machine Learning Services y SQL Server Launchpad.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfc3c95a4184cede01fb077ee232c02458c97cbf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118908"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110169"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Supervisar scripts de Python o R con eventos extendidos en SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Obtenga información sobre cómo usar eventos extendidos para supervisar y solucionar problemas de operaciones relacionadas con los scripts externos de trabajos de Python o R, SQL Server Machine Learning Services y SQL Server Launchpad.
 
@@ -135,7 +135,7 @@ El propio archivo de configuración presenta el siguiente formato:
 En el siguiente ejemplo se muestra la definición de un seguimiento de eventos para el servicio Launchpad:
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  
@@ -158,7 +158,7 @@ En el siguiente ejemplo se muestra la definición de un seguimiento de eventos p
 En el siguiente ejemplo se muestra la definición de un seguimiento de eventos para el ejecutable BXLServer.
   
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  

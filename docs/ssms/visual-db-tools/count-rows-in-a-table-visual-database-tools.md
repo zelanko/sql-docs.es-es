@@ -16,17 +16,16 @@ helpviewer_keywords:
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 208705b0070ba60359f6fa0b6d543cdcf6ec55d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 34a37d382d7176f1f1e602aa45a559299d7d43ea
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254384"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005122"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Contar las filas de una tabla (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Puede contar las filas de una tabla para determinar:  
   
 -   El número total de filas de una tabla, como por ejemplo, la suma de todos los libros de una tabla `titles` .  

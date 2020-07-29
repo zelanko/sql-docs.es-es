@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 31eacc9a-f814-4845-b252-b3b998271200
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 1a2e2721dcdeffd55cc166fc94230c9a29768664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a1adbc21d78b1b65aa14e580f40e9fbef87a227e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246539"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001734"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Desconectarse de un servidor registrado (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 En este tema se describe cómo desconectar el Explorador de objetos de un servidor en cualquier momento en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Al desconectar el Explorador de objetos no se desconectan otros componentes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , como el Editor SQL.  
 

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6a7d9029d775b2d1255d683e6b4c3b9d44ccdb31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1bf323be4adf219bcf00dbf48fb6c40433b3611d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252196"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009351"
 ---
 # <a name="use-the-toolbox"></a>Utilizar el cuadro de herramientas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Se pueden seleccionar y arrastrar elementos, texto y controles del cuadro de herramientas a formularios, páginas y diseñadores, y arrastrar de nuevo elementos de estos orígenes al cuadro de herramientas para volver a usarlos más adelante. Por ejemplo, en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] puede arrastrar una tarea a un plan de mantenimiento.  
   
 Los elementos del cuadro de herramientas se agrupan en secciones denominadas pestañas. Ésta es una lista de referencia de la tareas más habituales del cuadro de herramientas y cómo realizarlas:  

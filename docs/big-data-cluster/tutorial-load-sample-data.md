@@ -9,16 +9,16 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bcac2f50f8d4712b21a53aedb8ab14fdc9280963
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 8a4412c5b32b42074d760acbc162d5df56e0976f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772865"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Carga de datos de ejemplo en un clúster de macrodatos de SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En este tutorial se explica cómo usar un script para cargar datos de ejemplo en un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Muchos de los otros tutoriales de la documentación usan estos datos de ejemplo.
 

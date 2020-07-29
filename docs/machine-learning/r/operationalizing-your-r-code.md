@@ -2,22 +2,22 @@
 title: Implementación de código de R en procedimientos almacenados
 description: Inserte código de lenguaje R en un procedimiento almacenado de SQL Server para que esté disponible para cualquier aplicación cliente que tenga acceso a una base de datos de SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486814"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242331"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Operacionalización de código de R con procedimientos almacenados en SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Al usar las características de R y Python en SQL Server Machine Learning Services, el enfoque más común para trasladar soluciones a un entorno de producción es insertar código en procedimientos almacenados. En este artículo se resumen los puntos clave que debe tener en cuenta el desarrollador de SQL al operacionalizar código de R mediante SQL Server.
 
@@ -46,7 +46,7 @@ La puntuación es una tarea importante que se puede automatizar fácilmente o in
 
 + Puntuación en tiempo real, optimizada para lotes pequeños.
 + Puntuación de fila única, para llamar desde una aplicación.
-+ [Puntuación nativa](../sql-native-scoring.md), para una predicción rápida de lotes de SQL Server sin llamar a R.
++ [Puntuación nativa](../predictions/native-scoring-predict-transact-sql.md), para una predicción rápida de lotes de SQL Server sin llamar a R.
 
 En este tutorial se proporcionan ejemplos de puntuación mediante un procedimiento almacenado en los modos de lotes y de fila única:
 

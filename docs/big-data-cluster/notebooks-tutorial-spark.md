@@ -9,16 +9,16 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ce2b2439f136150348409f591550b8fc07383bd9
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7f42b454ebfc1b9b4ea8e841cba6fe2a4b209ebc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85660379"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Ejecución de un cuaderno de ejemplo con Spark
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En este tutorial, se muestra cómo cargar y ejecutar un cuaderno en Azure Data Studio en un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Esto permite a los científicos de datos e ingenieros de datos ejecutar código de Python, S o Scala en el clúster.
 

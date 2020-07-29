@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152006"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942795"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 A partir de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ahora permiten implementar clústeres escalables de contenedores de SQL Server, Spark y HDFS que se ejecutan en Kubernetes. Estos componentes se ejecutan en paralelo con objeto de que se puedan leer, escribir y procesar macrodatos de Transact-SQL o Spark, lo que permite combinar y analizar fácilmente los datos relacionales de alto valor con grandes volúmenes de datos.
 
@@ -85,7 +85,7 @@ Un clúster de macrodatos SQL Server es un clúster de contenedores de Linux or
 
 Kubernetes es un orquestador de contenedores de código abierto, que puede escalar las implementaciones de contenedores según sea necesario. En la tabla siguiente se define alguna terminología importante de Kubernetes:
 
-|||
+|Término|Descripción|
 |:--|:--|
 | **Clúster** | Un clúster de Kubernetes es un conjunto de máquinas, conocidas como nodos. Un nodo controla el clúster y se designa como nodo maestro; los nodos restantes son nodos de trabajo. El maestro de Kubernetes es responsable de distribuir el trabajo entre los nodos de trabajo y de supervisar el estado del clúster. |
 | **Node** | Un nodo ejecuta aplicaciones en contenedores. Puede ser una máquina física o una máquina virtual. Un clúster de Kubernetes puede contener una combinación de nodos de máquina física y de máquina virtual. |

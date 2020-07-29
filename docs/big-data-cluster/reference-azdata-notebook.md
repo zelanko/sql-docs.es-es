@@ -5,25 +5,25 @@ description: Artículo de referencia sobre los comandos de azdata notebook.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0a866dcca1debba47abf2e2e241d00151b8641ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7543666f7c8654cc0a28f44a8fe09fdd39f185c0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820962"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243004"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En el artículo siguiente se proporciona una referencia de los comandos `notebook` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos:
-|     |     |
+| Comando | Descripción |
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | Sirve para ver un cuaderno.  Opción para detenerse en el primer error de ejecución de celda.
 [azdata notebook run](#azdata-notebook-run) | Sirve para ejecutar un cuaderno.  La ejecución se detiene en el primer error.
@@ -36,11 +36,11 @@ azdata notebook view --path -p
 ### <a name="examples"></a>Ejemplos
 Sirve para ver cuaderno.  Esto muestra todas las celdas.
 ```bash
-azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb'
+azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
 Sirve para ver cuaderno.  Esto muestra todas las celdas, a menos que se detecte una celda con un error en la salida.  En ese caso, la salida se detiene.
 ```bash
-azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-error
+azdata notebook view --path "/home/me/notebooks/demo_notebook.ipynb" --stop-on-error
 ```
 ### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--path -p`
@@ -56,7 +56,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
@@ -64,16 +64,21 @@ Este comando crea un directorio temporal y ejecuta en él el cuaderno en cuesti�
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
-                    [--output-html]  
-                    [--arguments -a]  
-                    [--interactive -i]  
-                    [--clear -c]  
-                    [--timeout -t]
+                    
+[--output-html]  
+                    
+[--arguments -a]  
+                    
+[--interactive -i]  
+                    
+[--clear -c]  
+                    
+[--timeout -t]
 ```
 ### <a name="examples"></a>Ejemplos
 Sirve para ejecutar el cuaderno.
 ```bash
-azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
+azdata notebook run --path "/home/me/notebooks/demo_notebook.ipynb"
 ```
 ### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--path -p`
@@ -100,7 +105,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 

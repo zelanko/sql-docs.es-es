@@ -1,5 +1,5 @@
 ---
-title: IS_SRVROLEMEMBER (Transact-SQL) | Microsoft Docs
+title: IS_SRVROLEMEMBER (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb44adf219905a585b922fc280215f1c81465cda
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784508"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248525"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Indica si en el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es miembro del rol de servidor especificado.  
@@ -40,19 +41,23 @@ ms.locfileid: "85784508"
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  **'** *role* **'**  
  Es el nombre del rol de servidor que se va comprobar. *role* es **sysname**.  
   
  Los valores válidos para *role* son los roles de servidor definidos por el usuario y los siguientes roles fijos de servidor:  
-  
-|||  
-|-|-|  
-|sysadmin|serveradmin|  
-|dbcreator|setupadmin|  
-|bulkadmin|securityadmin|  
-|diskadmin|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> público|  
-|processadmin||  
+
+- sysadmin
+- serveradmin
+- dbcreator
+- setupadmin  
+- bulkadmin
+- securityadmin  
+- diskadmin
+- público  
+- processadmin
   
  **'** *login* **'**  
  Es el nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a comprobar. *login* es de tipo **sysname** y su valor predeterminado es NULL. Si no se especifica ningún valor, el resultado se basa en el contexto de ejecución actual. Si el parámetro contiene la palabra NULL, se devolverá NULL.  

@@ -1,5 +1,6 @@
 ---
 title: Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint | Microsoft Docs
+description: Muestre un informe, en SQL Server Reporting Services o en Power BI Report Server, agregando un elemento web Visor de informes a una página de SharePoint.
 ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a70d7619f878b7091e7a49e05caf93dd814e3a0
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256736"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767409"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint
 
@@ -22,7 +23,7 @@ Muestre un informe, en SQL Server Reporting Services o en Power BI Report Server
 
 ![Elemento web Visor de informes en una página de SharePoint](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 * Para que los informes se carguen correctamente, las notificaciones del servicio de token de Windows (C2WTS) deben estar configuradas para la delegación restringida de Kerberos. Para más información sobre cómo configurar C2WTS, vea [Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md).
 

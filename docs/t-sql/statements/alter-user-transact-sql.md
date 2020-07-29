@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a486cc868c445e664977e67fd108aaca2873a595
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: dcb3bc8292b2cef9b917447c1388162a8f61ae9e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552750"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245260"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -42,10 +42,23 @@ Cambia el nombre de un usuario de base de datos o cambia su esquema predetermina
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||||
-|-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
-||||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [Instancia administrada de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -204,9 +217,23 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|**_\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_**|[Instancia administrada de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+:::row:::
+    :::column:::
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_**
+    :::column-end:::
+    :::column:::
+        [Instancia administrada de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -375,9 +402,23 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)|**_\* Instancia administrada de <br />SQL Database \*_**|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+:::row:::
+    :::column:::
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* Instancia administrada de <br />SQL Database \*_**
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -629,9 +670,23 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+:::row:::
+    :::column:::
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [Instancia administrada de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_**
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -740,9 +795,23 @@ GO
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+:::row:::
+    :::column:::
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [Instancia administrada de<br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_**
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

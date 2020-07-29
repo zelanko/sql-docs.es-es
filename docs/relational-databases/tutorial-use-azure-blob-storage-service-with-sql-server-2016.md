@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016'
 ms.custom: seo-dt-2019
-ms.date: 01/10/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd01280d2777fdab926c2e733224dc94b5fef834
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906051"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247276"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016
 
@@ -37,7 +37,7 @@ Para completar este tutorial, debe estar familiarizado con los conceptos de copi
 - Obtenga una [cuenta de Azure](https://azure.microsoft.com/offers/ms-azr-0044p/) gratis.
 - Cree una [cuenta de almacenamiento de Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Aprovisione una [máquina virtual de Azure que ejecute SQL Server](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/).
+- Aprovisione una [máquina virtual de Azure que ejecute SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/).
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Descargue las [bases de datos de ejemplo de AdventureWorks2016](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Asigne la cuenta de usuario al rol [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) y conceda permisos [Modificar cualquier credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
@@ -180,7 +180,7 @@ Para crear una credencial de SQL Server, siga estos pasos:
 En esta sección, hará una copia la base de datos AdventureWorks2016 en su instancia de SQL Server 2016 local en el contenedor de Azure que creó en la [sección 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
-> Si quiere realizar una copia de seguridad de una base de datos de SQL Server 2012 SP1 CU2 o posterior o de una base de datos de SQL Server 2014 a este contenedor de Azure, puede usar la sintaxis en desuso que aparece [aquí](https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) para realizar una copia de seguridad en la dirección URL mediante la sintaxis WITH CREDENTIAL.  
+> Si quiere realizar una copia de seguridad de una base de datos de SQL Server 2012 SP1 CU2 o posterior o de una base de datos de SQL Server 2014 a este contenedor de Azure, puede usar la sintaxis en desuso que aparece [aquí](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) para realizar una copia de seguridad en la dirección URL mediante la sintaxis WITH CREDENTIAL.  
   
 Para realizar una copia de seguridad de una base de datos en Blob Storage, siga estos pasos:  
   

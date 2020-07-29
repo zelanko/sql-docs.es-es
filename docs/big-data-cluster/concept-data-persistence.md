@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661076"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Los [volúmenes persistentes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) proporcionan un modelo de complemento para el almacenamiento en Kubernetes. En este modelo, la forma en que se proporciona el almacenamiento depende de cómo se use. Por lo tanto, puede usar su propio almacenamiento con alta disponibilidad y conectarlo al clúster de macrodatos de SQL Server. Esto le proporciona control total sobre el tipo de almacenamiento, la disponibilidad y el rendimiento que necesite. Kubernetes admite [distintos tipos de soluciones de almacenamiento](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner), como discos o archivos de Azure, Network File System (NFS) y almacenamiento local, entre otras.
 

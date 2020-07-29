@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 57ceb0963f303a1674642b65ef6c2089fd86ef70
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 162f2e872d1feedd3cecdf54b766ed8e3a43365b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254254"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000002"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Crear autocombinaciones manualmente (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Puede combinar una tabla consigo misma aunque no tenga una relación reflexiva en la base de datos. Por ejemplo, puede utilizar una autocombinación para buscar pares de autores que residan en la misma ciudad.  
   
 Al igual que el resto de las combinaciones, una autocombinación requiere al menos dos tablas. La diferencia reside en que, en lugar de agregar una segunda tabla a la consulta, se agrega una segunda instancia de la misma tabla. De ese modo, puede comparar una columna de la primera instancia de la tabla con la misma columna de la segunda instancia y, por tanto, comparar los valores de una columna entre sí. El [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) asigna un alias a la segunda instancia de la tabla.  

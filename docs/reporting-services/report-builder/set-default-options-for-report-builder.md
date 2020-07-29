@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad43cd9b4a842cd022e9139b7b303b15134af6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc526ec022d139288fd057ac1cd7889653cecba5
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290773"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859768"
 ---
 # <a name="set-default-options-for-report-builder"></a>Establecimiento de opciones predeterminadas para el Generador de informes
   En Generador de informes, puede establecer un número de valores predeterminados útiles para que la creación de informes resulte más sencilla y más rápida.  Por ejemplo, si puede establecer o cambiar el servidor de informes predeterminado, Generador de informes guarda los informes en el mismo servidor de informes automáticamente, a menos que se especifique lo contrario.  
   
 -   En Generador de informes, haga clic en **Archivo** > **Opciones**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Usar este servidor de informes o sitio de SharePoint de forma predeterminada**  
  Puede que su administrador lo haya configurado. El valor puede ser una dirección URL bien formada con http:// o https://. Este valor determina qué conexiones de origen de datos aparecen de forma predeterminada en los Asistentes para tabla/matriz y para gráfico. Además, sus informes se procesarán en este servidor y puede hacer referencia a los recursos que contiene.  
   

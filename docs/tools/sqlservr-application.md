@@ -2,7 +2,7 @@
 title: sqlservr (aplicación)
 description: La aplicación sqlservr se inicia, se detiene, se pone en pausa y continúa una instancia de SQL Server desde un símbolo del sistema.
 ms.custom: seo-lt-2019
-ms.date: 08/01/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56498901eb6f7eed8fa58f73bae58daddb36f874
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1302360b6ab5175bed5a9776d7de5389c3d40c00
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150566"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112574"
 ---
 # <a name="sqlservr-application"></a>sqlservr (aplicación)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 La aplicación **sqlservr** se inicia, se detiene, se pone en pausa y continúa una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde un símbolo del sistema.
 
@@ -86,7 +86,7 @@ Los parámetros siguientes están obsoletos y no se admiten en [!INCLUDE[ssCurre
 |Parámetro | Más información|
 |:-----|:-----|
 |**-h** | En versiones anteriores de instancias de 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espacio de direcciones de memoria virtual para los metadatos de Agregar memoria sin interrupción cuando AWE está habilitado. Se admite a través de [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Para obtener más información, vea [Características de SQL Server en desuso y descontinuadas en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
-|**-g** | *memoria_para_reserva*<br/><br>Se aplica a las versiones anteriores de las instancias de 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se admite a través de [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Especifica un número entero de megabytes (MB) de memoria que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deja disponibles para las asignaciones de memoria en el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pero fuera del bloque de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información, vea [la documentación de SQL Server 2014 sobre opciones de configuración de memoria de servidor](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
+|**-g** | *memoria_para_reserva*<br/><br>Se aplica a las versiones anteriores de las instancias de 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Se admite a través de [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Especifica un número entero de megabytes (MB) de memoria que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deja disponibles para las asignaciones de memoria en el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pero fuera del bloque de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información, vea [la documentación de SQL Server 2014 sobre opciones de configuración de memoria de servidor](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Consulte también

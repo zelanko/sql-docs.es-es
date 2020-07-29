@@ -11,12 +11,12 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eb809ddbd1acfdd3a01f5601b30e9cf6e9259e0
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6f9392a6ef282d1a3201e5edb2a4fa026adc5752
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555260"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122781"
 ---
 # <a name="temporal-table-security"></a>Seguridad de la tabla temporal
 
@@ -58,15 +58,15 @@ Cuando SYSTEM_VERSIONING esté establecido en ON, las operaciones de modificaci�
 
 ## <a name="security-of-the-create-temporal-table-statement"></a>Seguridad de la instrucción CREATE TABLE (tabla temporal)
 
-||Crear una nueva tabla de historial|Volver a usar la tabla de historial existente|
-|-|------------------------------|----------------------------------|
+| Característica | Crear una nueva tabla de historial | Volver a usar la tabla de historial existente |
+| ------- | ------------------------ | ---------------------------- |
 |Permiso necesario|El permiso**CREATE TABLE** en la base de datos.<br /><br /> El permiso**ALTER** en los esquemas en los que se están creando las tablas actuales y de historial.|El permiso**CREATE TABLE** en la base de datos.<br /><br /> El permiso**ALTER** en el esquema en el que se creará la tabla actual.<br /><br /> El permiso**CONTROL** en la tabla de historial especificada como parte de la instrucción **CREATE TABLE** que crea la tabla temporal.|
 |Auditoría|En la auditoría se muestra que los usuarios trataron de crear dos objetos. La operación puede producir un error debido a una falta de permisos para crear la tabla en la base de datos o modificar esquemas para cualquiera de las dos tablas.|En la auditoría se muestra que la tabla temporal se creó. La operación puede generar un error debido a la falta de permisos para crear una tabla en la base de datos o alterar el esquema para la tabla temporal, o bien que no se dispongan que los permisos suficientes en la tabla de historial.|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>Seguridad de la instrucción ALTER TABLE SET (tabla temporal) (SYSTEM_VERSIONING ON/OFF)
 
-||Crear una nueva tabla de historial|Volver a usar la tabla de historial existente|
-|-|------------------------------|----------------------------------|
+| Característica | Crear una nueva tabla de historial | Volver a usar la tabla de historial existente |
+| ------- | ------------------------ | ---------------------------- |
 |Permiso necesario|El permiso**CONTROL** en la base de datos.<br /><br /> El permiso**CREATE TABLE** en la base de datos.<br /><br /> El**ALTER** permiso en los esquemas en los que se está creando la tabla de historial.|El permiso**CONTROL** en la tabla original que se ha modificado.<br /><br /> El permiso**CONTROL** en la tabla de historial especificada como parte de la instrucción **ALTER TABLE** .|
 |Auditoría|En la auditoría se muestra que se modificó la tabla temporal y que la de historial se creó a la vez. La operación puede generar un error debido a la falta de permisos para crear una tabla en la base de datos, alterar el esquema para la tabla de historial o modificar la tabla de temporal.|En la auditoría se muestra que se modificó la tabla temporal, pero que la operación requería acceso a la de historial. La operación puede generar un error debido a una falta de permisos en la tabla de historial o en la actual.|
 

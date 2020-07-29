@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 508c7561dc77f375375e174d68d3955e044ae4ee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 743b0ea95643555136ee5c785a1aea689ebb6d50
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247197"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011730"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Agrupar filas en los resultados de la consulta (Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Si desea crear subtotales o mostrar otra información de resumen para los subconjuntos de una tabla, debe crear grupos mediante una consulta de funciones agregadas. Cada grupo resume los datos para todas las filas de la tabla que tienen el mismo valor.  
   
 Por ejemplo, es posible que desee ver el precio medio de un libro en la tabla `titles` , pero con los resultados desglosados por editorial. Para ello, agrupe la consulta por editorial (por ejemplo, `pub_id`). El resultado de la consulta podría tener el siguiente aspecto:  

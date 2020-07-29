@@ -5,16 +5,16 @@ description: En este artículo se explica cómo configurar la organización en n
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606527"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730650"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Procedimiento para montar ADLS Gen2 para los niveles de HDFS en un clúster de macrodatos
 
@@ -48,7 +48,7 @@ Para poder usar las credenciales de OAuth para el montaje, debe llevar a cabo lo
 1. En la barra de navegación derecha, seleccione "Registros de aplicaciones" y cree un registro.
 1. Cree una aplicación web y siga el asistente. **Recuerde el nombre de la aplicación que cree aquí**. Tendrá que agregar este nombre a su cuenta de ADLS como usuario autorizado. Anote también el identificador de cliente de la aplicación en la información general cuando seleccione la aplicación.
 1. Después de crear la aplicación web, vaya a "Certificados y secretos", cree un **Nuevo secreto de cliente** y seleccione una duración de clave. **Agregue** el secreto.
-1.     Vuelva a la página Registros de aplicaciones y haga clic en "Puntos de conexión" en la parte superior. **Anote la URL de "Punto de conexión de token de OAuth (v2)"** .
+1. Vuelva a la página Registros de aplicaciones y haga clic en "Puntos de conexión" en la parte superior. **Anote la URL de "Punto de conexión de token de OAuth (v2)"** .
 1. Debería tener anotado lo siguiente para OAuth:
 
     - El "identificador de cliente de aplicación" de la aplicación web
@@ -71,13 +71,13 @@ Abra un símbolo del sistema en un equipo cliente que pueda acceder al clúster 
 
 **Tenga en cuenta** que, al indicar las credenciales, hay que quitar los saltos de línea o el espacio entre las comas (","). El siguiente formato se muestra solo para facilitar la lectura.
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## <a name="use-access-keys-to-mount"></a>Uso de claves de acceso para el montaje
 
@@ -94,10 +94,10 @@ También puede llevar a cabo el montaje con las claves de acceso que puede obten
 
 **Tenga en cuenta** que, al indicar las credenciales, hay que quitar los saltos de línea o el espacio entre las comas (","). El siguiente formato se muestra solo para facilitar la lectura.
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Montaje del almacenamiento de HDFS remoto
 

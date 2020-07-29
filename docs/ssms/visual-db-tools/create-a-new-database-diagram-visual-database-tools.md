@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 0c9d69f04fc7825b0902e101d1c8f8f40494da72
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f16ffac1272a0dd9bfc847d33b3232179d306c3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751455"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Crear un diagrama de base de datos nuevo (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Puede utilizar el Explorador de objetos para crear nuevos diagramas de base de datos. Estos diagramas muestran gráficamente la estructura de la base de datos. Mediante el uso de diagramas de base de datos puede crear y modificar tablas, columnas, relaciones y claves. Además, puede modificar índices y restricciones.  
   
 ### <a name="to-create-a-new-database-diagram"></a>Para crear un nuevo diagrama de base de datos  

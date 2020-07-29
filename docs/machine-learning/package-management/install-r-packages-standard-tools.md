@@ -2,23 +2,23 @@
 title: Instalación de paquetes con herramientas de R
 description: Aprenda a usar herramientas de R estándar para instalar nuevos paquetes de R en una instancia de SQL Server Machine Learning Services o SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 5d7c610f887de137c44f97ca8809e70c548a51db
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a1a135588c9775758008b5db9ffca38e6ff3d041
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723949"
 ---
 # <a name="install-packages-with-r-tools"></a>Instalación de paquetes con herramientas de R
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se describe cómo usar herramientas de R estándar para instalar nuevos paquetes de R en una instancia de SQL Server Machine Learning Services o SQL Server R Services. Puede instalar paquetes en un servidor SQL Server que tenga una conexión a Internet, así como uno que esté aislado de Internet.
 

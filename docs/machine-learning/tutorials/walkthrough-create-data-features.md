@@ -2,22 +2,22 @@
 title: 'Tutorial de R: Ingeniería de características'
 description: Tutorial en el que se muestra cómo crear características de datos mediante funciones de SQL Server para el análisis en bases de datos.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67d2c0bf73e24bc3f70e94cd6cf7ce94d13e5297
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8ae7adc2285a9888778a1d0d560f36e64bafcef0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781803"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Creación de características de datos con R y SQL Server (tutorial)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 La ingeniería de datos es un aspecto importante del aprendizaje automático. A menudo los datos deben transformarse antes de poder usarlos para el modelado de predicción. Si los datos no tienen las características que necesita, puede diseñarlos a partir de valores existentes.
 

@@ -2,23 +2,23 @@
 title: Generación de código para tareas de limpieza y transformación de datos
 titleSuffix: Azure Data Studio
 description: En este artículo se describe cómo usar el acelerador de código PROSE en Azure Data Studio para generar automáticamente código destinado a tareas comunes de limpieza y transformación de datos.
-author: MikeRayMSFT
-ms.author: mikeray
+author: dphansen
+ms.author: davidph
 ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67957685"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243446"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Limpieza y transformación de datos mediante el acelerador de código PROSE
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 El acelerador de código PROSE genera código Python legible para las tareas de limpieza y transformación de datos. El código generado se puede combinar con el código escrito a mano de una manera fluida mientras se trabaja en un cuaderno dentro de Azure Data Studio. En este artículo se proporciona información general sobre cómo se puede usar el acelerador de código.
 
@@ -113,8 +113,8 @@ Para obtener más información, consulte la [documentación](https://aka.ms/pros
 Otro escenario común es detectar patrones en una columna de cadena con el fin de limpiar o agrupar los valores. Por ejemplo, puede tener una columna de fecha con fechas en varios formatos distintos. Para normalizar los valores, quizá desee escribir instrucciones condicionales mediante expresiones regulares.
 
 
-|   |Nombre                      |BirthDate      |
-|---|:-------------------------|:--------------|
+|Row|Nombre                      |BirthDate      |
+|--:|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Desconocido        |
 | 2 |Jihoo Spel                |2014           |

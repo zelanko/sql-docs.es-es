@@ -26,12 +26,12 @@ ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51c3975cb0db2b93ebcaefcc6d2c423da62ba0e0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 09d9ff8e9944faa4d5dcbd9f24f2ab5a359962e2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011335"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111203"
 ---
 # <a name="collation-precedence"></a>Prioridad de intercalación
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -227,16 +227,63 @@ Las funciones CAST, CONVERT y COLLATE distinguen la intercalación para los tipo
  Para las funciones integradas que devuelven una cadena pero no reciben una entrada de cadena, la cadena de resultado es Coercible-default, y se le asigna la intercalación de la base de datos actual o la intercalación de la base de datos que contiene la función definida por el usuario, el procedimiento almacenado o el desencadenador en el que se hace referencia a la función.  
   
  Las funciones siguientes distinguen la intercalación y sus cadenas de salida tienen la etiqueta de intercalación de la cadena de entrada:  
-  
-|||  
-|-|-|  
-|CHARINDEX|REPLACE|  
-|DIFFERENCE|REVERSE|  
-|ISNUMERIC|RIGHT|  
-|LEFT|SOUNDEX|  
-|LEN|STUFF|  
-|LOWER|SUBSTRING|  
-|PATINDEX|UPPER|  
+
+:::row:::
+    :::column:::
+        CHARINDEX
+    :::column-end:::
+    :::column:::
+        REPLACE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DIFFERENCE
+    :::column-end:::
+    :::column:::
+        REVERSE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ISNUMERIC
+    :::column-end:::
+    :::column:::
+        RIGHT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LEFT
+    :::column-end:::
+    :::column:::
+        SOUNDEX
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LEN
+    :::column-end:::
+    :::column:::
+        STUFF
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LOWER
+    :::column-end:::
+    :::column:::
+        SUBSTRING
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        PATINDEX
+    :::column-end:::
+    :::column:::
+        UPPER
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>Consulte también  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   

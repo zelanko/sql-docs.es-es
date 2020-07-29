@@ -4,21 +4,21 @@ description: Obtenga sugerencias útiles sobre el uso de paquetes de R en SQL S
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a8402432904e724c0eee769f0f899ff12498ac8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ad2650317958ffd43b0f4b910585d429249115b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730545"
 ---
 # <a name="tips-for-using-r-packages"></a>Sugerencias para usar paquetes de R
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 En este artículo se proporcionan sugerencias útiles sobre el uso de paquetes de R en SQL Server. Estas sugerencias están destinadas a administradores de bases de datos que no están familiarizados con R y a desarrolladores de R experimentados que no están familiarizados con el acceso a paquetes en una instancia de SQL Server.
 
@@ -93,6 +93,6 @@ Si sigue las instrucciones que se indican a continuación, podrá evitar los err
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [Instalación de paquetes con herramientas de R](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [Instalación de nuevos paquetes de R con sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

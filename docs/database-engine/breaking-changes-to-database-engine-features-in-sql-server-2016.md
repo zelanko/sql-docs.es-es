@@ -3,7 +3,7 @@ title: 'Motor de base de datos: cambios importantes | Microsoft Docs'
 titleSuffix: SQL Server 2016
 description: Obtenga información sobre los cambios del motor de base de datos en SQL Server 2016 (13.x) y versiones anteriores que podrían interrumpir la funcionalidad de la versión anterior al actualizar.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8c6dad3c9ec55f9e895cc9f7ed430ed5816a73a8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bddfd0b06bfc64d68534548cfb90ea09ed2d4076
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751263"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236073"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Cambios importantes en las características del Motor de base de datos de SQL Server 2016
 
@@ -40,7 +40,7 @@ ms.locfileid: "85751263"
 
 ## <a name="previous-versions"></a><a name="previous-versions"></a> Versiones anteriores  
 
-Para obtener información sobre los cambios importantes en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y en algunas versiones anteriores, vea [Cambios recientes en las características del Motor de base de datos de SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014).
+Para obtener información sobre los cambios importantes en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y en algunas versiones anteriores, vea [Cambios recientes en las características del Motor de base de datos de SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016).
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>Documentación archivada para las versiones muy antiguas de SQL Server
 

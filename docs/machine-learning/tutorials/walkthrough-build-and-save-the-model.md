@@ -2,22 +2,22 @@
 title: 'Tutorial de R: Generar y guardar el modelo'
 description: Tutorial en el que se explica cómo crear un modelo de lenguaje R usado para el análisis en base de datos de SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4cb806c0a6286ec8a6608b346d12e666a8e9a09f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8ae0de4af29dd68e71300de52875044a8c2d64b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730431"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Compilación de un modelo de R y almacenamiento en SQL Server (tutorial)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este paso, aprenderá a generar un modelo de Machine Learning y a guardarlo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando un modelo se guarda, se puede llamar directamente a él desde código de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante el procedimiento almacenado del sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), o la [función PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 

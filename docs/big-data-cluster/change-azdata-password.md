@@ -8,16 +8,16 @@ ms.date: 12/19/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cc2a7778100be5c919c86a4c949d5aeb784d8e5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3121351fce1ef6c86575789cee5dbb2860ce3c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76265997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728810"
 ---
 # <a name="manually-update-azdata_password"></a>Actualización manual de `AZDATA_PASSWORD`
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Tanto si el clúster está funcionando con la integración de Active Directory como si no es así, `AZDATA_PASSWORD` se establece durante la implementación. Proporciona una autenticación básica al controlador de clúster y la instancia maestra. En este documento se describe cómo actualizar `AZDATA_PASSWORD` manualmente.
 

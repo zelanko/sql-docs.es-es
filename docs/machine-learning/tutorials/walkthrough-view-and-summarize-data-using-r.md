@@ -2,22 +2,22 @@
 title: 'Tutorial de R: Exploración de datos'
 description: Tutorial que muestra cómo visualizar y generar resúmenes estadísticos mediante funciones de R para el análisis en base de datos en SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e74224851d2c475cd89160b362ba163d53c00f61
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18fd4df2d2ae5764b5f3e9becaa872f863ed5ee5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781771"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Visualización y resumen de datos de SQL Server mediante R (tutorial)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En esta lección se presentan las funciones del paquete **RevoScaleR** y se explican estas tareas:
 

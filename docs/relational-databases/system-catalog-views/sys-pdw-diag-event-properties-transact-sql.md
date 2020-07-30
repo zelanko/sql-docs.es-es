@@ -12,15 +12,15 @@ ms.assetid: e3944f48-8074-43aa-9840-3d5230faedd3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9cdd74a5044603b869b38dc1c8b94e2c1049be7f
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: fe8faae43cc5ed6e1767d47e4657ca167a6f377b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627537"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396068"
 ---
 # <a name="syspdw_diag_event_properties-transact-sql"></a>Sys. pdw_diag_event_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Contiene información sobre qué propiedades están asociadas a los eventos de diagnóstico.  
   

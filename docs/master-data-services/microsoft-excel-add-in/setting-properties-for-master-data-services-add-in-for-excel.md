@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21166512c691f8d50d19816afc7a0247a6c09782
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c0a4778ae941b22bf362d926881b1cd3ba806059
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895272"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361845"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Establecer propiedades para el complemento Master Data Services para Excel
 
@@ -27,9 +27,8 @@ ms.locfileid: "85895272"
   
 ## <a name="excel-add-in-settings"></a>Configuración del complemento de Excel  
   
-||||  
-|-|-|-|  
 |Pestaña y sección|Configuración|Descripción|  
+|-|-|-|  
 |Configuración: Publicación|Mostrar el cuadro de diálogo **Publicar y anotar** al publicar|Seleccione esta opción para mostrar el cuadro de diálogo **Publicar y anotar** después de hacer clic en **Publicar**; esto le permitirá especificar una sola anotación para todos los cambios o una para cada cambio.<br /><br /> Anule la selección de esta opción si desea que el proceso de publicación se inicie sin mostrar el cuadro de diálogo **Publicar y anotar** . No tendrá la oportunidad de especificar ninguna anotación.|  
 |Configuración: Versión|Selección de versión|Seleccione la versión de los datos maestros que se cargarán en el complemento de Excel. Puede ser:<br /><br /> **Ninguno** para que no haya ninguna versión predeterminada<br /><br /> **Más antiguo** para usar como versión predeterminada la más antigua o **Más reciente** para usar como versión predeterminada la más reciente.|  
 |Configuración: Registro|Activar el registro detallado|Habilita el registro del proceso de carga de los datos maestros desde MDS en el complemento de Excel, de forma que quedan registrados los resultados de todos los comandos del servicio.|  

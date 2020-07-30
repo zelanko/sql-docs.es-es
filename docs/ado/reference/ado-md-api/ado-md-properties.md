@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b653bd79c6e6e27dee30a4f11385f457717364a2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 70153e52186ac4f15629b32cca0c303fc81209a9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765236"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242535"
 ---
 # <a name="ado-md-properties"></a>Propiedades de ADO MD
 
-|||  
+|Propiedad|Descripción|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indica a qué objeto de **conexión** ADO pertenece actualmente el objeto Cellset o el catálogo actual.|  
 |[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indica el título de texto que se va a usar al mostrar un **nivel** o un objeto de **miembro** .|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|Indica el número de miembros para los que el objeto **miembro** actual es el elemento primario de una jerarquía.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Devuelve una colección de **miembros** para los que el **miembro** actual es el elemento primario de la jerarquía.|  
 |[Recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
-|[Depth](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica el número de niveles entre el **nivel** y la raíz del nivel de la jerarquía.|  
+|[Profundidad](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Indica el número de niveles entre el **nivel** y la raíz del nivel de la jerarquía.|  
 |[Descripción](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Devuelve una explicación de texto del objeto actual.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indica el número de dimensiones de un eje.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Indica si hay elementos secundarios inmediatamente después del miembro en el eje.|  
@@ -45,7 +45,7 @@ ms.locfileid: "82765236"
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Indica el miembro que es primario del miembro actual de una jerarquía.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Indica si el elemento primario de este miembro de posición es igual que el elemento primario del miembro inmediatamente anterior.|  
 |[Origen](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Indica el origen de los datos del Cellset.|  
-|[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica el estado actual del Cellset.|  
+|[Estado](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica el estado actual del Cellset.|  
 |[Tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Indica el tipo del miembro actual.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indica un nombre no ambiguo para el objeto actual.|  
 |[Valor](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indica el valor de la celda actual.|  

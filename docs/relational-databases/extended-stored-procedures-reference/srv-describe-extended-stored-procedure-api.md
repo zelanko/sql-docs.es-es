@@ -1,5 +1,6 @@
 ---
 title: srv_describe (API de procedimiento almacenado extendido) | Microsoft Docs
+description: Obtenga información sobre cómo srv_describe en la API de procedimiento almacenado extendido define el nombre de columna y los tipos de datos de origen y destino para una columna específica de una fila.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2dc77e2ff3314664b28647980b62dabdde450fc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678590"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248473"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API de procedimiento almacenado extendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +102,7 @@ srcdata
 ## <a name="returns"></a>Devoluciones  
  El número de la columna descrita. La primera columna es la columna 1. Si se produce un error, devuelve 0.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Se debe llamar a la función **srv_describe** una vez por cada columna de la fila antes de realizar la primera llamada a **srv_sendrow**. Las columnas de una fila se pueden describir en cualquier orden.  
   
  Para cambiar la ubicación y la longitud de los datos de origen en las filas de columna antes de que se haya enviado el conjunto de resultados completo, use **srv_setcoldata** y **srv_setcollen**, respectivamente.  

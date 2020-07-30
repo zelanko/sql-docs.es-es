@@ -9,19 +9,19 @@ ms.topic: reference
 ms.assetid: f3303072-2b44-4443-936c-f024b0b2a8c5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 949c03aefc35b7ff99320bfbff980210dff092dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6f87a007de4a85dfc3d86931c0e1d043ab32e3a5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717685"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361240"
 ---
 # <a name="localdb_error_caller_is_not_owner"></a>LOCALDB_ERROR_CALLER_IS_NOT_OWNER
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Nombre de producto|SQL Server|  
 |Id. de evento|282|  

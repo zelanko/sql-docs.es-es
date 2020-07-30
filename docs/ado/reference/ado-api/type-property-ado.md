@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46718126ede409caa749b3a49dfaaffe118afc77
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7bfa47120814058adbc5c2e5f3650a79b2202afb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761833"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243186"
 ---
 # <a name="type-property-ado"></a>Tipo (propiedad, ADO)
 Indica el tipo operativo o el tipo de datos de un [parámetro](../../../ado/reference/ado-api/parameter-object.md), [campo](../../../ado/reference/ado-api/field-object.md)o objeto de [propiedad](../../../ado/reference/ado-api/property-object-ado.md) .  
@@ -35,11 +35,19 @@ Indica el tipo operativo o el tipo de datos de un [parámetro](../../../ado/refe
  Para todos los demás objetos, la propiedad **Type** es de solo lectura.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-||||  
-|-|-|-|  
-|[Objeto Field](../../../ado/reference/ado-api/field-object.md)|[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de la propiedad de tipo (campo) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Ejemplo de propiedad de tipo (propiedad) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   

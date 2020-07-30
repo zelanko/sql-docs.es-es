@@ -1,5 +1,5 @@
 ---
-title: Códigos de retorno | Microsoft Docs
+title: Códigos de retorno (proveedor de OLE DB de Native Client)
 description: Obtenga información sobre los códigos de retorno que se admiten para OLE DB de SQL Server Native Client, incluido el valor de DB_S_ERRORSOCCURRED HRESULT que se encuentra normalmente.
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,13 +24,14 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 400c5b1016e7519813c41ec5627dd86f6652441b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dff6003bf6671f4b3e7867daa4e6c444c6cd8854
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010522"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247934"
 ---
-# <a name="return-codes"></a>Códigos de retorno
+# <a name="return-codes-native-client-ole-db-provider"></a>Códigos de retorno (proveedor de OLE DB de Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En el nivel más básico, una función miembro se ejecuta correctamente o genera un error. En un nivel algo más preciso, puede que una función se ejecute correctamente pero que el resultado no sea el que esperaba el programador de la aplicación.  

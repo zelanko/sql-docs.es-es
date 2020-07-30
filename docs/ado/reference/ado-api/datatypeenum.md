@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 456b11972fcb9b7bb20ee07b58e36d2daa5cc0da
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757631"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242388"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-object.md), un [parámetro](../../../ado/reference/ado-api/parameter-object.md)o una [propiedad](../../../ado/reference/ado-api/property-object-ado.md). El indicador de tipo de OLE DB correspondiente se muestra entre paréntesis en la columna Descripción de la tabla siguiente.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Un valor de marca, siempre combinado con otra constante de tipo de datos, que indica una matriz del otro tipo de datos. No se aplica a ADOX.|  
 |**adBigInt**|20|Indica un entero con signo de ocho bytes (DBTYPE_I8).|  
@@ -115,8 +115,14 @@ Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-o
 |AdoEnums. DataType. WCHAR|  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Append (método) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
-|[Ejemplo del método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Tipo (propiedad, ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [Append (método) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+        [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Ejemplo del método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
+        [Tipo (propiedad, ADO)](../../../ado/reference/ado-api/type-property-ado.md)  
+    :::column-end:::
+:::row-end:::

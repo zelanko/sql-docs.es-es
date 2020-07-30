@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: e3e5e5dc-21dc-42fc-82a6-730fed46ef16
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d8b2a7c9134db93b9192fd9993f50042e4c4d144
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5787ae12a495288944cf1bd2edc82bef0668a9a3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641492"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245992"
 ---
 # <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |
+| --------- | ----- |
 |Nombre de producto|SQL Server|  
 |Id. de evento|266|  
 |Origen de eventos|SQL Server Local Database Runtime 12.0|  

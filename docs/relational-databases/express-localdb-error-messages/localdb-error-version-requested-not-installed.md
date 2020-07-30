@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: 12adc059-ad8e-4bc9-9693-79cc3e7eaff0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5ed1177b91f03cbb8c73ef4be4e9359d5fb149db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9994e54d764831336299689df8166b61b478e7df
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641252"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246538"
 ---
 # <a name="localdb_error_version_requested_not_installed"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |
+| --------- | ----- |
 |Nombre de producto|SQL Server|  
 |Id. de evento|273|  
 |Origen de eventos|SQL Server Local Database Runtime 12.0|  

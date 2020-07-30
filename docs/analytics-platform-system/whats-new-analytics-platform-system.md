@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85039825"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243083"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacenamiento de datos MPP de escalabilidad horizontal
 Vea las novedades de las últimas actualizaciones del dispositivo para Microsoft Analytics Platform System (AP). APS es un dispositivo local de escalado horizontal que hospeda MPP SQL Server almacenamiento de datos paralelos. 
@@ -65,6 +65,8 @@ APS CU 7.3 mejora el rendimiento de las consultas con una eliminación común de
 
 ### <a name="aps-informatica-connector-for-informatica-1020-published"></a>AP Informatica Connector for Informatica 10.2.0 Published
 Hemos publicado una nueva versión de los conectores de Informatica para APS que funciona con la versión de Informatica 10.2.0 y 10.2.0 revisión 1. Los nuevos conectores se pueden descargar desde el [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).
+> [!NOTE]
+> APS Informatica Connector for Informatica 10.2.0 o 10.2.0 Hotfix 1 no funciona en TLS 1.2 estricto y requiere que TLS 1.0 y 1,1 sean totalmente funcionales.
 
 #### <a name="supported-versions"></a>Versiones admitidas
 
@@ -135,7 +137,7 @@ APS admite un subconjunto de [comandos DBCC](https://docs.microsoft.com/sql/t-sq
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Reemplaza algunas llamadas de metadatos por objetos de catálogo
 El uso de objetos de catálogo para llamadas de metadatos en lugar de usar SMO ha mostrado la mejora del rendimiento en APS. A partir de CU 7.1, algunas de estas llamadas de metadatos ahora usan objetos de catálogo de forma predeterminada. Este comportamiento se puede desactivar por el [modificador de características](appliance-feature-switch.md) si los clientes que usan consultas de metadatos se ejecutan en cualquier problema.
 
-### <a name="bug-fixes"></a>Correcciones de errores
+### <a name="bug-fixes"></a>Corrección de errores
 Hemos actualizado a SQL Server 2016 SP2 CU2 con APS CU 7.1. La actualización corrige algunos problemas que se describen a continuación.
 
 | Título | Descripción |

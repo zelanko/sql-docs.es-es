@@ -1,5 +1,5 @@
 ---
-title: Captura de una sola fila con IRow | Microsoft Docs
+title: Capturar una sola fila con IRow (proveedor de OLE DB de cliente nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,14 @@ ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d055ddc7a5f9d7b55827e30cf42fc68a7af3ff9e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 453bc37d3cbe763cfa379339de01d523fa63307b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998481"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247620"
 ---
-# <a name="fetching-a-single-row-with-irow"></a>Capturar una única fila con IRow
+# <a name="fetching-a-single-row-with-irow-native-client-ole-db-provider"></a>Capturar una única fila con IRow (proveedor de OLE DB de cliente nativo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La implementación de la interfaz **IRow** en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client se ha simplificado para aumentar el rendimiento. **IRow** permite un acceso directo a las columnas de un único objeto de fila. Si sabe de antemano que el resultado de una ejecución de comandos generará exactamente una fila, **IRow** recuperará las columnas de esa fila. Si el conjunto de resultados incluye varias filas, **IRow** solo expondrá la primera.  

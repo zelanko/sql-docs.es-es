@@ -9,20 +9,20 @@ ms.topic: reference
 ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d63b78c0f173860df62e1015ac2f689c672c9320
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 703db802d9a1d7f7971ca82a444b4aab62f2923e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85641295"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246562"
 ---
 # <a name="localdb_error_unknown_version"></a>LOCALDB_ERROR_UNKNOWN_VERSION
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+| Atributo | Value |
+| --------- | ----- |
 |Nombre de producto|SQL Server|  
 |Id. de evento|269|  
 |Origen de eventos|SQL Server Local Database Runtime 12.0|  

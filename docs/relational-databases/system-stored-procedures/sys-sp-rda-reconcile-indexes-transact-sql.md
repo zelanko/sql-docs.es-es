@@ -1,5 +1,6 @@
 ---
 title: Sys. sp_rda_reconcile_indexes (Transact-SQL) | Microsoft Docs
+description: Más información sobre sys. sp_rda_reconcile_indexes. Vea cómo usar este procedimiento almacenado de Transact-SQL para poner en cola una tarea de esquema para conciliar los índices en una tabla remota.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be9e80c522cc68cd4438e34d96564a7e49196152
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 098649587cbb6f01caafdedb631c901af160c85f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053030"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236078"
 ---
 # <a name="syssp_rda_reconcile_indexes-transact-sql"></a>Sys. sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

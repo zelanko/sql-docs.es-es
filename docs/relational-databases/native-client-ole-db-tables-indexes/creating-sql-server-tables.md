@@ -18,14 +18,14 @@ ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9740c208db10484ee1e3c5ef807c5223fe6adfd6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 9943b2c5e05d9cdc90efa8752aedf933ec624db9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977742"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87241676"
 ---
-# <a name="creating-sql-server-tables"></a>Crear tablas de SQL Server
+# <a name="creating-sql-server-native-client-tables"></a>Crear tablas de SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client expone la función **ITableDefinition:: CreateTable** , lo que permite a los consumidores crear [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas. Los consumidores usan **createTable** para crear tablas permanentes con nombre de consumidor y tablas permanentes o temporales con nombres únicos generados por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client.  

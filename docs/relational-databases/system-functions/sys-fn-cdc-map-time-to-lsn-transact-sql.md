@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3cd283f09263d4f36f0f4e2cfd4a18767dd614e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bba5095587b8ddbb4c06d3334ad60e16cb2f5e35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898359"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395750"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'**<relational_operator>**'** {mayor menor que | más grande menor o igual que | más pequeño mayor que | más pequeño mayor o igual que}  
+ **'**<relational_operator>**'** {mayor menor que el más grande menor o igual que el más pequeño mayor que el más \| \| \| pequeño mayor o igual que}  
  Se usa para identificar un valor de LSN distinto en dentro de la tabla **CDC. lsn_time_mapping** con un **tran_end_time** asociado que satisface la relación en comparación con el valor de *tracking_time* .  
   
  *relational_operator* es **nvarchar (30)**.  
@@ -60,7 +60,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ## <a name="return-type"></a>Tipo de valor devuelto  
  **binary(10)**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para entender cómo se puede usar **Sys. fn_cdc_map_time_lsn** para asignar intervalos de fecha y hora a intervalos de LSN, considere el siguiente escenario. Suponga que un consumidor desea extraer los datos de cambios cada día. Es decir, el consumidor solo desea obtener los cambios que se han realizado durante un día determinado hasta la medianoche incluida. El límite inferior del intervalo temporal sería hasta las doce de la noche (no inclusive) del día anterior. El límite superior sería hasta las doce de la noche (inclusive) del día en cuestión. En el ejemplo siguiente se muestra cómo se puede usar la función **Sys. fn_cdc_map_time_to_lsn** para asignar sistemáticamente este intervalo basado en el tiempo al intervalo basado en LSN que necesitan las funciones de enumeración de captura de datos modificados para devolver todos los cambios dentro de ese intervalo.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  

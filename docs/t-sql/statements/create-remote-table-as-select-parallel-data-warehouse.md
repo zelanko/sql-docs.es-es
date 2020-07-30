@@ -10,15 +10,15 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 4547fe6ae7282aa95ed2b1e46c47a5a07aa20f11
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627411"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395250"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Selecciona los datos de una base de datos [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] y copia esos datos en una nueva tabla en una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP en un servidor remoto. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] usa el dispositivo, con todas las ventajas del procesamiento de consultas MPP, para seleccionar los datos de la copia remota. Úselo para escenarios que necesiten la funcionalidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

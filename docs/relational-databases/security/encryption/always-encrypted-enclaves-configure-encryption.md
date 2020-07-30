@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595520"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411461"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Configuración del cifrado de columna en contexto mediante Always Encrypted con enclaves seguros 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md) permite realizar operaciones criptográficas en columnas de base de datos en contexto dentro de un enclave seguro en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El cifrado en contexto elimina la necesidad de trasladar los datos fuera de la base de datos en operaciones de este tipo, lo que hace que las operaciones criptográficas sean más rápidas y confiables. 
 

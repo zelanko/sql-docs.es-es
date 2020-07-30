@@ -1,5 +1,5 @@
 ---
-title: Propiedades y comportamientos del conjunto de filas | Microsoft Docs
+title: Propiedades y comportamientos de conjuntos de filas (proveedor de OLE DB de Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d66aa7280bb2ce7f92211054713469626b4f6a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15f9884944eb5d0298e5536fa5b2f43f3aa46c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013133"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246854"
 ---
-# <a name="rowset-properties-and-behaviors"></a>Propiedades y comportamientos de conjuntos de filas
+# <a name="rowset-properties-and-behaviors-native-client-ole-db-provider"></a>Propiedades y comportamientos de conjuntos de filas (proveedor de OLE DB de Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Estas son las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propiedades del conjunto de filas del proveedor de OLE DB de Native Client.  
@@ -78,7 +79,7 @@ ms.locfileid: "86013133"
 |DBPROP_REPORTMULTIPLECHANGES|El proveedor de OLE DB de Native Client no implementa esta propiedad de conjunto de filas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al intentar leer o escribir el valor de propiedad, se genera un error.|  
 |DBPROP_RETURNPENDINGINSERTS|L/E: solo lectura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: cuando se llama a un método que captura filas, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no devuelve filas de inserción pendientes.|  
 |DBPROP_ROWRESTRICT|L/E: solo lectura<br /><br /> Valor predeterminado: VARIANT_TRUE<br /><br /> Descripción: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los conjuntos de filas del proveedor de OLE DB de Native Client no admiten derechos de acceso basados en la fila. Si la interfaz **IRowsetChange** se expone en un conjunto de filas, el consumidor puede llamar al método **SetData**.|  
-|DBPROP_ROWSET_ASYNCH|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Predeterminado: 0<br /><br /> Descripción: proporciona un procesamiento asincrónico del conjunto de filas. Esta propiedad pertenece al grupo de propiedades del conjunto de filas y al conjunto de propiedades DBPROPSET_ROWSET. El tipo es VT_14.<br /><br /> El único valor de la máscara de la máscara compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es **DBPROPVAL_ASYNCH_INITIALIZE**.|  
+|DBPROP_ROWSET_ASYNCH|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Predeterminado: 0<br /><br /> Descripción: proporciona un procesamiento de conjuntos de filas asincrónico. Esta propiedad pertenece al grupo de propiedades del conjunto de filas y al conjunto de propiedades DBPROPSET_ROWSET. El tipo es VT_14.<br /><br /> El único valor de la máscara de la máscara compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es **DBPROPVAL_ASYNCH_INITIALIZE**.|  
 |DBPROP_ROWTHREADMODEL|L/E: solo lectura<br /><br /> Valor predeterminado: DBPROPVAL_RT_FREETHREAD<br /><br /> Descripción: el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite el acceso a sus objetos desde varios subprocesos de ejecución de un único consumidor.|  
 |DBPROP_SERVERCURSOR|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: cuando se establece esta propiedad, se usa un cursor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para admitir el conjunto de filas. Para obtener más información, vea [Conjuntos de filas y cursores de SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_SERVERDATAONINSERT|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: datos de servidor al insertar.<br /><br /> VARIANT_TRUE: en el momento en que se transmite una inserción al servidor, el proveedor recupera los datos del servidor para actualizar la memoria caché de filas local.<br /><br /> VARIANT_FALSE: el proveedor no recupera los valores de servidor para las filas recién insertadas.|  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747256"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242865"
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 
-|||  
+|Método|Descripción|  
 |-|-|  
 |[AgregarNuevo](../../../ado/reference/ado-api/addnew-method-ado.md)|Crea un nuevo registro para un objeto de **conjunto de registros** actualizable.|  
 |[Append](../../../ado/reference/ado-api/append-method-ado.md)|Anexa un objeto a una colección. Si la colección es **campos**, puede crearse un nuevo objeto de **campo** antes de que se anexe a la colección.|  
@@ -45,7 +45,7 @@ ms.locfileid: "82747256"
 |[Execute (comando de ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Ejecuta la consulta, la instrucción SQL o el procedimiento almacenado especificado en la propiedad **CommandText** .|  
 |[Execute (conexión ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Ejecuta la consulta, la instrucción SQL, el procedimiento almacenado o el texto específico del proveedor especificados.|  
 |[Buscar](../../../ado/reference/ado-api/find-method-ado.md)|Busca en un **conjunto de registros** la fila que cumple los criterios especificados.|  
-|[Consumir](../../../ado/reference/ado-api/flush-method-ado.md)|Fuerza el contenido de la **secuencia** que queda en el búfer de ADO al objeto subyacente al que está asociada la **secuencia** .|  
+|[Vaciar](../../../ado/reference/ado-api/flush-method-ado.md)|Fuerza el contenido de la **secuencia** que queda en el búfer de ADO al objeto subyacente al que está asociada la **secuencia** .|  
 |[get_OLEDBCommand (método)](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Devuelve el comando OLEDB subyacente, propagando primero cualquier información de parámetros establecida en el comando de ADO al comando OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Devuelve un **conjunto de registros** cuyas filas representan los archivos y subdirectorios del directorio representado por este **registro**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Devuelve todo, o una parte de, el contenido de un objeto de **campo** de datos binarios o de texto grande.|  
@@ -74,7 +74,7 @@ ms.locfileid: "82747256"
 |[Seteos](../../../ado/reference/ado-api/seteos-method.md)|Establece la posición que es el final de la secuencia.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Omite una línea completa cuando se lee una secuencia de texto.|  
 |[Necesidad](../../../ado/reference/ado-api/stat-method.md)|Obtiene información estadística sobre un flujo abierto.|  
-|[Admite](../../../ado/reference/ado-api/supports-method.md)|Determina si un objeto de **conjunto de registros** especificado admite un tipo determinado de funcionalidad.|  
+|[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Determina si un objeto de **conjunto de registros** especificado admite un tipo determinado de funcionalidad.|  
 |[Actualizar](../../../ado/reference/ado-api/update-method.md)|Guarda los cambios realizados en la fila actual de un objeto de **conjunto de registros** o la colección de **campos** de un objeto de **registro** .|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Escribe todas las actualizaciones de Batch pendientes en el disco.|  
 |[Escritura](../../../ado/reference/ado-api/write-method.md)|Escribe datos binarios en un objeto de **secuencia** .|  

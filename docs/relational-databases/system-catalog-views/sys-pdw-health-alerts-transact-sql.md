@@ -10,15 +10,15 @@ ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e3ab735a19342e1ecc1a941a185832edae61262
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: f28f48d8530111e2de12bbb6f075b69147ad1cff
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627448"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396051"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>Sys. pdw_health_alerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Almacena las propiedades de las distintas alertas que se pueden producir en el sistema; se trata de una tabla de catálogo para las alertas.  
   

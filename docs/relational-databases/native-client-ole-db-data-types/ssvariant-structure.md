@@ -1,5 +1,5 @@
 ---
-title: Estructura SSVARIANT | Microsoft Docs
+title: Estructura SSVARIANT (proveedor de OLE DB de Native Client)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,13 +15,14 @@ ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d87c4a4537683d9dbb9817a0a3c022f23f2b846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ddd98b45cf44f840dfc236f8a0a1b5d809db7288
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998205"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331984"
 ---
-# <a name="ssvariant-structure"></a>Estructura SSVARIANT
+# <a name="ssvariant-structure-in-sql-server-native-client"></a>Estructura SSVARIANT en SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La estructura **SSVARIANT** , que se define en SQLNCLI. h, corresponde a un valor DBTYPE_SQLVARIANT en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLEDB de Native Client.  

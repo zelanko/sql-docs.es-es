@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287149"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411391"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planificación de la atestación del Servicio de protección de host
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Cuando use [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md), asegúrese de que la aplicación cliente se comunica con un enclave de confianza dentro del proceso de [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. En el caso de un enclave de seguridad basado en virtualización (VBS), este requisito incluye comprobar que el código incluido en el enclave es válido y que el equipo en el que se hospeda [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] es de confianza. La atestación remota logra este objetivo mediante la introducción de un tercero que puede validar la identidad (y, opcionalmente, la configuración) del equipo con [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Antes de que [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] pueda usar un enclave para ejecutar una consulta, debe proporcionar información al servicio de atestación sobre su entorno operativo para obtener un certificado de mantenimiento. Este certificado de mantenimiento se envía al cliente, que puede comprobar de forma independiente su autenticidad con el servicio de atestación. Una vez que el cliente confía en el certificado de mantenimiento, sabe que está hablando con un enclave de VBS de confianza y emitirá la consulta que usará dicho enclave.
 

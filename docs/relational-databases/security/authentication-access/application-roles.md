@@ -22,12 +22,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8232644c8d44b4df541d8301dffa75771fbba44f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01d9a3825b2972313602cbc077c0da501868c712
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628429"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332225"
 ---
 # <a name="application-roles"></a>Roles de la aplicación
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "85628429"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|||  
-|-|-|  
+| Tarea | Tipo |
+| ---- | ---- |
 |Crear un rol de aplicación.|[Crear un rol de aplicación](../../../relational-databases/security/authentication-access/create-an-application-role.md) y [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-application-role-transact-sql.md)|  
 |Modificar un rol de aplicación.|[ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-application-role-transact-sql.md)|  
 |Eliminar un rol de aplicación.|[DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-application-role-transact-sql.md)|  

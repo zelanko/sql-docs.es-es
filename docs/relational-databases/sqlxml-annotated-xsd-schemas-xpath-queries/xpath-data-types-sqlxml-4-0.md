@@ -29,12 +29,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764873"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332644"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de datos de XPath (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "85764873"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no realiza la selección por posición en los conjuntos de nodos: por ejemplo, la consulta de XPath `Customer[3]` significa el tercer cliente; este tipo de selección por posición no se admite en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por tanto, no se implementan las conversiones de conjunto de nodos a**cadena** o de conjunto de nodos en**número** tal y como se describe en la especificación de XPath. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la semántica "cualquiera" donde la especificación de XPath especifica la semántica "primero". Por ejemplo, según la especificación XPath de W3C, la consulta XPath `Order[OrderDetail/@UnitPrice > 10.0]` selecciona los pedidos con el primer **OrderDetail** que tiene un **UnitPrice** mayor que 10,0. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta consulta XPath selecciona los pedidos con cualquier **OrderDetail** que tenga un **UnitPrice** mayor que 10,0.  
   
- La conversión a un **valor booleano** genera una prueba de existencia; por lo tanto, la consulta XPath `Products[@Discontinued=true()]` es equivalente a la expresión SQL "Products. Discontinued is not null", no a la expresión SQL "Products. Discontinued = 1". Para que la consulta sea equivalente a la última expresión SQL, convierta primero el conjunto de nodos a un tipo no**booleano** , como **Number**. Por ejemplo: `Products[number(@Discontinued) = true()]`.  
+ La conversión a un **valor booleano** genera una prueba de existencia; por lo tanto, la consulta XPath `Products[@Discontinued=true()]` es equivalente a la expresión SQL "Products. Discontinued is not null", no a la expresión SQL "Products. Discontinued = 1". Para que la consulta sea equivalente a la última expresión SQL, convierta primero el conjunto de nodos a un tipo no**booleano** , como **Number**. Por ejemplo, `Products[number(@Discontinued) = true()]`.  
   
  Dado que la mayoría de los operadores están definidos para ser TRUE si son TRUE para cualquiera o uno de los nodos del conjunto de nodos, estas operaciones siempre se evalúan como FALSE si el conjunto de nodos está vacío. Así, si A está vacío, `A = B` y `A != B` son FALSE y `not(A=B)` y `not(A!=B)` son TRUE.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "85764873"
   
 |Tipo de datos XDR|Tipo de datos de XPath<br /><br /> equivalente|Conversión de SQL Server utilizada|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|No aplicable|NingunaEmployeeID|  
+|Nonebin.base64bin.hex|N/D|NingunaEmployeeID|  
 |boolean|boolean|CONVERT (bit, IdEmpleado)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
@@ -126,12 +126,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  Como se muestra en la tabla siguiente, ésta es la misma conversión que se aplica para otras expresiones de XPath (como expresiones de literales o compuestas).  
   
-||||||  
-|-|-|-|-|-|  
-||X es desconocido|X es una **cadena**|X es el **número**|X es un **valor booleano**|  
-|string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
-|number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN (X) > 0|X != 0|-|  
+|   | X es desconocido | X es una cadena | X es el número | X es un valor booleano |
+| - | ------------ | ----------- | ----------- | ------------ |
+| **string(X)** |CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
+| **number(X)** |CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
+| **boolean(X)** |-|LEN (X) > 0|X != 0|-|  
   
 ## <a name="examples"></a>Ejemplos  
   

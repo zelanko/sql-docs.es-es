@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138327"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396565"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configuración del proyecto (asignación de tipo) (MySQLToSQL)
 La configuración del proyecto de asignación de tipos permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA.  
@@ -48,9 +48,8 @@ Haga clic en esta opción para restablecer la lista asignación de tipos a los v
 ## <a name="type-mappings"></a>Asignaciones de tipos  
 En la tabla siguiente se muestra la asignación predeterminada entre los tipos de datos de origen y de destino.  
   
-|||  
+|Tipo de datos MySQL|Tipo de datos de SQL Server|  
 |-|-|  
-|**Tipo de datos MySQL**|**SQL Server tipo de datos**|  
 |bigint|bigint|  
 |BIGINT [*.. 255]|bigint|  
 |binary|binario [1]|  
@@ -86,18 +85,18 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |datetime|datetime2 [0]|  
 |dec|Decimal|  
 |Dec [*.. 65]|decimal [*] [0]|  
-|Dec [*.. 65] [\*.. 30|decimal [*] [\*]|  
+|Dec [*.. 65] [ \* .. 30|decimal [*] [ \* ]|  
 |Decimal|Decimal|  
 |decimal [*.. 65]|decimal [*] [0]|  
-|decimal [*.. 65] [\*.. 30|decimal [*] [\*]|  
+|decimal [*.. 65] [ \* .. 30|decimal [*] [ \* ]|  
 |double|Float [53]|  
 |double precision|Float [53]|  
-|precisión doble [*.. 255] [\*.. 30|Numeric [*] [\*]|  
-|Double [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|precisión doble [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
+|Double [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
 |fijo|NUMERIC|  
-|corregido [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|corregido [*.. 65] [ \* .. 30|Numeric [*] [ \* ]|  
 |FLOAT|Float [24]|  
-|Float [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|Float [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
 |Float [*.. 53]|Float [53]|  
 |int|int|  
 |int [*.. 255]|int|  
@@ -132,13 +131,13 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |nchar [2.. 255]|nchar [*]|  
 |NUMERIC|NUMERIC|  
 |Numeric [*.. 65]|Numeric [*] [0]|  
-|Numeric [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|Numeric [*.. 65] [ \* .. 30|Numeric [*] [ \* ]|  
 |NVARCHAR|nvarchar [1]|  
 |nvarchar [0.. 1]|nvarchar [1]|  
 |nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |real|Float [53]|  
-|real [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|real [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
 |serial|bigint|  
 |SMALLINT|SMALLINT|  
 |smallint [*.. 255]|SMALLINT|  
@@ -156,18 +155,18 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |BIGINT sin signo [*.. 255]|bigint|  
 |sin signo Dec|Decimal|  
 |sin signo Dec [*.. 65]|decimal [*] [0]|  
-|sin signo Dec [*.. 65] [\*.. 30|decimal [*] [\*]|  
+|sin signo Dec [*.. 65] [ \* .. 30|decimal [*] [ \* ]|  
 |decimal sin signo|Decimal|  
 |decimal sin signo [*.. 65]|decimal [*] [0]|  
-|decimal sin signo [*.. 65] [\*.. 30|decimal [*] [\*]|  
+|decimal sin signo [*.. 65] [ \* .. 30|decimal [*] [ \* ]|  
 |unsigned Double|Float [53]|  
 |doble precisión sin signo|Float [53]|  
-|doble precisión sin signo [*.. 255] [\*.. 30|Numeric [*] [\*]|  
-|Double sin signo [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|doble precisión sin signo [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
+|Double sin signo [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
 |Fixed sin signo|NUMERIC|  
-|sin signo fijo [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|sin signo fijo [*.. 65] [ \* .. 30|Numeric [*] [ \* ]|  
 |unsigned Float|Float [24]|  
-|unsigned Float [*.. 255] [\*.. 30|Numeric [*] [\*]|  
+|unsigned Float [*.. 255] [ \* .. 30|Numeric [*] [ \* ]|  
 |unsigned Float [*.. 53]|Float [53]|  
 |unsigned int|bigint|  
 |unsigned int [*.. 255]|bigint|  
@@ -177,9 +176,9 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |unsigned MEDIUMINT [*.. 255]|int|  
 |numérico sin signo|NUMERIC|  
 |numérico sin signo [*.. 65]|Numeric [*] [0]|  
-|numérico sin signo [*.. 65] [\*.. 30|Numeric [*] [\*]|  
+|numérico sin signo [*.. 65] [ \* .. 30|Numeric [*] [ \* ]|  
 |real sin signo|Float [53]|  
-|real sin signo [*.. 255 [[\*.. 30|Numeric [*] [\*]|  
+|real sin signo [*.. 255 [[ \* .. 30|Numeric [*] [ \* ]|  
 |smallint sin signo|int|  
 |smallint sin signo [*.. 255]|int|  
 |tinyint sin signo|TINYINT|  

@@ -19,12 +19,12 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: a345e41f42cc70e941e4a87e3510312313d4dc03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aad472489192516d367185572d1c9ac67eb78154
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764665"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248783"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,9 +33,8 @@ ms.locfileid: "85764665"
   
  Esta vista de catálogo es similar a [Sys. fulltext_languages &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
     
-||||  
-|-|-|-|  
-|**Nombre de la columna**|**Type**|**Descripción**|  
+|Nombre de la columna|Tipo|Description|  
+|-|-|-|   
 |lcid|int|Identificador de configuración regional (LCID) de Microsoft Windows para el idioma.|  
 |name|sysname|Es el valor del alias en [sys.syslenguajes &#40;&#41;de Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) que corresponde al valor de **LCID**o la representación de cadena del LCID numérico.|  
   

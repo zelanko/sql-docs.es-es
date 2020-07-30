@@ -30,13 +30,14 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc526febaed2fd049fb8fa95fd0b0585933fff9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6606da2bec127b6eb70eea0f5e676dd23a974e0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009832"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248803"
 ---
-# <a name="using-xml-data-types"></a>Usar tipos de datos XML
+# <a name="using-xml-data-types-in-sql-server-native-clients"></a>Usar tipos de datos XML en SQL Server clientes nativos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se ha introducido un tipo de datos **xml** que permite almacenar fragmentos y documentos XML en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El tipo de datos **xml** es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es de algún modo similar a otros tipos integrados, como **int** y **varchar**. Al igual que ocurre con otros tipos integrados, el tipo de datos **xml** puede usarse como un tipo de columna al crear una tabla, como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto por una función o en funciones CAST y CONVERT.  
@@ -83,13 +84,13 @@ ms.locfileid: "86009832"
 |Tipo de datos|A datos XML<br /><br /> **XML**|A datos XML<br /><br /> **Distinto de XML**|Desde datos XML<br /><br /> **XML**|Desde datos XML<br /><br /> **Distinto de XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Paso a través<sup>6,7</sup>|Error<sup>1</sup>|Correcto<sup>11, 6</sup>|Error<sup>8</sup>|  
-|DBTYPE_BYTES|Paso a través<sup>6,7</sup>|N/D<sup>2</sup>|Correcto<sup>11, 6</sup>|N/D <sup>2</sup>|  
-|DBTYPE_WSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
-|DBTYPE_BSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
-|DBTYPE_STR|Correcto<sup>6, 9, 10</sup>|N/D <sup>2</sup>|Correcto<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Flujo de bytes mediante **ISequentialStream**<sup>7</sup>|N/D <sup>2</sup>|Flujo de bytes mediante **ISequentialStream**<sup>11</sup>|N/D <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Paso a través<sup>6,7</sup>|N/D <sup>2</sup>|N/D|N/D <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
+|DBTYPE_BYTES|Paso a través<sup>6,7</sup>|N/D<sup>2</sup>|Correcto<sup>11, 6</sup>|N/A <sup>2</sup>|  
+|DBTYPE_WSTR|Paso a través<sup>6,10</sup>|N/A <sup>2</sup>|Correcto<sup>4, 6, 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_BSTR|Paso a través<sup>6,10</sup>|N/A <sup>2</sup>|Correcto<sup>3</sup>|N/A <sup>2</sup>|  
+|DBTYPE_STR|Correcto<sup>6, 9, 10</sup>|N/A <sup>2</sup>|Correcto<sup>5, 6, 12</sup>|N/A <sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Flujo de bytes mediante **ISequentialStream**<sup>7</sup>|N/A <sup>2</sup>|Flujo de bytes mediante **ISequentialStream**<sup>11</sup>|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Paso a través<sup>6,7</sup>|N/A <sup>2</sup>|N/D|N/A <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Paso a través<sup>6,10</sup>|N/A <sup>2</sup>|Correcto<sup>3</sup>|N/A <sup>2</sup>|  
   
  <sup>1</sup> Si se especifica un tipo de servidor distinto de DBTYPE_XML con **ICommandWithParameters:: SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_XML, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED, el estado del parámetro es DBSTATUS_E_BADACCESSOR); en caso contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de XML al tipo de datos del parámetro.  
   
@@ -136,7 +137,7 @@ ms.locfileid: "86009832"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Los conjuntos de filas de esquema COLUMNS y PROCEDURE_PARAMETERS  
  Las adiciones a los conjuntos de filas de esquema COLUMNS y PROCEDURE_PARAMETERS incluyen las columnas siguientes.  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nombre del catálogo donde se define una colección de esquemas XML. Es NULL para una columna no XML o una columna XML sin tipo.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nombre de un esquema donde se define una colección de esquemas XML. Es NULL para una columna no XML o una columna XML sin tipo.|  
@@ -148,7 +149,7 @@ ms.locfileid: "86009832"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>El conjunto de filas de esquema SS_XMLSCHEMA  
  Se ha introducido un nuevo conjunto de filas de esquema SS_XMLSCHEMA para que los clientes recuperen información del esquema XML. El conjunto de filas SS_XMLSCHEMA contiene las columnas siguientes.  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catálogo al que pertenece una colección XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Esquema al que pertenece una colección XML.|  
@@ -168,7 +169,7 @@ ms.locfileid: "86009832"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER  
  Para admitir el tipo de datos **XML** a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa el nuevo conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER, que contiene los valores siguientes.  
   
-|Nombre|Tipo|Descripción|  
+|Nombre|Tipo|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nombre del catálogo (base de datos) donde se define una colección de esquemas XML. Una de las partes del identificador de nombre de tres partes de SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nombre de un esquema XML de la colección de esquemas. Una de las partes del identificador de nombre de tres partes de SQL.|  
@@ -177,7 +178,7 @@ ms.locfileid: "86009832"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN  
  Para admitir la creación de tablas en la interfaz **ITableDefinition** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega tres nuevas columnas al conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nombre|Tipo|Descripción|  
+|Nombre|Tipo|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Para las columnas XML con tipo, esta propiedad es una cadena que especifica el nombre del catálogo donde se almacena el esquema XML. Para otros tipos de columna, esta propiedad devuelve una cadena vacía.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Para las columnas XML con tipo, esta propiedad es una cadena que especifica el nombre del esquema XML que define esta columna.|  
@@ -197,7 +198,7 @@ ms.locfileid: "86009832"
 #### <a name="the-icolumnsrowset-interface"></a>La interfaz IColumnsRowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client agrega las siguientes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] columnas específicas del conjunto de filas devuelto por el método **IColumnRowset:: GetColumnsRowset** . Estas columnas contienen el nombre de tres partes de una colección de esquemas XML. Para las columnas que no son XML o las columnas XML sin tipo, las tres columnas toman el valor predeterminado NULL.  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catálogo al que pertenece una colección de esquemas XML.<br /><br /> De lo contrario, NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Esquema al que pertenece una colección de esquemas XML. De lo contrario, NULL.|  

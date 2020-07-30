@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036595"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362655"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -67,7 +67,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  La expresión anterior produce los siguientes resultados:  
   
-||Reseller Sales Amount|  
+|City|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3.508.904,84|  
 |London|$1.521.530,09|  
@@ -102,7 +102,7 @@ FROM [Adventure Works]
   
  La consulta anterior devuelve los siguientes resultados (las filas de la sección intermedia se han quitado para facilitar la lectura).  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Bicicletas de paseo|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
 |Paseo: 2000 azul, 46|$321.027,03|$333.021,50|($11.994,47)|  
@@ -122,7 +122,7 @@ FROM [Adventure Works]
   
  Tenga en cuenta que la consulta solicita el cien por cien (100%); esto significa que deben devolverse todas las filas. Sin embargo, dado que hay valores negativos en el *Numeric_Expression* , solo se devuelve una fila.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Bicicletas de paseo|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
   

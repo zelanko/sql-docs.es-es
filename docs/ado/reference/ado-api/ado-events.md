@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1b69ced6c5d55b3b393ec30247c1a9f35f9fc57
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a93353be1737b38e7acb557a682e84cbb947c2a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747326"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242875"
 ---
 # <a name="ado-events"></a>Eventos de ADO
 
-|||  
+|Evento|Descripción|  
 |-|-|  
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Se llama después de la operación **BeginTrans** .|  
 |[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Se llama después de la operación **CommitTrans** .|  
 |[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Se llama después de que se inicie una conexión.|  
-|[Desconectar](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Se llama después de que finalice una conexión.|  
+|[Desconexión](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Se llama después de que finalice una conexión.|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Se llama cuando se intenta moverse a una fila más allá del final del conjunto de **registros**.|  
 |[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|Se llama después de que se haya terminado de ejecutar un comando.|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Se llama después de que todos los registros de una operación asincrónica larga se hayan recuperado en el **conjunto de registros**.|  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 638a5f791f7997cc96b22bde47f41198a9946133
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 517e672cdb5bb7a6991f83b72f25f937ecbb6359
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882785"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362825"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importar y exportar conocimiento
 
@@ -28,7 +28,7 @@ ms.locfileid: "85882785"
 ## <a name="in-this-section"></a>En esta sección  
  Puede realizar las operaciones de importación y exportación siguientes:  
   
-|||  
+|Descripción de la operación|Tema|  
 |-|-|  
 |Exportar un dominio de una base de conocimiento a un archivo de datos .dqs|[Exportar un dominio a un archivo .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |Importar un dominio desde un archivo de datos .dqs a una base de conocimiento existente|[Importar un dominio desde un archivo .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  

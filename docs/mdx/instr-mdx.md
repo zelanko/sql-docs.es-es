@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105302"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363415"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -48,7 +48,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |---------------|------------------|  
 |String1 es de longitud cero|cero (0)|  
 |String1 es NULL|no definido|  
-|String2 es de longitud cero|start|  
+|String2 es de longitud cero|start.|  
 |String2 es NULL|no definido|  
 |String2 no se encuentra|cero (0)|  
 |start es mayor que Len(String2)|cero (0)|  
@@ -95,9 +95,8 @@ from [Adventure Works]
   
  La tabla siguiente muestra los resultados obtenidos.  
   
-|||  
+|Campo en medidas|Results|  
 |-|-|  
-||Results|  
 |lowercase found in lowercase string|16|  
 |uppercase found in lowercase string|16|  
 |searched string is empty|0|  

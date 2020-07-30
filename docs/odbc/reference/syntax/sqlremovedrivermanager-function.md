@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 27b32c1c4e0f3f4d5359af287ba07d40b033af00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c94765dfe76bc5a1ef188328a6fe27e96671efb1
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301816"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363138"
 ---
 # <a name="sqlremovedrivermanager-function"></a>Función SQLRemoveDriverManager
 **Conformidad**  
  Versión introducida: ODBC 3,0: desusado en Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 y sistemas operativos posteriores.  
   
  **Resumen**  
- **SQLRemoveDriverManager** cambia o quita información acerca de los componentes principales de ODBC de la entrada Odbcinst. ini en la información del sistema.  
+ **SQLRemoveDriverManager** cambia o quita información sobre los componentes principales de ODBC de la entrada Odbcinst.ini en la información del sistema.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -49,14 +49,14 @@ BOOL SQLRemoveDriverManager(
  La función devuelve TRUE si es correcto, FALSE si se produce un error. Si no existe ninguna entrada en la información del sistema cuando se llama a esta función, la función devuelve FALSE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLRemoveDriverManager** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLRemoveDriverManager** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Error general del instalador|Se produjo un error en el que no había ningún error específico del instalador.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|No se encontró el componente en el registro|El instalador no pudo quitar la información del administrador de controladores porque no existía en el registro o no se encontró en el registro.|  
 |ODBC_ERROR_USAGE_UPDATE_FAILED|No se pudo aumentar o reducir el recuento de uso de componentes|El instalador no pudo reducir el recuento de uso del administrador de controladores.|  
-|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a una falta de memoria.|  
+|ODBC_ERROR_OUT_OF_MEM|Memoria agotada|El instalador no pudo realizar la función debido a una falta de memoria.|  
   
 ## <a name="comments"></a>Comentarios  
  **SQLRemoveDriverManager** complementa la función **SQLInstallDriverManager** y actualiza el recuento de uso de componentes en la información del sistema. Solo se debe llamar a esta función desde una aplicación de instalación.  
@@ -77,17 +77,27 @@ BOOL SQLRemoveDriverManager(
  **SQLRemoveDriverManager** realmente no quita ningún archivo. El programa de llamada es responsable de la eliminación de archivos y el mantenimiento de los recuentos de uso de archivos. No obstante, los archivos del administrador de controladores no deben quitarse cuando el recuento de uso de componentes y el recuento de uso de archivos alcanzan cero, ya que estos archivos pueden ser usados por otras aplicaciones que no han incrementado el recuento de uso de archivos.  
   
  Se llama a **SQLRemoveDriverManager** como parte del proceso de desinstalación. Los componentes principales de ODBC (que incluyen el administrador de controladores, la biblioteca de cursores, el instalador, la biblioteca de lenguajes, el administrador, los archivos de thunk, etc.) se desinstalan en su totalidad. Los siguientes archivos no se quitan cuando se llama a **SQLRemoveDriverManager** como parte del proceso de desinstalación:  
-  
-|||  
-|-|-|  
-|ODBC32DLL|ODBCCP32. DLL|  
-|ODBCCR32. DLL|ODBC16GT. DLL|  
-|ODBCCU32. DLL|ODBC32GT. DLL|  
-|ODBCINT. DLL|DS16GT. DLL|  
-|ODBCTRAC. DLL|DS32GT. DLL|  
-|MSVCRT40. DLL|ODBCAD32. EJECUTABLE|  
-|ODBCCP32. CPL||  
-  
+
+:::row:::
+    :::column:::
+        ODBC32DLL  
+        ODBCCR32.DLL  
+        ODBCCU32.DLL  
+        ODBCINT.DLL  
+        ODBCTRAC.DLL  
+        MSVCRT40.DLL  
+        ODBCCP32.CPL  
+    :::column-end:::
+    :::column:::
+        ODBCCP32.DLL  
+        ODBC16GT.DLL  
+        ODBC32GT.DLL  
+        DS16GT.DLL  
+        DS32GT.DLL  
+        ODBCAD32.EXE  
+    :::column-end:::
+:::row-end:::
+
  También se llama a **SQLRemoveDriverManager** como parte de un proceso de actualización. Si una aplicación detecta que tiene que realizar una actualización y ha instalado previamente el controlador, el controlador se debe quitar y volver a instalar.  
   
  Primero se debe llamar a **SQLRemoveDriverManager** para reducir el recuento de uso de componentes. A continuación, se debe llamar a **SQLInstallDriverEx** para incrementar el recuento de uso de componentes. El programa de instalación de la aplicación debe reemplazar los archivos de componentes principales antiguos por los nuevos archivos. Los recuentos de uso de archivos seguirán siendo los mismos y otras aplicaciones que usen los archivos de componentes principales de la versión anterior utilizarán los archivos de la versión más reciente.  

@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747060"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242815"
 ---
 # <a name="adostreamconstruction-interface"></a>Interfaz ADOStreamConstruction
 La interfaz **ADOStreamConstruction** se utiliza para construir un objeto de **secuencia** de ADO a partir de un OLE DB objeto **IStream** en una aplicación de C/C++.  
   
 ## <a name="properties"></a>Propiedades  
   
-|||  
+|Propiedad|Descripción|  
 |-|-|  
-|[Propiedad de la secuencia](../../../ado/reference/ado-api/stream-property.md)|Lectura y escritura. Obtiene o establece un objeto de **secuencia** de OLE DB.|  
+|[Stream](../../../ado/reference/ado-api/stream-property.md)|Lectura y escritura. Obtiene o establece un objeto de **secuencia** de OLE DB.|  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  
@@ -37,7 +37,7 @@ La interfaz **ADOStreamConstruction** se utiliza para construir un objeto de **s
 ## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Dado un OLE DB objeto **IStream** ( `pStream` ), la construcción de un objeto de **secuencia** de ADO ( `adoStr` ) se suma a las tres operaciones básicas siguientes:  
   
 1.  Cree un objeto de **secuencia** de ADO:  
@@ -68,7 +68,7 @@ adoStrConstruct->put_Stream(pUnk);
 ## <a name="requirements"></a>Requisitos  
  **Versión:** ADO 2,0 o una versión posterior  
   
- **Biblioteca:** msado15. dll  
+ **Biblioteca:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4f97356a810f5aa0d911e09df016c62b03ee726b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56d65221ba90b217521fa6a7563d70b7fc44f940
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304796"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363335"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Mensajes de Error nativo de controlador ODBC de Visual FoxPro
 En las tablas siguientes se enumeran los mensajes de error nativos del controlador ODBC de Visual FoxPro.  
   
 ## <a name="001"></a>001  
   
-|||  
+|Código de error|Mensaje de error|  
 |-|-|  
 |1|La característica no está disponible.|  
 |2|Error de operación de entrada/salida.|  
@@ -36,7 +36,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
   
 ## <a name="100"></a>100  
   
-|||  
+|Código de error|Mensaje de error|  
 |-|-|  
 |100|Hay demasiados archivos abiertos.|  
 |101|No se puede abrir el archivo.|  
@@ -92,7 +92,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
   
 ## <a name="200"></a>200  
   
-|||  
+|Código de error|Mensaje de error|  
 |-|-|  
 |200|Error de sintaxis.|  
 |201|Se usaron demasiados nombres.|  
@@ -132,7 +132,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
   
 ## <a name="300"></a>300  
   
-|||  
+|Código de error|Mensaje de error|  
 |-|-|  
 |301|Operador/tipo de operando no coincidente.|  
 |302|No coinciden los tipos de datos.|  
@@ -143,7 +143,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
   
 ## <a name="400"></a>400  
   
-|||  
+|Código de error|Mensaje de error|  
 |-|-|  
 |406|La impresora no está lista.|  
 |407|Argumento no válido usado con la función SET.|  
@@ -160,10 +160,10 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
 |471|Formato de columna incorrecto.|  
 |473|La propiedad de nivel de entorno no es válida.|  
 |474|Llamada no válida emitida al ejecutar una secuencia SQLEXEC ().|  
-|479|\\ *value*Valor\\de nombre de columna de actualización no válido.|  
+|479|Valor de nombre de columna de actualización no válido \\ *value* \\ .|  
 |489|Los campos generales no se pueden usar en la condición WHERE de una instrucción UPDATE. Cambie la propiedad WhereType de la vista.|  
 |491|No se ha especificado ninguna tabla de actualización. Use la propiedad tables del cursor.|  
-|492|No se ha especificado ninguna columna de clave para \\el *valor*\\de la tabla de actualización. Use la propiedad KeyFieldList del cursor.|  
+|492|No se ha especificado ninguna columna de clave para el valor de la tabla de actualización \\ *value* \\ . Use la propiedad KeyFieldList del cursor.|  
 |493|Falta el parámetro SQL.|  
 |494|La definición de la vista ha cambiado.|  
 |495|ADVERTENCIA: la clave definida por la propiedad KeyField para el *valor* de la tabla no es única.|  
@@ -172,7 +172,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
   
 ## <a name="500"></a>500  
   
-|||  
+|Código de error|Mensaje de error|  
 |-|-|  
 |502|No se puede escribir en el registro porque está en uso.|  
 |503|No se puede bloquear el archivo.|  
@@ -182,7 +182,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
 |523|El usuario canceló la ejecución.|  
 |525|La función no se admite en tablas remotas.|  
 |526|Error de conectividad: *valor.*|  
-|527|No se puede cargar la biblioteca ODBC, ODBC32. DLL.|  
+|527|No se puede cargar la biblioteca ODBC ODBC32.DLL.|  
 |528|Falta el punto de entrada de ODBC, *valor*.|  
 |530|Captura cancelada; la tabla remota está cerrada.|  
 |532|No se admite la conversión de tipos.|  
@@ -194,7 +194,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
 |542|Los campos de la tabla base han cambiado y ya no coinciden con los campos de vista. No se pueden establecer las propiedades del campo de vista.|  
 |543|La conversión de tipos requerida por la propiedad DataType para el campo '*Value*' no es válida.|  
 |544|La propiedad DataType del campo '*Value*' no es válida.|  
-|545|Búfer de tabla para \\el *valor*de alias \ contiene cambios no confirmados.|  
+|545|Búfer de tabla para el \\ *valor*de alias \ contiene cambios no confirmados.|  
 |546|No se puede cerrar la tabla durante la ejecución de la expresión enlazada a tablas.|  
 |547|No se puede insertar una fila vacía de una vista en sus tablas base.|  
 |548|El *valor* de tabla tiene uno o varios índices no estructurales abiertos. Ciérrelas y vuelva a intentar la operación de inicio.|  
@@ -233,7 +233,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
   
 ## <a name="600"></a>600  
   
-|||  
+|Código de error|Mensaje de error|  
 |-|-|  
 |601|El nombre de alias ya está en uso.|  
 |602|La operación no es válida para un campo de tipo Memo, general o imagen.|  
@@ -251,7 +251,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
   
 ## <a name="700"></a>700  
   
-|||  
+|Código de error|Mensaje de error|  
 |-|-|  
 |700|Otro usuario está usando el registro.|  
 |701|El archivo debe estar abierto exclusivamente.|  
@@ -277,7 +277,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
   
 ## <a name="800"></a>800  
   
-|||  
+|Código de error|Mensaje de error|  
 |-|-|  
 |802|SQL: no se encuentra la tabla.|  
 |872|Demasiadas columnas.|  
@@ -290,7 +290,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
   
 ## <a name="900"></a>900  
   
-|||  
+|Código de error|Mensaje de error|  
 |-|-|  
 |901|El valor del argumento de la función, el tipo o el recuento no es válido.|  
 |902|Error del evaluador de expresiones.|  
@@ -322,7 +322,7 @@ En las tablas siguientes se enumeran los mensajes de error nativos del controlad
 |945|Se ha liberado el objeto actual.|  
 |947|La expresión es demasiado compleja.|  
 |951|No se puede borrar el objeto en uso.|  
-|955|Suerte. INI/el registro está dañado.|  
+|955|WIN.INI/Registry está dañado.|  
 |957|Error al obtener acceso al administrador de trabajos de impresión.|  
 |959|Coordenadas no válidas.|  
 |960|Redefinición no válida del *valor*de la variable.|  

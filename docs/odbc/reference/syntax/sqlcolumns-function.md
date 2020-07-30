@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36293c1f2393e9a57351fc8cd19dcc6e3338f5cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 26d71bbe370e41683da44aafecd32c9e3050a223
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301261"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362761"
 ---
 # <a name="sqlcolumns-function"></a>Función SQLColumns
 **Conformidad**  
@@ -53,7 +53,7 @@ SQLRETURN SQLColumns(
  *StatementHandle*  
  Entradas Identificador de instrucción.  
   
- *Nombrecatálogo*  
+ *CatalogName*  
  Entradas Nombre del catálogo. Si un controlador admite catálogos para algunas tablas, pero no para otros, como cuando el controlador recupera datos de distintos DBMS, una cadena vacía ("") indica las tablas que no tienen catálogos. *Nombrecatálogo* no puede contener un patrón de búsqueda de cadenas.  
   
 > [!NOTE]  
@@ -102,7 +102,7 @@ SQLRETURN SQLColumns(
 |24000|Estado de cursor no válido|Un cursor estaba abierto en el *StatementHandle*y se ha llamado a **SQLFetch** o **SQLFetchScroll** . Este error lo devuelve el administrador de controladores si **SQLFetch** o **sqlfetchscroll** no ha devuelto SQL_NO_DATA y lo devuelve el controlador si **SQLFetch** o **sqlfetchscroll** ha devuelto SQL_NO_DATA.<br /><br /> Un cursor estaba abierto en el *StatementHandle* , pero no se ha llamado a **SQLFetch** o **SQLFetchScroll** .|  
 |40001|Error de serialización|La transacción se revirtió debido a un interbloqueo de recursos con otra transacción.|  
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*. A continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY009|Uso no válido de puntero nulo|El atributo de instrucción SQL_ATTR_METADATA_ID se estableció en SQL_TRUE, el argumento *nombrecatálogo* era un puntero nulo y el SQL_CATALOG_NAME *InfoType* devuelve los nombres de catálogo que se admiten.<br /><br /> (DM) el atributo de instrucción SQL_ATTR_METADATA_ID se estableció en SQL_TRUE y el argumento *SchemaName*, *TableName*o *columnName* era un puntero nulo.|  
@@ -148,13 +148,22 @@ SQLRETURN SQLColumns(
 |RADIX|NUM_PREC_RADIX|  
   
  Las columnas siguientes se han agregado al conjunto de resultados devuelto por **SQLColumns** para ODBC 3. *x*:  
-  
-|||  
-|-|-|  
-|CHAR_OCTET_LENGTH|ORDINAL_POSITION|  
-|COLUMN_DEF|SQL_DATA_TYPE|  
-|IS_NULLABLE|SQL_DATETIME_SUB|  
-  
+
+:::row:::
+    :::column:::
+        CHAR_OCTET_LENGTH  
+        COLUMN_DEF  
+    :::column-end:::
+    :::column:::
+        IS_NULLABLE  
+        ORDINAL_POSITION  
+    :::column-end:::
+    :::column:::
+        SQL_DATA_TYPE  
+        SQL_DATETIME_SUB  
+    :::column-end:::
+:::row-end:::
+
  En la tabla siguiente se enumeran las columnas del conjunto de resultados. El controlador puede definir columnas adicionales más allá de la columna 18 (IS_NULLABLE). Una aplicación debe obtener acceso a las columnas específicas del controlador contando desde el final del conjunto de resultados en lugar de especificar una posición ordinal explícita. Para obtener más información, vea [datos devueltos por las funciones de catálogo](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
 |Nombre de la columna|Columna<br /><br /> number|Tipo de datos|Comentarios|  

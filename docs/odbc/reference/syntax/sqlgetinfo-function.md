@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ce6c9e6032201f41eae058c9553f9bd61c4f079
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 9a88eb1a4aff7d166a81bbf6ec64ae2b878fd5fa
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279579"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363385"
 ---
 # <a name="sqlgetinfo-function"></a>Función SQLGetInfo
 
@@ -71,11 +71,11 @@ SQLRETURN SQLGetInfo(
   
  En el caso de todos los demás tipos de datos, se omite el valor de *BufferLength* y el controlador asume que el tamaño de \* *INFOVALUEPTR* es SQLUSMALLINT o sqluinteger que incluya, en función de la *InfoType*.  
   
-## <a name="returns"></a>Devoluciones  
+## <a name="returns"></a>Devuelve  
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnostics  
+## <a name="diagnostics"></a>Diagnóstico  
 
  Cuando **SQLGetInfo** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, se puede obtener un valor SQLSTATE asociado llamando a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_DBC y un *identificador* de *ConnectionHandle*. En la tabla siguiente se enumeran los valores de SQLSTATE que suele devolver **SQLGetInfo** y se explica cada uno de ellos en el contexto de esta función. la notación "(DM)" precede a las descripciones de SQLSTATEs devueltas por el administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
@@ -115,7 +115,7 @@ SQLRETURN SQLGetInfo(
   
  Un controlador debe devolver un valor para cada tipo de información que se define en las tablas siguientes. Si un tipo de información no se aplica al controlador o el origen de datos, el controlador devuelve uno de los valores enumerados en la tabla siguiente.  
 
-|||
+|Tipo de información|Valor|
 |-|-|
 |Cadena de caracteres ("Y" o "N")|"N"|
 |Cadena de caracteres (no es "Y" o "N")|cadena vacía.|
@@ -124,7 +124,7 @@ SQLRETURN SQLGetInfo(
   
  Por ejemplo, si un origen de datos no admite procedimientos, **SQLGetInfo** devuelve los valores que se muestran en la tabla siguiente para los valores de *InfoType* relacionados con los procedimientos.  
 
-|||
+|InfoType|Valor|
 |-|-|
 |SQL_PROCEDURES|"N"|
 |SQL_ACCESSIBLE_PROCEDURES|"N"|
@@ -142,29 +142,52 @@ SQLRETURN SQLGetInfo(
 ## <a name="driver-information"></a>Información del controlador  
 
  Los siguientes valores del argumento *InfoType* devuelven información sobre el controlador ODBC, como el número de instrucciones activas, el nombre del origen de datos y el nivel de cumplimiento de los estándares de interfaz:  
-  
-|||  
-|-|-|  
-|SQL_ACTIVE_ENVIRONMENTS|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|  
-|SQL_ASYNC_DBC_FUNCTIONS|SQL_FILE_USAGE|  
-|SQL_ASYNC_MODE|SQL_GETDATA_EXTENSIONS|  
-|SQL_ASYNC_NOTIFICATION|SQL_INFO_SCHEMA_VIEWS|  
-|SQL_BATCH_ROW_COUNT|SQL_KEYSET_CURSOR_ATTRIBUTES1|  
-|SQL_BATCH_SUPPORT|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
-|SQL_DATA_SOURCE_NAME|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|  
-|SQL_DRIVER_AWARE_POOLING_SUPPORTED|SQL_MAX_CONCURRENT_ACTIVITIES|  
-|SQL_DRIVER_HDBC|SQL_MAX_DRIVER_CONNECTIONS|  
-|SQL_DRIVER_HDESC|SQL_ODBC_INTERFACE_CONFORMANCE|  
-|SQL_DRIVER_HENV|SQL_ODBC_STANDARD_CLI_CONFORMANCE|  
-|SQL_DRIVER_HLIB|SQL_ODBC_VER|  
-|SQL_DRIVER_HSTMT|SQL_PARAM_ARRAY_ROW_COUNTS|  
-|SQL_DRIVER_NAME|SQL_PARAM_ARRAY_SELECTS|  
-|SQL_DRIVER_ODBC_VER|SQL_ROW_UPDATES|  
-|SQL_DRIVER_VER|SQL_SEARCH_PATTERN_ESCAPE|  
-|SQL_DYNAMIC_CURSOR_ATTRIBUTES1|SQL_SERVER_NAME|  
-|SQL_DYNAMIC_CURSOR_ATTRIBUTES2|SQL_STATIC_CURSOR_ATTRIBUTES1|  
-|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_STATIC_CURSOR_ATTRIBUTES2|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ACTIVE_ENVIRONMENTS  
+        SQL_ASYNC_DBC_FUNCTIONS  
+        SQL_ASYNC_MODE  
+        SQL_ASYNC_NOTIFICATION  
+        SQL_BATCH_ROW_COUNT  
+        SQL_BATCH_SUPPORT  
+        SQL_DATA_SOURCE_NAME  
+        SQL_DRIVER_AWARE_POOLING_SUPPORTED  
+        SQL_DRIVER_HDBC  
+        SQL_DRIVER_HDESC  
+        SQL_DRIVER_HENV  
+        SQL_DRIVER_HLIB  
+        SQL_DRIVER_HSTMT  
+        SQL_DRIVER_NAME  
+        SQL_DRIVER_ODBC_VER  
+        SQL_DRIVER_VER  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES1  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES2  
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1  
+    :::column-end:::
+    :::column:::
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2  
+        SQL_FILE_USAGE  
+        SQL_GETDATA_EXTENSIONS  
+        SQL_INFO_SCHEMA_VIEWS  
+        SQL_KEYSET_CURSOR_ATTRIBUTES1  
+        SQL_KEYSET_CURSOR_ATTRIBUTES2  
+        SQL_MAX_ASYNC_CONCURRENT_STATEMENTS  
+        SQL_MAX_CONCURRENT_ACTIVITIES  
+        SQL_MAX_DRIVER_CONNECTIONS  
+        SQL_ODBC_INTERFACE_CONFORMANCE  
+        SQL_ODBC_STANDARD_CLI_CONFORMANCE  
+        SQL_ODBC_VER  
+        SQL_PARAM_ARRAY_ROW_COUNTS  
+        SQL_PARAM_ARRAY_SELECTS  
+        SQL_ROW_UPDATES  
+        SQL_SEARCH_PATTERN_ESCAPE  
+        SQL_SERVER_NAME  
+        SQL_STATIC_CURSOR_ATTRIBUTES1  
+        SQL_STATIC_CURSOR_ATTRIBUTES2  
+    :::column-end:::
+:::row-end:::
+
 > [!NOTE]  
 > Al implementar **SQLGetInfo**, un controlador puede mejorar el rendimiento al minimizar el número de veces que la información se envía o solicita desde el servidor.  
   
@@ -172,141 +195,252 @@ SQLRETURN SQLGetInfo(
 
  Los siguientes valores del argumento *InfoType* devuelven información sobre el producto DBMS, como el nombre y la versión de DBMS:  
 
-|||
-|-|-|
-|SQL_DATABASE_NAME|SQL_DBMS_NAME|
-|SQL_DBMS_VER||
-  
+:::row:::
+    :::column:::
+        SQL_DATABASE_NAME  
+        SQL_DBMS_NAME  
+    :::column-end:::
+    :::column:::
+        SQL_DBMS_VER  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="data-source-information"></a>Información del origen de datos  
 
  Los siguientes valores del argumento *InfoType* devuelven información sobre el origen de datos, como las características de los cursores y las capacidades de las transacciones:  
-  
-|||  
-|-|-|  
-|SQL_ACCESSIBLE_PROCEDURES|SQL_MULT_RESULT_SETS|  
-|SQL_ACCESSIBLE_TABLES|SQL_MULTIPLE_ACTIVE_TXN|  
-|SQL_BOOKMARK_PERSISTENCE|SQL_NEED_LONG_DATA_LEN|  
-|SQL_CATALOG_TERM|SQL_NULL_COLLATION|  
-|SQL_COLLATION_SEQ|SQL_PROCEDURE_TERM|  
-|SQL_CONCAT_NULL_BEHAVIOR|SQL_SCHEMA_TERM|  
-|SQL_CURSOR_COMMIT_BEHAVIOR|SQL_SCROLL_OPTIONS|  
-|SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_TABLE_TERM|  
-|SQL_CURSOR_SENSITIVITY|SQL_TXN_CAPABLE|  
-|SQL_DATA_SOURCE_READ_ONLY|SQL_TXN_ISOLATION_OPTION|  
-|SQL_DEFAULT_TXN_ISOLATION|SQL_USER_NAME|  
-|SQL_DESCRIBE_PARAMETER||  
-  
+
+:::row:::
+    :::column:::
+        SQL_ACCESSIBLE_PROCEDURES  
+        SQL_ACCESSIBLE_TABLES  
+        SQL_BOOKMARK_PERSISTENCE  
+        SQL_CATALOG_TERM  
+        SQL_COLLATION_SEQ  
+        SQL_CONCAT_NULL_BEHAVIOR  
+        SQL_CURSOR_COMMIT_BEHAVIOR  
+        SQL_CURSOR_ROLLBACK_BEHAVIOR  
+        SQL_CURSOR_SENSITIVITY  
+        SQL_DATA_SOURCE_READ_ONLY  
+        SQL_DEFAULT_TXN_ISOLATION  
+        SQL_DESCRIBE_PARAMETER  
+    :::column-end:::
+    :::column:::
+        SQL_MULT_RESULT_SETS  
+        SQL_MULTIPLE_ACTIVE_TXN  
+        SQL_NEED_LONG_DATA_LEN  
+        SQL_NULL_COLLATION  
+        SQL_PROCEDURE_TERM  
+        SQL_SCHEMA_TERM  
+        SQL_SCROLL_OPTIONS  
+        SQL_TABLE_TERM  
+        SQL_TXN_CAPABLE  
+        SQL_TXN_ISOLATION_OPTION  
+        SQL_USER_NAME  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="supported-sql"></a>SQL compatible  
 
  Los siguientes valores del argumento *InfoType* devuelven información acerca de las instrucciones SQL que admite el origen de datos. La sintaxis SQL de cada una de las características descritas por estos tipos de información es la sintaxis de SQL-92. Estos tipos de información no describen exhaustivamente toda la gramática de SQL-92. En su lugar, describen las partes de la gramática para las que los orígenes de datos suelen ofrecer distintos niveles de compatibilidad. En concreto, se describen la mayoría de las instrucciones de DDL en SQL-92.  
   
  Las aplicaciones deben determinar el nivel general de gramática admitida a partir del tipo de información de SQL_SQL_CONFORMANCE y usar los otros tipos de información para determinar las variaciones del nivel de cumplimiento de los estándares indicado.  
-  
-|||  
-|-|-|  
-|SQL_AGGREGATE_FUNCTIONS|SQL_DROP_TABLE|  
-|SQL_ALTER_DOMAIN|SQL_DROP_TRANSLATION|  
-|SQL_ALTER_SCHEMA|SQL_DROP_VIEW|  
-|SQL_ALTER_TABLE|SQL_EXPRESSIONS_IN_ORDERBY|  
-|SQL_ANSI_SQL_DATETIME_LITERALS|SQL_GROUP_BY|  
-|SQL_CATALOG_LOCATION|SQL_IDENTIFIER_CASE|  
-|SQL_CATALOG_NAME|SQL_IDENTIFIER_QUOTE_CHAR|  
-|SQL_CATALOG_NAME_SEPARATOR|SQL_INDEX_KEYWORDS|  
-|SQL_CATALOG_USAGE|SQL_INSERT_STATEMENT|  
-|SQL_COLUMN_ALIAS|SQL_INTEGRITY|  
-|SQL_CORRELATION_NAME|SQL_KEYWORDS|  
-|SQL_CREATE_ASSERTION|SQL_LIKE_ESCAPE_CLAUSE|  
-|SQL_CREATE_CHARACTER_SET|SQL_NON_NULLABLE_COLUMNS|  
-|SQL_CREATE_COLLATION|SQL_SQL_CONFORMANCE|  
-|SQL_CREATE_DOMAIN|SQL_OJ_CAPABILITIES|  
-|SQL_CREATE_SCHEMA|SQL_ORDER_BY_COLUMNS_IN_SELECT|  
-|SQL_CREATE_TABLE|SQL_OUTER_JOINS|  
-|SQL_CREATE_TRANSLATION|SQL_PROCEDURES|  
-|SQL_DDL_INDEX|SQL_QUOTED_IDENTIFIER_CASE|  
-|SQL_DROP_ASSERTION|SQL_SCHEMA_USAGE|  
-|SQL_DROP_CHARACTER_SET|SQL_SPECIAL_CHARACTERS|  
-|SQL_DROP_COLLATION|SQL_SUBQUERIES|  
-|SQL_DROP_DOMAIN|SQL_UNION|  
-|SQL_DROP_SCHEMA||  
-  
+
+:::row:::
+    :::column:::
+        SQL_AGGREGATE_FUNCTIONS  
+        SQL_ALTER_DOMAIN  
+        SQL_ALTER_SCHEMA  
+        SQL_ALTER_TABLE  
+        SQL_ANSI_SQL_DATETIME_LITERALS  
+        SQL_CATALOG_LOCATION  
+        SQL_CATALOG_NAME  
+        SQL_CATALOG_NAME_SEPARATOR  
+        SQL_CATALOG_USAGE  
+        SQL_COLUMN_ALIAS  
+        SQL_CORRELATION_NAME  
+        SQL_CREATE_ASSERTION  
+        SQL_CREATE_CHARACTER_SET  
+        SQL_CREATE_COLLATION  
+        SQL_CREATE_DOMAIN  
+        SQL_CREATE_SCHEMA  
+        SQL_CREATE_TABLE  
+        SQL_CREATE_TRANSLATION  
+        SQL_DDL_INDEX  
+        SQL_DROP_ASSERTION  
+        SQL_DROP_CHARACTER_SET  
+        SQL_DROP_COLLATION  
+        SQL_DROP_DOMAIN  
+        SQL_DROP_SCHEMA  
+    :::column-end:::
+    :::column:::
+        SQL_DROP_TABLE  
+        SQL_DROP_TRANSLATION  
+        SQL_DROP_VIEW  
+        SQL_EXPRESSIONS_IN_ORDERBY  
+        SQL_GROUP_BY  
+        SQL_IDENTIFIER_CASE  
+        SQL_IDENTIFIER_QUOTE_CHAR  
+        SQL_INDEX_KEYWORDS  
+        SQL_INSERT_STATEMENT  
+        SQL_INTEGRITY  
+        SQL_KEYWORDS  
+        SQL_LIKE_ESCAPE_CLAUSE  
+        SQL_NON_NULLABLE_COLUMNS  
+        SQL_OJ_CAPABILITIES  
+        SQL_ORDER_BY_COLUMNS_IN_SELECT  
+        SQL_OUTER_JOINS  
+        SQL_PROCEDURES  
+        SQL_QUOTED_IDENTIFIER_CASE  
+        SQL_SCHEMA_USAGE  
+        SQL_SPECIAL_CHARACTERS  
+        SQL_SQL_CONFORMANCE  
+        SQL_SUBQUERIES  
+        SQL_UNION  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="sql-limits"></a>Límites de SQL  
 
  Los siguientes valores del argumento *InfoType* devuelven información sobre los límites aplicados a identificadores y cláusulas en instrucciones SQL, como las longitudes máximas de los identificadores y el número máximo de columnas de una lista de selección. El controlador o el origen de datos pueden imponer limitaciones.  
-  
-|||  
-|-|-|  
-|SQL_MAX_BINARY_LITERAL_LEN|SQL_MAX_IDENTIFIER_LEN|  
-|SQL_MAX_CATALOG_NAME_LEN|SQL_MAX_INDEX_SIZE|  
-|SQL_MAX_CHAR_LITERAL_LEN|SQL_MAX_PROCEDURE_NAME_LEN|  
-|SQL_MAX_COLUMN_NAME_LEN|SQL_MAX_ROW_SIZE|  
-|SQL_MAX_COLUMNS_IN_GROUP_BY|SQL_MAX_ROW_SIZE_INCLUDES_LONG|  
-|SQL_MAX_COLUMNS_IN_INDEX|SQL_MAX_SCHEMA_NAME_LEN|  
-|SQL_MAX_COLUMNS_IN_ORDER_BY|SQL_MAX_STATEMENT_LEN|  
-|SQL_MAX_COLUMNS_IN_SELECT|SQL_MAX_TABLE_NAME_LEN|  
-|SQL_MAX_COLUMNS_IN_TABLE|SQL_MAX_TABLES_IN_SELECT|  
-|SQL_MAX_CURSOR_NAME_LEN|SQL_MAX_USER_NAME_LEN|  
-  
+
+:::row:::
+    :::column:::
+        SQL_MAX_BINARY_LITERAL_LEN  
+        SQL_MAX_CATALOG_NAME_LEN  
+        SQL_MAX_CHAR_LITERAL_LEN  
+        SQL_MAX_COLUMN_NAME_LEN  
+        SQL_MAX_COLUMNS_IN_GROUP_BY  
+        SQL_MAX_COLUMNS_IN_INDEX  
+        SQL_MAX_COLUMNS_IN_ORDER_BY  
+        SQL_MAX_COLUMNS_IN_SELECT  
+        SQL_MAX_COLUMNS_IN_TABLE  
+        SQL_MAX_CURSOR_NAME_LEN  
+    :::column-end:::
+    :::column:::
+        SQL_MAX_IDENTIFIER_LEN  
+        SQL_MAX_INDEX_SIZE  
+        SQL_MAX_PROCEDURE_NAME_LEN  
+        SQL_MAX_ROW_SIZE  
+        SQL_MAX_ROW_SIZE_INCLUDES_LONG  
+        SQL_MAX_SCHEMA_NAME_LEN  
+        SQL_MAX_STATEMENT_LEN  
+        SQL_MAX_TABLE_NAME_LEN  
+        SQL_MAX_TABLES_IN_SELECT  
+        SQL_MAX_USER_NAME_LEN  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="scalar-function-information"></a>Información de la función escalar  
 
  Los siguientes valores del argumento *InfoType* devuelven información sobre las funciones escalares admitidas por el origen de datos y el controlador. Para obtener más información sobre las funciones escalares, vea [Apéndice E: funciones escalares](../appendixes/appendix-e-scalar-functions.md).  
-  
-|||  
-|-|-|  
-|SQL_CONVERT_FUNCTIONS|SQL_TIMEDATE_ADD_INTERVALS|  
-|SQL_NUMERIC_FUNCTIONS|SQL_TIMEDATE_DIFF_INTERVALS|  
-|SQL_STRING_FUNCTIONS|SQL_TIMEDATE_FUNCTIONS|  
-|SQL_SYSTEM_FUNCTIONS||  
-  
+
+:::row:::
+    :::column:::
+        SQL_CONVERT_FUNCTIONS  
+        SQL_NUMERIC_FUNCTIONS  
+        SQL_STRING_FUNCTIONS  
+        SQL_SYSTEM_FUNCTIONS  
+    :::column-end:::
+    :::column:::
+        SQL_TIMEDATE_ADD_INTERVALS  
+        SQL_TIMEDATE_DIFF_INTERVALS  
+        SQL_TIMEDATE_FUNCTIONS  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="conversion-information"></a>Información de conversión  
 
  Los siguientes valores del argumento *InfoType* devuelven una lista de los tipos de datos SQL a los que el origen de datos puede convertir el tipo de datos SQL especificado con la función escalar **Convert** :  
-  
-|||  
-|-|-|  
-|SQL_CONVERT_BIGINT|SQL_CONVERT_LONGVARBINARY|  
-|SQL_CONVERT_BINARY|SQL_CONVERT_LONGVARCHAR|  
-|SQL_CONVERT_BIT|SQL_CONVERT_NUMERIC|  
-|SQL_CONVERT_CHAR|SQL_CONVERT_REAL|  
-|SQL_CONVERT_DATE|SQL_CONVERT_SMALLINT|  
-|SQL_CONVERT_DECIMAL|SQL_CONVERT_TIME|  
-|SQL_CONVERT_DOUBLE|SQL_CONVERT_TIMESTAMP|  
-|SQL_CONVERT_FLOAT|SQL_CONVERT_TINYINT|  
-|SQL_CONVERT_INTEGER|SQL_CONVERT_VARBINARY|  
-|SQL_CONVERT_INTERVAL_YEAR_MONTH|SQL_CONVERT_VARCHAR|  
-|SQL_CONVERT_INTERVAL_DAY_TIME||  
-  
+
+:::row:::
+    :::column:::
+        SQL_CONVERT_BIGINT  
+        SQL_CONVERT_BINARY  
+        SQL_CONVERT_BIT  
+        SQL_CONVERT_CHAR  
+        SQL_CONVERT_DATE  
+        SQL_CONVERT_DECIMAL  
+        SQL_CONVERT_DOUBLE  
+        SQL_CONVERT_FLOAT  
+        SQL_CONVERT_INTEGER  
+        SQL_CONVERT_INTERVAL_DAY_TIME  
+        SQL_CONVERT_INTERVAL_YEAR_MONTH  
+    :::column-end:::
+    :::column:::
+        SQL_CONVERT_LONGVARBINARY  
+        SQL_CONVERT_LONGVARCHAR  
+        SQL_CONVERT_NUMERIC  
+        SQL_CONVERT_REAL  
+        SQL_CONVERT_SMALLINT  
+        SQL_CONVERT_TIME  
+        SQL_CONVERT_TIMESTAMP  
+        SQL_CONVERT_TINYINT  
+        SQL_CONVERT_VARBINARY  
+        SQL_CONVERT_VARCHAR  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="information-types-added-for-odbc-3x"></a>Tipos de información agregados para ODBC 3. x  
 
  Se han agregado los siguientes valores del argumento *InfoType* para ODBC 3. x:  
-  
-|||  
-|-|-|  
-|SQL_ACTIVE_ENVIRONMENTS|SQL_DRIVER_AWARE_POOLING_SUPPORTED|  
-|SQL_AGGREGATE_FUNCTIONS|SQL_DRIVER_HDESC|  
-|SQL_ALTER_DOMAIN|SQL_DROP_ASSERTION|  
-|SQL_ALTER_SCHEMA|SQL_DROP_CHARACTER_SET|  
-|SQL_ANSI_SQL_DATETIME_LITERALS|SQL_DROP_COLLATION|  
-|SQL_ASYNC_DBC_FUNCTIONS|SQL_DROP_DOMAIN|  
-|SQL_ASYNC_MODE|SQL_DROP_SCHEMA|  
-|SQL_ASYNC_NOTIFICATION|SQL_DROP_TABLE|  
-|SQL_BATCH_ROW_COUNT|SQL_DROP_TRANSLATION|  
-|SQL_BATCH_SUPPORT|SQL_DROP_VIEW|  
-|SQL_CATALOG_NAME|SQL_DYNAMIC_CURSOR_ATTRIBUTES1|  
-|SQL_COLLATION_SEQ|SQL_DYNAMIC_CURSOR_ATTRIBUTES2|  
-|SQL_CONVERT_INTERVAL_YEAR_MONTH|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|  
-|SQL_CONVERT_INTERVAL_DAY_TIME|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|  
-|SQL_CREATE_ASSERTION|SQL_INFO_SCHEMA_VIEWS|  
-|SQL_CREATE_CHARACTER_SET|SQL_INSERT_STATEMENT|  
-|SQL_CREATE_COLLATION|SQL_KEYSET_CURSOR_ATTRIBUTES1|  
-|SQL_CREATE_DOMAIN|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
-|SQL_CREATE_SCHEMA|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|  
-|SQL_CREATE_TABLE|SQL_MAX_IDENTIFIER_LEN|  
-|SQL_CREATE_TRANSLATION|SQL_PARAM_ARRAY_ROW_COUNTS|  
-|SQL_CURSOR_SENSITIVITY|SQL_PARAM_ARRAY_SELECTS|  
-|SQL_DDL_INDEX|SQL_STATIC_CURSOR_ATTRIBUTES1|  
-|SQL_DESCRIBE_PARAMETER|SQL_STATIC_CURSOR_ATTRIBUTES2|  
-|SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ACTIVE_ENVIRONMENTS  
+        SQL_AGGREGATE_FUNCTIONS  
+        SQL_ALTER_DOMAIN  
+        SQL_ALTER_SCHEMA  
+        SQL_ANSI_SQL_DATETIME_LITERALS  
+        SQL_ASYNC_DBC_FUNCTIONS  
+        SQL_ASYNC_MODE  
+        SQL_ASYNC_NOTIFICATION  
+        SQL_BATCH_ROW_COUNT  
+        SQL_BATCH_SUPPORT  
+        SQL_CATALOG_NAME  
+        SQL_COLLATION_SEQ  
+        SQL_CONVERT_INTERVAL_DAY_TIME  
+        SQL_CONVERT_INTERVAL_YEAR_MONTH  
+        SQL_CREATE_ASSERTION  
+        SQL_CREATE_CHARACTER_SET  
+        SQL_CREATE_COLLATION  
+        SQL_CREATE_DOMAIN  
+        SQL_CREATE_SCHEMA  
+        SQL_CREATE_TABLE  
+        SQL_CREATE_TRANSLATION  
+        SQL_CURSOR_SENSITIVITY  
+        SQL_DDL_INDEX  
+        SQL_DESCRIBE_PARAMETER  
+        SQL_DM_VER  
+    :::column-end:::
+    :::column:::
+        SQL_DRIVER_AWARE_POOLING_SUPPORTED  
+        SQL_DRIVER_HDESC  
+        SQL_DROP_ASSERTION  
+        SQL_DROP_CHARACTER_SET  
+        SQL_DROP_COLLATION  
+        SQL_DROP_DOMAIN  
+        SQL_DROP_SCHEMA  
+        SQL_DROP_TABLE  
+        SQL_DROP_TRANSLATION  
+        SQL_DROP_VIEW  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES1  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES2  
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1  
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2  
+        SQL_INFO_SCHEMA_VIEWS  
+        SQL_INSERT_STATEMENT  
+        SQL_KEYSET_CURSOR_ATTRIBUTES1  
+        SQL_KEYSET_CURSOR_ATTRIBUTES2  
+        SQL_MAX_ASYNC_CONCURRENT_STATEMENTS  
+        SQL_MAX_IDENTIFIER_LEN  
+        SQL_PARAM_ARRAY_ROW_COUNTS  
+        SQL_PARAM_ARRAY_SELECTS  
+        SQL_STATIC_CURSOR_ATTRIBUTES1  
+        SQL_STATIC_CURSOR_ATTRIBUTES2  
+        SQL_XOPEN_CLI_YEAR  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="information-types-renamed-for-odbc-3x"></a>Tipos de información cuyo nombre ha cambiado para ODBC 3. x  
 
  Se ha cambiado el nombre de los siguientes valores del argumento *InfoType* para ODBC 3. x.  
@@ -328,19 +462,27 @@ SQLRETURN SQLGetInfo(
 ## <a name="information-types-deprecated-in-odbc-3x"></a>Tipos de información desusados en ODBC 3. x  
 
  Los siguientes valores del argumento *InfoType* han quedado en desuso en ODBC 3. x. Los controladores ODBC 3. x deben seguir admitiendo estos tipos de información para mantener la compatibilidad con las aplicaciones ODBC 2. x. (Para obtener más información sobre estos tipos, vea [compatibilidad con SQLGetInfo](../appendixes/sqlgetinfo-support.md) en el Apéndice G: instrucciones de controlador para la compatibilidad con versiones anteriores).  
-  
-|||  
-|-|-|  
-|SQL_FETCH_DIRECTION|SQL_POS_OPERATIONS|  
-|SQL_LOCK_TYPES|SQL_POSITIONED_STATEMENTS|  
-|SQL_ODBC_API_CONFORMANCE|SQL_SCROLL_CONCURRENCY|  
-|SQL_ODBC_SQL_CONFORMANCE|SQL_STATIC_SENSITIVITY|  
-  
+
+:::row:::
+    :::column:::
+        SQL_FETCH_DIRECTION  
+        SQL_LOCK_TYPES  
+        SQL_ODBC_API_CONFORMANCE  
+        SQL_ODBC_SQL_CONFORMANCE  
+    :::column-end:::
+    :::column:::
+        SQL_POS_OPERATIONS  
+        SQL_POSITIONED_STATEMENTS  
+        SQL_SCROLL_CONCURRENCY  
+        SQL_STATIC_SENSITIVITY  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="information-type-descriptions"></a>Descripción del tipo de información  
 
 En la tabla siguiente se enumera alfabéticamente cada tipo de información, la versión de ODBC en la que se presentó y su descripción.  
   
-|Tipo de información|Versión de ODBC|Descripción|
+|Tipo de información|Versión de ODBC|Description|
 |-|-|-|
 |SQL_ACCESSIBLE_PROCEDURES|1.0|Cadena de caracteres: "Y" si el usuario puede ejecutar todos los procedimientos devueltos por **SQLProcedures**; "N" si es posible que se devuelvan procedimientos que el usuario no pueda ejecutar.|
 |SQL_ACCESSIBLE_TABLES|1.0|Una cadena de caracteres: "Y" si se garantiza que el usuario tiene privilegios **Select** para todas las tablas devueltas por **SQLTables**; "N" si es posible que se devuelvan tablas a las que el usuario no pueda tener acceso.|
@@ -372,7 +514,7 @@ En la tabla siguiente se enumera alfabéticamente cada tipo de información, la 
 |SQL_CREATE_SCHEMA|3.0|Una máscara de bits SQLUINTEGER que incluya que enumera las cláusulas en la instrucción **Create Schema** , tal como se define en SQL-92, admitidas por el origen de datos.<br/><br/>Las siguientes máscaras de código se usan para determinar qué cláusulas se admiten:<br/>SQL_CS_CREATE_SCHEMA<br/>SQL_CS_AUTHORIZATION<br/>SQL_CS_DEFAULT_CHARACTER_SET<br/><br/>Un controlador compatible con el nivel intermedio de SQL-92 siempre devolverá las opciones SQL_CS_CREATE_SCHEMA y SQL_CS_AUTHORIZATION como se admiten. También se deben admitir en el nivel de entrada SQL-92, pero no necesariamente como instrucciones SQL. Un controlador compatible con el nivel completo de SQL-92 siempre devolverá todas las opciones que se admiten.|
 |SQL_CREATE_TABLE|3.0|Una máscara de bits SQLUINTEGER que incluya que enumera las cláusulas de la instrucción **CREATE TABLE** , tal como se define en SQL-92, admitidas por el origen de datos.<br/><br/>El nivel de conformidad con SQL-92 o FIPS en el que se debe admitir esta característica se muestra entre paréntesis junto a cada máscara de bits.<br/><br/>Las siguientes máscaras de código se usan para determinar qué cláusulas se admiten:<br/>SQL_CT_CREATE_TABLE = se admite la instrucción CREATE TABLE. (Nivel de entrada)<br/>SQL_CT_TABLE_CONSTRAINT = se admite la especificación de restricciones de tabla (nivel de transición de FIPS)<br/>SQL_CT_CONSTRAINT_NAME_DEFINITION = la \<constraint name definition> cláusula se admite para asignar nombres a las restricciones de columna y de tabla (nivel intermedio)<br/><br/>Los bits siguientes especifican la capacidad de crear tablas temporales:<br/>SQL_CT_COMMIT_PRESERVE = las filas eliminadas se conservan en la confirmación. (Nivel completo)<br/>SQL_CT_COMMIT_DELETE = las filas eliminadas se eliminan al confirmar. (Nivel completo)<br/>SQL_CT_GLOBAL_TEMPORARY = se pueden crear tablas temporales globales. (Nivel completo)<br/>SQL_CT_LOCAL_TEMPORARY = se pueden crear tablas temporales locales. (Nivel completo)<br/><br/>Los bits siguientes especifican la capacidad de crear restricciones de columna:<br/>SQL_CT_COLUMN_CONSTRAINT = se admite la especificación de restricciones de columna (nivel de transición de FIPS)<br/>SQL_CT_COLUMN_DEFAULT = se admite la especificación de valores predeterminados de columna (nivel de transición de FIPS)<br/>SQL_CT_COLUMN_COLLATION = se admite la especificación de la intercalación de columnas (nivel completo)<br/><br/>Los bits siguientes especifican los atributos de restricción admitidos si se admite la especificación de restricciones de columna o tabla:<br/>SQL_CT_CONSTRAINT_INITIALLY_DEFERRED (nivel completo)<br/>SQL_CT_CONSTRAINT_INITIALLY_IMMEDIATE (nivel completo)<br/>SQL_CT_CONSTRAINT_DEFERRABLE (nivel completo)<br/>SQL_CT_CONSTRAINT_NON_DEFERRABLE (nivel completo)|
 |SQL_CREATE_TRANSLATION|3.0|Una máscara de bits SQLUINTEGER que incluya que enumera las cláusulas de la instrucción **Create Translation** , tal como se define en SQL-92, admitidas por el origen de datos.<br/><br/>La siguiente máscara de máscara se usa para determinar qué cláusulas se admiten:<br/>SQL_CTR_CREATE_TRANSLATION<br/><br/>Un controlador compatible con el nivel completo de SQL-92 siempre devolverá estas opciones como se admiten. Un valor devuelto de "0" significa que no se admite la instrucción **Create Translation** .|
-|SQL_CREATE_VIEW||3.0|Una máscara de bits SQLUINTEGER que incluya que enumera las cláusulas de la instrucción **Create View** , tal como se define en SQL-92, admitidas por el origen de datos.<br/><br/>Las siguientes máscaras de código se usan para determinar qué cláusulas se admiten:<br/>SQL_CV_CREATE_VIEW<br/>SQL_CV_CHECK_OPTION<br/>SQL_CV_CASCADED<br/>SQL_CV_LOCAL<br/><br/>Un valor devuelto de "0" significa que no se admite la instrucción **Create View** .<br/><br/>Un controlador compatible con el nivel de entrada SQL-92 siempre devolverá las opciones SQL_CV_CREATE_VIEW y SQL_CV_CHECK_OPTION como se admiten.<br/><br/>Un controlador compatible con el nivel completo de SQL-92 siempre devolverá todas las opciones que se admiten.|
+|SQL_CREATE_VIEW|3.0|Una máscara de bits SQLUINTEGER que incluya que enumera las cláusulas de la instrucción **Create View** , tal como se define en SQL-92, admitidas por el origen de datos.<br/><br/>Las siguientes máscaras de código se usan para determinar qué cláusulas se admiten:<br/>SQL_CV_CREATE_VIEW<br/>SQL_CV_CHECK_OPTION<br/>SQL_CV_CASCADED<br/>SQL_CV_LOCAL<br/><br/>Un valor devuelto de "0" significa que no se admite la instrucción **Create View** .<br/><br/>Un controlador compatible con el nivel de entrada SQL-92 siempre devolverá las opciones SQL_CV_CREATE_VIEW y SQL_CV_CHECK_OPTION como se admiten.<br/><br/>Un controlador compatible con el nivel completo de SQL-92 siempre devolverá todas las opciones que se admiten.|
 |SQL_CURSOR_COMMIT_BEHAVIOR|1.0|Un valor SQLUSMALLINT que indica cómo una operación de **confirmación** afecta a los cursores y a las instrucciones preparadas en el origen de datos (el comportamiento del origen de datos cuando se confirma una transacción).<br/><br/>El valor de este atributo reflejará el estado actual del siguiente valor: SQL_COPT_SS_PRESERVE_CURSORS.<br/>SQL_CB_DELETE = cerrar cursores y eliminar instrucciones preparadas. Para volver a utilizar el cursor, la aplicación debe volver a preparar y ejecutar la instrucción.<br/>SQL_CB_CLOSE = cerrar cursores. En el caso de las instrucciones preparadas, la aplicación puede llamar a **SQLExecute** en la instrucción sin llamar de nuevo a **SQLPrepare** . El valor predeterminado para el controlador ODBC de SQL es SQL_CB_CLOSE. Esto significa que el controlador ODBC de SQL cerrará los cursores al confirmar una transacción.<br/>SQL_CB_PRESERVE = conservar los cursores en la misma posición que antes de la operación de **confirmación** . La aplicación puede seguir recuperando datos o puede cerrar el cursor y volver a ejecutar la instrucción sin revelarla.|
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|1.0|Un valor SQLUSMALLINT que indica cómo una operación de **reversión** afecta a los cursores y a las instrucciones preparadas en el origen de datos:<br/>SQL_CB_DELETE = cerrar cursores y eliminar instrucciones preparadas. Para volver a utilizar el cursor, la aplicación debe volver a preparar y ejecutar la instrucción.<br/>SQL_CB_CLOSE = cerrar cursores. En el caso de las instrucciones preparadas, la aplicación puede llamar a **SQLExecute** en la instrucción sin llamar de nuevo a **SQLPrepare** .<br/>SQL_CB_PRESERVE = conservar los cursores en la misma posición que antes de la operación de **reversión** . La aplicación puede seguir recuperando datos o puede cerrar el cursor y volver a ejecutar la instrucción sin revelarla.|
 |SQL_CURSOR_SENSITIVITY|3.0|Un valor SQLUINTEGER que incluya que indica la compatibilidad con la sensibilidad del cursor:<br/>SQL_INSENSITIVE = todos los cursores del identificador de instrucción muestran el conjunto de resultados sin reflejar los cambios que se realizaron en él mediante ningún otro cursor dentro de la misma transacción.<br/>SQL_UNSPECIFIED = no se especifica si los cursores del controlador de la instrucción hacen visibles los cambios realizados en un conjunto de resultados por otro cursor dentro de la misma transacción. Los cursores del identificador de instrucción pueden hacer visibles ninguno, algunos o todos esos cambios.<br/>SQL_SENSITIVE = los cursores son sensibles a los cambios realizados por otros cursores dentro de la misma transacción.<br/><br/>Un controlador compatible con el nivel de entrada SQL-92 siempre devolverá la opción SQL_UNSPECIFIED tal como se admite.<br/><br/>Un controlador compatible con el nivel completo de SQL-92 siempre devolverá la opción SQL_INSENSITIVE como admitida.|

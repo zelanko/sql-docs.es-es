@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 939bf1d65c73b2aa83c54c7a5b936e3228719ba5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748919"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242795"
 ---
 # <a name="close-method-ado"></a>Close (método) (ADO)
 Cierra un objeto abierto y los objetos dependientes.  
@@ -34,7 +34,7 @@ Cierra un objeto abierto y los objetos dependientes.
 object.Close  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use el método **Close** para cerrar una [conexión](../../../ado/reference/ado-api/connection-object-ado.md), un [registro](../../../ado/reference/ado-api/record-object-ado.md), un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)o un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) para liberar los recursos del sistema asociados. Al cerrar un objeto no se quita de la memoria; puede cambiar la configuración de sus propiedades y volver a abrirla más tarde. Para eliminar completamente un objeto de la memoria, cierre el objeto y, a continuación, establezca la variable de objeto en *Nothing* (en Visual Basic).  
   
 ## <a name="connection"></a>Conexión  
@@ -54,12 +54,18 @@ object.Close
  Si usa el método [Clone](../../../ado/reference/ado-api/clone-method-ado.md) para crear copias de un objeto de **conjunto de registros** abierto, el cierre del original o de un clon no afectará a ninguna de las demás copias.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de los métodos Open y Close (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Ejemplo de los métodos Open y Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   

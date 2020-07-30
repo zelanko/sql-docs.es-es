@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 741a967b3fde6c5e3b5e3de87ac54a1142c93bfe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 513e376199c6f53953d49b70eae17f8da916f6bf
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896983"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362994"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos de la aplicación web (Master Data Services)
 
@@ -50,16 +50,45 @@ ms.locfileid: "85896983"
 > [!IMPORTANT]  
 >La**compresión de contenido dinámico** está habilitada de forma predeterminada. Esto disminuye considerablemente el tamaño de la respuesta xml y reduce la E/S de red, aunque el uso de CPU aumenta.  Para obtener más información, vea **[CTP 2.0] Rendimiento mejorado** in [Novedades en Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
-||  
-|-|  
-|Internet Information Services<br /><br /> Herramientas de administración web<br /><br /> Consola de administración de IIS<br /><br /> Servicios de World Wide Web<br /><br /> Desarrollo de aplicaciones<br /><br /> Extensibilidad de .NET<br /><br /> Extensibilidad de .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensiones ISAPI<br /><br /> Filtros de ISAPI<br /><br /> Características HTTP comunes<br /><br /> Documento predeterminado<br /><br /> Examen de directorios<br /><br /> Errores HTTP<br /><br /> Contenido estático<br /><br /> [Nota: no instale Publicación en WebDAV]<br /><br /> Estado y diagnóstico<br /><br /> Registrar HTTP<br /><br /> Monitor de solicitudes<br /><br /> Rendimiento<br /><br /> Compresión de contenido estático<br /><br /> Seguridad<br /><br /> Filtro de solicitudes<br /><br /> Autenticación de Windows|  
+- Internet Information Services
+- Herramientas de administración web
+- Consola de administración de IIS
+- Servicios de World Wide Web
+- Desarrollo de aplicaciones
+- Extensibilidad de .NET
+- Extensibilidad de .NET 4.5
+- ASP.NET 3.5
+- ASP.NET 4.5
+- Extensiones ISAPI
+- Filtros de ISAPI
+- Características HTTP comunes
+- Documento predeterminado
+- Examen de directorios
+- Errores HTTP
+- Contenido estático [Nota: no instalar publicación de WebDAV.]
+- Estado y diagnóstico
+- Registrar HTTP
+- Monitor de solicitudes
+- Rendimiento
+- Compresión de contenido estático
+- Seguridad
+- Filtro de solicitudes
+- Autenticación de Windows
   
 ### <a name="features"></a>Características 
  En Windows Server 2012 y Windows Server 2012 R2, puede usar **Administrador del servidor** para instalar las siguientes características necesarias.  
   
-||  
-|-|  
-|.NET Framework 3.5 (incluye .NET 2.0 y 3.0)<br /><br /> Servicios avanzados de .NET Framework 4.5<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> Activación HTTP [Nota: esto es necesario]<br /><br /> Uso compartido de puertos TCP<br /><br /> Servicio de activación de procesos de Windows<br /><br /> Modelo de proceso<br /><br /> Entorno .NET<br /><br /> API de configuración<br/><br/>compresión de contenido dinámico|  
+- .NET Framework 3.5 (incluye .NET 2.0 y 3.0)
+- Servicios avanzados de .NET Framework 4.5
+- ASP.NET 4.5
+- WCF Services
+- Activación HTTP [Nota: esto es necesario]
+- Uso compartido de puertos TCP
+- Servicio de activación de procesos de Windows
+- Modelo de proceso
+- Entorno .NET
+- API de configuración
+- compresión de contenido dinámico
   
  Este es un script de PowerShell de ejemplo que sirve para agregar características y roles de servidor necesarios. Las características y roles de servidor necesarios varían en función del entorno.  
   
@@ -73,7 +102,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>Cuentas y permisos  
   
-|Tipo|Descripción|  
+|Tipo|Description|  
 |----------|-----------------|  
 |Cuenta de Windows|Debe iniciar sesión en el equipo servidor web con una cuenta de Windows que tenga permiso para configurar roles de Windows, servicios de rol y características, y para crear y administrar grupos de aplicaciones, sitios web y aplicaciones web en IIS, en el equipo local.|  
 |Cuenta de servicio|Cuando cree la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] en [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], debe especificar una identidad para el grupo de aplicaciones en el que se ejecute la aplicación. Esta cuenta puede ser diferente de la cuenta de servicio que se especificó cuando se creó la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Esta identidad debe ser una cuenta de usuario de dominio y se agrega al rol de la base de datos mds_exec en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para tener acceso a las bases de datos. Para más información, vea [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Esta cuenta también se agrega a un grupo de Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, que es el permiso concedido al directorio de compilación temporal, **MDSTempDir**, en el sistema de archivos. Para obtener más información, vea [Permisos de carpetas y archivos&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
@@ -83,5 +112,3 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
       
  [Cree una aplicación Web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
  [Página Configuración web &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
-  
-  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: ce84ae70a1b09cd744528b132dcc7052cdde8816
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293672"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394280"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Conversión de bases de datos de MySQL (MySQLToSQL)
 Después de conectarse a MySQL, conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure y establecer las opciones de asignación de datos y de proyecto, puede convertir objetos de base de datos de MySQL en objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
@@ -31,12 +31,11 @@ Antes de convertir objetos, revise las opciones de conversión de proyectos en e
 ## <a name="conversion-results"></a>Resultados de la conversión  
 En la tabla siguiente se muestra qué objetos de MySQL se convierten y los objetos resultantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|||  
+|Objetos MySQL|Objetos SQL Server resultantes|  
 |-|-|  
-|**Objetos MySQL**|**Objetos SQL Server resultantes**|  
 |Tablas con objetos dependientes como índices|SSMA crea tablas con objetos dependientes. La tabla se convierte con todos los índices y restricciones. Los índices se convierten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos independientes.<br /><br />La **asignación de tipos de datos espaciales** solo se puede realizar en el nivel de nodo de tabla.<br /><br />Para obtener más información sobre la configuración de la conversión de tablas, vea configuración de la [conversión](conversion-settings-mysqltosql.md)|  
-|Funciones|Si la función se puede convertir directamente en Transact-SQL, SSMA crea una función. En algunos casos, la función se debe convertir en un procedimiento almacenado. Esto puede hacerse mediante la **conversión de funciones** en la configuración del proyecto. En este caso, SSMA crea un procedimiento almacenado y una función que llama al procedimiento almacenado.<br /><br />**Opciones proporcionadas:**<br /><br />Convertir según la configuración del proyecto<br /><br />Convertir a función<br /><br />Convertir en procedimiento almacenado<br /><br />Para obtener más información sobre la configuración de la conversión de funciones, vea configuración de la [conversión](conversion-settings-mysqltosql.md)|  
-|Procedimientos|Si el procedimiento se puede convertir directamente en Transact-SQL, SSMA crea un procedimiento almacenado. En algunos casos, se debe llamar a un procedimiento almacenado en una transacción autónoma. En este caso, SSMA crea dos procedimientos almacenados: uno que implementa el procedimiento y otro que se utiliza para llamar al procedimiento almacenado de implementación.|  
+|Functions|Si la función se puede convertir directamente a Transact-SQL, SSMA crea una función. En algunos casos, la función se debe convertir en un procedimiento almacenado. Esto puede hacerse mediante la **conversión de funciones** en la configuración del proyecto. En este caso, SSMA crea un procedimiento almacenado y una función que llama al procedimiento almacenado.<br /><br />**Opciones proporcionadas:**<br /><br />Convertir según la configuración del proyecto<br /><br />Convertir a función<br /><br />Convertir en procedimiento almacenado<br /><br />Para obtener más información sobre la configuración de la conversión de funciones, vea configuración de la [conversión](conversion-settings-mysqltosql.md)|  
+|Procedimientos|Si el procedimiento se puede convertir directamente a Transact-SQL, SSMA crea un procedimiento almacenado. En algunos casos, se debe llamar a un procedimiento almacenado en una transacción autónoma. En este caso, SSMA crea dos procedimientos almacenados: uno que implementa el procedimiento y otro que se utiliza para llamar al procedimiento almacenado de implementación.|  
 |Conversión de base de datos|Las bases de datos como objetos MySQL no se convierten directamente en SSMA para MySQL. Las bases de datos MySQL se tratan más como los nombres de esquema y todos los parámetros físicos se pierden durante la conversión. SSMA para MySQL usa la asignación de bases de datos de [MySQL a esquemas de SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) para asignar objetos de la base de datos MySQL a un par de base de datos o esquema de SQL Server adecuado.|  
 |Conversión de desencadenador|**SSMA crea desencadenadores basados en las siguientes reglas:**<br /><br />ANTES de que los desencadenadores se conviertan en desencadenadores INSTEAD OF T-SQL<br /><br />Los desencadenadores AFTER se convierten en después de los desencadenadores T-SQL con o sin iteraciones por filas.|  
 |Ver conversión|SSMA crea vistas con objetos dependientes|  

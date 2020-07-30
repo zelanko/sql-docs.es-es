@@ -15,24 +15,43 @@ helpviewer_keywords:
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9d319b08069fd0ae32af20bf39dbdb7cdfb819c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85548baf08c5403ca5c4b9886c34e9dbd4c45759
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306016"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362427"
 ---
 # <a name="scalar-functions"></a>Funciones escalares
 Los controladores de base de datos de Microsoft ODBC Desktop admiten las siguientes funciones escalares:  
-  
-||||  
-|-|-|-|  
-|CONCAT|LCASE|RIGHT|  
-|CONVERT|LEFT|RTRIM|  
-|CURDATE|LENGTH|SUBSTRING|  
-|CURTIME|LOCATE|UCASE|  
-|DATABASE|LTRIM|USER|  
-|DAYOFMONTH|MOD|YEAR|  
-|DAYOFWEEK|MONTH||  
-  
+
+:::row:::
+    :::column:::
+        CONCAT  
+        CONVERT  
+        CURDATE  
+        CURTIME  
+        DATABASE  
+        DAYOFMONTH  
+        DAYOFWEEK  
+    :::column-end:::
+    :::column:::
+        LCASE  
+        LEFT  
+        LENGTH  
+        LOCATE  
+        LTRIM  
+        MOD  
+        MONTH  
+    :::column-end:::
+    :::column:::
+        RIGHT  
+        RTRIM  
+        SUBSTRING  
+        UCASE  
+        USER  
+        YEAR  
+    :::column-end:::
+:::row-end:::
+
  Para obtener información sobre los argumentos y los valores devueltos de las funciones escalares, vea el Apéndice F de la *Referencia del programador de ODBC.*

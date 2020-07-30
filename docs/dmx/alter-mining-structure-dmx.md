@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8022ee6fd8cb9bf9de79a7a83d3ee0d6166606b5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971843"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362225"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -36,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *estructuras*  
+ *structure*  
  Nombre de la estructura de minería de datos a la que se agregará el modelo de minería de datos.  
   
  *model*  
@@ -108,9 +108,8 @@ USING <algorithm> [(<parameter list>)]
 > [!NOTE]  
 >  La marca de modelado NOT_NULL se aplica a la columna de estructura de minería de datos. Para obtener más información, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
-|||  
-|-|-|  
 |Término|Definición|  
+|-|-|  
 |**REGRESOR**|Indica que el algoritmo puede usar la columna especificada en la fórmula de regresión de algoritmos de regresión.|  
 |**MODEL_EXISTENCE_ONLY**|Indica que los valores de la columna de atributos no son tan importantes como la presencia del atributo.|  
   
@@ -119,7 +118,7 @@ USING <algorithm> [(<parameter list>)]
 ### <a name="prediction-clause"></a>Cláusula de predicción  
  La cláusula de predicción describe cómo se usa la columna de predicción. En la tabla siguiente se enumeran las cláusulas posibles.  
   
-|||  
+|Cláusula|Descripción|  
 |-|-|  
 |**MANERA**|Esta columna puede predecirla el modelo y sus valores se pueden usar como entrada para predecir el valor de otras columnas de predicción.|  
 |**PREDICT_ONLY**|Esta columna puede predecirla el modelo, pero sus valores no se pueden utilizar en escenarios de entrada para predecir el valor de otras columnas de predicción.|  

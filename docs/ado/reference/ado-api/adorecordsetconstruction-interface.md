@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23ee532329e8104d3a0e02c9547d9ca7813b42a2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747087"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242825"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interfaz ADORecordsetConstruction
 La interfaz **ADORecordsetConstruction** se utiliza para construir un objeto de **conjunto de registros** ADO a partir de un objeto de conjunto de **filas** OLE DB en una aplicación de C/C++.  
@@ -29,7 +29,7 @@ La interfaz **ADORecordsetConstruction** se utiliza para construir un objeto de 
   
 ## <a name="properties"></a>Propiedades  
   
-|||  
+|Propiedad|Descripción|  
 |-|-|  
 |[Capítulo](../../../ado/reference/ado-api/chapter-property-ado.md)|Lectura y escritura.<br />Obtiene o establece un OLE DB objeto **Chapter** en este objeto **Recordset** de ADO.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lectura y escritura.<br />Obtiene o establece un objeto **RowPosition** OLE DB a partir de este objeto de **conjunto de registros** de ADO.|  
@@ -41,7 +41,7 @@ La interfaz **ADORecordsetConstruction** se utiliza para construir un objeto de 
 ## <a name="events"></a>Eventos  
  Ninguno.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Dado un OLE DB objeto de **conjunto de filas** ( `pRowset` ), la construcción de un objeto de **conjunto de registros** ADO ( `adoRs` ) se suma a las tres operaciones básicas siguientes:  
   
 1.  Cree un objeto de **conjunto de registros** ADO:  
@@ -74,7 +74,7 @@ La interfaz **ADORecordsetConstruction** se utiliza para construir un objeto de 
 ## <a name="requirements"></a>Requisitos  
  **Versión:** ADO 2,0 y versiones posteriores  
   
- **Biblioteca:** msado15. dll  
+ **Biblioteca:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

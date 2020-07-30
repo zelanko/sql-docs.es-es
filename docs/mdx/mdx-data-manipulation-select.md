@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 97b9f5fd13a6cfb017f128564f0f0cf93c22ad58
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967376"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362795"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulación de datos de MDX: SELECT
 
@@ -159,14 +159,13 @@ FROM
   
  El conjunto de resultados obtenido es el siguiente:  
   
-|||||  
+|Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0,53 %**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
+|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47 %**|  
 |**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
@@ -211,14 +210,13 @@ FROM
   
  En lo que respecta a los siguientes resultados, ambos conjuntos (Top10SellingProducts y Preferred10Products) son iguales.  
   
-|||||  
+|Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0,53 %**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
+|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47 %**|  
 |**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
@@ -245,11 +243,10 @@ FROM
   
  Produce el siguiente conjunto de resultados:  
   
-|||||  
+|Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
 |**Mountain-300**|**$1,907,249.38**|**$876.95**|**0,05%**|  
 |**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1,62%**|  
@@ -303,11 +300,10 @@ FROM
   
  Produce el siguiente conjunto de resultados:  
   
-|||||  
+|Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
  En los resultados anteriores, la segmentación arroja un resultado que solamente incluye los productos Preferred10Products que forman parte del grupo [Mountain] de [Product].[Product Line]; es el resultado esperado, porque Preferred10Products es una expresión constante.  
@@ -332,11 +328,10 @@ FROM
   
  El siguiente conjunto de resultados muestra el comportamiento superficial de Autoexists.  
   
-|||||  
+|Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
  El comportamiento de autoexists se puede modificar mediante el parámetro autoexists = [1 | 2 | 3] en la cadena de conexión; vea [las propiedades XMLA admitidas &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para el uso de parámetros.  
@@ -375,9 +370,8 @@ WHERE
   
  Produce los siguientes resultados:  
   
-|||||||  
+|Tipo de negocio + categoría|All Products|Accesorios|Bicicletas|Ropa|Componentes|  
 |-|-|-|-|-|-|  
-||**Todos los productos**|**Accesorios**|**Bicicletas**|**Ropa**|**Componentes**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
@@ -399,9 +393,8 @@ WHERE
   
  Produce los siguientes resultados:  
   
-|||||  
+|Tipo de negocio + categoría|All Products|Accesorios|Ropa|  
 |-|-|-|-|  
-||**Todos los productos**|**Accesorios**|**Ropa**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
 |**Almacén**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
@@ -426,9 +419,8 @@ WHERE
   
  La consulta anterior genera los resultados siguientes:  
   
-|||||  
+|Tipo de negocio + categoría|All Products|Accesorios|Ropa|  
 |-|-|-|-|  
-||All Products|Accesorios|Ropa|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  
@@ -457,9 +449,8 @@ WHERE
   
  La consulta anterior genera los resultados siguientes:  
   
-|||||  
-|-|-|-|-|  
 |Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
+|-|-|-|-|  
 |$80,450,596.98|$79.980.114,38|$470.482,60|0,58%|  
   
 ## <a name="see-also"></a>Consulte también  

@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00b33a9fa92dd6ec86cbac5a939fe593725bc091
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 74d3cc347d14a1d02ae5953b7762513b252493e6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749215"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242885"
 ---
 # <a name="ado-enumerated-constants"></a>Constantes enumeradas de ADO
 Para ayudar en la depuración, las enumeraciones de ADO muestran un valor para cada constante. Sin embargo, este valor es meramente consultivo y puede cambiar de una versión de ADO a otra. El código solo debe depender del nombre, no del valor real, de cada constante enumerada.  
   
-|||  
+|Constante|Descripción|  
 |-|-|  
 |[ADCPROP_ASYNCTHREADPRIORITY_ENUM](../../../ado/reference/ado-api/adcprop-asyncthreadpriority-enum.md)|Para un objeto de **conjunto de registros** RDS, especifica la prioridad de ejecución del subproceso asincrónico que recupera los datos.|  
 |[ADCPROP_AUTORECALC_ENUM](../../../ado/reference/ado-api/adcprop-autorecalc-enum.md)|Especifica cuándo el proveedor **MSDataShape** vuelve a calcular las columnas agregadas y calculadas en un **conjunto de registros**jerárquico.|  

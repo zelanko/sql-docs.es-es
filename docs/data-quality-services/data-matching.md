@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0bc33f9fd40a29ab2da19d682fcbdbbb6cd40206
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: faa4c6066af0d7c516434176817d8c7f49672be5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882564"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363060"
 ---
 # <a name="data-matching"></a>Coincidencia de datos
 
@@ -73,7 +73,7 @@ ms.locfileid: "85882564"
 ## <a name="in-this-section"></a>En esta sección  
  En DQS puede realizar las tareas siguientes relacionadas con la búsqueda de coincidencias:  
   
-|||  
+|Descripción de la tarea|Tema|  
 |-|-|  
 |Crear y probar reglas de coincidencia en una directiva de coincidencia|[Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md)|  
 |Ejecutar la búsqueda de coincidencias en un proyecto de calidad de datos|[Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md)|  

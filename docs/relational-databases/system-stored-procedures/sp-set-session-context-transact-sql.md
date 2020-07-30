@@ -18,15 +18,15 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a57bf4acff6f8d0d08f86852de5ecc0411211c67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11a3bae7cc6cbf025370a947c8fa3194f978d419
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104388"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394526"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Establece un par clave-valor en el contexto de la sesión.  
   
@@ -42,13 +42,13 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @key= ] N'key'  
+ [ @key =] N'key '  
  La clave que se establece, de tipo **sysname**. El tamaño máximo de la clave es de 128 bytes.  
   
- [ @value= ] valor  
+ [ @value =] ' valor '  
  Valor de la clave especificada, de tipo **sql_variant**. Si se establece un valor NULL, se libera la memoria. El tamaño máximo es 8.000 bytes.  
   
- [ @read_only= ] {0 | 1}  
+ [ @read_only =] {0 | 1}  
  Marca de tipo **bit**. Si es 1, el valor de la clave especificada no se puede cambiar de nuevo en esta conexión lógica. Si es 0 (valor predeterminado), el valor se puede cambiar.  
   
 ## <a name="permissions"></a>Permisos  

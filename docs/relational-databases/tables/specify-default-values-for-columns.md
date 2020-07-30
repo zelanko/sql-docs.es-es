@@ -14,16 +14,16 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1544242905645fed5cb00fda3f7da0a06809326c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e624926eb55adf65bd8390e6929cfa04aa742ba4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448480"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395823"
 ---
 # <a name="specify-default-values-for-columns"></a>Especificar valores predeterminados para las columnas
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para especificar un valor predeterminado que se escribirá en la columna de tabla. Puede establecer un valor predeterminado mediante el Explorador de objetos de la interfaz de usuario o mediante el envío de [!INCLUDE[tsql](../../includes/tsql-md.md)].
 

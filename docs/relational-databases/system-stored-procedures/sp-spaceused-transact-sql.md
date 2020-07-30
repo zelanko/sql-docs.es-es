@@ -18,15 +18,15 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152134"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393962"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Muestra el número de filas, el espacio de disco reservado y el espacio de disco utilizado por una tabla, vista indizada o cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)] de la base de datos actual, o bien muestra el espacio de disco reservado y el que utiliza la base de datos completa.  
   
@@ -60,7 +60,7 @@ Si no se especifica *objName* , se devuelven resultados para toda la base de dat
   
  El argumento *mode* puede tener los valores siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |ALL|Devuelve las estadísticas de almacenamiento del objeto o la base de datos, incluida la parte local y la parte remota.|  
 |LOCAL_ONLY|Devuelve las estadísticas de almacenamiento de solo la parte local del objeto o la base de datos. Si el objeto o la base de datos no están habilitados para Stretch, devuelve las mismas estadísticas que @mode = ALL.|  
@@ -70,7 +70,7 @@ Si no se especifica *objName* , se devuelven resultados para toda la base de dat
   
 `[ @oneresultset = ] oneresultset`Indica si se va a devolver un único conjunto de resultados. El argumento *oneresultset* puede tener los siguientes valores:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0|Cuando * \@ objName* es null o no se especifica, se devuelven dos conjuntos de resultados. Dos conjuntos de resultados son el comportamiento predeterminado.|  
 |1|Cuando * \@ objName* = null o no se especifica, se devuelve un conjunto de resultados único.|  
@@ -97,7 +97,7 @@ Si no se especifica *objName* , se devuelven resultados para toda la base de dat
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**sector**|**VARCHAR (18)**|Espacio total asignado por los objetos de la base de datos.|  
-|**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
+|**data**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por índices.|  
 |**sin usar**|**VARCHAR (18)**|Espacio total reservado para los objetos de la base de datos, pero no utilizado todavía.|  
   
@@ -109,7 +109,7 @@ Si no se especifica *objName* , se devuelven resultados para toda la base de dat
 |**database_size**|**VARCHAR (18)**|Tamaño de la base de datos actual en megabytes. **database_size** incluye archivos de datos y de registro.|  
 |**espacio sin asignar**|**VARCHAR (18)**|Espacio de la base de datos que no se ha reservado para objetos de base de datos.|  
 |**sector**|**VARCHAR (18)**|Espacio total asignado por los objetos de la base de datos.|  
-|**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
+|**data**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por índices.|  
 |**sin usar**|**VARCHAR (18)**|Espacio total reservado para los objetos de la base de datos, pero no utilizado todavía.|  
   
@@ -120,7 +120,7 @@ Si no se especifica *objName* , se devuelven resultados para toda la base de dat
 |**name**|**nvarchar(128)**|Nombre del objeto del que se solicitó la información de utilización de espacio.<br /><br /> El nombre del esquema del objeto no se devuelve. Si se requiere el nombre de esquema, use las vistas de administración dinámica [Sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) o [Sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) para obtener información de tamaño equivalente.|  
 |**las**|**Char (20)**|Número de filas de la tabla. Si el objeto especificado es una cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)], esta columna indica el número de mensajes de la misma.|  
 |**sector**|**VARCHAR (18)**|Cantidad total de espacio reservado para *objName*.|  
-|**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos en *objName*.|  
+|**data**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos en *objName*.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los índices en *objName*.|  
 |**sin usar**|**VARCHAR (18)**|Cantidad total de espacio reservado para *objName* pero que todavía no se ha usado.|  
  
@@ -137,7 +137,7 @@ Espacio usado por las tablas en la base de datos: (este conjunto de resultados n
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**sector**|**VARCHAR (18)**|Espacio total asignado por los objetos de la base de datos.|  
-|**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
+|**data**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por índices.|  
 |**sin usar**|**VARCHAR (18)**|Espacio total reservado para los objetos de la base de datos, pero no utilizado todavía.|
 
@@ -157,7 +157,7 @@ Si se omite *objName* , el valor de oneresultset es 1 y *include_total_xtp_stora
 |**database_size**|**VARCHAR (18)**|Tamaño de la base de datos actual en megabytes. **database_size** incluye archivos de datos y de registro. Si la base de datos tiene un grupo de archivos MEMORY_OPTIMIZED_DATA, esto incluye el tamaño total en disco de todos los archivos de punto de comprobación del grupo de archivos.|
 |**espacio sin asignar**|**VARCHAR (18)**|Espacio de la base de datos que no se ha reservado para objetos de base de datos. Si la base de datos tiene un grupo de archivos MEMORY_OPTIMIZED_DATA, esto incluye el tamaño total en disco de los archivos de punto de comprobación con el estado creado en el grupo de archivos.|  
 |**sector**|**VARCHAR (18)**|Espacio total asignado por los objetos de la base de datos.|  
-|**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
+|**data**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por índices.|  
 |**sin usar**|**VARCHAR (18)**|Espacio total reservado para los objetos de la base de datos, pero no utilizado todavía.|
 |**xtp_precreated**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con estado precreated, en KB. Esto cuenta en el espacio sin asignar en la base de datos en conjunto. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. *Esta columna solo se incluye si @include_total_xtp_storage = 1*.| 
@@ -249,9 +249,9 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [Sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [Sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [Sys. index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [Sys. partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

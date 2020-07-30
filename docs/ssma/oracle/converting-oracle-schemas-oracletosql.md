@@ -13,12 +13,12 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 5eaf0970f5bc7d3aef49e83906a32295e9138cd9
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293582"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395170"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Conversión de esquemas de Oracle (OracleToSQL)
 Después de conectarse a Oracle, conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y establecer las opciones de asignación de datos y de proyecto, puede convertir objetos de base de datos de Oracle en objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -34,18 +34,17 @@ Antes de convertir objetos, revise las opciones de conversión de proyectos en e
 ## <a name="conversion-results"></a>Resultados de la conversión  
 En la tabla siguiente se muestran los objetos de Oracle convertidos y los objetos resultantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|||  
-|-|-|  
 |Objetos de Oracle|Objetos SQL Server resultantes|  
-|Funciones|Si la función se puede convertir directamente en [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crea una función.<br /><br />En algunos casos, la función se debe convertir en un procedimiento almacenado. En este caso, SSMA crea un procedimiento almacenado y una función que llama al procedimiento almacenado.|  
+|-|-|  
+|Functions|Si la función se puede convertir directamente en [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crea una función.<br /><br />En algunos casos, la función se debe convertir en un procedimiento almacenado. En este caso, SSMA crea un procedimiento almacenado y una función que llama al procedimiento almacenado.|  
 |Procedimientos|Si el procedimiento se puede convertir directamente en [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA crea un procedimiento almacenado.<br /><br />En algunos casos, se debe llamar a un procedimiento almacenado en una transacción autónoma. En este caso, SSMA crea dos procedimientos almacenados: uno que implementa el procedimiento y otro que se utiliza para llamar al procedimiento almacenado de implementación.|  
 |Paquetes|SSMA crea un conjunto de procedimientos almacenados y funciones que se unifican mediante nombres de objeto similares.|  
 |Secuencias|SSMA crea objetos de secuencia (SQL Server 2012 o SQL Server 2014) o emula secuencias de Oracle.|  
 |Tablas con objetos dependientes como índices y desencadenadores|SSMA crea tablas con objetos dependientes.|  
-|Ver con objetos dependientes, como desencadenadores|SSMA crea vistas con objetos dependientes.|  
-|Vistas materializadas|**SSMA crea vistas indizadas en SQL Server con algunas excepciones. Se producirá un error en la conversión si la vista materializada incluye una o varias de las construcciones siguientes:**<br /><br />Función definida por el usuario<br /><br />Campo/función/expresión no determinista en las cláusulas SELECT, WHERE o GROUP BY<br /><br />Uso de la columna Float en las cláusulas SELECT *, WHERE o GROUP BY (caso especial del problema anterior)<br /><br />Tipo de datos personalizado (incl. tablas anidadas)<br /><br />COUNT ( &lt; campo distinto &gt; )<br /><br />FETCH<br /><br />Combinaciones externas (LEFT, RIGHT o FULL)<br /><br />Subconsulta, otra vista<br /><br />SOBRE, RANGO, CLIENTE POTENCIAL, REGISTRO<br /><br />MIN, MAX<br /><br />UNION, MENOS, INTERSECT<br /><br />HAVING|  
-|Desencadenador|**SSMA crea desencadenadores basados en las siguientes reglas:**<br /><br />ANTES de que los desencadenadores se conviertan en desencadenadores INSTEAD OF.<br /><br />Los desencadenadores AFTER se convierten en desencadenadores AFTER.<br /><br />Los desencadenadores INSTEAD OF se convierten en desencadenadores INSTEAD OF. Varios desencadenadores INSTEAD OF definidos en la misma operación se combinan en un solo desencadenador.<br /><br />Los desencadenadores de nivel de fila se emulan mediante cursores.<br /><br />Los desencadenadores en cascada se convierten en varios desencadenadores individuales.|  
-|Sinónimos|**Los sinónimos se crean para los siguientes tipos de objeto:**<br /><br />Tablas y tablas de objetos<br /><br />Vistas y vistas de objetos<br /><br />Procedimientos almacenados<br /><br />Funciones<br /><br />**Los sinónimos de los siguientes objetos se resuelven y se reemplazan por referencias de objeto directas:**<br /><br />Secuencias<br /><br />Paquetes<br /><br />Objetos de esquema de clase Java<br /><br />Tipos de objetos definidos por el usuario<br /><br />Los sinónimos de otro sinónimo no se pueden migrar y se marcarán como errores.<br /><br />No se crean sinónimos para vistas materializadas.|  
+|Vista con objetos dependientes, como desencadenadores|SSMA crea vistas con objetos dependientes.|  
+|Vistas materializadas|**SSMA crea vistas indizadas en SQL Server con algunas excepciones. Se producirá un error en la conversión si la vista materializada incluye una o varias de las construcciones siguientes:**<br /><br />Función definida por el usuario<br /><br />Campo/función/expresión no determinista en las cláusulas SELECT, WHERE o GROUP BY<br /><br />Uso de la columna Float en las cláusulas SELECT *, WHERE o GROUP BY (caso especial del problema anterior)<br /><br />Tipo de datos personalizado (incluidas las tablas anidadas)<br /><br />COUNT (&lt;campo&gt; distinto)<br /><br />FETCH<br /><br />Combinaciones externas (LEFT, RIGHT o FULL)<br /><br />Subconsulta, otra vista<br /><br />OVER, RANK, LEAD, LOG<br /><br />MIN, MAX<br /><br />UNION, MINUS, INTERSECT<br /><br />HAVING|  
+|Desencadenador|**SSMA crea desencadenadores basados en las siguientes reglas:**<br /><br />Los desencadenadores BEFORE se convierten en desencadenadores INSTEAD OF.<br /><br />Los desencadenadores AFTER se convierten en desencadenadores AFTER.<br /><br />Los desencadenadores INSTEAD OF se convierten en desencadenadores INSTEAD OF. Varios desencadenadores INSTEAD OF definidos en la misma operación se combinan en un solo desencadenador.<br /><br />Los desencadenadores de nivel de fila se emulan mediante cursores.<br /><br />Los desencadenadores en cascada se convierten en varios desencadenadores individuales.|  
+|Sinónimos|**Los sinónimos se crean para los siguientes tipos de objeto:**<br /><br />Tablas y tablas de objetos<br /><br />Vistas y vistas de objetos<br /><br />Procedimientos almacenados<br /><br />Functions<br /><br />**Los sinónimos de los siguientes objetos se resuelven y se reemplazan por referencias de objeto directas:**<br /><br />Secuencias<br /><br />Paquetes<br /><br />Objetos de esquema de clase Java<br /><br />Tipos de objetos definidos por el usuario<br /><br />Los sinónimos de otro sinónimo no se pueden migrar y se marcarán como errores.<br /><br />No se crean sinónimos para vistas materializadas.|  
 |Tipos definidos por el usuario|**SSMA no proporciona compatibilidad para la conversión de tipos definidos por el usuario. Los tipos definidos por el usuario, incluido su uso en programas PL/SQL, se marcan con errores de conversión especiales guiados por las siguientes reglas:**<br /><br />La columna de tabla de un tipo definido por el usuario se convierte en VARCHAR (8000).<br /><br />El argumento del tipo definido por el usuario para un procedimiento almacenado o una función se convierte en VARCHAR (8000).<br /><br />La variable de tipo definido por el usuario en el bloque PL/SQL se convierte en VARCHAR (8000).<br /><br />La tabla de objetos se convierte en una tabla estándar.<br /><br />La vista de objetos se convierte en una vista estándar.|  
   
 ## <a name="converting-oracle-database-objects"></a>Convertir objetos Oracle Database  

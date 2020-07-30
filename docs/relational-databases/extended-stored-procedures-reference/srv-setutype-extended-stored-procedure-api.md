@@ -1,5 +1,6 @@
 ---
 title: srv_setutype (API de procedimiento almacenado extendido) | Microsoft Docs
+description: Más información sobre srv_setutype. srv_setutype establece el tipo de datos definido por el usuario para una columna de una fila.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70cacca6e6694d914c4b66b7e6eb813b012cf2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ecdbaef663059146f3ca6bd4a88305e12d4f495
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755813"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248198"
 ---
 # <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (API de procedimiento almacenado extendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,10 +61,10 @@ user_type
  *user_type*  
  Especifica el código del tipo de datos definido por el usuario.  
   
-## <a name="returns"></a>Devoluciones  
+## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL. Devuelve FAIL si la columna no existe.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Una columna tiene dos tipos de datos: el tipo de datos real y el tipo de datos definido por el usuario. Usa el tipo de datos definido por el usuario [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar el tipo de datos definido por el usuario real de la columna, si existe, y la información de descripción de la columna, como la nulabilidad y la actualización, para la columna.  
   
  Se puede llamar a la función **srv_setutype** en cualquier momento siempre que se haya definido *column* con **srv_describe** y antes de que se haya enviado la última fila.  

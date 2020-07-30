@@ -16,13 +16,14 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dcafb11041fc3698e0af5db31d05e95263dd268
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e50be9c92fdf887fbf11ae5e301c8c21b55be62c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009017"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247598"
 ---
-# <a name="service-principal-name-spn-support-in-client-connections"></a>Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
+# <a name="service-principal-name-spn-support-in-client-connections-in-sql-server-native-client"></a>Compatibilidad con el nombre de entidad de seguridad de servicio (SPN) en conexiones de cliente en SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   A partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], se ha ampliado la compatibilidad con los nombres de entidad de seguridad de servicio (SPN) para habilitar la autenticación mutua en todos los protocolos. En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los SPN solo se admitían en Kerberos sobre TCP, cuando el SPN predeterminado para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se registraba en Active Directory.  
@@ -60,7 +61,7 @@ ms.locfileid: "86009017"
 ## <a name="failover"></a>Conmutación por error  
  Los SPN no se almacenan en la memoria caché de conmutación por error y, por lo tanto, no pueden pasarse entre conexiones. Los SPN se usarán en todos los intentos de conexión a la entidad de seguridad y al asociado cuando se especifiquen en los atributos de cadena de conexión o atributos de conexión.  
   
-## <a name="connection-pooling"></a>Agrupar conexiones  
+## <a name="connection-pooling"></a>Agrupación de conexiones  
  Las aplicaciones deben tener en cuenta que especificar los SPN en algunas cadenas de conexión, pero no en todas, pueden contribuir a la fragmentación del grupo.  
   
  Las aplicaciones pueden especificar los SPN mediante programación como atributos de conexión, en lugar de especificar las palabras clave de cadena de conexión. Esto puede contribuir a administrar la fragmentación del grupo de conexiones.  
@@ -112,5 +113,5 @@ ms.locfileid: "86009017"
   
 ## <a name="see-also"></a>Consulte también  
  [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-[Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
+[Registrar un nombre principal de servicio para las conexiones con Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

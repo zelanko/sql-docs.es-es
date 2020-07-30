@@ -13,13 +13,14 @@ ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7974e0f902f990c664fc6442cb5fb6a3203811c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b9a79a82eaf8f3623435bd2330d87686eb9834c7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013030"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246752"
 ---
-# <a name="ole-db-table-valued-parameter-type-support-properties"></a>Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades)
+# <a name="ole-db-table-valued-parameter-type-support-in-sql-server-native-client-properties"></a>OLE DB compatibilidad con tipos de parámetros con valores de tabla en SQL Server Native Client (propiedades)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En este tema se proporciona información sobre las propiedades de OLE DB y los conjuntos de propiedades asociados a los objetos de conjunto de filas de parámetro con valores de tabla.  
@@ -29,7 +30,7 @@ ms.locfileid: "86013030"
   
  No se enumeran aquí las propiedades no implementadas en el objeto de conjunto de filas de parámetro con valores. Para obtener una lista completa de las propiedades, vea la documentación de OLE DB en Data Access Components para Windows.  
   
-|Id. de propiedad|Value|  
+|Id. de propiedad|Valor|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  

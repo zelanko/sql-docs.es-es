@@ -1,5 +1,6 @@
 ---
 title: srv_pfield (API de procedimiento almacenado extendido) | Microsoft Docs
+description: Obtenga información acerca de cómo srv_pfield en la API de procedimiento almacenado extendido devuelve información acerca de una conexión de base de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2711fa3c1e7035b75228b02e9d52de8fd3dcd6d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12d985ca974f923f37db9d19de048e14af143271
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755933"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248320"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimiento almacenado extendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ len
  *campo*  
  Especifica los datos que se van a devolver en la conexión.  
   
-|Valor|Devoluciones|  
+|Valor|Devuelve|  
 |-----------|-------------|  
 |SRV_APPLNAME|El nombre de aplicación proporcionado por el cliente cuando estableció la conexión.|  
 |SRV_BCPFLAG|Una marca que es TRUE si el cliente está preparando una operación de copia masiva; de lo contrario, FALSE.|  
@@ -82,7 +83,7 @@ len
  *terminado*  
  Es un puntero a una variable **int** que contiene la longitud del valor *field* devuelto. Si *len* es NULL, no se devuelve la longitud de la cadena.  
   
-## <a name="returns"></a>Devoluciones  
+## <a name="returns"></a>Devuelve  
  Un puntero a una cadena terminada en NULL que contiene el valor actual del campo especificado en la estructura de SRV_PROC. Si el campo está vacío, se devuelve un puntero válido a una cadena vacía y *len* contiene 0. Si el campo es desconocido, se devuelve NULL y *len* contiene el valor -1.  
   
 > [!IMPORTANT]  

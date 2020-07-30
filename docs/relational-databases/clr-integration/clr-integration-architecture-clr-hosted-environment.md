@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727642"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246400"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración CLR: entorno hospedado CLR
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -154,9 +154,8 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>Seguridad: conjuntos de permisos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite a los usuarios especificar los requisitos de confiabilidad y seguridad para el código implementado en la base de datos. Cuando se cargan ensamblados en la base de datos, el autor del ensamblado puede especificar uno de los tres conjuntos de permisos para ese ensamblado: SAFE, EXTERNAL_ACCESS y Unsafe.  
   
-|||||  
+|Funcionalidad|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|Conjunto de permisos|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Seguridad de acceso del código|Solo ejecución|Ejecución + acceso a recursos externos|Sin restricciones|  
 |Restricciones del modelo de programación|Sí|Sí|Sin restricciones|  
 |Requisito de capacidad de comprobación|Sí|Sí|No|  

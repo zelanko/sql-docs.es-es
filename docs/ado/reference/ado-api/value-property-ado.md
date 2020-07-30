@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6648fcabe8890ef653558636738735a4f5e4012f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c84ab6806924649bdad9bb712f730c24011cdb38
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759451"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243166"
 ---
 # <a name="value-property-ado"></a>Value (propiedad) (ADO)
 
@@ -43,11 +43,19 @@ ADO permite establecer y devolver datos binarios largos con la propiedad **Value
 > En el caso de los nuevos objetos de **campo** que se han anexado a la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de un objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) , la propiedad **Value** debe establecerse antes de que se puedan especificar otras propiedades de **campo** . En primer lugar, se debe haber asignado un valor específico para la propiedad **Value** y [actualizarse](../../../ado/reference/ado-api/update-method.md) en la colección **Fields** denominada. A continuación, se puede tener acceso a otras propiedades, como el [tipo](../../../ado/reference/ado-api/type-property-ado.md) o [los atributos](../../../ado/reference/ado-api/attributes-property-ado.md) .
   
 ## <a name="applies-to"></a>Se aplica a
-  
-||||  
-|-|-|-|  
-|[Objeto Field](../../../ado/reference/ado-api/field-object.md)|[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
-  
+
+:::row:::
+    :::column:::
+        [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también
 
 [Ejemplo de la propiedad Value (VB)](../../../ado/reference/ado-api/value-property-example-vb.md) 

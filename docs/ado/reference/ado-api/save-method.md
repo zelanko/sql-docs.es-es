@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4134e34cc494185ec384bd9900ba578e9fa3034d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755871"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243206"
 ---
 # <a name="save-method"></a>Save (método)
 Guarda el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) en un archivo o en un objeto de [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -88,11 +88,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  Un **conjunto de registros** guardado en formato XML se guarda con el formato UTF-8. Cuando se carga un archivo de este tipo en una secuencia de ADO, el objeto de secuencia no intentará abrir un **conjunto de registros** desde la secuencia a menos que la propiedad charset de la secuencia esté establecida en el valor adecuado para el formato UTF-8.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de métodos Save y Open (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Ejemplo de métodos Save y Open (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   

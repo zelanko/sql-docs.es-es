@@ -1,5 +1,5 @@
 ---
-title: Autenticación Kerberos integrada (OLE DB) | Microsoft Docs
+title: Autenticación integrada de Kerberos (proveedor de OLE DB de Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,13 +11,14 @@ ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6223848d99c9adb1f92906a2c0a6d20ecb8e89a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6904affb86c55c1611313a15c0db37b581f740e0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002360"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243657"
 ---
-# <a name="integrated-kerberos-authentication-ole-db"></a>Autenticación integrada de Kerberos (OLE DB)
+# <a name="integrated-kerberos-authentication-native-client-ole-db-provider"></a>Autenticación integrada de Kerberos (proveedor de OLE DB de Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En este ejemplo se muestra cómo obtener la autenticación mutua de Kerberos utilizando OLE DB en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  

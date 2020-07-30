@@ -1,5 +1,6 @@
 ---
 title: Tipos de datos (API de procedimiento almacenado extendido) | Microsoft Docs
+description: Obtenga información sobre cómo se pueden expandir los tipos de datos de API de procedimientos almacenados extendidos incluyendo el archivo de encabezado SRV. h en el programa.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5ff9f72c7ddec8301940cd14bbfe6086cadbd54
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679053"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244029"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Tipos de datos (API de procedimiento almacenado extendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85679053"
   
  Para utilizar los tipos de datos de la API Procedimiento almacenado extendido, incluya el archivo de encabezado Srv.h en el programa.  
   
-|Tipo de datos|Tipos de datos de SQL Server|Descripción|  
+|Tipo de datos|Tipos de datos de SQL Server|Description|  
 |---------------|--------------------------|-----------------|  
 |SRVBIGBINARY|**binary**|Tipo de datos **binary**, longitud de 0 a 8000 bytes.|  
 |SRVBIGCHAR|**char**|Tipo de datos **character**, longitud de 0 a 8000 bytes.|  
@@ -46,7 +47,7 @@ ms.locfileid: "85679053"
 |SRVFLT4|**real**|Tipo de datos **real** de 4 bytes.|  
 |SRVFLT8|**float**|Tipo de datos **float** de 8 bytes.|  
 |SRVFLTN|**real** &#124; **float null**|Tipo de datos **real** o **float**, permite valores NULL.|  
-|SRVIMAGE|**imagen**|Tipo de datos **image**.|  
+|SRVIMAGE|**image**|Tipo de datos **image**.|  
 |SRVINT1|**tinyint**|Tipo de datos **tinyint** de 1 byte.|  
 |SRVINT2|**smallint**|Tipo de datos **smallint** de 2 bytes.|  
 |SRVINT4|**int**|Tipo de datos **int** de 4 bytes.|  

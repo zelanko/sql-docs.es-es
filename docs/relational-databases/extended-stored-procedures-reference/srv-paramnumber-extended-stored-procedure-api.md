@@ -1,5 +1,6 @@
 ---
 title: srv_paramnumber (API de procedimiento almacenado extendido) | Microsoft Docs
+description: Obtenga información acerca de cómo srv_paramnumber en la API de procedimiento almacenado extendido devuelve el número de un parámetro de llamada a un procedimiento almacenado remoto.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f10d4a1bdfb2e3e7165596e5f3041c27440223bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d45225866cef925aa0b83ee1516e0d7dc1aa7eee
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756677"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248397"
 ---
 # <a name="srv_paramnumber-extended-stored-procedure-api"></a>srv_paramnumber (API de procedimiento almacenado extendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,10 +61,10 @@ namelen
  *namelen*  
  Es la longitud de *name*. Si *name* está terminado en null, establezca *namelen* en SRV_NULLTERM.  
   
-## <a name="returns"></a>Devoluciones  
+## <a name="returns"></a>Devuelve  
  Es el número de parámetro del parámetro nombrado. El primer parámetro es 1. Si no hay ningún parámetro denominado *name* o ningún procedimiento almacenado remoto, se devuelve 0 y se genera un mensaje.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se usan parámetros en una llamada a un procedimiento almacenado remoto, estos pueden pasarse por nombre o por posición (sin nombre). Se produce un error si la llamada al procedimiento almacenado remoto se realiza con algunos parámetros pasados por nombre y otros pasados por posición. Sigue llamándose al controlador SRV_RPC, pero parece como si no hubiera ningún parámetro y **srv_rpcparams** devuelve 0.  
   
 > [!IMPORTANT]  

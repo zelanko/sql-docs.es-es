@@ -1,5 +1,6 @@
 ---
 title: srv_rpcowner (API de procedimiento almacenado extendido) | Microsoft Docs
+description: Obtenga información acerca de cómo srv_rpcowner en la API de procedimiento almacenado extendido devuelve el componente propietario del procedimiento almacenado remoto actual.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c427b572b6c9320c3ebe320c4469f3571641fa4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64e9fa0970367ccac5d4fca5bf6b9815ad0e0e17
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755877"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248274"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API de procedimiento almacenado extendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +55,10 @@ len
  *terminado*  
  Es un puntero a una variable entera que recibe la longitud del nombre del propietario. El parámetro *len* puede ser NULL, en cuyo caso no se devuelve la longitud del componente de propietario.  
   
-## <a name="returns"></a>Devoluciones  
+## <a name="returns"></a>Devuelve  
  Un puntero DBCHAR al componente de propietario terminado en NULL para el procedimiento almacenado remoto actual. Si no hay ningún procedimiento almacenado remoto actual, se devuelve NULL y *len* se establece en -1.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta función únicamente devuelve el componente de propietario del procedimiento almacenado remoto. No incluye los especificadores opcionales para el nombre, nombre de procedimiento almacenado remoto, y número de procedimiento almacenado remoto.  
   
 > [!IMPORTANT]  

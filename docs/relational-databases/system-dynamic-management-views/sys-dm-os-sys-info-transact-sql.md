@@ -22,14 +22,15 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0394d8c13ec3aa9b458813556c80645841b5576b
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: 6b384190b6ffeee077f6658d0701f036c3f7746a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032519"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396849"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Devuelve diversos datos útiles sobre el equipo y los recursos disponibles y consumidos por [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
@@ -75,9 +76,9 @@ ms.locfileid: "86032519"
 |**sql_memory_model**|**int**|**Se aplica a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 y versiones posteriores.<br /><br />Especifica el modelo de memoria utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para asignar memoria. No acepta valores NULL.<br /><br />1 = modelo de memoria convencional<br />2 = bloquear páginas en la memoria<br /> 3 = páginas grandes en memoria|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Se aplica a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 y versiones posteriores.<br /><br />Especifica el modelo de memoria utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para asignar memoria. No acepta valores NULL.<br /><br />**CONVENTIONAL**  =  Convencional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el modelo de memoria convencional para asignar memoria. Este es el modelo de memoria de SQL predeterminado cuando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio no tiene privilegios de bloqueo de páginas en memoria durante el inicio.<br />**LOCK_PAGES**  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está utilizando bloquear páginas en la memoria para asignar memoria. Este es el administrador de memoria de SQL predeterminado cuando SQL Server cuenta de servicio posee el privilegio bloquear páginas en memoria durante SQL Server Inicio.<br /> **LARGE_PAGES**  =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza páginas grandes en memoria para asignar memoria. SQL Server utiliza el asignador de páginas grandes para asignar memoria solo con Enterprise Edition cuando SQL Server cuenta de servicio posee el privilegio bloquear páginas en memoria durante el inicio del servidor y cuando la marca de seguimiento 834 está activada.|
 |**pdw_node_id**|**int**|**Se aplica a:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
-|**socket_count** |**int** | **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores.<br /><br />Especifica el número de sockets de procesador disponibles en el sistema. |  
-|**cores_per_socket** |**int** | **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores.<br /><br />Especifica el número de procesadores por socket disponibles en el sistema. |  
-|**numa_node_count** |**int** | **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores.<br /><br />Especifica el número de nodos Numa disponibles en el sistema. Esta columna incluye los nodos Numa físicos y los nodos Numa de software. |  
+|**socket_count** |**int** | **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores<br /><br />Especifica el número de sockets de procesador disponibles en el sistema. |  
+|**cores_per_socket** |**int** | **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores<br /><br />Especifica el número de procesadores por socket disponibles en el sistema. |  
+|**numa_node_count** |**int** | **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores<br /><br />Especifica el número de nodos Numa disponibles en el sistema. Esta columna incluye los nodos Numa físicos y los nodos Numa de software. |  
   
 ## <a name="permissions"></a>Permisos
 

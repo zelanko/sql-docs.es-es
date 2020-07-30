@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab4088aa563befcb32eaaf8fe129716b789f516b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692661"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243616"
 ---
 # <a name="replication-views-transact-sql"></a>Vistas de replicación (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,34 +42,66 @@ ms.locfileid: "85692661"
  A continuación, se presenta una lista de las vistas del sistema utilizadas por la replicación, agrupadas por base de datos.  
   
 ### <a name="replication-views-in-the-msdb-database"></a>Vistas de replicación de la base de datos msdb  
-  
-|||  
-|-|-|  
-|[MSdatatype_mappings &#40;&#41;de Transact-SQL](../../relational-databases/system-views/msdatatype-mappings-transact-sql.md)|[sysdatatypemappings &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysdatatypemappings-transact-sql.md)|  
-  
+
+:::row:::
+    :::column:::
+        [MSdatatype_mappings &#40;&#41;de Transact-SQL](../../relational-databases/system-views/msdatatype-mappings-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sysdatatypemappings &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysdatatypemappings-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 ### <a name="replication-views-in-the-distribution-database"></a>Vistas de replicación de la base de datos de distribución  
-  
-|||  
-|-|-|  
-|[IHextendedArticleView &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihextendedarticleview-transact-sql.md)|[sysarticles &#40;vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)|  
-|[IHextendedSubscriptionView &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md)|[sysextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysextendedarticlesview-transact-sql.md)|  
-|[IHsyscolumns &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)|[syspublications &#40;Vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)|  
-|[MSdistribution_status &#40;&#41;de Transact-SQL](../../relational-databases/system-views/msdistribution-status-transact-sql.md)|[syssubscriptions &#40;Vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)|  
-|[sysarticlecolumns &#40;vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)||  
-  
+
+:::row:::
+    :::column:::
+        [IHextendedArticleView &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihextendedarticleview-transact-sql.md)
+
+        [IHextendedSubscriptionView &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md)
+
+        [IHsyscolumns &#40;Transact-SQL&#41;](../../relational-databases/system-views/ihsyscolumns-transact-sql.md)
+
+        [MSdistribution_status &#40;&#41;de Transact-SQL](../../relational-databases/system-views/msdistribution-status-transact-sql.md)
+
+        [sysarticlecolumns &#40;vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sysarticles &#40;vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)
+
+        [sysextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysextendedarticlesview-transact-sql.md)
+
+        [syspublications &#40;Vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)
+
+        [syssubscriptions &#40;Vista del sistema&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 ### <a name="replication-views-in-the-publication-database"></a>Vistas de replicación de la base de datos de publicaciones  
-  
-|||  
-|-|-|  
-|[sysmergeextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
-|[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
-  
+
+:::row:::
+    :::column:::
+        [sysmergeextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)
+
+        [systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sysmergepartitioninfoview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 ### <a name="replication-views-in-the-subscription-database"></a>Vistas de replicación de la base de datos de suscripciones  
-  
-|||  
-|-|-|  
-|[sysmergeextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
-|[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
+
+:::row:::
+    :::column:::
+        [sysmergeextendedarticlesview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)
+
+        [sysmergepartitioninfoview &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

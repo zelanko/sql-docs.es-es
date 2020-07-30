@@ -9,18 +9,18 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245392"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243479"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
+# <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>Configuración de polybase en el almacenamiento de datos paralelos para acceder a datos externos en Hadoop
 
 En el artículo se explica cómo usar polybase en un dispositivo APS para consultar datos externos en Hadoop.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 PolyBase es compatible con dos proveedores de Hadoop: Hortonworks Data Platform (HDP) y Cloudera Distributed Hadoop (CDH). Hadoop sigue el patrón “Principal.Secundaria.Versión” para sus revisiones nuevas y se admiten todas las versiones dentro de una revisión principal y secundaria compatible. Se admiten los siguientes proveedores de Hadoop:
  - Hortonworks HDP 1.3 en Linux y Windows Server  
@@ -55,7 +55,7 @@ Para mejorar el rendimiento de las consultas, habilite el cálculo de la aplicac
   
 1. Abra una conexión de escritorio remoto al nodo de control de PDW.
 
-2. Busque el archivo **yarn-site. XML** en el nodo de control. Normalmente, la ruta de acceso es:  
+2. Busque el archivo **yarn-site.xml** en el nodo de control. Normalmente, la ruta de acceso es:  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -63,7 +63,7 @@ Para mejorar el rendimiento de las consultas, habilite el cálculo de la aplicac
 
 3. En el equipo de Hadoop, busque el archivo análogo en el directorio de configuración de Hadoop. En el archivo, busque y copie el valor de la clave de configuración yarn.application.classpath.  
   
-4. En el nodo control, en el **archivo hilados. site. XML,** busque la propiedad **hilados. Application. classpath** . Pegue el valor de la máquina de Hadoop en el elemento de valor.  
+4. En el nodo de control, en el **archivo deyarn.site.xml,** busque la propiedad **hilados. Application. classpath** . Pegue el valor de la máquina de Hadoop en el elemento de valor.  
   
 5. Para todas las versiones 5.X de CDH, deberá agregar los parámetros de configuración mapreduce.application.classpath al final del archivo yarn.site.xml o en el archivo mapred-site.xml. HortonWorks incluye estas configuraciones dentro de las configuraciones yarn.application.classpath. Consulte [PolyBase configuration](../relational-databases/polybase/polybase-configuration.md) (Configuración de PolyBase) para obtener ejemplos.
 
@@ -102,7 +102,7 @@ Yarn-site.xml con la configuración yarn.application.classpath y mapreduce.appli
 </configuration>
 ```
 
-Si decide dividir los dos valores de configuración en mapred-site. XML y yarn-site. XML, los archivos serían los siguientes:
+Si decide dividir los dos valores de configuración en el mapred-site.xml y en el yarn-site.xml, los archivos serían los siguientes:
 
 **yarn-site.xml**
 
@@ -227,7 +227,7 @@ Para consultar los datos en el origen de datos de Hadoop, debe definir una tabla
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Cree un origen de datos externo con [Crear origen de datos externo](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

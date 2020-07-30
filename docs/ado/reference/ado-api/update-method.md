@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0d75e8f9fb6d11315e327edd6f7d064c13e063
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aeeb7bcbb79231a2d6ed842459355a09e2889e4f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759501"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243176"
 ---
 # <a name="update-method"></a>Update (método)
 Guarda los cambios realizados en la fila actual de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) o la colección de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) de un objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) .  
@@ -67,11 +67,16 @@ record.Fields.Update
  Por ejemplo, los campos eliminados con el método **Delete** se marcan para su eliminación inmediatamente, pero permanecen en la colección. Se debe llamar al método **Update** para eliminar realmente estos campos de la colección del proveedor.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de los métodos Update y CancelUpdate (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Ejemplo de los métodos Update y CancelUpdate (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

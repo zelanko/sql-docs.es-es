@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 370dc7900e5fe876ea1b1064b2621371c730f323
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 40a392e355e2ec8a468034b382956489f554ac78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765125"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243136"
 ---
 # <a name="name-property-ado-md"></a>Name (propiedad, ADO MD)
 Indica el nombre de un objeto.  
@@ -35,17 +35,27 @@ Indica el nombre de un objeto.
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve una **cadena** y es de solo lectura.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede recuperar la propiedad **Name** de un objeto mediante una referencia ordinal, después de la cual puede hacer referencia al objeto directamente por su nombre. Por ejemplo, si `cdf.CubeDefs(0).Name` produce "bobs Video Store", puede hacer referencia a este [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) como `cdf.CubeDefs("Bobs Video Store")` .  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-||||  
-|-|-|-|  
-|[Objeto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|[Objeto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Objeto CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|  
-|[Objeto de dimensión (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Objeto Hierarchy (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|[Objeto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|  
-|[Objeto de miembro (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
+        [Objeto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+        [Objeto CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto de dimensión (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
+        [Objeto Hierarchy (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+        [Objeto de miembro (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de catálogo (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Propiedad Caption (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   

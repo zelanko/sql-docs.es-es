@@ -1,5 +1,5 @@
 ---
-title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
+title: 'IBCPSession2:: BCPSetBulkMode (proveedor de OLE DB de Native Client) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12788578b865e24f390a3e49d97fa66388ecb4aa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dc8b48c6a9dab071df8fa3df1977f62afb91659d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008432"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247712"
 ---
-# <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
+# <a name="ibcpsession2bcpsetbulkmode-native-client-ole-db-provider"></a>IBCPSession2:: BCPSetBulkMode (proveedor de OLE DB de Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   IBCPSession2::BCPSetBulkMode proporciona una alternativa a [IBCPSession::BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) para especificar el formato de columna. A diferencia de IBCPSession::BCPColFmt, que establece atributos de formato de columna, IBCPSession2::BCPSetBulkMode establece todos los atributos.  
@@ -53,7 +54,7 @@ HRESULT BCPSetBulkMode (
  cbRow  
  Longitud en bytes del valor de terminador de fila.  
   
-## <a name="returns"></a>Devoluciones  
+## <a name="returns"></a>Devuelve  
  IBCPSession2::BCPSetBulkMode puede devolver uno de los siguientes elementos:  
   
 |||  

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105333"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247139"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -28,7 +28,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- La función IIf toma tres argumentos: IIF (\<condición>, \<después rama>, \<o rama>).  
+ La función IIf toma tres argumentos: IIF ( \<condition> , \<then branch> , \<else branch> ).  
   
  *Logical_Expression*  
  Una condición que se evalúa como **true** (1) o **false** (0). Debe ser expresión lógica MDX (Expresiones multidimensionales) válida.  
@@ -63,7 +63,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER y STRICT son mutuamente exclusivos en la sugerencia; se pueden utilizar en el mismo IIF(,,) a través de expresiones diferentes.  
   
- Para obtener más información, vea [sugerencias de consulta de función IIf en SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) y [planes de ejecución y sugerencias de plan para la función IIf de MDX y la instrucción Case](https://go.microsoft.com/fwlink/?LinkId=269565).  
+ Para obtener más información, vea [sugerencias de consulta de función IIf en SQL Server Analysis Services 2008](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008) y [planes de ejecución y sugerencias de plan para la función IIf de MDX y la instrucción Case](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## <a name="examples"></a>Ejemplos  
  En la consulta siguiente se muestra un uso simple de **IIf** dentro de una medida calculada para devolver uno de dos valores de cadena diferentes cuando la medida Internet sales amount es mayor o menor que $10000:  

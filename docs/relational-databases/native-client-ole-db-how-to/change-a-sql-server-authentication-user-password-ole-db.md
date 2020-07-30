@@ -11,13 +11,14 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f018de17838e70c5339bfbc986cdb29b0265f43c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 41d15be4184152741c8e2a6c98efacb1cffcac33
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004585"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247894"
 ---
-# <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Cambiar una contraseña de usuario de autenticación de SQL Server (OLE DB)
+# <a name="change-a-sql-server-native-client-authentication-user-password-ole-db"></a>Cambiar una contraseña de usuario de autenticación de SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   En este ejemplo se muestra cómo usar OLE DB para cambiar la contraseña de una cuenta de usuario bajo autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,5 +1,6 @@
 ---
 title: srv_got_attention (API de procedimiento almacenado extendido) | Microsoft Docs
+description: Obtenga información sobre cómo srv_got_attention comprueba si es necesario anular la conexión o la tarea actual y devuelve TRUE si la conexión se ha eliminado o se ha anulado el lote.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f30e546a5cd45d9c89923ab9e96670127491f1ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b5ba738ddd220d83cffe2c28b5629ee491d293f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756741"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248453"
 ---
 # <a name="srv_got_attention-extended-stored-procedure-api"></a>srv_got_attention (API de procedimiento almacenado extendido)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ srvproc
 ## <a name="return-value"></a>Valor devuelto  
  TRUE si se cancela la conexión o se anula el lote. FALSE si la conexión o el lote están activos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un procedimiento almacenado extendido de ejecución prolongada debe comprobar la atención del servidor al llamar periódicamente a **srv_got_attention** para que el procedimiento termine automáticamente cuando se cancele la conexión o se anule el lote.  
   
 > [!IMPORTANT]  

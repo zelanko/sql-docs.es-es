@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13a24320f7b49d8d2a0e1341bff2d9a4cca575dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5e504b442116f0a137d40a0932b00e51753deae5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765326"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243156"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection (propiedad, ADO MD)
 Indica a qué objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) ADO pertenece actualmente el objeto Cellset o el catálogo actual.  
@@ -30,7 +30,7 @@ Indica a qué objeto de [conexión](../../../ado/reference/ado-api/connection-ob
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un **valor de tipo Variant** que contiene una cadena que define una conexión o un objeto de **conexión** . El valor predeterminado es vacío.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede establecer esta propiedad en un objeto de **conexión** ADO válido o en una cadena de conexión válida. Cuando esta propiedad se establece en una cadena de conexión, el proveedor crea un nuevo objeto de **conexión** con esta definición y abre la conexión.  
   
  Si usa el argumento *ActiveConnection* del método [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) para abrir un objeto [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) , la propiedad **ActiveConnection** heredará el valor del argumento.  
@@ -57,11 +57,16 @@ Indica a qué objeto de [conexión](../../../ado/reference/ado-api/connection-ob
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Objeto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Objeto de conjunto de celdas (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Catalog (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto de conjunto de celdas (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

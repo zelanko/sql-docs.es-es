@@ -11,16 +11,16 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ddba1a36bfc1006d4e7c93d843431832fecf397
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 70b6d2237042a5d69be8e1076d72b7b0b5c87958
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484803"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396244"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Almacenamiento de datos paralelos)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
 Reduce el tamaño del registro de transacciones *en el dispositivo* para la base de datos actual de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Los datos se desfragmentan con el fin de reducir el registro de transacciones. Con el paso del tiempo, el registro de transacciones de la base de datos puede fragmentarse y volverse ineficaz. Use DBCC SHRINKLOG para reducir la fragmentación y el tamaño del registro.
   

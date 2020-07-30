@@ -13,31 +13,30 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 564385c15d9877454d30892f9cce54fbca6cf802
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029129"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396394"
 ---
 # <a name="generating-reports-sybasetosql"></a>Generación de informes (SybaseToSQL)
 Los informes de ciertas actividades realizadas con comandos se generan en la consola de SSMA en el nivel de árbol de objetos.  
   
 Use el procedimiento siguiente para generar informes:  
   
-1.  Especifique el parámetro **Write-Summary-Report-to** . El informe relacionado se almacena como el nombre de archivo (si se especifica) o en la carpeta que especifique. El nombre de archivo está predefinido por el sistema, como se mencionó en la ** &lt;tabla&gt; ** siguiente, donde n es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+1.  Especifique el parámetro **Write-Summary-Report-to** . El informe relacionado se almacena como el nombre de archivo (si se especifica) o en la carpeta que especifique. El nombre de archivo está predefinido por el sistema, como se mencionó en la tabla siguiente, donde ** &lt; n &gt; ** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
     Los comandos de los informes Vis-à-vis son los siguientes:  
   
-    ||||  
+    |SL. No.|Get-Help|Título del informe|  
     |-|-|-|  
-    |**SL. no.**|**Comando**|**Título del informe**|  
-    |1|generar informe de evaluación|AssessmentReport&lt;n&gt;. LENGUAJE|  
-    |2|Convert-Schema|SchemaConversionReport&lt;n&gt;. LENGUAJE|  
-    |3|migrar datos|DataMigrationReport&lt;n&gt;. LENGUAJE|  
-    |4|Convert-SQL-Statement|ConvertSQLReport&lt;n&gt;. LENGUAJE|  
-    |5|sincronizar-destino|TargetSynchronizationReport&lt;n&gt;. LENGUAJE|  
-    |6|actualizar desde la base de datos|SourceDBRefreshReport&lt;n&gt;. LENGUAJE|  
+    |1|generar informe de evaluación|AssessmentReport &lt; n &gt; . LENGUAJE|  
+    |2|Convert-Schema|SchemaConversionReport &lt; n &gt; . LENGUAJE|  
+    |3|migrar datos|DataMigrationReport &lt; n &gt; . LENGUAJE|  
+    |4|Convert-SQL-Statement|ConvertSQLReport &lt; n &gt; . LENGUAJE|  
+    |5|sincronizar-destino|TargetSynchronizationReport &lt; n &gt; . LENGUAJE|  
+    |6|actualizar desde la base de datos|SourceDBRefreshReport &lt; n &gt; . LENGUAJE|  
   
     > [!IMPORTANT]  
     > Un informe de salida es diferente del informe de evaluación. El primero es un informe sobre el rendimiento de un comando ejecutado, mientras que el segundo es un informe XML para el consumo mediante programación.  
@@ -46,9 +45,8 @@ Use el procedimiento siguiente para generar informes:
   
 2.  Indique el grado de detalle que desea en el informe de salida mediante la configuración del nivel de detalle del informe:  
   
-    ||||  
+    |SL. No.|Comando y parámetro|Descripción de salida|  
     |-|-|-|  
-    |**SL. no.**|**Comando y parámetro**|**Descripción de salida**|  
     |1|verbose = "false"|Genera un informe resumido de la actividad.|  
     |2|verbose = "true"|Genera un informe de estado resumido y detallado para cada actividad.|  
   
@@ -57,9 +55,8 @@ Use el procedimiento siguiente para generar informes:
   
 3.  Indique el grado de detalle que desea en los informes de errores mediante la configuración de informes de errores:  
   
-    ||||  
+    |SL. No.|Comando y parámetro|Descripción de salida|  
     |-|-|-|  
-    |**SL. no.**|**Comando y parámetro**|**Descripción de salida**|  
     |1|Informe-errores = "false"|No hay detalles de mensajes de error, ADVERTENCIA o información.|  
     |2|Informe-errores = "true"|Mensajes de error, ADVERTENCIA o información detallados.|  
   
@@ -87,7 +84,7 @@ Use el procedimiento siguiente para generar informes:
 ```  
   
 ### <a name="synchronize-target"></a>sincronizar-destino:  
-El comando **Synchronize-Target** tiene el parámetro **Report-Errors-to** , que especifica la ubicación del informe de errores para la operación de sincronización. A continuación, un archivo por **el&lt;nombre&gt;TargetSynchronizationReport n. XML** se crea en la ubicación especificada, donde ** &lt;n&gt; ** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+El comando **Synchronize-Target** tiene el parámetro **Report-Errors-to** , que especifica la ubicación del informe de errores para la operación de sincronización. A continuación, un archivo por el nombre **TargetSynchronizationReport &lt; n &gt; . XML** se crea en la ubicación especificada, donde ** &lt; n &gt; ** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
 **Nota:** Si se especifica la ruta de acceso de la carpeta, el parámetro "Report-Errors-to" se convierte en un atributo opcional para el comando "Synchronize-target".  
   
@@ -115,7 +112,7 @@ El comando **Synchronize-Target** tiene el parámetro **Report-Errors-to** , que
 -   error: script  
   
 ### <a name="refresh-from-database"></a>actualizar desde la base de datos:  
-El comando **Refresh-from-Database** tiene el parámetro **Report-Errors-to** , que especifica la ubicación del informe de errores para la operación de actualización. A continuación, un archivo por **el&lt;nombre&gt;SourceDBRefreshReport n. XML** se crea en la ubicación especificada, donde ** &lt;n&gt; ** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
+El comando **Refresh-from-Database** tiene el parámetro **Report-Errors-to** , que especifica la ubicación del informe de errores para la operación de actualización. A continuación, un archivo por el nombre **SourceDBRefreshReport &lt; n &gt; . XML** se crea en la ubicación especificada, donde ** &lt; n &gt; ** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
   
 **Nota:** Si se especifica la ruta de acceso de la carpeta, el parámetro "Report-Errors-to" se convierte en un atributo opcional para el comando "Synchronize-target".  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0022e0e740e9c4268ddf08340029c2e74a101437
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 77b0617fbaa8ea90388f40e16ed2b61cfd3bb2b8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922879"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396504"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conexión desde otro equipo
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ Si tiene previsto conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde ot
     > [!NOTE]  
     > Como el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un complemento del programa [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console y no un programa independiente, el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no aparece como aplicación en las versiones más recientes de Windows. El nombre de archivo contiene un número que representa el número de versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para abrir el Administrador de configuración desde el comando Ejecutar, estas son las rutas de acceso a las últimas cuatro versiones si Windows está instalado en la unidad C:.  
   
-    |||  
+    |Versión|Path|  
     |-|-|
     |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
     |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  
@@ -126,7 +126,7 @@ Cuando el servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-
 3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:** _<nombre_equipo>_ . En nuestro ejemplo de una instancia con nombre, escriba **tcp:** _<nombre_equipo>_ **,49172**.  
   
     > [!NOTE]  
-    > Si omite **tcp:** en el cuadro **Nombre del servidor** , el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  
+    > Si omite **tcp:** en el cuadro **Nombre de servidor** , el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  
   
 4.  En el cuadro **Autenticación** , confirme **Autenticación de Windows**y luego haga clic en **Conectar**.  
   

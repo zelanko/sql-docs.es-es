@@ -15,15 +15,15 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68016245"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397012"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propiedades de columnas de tablas (SQL Server Management Studio)
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Estas propiedades aparecen en el panel inferior del Diseñador de tablas. A menos que se especifique lo contrario, podrá modificar estas propiedades en la ventana Propiedades cuando la columna esté seleccionada. Las **Propiedades de columna** pueden mostrarse en categorías o en orden alfabético. Muchas propiedades solo aparecen o solo se pueden cambiar por ciertos tipos de datos.  
   

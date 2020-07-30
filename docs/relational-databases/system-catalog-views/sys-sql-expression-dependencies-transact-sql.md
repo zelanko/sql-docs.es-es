@@ -20,15 +20,15 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833968"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396684"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Contiene una fila para cada dependencia por nombre en una entidad definida por el usuario en la base de datos actual. Esto incluye las dependencias entre las funciones escalares definidas por el usuario y los módulos que se compilan de forma nativa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se crea una dependencia entre dos entidades cuando una entidad, denominada entidad a la *que se hace referencia*, aparece por nombre en una expresión SQL persistente de otra entidad, denominada *entidad de referencia*. Por ejemplo, si en la definición de una vista se hace referencia a una tabla, la vista, como entidad que hace la referencia, depende de la tabla, la entidad a la que se hace referencia. Si desapareciera la tabla, la vista sería inservible.  
   
@@ -73,23 +73,23 @@ ms.locfileid: "82833968"
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
 |Tabla|Sí*|Sí|  
-|Ver|Yes|Yes|  
+|Ver|Sí|Sí|  
 |Índice filtrado|Sí**|No|  
 |Estadísticas filtradas|Sí**|No|  
-|Procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Yes|Yes|  
-|procedimiento almacenado CLR|No|Yes|  
-|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|Yes|  
-|Función CLR definida por el usuario|No|Yes|  
+|Procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sí|Sí|  
+|procedimiento almacenado CLR|No|Sí|  
+|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
+|Función CLR definida por el usuario|No|Sí|  
 |Desencadenador CLR (DML y DDL)|No|No|  
 |Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
 |Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
 |Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Procedimientos almacenados extendidos|No|Yes|  
-|Cola|No|Yes|  
-|Synonym (Sinónimo)|No|Yes|  
-|Tipo (tipo CLR y alias definido por el usuario)|No|Yes|  
-|Colección de esquemas XML|No|Yes|  
-|Función de partición|No|Yes|  
+|Procedimientos almacenados extendidos|No|Sí|  
+|Cola|No|Sí|  
+|Synonym (Sinónimo)|No|Sí|  
+|Tipo (tipo CLR y alias definido por el usuario)|No|Sí|  
+|Colección de esquemas XML|No|Sí|  
+|Función de partición|No|Sí|  
   
  \*Se realiza un seguimiento de una tabla como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, un tipo definido por el usuario o una colección de esquemas XML en la definición de una columna calculada, una restricción check o una restricción default.  
   

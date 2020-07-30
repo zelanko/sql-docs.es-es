@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 104fbedea8199f0a6fb092c3ee1524bbfb4b903f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b02f1325e97cc27b9ae0457bc964f25150851144
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787306"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396605"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
@@ -446,6 +446,5 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)    (Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database)  
 [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md)    
 [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
-[Combinaciones](../../relational-databases/performance/joins.md)    
-[Demostración del procesamiento de consultas adaptable](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)       
+[Combinaciones](../../relational-databases/performance/joins.md)       
 [Demostración del procesamiento de consultas inteligentes](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

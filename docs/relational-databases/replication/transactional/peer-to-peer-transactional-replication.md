@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d85b1f3460dc55f7d6cd24420f2d86bb0f9623c2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 656b05414327e35b5aff1a982a0313835ded20a4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901244"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394660"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Replicación transaccional punto a punto
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "85901244"
 ### <a name="maintenance-considerations"></a>Consideraciones de mantenimiento  
  Las acciones siguientes requieren que el sistema esté inactivo. Esto significa que hay que detener la actividad de las tablas publicadas en todos los nodos y asegurarse de que cada nodo haya recibido todos los cambios de los demás nodos.  
   
-||Solo sistemas SQL Server 2005 del mismo nivel o una mezcla de sistemas SQL Server 2005 del mismo nivel con sistemas SQL Server 2008 y superiores del mismo nivel|Solo sistemas SQL Server 2005 del mismo nivel o una mezcla de sistemas SQL Server 2005 del mismo nivel con sistemas SQL Server 2008 y superiores del mismo nivel|Sistemas SQL2008 y versiones posteriores del mismo nivel|Sistemas SQL2008 y versiones posteriores del mismo nivel|  
+|Acción|Solo sistemas SQL Server 2005 del mismo nivel o una mezcla de sistemas SQL Server 2005 del mismo nivel con sistemas SQL Server 2008 y superiores del mismo nivel|Solo sistemas SQL Server 2005 del mismo nivel o una mezcla de sistemas SQL Server 2005 del mismo nivel con sistemas SQL Server 2008 y superiores del mismo nivel|Sistemas SQL2008 y versiones posteriores del mismo nivel|Sistemas SQL2008 y versiones posteriores del mismo nivel|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
 |Agregar un nodo a la topología|Dos nodos en una topología completa: no es necesario aplicar inactividad. Mediante `sync_type = 'initialize with backup'`.|Más de dos nodos: es necesario aplicar inactividad.|`sync_type = 'replication support only'`: es necesario aplicar inactividad.|`sync_type = 'initialize with backup'` y `'initialize from lsn'`: no es necesario aplicar inactividad.|  
   

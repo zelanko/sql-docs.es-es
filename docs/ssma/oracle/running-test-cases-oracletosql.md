@@ -10,12 +10,12 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266548"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394868"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ejecución de casos de prueba (OracleToSQL)
 Cuando SSMA Tester ejecuta un caso de prueba, ejecuta los objetos seleccionados para las pruebas y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba se realizó correctamente. La correspondencia de objetos entre Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se determina según la configuración de asignación de esquemas del proyecto SSMA actual.  
@@ -33,7 +33,7 @@ Una vez finalizada la prueba, se crea el informe de casos de prueba. Haga clic e
   
 ## <a name="test-case-execution-steps"></a>Pasos de ejecución del caso de prueba  
   
-### <a name="prerequisites"></a>Prerrequisitos  
+### <a name="prerequisites"></a>Requisitos previos  
 SSMA Tester comprueba si se cumplen todos los requisitos previos para la ejecución de pruebas antes de iniciar la prueba. Si no se cumplen algunas condiciones, aparece un mensaje de error.  
   
 ### <a name="initialization"></a>Inicialización  
@@ -41,9 +41,8 @@ En este paso, el evaluador de SSMA crea objetos auxiliares (tablas, desencadenad
   
 Supongamos que la tabla comprobada se denomina USER_TABLE. Para este tipo de tabla, se crean los siguientes objetos auxiliares en Oracle.  
   
-||||  
-|-|-|-|  
 |Nombre|Tipo|Descripción|  
+|-|-|-|  
 |USER_TABLE $ Trg|desencadenador|Desencadenador de auditoría de los cambios en la tabla comprobada.|  
 |USER_TABLE $ AUD|table|Tabla donde se guardan las filas eliminadas y sobrescritas.|  
 |USER_TABLE $ AUDID|table|Tabla donde se guardan las filas nuevas y modificadas.|  
@@ -52,18 +51,16 @@ Supongamos que la tabla comprobada se denomina USER_TABLE. Para este tipo de tab
 |USER_TABLE $ NEW_ID|ver|Identificación de las filas insertadas y modificadas.|  
 |USER_TABLE $ OLD|ver|Representación simplificada de filas eliminadas y reemplazadas.|  
   
-El siguiente objeto se crea en el esquema de la tabla comprobado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+El siguiente objeto se crea en el esquema de la tabla comprobado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-||||  
-|-|-|-|  
 |Nombre|Tipo|Descripción|  
+|-|-|-|  
 |USER_TABLE $ Trg|desencadenador|Desencadenador de auditoría de los cambios en la tabla comprobada.|  
   
-Y los siguientes objetos se crean en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la base de datos ssmatesterdb.  
+Y los siguientes objetos se crean en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de datos ssmatesterdb.  
   
-||||  
-|-|-|-|  
 |Nombre|Tipo|Descripción|  
+|-|-|-|  
 |USER_TABLE $ AUD|table|Tabla donde se guardan las filas eliminadas y sobrescritas.|  
 |USER_TABLE $ AudID|table|Tabla donde se guardan las filas nuevas y modificadas.|  
 |USER_TABLE|ver|Representación simplificada de las modificaciones de la tabla.|  

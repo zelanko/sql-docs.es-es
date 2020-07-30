@@ -13,20 +13,20 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145660"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394354"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>Sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Supervisa el progreso de las consultas de almacenamiento de datos en tiempo real mientras la consulta está en ejecución.   
   
 ## <a name="table-returned"></a>Tabla devuelta  
-Los contadores devueltos son por operador y por subproceso. Los resultados son dinámicos y no coinciden con los resultados de las opciones `SET STATISTICS XML ON` existentes, como, por ejemplo, las que solo crean los resultados cuando finaliza la consulta.  
+Los contadores devueltos son por operador y por subproceso. Los resultados son dinámicos y no coinciden con los resultados de las opciones existentes, como, por ejemplo, las `SET STATISTICS XML ON` que solo crean los resultados cuando finaliza la consulta.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -66,7 +66,7 @@ Los contadores devueltos son por operador y por subproceso. Los resultados son d
 |segment_read_count|**int**|Número de lecturas anticipadas de segmento hasta ahora.|  
 |segment_skip_count|**int**|Número de segmentos omitidos hasta ahora.| 
 |actual_read_row_count|**bigint**|Número de filas leídas por un operador antes de que se aplicara el predicado residual.| 
-|estimated_read_row_count|**bigint**|**Se aplica a:** A partir [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] de SP1. <br/>Número de filas que un operador debe leer antes de que se aplicara el predicado residual.|  
+|estimated_read_row_count|**bigint**|**Se aplica a:** A partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de filas que un operador debe leer antes de que se aplicara el predicado residual.|  
   
 ## <a name="remarks"></a>Observaciones  
 Se aplican los mismos comentarios en [Sys. dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) .  

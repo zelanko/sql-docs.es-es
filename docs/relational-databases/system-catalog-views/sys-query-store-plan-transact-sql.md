@@ -21,15 +21,15 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc78decc0c911376b61cc429ba538be11cbaded6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831442"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394000"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contiene información acerca de cada plan de ejecución asociado a una consulta.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82831442"
 |**is_forced_plan**|**bit**|El plan se marca como forzado cuando el usuario ejecuta el procedimiento almacenado **Sys. sp_query_store_force_plan**. Al forzar el mecanismo no se *garantiza* que se use exactamente este plan para la consulta a la que hace referencia **query_id**. Al forzar el plan, la consulta se vuelve a compilar y normalmente se produce exactamente el mismo plan o similar al plan al que hace referencia **plan_id**. Si el forzado del plan no se realiza correctamente, se incrementa **force_failure_count** y **last_force_failure_reason** se rellena con la razón del error. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
 |**is_natively_compiled**|**bit**|El plan incluye procedimientos optimizados para memoria compilados de forma nativa. (0 = FALSE, 1 = TRUE). <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
 |**force_failure_count**|**bigint**|Número de veces que se ha producido un error al forzar este plan. Solo se puede incrementar cuando la consulta se vuelve a compilar (*no en cada ejecución*). Se restablece en 0 cada vez que se cambia **is_plan_forced** de **false** a **true**. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**last_force_failure_reason**|**int**|Motivo del error al forzar el plan.<br /><br /> 0: sin error; de lo contrario, número de error del error que ha provocado un error en la fuerza<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<otro valor>: GENERAL_FAILURE <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
+|**last_force_failure_reason**|**int**|Motivo del error al forzar el plan.<br /><br /> 0: sin error; de lo contrario, número de error del error que ha provocado un error en la fuerza<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<other value>: GENERAL_FAILURE <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Descripción textual de last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: la consulta intenta modificar los datos mientras que la tabla de destino tiene un índice que se está generando en línea<br /><br /> INVALID_STARJOIN: el plan contiene una especificación StarJoin no válida<br /><br /> TIME_OUT: el optimizador superó el número de operaciones permitidas al buscar el plan especificado por el plan forzado<br /><br /> NO_DB: no existe una base de datos especificada en el plan<br /><br /> HINT_CONFLICT: no se puede compilar la consulta porque el plan entra en conflicto con una sugerencia de consulta<br /><br /> DQ_NO_FORCING_SUPPORTED: no se puede ejecutar la consulta porque el plan entra en conflicto con el uso de consultas distribuidas o operaciones de texto completo.<br /><br /> NO_PLAN: el procesador de consultas no pudo producir el plan de consulta porque no se pudo comprobar que el plan forzado no es válido para la consulta<br /><br /> NO_INDEX: el índice especificado en el plan ya no existe<br /><br /> VIEW_COMPILE_FAILED: no se pudo forzar el plan de consulta debido a un problema en una vista indizada a la que se hace referencia en el plan<br /><br /> GENERAL_FAILURE: error de fuerza general (no se trata con los motivos anteriores) <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá *None*.|  
 |**count_compiles**|**bigint**|Planear estadísticas de compilación.|  
 |**initial_compile_start_time**|**datetimeoffset**|Planear estadísticas de compilación.|  

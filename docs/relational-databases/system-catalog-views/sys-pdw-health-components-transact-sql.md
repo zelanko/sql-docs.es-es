@@ -10,15 +10,15 @@ ms.assetid: d5c7589b-09b0-4f12-ab84-feb3ec3fbaaa
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4da5f6bfb520f853904ce53c9101d0c6dd4a6ba6
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 83bea79a009e25d54f9d0ae589936de7fed7d94a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626993"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396049"
 ---
 # <a name="syspdw_health_components-transact-sql"></a>Sys. pdw_health_components (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Almacena información sobre todos los componentes y dispositivos que existen en el sistema. Entre ellos se incluyen el hardware, los dispositivos de almacenamiento y los dispositivos de red.  
   

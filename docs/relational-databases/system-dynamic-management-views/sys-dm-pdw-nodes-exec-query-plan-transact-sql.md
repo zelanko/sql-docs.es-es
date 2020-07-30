@@ -13,15 +13,15 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 96b499ea5bc38d2a4cf9c380116108009ea46086
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a11571ab7e4de54dbae73ae1f1252c88c2e2dca
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145640"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395944"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>Sys. pdw_nodes_dm_exec_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Devuelve el plan de presentación en formato XML para el lote especificado por el identificador del plan. Este plan especificado por el identificador del plan puede estar almacenado en caché o ejecutándose.  
 
@@ -40,7 +40,7 @@ Devuelve el plan de presentación en formato XML para el lote especificado por e
 Se aplican los mismos comentarios en [Sys. dm_exec_query_plan](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql?view=sql-server-ver15) .  
   
 ## <a name="permissions"></a>Permisos  
- Requiere **sysadmin** el rol de servidor `VIEW SERVER STATE` sysadmin o el permiso en el servidor.  
+ Requiere el rol de servidor **sysadmin** o `VIEW SERVER STATE` el permiso en el servidor.  
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

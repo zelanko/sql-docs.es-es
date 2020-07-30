@@ -11,12 +11,12 @@ ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 86cc0909140190ca7731ddc647fc979a6cd21c7a
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: a822aa1e9c30e245b61bd43c0af60b94fae33fe1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293628"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394918"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>Configuración del proyecto (conversión) (OracleToSQL)
 La página conversión del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan el modo en que SSMA convierte la sintaxis de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sintaxis.  
@@ -29,16 +29,14 @@ El panel conversión está disponible en los cuadros de diálogo Configuración 
   
 ## <a name="conversion-messages"></a>Mensajes de conversión  
   
-|||  
-|-|-|  
 |Término|Definición|  
+|-|-|  
 |**Generar mensajes sobre problemas aplicados**|Especifica si SSMA genera mensajes informativos durante la conversión, los muestra en el panel de salida y los agrega al código convertido.<br /><br />Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:<br /><br />**Modo predeterminado/optimista:** No<br /><br />**Modo completo:** No|  
   
 ## <a name="miscellaneous-options"></a>Otras opciones  
   
-|||  
-|-|-|  
 |Término|Definición|  
+|-|-|  
 |**Conversión de expresiones de ROWNUM como enteros**|Cuando SSMA convierte expresiones ROWNUM, convierte la expresión en una cláusula TOP, seguida de la expresión. En el ejemplo siguiente se muestra ROWNUM en una instrucción DELETE de Oracle:<br /><br />`DELETE FROM Table1`<br /><br />`WHERE ROWNUM < expression and Field1 >= 2`<br /><br />En el ejemplo siguiente se muestra el resultado [!INCLUDE[tsql](../../includes/tsql-md.md)] :<br /><br />`DELETE TOP (expression-1)`<br /><br />`FROM Table1`<br /><br />`WHERE Field1>=2`<br /><br />La parte superior requiere que la expresión de las cláusulas TOP se evalúe como un entero. Si el entero es negativo, la instrucción generará un error.<br /><br />Si selecciona **sí**, SSMA convierte la expresión en un entero.<br /><br />Si selecciona **no**, SSMA marcará todas las expresiones no enteras como un error en el código convertido.<br /><br />Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:<br /><br />**Modo predeterminado/completo:** No<br /><br />**Modo optimista:** ?|  
 |**Asignación de esquemas predeterminada**|Esta configuración especifica cómo se asignan los esquemas de Oracle a los esquemas de SQL Server. En esta configuración están disponibles dos opciones:<br /><br />**Esquema a base de datos:** En este modo, el esquema de Oracle ' sch1 ' se asignará de forma predeterminada a ' DBO ' SQL Server esquema en SQL Server base de datos ' sch1 '.<br /><br />**Esquema a esquema:** En este modo, el esquema de Oracle ' sch1 ' se asignará de forma predeterminada a ' sch1 ' SQL Server esquema en la base de datos de SQL Server predeterminada que se proporciona en el cuadro de diálogo de conexión.<br /><br />Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:<br /><br />**Modo predeterminado/optimista/completo:** Esquema a base de datos|  
 |**Formas de conversión de la instrucción MERGE**|Si selecciona **usar la instrucción INSERT, Update, Delete**, SSMA convierte la instrucción de fusión en instrucciones INSERT, Update y DELETE.<br /><br />Si selecciona **usar instrucción Merge**, SSMA convierte la instrucción de fusión en instrucción Merge en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br />**Nota:** Esta opción de configuración del proyecto solo está disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.<br /><br />Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:<br /><br />**Modo predeterminado/optimista/completo:** Usar la instrucción MERGE|  
@@ -69,18 +67,16 @@ El panel conversión está disponible en los cuadros de diálogo Configuración 
   
 ## <a name="returning-clause-conversion"></a>Conversión de la cláusula de devolución  
   
-|||  
-|-|-|  
 |Término|Definición|  
+|-|-|  
 |**Convertir la cláusula devuelta en la instrucción DELETE en la salida**|Oracle proporciona una cláusula RETURNING como una manera de obtener inmediatamente los valores eliminados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona esa funcionalidad con la cláusula OUTPUT.<br /><br />Si selecciona **sí**, SSMA convertirá las cláusulas devueltas en las instrucciones delete en cláusulas output. Dado que los desencadenadores de una tabla pueden cambiar valores, el valor devuelto podría ser diferente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que en Oracle.<br /><br />Si selecciona **no**, SSMA generará una instrucción SELECT antes de las instrucciones delete para recuperar los valores devueltos.<br /><br />Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:<br /><br />**Modo predeterminado/optimista/completo:** ?|  
 |**Convertir la cláusula devuelta en la instrucción INSERT en la salida**|Oracle proporciona una cláusula RETURNING como una manera de obtener inmediatamente los valores insertados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona esa funcionalidad con la cláusula OUTPUT.<br /><br />Si selecciona **sí**, SSMA convertirá una cláusula devuelta en una instrucción INSERT en Output. Dado que los desencadenadores de una tabla pueden cambiar valores, el valor devuelto podría ser diferente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que en Oracle.<br /><br />Si selecciona **no**, SSMA emula la funcionalidad de Oracle insertando y seleccionando los valores de una tabla de referencia.<br /><br />Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:<br /><br />**Modo predeterminado/optimista/completo:** ?|  
 |**Convertir la cláusula devuelta en la instrucción UPDATE en la salida**|Oracle proporciona una cláusula RETURNING como una manera de obtener inmediatamente los valores actualizados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona esa funcionalidad con la cláusula OUTPUT.<br /><br />Si selecciona **sí**, SSMA convertirá las cláusulas devueltas en las instrucciones Update en las cláusulas output. Dado que los desencadenadores de una tabla pueden cambiar valores, el valor devuelto podría ser diferente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que en Oracle.<br /><br />Si selecciona **no**, SSMA generará instrucciones SELECT después de las instrucciones Update para recuperar los valores devueltos.<br /><br />Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:<br /><br />**Modo predeterminado/optimista/completo:** ?|  
   
 ## <a name="sequence-conversion"></a>Conversión de secuencias  
   
-|||  
-|-|-|  
 |Término|Definición|  
+|-|-|  
 |**Generador de secuencias de conversión**|En Oracle, puede usar una secuencia para generar identificadores únicos.<br /><br />SSMA puede convertir secuencias en lo siguiente.<br /><br />Usar el generador de secuencias de SQL Server (esta opción solo está disponible cuando se convierte en SQL Server 2012 y SQL Server 2014).<br /><br />Usar el generador de secuencias de SSMA.<br /><br />Usar la identidad de columna.<br /><br />La opción predeterminada al convertir a SQL Server 2012 o SQL Server 2014 es usar el generador de secuencias de SQL Server. Sin embargo, SQL Server 2012 y SQL Server 2014 no admiten la obtención del valor de secuencia actual (como el del método currval de secuencia de Oracle). Consulte el sitio del blog del equipo de SSMA para obtener instrucciones sobre cómo migrar el método currval de secuencia de Oracle.<br /><br />SSMA también proporciona una opción para convertir la secuencia de Oracle en el emulador de secuencia de SSMA. Esta es la opción predeterminada cuando se convierte en SQL Server antes de 2012<br /><br />Por último, también puede convertir la secuencia asignada a una columna de la tabla para SQL Server valores de identidad. Debe especificar la asignación entre las secuencias en una columna de identidad en la pestaña de la **tabla** de Oracle|  
 |**Convertir los desencadenadores de CURRVAL fuera de**|Solo es visible cuando el generador de secuencias de conversión se establece en **utilizando la identidad de columna**. Dado que las secuencias de Oracle son objetos independientes de las tablas, muchas de las tablas que usan secuencias utilizan un desencadenador para generar e insertar un nuevo valor de secuencia. SSMA comenta estas instrucciones o las marca como errores cuando el comentario genera errores.<br /><br />Si selecciona **sí**, SSMA marcará todas las referencias a los desencadenadores externos en la secuencia convertida CURRVAL con una advertencia.<br /><br />Si selecciona **no**, SSMA marcará todas las referencias a los desencadenadores externos en la secuencia convertida CURRVAL con un error.|  
   

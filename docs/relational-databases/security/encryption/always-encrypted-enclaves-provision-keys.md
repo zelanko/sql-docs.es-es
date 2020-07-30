@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b87620704416df94cf21cda05d1a64a8159eb32
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ac3a5c0f7f1752fe26581db1f14f25e2d157508
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595590"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411521"
 ---
 # <a name="provision-enclave-enabled-keys"></a>Aprovisionar claves habilitadas para el enclave
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 En este artículo se describe cómo aprovisionar claves habilitadas para el enclave que admiten cálculos dentro de los enclaves seguros del lado servidor que se usan en [Always Encrypted con enclaves seguros](always-encrypted-enclaves.md). 
 

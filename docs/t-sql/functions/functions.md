@@ -20,15 +20,15 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b96b1d6f1229dba624076abc4cb0c82e49249a2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 15a46fa3c1adc9478bd1da9c0152cb671be378cf
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752357"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395704"
 ---
 # <a name="what-are-the-sql-database-functions"></a>¿Cuáles son las funciones de base de datos SQL?
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Obtenga información sobre las categorías de las funciones integradas que se pueden usar con las bases de datos SQL. Puede usar las funciones integradas o crear las suyas propias.
   

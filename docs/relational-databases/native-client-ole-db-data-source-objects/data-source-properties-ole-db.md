@@ -16,14 +16,14 @@ ms.assetid: 6e14fefc-4e0b-4847-a833-4cf0abe65d50
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c21803c90ed66cc0006985387555d07c39a91f6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: a4613a0185a5b81b6049f638337afce4608f292c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976637"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242285"
 ---
-# <a name="data-source-properties-ole-db"></a>Propiedades de orígenes de datos (OLE DB)
+#  <a name="sql-server-native-client-data-source-properties-ole-db"></a>Propiedades de SQL Server Native Client origen de datos (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client implementa las propiedades de origen de datos como se indica a continuación.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fbc22ea4b3673d6ed4d0d4ee581da8fadb473fb8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d09e76a26e0364857c70469ef1308f21e298727b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888057"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395050"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicación, seguimiento de cambios y captura de datos modificados - Grupos de disponibilidad AlwaysOn
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -205,9 +205,8 @@ Si la captura de datos modificados debe deshabilitarse en una base de datos que 
 ### <a name="restrictions"></a>Restricciones  
  Combinaciones admitidas de replicación en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|||||  
+|Replicación|Publicador|Distribuidor.|Suscriptor|  
 |-|-|-|-|  
-||**Publicador**|**Distribuidor**|**Suscriptor**|  
 |**Transaccional**|Sí<br /><br /> Nota: No incluye compatibilidad con la replicación transaccional bidireccional y recíproca.|Sí|Sí| 
 |**P2P**|No|No|No|  
 |**Combinar**|Sí|No|No|  

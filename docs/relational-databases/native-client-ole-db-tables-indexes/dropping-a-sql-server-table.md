@@ -1,5 +1,5 @@
 ---
-title: Eliminación de una tabla de SQL Server | Microsoft Docs
+title: Drop SQL Server Table (proveedor de OLE DB de Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: b6d6c4de-43c6-473e-92aa-34ffddd58cbe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d0d559309ba63859133e5f6f4c495572f7f70ab
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7d34ea9bec2ff64f2c7565b3d0980a8bc3aed5df
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012954"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87240602"
 ---
-# <a name="dropping-a-sql-server-table"></a>Quitar una tabla de SQL Server
+# <a name="dropping-a-sql-server-native-client-table"></a>Quitar una tabla de SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client expone la función **ITableDefinition::D roptable** para quitar una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla de una base de datos.  

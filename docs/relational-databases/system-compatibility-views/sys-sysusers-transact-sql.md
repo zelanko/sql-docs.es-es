@@ -1,5 +1,5 @@
 ---
-title: Sys. sysusers (Transact-SQL) | Microsoft Docs
+title: sys.sysusuarios (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,27 +21,27 @@ ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae0f80f4d77e04906b60549270763d3f2b0881c1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018061"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393150"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
-  Contiene una fila por cada [!INCLUDE[msCoName](../../includes/msconame-md.md)] usuario de Windows, grupo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows, usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o rol de la base de datos.  
+  Contiene una fila por cada [!INCLUDE[msCoName](../../includes/msconame-md.md)] usuario de Windows, grupo de Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuario o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol de la base de datos.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**UID**|**smallint**|Id. de usuario, único en esta base de datos.<br /><br /> 1 = Propietario de la base de datos<br /><br /> Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
+|**uid**|**smallint**|Id. de usuario, único en esta base de datos.<br /><br /> 1 = Propietario de la base de datos<br /><br /> Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|Nombre de usuario o de grupo, único en esta base de datos.|  
-|**Junction**|**varbinary(85)**|Identificador de seguridad de esta entrada.|  
+|**sid**|**varbinary(85)**|Identificador de seguridad de esta entrada.|  
 |**roles**|**varbinary (2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**CreateDate**|**datetime**|Fecha en que se agregó la cuenta.|  
 |**updatedate**|**datetime**|Fecha en que se cambió la cuenta por última vez.|  

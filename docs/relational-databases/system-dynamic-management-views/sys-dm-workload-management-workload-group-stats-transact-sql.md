@@ -11,15 +11,15 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 01d735e07a7c44c84c0087865e4f488318d65a75
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 38ed2b42a24dbaec27e3014bc0b1d783722fa91f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85066171"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394544"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>Sys. dm_workload_management_workload_groups_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Devuelve las estadísticas del grupo de cargas de trabajo y los valores efectivos del grupo de cargas de trabajo en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
@@ -38,6 +38,6 @@ Devuelve las estadísticas del grupo de cargas de trabajo y los valores efectivo
 |effective_request_max_resource_grant_percent|**decimal (5, 2)**|El valor efectivo en tiempo de ejecución de request_max_resource_grant_percent del grupo de cargas de trabajo teniendo en cuenta la configuración de todos los grupos de cargas de trabajo.||
 |||||
 
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
  [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

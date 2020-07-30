@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9e3d58ae93285accc9cf7a71e43579be4f54b21d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762944"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242465"
 ---
 # <a name="appendchunk-method-ado"></a>Método AppendChunk (ADO)
 Anexa datos a un [campo](../../../ado/reference/ado-api/field-object.md)de datos binario o de texto grande, o a un objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) .  
@@ -59,11 +59,16 @@ object.AppendChunk Data
  La primera llamada a **AppendChunk** en un objeto de **parámetro** escribe datos en el parámetro, sobrescribiendo los datos existentes. Las llamadas a **AppendChunk** posteriores en un objeto de **parámetro** se agregan a los datos de parámetro existentes. Una llamada a **AppendChunk** que pasa un valor null descarta todos los datos de parámetros.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Objeto Field](../../../ado/reference/ado-api/field-object.md)|[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de los métodos AppendChunk y GetChunk (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [Ejemplo de los métodos AppendChunk y GetChunk (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59149594d618350c9188d40eb6ade51b3aecde68
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b2af54e33aeaa42cab3de76f1ffc6bf5fd758dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764126"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243106"
 ---
 # <a name="adox-methods"></a>Métodos ADOX
 
-|||  
+|Método|Descripción|  
 |-|-|  
 |[Append (columnas)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Agrega un nuevo objeto de **columna** a la colección de **columnas** .|  
 |[Append (grupos)](../../../ado/reference/adox-api/append-method-adox-groups.md)|Agrega un nuevo objeto de **Grupo** a la colección de **grupos** .|  
@@ -33,7 +33,7 @@ ms.locfileid: "82764126"
 |[Append (usuarios)](../../../ado/reference/adox-api/append-method-adox-users.md)|Agrega un nuevo objeto de **usuario** a la colección de **usuarios** .|  
 |[Append (vistas)](../../../ado/reference/adox-api/append-method-adox-views.md)|Agrega un nuevo objeto de **vista** a la colección **views** .|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Cambia la contraseña de una cuenta de usuario.|  
-|[Crear](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuevo catálogo.|  
+|[Creación](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuevo catálogo.|  
 |[Eliminar](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Quita un objeto de una colección.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Devuelve el propietario de un objeto de un catálogo.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Devuelve los permisos de un grupo o usuario en un objeto.|  

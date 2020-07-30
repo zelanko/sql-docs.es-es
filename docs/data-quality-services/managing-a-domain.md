@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 77e1dc6a2e0039c8ff9a2f66c6b3ed45a2176a17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ecd829cbd3de8845f38a367e1e23d5af39ec48
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898105"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363015"
 ---
 # <a name="managing-a-domain"></a>Administrar un dominio
 
@@ -44,7 +44,7 @@ ms.locfileid: "85898105"
 ## <a name="in-this-section"></a>En esta sección  
  El uso de un dominio le permite hacer lo siguiente:  
   
-|||  
+|Descripción de la operación|Tema|  
 |-|-|  
 |Crear una representación semántica de un campo de datos con un tipo de datos específico, especificar cómo se rellena el dominio y dar formato a los resultados del dominio|[Crear un dominio](../data-quality-services/create-a-domain.md)|  
 |Vincular un dominio a otro, permitiéndole compartir los mismos valores y configuración|[Crear dominio vinculado](../data-quality-services/create-a-linked-domain.md)|  

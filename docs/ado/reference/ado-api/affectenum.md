@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06d3234317e38177defeacdf6f258bc2301dde9e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8c75c83fea1e6c8f4916180889635ddebd9cd915
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747047"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242805"
 ---
 # <a name="affectenum"></a>AffectEnum
 Especifica qué registros se ven afectados por una operación.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adAffectAll**|3|Si no hay ningún [filtro](../../../ado/reference/ado-api/filter-property.md) aplicado al conjunto de **registros**, afecta a todos los registros.<br /><br /> Si la propiedad **Filter** está establecida en un criterio de cadena (por ejemplo, "author = ' Smith '"), la operación afectará a los registros visibles en el capítulo actual.<br /><br /> Si la propiedad **Filter** está establecida en un miembro de [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) o una matriz de marcadores, la operación afectará a todas las filas del conjunto de **registros**. **Nota: adAffectAll** está oculto en el examinador de objetos Visual Basic.|  
 |**adAffectAllChapters**|4|Afecta a todos los registros de todos los capítulos del mismo nivel del **conjunto de registros**, incluidos los que no están visibles a través de cualquier **filtro** aplicado actualmente.|  
@@ -43,8 +43,14 @@ Especifica qué registros se ven afectados por una operación.
 |AdoEnums. afectar al grupo|  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Método CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|[Delete (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|  
-|[Método Resync](../../../ado/reference/ado-api/resync-method.md)|[Método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|
+
+:::row:::
+    :::column:::
+        [Método CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
+        [Delete (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+    :::column-end:::
+    :::column:::
+        [Método Resync](../../../ado/reference/ado-api/resync-method.md)  
+        [Método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
+    :::column-end:::
+:::row-end:::

@@ -1,6 +1,6 @@
 ---
 title: Sys. database_automatic_tuning_options (Transact-SQL) | Microsoft Docs
-description: Obtenga información sobre cómo ver las opciones de ajuste automático en un SQL Database
+description: Obtenga información sobre cómo ver las opciones de ajuste automático en un SQL Database. Consulte permisos necesarios y ver recursos adicionales disponibles.
 ms.custom: ''
 ms.date: 07/20/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6660bc43a6db9437ba628c0856760aac4ccd52f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4de2851505d7c5c240d792ecacdaa6bf3d1c6c3e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787145"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242955"
 ---
 # <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>Sys. Database \_ \_ (tuning_options automática) (TRANSACT-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "85787145"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Nombre de la opción de ajuste automático. Consulte [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) para ver las opciones disponibles.|  
-|**desired_state**|**smallint**|Indica el modo de operación deseado para la opción de ajuste automático, establecido explícitamente por el usuario.<br />0 = OFF<br />1 = ON |  
+|**desired_state**|**smallint**|Indica el modo de operación deseado para la opción de ajuste automático, establecido explícitamente por el usuario.<br />0 = OFF<br />1 = ON|  
 |**desired_state_desc**|**nvarchar(60)**|Descripción textual del modo de operación deseado de la opción de ajuste automático.<br />Apagado<br />ACTIVAR|  
-|**actual_state**|**smallint**|Indica el modo de operación de la opción de ajuste automático.<br />0 = OFF<br />1 = ON |  
+|**actual_state**|**smallint**|Indica el modo de operación de la opción de ajuste automático.<br />0 = OFF<br />1 = ON|  
 |**actual_state_desc**|**nvarchar(60)**|Descripción textual del modo de operación real de la opción de ajuste automático.<br />Apagado<br />ACTIVAR|  
 |**reason**|**smallint**|Indica por qué los Estados real y deseado son diferentes.<br />2 = DESHABILITADO<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
 |**reason_desc**|**nvarchar(60)**|Descripción textual de la razón por la que los Estados real y deseado son diferentes.<br />Disabled = la opción está deshabilitada por el sistema<br />QUERY_STORE_OFF = Almacén de consultas está desactivado<br />QUERY_STORE_READ_ONLY = Almacén de consultas está en modo de solo lectura<br />NOT_SUPPORTED = solo disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition| 

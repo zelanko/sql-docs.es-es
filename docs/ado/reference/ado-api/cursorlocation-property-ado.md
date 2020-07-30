@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b38b11917bf5d8a3248a6c9c0a64518109d7c83
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9aa95b7633d5dfa3a484dd97289c15c5737af986
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760191"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242745"
 ---
 # <a name="cursorlocation-property-ado"></a>Propiedad CursorLocation (ADO)
 Indica la ubicación del servicio de cursor.  
@@ -42,10 +42,15 @@ Indica la ubicación del servicio de cursor.
 >  **Uso del servicio de datos remotos** Cuando se usa en un objeto de **conjunto de registros** o de **conexión** del lado cliente, la propiedad **CursorLocation** solo se puede establecer en **adUseClient**.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

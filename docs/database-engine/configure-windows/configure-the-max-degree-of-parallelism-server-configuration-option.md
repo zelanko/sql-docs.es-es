@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperfq4
-ms.openlocfilehash: f1b4b8db6d5af2ff76b85933ab4fcdc3f67e4987
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 375d0b39fe0f898961d1386445b3b8e3f2945ee4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159733"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363313"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Establecer la opción de configuración del servidor Grado máximo de paralelismo
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], durante el inicio
 
 A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use las siguientes directrices al configurar el valor de configuración del servidor de **grado máximo de paralelismo**:
 
-||||
+|Configuración del servidor|Número de procesadores|Guía|
 |----------------|-----------------|-----------------|
 |Servidor con un solo nodo NUMA|8 procesadores lógicos como mínimo|Mantener MAXDOP en ese número de procesadores lógicos o por debajo de este|
 |Servidor con un solo nodo NUMA|Más de 8 procesadores lógicos|Mantener MAXDOP en 8|
@@ -75,7 +75,7 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use las siguiente
   
 De [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use las siguientes directrices al configurar el valor de configuración del servidor de **grado máximo de paralelismo**:
 
-||||
+|Configuración del servidor|Número de procesadores|Guía|
 |----------------|-----------------|-----------------|
 |Servidor con un solo nodo NUMA|8 procesadores lógicos como mínimo|Mantener MAXDOP en ese número de procesadores lógicos o por debajo de este|
 |Servidor con un solo nodo NUMA|Más de 8 procesadores lógicos|Mantener MAXDOP en 8|

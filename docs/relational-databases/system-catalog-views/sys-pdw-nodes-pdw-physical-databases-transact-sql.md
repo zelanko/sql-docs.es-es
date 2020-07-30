@@ -12,17 +12,17 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64d74d28c4b99e75c114effdf651a58d01a614d6
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399917"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394050"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>Sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  Contiene una fila para cada base de datos física en un nodo de proceso. Agregue información de base de datos física para obtener información detallada acerca de las bases de datos. Para combinar información, combine el `sys.pdw_nodes_pdw_physical_databases` en las `sys.pdw_database_mappings` tablas `sys.databases` y.  
+  Contiene una fila para cada base de datos física en un nodo de proceso. Agregue información de base de datos física para obtener información detallada acerca de las bases de datos. Para combinar información, combine el `sys.pdw_nodes_pdw_physical_databases` en las `sys.pdw_database_mappings` `sys.databases` tablas y.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

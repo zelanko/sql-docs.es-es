@@ -1,5 +1,5 @@
 ---
-title: Propiedades de inicialización y autorización | Microsoft Docs
+title: Propiedades de inicialización y autorización (proveedor de OLE DB de Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9ee4481a72979a93a0ab22be7b3756d97aff2e7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0ac647868ede039fe1b3f1b75835d5f925cd079a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998273"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242259"
 ---
-# <a name="initialization-and-authorization-properties"></a>Propiedades de inicialización y autorización
+# <a name="initialization-and-authorization-properties-native-client-ole-db-provider"></a>Propiedades de inicialización y autorización (proveedor de OLE DB de Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client interpreta las propiedades de inicialización y autorización de OLE DB de la siguiente forma:  

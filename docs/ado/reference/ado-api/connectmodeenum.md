@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e78ab5988d88447539da7c492f0b02943693844
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9a25677f79ede93f8ea24e979d80dd13adff4fe
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762616"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242765"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Especifica los permisos disponibles para modificar los datos de una [conexión](../../../ado/reference/ado-api/connection-object-ado.md), abrir un [registro](../../../ado/reference/ado-api/record-object-ado.md)o especificar valores para la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) de los objetos **Record** y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -53,8 +53,14 @@ Especifica los permisos disponibles para modificar los datos de una [conexión](
 |AdoEnums. ConnectMode. WRITE|  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Propiedad Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Open (método) (Stream de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
+
+:::row:::
+    :::column:::
+        [Propiedad Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
+        [Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+    :::column-end:::
+    :::column:::
+        [Open (método) (Stream de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+        [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::

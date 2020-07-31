@@ -20,15 +20,15 @@ ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed687f9a0f29359e60c05439e36853504e1ab6b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e0edb4d46ae47b4c45dc01f7d2e33f856424352
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830825"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442567"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Genera el estado actual de las transacciones confirmadas que han eliminado una o varias filas. El subproceso principal de recolección de elementos no utilizados se reactiva cada minuto o cuando el número de transacciones DML confirmadas supera un umbral interno desde el último ciclo de recolección de elementos no utilizados. Como parte del ciclo de recolección de elementos no utilizados, mueve las transacciones que se han confirmado a una o varias colas asociadas con las generaciones. Las transacciones que han generado versiones obsoletas se agrupan en una unidad de 16 transacciones en 16 generaciones de la manera siguiente:  
   

@@ -14,15 +14,15 @@ ms.assetid: ccd82fed-1a3f-47de-85c4-1c9bdd80b027
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 744a6bf84cfddb5ede068c03f152ec275c80d9a1
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 2cbcc1bfb022f213295f5c3c37d78be4935fbf48
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942783"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442523"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica de tablas con optimización para memoria (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Las siguientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vistas de administración dinámica (DMV) se usan con OLTP en memoria:  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 50766acbfa3f626061f71cf312d904dc350bc61b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a204858e7d2fcf78505e41de95d5301b2382b23a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918449"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442479"
 ---
 # <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila por cada acción en cada evento de una sesión de eventos.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "86918449"
 |event_session_id|**int**|Identificador de la sesión de eventos. No admite valores NULL.|  
 |event_id|**int**|Id. del evento. Este Id. es único dentro del objeto de sesión de eventos. No admite valores NULL.|  
 |name|**sysname**|Nombre de la acción. Acepta valores NULL.|  
-|Paquete|**sysname**|Nombre del paquete de eventos que contiene el evento. Acepta valores NULL.|  
+|paquete|**sysname**|Nombre del paquete de eventos que contiene el evento. Acepta valores NULL.|  
 |module|**sysname**|Nombre del módulo que contiene el evento. Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta vista tiene las siguientes cardinalidades de relación.  
   
 | De | A | Relación |

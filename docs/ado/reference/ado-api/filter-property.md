@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcc1b02671d73e9056babb417ba2fa22a4d6cf0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762546"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242695"
 ---
 # <a name="filter-property"></a>Propiedad Filter
 Indica un filtro para los datos de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -35,7 +35,7 @@ Establece o devuelve un valor **Variant** , que puede contener uno de los siguie
   
 -   Un valor de [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) .  
   
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Utilice la propiedad **Filter** para filtrar de forma selectiva los registros de un objeto de **conjunto de registros** . El conjunto de **registros** filtrado se convierte en el cursor actual. Otras propiedades que devuelven valores basados en el **cursor** actual se ven afectadas, como la [propiedad AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), la [propiedad AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), la [propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)y la [propiedad PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Al establecer la propiedad **Filter** en un valor nuevo específico, se mueve el registro actual al primer registro que satisface el nuevo valor.
   
@@ -43,7 +43,7 @@ La cadena de criterios se compone de cláusulas con el formato *FieldName-Operat
 
 -   *FieldName* debe ser un nombre de campo válido del **conjunto de registros**. Si el nombre del campo contiene espacios, debe escribir el nombre entre corchetes.  
   
--   El operador debe ser uno de los siguientes: \< , >, \< =, >=,  <>, = o **like**.  
+-   El operador debe ser uno de los siguientes: \<, > , \<=, > =,  <>, = o **like**.  
   
 -   Valor es el valor con el que se comparan los valores de campo (por ejemplo, ' Smith ', #8/24/95 #, 12,345 o $50,00). Use comillas simples con cadenas y signos de almohadilla (#) con fechas. En el caso de los números, puede usar separadores decimales, signos de dólar y notación científica. Si el operador es **like**, Value puede usar caracteres comodín. Solo el asterisco (*) y el signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. Value cannot be null.  
   
@@ -56,7 +56,7 @@ La cadena de criterios se compone de cláusulas con el formato *FieldName-Operat
 -   En su lugar, crearía este filtro como  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo, `LastName Like 'Smit*'`.  
+-   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo: `LastName Like 'Smit*'`.  
   
  Las constantes de filtro facilitan la resolución de conflictos de registros individuales durante el modo de actualización por lotes, ya que permiten ver, por ejemplo, solo los registros que se vieron afectados durante la última llamada al método del [método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
   
@@ -90,11 +90,11 @@ Solo los filtros en forma de cadenas de criterios afectan al contenido de un **c
   
 En la tabla siguiente se resumen los efectos de **adFilterPendingRecords** en diferentes combinaciones de filtrado y modificaciones. En la columna izquierda se muestran las posibles modificaciones. Las modificaciones se pueden realizar en cualquiera de los campos sin clave, en el campo clave de una tabla con una sola clave o en cualquiera de los campos clave de una tabla con varias claves. La fila superior muestra el criterio de filtrado. El filtrado puede basarse en cualquiera de los campos sin clave, en el campo clave de una tabla con una sola clave o en cualquiera de los campos clave de una tabla con varias claves. Las celdas de intersección muestran los resultados. Un **+** signo más significa que la aplicación de **adFilterPendingRecords** da como resultado un **conjunto de registros**no vacío. Un **-** signo menos significa un **conjunto de registros**vacío.  
   
-||No claves|Clave única|Varias claves|
+|Posibles|No claves|Clave única|Varias claves|
 |-|--------------|----------------|-------------------|
 |**No claves**|+|+|+|
-|**Clave única**|+|-|N/D|
-|**Varias claves**|+|N/D|+|
+|**Clave única**|+|-|N/A|
+|**Varias claves**|+|N/A|+|
 |||||
   
 ## <a name="applies-to"></a>Se aplica a

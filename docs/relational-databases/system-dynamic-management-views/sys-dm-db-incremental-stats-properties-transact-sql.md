@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f958e122277e28665b10ff27be4c0224574690d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 20e4f7f015cc5d1ced1802e192c36f6c86471f0b
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820930"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442918"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve propiedades de estadísticas incrementales para el objeto de base de datos especificado (tabla) en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El uso de `sys.dm_db_incremental_stats_properties` (que contiene un número de partición) es similar a `sys.dm_db_stats_properties` , que se usa para estadísticas no incrementales. 
   
@@ -59,7 +59,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |unfiltered_rows|**bigint**|Número total de filas de la tabla antes de aplicar la expresión de filtro (para estadísticas filtradas). Si las estadísticas no están filtradas, unfiltered_rows es igual al valor devuelto en la columna rows.|  
 |modification_counter|**bigint**|Número total de modificaciones para la columna de estadísticas iniciales (la columna en la que se ha generado el histograma) desde la última vez que se actualizaron las estadísticas.<br /><br /> Esta columna no contiene información sobre tablas optimizadas para memoria.|  
   
-## <a name="remarks"></a>Comentarios para <a name="Remarks"></a>  
+## <a name="remarks"></a><a name="Remarks"></a> Comentarios  
  `sys.dm_db_incremental_stats_properties` devuelve un conjunto de filas vacío si se da alguna de las condiciones siguientes:  
   
 -   `object_id` o `stats_id` es NULL.   
@@ -87,7 +87,7 @@ Para sugerencias adicionales de uso, consulte  [sys.dm_db_stats_properties](../.
   
 ## <a name="see-also"></a>Consulte también  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [Sys. stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Funciones y vistas de administración dinámica relacionadas con objetos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [Sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   

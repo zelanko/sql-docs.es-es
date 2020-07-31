@@ -1,6 +1,6 @@
 ---
 title: Migre SQL Server inicios de sesión con Data Migration Assistant
-description: Obtenga información sobre cómo migrar inicios de sesión de SQL Server con Data Migration Assistant
+description: Migre SQL Server inicios de sesión con Data Migration Assistant, incluidas las actualizaciones de SQL Server a versiones posteriores del producto local o a SQL Server en máquinas virtuales de Azure.
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f721800de13d11eefa1cabdd2f23fda838db9396
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 802df8e3bf6817bfd8da5608aa28c0612601a2cd
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885792"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472357"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migre SQL Server inicios de sesión con Data Migration Assistant
 

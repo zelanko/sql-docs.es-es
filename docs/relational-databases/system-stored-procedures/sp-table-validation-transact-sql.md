@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 37e03d7552f1297fe4410d68e69bdc15ddeb47ed
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834235"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442417"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el recuento de filas o la suma de comprobación de una tabla o vista indizada, o bien compara el recuento de filas o la suma de comprobación proporcionados con los de la tabla o vista indizada especificada. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones y en el suscriptor de la base de datos de suscripciones. *No se admite para publicadores de Oracle*.  
   
@@ -80,7 +80,7 @@ sp_table_validation [ @table = ] 'table'
   
  Si se realiza una validación de RowCount y el número esperado de filas es igual al número de la tabla, **sp_table_validation** devuelve un mensaje que indica que la tabla ha pasado la validación de RowCount. De lo contrario, devuelve un mensaje que indica que la tabla puede no estar sincronizada e informa de la diferencia entre el número de filas real y el esperado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_table_validation** se utiliza en todos los tipos de replicación. los publicadores de Oracle no admiten **sp_table_validation** .  
   
  La suma de comprobación calcula una prueba de redundancia cíclica (CRC, Cyclic Redundancy Check) de 32 bits sobre la imagen completa de la fila en la página. No comprueba las columnas de forma selectiva y no puede operar sobre vistas ni particiones verticales de la tabla. Además, la suma de comprobación omite el contenido de las columnas de **texto** e **imagen** (por diseño).  

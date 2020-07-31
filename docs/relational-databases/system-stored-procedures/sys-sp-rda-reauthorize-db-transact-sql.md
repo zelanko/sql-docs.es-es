@@ -1,5 +1,6 @@
 ---
 title: Sys. sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
+description: Obtenga información sobre cómo usar sys. sp_rda_reauthorize_db para restaurar la conexión autenticada entre una base de datos habilitada para Stretch local y una base de datos remota.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3fcac7c16de9acf851c623cf7eb1c582e78025c
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 5bb6c7ff0d9e2025e5036043c8a48616b0679a54
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053041"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247574"
 ---
 # <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -55,7 +57,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>Permisos  
  Requiere permisos de db_owner.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Al ejecutar [Sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos remota de Azure, esta operación restablece automáticamente el modo de consulta a LOCAL_AND_REMOTE, que es el comportamiento predeterminado para Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
   
 ## <a name="example"></a>Ejemplo  

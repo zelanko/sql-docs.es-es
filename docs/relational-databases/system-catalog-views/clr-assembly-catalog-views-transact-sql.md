@@ -16,22 +16,34 @@ helpviewer_keywords:
 ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22984dc8cf9ddc418b094ada5af232adb7f69706
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bae2182aec6b86776c28fa6573d7f249c5e11de
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753000"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472661"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>Vistas de catálogo del ensamblado CLR (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Esta sección contiene las siguientes vistas de catálogo.  
-  
-|||  
-|-|-|  
-|[sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|[sys.assembly_references](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|  
-|[sys.assembly_files](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)||  
+
+:::row:::
+    :::column:::
+        [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.assembly_references](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.assembly_files](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

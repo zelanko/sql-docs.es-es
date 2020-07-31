@@ -21,15 +21,15 @@ ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6ea40fa0a40e90b0ab31912bcda185cc21258b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0fcac0218e78887aecb4d2ce7e6bbba4ebe24d0a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830759"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442889"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Devuelve estadísticas del uso de memoria para cada tabla de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (usuario y sistema) de la base de datos actual. Las tablas del sistema tienen identificadores de objetos negativos y se emplean para almacenar información en tiempo de ejecución para el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. A diferencia de los objetos de usuario, las tablas del sistema son internas y solo existen en memoria; por tanto, no son visible mediante vistas de catálogo. Las tablas del sistema se usan para almacenar información como metadatos para todos los archivos de datos y delta del almacenamiento, solicitudes de combinación, marcas de agua de archivos delta para filtrar filas, tablas quitadas e información pertinente para la recuperación y las copias de seguridad. Puesto que el motor de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] puede tener hasta 8.192 pares de archivos de datos y delta, para las bases de datos en memoria grandes, la memoria que ocupan las tablas del sistema puede ser de algunos megabytes.  
   

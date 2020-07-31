@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 488fe5a46b994ed664c6355e24fe8d567d5ff11d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe649e6636f33dfc73ee5aac949830b4175cd3ec
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762912"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242455"
 ---
 # <a name="attributes-property-ado"></a>Propiedad Attributes (ADO)
 Indica una o más características de un objeto.  
@@ -38,7 +38,7 @@ Indica una o más características de un objeto.
   
  Para un objeto de [propiedad](../../../ado/reference/ado-api/property-object-ado.md) , la propiedad **attributes** es de solo lectura y su valor puede ser la suma de uno o más valores [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice la propiedad **attributes** para establecer o devolver características de objetos de **conexión** , objetos de **parámetro** , objetos de **campo** o objetos de **propiedad** .  
   
  Al establecer varios atributos, puede sumar las constantes adecuadas. Si establece el valor de la propiedad en una suma que incluye constantes incompatibles, se produce un error.  
@@ -47,12 +47,18 @@ Indica una o más características de un objeto.
 >  **Uso del servicio de datos remotos** Esta propiedad no está disponible en un objeto de **conexión** del lado cliente.  
   
 ## <a name="applies-to"></a>Se aplica a  
-  
-|||  
-|-|-|  
-|[Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Objeto Field](../../../ado/reference/ado-api/field-object.md)|  
-|[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de propiedades de atributos y nombres (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Ejemplo de propiedades de atributos y nombres (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

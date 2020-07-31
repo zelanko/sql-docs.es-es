@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfdfbe678e5b91d72e19a0300f9f1feec77c9d75
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b6f7e2f05d03c1bb43b184c259a5cef4b5d3b7e2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814565"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442450"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Enlaza la base de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] indicada para el grupo de recursos de servidor especificado. La base de datos y el grupo de recursos de servidor se deben haber creado antes de ejecutar `sys.sp_xtp_bind_db_resource_pool`.  
   
@@ -52,7 +52,7 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
  resource_pool_name  
  Nombre de un grupo de recursos de servidor existente.  
   
-## <a name="messages"></a>error de Hadoop  
+## <a name="messages"></a>Mensajes  
  Cuando se produce un error, `sp_xtp_bind_db_resource_pool` devuelve uno de estos mensajes.  
   
  **La base de datos no existe**  
@@ -152,7 +152,7 @@ END
 -   Requiere el permiso CONTROL SERVER.  
   
 ## <a name="see-also"></a>Consulte también  
- [Enlazar una base de datos con tablas optimizadas para memoria a un grupo de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

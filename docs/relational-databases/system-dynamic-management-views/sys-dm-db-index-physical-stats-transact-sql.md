@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7bceaef8321248bc29be2faad3886319a9267391
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112762"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472218"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,33 +55,33 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *database_id* | NULL | 0 | PREDETERMINADA  
+ *database_id* \| \| \| Valor predeterminado de NULL 0  
  Es el ID. de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.  
   
  Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar null para *object_id*, *index_id*y *partition_number*.  
   
  Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Al usar DB_ID sin especificar ningún nombre de base de datos, el nivel de compatibilidad de la base de datos actual debe ser 90 o superior.  
   
- *object_id* | NULL | 0 | PREDETERMINADA  
+ *object_id* \| \| \| Valor predeterminado de NULL 0  
  Es el identificador de objeto de la tabla o vista donde está activado el índice. *object_id* es **int**.  
   
  Las entradas válidas son el número de identificador de una tabla o vista, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , las entradas válidas también incluyen el nombre de la cola de Service Broker o el nombre de la tabla interna de la cola. Cuando se aplican los parámetros predeterminados (es decir, todos los objetos, todos los índices, etc.), la información de fragmentación de todas las colas se incluye en el conjunto de resultados.  
   
  Especifique NULL para devolver información de todas las tablas y vistas de la base de datos especificada. Si especifica NULL para *object_id*, también debe especificar null para *index_id* y *partition_number*.  
   
- *index_id* | 0 | NULL | -1 | PREDETERMINADA  
+ *index_id* \| 0 \| null \| -1 \| predeterminado  
  Es el identificador del índice. *index_id* es de **tipo int**. Las entradas válidas son el número de identificación de un índice, 0 si *object_id* es un montón, null,-1 o default. El valor predeterminado es -1. NULL,-1 y DEFAULT son valores equivalentes en este contexto.  
   
  Especifique NULL para devolver información de todos los índices de una tabla o vista base. Si especifica NULL para *index_id*, también debe especificar null para *partition_number*.  
   
- *partition_number* | NULL | 0 | PREDETERMINADA  
+ *partition_number* \| \| \| Valor predeterminado de NULL 0  
  Es el número de partición en el objeto. *partition_number* es de **tipo int**. Las entradas válidas son las *partion_number* de un índice o montón, null, 0 o default. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.  
   
  Especifique NULL para obtener información sobre todas las particiones del objeto propietario.  
   
  *partition_number* se basa en 1. Un índice o montón sin particiones tiene *partition_number* establecida en 1.  
   
- *modo* | NULL | PREDETERMINADA  
+ *modo* \| de NULL ( \| valor predeterminado)  
  Es el nombre del modo. el *modo* especifica el nivel de examen que se utiliza para obtener las estadísticas. *mode* es **sysname**. Las entradas válidas son DEFAULT, NULL, LIMITED, SAMPLED o DETAILED. El valor predeterminado (NULL) es LIMITED.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
@@ -120,7 +120,7 @@ sys.dm_db_index_physical_stats (
 |offrow_regular_version_record_count|**bigint**|Recuento de registros de versión que se mantienen fuera de la fila de datos original. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |offrow_long_term_version_record_count|**bigint**|Recuento de registros de versión considerados a largo plazo. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La función de administración dinámica sys.dm_db_index_physical_stats sustituye a la instrucción DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modos de recorrido  

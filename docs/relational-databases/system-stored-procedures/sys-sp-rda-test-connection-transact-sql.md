@@ -1,5 +1,6 @@
 ---
 title: Sys. sp_rda_test_connection (Transact-SQL) | Microsoft Docs
+description: Aprenda a usar sys. sp_rda_test_connection para probar la conexión de SQL Server al servidor remoto de Azure e informar de los problemas que pueden impedir la migración de datos.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4edd3cfc40225b4b040c73fb0d3ba929d16debc5
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 8a49ec06172f7e28828566383137ed2d165c1e89
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053591"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246494"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>Sys. sp_rda_test_connection (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -4,21 +4,29 @@ description: Obtenga información sobre los cambios en SQL Server Migration Assi
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: c35b67bebc63c47750b856d5a2ec2d45666c90b8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9a6d0b5eee611de7009247484dbb9b7591982d5
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003878"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477257"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para DB2 en cada versión.
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+La versión v 8.12 de SSMA para DB2 contiene los siguientes cambios:
+
+* Conversión de la `STRIP` función
+* Mejora del análisis de las opciones de procedimiento
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 

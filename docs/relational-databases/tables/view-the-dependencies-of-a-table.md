@@ -16,15 +16,15 @@ ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f543848759b737892998d913fa87ea6de7c6735
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: dd39db91c0ee2e6e71ed351fa39dae66921e0207
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858587"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394656"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Ver las dependencias de una tabla
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   Puede ver las dependencias de una tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -55,7 +55,7 @@ ms.locfileid: "83858587"
   
 2.  Haga clic con el botón derecho en una tabla y, después, haga clic en **Ver dependencias**.  
   
-3.  En el cuadro de diálogo **Dependencias del objeto** _\<nombre de objeto\>_ , seleccione **Objetos que dependen de** _\<nombre de objeto\>_ u **Objetos de los que** _\<nombre de objeto\>_ **depende**.  
+3.  En el cuadro de diálogo **Dependencias del objeto** _\<object name\>_ , seleccione **Objetos que dependen de**  _\<object name\>_ u **Objetos de los que depende** _\<object name\>_ **.**  
   
 4.  Seleccione un objeto en la cuadrícula **Dependencias** . El tipo de objeto (por ejemplo, "Desencadenador" o "Procedimiento almacenado"), aparece en el cuadro **Tipo** .  
   

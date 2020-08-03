@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897338"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362705"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Supervisión del rendimiento para grupos de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,9 +26,8 @@ ms.locfileid: "85897338"
   
  ![Sincronización de datos del grupo de disponibilidad](media/always-onag-datasynchronization.gif "Sincronización de datos del grupo de disponibilidad")  
   
-|||||  
+|Secuencia|Descripción del paso|Comentarios|Métricas de utilidad|  
 |-|-|-|-|  
-|**Secuencia**|**Descripción del paso**|**Comentarios**|**Métricas de utilidad**|  
 |1|Generación de registro|Los datos del registro se vacían en el disco. Este registro se debe replicar en las réplicas secundarias. Las entradas del registro entran en la cola de envío.|[SQL Server: Base de datos > Bytes de registro vaciados/s](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Capturar|Los registros de cada base de datos se capturan y se envían a la cola de asociado correspondiente (uno por par de réplica de base de datos). Este proceso de captura se ejecuta de forma continua siempre que la réplica de disponibilidad esté conectada y no se suspenda el movimiento de datos por algún motivo; el par de réplica de base de datos se muestra como Sincronizando o Sincronizado. Si el proceso de captura no es capaz de examinar y poner en cola los mensajes con la suficiente rapidez, la cola de envío de registros se acumula.|[SQL Server: Réplica de disponibilidad > Bytes enviados a la réplica\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md), que es una agregación de la suma de todos los mensajes de la base de datos en cola para esa réplica de disponibilidad.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) y [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/s) en la réplica principal.|  
 |3|Envío|Los mensajes de cada cola de réplica de base de datos se quitan de la cola y se envían a través de la conexión a la réplica secundaria correspondiente.|[SQL Server: réplica de disponibilidad > Bytes enviados al transporte\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
@@ -41,13 +40,12 @@ ms.locfileid: "85897338"
   
  Una vez capturados los registros en la réplica principal, están sujetos a dos niveles de control de flujo, como se muestra en la tabla siguiente.  
   
-|||||  
+|Nivel|Número de puertas|Número de mensajes|Métricas de utilidad|  
 |-|-|-|-|  
-|**Level**|**Número de puertas**|**Número de mensajes**|**Métricas de utilidad**|  
 |Transporte|1 por réplica de disponibilidad|8192|Evento extendido **database_transport_flow_control_action**|  
 |Base de datos|1 por base de datos de disponibilidad|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Evento extendido **hadron_database_flow_control_action**|  
   
- Una vez que se alcanza el umbral de mensajes de cualquier puerta, los mensajes de registro ya no se envían a una réplica determinada ni para una base de datos concreta. Los mensajes pueden enviarse una vez que se reciben los mensajes de confirmación de los mensajes enviados a fin de reducir el número de mensajes enviados por debajo del umbral.  
+ Una vez que se alcanza el umbral de mensajes de cualquier puerta, los mensajes de registro ya no se envían a una réplica determinada ni para una base de datos concreta. Los mensajes pueden enviarse una vez que se reciben los mensajes de confirmación de los mensajes enviados, a fin de reducir el número de mensajes enviados por debajo del umbral.  
   
  Además de las puertas de control de flujo, hay otro factor que puede evitar que los mensajes de registro se envíen. La sincronización de réplicas garantiza que los mensajes se envíen y se apliquen en el orden de los números de secuencia de registro (LSN). Antes de enviar un mensaje de registro, también se compara su LSN con el LSN confirmado más bajo para asegurarse de que es menor que uno de los umbrales (según el tipo de mensaje). Si la diferencia entre los dos LSN es mayor que el umbral, los mensajes no se envían. Una vez que la diferencia vuelve a estar por debajo del umbral, se envían los mensajes.  
   

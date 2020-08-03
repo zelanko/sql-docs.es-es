@@ -34,16 +34,16 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 246cf0c526e04c5f4df33067286b0cefaf9913cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636203"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397084"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM más JOIN, APPLY, PIVOT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 En Transact-SQL, la cláusula FROM está disponible en las siguientes instrucciones:
 
@@ -177,7 +177,7 @@ FROM { <table_source> [ ,...n ] }
  Especifica el origen de una tabla, una vista, una tabla variable o una tabla derivada, con o sin alias, para utilizarlo en la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se pueden utilizar hasta 256 orígenes de tabla en una instrucción, aunque el límite varía en función de la memoria disponible y de la complejidad del resto de las expresiones de la consulta. Las consultas individuales pueden no admitir un máximo de 256 orígenes de tabla.  
   
 > [!NOTE]  
->  El rendimiento de las consultas se puede ver afectado si se hace referencia a un número elevado de tablas en ellas. El tiempo de compilación y optimización también se puede ver afectado por factores adicionales. Estos incluyen la presencia de índices y vistas indizadas en cada \<table_source> y el tamaño de \<select_list> en la instrucción SELECT.  
+>  El rendimiento de las consultas se puede ver afectado si se hace referencia a un número elevado de tablas en ellas. El tiempo de compilación y optimización también se puede ver afectado por factores adicionales. Estos incluyen la presencia de índices y vistas indexadas en cada \<table_source> y el tamaño de \<select_list> en la instrucción SELECT.  
   
  El orden de los orígenes de tabla después de la palabra clave FROM no afecta al conjunto de resultados devuelto. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve errores si aparecen nombres duplicados en la cláusula FROM.  
   
@@ -383,14 +383,14 @@ ON (p.ProductID = v.ProductID);
 **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
- Devuelve una tabla con un único registro por cada fila que contenga los valores que fueran reales (actuales) en el momento determinado especificado en el pasado. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de la fila que era válida en el momento determinado especificado por el parámetro *\<date_time>* . El valor de una fila se considera válido si el valor de *system_start_time_column_name* es menor o igual que el valor del parámetro *\<date_time>* y el valor de *system_end_time_column_name* es mayor que el valor del parámetro *\<date_time>* .   
+ Devuelve una tabla con un único registro por cada fila que contenga los valores que fueran reales (actuales) en el momento determinado especificado en el pasado. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial, y los resultados se filtran para devolver los valores de la fila que era válida en el momento especificado por el parámetro *\<date_time>* . El valor de una fila se considera válido si el valor de *system_start_time_column_name* es menor o igual que el valor del parámetro *\<date_time>* y el valor de *system_end_time_column_name* es mayor que el valor del parámetro *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 
 **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
   
- Devuelve una tabla con los valores de todas las versiones de registro que estaban activas dentro del rango de tiempo especificado, independientemente de si empezaron a ser activas antes del valor del parámetro *\<start_date_time>* del argumento FROM o si dejaron de serlo después del valor del parámetro *\<end_date_time>* del argumento TO. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de todas las versiones de fila que estaban activas en cualquier momento dentro del intervalo de tiempo especificado. Se incluyen las filas que se activaron justamente en el límite inferior definido por el punto de conexión FROM y no se incluyen aquellas que se activaron exactamente en el límite superior definido por el punto de conexión TO.  
+ Devuelve una tabla con los valores de todas las versiones de registro que estaban activas dentro del intervalo de tiempo especificado, independientemente de si empezaron a estar activas antes del valor del parámetro *\<start_date_time>* en el argumento FROM o si dejaron de estarlo después del valor del parámetro *\<end_date_time>* en el argumento TO. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de todas las versiones de fila que estaban activas en cualquier momento dentro del intervalo de tiempo especificado. Se incluyen las filas que se activaron justamente en el límite inferior definido por el punto de conexión FROM y no se incluyen aquellas que se activaron exactamente en el límite superior definido por el punto de conexión TO.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 

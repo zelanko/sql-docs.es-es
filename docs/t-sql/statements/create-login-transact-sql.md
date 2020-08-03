@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08056878aabb707433dc22ca891798feb96ef329
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245234"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411047"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,10 +51,10 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Base de datos única/grupo elástico<br /> de Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Instancia administrada<br /> de Azure SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -284,10 +284,10 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_**
+        **_\* Base de datos única/grupo elástico<br />d e Azure SQL Database\*_**
     :::column-end:::
     :::column:::
-        [Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Instancia administrada<br /> de Azure SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -402,10 +402,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Base de datos única/grupo elástico<br /> de Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Instancia administrada de <br />SQL Database \*_**
+        **_\* Instancia administrada<br />de Azure SQL\*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -495,7 +495,7 @@ Después de crear un inicio de sesión, se puede conectar a una Instancia admini
 - Solo las entidades de seguridad de nivel de servidor de SQL (inicios de sesión) que formen parte del rol `sysadmin` pueden ejecutar las operaciones siguientes destinadas a entidades de seguridad de Azure AD:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
-- Los usuarios externos (invitados) que se han importado desde otro directorio de Azure AD no se pueden configurar directamente como administradores de Azure AD para la instancia administrada. En su lugar, debe unir a los usuarios externos a un grupo de Azure AD con seguridad habilitada y configurar este grupo como administrador de la instancia.
+- Los usuarios externos (invitados) que se han importado desde otro directorio de Azure AD no se pueden configurar directamente como administradores de Azure AD para SQL Managed Instance mediante Azure Portal. En su lugar, debe unir a los usuarios externos a un grupo de Azure AD con seguridad habilitada y configurar este grupo como administrador de la instancia. Puede usar PowerShell o la CLI de Azure para establecer usuarios invitados individuales como administrador de la instancia.
 - El inicio de sesión no se replica en la instancia secundaria de un grupo de conmutación por error. El inicio de sesión se guarda en la base de datos maestra, que es una base de datos del sistema y, como tal, no se replica geográficamente. Para solucionarlo, el usuario debe crear el inicio de sesión con el mismo identificador de seguridad en la instancia secundaria.
 
 ```SQL
@@ -601,10 +601,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Base de datos única/grupo elástico<br /> de Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Instancia administrada<br /> de Azure SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -729,10 +729,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Base de datos única/grupo elástico<br /> de Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Instancia administrada<br /> de Azure SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)

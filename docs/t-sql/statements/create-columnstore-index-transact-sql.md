@@ -29,15 +29,15 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fa18ece825ba55479eac3d5c421c6d5acba363c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7125460527a0ca6aa231d771cff8714db7891b09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633275"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396277"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Convierta una tabla de almacén de filas en un índice de almacén de columnas o cree un índice no clúster de almacén de columnas. Use un índice de almacén de columnas para ejecutar de forma eficaz los análisis operativos en tiempo real en una carga de trabajo OLTP o para mejorar la compresión de los datos y el rendimiento de las consultas de las cargas de trabajo de almacenamiento de datos.  
   
@@ -250,7 +250,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutos]  
    Especifica un límite inferior para el tiempo que una fila debe permanecer en el grupo de filas delta antes de que se pueda migrar a un grupo de filas comprimido. Por ejemplo, un cliente puede indicar que si una fila no se ha modificado durante 120 minutos, se pueda comprimir en formato de almacenamiento en columnas. En el índice de almacén de columnas de las tablas basadas en disco, no se realiza el seguimiento del tiempo de inserción o actualización de una fila; en su lugar, se usa el tiempo de cierre del grupo de filas de diferencial como elemento intermedio de la fila. La duración predeterminada es 0 minutos. Una fila se migra al almacenamiento en columnas una vez que en el grupo de filas delta se han acumulado 1 millón de filas y se ha marcado como cerrado.  
   
 ###### <a name="data_compression"></a>DATA_COMPRESSION  
@@ -516,7 +516,7 @@ GO
     -   Haga esto solo si desea especificar un nuevo nombre para el índice cuando se convierta en un índice clúster de almacén de columnas. Si no quita el índice clúster, el nuevo índice clúster de almacén de columnas tiene el mismo nombre.  
   
         > [!NOTE]  
-        > El nombre del índice será más fácil de recordar si usa su propio nombre. Todos los índices clúster de almacén de filas usan el nombre predeterminado, 'ClusteredIndex_\<GUID>'.  
+        > El nombre del índice será más fácil de recordar si usa su propio nombre. Todos los índices agrupados de almacén de filas usan el nombre predeterminado, "ClusteredIndex_\<GUID>".  
   
     ```sql  
     --Process for dropping a clustered index.  

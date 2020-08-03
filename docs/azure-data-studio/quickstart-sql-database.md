@@ -1,6 +1,6 @@
 ---
 title: Conexión a una base de datos de Azure SQL y consulta de ella
-description: En este inicio rápido se muestra cómo usar Azure Data Studio para conectarse a una base de datos SQL y ejecutar una consulta
+description: Realice este inicio rápido para usar Azure Data Studio para conectarse a un servidor de Azure SQL Database y, luego, crear y consultar una base de datos.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771957"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411301"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Inicio rápido: Uso de Azure Data Studio para conectarse a una base de datos de Azure SQL y consultarla
 

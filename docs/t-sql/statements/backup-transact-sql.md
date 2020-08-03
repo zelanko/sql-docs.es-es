@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29a53d4ccb5958a191bf06f4565cc8f908376086
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552780"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332514"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -65,10 +65,17 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -234,9 +241,9 @@ TO \<backup_device> [ **,** ...*n* ] Indica que el conjunto de [dispositivos de 
 
 Especifica el dispositivo de copia de seguridad físico o lógico que se va a utilizar para la operación de copia de seguridad.
 
-{ *logical_device_name* |  **@** _logical\_device\_name\_var_ } **Se aplica a:** SQL Server Es el nombre lógico del dispositivo de copia de seguridad en que se hace la copia de seguridad de la base de datos. El nombre lógico debe seguir las reglas definidas para los identificadores. Si se proporciona como una variable (@*logical_device_name_var*), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (@_logical\_device\_name\_var_ **=** logical backup device name) o como una variable de cualquier tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **Se aplica a:** SQL Server Es el nombre lógico del dispositivo de copia de seguridad en que se hace la copia de seguridad de la base de datos. El nombre lógico debe seguir las reglas definidas para los identificadores. Si se proporciona como una variable (@*logical_device_name_var*), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (@_logical\_device\_name\_var_ **=** logical backup device name) o como una variable de cualquier tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.
 
-{ DISK | TAPE | URL} **=** { **"** _physical\_device\_name_ **"**  |  **@** _physical\_device\_name\_var_ | "NUL" } **Se aplica a:** DISK, TAPE y URL se aplican a SQL Server.
+{ DISK \| TAPE \| URL} **=** { **"** _physical\_device\_name_ **"** \| **@** _physical\_device\_name\_var_ \| 'NUL' } **Se aplica a:** DISK, TAPE y URL se aplican a SQL Server.
 Especifica un archivo de disco o un dispositivo de cinta, o bien un servicio Microsoft Azure Blob Storage. El formato de las direcciones URL solo se usa para crear copias de seguridad en el servicio de almacenamiento Microsoft Azure. Para obtener información y ejemplos, vea [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obtener un tutorial, vea [Tutorial: Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
 
 > [!NOTE]
@@ -664,7 +671,7 @@ En esta tabla se describen las interacciones entre las opciones { **NOINIT** | I
 > [!NOTE]
 > Si el medio de cinta está vacío o el archivo de copia de seguridad en disco no existe, todas estas interacciones escriben un encabezado de medios y continúan. Si el medio no está vacío y no contiene ningún encabezado de medios válido, estas operaciones proporcionan un comentario que indica que no se trata de un medio MTF válido y terminan la operación de copia de seguridad.
 
-||NOINIT|INIT|
+|Opción de omitir|NOINIT|INIT|
 |------|------------|----------|
 |NOSKIP|Si el volumen contiene un encabezado de medios válido, se comprueba que el nombre del medio coincida con la opción `MEDIANAME`, si se ha proporcionado. Si coincide, se anexa el conjunto de copia de seguridad y se mantienen todos los conjuntos de copia de seguridad existentes.<br /> Si el volumen no contiene un encabezado de medios válido, se produce un error.|Si el volumen contiene un encabezado de medios válido, se realizan las siguientes comprobaciones:<br /><ul><li>Si se especificó `MEDIANAME`, se comprueba que el nombre del medio proporcionado coincida con el nombre del encabezado de medios.<sup>1</sup></li><li>Se comprueba que no haya conjuntos de copia de seguridad sin expirar en el medio. Si los hay, se finaliza la copia de seguridad.</li></ul><br />Si las comprobaciones son correctas, se sobrescriben los conjuntos de copia de seguridad de los medios y solo se mantiene el encabezado de medios.<br /> Si el volumen no contiene ningún encabezado de medios válido, se genera uno usando las opciones `MEDIANAME` y `MEDIADESCRIPTION` especificadas, si se especificó alguna.|
 |SKIP|Si el volumen contiene un encabezado de medios válido, se anexa el conjunto de copia de seguridad, conservándose todos los conjuntos de copia de seguridad existentes.|Si el volumen contiene un encabezado de medios válido <sup>2</sup>, los conjuntos de copia de seguridad de los medios se sobrescriben, conservándose solo el encabezado de medios.<br /> Si el medio está vacío, se genera un encabezado de medios usando las opciones `MEDIANAME` y `MEDIADESCRIPTION`, si se especificó alguna.|
@@ -929,9 +936,17 @@ WHERE r.command LIKE 'BACKUP%'
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instancia administrada de <br />SQL Database \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        **_\* Instancia administrada de <br />SQL Database \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1111,9 +1126,17 @@ WITH STATS = 5, COPY_ONLY;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        [Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

@@ -19,15 +19,15 @@ ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00ed86cdfd3002bc44c7a20c49c96663f6206417
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f1718a85927fa4b443576ab7835298db9f59178d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803917"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394258"
 ---
 # <a name="percentile_disc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Calcula un percentil concreto para los valores ordenados de un conjunto de filas completo o dentro de particiones distintas de un conjunto de filas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para un valor de percentil determinado *P*, PERCENTILE_DISC ordena los valores de expresión en la cláusula ORDER BY. A continuación, devuelve el valor con el menor valor de CUME_DIST dado (con respecto a la misma especificación de ordenación) que es mayor o igual que *P*. Por ejemplo, PERCENTILE_DISC (0.5) calculará el cincuentavo percentil (es decir, la mediana) de una expresión. PERCENTILE_DISC calcula el percentil basándose en una distribución discreta de los valores de columna; el resultado es igual a un valor específico de la columna.  
   
@@ -40,7 +40,9 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *literal*  
  El percentil que se va a calcular. El valor debe estar entre 0,0 y 1,0.  
   
@@ -48,7 +50,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  Especifica una lista de valores para ordenar y cuyo percentil se va a calcular. Solo se permite una *order_by_expression*. El criterio de ordenación predeterminado es ascendente. La lista de valores puede ser de cualquiera de los tipos de datos válidos para la operación de ordenación.  
   
  OVER **(** \<partition_by_clause>)**  
- Divide el conjunto de resultados de la cláusula FROM en particiones. La función percentile se aplica a estas particiones. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). Las cláusulas \<ORDER BY clause> y \<rows or range clause> no se pueden especificar en una función PERCENTILE_DISC.  
+ Divide el conjunto de resultados de la cláusula FROM en particiones. La función percentile se aplica a estas particiones. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md). No se pueden especificar \<ORDER BY clause> y \<rows or range clause> en una función PERCENTILE_DISC.  
   
 ## <a name="return-types"></a>Tipos de valor devuelto  
  El tipo de valor devuelto viene determinado por el tipo *order_by_expression*.  

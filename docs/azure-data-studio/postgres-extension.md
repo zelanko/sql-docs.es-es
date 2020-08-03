@@ -1,6 +1,6 @@
 ---
 title: Extensión de PostgreSQL (versión preliminar)
-description: Extensión PostgreSQL (versión preliminar) para Azure Data Studio
+description: Aprenda a instalar la extensión PostgreSQL de Azure Data Studio, que permite conectarse a bases de datos Postgres, consultarlas y desarrollar para estas.
 ms.custom: seodec18
 ms.date: 03/19/2019
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 5c5c12a45ee49456ff0b4742e258ee5ad2936600
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a273850f64168caeb48304606e50703ba8fc54f4
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735289"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411331"
 ---
 # <a name="postgresql-extension-preview"></a>Extensión de PostgreSQL (versión preliminar)
 

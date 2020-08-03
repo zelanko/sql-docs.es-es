@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13dd1cb62f139a672e53b0945e94fc3ba25abc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10eb6fdf211b15cdc5b9f11d7f85cb45c050019a
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883138"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332264"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker con grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85883138"
      Para obtener más información, vea [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    SQL Server Broker no reconoce múltiples subredes. Asegúrese de usar "registerallprovidersip" establecido en 0, y compruebe que no esté usando direcciones IP estáticas en DNS con el permiso necesario para el clúster en el DNS, como se define en https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. El agente puede retrasar el mensaje con el estado "CONVERSING" al intentar usar la IP deshabilitada.
+    SQL Server Service Broker no reconoce múltiples subredes. Establezca `RegisterAllProvidersIP` en 0 y compruebe que el clúster tiene el permiso necesario en DNS para usar direcciones IP estáticas. Consulte [Configuración del agente de escucha del grupo de disponibilidad](create-or-configure-an-availability-group-listener-sql-server.md) para obtener más información. Service Broker puede retrasar el mensaje con el estado "CONVERSING" al intentar usar la dirección IP deshabilitada.
 
 3.  **Conceda el permiso CONNECT para usar el extremo.**  
   

@@ -2,7 +2,7 @@
 title: Compatibilidad con la conectividad de cliente y controlador para grupos de disponibilidad
 description: 'En este tema se describen las consideraciones para la conectividad de cliente a grupos de Always On, incluidos los requisitos previos, las restricciones y las recomendaciones para las configuraciones y los valores de cliente. '
 ms.custom: seodec18
-ms.date: 04/26/2018
+ms.date: 07/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bb97e94e55f270331ff99909b5ec7dca6f8683e3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 691195b4a44065a95cf97d073d5bf52d2caa19f8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901036"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395078"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>Compatibilidad con la conectividad de cliente y controlador para grupos de disponibilidad
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,9 @@ ms.locfileid: "85901036"
 |SQL Native Client 11.0 OLEDB|No|Sí|Sí|No|No|  
 |ADO.NET con .NET Framework 4.0 con revisión de conectividad*|Sí|Sí|Sí|Sí|Sí|  
 |ADO.NET con .NET Framework 3.5 SP1 con revisión de conectividad **|Sí|Sí|Sí|Sí|Sí|  
-|Controlador JDBC 4.0 de Microsoft para SQL Server|Sí|Sí|Sí|Sí|Sí| 
-|Controlador Microsoft OLE DB para SQL Server|Sí|Sí|Sí|Sí|Sí| 
+|[Microsoft ODBC Driver 13.1 para SQL Server](../../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)|Sí|Sí|Sí|Sí|Sí|
+|[Microsoft JDBC Driver 4.0+ para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|Sí|Sí|Sí|Sí|Sí| 
+|[Controlador Microsoft OLE DB para SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|Sí|Sí|Sí|Sí|Sí| 
   
  *Descargar la revisión de conectividad para ADO .NET con .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85901036"
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)   
- [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)   
+ [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)   
  [Se produce un retraso prolongado cuando se vuelve a conectar una conexión de IPSec desde un equipo que ejecuta Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 o Windows Server 2008 R2](https://support.microsoft.com/kb/980915)   
  [El servicio de clúster tarda en torno a 30 segundos en la conmutación por error de las direcciones IP IPv6 en Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)   
  [Reducir la operación de conmutación por error si no existe un enrutador entre el clúster y un servidor de aplicaciones](https://support.microsoft.com/kb/2582281)  

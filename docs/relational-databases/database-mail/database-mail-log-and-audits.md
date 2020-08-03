@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8e8b0ce1e5924a2186529fb7f7b301b85d0d547c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4354def42884887539693073bf3108d7227170de
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726486"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363575"
 ---
 # <a name="database-mail-log-and-audits"></a>Registro y auditorías del Correo electrónico de base de datos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,9 +34,8 @@ ms.locfileid: "85726486"
   
 ## <a name="database-mail-auditing-tasks"></a>Tareas de auditoría de Correo electrónico de base de datos  
   
-|||  
+|Revisar y administrar los registros de Correo electrónico de base de datos|Vínculo al tema|  
 |-|-|  
-|**Revisar y administrar los registros de Correo electrónico de base de datos**|**Vínculo al tema**|  
 |Comprobar el estado de entrega de un mensaje individual|[Comprobar el estado de los mensajes de correo electrónico enviados con Correo electrónico de base de datos](../../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
 |Limpiar los mensajes, los datos adjuntos, y las entradas de registro del Correo electrónico de base de datos|[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)<br /><br /> [sysmail_delete_log_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|  
 |Almacenar los mensajes de correo electrónico y los registros de la base de datos|[Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  

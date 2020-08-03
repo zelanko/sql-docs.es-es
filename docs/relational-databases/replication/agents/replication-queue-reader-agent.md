@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f2474ed82498dae30b96178f0fcf962f3b1f0767
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 84872a5acaacf6c969e4dea367f0e64a2588d26a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897868"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395004"
 ---
 # <a name="replication-queue-reader-agent"></a>Agente de lectura de cola de replicación
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -75,10 +75,10 @@ qrdrsvc [-?]
  **-DistributorPassword** _distributor_password_  
  Es la contraseña del distribuidor.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Especifica el modo de seguridad del distribuidor. Un valor de **0** hace referencia a la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (valor predeterminado) y un valor de **1** hace referencia al modo de autenticación de Windows.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  Es el nivel de cifrado de la Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL), utilizado por el Agente de lectura de cola cuando realiza conexiones.  
   
 |Valor de EncryptionLevel|Descripción|  
@@ -92,7 +92,7 @@ qrdrsvc [-?]
   
  Para más información, consulte [Ver y modificar la configuración de seguridad de la replicación](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
- **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
+ **-HistoryVerboseLevel** [ **0**\| **1**\| **2**\| **3**]  
  Especifica la cantidad de historial registrado durante una operación del lector de cola. Puede minimizar el efecto sobre el rendimiento del registro del historial seleccionando **1**.  
   
 |Valor HistoryVerboseLevel|Descripción|  
@@ -108,7 +108,7 @@ qrdrsvc [-?]
  **-Output** _output_path_and_file_name_  
  Es la ruta de acceso del archivo de salida del agente. Si no se proporciona un nombre de archivo, el resultado se envía a la consola. Si el nombre de archivo especificado existe, el resultado se anexa al archivo.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2**]  
+ **-OutputVerboseLevel** [ **0**\| **1**\| **2**]  
  Especifica si el resultado debería ser detallado. Si el nivel detallado es **0**, solo se imprimen los mensajes de error. Si el nivel detallado es **1**, se imprimen todos los mensajes del informe de progreso. Si el nivel detallado es **2** (valor predeterminado), se imprimen todos los mensajes de error y mensajes del informe de progreso, lo que es útil para la depuración.  
   
  **-PollingInterval** _polling_interval_  
@@ -123,7 +123,7 @@ qrdrsvc [-?]
  **-QueryTimeOut** _query_time_out_seconds_  
  Es el número de segundos antes de que la consulta exceda el tiempo de espera. El valor predeterminado es 1800 segundos.  
   
- **-ResolverState** [ **1**| **2**| **3**]  
+ **-ResolverState** [ **1**\| **2**\| **3**]  
  Especifica cómo se resuelven los conflictos de actualización en cola. Un valor de **1** indica que el Publicador gana el conflicto, y la transacción en cola actual que está en conflicto se revertirá en el Publicador y el Suscriptor que originó la actualización; el procesamiento de las transacciones en cola posteriores continuará. Un valor de **2** indica que el Suscriptor gana el conflicto, y la transacción en cola invalidará los valores en el Publicador. Un valor de **3** indica que cualquier conflicto provocará la reinicialización del Suscriptor; el Publicador gana el conflicto, se finalizará el proceso de las transacciones en cola subsiguientes y se reinicializará la suscripción. La configuración predeterminada es **1** para las publicaciones transaccionales y **3** para las publicaciones de instantáneas.  
   
 ## <a name="remarks"></a>Observaciones  

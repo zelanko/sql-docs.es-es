@@ -28,15 +28,15 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee1bcbb781319c4cabc2265962350d2480d9d97
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981900"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392811"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenciones de sintaxis de Transact-SQL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 En la siguiente tabla se incluyen y describen las convenciones utilizadas en los diagramas de sintaxis de la referencia de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -52,7 +52,7 @@ En la siguiente tabla se incluyen y describen las convenciones utilizadas en los
 |[ **,** …_n_]|Indica que el elemento anterior puede repetirse _n_ veces. Los elementos se separan por comas.|  
 |[..._n_]|Indica que el elemento anterior puede repetirse _n_ veces. Cada repetición se separa del siguiente con un espacio en blanco.|  
 |;|Terminador de instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aunque el punto y coma no es necesario en la mayoría de las instrucciones de esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se exigirá en una versión futura.|  
-|\<label> ::=|Nombre de un bloque de sintaxis. Use esta convención para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en que se podría usar el bloque de sintaxis se indica con la etiqueta situada entre comillas angulares: \<label>.<br /><br /> Un conjunto es una colección de expresiones, por ejemplo \<grouping set>; una lista es una colección de conjuntos, por ejemplo \<composite element list>.|  
+|\<label> ::=|Nombre de un bloque de sintaxis. Use esta convención para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en la que se podría usar el bloque de sintaxis se indica con la etiqueta entre comillas angulares: \<label>.<br /><br /> Un conjunto es una colección de expresiones, por ejemplo, \<grouping set>; una lista es una colección de conjuntos, por ejemplo, \<composite element list>.|  
   
 ## <a name="multipart-names"></a>Nombres de varias partes  
 A menos que se especifique lo contrario, todas las referencias de [!INCLUDE[tsql](../../includes/tsql-md.md)] al nombre de un objeto de base de datos pueden ser un nombre de cuatro partes con el formato siguiente:  

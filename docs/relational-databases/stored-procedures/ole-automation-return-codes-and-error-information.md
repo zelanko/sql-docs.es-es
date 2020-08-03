@@ -1,5 +1,6 @@
 ---
 title: Códigos de retorno e información de error de automatización OLE | Microsoft Docs
+description: Obtenga información sobre los códigos de retorno de la automatización OLE y aprenda a usar un procedimiento almacenado de ejemplo para mostrar información de errores de automatización OLE.
 ms.custom: ''
 ms.date: 07/05/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 544d38f39e8ff27eeba474c6c9d54cb48576f049
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a810d032a2668e217d6776bb3fbab7fe40b79e91
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000940"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332578"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Códigos de retorno e información de error de OLE Automation
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -77,7 +78,7 @@ SELECT @BinVariable AS BinaryValue,
 GO  
 ```  
   
- Puede usar el siguiente ejemplo de procedimiento almacenado, **sp_displayoaerrorinfo** , para mostrar información de errores de automatización OLE cuando alguno de los procedimientos de automatización OLE devuelva un código de retorno HRESULT distinto de cero. En este ejemplo de procedimiento almacenado se usa **HexToChar**.  
+ Puede usar el siguiente ejemplo de procedimiento almacenado, **sp_displayoaerrorinfo**, para mostrar información de errores de OLE Automation cuando alguno de los procedimientos de OLE Automation devuelva un código de retorno HRESULT distinto de cero. En este ejemplo de procedimiento almacenado se usa **HexToChar**.  
   
 ```  
 CREATE PROCEDURE dbo.sp_DisplayOAErrorInfo  

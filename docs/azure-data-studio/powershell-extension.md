@@ -1,6 +1,6 @@
 ---
 title: Extensión de PowerShell
-description: Instalar y usar PowerShell para Azure Data Studio
+description: Obtenga información sobre cómo instalar y usar la extensión de PowerShell de Azure Data Studio, que proporciona una amplia compatibilidad con el editor de PowerShell para escribir y depurar scripts.
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637739"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411321"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Compatibilidad del Editor de PowerShell para Azure Data Studio
 

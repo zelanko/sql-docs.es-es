@@ -1,5 +1,6 @@
 ---
 title: Cambio de nombre de un procedimiento almacenado | Microsoft Docs
+description: Obtenga información sobre cómo cambiar el nombre de un procedimiento almacenado en SQL Server 2019 (15.x) mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 07/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71d0fefec2a0b0ba867b7c96a0d8b852884e08d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddf1685f89d24c5b1b6dec4956c3e0c7542ac236
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767501"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332535"
 ---
 # <a name="rename-a-stored-procedure"></a>Cambiar el nombre de un procedimiento almacenado
 
@@ -56,7 +57,7 @@ En este tema se describe cómo cambiar el nombre de un procedimiento almacenado 
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  CREATE PROCEDURE  
- Necesita el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se va a crear el procedimiento o la pertenencia al rol fijo de base de datos **db_ddladmin** .  
+ Necesita el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se va a crear el procedimiento o la pertenencia al rol fijo de base de datos **db_ddladmin**.  
   
  ALTER PROCEDURE  
  Necesita el permiso ALTER en el procedimiento o la pertenencia al rol fijo de base de datos **db_ddladmin** .  

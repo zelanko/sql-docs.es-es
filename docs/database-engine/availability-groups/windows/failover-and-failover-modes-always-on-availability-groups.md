@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98681c7ba908a43f2f4cc3e792f7f62b8a8ba2b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897502"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395060"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -79,8 +79,8 @@ ms.locfileid: "85897502"
 ##  <a name="overview-of-failover"></a><a name="Overview"></a> Información general de la conmutación por error  
  En la siguiente tabla se resumen las formas de conmutación por error admitidas en diferentes modos de disponibilidad y de conmutación por error. En cada pareja, el modo de disponibilidad y el modo de conmutación reales vienen determinados por la intersección de los modos de la réplica principal y los modos de una o varias réplicas secundarias.  
   
-||Modo de confirmación asincrónica|Modo de confirmación sincrónica con modo de conmutación por error manual|Modo de confirmación sincrónica con modo de conmutación por error automática|  
-|-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
+|Forma de conmutación por error|Modo de confirmación asincrónica|Modo de confirmación sincrónica con modo de conmutación por error manual|Modo de confirmación sincrónica con modo de conmutación por error automática|  
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Conmutación por error automática|No|No|Sí|  
 |Conmutación por error manual planeada|No|Sí|Sí|  
 |conmutación por error forzada|Sí|Sí|Sí **&#42;**|  

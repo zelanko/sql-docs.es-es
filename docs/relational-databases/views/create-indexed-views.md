@@ -18,12 +18,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08e432e0470074a5861c070d26110478353817b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03cff187ee251278274af6f7c97e4598235fde38
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727072"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363457"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
 
@@ -107,10 +107,14 @@ Además de las opciones SET y los requisitos de funciones deterministas, se debe
 
 - La vista se debe crear mediante la opción `WITH SCHEMABINDING`.
 - La vista solo debe hacer referencia a tablas base que estén en la misma base de datos que la vista. La vista no puede hacer referencia a otras vistas.
+
+- Si `GROUP BY` está presente, la definición de VIEW debe contener `COUNT_BIG(*)`, pero no `HAVING`. Estas restricciones `GROUP BY` solo se pueden aplicar a la definición de vista indizada. Una consulta puede usar una vista indizada en su plan de ejecución aun cuando no satisfaga estas restricciones `GROUP BY`.
+- Si la definición de vista contiene una cláusula `GROUP BY`, la clave del índice clúster único solo puede hacer referencia a las columnas especificadas en la cláusula `GROUP BY`.
+
 - La instrucción SELECT de la definición de vista no debe contener los siguientes elementos de Transact-SQL:
 
-   ||||
-   |-|-|-|
+   | Elementos de Transact-SQL | (continuación) | (continuación) |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|Funciones de ROWSET (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET` y `OPENXML`)|Combinaciones `OUTER` (`LEFT`, `RIGHT` o `FULL`)|
    |Tabla derivada (definida mediante una instrucción `SELECT` en la cláusula `FROM`)|Autocombinaciones|Especificación de columnas mediante `SELECT *` o `SELECT <table_name>.*`|
    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP` o `AVG`|Expresión de tabla común (CTE)|
@@ -121,15 +125,11 @@ Además de las opciones SET y los requisitos de funciones deterministas, se debe
    |Variables de tabla|`OUTER APPLY` o `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Conjuntos de columnas dispersas|Funciones insertadas (TVF) o con valores de tabla de múltiples instrucciones (MSTVF)|`OFFSET`|
    |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup> La vista indexada puede contener columnas **float**, aunque no se pueden incluir en la clave de índice agrupado.
 
-- Si `GROUP BY` está presente, la definición de VIEW debe contener `COUNT_BIG(*)`, pero no `HAVING`. Estas restricciones `GROUP BY` solo se pueden aplicar a la definición de vista indizada. Una consulta puede usar una vista indizada en su plan de ejecución aun cuando no satisfaga estas restricciones `GROUP BY`.
-- Si la definición de vista contiene una cláusula `GROUP BY`, la clave del índice clúster único solo puede hacer referencia a las columnas especificadas en la cláusula `GROUP BY`.
+   <sup>1</sup> La vista indexada puede contener columnas **float**, aunque no se pueden incluir en la clave de índice agrupado.
 
-> [!IMPORTANT]
-> No se admiten vistas indexadas con consultas temporales (las consultas que usan la cláusula `FOR SYSTEM_TIME`).
+   > [!IMPORTANT]
+   > No se admiten vistas indexadas con consultas temporales (las consultas que usan la cláusula `FOR SYSTEM_TIME`).
 
 ### <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones
 

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5324c46fb8a4eb67d2364ee3bcbd5e21674a5c7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2be2bcf872af3be6caf8bb2b13af70347fcf1106
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630987"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361489"
 ---
 # <a name="database-properties-mirroring-page"></a>Propiedades de la base de datos (página Creación de reflejo)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85630987"
   
  Si el asistente finaliza correctamente, la acción que realice dependerá de que la creación del reflejo haya empezado, de la forma siguiente:  
   
-|||  
+|Estado de creación de reflejo|Acción realizada|  
 |-|-|  
 |Si la creación del reflejo no ha empezado.|La página de propiedades almacena en caché la información de conexión, así como un valor que indica si la base de datos reflejada tiene el conjunto de propiedades asociadas.<br /><br /> Al final del asistente, se le pedirá que inicie la creación de reflejo de la base de datos mediante las direcciones de red del servidor predeterminadas y el modo de funcionamiento. Si necesita cambiar las direcciones o el modo de funcionamiento, haga clic en **No iniciar creación de reflejo**.|  
 |Si la creación del reflejo ha empezado.|Si el servidor testigo se ha modificado en el asistente, se debe configurar en consecuencia.|  

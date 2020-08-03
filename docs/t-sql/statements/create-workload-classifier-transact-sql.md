@@ -20,16 +20,16 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 89ee76f44006227500cdb9e160256800e6a62929
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9125903880247cd3aece0715ffcd3a9e34b35a36
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634584"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396191"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Crea un objeto clasificador para su uso en la administración de cargas de trabajo.  El clasificador asigna las solicitudes entrantes a un grupo de cargas de trabajo según los parámetros especificados en la definición de la instrucción del clasificador.  Los clasificadores se evalúan con cada solicitud enviada.  Si una solicitud no coincide con un clasificador, se asigna al grupo de cargas de trabajo predeterminado.  El grupo de cargas de trabajo predeterminado es la clase de recurso smallrc.
 
@@ -118,7 +118,7 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
  ,END_TIME       = '02:00' )
 ```
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+*IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 Especifica la importancia relativa de una solicitud.  IMPORTANCE puede ser es uno de los siguientes valores:
 
 - LOW

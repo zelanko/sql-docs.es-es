@@ -10,16 +10,16 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 7383e63ecb96a32c9b1f0087a138bc9f862eb722
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138248"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395160"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   Devuelve el plan de consulta para una instrucción [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sin ejecutarla. Use EXPLAIN para obtener una vista previa de las operaciones que requerirán movimiento de datos y ver los costos estimados de las operaciones de consulta. `WITH RECOMMENDATIONS` se aplica a Azure SQL Data Warehouse (versión preliminar).
   
@@ -71,7 +71,7 @@ Devuelva el plan de consulta con recomendaciones para optimizar el rendimiento d
 |\<dsql_query>|Elemento de documento o nivel superior.|
 |\<sql>|Muestra *SQL_statement*.|  
 |\<params>|Esta etiqueta no se usa actualmente.|
-|\<materialized_view_candidates > (versión preliminar)|Contiene la instrucción CREATE de la vista materializada recomendada para mejorar el rendimiento de la instrucción SQL.| 
+|\<materialized_view_candidates> (versión preliminar)|Contiene la instrucción CREATE de la vista materializada recomendada para mejorar el rendimiento de la instrucción SQL.| 
 |\<dsql_operations>|Resume y contiene los pasos de consulta, e incluye información del costo de la consulta. También contiene todos los bloques `<dsql_operation>`. Esta etiqueta contiene información de recuento para toda la consulta:<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *costo_total* es el tiempo total estimado para que se ejecute la consulta, en milisegundos.<br /><br /> *número_total_de_operaciones* es el número total de operaciones para la consulta. Una operación que se va a ejecutar en paralelo y en varios nodos se cuenta como una única operación.|  
 |\<dsql_operation>|Describe una única operación dentro del plan de consulta. La etiqueta \<dsql_operation> contiene el tipo de operación como un atributo:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* es uno de los valores encontrados en [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> El contenido del bloque `\<dsql_operation>` depende del tipo de operación.<br /><br /> Vea la tabla siguiente.|  
   

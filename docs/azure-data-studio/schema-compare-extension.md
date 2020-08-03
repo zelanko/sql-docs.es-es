@@ -1,6 +1,6 @@
 ---
 title: Extensión Schema Compare
-description: Instalación y uso de la extensión Schema Compare para Azure Data Studio
+description: Obtenga información sobre cómo instalar y usar la extensión Comparación de esquemas de Azure Data Studio para comparar fácilmente dos bases de datos y cambiar una de forma selectiva para que coincida con la otra.
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 09602241d0fd30153ca462225b617fd1612a0045
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80aa0be8ae70773fe0e1a0087e623f679504a983
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758407"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411231"
 ---
 # <a name="schema-compare-extension"></a>Extensión Schema Compare
 La extensión Comparación de esquemas proporciona una experiencia fácil de usar para comparar dos definiciones de bases de datos y aplicar las diferencias del origen al destino.

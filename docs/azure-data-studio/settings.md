@@ -1,6 +1,6 @@
 ---
 title: Configuración del usuario y el área de trabajo
-description: Procedimiento para personalizar Azure Data Studio al modificar la configuración del usuario y el área de trabajo.
+description: Aprenda a usar la configuración para personalizar el editor, la interfaz de usuario y el comportamiento funcional de Azure Data Studio de modo que se adapten a sus preferencias.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: azure-data-studio
@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71f1f27bc58f64d3a1bcf8bcc3f8e96594e2e771
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758383"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411211"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificación de la configuración del usuario y el área de trabajo
 

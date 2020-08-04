@@ -19,15 +19,15 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab7e05eba835f5cee47e0256f5866623bc658e44
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8a534a32e23c09d4e6cc41dc6bd22c9fc44c4c7f
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816658"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523457"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Devuelve un intervalo de valores de secuencia de un objeto de secuencia. El objeto de secuencia genera y emite el número de valores solicitados y proporciona a la aplicación metadatos relacionados con el intervalo.  
   
@@ -70,7 +70,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_sequence_get_rangeis en sys. el esquema y se puede hacer referencia a él como sys. sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Secuencias con recorrido  

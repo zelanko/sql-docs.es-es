@@ -18,15 +18,15 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831189"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522549"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   Devuelve un conjunto de resultados que contiene metadatos sobre parámetros no declarados en un [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. Considera cada parámetro que se utiliza en el lote de ** \@ tsql** , pero no se declara en los ** \@ parámetros**. Se devuelve un conjunto de resultados que contiene una fila para cada parámetro, con la información de tipo deducida para dicho parámetro. El procedimiento devuelve un conjunto de resultados vacío si el lote de entrada de ** \@ tsql** no tiene ningún parámetro excepto los declarados en ** \@ params**.  
   
@@ -87,7 +87,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Para uso interno.|  
 |**suggested_tds_length**|**int NOT NULL**|Para uso interno.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_describe_undeclared_parameters** siempre devuelve el estado de retorno de cero.  
   
  El uso más común es cuando se proporciona a una aplicación una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que podría contener parámetros y debe procesarlos de alguna manera. Un ejemplo es una interfaz de usuario (como ODBCTest o RowsetViewer) donde el usuario proporciona una consulta con la sintaxis de parámetros de ODBC. La aplicación debe detectar el número de parámetros dinámicamente y pedir confirmación al usuario para cada uno.  
@@ -177,7 +177,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      El tipo de datos de \@ P1, \@ P2 y \@ P3 será el tipo de datos C1, el tipo de datos devuelto de DBO. tbl y el tipo de datos de parámetro de DBO. tbl, respectivamente.  
   
-     Como caso especial, si \@ p es un argumento para un \< operador, >, \< = o >=, no se aplican las reglas de deducción simples. El algoritmo de deducción de tipo utilizará las reglas de deducción generales explicadas en la sección siguiente. Por ejemplo, si c1 es una columna del tipo de datos char(30), considere las siguientes dos consultas:  
+     Como caso especial, si \@ p es un argumento de un \<, > operador, \<=, or > =, no se aplican las reglas de deducción simples. El algoritmo de deducción de tipo utilizará las reglas de deducción generales explicadas en la sección siguiente. Por ejemplo, si c1 es una columna del tipo de datos char(30), considere las siguientes dos consultas:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
@@ -225,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      En este caso, E ( \@ p) es Col_Int + \@ p y TT ( \@ p) es de **tipo int**. se elige **int** para \@ p porque no genera ninguna conversión implícita. Cualquier otra opción de tipo de datos genera al menos una conversión implícita.  
   
-2.  Si hay varios tipos de datos que coinciden en el número menor de conversiones, se utiliza el tipo de datos con mayor prioridad. Por ejemplo:  
+2.  Si hay varios tipos de datos que coinciden en el número menor de conversiones, se utiliza el tipo de datos con mayor prioridad. Por ejemplo  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

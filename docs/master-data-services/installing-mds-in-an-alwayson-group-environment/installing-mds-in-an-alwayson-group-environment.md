@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f17290773a3becf0b33b28eb5e95bf914d53af06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901723"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522009"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 
@@ -390,7 +390,7 @@ La solución presentada en este artículo solo requiere que la base de datos de 
 
 En estas notas del producto, hemos aprendido a configurar y configurar la base de datos de back-end de Master Data Services como parte de un AG. Esta configuración ofrece alta disponibilidad y recuperación ante desastres en la base de datos back-end de Master Data Services. Para implementar esta configuración, debe instalar y configurar el clúster de conmutación por error de Windows Server, AG y Master Data Services.
 
-## <a name="feedback"></a>Comentarios
+## <a name="feedback-comments"></a>Comentarios sobre comentarios
 
 ¿Le ha resultado útil este documento? Envíenos sus comentarios haciendo clic en **Comentarios** en la parte superior del artículo. 
 

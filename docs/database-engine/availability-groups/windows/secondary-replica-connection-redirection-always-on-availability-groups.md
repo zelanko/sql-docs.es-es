@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d70d9599dda2f71edff911ad42821fdf101b524c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363178"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472456"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redireccionamiento de la conexión de lectura/escritura de réplicas de secundaria a principal (grupos de disponibilidad AlwaysOn)
 
@@ -62,7 +62,7 @@ En [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] se ha agregado `REA
 
 De forma predeterminada, no se establece el redireccionamiento de la conexión de réplica de lectura/escritura para una réplica. La manera en que una réplica secundaria gestiona las solicitudes de conexión depende de si está configurada para permitir las conexiones y de la opción `ApplicationIntent` de la cadena de conexión. En la siguiente tabla se muestra cómo gestiona una réplica secundaria las conexiones a partir de `SECONDARY_ROLE (ALLOW CONNECTIONS = )` y `ApplicationIntent`.
 
-|Valor de `ApplicationIntent`|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|Valor de <code>ApplicationIntent</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = NO)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)</code>|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/> Valor predeterminado|Error de conexiones|Error de conexiones|Conexiones correctas<br/>Lecturas correctas<br/>Error de escrituras|
 |`ApplicationIntent=ReadOnly`|Error de conexiones|Conexiones correctas|Conexiones correctas
@@ -73,7 +73,7 @@ En la tabla anterior se muestra el comportamiento predeterminado, que es el mism
 
 Después de establecer el redireccionamiento de la conexión de lectura/escritura, la réplica gestionará las solicitudes de conexión de otra manera. El comportamiento de la conexión sigue dependiendo de la configuración de `SECONDARY_ROLE (ALLOW CONNECTIONS = )` y `ApplicationIntent`. En la siguiente tabla se muestra cómo gestiona una réplica secundaria con `READ_WRITE_ROUTING` establecido las conexiones a partir de `SECONDARY_ROLE (ALLOW CONNECTIONS = )` y `ApplicationIntent`.
 
-|Valor de `ApplicationIntent`|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|Valor de <code>ApplicationIntent</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = NO)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)</code>|<code>SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)</code>|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>Valor predeterminado|Error de conexiones|Error de conexiones|Las conexiones se enrutan a la réplica principal|
 |`ApplicationIntent=ReadOnly`|Error de conexiones|Conexiones correctas|Conexiones correctas

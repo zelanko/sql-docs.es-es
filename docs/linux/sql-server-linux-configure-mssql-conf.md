@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 5d3ee42f28fed73a4dd513b10d01948552fdd6d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901547"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472191"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configuración de SQL Server en Linux con la herramienta mssql-conf
 
@@ -24,7 +24,7 @@ ms.locfileid: "85901547"
 
 **mssql-conf** es un script de configuración que se instala con SQL Server 2017 para Red Hat Enterprise Linux, SUSE Linux Enterprise Server y Ubuntu. Modifica el [**archivo mssql.conf**](#mssql-conf-format) donde se almacenan los valores de configuración. Puede usar la utilidad **mssql-conf** para establecer los parámetros siguientes:
 
-|||
+|Parámetro|Descripción|
 |---|---|
 | [Agent](#agent) | Habilite el Agente SQL Server. |
 | [Intercalación](#collation) | Establezca una nueva intercalación para SQL Server en Linux. |
@@ -52,7 +52,7 @@ ms.locfileid: "85901547"
 
 **mssql-conf** es un script de configuración que se instala con [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] para Red Hat Enterprise Linux, SUSE Linux Enterprise Server y Ubuntu. Puede usar esta utilidad para establecer los siguientes parámetros:
 
-|||
+|Parámetro|Descripción|
 |---|---|
 | [Agent](#agent) | Habilitar el Agente SQL Server |
 | [Intercalación](#collation) | Establezca una nueva intercalación para SQL Server en Linux. |
@@ -393,7 +393,7 @@ La primera captura de fase se controla mediante la configuración **coredump.cor
 
     En la siguiente tabla se muestran los posibles valores de **coredump.coredumptype**.
 
-    | Tipo | Descripción |
+    | Tipo | Description |
     |-----|-----|
     | **mini** | Mini es el tipo de archivo de volcado más pequeño. Usa la información del sistema Linux para determinar los subprocesos y los módulos del proceso. El volcado solo contiene los módulos y las pilas de subprocesos del entorno del host. No contiene referencias de memoria indirectas ni globales. |
     | **miniplus** | MiniPlus es similar a mini, pero incluye memoria adicional. Comprende los aspectos internos de SQLPAL y el entorno de host, y agrega las siguientes regiones de memoria al volcado:</br></br> - Varias globales</br> - Toda la memoria superior a 64 TB</br> - Todas las regiones con nombre que están en **/proc/$pid/maps**</br> - Memoria indirecta de los subprocesos y las pilas</br> - Información del subproceso</br> - Valores de Teb y Peb asociados</br> - Información del módulo</br> - Árbol de VAD y VMM |

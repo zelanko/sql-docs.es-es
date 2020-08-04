@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78bc5fe4d059a644c3490c94b02b5880c5d488d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922741"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435430"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)
 
@@ -253,8 +253,6 @@ Al especificar un rango como destino, se produce un error si el rango tiene meno
 Para poder guardar correctamente cadenas de más de 255 caracteres en una columna de Excel, el controlador debe reconocer el tipo de datos de la columna de destino como **memorando** y no como **cadena**.
 
 -   Si una tabla de destino existente ya contiene filas de datos, las primeras filas que muestree el controlador deberán contener por lo menos una instancia de un valor de más de 255 caracteres en la columna de memorando.
-
--   Si se crea una tabla de destino durante el diseño del paquete o en tiempo de ejecución (o el Asistente para importación y exportación crea una), la instrucción `CREATE TABLE` deberá usar LONGTEXT (o uno de sus sinónimos) como tipo de datos de la columna de memorando de destino. En el asistente, compruebe la instrucción `CREATE TABLE` y revísela si es necesario. Para ello, haga clic en **Editar SQL** junto a la opción **Crear tabla de destino** de la página **Asignaciones de columnas**.
 
 ## <a name="related-content"></a>Contenido relacionado
 

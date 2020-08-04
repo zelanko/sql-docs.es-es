@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916691"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472529"
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
 
@@ -60,19 +60,42 @@ ms.locfileid: "86916691"
  Algunas propiedades de transformaciones se pueden establecer mediante expresiones de propiedad. Para obtener más información, vea [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
 ## <a name="transformations-with-custom-properties"></a>Transformaciones con propiedades personalizadas  
-  
-||||  
-|-|-|-|  
-|[Agregada](#aggregate)|[Exportar columna](#extract)|[Recuento de filas](#rowcount)|  
-|[Auditoría](#audit)|[agrupación aproximada](#fgroup)|[Muestreo de fila](#rowsamp)|  
-|[Transformación de caché](#cachetransform)|[Búsqueda aproximada](#flookup)|[Componente de script](#script)|  
-|[Mapa de caracteres](#charmap)|[Importar columna](#insert)|[Dimensión de variación lenta](#scd)|  
-|[División condicional](#condsplit)|[Lookup](#lookup)|[Sort](#sort)|  
-|[Copiar columna](#copymap)|[Merge Join](#mjoin)|[Extracción de términos](#textract)|  
-|[Conversión de datos](#dataconv)|[Comando de OLE DB](#oledbcmd)|[Búsqueda de términos](#tlookup)|  
-|[Consulta de minería de datos](#dmquery)|[Muestreo de porcentaje](#percent)|[Anulación de dinamización](#unpivot)|  
-|[Columna derivada](#derived)|[Dinamización](#pivot)||  
-  
+
+:::row:::
+    :::column:::
+        [Agregada](#aggregate)  
+        [Auditoría](#audit)  
+        [Transformación de caché](#cachetransform)  
+        [Mapa de caracteres](#charmap)  
+        [División condicional](#condsplit)  
+        [Copiar columna](#copymap)  
+        [Conversión de datos](#dataconv)  
+        [Consulta de minería de datos](#dmquery)  
+        [Columna derivada](#derived)  
+    :::column-end:::
+    :::column:::
+        [Exportar columna](#extract)  
+        [agrupación aproximada](#fgroup)  
+        [Búsqueda aproximada](#flookup)  
+        [Importar columna](#insert)  
+        [Lookup](#lookup)  
+        [Merge Join](#mjoin)  
+        [Comando de OLE DB](#oledbcmd)  
+        [Muestreo de porcentaje](#percent)  
+        [Dinamización](#pivot)  
+    :::column-end:::
+    :::column:::
+        [Recuento de filas](#rowcount)  
+        [Muestreo de fila](#rowsamp)  
+        [Componente de script](#script)  
+        [Dimensión de variación lenta](#scd)  
+        [Sort](#sort)  
+        [Extracción de términos](#textract)  
+        [Búsqueda de términos](#tlookup)  
+        [Anulación de dinamización](#unpivot)  
+    :::column-end:::
+:::row-end:::
+
 ### <a name="transformations-without-custom-properties"></a>Transformaciones sin propiedades personalizadas  
  Las transformaciones siguientes no tienen ninguna propiedad personalizada en los niveles de componente, entrada o salida: [Transformación Mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md), [Transformación Multidifusión](../../../integration-services/data-flow/transformations/multicast-transformation.md), y [Transformación Unión de todo](../../../integration-services/data-flow/transformations/union-all-transformation.md). Utilizan solo las propiedades comunes a todos los componentes de flujo de datos.  
   

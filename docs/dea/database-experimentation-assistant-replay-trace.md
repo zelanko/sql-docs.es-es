@@ -1,6 +1,6 @@
 ---
 title: Reproducir un seguimiento para las actualizaciones de SQL Server
-description: Reproducir un seguimiento con Asistente para experimentación con bases de datos para las actualizaciones de SQL Server
+description: Obtenga información acerca de cómo reproducir un seguimiento capturado con Asistente para experimentación con bases de datos para las actualizaciones de SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289153"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565504"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Reproducir un seguimiento en Asistente para experimentación con bases de datos
 
@@ -118,7 +118,7 @@ El **paso%** significa que solo se pasó un porcentaje de consultas. Puede diagn
 
 **P: ¿Cómo puedo ver los eventos de seguimiento recopilados durante la reproducción?**
 
-Abra un archivo de seguimiento de destino y verlo en SQL Server Profiler. O bien, si desea realizar modificaciones en la captura de reproducción, todos los scripts de SQL Server están disponibles en C\\: archivos de programa (\\x86)\\Microsoft\\Corporation\\Asistente para experimentación con bases de datos scripts StartReplayCapture. SQL.
+Abra un archivo de seguimiento de destino y verlo en SQL Server Profiler. O bien, si desea realizar modificaciones en la captura de reproducción, todos los scripts de SQL Server están disponibles en C: \\ archivos de programa (x86) \\ Microsoft Corporation \\ Asistente para experimentación con bases de datos \\ scripts \\ StartReplayCapture. SQL.
 
 **P: ¿Qué eventos de seguimiento recopilan DEA durante la reproducción?**
 
@@ -133,11 +133,11 @@ DEA captura eventos de seguimiento que contienen información relacionada con el
 - Confirme que el usuario tiene los derechos de usuario necesarios.
 - Confirme que la cuenta de servicio del cliente de Distributed Replay tiene acceso al equipo que ejecuta SQL Server.
 
-Puede obtener más detalles en los registros en% Temp%\\DEA. Si el problema persiste, póngase en contacto con el equipo del producto.
+Puede obtener más detalles en los registros en% Temp% \\ DEA. Si el problema persiste, póngase en contacto con el equipo del producto.
 
 **P: ¿por qué no puedo conectarme al controlador de Distributed Replay?**
 
-- Compruebe que el servicio del controlador de Distributed Replay se está ejecutando en el equipo del controlador. Para comprobarlo, use las herramientas de administración de Distributed Replay `dreplay.exe status -f 1`(ejecute el comando).
+- Compruebe que el servicio del controlador de Distributed Replay se está ejecutando en el equipo del controlador. Para comprobarlo, use las herramientas de administración de Distributed Replay (ejecute el comando `dreplay.exe status -f 1` ).
 - Si la reproducción se inicia de forma remota:
   - Confirme que el equipo que ejecuta DEA puede hacer ping correctamente en el controlador. Confirme que la configuración del Firewall permite conexiones según las instrucciones de la página **configurar el entorno de reproducción** . Para obtener más información, vea el artículo [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
   - Asegúrese de que se permite el inicio remoto DCOM y la activación remota para el usuario del controlador de Distributed Replay.
@@ -163,6 +163,6 @@ Este problema se conoce en la versión RTM de SQL Server 2017. Para obtener más
   
 El problema se ha solucionado en la última actualización acumulativa 1 de SQL Server 2017. Descargue la versión más reciente de la [actualización acumulativa 1 para SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - Para crear un informe de análisis que le ayude a obtener información sobre los cambios propuestos, vea [crear informes](database-experimentation-assistant-create-report.md).

@@ -1,6 +1,6 @@
 ---
 title: Ejecutar Asistente para experimentación con bases de datos en un símbolo del sistema
-description: Ejecutar Asistente para experimentación con bases de datos en un símbolo del sistema
+description: Obtenga información acerca de cómo capturar un seguimiento en Asistente para experimentación con bases de datos (DEA) y, a continuación, analizar los resultados en un símbolo del sistema.
 ms.custom: seo-lt-2019
 ms.date: 02/25/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215492"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565534"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Ejecutar Asistente para experimentación con bases de datos en un símbolo del sistema
 

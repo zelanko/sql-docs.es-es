@@ -1,6 +1,6 @@
 ---
 title: Configurar la reproducción para las actualizaciones de SQL Server
-description: Configuración de Distributed Replay para Asistente para experimentación con bases de datos
+description: Use Asistente para experimentación con bases de datos (DEA) para tener acceso a las herramientas de Distributed Replay. Use las herramientas para reproducir un seguimiento capturado en un entorno de prueba actualizado.
 ms.custom: seo-lt-2019
 ms.date: 01/24/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2715667fc474335ffec54259ebb821fe2e5904a
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761539"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565523"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configuración de Distributed Replay para Asistente para experimentación con bases de datos
 
@@ -43,8 +43,8 @@ Distributed Replay requiere el uso de cuentas comunes entre equipos. Debido a es
 
 Para configurar el servicio del controlador:
 
-1. Instale el controlador de Distributed Replay mediante el instalador de SQL Server. Si omitió el paso del Asistente para SQL Server Installer que configura el controlador de Distributed Replay, puede configurar el controlador mediante el archivo de configuración. En una instalación típica, el archivo de configuración se encuentra en C:\Archivos de programa (x86)\<\Microsoft\>SQL Server versión \Tools\DReplayController\DReplayController.config.
-2. Los registros del controlador de Distributed Replay se encuentran en C:\Archivos de programa (\<x86\>) \Microsoft SQL Server versión \Tools\DReplayController\Log.
+1. Instale el controlador de Distributed Replay mediante el instalador de SQL Server. Si omitió el paso del Asistente para SQL Server Installer que configura el controlador de Distributed Replay, puede configurar el controlador mediante el archivo de configuración. En una instalación típica, el archivo de configuración se encuentra en C:\Archivos de programa (x86) \Microsoft SQL Server \<version\>\Tools\DReplayController\DReplayController.config.
+2. Los registros del controlador de Distributed Replay se encuentran en C:\Archivos de programa (x86) \Microsoft SQL Server \<version\> \Tools\DReplayController\Log.
 3. Abra Services. msc y vaya al servicio de **controlador de Distributed Replay de SQL Server** .
 4. Haga clic con el botón secundario en el servicio y, a continuación, seleccione **propiedades**. Establezca la cuenta de servicio en una cuenta que sea común a las máquinas cliente y del controlador de la red.
 5. Seleccione **Aceptar** para cerrar la ventana **propiedades** .
@@ -59,10 +59,10 @@ Para más opciones de configuración, consulte [configuración de Distributed Re
 
 Esta configuración solo es necesaria en el equipo del controlador.
 
-1. Abra DCOMCNFG. exe.
-2. Expanda **servicios** > de componente**equipos** > **mi PC** > **Configuración DCOM**.
+1. Abra dcomcnfg.exe.
+2. Expanda **servicios de componente**  >  **equipos**  >  **mi PC**  >  **Configuración DCOM**.
 3. En **Configuración DCOM**, haga clic con el botón secundario en **DReplayController**y seleccione **propiedades**.
-4. Selecciona la pestaña **Seguridad**.
+4. Seleccione la pestaña **Seguridad** .
 5. En **permisos de inicio y activación**, seleccione **personalizar**y, a continuación, seleccione **Editar**.
 6. Agregue el usuario que va a iniciar la reproducción. Conceda al usuario el inicio local y los permisos de activación local. Si el usuario tiene previsto iniciar o activar de forma remota, conceda al usuario permisos de inicio remoto y activación remota.
 7. Seleccione **Aceptar** para confirmar los cambios y volver a la pestaña **seguridad** .
@@ -82,16 +82,16 @@ Antes de configurar el servicio de cliente, use herramientas de red como ping pa
 1. Instale el cliente de Distributed Replay mediante el instalador de SQL Server.
 2. Abra Services. msc y vaya al servicio de cliente de SQL Server Distributed Replay.
 3. Haga clic con el botón secundario en el servicio y, a continuación, seleccione **propiedades**. Establezca la cuenta de servicio en una cuenta que sea común a los equipos del controlador y del cliente de la red.
-4. Seleccione **Aceptar** para cerrar la ventana **propiedades** . Si omitió el paso del Asistente para SQL Server Installer para configurar el cliente de Distributed Replay, puede configurarlo mediante el archivo de configuración. En una instalación típica, el archivo de configuración se encuentra en C:\Archivos de programa (x86)\<\Microsoft\>SQL Server versión \Tools\DReplayClient\DReplayClient.config.
-5. Asegúrese de que el archivo DReplayClient. config contiene el nombre del equipo del controlador como su controlador para el registro.
+4. Seleccione **Aceptar** para cerrar la ventana **propiedades** . Si omitió el paso del Asistente para SQL Server Installer para configurar el cliente de Distributed Replay, puede configurarlo mediante el archivo de configuración. En una instalación típica, el archivo de configuración se encuentra en C:\Archivos de programa (x86) \Microsoft SQL Server \<version\>\Tools\DReplayClient\DReplayClient.config.
+5. Asegúrese de que el archivo de DReplayClient.config contiene el nombre del equipo del controlador como el controlador para el registro.
 6. Reinicie el servicio de cliente de SQL Server Distributed Replay desde Services. msc. También puede ejecutar los siguientes comandos desde la línea de comandos para reiniciar el servicio:
 
     `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
 
-    Los registros del controlador de Distributed Replay se encuentran en C:\Archivos de programa (\<x86\>) \Microsoft SQL Server versión \Tools\DReplayClient\Log. Los registros indican si el cliente se puede registrar a sí mismo con el controlador.
+    Los registros del controlador de Distributed Replay se encuentran en C:\Archivos de programa (x86) \Microsoft SQL Server \<version\> \Tools\DReplayClient\Log. Los registros indican si el cliente se puede registrar a sí mismo con el controlador.
 
-    Si la configuración es correcta, el registro muestra el mensaje **registrado con el controlador <el\>nombre del controlador**.
+    Si la configuración es correcta, el registro muestra el mensaje **registrado con el controlador <el \> nombre del controlador**.
 
 Para más opciones de configuración, consulte [configuración de Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
@@ -99,10 +99,10 @@ Para más opciones de configuración, consulte [configuración de Distributed Re
 
 Puede usar Distributed Replay herramientas de administración para probar rápidamente si Distributed Replay funciona correctamente en el entorno. La prueba de la configuración puede ser especialmente útil en un entorno en el que se registran varios equipos cliente con un controlador. Es posible que tenga que instalar SQL Server Management Studio (SSMS) para obtener las herramientas de administración.
 
-1. Vaya a la ubicación de instalación de SSMS y busque la herramienta de administración de Distributed Replay dreplay. exe y sus componentes dependientes.
-2. En un símbolo del sistema, `dreplay.exe status -f 1`ejecute.
+1. Vaya a la ubicación de instalación de SSMS y busque la herramienta de administración de Distributed Replay dreplay.exe y sus componentes dependientes.
+2. En un símbolo del sistema, ejecute `dreplay.exe status -f 1` .
 
-Si los pasos anteriores se realizaron correctamente, la salida de la consola indica que el controlador puede ver `READY` sus clientes en un estado.
+Si los pasos anteriores se realizaron correctamente, la salida de la consola indica que el controlador puede ver sus clientes en un `READY` Estado.
 
 ## <a name="configure-the-firewall-for-remote-distributed-replay-access"></a>Configurar el firewall para el acceso de Distributed Replay remoto
 
@@ -110,8 +110,8 @@ El acceso remoto a Distributed Replay requiere la apertura de puertos visibles e
 
 1. Abra **firewall de Windows** con **seguridad avanzada**.
 2. Vaya a **reglas de entrada**.
-3. Cree una nueva regla de Firewall de entrada para el programa C:\Program Files (x86\<)\>\Microsoft SQL Server versión \Tools\DReplayController\DReplayController.exe.
-4. Permitir el acceso de nivel de dominio a todos los puertos de DReplayController. exe para poder comunicarse con el servicio de controlador de forma remota.
+3. Cree una nueva regla de Firewall de entrada para el programa C:\Program Files (x86) \Microsoft SQL Server \<version\>\Tools\DReplayController\DReplayController.exe.
+4. Permitir el acceso de nivel de dominio a todos los puertos de DReplayController.exe para poder comunicarse con el servicio de controlador de forma remota.
 5. Guarde la regla.
 
 ## <a name="set-up-target-computers"></a>Configuración de equipos de destino

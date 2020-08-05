@@ -16,15 +16,15 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7a6de1ad7652e7b948d741acdeebdd186f590b44
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: e6ee5d0f6a2b26dc10c901297097b99338ba9091
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627579"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544378"
 ---
 # <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
 Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de precios) y el nombre del grupo elástico, si existe, para una base de datos SQL de Azure o una Azure SQL Data Warehouse. Si inició sesión en la base de datos maestra en un servidor de Azure SQL Database, devuelve información sobre todas las bases de datos. Para Azure SQL Data Warehouse, debe estar conectado a la base de datos maestra.  
   
@@ -40,7 +40,7 @@ Devuelve la edición (nivel de servicio), el objetivo de servicio (nivel de prec
 |database_id|int|IDENTIFICADOR de la base de datos, único dentro de una instancia de Azure SQL Database Server. Se combina con [Sys. databases &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |edition|sysname|El nivel de servicio para la base de datos o el almacenamiento de datos: **básico**, **estándar**, **Premium** o **almacenamiento de datos**.|  
 |service_objective|sysname|El plan de tarifa de la base de datos. Si la base de datos está en un grupo elástico, devuelve **ElasticPool**.<br /><br /> En el nivel **básico** , devuelve **Basic**.<br /><br /> Una **sola base de datos en un nivel de servicio estándar** devuelve uno de los siguientes: S0, S1, S2, S3, S4, S6, S7, S9 o S12.<br /><br /> **Una sola base de datos en un nivel Premium** devuelve lo siguiente: P1, P2, P4, P6, P11 o p15.<br /><br /> **SQL Data Warehouse** devuelve DW100 a DW30000c.<br /><br /> Para más información, consulte bases de datos [únicas](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [grupos elásticos](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/), [almacenamientos de datos](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) .|  
-|elastic_pool_name|sysname|Nombre del [Grupo elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) al que pertenece la base de datos. Devuelve **null** si la base de datos es una sola base de datos o una warehoue de datos.|  
+|elastic_pool_name|sysname|Nombre del [Grupo elástico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) al que pertenece la base de datos. Devuelve **null** si la base de datos es una sola base de datos o un almacenamiento de datos.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso **dbManager** en la base de datos maestra.  En el nivel de base de datos, el usuario debe ser el creador o el propietario.  

@@ -1,6 +1,6 @@
 ---
 title: Capturar un seguimiento para las actualizaciones de SQL Server
-description: Capturar un seguimiento en Asistente para experimentación con bases de datos para las actualizaciones de SQL Server
+description: Utilice Asistente para experimentación con bases de datos (DEA) para crear un archivo de seguimiento con un registro de eventos de servidor capturados.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289833"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565597"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar un seguimiento en Asistente para experimentación con bases de datos
 
@@ -134,11 +134,11 @@ Si ve un error al ejecutar una captura de seguimiento, confirme lo siguiente:
 - El nombre del equipo que ejecuta SQL Server es válido. Para confirmar, intente conectarse al equipo que ejecuta SQL Server mediante SQL Server Management Studio (SSMS).
 - La configuración del firewall no bloquea las conexiones con el equipo que ejecuta SQL Server.
 - El usuario tiene los permisos que se enumeran en las [preguntas más frecuentes sobre la reproducción](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
-- El nombre de seguimiento no sigue la Convención estándar de sustitución\_incremental (Capture 1). En su lugar, pruebe nombres de seguimiento\_como Capture 1A o Capture1.
+- El nombre de seguimiento no sigue la Convención estándar de sustitución incremental (Capture \_ 1). En su lugar, pruebe nombres de seguimiento como Capture \_ 1A o Capture1.
 
 A continuación se muestran algunos posibles errores que podrían aparecer y soluciones para resolverlos:
 
-|Posibles errores|Soluciones|  
+|Posibles errores|Solución|  
 |---|---|  
 |No se puede iniciar el seguimiento en el SQL Server de destino, compruebe si tiene los permisos necesarios y si la cuenta de SQL Server tiene acceso de escritura a la ruta del archivo de seguimiento especificada código de error de SQL (53)|El usuario que ejecuta la herramienta DEA debe tener acceso al equipo que ejecuta SQL Server. El usuario debe tener asignado el rol sysadmin.|  
 |No se puede iniciar el seguimiento en el SQL Server de destino, compruebe si tiene los permisos necesarios y si la cuenta de SQL Server tiene acceso de escritura a la ruta del archivo de seguimiento especificada código de error de SQL (19062)|Es posible que la ruta de acceso especificada no exista o que la carpeta no tenga permisos de escritura para la cuenta en la que se están ejecutando los servicios de SQL Server (por ejemplo, servicio de red). La ruta de acceso debe existir y debe tener los permisos necesarios para que se inicie el seguimiento.|  

@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_operation_status (Azure SQL Database) | Microsoft Docs
+title: Sys. dm_operation_status | Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -19,16 +19,16 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 080d12cdcf945fe34a2c8f1ab9ea7414e714da8c
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440712"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544388"
 ---
-# <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
+# <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Devuelve información acerca de las operaciones realizadas en las bases de datos de un servidor [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -38,7 +38,7 @@ ms.locfileid: "85440712"
 |resource_type|**int**|Indica el tipo de recurso en el que se realiza la operación. NOT NULL. En la versión actual, esta vista solo realiza el seguimiento de las operaciones realizadas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)], y el valor entero correspondiente es 0.|  
 |resource_type_desc|**nvarchar(2048)**|Descripción del tipo de recurso en el que se realiza la operación. En la versión actual, esta vista solo realiza el seguimiento de las operaciones realizadas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Nombre del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el que se realiza la operación. No NULL.|  
-|minor_resource_id|**sql_variant**|Solo para uso interno. NOT NULL.|  
+|minor_resource_id|**sql_variant**|Sólo para uso interno. NOT NULL.|  
 |operation|**nvarchar(60)**|Operación realizada en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , como Create o ALTER.|  
 |state|**tinyint**|El estado de la operación.<br /><br /> 0 = Pendiente<br />1 = en curso<br />2= Completado<br />3 = error<br />4 = Cancelado|  
 |state_desc|**nvarchar(120)**|PENDING = la operación está esperando disponibilidad de los recursos o la cuota.<br /><br /> IN_PROGRESS = la operación se ha iniciado y está en curso.<br /><br /> COMPLETED = la operación finalizó correctamente.<br /><br /> FAILED= se produjo un error en la operación Vea la columna **error_desc** para obtener más información.<br /><br /> CANCELLED = la operación se detuvo a petición del usuario.|  
@@ -46,14 +46,14 @@ ms.locfileid: "85440712"
 |error_code|**int**|Código que indica el error que se produjo durante una operación con errores. Si el valor es 0, indica que la operación se completó correctamente.|  
 |error_desc|**nvarchar(2048)**|Descripción del error que se produjo durante una operación con errores.|  
 |error_severity|**int**|Nivel de gravedad del error que se produjo durante una operación con errores. Para obtener más información acerca de los errores de gravedad, consulte [motor de base de datos errores de gravedad](https://go.microsoft.com/fwlink/?LinkId=251052).|  
-|error_state|**int**|Reservado para uso futuro. La compatibilidad con versiones posteriores no está garantizada.|  
+|error_state|**int**|Reservado para un uso futuro. La compatibilidad con versiones posteriores no está garantizada.|  
 |start_time|**datetime**|Marca de tiempo del inicio de la operación.|  
 |last_modify_time|**datetime**|Marca de tiempo en la que se modificó el registro por última vez para una operación de ejecución prolongada. En el caso de operaciones completadas correctamente, este campo muestra la marca de tiempo en la que se completó la operación.|  
   
 ## <a name="permissions"></a>Permisos  
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para usar esta vista, debe estar conectado a la base de datos **maestra** . Use la `sys.dm_operation_status` vista en la base de datos **maestra** del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor para realizar un seguimiento del estado de las siguientes operaciones realizadas en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Crear base de datos  

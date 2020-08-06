@@ -1,6 +1,6 @@
 ---
 title: Cambiar la cuenta para el registro de escalabilidad horizontal de SSIS | Microsoft Docs
-description: En este artículo se describe cómo cambiar la cuenta de usuario para el registro de Escalabilidad horizontal de SSIS.
+description: Obtenga información sobre cómo cambiar la cuenta que usa para el registro de Escalabilidad horizontal de SQL Server Integration Services (SSIS).
 ms.custom: performance
 ms.date: 06/29/2020
 ms.prod: sql
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: 0478b685adffa36b4ec344f4f13c52da6436300c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c53a389541408080f1de43da409b4b61ca85a0ec
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919041"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522339"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Cambiar la cuenta para el registro del escalabilidad horizontal
 

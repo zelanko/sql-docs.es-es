@@ -1,6 +1,6 @@
 ---
 title: Patrón de escalabilidad horizontal | Microsoft Docs
-description: En este artículo se describe el componente Patrón de escalabilidad horizontal de Escalabilidad horizontal de SSIS.
+description: Obtenga información sobre el componente Servicio principal de Escalabilidad horizontal del Servicio principal de Escalabilidad horizontal de SQL Server Integration Services (SSIS).
 ms.custom: performance
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e7d9bc5b6d84a0108fd68a77a06bcbda5bf47d44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6d130bc0d6754a182f7768e4d2e7d8588dc337fc
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919004"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522319"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Patrón de escalado horizontal de Integration Services (SSIS)
 

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a275dbc088774355c3546b7234174e5b7b585e43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 929e6730ade53eeff07552652ff2905665fc4a49
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922534"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472561"
 ---
 # <a name="manage-a-cdc-instance"></a>Administrar una instancia CDC
 
@@ -71,7 +71,7 @@ ms.locfileid: "86922534"
   
 -   **Estado**: icono que indica el estado actual de la instancia CDC. A continuación se describen los estados.  
   
-    |||  
+    |Icono|Estados y descripciones|  
     |-|-|  
     |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**Error**. La instancia CDC de Oracle no se está ejecutando porque se produjo un error que no se puede reintentar. Están disponibles los subestados siguientes:<br /><br /> **Mal configurada**: se produjo un error de configuración que necesita intervención manual.<br /><br /> **Contraseña necesaria**: no se estableció ninguna contraseña para la instancia CDC de Oracle o la contraseña no es válida.<br /><br /> **Inesperado**. Todos los demás errores irrecuperables.|  
     |![De acuerdo](../../integration-services/change-data-capture/media/okay.gif "Correcto")|**En ejecución**: la instancia CDC se está ejecutando y está procesando registros de cambios. Están disponibles los subestados siguientes:<br /><br /> **Inactivo**: todos los registros de cambios se han procesado y se han almacenado en las tablas de cambios de destino. No hay más transacciones activas.<br /><br /> **Procesando**: hay registros de cambios que se están procesando y que no se han escrito todavía en las tablas de cambios.|  

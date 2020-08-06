@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484426"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435582"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
@@ -131,7 +131,7 @@ Como se ha mencionado antes, el plan de consulta ya no tiene un operador de func
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también ha inferido la cláusula `GROUP BY O_CUSTKEY on ORDERS` implícita y ha usado IndexSpool y StreamAggregate para implementarla.
 -  Ahora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el paralelismo de todos los operadores.
 
-Según la complejidad de la lógica de la UDF, es posible que el plan de consulta resultante también aumente de tamaño y complejidad. Como se puede ver, las operaciones dentro de la UDF ahora ya no son una caja negra y, por tanto, el optimizador de consultas es capaz de calcular los costos de esas operaciones y optimizarlas. Además, como la UDF ya no está en el plan, la invocación iterativa de UDF se sustituye por un plan que evita totalmente la sobrecarga de la llamada de función.
+Según la complejidad de la lógica de la UDF, es posible que el plan de consulta resultante también aumente de tamaño y complejidad. Como se puede ver, las operaciones dentro de la UDF ahora ya no son una caja opaca y, por tanto, el optimizador de consultas es capaz de calcular los costos de esas operaciones y optimizarlas. Además, como la UDF ya no está en el plan, la invocación iterativa de UDF se sustituye por un plan que evita totalmente la sobrecarga de la llamada de función.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Requisitos de las UDF escalares que se pueden insertar
 <a name="requirements"></a> Una UDF escalar de T-SQL se puede insertar si se cumplen todas las condiciones siguientes:

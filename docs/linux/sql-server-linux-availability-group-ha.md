@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 28a9541c1369202b8bd322cc23201e8d531f913e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a7a6ce8832db85d54ad9513d8258af2863dab2e5
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892257"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472429"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad
 
@@ -59,7 +59,7 @@ Esta configuración consta de tres réplicas sincrónicas. De forma predetermina
 
 Un grupo de disponibilidad con tres réplicas sincrónicas puede proporcionar protección de datos, alta disponibilidad y escalado de lectura. En la tabla siguiente se describe la disponibilidad de este comportamiento. 
 
-| |Escalado de lectura|Alta disponibilidad y </br> protección de datos | Protección de los datos|
+|Comportamiento de la disponibilidad |Escalado de lectura|Alta disponibilidad y </br> protección de datos | Protección de los datos|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |Interrupción principal |Conmutación por error automática. La nueva réplica principal es de L/E. |Conmutación por error automática. La nueva réplica principal es de L/E. |Conmutación por error automática. La nueva réplica principal no está disponible para todas las transacciones de usuario hasta que la réplica principal anterior se recupere y una al grupo de disponibilidad como réplica secundaria. |
@@ -77,7 +77,7 @@ Esta configuración habilita la protección de datos. Al igual que las demás co
 
 Un grupo de disponibilidad con dos réplicas sincrónicas proporciona protección de datos y escalado de lectura. En la tabla siguiente se describe la disponibilidad de este comportamiento. 
 
-| |Escalado de lectura |Protección de los datos|
+|Comportamiento de la disponibilidad |Escalado de lectura |Protección de los datos|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es de L/E.| Conmutación por error automática. La nueva réplica principal no está disponible para todas las transacciones de usuario hasta que la réplica principal anterior se recupere y una al grupo de disponibilidad como réplica secundaria.|
@@ -103,7 +103,7 @@ En el diagrama de grupo de disponibilidad, una réplica principal envía los dat
 
 El valor predeterminado para `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 0. En la tabla siguiente se describe la disponibilidad de este comportamiento. 
 
-| |Alta disponibilidad y </br> protección de datos | Protección de los datos|
+|Comportamiento de la disponibilidad |Alta disponibilidad y </br> protección de datos | Protección de los datos|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interrupción principal | Conmutación por error automática. La nueva réplica principal es de L/E. | Conmutación por error automática. La nueva réplica principal no está disponible para transacciones de usuario. |

@@ -19,15 +19,15 @@ ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7832a121d1d50b069927b811634224718434be3e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f2a8e5ef888ef0fc8adbbef961321083b9f6ac33
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832933"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522977"
 ---
 # <a name="percent_rank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Calcula el rango relativo de una fila dentro de un grupo de filas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Use PERCENT_RANK para evaluar la situación relativa de un valor dentro de un conjunto de resultados de la consulta o de una partición. PERCENT_RANK es similar a la función CUME_DIST.  
   
@@ -39,9 +39,11 @@ PERCENT_RANK( )
   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
- *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. _order\_by\_clause_ determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. La \<cláusula rows o range\> de la sintaxis OVER no se puede especificar en una función PERCENT_RANK.  Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. _order\_by\_clause_ determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. La \<rows or range clause\> de la sintaxis OVER no se puede especificar en una función PERCENT_RANK.  Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de valor devuelto  
  **float(53)**  

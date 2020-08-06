@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71d274d8dbdf7ccdd0d6e508628cb7a89e191400
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b9f3f2a1ba5cac36862362d152ceb824aeadf347
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917247"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435472"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -768,7 +768,7 @@ Para **CAMBIAR** de restricción al utilizar la replicación, vea [Replicar tabl
 Los índices de almacén de columnas no agrupados compilados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 y para las versiones de SQL Database anteriores a V12 estaban en un formato de solo lectura. Debe volver a compilar los índices de almacén de columnas no agrupados en el formato actual (que se puede actualizar) para poder ejecutar cualquier operación de partición.
 
 SET **(** FILESTREAM_ON = { *partition_scheme_name* \| *filestream_filegroup_name* \| **"** default **"** \| **"** NULL **"** } **)**  
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]no admite `FILESTREAM`.
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] no es compatible con `FILESTREAM`.
 
 Especifica dónde se almacenan los datos FILESTREAM.
 
@@ -780,9 +780,9 @@ Si especifica *partition_scheme_name*, se aplican las reglas para [CREATE TABLE]
 
 **"** default **"** especifica el grupo de archivos FILESTREAM con la propiedad DEFAULT establecida. Si no hay ningún grupo de archivos FILESTREAM, se produce un error.
 
-**"** NULL **"** especifica que se quitarán todas las referencias a los grupos de archivos FILESTREAM para la tabla. Se deben quitar primero todas las columnas FILESTREAM. Use SET FILESTREAM_ON **="** NULL **"** para eliminar todos los datos FILESTREAM que estén asociados a una tabla.
+**"** NULL **"** especifica que se quitarán todas las referencias a los grupos de archivos FILESTREAM para la tabla. Se deben quitar primero todas las columnas FILESTREAM. Use SET FILESTREAM_ON = "**NULL**" para eliminar todos los datos FILESTREAM que estén asociados a una tabla.
 
-SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]) ] } **)**  
+SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ] ) ] } **)**  
  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Habilita o deshabilita el control de versiones del sistema de una tabla. Para habilitar el control de versiones del sistema de una tabla, el sistema comprueba que se cumplan los requisitos de restricción del tipo de datos, de la restricción de nulabilidad y de la clave principal para el control de versiones del sistema. Si no utiliza el argumento HISTORY_TABLE, el sistema genera una nueva tabla de historial que coincide con el esquema de la tabla actual, crea un vínculo entre las dos tablas y permite que el sistema registre el historial de cada registro de la tabla actual en la tabla de historial. El nombre de esta tabla de historial será `MSSQL_TemporalHistoryFor<primary_table_object_id>`. Si usa el argumento HISTORY_TABLE para crear un vínculo a un historial existente y usarlo, el sistema crea un vínculo entre la tabla actual y la tabla especificada. Al crear un vínculo a una tabla de historial existente, puede realizar una comprobación de coherencia de datos. Esta comprobación de coherencia de datos garantiza que los registros existentes no se superponen. La comprobación de coherencia de datos se ejecuta de manera predeterminada. Para obtener más información, consulte [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
@@ -1130,7 +1130,7 @@ GO
 En el ejemplo siguiente se agrega una restricción a una columna existente de la tabla. La columna tiene un valor que infringe la restricción. Por tanto, `WITH NOCHECK` se usa para evitar que la restricción se valide en las filas existentes y para poder agregar la restricción.
 
 ```sql
-CREATE TABLE dbo.doc_exd ( column_a INT) ;
+CREATE TABLE dbo.doc_exd (column_a INT) ;
 GO
 INSERT INTO dbo.doc_exd VALUES (-1) ;
 GO
@@ -1148,15 +1148,15 @@ GO
 En el ejemplo siguiente se crea una tabla con dos columnas y se inserta un valor en la primera columna, y la otra columna sigue siendo NULL. A continuación se agrega una restricción `DEFAULT` a la segunda columna. Para comprobar que se aplica el valor predeterminado, se inserta otro valor en la primera columna y se consulta la tabla.
 
 ```sql
-CREATE TABLE dbo.doc_exz ( column_a INT, column_b INT) ;
+CREATE TABLE dbo.doc_exz (column_a INT, column_b INT) ;
 GO
-INSERT INTO dbo.doc_exz (column_a)VALUES ( 7 ) ;
+INSERT INTO dbo.doc_exz (column_a) VALUES (7) ;
 GO
 ALTER TABLE dbo.doc_exz
   ADD CONSTRAINT col_b_def
   DEFAULT 50 FOR column_b ;
 GO
-INSERT INTO dbo.doc_exz (column_a) VALUES ( 10 ) ;
+INSERT INTO dbo.doc_exz (column_a) VALUES (10) ;
 GO
 SELECT * FROM dbo.doc_exz ;
 GO
@@ -1169,7 +1169,7 @@ GO
 En el ejemplo siguiente se agregan varias columnas con restricciones que se definen con la nueva columna. La primera columna nueva tiene una propiedad `IDENTITY`. Cada fila de la tabla tiene nuevos valores incrementales en la columna de identidad.
 
 ```sql
-CREATE TABLE dbo.doc_exe ( column_a INT CONSTRAINT column_a_un UNIQUE) ;
+CREATE TABLE dbo.doc_exe (column_a INT CONSTRAINT column_a_un UNIQUE) ;
 GO
 ALTER TABLE dbo.doc_exe ADD
 
@@ -1207,7 +1207,7 @@ GO
 En el ejemplo siguiente se agrega una columna que acepta valores NULL con una definición `DEFAULT` y se usa `WITH VALUES` para proporcionar valores para cada fila existente en la tabla. Si no se utiliza WITH VALUES, cada fila tiene el valor NULL en la nueva columna.
 
 ```sql
-CREATE TABLE dbo.doc_exf ( column_a INT) ;
+CREATE TABLE dbo.doc_exf (column_a INT) ;
 GO
 INSERT INTO dbo.doc_exf VALUES (1) ;
 GO
@@ -1251,11 +1251,11 @@ GO
 En los ejemplos siguientes se muestra cómo agregar y modificar columnas dispersas en la tabla T1. El código para crear la tabla `T1` es el siguiente.
 
 ```sql
-CREATE TABLE T1
-(C1 int PRIMARY KEY,
-C2 varchar(50) SPARSE NULL,
-C3 int SPARSE NULL,
-C4 int ) ;
+CREATE TABLE T1 (
+  C1 INT PRIMARY KEY,
+  C2 VARCHAR(50) SPARSE NULL,
+  C3 INT SPARSE NULL,
+  C4 INT) ;
 GO
 ```
 
@@ -1263,7 +1263,7 @@ Para agregar una columna dispersa adicional `C5`, ejecute la instrucción siguie
 
 ```sql
 ALTER TABLE T1
-ADD C5 char(100) SPARSE NULL ;
+ADD C5 CHAR(100) SPARSE NULL ;
 GO
 ```
 
@@ -1279,7 +1279,7 @@ Para convertir la columna dispersa `C4` en una columna no dispersa, ejecute la i
 
 ```sql
 ALTER TABLE T1
-ALTER COLUMN C4 DROP SPARSE;
+ALTER COLUMN C4 DROP SPARSE ;
 GO
 ```
 
@@ -1288,11 +1288,11 @@ GO
 En los ejemplos siguientes se muestra cómo agregar una columna a la tabla `T2`. No se puede agregar un conjunto de columnas a una tabla si esta ya contiene columnas dispersas. El código para crear la tabla `T2` es el siguiente.
 
 ```sql
-CREATE TABLE T2
-(C1 int PRIMARY KEY,
-C2 varchar(50) NULL,
-C3 int NULL,
-C4 int ) ;
+CREATE TABLE T2 (
+  C1 INT PRIMARY KEY,
+  C2 VARCHAR(50) NULL,
+  C3 INT NULL,
+  C4 INT) ;
 GO
 ```
 
@@ -1333,11 +1333,11 @@ En los ejemplos de esta sección se muestra cómo quitar columnas y restriccione
 En el primer ejemplo se modifica una tabla para quitar una columna. En el segundo ejemplo se quitan varias columnas.
 
 ```sql
-CREATE TABLE dbo.doc_exb
-    (column_a INT
-     ,column_b VARCHAR(20) NULL
-     ,column_c datetime
-     ,column_d int) ;
+CREATE TABLE dbo.doc_exb (
+     column_a INT,
+     column_b VARCHAR(20) NULL,
+     column_c DATETIME,
+     column_d INT) ;
 GO  
 -- Remove a single column.
 ALTER TABLE dbo.doc_exb DROP COLUMN column_b ;
@@ -1351,7 +1351,7 @@ ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;
 En el primer ejemplo se quita una restricción `UNIQUE` de una tabla. En el segundo ejemplo se quitan dos restricciones y una sola columna.
 
 ```sql
-CREATE TABLE dbo.doc_exc ( column_a int NOT NULL CONSTRAINT my_constraint UNIQUE) ;
+CREATE TABLE dbo.doc_exc (column_a INT NOT NULL CONSTRAINT my_constraint UNIQUE) ;
 GO
 
 -- Example 1. Remove a single constraint.
@@ -1361,17 +1361,16 @@ GO
 DROP TABLE dbo.doc_exc;
 GO
 
-CREATE TABLE dbo.doc_exc ( column_a int
+CREATE TABLE dbo.doc_exc ( column_a INT
                           NOT NULL CONSTRAINT my_constraint UNIQUE
-                          ,column_b int
+                          ,column_b INT
                           NOT NULL CONSTRAINT my_pk_constraint PRIMARY KEY) ;
 GO
 
 -- Example 2. Remove two constraints and one column
 -- The keyword CONSTRAINT is optional. The keyword COLUMN is required.
 ALTER TABLE dbo.doc_exc
-
-    DROP CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
+DROP CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
 GO
 ```
 
@@ -1382,7 +1381,7 @@ En el ejemplo siguiente se elimina una restricción KEY PRIMARY con la opción `
 ```sql
 ALTER TABLE Production.TransactionHistoryArchive
 DROP CONSTRAINT PK_TransactionHistoryArchive_TransactionID
-WITH (ONLINE = ON);
+WITH (ONLINE = ON) ;
 GO
 ```
 
@@ -1392,7 +1391,7 @@ En el ejemplo siguiente se crea la tabla `ContactBackup` y, a continuación, se 
 
 ```sql
 CREATE TABLE Person.ContactBackup
-    (ContactID int) ;
+    (ContactID INT) ;
 GO
 
 ALTER TABLE Person.ContactBackup
@@ -1416,7 +1415,7 @@ DROP TABLE Person.ContactBackup ;
 En el ejemplo siguiente se modifica una columna de una tabla de `INT` a `DECIMAL`.
 
 ```sql
-CREATE TABLE dbo.doc_exy (column_a INT ) ;
+CREATE TABLE dbo.doc_exy (column_a INT) ;
 GO
 INSERT INTO dbo.doc_exy (column_a) VALUES (10) ;
 GO
@@ -1432,26 +1431,26 @@ En el ejemplo siguiente se aumenta el tamaño de una columna **varchar** y la pr
 
 ```sql
 -- Create a two-column table with a unique index on the varchar column.
-CREATE TABLE dbo.doc_exy ( col_a varchar(5) UNIQUE NOT NULL, col_b decimal (4,2));
+CREATE TABLE dbo.doc_exy (col_a varchar(5) UNIQUE NOT NULL, col_b decimal (4,2)) ;
 GO
-INSERT INTO dbo.doc_exy VALUES ('Test', 99.99);
+INSERT INTO dbo.doc_exy VALUES ('Test', 99.99) ;
 GO
 -- Verify the current column size.
 SELECT name, TYPE_NAME(system_type_id), max_length, precision, scale
-FROM sys.columns WHERE object_id = OBJECT_ID(N'dbo.doc_exy');
+FROM sys.columns WHERE object_id = OBJECT_ID(N'dbo.doc_exy') ;
 GO
 -- Increase the size of the varchar column.
-ALTER TABLE dbo.doc_exy ALTER COLUMN col_a varchar(25);
+ALTER TABLE dbo.doc_exy ALTER COLUMN col_a varchar(25) ;
 GO
 -- Increase the scale and precision of the decimal column.
-ALTER TABLE dbo.doc_exy ALTER COLUMN col_b decimal (10,4);
+ALTER TABLE dbo.doc_exy ALTER COLUMN col_b decimal (10,4) ;
 GO
 -- Insert a new row.
 INSERT INTO dbo.doc_exy VALUES ('MyNewColumnSize', 99999.9999) ;
 GO
 -- Verify the current column size.
 SELECT name, TYPE_NAME(system_type_id), max_length, precision, scale
-FROM sys.columns WHERE object_id = OBJECT_ID(N'dbo.doc_exy');
+FROM sys.columns WHERE object_id = OBJECT_ID(N'dbo.doc_exy') ;
 ```
 
 #### <a name="c-changing-column-collation"></a>C. Cambiar la intercalación de columnas
@@ -1459,11 +1458,11 @@ FROM sys.columns WHERE object_id = OBJECT_ID(N'dbo.doc_exy');
 En el siguiente ejemplo se muestra cómo cambiar la intercalación de una columna. Primero, se crea una tabla con la intercalación predeterminada del usuario.
 
 ```sql
-CREATE TABLE T3
-(C1 int PRIMARY KEY,
-C2 varchar(50) NULL,
-C3 int NULL,
-C4 int ) ;
+CREATE TABLE T3 (
+  C1 INT PRIMARY KEY,
+  C2 VARCHAR(50) NULL,
+  C3 INT NULL,
+  C4 INT) ;
 GO
 ```
 
@@ -1471,7 +1470,7 @@ Después, la intercalación de la columna `C2` se cambia a Latin1_General_BIN. E
 
 ```sql
 ALTER TABLE T3
-ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN;
+ALTER COLUMN C2 varchar(50) COLLATE Latin1_General_BIN ;
 GO
 ```
 
@@ -1482,11 +1481,11 @@ El ejemplo siguiente muestra cómo cifrar una columna mediante [Always Encrypted
 En primer lugar, se crea una tabla sin columnas cifradas.
 
 ```sql
-CREATE TABLE T3
-(C1 int PRIMARY KEY,
-C2 varchar(50) NULL,
-C3 int NULL,
-C4 int ) ;
+CREATE TABLE T3 (
+  C1 INT PRIMARY KEY,
+  C2 VARCHAR(50) NULL,
+  C3 INT NULL,
+  C4 INT) ;
 GO
 ```
 
@@ -1499,7 +1498,7 @@ Después, se cifra la columna "C2" con una clave de cifrado de columna, denomina
 
 ```sql
 ALTER TABLE T3
-ALTER COLUMN C2 varchar(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;
+ALTER COLUMN C2 VARCHAR(50) ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NULL;
 GO
 ```
 
@@ -1513,7 +1512,7 @@ En el ejemplo siguiente se cambia la compresión de una tabla sin particiones. S
 
 ```sql
 ALTER TABLE T1
-REBUILD WITH (DATA_COMPRESSION = PAGE);
+REBUILD WITH (DATA_COMPRESSION = PAGE) ;
 ```
 
 En el ejemplo siguiente se cambia la compresión de una tabla con particiones. La sintaxis `REBUILD PARTITION = 1` hace que solo se vuelva a generar la partición número `1`.
@@ -1533,7 +1532,7 @@ La misma operación que utiliza la sintaxis alternativa siguiente hace que se vu
 ```sql
 ALTER TABLE PartitionTable1
 REBUILD PARTITION = ALL
-WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
+WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1)) ;
 ```
 
 Para obtener más ejemplos de compresión de datos, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).
@@ -1556,7 +1555,7 @@ En el siguiente ejemplo se descomprime una partición de tabla de almacén de co
 
 ```sql
 ALTER TABLE PartitionTable1
-REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =COLUMNSTORE) ;
+REBUILD PARTITION = 1 WITH (DATA_COMPRESSION = COLUMNSTORE) ;
 GO
 ```
 
@@ -1565,10 +1564,10 @@ GO
 En el ejemplo siguiente se crea una tabla con particiones, suponiendo que el esquema de partición `myRangePS1` ya esté creado en la base de datos. A continuación, se crea una tabla sin particiones con la misma estructura que la tabla con particiones y en el mismo grupo de archivos que `PARTITION 2` de la tabla `PartitionTable`. Los datos de `PARTITION 2` de la tabla `PartitionTable` se cambian entonces a la tabla `NonPartitionTable`.
 
 ```sql
-CREATE TABLE PartitionTable (col1 int, col2 char(10))
+CREATE TABLE PartitionTable (col1 INT, col2 CHAR(10))
 ON myRangePS1 (col1) ;
 GO
-CREATE TABLE NonPartitionTable (col1 int, col2 char(10))
+CREATE TABLE NonPartitionTable (col1 INT, col2 CHAR(10))
 ON test2fg ;
 GO
 ALTER TABLE PartitionTable SWITCH PARTITION 2 TO NonPartitionTable ;
@@ -1582,7 +1581,7 @@ En el ejemplo siguiente se habilita la extensión de bloqueo al nivel de partici
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
-ALTER TABLE dbo.T1 SET (LOCK_ESCALATION = AUTO);
+ALTER TABLE dbo.T1 SET (LOCK_ESCALATION = AUTO) ;
 GO
 ```
 
@@ -1595,7 +1594,7 @@ En el ejemplo siguiente se habilita el seguimiento de cambios en la tabla `Perso
 ```sql
 USE AdventureWorks;
 ALTER TABLE Person.Person
-ENABLE CHANGE_TRACKING;
+ENABLE CHANGE_TRACKING ;
 ```
 
 El ejemplo siguiente habilita el seguimiento de cambios y el seguimiento de las columnas que se actualizan durante un cambio.
@@ -1616,9 +1615,9 @@ En el ejemplo siguiente se deshabilita el seguimiento de cambios en la tabla `Pe
 
 ```sql
 USE AdventureWorks;
-Go
+GO
 ALTER TABLE Person.Person
-DISABLE CHANGE_TRACKING;
+DISABLE CHANGE_TRACKING ;
 ```
 
 ### <a name="disabling-and-enabling-constraints-and-triggers"></a><a name="disable_enable"></a>Deshabilitar y habilitar restricciones y desencadenadores
@@ -1628,23 +1627,22 @@ DISABLE CHANGE_TRACKING;
 En el ejemplo siguiente se deshabilita una restricción que limita los salarios aceptados en los datos. `NOCHECK CONSTRAINT` se usa con `ALTER TABLE` para deshabilitar la restricción y permitir una inserción que normalmente infringiría la restricción. `CHECK CONSTRAINT` vuelve a habilitar la restricción.
 
 ```sql
-CREATE TABLE dbo.cnst_example
-(id INT NOT NULL,
- name VARCHAR(10) NOT NULL,
- salary MONEY NOT NULL
-    CONSTRAINT salary_cap CHECK (salary < 100000)
-);
+CREATE TABLE dbo.cnst_example (
+  id INT NOT NULL,
+  name VARCHAR(10) NOT NULL,
+  salary MONEY NOT NULL
+  CONSTRAINT salary_cap CHECK (salary < 100000)) ;
 
 -- Valid inserts
-INSERT INTO dbo.cnst_example VALUES (1,'Joe Brown',65000);
-INSERT INTO dbo.cnst_example VALUES (2,'Mary Smith',75000);
+INSERT INTO dbo.cnst_example VALUES (1,'Joe Brown',65000) ;
+INSERT INTO dbo.cnst_example VALUES (2,'Mary Smith',75000) ;
 
 -- This insert violates the constraint.
-INSERT INTO dbo.cnst_example VALUES (3,'Pat Jones',105000);
+INSERT INTO dbo.cnst_example VALUES (3,'Pat Jones',105000) ;
 
 -- Disable the constraint and try again.
 ALTER TABLE dbo.cnst_example NOCHECK CONSTRAINT salary_cap;
-INSERT INTO dbo.cnst_example VALUES (3,'Pat Jones',105000);
+INSERT INTO dbo.cnst_example VALUES (3,'Pat Jones',105000) ;
 
 -- Re-enable the constraint and try another insert; this will fail.
 ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
@@ -1656,10 +1654,10 @@ INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 En el ejemplo siguiente se usa la opción `DISABLE TRIGGER` de `ALTER TABLE` para deshabilitar el desencadenador y permitir una inserción que normalmente infringiría el desencadenador. Después se usa `ENABLE TRIGGER` para volver a habilitar el desencadenador.
 
 ```sql
-CREATE TABLE dbo.trig_example
-(id INT,
-name VARCHAR(12),
-salary MONEY) ;
+CREATE TABLE dbo.trig_example (
+  id INT,
+  name VARCHAR(12),
+  salary MONEY) ;
 GO
 -- Create the trigger.
 CREATE TRIGGER dbo.trig1 ON dbo.trig_example FOR INSERT
@@ -1703,8 +1701,7 @@ REBUILD WITH
     PAD_INDEX = ON,
     ONLINE = ON ( WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 4 MINUTES,
                                          ABORT_AFTER_WAIT = BLOCKERS ) )
-)
-;
+) ;
 ```
 
 #### <a name="b-online-alter-column"></a>B. Alteración de columna en línea
@@ -1714,12 +1711,12 @@ En el ejemplo siguiente se muestra cómo ejecutar una operación de alteración 
 **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
-CREATE TABLE dbo.doc_exy (column_a INT ) ;
+CREATE TABLE dbo.doc_exy (column_a INT) ;
 GO
 INSERT INTO dbo.doc_exy (column_a) VALUES (10) ;
 GO
 ALTER TABLE dbo.doc_exy
-    ALTER COLUMN column_a DECIMAL (5, 2) WITH (ONLINE = ON);
+    ALTER COLUMN column_a DECIMAL (5, 2) WITH (ONLINE = ON) ;
 GO
 sp_help doc_exy;
 DROP TABLE dbo.doc_exy ;
@@ -1743,11 +1740,11 @@ ADD PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime),
 SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL
     DEFAULT SYSUTCDATETIME(),
 SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL
-    DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59.99999999');
+    DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59.99999999') ;
 
 --Enable system versioning with 1 year retention for historical data
 ALTER TABLE InsurancePolicy
-SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
+SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR)) ;
 ```
 
 #### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. Migrar una solución existente para usar el control de versiones del sistema
@@ -1760,10 +1757,10 @@ DROP TRIGGER ProjectTask_HistoryTrigger;
 
 -- Adjust the schema for current and history table
 -- Change data types for existing period columns
-ALTER TABLE ProjectTask ALTER COLUMN [Changed Date] datetime2 NOT NULL;
-ALTER TABLE ProjectTask ALTER COLUMN [Revised Date] datetime2 NOT NULL;
-ALTER TABLE ProjectTaskHistory ALTER COLUMN [Changed Date] datetime2 NOT NULL;
-ALTER TABLE ProjectTaskHistory ALTER COLUMN [Revised Date] datetime2 NOT NULL;
+ALTER TABLE ProjectTask ALTER COLUMN [Changed Date] datetime2 NOT NULL ;
+ALTER TABLE ProjectTask ALTER COLUMN [Revised Date] datetime2 NOT NULL ;
+ALTER TABLE ProjectTaskHistory ALTER COLUMN [Changed Date] datetime2 NOT NULL ;
+ALTER TABLE ProjectTaskHistory ALTER COLUMN [Revised Date] datetime2 NOT NULL ;
 
 -- Add SYSTEM_TIME period and set system versioning with linking two existing tables
 -- (a certain set of data checks happen in the background)
@@ -1782,17 +1779,17 @@ En este ejemplo se muestra cómo deshabilitar el control de versiones del sistem
 BEGIN TRAN
 /* Takes schema lock on both tables */
 ALTER TABLE Department
-    SET (SYSTEM_VERSIONING = OFF);
+    SET (SYSTEM_VERSIONING = OFF) ;
 /* expand table schema for temporal table */
 ALTER TABLE Department  
-     ADD Col5 int NOT NULL DEFAULT 0;
+     ADD Col5 int NOT NULL DEFAULT 0 ;
 /* Expand table schema for history table */
 ALTER TABLE DepartmentHistory
-    ADD Col5 int NOT NULL DEFAULT 0;
+    ADD Col5 int NOT NULL DEFAULT 0 ;
 /* Re-establish versioning again*/
 ALTER TABLE Department
     SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE=dbo.DepartmentHistory,
-                                 DATA_CONSISTENCY_CHECK = OFF));
+                                 DATA_CONSISTENCY_CHECK = OFF)) ;
 COMMIT
 ```
 
@@ -1802,10 +1799,10 @@ En este ejemplo se muestra cómo quitar completamente el control de versiones de
 
 ```sql
 ALTER TABLE Department
-    SET (SYSTEM_VERSIONING = OFF);
+    SET (SYSTEM_VERSIONING = OFF) ;
 ALTER TABLE Department
-DROP PERIOD FOR SYSTEM_TIME;
-DROP TABLE DepartmentHistory;
+DROP PERIOD FOR SYSTEM_TIME ;
+DROP TABLE DepartmentHistory ;
 ```
 
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -1821,7 +1818,7 @@ SELECT * FROM sys.partitions AS p
 JOIN sys.tables AS t
     ON p.object_id = t.object_id
 WHERE p.partition_id IS NOT NULL
-    AND t.name = 'FactResellerSales';
+    AND t.name = 'FactResellerSales' ;
 ```
 
 ### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>B. Determinar los valores de límite para una tabla con particiones
@@ -1844,7 +1841,7 @@ JOIN sys.partition_functions AS f
 LEFT JOIN sys.partition_range_values AS r
     ON f.function_id = r.function_id and r.boundary_id = p.partition_number
 WHERE t.name = 'FactResellerSales' AND i.type <= 1
-ORDER BY p.partition_number;
+ORDER BY p.partition_number ;
 ```
 
 ### <a name="c-determining-the-partition-column-for-a-partitioned-table"></a>C. Determinar la columna de partición de una tabla con particiones
@@ -1866,7 +1863,7 @@ JOIN sys.index_columns AS ic
     AND ic.index_id = i.index_id AND ic.partition_ordinal > 0
 WHERE t.name = 'FactResellerSales'
 AND i.type <= 1
-AND c.column_id = ic.column_id;
+AND c.column_id = ic.column_id ;
 ```
 
 ### <a name="d-merging-two-partitions"></a>D. Combinar dos particiones
@@ -1877,14 +1874,14 @@ La tabla `Customer` tiene la definición siguiente:
 
 ```sql
 CREATE TABLE Customer (
-    id int NOT NULL,
-    lastName varchar(20),
-    orderCount int,
-    orderDate date)
+    id INT NOT NULL,
+    lastName VARCHAR(20),
+    orderCount INT,
+    orderDate DATE)
 WITH
     ( DISTRIBUTION = HASH(id),
     PARTITION ( orderCount RANGE LEFT
-    FOR VALUES (1, 5, 10, 25, 50, 100)));
+    FOR VALUES (1, 5, 10, 25, 50, 100))) ;
 ```
 
 El comando siguiente combina los límites de partición 10 y 25.
@@ -1897,14 +1894,14 @@ El nuevo archivo DDL para la tabla es:
 
 ```sql
 CREATE TABLE Customer (
-    id int NOT NULL,
-    lastName varchar(20),
-    orderCount int,
-    orderDate date)
+    id INT NOT NULL,
+    lastName VARCHAR(20),
+    orderCount INT,
+    orderDate DATE)
 WITH
     ( DISTRIBUTION = HASH(id),
     PARTITION ( orderCount RANGE LEFT
-    FOR VALUES (1, 5, 25, 50, 100)));
+    FOR VALUES (1, 5, 25, 50, 100))) ;
 ```
 
 ### <a name="e-splitting-a-partition"></a>E. Dividir una partición
@@ -1917,14 +1914,14 @@ La tabla `Customer` tiene el siguiente archivo DDL:
 DROP TABLE Customer;
 
 CREATE TABLE Customer (
-    id int NOT NULL,
-    lastName varchar(20),
-    orderCount int,
-    orderDate date)
+    id INT NOT NULL,
+    lastName VARCHAR(20),
+    orderCount INT,
+    orderDate DATE)
 WITH
     ( DISTRIBUTION = HASH(id),
     PARTITION ( orderCount RANGE LEFT
-    FOR VALUES (1, 5, 10, 25, 50, 100 )));
+    FOR VALUES (1, 5, 10, 25, 50, 100 ))) ;
 ```
 
 El siguiente comando crea un nuevo límite de partición por el valor 75, entre 50 y 100.
@@ -1937,13 +1934,13 @@ El nuevo archivo DDL para la tabla es:
 
 ```sql
 CREATE TABLE Customer (
-   id int NOT NULL,
-   lastName varchar(20),
-   orderCount int,
-   orderDate date)
+   id INT NOT NULL,
+   lastName VARCHAR(20),
+   orderCount INT,
+   orderDate DATE)
    WITH DISTRIBUTION = HASH(id),
    PARTITION ( orderCount (RANGE LEFT
-      FOR VALUES (1, 5, 10, 25, 50, 75, 100 )));
+      FOR VALUES (1, 5, 10, 25, 50, 75, 100))) ;
 ```
 
 ### <a name="f-using-switch-to-move-a-partition-to-a-history-table"></a>F. Usar SWITCH para mover una partición a una tabla de historial
@@ -1957,11 +1954,11 @@ CREATE TABLE Orders (
     id INT,
     city VARCHAR (25),
     lastUpdateDate DATE,
-    orderDate DATE )
+    orderDate DATE)
 WITH
-    (DISTRIBUTION = HASH ( id ),
+    (DISTRIBUTION = HASH (id),
     PARTITION ( orderDate RANGE RIGHT
-    FOR VALUES ('2004-01-01', '2005-01-01', '2006-01-01', '2007-01-01' )));
+    FOR VALUES ('2004-01-01', '2005-01-01', '2006-01-01', '2007-01-01'))) ;
 ```
 
 En este ejemplo, la tabla `Orders` tiene las siguientes particiones. Cada partición contiene datos.
@@ -1988,11 +1985,11 @@ CREATE TABLE OrdersHistory (
    id INT,
    city VARCHAR (25),
    lastUpdateDate DATE,
-   orderDate DATE )
+   orderDate DATE)
 WITH
-    (DISTRIBUTION = HASH ( id ),
+    (DISTRIBUTION = HASH (id),
     PARTITION ( orderDate RANGE RIGHT
-    FOR VALUES ( '2004-01-01' )));
+    FOR VALUES ('2004-01-01'))) ;
 ```
 
 Aunque las columnas y los nombres de columna deben ser iguales, no es necesario que los límites de partición sean iguales. En este ejemplo, la tabla `OrdersHistory` tiene las dos siguientes particiones y ambas están vacías:

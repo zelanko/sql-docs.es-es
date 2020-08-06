@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895346"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477357"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Preguntas más frecuentes sobre SQL Server en Linux
 
@@ -163,5 +163,9 @@ En las secciones siguientes se proporcionan preguntas y respuestas comunes sobre
 1. **¿Se puede cambiar la propiedad de los archivos y los directorios de SQL Server de la cuenta y el grupo de mssql instalados?**
 
    No permite cambiar la propiedad del directorio y los archivos de SQL Server de la instalación predeterminada. La cuenta y el grupo de mssql se usan específicamente para SQL Server y no tienen acceso de inicio de sesión interactivo.
-
+   
+ 1. **¿Se admiten vínculos simbólicos para directorios de registro y los datos de SQL Server?** 
+    
+    No, no se admiten vínculos simbólicos para directorios de registro y los datos de SQL Server. Para cambiar los directorios de registros y datos predeterminados, consulte [Cambio de la ubicación predeterminada del directorio de registro o los datos](sql-server-linux-configure-mssql-conf.md#datadir).
+    
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -1,6 +1,6 @@
 ---
 title: 'Instalación: Configuración de estado deseado de PowerShell'
-description: Obtenga información sobre cómo instalar SQL Server con Desired State Configuration (DSC) de PowerShell.
+description: Instale SQL Server con DSC de PowerShell y obtenga información sobre la configuración inicial de una instancia independiente de SQL Server 2017 en Windows Server 2016.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.devlang: PowerShell
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e7b3f2d8673972100e01413e5688353cb7c87a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33fff4f29650e54803d47dc2188ec67d5594f89
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258983"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472387"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Instalar SQL Server con la configuración de estado deseado de PowerShell
 

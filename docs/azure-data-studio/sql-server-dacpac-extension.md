@@ -1,6 +1,6 @@
 ---
 title: Extensión dacpac de SQL Server
-description: Instalación y uso de la extensión dacpac de SQL Server para Azure Data Studio
+description: Aprenda a instalar e iniciar el Asistente para aplicaciones de capa de datos, que facilita la implementación y extracción de archivos dacpac y la importación y exportación de archivos bacpac.
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 2062c32f5af698f635abba684eb1ea1bbe59250b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eeff69a65751097017383399784ea9a717f3b7e8
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758336"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522479"
 ---
 # <a name="sql-server-dacpac-extension"></a>Extensión dacpac de SQL Server
 

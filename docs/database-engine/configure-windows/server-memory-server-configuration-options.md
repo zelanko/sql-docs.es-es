@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751898"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442805"
 ---
 # <a name="server-memory-configuration-options"></a>Opciones de configuración de la memoria del servidor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,9 +77,14 @@ Para establecer una cantidad fija de memoria:
   
 2.  Haga clic en el nodo **Memoria** .  
   
-3.  En **Opciones de memoria del servidor**, escriba la misma cantidad que quiera para **Memoria de servidor mínima** y **Memoria de servidor máxima**.  
+3.  En **Opciones de memoria del servidor**, escriba la cantidad que desea para **Cantidad mínima de memoria del servidor** y **Cantidad máxima de memoria del servidor**.  
   
      Use la configuración predeterminada si desea que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda cambiar dinámicamente sus requisitos de memoria según los recursos del sistema disponibles. Se recomienda establecer una **memoria de servidor máxima**, tal y como [se describe anteriormente](#max_server_memory). 
+
+En la captura de pantalla siguiente se muestran los tres pasos: 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="Configuración de la memoria en SSMS":::
+
   
 ## <a name="lock-pages-in-memory-lpim"></a>Bloquear páginas en la memoria (LPIM) 
 Esta directiva de Windows determina qué cuentas pueden usar un proceso para mantener los datos en la memoria física, impidiendo que el sistema realice la paginación de los datos en la memoria virtual del disco. El bloqueo de páginas en memoria puede mantener el servidor activo cuando se produce la paginación en la memoria del disco. La opción **Bloquear páginas en memoria** está establecida en ON en las instancias de la edición [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard y posterior cuando a la cuenta con privilegios para ejecutar sqlservr.exe se le ha concedido el derecho de usuario de Windows *Bloquear páginas en memoria* (LPIM).  

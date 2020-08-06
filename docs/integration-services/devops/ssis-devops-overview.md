@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c5634130e2a9a4e6f2a394d067f0e679ab02827
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196077"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472481"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>Herramientas de DevOps para SQL Server Integration Services
 
@@ -117,7 +117,7 @@ Tipo de autenticación para acceder al servidor de destino especificado. Esta pr
 
 Pero el hecho de que se admita un tipo de autenticación concreto depende del tipo de servidor y del tipo de agente de destino. En la tabla siguiente se muestra la matriz de compatibilidad detallada.
 
-| |Agente hospedado por Microsoft|Agente autohospedado|
+|Tipo de servidor de destino|Agente hospedado por Microsoft|Agente autohospedado|
 |---------|---------|---------|
 |SQL Server local o máquina virtual |N/D|Autenticación de Windows|
 |Azure SQL|Autenticación de SQL Server <br> Active Directory - Contraseña|Autenticación de SQL Server <br> Active Directory - Contraseña <br> Active Directory - Integrado|
@@ -143,7 +143,7 @@ Especifica si se sobrescriben los proyectos existentes o archivos SSISDeployment
 
 #### <a name="continue-deployment-when-error-occurs"></a>Implementación continua al producirse un error
 
-Especifica si TP continúa con la implementación de los proyectos o archivos restantes cuando se produce un error. En caso negativo, la tarea de implementación de SSIS se detiene inmediatamente cuando se produce un error.
+Especifica si se continúa con la implementación de los proyectos o archivos restantes cuando se produce un error. En caso negativo, la tarea de implementación de SSIS se detiene inmediatamente cuando se produce un error.
 
 ### <a name="limitations-and-known-issues"></a>Limitaciones y problemas conocidos
 
@@ -197,7 +197,7 @@ Tipo de autenticación para acceder al servidor de destino especificado. En gene
 
 Pero el hecho de que se admita un tipo de autenticación concreto depende del tipo de servidor y del tipo de agente de destino. En la tabla siguiente se muestra la matriz de compatibilidad detallada.
 
-| |Agente hospedado por Microsoft|Agente autohospedado|
+|Tipo de servidor de destino|Agente hospedado por Microsoft|Agente autohospedado|
 |---------|---------|---------|
 |SQL Server local o máquina virtual |N/D|Autenticación de Windows|
 |Azure SQL|Autenticación de SQL Server <br> Active Directory - Contraseña|Autenticación de SQL Server <br> Active Directory - Contraseña <br> Active Directory - Integrado|
@@ -294,7 +294,7 @@ El esquema JSON de configuración tiene tres niveles:
 
 ##### <a name="folder-attributes"></a>Atributos de carpeta
 
-|Propiedad  |Descripción  |Notas  |
+|Propiedad.  |Descripción  |Notas  |
 |---------|---------|---------|
 |name  |Nombre de la carpeta del catálogo.|La carpeta se creará si no existe.|
 |description|Descripción de la carpeta del catálogo.|Se omitirá el valor de *null*.|
@@ -303,7 +303,7 @@ El esquema JSON de configuración tiene tres niveles:
 
 ##### <a name="project-attributes"></a>Atributos de proyecto
 
-|Propiedad  |Descripción  |Notas  |
+|Propiedad.  |Descripción  |Notas  |
 |---------|---------|---------|
 |name|Nombre del proyecto. |El objeto de proyecto se omitirá si el proyecto no existe en la carpeta principal.|
 |parámetros|Matriz de objetos de parámetro. Cada objeto contiene información de configuración de un parámetro.|Vea *Atributos de parámetro* para obtener el esquema de un objeto de parámetro.|
@@ -311,7 +311,7 @@ El esquema JSON de configuración tiene tres niveles:
 
 ##### <a name="parameter-attributes"></a>Atributos de parámetro
 
-|Propiedad  |Descripción  |Notas  |
+|Propiedad.  |Descripción  |Notas  |
 |---------|---------|---------|
 |name|Nombre del parámetro.|<li>El parámetro puede ser un parámetro de proyecto o un parámetro de paquete. <li>El parámetro se omite si no existe. <li>Si el parámetro es una propiedad del administrador de conexiones, el nombre debe estar con el formato **CM.\<Connection Manager Name>.\<Property Name>** . |
 |contenedor|Contenedor del parámetro.|<li>Si el parámetro es un parámetro de proyecto, *container* debe ser el nombre del proyecto. <li>Si es un parámetro de paquete, *container* debe ser el nombre del paquete con la extensión **.dtsx**.|
@@ -320,14 +320,14 @@ El esquema JSON de configuración tiene tres niveles:
 
 ##### <a name="reference-attributes"></a>Atributos de referencia
 
-|Propiedad  |Descripción  |Notas  |
+|Propiedad.  |Descripción  |Notas  |
 |---------|---------|---------|
 |environmentFolder|Nombre de carpeta del entorno.|La carpeta se creará si no existe. <br> El valor puede ser ".", que representa la carpeta principal del proyecto, que hace referencia al entorno.|
 |environmentName|Nombre del entorno al que se hace referencia.|Si el entorno especificado no existe, se creará.|
 
 ##### <a name="environment-attributes"></a>Atributos de entorno
 
-|Propiedad  |Descripción  |Notas  |
+|Propiedad.  |Descripción  |Notas  |
 |---------|---------|---------|
 |name|Nombre del entorno.|Si el entorno no existe, se creará.|
 |description|Descripción del entorno.|Se omitirá el valor de *null*.|

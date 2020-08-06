@@ -1,6 +1,6 @@
 ---
 title: Extensión SQL Server Profiler
-description: Instale y use la extensión SQL Server Profiler (versión preliminar) para Azure Data Studio.
+description: Aprenda a instalar y usar la extensión SQL Server Profiler (versión preliminar), una solución de seguimiento de SQL Server fácil de usar similar a SSMS Profiler.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: f86257f7d024d36109901e09f11ab910525810e5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e6e71f00748fa9d0fc4b803d8268d8a8b23284fc
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758313"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522449"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>Extensión SQL Server Profiler (versión preliminar)
 

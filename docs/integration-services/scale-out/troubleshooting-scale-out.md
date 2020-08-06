@@ -1,6 +1,6 @@
 ---
 title: Solución de problemas de escalabilidad horizontal de SSIS | Microsoft Docs
-description: En este artículo se describe cómo solucionar problemas comunes con Escalabilidad horizontal de SSIS.
+description: Solucione problemas comunes de Escalabilidad horizontal de SSIS como errores de configuración y falta de permisos de acceso.
 ms.custom: performance
 ms.date: 01/09/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 96cbbba57e74b0ffaa9dac9d012faf38e34a1ab8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e8e8a2b2acde605c779375adec9c0908cbf46b03
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922079"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522329"
 ---
 # <a name="troubleshoot-scale-out"></a>Solución de problemas de escalabilidad horizontal
 

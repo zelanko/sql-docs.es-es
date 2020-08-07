@@ -1,5 +1,5 @@
 ---
-title: Conexión a Azure SQL DB (MySQLToSQL) | Microsoft Docs
+title: Conexión a Azure SQL Database (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103194"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822564"
 ---
-# <a name="connecting-to-azure-sql-db-mysqltosql"></a>Conexión a Azure SQL DB (MySQLToSQL)
+# <a name="connecting-to-azure-sql-database-mysqltosql"></a>Conexión a Azure SQL Database (MySQLToSQL)
 Para migrar las bases de datos de MySQL a SQL Azure, debe conectarse a la instancia de destino de SQL Azure. Cuando se conecta, SSMA obtiene los metadatos de todas las bases de datos de la instancia de SQL Azure y muestra los metadatos de la base de datos en el explorador de metadatos de SQL Azure. SSMA almacena información de la instancia de SQL Azure a la que está conectado, pero no almacena contraseñas.  
   
 La conexión a SQL Azure permanece activa hasta que se cierra el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse a SQL Azure si desea una conexión activa con el servidor. Puede trabajar sin conexión hasta que cargue los objetos de base de datos en SQL Azure y migre los datos.  
@@ -87,5 +87,5 @@ El siguiente paso de la migración depende de las necesidades del proyecto:
 -   Si no tiene que realizar ninguna de estas tareas, puede convertir las definiciones de objetos de base de datos de MySQL en SQL Azure definiciones de objeto. Para obtener más información, vea [convertir las bases de datos MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>Consulte también  
-[Migración de bases de datos de MySQL a SQL Server: Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migración de bases de datos de MySQL a SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

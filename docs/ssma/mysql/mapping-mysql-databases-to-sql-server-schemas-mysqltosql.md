@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f70cf22db8d4a9c957465ea86f286c41098538c5
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293730"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823640"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Asignación de bases de datos de MySQL a esquemas de SQL Server (MySQLToSQL)
 De forma predeterminada, SSMA para MySQL migra todos los objetos de un esquema de MySQL a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos de o SQL Azure denominada para el esquema. Sin embargo, puede personalizar la asignación entre los esquemas de MySQL y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las bases de datos de SQL Azure.  
@@ -71,7 +71,7 @@ Si desea analizar la conversión de objetos de MySQL en SQL Server o SQL Azure o
   
 ## <a name="see-also"></a>Consulte también  
 [Configuración del proyecto &#40;conversión&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
-[Conexión a Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-[Migración de bases de datos de MySQL a SQL Server: Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Conexión a Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[Migración de bases de datos de MySQL a SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Conexión a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   

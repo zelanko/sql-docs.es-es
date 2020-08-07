@@ -18,12 +18,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 34f524eb8e6c7a64a53f64eda67a370aace745c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c6d2e7cccc7e1aa07327480415c0acd2a3db192
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648895"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822960"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "85648895"
 |**max_session_percent**|**decimal (5, 2)**|Cantidad máxima de sesiones simultáneas en porcentaje basado en el límite del grupo.|  
 |**elastic_pool_dtu_limit**|**int**|Configuración de cantidad máxima de DTU de grupos elásticos actual para este grupo elástico durante este intervalo.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Configuración de límite máximo de almacenamiento de grupos elásticos actual para este grupo elástico en megabytes durante este intervalo.|
-|**avg_allocated_storage_percent**|**decimal (5, 2)**|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico.  Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
+|**avg_allocated_storage_percent**|**decimal (5, 2)**|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico.  Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
  Esta vista existe en la base de datos maestra del servidor de SQL Database. Debe estar conectado a la base de datos maestra para consultar **Sys. elastic_pool_resource_stats**.  
   

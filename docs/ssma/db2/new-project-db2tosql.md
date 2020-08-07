@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 8e9edc319a539d438cdb7eb126694812d9084d24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a670a9766388d4ba1d1908a71ef7a32147f60fc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084622"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824048"
 ---
 # <a name="new-project-db2tosql"></a>Nuevo proyecto (DB2ToSQL)
 Utilice el cuadro de diálogo **nuevo proyecto** para crear un nuevo proyecto de SSMA. Para tener acceso al cuadro de diálogo **nuevo proyecto** , en el menú **archivo** , haga clic en **nuevo proyecto**.  
@@ -35,5 +35,5 @@ Seleccione una de las siguientes versiones de la base de datos de destino en la 
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   Azure SQL DB  
+-   Azure SQL Database  
   

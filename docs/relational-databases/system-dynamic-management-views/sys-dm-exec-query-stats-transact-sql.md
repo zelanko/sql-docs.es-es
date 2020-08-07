@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2df86c9850dddb7532602476d2ce9ffcaebad62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734704"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865323"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -116,10 +116,10 @@ Devuelve estadísticas de rendimiento de agregado para planes de consulta en cac
 |**min_spills**|**bigint**|Número mínimo de páginas que esta consulta ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Número máximo de páginas que esta consulta ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br /> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-|**total_page_server_reads**|**bigint**|Número total de lecturas del servidor de páginas remotas realizadas por las ejecuciones de este plan desde su compilación.<br /><br /> **Se aplica a:** Hiperescalado de Azure SQL Database |  
-|**last_page_server_reads**|**bigint**|Número de lecturas del servidor de páginas remotas realizadas la última vez que se ejecutó el plan.<br /><br /> **Se aplica a:** Hiperescalado de Azure SQL Database |  
-|**min_page_server_reads**|**bigint**|Número mínimo de lecturas del servidor de páginas remotas que ha realizado este plan durante una ejecución.<br /><br /> **Se aplica a:** Hiperescalado de Azure SQL Database |  
-|**max_page_server_reads**|**bigint**|Número máximo de lecturas del servidor de páginas remotas que ha realizado este plan durante una ejecución.<br /><br /> **Se aplica a:** Hiperescalado de Azure SQL Database |  
+|**total_page_server_reads**|**bigint**|Número total de lecturas del servidor de páginas remotas realizadas por las ejecuciones de este plan desde su compilación.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database |  
+|**last_page_server_reads**|**bigint**|Número de lecturas del servidor de páginas remotas realizadas la última vez que se ejecutó el plan.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database |  
+|**min_page_server_reads**|**bigint**|Número mínimo de lecturas del servidor de páginas remotas que ha realizado este plan durante una ejecución.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database |  
+|**max_page_server_reads**|**bigint**|Número máximo de lecturas del servidor de páginas remotas que ha realizado este plan durante una ejecución.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database |  
 > [!NOTE]
 > <sup>1</sup> para los procedimientos almacenados compilados de forma nativa cuando la recopilación de estadísticas está habilitada, el tiempo de trabajo se recopila en milisegundos. Si la consulta se ejecuta en menos de un milisegundo, el valor será 0.  
   
@@ -128,7 +128,7 @@ Devuelve estadísticas de rendimiento de agregado para planes de consulta en cac
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
    
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se completa una consulta, se actualizan las estadísticas en la vista.  
   
 ## <a name="examples"></a>Ejemplos  

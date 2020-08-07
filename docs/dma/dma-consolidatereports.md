@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435184"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823247"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluación de una empresa y consolidación de informes de evaluación con DMA.
 
@@ -197,7 +197,7 @@ También puede usar el script LoadWarehouse para proporcionar las instrucciones 
 
 Para trabajar con informes DMA, use marcadores y segmentaciones para filtrar por:
 
-- Tipos de evaluación (Azure SQL DB, Azure SQL MI, SQL local) 
+- Tipos de evaluación (Azure SQL Database, Azure SQL Instancia administrada, SQL Server) 
 - Nombre de instancia
 - Nombre de la base de datos
 - Nombre de equipo
@@ -212,8 +212,8 @@ Al seleccionar el marcador filtros, se habilita la siguiente hoja:
 
 Puede usar marcadores para cambiar el contexto de informes entre:
 
-- Evaluaciones de la nube de Azure SQL Database
-- Evaluaciones de la nube de Azure SQL MI
+- Azure SQL Database evaluaciones en la nube
+- Evaluaciones de la nube de Azure SQL Instancia administrada
 - Evaluaciones locales
 
 ![Marcadores de vistas de informes DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
@@ -274,7 +274,7 @@ Esta sección es la parte principal del informe, que muestra la preparación de 
 
 - InstanceDatabase
 - ChangeCategory
-- Título
+- Title
 - ObjectType
 - ImpactedObjectName
 

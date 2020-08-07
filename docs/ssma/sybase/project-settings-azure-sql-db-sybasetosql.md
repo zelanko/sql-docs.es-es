@@ -1,5 +1,5 @@
 ---
-title: Configuración del proyecto (Azure SQL DB) (SybaseToSQL) | Microsoft Docs
+title: Configuración del proyecto (Azure SQL Database) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,34 +9,34 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 829e7b0c51cd341193944fb2f28241f48618c407
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0348d548d21ea9b593aa7fe4aa14986607ba76fb
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176225"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863447"
 ---
-# <a name="project-settings-azure-sql-db--sybasetosql"></a>Configuración del proyecto (Azure SQL DB ) (SybaseToSQL)
-La configuración del proyecto de Azure SQL DB permite configurar el sufijo de base de datos de Azure SQL Database que se va a agregar en el cuadro de diálogo de conexión y también permitir la implementación del mecanismo de latido en la conexión de Azure SQL DB.  
+# <a name="project-settings-azure-sql-database--sybasetosql"></a>Configuración del proyecto (Azure SQL Database) (SybaseToSQL)
+La configuración del proyecto Azure SQL Database permite configurar el sufijo de la base de datos Azure SQL Database que se va a agregar en el cuadro de diálogo de conexión y también permitir la implementación del mecanismo de latido en Azure SQL Database conexión.  
   
-El panel Azure SQL DB está disponible en los cuadros de diálogo **configuración del proyecto** y **configuración predeterminada del proyecto** .  
+El panel Azure SQL Database está disponible en los cuadros de diálogo **configuración del proyecto** y **configuración predeterminada del proyecto** .  
   
--   Utilice el cuadro de diálogo Configuración del proyecto para establecer las opciones de configuración del proyecto actual. Para acceder a la configuración de Azure SQL DB, en el menú **herramientas** , seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, seleccione **Azure SQL dB**.  
+-   Utilice el cuadro de diálogo Configuración del proyecto para establecer las opciones de configuración del proyecto actual. Para obtener acceso a la configuración de Azure SQL Database, en el menú **herramientas** , seleccione **configuración del proyecto**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, seleccione **Azure SQL Database**.  
   
--   Utilice el cuadro de diálogo Configuración predeterminada del proyecto para establecer las opciones de configuración de todos los proyectos. Para acceder a la configuración de Azure SQL DB, en el menú **herramientas** , seleccione **configuración de DefaultProject**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, seleccione **Azure SQL dB**.  
+-   Utilice el cuadro de diálogo Configuración predeterminada del proyecto para establecer las opciones de configuración de todos los proyectos. Para obtener acceso a la configuración de Azure SQL Database, en el menú **herramientas** , seleccione **configuración de DefaultProject**, haga clic en **General** en la parte inferior del panel izquierdo y, a continuación, seleccione **Azure SQL Database**.  
   
 ## <a name="connectivity"></a>Conectividad  
 **Intervalo entre latidos**  
   
-Especifica un intervalo de tiempo que se va a usar para que el mecanismo de latido mantenga la conexión de Azure SQL DB activa en formato "minutos: segundos".  
+Especifica un intervalo de tiempo que se va a usar para que el mecanismo de latido mantenga el Azure SQL Database conexión activa en formato "minutos: segundos".  
   
 **Valor predeterminado**: ' 4:45 '  
   
 El valor debe especificarse en formato "m:SS" (por ejemplo, "4:45" o "0:50").  
   
-**Sufijo del servidor de Azure SQL Database**  
+**Sufijo de servidor Azure SQL Database**  
   
-Especifica un sufijo de servidor de Azure SQL Database.  
+Especifica un sufijo de servidor Azure SQL Database  
   
 **Valor predeterminado**: ' Database.Windows.net '.  
   

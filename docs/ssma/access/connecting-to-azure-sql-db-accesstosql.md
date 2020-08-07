@@ -1,5 +1,5 @@
 ---
-title: Conexión a Azure SQL DB (AccessToSQL) | Microsoft Docs
+title: Conexión a Azure SQL Database (AccessToSQL) | Microsoft Docs
 description: Obtenga información sobre cómo conectarse a una instancia de destino de Azure SQL Database para migrar bases de datos de Access. SSMA obtiene metadatos acerca de las bases de datos en Azure SQL Database.
 ms.prod: sql
 ms.custom: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293132"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822522"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>Conexión a Azure SQL DB (AccessToSQL)
+# <a name="connecting-to-azure-sql-database-accesstosql"></a>Conexión a Azure SQL Database (AccessToSQL)
 Para migrar bases de datos de Access a SQL Azure, debe conectarse a la instancia de destino de SQL Azure. Cuando se conecta, SSMA obtiene los metadatos de todas las bases de datos de la instancia de SQL Azure y muestra los metadatos de la base de datos en el explorador de metadatos de SQL Azure. SSMA almacena información acerca de la instancia de SQL Azure a la que está conectado, pero no almacena contraseñas.  
   
 La conexión a SQL Azure permanece activa hasta que se cierra el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse a SQL Azure si desea una conexión activa con el servidor. Puede trabajar sin conexión hasta que cargue los objetos de base de datos en SQL Azure y migre los datos.  

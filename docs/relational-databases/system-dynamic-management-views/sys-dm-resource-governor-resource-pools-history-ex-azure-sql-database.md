@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 04f0346e15043c105030b94eb96633e1f31b64d9
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 30c024fb1d1298e0ba2f2e4e49b2acf04d9b7619
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627309"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823900"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -94,7 +94,7 @@ Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 mi
 |**avg_data_io_percent**|decimal (5, 2)|Uso de E/S medio en porcentaje basado en el límite del grupo.|
 |**avg_log_write_percent**|decimal (5, 2)|Uso de recursos de escritura medio en porcentaje del límite del grupo.|
 |**avg_storage_percent**|decimal (5, 2)|Uso de almacenamiento medio en porcentaje del límite de almacenamiento del grupo.|
-|**avg_allocated_storage_percent**|decimal (5, 2)|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico. Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico. Para obtener más información, vea Administración del espacio de archivo en SQL Database.|
+|**avg_allocated_storage_percent**|decimal (5, 2)|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico. Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico. Para obtener más información, vea Administración del espacio de archivo en SQL Database|
 |**max_worker_percent**|decimal (5, 2)|Cantidad máxima de trabajos simultáneos (solicitudes) en porcentaje basado en el límite del grupo.|
 |**max_session_percent**|decimal (5, 2)|Cantidad máxima de sesiones simultáneas en porcentaje basado en el límite del grupo.|
 |||

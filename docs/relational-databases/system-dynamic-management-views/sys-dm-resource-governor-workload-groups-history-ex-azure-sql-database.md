@@ -18,17 +18,17 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 41378ba13c6c85059313595161aeeb4226c6731e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b112762df3ca05411594b1e1c03a04817c094d9
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718731"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823326"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 minutos (128 archivos en total) de las estadísticas de grupos de recursos para un Azure SQL Database.
+Devuelve una instantánea en un intervalo de 20 segundos durante los últimos 32 minutos (128 segundos en total) de las estadísticas de grupos de recursos para un Azure SQL Database.
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -79,7 +79,7 @@ Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 mi
 
 Esta vista requiere el permiso VIEW SERVER STATE.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Los usuarios pueden tener acceso a esta vista de administración dinámica para supervisar el consumo de recursos casi en tiempo real para el grupo de cargas de trabajo de usuario, así como los grupos internos del sistema de la instancia de Azure SQL Database.
 

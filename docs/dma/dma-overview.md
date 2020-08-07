@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: d74cb91c6e0cb9bc9a1c8dce53f8e93d355df5d2
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885802"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823607"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Información general de Data Migration Assistant
 
@@ -30,7 +30,7 @@ El Data Migration Assistant (DMA) le ayuda a actualizar a una plataforma de dato
   
 ## <a name="get-data-migration-assistant"></a>Obtener Data Migration Assistant
 
-Para instalar DMA, descargue la versión más reciente de la herramienta en el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=53595)y, a continuación, ejecute el archivo **DataMigrationAssistant. msi** .
+Para instalar DMA, descargue la versión más reciente de la herramienta en el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=53595)y, a continuación, ejecute el archivo de **DataMigrationAssistant.msi** .
 
 ## <a name="capabilities"></a>Funcionalidades
 
@@ -61,7 +61,7 @@ Para instalar DMA, descargue la versión más reciente de la herramienta en el [
 
 - Después de una migración correcta, las aplicaciones pueden conectarse a las bases de datos de SQL Server de destino sin problemas.
 
-- Evalúe los paquetes de SQL Server Integration Services local (SSIS) que migran a Azure SQL Database o Azure SQL Database instancia administrada. La evaluación ayuda a detectar problemas que pueden afectar a la migración. Estos se describen como problemas de compatibilidad y se organizan en las siguientes categorías:
+- Evalúe los paquetes de SQL Server Integration Services local (SSIS) que migran a Azure SQL Database o a Azure SQL Instancia administrada. La evaluación ayuda a detectar problemas que pueden afectar a la migración. Estos se describen como problemas de compatibilidad y se organizan en las siguientes categorías:
 
   - Bloqueadores de migración: detecta los problemas de compatibilidad que bloquean la migración de paquetes de origen a Azure. DMA proporciona recomendaciones para ayudarle a solucionar esos problemas.
 
@@ -82,8 +82,8 @@ DMA reemplaza todas las versiones anteriores de SQL Server Asesor de actualizaci
 - SQL Server 2008 R2
 - SQL Server 2012
 - SQL Server 2014
-- SQL Server 2016
--  SQL Server 2017 en Windows
+- SQL Server 2016
+- SQL Server 2017 en Windows
 
 **Destinos**
 
@@ -93,10 +93,10 @@ DMA reemplaza todas las versiones anteriores de SQL Server Asesor de actualizaci
 - SQL Server 2017 en Windows y Linux
 - SQL Server 2019
 - Base de datos única de Azure SQL Database
-- Instancia administrada de Azure SQL Database
+- Instancia administrada de Azure SQL
 - SQL Server que se ejecuta en una máquina virtual de Azure
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Evaluación de la migración de SQL Server](../dma/dma-assesssqlonprem.md)
 

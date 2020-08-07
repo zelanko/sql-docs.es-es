@@ -1,6 +1,6 @@
 ---
 title: Cree una evaluación de migración de SSIS con el Data Migration Assistant
-description: Aprenda a usar Data Migration Assistant para evaluar un servicio de integración SQL Server (SSIS) local antes de migrar a Azure SQL Database o Azure SQL Database instancia administrada
+description: Aprenda a usar Data Migration Assistant para evaluar un servicio de integración SQL Server (SSIS) local antes de migrar a Azure SQL Database o a Azure SQL Instancia administrada
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,16 +14,16 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74687158"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822200"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Realización de una evaluación de migración del servicio de integración de SQL Server con Data Migration Assistant
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para evaluar los paquetes de SQL Server Integration Service (SSIS), los componentes siguientes deben instalarse con Data Migration Assistant:
 
@@ -34,7 +34,7 @@ DMA debe ejecutarse con acceso de administrador para evaluar **los** paquetes SS
 
 ## <a name="performance-assessments"></a>Evaluaciones de rendimiento
 
-Las siguientes instrucciones paso a paso le ayudarán a realizar la primera evaluación de la migración de paquetes de SQL Server Integration Service (SSIS) a Azure SQL Database o Azure SQL Database instancia administrada, con Data Migration Assistant.
+Las siguientes instrucciones paso a paso le ayudarán a realizar la primera evaluación de la migración de paquetes de SQL Server Integration Service (SSIS) a Azure SQL Database o a Azure SQL Instancia administrada mediante el uso de Data Migration Assistant.
 
 ## <a name="create-an-assessment"></a>Crear una evaluación
 
@@ -42,7 +42,7 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
 1. Establezca el tipo de servidor de origen y de destino.
 
-    Seleccione el origen como **SQL Server**y establezca el tipo de servidor de destino como **Azure SQL Database** o **Azure SQL Database instancia administrada**.
+    Seleccione el origen como **SQL Server**y establezca el tipo de servidor de destino como **Azure SQL Database** o **Azure SQL instancia administrada**.
 
 1. Haga clic en **Crear**.
 
@@ -74,5 +74,5 @@ La categoría de problemas de compatibilidad proporciona características parcia
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Información general sobre la migración de cargas de trabajo de SSIS locales a SSIS en ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Migración de paquetes de SQL Server Integration Services a una instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Migración de paquetes de SQL Server Integration Services a Instancia administrada de Azure SQL](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [Reimplementación de paquetes de SQL Server Integration Services a Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

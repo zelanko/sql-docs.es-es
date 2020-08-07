@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: alexiva
-ms.openlocfilehash: 06fd04921d217bf81861c76a5b09769039be5ee7
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 1175a66a0d87296204825542dfb4021b568c30e6
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477377"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863858"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novedades de SSMA para Access (AccessToSQL)
 
@@ -114,9 +114,9 @@ La versión v 8.1 de SSMA para Access se ha mejorado con correcciones de destino
 
 La versión v 8.0 de SSMA para Access se ha mejorado con las correcciones de destino diseñadas para mejorar la calidad y las métricas de conversión. Esta versión también ofrece las siguientes características nuevas:
 
-* Compatibilidad con **instancia administrada de Azure SQL Database** como destino. Ahora puede crear nuevos proyectos que tengan como destino Instancia administrada de Azure SQL Database:
+* Compatibilidad con **Azure SQL instancia administrada** como destino. Ahora puede crear nuevos proyectos que tengan como destino Azure SQL Instancia administrada:
 
-  ![Proyecto de MI de base de SQL](../media/ssma-newproject-sqldbmi.png)
+  ![Proyecto de MI de SQL](../media/ssma-newproject-sqldbmi.png)
 
 * **Asesor de corrección**posterior a la conversión. Obtenga más información [aquí](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Accelerate-your-Oracle-migrations-with-new-machine-learning/ba-p/368733).
 
@@ -231,8 +231,8 @@ La versión de mantenimiento de enero de 2016 de SSMA para Access contiene los c
 
 La versión 2014 de julio de SSMA para Access contiene los cambios siguientes:
 
-* Conversión de código de Azure SQL DB mejorada.
-* Se ha cambiado la funcionalidad del paquete de extensiones al esquema para admitir Azure SQL DB.
+* Conversión de código Azure SQL Database mejorada.
+* Se ha cambiado la funcionalidad del paquete de extensiones al esquema para admitir Azure SQL Database.
 * Mejoras en el rendimiento de las bases de datos con más de 10 000 objetos.
 * Se han agregado mejoras de la interfaz de usuario para tratar con un gran número de objetos.
 * Se ha agregado compatibilidad con el resaltado de esquemas LOB "conocidos" (por lo que se pueden omitir en la conversión).

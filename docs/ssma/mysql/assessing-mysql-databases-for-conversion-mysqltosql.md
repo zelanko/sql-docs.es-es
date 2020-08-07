@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85923b0252eb24012c12e0c19937e076806b78bd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139206"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823812"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Evaluación de las bases de datos de MySQL para la conversión (MySQLToSQL)
 Antes de cargar objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe determinar la complejidad de la migración y el tiempo que tardará la migración. SSMA puede crear un informe de evaluación que muestre el porcentaje de objetos que se convertirán correctamente. SSMA también le permite ver los problemas específicos que causan errores de conversión.  
   
 ## <a name="creating-assessment-reports"></a>Creación de informes de evaluación  
-Cuando crea este informe de evaluación, SSMA convierte los objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MySQL seleccionados en sintaxis o SQL Azure y, a continuación, muestra los resultados.  
+Cuando crea este informe de evaluación, SSMA convierte los objetos de base de datos de MySQL seleccionados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sintaxis o SQL Azure y, a continuación, muestra los resultados.  
   
 **Para crear un informe de evaluación**  
   
@@ -76,11 +76,11 @@ En el panel de estadísticas de conversión se muestran las estadísticas de con
   
 -   En MySQL, puede modificar el objeto MySQL para quitar o revisar el código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, consulte [conexión a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
   
--   Puede excluir el objeto de la migración. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure el explorador de metadatos y el explorador de metadatos de MySQL, desactive la casilla situada junto al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elemento antes de cargar los objetos en o SQL Azure y migrar datos de MySQL.  
+-   Puede excluir el objeto de la migración. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure el explorador de metadatos y el explorador de metadatos de MySQL, desactive la casilla situada junto al elemento antes de cargar los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure y migrar datos de MySQL.  
   
 ## <a name="next-step"></a>siguiente paso  
 [Conversión de bases de datos MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>Consulte también  
-[Migración de bases de datos de MySQL a SQL Server: Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migración de bases de datos de MySQL a SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

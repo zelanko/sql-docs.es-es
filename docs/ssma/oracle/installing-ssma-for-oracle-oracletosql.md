@@ -11,15 +11,15 @@ ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: b97da15fb97c348afa694eb399d2a0c9a2f08928
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 3938d01e98bfb2a57057d9573ee7199f0b12fc14
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292917"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864852"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Instalación de SSMA para Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para Oracle se compone de una aplicación cliente que se utiliza para realizar una migración desde Oracle hasta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Azure SQL dB. También contiene un paquete de extensión que admite la migración de datos y el uso de las funciones del sistema de Oracle en las bases de datos migradas.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para Oracle se compone de una aplicación cliente que se utiliza para realizar una migración de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Azure SQL Database. También contiene un paquete de extensión que admite la migración de datos y el uso de las funciones del sistema de Oracle en las bases de datos migradas.  
   
 Instale la aplicación cliente en el equipo desde el que llevará a cabo los pasos de migración. Debe instalar los archivos del paquete de extensión en el equipo donde se hospedarán las bases de datos migradas. Dicho equipo debe estar ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

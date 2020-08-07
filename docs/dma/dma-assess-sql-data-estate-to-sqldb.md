@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054268"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864942"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Evaluar la preparación de una SQL Server la migración de datos a Azure SQL Database mediante el Data Migration Assistant
 
@@ -99,7 +99,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
 1. A la izquierda, seleccione el **+** icono y, a continuación, seleccione el **tipo de proyecto** evaluación.
 2. Especifique el nombre del proyecto y, a continuación, seleccione los tipos de servidor de origen y de servidor de destino.
 
-    Si está actualizando la instancia de SQL Server local a una versión posterior de SQL Server o SQL Server hospedada en una máquina virtual de Azure, establezca el tipo de servidor de origen y de destino en **SQL Server**. Establezca el tipo de servidor de destino en **instancia administrada de Azure SQL Database** para una evaluación de preparación de destino de Azure SQL Database (PaaS).
+    Si está actualizando la instancia de SQL Server local a una versión posterior de SQL Server o SQL Server hospedada en una máquina virtual de Azure, establezca el tipo de servidor de origen y de destino en **SQL Server**. Establezca el tipo de servidor de destino en **Azure SQL instancia administrada** para obtener una evaluación de preparación de destino de Azure SQL Database (PaaS).
 
 3. Seleccione **Crear**.
 
@@ -159,7 +159,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
    ![Azure Migrate: revisar los resultados de la preparación](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
     **Instancias de base de datos evaluadas**: el número de instancias de SQL Server que se han evaluado hasta ahora.
-    **Bases de datos evaluadas**: número total de bases de datos evaluadas en una o varias instancias de SQL Server se han evaluado **las bases de datos listas para**la base de datos SQL: el número de bases de datos que están listas para la migración a Azure SQL Database (PaaS).
+    **Bases de datos evaluadas**: número total de bases de datos evaluadas en una o varias instancias de SQL Server se han evaluado **las bases de datos preparadas para SQL Database**: el número de bases de datos que están listas para migrar a Azure SQL Database (PaaS).
     **Bases de datos listas para la máquina virtual de Azure SQL**: el número de bases de datos consta de uno o varios bloqueadores de migración para Azure SQL Database (PaaS), pero está listo para migrar a Azure SQL Server máquinas virtuales.
 
 3. Seleccione **instancias de base de datos evaluadas** para obtener acceso a SQL Server vista de nivel de instancia.
@@ -178,7 +178,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
 
    ![Azure Migrate-revisar los bloqueadores de migración](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Vea también
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: opciones de configuración](../dma/dma-configurationsettings.md)

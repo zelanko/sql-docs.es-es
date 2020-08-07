@@ -10,12 +10,12 @@ ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 02d1d499cb9030b737028e59219fd779bde295c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 135d0ef298a0b3ddc8d617080d535a71bfe80586
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264672"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864832"
 ---
 # <a name="new-project-oracletosql"></a>Nuevo proyecto (OracleToSQL)
 Utilice el cuadro de diálogo **nuevo proyecto** para crear un nuevo proyecto de SSMA. Para tener acceso al cuadro de diálogo **nuevo proyecto** , en el menú **archivo** , haga clic en **nuevo proyecto**.  
@@ -40,5 +40,5 @@ Seleccione una de las siguientes versiones de la base de datos de destino en la 
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   Azure SQL DB  
+-   Azure SQL Database  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 79fbe8ea-471b-407a-be2a-4100d9b57c61
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 4628f745f17a3a694d20fe27c134753bc108a6b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: baf581fcec3caaf6bbb9fedad868e59d22b866e1
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141053"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823706"
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>Instalación de SSMA para DB2 (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para DB2 consta de una aplicación cliente que se utiliza para realizar una migración desde DB2 hasta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Azure SQL dB. También contiene un paquete de extensión que admite la migración de datos y el uso de funciones del sistema DB2 en las bases de datos migradas.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para DB2 consta de una aplicación cliente que se utiliza para realizar una migración desde DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Azure SQL Database. También contiene un paquete de extensión que admite la migración de datos y el uso de funciones del sistema DB2 en las bases de datos migradas.  
   
 Instale la aplicación cliente en el equipo desde el que llevará a cabo los pasos de migración. El cliente implementa el paquete de extensión y no requiere una instalación independiente.  
   
@@ -29,7 +29,7 @@ Si desea actualizar a una versión posterior de SSMA para DB2, primero debe desi
 |Tema|Descripción|  
 |---------|---------------|  
 |[Instalación de SSMA para el cliente DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|Proporciona información e instrucciones para instalar el cliente de SSMA.|  
-|[Instalación de componentes de SSMA en SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)|Proporciona información e instrucciones para instalar el paquete de extensión en las instancias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.|  
+|[Instalación de componentes de SSMA en SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)|Proporciona información e instrucciones para instalar el paquete de extensión en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Quitar SSMA para componentes de DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/removing-ssma-for-db2-components-db2tosql.md)|Proporciona instrucciones para desinstalar el programa cliente y el paquete de extensión.|  
   
 ## <a name="see-also"></a>Consulte también  

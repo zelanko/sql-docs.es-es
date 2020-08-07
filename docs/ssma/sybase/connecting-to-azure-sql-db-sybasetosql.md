@@ -1,5 +1,5 @@
 ---
-title: Conexión a Azure SQL DB (SybaseToSQL) | Microsoft Docs
+title: Conexión a Azure SQL Database (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,42 +9,42 @@ ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 10be1dc3652c944b9de08a01b0f4cdff5ae5849a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a16ade8d212d3d197b858488dde05b439d8e989f
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176241"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864762"
 ---
-# <a name="connecting-to-azure-sql-db-sybasetosql"></a>Conexión a Azure SQL DB (SybaseToSQL)
-Para migrar bases de datos de Sybase a Azure SQL DB, debe conectarse a la instancia de destino de Azure SQL DB. Cuando se conecta, SSMA obtiene los metadatos de todas las bases de datos de la instancia de Azure SQL Database y muestra los metadatos de la base de datos en el explorador de metadatos de Azure SQL DB. SSMA almacena información de la instancia de Azure SQL DB a la que está conectado, pero no almacena contraseñas.  
+# <a name="connecting-to-azure-sql-database-sybasetosql"></a>Conexión a Azure SQL Database (SybaseToSQL)
+Para migrar bases de datos de Sybase a Azure SQL Database, debe conectarse a la instancia de destino de Azure SQL Database. Cuando se conecta, SSMA obtiene los metadatos de todas las bases de datos de la instancia de Azure SQL Database y muestra los metadatos de la base de datos en el explorador de metadatos de Azure SQL Database. SSMA almacena información de la instancia de Azure SQL Database a la que está conectado, pero no almacena contraseñas.  
   
-La conexión a Azure SQL DB permanece activa hasta que se cierra el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse a Azure SQL DB si desea una conexión activa con el servidor. Puede trabajar sin conexión hasta que cargue los objetos de base de datos en Azure SQL DB y migre los datos.  
+La conexión a Azure SQL Database permanece activa hasta que se cierra el proyecto. Cuando vuelva a abrir el proyecto, debe volver a conectarse a Azure SQL Database si desea una conexión activa con el servidor. Puede trabajar sin conexión hasta que cargue los objetos de base de datos en Azure SQL Database y migre los datos.  
   
-Los metadatos sobre la instancia de Azure SQL DB no se sincronizan automáticamente. En su lugar, para actualizar los metadatos en el explorador de metadatos de Azure SQL Database, debe actualizar manualmente los metadatos de la base de datos SQL de Azure. Para obtener más información, vea la sección "sincronización de metadatos de Azure SQL DB" más adelante en este tema.  
+Los metadatos sobre la instancia de Azure SQL Database no se sincronizan automáticamente. En su lugar, para actualizar los metadatos en Azure SQL Database explorador de metadatos, debe actualizar manualmente los metadatos de Azure SQL Database. Para obtener más información, vea la sección "sincronizar metadatos de Azure SQL Database" más adelante en este tema.  
   
-## <a name="required-azure-sql-db-permissions"></a>Permisos necesarios de Azure SQL Database  
-La cuenta que se usa para conectarse a Azure SQL DB requiere permisos diferentes en función de las acciones que realiza la cuenta:  
+## <a name="required-azure-sql-database-permissions"></a>Permisos Azure SQL Database necesarios  
+La cuenta que se usa para conectarse a Azure SQL Database requiere permisos diferentes en función de las acciones que realiza la cuenta:  
   
-1.  Para convertir objetos de Sybase [!INCLUDE[tsql](../../includes/tsql-md.md)] en sintaxis, actualizar metadatos de Azure SQL dB o guardar la sintaxis convertida en scripts, la cuenta debe tener permiso para iniciar sesión en la instancia de base de datos SQL de Azure.  
+1.  Para convertir objetos de Sybase en [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis, actualizar metadatos de Azure SQL Database, o para guardar la sintaxis convertida en scripts, la cuenta debe tener permiso para iniciar sesión en la instancia de Azure SQL Database.  
   
-2.  Para cargar objetos de base de datos en Azure SQL DB, el requisito de permiso mínimo es la pertenencia al rol de base de datos **db_owner** en la base de datos de destino.  
+2.  Para cargar los objetos de base de datos en Azure SQL Database, el requisito de permiso mínimo es la pertenencia al rol de base de datos **db_owner** en la base de datos de destino.  
   
-## <a name="establishing-an-azure-sql-db-connection"></a>Establecimiento de una conexión a Azure SQL DB  
-Antes de convertir los objetos de base de datos de Sybase a la sintaxis de Azure SQL Database, debe establecer una conexión con la instancia de base de datos SQL de Azure en la que desea migrar la base de datos o las bases de datos de Sybase.  
+## <a name="establishing-an-azure-sql-database-connection"></a>Establecimiento de una conexión Azure SQL Database  
+Antes de convertir los objetos de base de datos de Sybase en Azure SQL Database sintaxis, debe establecer una conexión con la instancia de Azure SQL Database en la que desea migrar la base de datos o las bases de datos de Sybase.  
   
-Al definir las propiedades de conexión, también se especifica la base de datos en la que se migrarán los objetos y los datos. Puede personalizar esta asignación en el nivel de esquema de Sybase después de conectarse a Azure SQL DB. Para obtener más información, consulte [asignación de esquemas de Sybase ase a esquemas de SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
+Al definir las propiedades de conexión, también se especifica la base de datos en la que se migrarán los objetos y los datos. Puede personalizar esta asignación en el nivel de esquema de Sybase después de conectarse a Azure SQL Database. Para obtener más información, consulte [asignación de esquemas de Sybase ase a esquemas de SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
   
 > [!WARNING]  
-> Antes de intentar conectarse a Azure SQL DB, asegúrese de que la instancia de Azure SQL DB se está ejecutando y puede aceptar conexiones.  
+> Antes de intentar conectarse a Azure SQL Database, asegúrese de que la instancia de Azure SQL Database se está ejecutando y puede aceptar conexiones.  
   
-**Para conectarse a Azure SQL DB**  
+**Para conectarse a Azure SQL Database**  
   
-1.  En el menú **archivo** , seleccione **conectarse a Azure SQL dB**(esta opción se habilita después de la creación de un proyecto).  
+1.  En el menú **archivo** , seleccione **conectarse a Azure SQL Database**(esta opción se habilita después de la creación de un proyecto).  
   
-    Si previamente se ha conectado a Azure SQL DB, el nombre del comando se volverá **a conectar a Azure SQL dB**  
+    Si previamente se ha conectado a Azure SQL Database, el nombre del comando se volverá **a conectar a Azure SQL Database**  
   
-2.  En el cuadro de diálogo conexión, escriba o seleccione el nombre del servidor de Azure SQL DB.  
+2.  En el cuadro de diálogo conexión, escriba o seleccione el nombre del servidor de Azure SQL Database.  
   
 3.  Escriba, seleccione o **examine** el nombre de la base de datos.  
   
@@ -52,21 +52,21 @@ Al definir las propiedades de conexión, también se especifica la base de datos
   
 5.  Escriba la **contraseña**.  
   
-6.  SSMA recomienda una conexión cifrada a Azure SQL DB.  
+6.  SSMA recomienda una conexión cifrada para Azure SQL Database.  
   
 7.  Haga clic en **Conectar**.  
   
 > [!IMPORTANT]  
-> SSMA para Sybase no admite la conexión a la base de datos **maestra** en Azure SQL dB.  
+> SSMA para Sybase no admite la conexión a la base de datos **maestra** en Azure SQL Database.  
   
-## <a name="synchronizing-azure-sql-db-metadata"></a>Sincronización de metadatos de Azure SQL DB  
-Los metadatos acerca de las bases de datos de base de datos SQL de Azure no se actualizan automáticamente. Los metadatos del explorador de metadatos de Azure SQL Database son una instantánea de los metadatos la primera vez que se conecta a Azure SQL DB o la última vez que se actualizaron los metadatos manualmente. Puede actualizar manualmente los metadatos de todas las bases de datos o de cualquier base de datos o objeto de base de datos.  
+## <a name="synchronizing-azure-sql-database-metadata"></a>Sincronizar metadatos de Azure SQL Database  
+Los metadatos acerca de Azure SQL Database bases de datos no se actualizan automáticamente. Los metadatos de Azure SQL Database explorador de metadatos es una instantánea de los metadatos cuando se conectó por primera vez a Azure SQL Database, o la última vez que se actualizaron los metadatos manualmente. Puede actualizar manualmente los metadatos de todas las bases de datos o de cualquier base de datos o objeto de base de datos.  
   
 **Para sincronizar los metadatos**  
   
-1.  Asegúrese de que está conectado a Azure SQL DB.  
+1.  Asegúrese de que está conectado a Azure SQL Database.  
   
-2.  En el explorador de metadatos de Azure SQL Database, active la casilla situada junto a la base de datos o el esquema de la base de datos que desea actualizar.  
+2.  En Azure SQL Database explorador de metadatos, active la casilla situada junto a la base de datos o el esquema de la base de datos que desea actualizar.  
   
     Por ejemplo, para actualizar los metadatos de todas las bases de datos, active la casilla situada junto a bases de datos.  
   
@@ -75,14 +75,14 @@ Los metadatos acerca de las bases de datos de base de datos SQL de Azure no se a
 ## <a name="next-step"></a>siguiente paso  
 El siguiente paso de la migración depende de las necesidades del proyecto:  
   
--   Para personalizar la asignación entre los esquemas de Sybase y las bases de datos y los esquemas de Azure SQL Database, consulte [asignación de esquemas de Sybase ase a esquemas de SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
+-   Para personalizar la asignación entre esquemas de Sybase y bases de datos y esquemas de Azure SQL Database, consulte [asignación de esquemas de Sybase ase a esquemas de SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)  
   
 -   Para personalizar las opciones de configuración de los proyectos, vea [establecer opciones de proyecto &#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)  
   
 -   Para personalizar la asignación de los tipos de datos de origen y de destino, consulte [asignación de tipos de datos de Sybase ase y SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)  
   
--   Si no tiene que realizar ninguna de estas tareas, puede convertir las definiciones de objetos de base de datos de Sybase en definiciones de objetos de Azure SQL DB. Para obtener más información, consulte [conversión de objetos de base de datos de Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
+-   Si no tiene que realizar ninguna de estas tareas, puede convertir las definiciones de objetos de base de datos de Sybase en Azure SQL Database definiciones de objeto. Para obtener más información, consulte [conversión de objetos de base de datos de Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>Consulte también  
-[Migración de bases de datos de Sybase ASE a SQL Server: Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migración de bases de datos de Sybase ASE a SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

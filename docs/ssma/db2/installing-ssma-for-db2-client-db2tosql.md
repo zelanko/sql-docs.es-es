@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4d069d7b34b590f8d2681a136f91ed327755d5a3
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 5b9679451c1052423cb412b85bf8dde25c4a8351
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411623"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823720"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Instalación de SSMA para el cliente DB2 (DB2ToSQL)
 
@@ -39,7 +39,7 @@ Antes de instalar SSMA, asegúrese de que el equipo cumple los requisitos siguie
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o versiones posteriores.
 - La [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versión 4.7.2 o una versión posterior. Puede obtenerlo en el [Centro para desarrolladores de .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Proveedor OLE DB de Microsoft para DB2 versión 5 o una versión posterior y la conectividad con las bases de datos DB2 que desea migrar.
-- Acceso y permisos suficientes en el equipo que hospeda la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL dB, donde se van a migrar los datos y los objetos de base de datos. Para obtener más información, vea [conectarse a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).
+- Acceso a y permisos suficientes en el equipo que hospeda la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database donde va a migrar los datos y los objetos de base de datos. Para obtener más información, vea [conectarse a SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).
 - se recomiendan 4 GB de RAM.
 
 ## <a name="microsoft-ole-db-provider-for-db2"></a>Proveedor Microsoft OLE DB para DB2
@@ -64,7 +64,7 @@ Para instalar el cliente de SSMA:
 
 La ubicación de instalación predeterminada es `C:\Program Files\Microsoft SQL Server Migration Assistant for DB2`.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instalación de componentes de SSMA en SQL Server](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)
 - [Migración de bases de datos de DB2 a SQL Server](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)

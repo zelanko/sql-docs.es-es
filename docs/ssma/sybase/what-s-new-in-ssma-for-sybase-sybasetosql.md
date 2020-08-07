@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477327"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864712"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novedades de SSMA para SAP ASE (SybaseToSQL)
 
@@ -114,9 +114,9 @@ La versión v 8.1 de SSMA para SAP ASE se ha mejorado con correcciones de destin
 
 La versión 8.0 de SSMA para SAP ASE se ha mejorado con las correcciones de destino diseñadas para mejorar la calidad y las métricas de conversión. Además, esta versión ofrece las siguientes características nuevas:
 
-* Compatibilidad con **instancia administrada de Azure SQL Database** como destino. Ahora puede crear nuevos proyectos que tengan como destino Instancia administrada de Azure SQL Database:
+* Compatibilidad con **Azure SQL instancia administrada** como destino. Ahora puede crear nuevos proyectos que tengan como destino Azure SQL Instancia administrada:
 
-  ![Proyecto de MI de base de SQL](../media/ssma-newproject-sqldbmi.png)
+  ![Proyecto de SQL Database MI](../media/ssma-newproject-sqldbmi.png)
 
 * **Asesor de corrección**posterior a la conversión. Obtenga más información [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -236,8 +236,8 @@ La versión de mantenimiento de enero de 2016 de SSMA para Sybase contiene los s
 
 La versión 2014 de julio de SSMA para Sybase contiene los siguientes cambios:
 
-* Conversión de código de Azure SQL DB mejorada.
-* Se ha cambiado la funcionalidad del paquete de extensiones al esquema para admitir Azure SQL DB.
+* Conversión de código Azure SQL Database mejorada.
+* Se ha cambiado la funcionalidad del paquete de extensiones al esquema para admitir Azure SQL Database.
 * Se han realizado mejoras en el rendimiento de las bases de datos con más de 10 000 objetos.
 * Se han agregado mejoras de la interfaz de usuario para tratar con un gran número de objetos.
 * Se ha agregado la capacidad de resaltar esquemas de LOB conocidos (por lo que se pueden omitir en la conversión).
@@ -340,6 +340,6 @@ La versión de noviembre de 2006 de SSMA para Sybase contiene los siguientes cam
 
 La versión de julio de 2006 de SSMA para Sybase fue la versión inicial.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Introducción con SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

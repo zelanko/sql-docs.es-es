@@ -20,12 +20,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8efc79ed772d92986af87a707cf64f4c0f9cbdcf
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442545"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865373"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -89,7 +89,7 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, la *infraestr
 > La consulta en investigación tiene que iniciarse **después** de que se haya habilitado la infraestructura de generación de perfiles de consulta, lo que lo habilitará después de iniciar la consulta no producirá resultados en `sys.dm_exec_query_profiles` . Para obtener más información sobre cómo habilitar las infraestructuras de generación de perfiles de consulta, consulte la [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Permisos  
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] instancia administrada, requiere `VIEW DATABASE STATE` el permiso y la pertenencia al `db_owner` rol de base de datos.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y Azure SQL instancia administrada, requiere `VIEW DATABASE STATE` el permiso y la pertenencia al rol de la `db_owner` base de datos.   
 En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
    
 ## <a name="examples"></a>Ejemplos  

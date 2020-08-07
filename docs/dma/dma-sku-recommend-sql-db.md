@@ -14,36 +14,36 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885833"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864912"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificación de la SKU de Azure SQL Database/Instancia administrada adecuada para la base de datos local
 
 La migración de bases de datos a la nube puede ser complicada, especialmente cuando se intenta seleccionar el mejor destino y la SKU de Azure Database para la base de datos. Nuestro objetivo con el Migration Assistant de base de datos (DMA) es ayudar a abordar estas preguntas y facilitar la migración de la base de datos proporcionando estas recomendaciones de SKU en una salida fácil de utilizar.
 
-Este artículo se centra en la característica de recomendaciones de SKU de Azure SQL Database de DMA. Azure SQL Database tiene varias opciones de implementación, entre las que se incluyen:
+Este artículo se centra en la característica de recomendaciones de SKU de Azure SQL Database de DMA. Azure SQL Database y Azure SQL Instancia administrada tienen varias opciones de implementación, entre las que se incluyen:
 
 - Base de datos única
 - Grupos elásticos
 - instancia administrada
 
-La característica de recomendaciones de SKU le permite identificar el mínimo recomendado Azure SQL Database la SKU de una sola base de datos o instancia administrada en función de los contadores de rendimiento recopilados de los equipos que hospedan las bases de datos. La característica proporciona recomendaciones relacionadas con el plan de tarifa, el nivel de proceso y el tamaño máximo de los datos, así como el costo estimado al mes. También ofrece la posibilidad de aprovisionar masivamente bases de datos únicas e instancias administradas en Azure para todas las bases de datos recomendadas.
+La característica de recomendaciones de SKU le permite identificar el mínimo recomendado Azure SQL Database base de datos única o la SKU de Azure SQL Instancia administrada en función de los contadores de rendimiento recopilados de los equipos que hospedan las bases de datos. La característica proporciona recomendaciones relacionadas con el plan de tarifa, el nivel de proceso y el tamaño máximo de los datos, así como el costo estimado al mes. También ofrece la posibilidad de aprovisionar masivamente bases de datos únicas e instancias administradas para todas las bases de datos recomendadas.
 
 > [!NOTE]
 > Esta funcionalidad está actualmente disponible solo a través de la interfaz de la línea de comandos (CLI).
 
-Las siguientes son instrucciones para ayudarle a determinar las recomendaciones de SKU de Azure SQL Database y aprovisionar las bases de datos únicas correspondientes o las instancias administradas de Azure mediante DMA.
+Las siguientes son instrucciones para ayudarle a determinar las recomendaciones de la SKU y aprovisionar las bases de datos únicas correspondientes o las instancias administradas de Azure mediante DMA.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Descargue e instale la versión más reciente de [DMA](https://aka.ms/get-dma). Si ya tiene una versión anterior de la herramienta, ábrala y se le pedirá que actualice el DMA.
 - Asegúrese de que el equipo tiene la [versión 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o posterior de PowerShell, que es necesaria para ejecutar todos los scripts. Para obtener información sobre cómo averiguar qué versión de PowerShell está instalada en el equipo, consulte el artículo [Descargar e instalar Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Asegúrese de que el equipo tiene instalado el módulo de Azure PowerShell. Para obtener más información, vea el artículo [instalar el módulo de Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
-- Compruebe que el archivo de PowerShell **SkuRecommendationDataCollectionScript. PS1**, que es necesario para recopilar los contadores de rendimiento, está instalado en la carpeta DMA.
+- Compruebe que el archivo de PowerShell **SkuRecommendationDataCollectionScript.ps1**, que es necesario para recopilar los contadores de rendimiento, está instalado en la carpeta DMA.
 - Asegúrese de que el equipo en el que va a realizar este proceso tenga permisos de administrador en el equipo que hospeda las bases de datos de.
 
 ## <a name="collect-performance-counters"></a>Recopilar contadores de rendimiento
@@ -52,7 +52,7 @@ El primer paso del proceso es recopilar los contadores de rendimiento de las bas
 
 No es necesario realizar esta tarea para cada base de datos individualmente. Los contadores de rendimiento recopilados de un equipo se pueden usar para recomendar la SKU para todas las bases de datos hospedadas en el equipo.
 
-1. En la carpeta DMA, busque el archivo de PowerShell SkuRecommendationDataCollectionScript. ps1. Este archivo es necesario para recopilar los contadores de rendimiento.
+1. En la carpeta DMA, busque el archivo de PowerShell SkuRecommendationDataCollectionScript.ps1. Este archivo es necesario para recopilar los contadores de rendimiento.
 
     ![Archivo de PowerShell que se muestra en la carpeta DMA](../dma/media/dma-sku-recommend-data-collection-file.png)
 
@@ -80,9 +80,9 @@ Use el archivo de salida de los contadores de rendimiento que creó como entrada
 
 En el caso de la opción de base de datos única, DMA proporcionará recomendaciones para el Azure SQL Database plan de tarifa de base de datos única, el nivel de proceso y el tamaño de datos máximo para cada base de datos del equipo. Si tiene varias bases de datos en el equipo, también puede especificar las bases de datos para las que desea obtener recomendaciones. DMA también le proporcionará el costo mensual estimado para cada base de datos.
 
-En el caso de la instancia administrada, las recomendaciones admiten un escenario de elevación y desplazamiento. Como resultado, DMA le proporcionará recomendaciones para el plan de tarifa de Azure SQL Database instancia administrada, el nivel de proceso y el tamaño máximo de los datos para el conjunto de bases de datos del equipo. De nuevo, si tiene varias bases de datos en el equipo, también puede especificar las bases de datos para las que desea obtener recomendaciones. DMA también le proporcionará el costo mensual estimado para la instancia administrada.
+En el caso de la instancia administrada, las recomendaciones admiten un escenario de elevación y desplazamiento. Como resultado, DMA le proporcionará recomendaciones para el plan de tarifa de Azure SQL Instancia administrada, el nivel de proceso y el tamaño máximo de los datos para el conjunto de bases de datos del equipo. De nuevo, si tiene varias bases de datos en el equipo, también puede especificar las bases de datos para las que desea obtener recomendaciones. DMA también le proporcionará el costo mensual estimado para la instancia administrada.
 
-Para usar la CLI de DMA para obtener recomendaciones de SKU, en el símbolo del sistema, ejecute dmacmd. exe con los siguientes argumentos:
+Para usar la CLI de DMA para obtener recomendaciones de SKU, en el símbolo del sistema, ejecute dmacmd.exe con los siguientes argumentos:
 
 - **/Action = SkuRecommendation**: escriba este argumento para ejecutar evaluaciones de SKU.
 - **/SkuRecommendationInputDataFilePath**: la ruta de acceso al archivo de contador recopilado en la sección anterior.
@@ -176,15 +176,15 @@ En el caso de recomendaciones de instancia administrada, el archivo de salida TS
 A continuación se muestra una descripción de cada columna del archivo de salida.
 
 - **DatabaseName** : el nombre de la base de datos.
-- **MetricType** : recomendado Azure SQL Database nivel de base de datos única o de instancia administrada.
-- **MetricValue** : se recomienda Azure SQL Database SKU de base de datos única o instancia administrada.
+- **MetricType** : nivel de rendimiento recomendado.
+- **MetricValue** : SKU recomendada.
 - **PricePerMonth** : el precio estimado al mes para la SKU correspondiente.
 - **RegionName** : el nombre de la región de la SKU correspondiente. 
 - **IsTierRecommended** : se crea una recomendación de SKU mínima para cada nivel. A continuación, se aplica la heurística para determinar el nivel correcto de la base de datos. Esto refleja el nivel recomendado para la base de datos. 
 - **ExclusionReasons** : este valor está en blanco si se recomienda un nivel. Para cada nivel que no se recomienda, se proporcionan las razones por las que no se ha seleccionado.
 - **AppliedRules** : notación breve de las reglas que se aplicaron.
 
-El nivel final recomendado (es decir, **MetricType**) y el valor (es decir, **MetricValue**): se encuentra donde la columna **IsTierRecommended** es true, refleja la SKU mínima necesaria para que las consultas se ejecuten en Azure con una tasa de éxito similar a las bases de datos locales. En el caso de la instancia administrada, DMA actualmente admite recomendaciones para el 8vcore que se usa con más frecuencia para 40vcore SKU. Por ejemplo, si la SKU mínima recomendada es S4 para el nivel estándar, la elección de S3 o inferior hará que las consultas agoten el tiempo de espera o no se ejecuten.
+El nivel final recomendado (es decir, **MetricType**) y el valor (es decir, **MetricValue**): se encuentra donde la columna **IsTierRecommended** es true, refleja la SKU mínima necesaria para que las consultas se ejecuten en Azure con una tasa de éxito similar a las bases de datos locales. En el caso de Azure SQL Instancia administrada, DMA actualmente admite recomendaciones para el 8vcore que se usa con más frecuencia para 40vcore SKU. Por ejemplo, si la SKU mínima recomendada es S4 para el nivel estándar, la elección de S3 o inferior hará que las consultas agoten el tiempo de espera o no se ejecuten.
 
 El archivo HTML contiene esta información en un formato gráfico. Proporciona un medio descriptivo para ver la recomendación final y aprovisionar la siguiente parte del proceso. En la sección siguiente se muestra más información sobre la salida HTML.
 
@@ -198,7 +198,7 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
 
 **Para recomendaciones de base de datos única**
 
-![Pantalla de recomendaciones de SKU de Azure SQL Database](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+![Azure SQL Database pantalla de recomendaciones de SKU](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
 1. Abra el archivo HTML y escriba la siguiente información:
     - **Identificador de suscripción** : el identificador de suscripción de la suscripción de Azure en la que desea aprovisionar las bases de datos.
@@ -214,7 +214,7 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
 
     Este proceso debe crear todas las bases de datos que ha seleccionado en la página HTML.
 
-**Recomendaciones de instancia administrada**
+**Recomendaciones de Azure SQL Instancia administrada**
 
 ![Pantalla de recomendaciones de SKU de Azure SQL MI](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 
@@ -235,6 +235,6 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
     > [!NOTE]
     > La creación de instancias administradas en una subred (especialmente por primera vez) puede tardar varias horas en completarse. Después de ejecutar el script de aprovisionamiento a través de PowerShell, puede comprobar el estado de la implementación en Azure portal.
 
-## <a name="next-step"></a>Siguiente paso
+## <a name="next-step"></a>Paso siguiente
 
 - Para obtener una lista completa de los comandos para ejecutar DMA desde la CLI, consulte el artículo [ejecución de Data Migration Assistant desde la línea de comandos](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017).

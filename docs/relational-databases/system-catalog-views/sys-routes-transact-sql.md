@@ -20,12 +20,12 @@ ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 831447faa71c3386f394e456f3cbf1243f222083
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b15dc8ebf9bbe9616ada47627a638b7d34d7c278
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901683"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862933"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "85901683"
 |**principal_id**|**int**|Identificador de la base de datos de la entidad de seguridad propietaria de la ruta. Acepta valores NULL.|  
 |**remote_service_name**|**nvarchar(256)**|Nombre del servicio remoto. Acepta valores NULL.|  
 |**broker_instance**|**nvarchar(128)**|Identificador del agente que hospeda el servicio remoto. Acepta valores NULL.|  
-|**validez**|**datetime**|Fecha y hora de expiración de la ruta. Tenga en cuenta que este valor no usa la zona horaria local. En lugar de ello, el valor muestra la fecha de expiración de UTC. Acepta valores NULL.|  
-|**address**|**nvarchar(256)**|Dirección de red a la que Service Broker envía mensajes para el servicio remoto. Acepta valores NULL. Por Instancia administrada de SQL Database, la dirección debe ser local.|  
+|**lifetime**|**datetime**|Fecha y hora de expiración de la ruta. Tenga en cuenta que este valor no usa la zona horaria local. En lugar de ello, el valor muestra la fecha de expiración de UTC. Acepta valores NULL.|  
+|**address**|**nvarchar(256)**|Dirección de red a la que Service Broker envía mensajes para el servicio remoto. Acepta valores NULL. En el caso de SQL Instancia administrada, la dirección debe ser local.|  
 |**mirror_address**|**nvarchar(256)**|Dirección de red del asociado de reflejo para el servidor especificado en la dirección. Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  

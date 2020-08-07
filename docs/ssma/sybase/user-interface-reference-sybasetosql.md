@@ -9,26 +9,26 @@ ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 14c817420c13e7355c43324bf09fcb3abc6737dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 997566ef168b53397ad7c76014012d671fb25c91
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020862"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864732"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referencia de la interfaz de usuario (SybaseToSQL)
-En esta sección se incluyen los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] temas de ayuda de Migration Assistant (SSMA) para Sybase.  
+En esta sección se incluyen los temas de ayuda de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para Sybase.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 |Tema|Descripción|  
 |---------|---------------|  
 |[Selección avanzada de objetos &#40;SybaseToSQL&#41;](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|Utilice el cuadro de diálogo **Seleccionar objeto avanzado** para buscar objetos de base de datos mediante criterios de filtro y, a continuación, Active o desactive esos objetos.|  
-|[Informe de evaluación &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|Use el informe de evaluación para ver los resultados de la conversión de objetos de Sybase Adaptive Server Enterprise (ASE [!INCLUDE[tsql](../../includes/tsql-md.md)] ) en sintaxis y para calcular el tiempo y la complejidad de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migración a o SQL Azure.|  
-|[Conéctese a SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sql-server-sybasetosql.md)|Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de a la que desea migrar.|  
-|[Conexión a Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-azure-sql-db-sybasetosql.md)|Utilice el cuadro de diálogo **conectar con SQL Azure** para conectarse a la instancia de SQL Azure a la que desea migrar.|  
+|[Informe de evaluación &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|Use el informe de evaluación para ver los resultados de la conversión de objetos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis y para calcular el tiempo y la complejidad de una migración a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.|  
+|[Conéctese a SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sql-server-sybasetosql.md)|Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que desea migrar.|  
+|[Conéctese a Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-azure-sql-db-sybasetosql.md)|Utilice el cuadro de diálogo **conectar con SQL Azure** para conectarse a la instancia de SQL Azure a la que desea migrar.|  
 |[Conéctese a Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)|Utilice el cuadro de diálogo **conectar a Sybase** para conectarse a ase.|  
-|[Informe de migración de datos &#40;SybaseToSQL&#41;](../../ssma/sybase/data-migration-report-sybasetosql.md)|Muestra los resultados de la migración de datos de ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a o SQL Azure.|  
+|[Informe de migración de datos &#40;SybaseToSQL&#41;](../../ssma/sybase/data-migration-report-sybasetosql.md)|Muestra los resultados de la migración de datos de ASE a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.|  
 |[Configuración de la migración de datos](data-migration-settings-sybasetosql.md)|Use la pestaña **configuración de migración de datos extendida** para escribir consultas personalizadas para la migración de datos.|  
 |[Editar asignación de tipos &#40;SybaseToSQL&#41;](../../ssma/sybase/edit-type-mapping-sybasetosql.md)|Utilice el cuadro de diálogo **nueva asignación de tipos** o **Editar asignación de tipos** para crear o editar la asignación de tipos de datos entre las bases de datos de origen y de destino, y los objetos de base de datos.|  
 |[Configuración global &#40;editor&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|Use la página editor del cuadro de diálogo **configuración global** para configurar las opciones del editor de código.|  
@@ -40,12 +40,12 @@ En esta sección se incluyen los [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 |[Configuración del proyecto &#40;conversión&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)|Use la página conversión del cuadro de diálogo **configuración del proyecto** para especificar cómo SSMA para Sybase convierte funciones y variables globales.|  
 |[Configuración del proyecto &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)|Use la página GUI del cuadro de diálogo **configuración del proyecto** para especificar la cantidad de datos que aparecen en la pestaña **datos** .|  
 |[Configuración del proyecto &#40;migración&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-migration-sybasetosql.md)|Use la página migración del cuadro de diálogo **configuración del proyecto** para personalizar cómo SSMA para Sybase migra datos de ase a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.|  
-|[Configuración del proyecto &#40;sincronización&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)|Use la página sincronización del cuadro de diálogo **configuración del proyecto** para personalizar cómo SSMA para Sybase crea o modifica objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrados en o SQL Azure.|  
-|[Configuración del proyecto &#40;Azure SQL DB &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)|Use la página SQL Azure del cuadro de diálogo **configuración del proyecto** para personalizar la configuración de conectividad a fin de migrar los datos de Sybase a SQL Azure.|  
+|[Configuración del proyecto &#40;sincronización&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-synchronization-sybasetosql.md)|Use la página sincronización del cuadro de diálogo **configuración del proyecto** para personalizar cómo SSMA para Sybase crea o modifica objetos de base de datos migrados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.|  
+|[Configuración del proyecto &#40;Azure SQL Database &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md)|Use la página SQL Azure del cuadro de diálogo **configuración del proyecto** para personalizar la configuración de conectividad a fin de migrar los datos de Sybase a SQL Azure.|  
 |[Configuración del proyecto &#40;asignación de tipos&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|Use la página asignación de tipos del cuadro de diálogo **configuración del proyecto** para especificar las asignaciones de tipos predeterminadas para todas las bases de datos y los objetos de base de datos del proyecto SSMA para Sybase.|  
 |[Guardar metadatos &#40;SybaseToSQL&#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|El cuadro de diálogo **guardar metadatos** aparece cuando se guarda un proyecto en el que faltan metadatos.|  
   
 ## <a name="see-also"></a>Consulte también  
 [Introducción con SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
-[Migración de bases de datos de Sybase ASE a SQL Server: Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migración de bases de datos de Sybase ASE a SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

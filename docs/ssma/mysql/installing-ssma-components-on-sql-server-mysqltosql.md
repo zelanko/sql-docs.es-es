@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9b598915222610470bc9cf2e618cea65d725c5fb
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: a38808c64209edb094c986e63305707a0a834edb
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411283"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823676"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Instalación de componentes de SSMA en SQL Server (MySQLToSql)
 
@@ -76,7 +76,7 @@ Para instalar el paquete de extensión:
 
 12. Para instalar las utilidades en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione **sí**y, a continuación, haga clic en **siguiente**. O bien, para salir del asistente, haga clic en **no**.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Instalar SSMA para el cliente de MySQL](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)
-- [Migración de bases de datos de MySQL a SQL Server: base de datos SQL de Azure](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Migración de bases de datos de MySQL a SQL Server-Azure SQL Database](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

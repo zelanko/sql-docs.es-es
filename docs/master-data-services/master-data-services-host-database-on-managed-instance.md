@@ -1,6 +1,6 @@
 ---
 title: Hospedar una base de datos en una instancia administrada
-description: En este artículo se describe cómo configurar una base de datos de Master Data Service (MDS) en una instancia administrada.
+description: Aprenda a crear y configurar una base de datos de Master Data Services (MDS) y a hospedarla en una Instancia administrada de Azure SQL.
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812931"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878942"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hospedar una base de datos de MDS en una instancia administrada
 
@@ -27,19 +27,19 @@ ms.locfileid: "85812931"
   
 ## <a name="preparation"></a>Preparación
 
-Para prepararse, debe crear y configurar una instancia administrada de Azure SQL Database y configurar el equipo de la aplicación Web.
+Para prepararse, debe crear y configurar una Instancia administrada de Azure SQL y configurar el equipo de la aplicación Web.
 
 ### <a name="create-and-configure-the-database"></a>Crear y configurar la base de datos
 
-1. Cree una instancia administrada de Azure SQL Database con una red virtual. Consulte [Inicio rápido: creación de una instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) para obtener más información.
+1. Cree una instancia administrada con una red virtual. Consulte [Inicio rápido: creación de un instancia administrada de SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) para obtener más información.
 
 1. Configure una conexión de punto a sitio. Consulte [configuración de una conexión de punto a sitio a una red virtual mediante la autenticación de certificados de Azure nativa: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) para obtener instrucciones.
 
-1. Configurar la autenticación de Azure Active Directory con SQL Database instancia administrada. Consulte [configuración y administración de la autenticación de Azure Active Directory con SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) para obtener más información.
+1. Configurar la autenticación de Azure Active Directory con SQL Instancia administrada. Consulte [configuración y administración de la autenticación de Azure Active Directory con SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) para obtener más información.
 
 ### <a name="configure-web-application-machine"></a>Configurar equipo de aplicación Web
 
-1. Instale un certificado de conexión de punto a sitio y una VPN para asegurarse de que el equipo pueda acceder a la instancia administrada de SQL Database. Consulte [configuración de una conexión de punto a sitio a una red virtual mediante la autenticación de certificados de Azure nativa: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) para obtener instrucciones.
+1. Instale un certificado de conexión de punto a sitio y una VPN para asegurarse de que el equipo pueda tener acceso a la instancia administrada. Consulte [configuración de una conexión de punto a sitio a una red virtual mediante la autenticación de certificados de Azure nativa: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) para obtener instrucciones.
 
 1. Instale los siguientes roles y características:
    - Funciones:
@@ -110,9 +110,9 @@ Esta acción instala:
 
 1. Abra [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] y, a continuación, seleccione **configuración de base de datos** en el panel izquierdo.
 
-1. Seleccione **crear base de datos** para abrir el **Asistente para crear bases de datos**. Seleccione **Siguiente**.
+1. Seleccione **crear base de datos** para abrir el **Asistente para crear bases de datos**. Seleccione **Next** (Siguiente).
 
-1. En la página **servidor de base de datos** , complete el campo instancia de **SQL Server** y, a continuación, elija el tipo de **autenticación**. Seleccione **probar conexión** para confirmar que puede usar sus credenciales para conectarse a la base de datos mediante el tipo de autenticación elegido. Seleccione **Siguiente**.
+1. En la página **servidor de base de datos** , complete el campo instancia de **SQL Server** y, a continuación, elija el tipo de **autenticación**. Seleccione **probar conexión** para confirmar que puede usar sus credenciales para conectarse a la base de datos mediante el tipo de autenticación elegido. Seleccione **Next** (Siguiente).
 
    > [!NOTE]
    > - Una instancia de SQL Server tiene el siguiente aspecto `xxxxxxx.xxxxxxx.database.windows.net` .
@@ -123,7 +123,7 @@ Esta acción instala:
 
    ![MDS-SQLServer2019-config-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "MDS-SQLServer2019-config-MI_CreateDBConnect")  
 
-1. Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desactive la casilla **SQL Server intercalación predeterminada** y seleccione una o varias de las opciones disponibles. Por ejemplo, **distingue mayúsculas de minúsculas**. Seleccione **Siguiente**.
+1. Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desactive la casilla **SQL Server intercalación predeterminada** y seleccione una o varias de las opciones disponibles. Por ejemplo, **distingue mayúsculas de minúsculas**. Seleccione **Next** (Siguiente).
 
    ![MDS-SQLServer2019-config-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "MDS-SQLServer2019-config-MI_CreatedDBName")
 
@@ -203,7 +203,7 @@ MDS también admite la autenticación Active Directory contraseña y la autentic
 
 Instale la **actualización acumulativa SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]se actualizará automáticamente.
 
-### <a name="upgrade-sql-server"></a>Actualización de SQL Server
+### <a name="upgrade-sql-server"></a>Actualizar SQL Server
 
 Podría obtener el error: `The client version is incompatible with the database version` después de instalar **SQL Server actualización acumulativa 2019**.
 ![MDS-SQLServer2019-config-MI-UpgradeDBPage](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "MDS-SQLServer2019-config-MI_UpgradeDBPage")

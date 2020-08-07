@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c65c19ee3b95303afb0e1ae0a950efe548c8f0af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8941c243b6741b42b7c3e628305431812ad3f8d7
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083530"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864842"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Evaluación de objetos de base de datos de SAP ASE para la conversión (SybaseToSQL)
-Antes de cargar objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a Azure SQL, debe determinar la complejidad de la migración y el tiempo que debe tardar. SSMA puede crear un informe de evaluación que muestre el porcentaje de objetos y procedimientos que se convertirán correctamente [!INCLUDE[tsql](../../includes/tsql-md.md)]en. SSMA también le permite ver los problemas específicos que pueden producir errores de conversión.  
+Antes de cargar objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a Azure SQL, debe determinar la complejidad de la migración y el tiempo que debe tardar. SSMA puede crear un informe de evaluación que muestre el porcentaje de objetos y procedimientos que se convertirán correctamente en [!INCLUDE[tsql](../../includes/tsql-md.md)] . SSMA también le permite ver los problemas específicos que pueden producir errores de conversión.  
   
 ## <a name="create-assessment-reports"></a>Crear informes de evaluación  
-Al crear este informe de evaluación, SSMA convierte los objetos de base de datos de SAP Adaptive Server Enterprise ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ase) seleccionados en sintaxis SQL de Azure y, después, muestra los resultados.  
+Al crear este informe de evaluación, SSMA convierte los objetos de base de datos de SAP Adaptive Server Enterprise (ASE) seleccionados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxis SQL de Azure y, después, muestra los resultados.  
   
 **Para crear un informe de evaluación**  
   
@@ -71,11 +71,11 @@ Los **paneles de estadísticas de conversión** muestran las estadísticas de co
   
     -   En ASE, puede modificar el objeto ASE para quitar o revisar el código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, consulte [conexión a Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
-    -   Puede excluir el objeto de la migración. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el explorador de metadatos de Azure SQL y el explorador de metadatos de Sybase, desactive la casilla situada junto al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elemento antes de cargar los objetos en o Azure SQL y migrar datos desde ase.
+    -   Puede excluir el objeto de la migración. En el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos de Azure SQL y el explorador de metadatos de Sybase, desactive la casilla situada junto al elemento antes de cargar los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL y migrar datos desde ase.
   
 ## <a name="next-steps"></a>Pasos siguientes  
 [Conversión de objetos de base de datos de SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>Consulte también  
-[Migración de bases de datos de SAP ASE a SQL Server: Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migración de bases de datos de SAP ASE a SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

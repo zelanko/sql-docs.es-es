@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: ae88f4473414e83a2ffbddee5c47fa40c552115a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565504"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823370"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Reproducir un seguimiento en Asistente para experimentación con bases de datos
 
@@ -48,7 +48,7 @@ En primer lugar, debe realizar una reproducción de seguimiento en el destino 1,
     - **Reproducir la ubicación de seguimiento**: especifique la ruta de acceso para almacenar los archivos de seguimiento y XEvents asociados con la reproducción de seguimiento.
 
         > [!NOTE]
-        > Para un Azure SQL Database o una instancia administrada de Azure SQL Database, debe proporcionar el URI de SAS de la cuenta de almacenamiento de blobs de Azure.
+        > Para una Azure SQL Database o un Instancia administrada de Azure SQL, debe proporcionar el URI de SAS de la cuenta de almacenamiento de blobs de Azure.
 
 3. Compruebe que ha restaurado las bases de datos. para ello, active la casilla **sí, he restaurado manualmente la base de datos** .
 
@@ -163,6 +163,6 @@ Este problema se conoce en la versión RTM de SQL Server 2017. Para obtener más
   
 El problema se ha solucionado en la última actualización acumulativa 1 de SQL Server 2017. Descargue la versión más reciente de la [actualización acumulativa 1 para SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - Para crear un informe de análisis que le ayude a obtener información sobre los cambios propuestos, vea [crear informes](database-experimentation-assistant-create-report.md).

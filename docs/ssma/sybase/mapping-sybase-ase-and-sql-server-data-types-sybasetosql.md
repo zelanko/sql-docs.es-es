@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11d17d35dd8118c2afb9310ffcc45dcbea021f6c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028894"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865363"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Asignación de tipos de datos de Sybase ASE y de SQL Server (SybaseToSQL)
-Los tipos de base de datos de Sybase Adaptive Server Enterprise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ASE) difieren de o SQL Azure tipos de base de datos. Al convertir objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de ase en objetos de o SQL Azure, debe especificar cómo se asignan los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos de ase a o SQL Azure. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en las secciones siguientes.  
+Los tipos de base de datos de Sybase Adaptive Server Enterprise (ASE) difieren de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure tipos de base de datos. Al convertir objetos de base de datos de ASE en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de o SQL Azure, debe especificar cómo se asignan los tipos de datos de ase a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en las secciones siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
 SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para ver la lista de asignaciones predeterminadas, vea [configuración del proyecto &#40;asignación de tipos&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
@@ -87,9 +87,9 @@ En el procedimiento siguiente se muestra cómo asignar tipos de datos en el nive
   
         No se pueden quitar las asignaciones heredadas. Sin embargo, las asignaciones heredadas se reemplazan por asignaciones personalizadas en un objeto o categoría de objeto específicos.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
 El siguiente paso del proceso de migración consiste en [crear un informe de evaluación](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) o [convertir los objetos de base de datos de Sybase ase en SQL Server o SQL Azure sintaxis](converting-sybase-ase-database-objects-sybasetosql.md). Si crea un informe de evaluación, los objetos de Sybase ASE se convierten automáticamente durante la evaluación.  
   
 ## <a name="see-also"></a>Consulte también  
-[Migración de bases de datos de Sybase ASE a SQL Server: Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migración de bases de datos de Sybase ASE a SQL Server Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

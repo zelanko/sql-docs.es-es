@@ -19,12 +19,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717576"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822937"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85717576"
 |start_time|**datetime**|Hora UTC que indica el inicio del intervalo de informes de cinco minutos.|  
 |end_time|**datetime**|Hora UTC que indica el final del intervalo de informes de cinco minutos.|  
 |database_name|**nvarchar(128)**|Nombre de la base de datos del usuario.|  
-|sku|**nvarchar(128)**|Nivel de servicio de la base de datos. Los posibles valores son los siguientes:<br /><br /> Básico<br /><br /> Estándar<br /><br /> Premium<br /><br />Uso general<br /><br />Crítico para la empresa|  
+|sku|**nvarchar(128)**|Nivel de servicio de la base de datos. Los posibles valores son los siguientes:<br /><br /> Básico<br /><br /> Estándar<br /><br /> Premium<br /><br />De uso general<br /><br />Crítico para la empresa|  
 |storage_in_megabytes|**float**|Tamaño de almacenamiento máximo en megabytes para el período de tiempo, incluidos los datos de base de datos, los índices, los procedimientos almacenados y los metadatos.|  
 |avg_cpu_percent|**decimal (5, 2)**|Uso de proceso promedio como porcentaje del límite del nivel de servicio.|  
 |avg_data_io_percent|**decimal (5, 2)**|Uso de E/S promedio como porcentaje según el límite del nivel de servicio. Para las bases de datos de hiperescala, consulte [e/s de datos en estadísticas de uso de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics).|  
@@ -50,10 +50,10 @@ ms.locfileid: "85717576"
 |dtu_limit|**int**|Valor actual máximo de DTU de base de datos para esta base de datos durante este intervalo. |
 |xtp_storage_percent|**decimal (5, 2)**|Uso del almacenamiento para OLTP en memoria en porcentaje del límite del nivel de servicio (al final del intervalo de informes). Esto incluye la memoria usada para el almacenamiento de los siguientes objetos OLTP en memoria: tablas, índices y variables de tabla con optimización para memoria. También incluye la memoria usada para procesar las operaciones de ALTER TABLE.<br /><br /> Devuelve 0 si no se utiliza OLTP en memoria en la base de datos.|
 |avg_login_rate_percent|**decimal (5, 2)**|Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
-|avg_instance_cpu_percent|**decimal (5, 2)**|Uso promedio de la CPU de la base de datos como porcentaje del proceso de base de datos de SQL.|
-|avg_instance_memory_percent|**decimal (5, 2)**|Promedio de uso de memoria de base de datos como porcentaje del proceso de base de datos de SQL.|
+|avg_instance_cpu_percent|**decimal (5, 2)**|Uso promedio de la CPU de la base de datos como porcentaje del proceso de SQL Database.|
+|avg_instance_memory_percent|**decimal (5, 2)**|Promedio de uso de memoria de base de datos como porcentaje del proceso de SQL Database.|
 |cpu_limit|**decimal (5, 2)**|Número de núcleos virtuales para esta base de datos durante este intervalo. En el caso de las bases de datos que usan el modelo basado en DTU, esta columna es NULL.|
-|allocated_storage_in_megabytes|**float**|La cantidad de espacio de archivo con formato en MB disponible para almacenar los datos de la base de datos. El espacio de archivo con formato también se conoce como espacio de datos asignado.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|
+|allocated_storage_in_megabytes|**float**|La cantidad de espacio de archivo con formato en MB disponible para almacenar los datos de la base de datos. El espacio de archivo con formato también se conoce como espacio de datos asignado.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  Para más información sobre estos límites y los niveles de servicio, consulte los temas sobre los [niveles de servicio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
@@ -61,7 +61,7 @@ ms.locfileid: "85717576"
 ## <a name="permissions"></a>Permisos  
  Esta vista está disponible para todos los roles de usuario con permisos para conectarse a la base de datos **maestra** virtual.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los datos devueltos por **Sys. resource_stats** se expresan como un porcentaje de los límites máximos permitidos para el nivel de servicio/nivel de rendimiento que se está ejecutando.  
   
  Cuando una base de datos es miembro de un grupo elástico, las estadísticas de recursos que se presentan como valores porcentuales se expresan como el porcentaje del límite máximo de las bases de datos establecidas en la configuración del grupo elástico.  

@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790398"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877960"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Una lista de valores para los parámetros de entrada utilizados por el script externo.  
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 > [!IMPORTANT]
 > El árbol de consultas se controla mediante el aprendizaje automático de SQL y los usuarios no pueden realizar operaciones arbitrarias en la consulta.
@@ -177,7 +177,7 @@ Los dos parámetros son **input_data_1_partition_by_columns** y **input_data_1_o
 Puede ejecutar un script en paralelo especificando `@parallel=1` . Si la consulta de entrada puede ejecutarse en paralelo, debe establecer `@parallel=1` como parte de los argumentos en `sp_execute_external_script` . De forma predeterminada, el optimizador de consultas opera en `@parallel=1` las tablas que tienen más de 256 filas, pero si desea controlar esto explícitamente, este script incluye el parámetro como una demostración.
 
 > [!Tip]
-> En las cargas de trabajo de entrenamiento, puede usar `@parallel` con cualquier script de entrenamiento arbitrario, incluso aquellos que usan algoritmos rx que no son de Microsoft. Normalmente, solo los algoritmos de RevoScaleR (con el prefijo rx) ofrecen paralelismo en escenarios de entrenamiento de SQL Server. Sin embargo, con los nuevos parámetros de SQL Server vNext, puede paralelizar un script que llama a funciones que no se han diseñado específicamente con esa capacidad.
+> En las cargas de trabajo de entrenamiento, puede usar `@parallel` con cualquier script de entrenamiento arbitrario, incluso aquellos que usan algoritmos rx que no son de Microsoft. Normalmente, solo los algoritmos de RevoScaleR (con el prefijo rx) ofrecen paralelismo en escenarios de entrenamiento de SQL Server. Pero con los nuevos parámetros en SQL Server 2019 y versiones posteriores, puede paralelizar un script que llama a funciones que no se han diseñado específicamente con esa capacidad.
 ::: moniker-end
 
 ### <a name="streaming-execution-for-python-and-r-scripts"></a>Ejecución de streaming para Python y scripts de R  

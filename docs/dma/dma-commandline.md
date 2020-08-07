@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 62626e8a9f3cfe5bf9272378b26e3bb0ab2f6b1a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925359"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864922"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ejecutar Data Migration Assistant desde la línea de comandos
 
-Con la versión 2,1 y posteriores, al instalar Data Migration Assistant, también se instalará dmacmd. exe en *% ProgramFiles% \\ Microsoft Data Migration Assistant \\ *. Use dmacmd. exe para evaluar las bases de datos en modo desatendido y generar el resultado en un archivo JSON o CSV. Este método es especialmente útil al evaluar varias bases de datos o bases de datos de gran tamaño. 
+Con la versión 2,1 y posteriores, al instalar Data Migration Assistant, también se instalará dmacmd.exe en *% ProgramFiles% \\ Microsoft Data Migration Assistant \\ *. Use dmacmd.exe para evaluar las bases de datos en modo desatendido y generar el resultado en un archivo JSON o CSV. Este método es especialmente útil al evaluar varias bases de datos o bases de datos de gran tamaño. 
 
 > [!NOTE]
-> Dmacmd. exe solo admite la ejecución de evaluaciones. En este momento no se admiten las migraciones.
+> Dmacmd.exe solo admite la ejecución de evaluaciones. En este momento no se admiten las migraciones.
 
 ## <a name="assessments-using-the-command-line-interface-cli"></a>Evaluaciones mediante la interfaz de la línea de comandos (CLI)
 
@@ -42,35 +42,35 @@ DmaCmd.exe /AssessmentName="string"
 
 |Argumento  |Descripción  | Requerido (s/N)
 |---------|---------|---------------|
-| `/help or /?`     | Cómo usar el texto de ayuda de dmacmd. exe        | No
-|`/AssessmentName`     |   Nombre del proyecto de evaluación   | S
-|`/AssessmentDatabases`     | Lista delimitada por espacios de cadenas de conexión. El nombre de la base de datos (catálogo inicial) distingue mayúsculas de minúsculas. | S
-|`/AssessmentSourcePlatform`     | Plataforma de origen para la evaluación: <br>Valores admitidos para la evaluación: SqlOnPrem, RdsSqlServer (valor predeterminado) <br>Valores admitidos para la evaluación de preparación de destino: SqlOnPrem, RdsSqlServer (valor predeterminado), Cassandra (versión preliminar)   | No
-|`/AssessmentTargetPlatform`     | Plataforma de destino para la evaluación:  <br> Valores admitidos para la evaluación: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 y SqlServerWindows2017 (valor predeterminado)  <br> Valores admitidos para la evaluación de preparación de destino: ManagedSqlServer (valor predeterminado), CosmosDB (versión preliminar)   | No
-|`/AssessmentEvaluateFeatureParity`  | Ejecutar reglas de paridad de características. Si la plataforma de origen es RdsSqlServer, la evaluación de la paridad de características no se admite para la plataforma de destino AzureSqlDatabase  | No
-|`/AssessmentEvaluateCompatibilityIssues`     | Ejecutar reglas de compatibilidad  | S <br> (Se requiere AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations).
-|`/AssessmentEvaluateRecommendations`     | Ejecutar recomendaciones de características        | S <br> (Se requiere AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations)
-|`/AssessmentOverwriteResult`     | Sobrescribir el archivo de resultados    | No
-|`/AssessmentResultJson`     | Ruta de acceso completa al archivo de resultados JSON     | S <br> (Se requiere AssessmentResultJson o AssessmentResultCsv)
-|`/AssessmentResultCsv`    | Ruta de acceso completa al archivo de resultados CSV   | S <br> (Se requiere AssessmentResultJson o AssessmentResultCsv)
-|`/AssessmentResultDma`    | Ruta de acceso completa al archivo de resultados de DMA   | No
-|`/Action`    | Use SkuRecommendation para obtener recomendaciones de SKU. <br> Use AssessTargetReadiness para realizar la evaluación de preparación de destino. <br> Use AzureMigrateUpload para cargar todos los archivos de evaluación de DMA en el AzzessmentResultInputFolder para la carga masiva en Azure Migrate. uso del tipo de acción/Action = AzureMigrateUpload   | No
-|`/SourceConnections`    | Lista delimitada por espacios de cadenas de conexión. El nombre de la base de datos (catálogo inicial) es opcional. Si no se proporciona ningún nombre de base de datos, se evalúan todas las bases de datos del origen.   | S <br> (Obligatorio si la acción es ' AssessTargetReadiness ')
-|`/TargetReadinessConfiguration`    | Ruta de acceso completa al archivo XML que describe los valores para el nombre, las conexiones de origen y el archivo de resultados.   | S <br> (Se requiere TargetReadinessConfiguration o SourceConnections)
-|`/FeatureDiscoveryReportJson`    | Ruta de acceso al informe JSON de detección de características. Si se genera este archivo, se puede usar para volver a ejecutar la evaluación de preparación de destino sin conectarse al origen. | No
-|`/ImportFeatureDiscoveryReportJson`    | Ruta de acceso al informe JSON de detección de características creado anteriormente. En lugar de las conexiones de origen, se usará este archivo.   | No
-|`/EnableAssessmentUploadToAzureMigrate`    | Permite cargar y publicar los resultados de la evaluación en Azure Migrate   | No
-|`/AzureCloudEnvironment`    |Selecciona el entorno de nube de Azure al que conectarse, el valor predeterminado es nube pública de Azure. Valores admitidos: Azure (valor predeterminado), AzureChina, AzureGermany, AzureUSGovernment.   | No 
-|`/SubscriptionId`    |Identificador de suscripción de Azure.   | S <br> (Obligatorio si se especifica el argumento EnableAssessmentUploadToAzureMigrate)
-|`/AzureMigrateProjectName`    |Azure Migrate nombre del proyecto al que se van a cargar los resultados de la evaluación.   | S <br> (Obligatorio si se especifica el argumento EnableAssessmentUploadToAzureMigrate)
-|`/ResourceGroupName`    |Azure Migrate nombre del grupo de recursos.   | S <br> (Obligatorio si se especifica el argumento EnableAssessmentUploadToAzureMigrate)
-|`/AssessmentResultInputFolder`    |La ruta de acceso de la carpeta de entrada que contiene. Archivos de evaluación de DMA que se van a cargar en Azure Migrate.   | S <br> (Obligatorio si la acción es AzureMigrateUpload)
+| `/help or /?`     | Cómo usar dmacmd.exe texto de ayuda        | N
+|`/AssessmentName`     |   Nombre del proyecto de evaluación   | Y
+|`/AssessmentDatabases`     | Lista delimitada por espacios de cadenas de conexión. El nombre de la base de datos (catálogo inicial) distingue mayúsculas de minúsculas. | Y
+|`/AssessmentSourcePlatform`     | Plataforma de origen para la evaluación: <br>Valores admitidos para la evaluación: SqlOnPrem, RdsSqlServer (valor predeterminado) <br>Valores admitidos para la evaluación de preparación de destino: SqlOnPrem, RdsSqlServer (valor predeterminado), Cassandra (versión preliminar)   | N
+|`/AssessmentTargetPlatform`     | Plataforma de destino para la evaluación:  <br> Valores admitidos para la evaluación: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 y SqlServerWindows2017 (valor predeterminado)  <br> Valores admitidos para la evaluación de preparación de destino: ManagedSqlServer (valor predeterminado), CosmosDB (versión preliminar)   | N
+|`/AssessmentEvaluateFeatureParity`  | Ejecutar reglas de paridad de características. Si la plataforma de origen es RdsSqlServer, la evaluación de la paridad de características no se admite para la plataforma de destino AzureSqlDatabase  | N
+|`/AssessmentEvaluateCompatibilityIssues`     | Ejecutar reglas de compatibilidad  | Y <br> (Se requiere AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations).
+|`/AssessmentEvaluateRecommendations`     | Ejecutar recomendaciones de características        | Y <br> (Se requiere AssessmentEvaluateCompatibilityIssues o AssessmentEvaluateRecommendations)
+|`/AssessmentOverwriteResult`     | Sobrescribir el archivo de resultados    | N
+|`/AssessmentResultJson`     | Ruta de acceso completa al archivo de resultados JSON     | Y <br> (Se requiere AssessmentResultJson o AssessmentResultCsv)
+|`/AssessmentResultCsv`    | Ruta de acceso completa al archivo de resultados CSV   | Y <br> (Se requiere AssessmentResultJson o AssessmentResultCsv)
+|`/AssessmentResultDma`    | Ruta de acceso completa al archivo de resultados de DMA   | N
+|`/Action`    | Use SkuRecommendation para obtener recomendaciones de SKU. <br> Use AssessTargetReadiness para realizar la evaluación de preparación de destino. <br> Use AzureMigrateUpload para cargar todos los archivos de evaluación de DMA en el AzzessmentResultInputFolder para la carga masiva en Azure Migrate. uso del tipo de acción/Action = AzureMigrateUpload   | N
+|`/SourceConnections`    | Lista delimitada por espacios de cadenas de conexión. El nombre de la base de datos (catálogo inicial) es opcional. Si no se proporciona ningún nombre de base de datos, se evalúan todas las bases de datos del origen.   | Y <br> (Obligatorio si la acción es ' AssessTargetReadiness ')
+|`/TargetReadinessConfiguration`    | Ruta de acceso completa al archivo XML que describe los valores para el nombre, las conexiones de origen y el archivo de resultados.   | Y <br> (Se requiere TargetReadinessConfiguration o SourceConnections)
+|`/FeatureDiscoveryReportJson`    | Ruta de acceso al informe JSON de detección de características. Si se genera este archivo, se puede usar para volver a ejecutar la evaluación de preparación de destino sin conectarse al origen. | N
+|`/ImportFeatureDiscoveryReportJson`    | Ruta de acceso al informe JSON de detección de características creado anteriormente. En lugar de las conexiones de origen, se usará este archivo.   | N
+|`/EnableAssessmentUploadToAzureMigrate`    | Permite cargar y publicar los resultados de la evaluación en Azure Migrate   | N
+|`/AzureCloudEnvironment`    |Selecciona el entorno de nube de Azure al que conectarse, el valor predeterminado es nube pública de Azure. Valores admitidos: Azure (valor predeterminado), AzureChina, AzureGermany, AzureUSGovernment.   | N 
+|`/SubscriptionId`    |Identificador de suscripción de Azure   | Y <br> (Obligatorio si se especifica el argumento EnableAssessmentUploadToAzureMigrate)
+|`/AzureMigrateProjectName`    |Azure Migrate nombre del proyecto al que se van a cargar los resultados de la evaluación.   | Y <br> (Obligatorio si se especifica el argumento EnableAssessmentUploadToAzureMigrate)
+|`/ResourceGroupName`    |Azure Migrate nombre del grupo de recursos.   | Y <br> (Obligatorio si se especifica el argumento EnableAssessmentUploadToAzureMigrate)
+|`/AssessmentResultInputFolder`    |La ruta de acceso de la carpeta de entrada que contiene. Archivos de evaluación de DMA que se van a cargar en Azure Migrate.   | Y <br> (Obligatorio si la acción es AzureMigrateUpload)
 
 
 
 ## <a name="examples-of-assessments-using-the-cli"></a>Ejemplos de evaluaciones mediante la CLI
 
-**Dmacmd. exe**
+**Dmacmd.exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
@@ -269,7 +269,7 @@ DmaCmd.exe
 DmaCmd.exe 
 /Action="AzureMigrateUpload" 
 /AssessmentResultInputFolder="C:\assessments\results" 
-/SubscriptionId="subscription Id" 
+/SubscriptionId="Subscription Id" 
 /AzureMigrateProjectName="Azure Migrate project name" 
 /ResourceGroupName="Resource Group name" 
 /AzureAuthenticationInteractiveAuthentication
@@ -277,9 +277,9 @@ DmaCmd.exe
 /EnableAssessmentUploadToAzureMigrate
 
 ```
-## <a name="azure-sql-databasemanaged-instance-sku-recommendations-using-the-cli"></a>Recomendaciones de SKU de instancia administrada y Azure SQL Database mediante la CLI
+## <a name="azure-sql-database--azure-sql-managed-instance-sku-recommendations-using-the-cli"></a>Recomendaciones de Azure SQL Database/Azure SQL Instancia administrada SKU mediante la CLI
 
-Estos comandos admiten recomendaciones para Azure SQL Database opciones de implementación de base de datos única y de instancia administrada.
+Estos comandos admiten recomendaciones para las opciones de implementación de Azure SQL Database única base de datos y de Azure SQL Instancia administrada.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -292,31 +292,31 @@ Estos comandos admiten recomendaciones para Azure SQL Database opciones de imple
 
 |Argumento  |Descripción  | Requerido (s/N)
 |---------|---------|---------------|
-|`/Action=SkuRecommendation` | Ejecutar evaluación de SKU mediante la línea de comandos DMA | S
-|`/SkuRecommendationInputDataFilePath` | Ruta de acceso completa al archivo de contador de rendimiento recopilado del equipo que hospeda las bases de datos | S
-|`/SkuRecommendationTsvOutputResultsFilePath` | Ruta de acceso completa al archivo de resultados TSV | S <br> (Requiere TSV o JSON o la ruta de acceso del archivo HTML)
-|`/SkuRecommendationJsonOutputResultsFilePath` | Ruta de acceso completa al archivo de resultados JSON | S <br> (Requiere TSV o JSON o la ruta de acceso del archivo HTML)
-|`/SkuRecommendationHtmlResultsFilePath` | Ruta de acceso completa al archivo de resultados HTML | S <br> (Requiere TSV o JSON o la ruta de acceso del archivo HTML)
-|`/SkuRecommendationPreventPriceRefresh` | Impide que se produzca la actualización del precio. Use si se ejecuta en modo sin conexión (por ejemplo, true). | S <br> (Seleccione este argumento para precios estáticos o se deben seleccionar todos los argumentos siguientes para obtener los precios más recientes).
-|`/SkuRecommendationCurrencyCode` | Moneda en la que se van a mostrar los precios (por ejemplo, "USD") | S <br> (Para los precios más recientes)
-|`/SkuRecommendationOfferName` | El nombre de la oferta (por ejemplo, "MS-AZR-0003P"). Para obtener más información, consulte la página Detalles de la [oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | S <br> (Para los precios más recientes)
-|`/SkuRecommendationRegionName` | El nombre de la región (por ejemplo, "Westus") | S <br> (Para los precios más recientes)
-|`/SkuRecommendationSubscriptionId` | Identificador de la suscripción. | S <br> (Para los precios más recientes)
-|`/SkuRecommendationDatabasesToRecommend` | Lista separada por espacios de las bases de datos que se van a recomendar para (por ejemplo, "Database1" "Database2" "Database3"). Los nombres distinguen mayúsculas de minúsculas y deben ir entre comillas dobles. Si se omite, se proporcionan recomendaciones para todas las bases de datos. | No
-|`/AzureAuthenticationTenantId` | El inquilino de autenticación. | S <br> (Para los precios más recientes)
-|`/AzureAuthenticationClientId` | IDENTIFICADOR de cliente de la aplicación de AAD que se usa para la autenticación. | S <br> (Para los precios más recientes)
-|`/AzureAuthenticationInteractiveAuthentication` | Establézcalo en true para mostrar la ventana. | S <br> (Para los precios más recientes) <br>(Seleccione una de las tres opciones de autenticación: opción 1)
-|`/AzureAuthenticationCertificateStoreLocation` | Establezca en la ubicación del almacén de certificados (por ejemplo, "CurrentUser"). | S <br>(Para los precios más recientes) <br> (Seleccione una de las tres opciones de autenticación: opción 2)
-|`/AzureAuthenticationCertificateThumbprint` | Establezca en la huella digital del certificado. | S <br> (Para los precios más recientes) <br>(Seleccione una de las tres opciones de autenticación: opción 2)
-|`/AzureAuthenticationToken` | Establezca en el token de certificado. | S <br> (Para los precios más recientes) <br>(Seleccione una de las tres opciones de autenticación: opción 3)
+|`/Action=SkuRecommendation` | Ejecutar evaluación de SKU mediante la línea de comandos DMA | Y
+|`/SkuRecommendationInputDataFilePath` | Ruta de acceso completa al archivo de contador de rendimiento recopilado del equipo que hospeda las bases de datos | Y
+|`/SkuRecommendationTsvOutputResultsFilePath` | Ruta de acceso completa al archivo de resultados TSV | Y <br> (Requiere TSV o JSON o la ruta de acceso del archivo HTML)
+|`/SkuRecommendationJsonOutputResultsFilePath` | Ruta de acceso completa al archivo de resultados JSON | Y <br> (Requiere TSV o JSON o la ruta de acceso del archivo HTML)
+|`/SkuRecommendationHtmlResultsFilePath` | Ruta de acceso completa al archivo de resultados HTML | Y <br> (Requiere TSV o JSON o la ruta de acceso del archivo HTML)
+|`/SkuRecommendationPreventPriceRefresh` | Impide que se produzca la actualización del precio. Use si se ejecuta en modo sin conexión (por ejemplo, true). | Y <br> (Seleccione este argumento para precios estáticos o se deben seleccionar todos los argumentos siguientes para obtener los precios más recientes).
+|`/SkuRecommendationCurrencyCode` | Moneda en la que se van a mostrar los precios (por ejemplo, "USD") | Y <br> (Para los precios más recientes)
+|`/SkuRecommendationOfferName` | El nombre de la oferta (por ejemplo, "MS-AZR-0003P"). Para obtener más información, consulte la página Detalles de la [oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) . | Y <br> (Para los precios más recientes)
+|`/SkuRecommendationRegionName` | El nombre de la región (por ejemplo, "Westus") | Y <br> (Para los precios más recientes)
+|`/SkuRecommendationSubscriptionId` | Identificador de la suscripción. | Y <br> (Para los precios más recientes)
+|`/SkuRecommendationDatabasesToRecommend` | Lista separada por espacios de las bases de datos que se van a recomendar para (por ejemplo, "Database1" "Database2" "Database3"). Los nombres distinguen mayúsculas de minúsculas y deben ir entre comillas dobles. Si se omite, se proporcionan recomendaciones para todas las bases de datos. | N
+|`/AzureAuthenticationTenantId` | El inquilino de autenticación. | Y <br> (Para los precios más recientes)
+|`/AzureAuthenticationClientId` | IDENTIFICADOR de cliente de la aplicación de AAD que se usa para la autenticación. | Y <br> (Para los precios más recientes)
+|`/AzureAuthenticationInteractiveAuthentication` | Establézcalo en true para mostrar la ventana. | Y <br> (Para los precios más recientes) <br>(Seleccione una de las tres opciones de autenticación: opción 1)
+|`/AzureAuthenticationCertificateStoreLocation` | Establezca en la ubicación del almacén de certificados (por ejemplo, "CurrentUser"). | Y <br>(Para los precios más recientes) <br> (Seleccione una de las tres opciones de autenticación: opción 2)
+|`/AzureAuthenticationCertificateThumbprint` | Establezca en la huella digital del certificado. | Y <br> (Para los precios más recientes) <br>(Seleccione una de las tres opciones de autenticación: opción 2)
+|`/AzureAuthenticationToken` | Establezca en el token de certificado. | Y <br> (Para los precios más recientes) <br>(Seleccione una de las tres opciones de autenticación: opción 3)
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Ejemplos de evaluaciones de SKU mediante la CLI
 
-**Dmacmd. exe**
+**Dmacmd.exe**
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Azure SQL DB/recomendación de SKU de MI con actualización de precios (obtener los precios más recientes)-autenticación interactiva** 
+**Recomendación de Azure SQL Database/Azure SQL Instancia administrada SKU con actualización de precios (obtener los precios más recientes)-autenticación interactiva** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -333,7 +333,7 @@ Estos comandos admiten recomendaciones para Azure SQL Database opciones de imple
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**Azure SQL DB/recomendación de SKU de MI con actualización de precios (obtener los precios más recientes)-autenticación de certificados**
+**Recomendación de Azure SQL Database/Azure SQL Instancia administrada SKU con actualización de precios (obtener precios más recientes): autenticación de certificados**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -351,7 +351,7 @@ Estos comandos admiten recomendaciones para Azure SQL Database opciones de imple
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**Recomendación de Azure SQL DB SKU/MI con actualización de precios (obtener los precios más recientes)-autenticación de tokens y especificar las bases de datos que se recomiendan**
+**Azure SQL Database/Azure SQL Instancia administrada recomendación con actualización de precios (obtener los precios más recientes)-autenticación de tokens y especificar las bases de datos que se recomiendan**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -369,7 +369,7 @@ Estos comandos admiten recomendaciones para Azure SQL Database opciones de imple
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**Azure SQL DB/recomendación de SKU de MI sin actualización de precios (usar precios estáticos)** 
+**Recomendación de Azure SQL Database/Azure SQL Instancia administrada SKU sin actualización de precios (usar precios estáticos)** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
@@ -379,6 +379,6 @@ Estos comandos admiten recomendaciones para Azure SQL Database opciones de imple
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 - [Data Migration Assistant](https://aka.ms/get-dma) descargar.
 - En el artículo se [identifican los Azure SQL Database SKU correctos para la base de datos local](https://aka.ms/dma-sku-recommend-sqldb).

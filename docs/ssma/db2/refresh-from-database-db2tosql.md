@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a53c3005aca2e599d8ceb0b973a58bcf2ca5e14c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2efc0667bd69e43cfe3d3246c0622fad18ff21e3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060128"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933366"
 ---
 # <a name="refresh-from-database-db2tosql"></a>Actualizar desde la base de datos (DB2ToSQL)
 El cuadro de diálogo **actualizar desde base de datos** permite seleccionar los objetos que se van a actualizar desde la base de datos DB2. Las filas del cuadro de diálogo están codificadas por colores en función del estado de los metadatos:  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5d3fb45d6220d10e9a6d5cc786fc09f33ce5ee59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 872eb991483bb1615f3260d64ed5e5438fd1c2ce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909715"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933546"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Nuevas características de la interfaz gráfica de usuario de SSMA para DB2 (DB2ToSQL)
 En este capítulo se describen las nuevas características de la interfaz de usuario de SSMA.  
@@ -54,14 +54,14 @@ Puede establecer o quitar un marcador de las siguientes maneras:
   
 -   Haga clic en el área gris a la izquierda de la ventana SQL.  
   
--   Use Ctrl + Mayús +&lt;0.. 9&gt; para establecer el marcador numerado  
+-   Use Ctrl + Mayús + &lt; 0.. 9 &gt; para establecer el marcador numerado  
   
 ### <a name="bookmark-navigation"></a>Navegación por marcadores  
 Puede recorrer los marcadores de las siguientes maneras:  
   
 -   Usar botones marcador siguiente, marcador anterior en la parte superior de la ventana SQL  
   
--   Use Ctrl +&lt;0.. 9&gt; para buscar el marcador numerado  
+-   Use Ctrl + &lt; 0.. 9 &gt; para buscar el marcador numerado  
   
 -   Usar los botones ir a o ver código fuente en el cuadro de diálogo administrar marcadores  
   

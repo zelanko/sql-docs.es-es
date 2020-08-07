@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea7cfd8940bdfbcda32d7a7338906db020b8c34a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d86b8f573e8539971dae9d9386d4b255977f5d3d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051471"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933871"
 ---
 # <a name="troubleshooting-accesstosql"></a>Solución de problemas (AccessToSQL)
 No es raro que se ejecute en problemas de migración que ejecutan los comandos o scripts de la consola.  

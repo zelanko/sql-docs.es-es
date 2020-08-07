@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,Output Conventions
 - Sybase Console,Procedure for Using Console
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a577a2b187112dd0b80cedf50d42d13112208970
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029111"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931558"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introducción con la consola de SSMA para Sybase (SybaseToSQL)
 En esta sección se describe el procedimiento para iniciar y comenzar a usar la aplicación de consola SSMA para Sybase. También se enumeran las convenciones que se usan en una ventana de salida de la consola de SSMA típica.  
@@ -30,7 +30,7 @@ Siga estos pasos para iniciar la aplicación de consola SSMA:
   
 2.  Haga clic en el acceso directo del **símbolo del sistema de SQL Server Migration Assistant para Sybase** .  
   
-    Muestra el menú de uso de la consola `(/? Help)`de SSMA y, para ayudarle a empezar a trabajar con la aplicación de consola.  
+    Muestra el menú de uso de la consola de SSMA y `(/? Help)` , para ayudarle a empezar a trabajar con la aplicación de consola.  
   
 ## <a name="using-the-ssma-console"></a>Usar la consola de SSMA  
 Una vez que se haya iniciado correctamente la consola de en el sistema Windows, puede usar los pasos siguientes para trabajar en ella:  

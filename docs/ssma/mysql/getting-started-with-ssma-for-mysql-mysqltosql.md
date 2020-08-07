@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Getting started, SQL Server or SQL Azure metadata explorer
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c1cc8f5ddbe1efc1a1038bf2e9d6595e31ff3102
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 1dee948ce6b0cd36191fc13421fcfdfaa07138ac
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823655"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935501"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introducción a SSMA para MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) para MySQL permite convertir rápidamente esquemas de base de datos MySQL en esquemas de SQL Server o Azure SQL Database, cargar los esquemas resultantes en SQL Server o Azure SQL Database y migrar datos de MySQL a SQL Server o Azure SQL Database.  
@@ -110,7 +110,7 @@ En la tabla siguiente se muestran los menús de SSMA.
 |-|-|  
 |**Menú**|**Descripción**|  
 |**Archivo**|Contiene comandos para trabajar con proyectos, conectarse a MySQL y conectarse a SQL Server o Azure SQL Database.|  
-|**Edición**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles. Para abrir el cuadro de diálogo **administrar marcadores** , en el menú Edición, haga clic en administrar marcadores. En el cuadro de diálogo verá una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
+|**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles. Para abrir el cuadro de diálogo **administrar marcadores** , en el menú Edición, haga clic en administrar marcadores. En el cuadro de diálogo verá una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
 |**Ver**|Contiene el comando **sincronizar exploradores de metadatos** . Que sincroniza los objetos entre el explorador de metadatos de MySQL y SQL Server o Azure SQL Database explorador de metadatos. También contiene comandos para mostrar y ocultar los paneles de **salida** y **lista de errores** y los **diseños** de opciones que se van a administrar con los diseños.|  
 |**Herramientas**|Contiene comandos para crear informes, convertir esquemas, actualizar desde la base de datos, migrar objetos y datos y guardar como script. También proporciona acceso a los cuadros de diálogo **configuración global, configuración de proyecto predeterminada** y **configuración del proyecto** .|  
 |**Ayuda**|Proporciona acceso a la ayuda de SSMA y al cuadro **de diálogo acerca de** .|  

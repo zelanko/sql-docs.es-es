@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acd4b7c13b2f8674f120c7f5b49f503a7f8fb5bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865333"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931230"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Asignación de esquemas de Sybase ASE a esquemas de SQL Server (SybaseToSQL)
-En Sybase Adaptive Server Enterprise (ASE), cada base de datos tiene uno o más esquemas. De forma predeterminada, SSMA migra todos los objetos de una base de datos y un esquema a la misma base de datos y esquema en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Sin embargo, puede personalizar la asignación entre ASE y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure bases de datos y esquemas.  
+En Sybase Adaptive Server Enterprise (ASE), cada base de datos tiene uno o más esquemas. De forma predeterminada, SSMA migra todos los objetos de una base de datos y un esquema a la misma base de datos y esquema en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Sin embargo, puede personalizar la asignación entre ASE y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>Esquemas de ASE y SQL Server o SQL Azure  
 ASE y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure especifican las bases de datos y sus esquemas mediante la notación de dos partes como *Database. Schema*. Por ejemplo, en una base de datos de **demostración** de ase, puede haber un esquema **DBO** . La base de datos y el par de esquema se especifican como **Demo. DBO**. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure tienen la misma base de datos y el mismo esquema, el par también se especifica como **Demo. DBO**.  
@@ -51,7 +51,7 @@ Puede asignar una base de datos de origen a cualquier base de datos de destino. 
   
 -   Asignar a SQL Azure  
   
-Puede asignar la base de datos de origen a la base de datos de destino SQL Azure o a cualquier esquema de la base de datos de destino SQL Azureda conectada. Si asigna un esquema de origen a cualquier esquema no existente en la base de datos de destino conectada, se le pedirá un mensaje que indica que el **esquema no existe en los metadatos de destino. Se creará durante la sincronización. ¿Desea continuar? "** Haga clic en sí.  
+Puede asignar la base de datos de origen al destino conectado Azure SQL Database o a cualquier esquema en el Azure SQL Database de destino conectado. Si asigna un esquema de origen a cualquier esquema no existente en la base de datos de destino conectada, se le pedirá un mensaje que indica que el **esquema no existe en los metadatos de destino. Se creará durante la sincronización. ¿Desea continuar? "** Haga clic en sí.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Revertir a la base de datos y el esquema predeterminados  
 Si personaliza la asignación entre un esquema de ASE y un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure esquema, puede revertir la asignación a los valores predeterminados.  
@@ -60,7 +60,7 @@ Si personaliza la asignación entre un esquema de ASE y un [!INCLUDE[ssNoVersion
   
 1.  En la pestaña asignación de esquema, seleccione cualquier fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos y el esquema predeterminados.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
 Si desea analizar la conversión de objetos de Sybase ASE en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos o SQL Azure, puede [crear un informe de conversión](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md). De lo contrario, puede [convertir las definiciones de objetos de base de datos ase](converting-sybase-ase-database-objects-sybasetosql.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure definiciones de objeto.  
   
 ## <a name="see-also"></a>Consulte también  

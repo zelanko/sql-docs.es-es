@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: cf2b724b-4ca7-470a-8dd7-fa95b1e060a4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3801526bfec64fa8efeb992ec7552a232d2e13c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 18d0ff301ae0c15a4d8fc8bb81d33553c3f87e12
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989510"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937292"
 ---
 # <a name="installing-ssma-components-on-sql-server-db2tosql"></a>Instalación de componentes de SSMA en SQL Server (DB2ToSQL)
 En esta versión de SSMA no es necesario realizar una instalación independiente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el paquete de extensión de SSMA, que admite la migración de datos y los proveedores de DB2 para habilitar la conectividad de servidor a servidor.  
   
 ## <a name="ssma-for-db2-extension-pack"></a>SSMA para el paquete de extensión DB2  
-SSMA Extension Pack agrega un esquema a la base de datos de la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]especificada de. El esquema **sysdb** contiene las tablas y los procedimientos almacenados necesarios para migrar datos, así como las funciones definidas por el usuario que emulan las funciones del sistema DB2.  
+SSMA Extension Pack agrega un esquema a la base de datos de la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El esquema **sysdb** contiene las tablas y los procedimientos almacenados necesarios para migrar datos, así como las funciones definidas por el usuario que emulan las funciones del sistema DB2.  
   
 ## <a name="see-also"></a>Consulte también  
 [Instalación de SSMA para el cliente DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  

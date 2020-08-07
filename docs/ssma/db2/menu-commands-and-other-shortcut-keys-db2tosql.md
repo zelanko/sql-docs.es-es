@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074148"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933726"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandos de menú y otras teclas de método abreviado (DB2ToSQL)
 En las secciones siguientes se describen los métodos abreviados de teclado para tener acceso a los comandos de menú y otras teclas de método abreviado usadas en varios cuadros de diálogo de la aplicación SSMA for DB2.  
@@ -79,7 +79,7 @@ Para acceder al menú herramientas, el método abreviado de teclado utilizado es
 |Crear informe.|ALT + T + C|  
 |Convierte el esquema.|ALT + T + N o CTRL + R|  
 |Actualizar desde la base de datos DB2.|ALT+T+R|  
-|Sincronizar con SQL Server o SQL Azure base de datos.|ALT + T + S|  
+|Sincronizar con SQL Server o Azure SQL Database.|ALT + T + S|  
 |Guardar como script.|ALT + T + A|  
 |Migre los datos.|ALT+T+M|  
 |Detener la operación actual.|ALT + T + O|  

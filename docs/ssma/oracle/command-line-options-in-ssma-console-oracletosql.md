@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6bddaddeda73133b83d6a7669c98fd89af96cd2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264509"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934994"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Opciones de la línea de comandos en la consola SSMA (OracleToSQL)
 Microsoft proporciona un sólido conjunto de opciones de línea de comandos para ejecutar y controlar las actividades de SSMA. Las secciones siguientes detallan el mismo.  
@@ -30,7 +30,7 @@ Aquí se describen las opciones del comando de la consola.
   
 En esta sección, el término ' opción ' también se conoce como ' modificador '.  
   
--   Las opciones no distinguen mayúsculas de minúsculas y pueden**-** comenzar con un carácter**/**' ' o ' '.  
+-   Las opciones no distinguen mayúsculas de minúsculas y pueden comenzar con un **-** carácter ' ' o ' **/** '.  
   
 -   Si se especifican opciones, es obligatorio especificar los parámetros de opción correspondientes.  
   
@@ -127,7 +127,7 @@ Esta opción indica la contraseña cifrada para las conexiones del servidor. Dif
   
 No se puede especificar ninguna otra opción o contraseña como parámetro de la línea de comandos. De lo contrario, se producirá un error. Para obtener más información, consulte la sección [Administración de contraseñas](managing-passwords-oracletosql.md) .  
   
-Se admiten las siguientes subopciones para `-p/securepassword`:  
+Se admiten las siguientes subopciones para `-p/securepassword` :  
   
 -   Para agregar una contraseña al almacenamiento protegido para un identificador de servidor especificado o para todos los identificadores de servidor definidos en el archivo de conexión de servidor. La opción-overwrite, que aparece a continuación, actualiza la contraseña si ya existe:  
   

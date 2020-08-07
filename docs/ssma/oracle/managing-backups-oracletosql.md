@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Oracle Backup Management
 - SQL Server Backup Management
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b9e091db3e04eb0b82458e60f860dfb829076863
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262970"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934726"
 ---
 # <a name="managing-backups-oracletosql"></a>Administración de copias de seguridad (OracleToSQL)
 La administración de copia de seguridad de Oracle permite realizar copias de seguridad y restaurar datos de tablas antes o después de ejecutar una prueba. También puede administrar el cuadro de diálogo contenido de copia de seguridad con administrar contenido de copia de seguridad.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Sybase Console,Command Line Options
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 285f5c58c94db0f5506f84d19c992dfcdbbd00d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5aef07e7b7d1d96d93fba34a376e5374b1754fce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083485"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932136"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Opciones de la línea de comandos en la consola SSMA (SybaseToSQL)
 Microsoft proporciona un conjunto sólido de opciones de línea de comandos para ejecutar y controlar las actividades de SSMA. Las secciones siguientes detallan el mismo.  
@@ -26,7 +26,7 @@ Aquí se describen las opciones del comando de la consola.
   
 En esta sección, el término ' opción ' también se conoce como ' modificador '.  
   
--   Las opciones no distinguen mayúsculas de minúsculas y pueden**-** comenzar con un carácter**/**' ' o ' '.  
+-   Las opciones no distinguen mayúsculas de minúsculas y pueden comenzar con un **-** carácter ' ' o ' **/** '.  
   
 -   Si se especifican opciones, es obligatorio especificar los parámetros de opción correspondientes.  
   
@@ -123,7 +123,7 @@ Esta opción indica la contraseña cifrada para las conexiones del servidor. Dif
   
 No se puede especificar ninguna otra opción o contraseña como parámetro de la línea de comandos. De lo contrario, se producirá un error. Para obtener más información, consulte la sección [Administración de contraseñas](managing-passwords-sybasetosql.md) .  
   
-Se admiten las siguientes subopciones para `-p/securepassword`:  
+Se admiten las siguientes subopciones para `-p/securepassword` :  
   
 -   Para agregar una contraseña al almacenamiento protegido para un identificador de servidor especificado o para todos los identificadores de servidor definidos en el archivo de conexión de servidor. La opción-overwrite, que aparece a continuación, actualiza la contraseña si ya existe:  
   

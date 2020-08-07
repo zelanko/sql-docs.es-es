@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3cd166f0e85a4a9a58a43feca8e1f3ba4fc211b7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006543"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938720"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Asistente buscar bases de datos (seleccionar archivos) (AccessToSQL)
 La página seleccionar archivos del asistente buscar bases de datos muestra los archivos que se encontraron durante la búsqueda. Para seleccionar un archivo y agregarlo a SSMA, seleccione la fila que contiene el nombre de archivo. Cuando haya terminado de seleccionar los archivos, haga clic en **siguiente** para ver la página comprobar selección.  
@@ -38,7 +38,7 @@ Muestra el nombre del archivo de base de datos de Access que se va a agregar a S
 **Propietario**  
 Muestra el propietario del archivo.  
   
-**Ruta de acceso del archivo**  
+**Ruta de acceso de archivo**  
 Muestra la ruta de acceso del archivo de base de datos de Access.  
   
 **Tamaño**  
@@ -47,7 +47,7 @@ Tamaño de la base de datos, en bytes.
 **Creado**  
 Fecha y hora en que se creó la base de datos.  
   
-**Modificado**  
+**Cambia**  
 Fecha y hora en que se actualizó por última vez la base de datos.  
   
 ## <a name="see-also"></a>Consulte también  

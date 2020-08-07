@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e9ca0ef87aac60849d114d0e43dd349e063e8c83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68222222"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938515"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introducción con SSMA para la consola de acceso (AccessToSQL)
 En esta sección se describe el procedimiento para iniciar y comenzar a usar la aplicación de consola de Access. Además, aquí se enumeran las convenciones que se usan en una ventana de salida de la consola de SSMA típica.  
@@ -26,7 +26,7 @@ Siga estos pasos para iniciar la aplicación de consola SSMA:
   
 2.  Haga clic en el acceso directo del **símbolo del sistema de SQL Server Migration Assistant para Access** .  
   
-    Muestra el menú de uso de la consola `(/? Help)`de SSMA y, para ayudarle a empezar a trabajar con la aplicación de consola.  
+    Muestra el menú de uso de la consola de SSMA y `(/? Help)` , para ayudarle a empezar a trabajar con la aplicación de consola.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Procedimiento para usar la consola de SSMA  
 Una vez que se haya iniciado correctamente la consola de en el sistema Windows, puede usar los pasos siguientes para trabajar en ella:  

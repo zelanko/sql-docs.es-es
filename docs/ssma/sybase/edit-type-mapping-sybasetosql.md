@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 043eb1a2eaf9325d8a252598b26317017d92fa94
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029169"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931971"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Editar asignación de tipo (SybaseToSQL)
 El cuadro de diálogo **Editar asignación de tipos** permite especificar cómo se asignan los tipos entre los objetos de base de datos de origen y de destino.  
@@ -29,7 +29,7 @@ Las asignaciones de tipos específicas de tabla invalidan las asignaciones de ti
   
 ## <a name="options"></a>Opciones  
 **Tipo de origen**  
-Seleccione el tipo de datos de origen que se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] va a asignar a un tipo de datos.  
+Seleccione el tipo de datos de origen que se va a asignar a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  
   
 Si el tipo de datos es de longitud variable, los campos siguientes aparecerán en **tipo de origen**:  
   
@@ -40,7 +40,7 @@ Especifique la longitud mínima de esta asignación. Por ejemplo, para el tipo d
 Especifique la longitud máxima de esta asignación. Por ejemplo, para el tipo de datos **nchar** , puede especificar 20 para especificar que esta asignación es para un intervalo que termina en **NCHAR (20)**.  
   
 **Tipo de destino**  
-Seleccione el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos al que se asigna el tipo de datos de origen. Cuando SSMA crea la tabla o el procedimiento almacenado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en, el tipo de datos de origen cambiará a este tipo de datos.  
+Seleccione el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos al que se asigna el tipo de datos de origen. Cuando SSMA crea la tabla o el procedimiento almacenado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el tipo de datos de origen cambiará a este tipo de datos.  
   
 Si el tipo de datos es de longitud variable, el siguiente campo aparecerá en **tipo de destino**:  
   

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - reference, user interface
 - user interface
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0366c4549c557d2e5f90733f5dadba61cecdc22c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266961"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937780"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Referencia de la interfaz de usuario (AccessToSQL)
-En esta sección se incluyen temas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de ayuda para Migration Assistant (SSMA) para el acceso.  
+En esta sección se incluyen temas de ayuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para el acceso.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -29,7 +29,7 @@ En esta sección se incluyen temas [!INCLUDE[ssNoVersion](../../includes/ssnover
 |---------|---------------|  
 |[Selección avanzada de objetos &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Utilice el cuadro de diálogo **Seleccionar objeto avanzado** para buscar objetos de base de datos mediante criterios de filtro y, a continuación, Active o desactive esos objetos.|  
 |[Informe de evaluación &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|Utilice el cuadro de diálogo **Informe de evaluación** para analizar la conversión de objetos de base de datos de Access y para calcular cuánto tiempo tardará la migración.|  
-|[Conectarse a SQL Server](https://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de a la que desea migrar.|  
+|[Conectarse a SQL Server](https://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que desea migrar.|  
 |[Conectarse a SQL Azure](connect-to-azure-sql-db-accesstosql.md)|Utilice el cuadro de diálogo **conectar con SQL Azure** para conectarse a la instancia de SQL Azure a la que desea migrar.|  
 |[Convertir, cargar y migrar](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)|El cuadro de diálogo **convertir, cargar y migrar** forma parte del Asistente para migración y también aparece cuando se usa el comando **convertir, cargar y migrar** .|  
 |[Informe de migración de datos &#40;AccessToSQL&#41;](../../ssma/access/data-migration-report-accesstosql.md)|Aparece después de la migración de datos y los informes de aciertos y errores de cada tabla.|  
@@ -45,7 +45,7 @@ En esta sección se incluyen temas [!INCLUDE[ssNoVersion](../../includes/ssnover
 |[Nuevo proyecto (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)|Utilice el cuadro de diálogo **nuevo proyecto** para crear un nuevo proyecto de SSMA.|  
 |[Configuración del proyecto (conversión)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)|Use la página **conversión** del cuadro de diálogo **configuración del proyecto** para especificar cómo SSMA convierte las columnas de memorando indizadas, las claves principales, las restricciones de clave externa, las marcas de tiempo y las tablas sin índices.|  
 |[Configuración del proyecto &#40;GUI&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-gui-accesstosql.md)|Use la página GUI del cuadro de diálogo **configuración del proyecto** para especificar la cantidad de datos que aparecen en la pestaña **datos** .|  
-|[Configuración del proyecto (migración)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Use la página migración del cuadro de diálogo **configuración del proyecto** para especificar el tamaño del lote de migración, el bloqueo de tabla, la comprobación de restricciones, la activación del desencadenador de inserción, la identidad y el control [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de valores NULL, y cómo controlar las fechas que están fuera del intervalo.|  
+|[Configuración del proyecto (migración)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)|Use la página migración del cuadro de diálogo **configuración del proyecto** para especificar el tamaño del lote de migración, el bloqueo de tabla, la comprobación de restricciones, la activación del desencadenador de inserción, la identidad y el control de valores NULL, y cómo controlar las fechas que están fuera del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intervalo.|  
 |[Configuración del proyecto (asignación de tipo)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)|Use la página asignación de tipos del cuadro de diálogo **configuración del proyecto** para especificar las asignaciones de tipos predeterminadas para todas las bases de datos y los objetos de base de datos del proyecto SSMA.|  
 |[Configuración del proyecto (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Use la página SQL Azure del cuadro de diálogo **configuración del proyecto** para especificar el sufijo de la base de datos y también el intervalo de tiempo de espera de latido.|  
 |[Guardar metadatos &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|El cuadro de diálogo **guardar metadatos** aparece cuando se guarda un proyecto en el que faltan metadatos.|  

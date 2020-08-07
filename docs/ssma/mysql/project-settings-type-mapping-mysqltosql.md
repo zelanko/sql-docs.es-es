@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 79c86ee63638dcc520aa9bb590b8a616172cb1e4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396565"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935180"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configuración del proyecto (asignación de tipo) (MySQLToSQL)
 La configuración del proyecto de asignación de tipos permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA.  
@@ -39,7 +39,7 @@ Haga clic para agregar un tipo de datos a la lista de asignaciones.
 ##### <a name="edit"></a>Editar  
 Haga clic en esta opción para modificar el tipo de datos seleccionado en la lista asignación.  
   
-##### <a name="remove"></a>Remove  
+##### <a name="remove"></a>Quitar  
 Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
 ##### <a name="reset-to-default"></a>Valores predeterminados  
@@ -199,7 +199,7 @@ Haga clic para agregar un tipo de datos a la lista de asignaciones.
 ##### <a name="edit"></a>Editar  
 Haga clic para editar un tipo de datos en la lista asignación.  
   
-##### <a name="remove"></a>Remove  
+##### <a name="remove"></a>Quitar  
 Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
 ##### <a name="reset-to-default"></a>Valores predeterminados  

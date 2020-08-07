@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Script File Commands, Script Generation Commands,Manageability Commands
 - Script File Commands,Project Commands
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 60843fc3c41d089c28847e724585e62992089be1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6b6d7576bc20786c49893a5cf5ab4835d1d7fb57
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909537"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934863"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Ejecución de la consola de SSMA (OracleToSQL)
 Microsoft proporciona un conjunto sólido de comandos de archivo de script para ejecutar y controlar las actividades de SSMA. La aplicación de consola usa determinados comandos de archivo de script estándar que se enumeran en esta sección.  
@@ -42,7 +42,7 @@ crear-nuevo-proyecto
   
 -   `project-type:`Atributo opcional. Indica el tipo de proyecto, es decir, el proyecto "SQL-Server-2005" o el proyecto "SQL-Server-2008" o el proyecto "SQL-Server-2012" o "SQL-Server-2014" o "SQL-Azure". El valor predeterminado es "SQL-Server-2014".  
   
-**Ejemplo:**  
+**Ejemplo**:  
   
 ```xml  
 <create-new-project  
@@ -160,7 +160,7 @@ Requiere uno o varios nodos de metabase como parámetro de línea de comandos.
   
   metabase="<source/target>"/>  
 ```  
-or  
+o  
   
 ```xml  
 <force-load>  
@@ -244,7 +244,7 @@ generar informe de evaluación
   
 -   `write-summary-report-to:`Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;AssessmentReport n&gt;. **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **AssessmentReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -273,7 +273,7 @@ generar informe de evaluación
   
 />  
 ```  
-or  
+o  
   
 ```xml  
 <generate-assessment-report  
@@ -318,7 +318,7 @@ Convert-Schema
   
 -   `write-summary-report-to:`Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;SchemaConversionReport n&gt;. **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **SchemaConversionReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -347,7 +347,7 @@ Convert-Schema
   
 />  
 ```  
-or  
+o  
   
 ```xml  
 <convert-schema  
@@ -382,7 +382,7 @@ Migra los datos de origen al destino.
   
 -   `write-summary-report-to:`Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;DataMigrationReport n&gt;. **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **DataMigrationReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -415,7 +415,7 @@ Migra los datos de origen al destino.
   
 </migrate-data>  
 ```  
-or  
+o  
   
 ```xml  
 <migrate-data  
@@ -485,7 +485,7 @@ sincronizar-destino
   
     -   error: script  
   
--   `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea File by Name **TargetSynchronizationReport. XML** .  
+-   `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea el archivo por nombre **TargetSynchronizationReport.XML** .  
   
 **Ejemplo de sintaxis:**  
   
@@ -550,7 +550,7 @@ Requiere uno o varios nodos de metabase como parámetro de línea de comandos.
   
     -   error: script  
   
--   `report-errors-to:`Especifica la ubicación del informe de errores para la operación de actualización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea File by Name **SourceDBRefreshReport. XML** .  
+-   `report-errors-to:`Especifica la ubicación del informe de errores para la operación de actualización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea el archivo por nombre **SourceDBRefreshReport.XML** .  
   
 **Ejemplo de sintaxis:**  
   
@@ -628,7 +628,7 @@ Requiere uno o varios nodos de metabase como parámetro de línea de comandos.
   
 />  
 ```  
-or  
+o  
   
 ```xml  
 <save-as-script  
@@ -659,13 +659,13 @@ Convert-SQL-Statement
   
     **Valor predeterminado:** false. (atributo opcional)  
   
--   `write-converted-sql-to`Especifica la ruta de acceso de la carpeta del archivo (o) donde se va a almacenar el T-SQL convertido. Cuando se especifica una ruta de acceso de carpeta `sql-files` junto con el atributo, cada archivo de código fuente tendrá un archivo T-SQL de destino correspondiente creado en la carpeta especificada. Cuando se especifica una ruta de acceso de carpeta `sql` junto con el atributo, el T-SQL convertido se escribe en un archivo denominado **result. out** en la carpeta especificada.  
+-   `write-converted-sql-to`Especifica la ruta de acceso de la carpeta del archivo (o) donde se va a almacenar el T-SQL convertido. Cuando se especifica una ruta de acceso de carpeta junto con el `sql-files` atributo, cada archivo de código fuente tendrá un archivo T-SQL de destino correspondiente creado en la carpeta especificada. Cuando se especifica una ruta de acceso de carpeta junto con el `sql` atributo, el T-SQL convertido se escribe en un archivo denominado **result. out** en la carpeta especificada.  
   
 -   `sql`especifica las instrucciones SQL de Oracle que se van a convertir; se pueden separar una o varias instrucciones usando un ";"  
   
 -   `sql-files`Especifica la ruta de acceso de los archivos SQL que se deben convertir al código T-SQL.  
   
--   `write-summary-report-to`Especifica la ruta de acceso donde se generará el informe. Si solo se menciona la ruta de acceso de la carpeta, se crea File by Name **ConvertSQLReport. XML** . (atributo opcional)  
+-   `write-summary-report-to`Especifica la ruta de acceso donde se generará el informe. Si solo se menciona la ruta de acceso de la carpeta, se crea el archivo por nombre **ConvertSQLReport.XML** . (atributo opcional)  
   
     La creación de informes tiene 2 subcategorías más, es decir:  
   

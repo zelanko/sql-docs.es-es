@@ -34,17 +34,17 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068955"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934156"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventario de acceso (AccessToSQL)
-En las secciones siguientes se describen las tablas que se crean al exportar esquemas de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+En las secciones siguientes se describen las tablas que se crean al exportar esquemas de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="databases"></a>Bases de datos  
 Los metadatos de la base de datos se exportan a la tabla **SSMA_Access_InventoryDatabases** . Esta tabla contiene las columnas siguientes:  
@@ -92,12 +92,12 @@ Los metadatos de columna se exportan a la tabla **SSMA_Access_InventoryColumns**
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene esta columna.|  
 |**TableId**|**uniqueidentifier**|Identifica la tabla que contiene esta columna.|  
 |**ColumnId**|**int**|Entero que incrementa el valor de la columna. **ColumnId** es la clave principal de la tabla.|  
-|**ColumnName**|**nvarchar(4000)**|Nombre de la columna.|  
+|**ColumnName**|**nvarchar(4000)**|El nombre de la columna.|  
 |**IsNullable**|**bit**|Especifica si la columna puede contener valores NULL. Si el valor es 1, la columna puede contener valores NULL. Si el valor es 0, la columna no puede contener valores NULL. Tenga en cuenta que la regla de validación también se puede usar para evitar valores NULL.|  
 |**DataType**|**nvarchar(4000)**|El tipo de datos de acceso de la columna, como **texto** o **largo**.|  
 |**Disautoincrement**|**bit**|Especifica si la columna incrementa automáticamente los valores enteros. Si el valor es 1, los enteros se incrementan automáticamente.|  
-|**Números**|**smallint**|El orden de la columna de la tabla, empezando por cero.|  
-|**DefaultValue**|**nvarchar(4000)**|El valor predeterminado de la columna.|  
+|**Ordinal**|**smallint**|El orden de la columna de la tabla, empezando por cero.|  
+|**DefaultValue**|**nvarchar(4000)**|Valor predeterminado para la columna.|  
 |**(**|**nvarchar(4000)**|La regla que se usa para validar los datos agregados o actualizados en la columna.|  
   
 ## <a name="indexes"></a>Índices  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d7287c5ed79834629c5cded6e29b87cf46d0e9ef
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266507"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932856"
 ---
 # <a name="save-metadata--oracletosql"></a>Guardar metadatos (OracleToSQL)
 El cuadro de diálogo **guardar metadatos** le solicita que cargue los metadatos en el proyecto de SSMA antes de guardarlo. Esto le permite tener un archivo de proyecto completo que puede usar sin conexión y enviar a otras personas, como personal de soporte técnico.  
@@ -34,7 +34,7 @@ SSMA carga los metadatos en el proyecto según sea necesario. Los metadatos se c
 **Seleccionar todo**  
 Selecciona todas las bases de datos de la lista.  
   
-**Claridad**  
+**Borrar**  
 Desactiva la casilla para todas las bases de datos con metadatos que faltan. No puede desactivar la casilla si se han cargado los metadatos.  
   
 **Guardar**  

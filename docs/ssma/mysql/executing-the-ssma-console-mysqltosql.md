@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Script file commands, Report commands
 - Script file commands, Script generation commands
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 239ba5021363be583572d5d24887233261e359cc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8cf2ded8823c03c5f002087277604ac65985aabc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909695"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935604"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Ejecución de la consola de SSMA (MySQLToSQL)
 Microsoft proporciona un conjunto sólido de comandos de archivo de script para ejecutar y controlar las actividades de SSMA.  
@@ -200,7 +200,7 @@ reconnect-Source-Database
   
 Connect-Target-Database  
   
-1.  Se conecta al SQL Server de destino o SQL Azure base de datos y carga los metadatos de alto nivel de la base de datos de destino, pero no los metadatos por completo.  
+1.  Se conecta al SQL Server de destino o Azure SQL Database y carga los metadatos de alto nivel de la base de datos de destino, pero no los metadatos por completo.  
   
 2.  Si no se puede establecer la conexión con el destino, se genera un error y la aplicación de consola detiene la ejecución.  
   
@@ -244,7 +244,7 @@ generar informe de evaluación
   
 **Script**  
   
-1.  `assessment-report-folder:`Especifica la carpeta donde se puede almacenar el informe de evaluación. (atributo opcional)  
+1.  `assessment-report-folder:`Especifica la carpeta donde se almacena el informe de evaluación. (atributo opcional)  
   
 2.  `object-name:`Especifica los objetos que se han tenido en cuenta para la generación de informes de evaluación (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
@@ -256,7 +256,7 @@ generar informe de evaluación
   
 5.  `write-summary-report-to:`Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;AssessmentReport n&gt;. **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **AssessmentReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -285,7 +285,7 @@ generar informe de evaluación
   
 />  
 ```  
-or  
+o  
   
 ```xml  
 <generate-assessment-report  
@@ -318,7 +318,7 @@ Convert-Schema
   
 **Script**  
   
-1.  `conversion-report-folder:`Especifica la carpeta donde se puede almacenar el informe de evaluación. (atributo opcional)  
+1.  `conversion-report-folder:`Especifica la carpeta donde se almacena el informe de evaluación. (atributo opcional)  
   
 2.  `object-name:`Especifica los objetos que se tienen en cuenta para convertir el esquema (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
@@ -330,7 +330,7 @@ Convert-Schema
   
 5.  `write-summary-report-to:`Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;SchemaConversionReport n&gt;. **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **SchemaConversionReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
   
     La creación de informes de resumen tiene dos subcategorías más:  
   
@@ -359,7 +359,7 @@ Convert-Schema
   
 />  
 ```  
-or  
+o  
   
 ```xml  
 <convert-schema  
@@ -388,7 +388,7 @@ migrar datos
   
 3.  `write-summary-report-to:`Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;DataMigrationReport n&gt;. **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **DataMigrationReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -419,7 +419,7 @@ migrar datos
   
 </migrate-data>  
 ```  
-or  
+o  
   
 ```xml  
 <migrate-data  
@@ -488,7 +488,7 @@ sincronizar-destino
   
     -   error: script  
   
-4.  `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea File by Name **TargetSynchronizationReport. XML** .  
+4.  `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea el archivo por nombre **TargetSynchronizationReport.XML** .  
   
 **Ejemplo de sintaxis:**  
   
@@ -551,7 +551,7 @@ actualizar desde la base de datos
   
     -   error: script  
   
-4.  `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea File by Name **SourceDBRefreshReport. XML** .  
+4.  `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea el archivo por nombre **SourceDBRefreshReport.XML** .  
   
 Requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
@@ -631,7 +631,7 @@ Requiere uno o varios nodos de metabase como parámetro de línea de comandos.
   
 />  
 ```  
-or  
+o  
   
 ```xml  
 <save-as-script  
@@ -656,19 +656,19 @@ Convert-SQL-Statement
   
     Si no se especifica este atributo, se muestra la instrucción T-SQL convertida en la consola. (atributo opcional)  
   
-3.  `conversion-report-folder`Especifica la carpeta donde se puede almacenar el informe de evaluación. (atributo opcional)  
+3.  `conversion-report-folder`Especifica la carpeta donde se almacena el informe de evaluación. (atributo opcional)  
   
 4.  `conversion-report-overwrite`Especifica si se va a sobrescribir la carpeta de informes de evaluación si ya existe.  
   
     **Valor predeterminado:** false. (atributo opcional)  
   
-5.  `write-converted-sql-to`Especifica la ruta de acceso de la carpeta del archivo (o) donde se va a almacenar el T-SQL convertido. Cuando se especifica una ruta de acceso de carpeta `sql-files` junto con el atributo, cada archivo de código fuente tendrá un archivo T-SQL de destino correspondiente creado en la carpeta especificada. Cuando se especifica una ruta de acceso de carpeta `sql` junto con el atributo, el T-SQL convertido se escribe en un archivo denominado result. out en la carpeta especificada.  
+5.  `write-converted-sql-to`Especifica la ruta de acceso de la carpeta del archivo (o) donde se va a almacenar el T-SQL convertido. Cuando se especifica una ruta de acceso de carpeta junto con el `sql-files` atributo, cada archivo de código fuente tendrá un archivo T-SQL de destino correspondiente creado en la carpeta especificada. Cuando se especifica una ruta de acceso de carpeta junto con el `sql` atributo, el T-SQL convertido se escribe en un archivo denominado result. out en la carpeta especificada.  
   
 6.  `sql`especifica las instrucciones SQL de MySQL que se van a convertir; una o varias instrucciones se pueden separar con un ";"  
   
 7.  `sql-files`Especifica la ruta de acceso de los archivos SQL que se deben convertir al código T-SQL.  
   
-8.  `write-summary-report-to`Especifica la ruta de acceso donde se generará el informe de resumen. Si solo se menciona la ruta de acceso de la carpeta, se crea File by Name **ConvertSQLReport. XML** . (atributo opcional)  
+8.  `write-summary-report-to`Especifica la ruta de acceso donde se generará el informe de resumen. Si solo se menciona la ruta de acceso de la carpeta, se crea el archivo por nombre **ConvertSQLReport.XML** . (atributo opcional)  
   
     La creación de informes tiene 2 subcategorías más, es decir,...:  
   

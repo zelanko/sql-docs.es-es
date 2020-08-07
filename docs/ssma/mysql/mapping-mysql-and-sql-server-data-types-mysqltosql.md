@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 604f9ce8e26e3d2221cd9a4bf7732c56ba3296c0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823470"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935394"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Asignación de tipos de datos de MySQL y de SQL Server (MySQLToSQL)
-Los tipos de base de datos MySQL difieren de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure tipos de base de datos. Al convertir objetos de base de datos MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos o SQL Azure, debe especificar cómo se asignan los tipos de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en los procedimientos siguientes.  
+Los tipos de base de datos MySQL se diferencian de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de Azure SQL Database. Al convertir objetos de base de datos MySQL en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos o SQL Azure, debe especificar cómo se asignan los tipos de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en los procedimientos siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
 SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para ver la lista de asignaciones predeterminadas, vea [configuración del proyecto &#40;asignación de tipos&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -68,9 +68,9 @@ Al ver la pestaña **asignación de tipos** en SSMA, el fondo está codificado p
   
     Esto le permite personalizar la asignación de datos para valores más pequeños y mayores del mismo tipo de datos. En **tipo de destino**, seleccione el tipo de datos SQL Server o SQL Azure de destino.  
   
-    1.  Algunos tipos requieren una longitud de tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
+    -  Algunos tipos requieren una longitud de tipo de datos de destino. Si es necesario, escriba la nueva longitud de datos en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
-    2.  Algunos tipos requieren una **escala** y **precisión** del tipo de datos de destino. Si es necesario, escriba la nueva precisión y la escala en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar** .  
+    -  Algunos tipos requieren una **escala**y **precisión** del tipo de datos de destino. Si es necesario, escriba la nueva precisión y la escala en el cuadro **reemplazar con** y, a continuación, haga clic en **Aceptar**.  
   
 -   **Para quitar una asignación de tipo de datos, haga lo siguiente:**  
   

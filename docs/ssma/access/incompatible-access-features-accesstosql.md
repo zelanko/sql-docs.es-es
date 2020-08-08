@@ -26,14 +26,14 @@ helpviewer_keywords:
 - unique indexes
 - validation rules
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8bccdd3ebb49e3694ca472525a7c76d81f1fcc7a
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 27761441dd9df65c276a2afd12565018e4440f85
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293552"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938766"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Características de acceso incompatibles (AccessToSQL)
 No todas las características de base de datos de Access son compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Access tienen diferentes conjuntos de palabras clave reservadas. Los problemas como estos pueden impedir que la migración se realice correctamente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use la tabla siguiente para obtener información acerca de posibles problemas de migración y lo que puede hacer con ellos.  

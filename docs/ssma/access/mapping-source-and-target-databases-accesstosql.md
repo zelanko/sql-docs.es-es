@@ -16,25 +16,25 @@ helpviewer_keywords:
 - source database
 - target database
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 894dec18ab2d487eca22a65542e1d77d6c2e2f77
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 9e07c42e272728943f30198c8800c86aaa9443e3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293758"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938184"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Asignación de bases de datos de origen y de destino (AccessToSQL)
-Al conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe especificar una base de datos de destino para la migración. Si tiene varias bases de datos de Access, puede asignarlas a varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos (o esquemas) o a varios esquemas en la base de datos de SQL Azure conectada.  
+Al conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe especificar una base de datos de destino para la migración. Si tiene varias bases de datos de Access, puede asignarlas a varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos (o esquemas) o a varios esquemas en el Azure SQL Database conectado.  
   
-## <a name="sql-server-or-sql-azure-database-schemas"></a>Esquemas de base de datos SQL Server o SQL Azure  
+## <a name="sql-server-or-azure-sql-database-schemas"></a>Esquemas de SQL Server o Azure SQL Database  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las bases de datos usan el concepto de esquemas para separar los objetos de una base de datos en grupos lógicos. Por ejemplo, una base de datos de biblioteca podría usar tres esquemas denominados **libros**, **audio**y **vídeo** para separar los objetos de libro, audio y vídeo entre sí. De forma predeterminada, la base de datos de Access se asigna a la base de datos **maestra** y al esquema **DBO** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a la base de datos conectada y al esquema **DBO** en SQL Azure.  
   
 A menos que personalice la asignación entre cada base de datos de Access y la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el esquema, SSMA migrará todos los esquemas y datos asociados a la base de datos de Access a la base de datos predeterminada asignada.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Modificar la base de datos y el esquema de destino  
-SSMA le permite asignar cada base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure base de datos y esquema. En el procedimiento siguiente se describe cómo personalizar la asignación por base de datos.  
+SSMA le permite asignar cada base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database. En el procedimiento siguiente se describe cómo personalizar la asignación por base de datos.  
   
 **Para modificar la base de datos y el esquema de destino**  
   
@@ -61,7 +61,7 @@ Puede asignar una base de datos de origen a cualquier base de datos de destino. 
 Puede asignar la base de datos de origen a la base de datos de destino conectada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a cualquier esquema de la base de datos de destino conectada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si asigna un esquema de origen a cualquier esquema no existente en la base de datos de destino conectada, se le pedirá un mensaje que indica que el **esquema no existe en los metadatos de destino. Se creará durante la sincronización. ¿Desea continuar? "** Haga clic en sí.  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>Revertir a la base de datos y el esquema iniciales  
-Si personaliza la asignación entre una base de datos de Access y una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure base de datos y esquema, puede revertir la asignación a la base de datos que especificó al conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
+Si personaliza la asignación entre una base de datos de Access y un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database, puede revertir la asignación de nuevo a la base de datos que especificó al conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 **Para restablecer la base de datos y el esquema predeterminados**  
   

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3bb372b329ce516cae2ab26ece02721d7934b228
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822522"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938934"
 ---
 # <a name="connecting-to-azure-sql-database-accesstosql"></a>Conexión a Azure SQL Database (AccessToSQL)
 Para migrar bases de datos de Access a SQL Azure, debe conectarse a la instancia de destino de SQL Azure. Cuando se conecta, SSMA obtiene los metadatos de todas las bases de datos de la instancia de SQL Azure y muestra los metadatos de la base de datos en el explorador de metadatos de SQL Azure. SSMA almacena información acerca de la instancia de SQL Azure a la que está conectado, pero no almacena contraseñas.  
@@ -72,7 +72,7 @@ Al definir las propiedades de conexión, también se especifica la base de datos
 Si no hay ninguna base de datos en la cuenta de SQL Azure, puede crear la primera base de datos mediante la opción **crear base de datos de Azure** que aparece en el botón hacer clic en **examinar** .  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>Sincronizar metadatos de SQL Azure  
-Los metadatos acerca de SQL Azure bases de datos no se actualizan automáticamente. Los metadatos de SQL Azure explorador de metadatos es una instantánea de los metadatos cuando se conectó por primera vez a SQL Azure, o la última vez que se actualizaron los metadatos manualmente. Puede actualizar manualmente los metadatos de todas las bases de datos o de cualquier base de datos o objeto de base de datos.  
+Los metadatos acerca de las bases de datos de Azure SQL Database no se actualizan automáticamente. Los metadatos de SQL Azure explorador de metadatos es una instantánea de los metadatos cuando se conectó por primera vez a SQL Azure, o la última vez que se actualizaron los metadatos manualmente. Puede actualizar manualmente los metadatos de todas las bases de datos o de cualquier base de datos o objeto de base de datos.  
   
 **Para sincronizar los metadatos**  
   
@@ -96,10 +96,10 @@ La conexión a SQL Azure permanece activa hasta que se cierra el proyecto. Cuand
   
 El procedimiento para volver a conectar a SQL Azure es el mismo que el procedimiento para establecer una conexión.  
   
-## <a name="next-step"></a>siguiente paso  
+## <a name="next-steps"></a>Pasos siguientes  
 El siguiente paso de la migración depende de las necesidades del proyecto:  
   
--   Para personalizar la asignación entre esquemas de acceso y bases de datos y esquemas de SQL Azure, consulte [asignación de bases de datos de Access a esquemas de SQL Server](mapping-source-and-target-databases-accesstosql.md).  
+-   Para personalizar la asignación entre los esquemas de acceso y Azure SQL Database, vea [asignar bases de datos de Access a esquemas de SQL Server](mapping-source-and-target-databases-accesstosql.md).  
   
 -   Para personalizar las opciones de configuración de los proyectos, consulte [configuración de las opciones del proyecto](setting-conversion-and-migration-options-accesstosql.md).  
   

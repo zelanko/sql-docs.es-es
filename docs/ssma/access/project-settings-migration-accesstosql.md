@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929394"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937772"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Configuración del proyecto (migración) (AccessToSQL)
-La configuración del proyecto de migración le permite configurar cómo se migran los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos a o SQL Azure.  
+La configuración del proyecto de migración le permite configurar cómo se migran los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 El panel Migración está disponible en los cuadros de diálogo Configuración del **proyecto** y **configuración predeterminada del proyecto** .  
   
@@ -39,7 +39,7 @@ Especifica si SSMA debe comprobar las restricciones cuando agrega datos a las ta
 -   **Modo completo**: false  
   
 **Activar desencadenadores**  
-Especifica si SSMA debe activar los desencadenadores de inserción cuando agrega datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a las tablas.  
+Especifica si SSMA debe activar los desencadenadores de inserción cuando agrega datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las tablas.  
   
 -   **Modo predeterminado**: false  
   
@@ -48,7 +48,7 @@ Especifica si SSMA debe activar los desencadenadores de inserción cuando agrega
 -   **Modo completo**: false  
   
 **Mantener valores de identidad**  
-Especifica si SSMA conserva los valores de identidad de acceso cuando agrega datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si este valor es false, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna los valores de identidad.  
+Especifica si SSMA conserva los valores de identidad de acceso cuando agrega datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si este valor es false, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna los valores de identidad.  
   
 -   **Modo predeterminado**: true  
   
@@ -57,7 +57,7 @@ Especifica si SSMA conserva los valores de identidad de acceso cuando agrega dat
 -   **Modo completo**: false  
   
 **Mantener valores NULL**  
-Especifica si SSMA conserva los valores NULL en los datos de origen cuando agrega datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independientemente de los valores predeterminados que se especifiquen en. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+Especifica si SSMA conserva los valores NULL en los datos de origen cuando agrega datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , independientemente de los valores predeterminados que se especifiquen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Modo predeterminado**: true  
   

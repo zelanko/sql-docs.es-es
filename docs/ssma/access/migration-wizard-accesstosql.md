@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Migration Wizard, New Project
 - Migration Wizard, Selecting objects to migrate
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8413487d4b367426c22795f7e82e58ec029706c3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083590"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938015"
 ---
 # <a name="migration-wizard-accesstosql"></a>Asistente para migración (AccessToSQL)
-El Asistente para migración le guía a través de la migración de una o varias bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de acceso a o SQL Azure. Mediante el asistente, se crea un proyecto, se agregan bases de datos al proyecto, se seleccionan los objetos que se van a migrar y se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. También convertirá, cargará y migrará los esquemas y los datos de Access. Opcionalmente, puede vincular tablas de Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tablas de o SQL Azure.  
+El Asistente para migración le guía a través de la migración de una o varias bases de datos de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Mediante el asistente, se crea un proyecto, se agregan bases de datos al proyecto, se seleccionan los objetos que se van a migrar y se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. También convertirá, cargará y migrará los esquemas y los datos de Access. Opcionalmente, puede vincular tablas de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas de o SQL Azure.  
   
 La mayoría de las páginas del Asistente para migración contienen las mismas opciones que los cuadros de diálogo de SSMA existentes. Por lo tanto, las páginas del asistente se describen aquí y, a continuación, se proporcionan vínculos para que pueda obtener más información sobre las opciones individuales. Si una página contiene opciones únicas, se documentan aquí.  
   
@@ -75,7 +75,7 @@ Si tiene muchos objetos, es posible que desee usar las opciones **avanzadas de s
 Para obtener más información sobre el filtrado, consulte la sección Opciones de [selección avanzada de objetos (SSMA Common)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## <a name="connect-to-sql-server-page"></a>Página conectar con SQL Server  
-En la página conectar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a, especifique las propiedades de conexión y, a continuación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], conéctese a. Para obtener más información, consulte [conexión a SQL Server](connect-to-sql-server-accesstosql.md).
+En la página conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , especifique las propiedades de conexión y, a continuación, conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [conexión a SQL Server](connect-to-sql-server-accesstosql.md).
   
 > [!IMPORTANT]  
 > En cuanto la conexión se realiza correctamente, se encontrará en la página **vincular tablas** , donde tiene la opción de vincular las tablas. Haga clic en **siguiente** y se iniciará la migración.  
@@ -87,13 +87,13 @@ En la página conectar a SQL Azure, especifique las propiedades de conexión y, 
 > En cuanto la conexión se realiza correctamente, se encontrará en la página **vincular tablas** , donde tiene la opción de vincular las tablas. Haga clic en el botón **siguiente** en la página vínculos para iniciar la migración.  
   
 ## <a name="link-tables-page"></a>Página vincular tablas  
-La página vincular tablas le permite vincular las tablas de Access originales a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las tablas migradas o SQL Azure. La vinculación de tablas modifica la base de datos de Access de forma que las consultas, los formularios, los informes y las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] páginas de acceso a datos usen los datos de la base de datos o SQL Azure en lugar de los datos de la base de datos de Access.  
+La página vincular tablas le permite vincular las tablas de Access originales a las tablas migradas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. La vinculación de tablas modifica la base de datos de Access de forma que las consultas, los formularios, los informes y las páginas de acceso a datos usan los datos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database o en lugar de los datos de la base de datos de Access.  
   
 **Vincular tablas**  
-Active la casilla **vincular tablas** para vincular las tablas de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las tablas migradas o SQL Azure. Para iniciar la migración, haga clic en el botón **siguiente** .  
+Active la casilla **vincular tablas** para vincular las tablas de Access a las tablas migradas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Para iniciar la migración, haga clic en el botón **siguiente** .  
   
 ## <a name="migration-status-page"></a>Página estado de la migración  
-La página estado de la migración muestra el progreso de la conversión de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas de acceso a o SQL Azure esquemas, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carga de los esquemas convertidos en o SQL Azure y, a continuación, la migración de datos.  
+La página estado de la migración muestra el progreso de la conversión de los esquemas de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure esquemas, la carga de los esquemas convertidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure y, a continuación, la migración de datos.  
   
 Para obtener más información acerca de esta página, vea [convertir, cargar y migrar](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b) .  
   

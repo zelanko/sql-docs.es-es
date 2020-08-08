@@ -13,17 +13,17 @@ helpviewer_keywords:
 - source data types
 - target data types
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907160"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938304"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Asignación de tipos de datos de origen y de destino (AccessToSQL)
-Los tipos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de Access se diferencian de los tipos Al convertir objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Access en objetos de, debe especificar cómo se asignan los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipos de datos de a. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en los procedimientos siguientes.  
+Los tipos de base de datos de Access se diferencian de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos Al convertir objetos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de Access en objetos de, debe especificar cómo se asignan los tipos de datos de a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en los procedimientos siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
 SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para obtener la lista de asignaciones predeterminadas, vea [configuración del proyecto (asignación de tipos)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  

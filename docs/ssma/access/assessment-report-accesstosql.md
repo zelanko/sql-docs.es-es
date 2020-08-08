@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Assessment Report dialog box
 - Conversion Report dialog box
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c28fb4cf5d110e01b156fc6ce985b2cb2fb7bfe1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: de675e479217170a465126d8fe242d01c778abf0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910685"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939084"
 ---
 # <a name="assessment-report-accesstosql"></a>Informe de evaluación (AccessToSQL)
-La ventana Informe de evaluación muestra los resultados de la conversión de objetos de [!INCLUDE[tsql](../../includes/tsql-md.md)] base de datos a sintaxis y también puede ayudarle a calcular la complejidad y el costo de los proyectos de migración.  
+La ventana Informe de evaluación muestra los resultados de la conversión de objetos de base de datos a [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis y también puede ayudarle a calcular la complejidad y el costo de los proyectos de migración.  
   
 Para crear un informe de evaluación, seleccione los objetos que desea convertir en el explorador de metadatos de origen, haga clic con el botón derecho en **bases**de datos y, a continuación, seleccione **crear informe**. También puede mostrar este informe automáticamente después de convertir los esquemas. Sin embargo, el nombre del informe será informe de conversión. Para obtener más información, vea [configuración del proyecto (GUI) (SSMA Common)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
   

@@ -16,12 +16,12 @@ ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2899c671b312edff56c11568a74a67d3f961d9e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b9d686223d5b5261426195b3ca659cf7909b9e38
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247811"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87941802"
 ---
 # <a name="ibcpsessionbcpcolfmt-native-client-ole-db-provider"></a>IBCPSession:: BCPColFmt (proveedor de OLE DB de Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El método **BCPColFmt** se usa para crear un enlace entre los campos de archivo de datos BCP y las columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toma como parámetros la longitud, el tipo, el terminador y la longitud de prefijo de una columna y establece cada una de estas propiedades para campos individuales.  
   
  Si el usuario elige el modo interactivo, se llama a este método dos veces; una para establecer el formato de columna en función de los valores predeterminados (según el tipo de columna de servidor) y otra para establecer el formato en función del tipo de columna elegido por el cliente durante el modo interactivo para cada columna.  
@@ -117,7 +117,7 @@ HRESULT BCPColFmt(
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) .  
   
  E_UNEXPECTED  
  No se esperaba la llamada al método. Por ejemplo, no se llamó al método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) antes de llamar a este método.  

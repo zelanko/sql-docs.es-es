@@ -10,17 +10,17 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929453"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937907"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Configuración del proyecto (conversión) (AccessToSQL)
-La configuración del proyecto de conversión permite configurar el modo en que se convierten los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de objetos de base de datos de Access en objetos de base de datos de o SQL Azure.  
+La configuración del proyecto de conversión le permite configurar el modo en que se convierten los objetos de objetos de base de datos de Access en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos o Azure SQL Database.  
   
 El panel conversión está disponible en los cuadros de diálogo Configuración del **proyecto** y **configuración predeterminada del proyecto** .  
   
@@ -83,7 +83,7 @@ Especifica el tipo de mensaje (ADVERTENCIA, error o nada) que SSMA muestra en el
   
 -   **Modo completo**: error  
   
-**Advertir cuando una consulta compleja usa un carácter\&comodín (#42;)**  
+**Advertir cuando una consulta compleja usa un carácter comodín ( \& #42;)**  
 Muestra una advertencia en el panel de salida y Lista de errores cuando un nombre de columna en una instrucción SELECT es un carácter comodín (*).  
   
 -   **Modo predeterminado**: true  

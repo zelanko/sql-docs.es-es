@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020991"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930456"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selección y configuración de objetos afectados (SybaseToSQL)
 En esta página puede seleccionar las tablas y las claves externas, los cambios en los que debe compararse cuando SSMA comprueba los resultados de la ejecución de los objetos elegidos en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -33,7 +33,7 @@ La pestaña tabla contiene la vista de cuadrícula de la tabla seleccionada. La 
   
 -   Tipo de datos  
   
--   Precision  
+-   Precisión  
   
 -   Escala  
   
@@ -110,9 +110,9 @@ Controla la distinción de mayúsculas y minúsculas de la comparación.
 -   Si elige **false**, la comparación tendrá en cuenta las mayúsculas y minúsculas de la letra.  
   
 ## <a name="comparing-sql"></a>Comparar SQL  
-Puede ver las instrucciones SELECT generadas por SSMA Tester en la página **Compare SQL** . El evaluador comparará los conjuntos de resultados de estas instrucciones fila a fila. Cada fila siguiente de un conjunto de resultados de Sybase debe ser igual a la siguiente fila del conjunto de resultados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]generado en.  
+Puede ver las instrucciones SELECT generadas por SSMA Tester en la página **Compare SQL** . El evaluador comparará los conjuntos de resultados de estas instrucciones fila a fila. Cada fila siguiente de un conjunto de resultados de Sybase debe ser igual a la siguiente fila del conjunto de resultados generado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-Puede editar esas instrucciones SELECT para proporcionar una comprobación personalizada. Para guardar los cambios en las instrucciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sybase y in, use los botones **aplicar** en el SQL de origen y de destino, según corresponda.  
+Puede editar esas instrucciones SELECT para proporcionar una comprobación personalizada. Para guardar los cambios en las instrucciones de Sybase y in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use los botones **aplicar** en el SQL de origen y de destino, según corresponda.  
   
 ## <a name="next-step"></a>siguiente paso  
 [Personalizar el orden de llamadas &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  

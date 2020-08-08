@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 06a6135425a8baf19d28d99b74e761f229f977fd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68024747"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938666"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Asistente buscar bases de datos (ubicaciones seleccionadas) (AccessToSQL)
 En la página seleccionar ubicaciones del asistente buscar bases de datos, especifique los parámetros de búsqueda para buscar las bases de datos de Access.  
@@ -24,7 +24,7 @@ En la página seleccionar ubicaciones del asistente buscar bases de datos, espec
 Para abrir el asistente buscar bases de datos, en el menú **archivo** , haga clic en **Buscar bases de datos**. Para obtener más información sobre cómo usar este cuadro de diálogo, vea [Agregar y quitar archivos de base de datos de Access](adding-and-removing-access-database-files-accesstosql.md) .  
   
 ## <a name="options"></a>Opciones  
-**Examinar**  
+**Browse**  
 Haga clic para examinar el equipo o la red. Seleccione la carpeta o la ubicación en la que desea realizar la búsqueda y, a continuación, haga clic en **Aceptar**. Haga clic en **Agregar** para agregar esta ubicación a la lista.  
   
 **Cuadro Ruta de acceso**  
@@ -55,7 +55,7 @@ Para buscar las bases de datos que se actualizaron por última vez en un interva
 Para buscar las bases de datos que coinciden con un criterio de tamaño, seleccione un carácter de comparación en el primer cuadro, escriba un número para el tamaño y, a continuación, seleccione bytes, kilobytes o megabytes en el tercer cuadro.  
   
 **Propietario**  
-Escriba el nombre de usuario completo de Windows del propietario. Esto podría tener el formato *domain*\\*usuario*de dominio.  
+Escriba el nombre de usuario completo de Windows del propietario. Esto podría tener el formato *domain* \\ *usuario*de dominio.  
   
 ## <a name="see-also"></a>Consulte también  
 [Agregar y quitar archivos de base de datos de Access](adding-and-removing-access-database-files-accesstosql.md)  

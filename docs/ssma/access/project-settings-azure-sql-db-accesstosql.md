@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Project Settings dialog box, SQL Azure
 - SQL Azure settings
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 67d80ae6457a4b02e4520d634acfb5f06aa747ec
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3dd47039f6bbfaa15eb16776487191a66a17db59
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823934"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937584"
 ---
 # <a name="project-settings-azure-sql-database-accesstosql"></a>Configuración del proyecto (Azure SQL Database) (AccessToSQL)
-La configuración del proyecto SQL Azure permite configurar el sufijo de la base de datos SQL Azure que se va a agregar en el cuadro de diálogo de conexión y también permitir la implementación del mecanismo de latido en SQL Azure conexión.  
+La configuración del proyecto SQL Azure permite configurar el sufijo de Azure SQL Database que se va a agregar en el cuadro de diálogo de conexión y permitir también la implementación del mecanismo de latido en SQL Azure conexión.  
   
 El panel SQL Azure está disponible en los cuadros de diálogo **configuración del proyecto** y **configuración predeterminada del proyecto** .  
   

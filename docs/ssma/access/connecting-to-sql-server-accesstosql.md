@@ -20,14 +20,14 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 757c0e040a047f96a6dcf364638f76593904adf1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 612921c1640b97135c96a5f81c3099722bf5bb4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395866"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939168"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Conexión a SQL Server (AccessToSQL)
 Para migrar bases de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe conectarse a la instancia de de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se conecta, SSMA obtiene los metadatos de las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y muestra los metadatos de la base de datos en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos. SSMA almacena información acerca de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que está conectado, pero no almacena contraseñas.  
@@ -119,7 +119,7 @@ La conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permane
   
 El procedimiento para volver a conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el mismo que el procedimiento para establecer una conexión.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
 Si desea personalizar la asignación entre las bases de datos de origen y de destino, consulte [asignación de bases de datos de origen y de destino](mapping-source-and-target-databases-accesstosql.md) ; en caso contrario, el siguiente paso consiste en convertir los objetos de base de datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxis mediante la conversión de objetos de base de [datos](converting-access-database-objects-accesstosql.md) .  
   
 ## <a name="see-also"></a>Consulte también  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: b27d773bc8fd928e7db2e29c7a01492fb97df78f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d622396e9e650aa3e9fc1b3855e1dfc1634bc34e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823953"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938844"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introducción a SQL Server Migration Assistant para Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para Access permite convertir rápidamente objetos de base de datos de Access en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de o Azure SQL Database, cargar los objetos resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database y migrar datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a Azure SQL Database. Si es necesario, también puede vincular tablas de acceso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database tablas para poder seguir usando las aplicaciones front-end de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.  
@@ -120,7 +120,7 @@ SSMA contiene los siguientes menús:
 |Menú|Descripción|  
 |--------|---------------|  
 |**Archivo**|Contiene comandos para el Asistente para migración, trabajar con proyectos, agregar y quitar archivos de base de datos de Access y conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.|  
-|**Edición**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el panel de detalles de SQL. Para abrir el cuadro de diálogo **administrar marcadores** , en el menú Edición, haga clic en administrar marcadores. En el cuadro de diálogo, verá una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
+|**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el panel de detalles de SQL. Para abrir el cuadro de diálogo **administrar marcadores** , en el menú Edición, haga clic en administrar marcadores. En el cuadro de diálogo, verá una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
 |**Ver**|Contiene el comando **sincronizar exploradores de metadatos** . Esto sincroniza los objetos entre el explorador de metadatos de Access y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos de Azure SQL Database. También contiene comandos para mostrar y ocultar los paneles de **salida** y **lista de errores** y los **diseños** de opciones que se van a administrar con los diseños.|  
 |**Herramientas**|Contiene comandos para crear informes, exportar datos, migrar objetos y datos, vincular tablas y proporciona acceso a los cuadros de diálogo Configuración global y proyecto.|  
 |**Ayuda**|Proporciona acceso a la ayuda de SSMA y al cuadro **de diálogo acerca de** .|  
@@ -132,6 +132,6 @@ El menú **Ver** proporciona comandos para alternar la visibilidad del panel de 
   
 -   En el panel de Lista de errores se muestran mensajes de error, de advertencia e informativos en una lista que se puede ordenar.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 51c0253dce8e95a5a25110b47b348397c967af94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 32167639a12d86a7bf3cf84b3895537af551d8d5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938262"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937045"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opciones de la línea de comandos en la consola SSMA (DB2ToSQL)
 Microsoft proporciona un sólido conjunto de opciones de línea de comandos para ejecutar y controlar las actividades de SSMA. Las secciones siguientes detallan el mismo.  
@@ -24,7 +24,7 @@ Aquí se describen las opciones del comando de la consola.
   
 En esta sección, el término ' opción ' también se conoce como ' modificador '.  
   
-Las opciones no distinguen mayúsculas de minúsculas y pueden**-** comenzar con un carácter**/**' ' o ' '.  
+Las opciones no distinguen mayúsculas de minúsculas y pueden comenzar con un **-** carácter ' ' o ' **/** '.  
   
 Si se especifican opciones, es obligatorio especificar los parámetros de opción correspondientes.  
   
@@ -121,7 +121,7 @@ Esta opción indica la contraseña cifrada para las conexiones del servidor. Dif
   
 No se puede especificar ninguna otra opción o contraseña como parámetro de la línea de comandos. De lo contrario, se producirá un error. Para obtener más información, consulte la sección [Administración de contraseñas](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) .  
   
-Se admiten las siguientes subopciones para `-p/securepassword`:  
+Se admiten las siguientes subopciones para `-p/securepassword` :  
   
 -   Para agregar una contraseña al almacenamiento protegido para un identificador de servidor especificado o para todos los identificadores de servidor definidos en el archivo de conexión de servidor. La opción-overwrite, que aparece a continuación, actualiza la contraseña si ya existe:  
   

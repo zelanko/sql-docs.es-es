@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b384190b6ffeee077f6658d0701f036c3f7746a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396849"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928706"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "87396849"
 |**scheduler_total_count**|**int**|Representa el número total de programadores en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No acepta valores NULL.|  
 |**deadlock_monitor_serial_number**|**int**|Especifica el identificador de la secuencia del monitor de interbloqueos actual. No acepta valores NULL.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|Representa el número de **ms_tick** cuando se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inició por última vez. Comparar a la columna actual ms_ticks. No acepta valores NULL.|  
-|**sqlserver_start_time**|**datetime**|Especifica la fecha y la hora en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez. No acepta valores NULL.|  
+|**sqlserver_start_time**|**datetime**|Especifica la fecha y la hora del sistema local que se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciaron por última vez. No acepta valores NULL.|  
 |**affinity_type**|**int**|**Se aplica a:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y versiones posteriores.<br /><br /> Especifica el tipo de la afinidad de proceso de la CPU de servidor actualmente en uso. No acepta valores NULL. Para obtener más información, vea [ALTER Server CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**Se aplica a:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y versiones posteriores.<br /><br /> Describe el **affinity_type** columna. No acepta valores NULL.<br /><br /> MANUAL = la afinidad se ha establecido para al menos una CPU.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede mover libremente los subprocesos entre las CPU.|  
 |**process_kernel_time_ms**|**bigint**|**Se aplica a:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y versiones posteriores.<br /><br /> Tiempo total en milisegundos que han tardado todos los subprocesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo kernel. Este valor puede ser mayor que el de un único reloj de procesador porque incluye el tiempo para todos los procesadores del servidor. No acepta valores NULL.|  

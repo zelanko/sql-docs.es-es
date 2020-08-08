@@ -21,18 +21,18 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823856"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938482"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Vinculación de aplicaciones de Access a SQL Server-Azure SQL Database (AccessToSQL)
-Si desea usar las aplicaciones de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede vincular las tablas de Access originales a las tablas migradas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. La vinculación modifica la base de datos de Access de forma que las consultas, los formularios, los informes y las páginas de acceso a datos usan los datos de la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure en lugar de los datos de la base de datos de Access.  
+Si desea usar las aplicaciones de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede vincular las tablas de Access originales a las tablas migradas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. La vinculación modifica la base de datos de Access de forma que las consultas, los formularios, los informes y las páginas de acceso a datos usan los datos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database o en lugar de los datos de la base de datos de Access.  
   
 > [!NOTE]  
 > Las tablas de Access permanecen en el acceso, pero no se actualizan junto con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure actualizaciones. Después de vincular las tablas y comprobar la funcionalidad, es posible que desee eliminar las tablas de Access.  
@@ -154,6 +154,6 @@ Recordset.LastModified
   
 **Solución:** Puede definir una consulta de acceso que solo devuelva las filas con tipos de datos admitidos.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

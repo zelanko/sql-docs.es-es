@@ -16,12 +16,12 @@ ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98d21ab0c4bb17ca9e701a17b5abd8d3da2438dc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 42f50ec668d61d9244f6f2ba413095fb1642a964
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247790"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87942709"
 ---
 # <a name="ibcpsessionbcpcontrol-native-client-ole-db-provider"></a>IBCPSession:: BCPControl (proveedor de OLE DB de Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El método **BCPControl** establece varios parámetros de control para operaciones de copia masiva, incluidos el número de errores permitidos antes de cancelar una copia masiva, los números de la primera y última filas que se copian de un archivo de datos y el tamaño del lote.  
   
  Este método se utiliza también para especificar la instrucción SELECT que se utiliza en la copia masiva de datos desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede establecer el argumento **eOption** en BCP_OPTION_HINTS y el argumento **iValue** para tener un puntero a una cadena de caracteres anchos que contenga la instrucción SELECT.  
@@ -76,7 +76,7 @@ HRESULT BCPControl(
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se produjo un error específico del proveedor. para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Se produjo un error específico del proveedor. para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) .  
   
  E_UNEXPECTED  
  No se esperaba la llamada al método. Por ejemplo, no se llamó al método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) antes de llamar a esta función.  

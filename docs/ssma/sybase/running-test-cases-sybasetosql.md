@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Execution Steps
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021020"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930506"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ejecución de casos de prueba (SybaseToSQL)
 Cuando SSMA Tester ejecuta un caso de prueba, ejecuta los objetos seleccionados para las pruebas y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba se realizó correctamente. La correspondencia de objetos entre Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se determina según la configuración de asignación de esquemas del proyecto SSMA actual.  
@@ -34,15 +34,15 @@ Una vez finalizada la prueba, se crea el informe de casos de prueba. Haga clic e
   
 ## <a name="test-case-execution-steps"></a>Pasos de ejecución del caso de prueba  
   
-### <a name="prerequisites"></a>Prerrequisitos  
+### <a name="prerequisites"></a>Requisitos previos  
 SSMA Tester comprueba si se cumplen todos los requisitos previos para la ejecución de pruebas antes de iniciar la prueba. Si no se cumplen algunas condiciones, aparece un mensaje de error.  
   
 ### <a name="initialization"></a>Inicialización  
-En este paso, SSMA tester crea objetos auxiliares (tablas, desencadenadores y vistas) tanto en Sybase como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en. Permiten realizar cambios en el seguimiento de las tablas afectadas seleccionadas para la comprobación si el modo de comparación de tablas **solo cambia**.  
+En este paso, SSMA tester crea objetos auxiliares (tablas, desencadenadores y vistas) tanto en Sybase como en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Permiten realizar cambios en el seguimiento de las tablas afectadas seleccionadas para la comprobación si el modo de comparación de tablas **solo cambia**.  
   
 Supongamos que la tabla comprobada se denomina USER_TABLE. Para este tipo de tabla, se crean los siguientes objetos auxiliares en Sybase.  
   
-Los objetos siguientes se crean en Sybase en la base de datos SSMATESTER2005db o SSMATESTER2008db [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en la base de datos ssmatesterdb_syb.  
+Los objetos siguientes se crean en Sybase en la base de datos SSMATESTER2005db o SSMATESTER2008db y en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la base de datos ssmatesterdb_syb.  
   
 |Nombre|Tipo|Descripción|  
 |--------|--------|---------------|  
@@ -54,7 +54,7 @@ Los objetos siguientes se crean en Sybase en la base de datos SSMATESTER2005db o
 |USER_TABLE $ new_id|Ver|Identificación de las filas insertadas y modificadas.|  
 |USER_TABLE $ Old|Ver|Representación simplificada de filas eliminadas y reemplazadas.|  
   
-El siguiente objeto se crea en la base de datos de la tabla comprobado en Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+El siguiente objeto se crea en la base de datos de la tabla comprobado en Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Nombre|Tipo|Descripción|  
 |--------|--------|---------------|  

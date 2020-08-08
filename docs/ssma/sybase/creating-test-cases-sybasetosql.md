@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester component,Test Case Wizard
 ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b3f54a38ae995dd2c83fd36647393f81b802fde2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 146e6975dd8880f750e7bb449e8d42ca3e6a4e62
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948453"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931919"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>Creación de casos de prueba (SybaseToSQL)
 Use el Asistente para casos de prueba para crear una prueba. Este asistente le permite crear casos de prueba eligiendo objetos comprobados y comprobados y especificando los parámetros de prueba.  

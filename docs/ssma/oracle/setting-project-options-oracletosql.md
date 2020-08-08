@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Configuration Options and Modes
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: e104c2ed456567074b796d68d5a82769ac67e5ac
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266530"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932966"
 ---
 # <a name="setting-project-options-oracletosql"></a>Configuración de opciones de proyecto (OracleToSQL)
-Puede establecer opciones de nivel de proyecto para cada proyecto de SSMA. Estas opciones especifican la conversión de objetos, la carga de objetos, la interfaz de usuario y la configuración de migración de datos. Antes de convertir objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compruebe que las opciones de configuración son adecuadas para el proyecto.  
+Puede establecer opciones de nivel de proyecto para cada proyecto de SSMA. Estas opciones especifican la conversión de objetos, la carga de objetos, la interfaz de usuario y la configuración de migración de datos. Antes de convertir objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , compruebe que las opciones de configuración son adecuadas para el proyecto.  
   
 SSMA le permite configurar opciones predeterminadas para todos los proyectos. Estas opciones se aplican a cualquier proyecto nuevo que cree. Después, puede personalizar las opciones de cada proyecto.  
   
@@ -47,7 +47,7 @@ También tiene cuatro modos para configurar estas opciones:
   
 -   Personalizada  
   
-El modo predeterminado es el recomendado para la mayoría de los usuarios. El modo optimista mantiene más la sintaxis de Oracle actual y es más fácil de leer. Sin embargo, mantener la sintaxis actual podría no ser preciso. Si la sintaxis de Oracle se debe convertir en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una sintaxis equivalente, el modo completo realiza la conversión más completa, pero es posible que el código resultante sea más difícil de leer. En el modo personalizado, se establecen las opciones.  
+El modo predeterminado es el recomendado para la mayoría de los usuarios. El modo optimista mantiene más la sintaxis de Oracle actual y es más fácil de leer. Sin embargo, mantener la sintaxis actual podría no ser preciso. Si la sintaxis de Oracle se debe convertir en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sintaxis equivalente, el modo completo realiza la conversión más completa, pero es posible que el código resultante sea más difícil de leer. En el modo personalizado, se establecen las opciones.  
   
 Para obtener más información sobre la configuración y cómo se aplica la configuración en cada modo, vea los temas siguientes:  
   
@@ -97,7 +97,7 @@ El siguiente paso de la migración depende de las necesidades del proyecto:
   
 -   Para personalizar la asignación de los tipos de datos de origen y de destino, vea [asignar tipos de datos de Oracle y SQL Server &#40;&#41;OracleToSQL ](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
--   De lo contrario, puede convertir las definiciones de objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos de Oracle en definiciones de objeto. Para obtener más información, vea [convertir esquemas de Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
+-   De lo contrario, puede convertir las definiciones de objetos de base de datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiciones de objeto. Para obtener más información, vea [convertir esquemas de Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
 ## <a name="see-also"></a>Consulte también  
 [Asignar tipos de datos de Oracle y SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  

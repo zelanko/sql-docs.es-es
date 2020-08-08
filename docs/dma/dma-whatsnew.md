@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864902"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988501"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novedades de Data Migration Assistant
 
@@ -154,8 +154,8 @@ La versión v 3.2 de Data Migration Assistant incluye las siguientes adiciones:
 
 La versión v 3.1 de Data Migration Assistant incluye las siguientes adiciones:
 
-- Recomendaciones de evaluación mejoradas para las bases de datos SQL de Azure en lo que respecta a las intercalaciones de base de datos, el uso de procedimientos almacenados del sistema no admitidos y objetos CLR.
-- Instrucciones de evaluación de los niveles de compatibilidad 130, 120, 110 y 100 al migrar a bases de datos SQL de Azure.
+- Recomendaciones de evaluación mejoradas para Azure SQL Database en cuanto a las intercalaciones de base de datos, el uso de procedimientos almacenados del sistema no admitidos y objetos CLR.
+- Instrucciones de evaluación de los niveles de compatibilidad 130, 120, 110 y 100 al migrar a Azure SQL Database.
 
 ## <a name="data-migration-assistant-v30"></a>Data Migration Assistant v 3.0
 
@@ -181,7 +181,7 @@ La versión v 2.0 de Data Migration Assistant incluye recomendaciones de caracte
 La versión v 1.0 de Data Migration Assistant es la versión inicial y proporciona:
 
 - Detección de problemas que pueden afectar a una actualización a una versión local de SQL Server. Los hallazgos se describen como problemas de compatibilidad y se clasifican en las siguientes áreas:
-  - Cambios importantes
+  - Últimos cambios
   - Cambios de comportamiento
   - Características en desuso
 - Detección de nuevas características en la plataforma de SQL Server de destino en la que se puede beneficiar la base de datos después de una actualización. Los hallazgos se describen como recomendaciones de características y se clasifican en las siguientes áreas:
@@ -190,6 +190,6 @@ La versión v 1.0 de Data Migration Assistant es la versión inicial y proporcio
   - Storage
 - Experiencia de usuario moderna para realizar evaluaciones.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [Información general de Data Migration Assistant](../dma/dma-overview.md)

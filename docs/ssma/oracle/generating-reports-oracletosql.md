@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Report Generation in Oracle Console,refresh-from-database
 - Report Generation in Oracle Console,write-summary-report-to
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: ca9490b53cd55c9d8fdae5d24a045ceaf5a2e83e
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 17f9c9b31d1593edd353830d999d5afdbfbaabaa
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396234"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934853"
 ---
 # <a name="generating-reports-oracletosql"></a>Generación de informes (OracleToSQL)
 Los informes de ciertas actividades realizadas con comandos se generan en la consola de SSMA en el nivel de árbol de objetos.  

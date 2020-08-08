@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b74cf86e6a68653a2047aebefc7ca86ab6868475
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006606"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933986"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Crear los archivos de conexión del servidor (AccessToSQL)
-La información del servidor se puede especificar en la sección servidores del archivo de script. La información del servidor también se puede especificar en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de `-c <serverconnectionfile>`conexión de servidor es. Si el mismo identificador de servidor está presente en los archivos de conexión del servidor y del script, se considerará la definición del servidor en el archivo de script.  
+La información del servidor se puede especificar en la sección servidores del archivo de script. La información del servidor también se puede especificar en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión de servidor es `-c <serverconnectionfile>` . Si el mismo identificador de servidor está presente en los archivos de conexión del servidor y del script, se considerará la definición del servidor en el archivo de script.  
   
 ```xml  
 <!--Sample of server connection file commands -->  

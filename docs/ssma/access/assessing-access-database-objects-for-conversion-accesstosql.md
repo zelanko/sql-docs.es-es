@@ -16,20 +16,20 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: d45df17f82bf52d6d059b2efbf69a39cedb949f0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910691"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934106"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Evaluar objetos de base de datos de Access para la conversión (AccessToSQL)
-Antes de cargar objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe determinar la cantidad de la migración que se realizará correctamente y el tiempo que puede tardar la conversión. SSMA puede crear un informe de evaluación que muestre el porcentaje de objetos que se convirtieron [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correctamente en o SQL Azure la sintaxis y estimaciones de tiempo para realizar la migración. SSMA también le permite ver los problemas específicos que provocaron errores de conversión.  
+Antes de cargar objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe determinar la cantidad de la migración que se realizará correctamente y el tiempo que puede tardar la conversión. SSMA puede crear un informe de evaluación que muestre el porcentaje de objetos que se convirtieron correctamente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure la sintaxis y estimaciones de tiempo para realizar la migración. SSMA también le permite ver los problemas específicos que provocaron errores de conversión.  
   
 ## <a name="creating-assessment-reports"></a>Creación de informes de evaluación  
-Cuando crea un informe de evaluación, SSMA convierte los objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access seleccionados en sintaxis o SQL Azure y, a continuación, muestra los resultados.  
+Cuando crea un informe de evaluación, SSMA convierte los objetos de base de datos de Access seleccionados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sintaxis o SQL Azure y, a continuación, muestra los resultados.  
   
 **Para crear un informe de evaluación**  
   

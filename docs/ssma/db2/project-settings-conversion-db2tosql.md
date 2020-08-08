@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cd22c1c53bb95519f65fd044f80e35f44cc2b7ae
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 998d8cc8e39599fd24994e241c1da02fa87b863e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394681"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933716"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Configuración del proyecto (conversión) (DB2ToSQL)
 La página conversión del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan cómo SSMA convierte la sintaxis de DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sintaxis.  

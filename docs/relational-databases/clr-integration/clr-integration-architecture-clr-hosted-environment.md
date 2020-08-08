@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8824e427b71c26a8b6145db7cf60bbfc110e9ed5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246400"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934406"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración CLR: entorno hospedado CLR
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87246400"
  El código con seguridad de tipos es código que obtiene acceso a las estructuras de memoria siguiendo métodos perfectamente definidos. Por ejemplo, dada una referencia válida a un objeto, el código con seguridad de tipos puede obtener acceso a la memoria en desplazamientos fijos que se correspondan con miembros de campo reales. Sin embargo, si el código obtiene acceso a la memoria en desplazamientos arbitrarios que se encuentran dentro o fuera del intervalo de memoria perteneciente al objeto, significa que no tiene seguridad de tipos. Cuando los ensamblados se cargan en CLR, antes de que MSIL se compile mediante la compilación Just-In-Time (JIT), el tiempo de ejecución realiza una fase de comprobación que examina el código para determinar su seguridad de tipos. El código que supera correctamente esta comprobación se denomina código con seguridad de tipos comprobable.  
   
 ###### <a name="application-domains"></a>Dominios de aplicación  
- CLR admite la noción de dominios de aplicación como zonas de ejecución dentro de un proceso de host donde los ensamblados de código administrado pueden cargarse y ejecutarse. El límite del dominio de aplicación proporciona aislamiento entre los ensamblados. Los ensamblados se aíslan en lo que se refiere a la visibilidad de variables estáticas y miembros de datos, y a la capacidad de llamar al código de forma dinámica. Los dominios de aplicación también constituyen el mecanismo de carga y descarga de código. Solo es posible descargar código de la memoria descargando el dominio de aplicación. Para obtener más información, vea [dominios de aplicación y seguridad de la integración CLR](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473).  
+ CLR admite la noción de dominios de aplicación como zonas de ejecución dentro de un proceso de host donde los ensamblados de código administrado pueden cargarse y ejecutarse. El límite del dominio de aplicación proporciona aislamiento entre los ensamblados. Los ensamblados se aíslan en lo que se refiere a la visibilidad de variables estáticas y miembros de datos, y a la capacidad de llamar al código de forma dinámica. Los dominios de aplicación también constituyen el mecanismo de carga y descarga de código. Solo es posible descargar código de la memoria descargando el dominio de aplicación. Para obtener más información, vea [dominios de aplicación y seguridad de la integración CLR](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014).  
   
 ###### <a name="code-access-security-cas"></a>Seguridad de acceso del código (CAS)  
  El sistema de seguridad de CLR proporciona un modo de controlar qué tipos de operaciones puede llevar a cabo el código administrado mediante la asignación de permisos al código. Los permisos de acceso a código se asignan según la identidad del código (por ejemplo, la firma del ensamblado o el origen del código).  

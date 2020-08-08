@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 619da90c19cf918b3f53ac6cd213b27e718b6a10
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266504"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932916"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Selección y configuración de objetos afectados (OracleToSQL)
 En esta página puede seleccionar las tablas y las claves externas, los cambios en los que debe compararse cuando SSMA comprueba los resultados de la ejecución de los objetos elegidos en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -35,7 +35,7 @@ La pestaña tabla contiene la vista de cuadrícula de la tabla seleccionada. La 
   
 -   Tipo de datos  
   
--   Precision  
+-   Precisión  
   
 -   Escala  
   

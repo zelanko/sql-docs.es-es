@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connecting to SQL Server
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 318de1e7a463892dbb40639bccacb89f6907b8bf
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c1697d96acf7988fa868ad35fefad6718c159dd1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864772"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932436"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>Conexión a SQL Server (SybaseToSQL)
 Para migrar las bases de datos de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe conectarse a cualquiera de las instancias de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se conecta, SSMA obtiene los metadatos de todas las bases de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y muestra los metadatos de la base de datos en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos. SSMA almacena información acerca de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que está conectado, pero no almacena contraseñas.  

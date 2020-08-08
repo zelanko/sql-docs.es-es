@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 13afcabf85515b211d8493990a59950dc97d72f5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989869"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933939"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversión de esquemas DB2 (DB2ToSQL)
-Después de conectarse a DB2, conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y establecer las opciones de asignación de datos y de proyecto, puede convertir los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos DB2 en objetos de base de datos.  
+Después de conectarse a DB2, conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y establecer las opciones de asignación de datos y de proyecto, puede convertir los objetos de base de datos DB2 en objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="the-conversion-process"></a>Proceso de conversión  
-La conversión de objetos de base de datos toma las definiciones de objetos de DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , las convierte en objetos similares y, a continuación, carga esta información en los metadatos de SSMA. No carga la información en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, puede ver los objetos y sus propiedades mediante el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explorador de metadatos.  
+La conversión de objetos de base de datos toma las definiciones de objetos de DB2, las convierte en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos similares y, a continuación, carga esta información en los metadatos de SSMA. No carga la información en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A continuación, puede ver los objetos y sus propiedades mediante el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos.  
   
 Durante la conversión, SSMA imprime los mensajes de salida en el panel de salida y los mensajes de error en el panel de Lista de errores. Utilice la información de salida y de error para determinar si tiene que modificar las bases de datos DB2 o el proceso de conversión para obtener los resultados de la conversión deseada.  
   
@@ -28,7 +28,7 @@ Durante la conversión, SSMA imprime los mensajes de salida en el panel de salid
 Antes de convertir objetos, revise las opciones de conversión de proyectos en el cuadro de diálogo **configuración del proyecto** . Mediante este cuadro de diálogo, puede establecer cómo SSMA convierte las funciones y las variables globales. Para obtener más información, vea [configuración del proyecto &#40;conversión&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md).  
   
 ## <a name="conversion-results"></a>Resultados de la conversión  
-En la tabla siguiente se muestra qué objetos DB2 se convierten y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los objetos resultantes:  
+En la tabla siguiente se muestra qué objetos DB2 se convierten y los objetos resultantes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 |Objetos DB2|Objetos SQL Server resultantes|  
 |-----------|----------------------------|  
@@ -73,7 +73,7 @@ En la tabla siguiente se muestra qué objetos DB2 se convierten y [!INCLUDE[ssNo
 |Alias|Asignación parcial. Se requiere procesamiento manual para el objeto subyacente|  
 |Sinónimos|Están asignadas.|  
 |Funciones estándar en DB2|SSMA asigna funciones estándar DB2 cuando una función equivalente está disponible en SQL Server:|  
-|Authorization|No asignado.|  
+|Autorización|No asignado.|  
 |Predicados|Están asignadas.|  
 |SELECT INTO, instrucción|No asignado.|  
 |VALUEs INTO (instrucción)|No asignado.|  
@@ -143,7 +143,7 @@ Para cada elemento que no se pueda convertir, debe determinar qué desea hacer c
   
 -   Puede modificar el objeto en la base de datos DB2 para quitar o revisar el código problemático. Para cargar el código actualizado en SSMA, tendrá que actualizar los metadatos. Para obtener más información, vea [conectarse a la base de datos DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
--   Puede excluir el objeto de la migración. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el explorador de metadatos y el explorador de metadatos DB2, desactive la casilla situada junto al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elemento antes de cargar los objetos en y migrar los datos de DB2.  
+-   Puede excluir el objeto de la migración. En el explorador de metadatos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el explorador de metadatos DB2, desactive la casilla situada junto al elemento antes de cargar los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y migrar los datos de DB2.  
   
 ## <a name="next-step"></a>siguiente paso  
 El siguiente paso del proceso de migración consiste en [cargar los objetos convertidos en SQL Server](https://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3).  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8f6ea6e9b9e0971967b58b005e4fe554b397edb0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028883"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934676"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Comandos de menú y otras teclas de acceso directo (SybaseToSQL)
 En las secciones siguientes se describen los métodos abreviados de teclado para tener acceso a los comandos de menú y otras teclas de método abreviado usadas en varios cuadros de diálogo de la aplicación SSMA for Sybase.  
@@ -79,7 +79,7 @@ Para acceder al menú herramientas, el método abreviado de teclado utilizado es
 |Crear informe.|ALT + T + C|  
 |Convierte el esquema.|ALT + T + N o CTRL + R|  
 |Actualice desde la base de datos de Sybase.|ALT+T+R|  
-|Sincronizar con SQL Server o SQL Azure base de datos.|ALT + T + S|  
+|Sincronizar con SQL Server o Azure SQL Database.|ALT + T + S|  
 |Guardar como script.|ALT + T + A|  
 |Migre los datos.|ALT+T+M|  
 |Detener la operación actual.|ALT + T + O|  

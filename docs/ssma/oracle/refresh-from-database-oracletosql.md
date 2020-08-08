@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 694953d914b9811208f2ea143f93e2c91878f07b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266539"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933016"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Actualizar desde la base de datos (OracleToSQL)
 El cuadro de diálogo **actualizar desde base de datos** permite seleccionar los objetos que se van a actualizar desde la base de datos de Oracle. Las filas del cuadro de diálogo están codificadas por colores en función del estado de los metadatos:  

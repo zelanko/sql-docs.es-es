@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c3085d17804866015a78e93556dd5373d3a1b8cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: bbc833070b127d885bf223340a1c5e35388f9cdb
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029138"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931630"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Finalización de la preparación del caso de prueba (SybaseToSQL)
 La página final del asistente muestra la descripción del caso de prueba e información sobre los objetos implicados en la prueba. Además, en esta página puede establecer las opciones de ejecución de pruebas.  

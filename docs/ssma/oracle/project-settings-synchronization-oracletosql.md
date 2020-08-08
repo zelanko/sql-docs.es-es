@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 743ed010107c9557c84b1683f7a81b369ca7cf3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 697bf746f438d45731e78c0c39d28677c3be6ddd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266588"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933209"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Configuración del proyecto (sincronización) (OracleToSQL)
-La página sincronización del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan el modo en que SSMA carga y actualiza los objetos de base de datos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tablas y procedimientos almacenados, en.  
+La página sincronización del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan el modo en que SSMA carga y actualiza los objetos de base de datos, como tablas y procedimientos almacenados, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Las opciones de acciones predeterminadas especifican la configuración predeterminada para actualizar objetos de la base de datos de Oracle y para sincronizar objetos con la base de datos de SQL Server. Para obtener más información, vea [actualizar desde base de datos: Oracle](../../ssma/oracle/refresh-from-database-oracletosql.md).  
   
@@ -30,7 +30,7 @@ Puede tener acceso a dos páginas de sincronización diferentes que contengan la
   
 ## <a name="miscellaneous-options"></a>Otras opciones  
 **Fallido**  
-Especifica el número de intentos que SSMA debe realizar cuando carga objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los objetos que no se cargan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el intento actual se intentarán de nuevo hasta que SSMA alcance el número máximo de intentos en el proceso de sincronización actual. El conjunto de valores predeterminado es **2**  
+Especifica el número de intentos que SSMA debe realizar cuando carga objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los objetos que no se cargan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el intento actual se intentarán de nuevo hasta que SSMA alcance el número máximo de intentos en el proceso de sincronización actual. El conjunto de valores predeterminado es **2**  
   
 ## <a name="synchronization-for-oracle-options"></a>Sincronización para opciones de Oracle  
 **Acción en el cambio de objetos locales y remotos**  

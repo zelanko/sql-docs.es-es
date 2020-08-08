@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Server Connection File Creation
 - Server Connection File, Server Connection File Validation
 ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 499543ea1790e5f9c1f1e1f2ddf6111e9d846dc9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266111"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934943"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>Creación de archivos de conexión del servidor (OracleToSQL)
-La información del servidor se puede especificar en la sección servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión `-c <serverconnectionfile>`de servidor es,. Si el mismo identificador de servidor está presente en el archivo de script y en el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  
+La información del servidor se puede especificar en la sección servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión de servidor es, `-c <serverconnectionfile>` . Si el mismo identificador de servidor está presente en el archivo de script y en el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  
   
 **Ejemplo: 1**  
   

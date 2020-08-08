@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 985d6e58d00dee705a684b7ef2f6516a5459f0df
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 7ee753bd032cb8ad69f472888a99cc53cc5760d9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293877"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934909"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Introducción a SSMA para Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para Oracle le permite convertir rápidamente esquemas de base de datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas, cargar los esquemas resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y migrar datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -98,8 +98,8 @@ En la tabla siguiente se muestran los menús de SSMA.
 |Menú|Descripción|  
 |----|-----------|  
 |**Archivo**|Contiene comandos para trabajar con proyectos, conectarse a Oracle y conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Edición**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el panel de detalles de SQL. También contiene la opción **administrar marcadores** , donde podrá ver una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
-|**Vista**|Contiene el comando **sincronizar exploradores de metadatos** . Que sincroniza los objetos entre el explorador de metadatos de Oracle y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos. También contiene comandos para mostrar y ocultar los paneles de **salida** y **lista de errores** y los **diseños** de opciones para administrar los diseños.|  
+|**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el panel de detalles de SQL. También contiene la opción **administrar marcadores** , donde podrá ver una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
+|**Ver**|Contiene el comando **sincronizar exploradores de metadatos** . Que sincroniza los objetos entre el explorador de metadatos de Oracle y el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos. También contiene comandos para mostrar y ocultar los paneles de **salida** y **lista de errores** y los **diseños** de opciones para administrar los diseños.|  
 |**Herramientas**|Contiene comandos para crear informes y migrar objetos y datos. También proporciona acceso a los cuadros de diálogo Configuración **global** y **configuración del proyecto** .|  
 |**Evaluador**|Contiene comandos para crear y trabajar con casos de prueba, repositorio y sistema de administración de copia de seguridad.|  
 |**Ayuda**|Proporciona acceso a la ayuda de SSMA y al cuadro **de diálogo acerca de** .|  

@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 3be5379cc339326bc8ce35c886982e7eeff4d0a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264253"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934972"
 ---
 # <a name="data-migration-report--oracletosql"></a>Informe de migración de datos (OracleToSQL)
-El cuadro de diálogo **Informe de migración de datos** aparece después de migrar los datos a. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+El cuadro de diálogo **Informe de migración de datos** aparece después de migrar los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
 **Estado**  
@@ -36,7 +36,7 @@ El número de filas de datos de la tabla de origen.
 **Número de filas migradas correctamente**  
 El número de filas de datos que se migraron correctamente a la tabla de destino.  
   
-**Relación**  
+**Proporción**  
 Porcentaje de filas migradas correctamente.  
   
 **Detalles**  

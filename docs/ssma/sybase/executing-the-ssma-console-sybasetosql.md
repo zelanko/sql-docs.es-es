@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Commands
 - Sybase Console,Script Generation Commands
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ee279098aa195cdc8cb1f5b7d50cf5ba7a8a73c5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029155"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931681"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Ejecución de la consola de SSMA (SybaseToSQL)
 Microsoft proporciona un conjunto sólido de comandos de archivo de script para ejecutar y controlar las actividades de SSMA. Las secciones siguientes detallan el mismo.  
@@ -201,7 +201,7 @@ No se puede conectar con el servidor de base de datos de origen durante la ejecu
   
 -   `write-summary-report-to:`Especifica la ruta de acceso en la que se generará el informe.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;AssessmentReport n&gt;. **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **AssessmentReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -230,7 +230,7 @@ No se puede conectar con el servidor de base de datos de origen durante la ejecu
   
 />  
 ```  
-or  
+o  
   
 ```xml  
 <generate-assessment-report  
@@ -267,7 +267,7 @@ Si no se realiza la conexión a la base de datos de origen o de destino antes de
   
 -   `write-summary-report-to:`Especifica la ruta de acceso en la que se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;SchemaConversionReport n&gt;. **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **SchemaConversionReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -295,7 +295,7 @@ Si no se realiza la conexión a la base de datos de origen o de destino antes de
   
 />  
 ```  
-or  
+o  
   
 ```xml  
 <convert-schema  
@@ -320,7 +320,7 @@ Este comando migra los datos de origen al destino.
   
 -   `write-summary-report-to:`Especifica la ruta de acceso en la que se generará el informe.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **&lt;DataMigrationReport n&gt;. **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **DataMigrationReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
@@ -351,7 +351,7 @@ Este comando migra los datos de origen al destino.
   
 </migrate-data>  
 ```  
-or  
+o  
   
 ```xml  
 <migrate-data  
@@ -411,7 +411,7 @@ Si no se realiza la conexión a la base de datos de destino antes de ejecutar es
   
     -   error: script  
   
--   `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional). Si solo se especifica la ruta de acceso de la carpeta, se crea File by Name **TargetSynchronizationReport. XML** .  
+-   `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional). Si solo se especifica la ruta de acceso de la carpeta, se crea el archivo por nombre **TargetSynchronizationReport.XML** .  
   
 **Ejemplo de sintaxis:**  
   
@@ -472,7 +472,7 @@ Este comando requiere uno o varios nodos de metabase como parámetro de línea d
   
     -   error: script  
   
--   `report-errors-to:`Especifica la ubicación del informe de errores para la operación de actualización (atributo opcional). Si solo se especifica la ruta de acceso de la carpeta, se crea File by Name **SourceDBRefreshReport. XML** .  
+-   `report-errors-to:`Especifica la ubicación del informe de errores para la operación de actualización (atributo opcional). Si solo se especifica la ruta de acceso de la carpeta, se crea el archivo por nombre **SourceDBRefreshReport.XML** .  
   
 **Ejemplo de sintaxis:**  
   
@@ -545,7 +545,7 @@ Este comando requiere uno o varios nodos de metabase como parámetro de línea d
   
 />  
 ```  
-or  
+o  
   
 ```xml  
 <save-as-script  
@@ -576,13 +576,13 @@ Este comando convierte la instrucción SQL.
   
     **Valor predeterminado:** false. (atributo opcional)  
   
--   `write-converted-sql-to`Especifica la ruta de acceso de la carpeta del archivo (o) en la que se debe almacenar el T-SQL convertido. Cuando se especifica una ruta de acceso de carpeta `sql-files` junto con el atributo, cada archivo de código fuente tiene un archivo T-SQL de destino correspondiente creado en la carpeta especificada. Cuando se especifica una ruta de acceso de carpeta `sql` junto con el atributo, el T-SQL convertido se escribe en un archivo denominado result. out en la carpeta especificada.  
+-   `write-converted-sql-to`Especifica la ruta de acceso de la carpeta del archivo (o) en la que se debe almacenar el T-SQL convertido. Cuando se especifica una ruta de acceso de carpeta junto con el `sql-files` atributo, cada archivo de código fuente tiene un archivo T-SQL de destino correspondiente creado en la carpeta especificada. Cuando se especifica una ruta de acceso de carpeta junto con el `sql` atributo, el T-SQL convertido se escribe en un archivo denominado result. out en la carpeta especificada.  
   
 -   `sql`especifica las instrucciones SQL de Sybase que se van a convertir; se pueden separar una o varias instrucciones mediante un ";"  
   
 -   `sql-files`Especifica la ruta de acceso de los archivos SQL que se deben convertir al código T-SQL.  
   
--   `write-summary-report-to`Especifica la ruta de acceso donde se generará el informe de resumen. Si solo se menciona la ruta de acceso de la carpeta, se crea File by Name **ConvertSQLReport. XML** . (atributo opcional)  
+-   `write-summary-report-to`Especifica la ruta de acceso donde se generará el informe de resumen. Si solo se menciona la ruta de acceso de la carpeta, se crea el archivo por nombre **ConvertSQLReport.XML** . (atributo opcional)  
   
     La creación de informes de resumen tiene dos subcategorías más, es decir:  
   

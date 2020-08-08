@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3d6176934e5a31cc245354db70c5295afc70d2d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 70074acc0f3d3d1a586303cc6f9fd39afb2a7ef0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76909988"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934627"
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Nuevas características de la interfaz gráfica de usuario de SSMA para Sybase (SybaseToSQL)
 En este capítulo se describen las nuevas características de la interfaz de usuario de SSMA.  
@@ -54,14 +54,14 @@ Puede establecer o quitar un marcador de las siguientes maneras:
   
 -   Haga clic en el área gris a la izquierda de la ventana SQL.  
   
--   Use Ctrl + Mayús +&lt;0.. 9&gt; para establecer el marcador numerado  
+-   Use Ctrl + Mayús + &lt; 0.. 9 &gt; para establecer el marcador numerado  
   
 ### <a name="bookmark-navigation"></a>Navegación por marcadores  
 Puede recorrer los marcadores de las siguientes maneras:  
   
 -   Usar botones marcador siguiente, marcador anterior en la parte superior de la ventana SQL  
   
--   Use Ctrl +&lt;0.. 9&gt; para buscar el marcador numerado  
+-   Use Ctrl + &lt; 0.. 9 &gt; para buscar el marcador numerado  
   
 -   Usar los botones ir a o ver código fuente en el cuadro de diálogo administrar marcadores  
   

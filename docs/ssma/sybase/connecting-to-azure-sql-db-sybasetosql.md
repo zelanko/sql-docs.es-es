@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: a16ade8d212d3d197b858488dde05b439d8e989f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 12e090ef0b2c97fe57d27a61842dd7fe2cb99866
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864762"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932107"
 ---
 # <a name="connecting-to-azure-sql-database-sybasetosql"></a>Conexión a Azure SQL Database (SybaseToSQL)
 Para migrar bases de datos de Sybase a Azure SQL Database, debe conectarse a la instancia de destino de Azure SQL Database. Cuando se conecta, SSMA obtiene los metadatos de todas las bases de datos de la instancia de Azure SQL Database y muestra los metadatos de la base de datos en el explorador de metadatos de Azure SQL Database. SSMA almacena información de la instancia de Azure SQL Database a la que está conectado, pero no almacena contraseñas.  

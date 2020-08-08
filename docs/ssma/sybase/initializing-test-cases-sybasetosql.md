@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,InitializingTest Cases
 ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 56d5426b0b05793106724b576f9f012938393d58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 29e9394e6c88aa671bf32811ccf8ea16b6f5f491
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029004"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934690"
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>Inicialización de casos de prueba (SybaseToSQL)
 En este paso, especificará la información inicial del nuevo caso de prueba.  

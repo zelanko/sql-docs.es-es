@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 75ce91d7948b53522f6ac861a078f8f902b23ab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 38097cda1a014c173f96657f5758a95b9d266f6a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086789"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932536"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>Visualización de informes de casos de prueba (OracleToSQL)
 El informe caso de prueba muestra los resultados de la comprobación de la prueba y la información general de las pruebas. En caso de que se produzca un error en la prueba, también se muestra información sobre los datos que no coinciden en los objetos comprobados.  
@@ -33,7 +33,7 @@ El resto del informe muestra información en cuatro categorías:
 **Errores de requisitos previos**  
 Muestra los errores que se produjeron en el **paso de requisitos previos.** Normalmente, se omite.  
   
-**Inicial**  
+**Inicialización**  
 Muestra el estado de ejecución como **correcto** o **error**.  
   
 **Resultado de objetos de prueba**  

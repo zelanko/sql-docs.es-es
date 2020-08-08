@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Sybase Console,Script File Validation
 - Sybase Console,Server Connection Parameters
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 9d7df0fe0917a684f1050197e6706ba5b5414f6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e5abea3995ae8b2515c142812ee47498c37497f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948474"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932003"
 ---
 # <a name="creating-script-files-sybasetosql"></a>Creación de archivos de script (SybaseToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA es crear el archivo de script y, si es necesario, crear el archivo de valores de variable y el archivo de conexión de servidor.  
@@ -49,7 +49,7 @@ Las opciones configurables por el usuario incluyen:
   
     -   Suprimir mensajes: suprime mensajes en la consola. Es "false" de forma predeterminada.  
   
-    **Ejemplo:**  
+    **Ejemplo**:  
   
     ```xml  
     <output-providers>  
@@ -92,7 +92,7 @@ Las opciones configurables por el usuario incluyen:
   
     -   Target-use-Last-Used = "true" (valor predeterminado) o target-server = "target_servername"  
   
-    **Ejemplo:**  
+    **Ejemplo**:  
   
     ```xml  
     <output-providers>  
@@ -127,7 +127,7 @@ Las opciones configurables por el usuario incluyen:
   
     El modo predeterminado es **error**.  
   
-    **Ejemplo:**  
+    **Ejemplo**:  
   
     ```xml  
     <output-providers>  
@@ -158,7 +158,7 @@ Las opciones configurables por el usuario incluyen:
   
     El modo predeterminado es **Generate-an-error**.  
   
-    **Ejemplo:**  
+    **Ejemplo**:  
   
     ```xml  
     <output-providers>  
@@ -206,7 +206,7 @@ Las opciones configurables por el usuario incluyen:
   
     -   Ask-User: solicita al usuario una entrada ("Yes"/"no")  
   
-    **Ejemplo:**  
+    **Ejemplo**:  
   
     ```xml  
     <output-providers>  
@@ -227,7 +227,7 @@ Las opciones configurables por el usuario incluyen:
   
 6.  **Error de proveedor de requisitos previos:** Esto permite al usuario controlar los requisitos previos necesarios para procesar un comando. De forma predeterminada, el modo STRICT es ' false '. Si se establece en "true", se genera una excepción para que no cumpla los requisitos previos.  
   
-    **Ejemplo:**  
+    **Ejemplo**:  
   
     ```xml  
     <output-providers>  
@@ -255,7 +255,7 @@ Las opciones configurables por el usuario incluyen:
   
     -   cada-20%  
   
-    **Ejemplo:**  
+    **Ejemplo**:  
   
     ```xml  
     <output-providers>  
@@ -301,7 +301,7 @@ Las opciones configurables por el usuario incluyen:
     > [!NOTE]  
     > Los mensajes obligatorios se registran en cualquier nivel.  
   
-    **Ejemplo:**  
+    **Ejemplo**:  
   
     ```xml  
     <output-providers>  
@@ -324,11 +324,11 @@ Las opciones configurables por el usuario incluyen:
   
     Aquí aparecen dos casos:  
   
-    1.  Si la opción de invalidación es **false**, el orden de búsqueda será almacenamiento&gt;protegido-archivo&gt;de conexión del servidor&gt; de archivos de script: preguntar al usuario.  
+    1.  Si la opción de invalidación es **false**, el orden de búsqueda será almacenamiento protegido-archivo de &gt; conexión del servidor de archivos de script: preguntar al &gt; &gt; usuario.  
   
-    2.  Si la opción de invalidación es **true**, el orden de búsqueda será archivo&gt;de conexión de script&gt;de servidor de archivos: preguntar al usuario.  
+    2.  Si la opción de invalidación es **true**, el orden de búsqueda será archivo de conexión de script de servidor de archivos &gt; : &gt; preguntar al usuario.  
   
-    **Ejemplo:**  
+    **Ejemplo**:  
   
     ```xml  
     <output-providers>  
@@ -348,11 +348,11 @@ Los parámetros de conexión de servidor se pueden definir en el archivo de scri
 ## <a name="script-commands"></a>Comandos de script  
 El archivo de script contiene una secuencia de comandos de flujo de trabajo de migración en formato XML. La aplicación de consola SSMA procesa la migración en el orden de los comandos que aparecen en el archivo de script.  
   
-Por ejemplo, una migración de datos típica de una tabla específica en una base de datos de Sybase sigue la jerarquía&gt;de:&gt;Database-Schema-Table.  
+Por ejemplo, una migración de datos típica de una tabla específica en una base de datos de Sybase sigue la jerarquía de: Database- &gt; Schema- &gt; TABLE.  
   
 Cuando todos los comandos del archivo de script se ejecutan correctamente, la aplicación de consola SSMA se cierra y devuelve el control al usuario. El contenido de un archivo de script es más o menos estático con información variable contenida en un archivo de [valores de variable](creating-variable-value-files-sybasetosql.md) o, en una sección independiente del archivo de script para valores de variable.  
   
-**Ejemplo:**  
+**Ejemplo**:  
   
 ```xml  
 <!--Sample of script file commands -->  
@@ -379,15 +379,15 @@ Cuando todos los comandos del archivo de script se ejecutan correctamente, la ap
 ```  
 Las plantillas que constan de 3 archivos de script (para ejecutar varios escenarios), un archivo de valores de variable y un archivo de conexión de servidor se proporcionan en la carpeta scripts de la consola de ejemplo del directorio del producto:  
   
--   AssessmentReportGenerationSample. XML  
+-   AssessmentReportGenerationSample.xml  
   
--   ConversionAndDataMigrationSample. XML  
+-   ConversionAndDataMigrationSample.xml  
   
--   SqlStatementConversionSample. XML  
+-   SqlStatementConversionSample.xml  
   
--   VariableValueFileSample. XML  
+-   VariableValueFileSample.xml  
   
--   ServersConnectionFileSample. XML  
+-   ServersConnectionFileSample.xml  
   
 Puede ejecutar las plantillas (archivos) después de cambiar los parámetros que se muestran en la relevancia.  
   

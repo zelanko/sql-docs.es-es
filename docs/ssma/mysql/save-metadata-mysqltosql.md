@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 549c4b88e7ca75ce86c8a4e2ddd3eba25f138583
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c032cfd8707524e64b68f6fcb7cd0223342602bb
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929369"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935152"
 ---
 # <a name="save-metadata--mysqltosql"></a>Guardar metadatos (MySQLToSQL)
 El cuadro de diálogo **guardar metadatos** le solicita que cargue los metadatos en el proyecto de SSMA antes de guardarlo. Esto le permite tener un archivo de proyecto completo que puede usar sin conexión y enviar a otras personas, como personal de soporte técnico.  
@@ -33,7 +33,7 @@ SSMA carga los metadatos en el proyecto según sea necesario. Los metadatos se c
 **Seleccionar todo**  
 Selecciona todas las bases de datos de la lista.  
   
-**Claridad**  
+**Borrar**  
 Desactiva la casilla para todas las bases de datos con metadatos que faltan. No puede desactivar la casilla si se han cargado los metadatos.  
   
 **Guardar**  

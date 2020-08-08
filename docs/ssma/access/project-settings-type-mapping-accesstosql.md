@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2b25cb2dbe5b92e0ece7ef28a842a2585ea9961d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066659"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934013"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configuración del proyecto (asignación de tipo) (AccessToSQL)
 La configuración del proyecto de asignación de tipos permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos de base de datos individuales. Para obtener más información, vea [asignar tipos de datos de origen y de destino](mapping-source-and-target-data-types-accesstosql.md).  
@@ -37,13 +37,13 @@ La asignación de tipos está disponible en los cuadros de diálogo Configuraci�
 Tipo de datos de acceso que se va a asignar.  
   
 **Tipo de destino**  
-El tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos de destino o SQL Azure para el tipo de datos de acceso especificado.  
+El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos de destino o SQL Azure para el tipo de datos de acceso especificado.  
   
 En la tabla siguiente se muestra la asignación predeterminada entre los tipos de datos de origen y de destino.  
   
 |Tipo de datos de Access|Tipo de datos de SQL Server|  
 |--------------------|------------------------|  
-|**binario\*[.. \*]**|**varbinary [\*]**|  
+|**binario [ \* .. \* ]**|**varbinary [ \* ]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
 |**monetaria**|**money**|  
@@ -57,13 +57,13 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |**Memorando**|**nvarchar(max)**|  
 |**memorando** -para Access 97|**ntext**|  
 |**single**|**real**|  
-|**texto [\*.. \*]**|**nvarchar [\*]**|  
-|**texto [\*.. ] \*** -para Access 97|**VARCHAR [\*]**|  
+|**texto [ \* ... \* ]**|**nvarchar [ \* ]**|  
+|**texto [ \* .. \* ]** -para Access 97|**VARCHAR [ \* ]**|  
   
 **Add (Agregar)**  
 Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
-**Edición**  
+**Editar**  
 Haga clic para editar un tipo de datos en la lista asignación.  
   
 **Remove**  

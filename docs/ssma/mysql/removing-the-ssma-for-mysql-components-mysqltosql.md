@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Uninstalling, Extension pack
 - Uninstalling, SSMA for MySQL client
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3a5d6d1234cc294cc8e8cdd163ce8a9bd6ac3e3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 27c1ab67a6d62bceb31bb036978f65b3494e4f19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929384"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935244"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Eliminación de los componentes de SSMA para MySQL (MySQLToSql)
-Cuando haya terminado de migrar las bases de datos de MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a, es posible que desee desinstalar los componentes de SSMA. Puede desinstalar los componentes de cliente en cualquier momento. Sin embargo, Si desinstala el paquete de extensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA dejará de admitir la migración de datos de MySQL a la base de datos de destino (SQL Server/SQL Azure) mediante el motor de migración de datos del lado servidor.  
+Cuando haya terminado de migrar las bases de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es posible que desee desinstalar los componentes de SSMA. Puede desinstalar los componentes de cliente en cualquier momento. Sin embargo, Si desinstala el paquete de extensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , SSMA dejará de admitir la migración de datos de MySQL a la base de datos de destino (SQL Server/SQL Azure) mediante el motor de migración de datos del lado servidor.  
   
 ## <a name="uninstalling-the-ssma-for-mysql-client"></a>Desinstalación de SSMA para el cliente MySQL  
 Puede desinstalar SSMA mediante **Agregar o quitar programas**.  
@@ -48,13 +48,13 @@ Puede quitar el paquete de extensión mediante **Agregar o quitar programas**.
   
 5.  En la página parámetros de conexión, seleccione el método de autenticación y, a continuación, haga clic en **siguiente**.  
   
-    La autenticación de Windows utilizará las credenciales de Windows para intentar iniciar sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la instancia de. Si selecciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, debe escribir un nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión y una contraseña.  
+    La autenticación de Windows utilizará las credenciales de Windows para intentar iniciar sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si selecciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, debe escribir un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre de inicio de sesión y una contraseña.  
   
 6.  En la página operación completada, haga clic en **Aceptar**.  
   
 7.  En la página finalizar, haga clic en **salir**.  
   
-Una vez completado el proceso de desinstalación, puede confirmar que los objetos del esquema **sysdb. ssma_MySQL** y, posiblemente, toda la base de datos de **sysdb** , se [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]han quitado mediante. Sin embargo, si utiliza otros productos de SSMA, también usarán la base de datos **sysdb** . Si la base de datos existe y está seguro de que no hay ninguna otra base de datos que haga referencia a los objetos de esta base de datos, puede separar la base de datos.  
+Una vez completado el proceso de desinstalación, puede confirmar que los objetos del esquema **sysdb. ssma_MySQL** y, posiblemente, toda la base de datos de **sysdb** , se han quitado mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Sin embargo, si utiliza otros productos de SSMA, también usarán la base de datos **sysdb** . Si la base de datos existe y está seguro de que no hay ninguna otra base de datos que haga referencia a los objetos de esta base de datos, puede separar la base de datos.  
   
 ## <a name="see-also"></a>Consulte también  
 [Instalación de SSMA para MySQL Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  

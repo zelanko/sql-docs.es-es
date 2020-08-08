@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d7fe937b95049788f4b488df2d36451df67c4c09
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7782a8853e1b17ecba0950e647d1335758b998af
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396404"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935284"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Asignación de juegos de caracteres de MySQL y de SQL Server (MySQLToSQL)
 El juego de caracteres (charset) se puede especificar para tipos de datos de caracteres de MySQL, expresiones y literales.  

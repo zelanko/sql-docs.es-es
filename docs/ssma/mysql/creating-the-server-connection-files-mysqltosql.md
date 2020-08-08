@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Server connection file validation
 - Server connection files
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1df2c474afa5e062dfa22cf05af6b0edf036f768
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fa9505c0f5c40dcf2ff7cd84fc956240728385b3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103044"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935734"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>Creación de los archivos de conexión del servidor (MySQLToSQL)
-La información del servidor se puede especificar en la sección servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión `-c <serverconnectionfile>`de servidor es,. Si el mismo identificador de servidor está presente en el archivo de script y en el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  
+La información del servidor se puede especificar en la sección servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión de servidor es, `-c <serverconnectionfile>` . Si el mismo identificador de servidor está presente en el archivo de script y en el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  
   
-**Ejemplo:**  
+**Ejemplo**:  
   
 ```xml  
 <!--Sample of server connection file commands -->  

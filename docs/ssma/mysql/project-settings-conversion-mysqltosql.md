@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908869"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935224"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Configuración del proyecto (conversión) (MySQLToSQL)
 La página conversión del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan cómo SSMA convierte la sintaxis de MySQL en SQL Server o SQL Azure sintaxis.  
@@ -44,7 +44,7 @@ El panel conversión está disponible en los cuadros de diálogo Configuración 
 |**Generar restricción para columnas de columnas de tipos de datos numéricos sin signo**|Agregue una comprobación de valor no negativo a las columnas de tipos de datos numéricos sin signo.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
 |**Generar restricción para columnas de tipo de datos YEAR**|Genera una restricción para las columnas de tipo de datos YEAR en el SQL Server o SQL Azure tabla, si no está presente en la tabla MySQL. En caso afirmativo, todas las columnas convertidas del tipo de datos YEAR irán acompañadas de la restricción CHECK que controla el valor.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
   
-### <a name="data-types"></a>Tipos de datos  
+### <a name="data-types"></a>Tipo de datos  
   
 |||  
 |-|-|  

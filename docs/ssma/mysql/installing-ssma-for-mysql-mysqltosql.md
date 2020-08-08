@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Installing SSMA 2008, Upgrading
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 236edb86bf1b66393ba441daf06993baea7012a6
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8ac4c45e91ea92d77462227422d649aab1ea789b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87824020"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935654"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Instalación de SSMA para MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) para MySQL se compone de una aplicación cliente que se utiliza para realizar una migración desde MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. También contiene un paquete de extensión que admite la migración de datos y el uso de las funciones del sistema de MySQL en las bases de datos migradas.  

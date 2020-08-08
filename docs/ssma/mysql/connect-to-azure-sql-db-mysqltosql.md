@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823798"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935994"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Conexión a Azure SQL Database (MySQLToSQL)
-Utilice el cuadro de diálogo conectar con SQL Azure para conectarse a la base de datos de SQL Azure que desea migrar.  
+Utilice el cuadro de diálogo conectar con SQL Azure para conectarse a la base de datos de Azure SQL Database que desea migrar.  
   
 Para obtener acceso a este cuadro de diálogo, en el menú **archivo** , seleccione **conectarse a SQL Azure**. Si ya se ha conectado, el comando se **vuelve a conectar a SQL Azure.**  
   
@@ -35,7 +35,7 @@ Seleccione, escriba o **examine** el nombre de la base de datos.
   
 **Nombre de usuario**  
   
-Escriba el nombre de usuario que SSMA usará para conectarse a la base de datos de SQL Azure  
+Escriba el nombre de usuario que SSMA usará para conectarse a Azure SQL Database  
   
 **Contraseña**  
   

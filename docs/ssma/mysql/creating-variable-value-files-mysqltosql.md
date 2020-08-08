@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Creating variable value files
 - variable value file validation
 ms.assetid: 1dc56a7b-8e3a-4576-ad4f-47050bf7e28a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: be1530bdec1c1523a873dc93b1d70e6e72c880ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b3b44a99893c2dbc3dbd3a0597e6600020211702
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103022"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935714"
 ---
 # <a name="creating-variable-value-files-mysqltosql"></a>Creación de archivos de valor variable (MySQLToSQL)
 El archivo de valores de variable es un archivo XML que comprende los valores de parámetro de comandos como, el nombre de servidor de origen o de destino que cambian con frecuencia de una migración de servidor a otra. Cuando se produce un gran número de migraciones de base de datos, se crearán varios archivos de variables para almacenar el valor de cada servidor de origen y se hará referencia a ellos en un archivo de script maestro con el modificador **-v** en la línea de comandos. Esto ayuda a mantener valores estáticos en algunos archivos de script con los valores de variable en varios archivos de variables.  
   
 > [!NOTE]  
 > 1.  Los nombres de variable tienen el prefijo y el sufijo con un símbolo $ (dólar). Si no se asigna un valor a las variables en el archivo de valores de variable, se producirá un error durante el análisis del archivo de script, lo que provocará que se detenga el proceso de ejecución de la consola.  
-> 2.  El carácter de escape **$** para **$$** es. Si el valor de una variable o un valor estático de un parámetro **$** contiene un símbolo (dólar) **$$** , debe especificarse para tratarlo como un carácter en lugar de una variable.  
-> 3.  En lo que respecta a la facilidad de mantenimiento, `'variable-group'` las variables se pueden declarar dentro de elementos para la separación lógica de las variables definidas por el usuario.  El uso de este elemento no es obligatorio.  
+> 2.  El carácter de escape para **$** es **$$** . Si el valor de una variable o un valor estático de un parámetro contiene un **$** símbolo (dólar), **$$** debe especificarse para tratarlo como un carácter en lugar de una variable.  
+> 3.  En lo que respecta a la facilidad de mantenimiento, las variables se pueden declarar dentro de `'variable-group'` elementos para la separación lógica de las variables definidas por el usuario.  El uso de este elemento no es obligatorio.  
   
 **Ejemplos:**  
   

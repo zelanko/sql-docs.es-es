@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141012"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936944"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Asignación de tipos de datos de DB2 y SQL Server (DB2ToSQL)
-Los tipos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos DB2 son distintos de los tipos de base de datos Al convertir objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 en objetos, debe especificar cómo se asignan los tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]datos de DB2 a. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en las secciones siguientes.  
+Los tipos de base de datos DB2 son distintos de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de base de datos Al convertir objetos de base de datos DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, debe especificar cómo se asignan los tipos de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en las secciones siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
 SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para ver la lista de asignaciones predeterminadas, vea [configuración del proyecto &#40;asignación de tipos&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  

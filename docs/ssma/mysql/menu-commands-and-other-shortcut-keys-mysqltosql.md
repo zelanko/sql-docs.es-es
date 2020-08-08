@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fc847eecec3f84cda54e2820a444036a016ec9a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293606"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935274"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandos de menú y otras teclas de acceso directo (MySQLToSQL)
 En las secciones siguientes se describen los métodos abreviados de teclado para tener acceso a los comandos de menú y otras teclas de método abreviado usadas en varios cuadros de diálogo de la aplicación SSMA for MySQL.  
@@ -80,7 +80,7 @@ Para acceder al menú herramientas, el método abreviado de teclado utilizado es
 |Crear informe.|ALT + T + C|  
 |Convierte el esquema.|ALT + T + N o CTRL + R|  
 |Actualizar desde la base de datos MySQL.|ALT+T+R|  
-|Sincronizar con SQL Server o SQL Azure base de datos.|ALT + T + S|  
+|Sincronizar con SQL Server o Azure SQL Database.|ALT + T + S|  
 |Guardar como script.|ALT + T + A|  
 |Migre los datos.|ALT+T+M|  
 |Detener la operación actual.|ALT + T + O|  

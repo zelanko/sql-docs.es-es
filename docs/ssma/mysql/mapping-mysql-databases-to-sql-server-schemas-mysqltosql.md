@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823640"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935370"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Asignación de bases de datos de MySQL a esquemas de SQL Server (MySQLToSQL)
-De forma predeterminada, SSMA para MySQL migra todos los objetos de un esquema de MySQL a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos de o SQL Azure denominada para el esquema. Sin embargo, puede personalizar la asignación entre los esquemas de MySQL y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las bases de datos de SQL Azure.  
+De forma predeterminada, SSMA para MySQL migra todos los objetos de un esquema de MySQL a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database denominada para el esquema. Sin embargo, puede personalizar la asignación entre los esquemas de MySQL y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>Esquemas de MySQL y SQL Server o SQL Azure  
 El concepto de MySQL de un esquema se asigna al concepto de SQL Server de una base de datos y a uno de sus esquemas. SSMA hace referencia a la combinación de SQL Server de la base de datos y el esquema como un esquema.  
@@ -66,7 +66,7 @@ Si personaliza la asignación entre un esquema de MySQL y un esquema de SQL Serv
   
 1.  En la pestaña asignación de esquema, seleccione cualquier fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos y el esquema predeterminados.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
 Si desea analizar la conversión de objetos de MySQL en SQL Server o SQL Azure objetos, puede [crear un informe de conversión](assessing-mysql-databases-for-conversion-mysqltosql.md) ; de lo contrario, puede [convertir las definiciones de objetos de base de datos de MySQL](converting-mysql-databases-mysqltosql.md) en esquemas de SQL Server o SQL Azure  
   
 ## <a name="see-also"></a>Consulte también  

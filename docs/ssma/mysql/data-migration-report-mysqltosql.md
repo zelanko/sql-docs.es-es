@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0bb755336e3d26dd54ea1820ed4fdcfab75e757
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e9c88bb9f59d38a1d9cf85785954f5fc6b4ae276
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026600"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935864"
 ---
 # <a name="data-migration-report--mysqltosql"></a>Informe de migración de datos (MySQLToSQL)
-El cuadro de diálogo **Informe de migración de datos** aparece después de migrar los datos a. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+El cuadro de diálogo **Informe de migración de datos** aparece después de migrar los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
 **Estado**  
@@ -35,7 +35,7 @@ El número de filas de datos de la tabla de origen.
 **Número de filas migradas correctamente**  
 El número de filas de datos que se migraron correctamente a la tabla de destino.  
   
-**Relación**  
+**Proporción**  
 Porcentaje de filas migradas correctamente.  
   
 **Detalles**  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebb47597b5d08e0f14d37490304001811d0b33e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee3ac3901c09ab4a0f73803d00a2e4651af51df7
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786281"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051124"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -81,7 +81,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`Es el tipo de artículo. *Type* es de tipo **sysname, su**valor predeterminado es **TABLE**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**tabla** (valor predeterminado)|Tabla con esquema y datos. La replicación supervisa la tabla para determinar los datos que se van a replicar.|  
 |**func schema only**|Función con solo esquema.|  
@@ -101,12 +101,12 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`Especifica lo que debe hacer el sistema si la tabla existe en el suscriptor al aplicar la instantánea. *pre_creation_cmd* es **nvarchar (10)** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Ninguna**|Si la tabla ya existe en el suscriptor, no se lleva a cabo ninguna acción.|  
 |**delete**|Emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.|  
 |**Drop** (valor predeterminado)|Quita la tabla antes de volver a crearla. Necesario para admitir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores.|  
-|**truncar**|Trunca la tabla de destino.|  
+|**truncate**|Trunca la tabla de destino.|  
   
 `[ @creation_script = ] 'creation_script'`Es la ruta de acceso y el nombre de un script de esquema de artículo opcional que se usa para crear el artículo en la base de datos de suscripciones. *creation_script* es de tipo **nvarchar (255)** y su valor predeterminado es NULL.  
   
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`Es un mapa de bits de la opción de generación de esquemas para el artículo dado. *schema_option* es **binario (8)** y puede ser el [| (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0x00**|Deshabilita el scripting por el Agente de instantáneas y usa el script de creación previa de esquemas proporcionado definido en *creation_script*.|  
 |**0x01**|Genera la creación del objeto (CREATE TABLE, CREATE PROCEDURE, etc.). Este es el valor predeterminado en los artículos de procedimientos almacenados.|  
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** especifica que se comprobará la firma para ver si procede de un origen de confianza.  
   
-`[ @destination_object = ] 'destination_object'`Es el nombre del objeto en la base de datos de suscripciones. *destination_object* es de **tipo sysname y su**valor predeterminado es lo que se encuentra en ** \@ source_object**. Este parámetro se puede especificar únicamente si el artículo es de solo esquema, como procedimientos almacenados, vistas y UDF. Si el artículo especificado es un artículo de tabla, el valor de *@source_object* invalida el valor de *destination_object*.  
+`[ @destination_object = ] 'destination_object'`Es el nombre del objeto en la base de datos de suscripciones. *destination_object* es de **tipo sysname y su**valor predeterminado es lo que se encuentra en ** \@ source_object**. Este parámetro se puede especificar únicamente si el artículo es de solo esquema, como procedimientos almacenados, vistas y UDF. Si el artículo especificado es un artículo de tabla, el valor de * \@ source_object* invalida el valor de *destination_object*.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`Habilita o deshabilita el uso del solucionador interactivo en un artículo. *allow_interactive_resolver* es de tipo **nvarchar (5)** y su valor predeterminado es false. **true** habilita el uso del solucionador interactivo en el artículo; **false** lo deshabilita.  
   
@@ -212,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`Es un mapa de bits de los permisos de nivel de tabla que se comprueban cuando el Agente de mezcla aplica los cambios al publicador. Si la cuenta de inicio de sesión o usuario del publicador que utiliza el proceso de mezcla no dispone de los permisos de tabla correctos, los cambios no válidos se registran como conflictos. *check_permissions* es de **tipo int**y puede ser el valor de [| (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0x00** (valor predeterminado)|Los permisos no se comprueban.|  
 |**0x10**|Comprueba los permisos en el publicador antes de cargar las operaciones de inserción creadas en un suscriptor.|  
@@ -253,7 +253,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @partition_options = ] partition_options`Define la manera en que se crean las particiones de los datos en el artículo, lo que permite optimizar el rendimiento cuando todas las filas pertenecen solo a una partición o a una sola suscripción. *partition_options* es **tinyint**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|El filtrado para el artículo es estático o no produce un subconjunto único de datos para cada partición, es decir, una partición "superpuesta".|  
 |**1**|Las particiones se superponen y las actualizaciones del lenguaje de manipulación de datos (DML) realizadas en el suscriptor no pueden cambiar la partición a la que pertenece la fila.|  
@@ -267,7 +267,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @subscriber_upload_options = ] subscriber_upload_options`Define las restricciones en las actualizaciones realizadas en un suscriptor con una suscripción de cliente. Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* es **tinyint**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Sin restricciones. Los cambios realizados en el suscriptor se cargan en el publicador.|  
 |**1**|Se permiten cambios en el suscriptor, pero éstos no se cargan en el publicador.|  
@@ -280,7 +280,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`Especifica cómo se controla la administración del intervalo de identidad para el artículo. *identityrangemanagementoption* es de tipo **nvarchar (10)** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Ninguna**|Deshabilita la administración de intervalos de identidad.|  
 |**Manual**|Marca la columna de identidad utilizando NOT FOR REPLICATION para habilitar la administración manual de intervalos de identidad.|  
@@ -355,15 +355,15 @@ sp_addmergearticle [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .  
+ Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Definir un artículo](../../relational-databases/replication/publish/define-an-article.md)   
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [sp_changemergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bfef4a0f2bf65166193e28610d5869e65c1023cb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ab3c2cdbb0e7c4628b757ab25f75d848e0a62887
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917578"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87952535"
 ---
 # <a name="integration-services-programming-overview"></a>Información general sobre la programación de Integration Services
 
@@ -54,7 +54,7 @@ ms.locfileid: "86917578"
  Puede programar paquetes, tareas personalizadas y componentes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] o en otro editor de código o de texto. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ofrece al desarrollador muchas herramientas y características para simplificar y acelerar los ciclos iterativos de codificación, depuración y prueba. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] también simplifica la implementación. Sin embargo, no necesita [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] para compilar y generar proyectos de código de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK incluye los compiladores [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] y [!INCLUDE[csprcs](../includes/csprcs-md.md)] y herramientas relacionadas.  
   
 > [!IMPORTANT]  
->  De forma predeterminada, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] se instala con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a diferencia de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Los vínculos al contenido de SDK de esta sección solo funcionarán si el SDK está instalado en el equipo y su documentación está incluida en la colección de Libros en pantalla. Después de instalar el SDK de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], puede agregar la documentación del SDK a la colección y la tabla de contenido de Libros en pantalla si sigue las instrucciones de [Agregar o quitar la documentación del producto para SQL Server](https://msdn.microsoft.com/library/ef798cc8-87cf-4d60-a7bf-9e061bdd0052).  
+>  De forma predeterminada, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] se instala con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], a diferencia de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK. Los vínculos al contenido de SDK de esta sección solo funcionarán si el SDK está instalado en el equipo y su documentación está incluida en la colección de Libros en pantalla. Después de instalar el SDK de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)], puede agregar la documentación del SDK a la colección y la tabla de contenido de Libros en pantalla si sigue las instrucciones de [Agregar o quitar la documentación del producto para SQL Server](https://www.microsoft.com/download/details.aspx?id=42557).  
   
  Tanto la tarea Script como el componente de script de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usan [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) como entorno de scripting incrustado. VSTA es compatible con [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic y [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   

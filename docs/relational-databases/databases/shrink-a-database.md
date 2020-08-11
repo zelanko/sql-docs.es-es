@@ -20,12 +20,12 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cacfade7921a099d618704b3145f5de2acd2b73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715509"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807518"
 ---
 # <a name="shrink-a-database"></a>Reducir una base de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,9 +57,7 @@ ms.locfileid: "85715509"
   
 -   El tamaño de la base de datos no puede ser menor que el tamaño mínimo de la base de datos. El tamaño mínimo es el tamaño especificado cuando se creó la base de datos o el último tamaño establecido explícitamente mediante una operación de modificación del tamaño del archivo, como DBCC SHRINKFILE. Por lo tanto, si se creó una base de datos con un tamaño de 10 MB y ha crecido hasta llegar a 100 MB, solo podrá reducirla hasta un tamaño de 10 MB, aunque se hayan eliminado todos los datos de la base de datos.  
   
--   No se puede reducir una base de datos mientras se está realizando una copia de seguridad de la misma. Asimismo, no se puede realizar una copia de seguridad de una base de datos mientras se está realizando una operación de reducción de ésta.  
-  
--   DBCC SHRINKDATABASE producirá un error cuando encuentra un índice de almacén de columnas optimizado de memoria xVelocity. El trabajo realizado antes de encontrar el índice de almacén de columnas se llevará a cabo correctamente, por lo que es posible que la base de datos sea más pequeña. Para completar DBCC SHRINKDATABASE, deshabilite todos los índices de almacén de columnas antes de ejecutar DBCC SHRINKDATABASE y, a continuación, vuelva a generar los índices de almacén de columnas.  
+-   No se puede reducir una base de datos mientras se está realizando una copia de seguridad de la misma. Asimismo, no se puede realizar una copia de seguridad de una base de datos mientras se está realizando una operación de reducción de ésta.
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   

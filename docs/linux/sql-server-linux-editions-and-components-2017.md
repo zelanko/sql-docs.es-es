@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 860d2a8c903a918e95ef38214e25a18efc3590d2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1cc1a575ba2159fc995022df97f5f2079b26206
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893091"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928666"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y características admitidas de SQL Server 2017 en Linux
 
@@ -245,6 +245,5 @@ Las siguientes características y servicios no están disponibles para SQL Serv
  [Ediciones y características admitidas de SQL Server 2019 en Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Ediciones y características admitidas de SQL Server 2017 en Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Ediciones y características admitidas de SQL Server 2016 en Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
- [Ediciones y características admitidas de SQL Server 2014 en Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Instalación de SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [Especificaciones de producto para SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)

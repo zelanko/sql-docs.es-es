@@ -11,12 +11,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a24ea6315575233d1f3fb052334d2a1edb66c05e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4ea742a7dfd4db224e55765ff74bb67c4616f9bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629207"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934334"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Reversión a la versión anterior de los separadores de palabras usados por Buscar (Búsqueda de SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -380,5 +380,5 @@ ms.locfileid: "85629207"
   
 ## <a name="see-also"></a>Consulte también  
  [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Cambios de comportamiento en la búsqueda de texto completo](/sql/database-engine/behavior-changes-to-full-text-search)
+ [Cambios de comportamiento en la búsqueda de texto completo](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)
  

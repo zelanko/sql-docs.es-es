@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e838636d3d52fa05933601c2ad9fae1f6006f7b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: daead13f4a3069966d1ede9aa677c47c8a784099
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629170"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934316"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "85629170"
   
     -   **Crear a partir de una lista de propiedades de búsqueda existente**  
   
-     Para más información, consulte [New Search Property List](/sql/database-engine/new-search-property-list).  
+     Para más información, consulte [New Search Property List](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -201,7 +201,7 @@ GO
   
     2.  Para agregar una propiedad de documento, haga clic en la fila vacía en la parte inferior de la lista, a la derecha del símbolo **\*** y escriba los valores para la nueva propiedad.  
   
-         Para obtener información sobre estos valores, vea [Editor de lista de propiedades de búsqueda](/sql/database-engine/search-property-list-editor). Para obtener información sobre cómo obtener estos valores para las propiedades definidas por Microsoft, vea [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obtener información sobre propiedades definidas por un fabricante de software independiente (ISV), vea la documentación de ese fabricante.  
+         Para obtener información sobre estos valores, vea [Editor de lista de propiedades de búsqueda](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql). Para obtener información sobre cómo obtener estos valores para las propiedades definidas por Microsoft, vea [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obtener información sobre propiedades definidas por un fabricante de software independiente (ISV), vea la documentación de ese fabricante.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

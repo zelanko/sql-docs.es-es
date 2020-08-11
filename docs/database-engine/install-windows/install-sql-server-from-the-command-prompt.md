@@ -85,12 +85,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 78d413af670dd62d3eb761babf1e0df846117c14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 190f757b7c9849866788646fe3288086d73f8811
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892342"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934394"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar SQL Server desde el símbolo del sistema
 
@@ -883,7 +883,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine,PolyBase|Instala el motor de PolyBase.|  
   
 ##  <a name="role-parameters"></a><a name="RoleParameters"></a> Parámetros de rol  
- El rol de instalación o el parámetro /Role se utiliza para instalar una selección preconfigurada de características. Los roles de SSAS instalan una instancia de SSAS en una granja de SharePoint existente o en una granja nueva sin configurar. Se proporcionan dos roles de instalación para ser compatibles con cada escenario. Puede elegir solo un rol de instalación que instalar a la vez. Si elige un rol de instalación, el programa de instalación instala las características y componentes que pertenecen al rol. No puede variar las características y los componentes que están designados para ese rol. Para obtener más información sobre cómo usar el parámetro de roles de características, vea [Instalar PowerPivot desde el símbolo del sistema](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
+ El rol de instalación o el parámetro /Role se utiliza para instalar una selección preconfigurada de características. Los roles de SSAS instalan una instancia de SSAS en una granja de SharePoint existente o en una granja nueva sin configurar. Se proporcionan dos roles de instalación para ser compatibles con cada escenario. Puede elegir solo un rol de instalación que instalar a la vez. Si elige un rol de instalación, el programa de instalación instala las características y componentes que pertenecen al rol. No puede variar las características y los componentes que están designados para ese rol. Para obtener más información sobre cómo usar el parámetro de roles de características, vea [Instalar PowerPivot desde el símbolo del sistema](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode). 
   
  El rol AllFeatures_WithDefaults es el comportamiento predeterminado para las ediciones de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] y reduce el número de cuadros de diálogo que se presentan al usuario. Se puede especificar desde la línea de comandos al instalar una edición de SQL Server diferente de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   

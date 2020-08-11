@@ -1,1 +1,1 @@
-Instancia administrada de Azure SQL Database
+Instancia administrada de Azure SQL

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247627"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934408"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -147,7 +147,7 @@ Los pasos básicos que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ut
 - Expresiones aritméticas, como 1+1, 5/3*2, que solo incluyen constantes.
 - Expresiones lógicas, como 1=1 y 1>2 AND 3>4, que solo incluyen constantes.
 - Funciones integradas que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] considera que pueden doblarse, incluidas `CAST` y `CONVERT`. Por lo general, una función intrínseca puede doblarse si se trata de una función exclusiva de sus entradas y no contiene ninguna otra información contextual, como opciones SET, configuración de idioma, opciones de la base de datos y claves de cifrado. Las funciones no deterministas no pueden doblarse. Excepto algunas excepciones, las funciones deterministas integradas pueden doblarse.
-- Métodos deterministas de tipos definidos por el usuario CLR y funciones deterministas definidas por el usuario CLR con valores escalares (empezando por [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para obtener más información, vea [Doblado constante para las funciones y métodos definidos por el usuario CLR](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
+- Métodos deterministas de tipos definidos por el usuario CLR y funciones deterministas definidas por el usuario CLR con valores escalares (empezando por [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Para obtener más información, vea [Doblado constante para las funciones y métodos definidos por el usuario CLR](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
 
 > [!NOTE] 
 > Los tipos de objetos grandes constituyen una excepción. Si el tipo de salida del proceso de doblado es un tipo de objeto grande (text,ntext, image, nvarchar(max), varchar(max), varbinary(max) o XML), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no dobla la expresión.

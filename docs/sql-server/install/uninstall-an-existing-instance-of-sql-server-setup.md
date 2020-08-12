@@ -1,5 +1,6 @@
 ---
 title: Desinstalación de una instancia existente
+description: En este artículo se describe cómo desinstalar una instancia independiente de SQL Server, que también prepara el sistema para que pueda volver a instalar SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 61647a4e0a654d478050268587b2b47fd79fc686
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fd4e3ee094bca1d27543a92a357f705b0e3d82fe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78335750"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883734"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar una instancia existente de SQL Server (programa de instalación)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este artículo se describe cómo desinstalar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Siguiendo los pasos de este tema también podrá preparar el sistema para reinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +56,7 @@ ms.locfileid: "78335750"
     > Las bases de datos de ReportServer se incluyen con SQL Server Reporting Services.   
 
  
-1.  **Detenga todos** los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]servicios de **.** Se recomienda detener todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las conexiones activas pueden evitar que la desinstalación se realice correctamente.  
+1.  **Detenga todos** los **servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** Se recomienda detener todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de desinstalar los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las conexiones activas pueden evitar que la desinstalación se realice correctamente.  
   
 1.  **Utilice una cuenta que tenga los permisos adecuados.** Inicie sesión en el servidor mediante la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o con una cuenta que tenga permisos equivalentes. Por ejemplo, puede iniciar sesión en el servidor mediante una cuenta miembro del grupo de administradores locales.  
   

@@ -1,5 +1,6 @@
 ---
 title: Ayuda del Administrador de configuración de SQL Server
+description: Familiarícese con el Administrador de configuración de SQL Server. Aprenda a usarlo para administrar servicios de SQL Server y configurar la conectividad de red.
 ms.custom: seo-lt-2019
 ms.date: 02/01/2018
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ade0d0e0944b01005866fc5c38e50ce45fae0fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02926be4321c3f423f33c9b10b810009e65e2731
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306957"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895051"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Ayuda del Administrador de configuración de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para configurar los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la conectividad de red. Para crear o administrar objetos de base de datos, configurar la seguridad y escribir consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] , use la herramienta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información acerca de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
  > [!TIP]
@@ -55,7 +56,7 @@ ms.locfileid: "75306957"
 -   Configurar un protocolo de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 > [!NOTE]  
->  Para obtener un tutorial breve sobre cómo configurar protocolos y conectar al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vea [Tutorial: Introducción al motor de base de datos](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+>  Para información sobre cómo configurar protocolos y conectarse a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consulte este breve [Tutorial: Introducción al motor de base de datos](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
 ## <a name="sql-server-native-client-configuration"></a>Configuración de SQL Server Native Client  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conectan a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la biblioteca de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para llevar a cabo las siguientes tareas relacionadas con las aplicaciones cliente en este equipo:  

@@ -1,5 +1,6 @@
 ---
 title: Propiedades del conjunto de datos (cuadro de diálogo), parámetros | Microsoft Docs
+description: Aprenda a usar la propiedad Parámetros del cuadro de diálogo Propiedades del conjunto de datos para agregar, cambiar y eliminar parámetros de consulta.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 66e0d56cbff57a6100ab8c61436ba6bcddf15382
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc0f85dbd100593549ab3f543dfaf4f95e0d91ba
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812246"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Propiedades del conjunto de datos (cuadro de diálogo), Parámetros
   Seleccione **Parámetros** en el cuadro de diálogo **Propiedades del conjunto de datos** para agregar, cambiar y eliminar parámetros de la consulta, incluso los que vinculan a los parámetros de informe.  

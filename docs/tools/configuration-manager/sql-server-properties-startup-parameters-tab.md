@@ -1,5 +1,6 @@
 ---
 title: Propiedades de SQL Server (pestaña Parámetros de inicio)
+description: Use la pestaña Parámetros de inicio del cuadro de diálogo Propiedades de SQL Server para agregar o quitar parámetros de inicio, lo que puede afectar al rendimiento del Motor de base de datos.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d5a4c5cb279cb4cfd4bbe1baa63f89dc1289436
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13952b4c01bbbb65e3afc9909482a53ce327f32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306774"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894517"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propiedades de SQL Server (pestaña Parámetros de inicio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Utilice este cuadro de diálogo para agregar o quitar parámetros de inicio para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los parámetros de inicio pueden tener una gran influencia en el rendimiento del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Antes de agregar o cambiar los parámetros de inicio, vea el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  

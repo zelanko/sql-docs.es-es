@@ -1,5 +1,6 @@
 ---
 title: Usar condiciones de prueba en pruebas unitarias de SQL Server
+description: Obtenga información sobre las condiciones de prueba en las pruebas unitarias de SQL Server. Vea cómo usar condiciones predefinidas y pruebas negativas, y obtenga información sobre condiciones personalizadas.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dc5e5817952ea19f12879079c572a3c79594e070
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243518"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895117"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Usar condiciones de prueba en pruebas unitarias de SQL Server
 
@@ -42,7 +42,7 @@ En la tabla siguiente se enumeran las condiciones de prueba predefinidas que pue
 >   
 > La duración notificada no incluye el tiempo usado para la generación de datos y la implementación del esquema, porque aparecen antes de que se ejecuten las pruebas. Para ver la duración de la prueba, seleccione una serie de pruebas en la ventana **Resultados de pruebas**, haga clic con el botón derecho y elija **Ver detalles de resultados de pruebas**.  
   
-Puede agregar condiciones de prueba a pruebas unitarias de SQL Server mediante el panel Condiciones de prueba del Diseñador de pruebas unitarias de SQL Server. Para más información, consulte [Cómo: Agregar condiciones de prueba a pruebas unitarias de SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+Puede agregar condiciones de prueba a pruebas unitarias de SQL Server mediante el panel Condiciones de prueba del Diseñador de pruebas unitarias de SQL Server. Para más información, vea: [Cómo: Incorporar condiciones de prueba a pruebas unitarias de SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
 También puede modificar el código del método de prueba directamente para agregar más funcionalidad. Para más información, consulte [Cómo: Abrir una prueba unitaria de SQL Server para editarla](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md) y [Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md). Por ejemplo, puede agregar funcionalidad a un método de prueba si agrega instrucciones Assert. Para más información, consulte [Usar aserciones de Transact-SQL en pruebas unitarias de SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md).  
   
@@ -92,7 +92,7 @@ Después de agregar una condición de prueba Suma de comprobación de datos a la
   
     Aparece el cuadro de diálogo **Configuración de TestConditionName** .  
   
-5.  Especifique una conexión a la base de datos que desee probar. Para más información, consulte [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Especifique una conexión a la base de datos que desee probar. Para más información, vea: [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  De manera predeterminada, el cuerpo de Transact\-SQL de la prueba aparece en el panel de edición. Puede modificar el código en caso necesario, para generar los resultados esperados. Por ejemplo, si la prueba tiene código anterior a la prueba, quizás tenga que agregar ese código.  
   
@@ -122,7 +122,7 @@ Una vez agregada una condición de prueba Esquema esperado a la prueba unitaria 
   
     Aparece el cuadro de diálogo **Configuración de TestConditionName** .  
   
-5.  Especifique una conexión a la base de datos que desee probar. Para más información, consulte [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Especifique una conexión a la base de datos que desee probar. Para más información, vea: [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  De manera predeterminada, el cuerpo de Transact\-SQL de la prueba aparece en el panel de edición. Puede modificar el código en caso necesario, para generar los resultados esperados. Por ejemplo, si la prueba tiene código anterior a la prueba, quizás tenga que agregar ese código.  
   

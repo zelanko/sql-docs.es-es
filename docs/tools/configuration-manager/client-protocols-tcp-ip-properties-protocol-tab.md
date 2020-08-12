@@ -1,5 +1,6 @@
 ---
 title: 'Protocolos de cliente: Propiedades de TCP/IP (pestaña Protocolo)'
+description: Obtenga información sobre cómo especificar las opciones de TCP/IP en el Administrador de configuración de SQL Server, como el parámetro Mantener conexión y el número de puerto predeterminado.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad15bb228002645c929f1ff2d4c049e94f3ae004
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 637ebfc8b031ed5b8b49ac634718c56786a9b813
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306517"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892041"
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>Protocolos de cliente: Propiedades de TCP/IP (pestaña Protocolo)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   En el Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use la pestaña **Protocolo** del cuadro de diálogo **Propiedades de TCP/IP** para ver o especificar las siguientes opciones. Para conectar a un puerto diferente, escriba el número de puerto en el cuadro **Puerto predeterminado** . Para obtener más información sobre cadenas de conexión, vea [Crear una cadena de conexión válida con TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
   
 ## <a name="options"></a>Opciones  

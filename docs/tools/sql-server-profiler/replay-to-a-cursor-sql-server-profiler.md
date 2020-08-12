@@ -1,6 +1,7 @@
 ---
 title: Reproducir hasta un cursor
 titleSuffix: SQL Server Profiler
+description: Obtenga información sobre cómo usar un cursor en SQL Server Profiler para pausar una reproducción de seguimiento en un punto específico. Reproduzca hasta un cursor para facilitar la depuración.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9df4fe8bf442fae11aefeb2b3d4e3c95aa13037e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 075458bd919ebf5ba52d121276e5363b204c0e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74957791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789925"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>Reproducir hasta un cursor (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este tema se describe cómo reproducir archivos o tablas de seguimiento que se ponen en pausa al alcanzar un cursor mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. La pausa de seguimientos en cursores es compatible con la depuración porque la reproducción de scripts de seguimiento largos se puede dividir en segmentos cortos que se pueden analizar de forma incremental.  
   

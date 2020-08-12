@@ -1,5 +1,6 @@
 ---
 title: Opciones del Editor de Transact-SQL
+description: Familiarícese con las opciones del Editor de Transact-SQL. Obtenga información sobre las propiedades de ejecución de consultas y las de resultados de consulta, y vea cómo ajustar los valores.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -23,16 +24,15 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0edf0ee20ce44abadb7783baa6e99cba88ddff7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256318"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883418"
 ---
 # <a name="transact-sql-editor-options"></a>Opciones del Editor de Transact-SQL
 

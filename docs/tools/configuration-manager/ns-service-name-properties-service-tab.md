@@ -1,5 +1,6 @@
 ---
 title: Propiedades de NS$&lt;nombre de servicio&gt; (pestaña Servicio)
+description: Obtenga información sobre las opciones de la pestaña Servicio del cuadro de diálogo Propiedades de Notification Services, como la ruta de acceso binaria, el nombre de host y el modo de inicio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f6d926dbe1380bf0f44b8b841d79b2bd66afc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00d3b6ffa3144384f04176af7ab4659649c7f338
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306394"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892497"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Propiedades de NS$&lt;nombre de servicio&gt; (pestaña Servicio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Este es el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
   
 ## <a name="options"></a>Opciones  
@@ -47,11 +48,11 @@ ms.locfileid: "75306394"
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
   
--   Manual: el servicio no se inicia automáticamente al iniciar el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
+-   Manual: este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: el servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: este servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: el servicio no se puede iniciar.  
+-   Deshabilitado: no se puede iniciar el servicio.  
   
  **State**  
  Indica si el servicio está en ejecución, detenido o deshabilitado.  

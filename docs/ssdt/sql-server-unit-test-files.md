@@ -1,21 +1,21 @@
 ---
 title: Archivos de prueba unitaria de SQL Server
+description: Obtenga información sobre los archivos que componen una prueba unitaria de SQL Server, como el archivo de código fuente, el de recursos, el de configuración y el de instalación.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 45c43cbf392e795eb0f5aee6876ad9e649b09788
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ec988c2df747164111c8915219d90366af2af463
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256335"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883434"
 ---
 # <a name="sql-server-unit-test-files"></a>Archivos de prueba unitaria de SQL Server
 

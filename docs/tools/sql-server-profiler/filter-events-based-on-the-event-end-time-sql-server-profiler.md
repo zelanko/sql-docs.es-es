@@ -1,6 +1,7 @@
 ---
 title: Filtrar eventos en función de la hora de finalización del evento
 titleSuffix: SQL Server Profiler
+description: Filtre los eventos por hora de finalización durante un seguimiento. Aprenda a configurar un filtro en la hora de finalización del evento en SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8372ce58317eead122675f3585be01f5da7eb829
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e82f5820f418e65e8638ee27898a130ae6e564d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774812"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>Filtrar eventos basándose en la hora de finalización del evento (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe el modo de filtrar eventos de seguimiento basándose en la hora de finalización del evento mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-filter-events-based-on-the-event-end-time"></a>Para filtrar eventos basándose en la hora de finalización del evento  

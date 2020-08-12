@@ -8,28 +8,30 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d9640ee6040e6906f888486f6b0a1f99bb1d071f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a949fc5f17d2e6875eeef7f62ecef065283e3a92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607118"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772321"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>Tutorial: Implementación de un modelo de agrupación en clústeres en R con el aprendizaje automático de SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en R, en una base de datos SQL con SQL Server Machine Learning Services o en clústeres de macrodatos.
+En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en R, en una base de datos con SQL Server Machine Learning Services o en Clústeres de macrodatos.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en R, en una base de datos SQL mediante SQL Server Machine Learning Services.
+En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en R, en una base de datos mediante SQL Server Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en R, en una base de datos SQL mediante SQL Server R Services.
+En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en R, en una base de datos mediante SQL Server R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en R, en una base de datos mediante Machine Learning Services en Azure SQL Managed Instance.
 ::: moniker-end
 
 Para realizar la agrupación en clústeres de forma periódica cuando se registren nuevos clientes, necesita llamar al script de R desde cualquier aplicación. Para hacerlo, puede implementar el script de R en una base de datos si lo coloca dentro de un procedimiento almacenado de SQL. Como el modelo se ejecuta en la base de datos, se puede entrenar fácilmente con los datos almacenados en la base de datos.
@@ -38,7 +40,7 @@ En este artículo, aprenderá a:
 
 > [!div class="checklist"]
 > * Crear un procedimiento almacenado que genere el modelo
-> * Agrupación en clústeres en una base de datos SQL
+> * Agrupación en clústeres
 > * Uso de la información de agrupación en clústeres
 
 En la [parte uno](r-clustering-model-introduction.md), ha instalado los requisitos previos y ha restaurado la base de datos de ejemplo.
@@ -139,10 +141,11 @@ EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
 # Define the connection string
+
 connStr <- paste("Driver=SQL Server; Server=", instance_name,
-               "; Database=", database_name,
-               "; Trusted_Connection=true; ",
-                  sep="" );
+                 "; Database=", database_name,
+                 "; uid=Username;pwd=Password; ",
+                 sep="" )
 
 # Input customer data that needs to be classified.
 # This is the result we get from the query.
@@ -178,7 +181,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>Agrupación en clústeres en una base de datos SQL
+## <a name="perform-clustering"></a>Agrupación en clústeres
 
 Ahora que ha creado el procedimiento almacenado, ejecute el siguiente script para realizar la agrupación en clústeres.
 
@@ -237,7 +240,7 @@ Cuando termine este tutorial, puede eliminar la base de datos tpcxbb_1gb.
 En la parte cuatro de la serie de tutoriales, ha aprendido a:
 
 * Crear un procedimiento almacenado que genere el modelo
-* Agrupar en clústeres en SQL Server
+* Realización de la agrupación en clústeres con aprendizaje automático de SQL
 * Uso de la información de agrupación en clústeres
 
 Para más información sobre cómo usar R en Machine Learning Services, vea:

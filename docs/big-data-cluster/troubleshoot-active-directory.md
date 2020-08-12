@@ -5,20 +5,20 @@ description: Solucione problemas de implementación de un clúster de macrodatos
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153251"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772880"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Solución de problemas de integración de Active Directory de un clúster de macrodatos de SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En este artículo se explica cómo solucionar problemas de implementación de un clúster de macrodatos de SQL Server en el modo de Active Directory.
 
@@ -123,9 +123,9 @@ Para identificar por qué se ha salido de la implementación sin crear los pods 
 
 ## <a name="cause"></a>Causa
 
-En el ejemplo anterior, se produce un error en la implementación al crear un inicio de sesión para el usuario del dominio porque el ámbito del grupo de dominio es el dominio local. Use grupos con ámbito de dominio global o universal. En [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](deploy-active-directory.md) se explican los requisitos de ámbito de los grupo de AD.
+En el ejemplo anterior, se produce un error en la implementación al crear un inicio de sesión para el usuario del dominio porque el ámbito del grupo de dominio es el dominio local. Use grupos de ámbito universal o global. En [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](deploy-active-directory.md) se explican los requisitos de ámbito de los grupo de AD.
 
-## <a name="resolution"></a>Solución
+## <a name="verify"></a>Verify
 
 Compruebe el ámbito del grupo de dominio (<`domain-group`>). Use [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 

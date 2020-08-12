@@ -1,5 +1,6 @@
 ---
 title: Propiedades de Analysis Server (pestaña Iniciar sesión)
+description: Obtenga información sobre la pestaña Iniciar sesión del cuadro de diálogo Propiedades de Analysis Server. Vea cómo se usa para especificar la cuenta de servicio de SSAS e iniciar o detener el servicio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b324124e50e02a1acaac17ed188000687b93665
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c0559cb8e32bc273887ec4f5874b6e7bd1ced06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306563"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895081"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Propiedades de Analysis Server (pestaña Iniciar sesión)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Analysis Server** para especificar la cuenta que utiliza el servicio [!INCLUDE[ssAS](../../includes/ssas-md.md)] así como para iniciar y detener el servicio.  
   
 > [!NOTE]  

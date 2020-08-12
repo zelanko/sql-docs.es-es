@@ -1,21 +1,21 @@
 ---
 title: Crear y ejecutar una prueba unitaria de SQL Server
+description: Aprenda a crear una prueba unitaria de SQL Server. Siga los pasos de configuración de una prueba que detecta un error en un procedimiento almacenado.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: cb284457b86d6dd1e2284d6815a1b175640fa0c2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087512"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882920"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Tutorial: Crear y ejecutar una prueba unitaria de SQL Server
 
@@ -39,7 +39,7 @@ En este tutorial, realizará las tareas siguientes:
   
 Cuando una de las pruebas unitarias detecta un error en un procedimiento almacenado, se corrige el error y se vuelve a ejecutar la prueba.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
 Para completar este tutorial, debe poder conectarse a un servidor de bases de datos (o a una base de datos LocalDB) en el que tenga permisos para crear e implementar una base de datos. Para más información, consulte [Permisos necesarios para las características de base de datos de Visual Studio](https://msdn.microsoft.com/library/aa833413(VS.100).aspx).  
   
 ## <a name="create-a-script-that-contains-a-database-schema"></a><a name="CreateScript"></a>Crear un script que contiene un esquema de la base de datos  
@@ -181,7 +181,7 @@ Para completar este tutorial, debe poder conectarse a un servidor de bases de da
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  
@@ -274,7 +274,7 @@ De forma predeterminada, al presionar F5 se implementa (o publica) la base de da
   
 2.  Haga clic con el botón derecho en alguno de los procedimientos almacenados y haga clic en **Crear pruebas unitarias** para mostrar el cuadro de diálogo **Crear pruebas unitarias**.  
   
-3.  Active las casillas de los cinco procedimientos almacenados: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** y **Sales.uspShowOrderDetails**.  
+3.  Active las casillas de los cinco procedimientos almacenados: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**y **Sales.uspShowOrderDetails**.  
   
 4.  En la lista desplegable **Proyecto**, seleccione **Crear un nuevo proyecto de prueba de Visual C#** .  
   

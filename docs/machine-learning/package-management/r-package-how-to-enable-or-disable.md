@@ -2,22 +2,22 @@
 title: Habilitación o deshabilitación de la administración remota de paquetes de R
 description: Habilitación de la administración remota de paquetes de R en SQL Server 2016 R Services o SQL Server Machine Learning Services (en base de datos)
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117988"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757145"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitación o deshabilitación de la administración remota de paquetes para SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se describe cómo habilitar la administración remota de paquetes de R desde una estación de trabajo cliente o un servidor Machine Learning Server diferente. Una vez habilitada la característica de administración de paquetes en SQL Server, puede usar comandos de RevoScaleR en un cliente para instalar paquetes en SQL Server.
 
@@ -41,7 +41,7 @@ La [deshabilitación](#bkmk_disable) de la característica de administración de
 
     Este comando crea objetos de nivel de instancia en el equipo de SQL Server que son necesarios para la administración de paquetes. También reinicia Launchpad para la instancia.
 
-    Si no especifica una instancia, se usa la instancia predeterminada. Si no especifica un usuario, se usa el contexto de seguridad actual. Por ejemplo, el siguiente comando habilita la administración de paquetes en la instancia de la ruta de acceso de RegisterRExt.exe, con las credenciales del usuario que abrió el símbolo del sistema:
+    Si no especifica una instancia, se usa la instancia predeterminada. Si no especifica un usuario, se usa el contexto de seguridad actual. Por ejemplo, el siguiente comando habilita la administración de paquetes en la instancia predeterminada, con las credenciales del usuario que abrió el símbolo del sistema:
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -51,7 +51,7 @@ La [deshabilitación](#bkmk_disable) de la característica de administración de
    
     Este comando crea algunos artefactos de base de datos, incluidos los siguientes roles de base de datos que se usan para controlar los permisos de usuario: `rpkgs-users`, `rpkgs-private` y `rpkgs-shared`.
 
-    Por ejemplo, el siguiente comando habilita la administración de paquetes en la base de datos, en la instancia donde se ejecuta RegisterRExt. Si no especifica un usuario, se usa el contexto de seguridad actual.
+    Por ejemplo, el siguiente comando habilita la administración de paquetes en la base de datos, en la instancia predeterminada. Si no especifica un usuario, se usa el contexto de seguridad actual.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

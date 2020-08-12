@@ -1,5 +1,6 @@
 ---
 title: Propiedades de TCP/IP (pestaña Direcciones IP)
+description: Aprenda a usar la pestaña Direcciones IP del cuadro de diálogo Propiedades de TCP/IP para configurar las opciones del protocolo TCP/IP para una dirección IP específica en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 08/24/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f1afdb9d25d599f32b2efb9d5339ef4afffd6f31
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c68b7a9f1da65862403750e32315ee7168ded6e6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307563"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880298"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propiedades de TCP/IP (pestaña Direcciones IP)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use el cuadro de diálogo **Propiedades de TCP/IP (pestaña Direcciones IP)** para configurar las opciones del protocolo TCP/IP para una dirección IP específica. Solo las opciones **Puertos dinámicos TCP** y **Puerto TCP** pueden configurarse para todas las direcciones al mismo tiempo seleccionando **IPAll**.  
   
  Los cambios surten efecto cuando se reinicia SQL Server SQL Server. Para información sobre cómo iniciar y detener el servicio SQL Server Browser, consulte [Iniciar y detener el servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
@@ -52,7 +53,7 @@ ms.locfileid: "75307563"
   
  El motor de base de datos puede escuchar en varios puertos con la misma dirección IP y enumerar los puertos, separados por comas, con el formato 1433,1500,1501. Este campo tiene un límite de 2.047 caracteres.  
   
- Para configurar que una misma dirección IP escuche en varios puertos, el parámetro **Escuchar todo** también tiene que establecerse en **No**(en la **pestaña Protocolos** del cuadro de diálogo **Propiedades de TCP/IP** ). Para más información, consulte "Cómo configurar el motor de base de datos para escuchar en varios puertos TCP" en Libros en pantalla de SQL Server.  
+ Para configurar que una misma dirección IP escuche en varios puertos, el parámetro **Escuchar todo** también tiene que establecerse en **No**(en la **pestaña Protocolos** del cuadro de diálogo **Propiedades de TCP/IP** ). Para obtener más información, consulte: "Procedimientos: Configuración del motor de base de datos para escuchar en varios puertos TCP" en los Libros en pantalla de SQL Server.  
   
 ## <a name="adding-or-removing-ip-addresses"></a>Agregar o quitar direcciones IP  
  Administrador de configuración de SQL Server muestra las direcciones IP disponibles en el momento en que se instaló SQL Server. Las direcciones IP disponibles pueden cambiar cuando se agregan o se quitan tarjetas de red, cuando expira una dirección IP asignada dinámicamente, cuando se vuelve a configurar la estructura de red o cuando cambia la ubicación física del equipo, por ejemplo un equipo portátil que se conecta a la red en un edificio diferente. Para cambiar una dirección IP, edite el cuadro **Dirección IP** y, luego, reinicie SQL Server.  

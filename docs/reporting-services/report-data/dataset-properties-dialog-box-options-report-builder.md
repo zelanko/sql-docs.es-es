@@ -1,5 +1,6 @@
 ---
 title: Propiedades del conjunto de datos (cuadro de diálogo), Opciones (Generador de informes) | Microsoft Docs
+description: Aprenda a usar el cuadro de diálogo Propiedades del conjunto de datos para cambiar opciones de datos, como las opciones de intercalación y el tratamiento de subtotales como datos detallados.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1db5bcd2401d1888fb6dc76e42c5840ed3b0b62
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 141e2f9639ecd89113f738546f47053d9ab630fd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573129"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812270"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Opciones (Generador de informes)
   Seleccione **Opciones** en el cuadro de diálogo **Propiedades del conjunto de datos** para cambiar opciones de datos, como las opciones de intercalación y el tratamiento de subtotales como datos detallados, para la consulta. Para obtener más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  

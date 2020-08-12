@@ -4,20 +4,20 @@ titleSuffix: SQL Server Language Extensions
 description: Obtenga información sobre cómo llamar clases de Java desde procedimientos almacenados de SQL Server mediante las extensiones de lenguaje de SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5aa8659b57349efb7378209006bbada148206bcb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735120"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Procedimiento para llamar al tiempo de ejecución de Java en las extensiones de lenguaje de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Las [extensiones del lenguaje de SQL Server](../language-extensions-overview.md) usan el procedimiento almacenado del sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) como interfaz para llamar al tiempo de ejecución de Java. 
 
@@ -114,6 +114,20 @@ with result sets ((column1 int))
 ```
 
 Para obtener más información, vea [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
+## <a name="loopback-connection-to-sql-server"></a>Conexión de bucle invertido en SQL Server
+
+Use una conexión de bucle invertido para volver a conectar con SQL Server a través de JDBC a fin de leer o escribir datos de Java ejecutado desde `sp_execute_external_script`. Se puede utilizar cuando no sea posible usar los argumentos **InputDataSet** y **OutputDataSet** de `sp_execute_external_script`.
+Para realizar una conexión de bucle invertido en Windows use el ejemplo siguiente:
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+Para realizar una conexión de bucle invertido en Linux, el controlador JDBC requiere que se definan tres propiedades de conexión en el certificado siguiente:
+
+[Autenticación de certificado de cliente](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## <a name="next-steps"></a>Pasos siguientes
 

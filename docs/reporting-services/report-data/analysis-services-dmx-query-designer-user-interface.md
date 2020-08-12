@@ -1,5 +1,6 @@
 ---
 title: Interfaz de usuario del diseñador de consultas DMX de Analysis Services | Microsoft Docs
+description: Obtenga información sobre los diseñadores gráficos de consultas de Reporting Services para crear consultas de expresiones de minería de datos (DMX).
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42313894264979caf49ccbbe54d25b91261a8a10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b5ec7c356cef924749ae4ea9a1f6519cd983099
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812140"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas DMX de Analysis Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona diseñadores gráficos de consultas para crear consultas DMX (Expresiones de minería de datos) y consultas MDX (Expresiones multidimensionales) para un origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En este tema se describe el diseñador de consultas DMX. Para obtener más información acerca del diseñador de consultas MDX, vea [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
@@ -35,11 +36,11 @@ ms.locfileid: "65573575"
 |**Editar como texto**|Deshabilitado para este tipo de origen de datos.|  
 |**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Cambiar a la vista de la consulta MDX](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "Cambiar a la vista de la consulta MDX")|Cambia al modo del diseñador de consultas MDX.|  
-|![Cambiar a la vista del lenguaje de consultas DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Cambio a la vista del lenguaje de consultas DMX")|Cambia al modo del diseñador de consultas DMX.|  
+|![Cambiar a la vista del lenguaje de consultas DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Cambiar a la vista del lenguaje de consultas DMX")|Cambia al modo del diseñador de consultas DMX.|  
 |![Actualizar datos de resultados](../../reporting-services/report-data/media/rsqdicon-refresh.gif "Actualizar datos de resultados")|Actualiza los metadatos desde el origen de datos.|  
 |![Eliminar](../../reporting-services/report-data/media/rsqdicon-delete.gif "Eliminar")|Elimina la columna seleccionada en el panel Datos de la consulta.|  
 |![Icono del cuadro de diálogo Parámetros de consulta](../../reporting-services/report-data/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")|Muestra el cuadro de diálogo **Parámetros de consulta** . Si asigna un valor predeterminado a una variable, se crea un parámetro de informe correspondiente al cambiar a la vista Diseño del Diseñador de informes.|  
-|![Ejecución de la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecución de la consulta")|Prepara la consulta.|  
+|![Ejecutar la consulta](../../reporting-services/report-data/media/rsqdicon-run.gif "Ejecutar la consulta")|Prepara la consulta.|  
 |![Cambiar al modo de diseño](../../reporting-services/media/rsqdicon-designmode.gif "Cambiar al modo de diseño")|Alterna el modo de diseño y el modo de consulta. Para cambiar a la vista de resultados, haga clic con el botón derecho en el panel Diseño y elija **Resultado**.|  
   
 ## <a name="graphical-dmx-query-designer-in-design-mode"></a>Diseñador gráfico de consultas DMX en modo de diseño  

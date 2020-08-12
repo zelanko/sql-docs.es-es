@@ -1,5 +1,6 @@
 ---
 title: Propiedades de SQL Server Integration Services (pestaña Servicio)
+description: Obtenga información sobre las opciones de la pestaña Servicio del cuadro de diálogo Propiedades de Integration Services, como la ruta de acceso binaria, el nombre de host y el modo de inicio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e6b25e14ebc6f757239046987e338d941c3fbbd8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2c1e9452be81789ae6b65db764c6df2a8b565d7d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304940"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887786"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>Propiedades de SQL Server Integration Services (pestaña Servicio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use la pestaña **Servicio**del cuadro de diálogo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Properties** para ver o especificar las siguientes opciones.  
   
 ## <a name="options"></a>Opciones  
@@ -47,11 +48,11 @@ ms.locfileid: "75304940"
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
   
--   Manual: el servicio no se inicia automáticamente al iniciar el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
+-   Manual: este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: el servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: este servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: el servicio no se puede iniciar.  
+-   Deshabilitado: no se puede iniciar el servicio.  
   
  **State**  
  Indica si el servicio está en ejecución, detenido o deshabilitado. " **…** " indica que hay un cambio de estado pendiente.  

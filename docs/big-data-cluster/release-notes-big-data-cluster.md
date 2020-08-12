@@ -5,20 +5,20 @@ description: En este artículo se describen las actualizaciones más recientes y
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 03/31/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd004554ad45db40beae958bdf0a7142b1b74bab
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 212c80adf64c9991aaf80cb422ded8fcbd1266ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517165"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772905"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notas de la versión para los Clústeres de macrodatos de SQL Server 2019
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Las notas de la versión siguientes se aplican a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Este artículo se divide en secciones para cada versión. Cada versión tiene un vínculo a un artículo de asistencia en el que se describen los cambios de la CU, así como vínculos a las descargas de los paquetes de Linux. En el artículo también se enumeran los [problemas conocidos](#known-issues) para las versiones más recientes de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (BDC).
 
@@ -30,15 +30,18 @@ En esta sección se explican las plataformas compatibles con BDC.
 
 |Plataforma|Versiones compatibles|
 |---------|---------|
-|Kubernetes|BDC requiere la versión 1.13 de Kubernetes como mínimo. Vea [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/) (Versión de Kubernetes y directiva de compatibilidad de sesgo de versión) para obtener la directiva de compatibilidad con versiones de Kubernetes.|
-|Azure Kubernetes Service (AKS)|BDC requiere la versión 1.13 de AKS como mínimo.<br/>Vea [Versiones de Kubernetes compatibles en Azure Kubernetes Service (AKS)](/azure/aks/supported-kubernetes-versions) para obtener la directiva de compatibilidad de versiones.|
+|Kubernetes (ascendente) estándar|Implemente BDC en el entorno local con un clúster de la versión 1.13 de Kubernetes como mínimo. Vea [Versión de Kubernetes y directiva de soporte de asimetría de versiones](https://kubernetes.io/docs/setup/release/version-skew-policy/).|
+|Red Hat OpenShift|Implemente BDC en el entorno local con un clúster de la versión 4.3 de OpenShift como mínimo. Vea [Directiva de ciclo de vida de la plataforma de contenedores Red Hat OpenShift](https://access.redhat.com/support/policy/updates/openshift).<br><br> Compatibilidad introducida en SQL Server 2019 CU5.|
+|Azure Kubernetes Service (AKS)|Implemente BDC en un clúster de la versión 1.13 de AKS como mínimo.<br/>Vea [Versiones de Kubernetes compatibles en Azure Kubernetes Service (AKS)](/azure/aks/supported-kubernetes-versions) para obtener la directiva de compatibilidad de versiones.|
+|Red Hat OpenShift en Azure (ARO)|Implemente BDC en un clúster de la versión 4.3 de ARO como mínimo. Vea [Red Hat OpenShift en Azure](/azure/openshift/). <br><br> Compatibilidad introducida en SQL Server 2019 CU5.|
 
 ### <a name="host-os-for-kubernetes"></a>SO del host para Kubernetes
 
-|Plataforma|Versiones compatibles|
+|Plataforma|Sistema operativo del host|Versiones compatibles|
 |---------|---------|
-|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
-|Ubuntu|16.04|
+|Kubernetes|Ubuntu|16.04|
+|Kubernetes|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
+|OpenShift|Red Hat Enterprise Linux / CoreOS |Vea [Notas de la versión de OpenShift](https://docs.openshift.com/container-platform/4.3/release_notes/ocp-4-3-release-notes.html#ocp-4-3-about-this-release)|
 
 ### <a name="sql-server-editions"></a>Ediciones de SQL Server
 
@@ -50,24 +53,46 @@ En esta sección se explican las plataformas compatibles con BDC.
 
 |Plataforma|Versiones compatibles|
 |---------|---------|
-|`azdata`|Debe ser la misma versión secundaria que la del servidor (igual que la instancia maestra de SQL Server).<br/><br/>Ejecute `azdata –-version` para validar la versión.<br/><br/>Vea [Historial de versiones](#release-history) para obtener la versión más reciente.|
+|`azdata`|Como procedimiento recomendado, use la versión más reciente disponible. A partir de la versión SQL Server 2019 CU5, `azdata` tiene una versión semántica independiente del servidor. <br/><br/>Ejecute `azdata –-version` para validar la versión.<br/><br/>Vea [Historial de versiones](#release-history) para obtener la versión más reciente.|
 |Azure Data Studio|Obtenga la versión más reciente de [Azure Data Studio](https://aka.ms/getazuredatastudio).|
+
+Para obtener una lista completa, vea [¿Qué herramientas son necesarias?](deploy-big-data-tools.md#which-tools-are-required)
 
 ## <a name="release-history"></a>Historial de versiones
 
 En la tabla siguiente, se muestra la lista del historial de versiones de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Release               | Versión         | Fecha de la versión |
-|-----------------------|-----------------|--------------|
-| [CU4](#cu4)           | 15.0.4033.1     | 31-03-2020   |
-| [CU3](#cu3)           | 15.0.4023.6     | 12-03-2020   |
-| [CU2](#cu2)           | 15.0.4013.40    | 13-02-2020   |
-| [CU1](#cu1)           | 15.0.4003.23    | 07-01-2020   |
-| [GDR1](#rtm)          | 15.0.2070.34    | 2019-11-04   |
+| Release          | Versión de BDC    | Versión de `azdata`| Fecha de la versión |
+|------------------|----------------|-----------------|--------------|
+| [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 22-06-2020   |
+| [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 31-03-2020   |
+| [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 12-03-2020   |
+| [CU2](#cu2)      | 15.0.4013.40   | 15.0.4013       | 13-02-2020   |
+| [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 07-01-2020   |
+| [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
 ## <a name="how-to-install-updates"></a>Instalación de las actualizaciones
 
 Para instalar las actualizaciones, consulte [Cómo actualizar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5 (junio de 2020)
+
+Versión de actualización acumulativa 5 (CU5) para SQL Server 2019.
+
+|Versión del paquete | Etiqueta de imagen |
+|-----|-----|
+|15.0.4043.16 |[2019-CU5-ubuntu-16.04]
+
+### <a name="added-capabilities"></a>Funcionalidades agregadas
+
+- Compatibilidad con la implementación de clústeres de macrodatos en Red Hat OpenShift. La compatibilidad incluye la plataforma de contenedores OpenShift implementada en la versión local 4.3 y superiores, y Red Hat OpenShift en Azure. Vea [Implementación de clústeres de macrodatos de SQL Server en OpenShift](deploy-openshift.md).
+- Se ha actualizado el modelo de seguridad de implementación de BDC, de modo que los contenedores con privilegios implementados como parte de BDC ya no son *necesarios*. Además de que ya no necesiten privilegios, los contenedores se ejecutan como un usuario que no es de raíz de forma predeterminada para todas las implementaciones nuevas mediante SQL Server 2019 CU5. 
+- Se ha agregado compatibilidad para implementar varios clústeres de macrodatos en un dominio de Active Directory.
+- La CLI de `azdata` tiene su propia versión semántica, independiente del servidor. Se quitan todas las dependencias entre el cliente y la versión del servidor de azdata. Se recomienda usar la versión más reciente del cliente y del servidor para asegurarse de que se beneficia de las últimas mejoras y correcciones.
+- Se han introducido dos nuevos procedimientos almacenados, sp_data_source_objects y sp_data_source_columns, para admitir la introspección de determinados orígenes de datos externos. Los clientes pueden usarlos directamente a través de T-SQL para la detección de esquemas y ver qué tablas están disponibles para su virtualización. Estos cambios se aprovechan en el Asistente para tablas externas de la [extensión Virtualización de datos](../azure-data-studio/data-virtualization-extension.md) para Azure Data Studio, lo que permite crear tablas externas a partir de SQL Server, Oracle, MongoDB y Teradata.
+- Se ha agregado compatibilidad para conservar las personalizaciones realizadas en Grafana. Antes de CU5, los clientes observaban que las modificaciones en las configuraciones de Grafana se perdían al reiniciar el pod `metricsui` (en el que se hospeda el panel de Grafana). Este problema se ha corregido y ahora se conservan todas las configuraciones. 
+- Se ha corregido un problema de seguridad relacionado con la API que se usa para recopilar métricas de pods y nodos mediante Telegraf (que se hospeda en los pods `metricsdc`). Como resultado de este cambio, ahora en Telegraf es necesario que una cuenta de servicio, el rol de clúster y los enlaces de clúster tengan los permisos necesarios para recopilar las métricas de pods y nodos. Vea [Rol de clúster necesario para la recopilación de métricas de pods y nodos](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) para obtener más información.
+- Se han agregado dos modificadores de características para controlar la recopilación de métricas de pods y nodos. En caso de que use otras soluciones para la supervisión de la infraestructura de Kubernetes, puede desactivar la recopilación de métricas integradas para pods y nodos de host si establece *allowNodeMetricsCollection* y *allowPodMetricsCollection* en false en el archivo de configuración de implementación control.json. Para los entornos de OpenShift, estos valores se establecen en false de forma predeterminada en los perfiles de implementación integrados, ya que la recopilación de métricas de pods y nodos requiere funciones con privilegios.
 
 ## <a name="cu4-april-2020"></a><a id="cu4"></a> CU4 (abril de 2020)
 
@@ -120,6 +145,31 @@ Versión de distribución general 1 (GDR1) de SQL Server 2019, presenta la dis
 
 ## <a name="known-issues"></a>Problemas conocidos
 
+### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>Credenciales para acceder a los servicios a través del punto de conexión de puerta de enlace
+
+- **Versiones afectadas**: clústeres nuevos implementados a partir de CU5.
+
+- **Problema e impacto en el cliente**: para los nuevos clústeres de macrodatos implementados con SQL Server 2019 CU5, el nombre de usuario de puerta de enlace no es **root** (raíz). Si la aplicación que se usa para conectarse al punto de conexión de puerta de enlace usa las credenciales incorrectas, verá un error de autenticación. Este cambio es el resultado de la ejecución de aplicaciones en el clúster de macrodatos como un usuario distinto de root (un nuevo comportamiento predeterminado a partir de la versión SQL Server 2019 CU5; cuando se implementa un nuevo clúster de macrodatos con CU5, el nombre de usuario del punto de conexión de puerta de enlace se basa en el valor que se pasa a través de la variable de entorno **AZDATA_USERNAME**). Es el mismo nombre de usuario que se usa para los puntos de conexión del controlador y SQL Server. Esto solo afecta a las implementaciones nuevas; en los clústeres de macrodatos existentes implementados con cualquiera de las versiones anteriores se seguirá usando **root**. No se produce ningún impacto en las credenciales cuando el clúster se implementa para usar la autenticación de Active Directory. 
+
+- **Solución alternativa**: Azure Data Studio controlará de forma transparente el cambio de credenciales para la conexión realizada a la puerta de enlace a fin de habilitar la experiencia de exploración de HDFS en el Explorador de objetos. Debe instalar la [versión más reciente Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) que incluya los cambios necesarios que solucionan este caso de uso.
+Para otros escenarios en los que debe proporcionar credenciales para acceder al servicio a través de la puerta de enlace (por ejemplo, el inicio de sesión con `azdata`, el acceso a los paneles web de Spark), tendrá que asegurarse de que se usen las credenciales correctas. Si el destino es un clúster existente implementado antes de CU5, seguirá usando el nombre de usuario **root** para conectarse a la puerta de enlace, incluso después de actualizar el clúster a CU5. Si implementa un nuevo clúster mediante la compilación CU5, inicie sesión con el nombre de usuario correspondiente a la variable de entorno **AZDATA_USERNAME**.
+
+### <a name="pods-and-nodes-metrics-not-being-collected"></a>Métricas de pods y nodos no recopiladas
+
+- **Versiones afectadas**: clústeres nuevos y existentes en los que se usan imágenes de CU5
+
+- **Problema e impacto en el cliente**: como resultado de una corrección de seguridad relacionada con la API que `telegraf` usaba para recopilar métricas de pods y nodo host, es posible que los clientes vean que no se recopilan métricas. Esto es posible en implementaciones nuevas y existentes de BDC (después de la actualización a CU5). Como resultado de la corrección, ahora en Telegraf se necesita una cuenta de servicio con permisos de rol en la totalidad del clúster. La implementación intenta crear la cuenta de servicio y el rol de clúster necesarios, pero si el usuario que implementa el clúster o realiza la actualización no tiene permisos suficientes, la implementación o la actualización continúa con una advertencia y se realiza correctamente, pero no se recopilarán las métricas de nodos y pods.
+
+- **Solución alternativa**: puede pedirle a un administrador que cree el rol y la cuenta de servicio (antes o después de la implementación o actualización), para que se usen en BDC. En [este artículo](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) se describe cómo crear los artefactos necesarios.
+
+### <a name="azdata-bdc-copy-logs-command-failure"></a>Error del comando `azdata bdc copy-logs`
+
+- **Versiones afectadas**: `azdata` versión *20.0.0*
+
+- **Problema e impacto en el cliente**: la implementación del comando *copy-logs* asume que la herramienta cliente `kubectl` está instalada en el equipo cliente desde el que se emite el comando. Si emite el comando en un clúster de BDC instalado en OpenShift, desde un cliente donde solo está instalada la herramienta `oc`, obtendrá un error: *Se produjo un error al recopilar los registros: [WinError 2] El sistema no encuentra el archivo especificado.* .
+
+- **Solución alternativa**: instale la herramienta `kubectl` en el mismo equipo cliente y vuelva a emitir el comando `azdata bdc copy-logs`. Vea [estas](deploy-big-data-tools.md) instrucciones sobre cómo instalar `kubectl`.
+
 ### <a name="deployment-with-private-repository"></a>Implementación con repositorio privado
 
 - **Versiones afectadas**: GDR1, CU1, CU2. Resuelto para CU3.
@@ -165,9 +215,9 @@ No se admite la actualización mediante distintos repositorios privados para com
 
        **`controllerUpgradeTimeoutInMinutes`** designa el número de minutos que se esperará a que finalice la actualización del controlador o de la base de datos del controlador. El valor predeterminado es 5. Actualice al menos a 20.
 
-       **`totalUpgradeTimeoutInMinutes`** : designa la cantidad de tiempo para que el controlador y la base de datos del controlador terminen de actualizarse (actualización del controlador y de la base de datos del controlador). El valor predeterminado es 10. Actualice al menos a 40.
+       **`totalUpgradeTimeoutInMinutes`** : designa la cantidad de tiempo para que el controlador y la base de datos del controlador terminen de actualizarse (actualización `controller` + `controllerdb`). El valor predeterminado es 10. Actualice al menos a 40.
 
-       **`componentUpgradeTimeoutInMinutes`** : designa la cantidad de tiempo en que se debe completar cada fase posterior de la actualización.  El valor predeterminado es 30. Actualice a 45.
+       **`componentUpgradeTimeoutInMinutes`** : designa la cantidad de tiempo en que se debe completar cada fase posterior de la actualización. El valor predeterminado es 30. Actualice a 45.
 
    3. Guarde y salga.
 

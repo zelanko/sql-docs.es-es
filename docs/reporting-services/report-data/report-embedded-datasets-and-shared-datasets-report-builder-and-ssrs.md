@@ -1,5 +1,6 @@
 ---
 title: Conjuntos de datos incrustados y compartidos de informes (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre conjuntos de datos insertados y compartidos de los informes para que pueda crear expresiones que se evalúen como los datos reales al ejecutar el informe.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a77d0b930b15d287a010e141c256c9bf311dc303
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1347086db055ab0bb13f337d8125b3f9795157dc
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812256"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de datos incrustados y compartidos de informe (Generador de informes y SSRS)
   Un conjunto de datos especifica los datos que desea usar de una conexión de datos. Un conjunto de datos se basa en una conexión de datos guardada en el informe como un origen del datos incrustado o una referencia a un origen de datos compartido en un servidor de informes. El conjunto de datos incluye una consulta que especifica un conjunto de campos. Al arrastrar estos campos hacia la superficie de diseño, se crean expresiones que se evalúan como los datos reales cuando se ejecuta el informe.  

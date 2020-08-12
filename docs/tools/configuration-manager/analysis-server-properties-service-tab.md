@@ -1,5 +1,6 @@
 ---
 title: Propiedades de Analysis Server (pestaña Servicio)
+description: Obtenga información sobre las opciones de la pestaña Servicio del cuadro de diálogo Propiedades de Analysis Server, como la ruta de acceso binaria, el nombre de host y el modo de inicio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b5520bb39a8e8e856030781b7739a55fd88fccaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 438f256154961a730d473096989fdc363af42b19
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306553"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895069"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Propiedades de Analysis Server (pestaña Servicio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Este es el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Este servicio debe estar en ejecución para que [!INCLUDE[ssAS](../../includes/ssas-md.md)] funcione correctamente. Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
   
 ## <a name="options"></a>Opciones  
@@ -47,11 +48,11 @@ ms.locfileid: "75306553"
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
   
--   Manual: el servicio no se inicia automáticamente al iniciar el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
+-   Manual: este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: el servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: este servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: el servicio no se puede iniciar.  
+-   Deshabilitado: no se puede iniciar el servicio.  
   
  **State**  
  Indica si el servicio está en ejecución, detenido o deshabilitado.  

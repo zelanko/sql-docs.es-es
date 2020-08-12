@@ -1,6 +1,7 @@
 ---
 title: Análisis de interbloqueos
 titleSuffix: SQL Server Profiler
+description: Identifique la causa de un interbloqueo mediante la reproducción y visualización de eventos de interbloqueo para el análisis en SQL Server Profiler y la generación de gráficos de espera.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
-ms.openlocfilehash: 15d41ae2517a3eadb8305a359f4576fb4407020b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8adc8e6839b6af9765139d0fe26b38cb1d1253c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774942"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analizar interbloqueos con SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Use el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para identificar la causa de un interbloqueo. Un interbloqueo se produce cuando hay una dependencia cíclica entre dos o más subprocesos o procesos para algún conjunto de recursos en SQL Server. El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]le permite crear un seguimiento que registra, reproduce y muestra eventos de interbloqueo para su análisis.  
   
@@ -41,7 +42,7 @@ Use el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para identi
  Nodo de recurso  
  Un objeto de la base de datos; por ejemplo, una tabla, un índice o una fila.  
   
- perimetral  
+ Edge  
  Una relación entre un proceso y un recurso. Un borde **request** se produce cuando un proceso espera un recurso. Un borde **owner** se produce cuando un recurso espera un proceso. El modo de bloqueo se incluye en la descripción del borde. Por ejemplo, **Modo: X**.  
   
 ## <a name="deadlock-process-node"></a>Nodo de proceso de interbloqueo  

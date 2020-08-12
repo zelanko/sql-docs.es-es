@@ -1,5 +1,6 @@
 ---
 title: Adición y comprobación de una conexión de datos o un origen de datos (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo usar el Generador de informes para agregar y comprobar una conexión de datos para comprobar que las credenciales que se especifican son suficientes.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e128bf4402074ecce5b65951f0d2463368c08bf6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812150"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Agregar y comprobar una conexión de datos o un origen de datos (Generador de informes y SSRS)
 
@@ -54,7 +55,7 @@ El origen de datos aparece en el panel Datos de informe.
 
 3. Si la conexión es correcta, aparece el mensaje siguiente: "Conexión creada correctamente". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. Si la conexión no es correcta, aparece un mensaje similar al siguiente: "No se puede establecer conexión con el origen de datos".  
+4. Si la conexión no es correcta, aparece el mensaje siguiente: "No se puede conectar con el origen de datos".  
 
 5. Haga clic en **Detalles**y utilice la información para corregir el problema.
 

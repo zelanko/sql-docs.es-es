@@ -1,21 +1,21 @@
 ---
 title: Interpretar los resultados de pruebas unitarias de SQL Server
+description: Descubra cómo usar la ventana Resultados de pruebas o los archivos .trx para ver los resultados de las pruebas unitarias de SQL Server. Vea cómo obtener información detallada sobre los resultados.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1708c6aa8a082cfc06aadf832e0dbf30f2c23e23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42ec6c34cad7a14d397965717a9447c9d0e29a4b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246433"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893832"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>Interpretar los resultados de pruebas unitarias de SQL Server
 
@@ -26,7 +26,7 @@ Para ver información detallada sobre un resultado de prueba, haga doble clic en
 Para más información sobre cómo cambiar la presentación de la ventana **Resultados de pruebas**, consulte [Cómo: Agregar o quitar columnas de las ventanas de pruebas (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx) o [Cómo: Agregar o quitar columnas de las ventanas de pruebas (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx).  
   
 ## <a name="storing-test-results"></a>Almacenar los resultados de pruebas  
-Los resultados de las pruebas unitarias se almacenan en el disco duro en archivos con la extensión .trx. Un archivo .trx es un archivo XML que contiene los detalles de una serie de pruebas. Puede cargar los archivos .trx de series de pruebas anteriores para revisar los resultados de esas series de pruebas o volver a ejecutar pruebas anteriores. Para más información, consulte [Cómo: Volver a ejecutar una prueba (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
+Los resultados de las pruebas unitarias se almacenan en el disco duro en archivos con la extensión .trx. Un archivo .trx es un archivo XML que contiene los detalles de una serie de pruebas. Puede cargar los archivos .trx de series de pruebas anteriores para revisar los resultados de esas series de pruebas o volver a ejecutar pruebas anteriores. Para más información, vea: [Cómo: Vuelva a ejecutar una prueba (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
   
 > [!NOTE]  
 > No puede ejecutar pruebas unitarias de forma remota.  

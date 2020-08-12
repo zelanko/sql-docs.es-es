@@ -1,5 +1,6 @@
 ---
 title: Crear una consulta en el Diseñador de consultas relacionales (Generador de informes y SSRS)
+description: Obtenga información sobre cómo crear una consulta en el Diseñador de consultas relacionales para que pueda especificar qué datos se deben recuperar de un origen de datos externo para un conjunto de datos de informe.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/25/2019
-ms.openlocfilehash: 9895582db682497dd272010466d05f0bebd93b1a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5ead07a1cf2afa13189b76c0c6eb75a472699543
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808485"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Crear una consulta en el Diseñador de consultas relacionales (Generador de informes y SSRS)
 

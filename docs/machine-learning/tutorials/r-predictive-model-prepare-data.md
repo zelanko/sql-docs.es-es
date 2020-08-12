@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae2931ca07cdcd6e3f1216ce7adb2551a6e23ae
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784083"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: Preparación de los datos para entrenar un modelo predictivo en R con el aprendizaje automático de SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En la segunda parte de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos mediante R. Más adelante en la serie, usará estos datos para entrenar e implementar un modelo predictivo en R con SQL Server Machine Learning Services o con clústeres de macrodatos.
@@ -31,12 +30,15 @@ En la parte uno de esta serie de tutoriales de tres partes, importará y prepara
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos mediante R. Más adelante en la serie, usará estos datos para entrenar e implementar un modelo predictivo en R con SQL Server R Services.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos mediante R. Más adelante en la serie, usará estos datos para entrenar e implementar un modelo predictivo en R con Machine Learning Services en Azure SQL Managed Instance.
+::: moniker-end
 
 En este artículo, aprenderá a:
 
 > [!div class="checklist"]
 > * Restaurar una base de datos de ejemplo en una base de datos
-> * Cargar los datos de la base de datos de SQL en una trama de datos de R
+> * Cargar los datos de la base de datos en una trama de datos de R
 > * Preparar los datos en R mediante la identificación de algunas columnas como de categoría
 
 En la [parte uno](r-predictive-model-introduction.md), ha aprendido a restaurar la base de datos de ejemplo.
@@ -51,22 +53,19 @@ En la segunda parte de este tutorial se da por hecho que ha realizado la [**prim
 
 ## <a name="load-the-data-into-a-data-frame"></a>Carga de los datos en una trama de datos
 
-Para usar los datos en R, deberá cargar los datos de la base de datos de SQL en una trama de datos (`rentaldata`).
+Para usar los datos en R, deberá cargarlos desde la base de datos hasta una trama de datos (`rentaldata`).
 
 Cree un archivo de RScript en RStudio y ejecute el siguiente script. Reemplace **ServerName** por su propia información de conexión.
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
+
 
 #Get the data from the table
 library(RODBC)
 
 ch <- odbcDriverConnect(connStr)
-
-#Take a look at the structure of the data and the top rows
-head(rentaldata)
-str(rentaldata)
 
 #Import the data from the table
 rentaldata <- sqlFetch(ch, "dbo.rental_data")
@@ -138,7 +137,7 @@ Si no quiere continuar con este tutorial, elimine la base de datos TutorialDB.
 
 En la parte dos de la serie de tutoriales, ha aprendido a:
 
-* Cargar los datos de ejemplo de SQL Server en una trama de datos de R
+* Carga de los datos de ejemplo en una trama de datos de R
 * Preparar los datos en R mediante la identificación de algunas columnas como de categoría
 
 Para crear un modelo de aprendizaje automático que use datos de la base de datos TutorialDB, siga la parte tres de esta serie de tutoriales:

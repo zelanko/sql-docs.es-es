@@ -1,5 +1,6 @@
 ---
 title: Instalar características de Business Intelligence
+description: En este artículo se proporcionan vínculos a información para instalar características de SQL Server que forman parte de la plataforma de inteligencia empresarial de Microsoft.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f1fe29347adabe175745d6994000d7f1f68b05dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 805247f2fdf491bf75295c232e15d4b066ac179c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253450"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893952"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Install SQL Server Business Intelligence Features (Instalar las características de SQL Server Business Intelligence)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Las características de SQL Server que forman parte de la plataforma Microsoft Business Intelligence incluyen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y varias aplicaciones cliente que se usan para crear datos analíticos o para trabajar con ellos. En esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se explica cómo instalar estas características.  
   

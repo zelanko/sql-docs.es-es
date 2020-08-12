@@ -1,5 +1,6 @@
 ---
 title: Adición, edición y actualización de campos en el panel Datos de informe (Generador de informes) | Microsoft Docs
+description: Obtenga información detallada sobre los conjuntos de datos y cómo agregar, editar y actualizar campos en el panel Datos de informe del Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c6bc3c94923c3ebdb6e2897c4d3aaedbc58621c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 419e4fa24e6c22dd60eed70dd2b2e3871447f061
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813146"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>Agregar, editar y actualizar campos en el panel Datos de informe (Generador de informes y SSRS)
   Los campos de conjunto de datos son la colección integrada de nombres de campo que representan los datos que se devuelven cuando una consulta de conjunto de datos se ejecuta en un origen de datos externo.  

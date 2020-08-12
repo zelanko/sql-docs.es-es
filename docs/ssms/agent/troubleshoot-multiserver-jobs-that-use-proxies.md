@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e3b579bb9154b59247b500c921850cae4e989d39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3ca261b3ecff1a6bc8a806e1abce38fce7e83ba6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755046"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Solucionar problemas de trabajos multiservidor que usan servidores proxy
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
@@ -32,7 +31,7 @@ Los trabajos distribuidos que tienen pasos asociados a un proxy se ejecutan en e
   
 -   "Este trabajo requiere una cuenta de proxy, pero la coincidencia de proxy se ha deshabilitado en el servidor de destino."  
   
-    Para solucionar este error, establezca la subclave del registro **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n\>_ **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** en **1 (true)** . De manera predeterminada, esta subclave está establecida en **0** (**false**). El valor de **MSSQL.** \<*n*> es el nombre de la instancia; por ejemplo, **MSSQL.1** o **MSSQL.3**.  
+    Para solucionar este error, establezca la subclave del Registro **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n\>_ **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** en **1 (true)** . De manera predeterminada, esta subclave está establecida en **0** (**false**). El valor de **MSSQL.** \<*n*> es el nombre de instancia; por ejemplo, **MSSQL.1** o **MSSQL.3**.  
   
 -   "No se encontró el proxy".  
   

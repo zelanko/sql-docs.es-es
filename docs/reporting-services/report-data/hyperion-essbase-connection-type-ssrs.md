@@ -1,5 +1,6 @@
 ---
 title: Tipo de conexión de Hyperion Essbase | Microsoft Docs
+description: Obtenga información sobre cómo recuperar datos multidimensionales de un origen de datos externo de Hyperion Essbase para incluirlos en el informe.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e65c3ca2bd6866ede2eb9924f8465e5b66d37c0b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6ee62393c6b9a74dee16acf532d474a7a344b54
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079020"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808437"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo de conexión de Hyperion Essbase (SSRS)
   Para incluir los datos de un origen de datos externo de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] en su informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], que permite recuperar los datos multidimensionales de un origen de datos externo de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -75,11 +76,11 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Propiedades de campo predefinidas  
- Propiedades de campo predefinidas admitidas generalmente por varios proveedores de datos y que aparecen en la consulta MDX subyacente para un conjunto de datos de informe. Por ejemplo, la propiedad de dimensión MDX MEMBER_UNIQUE_NAME se asigna a la propiedad de campo de conjunto de datos de informe predefinida **UniqueName**. Para incluir el valor de nombre único en un cuadro de texto, use la expresión `=Fields!` *\<NombreDeCampo>* `.UniqueName`.  
+ Propiedades de campo predefinidas admitidas generalmente por varios proveedores de datos y que aparecen en la consulta MDX subyacente para un conjunto de datos de informe. Por ejemplo, la propiedad de dimensión MDX MEMBER_UNIQUE_NAME se asigna a la propiedad de campo de conjunto de datos de informe predefinida **UniqueName**. Para incluir el valor de nombre único en un cuadro de texto, use la expresión `=Fields!` *\<FieldName>* `.UniqueName`.  
   
  En la tabla siguiente, se ofrece una lista de las propiedades de campo predefinidas que se pueden usar para un origen de datos de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
-|**Propiedad**|**Tipo**|**Descripción o valor esperado**|  
+|**Property**|**Type**|**Descripción o valor esperado**|  
 |------------------|--------------|---------------------------------------|  
 |**Valor**|**Object**|Especifica el valor de los datos del campo.<br /><br /> Para una propiedad de dimensión, se asigna a MEMBER_CAPTION. Para una medida, se asigna al valor de datos.|  
 |**IsMissing**|**Boolean**|Indica si se ha encontrado el campo en el conjunto de datos resultante.|  
@@ -92,7 +93,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>Propiedades personalizadas  
- Propiedades de campo personalizadas admitidas por un proveedor de datos y que aparecen en la consulta MDX subyacente para un conjunto de datos de informe, pero no aparecen en el panel de conjuntos de datos de informe como campos del conjunto de datos. Por ejemplo, **Long Names** es una propiedad de miembro definida para un nivel de dimensión. Para incluir el valor en un cuadro de texto, use la expresión `=Fields!` *\<NombreDeCampo>* `("Long Names")`. En los nombres de campos de la expresión se distinguen mayúsculas de minúsculas.  
+ Propiedades de campo personalizadas admitidas por un proveedor de datos y que aparecen en la consulta MDX subyacente para un conjunto de datos de informe, pero no aparecen en el panel de conjuntos de datos de informe como campos del conjunto de datos. Por ejemplo, **Long Names** es una propiedad de miembro definida para un nivel de dimensión. Para incluir el valor en un cuadro de texto, use la expresión `=Fields!` *\<FieldName>* `("Long Names")`. En los nombres de campos de la expresión se distinguen mayúsculas de minúsculas.  
   
  Para hacer referencia a propiedades extendidas personalizadas en una expresión, se utiliza la sintaxis siguiente:  
   
@@ -100,7 +101,7 @@ Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
  En la tabla siguiente, se muestra la propiedad de campo personalizada que se puede usar para un origen de datos de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
-|**Propiedad**|**Tipo**|**Descripción o valor esperado**|  
+|**Property**|**Type**|**Descripción o valor esperado**|  
 |------------------|--------------|---------------------------------------|  
 |**FORMAT_STRING**|**String**|Se define en una medida y es **FormattedValue** , disponible como un tipo String.|  
   

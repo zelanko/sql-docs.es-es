@@ -1,5 +1,6 @@
 ---
 title: Creación y modificación de orígenes de datos incrustados | Microsoft Docs
+description: Obtenga información sobre cómo crear y modificar orígenes de datos insertados que se definen en una definición de informe y que solo usa ese informe.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f2ce2535a28661e40e845aa87936f3c23353e544
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0e5f9aed11beacf056916e44e6f2df391444eae0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808455"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Creación y modificación de orígenes de datos incrustados
   Un origen de datos incrustado se define en una definición de informe y se usa solamente en ese informe.  

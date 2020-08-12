@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbcff4ee14db85a3a973496ce8a5cb24772a35b9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f07f4e5f6e833419b922dd6f8e6d7b58becf96b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793292"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Notas de la versión de Microsoft JDBC Driver para SQL Server
 
@@ -51,7 +51,7 @@ Microsoft JDBC Driver 8.2 para SQL Server es compatible con Java Development 
 | Cambio de Always Encrypted | Detalles |
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2 para SQL Server ahora admite Always Encrypted con enclaves seguros. Los detalles se pueden encontrar aquí: Always Encrypted con enclaves seguros. |
-| Más información y código de ejemplo. | [Always Encrypted con enclaves seguros](always-encrypted-with-secure-enclaves.md). |
+| Más información y código de ejemplo. | [Always Encrypted con enclaves seguros](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>Mejora del rendimiento al recuperar tipos de datos temporales de SQL Server <sup>1</sup>
@@ -64,11 +64,11 @@ Microsoft JDBC Driver 8.2 para SQL Server es compatible con Java Development 
 
 <sup>1</sup> Debido a las diferencias en la forma de administrar las zonas horarias entre la API java.util.Calendar y java.time.LocalDateTime, los tipos de datos temporales con un objeto java.util.Calendar proporcionado por el usuario asociado a ellos o con los tipos de datos microsoft.sql.DateTimeOffset no se benefician de esta mejora.
 
-### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Implementación de mssql-jdbc_auth-\<versión>-\<arch>.dll (anteriormente sqljdbc_auth.dll) en el repositorio de Maven
+### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Implementación de mssql-jdbc_auth-\<version>-\<arch>.dll (antes sqljdbc_auth.dll) en el repositorio de Maven
 
 | Cambio de sqljdbc_auth.dll | Detalles |
 | :------------------- | :------ |
-| A partir de Microsoft JDBC Driver 8.2 para SQL Server, el controlador se basa en mssql-jdbc_auth-\<versión>-\<arch>.dll, en lugar de en sqljdbc_auth.dll, para usar la característica Autenticación de Azure Active Directory. | &nbsp; |
+| A partir de Microsoft JDBC Driver 8.2 para SQL Server, el controlador se basa en mssql-jdbc_auth-\<version>-\<arch>.dll, en lugar de en sqljdbc_auth.dll, para usar la característica Autenticación de Azure Active Directory. | &nbsp; |
 | El archivo DLL también se ha cargado en el repositorio de Maven para facilitar el acceso. | Vea [esta página](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
 | &nbsp; | &nbsp; |
 
@@ -344,7 +344,7 @@ El controlador JDBC Driver ha implementado el almacenamiento en caché de metada
 
 ### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmacos"></a>Adición de compatibilidad con la autenticación integrada de Azure AD en Linux o macOS
 
-JDBC Driver ahora admite la autenticación integrada de Azure Active Directory (Azure AD) en todos los sistemas operativos compatibles (Windows, Linux y macOS) con Kerberos. Como alternativa, en sistemas operativos Windows, los usuarios se pueden autenticar con mssql-jdbc_auth-\<versión>-\<arch>.dll.
+JDBC Driver ahora admite la autenticación integrada de Azure Active Directory (Azure AD) en todos los sistemas operativos compatibles (Windows, Linux y macOS) con Kerberos. Como alternativa, en los sistemas operativos Windows, los usuarios se pueden autenticar con mssql-jdbc_auth-\<version>-\<arch>.dll.
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>Se ha actualizado la versión de "Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java": 1.4.0
 

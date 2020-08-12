@@ -1,6 +1,6 @@
 ---
 title: Actualización de una instancia del clúster de conmutación por error
-description: Pasos para actualizar una instancia de clúster de conmutación por error de SQL Server mediante medios de instalación.
+description: Aprenda a actualizar una instancia de clúster de conmutación por error de SQL Server mediante medios de instalación. Obtenga información sobre las actualizaciones graduales y la actualización de un clúster de varias subredes.
 ms.custom: seo-lt-2019
 ms.date: 11/21/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24607a6372ba733165aa12fd159baea10f80ebd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43447d1fbba7ceb9a1c3faa79443f6304e8e6015
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822024"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858575"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Actualizar una instancia del clúster de conmutación por error de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la actualización de un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una nueva versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a una nueva actualización acumulativa o un nuevo Service Pack de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o, al instalar, a una nueva actualización acumulativa o un nuevo Service Pack de Windows por separado en todos los nodos del clúster de conmutación por error, con tiempo de inactividad limitado a una sola conmutación por error manual (o dos conmutaciones por error manuales si conmuta por recuperación a la base de datos primaria original).  
   
  No se admite la actualización del sistema operativo Windows de un clúster de conmutación por error para sistemas operativos anteriores a [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. Para actualizar un nodo de clúster con [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] o superior, vea [Realizar una actualización gradual](#perform-a-rolling-upgrade-or-update).  
@@ -43,16 +43,16 @@ ms.locfileid: "74822024"
   
 -   Durante el proceso de actualización de los clústeres de conmutación por error, el tiempo de inactividad se limita al tiempo de conmutación por error y al tiempo necesario para ejecutar los scripts de actualización. Si sigue el proceso de actualización gradual de clúster de conmutación por error que se muestra a continuación y cumple todos los requisitos previos en todos los nodos antes de comenzar dicho proceso, el tiempo de inactividad es mínimo. Se necesitará un poco más de tiempo a la hora de actualizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si se usan tablas optimizadas para memoria. Para obtener más información, consulte [Planeación y prueba del plan de actualización del motor de base de datos](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Antes de empezar, revise la siguiente información importante:  
   
--   [Actualizaciones de ediciones y versiones admitidas](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): compruebe que puede actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] desde la versión del sistema operativo Windows y la versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por ejemplo, no puede actualizar directamente desde una instancia de clúster de conmutación por error de SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ni actualizar un clúster de conmutación por error que se ejecuta en [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
+-   [Actualizaciones de ediciones y versiones admitidas](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): compruebe que puede actualizar a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] desde su versión del sistema operativo Windows y la versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por ejemplo, no puede actualizar directamente desde una instancia de clúster de conmutación por error de SQL Server 2005 a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ni actualizar un clúster de conmutación por error que se ejecuta en [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
   
--   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
+-   [Elegir un método de actualización del motor de base de datos](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
   
--   [Planeamiento y prueba del plan de actualización del motor de base de datos](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, la lista de comprobación previa a la actualización y desarrolle y pruebe el plan de actualización.  
+-   [Planeación y prueba del plan de actualización del motor de base de datos](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, así como la lista de comprobación previa a la actualización, y desarrolle y pruebe el plan de actualización.  
   
--   [Requisitos de hardware y software para instalar SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
+-   [Requisitos de hardware y software para instalar SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>Realizar una actualización gradual  
  Para actualizar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], use el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para actualizar cada nodo de clúster de conmutación por error, uno por uno, comenzando por los nodos pasivos. A medida que se actualiza cada nodo, se excluye de los posibles propietarios del clúster de conmutación por error. Si se produce una conmutación por error inesperada, los nodos actualizados no participan en ella hasta que el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mueve la propiedad del grupo de recursos del clúster a un nodo actualizado.  

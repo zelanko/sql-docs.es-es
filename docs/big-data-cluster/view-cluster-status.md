@@ -5,20 +5,20 @@ description: En este artículo, se explica cómo ver el estado de un clúster de
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772822"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Procedimiento para ver el estado de un clúster de macrodatos 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En este artículo se describe cómo acceder a los puntos de conexión del servicio y ver el estado de los componentes de un clúster de macrodatos de SQL Server. Puede usar tanto Azure Data Studio como **azdata**, y en este artículo se describen las dos técnicas.
 
@@ -53,7 +53,9 @@ En la tabla de puntos de conexión del servicio, también se muestran varios pan
 - Supervisión de trabajos de Spark
 - Administración de recursos de Spark
 
-Puede hacer clic directamente de estos vínculos. Se le pedirá que se autentique al acceder a estos paneles. En el caso de los paneles de métricas y registros, indique las credenciales de administrador del controlador que estableció en el momento de la implementación mediante las variables de entorno **AZDATA_USERNAME** y **AZDATA_PASSWORD**. Los paneles de Spark usarán credenciales de puerta de enlace (Knox), ya sea la identidad de AD en un clúster integrado con AD o el usuario **raíz** y **AZDATA_PASSWORD**, si se usa la autenticación básica en el clúster. 
+Puede hacer clic directamente de estos vínculos. Se le pedirá que se autentique al acceder a estos paneles. En el caso de los paneles de métricas y registros, indique las credenciales de administrador del controlador que estableció en el momento de la implementación mediante las variables de entorno **AZDATA_USERNAME** y **AZDATA_PASSWORD**. Los paneles de Spark usarán credenciales de puerta de enlace (Knox), ya sea la identidad de AD en un clúster integrado con AD o **AZDATA_USERNAME** y **AZDATA_PASSWORD**, si se usa la autenticación básica en el clúster.
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ### <a name="cluster-status-notebook"></a><a id="notebook"></a> Cuaderno de estado del clúster
 

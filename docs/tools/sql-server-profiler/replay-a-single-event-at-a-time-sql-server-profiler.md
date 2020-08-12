@@ -1,6 +1,7 @@
 ---
 title: Reproducir un solo evento cada vez
 titleSuffix: (SQL Server Profiler
+description: Descubra cómo reproducir un evento de seguimiento cada vez en SQL Server Profiler mediante la ejecución paso a paso de una tabla o un archivo de seguimiento de reproducción.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e8f217e2117e22edbd5f763b71c51cb078d49301
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 151c562d5448d94743ba13a49954cd2e7a5c0547
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307517"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774721"
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>Reproducir un único evento cada vez (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este tema se describe cómo reproducir un solo evento cada vez en un archivo o tabla de reproducción de seguimientos mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

@@ -1,6 +1,7 @@
 ---
 title: Análisis de consultas con resultados de SHOWPLAN
 titleSuffix: SQL Server Profiler
+description: Obtenga información sobre cómo extraer eventos de plan de presentación de un seguimiento para que SQL Server Profiler muestre información del plan de consulta. Vea una tabla de eventos de seguimiento del plan de presentación.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e0936a3931b574c08e5a58f396d7917eae569078
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b833f87e092260d38649c464fd4b09c6e43899d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774949"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Puede agregar clases de eventos Showplan a una definición de seguimiento que permitan que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] recopile y muestre información del plan de consulta en el seguimiento. También es posible extraer los eventos Showplan de los otros eventos recopilados en el seguimiento y guardarlos en un archivo XML independiente.  
   
  La extracción de eventos Showplan del seguimiento puede hacerse de dos formas:  

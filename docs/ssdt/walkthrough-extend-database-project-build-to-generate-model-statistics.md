@@ -1,23 +1,23 @@
 ---
 title: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo
+description: Obtenga información sobre cómo crear, instalar y probar un colaborador de compilación que genera estadísticas del modelo de base de datos SQL al compilar un proyecto de base de datos.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242690"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894022"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliar la compilación del proyecto de base de datos para generar estadísticas de modelo
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo
 
 Puede crear un colaborador de compilación para realizar acciones personalizadas al compilar un proyecto de base de datos. En este tutorial, se crea un colaborador de compilación llamado ModelStatistics que genera estadísticas del modelo de base de datos SQL al compilar un proyecto de base de datos. Dado que este colaborador de compilación acepta parámetros cuando se compila, son necesarios algunos pasos adicionales.  
   
@@ -29,7 +29,7 @@ En este tutorial, realizará las principales tareas siguientes:
   
 -   [Comprobar su colaborador de compilación](#TestBuildContributor)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Necesitará los componentes siguientes para completar este tutorial:  
   
 -   Debe haber instalado una versión de Visual Studio que incluya las herramientas (SSDT) de datos de SQL Server y admita el desarrollo de C# o VB.  
@@ -508,7 +508,7 @@ Puede hacerlo de una de las maneras siguientes:
         </Project>  
         ```  
   
-    4.  En el archivo .sqlproj para cualquier proyecto en el que desea ejecutar colaboradores, importe el archivo de destinos agregando la siguiente instrucción al archivo .sqlproj después del nodo \<Import project="$(MSBuildExtensionsPath) \Microsoft\VisualStudio\v$ (VisualStudioVersion) \SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> en el archivo:  
+    4.  En el archivo .sqlproj de cualquier proyecto en el que quiera ejecutar colaboradores, importe el archivo de destinos mediante la adición de la siguiente instrucción al archivo .sqlproj después del nodo \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> en el archivo:  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -525,7 +525,7 @@ Después de haber seguido uno de estos métodos, puede usar MSBuild con el fin d
   
 1.  En Visual Studio, haga clic con el botón secundario en el proyecto y seleccione “Recompilar”. Se recompilará el proyecto, y debería ver las estadísticas del modelo generadas, con la salida incluida en la compilación de salida y guardada en ModelStatistics.xml. Observe que puede tener que elegir “Mostrar todos los archivos” en el Explorador de soluciones para ver el archivo XML.  
   
-2.  Abra un símbolo del sistema de Visual Studio: en el menú **Inicio**, haga clic en **Todos los programas**, **Microsoft Visual Studio <Visual Studio Version>** , **Visual Studio Tools**, y, finalmente, en **Símbolo del sistema Visual Studio (<Visual Studio Version>)** .  
+2.  Abra un símbolo del sistema de Visual Studio: en el menú **Inicio**, haga clic en **Todos los programas**, **Microsoft Visual Studio <Visual Studio Version>**, **Visual Studio Tools**, y, finalmente, en **Símbolo del sistema Visual Studio (<Visual Studio Version>)**.  
   
 3.  En el símbolo del sistema, navegue a la carpeta que contiene el proyecto de SQL.  
   
@@ -593,5 +593,5 @@ Puede crear herramientas adicionales para realizar el procesamiento del archivo 
   
 ## <a name="see-also"></a>Consulte también  
 [Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Tutorial: Ampliar la implementación del proyecto de base de datos para analizar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Tutorial: Ampliación de la implementación del proyecto de base de datos para analizar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

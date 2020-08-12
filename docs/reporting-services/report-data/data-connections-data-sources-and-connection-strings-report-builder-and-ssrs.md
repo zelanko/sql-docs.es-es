@@ -1,18 +1,19 @@
 ---
 title: Creación de cadenas de conexión de datos - Generador de informes y SSRS | Microsoft Docs
-ms.date: 11/18/2019
+description: Aprenda a crear cadenas de conexión de datos y obtenga información importante relacionada con las credenciales de los orígenes de datos.
+ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: accb94c4fbfe0c7e10b6fdfcaa749e8059b8e498
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812300"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>Creación de cadenas de conexión de datos - Generador de informes y SSRS
 
@@ -33,7 +34,7 @@ ms.locfileid: "74190914"
 |---------------------|-----------------|---------------------|  
 |Base de datos de SQL Server en el servidor local|`data source="(local)";initial catalog=AdventureWorks`|Establezca el tipo de origen de datos en **Microsoft SQL Server**. Para obtener más información, vea [Tipo de conexión de SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
 |Instancia de SQL Server<br /><br /> database|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Establezca el tipo de origen de datos en **Microsoft SQL Server**.|  
-|Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Establezca el tipo de origen de datos en **Microsoft Azure SQL Database**. Para obtener más información, vea [Tipo de conexión SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
+|Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Establezca el tipo de origen de datos en **Microsoft Azure SQL Database**. Para obtener más información, vea [Tipo de conexión SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |Almacenamiento de datos paralelo de SQL Server|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Establezca el tipo de origen de datos en **Microsoft SQL Server Parallel Data Warehouse**. Para obtener más información, vea [Tipo de conexión Almacenamiento de datos paralelo de SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Base de datos de Analysis Services en el servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Establezca el tipo de origen de datos en **Microsoft SQL Server Analysis Services**. Para más información, vea [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) o [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Base de datos de modelo tabular de Analysis Services con una perspectiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Establezca el tipo de origen de datos en **Microsoft SQL Server Analysis Services**. Especifique el nombre de la perspectiva en la configuración cube=. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
@@ -41,12 +42,12 @@ ms.locfileid: "74190914"
 |Origen de datos SAP Netweaver BI|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Configure el tipo de origen de datos en **SAP NetWeaver BI**. Para obtener más información, vea [Tipo de conexión de SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Origen de datos de Hyperion Essbase|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Configure el tipo de origen de datos en **Hyperion Essbase**. Para obtener más información, vea [Tipo de conexión de Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
 |Origen de datos de Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Configure el tipo de origen de datos en **Teradata**. La cadena de conexión es una dirección IP (protocolo de Internet) formada por cuatro campos, donde cada campo puede tener de uno a tres dígitos. Para más información, vea [Tipo de conexión de Teradata &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
-|Origen de datos de Teradata|`Database=` *\<nombre de la base de datos>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|Establezca el tipo de origen de datos en **Teradata**, de modo similar a como se hizo en el ejemplo anterior. Usa solamente la base de datos predeterminada que se especifica en la etiqueta de la base de datos, sin detectar automáticamente las relaciones de los datos.|  
+|Origen de datos de Teradata|`Database=` *\<database name>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Establezca el tipo de origen de datos en **Teradata**, de modo similar a como se hizo en el ejemplo anterior. Usa solamente la base de datos predeterminada que se especifica en la etiqueta de la base de datos, sin detectar automáticamente las relaciones de los datos.|  
 |Origen de datos XML, servicio web|`data source=https://adventure-works.com/results.aspx`|Configure el tipo de origen de datos en **XML**. La cadena de conexión es una dirección URL de un servicio web que admite el Lenguaje de definición de servicios web (WSDL). Para más información, vea [Tipo de conexión XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |Origen de datos XML, documento XML|`https://localhost/XML/Customers.xml`|Configure el tipo de origen de datos en **XML**. La cadena de conexión es una dirección URL que lleva al documento XML. 
 |Origen de datos XML, documento XML incrustado|*Vacía*|Configure el tipo de origen de datos en **XML**. Los datos XML se incrustan en la definición de informe.|  
 |Lista de SharePoint|`data source=https://MySharePointWeb/MySharePointSite/`|Establezca el tipo de origen de datos en **SharePoint List**.|  
-| Conjunto de datos de Power BI Premium (a partir de Reporting Services 2019) | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;initial catalog = <YourDatasetName> | Establezca el tipo de origen de datos en **Microsoft SQL Server Analysis Services**. |
+| Conjunto de datos de Power BI Premium (a partir de Reporting Services 2019 y Power BI Report Server de enero de 2020) | `Data Source=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;Initial Catalog=<datasetname>` | Establezca el tipo de origen de datos en **Microsoft SQL Server Analysis Services**. |
 
   
  Si no puede conectarse con un servidor de informes mediante **localhost**, compruebe que se haya habilitado el protocolo de red TCP/IP. Para obtener más información, consulte [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  

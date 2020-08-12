@@ -1,6 +1,6 @@
 ---
 title: Configuración de HealthCheckTimeout para el grupo de disponibilidad
-description: Configure HealthCheckTimeout para un grupo de disponibilidad de Always On, que se usa para especificar el tiempo que debe esperar el archivo DLL de recursos SQL Server antes de informar de la falta de respuesta.
+description: Configure HealthCheckTimeout para un grupo de disponibilidad Always On, que especifica cuánto tiempo espera el archivo DLL de recursos de SQL Server antes de notificar la falta de respuesta.
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3baf48a747db8dfdc9fb18387ac92dd0c53b4c8
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 83c59052646a870b513ebe79835d4c5a9345a5d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925126"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882951"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurar los valores de la propiedad HealthCheckTimeout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   El valor HealthCheckTimeout se emplea para especificar el tiempo, en milisegundos, que la DLL de recursos de SQL Server debe esperar la información devuelta por el procedimiento almacenado [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) antes de notificar a la instancia de clúster de conmutación por error (FCI) AlwaysOn que no ha recibido respuesta. Los cambios que se realizan en la configuración del tiempo de espera son vigentes de forma inmediata y no requieren reiniciar el recurso de SQL Server.  
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Limits), [Seguridad](#Security)  

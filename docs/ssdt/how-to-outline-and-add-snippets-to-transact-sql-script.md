@@ -1,23 +1,23 @@
 ---
 title: Esquematización e incorporación de fragmentos de código a script Transact-SQL
+description: Obtenga información sobre los fragmentos de código que proporciona SSDT. Vea cómo insertar fragmentos de código en aplicaciones y descubra cómo ocultar y expandir código en el editor de Transact-SQL.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 655dc1271fa928558974bf6ebc36b8d551207ea2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241359"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880431"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Cómo: Esquematizar y agregar fragmentos de código a script Transact-SQL
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procedimientos: Esquematización e incorporación de fragmentos de código a script Transact-SQL
 
 SQL Server Data Tools incluye una biblioteca de código formada por fragmentos de código que están listos para insertarse en la aplicación. Cada fragmento de código realiza una tarea de scripting completa como crear una función, una tabla, un desencadenador, un índice, una vista, un tipo de datos definido por el usuario, etc. Puede insertar un fragmento de código en el código fuente con unos pocos clics con el mouse. Estos fragmentos de código aumentan la productividad al reducir el tiempo dedicado a escribir.  
   

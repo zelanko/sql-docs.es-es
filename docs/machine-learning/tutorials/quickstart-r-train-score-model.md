@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 21b3f8f93d3375789de9da92ab4bb2b1e136964c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772333"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>Inicio rápido: Creación y puntuación de un modelo predictivo en R con el aprendizaje automático de SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o en [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md).
@@ -29,6 +29,9 @@ En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardar
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server R Services](../r/sql-server-r-services.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. El primero usa el conjunto de datos **mtcars** incluido con R y genera un sencillo modelo lineal generalizado (GLM) que predice la probabilidad de que un vehículo tenga transmisión manual. El segundo procedimiento es para puntuación: realiza una llamada al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en datos nuevos. Al colocar código de R en un procedimiento almacenado en SQL, las operaciones se incluyen en SQL, son reutilizables y pueden recibir llamadas de otros procedimientos almacenados y aplicaciones cliente.
@@ -55,6 +58,9 @@ Para ejecutar este inicio rápido, debe cumplir los siguientes requisitos previo
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. Para obtener más instrucciones sobre cómo instalar R Services, consulte la [Guía de instalación de Windows](../install/sql-r-services-windows-install.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Machine Learning Services en Azure SQL Managed Instance. Para obtener información sobre cómo registrarse, vea la [información general de Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 - Una herramienta para ejecutar consultas de SQL que contengan scripts de R. En este inicio rápido se utiliza [Azure Data Studio](../../azure-data-studio/what-is.md).

@@ -1,6 +1,7 @@
 ---
 title: Replay Requirements
 titleSuffix: SQL Server Profiler
+description: Obtenga información sobre las clases de eventos y columnas de datos que se van a capturar en un seguimiento para poder reproducir los datos de seguimiento con SQL Server Profiler o Distributed Replay Utility.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5fa4964a2ffb0d62777c25aa0d0c6ef205ee94b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789930"
 ---
 # <a name="replay-requirements"></a>Replay Requirements
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Para reproducir los datos de seguimiento con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Distributed Replay Utility, se debe capturar un conjunto específico de clases de eventos y columnas en el seguimiento. Esta configuración se habilita de forma predeterminada si se usa la plantilla de seguimiento **TSQL_Replay** para configurar un seguimiento que se usará posteriormente para la reproducción. En este tema se describe esta configuración y otros requisitos de reproducción.  
   

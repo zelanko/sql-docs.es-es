@@ -1,5 +1,6 @@
 ---
 title: Administrar conjuntos de datos compartidos | Microsoft Docs
+description: Obtenga información sobre cómo administrar conjuntos de datos compartidos en Reporting Services a fin de poder compartir una consulta para ayudar a proporcionar un conjunto coherente de datos para varios informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 332103dd9f100a2477b9ae7392bd6d24088261f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df22dbab5cf450981f53976fb2a09e6ff08797c8
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67220586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808445"
 ---
 # <a name="manage-shared-datasets"></a>Administrar conjuntos de datos compartidos
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los conjuntos de datos compartidos recuperan los datos de los orígenes de datos compartidos que se conectan a los orígenes de datos externos. Un conjunto de datos compartido proporciona una manera de compartir una consulta para ayudar a proporcionar un conjunto coherente de datos para varios informes. La consulta del conjunto de datos puede incluir parámetros de conjunto de datos. Puede configurar un conjunto de datos compartido para almacenar en memoria caché los resultados de la consulta para combinaciones de parámetros concretas al usarse por primera vez o especificando una programación. Puede utilizar el almacenamiento en caché del conjunto de datos compartido en combinación con el almacenamiento en caché de los informes y las fuentes de datos de informe para ayudar a administrar el acceso a un origen de datos.  
@@ -41,8 +42,8 @@ ms.locfileid: "67220586"
 ### <a name="manage-shared-dataset-item-properties"></a>Administración de las propiedades de elemento del conjunto de datos compartido  
  En la siguiente tabla se enumeran las propiedades de elemento que puede cambiar para un elemento de conjunto de datos compartido.  
   
-|||  
-|-|-|  
+|Propiedad|Descripción|  
+|--------|-----------|  
 |Editar nombre|Cambie el nombre del conjunto de datos compartido. Todas las referencias en los elementos dependientes continuarán funcionando.|  
 |Editar descripción|Cambie la descripción del conjunto de datos compartido.|  
 |Modificar el tiempo de espera de ejecución de la consulta|Establezca el tiempo de espera de ejecución de la consulta en segundos. Cero (0) segundos significa que no hay tiempo de espera. Determina el número de segundos antes de que la consulta de conjunto de datos supere el tiempo de espera. Para no especificar ningún valor de tiempo de espera, utilice 0. Para más información, vea [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  

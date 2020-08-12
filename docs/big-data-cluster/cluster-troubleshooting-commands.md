@@ -5,20 +5,20 @@ description: En este artículo se proporcionan comandos útiles para supervisar 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 4d384a1835d902e56030b62897d657c81c0ec3b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606407"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773670"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Solución de problemas de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En este artículo se describen varios comandos útiles de Kubernetes que puede usar para supervisar y solucionar problemas de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Se muestra cómo ver información detallada de un pod u otros artefactos de Kubernetes que se encuentran en el clúster de macrodatos. En este artículo también se tratan las tareas habituales, como copiar archivos en un contenedor que ejecute uno de los servicios de clúster de macrodatos de SQL Server, o bien copiarlos desde uno.
 
@@ -118,8 +118,10 @@ Los siguientes servicios admiten conexiones externas al clúster de macrodatos:
 |---|---|
 | **master-svc-external** | Proporciona acceso a la instancia maestra.<br/>(**EXTERNAL-IP,31433** y el usuario de **SA**) |
 | **controller-svc-external** | Admite herramientas y clientes que administran el clúster. |
-| **gateway-svc-external** | Proporciona acceso a la puerta de enlace de HDFS/Spark.<br/>(**EXTERNAL-IP** y el usuario **raíz**) |
+| **gateway-svc-external** | Proporciona acceso a la puerta de enlace de HDFS/Spark.<br/>(**EXTERNAL-IP** y el usuario `<AZDATA_USERNAME>`)<sup>1</sup>|
 | **appproxy-svc-external** | Admite escenarios de implementación de aplicaciones. |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > Esta es una forma de ver los servicios con **kubectl**, pero también se puede usar el comando `azdata bdc endpoint list` para ver estos puntos de conexión. Para obtener más información, vea [Obtención de los puntos de conexión del clúster de macrodatos](deployment-guidance.md#endpoints).

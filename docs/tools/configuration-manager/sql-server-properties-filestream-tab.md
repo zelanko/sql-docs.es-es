@@ -1,5 +1,6 @@
 ---
 title: Propiedades de SQL Server (pestaña FILESTREAM)
+description: Aprenda a usar la pestaña FILESTREAM del cuadro de diálogo Propiedades de SQL Server para habilitar FILESTREAM para una instalación de SQL Server 2019.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,18 +12,18 @@ ms.assetid: 07ca5ac6-a68a-4e85-bc6f-fa7ccf9f1c10
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b6606424a2e3f8e2d0191b012a81b7af430657a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3af7955cb439a32789436faa8883425f7a17570
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306783"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893326"
 ---
 # <a name="sql-server-properties-filestream-tab"></a>Propiedades de SQL Server (pestaña FILESTREAM)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Utilice esta página para habilitar FILESTREAM para esta instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Habilitar FILESTREAM para acceso Transact-SQL**  
  Seleccione esta opción para habilitar FILESTREAM para el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este control debe comprobarse para que las otras opciones de control estén disponibles.  
   

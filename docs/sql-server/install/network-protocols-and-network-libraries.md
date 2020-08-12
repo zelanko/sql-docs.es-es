@@ -1,5 +1,6 @@
 ---
 title: Protocolos de red y bibliotecas de red | Microsoft Docs
+description: Un servidor se puede configurar para que supervise varios protocolos de red. Puede cambiar la configuración mediante el Administrador de configuración de SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - network protocols [SQL Server], about network protocols
 - configuration options [SQL Server], libraries
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: abdd5e7af707bd566288bd1048eda4874d82311c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc3f56fe60fdab32a41e61c878b1a3988e265a28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126073"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880450"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocolos de red y bibliotecas de red
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Un servidor puede escuchar en, o supervisar, varios protocolos de red al mismo tiempo. Sin embargo, cada protocolo debe estar configurado. Si un protocolo concreto no está configurado, el servidor no podrá escuchar en dicho protocolo. Después de la instalación, podrá cambiar las configuraciones de protocolo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68126073"
   
 3.  Siga los pasos de desinstalación.  
   
-4.  Seleccione **Compartir impresoras y archivos para redes Microsoft** y, a continuación, haga clic en **Desinstalar**.  
+4.  Seleccione **Compartir impresoras y archivos para redes Microsoft**y, a continuación, haga clic en **Desinstalar**.  
   
 5.  Siga los pasos de desinstalación.  
   

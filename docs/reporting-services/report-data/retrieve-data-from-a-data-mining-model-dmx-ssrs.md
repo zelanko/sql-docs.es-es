@@ -1,5 +1,6 @@
 ---
 title: Recuperación de datos de un modelo de minería de datos (DMX) | Microsoft Docs
+description: Obtenga información sobre cómo usar los datos de un modelo de minería de datos de SQL Server Analysis Services (SSAS) en el informe.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b49ed7ad49555f83a80ece77f2ba23d2d4252a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c5a18ffd89382fb9c169cc5292a5834e0488ec4e
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081812"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812222"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Recuperar datos de un modelo de minería de datos (DMX) (SSRS)
   Para usar los datos de un modelo de minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el informe, debe definir un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y uno o más conjuntos de datos de informe. Al crear la definición de origen de datos, debe especificar una cadena de conexión y unas credenciales para poder tener acceso al origen de datos desde el equipo cliente.  

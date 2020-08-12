@@ -1,24 +1,25 @@
 ---
 title: 'Inicio rápido: estructuras de datos de Python'
-description: En este inicio rápido, aprenderá a trabajar con estructuras de datos y objetos de datos en Python y SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: En este inicio rápido, obtendrá información sobre cómo trabajar con estructuras de datos y objetos de datos en Python mediante aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3023287504cbb7b25e194b53d0957e82405d1ea8
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: ed35820d38ea31ea0b7f8bae9b0a440398d55674
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784101"
 ---
-# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>Inicio rápido: estructuras de datos y objetos mediante Python en SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-data-structures-and-objects-using-python-with-sql-machine-learning"></a>Inicio rápido: Estructuras de datos y objetos mediante Python con aprendizaje automático de SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En este inicio rápido, aprenderá a usar estructuras de datos y tipos de datos cuando use Python en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o en [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md). Aprenderá a mover datos entre Python y SQL Server, así como los problemas comunes que pueden producirse.
@@ -26,8 +27,11 @@ En este inicio rápido, aprenderá a usar estructuras de datos y tipos de datos 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 En este inicio rápido, aprenderá a usar estructuras de datos y tipos de datos cuando use Python en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Aprenderá a mover datos entre Python y SQL Server, así como los problemas comunes que pueden producirse.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En este inicio rápido, obtendrá información sobre cómo usar estructuras de datos y tipos de datos cuando use Python en [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). Obtendrá información sobre cómo mover datos entre Python y Azure SQL Managed Instance, así como las incidencias comunes que pueden producirse.
+::: moniker-end
 
-SQL Server se basa en el paquete **pandas** de Python, que es excelente para trabajar con datos tabulares. Sin embargo, no puede pasar un valor escalar desde Python a SQL Server y esperar que funcione. En esta guía de inicio rápido, revisará algunas definiciones de estructura de datos básicas para prepararle para problemas adicionales que podrían ocurrir al pasar datos tabulares entre Python y SQL Server.
+Aprendizaje automático de SQL se basa en el paquete **pandas** de Python, que es excelente para trabajar con datos tabulares. Sin embargo, no puede pasar un valor escalar desde Python a la base de datos y esperar que *funcione*. En esta guía de inicio rápido, revisará algunas definiciones de estructura de datos básicas a fin de prepararle para incidencias adicionales que podrían ocurrir al pasar datos tabulares entre Python y la base de datos.
 
 Los conceptos más comunes son:
 
@@ -35,10 +39,10 @@ Los conceptos más comunes son:
 - Una sola columna de una trama de datos es un objeto de tipo lista denominado serie.
 - Un valor único de una trama de datos se denomina celda y se obtiene acceso a ella mediante el índice.
 
-¿Cómo se expondría el resultado único de un cálculo como una trama de datos, si una data.frame requiere una estructura tabular? Una respuesta es representar el valor escalar único como una serie, que se convierte fácilmente en una trama de datos. 
+¿Cómo se expondría el resultado único de un cálculo como una trama de datos, si una data.frame requiere una estructura tabular? Una respuesta es representar el valor escalar único como una serie, que se convierte fácilmente en una trama de datos.
 
 > [!NOTE]
-> Cuando se devuelven fechas, Python en SQL usa DATETIME, que tiene un intervalo de fechas restringido de 1753-01-01(-53690) a 9999-12-31(2958463). 
+> Cuando se devuelven fechas, Python en SQL usa DATETIME, que tiene un intervalo de fechas restringido de 1753-01-01(-53690) a 9999-12-31(2958463).
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
@@ -50,7 +54,11 @@ Para ejecutar este inicio rápido, debe cumplir los siguientes requisitos previo
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 - SQL Server Machine Learning Services. SQL Server Machine Learning Services: para obtener información sobre cómo instalar Machine Learning Services, vea la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md). 
 ::: moniker-end
-- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de Python. Puede ejecutar estos scripts con cualquier herramienta de consultas o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. En este inicio rápido se utiliza [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Machine Learning Services en Azure SQL Managed Instance. Para obtener información sobre cómo registrarse, vea la [información general de Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
+
+- Una herramienta para ejecutar consultas SQL que contengan scripts de Python. En este inicio rápido se utiliza [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="scalar-value-as-a-series"></a>Valor escalar como una serie
 
@@ -81,7 +89,7 @@ Este ejemplo realiza algunas operaciones matemáticas simples y convierte un val
    dtype: float64
    ```
 
-1. Para aumentar la longitud de la serie, puede agregar nuevos valores mediante una matriz. 
+1. Para aumentar la longitud de la serie, puede agregar nuevos valores mediante una matriz.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -100,7 +108,7 @@ Este ejemplo realiza algunas operaciones matemáticas simples y convierte un val
    **Resultados**
 
    ```text
-   STDOUT message(s) from external script: 
+   STDOUT message(s) from external script:
    0    0.5
    1    2.0
    dtype: float64
@@ -122,7 +130,7 @@ Este ejemplo realiza algunas operaciones matemáticas simples y convierte un val
    **Resultados**
 
    ```text
-   STDOUT message(s) from external script: 
+   STDOUT message(s) from external script:
    0.5
    simple math example 1    0.5
    simple math example 2    0.5
@@ -131,7 +139,7 @@ Este ejemplo realiza algunas operaciones matemáticas simples y convierte un val
 
 ## <a name="convert-series-to-data-frame"></a>Conversión de series en tramas de datos
 
-Después de convertir los resultados matemáticos escalares en una estructura tabular, debe convertirlos a un formato que SQL Server pueda controlar.
+Después de convertir los resultados matemáticos escalares en una estructura tabular, debe convertirlos a un formato que aprendizaje automático de SQL pueda controlar.
 
 1. Para convertir una serie en data.frame, llame al método [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) de pandas.
 
@@ -217,12 +225,7 @@ Ahora se mostrarán los valores específicos de dos series de resultados matemá
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener información sobre cómo escribir funciones avanzadas de Python en SQL Server, siga esta guía de inicio rápido:
+Para obtener información sobre cómo escribir funciones avanzadas de Python con aprendizaje automático de SQL, siga este inicio rápido:
 
 > [!div class="nextstepaction"]
-> [Creación de funciones avanzadas de Python con SQL Server Machine Learning Services](quickstart-python-functions.md)
-
-Para más información sobre cómo usar Python en SQL Server Machine Learning Services, vea los artículos siguientes:
-
-- [Creación y puntuación de un modelo predictivo en Python](quickstart-python-train-score-model.md)
-- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../sql-server-machine-learning-services.md)
+> [Escritura de funciones de Python avanzadas](quickstart-python-functions.md).

@@ -1,5 +1,6 @@
 ---
 title: Configuración de un equipo de host múltiples para el acceso
+description: Aprenda a configurar SQL Server y Firewall de Windows para proporcionar conexiones de red a una instancia de SQL Server en un entorno de hosts múltiples.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244462"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894901"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar un equipo de host múltiple para el acceso a SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Cuando un servidor debe proporcionar una conexión a dos o más redes o subredes de la red, un escenario típico utiliza un equipo de host múltiple. Con frecuencia, este equipo se encuentra en una red perimetral (también conocida como DMZ, zona desmilitarizada o subred filtrada). En este artículo se describe cómo configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Firewall de Windows con seguridad avanzada para proporcionar las conexiones de red a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno de host múltiple.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "75244462"
   
 1.  Haga clic en **Inicio**, elija **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], seleccione **Herramientas de configuración** y, después, haga clic en **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-2.  En el panel de la consola del **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , expanda **Configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Protocolos de \<nombre de instancia>** . Después, haga doble clic en **TCP/IP**.  
+2.  En el panel de la consola del **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , expanda **Configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Protocolos de \<instance name>** y, después, haga doble clic en **TCP/IP**.  
   
 3.  En el cuadro de diálogo **Propiedades de TCP/IP** , en la pestaña **Direcciones IP** , aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP configurada en el equipo.  
   

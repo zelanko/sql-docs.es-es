@@ -1,5 +1,6 @@
 ---
 title: Configuración de SQL Native Client 11.0
+description: Obtenga información sobre los valores que se configuran en los cuadros de diálogo Configuración de SQL Server Native Client en el Administrador de configuración de SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e205d03c430670a9b51a0ed852629d608d8e78af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08b2107b77acecebeb990e6a071963af964f61ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306726"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885973"
 ---
 # <a name="sql-native-client-110-configuration"></a>Configuración de SQL Native Client 11.0
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Esta sección contiene los temas de la Ayuda F1 para los cuadros de diálogo de **Configuración de SQL Server Native Client** del Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es la biblioteca de red que los equipos cliente utilizan para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se inicia con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Las opciones establecidas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuración de SQL Native Client se utilizan en el equipo que ejecuta el programa cliente. Si se establecen en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], solo afectan a los programas cliente que se ejecutan en el servidor.  

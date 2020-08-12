@@ -1,6 +1,7 @@
 ---
 title: Plantillas
 titleSuffix: SQl Server Profiler
+description: Obtenga información sobre las plantillas predefinidas que proporciona SQL Server Profiler y cómo usarlas. Vea cómo crear plantillas definidas por el usuario y cambiar la plantilla predeterminada.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b0d52f5405e3519b861b7642264460b316acd03
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d278cd7b25dd4a9879f2c3a498bf2288e582beb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307840"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748642"
 ---
 # <a name="sql-server-profiler-templates"></a>Plantillas de SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Puede utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear plantillas que definan las clases de eventos y columnas de datos que desea incluir en los seguimientos. Después de definir y guardar la plantilla, ejecute un seguimiento que registre los datos de cada clase de evento que ha seleccionado. Una sola plantilla puede utilizarse en varios seguimientos puesto que la plantilla no se ejecuta como tal.  
 
@@ -51,7 +52,7 @@ Puede utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 
 ## <a name="default-template"></a>Plantilla predeterminada  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] designa de forma automática la plantilla **Standard** como plantilla predeterminada para aplicar a cualquier seguimiento nuevo. No obstante, puede cambiar la plantilla predeterminada por cualquier otra predefinida o definida por el usuario. Para cambiar la plantilla predeterminada, active la casilla **Usar como plantilla predeterminada para tipo de servidor seleccionado** cuando cree o edite una plantilla desde la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** .  
   
- Para obtener acceso al cuadro de diálogo **Propiedades de la plantilla de seguimiento**, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Archivo**de**, elija **Plantillas**y haga clic en **Nueva plantilla** o **Editar plantilla**.  
+ Para obtener acceso al cuadro de diálogo **Propiedades de la plantilla de seguimiento**, en el menú **Archivo** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], elija **Plantillas**y haga clic en **Nueva plantilla** o **Editar plantilla**.  
   
 > [!NOTE]  
 >  La plantilla predeterminada es específica para un tipo de servidor concreto. Si la cambia para un tipo de servidor, seguirá siendo la misma para el resto de tipos de servidor. Para obtener más información sobre cómo configurar una plantilla predeterminada para un servidor específico, vea [Configurar los valores predeterminados de definición de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  

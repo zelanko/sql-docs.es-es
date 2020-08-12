@@ -1,6 +1,7 @@
 ---
 title: Crear una plantilla de seguimiento
 titleSuffix: SQL Server Profiler
+description: Aprenda a crear una plantilla de seguimiento en SQL Server Profiler. Obtenga información sobre cómo agregar filtros a la plantilla y cómo agregar o quitar eventos y columnas de datos.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 2944e21afee17f66eef51723f4e552c947f43db8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af272f50f281a8c3a564913cfb91be8abcab2898
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307318"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774877"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>Crear una plantilla de seguimiento (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo crear una plantilla de seguimiento nueva mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-create-a-trace-template"></a>Para crear una plantilla de seguimiento  

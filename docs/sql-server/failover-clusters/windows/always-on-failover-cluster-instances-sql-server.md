@@ -1,6 +1,6 @@
 ---
 title: Instancias de clúster de conmutación por error de AlwaysOn
-description: Descripción de la instancia de clúster de conmutación por error de Always On para SQL Server.
+description: Obtenga información sobre cómo las instancias de clúster de conmutación por error de AlwaysOn proporcionan alta disponibilidad local mediante redundancia en el nivel de instancia del servidor en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 727bc6c3725315a012cff268b180ecc28a5a3631
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882969"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Como parte de la oferta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On, las instancias de clúster de conmutación por error de Always On aprovechan la funcionalidad de Clústeres de conmutación por error de Windows Server (WSFC) para proporcionar alta disponibilidad local mediante la redundancia en el nivel de instancias de servidor, una *instancia de clúster de conmutación por error* (FCI). Una FCI es una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se instala a través de los nodos de Clústeres de conmutación por error de Windows Server (WSFC) y, posiblemente, a través de varias subredes. En la red, una FCI aparece como una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ejecuta en un equipo individual, pero proporciona la conmutación por error entre nodos de WSFC si el nodo actual deja de estar disponible.  
   

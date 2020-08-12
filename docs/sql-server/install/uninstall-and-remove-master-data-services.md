@@ -1,5 +1,6 @@
 ---
 title: Desinstalar y quitar Master Data Services | Microsoft Docs
+description: Este proceso de desinstalación quita carpetas y archivos, de Master Data Services y desinstala el Administrador de configuración de Master Data Services del equipo local.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a0ed3134e26bc2ed0f581a722de50526a49fb9e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec6345d4470c95669b13a08bde103057409bde67
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126036"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883716"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Desinstalar y quitar Master Data Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Para desinstalar la característica [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], siga los pasos de [Desinstalar una instancia existente de SQL Server &#40;programa de instalación&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) y especifique [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] como característica para la operación de quitar en la página de **Seleccionar características**. El proceso de desinstalación quita las carpetas y archivos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , y desinstala [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] del equipo local.  
   

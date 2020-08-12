@@ -1,5 +1,6 @@
 ---
 title: Trabajo con objetos de base de datos CLR
+description: Aprenda a usar lenguajes de .NET Framework para recuperar y actualizar datos. Vea cómo crear y usar un objeto de base de datos Common Language Runtime (CLR) en un proyecto.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,18 +9,17 @@ f1_keywords:
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f8aa504554cc973e5babbfe3c8512f59932fa147
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 46269e242cab25708006b8f1432ac12b72570779
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226730"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893849"
 ---
-# <a name="how-to-work-with-clr-database-objects"></a>Cómo: Trabajar con objetos de base de datos CLR
+# <a name="how-to-work-with-clr-database-objects"></a>Procedimientos: Trabajo con objetos de base de datos CLR
 
 Además del lenguaje de programación Transact\-SQL, puede usar los lenguajes .NET Framework para crear objetos de base de datos que recuperen y actualicen los datos. Los objetos de base de datos que se escriben en código administrado se denominan objetos de base de datos de Common Language Runtime (CLR) de SQL Server. Para ver una explicación de las ventajas de usar objetos de base de datos CLR hospedados en SQL Server y de cómo elegir entre Transact\-SQL y CLR, consulte [Ventajas de la integración CLR](../relational-databases/clr-integration/clr-integration-overview.md) y [Ventajas de utilizar código administrado para crear objetos de base de datos](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
   

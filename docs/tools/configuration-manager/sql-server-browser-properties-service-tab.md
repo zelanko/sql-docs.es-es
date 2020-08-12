@@ -1,5 +1,6 @@
 ---
 title: Propiedades de Explorador de SQL (pestaña Servicio)
+description: Obtenga información sobre las opciones de la pestaña Servicio del cuadro de diálogo Propiedades de SQL Server Browser, como la ruta de acceso binaria, el nombre de host y el modo de inicio.
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c9e5cb32206a2a2b81970a43308058dc2ad1c52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7fa05db685f2597d92c6314f5b42a7e1976db4fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307095"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894261"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Propiedades de Explorador de SQL (pestaña Servicio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   El programa Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como un servicio en el servidor. El Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha las solicitudes entrantes de recursos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona información sobre las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas en el equipo.  
   
  Use la pestaña **Servicio** del cuadro de diálogo **Propiedades de SQL Server Browser** para ver las siguientes opciones. Todas las propiedades excepto **Modo de inicio** son de solo lectura.  
@@ -49,11 +50,11 @@ ms.locfileid: "75307095"
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
   
--   Manual: el servicio no se inicia automáticamente al iniciar el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
+-   Manual: este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: el servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: este servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: el servicio no se puede iniciar.  
+-   Deshabilitado: no se puede iniciar el servicio.  
   
  **State**  
  Indica si el servicio está en ejecución, detenido o deshabilitado. " **…** " indica que hay un cambio de estado pendiente.  

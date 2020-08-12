@@ -1,6 +1,7 @@
 ---
 title: Derivar una plantilla a partir de un archivo de seguimiento o de una tabla de seguimiento
 titleSuffix: SQL Server Profiler
+description: Obtenga información sobre cómo usar SQL Server Profiler para crear una plantilla de seguimiento a partir de un archivo de seguimiento existente o de una tabla de seguimiento almacenada en una base de datos.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 88058eed970b7294f8bbc0c1cc50352753f511a2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 58e62ae757b0509c0cf9e7862e8bd6f0aa570183
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307296"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774819"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>Derivar una plantilla a partir de un archivo o tabla de seguimiento (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo crear mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]una plantilla de seguimiento a partir de un archivo o tabla de seguimiento existente.  
   
 ### <a name="to-derive-a-template-from-a-trace-file-or-trace-table"></a>Para derivar una plantilla de un archivo de seguimiento o de una tabla de seguimiento  

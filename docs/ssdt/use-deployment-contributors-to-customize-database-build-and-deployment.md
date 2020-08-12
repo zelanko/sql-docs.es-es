@@ -1,21 +1,21 @@
 ---
 title: Personalización de las implementaciones de bases de datos con colaboradores de implementación
+description: Aprenda a modificar el comportamiento de los proyectos de base de datos. Vea recursos sobre colaboradores de compilación e implementación, y ejemplos de escenarios en los que se usan.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4d0c83e0b6adb5981adde576e06b0b74faf42eeb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0f5235969a2289220e7a70b035296e1ba0092714
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256250"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883371"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación
 
@@ -47,8 +47,8 @@ Además, puede exponer pares personalizados de argumentos de nombre/valor desde 
   
 |**Tareas comunes**|**Contenido adicional**|  
 |--------------------|--------------------------|  
-|**Obtenga más información acerca de los puntos de extensibilidad:** puede obtener información acerca de las clases base que se utilizan para implementar colaboradores de compilación y de implementación.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|**Crear colaboradores de ejemplo:** aprenda los pasos necesarios para crear un colaborador de compilación o de implementación. Si sigue estos tutoriales, debe:<br /><br />-   Crear un colaborador de compilación que genere un informe que enumera todos los elementos del modelo.<br />-   Crear un colaborador de implementación que cambie el plan de implementación antes de que se ejecute.<br />-   Crear un colaborador de implementación que genere un informe de implementación al implementar un proyecto de SQL.<br /><br />Puede crear todos los colaboradores en un único ensamblado o en varios ensamblados, dependiendo de cómo desee que estén distribuidos los colaboradores en el equipo.|[Tutorial: Ampliar la compilación del proyecto de base de datos para generar estadísticas de modelo](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Tutorial: Ampliar la implementación del proyecto de base de datos para modificar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Tutorial: Ampliar la implementación del proyecto de base de datos para analizar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|**Obtenga más información sobre los puntos de extensibilidad**: puede obtener información acerca de las clases base que se utilizan para implementar colaboradores de compilación y de implementación.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**Crear colaboradores de ejemplo**: aprenda los pasos necesarios para crear un colaborador de compilación o de implementación. Si sigue estos tutoriales, debe:<br /><br />-   Crear un colaborador de compilación que genere un informe que enumera todos los elementos del modelo.<br />-   Crear un colaborador de implementación que cambie el plan de implementación antes de que se ejecute.<br />-   Crear un colaborador de implementación que genere un informe de implementación al implementar un proyecto de SQL.<br /><br />Puede crear todos los colaboradores en un único ensamblado o en varios ensamblados, dependiendo de cómo desee que estén distribuidos los colaboradores en el equipo.|[Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Tutorial: Ampliación de la implementación del proyecto de base de datos para modificar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Tutorial: Ampliación de la implementación del proyecto de base de datos para analizar el plan de implementación](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a>Consulte también  
 [Definir condiciones personalizadas para pruebas unitarias de SQL](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  

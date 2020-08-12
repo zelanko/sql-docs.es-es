@@ -1,5 +1,6 @@
 ---
 title: Abrir un archivo de seguimiento (SQL Server Profiler)
+description: Aprenda a abrir un archivo que contiene datos de eventos capturados durante un seguimiento. Familiarícese con la apertura de archivos de seguimiento en SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +11,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 7350e2f03d20754e57c726ec5db4c6b91a2528d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 166bb88c60717d0b01ba658d720e00898aade380
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307173"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774791"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>Abrir un archivo de seguimiento (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este tema se describe cómo abrir un archivo de seguimiento mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   

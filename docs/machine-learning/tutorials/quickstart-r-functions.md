@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: En este inicio rápido, aprenderá a usar las funciones matemáticas y de utilidad de R con el aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a056d73ae28d822c12752ac60f31df5022acf28b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606674"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772370"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>Inicio rápido: Funciones de R con aprendizaje automático de SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En este inicio rápido, aprenderá a usar las funciones matemáticas y de utilidad de R con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o en [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md). Las funciones estadísticas suelen ser complicadas de implementar en T-SQL, pero esto se puede hacer en R con solo unas pocas líneas de código.
@@ -29,6 +29,9 @@ En este inicio rápido, aprenderá a usar las funciones matemáticas y de utilid
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 En este inicio rápido, aprenderá a usar las funciones matemáticas y de utilidad de R con [SQL Server R Services](../r/sql-server-r-services.md). Las funciones estadísticas suelen ser complicadas de implementar en T-SQL, pero esto se puede hacer en R con solo unas pocas líneas de código.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En este inicio rápido, obtendrá información sobre cómo usar estructuras de datos y tipos de datos cuando use R en [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). Obtendrá in sobre cómo mover datos entre R y SQL Managed Instance, así como las incidencias comunes que pueden producirse.
 ::: moniker-end
 
 ## <a name="prerequisites"></a>Prerrequisitos
@@ -43,6 +46,9 @@ Para ejecutar este inicio rápido, debe cumplir los siguientes requisitos previo
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. Para obtener más instrucciones sobre cómo instalar R Services, consulte la [Guía de instalación de Windows](../install/sql-r-services-windows-install.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Machine Learning Services en Azure SQL Managed Instance. Para obtener información sobre cómo registrarse, vea la [información general de Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 - Una herramienta para ejecutar consultas de SQL que contengan scripts de R. En este inicio rápido se utiliza [Azure Data Studio](../../azure-data-studio/what-is.md).
@@ -106,21 +112,19 @@ EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 El paquete **utils**, instalado de forma predeterminada, ofrece diversas funciones de utilidad para investigar el entorno actual de R. Estas funciones pueden ser útiles si encuentra discrepancias en la forma en que el código de R se ejecuta en SQL Server y en entornos externos.
 
-Por ejemplo, podría usar la función `memory.limit()` de R para obtener memoria para el entorno actual de R. Dado que el paquete `utils` está instalado pero no se carga de forma predeterminada, debe usar la función `library()` para cargarlo primero.
+Por ejemplo, puede usar las funciones de control de tiempo del sistema de R, como `system.time` y `proc.time`, para capturar el tiempo que tardan los procesos de R y analizar incidencias de rendimiento. Para obtener un ejemplo, vea el tutorial [Creación de características de datos](../tutorials/walkthrough-create-data-features.md) donde las funciones de control de tiempo de R se incrustan en la solución.
 
 ```sql
 EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
         library(utils);
-        mymemory <- memory.limit();
-        OutputDataSet <- as.data.frame(mymemory);'
-    , @input_data_1 = N' ;'
-WITH RESULT SETS (([Col1] int not null));
+        start.time <- proc.time();
+        
+        # Run R processes
+        
+        elapsed_time <- proc.time() - start.time;'
 ```
-
-> [!TIP]
-> Muchos usuarios quieren usar las funciones de control de tiempo del sistema de R, como `system.time` y `proc.time`, para capturar el tiempo que tardan los procesos de R y analizar problemas de rendimiento. Para obtener un ejemplo, vea el tutorial [Creación de características de datos](../tutorials/walkthrough-create-data-features.md) donde las funciones de control de tiempo de R se incrustan en la solución.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

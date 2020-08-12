@@ -1,23 +1,23 @@
 ---
 title: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
+description: Obtenga información sobre cómo ejecutar pruebas unitarias de SQL Server desde Team Foundation Build. Vea cómo crear una definición de compilación y ejecutar pruebas unitarias en una ejecución de pruebas automatizada.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f256431ad0b9df55d23672522db8533ebd26f311
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244290"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893925"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Cómo: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedimientos: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
 
 Puede usar Team Foundation Build para ejecutar las pruebas unitarias de SQL Server como parte de una prueba de comprobación de la compilación (BVT). Puede configurar las pruebas unitarias para implementar la base de datos, generar datos de prueba y ejecutar las pruebas seleccionadas. Si no está familiarizado con Team Foundation Build, debe revisar la siguiente información antes de seguir los procedimientos de este tema:  
   
@@ -167,7 +167,7 @@ De forma predeterminada, Team Foundation Build crea un archivo de configuración
   
 9. En el Explorador de soluciones, haga doble clic en app.config.  
   
-10. En el editor, para cada nodo \<SqlUnitTesting_*VSVersion*>, agregue `AllowConfigurationOverride="true"`. Por ejemplo:  
+10. En el editor, para cada nodo de \<SqlUnitTesting_*VSVersion*>, agregue `AllowConfigurationOverride="true"`. Por ejemplo:  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  

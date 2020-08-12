@@ -1,5 +1,6 @@
 ---
 title: Quitar objetos del servidor de calidad de datos | Microsoft Docs
+description: Si desinstala el servidor de calidad de datos de una instancia de SQL Server, tendrá que eliminar de forma manual algunos de sus objetos, incluidas las bases de datos de DQS.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,17 +8,17 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 531e7f600c1523a565890d1ba1ab781d3b8a9deb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f19dc1e34ea35509a8894400ca298909e3b1f96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68019823"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883741"
 ---
 # <a name="remove-data-quality-server-objects"></a>Quitar objetos del servidor de calidad de datos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   La desinstalación de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o la eliminación completa de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tiene [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] no elimina algunos objetos de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , incluidas las bases de datos de DQS. Esto implica que no pierde los datos de DQS si desinstala el [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] mediante el programa de instalación de SQL Server. Debe eliminar manualmente estos objetos de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] después de completarse el proceso de desinstalación.  
   

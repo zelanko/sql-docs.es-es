@@ -1,5 +1,6 @@
 ---
 title: Asociación de un parámetro de consulta a un parámetro de informe (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre los usos de los parámetros de informe de Reporting Services, las propiedades que puede establecer y cómo asociar un parámetro de consulta de conjunto de datos a un parámetro de informe.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e9752c14ef2ba03cdb95ad8fe4430c4d4fa23db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76af4ebaaabf8b99f6bf654715aeb5e19791b3db
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081426"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808475"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Asociar un parámetro de consulta a un parámetro de informe (Generador de informes y SSRS)
   Cuando define una consulta de conjunto de datos que contiene una variable de consulta, se analiza el comando de consulta. Para cada variable de consulta, se crea un parámetro de informe y un parámetro de conjunto de datos correspondientes. El parámetro de conjunto de datos señala el parámetro de informe. Esto permite al usuario especificar un valor que pasa directamente a la consulta. Cada vez que se modifica el comando de consulta, se realiza el mismo proceso.  
@@ -37,7 +38,7 @@ ms.locfileid: "77081426"
   
     -   En **Valor de parámetro**, escriba o seleccione una expresión que se evalúe como el valor que se va a pasar al parámetro de consulta. Éste es normalmente el nombre del parámetro de informe.  
   
-        > **NOTA:** El valor de los parámetros de consulta no está limitado a los parámetros de informe. Como valor del parámetro se puede utilizar cualquier expresión que se evalúe como un valor.  
+        > **NOTA:** El valor de los parámetros de consulta no está limitado a parámetros de informe. Como valor del parámetro se puede utilizar cualquier expresión que se evalúe como un valor.  
   
 3.  Repita el paso 2 para otros parámetros de consulta.  
   

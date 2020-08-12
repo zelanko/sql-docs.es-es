@@ -1,6 +1,7 @@
 ---
 title: Filtrar los eventos de un seguimiento
 titleSuffix: SQL Server Profiler
+description: Aprenda a establecer un filtro para limitar los eventos que SQL Server Profiler captura durante un seguimiento. Obtenga información sobre los formatos necesarios para determinados filtros.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 66780fe3a71f784679e80779985740a3d9069777
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd8eae33f37b3e21716a0eabd894f77558ac34da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790009"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>Filtrar eventos en un seguimiento (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Los filtros limitan los eventos que se recopilan en el seguimiento. Si no se establece un filtro, se devolverán todos los eventos de las clases de eventos seleccionadas en el resultado del seguimiento. No es obligatorio establecer un filtro para un seguimiento. Sin embargo, un filtro minimiza la sobrecarga que comporta una traza.  
   
@@ -48,7 +49,7 @@ Los filtros limitan los eventos que se recopilan en el seguimiento. Si no se est
   
          O  
   
-    -   Se ha seleccionado la opción**Usar la configuración regional para mostrar valores de fecha y hora** del cuadro de diálogo **Opciones generales** . Para ver el cuadro de diálogo **Opciones generales**, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Herramientas**de**, haga clic en **Opción**.  
+    -   Se ha seleccionado la opción**Usar la configuración regional para mostrar valores de fecha y hora** del cuadro de diálogo **Opciones generales** . Para ver el cuadro de diálogo **Opciones generales**, en el menú **Herramientas** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], haga clic en **Opción**.  
   
          Y  
   

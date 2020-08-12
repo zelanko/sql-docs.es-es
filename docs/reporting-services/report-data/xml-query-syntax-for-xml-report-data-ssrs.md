@@ -1,5 +1,6 @@
 ---
 title: Sintaxis de consulta XML para los datos de informe XML | Microsoft Docs
+description: Aprenda a crear la consulta del conjunto de datos en Reporting Services mediante la inclusión de una consulta XML o una ruta de acceso de elemento.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0ee76c36c70c201de03700b8838e5f21a8589448
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081346"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812197"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxis de consulta XML para los datos de informe XML (SSRS)
-  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML **Query** o una ruta de acceso de elemento. Un elemento XML **Query** empieza con una etiqueta **\<Consulta>** e incluye espacios de nombres y elementos XML que varían en función del origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
+  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], se pueden crear conjuntos de datos para orígenes de datos XML. Después de definir un origen de datos, se crea una consulta para el conjunto de datos. En función del tipo de datos XML a los que señala el origen de datos, la consulta del conjunto de datos se crea incluyendo un elemento XML **Query** o una ruta de acceso de elemento. Un elemento **Query** de XML empieza con una etiqueta **\<Query>** e incluye espacios de nombres y elementos XML que varían en función del origen de datos. Una ruta de acceso de elemento es independiente del espacio de nombres y especifica qué nodos y atributos de nodo se utilizan de los datos XML subyacentes con una sintaxis del tipo de XPath. Para más información sobre las rutas de acceso de elemento, vea [Sintaxis de ruta de acceso de elemento para datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
  Se pueden crear orígenes de datos XML para los siguientes tipos de datos XML:  
   
@@ -78,7 +79,7 @@ ms.locfileid: "77081346"
 </Query>  
 ```  
   
- Para especificar el espacio de nombres del proveedor de datos de manera que el espacio de nombres predeterminado permanezca vacío, utilice **xmldp**. Esto se muestra en el ejemplo siguiente.  
+ Para especificar el espacio de nombres del proveedor de datos de manera que el espacio de nombres predeterminado permanezca vacío, utilice **xmldp**. Esta implementación se muestra en el ejemplo siguiente.  
   
 ### <a name="example"></a>Ejemplo  
  En los ejemplos siguientes se utiliza el documento XML DPNamespace.xml, que se proporciona después de la tabla a modo de ilustración. En esta tabla se muestran dos ejemplos de sintaxis de ruta de acceso de elemento XML que incluye prefijos de espacios de nombres.  

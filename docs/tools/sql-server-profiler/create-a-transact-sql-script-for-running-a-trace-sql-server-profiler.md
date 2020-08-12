@@ -1,6 +1,7 @@
 ---
 title: Crear un script Transact-SQL para ejecutar un seguimiento
 titleSuffix: SQL Server Profiler
+description: Obtenga información sobre cómo crear un script de Transact-SQL a partir de un archivo o una tabla de seguimiento existente en SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 3324980dd331ed8211c2480415e430ee1fcd0821
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9f34472358f0d0cde586a25374c0de90ab708539
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774857"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Crear un script de Transact-SQL para ejecutar un seguimiento (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo crear un script de Transact-SQL a partir de un archivo o una tabla de seguimiento existente mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-create-a-transact-sql-script-to-run-a-trace"></a>Para crear un script de Transact-SQL para ejecutar un seguimiento  

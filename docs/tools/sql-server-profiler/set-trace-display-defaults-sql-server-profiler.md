@@ -1,6 +1,7 @@
 ---
 title: Establecer los valores predeterminadas de presentación de seguimiento
 titleSuffix: SQL Server Profiler
+description: Explore las opciones de herramientas que SQL Server Profiler utiliza de forma predeterminada en los seguimientos, como el tipo de fuente, el tamaño y el estilo, y aprenda a ajustarlas.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4a1958ee112b1453a6b86a5e520737b0945147c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a1e746b4f418c23e22dafc6c07b211c188b8a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726867"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Establecer los valores predeterminados de presentación de seguimiento (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 En este tema se describe el modo de establecer las opciones de la herramienta que especifican los tipos de fuente, tamaño y estilo que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utiliza para mostrar los seguimientos en la ventana de seguimiento. También puede especificar que el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestre todas las fechas y horas con la misma configuración regional del sistema operativo.  
   

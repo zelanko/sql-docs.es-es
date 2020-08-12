@@ -1,5 +1,6 @@
 ---
 title: Registro de seguimiento del servicio del servidor de informes
+description: Obtenga información sobre los registros de seguimiento del servidor de Reporting Services, que contienen información detallada de las operaciones del servicio del servidor de informes.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
-ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 294639b3fed68acf0bb8b07ea0430a890e97910e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68254865"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541507"
 ---
 # <a name="report-server-service-trace-log"></a>Registro de seguimiento del servicio del servidor de informes
 
@@ -65,8 +66,8 @@ El comportamiento del registro de seguimiento se administra en el archivo de con
 |**Prefijo**|Especifica un valor generado que distingue una instancia de registro de otra.|De manera predeterminada, se anexan valores de marca de tiempo a los nombres de los archivos de registro de seguimiento. Este valor se establece en "appdomain, tid, time". No modifique este parámetro.|  
 |**TraceListeners**|Especifica un destino de salida para el contenido del registro de seguimiento. Se pueden especificar varios destinos separados por comas.|Los valores válidos son:<br /><br /> <br /><br /> DebugWindow<br /><br /> File (predeterminado)<br /><br /> StdOut|  
 |**TraceFileMode**|Especifica si los registros de seguimiento incluyen datos de un período de 24 horas. Es recomendable tener un único registro de seguimiento para cada componente y día.|Este valor se establece en "Unique (default)". No modifique este valor.|  
-|**Categoría de componentes**|Especifica los componentes para los cuales se genera la información de registro de seguimiento y el nivel de seguimiento en este formato.<br /><br /> \<categoría de componente>:\<tracelevel><br /><br /> Puede especificar todos los componentes o algunos de ellos (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Si no desea generar información para un componente específico, puede deshabilitar el seguimiento para el mismo (por ejemplo, "SemanticModelGenerator:0"). No deshabilite el seguimiento para **all**.<br /><br /> Puede establecer "SemanticQueryEngine:4" si desea ver las instrucciones Transact-SQL generadas para cada consulta semántica. Las instrucciones Transact-SQL se registran en el registro de seguimiento. El ejemplo siguiente muestra el valor de configuración que agrega las instrucciones Transact-SQL al registro:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|Las categorías de componentes se pueden establecer en:<br /><br /> <br /><br /> **All** se utiliza para realizar un seguimiento de la actividad general del servidor de informes para todos los procesos que no están divididos en las categorías específicas.<br /><br /> **RunningJobs** se usa para realizar un seguimiento de una operación de suscripción o informe en curso.<br /><br /> **SemanticQueryEngine** se usa para realizar un seguimiento de una consulta semántica procesada cuando un usuario realiza una exploración de datos ad hoc en un informe basado en un modelo.<br /><br /> **SemanticModelGenerator** se utiliza para realizar un seguimiento de generación de modelos.<br /><br /> **http** se utiliza para habilitar el archivo de registro HTTP del servidor de informes. Para obtener más información, vea [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
-|Valor de**trace level** de categorías de componentes|\<categoría de componente>:\<tracelevel><br /><br /> <br /><br /> Si no anexa un nivel de seguimiento al componente, se utiliza el valor especificado para **DefaultTraceSwitch** . Por ejemplo, si especifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos los componentes utilizan el nivel de seguimiento predeterminado.|Los valores válidos del nivel de seguimiento son:<br /><br /> <br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado<br /><br /> El valor predeterminado del servidor de informes es "todo:3"|  
+|**Categoría de componentes**|Especifica los componentes para los cuales se genera la información de registro de seguimiento y el nivel de seguimiento en este formato.<br /><br /> \<component category>:\<tracelevel><br /><br /> Puede especificar todos los componentes o algunos de ellos (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Si no desea generar información para un componente específico, puede deshabilitar el seguimiento para el mismo (por ejemplo, "SemanticModelGenerator:0"). No deshabilite el seguimiento para **all**.<br /><br /> Puede establecer "SemanticQueryEngine:4" si desea ver las instrucciones Transact-SQL generadas para cada consulta semántica. Las instrucciones Transact-SQL se registran en el registro de seguimiento. El ejemplo siguiente muestra el valor de configuración que agrega las instrucciones Transact-SQL al registro:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|Las categorías de componentes se pueden establecer en:<br /><br /> <br /><br /> **All** se utiliza para realizar un seguimiento de la actividad general del servidor de informes para todos los procesos que no están divididos en las categorías específicas.<br /><br /> **RunningJobs** se usa para realizar un seguimiento de una operación de suscripción o informe en curso.<br /><br /> **SemanticQueryEngine** se usa para realizar un seguimiento de una consulta semántica procesada cuando un usuario realiza una exploración de datos ad hoc en un informe basado en un modelo.<br /><br /> **SemanticModelGenerator** se utiliza para realizar un seguimiento de generación de modelos.<br /><br /> **http** se utiliza para habilitar el archivo de registro HTTP del servidor de informes. Para obtener más información, vea [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
+|Valor de**trace level** de categorías de componentes|\<component category>:\<tracelevel><br /><br /> <br /><br /> Si no anexa un nivel de seguimiento al componente, se utiliza el valor especificado para **DefaultTraceSwitch** . Por ejemplo, si especifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos los componentes utilizan el nivel de seguimiento predeterminado.|Los valores válidos del nivel de seguimiento son:<br /><br /> <br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado<br /><br /> El valor predeterminado del servidor de informes es "todo:3"|  
   
 ## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> Agregar un valor de configuración personalizado para especificar una ubicación del archivo de volcado  
 Puede agregar una configuración personalizada para establecer la ubicación que utiliza la herramienta Dr. Watson para Windows para almacenar archivos de volcado. El valor predeterminado es **Directory**. El ejemplo siguiente muestra cómo se especifica esta configuración en la sección **RStrace** :  
@@ -100,9 +101,9 @@ Los registros de seguimiento contienen los siguientes archivos:
 ## <a name="previous-versions"></a>Versiones anteriores
 
 En versiones anteriores de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], hubo varios archivos de registro de seguimiento, uno para cada aplicación. Los siguientes archivos están desusados y ya no se crean en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ni en las versiones posteriores.
-+ ReportServerWebApp_ *\<marca de tiempo>* .log
-+ ReportServer_ *\<marca de tiempo>* .log
-+ ReportServerService_main_ *\<marca de tiempo>* .log
++ ReportServerWebApp_ *\<timestamp>* .log
++ ReportServer_ *\<timestamp>* .log
++ ReportServerService_main_ *\<timestamp>* .log
   
 ## <a name="see-also"></a>Consulte también
 

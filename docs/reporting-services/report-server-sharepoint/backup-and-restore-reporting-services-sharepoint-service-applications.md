@@ -1,5 +1,6 @@
 ---
 title: Copias de seguridad y restauración de aplicaciones de servicio de SharePoint de Reporting Services | Microsoft Docs
+description: Obtenga información sobre cómo hacer una copia de seguridad y restaurar aplicaciones de servicio de SQL Server Reporting Services mediante Administración central de SharePoint o PowerShell.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9bf9391bfb9a705379caa6c9f34ae752d2dcc3c6
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574347"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767106"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint de Reporting Services
 
@@ -77,7 +78,7 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Comprobación de la cuenta de ejecución y autenticación de la base de datos
 
- **Cuenta de la ejecución:** para comprobar si la aplicación de servicio utiliza una cuenta de ejecución:  
+ **Cuenta de ejecución:** para comprobar si la aplicación de servicio utiliza una cuenta de ejecución:  
   
 1.  En Administración central de SharePoint, seleccione **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones**.  
   
@@ -87,7 +88,7 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 4.  Si se configura una cuenta de ejecución, tendrá que conocer las credenciales cuando llegue el momento de restaurar una copia de seguridad de la aplicación de servicio. No realice el procedimiento de copia de seguridad y restauración hasta que sepa cuáles son las credenciales correctas.  
   
- **Autenticación de la base de datos:** para comprobar si la aplicación de servicio utiliza la Autenticación de Windows para la autenticación de la base de datos:  
+ **Autenticación de base de datos:** para comprobar si la aplicación de servicio utiliza la Autenticación de Windows para la autenticación de la base de datos:  
   
 1.  En Administración central de SharePoint, seleccione **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones**.  
   
@@ -147,7 +148,7 @@ Para realizar una copia de seguridad de la aplicación de servicio, siga estos p
   
 5.  Seleccione **Aceptar**.  
   
- **Autenticación de la base de datos:** si la aplicación de servicio utilizaba la autenticación de Windows para la autenticación de la base de datos, realice el procedimiento siguiente:  
+ **Autenticación de base de datos:** si la aplicación de servicio utilizaba la autenticación de Windows para la autenticación de la base de datos, realice el procedimiento siguiente:  
   
 1.  En Administración central de SharePoint, seleccione **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones**.  
   

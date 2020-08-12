@@ -1,5 +1,6 @@
 ---
 title: Gráficos (Generador de informes) | Microsoft Docs
+description: Use regiones de datos de gráfico para ayudar a los lectores de los informes paginados a comprender grandes volúmenes de datos agregados de un vistazo en el Generador de informes.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc2a48d56c5d603714353974b0a775b93140fd7a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a5b345d6806a937a62b69a30b515989a58f7ec40
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881964"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Gráficos (Generador de informes y SSRS)
 Lea sobre el uso de las regiones de datos de gráfico para ayudar a los lectores de los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a comprender grandes volúmenes de datos agregados de un vistazo.  

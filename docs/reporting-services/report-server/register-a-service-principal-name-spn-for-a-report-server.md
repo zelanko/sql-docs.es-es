@@ -1,5 +1,6 @@
 ---
 title: Registrar un nombre de entidad de seguridad de servicio (SPN) para un servidor de informes | Microsoft Docs
+description: Obtenga información sobre cómo crear un SPN para el servicio del servidor de informes si se ejecuta como un usuario de dominio, si en la red se usa Kerberos para la autenticación.
 ms.date: 02/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9bfe7a68dc64d2248b9ff9fc4c0696970f692b60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256428"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544507"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar un nombre principal de servicio (SPN) para un servidor de informes
   Si está implementando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una red que usa el protocolo Kerberos para la autenticación mutua, debe crear un nombre principal de servicio (SPN) para el servicio Servidor de informes si lo configura para que se ejecute como una cuenta de usuario de dominio.  
@@ -41,7 +42,7 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
   
  **HTTP** es la clase de servicio. El servicio web del servidor de informes se ejecuta en HTTP.SYS. Una consecuencia de la creación de un SPN para HTTP es que a todas las aplicaciones web del mismo equipo que se ejecutan en HTTP.SYS (incluidas las que se hospedan en IIS) se les concederán vales en función de la cuenta de usuario de dominio. Si esos servicios se ejecutan en una cuenta diferente, se producirá un error en las solicitudes de autenticación. Para evitar este problema, asegúrese de configurar todas las aplicaciones HTTP para ejecutarse en la misma cuenta, o considere la posibilidad de crear los encabezados de host para cada aplicación y crear después SPN independientes para cada encabezado de host. Al configurar los encabezados de host, se requieren cambios de DNS con independencia de la configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Los valores que especifique para \<*nombreDeEquipo* y \<*nombreDeDominio*> identifican la dirección de red única del equipo que hospeda el servidor de informes. Puede ser un nombre de host local o un nombre de dominio completo (FQDN). Si solo tiene un dominio, puede omitir \<*nombreDeDominio*> de la línea de comandos. \<*cuenta-de-usuario-de-dominio*> es la cuenta de usuario con la que se ejecuta el servicio del servidor de informes y para la que es necesario registrar el SPN.  
+ Los valores que especifique para \<*computername*> y \<*domainname*> identifican la dirección de red única del equipo en el que se hospeda el servidor de informes. Puede ser un nombre de host local o un nombre de dominio completo (FQDN). Si solo tiene un dominio, puede omitir \<*domainname*> de la línea de comandos. \<*domain-user-account*> es la cuenta de usuario en la que se ejecuta el servicio del servidor de informes y para la que se debe registrar el SPN.  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>Registrar un nombre principal de servicio para la cuenta de usuario de dominio  
   

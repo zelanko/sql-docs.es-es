@@ -1,7 +1,7 @@
 ---
 title: Operaciones de copia masiva en SQL Server
 description: Describe la funcionalidad de copia masiva del proveedor de datos de .NET para SQL Server.
-ms.date: 09/30/2019
+ms.date: 06/15/2020
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 6ab832627f04825b5cdddc2939108fb427801bc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4896bfdb419cfbd8e2cf6302a0a818407d6a596c
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928907"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85107016"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Operaciones de copia masiva en SQL Server
 
@@ -46,6 +46,9 @@ Describe cómo realizar varias operaciones de copia masiva de datos en una insta
   
 [Operaciones de transacción y de copia masiva](transaction-bulk-copy-operations.md)  
 Describe cómo realizar una operación de copia masiva en una transacción, incluida la forma de confirmar o revertir la transacción.  
+
+[Sugerencias de orden para operaciones de copia masiva](bulk-copy-order-hints.md)  
+Describe cómo usar las sugerencias de orden para mejorar el rendimiento de la copia masiva.
   
 ## <a name="next-steps"></a>Pasos siguientes
 - [SQL Server y ADO.NET](index.md)

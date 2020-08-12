@@ -1,6 +1,6 @@
 ---
 title: Incorporación de una acción de expandir y contraer (Generador de informes y SSRS) | Microsoft Docs
-description: Puede permitir a los usuarios expandir o contraer interactivamente elementos en un informe paginado, o bien expandir o contraer las filas y columnas asociadas a un grupo para una tabla o una matriz.
+description: Permita a los usuarios expandir o contraer elementos, filas y columnas asociadas a un grupo para una tabla o una matriz en un informe del Generador de informes.
 ms.date: 12/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776326093518aa33f8f031e4c4d6675791acf82d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78d67f7d34bd2e146f7f625c1fd8ddb538b3b3eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242552"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681304"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder--ssrs"></a>Incorporación de una acción de expandir y contraer a un elemento (Generador de informes y SSRS)
   Puede permitir a los usuarios expandir o contraer interactivamente elementos en un informe paginado, o bien expandir o contraer las filas y columnas asociadas a un grupo para una tabla o una matriz. Para permitir a los usuarios expandir o contraer un elemento, debe establecer las propiedades de visibilidad del elemento. El establecimiento de la visibilidad funciona en un visor de informes HTML y en ocasiones se denomina acción *de obtención de detalles* .  
@@ -49,7 +49,7 @@ ms.locfileid: "75242552"
   
     -   Seleccione **True** para ocultar el elemento de informe.  
   
-    -   Seleccione **\<Expresión>** para abrir el cuadro de diálogo **Expresión** para crear una expresión que se evalúe en tiempo de ejecución para determinar la visibilidad.  
+    -   Seleccione **\<Expression>** para abrir el cuadro de diálogo **Expresión** a fin de crear una expresión que se evalúe en tiempo de ejecución para determinar la visibilidad.  
   
 5.  En **ToggleItem**, en la lista desplegable, seleccione el nombre de un cuadro de texto al que quiera agregar la imagen de alternancia.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75242552"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Para agregar una acción de expandir y contraer a un elemento de informe  
   
-1.  En la vista de diseño del informe, haga clic con el botón derecho en el elemento de informe que quiera mostrar u ocultar y, después, haga clic en *\<elemento de informe>* **Propiedades**. Se abre el cuadro de diálogo *\<elemento de informe>* **Propiedades** del elemento de informe.  
+1.  En la vista de diseño del informe, haga clic con el botón derecho en el elemento de informe que quiera mostrar u ocultar y, después, haga clic en **Properties de *\<report item>***. Se abre el cuadro de diálogo **Properties de *\<report item>*** para el elemento de informe.  
   
 2.  Haga clic en **Visibilidad**.  
   

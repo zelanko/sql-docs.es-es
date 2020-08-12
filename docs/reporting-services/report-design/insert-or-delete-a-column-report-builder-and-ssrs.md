@@ -1,5 +1,6 @@
 ---
 title: Inserción o eliminación de una columna (Generador de informes) | Microsoft Docs
+description: Agregue o elimine columnas en una región de datos Tablix de un informe paginado. En el Generador de informes, la región de datos Tablix puede ser una tabla, una matriz o una lista.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243b6ea1838e3e6d8666114172ca9c51684878b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b625462a1f4898bae7388842e5825c915eaf93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061736"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Insertar o eliminar una columna (Generador de informes y SSRS)
   Puede agregar o eliminar columnas en una región de datos Tablix de un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . La región de datos Tablix puede ser una tabla, una matriz o una lista. Los procedimientos siguientes no se aplican a las regiones de datos Gráfico y Medidor.  

@@ -1,5 +1,6 @@
 ---
 title: Comparación y sincronización de los datos de dos bases de datos
+description: Obtenga información sobre cómo comparar y sincronizar los datos de dos bases de datos. Aprenda a configurar la comparación, ver las diferencias y actualizar el destino.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +11,17 @@ f1_keywords:
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c53dc1e11d242d6864525aba677e78c67671277c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241579"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519045"
 ---
-# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Cómo: Comparar y sincronizar los datos de dos bases de datos
+# <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procedimientos: Comparación y sincronización de los datos de dos bases de datos
 
 Puede comparar los datos contenidos en dos bases de datos. Las bases de datos que se comparan se conocen como el *origen* y el *destino*.  
   
@@ -39,7 +39,7 @@ Una vez finalizada la comparación, puede realizar otras acciones:
 Para más información, consulte [Comparar y sincronizar datos de una o más tablas con datos de una base de datos de referencia](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 > [!NOTE]  
-> También puede comparar el *esquema* de dos bases de datos o de dos versiones de la misma base de datos. Para más información, consulte [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
+> También puede comparar el *esquema* de dos bases de datos o de dos versiones de la misma base de datos. Para más información, vea: [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
 ## <a name="comparing-database-data"></a><a name="CompareDatabaseData"></a>Comparar datos de bases de datos  
   

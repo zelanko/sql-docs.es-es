@@ -1,21 +1,21 @@
 ---
 title: Analizar el rendimiento de los scripts
+description: Obtenga información sobre cómo las estadísticas de cliente, los planes de ejecución y Code Analysis de SQL Server Data Tools pueden ayudar a mejorar el rendimiento de las consultas, los procedimientos almacenados y los scripts.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0c762da9cf6bb8a2a66831e4a75c98a4360afc6a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbaec18d8f28e820af1905047de89aa6c00e9743
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245562"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519115"
 ---
 # <a name="analyze-script-performance"></a>Analizar el rendimiento de los scripts
 

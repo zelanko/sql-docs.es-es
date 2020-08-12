@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: 'En este artículo se describen las formas en que se puede instalar Distributed Replay: con el Asistente para instalación, en una ventana del símbolo del sistema o por medio de un archivo de configuración.'
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 08e69ce63d3bd3524614f014a2c193cad1634389
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8b05cbaf1978ec06da1f364d337509ca3652d030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681330"
 ---
 # <a name="install-distributed-replay"></a>Instalar Distributed Replay
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Puede instalar Distributed Replay en una de estas tres maneras:  
   
@@ -67,7 +67,7 @@ Puede instalar Distributed Replay en una de estas tres maneras:
   
      \- O BIEN -  
   
-     \<Directorio de características compartidas\Tools\\(directorio de características compartidas alternativo proporcionado por el usuario)  
+     \<Share Feature Directory>\Tools\\ (directorio alternativo de características compartidas proporcionado por el usuario)  
   
 -   En un sistema de 64 bits:  
   
@@ -75,7 +75,7 @@ Puede instalar Distributed Replay en una de estas tres maneras:
   
      \- O BIEN -  
   
-     \<Directorio de características compartidas (x86)>\Tools\\(directorio de características compartidas (x86) alternativo proporcionado por el usuario)  
+     \<Share Feature Directory (x86)>\Tools\\ (directorio alternativo de características compartidas (x86) proporcionado por el usuario)  
   
 #### <a name="to-install-distributed-replay-features"></a>Para instalar las características de Distributed Replay  
   

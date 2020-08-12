@@ -4,24 +4,32 @@ description: Aprenda a obtener información sobre los paquetes de R instalados e
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 05/27/2020
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 78dc96f3568bd2a19f2604d76d47010f9d9104a0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 877728812d36a7d4db8370254c0fdccbe1011350
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723941"
 ---
 # <a name="get-r-package-information"></a>Obtención de información de paquetes de R
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-En este artículo se describe cómo obtener información sobre los paquetes de R instalados en SQL Server Machine Learning Services y SQL Server R Services. Los scripts de R de ejemplo muestran cómo mostrar información de paquetes, como la ruta de instalación y la versión.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+En este artículo se describe cómo obtener información sobre los paquetes de R instalados en [Machine Learning Services en SQL Server](../sql-server-machine-learning-services.md) y en [Clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md). Los scripts de R de ejemplo muestran cómo mostrar información de paquetes, como la ruta de instalación y la versión.
+::: moniker-end
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+En este artículo se describe cómo obtener información sobre los paquetes de R instalados en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Los scripts de R de ejemplo muestran cómo mostrar información de paquetes, como la ruta de instalación y la versión.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En este artículo se describe cómo obtener información sobre los paquetes de R instalados en [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). Los scripts de R de ejemplo muestran cómo mostrar información de paquetes, como la ruta de instalación y la versión.
+::: moniker-end
 
 ## <a name="default-r-library-location"></a>Ubicación predeterminada de las bibliotecas de R
 
@@ -90,7 +98,7 @@ Los siguientes paquetes de R de Microsoft se instalan con SQL Server Machine Le
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 Los siguientes paquetes de R de Microsoft se instalan con SQL Server Machine Learning Services al seleccionar la característica de R durante la instalación.
 
@@ -174,6 +182,6 @@ print(packageDescription("MicrosoftML"))
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [Instalación de paquetes con herramientas de R](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [Instalación de nuevos paquetes de R con sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

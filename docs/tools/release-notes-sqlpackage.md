@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262129"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353102"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas de la versión de SqlPackage.exe
 
@@ -34,6 +34,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="1851-sqlpackage"></a>sqlpackage 18.5.1
+
+|Plataforma|Descargar|Fecha de la versión|Versión|Build
+|:---|:---|:---|:---|:---|
+|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2134206)|24 de junio de 2020|18.5.1|15.0.4826.1|
+|macOS .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2134312)|24 de junio de 2020| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2134311)|24 de junio de 2020| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2134310)|24 de junio de 2020| 18.5.1|15.0.4826.1|
+
+### <a name="fixes"></a>Correcciones
+| Característica | Detalles |
+| :------ | :------ |
+| Implementación | Se ha corregido una regresión que apareció en la versión 18.5 que provocaba un error "Sintaxis incorrecta cerca de "tipo"" al implementar un paquete DAC o importar un bacpac con un usuario con inicio de sesión externo en el entorno local. | 
+
 ## <a name="185-sqlpackage"></a>sqlpackage 18.5
 
 |Plataforma|Descargar|Fecha de la versión|Versión|Build
@@ -51,7 +66,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Implementación | Adición de compatibilidad de Azure SQL Data Warehouse con el índice de almacén de columnas agrupado ordenado |
 | Implementación | Adición de compatibilidad con el origen de datos externo (para Oracle, Teradata, MongoDB/CosmosDB, ODBC, clúster de macrodatos) y la tabla externa para el clúster de macrodatos de SQL Server 2019 |
 | Implementación | Adición de la instancia de SQL Database Edge como edición compatible |
-| Implementación | Compatibilidad con nombres de servidor de Instancia administrada del formulario "\<servidor>.\<dnszone>.database.windows.net" |
+| Implementación | Compatibilidad con nombres de servidor de Instancia administrada con el formato "\<server>.\<dnszone>.base_de_datos.windows.net" |
 | Implementación | Adición de compatibilidad con el comando de copia en Azure SQL Data Warehouse |
 | Implementación | Adición de la opción de implementación "IgnoreTablePartitionOptions" durante la publicación para evitar que se vuelva a crear la tabla cuando se produzcan cambios en la función de partición en la tabla para Azure SQL Data Warehouse |
 | .NET Core | Adición de compatibilidad con Microsoft.Data.SqlClient en la versión de .NET Core de sqlpackage |
@@ -60,7 +75,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Correcciones
 | Fix | Detalles |
 | :-- | :------ |
-| Implementación | Corrección la publicación del dacpac de una base de datos que contiene un usuario externo que generaba un error "Referencia a objeto no establecida como instancia de un objeto" |
 | Implementación | Corrección del análisis de la ruta de acceso JSON como expresión |
 | Implementación | Corrección de la generación de instrucciones GRANT para los permisos AlterAnyDatabaseScopedConfiguration y AlterAnySensitivityClassification |
 | Implementación | Corrección del permiso de script externo que no se reconoce |
@@ -71,6 +85,13 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom | Corrección del error ScriptDom donde no se podían reconocer las restricciones insertadas definidas después de un índice insertado |
 | ScriptDom | Corrección del paréntesis de cierre que faltaba en ScriptDom SYSTEM_TIME en una instrucción por lotes |
 | Always Encrypted | Corrección de la tabla #tmpErrors que no se puede quitar si sqlpackage se vuelve a conectar y la tabla temporal ya no existe porque desaparece cuando la conexión termina |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conocidos
+| Característica | Detalles |
+| :------ | :------ |
+| Implementación |  Ha aparecido una regresión en la versión 18.5 que provoca un error "Sintaxis incorrecta cerca de "tipo"" al implementar un paquete DAC o importar un bacpac con un usuario con inicio de sesión externo en el entorno local. La solución alternativa consiste en usar sqlpackage 18.4 y se corregirá en la siguiente versión de sqlpackage. | 
+| .NET Core | Se produce un "Error irrecuperable de conexión interna" al importar archivos bacpac con la clasificación de confidencialidad debido a este [problema conocido](https://github.com/dotnet/SqlClient/issues/559) en Microsoft.Data.SqlClient. Este problema se solucionará en la próxima versión de sqlpackage. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage

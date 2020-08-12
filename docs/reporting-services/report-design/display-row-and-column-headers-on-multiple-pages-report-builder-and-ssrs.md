@@ -1,6 +1,6 @@
 ---
 title: Visualización de encabezados de columna y de fila en varias páginas (Generador de informes) | Microsoft Docs
-description: Puede controlar si se deben repetir los encabezados de fila y de columna en cada página de un informe paginado de Reporting Services de una región de datos Tablix (una tabla, matriz o lista) que abarca varias páginas.
+description: Aprenda a controlar la repetición de encabezados de fila y columna en cada página de un informe paginado de una región de datos Tablix que abarca varias páginas en el Generador de informes.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 12/09/2019
-ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a0ece423e7396e2c3aab07cc1882cf1e7f5b09ad
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254590"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778647"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Mostrar encabezados de fila y de columna en varias páginas (Generador de informes y SSRS)
 

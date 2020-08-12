@@ -1,5 +1,6 @@
 ---
 title: Eliminación de objetos y resolución de dependencias
+description: Obtenga información sobre cómo cambiar el nombre de los objetos de base de datos o eliminarlos. Vea qué objetos dependientes actualiza SSDT de forma automática y qué dependencias tiene que actualizar.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +11,17 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c9f2bd6ed462004d76750fb2328d1615a51c2c84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aecacc373ccd1392217d57d51875094a5f9d4d34
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241425"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519065"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Cómo: Eliminar objetos y resolver dependencias
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Procedimientos: Eliminación de objetos y resolución de dependencias
 
 Al cambiar el nombre de un objeto o eliminarlo en el **Explorador de objetos de SQL Server**, SQL Server Data Tools detecta automáticamente todos sus objetos de dependencia y preparará un script ALTER para cambiar el nombre de la dependencia o quitarla según sea necesario.  
   
@@ -47,7 +47,7 @@ Al cambiar el nombre de un objeto o eliminarlo en el **Explorador de objetos de 
     > [!WARNING]  
     > SSDT no actualizará automáticamente las dependencias basadas en scripts, como referencias a una tabla desde una vista o procedimientos almacenados. Después del cambio de nombre, puede usar el panel **Lista de errores** para encontrar todas las demás dependencias y corregirlas manualmente.  
   
-5.  Aplique el cambio siguiendo los pasos descritos en el procedimiento [Cómo: Actualizar una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+5.  Aplique el cambio siguiendo los pasos descritos en el procedimiento anterior [Cómo: Actualizar una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 6.  Vuelva a hacer clic con el botón derecho en la tabla **Customers** en el **Explorador de objetos de SQL Server** y seleccione **Ver datos**. Observe que los datos de la tabla están intactos después de la operación de cambio de nombre.  
   

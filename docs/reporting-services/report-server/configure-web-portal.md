@@ -1,5 +1,6 @@
 ---
 title: Configurar el portal web | Microsoft Docs
+description: Aprenda a configurar la aplicación del portal web que se usa para ver informes, administrar el contenido del servidor de informes y conceder acceso de usuario a un servidor de informes en modo nativo.
 ms.date: 05/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52a6055a3b3c79c08622d89b2931a48eedd14d76
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63308401"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548057"
 ---
 # <a name="configure-the-web-portal"></a>Configurar el portal web
 
 El portal web es una aplicación front-end web que se usa para ver informes, administrar el contenido del servidor de informes y conceder acceso de usuario a un servidor de informes en modo nativo. El portal web se instala con el servicio web del servidor de informes en la misma instancia del servidor de informes y, opcionalmente, se configura si se selecciona la opción **Instalar la configuración predeterminada del modo nativo** en el programa de instalación. También puede configurar el portal web después de haber realizado la instalación. En este tema se proporciona información sobre los siguientes escenarios de configuración del portal web:
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Para usar el portal web, debe cumplir los requisitos previos siguientes:
 
@@ -60,7 +61,7 @@ Cuando se configuran direcciones URL en la herramienta Configuración de [!INCLU
 
 #### <a name="to-configure-a-static-report-server-url"></a>Para configurar una dirección URL estática del servidor de informes
 
-1. Abra el archivo **RsReportServer.config** en un editor de texto. De forma predeterminada, se encuentra en \Archivos de programa\Microsoft SQL Server\MSRS12.\<*nombreDeInstancia*>\Reporting Services\ReportServer.  
+1. Abra el archivo **RsReportServer.config** en un editor de texto. De forma predeterminada, se encuentra \Archivos de programa\Microsoft SQL Server\MSRS12.\<*instancename*>\Reporting Services\ReportServer.  
 
 2. Busque **ReportServerURL**.
 
@@ -80,7 +81,7 @@ Puede crear un paquete de marca personalizado para modificar los colores usados 
 
 2. Abra Internet Explorer.
 
-3. Escriba la dirección URL del portal web. De forma predeterminada, es https://\<**nombreDeServidor**>/reports, pero si ha instalado Reporting Services como una instancia con nombre, la dirección URL predeterminada será https://\<**nombreDeServidor**>/reports\< **_nombreDeInstancia**>.
+3. Escriba la dirección URL del portal web. De forma predeterminada, es https://\<**your-server-name**>/reports, pero si ha instalado Reporting Services como una instancia con nombre, la dirección URL predeterminada será https://\<**your-server-name**>/reports\<**_instancename**>.
 
 4. Seleccione **Configuración del sitio**.
 

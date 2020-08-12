@@ -1,23 +1,23 @@
 ---
 title: Incorporación de condiciones de prueba a pruebas unitarias de SQL Server
+description: Obtenga información sobre cómo agregar condiciones de prueba a una prueba unitaria de SQL Server. Vea cómo usar el Diseñador de pruebas unitarias de SQL Server para esta tarea.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4216358a4b8b541ed724b70fe68245a16235664b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e78a045c3dd7127df8c692120ff140892594fb0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241628"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518935"
 ---
-# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Cómo: Agregar condiciones de prueba a pruebas unitarias de SQL Server
+# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Procedimientos: Incorporación de condiciones de prueba a pruebas unitarias de SQL Server
 
 Puede agregar condiciones de prueba a una prueba unitaria de SQL Server mediante el **Diseñador de pruebas unitarias de SQL Server**. Cuando guarda la clase de prueba, las condiciones de prueba se guardan automáticamente en el proyecto de prueba como código de Visual C\# o de Visual Basic en el archivo de código fuente que contiene la clase de prueba. Después de guardar una condición de prueba, puede editarla en el **Diseñador de pruebas unitarias de SQL Server** o en su archivo de código fuente.  
   

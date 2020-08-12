@@ -1,5 +1,6 @@
 ---
 title: Función Aggregate (Generador de informes) | Microsoft Docs
+description: La función Aggregate devuelve un agregado personalizado de la expresión especificada, según la defina el proveedor de datos.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c2590431193fa48bf4467fb30c5abc6cbf5a037
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aef4411334ee9ca345a5b2f2c8b325c6fd2dae70
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079139"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462419"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Funciones del Generador de informes: función Aggregate
   Devuelve un agregado personalizado de la expresión especificada, según esté definido en el proveedor de datos.  

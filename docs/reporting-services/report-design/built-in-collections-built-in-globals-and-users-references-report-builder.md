@@ -1,5 +1,6 @@
 ---
 title: Referencias a campos globales y de usuario integrados (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre los valores que se pueden usar en expresiones para filtrar los resultados de un informe en el Generador de informes.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8dfd41dfbcbd35712fb2e13925b047e4ed2db962
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23c0167fddf6887d0ff4e25dcfcd9242434b4f66
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082211"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462199"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Colecciones integradas: referencias a campos globales y de usuario integrados (Generador de informes)
   La colección de campos integrados, que incluye las colecciones **Globals** y **User** , representa valores globales proporcionados por Reporting Services al procesar un informe. La colección **Globals** proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección **User** proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  
@@ -42,7 +43,7 @@ ms.locfileid: "77082211"
 ### <a name="renderformat"></a>RenderFormat  
  En esta tabla se describen los miembros de **RenderFormat**.  
   
-|Member|Tipo|Descripción|  
+|Miembro|Tipo|Descripción|  
 |------------|----------|-----------------|  
 |Nombre|**String**|Nombre del representador como está registrado en el archivo de configuración de RSReportServer.<br /><br /> Está disponible durante el ciclo de procesamiento o representación de partes concretas del informe.|  
 |IsInteractive|**Boolean**|Si la solicitud de representación actual utiliza un formato de representación interactivo.|  

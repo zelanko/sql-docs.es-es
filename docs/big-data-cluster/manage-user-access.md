@@ -8,16 +8,16 @@ ms.date: 12/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f9cca7e761b8f8ec3f5b87e9a195a0eb8b5da6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94719ef65023b1afd4edcf7770887323d0267127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76259463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730623"
 ---
 # <a name="manage-big-data-cluster-access-in-active-directory-mode"></a>Administración del acceso al clúster de macrodatos en el modo de Active Directory
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En este artículo se describe cómo actualizar los grupos de Active Directory que se proporcionan durante la implementación para clusterAdmins y clusterUsers.
 
@@ -81,7 +81,7 @@ Al seguir los procedimientos de esta sección, puede conceder acceso de administ
 
 1. Use la conexión anterior para insertar una fila en la tabla de roles. Escriba el valor *REALM* en mayúsculas.
 
-   Si va a conceder permisos de administrador, use el rol *bdcAdmin* en el *\<nombre del rol>* . Para los usuarios que no son administradores, use el rol *bdcUser*.
+   Si va a conceder permisos de administrador, use el rol *bdcAdmin* en *\<role name>* . Para los usuarios que no son administradores, use el rol *bdcUser*.
 
    ```sql
    USE controller;

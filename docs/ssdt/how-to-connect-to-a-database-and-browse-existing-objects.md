@@ -1,5 +1,6 @@
 ---
 title: Conectar con una base de datos y examinar objetos existentes
+description: Aprenda a usar el Explorador de objetos de SQL Server en Visual Studio para conectarse a instancias de SQL Server locales y remotas.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,18 +9,17 @@ f1_keywords:
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b2195bd66960640747381db5fd3a1390c7d3e342
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75755822"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519025"
 ---
-# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Cómo: Conectar con una base de datos y examinar objetos existentes
+# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Procedimientos: Conectar con una base de datos y examinar objetos existentes
 
 Una tarea muy frecuente que realizan los administradores y desarrolladores de bases de datos es conectarse a una base de datos activa, diseñar o examinar su esquema y realizar consultas de sus objetos. El Explorador de objetos de SQL Server de Visual Studio contiene ahora un nodo **SQL Server** dedicado bajo el cual están agrupadas todas las instancias conectadas de SQL Server y sus bases de datos, en una jerarquía similar a la de SSMS. Las instancias conectadas de SQL Server pueden ser una instancia local, como un servidor con SQL Server 2008 en ejecución, o una instancia remota de SQL Azure.  
   

@@ -1,5 +1,6 @@
 ---
 title: Aplicación de formato a los punteros de un medidor (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo indicar el valor actual de un medidor en un informe paginado en el Generador de informes mediante la aplicación de formato a los puntos del medidor.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 541cc806804dc2095d7a33c33c449d6cf8768608
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 21f02918ca00e272292b0f88557677848dae0aab
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079771"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681494"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a los punteros de un medidor (Generador de informes y SSRS)
  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el puntero de un medidor indica el valor actual del medidor.   

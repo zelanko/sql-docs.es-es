@@ -1,5 +1,6 @@
 ---
 title: Función Avg (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre la función Avg en los informes paginados, que devuelve el promedio de todos los valores numéricos no NULL especificados por la expresión en el Generador de informes.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c29c03ea3942f9fd89fd7e148d65a3fe4c8b9f33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 983d0158582b7ead50ece81eb7f3d67bbe5777ad
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081312"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462399"
 ---
 # <a name="report-builder-functions---avg-function"></a>Funciones del Generador de informes: función Avg
 En los informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , devuelve el promedio de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  

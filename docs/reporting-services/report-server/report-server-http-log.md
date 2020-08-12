@@ -1,5 +1,6 @@
 ---
 title: Registro HTTP del servidor de informes | Microsoft Docs
+description: Aprenda a habilitar el registro HTTP del servidor de informes después de instalar Reporting Services. Esta característica registra todas las solicitudes y respuestas HTTP que controla un servidor de informes.
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140461"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548007"
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
   El archivo de registro HTTP del servidor de informes guarda un registro de cada solicitud y respuesta HTTP administradas por el servidor de informes. Dado que los errores de desbordamiento y de tiempo de espera de la solicitud no alcanzan el servidor de informes, no se graban en el archivo de registro.  
@@ -27,8 +28,8 @@ ms.locfileid: "67140461"
   
 |||  
 |-|-|  
-|Nombre de archivo|De forma predeterminada, el nombre del archivo es ReportServerService_HTTP_\<marcaDeTiempo>.log. Puede personalizar el prefijo del nombre de archivo si modifica el atributo HttpTraceFileName en el archivo ReportingServicesService.exe.config. La marca de tiempo se basa en la hora universal coordinada (UTC).|  
-|Ubicación del archivo|El archivo se encuentra en \Microsoft SQL Server\\ *\<Instancia de SQL Server>* \Reporting Services\LogFiles.|  
+|Nombre de archivo|De forma predeterminada, el nombre del archivo es ReportServerService_HTTP_\<timestamp>.log. Puede personalizar el prefijo del nombre de archivo si modifica el atributo HttpTraceFileName en el archivo ReportingServicesService.exe.config. La marca de tiempo se basa en la hora universal coordinada (UTC).|  
+|Ubicación del archivo|El archivo se encuentra en \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles.|  
 |Formato de archivo|El archivo está en formato EN-US. Es un archivo de texto ASCII.|  
 |Creación y retención de archivos|El registro HTTP se crea tras habilitarlo en el archivo de configuración, de reiniciar el servicio y de que el servidor de informes procese una solicitud HTTP. Si configura los valores pero no ve el archivo de registro, abra un informe o inicie una aplicación de servidor de informes (como el portal web) para generar una solicitud HTTP y crear el archivo.<br /><br /> Se creará una nueva instancia del archivo de registro después de cada reinicio del servicio y de la solicitud HTTP subsiguiente al servidor de informes.<br /><br /> De manera predeterminada, los registros de seguimiento están limitados a 32 megabytes y se eliminan transcurridos 14 días.|  
   
@@ -58,7 +59,7 @@ ms.locfileid: "67140461"
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Este valor es opcional. El valor predeterminado es ReportServerServiceHTTP_. Puede especificar un valor diferente si desea utilizar una convención de nomenclatura de archivos diferente (por ejemplo, para incluir el nombre de servidor si guarda los archivos de registro en una ubicación central).|Sí|  
 |HTTPTraceSwitches|Este valor es opcional. Si lo especifica, puede configurar los campos utilizados en el archivo de registro con un formato separado por comas.|No|  
-|Date|Fecha en que se produjo la actividad.|No|  
+|Fecha|Fecha en que se produjo la actividad.|No|  
 |Time|Hora en que se produjo la actividad.|No|  
 |ClientIp|Dirección IP del cliente que tiene acceso al servidor de informes.|Sí|  
 |UserName|Nombre del usuario que tuvo acceso al servidor de informes.|No|  

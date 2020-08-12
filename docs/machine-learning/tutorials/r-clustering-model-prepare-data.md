@@ -1,48 +1,50 @@
 ---
 title: 'Tutorial: Preparación de datos para realizar la agrupación en clústeres en R'
 titleSuffix: SQL machine learning
-description: En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos de SQL para realizar la agrupación en clústeres en R con el aprendizaje automático de SQL.
+description: En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos para realizar la agrupación en clústeres en R con el aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adeda8bf04333bb256daea8ebc3cab1288f9aebf
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a83268efebbe53a12806c3e52a38e3c5ea2d94e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728553"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Tutorial: Preparación de datos para realizar la agrupación en clústeres en R con el aprendizaje automático de SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos de SQL para realizar la agrupación en clústeres en R con SQL Database Machine Learning Services o en clústeres de macrodatos.
+En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos para realizar la agrupación en clústeres en R con SQL Server Machine Learning Services o en Clústeres de macrodatos.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos de SQL para realizar la agrupación en clústeres en R con SQL Database Machine Learning Services.
+En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos para realizar la agrupación en clústeres en R con SQL Server Machine Learning Services.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos de SQL para realizar la agrupación en clústeres en R con SQL Database R Services.
+En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos para realizar la agrupación en clústeres en R con SQL Server 2016 R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos para realizar la agrupación en clústeres en R con Machine Learning Services en Azure SQL Managed Instance.
 ::: moniker-end
 
 En este artículo, aprenderá a:
 
 > [!div class="checklist"]
 > * Separar clientes en diferentes dimensiones mediante R
-> * Cargar los datos de la base de datos de SQL en una trama de datos de R
+> * Cargar los datos de la base de datos en una trama de datos de R
 
 En la [parte uno](r-clustering-model-introduction.md), ha instalado los requisitos previos y ha restaurado la base de datos de ejemplo.
 
 En la [parte tres](r-clustering-model-build.md), aprenderá a crear y entrenar un modelo de agrupación en clústeres k-means en R.
 
-En la [parte cuatro](r-clustering-model-deploy.md), aprenderá a crear un procedimiento almacenado en una base de datos SQL que pueda realizar la agrupación en clústeres en R basándose en datos nuevos.
+En la [parte cuatro](r-clustering-model-deploy.md), descubrirá cómo crear un procedimiento almacenado en una base de datos que pueda realizar la agrupación en clústeres en R basándose en datos nuevos.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
@@ -63,9 +65,9 @@ En la función **connStr**, reemplace **ServerName** por su propia información 
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;uid=Username;pwd=Password"
 
-#Define the query to select data from SQL Server
+#Define the query to select data
 input_query <- "
 SELECT ss_customer_sk AS customer
     ,round(CASE 
@@ -124,7 +126,7 @@ LEFT OUTER JOIN (
         SUM(sr_return_amt) AS returns_money
     FROM store_returns
     GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
+    ) returned ON ss_customer_sk = sr_customer_sk";
 ```
 
 ## <a name="load-the-data-into-a-data-frame"></a>Carga de los datos en una trama de datos
@@ -132,7 +134,7 @@ LEFT OUTER JOIN (
 Ahora, use el siguiente script para que se devuelvan los resultados de la consulta a una trama de datos de R.
 
 ```r
-# Query SQL Server using input_query and get the results back
+# Query using input_query and get the results back
 # to data frame customer_data
 
 library(RODBC)
@@ -141,7 +143,7 @@ ch <- odbcDriverConnect(connStr)
 
 customer_data <- sqlQuery(ch, input_query)
 
-# Take a look at the data just loaded from SQL Server
+# Take a look at the data just loaded
 head(customer_data, n = 5);
 ```
 
@@ -165,7 +167,7 @@ Si no quiere continuar con este tutorial, elimine la base de datos tpcxbb_1gb.
 En la parte dos de la serie de tutoriales, ha aprendido a:
 
 * Separar clientes en diferentes dimensiones mediante R
-* Cargar los datos de la base de datos de SQL en una trama de datos de R
+* Cargar los datos de la base de datos en una trama de datos de R
 
 Para crear un modelo de aprendizaje automático que use estos datos de clientes, siga la parte tres de esta serie de tutoriales:
 

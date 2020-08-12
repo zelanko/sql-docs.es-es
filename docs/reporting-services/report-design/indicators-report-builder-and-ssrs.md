@@ -1,5 +1,6 @@
 ---
 title: Indicadores (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre los indicadores, los pequeños medidores que comunican el estado de un único valor de datos en los informes paginados del Generador de informes.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,15 +16,15 @@ f1_keywords:
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2e62ec26c0019e82b3f0e37dbdd9c1539332212
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2b440f82dc7d758e7f6eb17bdf0f13e818348423
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082068"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779517"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicadores (Generador de informes y SSRS)
-  En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , los indicadores son medidores mínimos que comunican el estado del valor de un dato de un vistazo. Los iconos que representan a los indicadores y sus estados son simples y visualmente efectivos incluso cuando su tamaño es pequeño.  
+  En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], los indicadores son medidores pequeños que comunican el estado de un único valor de datos de un vistazo. Los iconos que representan a los indicadores y sus estados son simples y visualmente efectivos incluso cuando su tamaño es pequeño.  
   
  Puede usar indicadores de estado en los informes para mostrar lo siguiente:  
   
@@ -41,7 +42,7 @@ ms.locfileid: "77082068"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona conjuntos de indicadores integrados e iconos de indicadores para usarlos tal cual, y también puede personalizar iconos de indicadores individuales y conjuntos de indicadores para satisfacer sus necesidades.  
   
- Para obtener más información sobre el uso de indicadores como KPI, vea [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Para más información sobre el uso de indicadores como KPI, consulte el [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
   
 > [!NOTE]  
 >  Puede publicar indicadores por separado de un informe como elementos de informe. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -142,13 +143,13 @@ ms.locfileid: "77082068"
 |--------------------|-----------------|---------------|  
 |Rojo|0|3500|  
 |Amarillo|3500|5000|  
-|Verde|5000|10000|  
+|Verde|5000|10 000|  
   
  La flecha roja hacia abajo representa el valor 3500 y la flecha amarilla horizontal, 5000.  
   
 |Secuencia de estado|Valor inicial|Valor final|  
 |--------------------|-----------------|---------------|  
-|Verde|5000|10000|  
+|Verde|5000|10 000|  
 |Amarillo|3500|5000|  
 |Rojo|0|3500|  
   
@@ -156,7 +157,7 @@ ms.locfileid: "77082068"
   
 |Secuencia de estado|Valor inicial|Valor final|  
 |--------------------|-----------------|---------------|  
-|Verde|5000|10000|  
+|Verde|5000|10 000|  
 |Rojo|0|3500|  
 |Amarillo|3500|5000|  
   
@@ -166,7 +167,7 @@ ms.locfileid: "77082068"
 |--------------------|-----------------|---------------|  
 |Amarillo|3500|5000|  
 |Rojo|0|3500|  
-|Verde|5000|10000|  
+|Verde|5000|10 000|  
   
  La flecha amarilla hacia abajo ahora representa tanto el valor 3500 como el 5000.  
   

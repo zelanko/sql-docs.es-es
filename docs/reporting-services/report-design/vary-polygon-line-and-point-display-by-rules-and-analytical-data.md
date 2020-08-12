@@ -1,5 +1,6 @@
 ---
 title: Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos | Microsoft Docs
+description: Controle la presentación de polígonos, líneas y puntos mediante el establecimiento de opciones y reglas, o bien invalide las opciones de los elementos de mapa insertados en el Generador de informes.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c323a03752ea7b9e0c7450dc53446191f3c3315
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b251d3483d999ee2e4923502608bb9254e44776a
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578444"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012223"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos
   Las opciones de presentación de polígonos, líneas y puntos en una capa de mapa se controlan estableciendo las opciones de la capa y las reglas para los elementos de mapa de la capa, o invalidando las opciones de elementos de mapa insertados concretos de una capa.  
@@ -100,13 +101,13 @@ ms.locfileid: "65578444"
   
  En la lista siguiente, suponga que tiene tres elementos de mapa y seis valores analíticos relacionados que van de 1 a 9999 con los valores siguientes: 1, 10, 200, 2000, 4777 y 8999.  
   
--   **EqualInterval** . Cree intervalos que dividan los datos en intervalos de rangos iguales. En el ejemplo, los tres intervalos serían 0-2999, 3000-5999, 6000-8999. Subintervalo 1: 1, 10, 200, 500. Subintervalo 2: 4777. Subintervalo 3: 8999. Este método no tiene en cuenta cómo se distribuyen los datos. Los valores muy grandes o muy pequeños pueden sesgar los resultados de la distribución.  
+-   **EqualInterval** . Cree intervalos que dividan los datos en intervalos de rangos iguales. En el ejemplo, los tres intervalos serían 0-2999, 3000-5999, 6000-8999. Subintervalo 1: 1, 10, 200, 500. Subintervalo 2: 4777. Subintervalo 3: 8999. Este método no tiene en cuenta cómo se distribuyen los datos. Los valores muy grandes o muy pequeños pueden sesgar los resultados de la distribución.  
   
--   **EqualDistribution** . Cree intervalos que dividan los datos de modo que cada intervalo tenga un número igual de elementos. En los datos de ejemplo, los tres intervalos serían 0-10, 11-500, 501-8999. Subintervalo 1: 1, 10. Subintervalo 2: 200, 500. Subintervalo 3: 4777, 8999. Este método puede sesgar la distribución al crear divisiones que abarcan intervalos muy grandes o muy pequeños.  
+-   **EqualDistribution** . Cree intervalos que dividan los datos de modo que cada intervalo tenga un número igual de elementos. En los datos de ejemplo, los tres intervalos serían 0-10, 11-500, 501-8999. Subintervalo 1: 1, 10. Subintervalo 2: 200, 500. Subintervalo 3: 4777, 8999. Este método puede sesgar la distribución al crear divisiones que abarcan intervalos muy grandes o muy pequeños.  
   
 -   **Óptimo** . Cree intervalos que ajusten automáticamente la distribución para crear subintervalos equilibrados. El algoritmo determina el número de subintervalos.  
   
--   **Personalizado.** Especifique su propio número de intervalos para controlar la distribución de valores. En los datos de ejemplo, puede especificar tres intervalos: 1-2, 3-8, 9.  
+-   **Personalizado.** Especifique su propio número de intervalos para controlar la distribución de valores. En los datos de ejemplo, puede especificar tres intervalos: 1-2, 3-8, 9.  
   
  Las reglas utilizan los valores de distribución para variar los valores de presentación de los elementos de mapa.  
   
@@ -123,7 +124,7 @@ ms.locfileid: "65578444"
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Muestra la moneda del valor total sin posiciones decimales.|400 $|  
 |`#FROMVALUE {C2}`|Muestra la moneda del valor total con dos posiciones decimales.|400,55 $|  
-|`#TOVALUE`|Muestra el valor numérico real del campo de datos.|10000|  
+|`#TOVALUE`|Muestra el valor numérico real del campo de datos.|10 000|  
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Muestra los valores numéricos reales del principio y el fin del intervalo.|10 - 790|  
   
 ## <a name="see-also"></a>Consulte también  

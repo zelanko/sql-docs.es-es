@@ -1,5 +1,6 @@
 ---
 title: Especificación de las rutas de acceso a los elementos externos (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo especificar rutas de acceso en las propiedades de los elementos de informe para hacer referencia a elementos externos al archivo de definición de informe en el Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6ec449fd6b57c81e25e2a05e1702748dd88197d3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080909"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681474"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Especificar las rutas de acceso a los elementos externos (Generador de informes y SSRS)
   Especifique rutas de acceso en las propiedades de los elementos de informe para hacer referencia a elementos tales como informes detallados, subinformes y archivos de imagen que son externos al archivo de definición de informe y se guardan en un servidor de informes.  
@@ -37,7 +38,7 @@ ms.locfileid: "77080909"
   
 -   **Una ruta de acceso completa al elemento.**  
   
-    -   **En un servidor de informes:** la ruta de acceso empieza desde **/** , la carpeta particular. Por ejemplo, /Informes/TodosLosSubinformes/Subinforme1.  
+    -   **En un servidor de informes:** la ruta de acceso completa se inicia en **/** , la carpeta Inicio. Por ejemplo, /Informes/TodosLosSubinformes/Subinforme1.  
   
     -   **En un sitio de SharePoint** : debe especificar el nombre del informe en una expresión, con la dirección URL completa del elemento y la extensión de archivo .rdl. Por ejemplo, `="https://server/site/library/folder/Report1.rdl"`.  
   

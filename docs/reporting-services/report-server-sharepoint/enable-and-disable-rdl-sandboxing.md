@@ -1,5 +1,6 @@
 ---
 title: Habilitar y deshabilitar el espacio seguro para RDL para Reporting Services en el modo integrado de SharePoint | Microsoft Docs
+description: Con el espacio aislado de RDL, puede detectar y restringir el uso de los tipos de recursos por parte de los inquilinos en los que varios inquilinos usan una única granja de servidores de informes.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d86cf9bbf284ad76c7423900c10a74f7ca26faa
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577768"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767033"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Habilitar y deshabilitar el espacio seguro para RDL para Reporting Services en el modo integrado de SharePoint
 
@@ -104,7 +105,7 @@ Puede modificar la característica de espacio aislado de RDL para administrar lo
   
 -   Miembros estáticos de un tipo.  
   
--   El método [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]New**de**.  
+-   El método **New** de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
 -   El elemento **\<Classes>** en la definición del informe.  
   
@@ -128,7 +129,7 @@ Puede modificar la característica de espacio aislado de RDL para administrar lo
   
  Para agregar funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue los tipos correspondientes del espacio de nombres Microsoft.VisualBasic a la lista de permitidos.  
   
- Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar la palabra clave **Integer** de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, agregue el fragmento XML siguiente al elemento **\<RDLSandboxing>**:  
+ Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar la palabra clave **Integer** de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, agregue el fragmento XML siguiente al elemento **\<RDLSandboxing>** :  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  

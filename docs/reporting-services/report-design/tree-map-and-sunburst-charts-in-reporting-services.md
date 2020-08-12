@@ -1,5 +1,6 @@
 ---
 title: Gráficos de rectángulos y de proyección solar en SQL Server Reporting Services | Microsoft Docs
+description: Obtenga información sobre cómo representar visualmente datos jerárquicos mediante un gráfico de rectángulos o de proyección solar en el Generador de informes.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af294ac47e7523f0b0dba5a57bbf2318bbe8c149
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259365"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255438"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de rectángulos y de proyección solar en Reporting Services 
 
@@ -115,7 +116,7 @@ La consulta devuelve los datos detallados de los pedidos de venta de AdventureWo
   
 1. **Obtener los datos**.  
   
-     La consulta de esta sección se basa en la base de datos de AdventureWorks, que puede descargar en GitHub: [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
+     La consulta de esta sección se basa en la base de datos de AdventureWorks, que puede descargar en GitHub: [Copia de seguridad completa de AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
 
 2. **Crear un origen de datos**.  
   

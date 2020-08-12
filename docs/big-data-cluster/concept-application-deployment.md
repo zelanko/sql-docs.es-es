@@ -2,26 +2,26 @@
 title: ¿Qué es la implementación de la aplicación?
 titleSuffix: SQL Server Big Data Clusters
 description: En este artículo se describe la implementación de la aplicación en clústeres de macrodatos para SQL Server 2019.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831577"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215454"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>¿Qué es la implementación de la aplicación en un clúster de macrodatos?
 
 La implementación de la aplicación permite la implementación de aplicaciones en el clúster de macrodatos proporcionando interfaces para crear, administrar y ejecutar aplicaciones. Las aplicaciones implementadas en el clúster de macrodatos se benefician de la capacidad de cálculo del clúster y pueden tener acceso a los datos que están disponibles en el clúster. Esto aumenta la escalabilidad y el rendimiento de las aplicaciones, al tiempo que se administran las aplicaciones en las que residen los datos. Los tiempos de ejecución de aplicaciones compatibles en los Clústeres de macrodatos de SQL Server son R, Python, SSIS, MLeap.
 
-En las secciones siguientes se describe la arquitectura y funcionalidad de la implementación de la aplicación.
+En las secciones siguientes se describe la arquitectura y las funciones de la implementación de la aplicación.
 
 ## <a name="application-deployment-architecture"></a>Arquitectura de implementación de la aplicación
 
@@ -53,9 +53,31 @@ Una vez que se ha creado el conjunto ReplicaSet y se han iniciado los pods, se c
 
 Cuando se ejecuta una aplicación, el servicio Kubernetes de la aplicación envía por proxy las solicitudes a una réplica y devuelve los resultados.
 
+## <a name="security-considerations-for-applications-deployments-on-openshift"></a><a id="app-deploy-security"></a> Consideraciones de seguridad para las implementaciones de aplicaciones en OpenShift
+
+SQL Server 2019 CU5 habilita la compatibilidad con la implementación de clústeres de macrodatos en Red Hat OpenShift, así como un modelo de seguridad actualizado para clústeres de macrodatos, por lo que ya no se necesitan contenedores con privilegios. Aparte de que ya no necesiten privilegios, los contenedores se ejecutan como un usuario que no es de raíz de forma predeterminada para todas las implementaciones nuevas mediante SQL Server 2019 CU5.
+
+En el momento del lanzamiento de la versión CU5, el paso de instalación de las aplicaciones implementadas con las interfaces de [implementación de la aplicación](concept-application-deployment.md) se seguirá ejecutando como usuario *raíz*. Esto es necesario, ya que durante la configuración se instalan paquetes adicionales que usará la aplicación. Otro código de usuario implementado como parte de la aplicación se ejecutará como usuario con pocos privilegios. 
+
+Además, **CAP_AUDIT_WRITE** es una capacidad opcional necesaria para permitir la programación de aplicaciones SSIS mediante trabajos de Cron. Cuando el archivo de especificación YAML de la aplicación especifica una programación, la aplicación se desencadenará a través de un trabajo Cron, que necesita la capacidad adicional.  Como alternativa, la aplicación se puede desencadenar a petición con *azdata app run* a través de una llamada de servicio web, que no requiere la capacidad CAP_AUDIT_WRITE. 
+
+> [!NOTE]
+> El SCC personalizado en el [artículo de implementación de OpenShift](deploy-openshift.md) no incluye esta capacidad, ya que no es necesaria para una implementación predeterminada del clúster de macrodatos. Para habilitar esta capacidad, primero debe actualizar el archivo YAML de SCC personalizado para que incluya CAP_AUDIT_WRITE. 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
+
 ## <a name="how-to-work-with-application-deployment"></a>Cómo trabajar con la implementación de la aplicación
 
-Las dos interfaces principales de la implementación de la aplicación son: 
+Las dos interfaces principales de la implementación de la aplicación son las siguientes: 
 - [Interfaz de línea de comandos`azdata`](big-data-cluster-create-apps.md)
 - [Extensión de Visual Studio Code y Azure Data Studio](app-deployment-extension.md)
 

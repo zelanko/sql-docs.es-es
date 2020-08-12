@@ -1,32 +1,35 @@
 ---
 title: 'Tutorial de Python: Implementación del modelo del clúster'
+titleSuffix: SQL machine learning
 description: En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres en Python con el aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b01f213ccac6d6ede0965cc55f3e11a12623ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730521"
 ---
 # <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Tutorial de Python: Implementación de un modelo para clasificar clientes por categorías con aprendizaje automático de SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en Python, en una base de datos SQL con SQL Server Machine Learning Services o en clústeres de macrodatos.
+En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en Python, en una base de datos con SQL Server Machine Learning Services o en Clústeres de macrodatos.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en Python, en una base de datos SQL mediante SQL Server Machine Learning Services.
+En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en Python, en una base de datos mediante SQL Server Machine Learning Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en Python, en una base de datos mediante Machine Learning Services en Azure SQL Managed Instance.
 ::: moniker-end
 
 Para realizar la agrupación en clústeres de forma periódica cuando se registren nuevos clientes, necesita llamar al script de Python desde cualquier aplicación. Para hacerlo, puede implementar el script de Python en una base de datos si lo coloca dentro de un procedimiento almacenado de SQL. Como el modelo se ejecuta en la base de datos, se puede entrenar fácilmente con los datos almacenados en la base de datos.
@@ -42,7 +45,7 @@ En este artículo, aprenderá a:
 
 En la [parte uno](python-clustering-model.md), ha instalado los requisitos previos y ha restaurado la base de datos de ejemplo.
 
-En la [parte dos](python-clustering-model-prepare-data.md), ha aprendido a preparar los datos de una base de datos SQL para realizar la agrupación en clústeres.
+En la [parte dos](python-clustering-model-prepare-data.md), ha aprendido a preparar los datos de una base de datos para realizar la agrupación en clústeres.
 
 En la [parte tres](python-clustering-model-build.md), ha aprendido a crear y entrenar un modelo de agrupación en clústeres k-means en Python.
 
@@ -130,7 +133,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>Agrupación en clústeres en una base de datos SQL
+## <a name="perform-clustering"></a>Agrupación en clústeres
 
 Después de crear el procedimiento almacenado, ejecute el script siguiente para realizar la agrupación en clústeres mediante el procedimiento.
 

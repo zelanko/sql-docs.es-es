@@ -6,20 +6,20 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728029"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones Spark en clústeres de macrodatos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con el servidor de historial de Spark
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En este artículo se proporcionan instrucciones para usar el servidor de historial de Spark extendido para depurar y diagnosticar aplicaciones Spark en un clúster de macrodatos de SQL Server. Estas funcionalidades de depuración y diagnóstico están integradas en el servidor de historial de Spark y tienen tecnología de Microsoft. La extensión incluye la pestaña de datos, la pestaña de gráfico y la pestaña de diagnóstico. En la pestaña de datos, los usuarios pueden comprobar los datos de entrada y salida del trabajo de Spark. En la pestaña de gráfico, los usuarios pueden comprobar el flujo de datos y reproducir el gráfico de trabajo. En la pestaña de diagnóstico, el usuario puede hacer referencia a la asimetría de datos, el desfase horario y el análisis de uso del ejecutor.
 
@@ -28,7 +28,7 @@ En este artículo se proporcionan instrucciones para usar el servidor de histori
 La experiencia del usuario del servidor de historial de Spark de código abierto se ha mejorado con información, como, por ejemplo, datos específicos del trabajo y visualización interactiva de los flujos de datos y del gráfico de trabajo para el clúster de macrodatos. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Apertura de la interfaz de usuario web del servidor de historial de Spark mediante URL
-Para abrir el servidor de historial de Spark, vaya a la siguiente dirección URL, y reemplace `<Ipaddress>` y `<Port>` por la información específica del clúster de macrodatos. Tenga en cuenta que en una configuración de clúster de macrodatos (nombre de usuario/contraseña) de autenticación básica, debe proporcionar el usuario **raíz** cuando se le pida que inicie sesión en los puntos de conexión de puerta de enlace (Knox). Puede consultar más información en: [Implementar el clúster de macrodatos de SQL Server](quickstart-big-data-cluster-deploy.md)
+Para abrir el servidor de historial de Spark, vaya a la siguiente dirección URL, y reemplace `<Ipaddress>` y `<Port>` por la información específica del clúster de macrodatos. En los clústeres implementados antes de SQL Server 2019 CU5, con una configuración de clúster de macrodatos de autenticación básica (nombre de usuario/contraseña), debe proporcionar el usuario **root** (raíz) cuando se le pida que inicie sesión en los puntos de conexión de puerta de enlace (Knox). Vea [Implementación del clúster de macrodatos de SQL Server](quickstart-big-data-cluster-deploy.md). [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -193,7 +193,13 @@ El gráfico de uso del ejecutor visualiza el estado de ejecución y la asignaci�
 + Haga clic en el icono de color para seleccionar o anular la selección del contenido correspondiente en todos los borradores.
 
     ![Seleccionar gráfico](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## <a name="spark--yarn-logs"></a>Registros de Spark / Yarn
+Además del Servidor de historial de Spark, aquí puede encontrar los registros de Spark y Yarn, respectivamente:
+* Registros de eventos de Spark: hdfs:///system/spark-events
+* Registros de Yarn: hdfs:///tmp/logs/root/logs-tfile
 
+Nota: Los dos registros tienen un período de retención predeterminado de siete días. Si quiere cambiar el período de retención, vea la página [Configuración de Apache Spark y Apache Hadoop](configure-spark-hdfs.md). La ubicación **no** se puede cambiar.
 
 ## <a name="known-issues"></a>Problemas conocidos
 El servidor de historial de Spark tiene los siguientes problemas conocidos:

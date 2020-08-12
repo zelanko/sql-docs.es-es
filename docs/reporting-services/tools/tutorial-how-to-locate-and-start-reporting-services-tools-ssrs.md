@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Búsqueda e inicio de herramientas de Reporting Services | Microsoft Docs'
-description: En este tutorial se presentan las herramientas que se usan para configurar un servidor de informes, administrar las operaciones y el contenido del servidor de informes, y crear y publicar informes paginados y móviles de Reporting Services.
+description: Conozca las herramientas que se usan para configurar un servidor de informes, administrar sus operaciones y contenido, y crear y publicar informes paginados y móviles de Reporting Services.
 ms.date: 12/09/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4ecbe6fba042f1802d8e1d592314828c0f844fd3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f90a0f31355b5225533728efb25dfb5f6c96de16
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79486545"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462172"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Cómo buscar e iniciar herramientas de Reporting Services (SSRS)
 

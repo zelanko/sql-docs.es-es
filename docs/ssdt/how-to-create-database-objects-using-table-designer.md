@@ -1,5 +1,6 @@
 ---
 title: Creación de objetos de base de datos usando el Diseñador de tablas
+description: Aprenda a crear una base de datos en el Explorador de objetos de SQL Server. Vea cómo crear tablas, restricciones y referencias de clave externa en el Diseñador de tablas.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,18 +10,17 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ef475a7a0f5e2e8fdea510a0ee743f0d74d19dd2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3364df5dd6336023af7316be12150b878f2c9eb9
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241503"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518785"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Cómo: Crear objetos de base de datos usando el Diseñador de tablas
+# <a name="how-to-create-database-objects-using-table-designer"></a>Procedimientos: Creación de objetos de base de datos usando el Diseñador de tablas
 
 El nuevo nodo **SQL Server** del **Explorador de objetos de SQL Server** no solo es muy similar a SSMS visualmente, sino que puede crear nuevos objetos usando menús contextuales que funcionan de manera similar a sus homólogos de SSMS.  
   

@@ -4,27 +4,30 @@ titleSuffix: SQL machine learning
 description: En la tercera parte de esta serie de tutoriales de cuatro partes, entrenará un modelo de regresión lineal en Python para predecir los alquileres de esquíes con aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2d2335c982a75d924bfc60293632650b2d887527
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 827c79e39cd646b81b5ee79d440a8bc48574210c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730474"
 ---
 # <a name="python-tutorial-train-a-linear-regression-model-with-sql-machine-learning"></a>Tutorial de Python: Entrenamiento de un modelo de regresión lineal con aprendizaje automático de SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En la parte tres de esta serie de tutoriales de cuatro partes, entrenará un modelo de regresión lineal en Python. En la siguiente parte de esta serie, implementará este modelo en una base de datos de SQL Server con Machine Learning Services o en clústeres de macrodatos.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 En la parte tres de esta serie de tutoriales de cuatro partes, entrenará un modelo de regresión lineal en Python. En la siguiente parte de esta serie, implementará el modelo en una base de datos de SQL Server con Machine Learning Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En la parte tres de esta serie de tutoriales de cuatro partes, entrenará un modelo de regresión lineal en Python. En la siguiente parte de esta serie, implementará este modelo en una base de datos de Azure SQL Managed Instance con Machine Learning Services.
 ::: moniker-end
 
 En este artículo, aprenderá a:

@@ -1,6 +1,6 @@
 ---
 title: Recomendaciones y trucos para el uso de SSMS
-description: Aprenda a agregar o quitar marcas de comentarios en el código, aplicar sangría al texto, filtrar objetos en el explorador de objetos, acceder al registro de errores de SQL Server y buscar el nombre de la instancia de SQL Server con SQL Server Management Studio.
+description: Aprenda a convertir código en comentario y a quitar la marca de comentario, aplicar sangría al texto, filtrar objetos, acceder a los registros de errores y buscar nombres de instancia de SQL Server con SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245507"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462349"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Recomendaciones y trucos para usar SQL Server Management Studio (SSMS)
 

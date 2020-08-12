@@ -5,20 +5,20 @@ description: En este artículo se describen los conceptos relativos a la segurid
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 10/23/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77074433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730685"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Conceptos de seguridad para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En este artículo se tratan los conceptos clave relacionados con la seguridad en los clústeres de macrodatos.
 
@@ -83,17 +83,21 @@ Los componentes de Hadoop no admiten la autenticación de modo mixto, lo que sig
 Las credenciales de inicio de sesión que debe definir durante la implementación incluyen lo siguiente:
 
 Nombre de usuario del administrador del clúster:
+
  + `AZDATA_USERNAME=<username>`
 
 Contraseña del administrador del clúster:  
  + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
-> Tenga en cuenta que, en el modo que no es de AD, el nombre de usuario "raíz" debe usarse en combinación con la contraseña anterior a fin de autenticarse en la puerta de enlace (Knox) para el acceso a HDFS/Spark.
+> Tenga en cuenta que, en el modo que no es de AD, es necesario usar el nombre de usuario en combinación con la contraseña anterior a fin de autenticarse en la puerta de enlace (Knox) para el acceso a HDFS/Spark. Antes de SQL Server 2019 CU5, el nombre de usuario era `root`.
+> 
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vea los recursos siguientes:
+[¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
 
-- [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Taller: Arquitectura de los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+[Taller: Arquitectura de los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+
+[RBAC de Kubernetes](kubernetes-rbac.md)

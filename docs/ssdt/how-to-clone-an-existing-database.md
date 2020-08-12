@@ -1,23 +1,23 @@
 ---
 title: Clon de una base de datos existente
+description: Aprenda a clonar una base de datos. Vea los pasos implicados en la creación de una base de datos, la duplicación de su esquema y la replicación de sus datos.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03dedf5c30c8370195243c11406552d12edd8394
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241588"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518905"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Cómo: Clonar una base de datos existente
+# <a name="how-to-clone-an-existing-database"></a>Procedimientos: Clon de una base de datos existente
 
 Esta tarea usa algunos de los pasos que ha aprendido en procedimientos anteriores para crear una nueva base de datos y transportar datos existentes. Además, utiliza los pasos descritos en [Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) para sincronizar el esquema de una base de datos de origen y de un proyecto.  
   

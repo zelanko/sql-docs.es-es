@@ -1,23 +1,23 @@
 ---
 title: Edición de una tabla existente mediante consultas
+description: Aprenda a usar una consulta de Transact-SQL para editar la definición o los datos de una tabla. Vea ejemplos de edición de una definición de tabla y de inserción de filas en una tabla.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 56411bfffbaebeb07adf23b456a20523342db21d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1ebdca633ff866d51fcc20aa05993bb5969e4b2
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241413"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518815"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>Cómo: Editar una tabla existente mediante consultas
+# <a name="how-to-edit-an-existing-table-using-queries"></a>Procedimientos: Edición de una tabla existente mediante consultas
 
 Puede editar la definición de una tabla o sus datos escribiendo una consulta de Transact\-SQL. Para ver o escribir datos en una tabla visualmente, use el Editor de datos como se describe en [Desarrollo de bases de datos conectadas](../ssdt/connected-database-development.md).  
   
@@ -32,7 +32,7 @@ Puede editar la definición de una tabla o sus datos escribiendo una consulta de
   
 3.  Active la casilla **Permitir valores NULL** para la columna **Address**. Observe que el código correspondiente del panel de scripts cambia a `NULL` inmediatamente.  
   
-4.  Actualice la base de datos siguiendo los pasos del tema [Actualización de una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+4.  Actualice la base de datos siguiendo los pasos del tema [Cómo: Actualizar una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>Para rellenar datos de nuevas tablas usando una consulta de Transact\-SQL  
   

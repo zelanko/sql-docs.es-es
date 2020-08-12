@@ -1,5 +1,6 @@
 ---
 title: Cómo instalar extensiones de seguridad personalizadas | Microsoft Docs
+description: Obtenga información sobre el nuevo portal web que se presentó en Reporting Services 2016. Vea cómo afectan los cambios resultantes a la implementación de extensiones de seguridad personalizadas.
 ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4dfc638f65c66f6ecf5957b80b883ab89337b03e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68223230"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529071"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Cómo instalar extensiones de seguridad personalizadas
 
@@ -51,7 +52,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>Implementación y configuración
 
-Las configuraciones básicas necesarias para la extensión de seguridad personalizada son las mismas que en versiones anteriores. Es necesario realizar cambios en web.config y rsreportserver.config: para más información, vea [Configurar la autenticación de formularios o personalizada en el servidor de informes](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
+Las configuraciones básicas necesarias para la extensión de seguridad personalizada son las mismas que en versiones anteriores. Se necesitan cambios para web.config y rsreportserver.config: Para obtener más información, vea [Configuración de la autenticación de formularios o personalizada en el servidor de informes](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
 Ya no es hay un archivo web.config independiente para el Administrador de informes, sino que el portal hereda la misma configuración que el punto de conexión reportserver.
 

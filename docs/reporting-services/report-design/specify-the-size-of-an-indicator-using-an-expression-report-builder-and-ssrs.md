@@ -1,5 +1,6 @@
 ---
 title: Especificación del tamaño de un indicador mediante una expresión (Generador de informes) | Microsoft Docs
+description: Descubra formas de usar el tamaño, además del color, la dirección y la forma, para maximizar el impacto visual de los indicadores en el Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ceaff572ac7641de9b7f184fa58baf8d74790677
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b699e22bfe392ae04cbfb504f09e3faba48b08b9
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080922"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681594"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Especificar el tamaño de un indicador utilizando una expresión (Generador de informes y SSRS)
   Además del color, dirección y forma, puede usar el tamaño para maximizar el impacto visual de los indicadores.  

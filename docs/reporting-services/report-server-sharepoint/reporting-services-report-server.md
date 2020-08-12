@@ -1,5 +1,6 @@
 ---
 title: Comparación de los servidores de informes de Reporting Services nativos y de SharePoint | Microsoft Docs
+description: Obtenga información sobre el elemento central de una instalación de SQL Server Reporting Services, que consta de un motor de procesamiento y extensiones para agregar funcionalidad.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038014"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764895"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Comparación de los servidores de informes de Reporting Services nativos y de SharePoint
 

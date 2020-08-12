@@ -1,5 +1,6 @@
 ---
 title: 'Creación, eliminación o modificación de una carpeta: Reporting Services | Microsoft Docs'
+description: Obtenga información sobre cómo crear, modificar y eliminar carpetas para que pueda organizar y administrar los elementos que publica en un servidor de informes de Reporting Services.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae3ae4b181ee6b3308bcbe5bcfc4af1ca370c974
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67492853"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548027"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Creación, eliminación o modificación de una carpeta: Reporting Services
   Puede crear carpetas para organizar y administrar los elementos que publica en un servidor de informes. La creación de carpetas puede ayudar a los usuarios a buscar informes de su interés. Para administradores de contenido, las carpetas proporcionan un marco para aplicar permisos. Puede crear asignaciones de roles en carpetas concretas para restringir el acceso a los informes que se están desarrollando o que no se deberían distribuir de manera amplia.  

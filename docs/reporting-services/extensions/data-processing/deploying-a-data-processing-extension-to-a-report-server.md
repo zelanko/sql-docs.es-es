@@ -1,5 +1,6 @@
 ---
 title: Cómo implementar una extensión de procesamiento de datos en un servidor de informes | Microsoft Docs
+description: Obtenga información sobre cómo implementar una extensión de procesamiento de datos en un servidor de informes y aprenda qué entradas agregar a los archivos de configuración.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3f0b775b53244cd0a428bb4ce4023906d2f5119
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a43b94a4ef45b210ea2f54b0401962e79ca9a489
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194118"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529587"
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>Implementar una extensión de procesamiento de datos en un servidor de informes
   Los servidores de informes utilizan las extensiones de procesamiento de datos para recuperar y procesar los datos en informes representados. Debería implementar el ensamblado de extensión de procesamiento de datos en un servidor de informes como un ensamblado privado. También tiene que realizar una entrada en el archivo de configuración del servidor de informes, RSReportServer.config.  
@@ -25,7 +26,7 @@ ms.locfileid: "63194118"
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Para implementar un ensamblado de extensión de procesamiento de datos  
   
-1.  Copie el ensamblado de la ubicación provisional al directorio bin del servidor de informes en el que desea utilizar la extensión de procesamiento de datos. La ubicación predeterminada del directorio Bin del servidor de informes es %Archivos de programa%\Microsoft SQL Server\MSRS10_50.\<*nombreDeInstancia*>\Reporting Services\ReportServer\bin.  
+1.  Copie el ensamblado de la ubicación provisional al directorio bin del servidor de informes en el que desea utilizar la extensión de procesamiento de datos. La ubicación predeterminada del directorio bin del servidor de informes es %Archivos de programa%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
     >  Este paso evitará una actualización a una instancia más nueva de SQL Server. Para obtener más información, vea [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
@@ -50,7 +51,7 @@ ms.locfileid: "63194118"
   
      El valor de **Name** es el nombre único de la extensión de procesamiento de datos. El valor de **Type** es una lista separada por comas que incluye una entrada para el espacio de nombres completo de la clase que implementa las interfaces <xref:Microsoft.ReportingServices.Interfaces.IExtension> y <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, seguido del nombre del ensamblado (sin incluir la extensión de archivo .dll). De forma predeterminada, las extensiones de procesamiento de datos están visibles. Para ocultar una extensión de las interfaces de usuario, por ejemplo del Administrador de informes, agregue un atributo **Visible** al elemento **Extension** y establézcalo en **false**.  
   
-5.  Agregue un grupo de código para el ensamblado personalizado que conceda el permiso **FullTrust** a la extensión. Para ello, agregue el grupo de código al archivo rssrvpolicy.config que se encuentra de forma predeterminada en %Archivos de programa%\Microsoft SQL Server\\<MSRS10_50.\<*nombreDeInstancia*>\Reporting Services\ReportServer. El grupo de código podría tener la apariencia siguiente:  
+5.  Agregue un grupo de código para el ensamblado personalizado que conceda el permiso **FullTrust** a la extensión. Para ello, agregue el grupo de código al archivo rssrvpolicy.config que se encuentra, de forma predeterminada, en %Archivos de programa%\Microsoft SQL Server\\<MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer. El grupo de código podría tener la apariencia siguiente:  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

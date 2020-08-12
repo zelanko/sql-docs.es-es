@@ -1,5 +1,6 @@
 ---
 title: Configurar el acceso al Generador de informes | Microsoft Docs
+description: Configure el Generador de informes, una herramienta de generación de informes instalada con un servidor de informes de SQL Server Reporting Services. Usa el modo nativo o el modo integrado de SharePoint.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -7,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
-ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 168e8897743e113ae1a40df5ad8d35c66289fde0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68255173"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548087"
 ---
 # <a name="configure-report-builder-access"></a>Configurar el acceso al Generador de informes
 El Generador de informes es una herramienta de notificación ad hoc que se instala con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para modo nativo o para modo de integración con SharePoint.  
@@ -25,7 +26,7 @@ El acceso al Generador de informes depende de los factores siguientes:
 
 - Configuración de autenticación que determina si las credenciales del usuario se pueden pasar al servidor de informes o está configurado el acceso anónimo en los archivos de la aplicación.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 El Generador de informes no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
@@ -115,7 +116,7 @@ Después de crear las asignaciones de roles, los usuarios tendrán permiso para 
 3. Haga clic en **Seguridad**.  
 
 4. Si ya existe una asignación de roles para el usuario o el grupo cuyo acceso al Generador de informes desea configurar, haga clic en **Editar**.  
-De lo contrario, haga clic en **Nueva asignación de roles**. En Grupo o usuario, escriba una cuenta de grupo o de usuario de dominio de Windows con este formato: \<dominio>\\<cuenta\>. Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.  
+De lo contrario, haga clic en **Nueva asignación de roles**. En Grupo o usuario, escriba una cuenta de grupo o de usuario de dominio de Windows con este formato: \<domain>\\<cuenta\>. Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.  
 
 5. Seleccione **Usuario del sistema**y, a continuación, haga clic en **Aceptar**.  
 
@@ -127,7 +128,7 @@ De lo contrario, haga clic en **Nueva asignación de roles**. En Grupo o usuario
 
 9. Si ya existe una asignación de roles para el usuario o el grupo cuyo acceso al Generador de informes desea configurar, haga clic en **Editar**.  
 
-    De lo contrario, haga clic en **Nueva asignación de roles**. En Grupo o usuario, escriba una cuenta de grupo o de usuario de dominio de Windows con este formato: \<dominio>\\<cuenta\>. Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.  
+    De lo contrario, haga clic en **Nueva asignación de roles**. En Grupo o usuario, escriba una cuenta de grupo o de usuario de dominio de Windows con este formato: \<domain>\\<cuenta\>. Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.  
 
 10. Seleccione **Generador de informes**y haga clic en **Aplicar**.  
 

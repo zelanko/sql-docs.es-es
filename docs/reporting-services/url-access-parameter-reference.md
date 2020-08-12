@@ -1,7 +1,7 @@
 ---
 title: Referencia de parámetros de acceso URL | Microsoft Docs
 description: Use los parámetros de este artículo como parte de una dirección URL para configurar la apariencia de los informes de Reporting Services.
-ms.date: 01/31/2020
+ms.date: 05/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c975f457238912c16e33a13f1f2ba598c82cac3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147382"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859039"
 ---
 # <a name="url-access-parameter-reference"></a>Referencia de parámetros de acceso URL
 
@@ -79,18 +79,21 @@ ms.locfileid: "77147382"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**: Busca en un informe un conjunto específico de texto.
+-   **FindString**: busca un conjunto de texto específico en un informe y resalta el texto.
+    
+    > [!IMPORTANT]  
+    >  *rc:FindString* no funciona a menos que incluya *rc:Toolbar*=**false** en la cadena de acceso URL.
   
      Por ejemplo, en modo nativo:
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      Por ejemplo, en modo de SharePoint:
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind**: Especifica la última sección en que se buscará. El valor predeterminado de este parámetro es la última página del informe.  
@@ -260,7 +263,7 @@ ms.locfileid: "77147382"
   
 -   **ClearSession**: Un valor de **true** indica al servidor de informes que quite un informe de la sesión de informe. Todas las instancias del informe asociadas a un usuario autenticado se quitan de la sesión de informe. (Una instancia del informe se define como el mismo informe ejecutado varias veces con diferentes valores de parámetro de informe). El valor predeterminado es **false**.
   
--   **ResetSession**: Un valor de **true** indica al servidor de informes que restablezca la sesión del informe y que quite la asociación de la sesión del informe con todas las instantáneas de informe. El valor predeterminado es **false**.
+-   **ResetSession**: un valor de **true** indica al servidor de informes que restablezca la sesión del informe y que quite la asociación de la sesión del informe con todas las instantáneas de informe. El valor predeterminado es **false**.
   
 -   **ShowHideToggle**: Alterna el estado de mostrar u ocultar de una sección del informe. Especifique un entero positivo para representar la sección que desea alternar.
   

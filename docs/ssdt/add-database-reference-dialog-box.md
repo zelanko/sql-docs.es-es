@@ -1,20 +1,20 @@
 ---
 title: Cuadro de diálogo Agregar referencia de base de datos
+description: Obtenga información sobre las referencias a bases de datos y cómo usarlas. Vea los procedimientos que puede realizar en el cuadro de diálogo Agregar referencia de base de datos.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: a43b16b3c45a0f98ca22a4d1e0d3e291cf92f95d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95d56c0a307d49f7cb0e4a2ba09d1f68d4063226
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256143"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519125"
 ---
 # <a name="add-database-reference-dialog-box"></a>Cuadro de diálogo Agregar referencia de base de datos
 

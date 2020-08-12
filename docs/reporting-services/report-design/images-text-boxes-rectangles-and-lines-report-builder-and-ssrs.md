@@ -1,5 +1,6 @@
 ---
 title: Imágenes, cuadros de texto, rectángulos y líneas (Generador de informes) | Microsoft Docs
+description: Agregue interés visual, resalte información clave o proporcione información relacionada en el Generador de informes. Agregue imágenes, cuadros de texto, rectángulos y líneas.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a57bef0be8819674142526d62ec824078ded04e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 18afd1d921969d84f0015b6e982b634feb46b097
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082062"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061029"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Imágenes, cuadros de texto rectángulos y líneas (Generador de informes y SSRS)
   Además de regiones de datos como tablas, matrices y gráficos, los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] usan otros elementos de informe, como imágenes, cuadros de texto y rectángulos, para agregar interés visual, resaltar información clave o proporcionar información relacionada. Puede cambiar el formato de un elemento de informe. Por ejemplo, puede agregar un borde o un relleno, cambiar la visibilidad o la dirección inicial, o especificar una ubicación y un tamaño determinados para el elemento.  

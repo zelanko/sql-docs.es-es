@@ -1,5 +1,6 @@
 ---
 title: Región de datos Tablix (Generador de informes) | Microsoft Docs
+description: Vea cómo mostrar datos de informes paginados en celdas. Organice los datos en filas y columnas con una región de datos Tablix en el Generador de informes.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a37105db6639b7d7db35c3beb1fc85020015d7e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98c23ceae7ced6bdd31e55319db67aefa5a6e848
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067066"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Región de datos Tablix (Generador de informes y SSRS)
-  En [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], la región de datos Tablix es un elemento de informe de diseño generalizado que muestra los datos del informe paginado en celdas organizadas en filas y columnas. Los datos del informe pueden ser datos detallados tal y como se recuperan del origen de datos, o datos detallados agregados organizados en grupos previamente especificados. Cada celda de Tablix puede contener cualquier elemento de informe, como un cuadro de texto o una imagen, o bien otra región de datos, como una región de Tablix, un gráfico o un medidor. Para agregar varios elementos de informe a una celda, agregue primero un rectángulo que actúe como contenedor. Después, agregue los elementos de informe al rectángulo.  
+  En [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], la región de datos Tablix es un elemento de informe de diseño generalizado que muestra los datos del informe paginado en celdas organizadas en filas y columnas. Los datos del informe pueden ser datos detallados tal y como se recuperan del origen de datos, o datos detallados agregados organizados en grupos previamente especificados. Cada celda de Tablix puede contener cualquier elemento de informe, como un cuadro de texto o una imagen, o bien otra región de datos, como una región de Tablix, un gráfico o un medidor. Para agregar varios elementos de informe a una celda, agregue primero un rectángulo que actúe como contenedor. Después, agregue los elementos de informe al rectángulo. 
   
  Las regiones de datos de tabla, matriz y lista se representan en la cinta de opciones mediante plantillas para la región de datos Tablix subyacente. Al agregar una de estas plantillas a un informe, en realidad se está agregando una región de datos Tablix que está optimizada para un diseño de datos concreto. De forma predeterminada, una plantilla de tabla muestra datos detallados en un diseño de cuadrícula, una matriz muestra datos de grupo en un diseño de cuadrícula y una lista muestra datos detallados en un diseño de forma libre.  
   

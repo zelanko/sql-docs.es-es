@@ -1,6 +1,6 @@
 ---
 title: Paginación en informes (Generador de informes y SSRS) | Microsoft Docs
-description: La paginación hace referencia al número de páginas de un informe paginado y al modo en que los elementos de informe se organizan en dichas páginas. La paginación en Reporting Services varía en función de la extensión de representación usada para ver y entregar el informe.
+description: Obtenga información sobre el número de páginas de un informe paginado y cómo los elementos de informe se organizan en esas páginas en el Generador de informes.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2c3ce298553ebe5103cc8639a3a86e14977725ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b308503f2aafb1fcbfd88b3e7509906cafad8a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247341"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006156"
 ---
 # <a name="pagination-in-reports-report-builder--and-ssrs"></a>Paginación en informes (Generador de informes y SSRS)
   La paginación hace referencia al número de páginas de un informe paginado y al modo en que los elementos de informe se organizan en dichas páginas. La paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varía en función de la extensión de representación usada para ver y entregar el informe. Cuando se ejecuta un informe en el servidor de informes, el informe usa el representador de HTML. HTML sigue un conjunto concreto de reglas de paginación. Si, por ejemplo, exporta el mismo informe a PDF, se usará el representador de PDF y se aplicará otro conjunto de reglas; por consiguiente, el informe se paginará de manera diferente. Para diseñar correctamente un informe que resulte fácil de leer y que esté optimizado para el representador que va a usar para su entrega, es preciso que comprenda las reglas que se usan para controlar la paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

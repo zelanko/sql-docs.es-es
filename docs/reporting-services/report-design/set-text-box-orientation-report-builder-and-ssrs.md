@@ -1,5 +1,6 @@
 ---
 title: Establecimiento de la orientación del cuadro de texto (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo girar un cuadro de texto en diferentes direcciones en los informes paginados en el Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,18 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 322c393749f60b1fb505577bf3af57238eb093c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 058da26bfe4fc5bf8ae5d777a35d0356b463ca11
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081000"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681384"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Establecer la orientación del cuadro de texto (Generador de informes y SSRS)
 En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , puede girar un cuadro de texto en varias direcciones:   
 * Horizontalmente   
-* Verticalmente (se gira 90 grados y el texto se lee de arriba abajo)  
+* Verticalmente (se gira 90 grados y el texto se lee de arriba abajo, excepto los caracteres de texto de Este de Asia)
+
 * Girar 270 grados (el texto lee de abajo arriba)   
   
 Dado que se gira el cuadro de texto y no el texto, la rotación se aplica a todo el texto del cuadro de texto. No es posible especificar direcciones diferentes para las partes del texto. Debe establecer manualmente el ancho de columna y el alto de fila para alojar el texto girado.  

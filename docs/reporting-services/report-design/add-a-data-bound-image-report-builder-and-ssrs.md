@@ -1,5 +1,6 @@
 ---
 title: Adición de una imagen enlazada a datos (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo hacer referencia a una imagen almacenada en una base de datos para mostrar la imagen en los informes en el Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ab11e39d435a2a4f965c4a6cb5cf367ae2b4d84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f126fc98d517268f5513cc2cbaa8b439ae6623eb
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080758"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681564"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Agregar una imagen enlazada a datos (Generador de informes y SSRS)
   Un informe puede incluir una referencia a una imagen que está almacenada en una base de datos. Este tipo de imagen se conoce como *imagen enlazada a datos*. Las imágenes que aparecen junto a los nombres de producto de una lista de productos son ejemplos de imágenes enlazadas a datos.  
@@ -25,7 +26,7 @@ ms.locfileid: "77080758"
   
 ### <a name="to-add-a-data-bound-image"></a>Agregar una imagen enlazada a datos  
   
-1.  En la vista de diseño del informe, cree una tabla con una conexión a un origen de datos y un conjunto de datos con un campo que contenga los datos binarios de la imagen. Para más información, vea [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+1.  En la vista de diseño del informe, cree una tabla con una conexión a un origen de datos y un conjunto de datos con un campo que contenga los datos binarios de la imagen. Para obtener más información, vea [Tablas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 2.  Inserte una columna en la tabla. Para más información, vea [Insertar o eliminar una columna &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
   

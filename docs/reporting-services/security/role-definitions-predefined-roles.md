@@ -1,6 +1,6 @@
 ---
-title: 'Definiciones de roles: roles predefinidos | Microsoft Docs'
-ms.date: 05/24/2019
+title: 'Definiciones de roles: roles predefinidos | Microsoft Docs'
+ms.date: 06/10/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c792804d9e7daae9209bcbafb8bae95fffb3492
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67500188"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716752"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definiciones de roles: roles predefinidos
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala junto con roles predefinidos que puede usar para conceder acceso a operaciones del servidor de informes. Cada rol predefinido describe una recopilación de tareas relacionadas. Puede asignar grupos y cuentas de usuario a los roles predefinidos para proporcionar acceso inmediato a las operaciones del servidor de informes.  
@@ -59,11 +59,11 @@ ms.locfileid: "67500188"
 |----------|-----------------|  
 |Usar informes|Permite leer definiciones de informes.|  
 |Crear informes vinculados|Crear informes vinculados que se basen en un informe no vinculado.|  
-|Administrar todas las suscripciones|Ver, modificar y eliminar cualquier suscripción para informes e informes vinculados, independientemente de quién sea su propietario. Esta tarea también permite crear suscripciones controladas por datos.|  
+|Administrar todas las suscripciones|Ver, modificar y eliminar cualquier suscripción para informes e informes vinculados, independientemente de quién sea su propietario. Esta tarea permite crear suscripciones controladas por datos. También admite la edición y ejecución de la [actualización programada para archivos de Power BI (.pbix) en Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Administración de orígenes de datos|Cree y elimine elementos de orígenes de datos compartidos; vea y modifique el contenido y las propiedades del origen de datos.|  
 |Administrar carpetas|Cree, vea y elimine carpetas; vea y modifique propiedades de carpetas.|  
 |Administración de modelos|Crear, ver y eliminar modelos; ver y modificar propiedades de modelos.|  
-|Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados.|  
+|Administrar suscripciones individuales|Crear, ver, modificar y eliminar suscripciones de usuarios a informes e informes vinculados. Esta tarea también admite la edición y ejecución de la [actualización programada para archivos de Power BI (.pbix) en Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
 |Administrar historial de informe|Cree, vea y elimine el historial del informe, vea las propiedades del historial del informe; vea y modifique la configuración que determina los límites del historial de instantáneas y cómo funciona el almacenamiento en caché.|  
 |Administrar informes|Agregue y elimine informes, modifique parámetros de informes, vea y modifique propiedades de informes, vea y modifique orígenes de datos que proporcionen contenido al informe, vea y modifique definiciones de informe y establezca directivas de seguridad de nivel de informe.|  
 |Administrar recursos|Cree, modifique y elimine recursos; vea y modifique propiedades de recursos.|  

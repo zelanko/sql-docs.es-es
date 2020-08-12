@@ -1,5 +1,6 @@
 ---
 title: SqlPackage.exe
+description: Obtenga información sobre cómo automatizar las tareas de desarrollo de bases de datos con SqlPackage.exe. Vea ejemplos y los parámetros, las propiedades y las variables SQLCMD disponibles.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 03/17/2020
-ms.openlocfilehash: 1ee42c97fe4e032835ccb2f8a07ea51fe70114ac
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 1209945c167f26dd7011cc4ce210e61ac24f7134
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303146"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441262"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -94,7 +95,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 
 ### <a name="properties-specific-to-the-extract-action"></a>Propiedades específicas de la acción Extract
 
-|Propiedad|Value|Descripción|
+|Propiedad|Valor|Descripción|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server.|
 |**/p:**|DacApplicationDescription=(STRING)|Define la descripción de la aplicación que se va a guardar en los metadatos del DACPAC.|
@@ -333,7 +334,7 @@ Una acción de importación de SqlPackage.exe importa los datos de esquema y tab
 
 Propiedades específicas de la acción Import:
 
-|Propiedad|Value|Descripción|
+|Propiedad|Valor|Descripción|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Define la edición de la instancia de Azure SQL Database.|

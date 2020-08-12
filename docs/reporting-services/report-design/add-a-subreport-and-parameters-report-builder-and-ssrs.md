@@ -1,5 +1,6 @@
 ---
 title: Adición de un subinforme y parámetros (Generador de informes) | Microsoft Docs
+description: Aprenda a agregar un subinforme. Use subinformes cuando quiera crear un informe principal como un contenedor para varios informes relacionados en el Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a74ef0a64fb7d1a77f3e336f98aeaa245c4458d8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9131d15b8374df4b3db22946583d3349f0386e91
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080667"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462309"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Agregar un subinforme y parámetros (Generador de informes y SSRS)
   Agregue subinformes a un informe cuando desee crear un informe principal que actúe como contenedor para varios informes relacionados. Un subinforme es una referencia a otro informe. Para relacionar informes mediante valores de datos (por ejemplo, para que varios informes muestren datos del mismo cliente), debe diseñar un informe con parámetros (por ejemplo, un informe que muestre los detalles de un cliente concreto) como el subinforme. Al agregar un subinforme al informe principal, puede especificar los parámetros que se deben pasar al subinforme.  
@@ -57,7 +58,7 @@ ms.locfileid: "77080667"
 5.  En el cuadro de lista **Valor** , escriba o seleccione el valor que se pasará al subinforme. Este valor puede ser texto estático o una expresión que haga referencia a un campo o a otro objeto del informe principal.  
   
     > [!NOTE]  
-    >  En el Generador de informes, si falta un parámetro de la lista **Parámetros** y se ha definido un valor predeterminado para el subinforme, este se procesará correctamente.  
+    >   En el Generador de informes, si falta un parámetro en la lista **Parámetros** y se ha definido un valor predeterminado para el subinforme, este se procesará correctamente.  
     >   
     >  En el Diseñador de informes, todos los parámetros que requiera el subinforme deben incluirse en la lista **Parámetros** . Si falta un parámetro necesario, el subinforme no se muestra correctamente en el informe principal.  
   

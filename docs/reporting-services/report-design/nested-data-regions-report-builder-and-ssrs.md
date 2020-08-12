@@ -1,5 +1,6 @@
 ---
 title: Regiones de datos anidadas (Generador de informes) | Microsoft Docs
+description: Descubra cómo anidar una región de datos dentro de otra en el Generador de informes. Muestre resúmenes de datos en una tabla o matriz concisa.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d58cdcf55429a76766e3e1810c1d6599aa360e6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4822f668b78332a7a62aeab7ca4959eb328fcc0d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885085"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Anidar regiones de datos (Generador de informes y SSRS)
   Normalmente, una región de datos, como un gráfico, se anida dentro de otra, como una matriz, para mostrar resúmenes de los datos de una manera concisa o para mostrar los datos de forma gráfica, además de hacerlo en una tabla o una matriz.  
@@ -87,7 +88,7 @@ ms.locfileid: "77082600"
  [Medidores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un KPI al informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Administrar una aplicación de servicio de SharePoint de Reporting Services | Microsoft Docs
+description: Aprenda a administrar aplicaciones de servicio de SQL Server Reporting Services en Administración central de SharePoint.
 ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5de7b0a5b155c519a7a7d24331fb9ad2dc571e3e
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580087"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83765126"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Administrar una aplicación de servicio de SharePoint de Reporting Services
 
@@ -34,7 +35,7 @@ ms.locfileid: "65580087"
   
 2.  Haga clic junto al nombre de la aplicación de servicio o en la columna **tipo** (para seleccionar toda la columna) y después haga clic en **Propiedades** en la cinta de opciones de SharePoint.  
   
- Para obtener más información acerca de las propiedades de la aplicación del servicio, vea [Step 3: Create a Reporting Services Service Application](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
+ Para más información acerca de las propiedades de la aplicación del servicio, vea [Paso 3: Crear una aplicación de servicio de Reporting Services](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 ## <a name="open-service-application-management-pages"></a>Abrir las páginas de administración de aplicaciones de servicio
 

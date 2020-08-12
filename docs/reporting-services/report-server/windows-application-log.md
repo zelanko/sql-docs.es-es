@@ -1,5 +1,6 @@
 ---
 title: Registro de aplicación Windows | Microsoft Docs
+description: Obtenga información sobre cómo ver los mensajes de eventos del registro de aplicaciones generados por las aplicaciones del servidor de informes que se ejecutan en el sistema local.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f3d51afd8a27786be3c66bfdf935ad8b2e328d36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5466c8a3e839a6db9438fde3ca7ce295405f3f23
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580923"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547837"
 ---
 # <a name="windows-application-log"></a>Registro de aplicación Windows
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Escribe mensajes de evento en el registro de aplicación de Windows. Puede utilizar la información de los mensajes escrita en el registro de aplicación para obtener información sobre los eventos generados por las aplicaciones del servidor de informes que se ejecutan en el sistema local.  
@@ -39,7 +40,7 @@ ms.locfileid: "65580923"
   
 |Tipo de evento|Descripción|  
 |----------------|-----------------|  
-|Information|Evento que describe una operación correcta (por ejemplo, cuándo se inicia el servicio del servidor de informes).|  
+|Información|Evento que describe una operación correcta (por ejemplo, cuándo se inicia el servicio del servidor de informes).|  
 |Advertencia|Evento que indica un problema potencial (por ejemplo, poco espacio en disco).|  
 |Error|Evento que describe un problema considerable (por ejemplo, no se inició el servicio).|  
 |Auditoría de aciertos|Evento de seguridad que describe un inicio de sesión correcto.|  

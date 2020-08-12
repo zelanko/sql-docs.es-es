@@ -1,6 +1,6 @@
 ---
 title: Celdas, filas y columnas de una región de datos Tablix | Microsoft Docs
-description: Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe paginado de SQL Server Reporting Services, debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales.
+description: Aprenda a especificar filas y columnas para datos, etiquetas y totales, lo que le permite controlar la presentación en un informe de SQL Server.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1630b872e3a445b082c6ceca98d45cf225cdaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26567c364e734824964e19ee6a639f2500ee2b4b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252398"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689451"
 ---
 # <a name="cells-rows--columns-in-a-tablix-data-region-report-builder-and-ssrs"></a>Celdas, filas y columnas de una región de datos Tablix (Generador de informes y SSRS)
 

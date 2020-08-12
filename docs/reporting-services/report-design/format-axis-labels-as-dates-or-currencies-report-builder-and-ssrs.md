@@ -1,5 +1,6 @@
 ---
 title: Aplicación de formato de fecha o de moneda a las etiquetas de los ejes (Generador de informes)| Microsoft Docs
+description: Especifique un intervalo de fecha u hora para un eje x; para ello, aplique formato a las etiquetas del eje y establezca el tipo de intervalo del eje en un intervalo válido.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f93ab65674436fc0225ba8f8c66b98d12f9b7694
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b65c752c479c86f88679cb01bd328dc2d22cf3be
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080020"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689426"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>Aplicar formato de fecha o de moneda a las etiquetas de los ejes (Generador de informes y SSRS)
 Cuando se muestren valores DateTime con el formato correcto en un eje de un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , un gráfico mostrará automáticamente dichos valores como días. Para especificar un intervalo de fechas u horas para el eje X, como un intervalo de meses o de horas, debe dar formato a las etiquetas del eje y establecer el tipo de intervalo de éste en un intervalo de fechas u horas válido.  

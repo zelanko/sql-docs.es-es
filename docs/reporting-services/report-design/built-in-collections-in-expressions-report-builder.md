@@ -1,6 +1,7 @@
 ---
 title: Colecciones integradas en expresiones (Generador de informes) | Microsoft Docs
-ms.date: 03/14/2017
+description: Descubra las colecciones integradas en expresiones para hacer referencia a colecciones como parámetros, campos y conjuntos de datos de los informes en el Generador de informes.
+ms.date: 3/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73fcabfe163fce811b208861adbde97e4411300b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5dbc7cf2683f78118087d18b2dd51865bf52f3d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082202"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880259"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Colecciones integradas en expresiones (Generador de informes)
-  En una expresión de un informe, puede incluir referencias a las siguientes colecciones integradas: ReportItems, Parameters, Fields, DataSets, DataSources, Variables y a campos integrados para información global, como el nombre del informe. No todas las colecciones aparecen en el cuadro de diálogo **Expresión** . Las colecciones DataSets y DataSources solo están disponibles en tiempo de ejecución para los informes publicados en un servidor de informes. ReportItems es un conjunto de cuadros de texto situados en una región del informe; por ejemplo, los cuadros de texto de una página o de un encabezado de página.  
+  En una expresión de un informe, puede incluir referencias a las siguientes colecciones integradas: ReportItems, Parameters, Fields, DataSets, DataSources, Variables y a campos integrados para información global, como el nombre del informe. No todas las colecciones aparecen en el cuadro de diálogo **Expresión** . Las colecciones DataSets y DataSources solo están disponibles en tiempo de ejecución para los informes publicados en un servidor de informes. ReportItems es una colección de cuadros de texto situados en una región del informe; por ejemplo, los cuadros de texto de una página o de un encabezado de página.  
   
  Para más información, vea [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   
@@ -31,7 +32,7 @@ ms.locfileid: "77082202"
 |**Globales**|Campos integrados|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|Representa variables globales útiles para los informes, como el nombre del informe o el número de página. Siempre está disponible.<br /><br /> Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**User**|Campos integrados|`=User.UserID`<br /><br /> O bien<br /><br /> `=User.Language`|Representa una recopilación de datos acerca del usuario que ejecuta el informe, como la configuración de idioma o el identificador de usuario. Siempre está disponible.<br /><br /> Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Parámetros**|Parámetros|`=Parameters("ReportMonth").Value`<br /><br /> O bien<br /><br /> `=Parameters!ReportYear.Value`|Representa la colección de parámetros de informe (pueden tener uno o varios valores). No está disponible hasta que la inicialización se ha completado. Para más información, vea [Usar referencias a la colección de parámetros &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).|  
-|**Campos (** *\<Conjunto de datos>* **)**|Fields|`=Fields!Sales.Value`|Representa la colección de campos del conjunto de datos que están disponibles para el informe. Está disponible una vez que los datos se han recuperado desde un origen de datos en un conjunto de datos. Para obtener más información, vea [Referencias a la colección de campos de conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).|  
+|**Fields(** *\<Dataset>* **)**|Fields|`=Fields!Sales.Value`|Representa la colección de campos del conjunto de datos que están disponibles para el informe. Está disponible una vez que los datos se han recuperado desde un origen de datos en un conjunto de datos. Para obtener más información, vea [Referencias a la colección de campos de conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).|  
 |**DataSets**|No se muestra|`=DataSets("TopEmployees").CommandText`|Representa la colección de conjuntos de datos a los que se hace referencia desde el cuerpo de una definición de informe. No incluye los orígenes de datos que solo se utilizan en encabezados o pies de página. No está disponible en el modo de vista previa local. Para más información, vea [Usar referencias a las colecciones DataSources y DataSets &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |**DataSources**|No se muestra|`=DataSources("AdventureWorks2012").Type`|Representa la colección de orígenes de datos a los que se hace referencia en el cuerpo de un informe. No incluye los orígenes de datos que solo se utilizan en encabezados o pies de página. No está disponible en el modo de vista previa local. Para más información, vea [Usar referencias a las colecciones DataSources y DataSets &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |**Variables**|`Variables`|`=Variables!CustomTimeStamp.Value`|Representa la colección de variables de informe y de variables de grupo. Para más información, vea [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md).|  

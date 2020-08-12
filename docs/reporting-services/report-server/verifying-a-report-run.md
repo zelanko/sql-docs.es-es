@@ -1,5 +1,6 @@
 ---
 title: Comprobar la ejecución de un informe | Microsoft Docs
+description: Aprenda a usar los archivos de registro o hacer referencia a la información de estado que se muestra con un informe para comprobar que se ejecuta en el Administrador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cd48861b53b6b7f159d4421bd86bf024838fbaf7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6384697eea05d39431ecd7ec77796101747a59ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580073"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547827"
 ---
 # <a name="verifying-a-report-run"></a>Comprobar la ejecución de un informe
   Para ver información acerca del estado del procesamiento de un informe, puede utilizar los archivos de registro o bien consultar la información de estado que se muestra junto con el informe en el Administrador de informes.  

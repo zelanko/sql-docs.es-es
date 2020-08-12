@@ -1,5 +1,6 @@
 ---
 title: Inicio de los valores del gráfico circular desde la parte superior del gráfico (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo iniciar los valores de gráficos circulares en la parte superior del gráfico en lugar de a 90 grados desde la parte superior, el valor predeterminado.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f23163da5fc4b23a364646be607167e663187fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dfdd7600a08a78baa0b70f2048423f1632ebe2db
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080899"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689437"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>Iniciar los valores del gráfico circular desde la parte superior del gráfico (Generador de informes y SSRS)
 En los gráficos circulares de los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el primer valor del conjunto de datos se inicia de forma predeterminada en 90 grados desde la parte superior del círculo. 
@@ -22,7 +23,7 @@ En los gráficos circulares de los informes paginados de [!INCLUDE[ssRSnoversion
 
 *Los valores del gráfico se inician en 90 grados.*
 
-En su lugar, podría interesarle que el primer valor se inicie en la parte superior. 
+En su lugar, es posible que le interese que el primer valor se inicie en la parte superior. 
 
 ![generador-informes-gráfico-circular-inicia-parte-superior](../../reporting-services/media/report-builder-pie-chart-start-at-top.png)
 

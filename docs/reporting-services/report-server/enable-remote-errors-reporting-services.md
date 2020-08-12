@@ -1,5 +1,6 @@
 ---
 title: Habilitar los errores remotos (Reporting Services) | Microsoft Docs
+description: Aprenda a establecer las propiedades de servidor en un servidor de informes de Reporting Services para devolver información adicional sobre condiciones de error que se produzcan en servidores remotos.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b26db3656ee548e08f9e5d4737033bb3393a969
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 359d3705acbb3a7be762341008f32a6b473bdb55
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593871"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547977"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Habilitar los errores remotos (Reporting Services)
   Es posible establecer propiedades de servidor en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para devolver información adicional sobre condiciones de error que se produzcan en servidores remotos. Si un mensaje de error incluye el texto "Para obtener más información acerca de este error, navegue hasta el servidor de informes en el equipo del servidor local o habilite los errores remotos", puede establecer la propiedad **EnableRemoteErrors** para obtener información adicional que pueda ayudarle a solucionar el problema. Para más información, vea [Propiedades del sistema del servidor de informes](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).  

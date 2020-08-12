@@ -1,5 +1,6 @@
 ---
 title: Referencias a las colecciones de variables de informe y de grupo (Generador de informes) | Microsoft Docs
+description: Cree una variable con un nombre único cuando tenga un cálculo complejo que use en un informe más de una vez.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ec35aa6399929f90f8e816b8c2d2de50e5cc155
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081454"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688852"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Colecciones integradas: referencias a variables de grupo e informe (Generador de informes)
   Si existe un cálculo complejo que se usa más de una vez en las expresiones de un informe, es probable que le interese crear una variable. Puede crear una variable de informe o una variable de grupo. Los nombres de variable deben ser únicos en un informe.  

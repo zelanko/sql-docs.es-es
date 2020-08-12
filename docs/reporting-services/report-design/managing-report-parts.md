@@ -1,5 +1,6 @@
 ---
 title: Administrar elementos de informe | Microsoft Docs
+description: Organice los elementos de informe para varios usuarios e informes, con opciones flexibles para la publicación, los permisos y la seguridad.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 233aa6a48937d26b9e9f9c486f4cda7238245a47
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580106"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689677"
 ---
 # <a name="managing-report-parts"></a>Administrar elementos de informe
   Los elementos de informe se pueden reutilizar en informes paginados, por varios usuarios y en varios informes. Los usuarios pueden buscar elementos de informe en el servidor y agregarlos a un informe.  También pueden informarse de las actualizaciones del elemento de informe en el servidor y volver a publicar versiones nuevas de un elemento de informe. Esas acciones de creación de informes se pueden ver afectadas por los permisos de seguridad de los servicios de informe, que las controlan.  En este tema se revisan las propiedades de los elementos de informe y su comportamiento cuando se encuentran en el servidor.  

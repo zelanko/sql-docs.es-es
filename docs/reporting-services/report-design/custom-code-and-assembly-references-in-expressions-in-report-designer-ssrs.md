@@ -1,5 +1,6 @@
 ---
 title: Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes | Microsoft Docs
+description: Obtenga información sobre cómo agregar referencias a un código personalizado insertado en un informe. Compile y guarde en el equipo, e implemente en el servidor de informes en el Generador de informes.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab5e36ce6e76cf0017e7306802544f1b2764af73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 603207390785ff684167b3b553b31c3b956842c6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880766"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes (SSRS)
   Puede agregar referencias al código personalizado incrustado en un informe o a los ensamblados personalizados que haya generado y guardado en el equipo e implementado en el servidor de informes. El código incrustado se utiliza en constantes, funciones complejas o funciones personalizadas que se usan varias veces en un único informe. Use ensamblados de código personalizados para mantener el código en un único lugar y compartirlo con el fin de utilizarlos en múltiples informes. El código personalizado puede incluir nuevas constantes, variables, funciones o subrutinas personalizadas. Puede incluir referencias de solo lectura en las colecciones integradas, como la colección Parameters. Sin embargo, no puede pasar conjuntos de valores de datos de informe a las funciones personalizadas; concretamente, no se admiten agregados personalizados.  
@@ -48,7 +49,7 @@ ms.locfileid: "77080575"
 2.  Obtener una vista previa de un informe con referencias a ensamblados personalizados en modo local.  
   
 ##  <a name="including-references-to-commonly-used-functions"></a><a name="Common"></a> Incluir referencias a funciones de uso frecuente  
- Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. En las funciones comunes se incluyen clases de los espacios de nombres [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert>, así como funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Para mayor comodidad, puede ver las funciones más usadas en el cuadro de diálogo **Expresión**, donde aparecen agrupadas por categoría: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
+ Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. En las funciones comunes se incluyen clases de los espacios de nombres [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert>, así como funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Para mayor comodidad, puede ver las funciones de uso más frecuente en el cuadro de diálogo **Expresión** , donde aparecen agrupadas por categorías: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
   
  Para usar una función integrada, haga doble clic en el nombre de la función en el panel Elemento. En el panel Descripción, aparece una descripción de la función; en el panel Ejemplo, aparece un ejemplo de la llamada a la función. En el panel de código, al escribir el nombre de la función seguido por un paréntesis izquierdo **(** , la Ayuda de IntelliSense muestra la sintaxis válida para la llamada a la función. Por ejemplo, para calcular el valor máximo de un campo denominado `Quantity` en una tabla, agregue la expresión simple `=Max(` al panel de código y, a continuación, use las etiquetas inteligentes para ver todas las posibles sintaxis válidas para la llamada a la función. Para completar este ejemplo, escriba `=Max(Fields!Quantity.Value)`.  
   

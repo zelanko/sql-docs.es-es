@@ -1,5 +1,6 @@
 ---
 title: Ordenación de datos en una región de datos (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo cambiar el criterio de ordenación de los datos en una región de datos cuando se ejecuta un informe por primera vez en el Generador de informes.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17c93f66924d6b948264efd9747f72b47bf765a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fecda4c838a5317bf87b50834152a3bb65f1d41b
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080971"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462209"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Ordenar datos en una región de datos (Generador de informes y SSRS)
   Para cambiar el criterio de ordenación de los datos de una región de datos cuando se ejecuta un informe por primera vez, es necesario establecer la expresión de ordenación en la región de datos o el grupo. De forma predeterminada, la expresión de ordenación de un grupo se establece automáticamente en el mismo valor que la expresión de grupo.  

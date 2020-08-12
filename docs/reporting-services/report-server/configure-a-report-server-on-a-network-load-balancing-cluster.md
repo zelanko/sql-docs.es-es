@@ -1,5 +1,6 @@
 ---
 title: Configurar un servidor de informes en un clúster con equilibrio de carga de red | Microsoft Docs
+description: Aprenda a configurar la escalabilidad horizontal de un servidor de informes para ejecutarlo en NLB. Implemente una solución de clúster de equilibrio de carga de red para admitir una implementación escalada de Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 12/11/2019
-ms.openlocfilehash: 09ccccf33047bb59d3097ff1bb304d3874335ade
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8bd6d8e99549cb6228a46f04b1532bbf872a066
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244402"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545577"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
 
@@ -108,13 +109,13 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
   
 1. Abra RSReportServer.config en un editor de texto.  
   
-2. Busque la sección **\<Service>** y agregue la información siguiente al archivo de configuración, al reemplazar el valor **Hostname** por el nombre de servidor virtual del servidor NLB:  
+2. Busque la sección **\<Service>** y agregue la información siguiente al archivo de configuración; reemplace el valor **Hostname** por el nombre de servidor virtual del servidor NLB:  
   
     ```xml
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3. Busque **UrlRoot**. El elemento no está especificado en el archivo de configuración, pero el valor predeterminado que se usa es una dirección URL con este formato: https:// o `https://<computername>/<reportserver>`, donde \<*servidor_de_informes*> es el nombre del directorio virtual del servicio web del servidor de informes.  
+3. Busque **UrlRoot**. El elemento no está especificado en el archivo de configuración, pero el valor predeterminado que se usa es una dirección URL con este formato: https:// o `https://<computername>/<reportserver>`, donde \<*reportserver*> es el nombre del directorio virtual del servicio web del servidor de informes.  
   
 4. Escriba un valor para **UrlRoot** que incluya el nombre virtual del clúster con este formato: https:// o `https://<virtual_server>/<reportserver>`.  
   
@@ -136,9 +137,9 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
   
 1. Abra el archivo RSReportServer.config en un editor de texto.  
   
-2. Busque \<**Hostname**>, \<**ReportServerUrl**> y \<**UrlRoot**> y compruebe el nombre de host de cada configuración. Si el valor no es el nombre de host que espera, reemplácelo por el correcto.  
+2. Busque \<**Hostname**>, \<**ReportServerUrl**> y \<**UrlRoot**>, y compruebe el nombre de host para cada configuración. Si el valor no es el nombre de host que espera, reemplácelo por el correcto.  
   
- Si inicia la herramienta Configuración de Reporting Services después de efectuar estos cambios, es posible que la herramienta cambie el valor de \<**ReportServerUrl**> al predeterminado. Mantenga siempre una copia de seguridad de los archivos de configuración por si necesita sustituirlos por la versión que contiene la configuración que desee utilizar.  
+ Si se inicia la herramienta Configuración de Reporting Services después de efectuar estos cambios, es posible que cambie el valor de \<**ReportServerUrl**> por el predeterminado. Mantenga siempre una copia de seguridad de los archivos de configuración por si necesita sustituirlos por la versión que contiene la configuración que desee utilizar.  
   
 ## <a name="see-also"></a>Consulte también
 

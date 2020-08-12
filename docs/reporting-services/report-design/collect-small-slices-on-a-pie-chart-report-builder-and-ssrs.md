@@ -1,5 +1,6 @@
 ---
 title: Recopilación de segmentos pequeños en un gráfico circular (Generador de informes) | Microsoft Docs
+description: Aprenda a recopilar muchos segmentos pequeños de un gráfico circular en un único segmento en los informes paginados del Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5c318bebf807846aed85f49770498c57a27ef4d3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5a4dc5671d5a23448f3549e383b26097026cc021
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487984"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462069"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Recopilar segmentos pequeños en un gráfico circular (Generador de informes y SSRS)
 Los gráficos circulares con demasiados segmentos pueden parecer abarrotados. Aprenda a combinar muchos segmentos pequeños de un gráfico circular en un único segmento en informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].
@@ -79,7 +80,7 @@ Los gráficos circulares con demasiados segmentos pueden parecer abarrotados. Ap
 >  No puede dar formato al gráfico circular secundario. Por esta razón, a la hora de recopilar sectores del gráfico circular se recomienda el uso del primer enfoque.  
   
 ## <a name="see-also"></a>Consulte también  
-* [Tutorial: agregar un gráfico circular a un informe (Generador de informes)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
+* [Tutorial: Agregar un gráfico circular a un informe (generador de informes)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [Gráficos circulares &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Aplicar formato a los puntos de datos de un gráfico &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

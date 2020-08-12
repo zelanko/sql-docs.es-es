@@ -1,5 +1,6 @@
 ---
 title: Ordenación interactiva (Generador de informes) | Microsoft Docs
+description: Agregue botones de ordenación interactivos para permitir a los usuarios alternar entre el orden ascendente y descendente para las filas de una tabla.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d87ccdb5cc240f73dc22c132bf4d3f88685919c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6e9677095ce97fe046f1d1e4b0a4d7b93ea4bffc
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081982"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689347"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Ordenación interactiva (Generador de informes y SSRS)
   Puede agregar botones de ordenación interactiva para permitir a los usuarios alternar entre el orden ascendente y descendente para las filas de una tabla o para las filas y columnas de una matriz. El uso más común de la ordenación interactiva es agregar un botón de ordenación a cada encabezado de columna. De esta forma, el usuario podrá elegir la columna por la que desea realizar la ordenación.  
@@ -25,9 +26,9 @@ ms.locfileid: "77081982"
   
  Al agregar una ordenación interactiva, es necesario especificar los elementos siguientes:  
   
--   **Qué ordenar:** ¿filas o columnas?  
+-   **Lo que ordenar:** ¿filas o columnas?  
   
--   **Los datos por los que se debe realizar la ordenación:** ¿un campo que se muestra en una columna de una tabla? ¿Un campo que no se muestra?  
+-   **Por lo que se va a ordenar:** ¿un campo que se muestra en una columna de una tabla? ¿Un campo que no se muestra?  
   
 -   **El contexto en el que se va a realizar la ordenación:** por ejemplo, se puede ordenar por las filas asociadas a grupos de filas; por las columnas asociadas a grupos de columnas; por filas de detalles; por grupos secundarios dentro de un grupo primario; o por un grupo primario y un grupo secundario al mismo tiempo.  
   

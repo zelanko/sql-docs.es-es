@@ -1,5 +1,6 @@
 ---
 title: Administración de contenido del servidor de informes (Modo nativo) | Microsoft Docs
+description: Obtenga información sobre el portal web y la nueva experiencia del portal web para la administración de contenido de Reporting Services. Administre elementos mediante propiedades y configuración de seguridad.
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 12832f724da36f6359f34fd2fd950ba804619c45
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286389"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547251"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Administración de contenido del servidor de informes (Modo nativo de SSRS)
 En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la administración de contenido hace referencia a la administración de elementos del servidor de informes. Es posible administrar todos los elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido. A partir de SQL Server 2016 Reporting Services o posterior (SSRS) CTP 3.2, está disponible el portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En este artículo examinaremos el portal web y la nueva experiencia de portal web.  

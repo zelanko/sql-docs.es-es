@@ -1,5 +1,6 @@
 ---
 title: Configurar Reporting Services para usar un nombre alternativo del asunto | Microsoft Docs
+description: Aprenda a configurar SQL Server Reporting Services para usar un SAN mediante la modificación del archivo rsreportserver.config y la herramienta Netsh.exe.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41a39c92a8ec9e9d940c44660a02abe5e710fede
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ecb4b0be06731070c0852f23375fafea0eed4434
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487028"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767065"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Configurar Reporting Services para usar un nombre alternativo del asunto
 

@@ -1,5 +1,6 @@
 ---
 title: Supervisar el rendimiento del servidor de informes | Microsoft Docs
+description: Obtenga información sobre cómo supervisar el rendimiento del servidor de informes para evaluar su actividad, ver tendencias, diagnosticar cuellos de botella y recopilar datos sobre la configuración del sistema.
 ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67d9f59f1561ce844c3e6a1b6f3e20770e12db6b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67412654"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547967"
 ---
 # <a name="monitoring-report-server-performance"></a>Supervisar el rendimiento del servidor de informes
   Utilice las herramientas de supervisión del rendimiento para supervisar el rendimiento del servidor de informes a fin de evaluar la actividad del servidor, observar tendencias, diagnosticar cuellos de botella del sistema y recopilar datos que pueden ayudar a determinar si la configuración actual del sistema es suficiente. Para optimizar el rendimiento del servidor, puede especificar la frecuencia con que se recicla el dominio de aplicación del servidor de informes. Para obtener más información, vea [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  

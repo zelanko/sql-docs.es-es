@@ -1,5 +1,6 @@
 ---
 title: Referencias a la colección de campos de conjunto de datos (Generador de informes) | Microsoft Docs
+description: Cree un conjunto de datos para mostrar valores individuales o resumidos en el panel Datos de informe del Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83b041ebde43c0208c3606fff6b0dcc33d7680c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3b2466036918d6c66db980a7a66259cef63fe20d
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081899"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688856"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Colecciones integradas: referencias a la colección de campos de conjunto de datos (Generador de informes)
   Cada conjunto de datos de un informe contiene una colección Fields. La colección Fields es el conjunto de campos especificados por la consulta de conjunto de datos, más los campos calculados adicionales que se hayan creado. Una vez creado el conjunto de datos, la colección de campos aparece en el panel **Datos de informe** .  

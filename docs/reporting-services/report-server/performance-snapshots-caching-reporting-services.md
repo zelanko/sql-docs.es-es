@@ -1,5 +1,6 @@
 ---
 title: Rendimiento, instantáneas, almacenamiento en caché (Reporting Services) | Microsoft Docs
+description: Aprenda a obtener datos de línea base y ejecutar pruebas para entender los factores de rendimiento específicos de la instalación y generar los resultados deseados.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8cab49b0f07caff685bd216ec9090f9e851a1d38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b6abcdaa2fc9a633531fb4d2327aec0f23158c88
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581486"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545517"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Rendimiento, instantáneas, almacenamiento en caché (Reporting Services)
   El rendimiento del servidor de informes se ve afectado por una combinación de factores entre los que se incluyen el hardware, el número de usuarios simultáneos que tienen acceso a los informes, la cantidad de datos de un informe y el formato de salida. Para entender los factores de rendimiento específicos de su instalación y qué remedios generarán los resultados que desea, necesitará obtener datos de línea base y ejecutar pruebas. Para obtener más información sobre herramientas e instrucciones, vea las publicaciones siguientes en MSDN: [Optimización del rendimiento de Reporting Services](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) y [Usar Visual Studio 2005 para realizar pruebas de carga en un servidor de informes de SQL Server 2005 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=77519).  

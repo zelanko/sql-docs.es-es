@@ -1,5 +1,6 @@
 ---
 title: Configurar un firewall para el acceso al servidor de informes | Microsoft Docs
+description: Aprenda a configurar Firewall de Windows para permitir el acceso a las aplicaciones del servidor de informes y a los informes publicados a los que se accede a través de direcciones URL.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08a80c8307d551813a30becbed6d12507e6b2947
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593747"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545591"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurar un firewall para el acceso al servidor de informes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] A las aplicaciones del servidor de informes y a los informes publicados se tiene acceso a través de direcciones URL que especifican una dirección IP, un puerto y un directorio virtual. Si Firewall de Windows está activado, es probable que el puerto que el servidor de informes está configurado para usar esté cerrado. Lo que indica que un puerto podría estar cerrado es la recepción de una página en blanco cuando intenta abrir el portal web desde un equipo cliente remoto o una página web en blanco después de solicitar un informe.  
@@ -27,7 +28,7 @@ ms.locfileid: "73593747"
   
  Si está teniendo acceso a las bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en equipos externos, o si la base de datos del servidor de informes se encuentra en una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] externa, debe abrir el puerto 1433 y 1434 del equipo externo. Para más información, vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Para obtener más información sobre la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al [!INCLUDE[ssDE](../../includes/ssde-md.md)], a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  En estas instrucciones se supone que ya configuró la cuenta de servicio, creó la base de datos del servidor de informes y configuró direcciones URL para el servicio web del servidor de informes y el portal web. Para más información, vea [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
  También debería haber comprobado que el servidor de informes es accesible a través de una conexión del explorador web local a la instancia del servidor de informes local. Con este paso se establece que tiene una instalación activa. Debería comprobar que la instalación está configurada correctamente antes de empezar a abrir los puertos. Para completar este paso en Windows Server 2008, debe haber agregado también el sitio del servidor de informes a Sitios de confianza. Para más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  

@@ -1,5 +1,6 @@
 ---
 title: Búsqueda de elementos de informe y establecimiento de una carpeta predeterminada (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo agregar elementos de informa existentes, como tablas y gráficos, al informe desde la Galería de elementos de informe en el Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd07e02d7c36c66fdec007d6c6876e765e39ffc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7db8a7ec6a9f4340dcbdf03badb0a77cdbc42591
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081469"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778917"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Buscar elementos de informe y establecer una carpeta predeterminada (Generador de informes y SSRS)
 La manera más fácil de crear un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es agregar elementos de informe existentes, como tablas y gráficos, desde la galería de elementos de informe. Al agregar un elemento de informe al informe, también agrega todo lo que debe tener para que funcione. Por ejemplo, cualquier elemento de informe que muestre los datos depende de un conjunto de datos, es decir, una consulta y una conexión a un origen de datos. Después de agregar el elemento de informe a un informe, puede modificarlo como convenga.  
@@ -31,7 +32,7 @@ La manera más fácil de crear un informe paginado de [!INCLUDE[ssRSnoversion](.
     > [!NOTE]  
     >  Debe estar conectado a un servidor de informes para buscar elementos de informe.  
   
-2.  Puede restringir la búsqueda especificando detalles sobre el elemento de informe. Escriba todo o parte del nombre y la descripción en el cuadro **Buscar** , o haga clic **Agregar criterios** y agregue los valores para alguno de los campos o para todos:  
+2.  Puede restringir la búsqueda especificando detalles sobre el elemento de informe. Escriba todo o parte del nombre y la descripción en el cuadro **Buscar**, o haga clic **Agregar criterios** y agregue los valores para alguno de los campos o para todos:  
   
     -   Creado por  
   

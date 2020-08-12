@@ -1,5 +1,6 @@
 ---
 title: Cambio de un elemento de una celda (Generador de informes) | Microsoft Docs
+description: Reemplace un elemento que no sea un contenedor, como un cuadro de texto, una línea o una imagen, en los informes paginados por un elemento de informe nuevo en el Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e94201485577a2f70d8e459322a6d0475a65300d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c262d1c3b84f65c80897c28e6fa4de826aeb3a30
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081871"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255658"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>Cambiar un elemento de una celda (Diseñador de informes y SSRS)
 En informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , solo un elemento no contenedor, como un cuadro de texto, una línea o una imagen, se puede reemplazar por un elemento de informe nuevo. Por ejemplo, puede arrastrar una tabla hasta un cuadro de texto para reemplazar éste por la tabla.  
@@ -30,7 +31,7 @@ En informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
 -   En la pestaña **Insertar** , en el grupo **Regiones de datos** o **Elementos de informe** , haga clic en el elemento que desee agregar al informe y, a continuación, haga clic en este último. El elemento se agregará al informe.  
   
 > [!NOTE]  
->  El cuadro de diálogo **Propiedades de la imagen** se abre al arrastrar un elemento de informe de imagen a una celda; en él puede establecer propiedades como el origen de la imagen antes de agregarla a la celda.  
+>   El cuadro de diálogo **Propiedades de la imagen** se abre al arrastrar un elemento de informe de imagen a una celda; en él puede establecer propiedades como el origen de la imagen antes de agregarla a la celda.  
   
 ## <a name="see-also"></a>Consulte también  
  [Imágenes, cuadros de texto, rectángulos y líneas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   

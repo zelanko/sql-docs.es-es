@@ -1,5 +1,6 @@
 ---
 title: Base de datos del servidor de informes (modo nativo) | Microsoft Docs
+description: Obtenga información sobre cómo una instalación en modo nativo de Reporting Services separa el almacenamiento de datos persistentes y el almacenamiento de datos temporal en dos bases de datos.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71207cc3476374c457ab72aa03e54215b38330ba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1a4bfe8c47361793dde026d61fb5fb7bdf0e709c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078010"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547287"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Base de datos del servidor de informes (Modo nativo de SSRS)
   Un servidor de informes es un servidor sin estado que usa el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para almacenar metadatos y definiciones de objeto. Una instalación en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] emplea dos bases de datos para separar los requisitos de almacenamiento persistente de datos de los de almacenamiento temporal. Las bases de datos se crean juntas y se enlazan mediante el nombre. De forma predeterminada, los nombres de base de datos son **ReportServer** y **ReportServerTempDB**, respectivamente.  

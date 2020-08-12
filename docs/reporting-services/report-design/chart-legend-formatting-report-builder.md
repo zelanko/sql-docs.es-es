@@ -1,5 +1,6 @@
 ---
 title: Aplicación de formato a la leyenda de un gráfico (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo aplicar formato a una leyenda de un gráfico en el Generador de informes mediante el cuadro de diálogo Propiedades de la leyenda o con el panel Propiedades.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ f1_keywords:
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b2babeb60f6208761be04e85889206f9ba407e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc2f10905bdf80c1853aecefd6783bdc60819a82
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080558"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255331"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Leyenda de gráfico: aplicar formato (Generador de informes)
   La leyenda de un gráfico contiene descripciones para cada una de las categorías de un gráfico. Una leyenda siempre contiene uno o varios elementos de leyenda, cada uno de los cuales consta de un cuadro coloreado que representa la serie y una cadena de texto que describe la serie, tal como se ve en la ilustración siguiente.  

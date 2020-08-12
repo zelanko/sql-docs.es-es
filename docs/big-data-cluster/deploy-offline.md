@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 15af041e94ac0abfdae13635345de62262a4b086
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531982"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423164"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realización de una implementación sin conexión de un clúster de macrodatos de SQL Server
 
@@ -54,6 +54,10 @@ En los pasos siguientes se explica cómo extraer las imágenes de contenedor de 
    ```PowerShell
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
+ 
+> [!WARNING]
+> No modifique las imágenes del clúster de macrodatos una vez insertadas en el repositorio privado. Si realiza una implementación con imágenes modificadas, se producirá una configuración de clúster de macrodatos no admitida.
+
 
 ### <a name="big-data-cluster-container-images"></a><a id="images"></a> Imágenes de contenedor de clúster de macrodatos
 

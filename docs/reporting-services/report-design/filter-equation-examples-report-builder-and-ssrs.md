@@ -1,5 +1,6 @@
 ---
 title: Ejemplos de ecuaciones de filtro (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo crear un filtro de informe. Tenga en cuenta estos ejemplos de filtros usados con frecuencia para crear los suyos propios.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a76863222fdd58d769031020ac888966596146
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 074a7d7b300d9ae55776199479b229407b2ba3a1
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080134"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689741"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Ejemplos de ecuaciones de filtro (Generador de informes y SSRS)
   Para crear un filtro, debe especificar una o varias ecuaciones de filtro. Una ecuación de filtro incluye una expresión, un tipo de datos, un operador y un valor. En este tema, se proporcionan ejemplos de filtros usados habitualmente.  

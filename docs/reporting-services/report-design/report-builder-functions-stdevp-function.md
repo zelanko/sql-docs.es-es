@@ -1,5 +1,6 @@
 ---
 title: Función StDevP (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre esta función que devuelve la desviación estándar de población de todos los valores numéricos no NULL especificados por una expresión.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c46bdc29f93715246401a824cac889f8052101bc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2323683d4e5164d9c73cccca4ee896e7352c8fef
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081142"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688724"
 ---
 # <a name="report-builder-functions---stdevp-function"></a>Funciones del Generador de informes: función StDevP
   Devuelve la desviación estándar de población de todos los valores numéricos no NULL especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  

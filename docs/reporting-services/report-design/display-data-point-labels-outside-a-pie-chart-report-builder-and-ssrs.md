@@ -1,5 +1,6 @@
 ---
 title: Representación de etiquetas de puntos de datos fuera de un gráfico circular (Generador de informes) | Microsoft Docs
+description: Descubra cómo mostrar las etiquetas fuera de un gráfico circular podría crear más espacio para las etiquetas de datos más largas en el Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd5607aa5e3d6f93692e251da7c3490d8f62cb86
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e09f4cd21015c0e1933154685e954fadd017943c
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080498"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462249"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular (Generador de informes y SSRS)
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el etiquetado de los gráficos circulares está optimizado, por lo que las etiquetas se muestran solo en varios segmentos de datos. Si el gráfico circular contiene demasiados segmentos, las etiquetas se pueden superponer. Una solución consiste en mostrar las etiquetas fuera del gráfico circular, lo que puede crear más espacio para las etiquetas de datos más largas. Si las etiquetas siguen solapándose, habilite 3D para crear más espacio. Esto reduce el diámetro del gráfico circular, lo que crea más espacio alrededor del gráfico.  

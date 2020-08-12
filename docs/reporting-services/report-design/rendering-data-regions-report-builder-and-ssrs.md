@@ -1,5 +1,6 @@
 ---
 title: Representación de regiones de datos (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre los comportamientos de paginación y representación de los distintos elementos de una región de datos en el Generador de informes.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06eb5ee05e045a2cb6e902030714ebb2f824becc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9db14d568b96599a114616b011383b6aaf14ea7e
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077001"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462299"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Representar regiones de datos (Generador de informes y SSRS)
   Además de los comportamientos generales de representación que se aplican a todos los elementos de informe, las regiones de datos están sujetas a comportamientos de paginación y de representación adicionales. Las reglas de representación específicas de las regiones de datos describen la forma en la que crece una región de datos, cómo se representan las celdas especiales, como la celda de la esquina o las celdas de encabezado, y cómo se representa una región de datos para la lectura de derecha a izquierda. En este tema se explica cómo se representan las distintas partes de una región de datos.  

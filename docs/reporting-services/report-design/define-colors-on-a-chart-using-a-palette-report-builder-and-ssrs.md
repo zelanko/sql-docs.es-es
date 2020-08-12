@@ -1,5 +1,6 @@
 ---
 title: Definición de los colores de un gráfico mediante una paleta (Generador de informes) | Microsoft Docs
+description: Cambie la paleta de colores de un gráfico mediante la selección de una paleta predefinida o la definición de una paleta personalizada.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c20b5893adba8968373656b0358b89deb2dc0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 09d5239056225e010431947e99dd508b1c6f01ac
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080510"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689268"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Definir los colores de un gráfico mediante una paleta (Generador de informes y SSRS)
   Para cambiar la paleta de colores de un gráfico, puede seleccionar una paleta predefinida o definir una paleta personalizada. Las paletas personalizadas son específicas de cada gráfico.  

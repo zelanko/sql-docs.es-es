@@ -1,5 +1,6 @@
 ---
 title: Crear una biblioteca de extensiones de entrega | Microsoft Docs
+description: Obtenga información sobre cómo asignar una extensión de entrega creada en Reporting Services a un espacio de nombres único y compilarla en un archivo de ensamblado o biblioteca.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 06b204e9cc3c13492b0ab6815c7d36abdc628d4b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77bff5683f459317458f270eea663641ca5e2c33
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193875"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529141"
 ---
 # <a name="creating-a-delivery-extension-library"></a>Crear la biblioteca de una extensión de entrega
   Cada extensión de entrega de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que cree debería tener asignado un espacio de nombres único e integrarse en archivo de ensamblado o biblioteca. El nombre exacto del espacio de nombres no es importante, pero debe ser único y no compartirse con ninguna otra extensión. Debería crear sus propios espacios de nombres únicos para las extensiones de entrega de su compañía.  

@@ -1,5 +1,6 @@
 ---
 title: Autorización en Reporting Services | Microsoft Docs
+description: Obtenga información sobre el proceso de autorización en Reporting Services. Obtenga información sobre el desarrollo de extensiones de seguridad mediante la interfaz IAuthorizationExtension2.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2210d5eb5997ec66e707a90cdc52dc24328e6f6f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5895064b0e6191c3ecbdcbd5405b1fd1bd50237
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193360"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529061"
 ---
 # <a name="authorization-in-reporting-services"></a>La autorización en Reporting Services
   La autorización es el proceso de determinar si se debería conceder a una identidad el tipo solicitado de acceso a un recurso determinado en la base de datos del servidor de informes. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza una arquitectura de autorización basada en roles que concede a los usuarios acceso a un recurso determinado según la asignación de roles del usuario para la aplicación. Las extensiones de seguridad para [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contienen una implementación de un componente de autorización que se utiliza para conceder acceso a los usuarios una vez autenticados en el servidor de informes. La autorización se invoca cuando un usuario intenta realizar una operación en el sistema o en un elemento del servidor de informes a través del acceso de dirección URL y la API SOAP. Esto es posible a través de la interfaz de extensión de seguridad **IAuthorizationExtension2**. Según se ha indicado previamente, todas las extensiones heredan de **IExtension** la interfaz básica de cualquier extensión que implemente. **IExtension** e **IAuthorizationExtension2** son miembros del espacio de nombres **Microsoft.ReportingServices.Interfaces**.  

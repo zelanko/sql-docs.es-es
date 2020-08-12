@@ -1,5 +1,6 @@
 ---
 title: Representación de encabezados y pies de página con un grupo (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo establecer propiedades para representar encabezados y pies de página con filas dinámicas que están asociadas a un grupo en una región de datos Tablix.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecc2cb9b0b2e425627f73ae87aa3a9e8f5a289b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54afbcc4f95fdd0c626b6559437e08c454cd2dd4
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080478"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689260"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Mostrar encabezados y pies de página con un grupo (Generador de informes y SSRS)
   Puede ayudar a controlar si una fila estática, como un encabezado o un pie de grupo, se representa en filas dinámicas asociadas a un grupo en una región de datos Tablix.  

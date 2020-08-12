@@ -1,5 +1,6 @@
 ---
 title: Referencia de funciones de agregado (Generador de informes) | Microsoft Docs
+description: Use las funciones de agregado integradas en las expresiones del Generador de informes para incluir valores de agregado en el informe.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081318"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255738"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funciones del Generador de informes: referencia de funciones de agregado
   Para incluir valores de agregado en un informe, puede utilizar las funciones de agregado integradas en las expresiones. La función de agregado predeterminada para los campos numéricos es SUM. Puede modificar la expresión y utilizar una función de agregado integrada diferente o especificar un ámbito diferente. El ámbito identifica qué conjunto de datos utilizar para el cálculo.  
@@ -78,10 +79,10 @@ ms.locfileid: "77081318"
 |Parámetro de consulta|No|Sí|No|No|No|No|No|  
 |Expresión de grupo|Sí|Sí|No|No|Sí|No|No|  
 |Expresión de ordenación|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 5|No|  
-|Expresión de filtro|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 6|No|  
+|Expresión de filtro|Sí|Sí|No|Sin|Sí|Sí<br /><br /> Nota 6|No|  
 |Código|No|Sí<br /><br /> Nota 7|No|No|No|No|No|  
 |Idioma de los informes|No|Sí|No|No|No|No|No|  
-|variables|Sí|Sí|No|No|Sí|Ámbito actual o que lo contiene|No|  
+|variables|Sí|Sí|No|Sin|Sí|Ámbito actual o que lo contiene|No|  
 |Agregados|Sí|Sí|Solo en encabezado de página o pie de página|Solo en agregados de elementos de informe|Sí|No|No|  
 |Funciones de búsqueda|Sí|Sí|Sí|No|Sí|No|No|  
   
@@ -108,10 +109,10 @@ ms.locfileid: "77081318"
   
 |Context|RunningValue|RowNumber|Primero<br /><br /> Último|Previous|Funciones de suma y otras de ordenación previa|Agregados ReportItem|Funciones de búsqueda|Función de agregado|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valor actual|No|No|No|No|Sí|No|Sí|No|  
-|Primero<br /><br /> Último|No|No|No|No|Sí|No|No|No|  
+|Valor actual|No|No|No|Sin|Sí|No|Sí|No|  
+|Primero<br /><br /> Último|No|No|No|Sin|Sí|No|No|No|  
 |Previous|Sí|Sí|Sí|No|Sí|No|Sí|No|  
-|Funciones de suma y otras de ordenación previa|No|No|No|No|Sí|No|Sí|No|  
+|Funciones de suma y otras de ordenación previa|No|No|No|Sin|Sí|No|Sí|No|  
 |Agregados ReportItem|No|No|No|No|No|No|No|No|  
 |Funciones de búsqueda|Sí|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|No|No|  
 |Función de agregado|No|No|No|No|No|No|No|No|  

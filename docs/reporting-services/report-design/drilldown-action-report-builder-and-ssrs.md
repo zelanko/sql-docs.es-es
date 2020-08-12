@@ -1,5 +1,6 @@
 ---
 title: Acción de exploración en profundidad (Generador de informes) | Microsoft Docs
+description: Permita que los usuarios con la acción de obtención de detalles puedan ocultar y mostrar elementos de forma interactiva en el Generador de informes mediante iconos más y menos en un cuadro de texto.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -38,12 +39,12 @@ f1_keywords:
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a0c286663b339171a2536340ca19213879e22091
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c917e591bf7de47c7d6084d06cf2064904f8b4a
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080468"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462239"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Acción de obtención de detalles (generador de informes y SSRS)
 Si quiere que los usuarios puedan ocultar y mostrar los elementos de forma interactiva, proporcione iconos más y menos en un cuadro de texto. Esto se denomina acción *de obtención de detalles* . En una tabla o matriz, puede mostrar u ocultar filas y columnas estáticas, o filas y columnas que están asociadas a grupos.  

@@ -1,5 +1,6 @@
 ---
 title: Actualización de un recurso (portal web) | Microsoft Docs
+description: Actualice un recurso mediante el portal web de Reporting Services. Reemplace un recurso existente mediante la importación de contenido de archivo nuevo o diferente en el recurso existente.
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f101df8f160e7d6bab50dd96e7a156622c7699a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a59d655ef6101d8b9968ff2a241eff7d245ecc75
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67228581"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547847"
 ---
 # <a name="update-a-resource-web-portal"></a>Actualización de un recurso (portal web)
   Puede actualizar un recurso reemplazándolo por una versión más reciente. Los recursos son elementos almacenados en un servidor de informes que contienen el contenido de un archivo que el usuario carga. Puede reemplazar un recurso existente importando el contenido de archivo nuevo o diferente en el recurso existente. La actualización de un recurso proporciona un modo de actualizar contenido preservando las propiedades existentes y la configuración de seguridad del recurso.  

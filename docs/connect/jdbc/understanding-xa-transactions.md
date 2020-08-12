@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528739"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294005"
 ---
 # <a name="understanding-xa-transactions"></a>Descripción de las transacciones XA
 
@@ -60,7 +60,7 @@ Las siguientes instrucciones adicionales se aplican a las transacciones fuerteme
 Los siguientes pasos son necesarios si desea usar los orígenes de datos XA junto con Microsoft DTC (Coordinador de transacciones distribuidas) para administrar las transacciones distribuidas.  
 
 > [!NOTE]  
-> Los componentes de transacciones distribuidas de JDBC están incluidos en el directorio xa de la instalación del controlador JDBC. Estos componentes incluyen los archivos xa_install.sql y sqljdbc_xa.dll.  
+> Los componentes de transacciones distribuidas de JDBC están incluidos en el directorio xa de la instalación del controlador JDBC. Estos componentes incluyen los archivos xa_install.sql y sqljdbc_xa.dll. Si tiene otras versiones del controlador JDBC en otros clientes, se recomienda usar el archivo sqljdbc_xa.dll más reciente en el servidor.  
 
 > [!NOTE]  
 > A partir de la versión preliminar pública CTP 2.0 de SQL Server 2019, los componentes de transacciones distribuidas de JDBC XA se incluyen en el motor de SQL Server y se pueden habilitar o deshabilitar con un procedimiento almacenado del sistema.

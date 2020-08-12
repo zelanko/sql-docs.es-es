@@ -1,5 +1,6 @@
 ---
 title: Cmdlets de PowerShell para el modo de SharePoint de Reporting Services | Microsoft Docs
+description: Los cmdlets de PowerShell se instalan para admitir el modo de SharePoint de SQL Server Reporting Services, incluida la instalación y administración de aplicaciones y características.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e415fee08a9723419c7d8a4258fc88670c5e262
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a92cb1a23c4c1d7062945bc24961a2c37d25950
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68892405"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83765006"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets de PowerShell para el modo de SharePoint de Reporting Services
 
@@ -38,7 +39,7 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
   
  Si ve un mensaje de error similar al siguiente al escribir los ejemplos de PowerShell:  
   
--   Install-SPRSService : El término 'Install-SPRSService' no se reconoce como  
+-   Install-SPRSService: El término 'Install-SPRSService' no se reconoce como  
     nombre de un cmdlet, función, archivo de script o programa ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.  
   
  Se está produciendo uno de los problemas siguientes:  
@@ -290,7 +291,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Uso de PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Lista de comprobación: usar PowerShell para comprobar PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[Lista de comprobación: Uso de PowerShell para comprobar PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
 [Obtener ayuda de SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

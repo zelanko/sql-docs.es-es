@@ -1,5 +1,6 @@
 ---
 title: Mapas (Generador de informes) | Microsoft Docs
+description: Familiarícese con el modo de agregar un mapa a un informe paginado que muestre datos empresariales sobre un fondo geográfico del informe paginado en el Generador de informes.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b3c37e642ba5c9d570fc754f5eca3ab0b57d24a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082610"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881914"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Generador de informes y SSRS)
   Para visualizar datos comerciales con un fondo geográfico, puede agregar un mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . El tipo de mapa que seleccione dependerá de qué información desee comunicar en el informe. Puede agregar un mapa que solo muestre las ubicaciones, un mapa de burbujas que varíe el tamaño de la burbuja en función del número de casas de un área, un mapa de marcadores que varíe el estilo de marcador según el producto más rentable de cada almacén o un mapa de líneas que muestre las rutas entre los almacenes.  
@@ -70,7 +71,7 @@ ms.locfileid: "77082610"
 #### <a name="sources-of-spatial-data"></a>Orígenes de datos espaciales  
  Se admiten los orígenes siguientes de datos espaciales:  
   
--   **Informes de la Galería de mapas.** Los datos espaciales se incrustan en los informes que se encuentran en la galería de mapas. De forma predeterminada, la Galería de mapas se instala en *\<unidad>* :\Archivos de programa\Microsoft SQL Server\Report Builder\MapGallery.  
+-   **Informes de la Galería de mapas.** Los datos espaciales se incrustan en los informes que se encuentran en la galería de mapas. De forma predeterminada, la Galería de mapas se instala en *\<drive>* :\Archivos de programa\Microsoft SQL Server\Report Builder\MapGallery.  
   
     > [!NOTE]  
     >  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([https://www.census.gov/](https://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para más información acerca de los archivos de forma TIGER/Line, vaya a [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) (Documentación técnica de los archivos de forma TIGER/Line y los archivos TIGER/Line). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  

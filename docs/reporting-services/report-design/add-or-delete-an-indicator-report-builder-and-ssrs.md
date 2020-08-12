@@ -1,5 +1,6 @@
 ---
 title: Adición o eliminación de un indicador (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo agregar o eliminar un indicador en los informes paginados para transmitir el estado de un único valor de datos en el Generador de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08dd396fc68bae04d973d6b96f67466006642120
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 154faecf24a142578fc236a2cae6330ea7d89a76
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881259"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Agregar o eliminar un indicador (Generador de informes y SSRS)
-  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , los indicadores son medidores mínimos que comunican el estado del valor de un dato de un vistazo. Para obtener más información sobre ellos, vea [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
+  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], los indicadores son medidores mínimos que comunican el estado de un único valor de datos de un vistazo. Para obtener más información sobre ellos, vea [Indicadores &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  Los indicadores normalmente se colocan en celdas en una tabla o matriz, pero también puede utilizarlos solos, uno al lado de otro con medidores o incrustados en medidores.  
   

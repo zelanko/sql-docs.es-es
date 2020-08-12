@@ -1,5 +1,6 @@
 ---
 title: Aplicación de formato a las etiquetas de los ejes de un gráfico (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo dar formato a las etiquetas de los ejes de un gráfico mediante un cuadro de diálogo o el panel Propiedades para clasificar y mostrar las relaciones en el Generador de informes.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0838e5d0ea9c592a52408956b75ee651bcc542a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d44212b3d290f69f8565040d44946104f92b045
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880285"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS)
   Los tipos de gráficos basados en coordenadas (de columnas, de barras, de áreas, de puntos, de líneas y de intervalos) tienen dos ejes que se usan para clasificar y mostrar las relaciones entre los datos. A cada eje se le aplican distintos tipos de formato.  

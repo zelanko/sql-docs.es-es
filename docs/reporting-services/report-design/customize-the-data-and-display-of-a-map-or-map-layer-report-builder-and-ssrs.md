@@ -1,5 +1,6 @@
 ---
 title: Personalización de los datos y presentación de un mapa o una capa de mapa (Generador de informes) | Microsoft Docs
+description: Mejore la experiencia del usuario de los datos y muéstrelos con cambios en las leyendas, el color, las etiquetas y la resolución en el Generador de informes.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 671ea97546b8b2184ee6d105da2990d9f736d9e1
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080519"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462259"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar los datos y la presentación de un mapa o una capa de mapa (Generador de informes y SSRS)
   Después de agregar un mapa o una capa de mapa a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] con un asistente, puede que quiera cambiar el aspecto del mapa en el informe. Puede realizar mejoras considerando las ideas siguientes:  
@@ -121,7 +122,7 @@ ms.locfileid: "77080519"
   
  La expresión de grupo especifica cómo se agregan los datos analíticos que tienen relación con los datos espaciales para cada elemento de mapa de la capa. De forma predeterminada, la expresión de grupo es el conjunto de campos coincidentes que se especificó para la relación entre los datos espaciales y los datos analíticos. Por ejemplo, en un mapa de burbujas que muestra las ubicaciones de las ciudades y el tamaño de la población de un país o región, los campos coincidentes incluyen el nombre de la ciudad [City] y el nombre de la región [Region] porque puede haber varias ciudades con el mismo nombre. La expresión de grupo correspondiente incluye dos campos: [City ] y [Region].  
   
- Para obtener más información, vea [Sugerencias sobre mapas: cómo importar archivos de forma en SQL Server y agregar datos espaciales](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ Para obtener más información, consulte [Sugerencias sobre mapas: Cómo importar archivos de forma en SQL Server y agregar datos espaciales](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
 ##  <a name="change-options-for-the-map-elements-on-the-layer"></a><a name="MapElements"></a> Cambiar las opciones de los elementos de mapa de la capa  
  Los elementos de mapa son los puntos, líneas o polígonos de una capa que se basan en los datos espaciales. Se pueden establecer las opciones siguientes para los elementos de mapa. Estas opciones se aplican a todos los elementos de mapa de la capa, tanto si están incrustados como si no:  

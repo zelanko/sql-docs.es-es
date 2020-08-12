@@ -1,5 +1,6 @@
 ---
 title: Trazado de datos en un eje secundario (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre los usos del tipo de eje secundario para comparar dos intervalos de datos distintos en el Generador de informes.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 094f39bf-3634-4852-9fc3-3adec4b266e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b53f514104032f55dcdbc88986f8e2679ecd5700
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5c39b7b9c601e0a796874f45a0eb1512a69943b
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082375"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255601"
 ---
 # <a name="plot-data-on-a-secondary-axis-report-builder-and-ssrs"></a>Trazar datos en un eje secundario (Generador de informes y SSRS)
 

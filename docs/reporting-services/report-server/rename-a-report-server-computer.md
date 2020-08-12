@@ -1,5 +1,6 @@
 ---
 title: Cambiar el nombre de un equipo servidor de informes | Microsoft Docs
+description: Aprenda a volver a configurar un servidor de informes después de cambiar el nombre de un equipo. Es posible que SQL Server Reporting Services no sea accesible después de cambiar el nombre de un equipo.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3fe381daf1b89d76d9282f2c1a54c3940a3ffbe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83de666e0f6aa3dc54c3e9b864ebabf957f4ac25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67314046"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544527"
 ---
 # <a name="rename-a-report-server-computer"></a>Cambiar el nombre de un equipo que ejecuta un servidor de informes
   Al cambiar el nombre de un equipo, también se cambia el nombre correspondiente del servidor web y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (si está en el mismo equipo). En algunos casos, puede que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no esté accesible después de un cambio en el nombre de equipo. Siga los pasos que aparecen en este artículo para volver a configurar un servidor de informes después de haber cambiado el nombre de un equipo.  

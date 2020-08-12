@@ -1,5 +1,6 @@
 ---
 title: Colocación de etiquetas en un gráfico (Generador de informes) | Microsoft Docs
+description: Determine el tipo de gráfico que usa para averiguar cómo cambiar la posición de las etiquetas en ese tipo y forma de gráfico.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5db74e0b-8be8-4b47-b386-faab56dffa9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 66083dc0ff720f5b836db0e6f0689c916d2b2fdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 23969f84491a66d7aedfdb887128fa85aea34742
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082382"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688655"
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>Colocar etiquetas en un gráfico (Generador de informes y SSRS)
-  Dado que cada tipo de gráfico en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tiene una forma diferente, las etiquetas de punto de datos se colocan en una ubicación óptima para no interferir en el gráfico. La posición predeterminada de las etiquetas depende del tipo de gráfico:  
+  Dado que cada tipo de gráfico en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tiene una forma diferente, las etiquetas de punto de datos se colocan en una ubicación óptima para no interferir en el gráfico. La posición predeterminada de las etiquetas varía con el tipo de gráfico:  
   
 -   En los gráficos apilados, las etiquetas solo se pueden colocar dentro de la serie.  
   

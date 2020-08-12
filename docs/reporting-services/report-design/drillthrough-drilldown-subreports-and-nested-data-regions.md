@@ -1,5 +1,6 @@
 ---
 title: Obtención de detalles, exploración en profundidad, subinformes y regiones de datos anidadas | Microsoft Docs
+description: Organice los datos para mostrar la relación de los generales con los detallados y, después, muestre los datos en un subinforme o en un informe de obtención de detalles independiente.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55dd847b01d6870712c226fa9aec0d49de2c4efb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578777"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689385"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas
   Puede organizar los datos de distintas formas para mostrar la relación entre lo general y lo detallado.  Puede incluir todos los datos en el informe, pero establecer que permanezcan ocultos hasta que un usuario haga clic para mostrar los detalles; esta es una acción *de obtención de detalles* . Puede mostrar los datos en una región de datos, como una tabla o un gráfico, que *está anidada* en otra, como una tabla o matriz. Puede mostrar los datos en un *subinforme* que esté completamente incluido dentro de un informe principal. O también, puede colocar los datos detallados en informes *detallados* , informes independientes que se muestran cuando un usuario hace clic en un vínculo.  

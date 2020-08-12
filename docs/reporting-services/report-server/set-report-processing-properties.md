@@ -1,5 +1,6 @@
 ---
 title: Establecer las propiedades del procesamiento de informes | Microsoft Docs
+description: Obtenga información sobre las propiedades de ejecución de informes del servidor de informes que controlan cómo se procesan los informes, y aprenda a configurarlas para cada informe a través del portal web.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 62c38e222ede1678d7fd06089897b3a8435aa687
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140400"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547887"
 ---
 # <a name="set-report-processing-properties"></a>Establecer las propiedades del procesamiento de informes
   Las propiedades de ejecución del informe controlan el modo en que se procesa un informe. Estas propiedades deben establecerse de forma individual para cada uno de los informes.  

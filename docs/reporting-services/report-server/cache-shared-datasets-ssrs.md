@@ -1,5 +1,6 @@
 ---
 title: Almacenamiento en caché de conjuntos de datos compartidos | Microsoft Docs
+description: Obtenga información sobre el almacenamiento en caché de conjuntos de datos compartidos en el Administrador de informes de SQL Server, lo que mejora el tiempo de respuesta y proporciona datos coherentes para los informes en los que se usa el conjunto de datos.
 ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9436fd4963c5c9af86f3ea4ede200952fb6deb59
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b256074f441dd2160298fe7840af4f6fca13eaf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082551"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545604"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Almacenar en caché conjuntos de datos compartidos (SSRS)
   Los resultados de las consultas para un conjunto de datos compartido se pueden copiar en una memoria caché para proporcionar datos coherentes a varios informes y mejorar el tiempo de respuesta de la consulta del conjunto de datos. Al igual que los informes, puede configurar un conjunto de datos compartido que se va a almacenar en memoria caché al usarse por primera vez o especificando una programación.  

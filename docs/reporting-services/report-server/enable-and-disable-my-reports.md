@@ -1,5 +1,6 @@
 ---
 title: Habilitar y deshabilitar Mis informes | Microsoft Docs
+description: Aprenda a habilitar y deshabilitar la característica Mis informes en Reporting Services. Mis informes proporciona almacenamiento en la base de datos del servidor de informes para los usuarios.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ffc2b26db7e6211f16496b06f8bbaebf30b9ed7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547987"
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar y deshabilitar Mis informes
   La característica Mis informes asigna espacio de almacenamiento personal en la base de datos del servidor de informes para que los usuarios puedan guardar sus propios informes en una carpeta privada. Los administradores de servidores de informes pueden habilitar o deshabilitar esta característica o cambiar su funcionamiento modificando la configuración de seguridad que controla las acciones que los usuarios llevan a cabo en esta área de trabajo.  

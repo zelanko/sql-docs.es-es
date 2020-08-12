@@ -1,5 +1,6 @@
 ---
 title: Descripción de los grupos (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo un grupo organiza una vista de un conjunto de datos de un informe en un informe paginado en el Generador de informes.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,19 +12,19 @@ f1_keywords:
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a24833de353f4a524dd12f3a37a343fdc1a9151
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 498604b377638981d767e353518b70fe3398c597
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880303"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Descripción de los grupos (Generador de informes y SSRS)
   En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , un grupo es un conjunto de datos con nombre del conjunto de datos de informe que está enlazado a una región de datos. Básicamente, un grupo organiza una vista de un conjunto de datos de informe. Todos los grupos de una región de datos especifican vistas diferentes del mismo conjunto de datos de informe.  
   
  Para poder visualizar lo que es un grupo, consulte la ilustración siguiente que muestra la región de datos Tablix en la vista previa. En esta ilustración, los grupos de filas ordenan el conjunto de datos por tipo de producto y los grupos de columnas ordenan el conjunto de datos por región geográfica y año.  
   
- ![Descripción de las áreas de la región de datos Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Descripción de las áreas de la región de datos Tablix")  
+ ![Áreas de la región de datos Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Áreas de la región de datos Tablix")  
   
  Las secciones siguientes sirven de ayuda para describir los distintos aspectos de los grupos.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "77080853"
 > [!NOTE]  
 >  Aunque los grupos tienen nombres diferentes en regiones de datos diferentes, los principios en los que se basa la creación y el uso de los grupos son los mismos. Cuando se crea un grupo para una región de datos, se especifica una manera de organizar los datos detallados del conjunto de datos que está vinculado a la región de datos. Cada región de datos admite una estructura de grupo en la que mostrar los datos agrupados.  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Grupos de una región de datos Tablix: grupos de detalles, de filas y de columnas  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Grupos de una región de datos Tablix: grupos de detalles, filas y columnas  
  Como se explicó anteriormente en este tema, una región de datos Tablix le permite organizar los datos en grupos por filas o por columnas. Sin embargo, los grupos de filas y de columnas no son los únicos grupos disponibles en una región de datos Tablix. Esta región de datos puede tener los tipos de grupos siguientes:  
   
 -   **Grupo de detalles** : el grupo de detalles está compuesto por todos los datos de un conjunto de datos de informe después de que el Generador de informes o el Diseñador de informes apliquen filtros de conjuntos de datos y de regiones de datos. Por lo tanto, el grupo de detalles es el único grupo que no tiene ninguna expresión de grupo.  

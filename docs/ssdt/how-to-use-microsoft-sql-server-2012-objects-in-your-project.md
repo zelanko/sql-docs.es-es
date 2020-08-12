@@ -1,23 +1,23 @@
 ---
 title: Objetos de SQL Server 2012 en un proyecto
+description: Familiarícese con las secuencias de SQL Server 2012. Vea cómo agregar estos objetos a proyectos de base de datos y usarlos en consultas.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 69c68812e169d2831ffde71d2b21f9af8f418600
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 42c9c1cdc852aed9a1ff8bf469cd0534bc992ba2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486796"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895838"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Usar objetos de Microsoft SQL Server 2012 en un proyecto
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedimientos: Uso de objetos de Microsoft SQL Server 2012 en un proyecto
 
 En este ejemplo, agregará un objeto de secuencia a un proyecto de base de datos destinado a Microsoft SQL Server 2012.  
   
@@ -44,7 +44,7 @@ Las secuencias se incluyeron en Microsoft SQL Server 2012. Una secuencia es un o
     CACHE 10  
     ```  
   
-4.  Si la plataforma de destino del proyecto no se ha establecido en Microsoft SQL Server 2012, la **Lista de errores** mostrará un error de sintaxis para la instrucción `CREATE SEQUENCE`. Para corregir este problema, siga el tema [Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) para cambiar la plataforma de destino según corresponda.  
+4.  Si la plataforma de destino del proyecto no se ha establecido en Microsoft SQL Server 2012, la **Lista de errores** mostrará un error de sintaxis para la instrucción `CREATE SEQUENCE`. Para corregir este problema, vea [Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) para cambiar la plataforma de destino según corresponda.  
   
 5.  Siga el tema [Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) para publicar el proyecto en una base de datos del servidor de Microsoft SQL Server 2012 conectado.  
   

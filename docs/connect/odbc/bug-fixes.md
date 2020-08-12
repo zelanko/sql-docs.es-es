@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153223"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091809"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de los errores corregidos
 
@@ -51,8 +51,8 @@ Esta página contiene una lista de los errores corregidos en cada versión, a pa
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-174-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17.4 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Corrección del bloqueo intermitente cuando los Conjuntos de resultados activos múltiples (MARS) están habilitados
-- Corrección del bloqueo de resistencia de conexión cuando está habilitada la notificación asincrónica
+- Corrección de un problema intermitente que hace que el controlador deje de responder cuando se habilitan conjuntos de resultados activos múltiples (MARS)
+- Corrección de un problema de resistencia de conexión que hace que el controlador deje de responder cuando se habilita la notificación asincrónica
 - Corrección del bloqueo al recuperar registros de diagnóstico para intentos de conexión multiproceso
 - Corrección del error de cifrado no compatible tras la reconexión después de llamar a SQLGetInfo() con SQL_USER_NAME y SQL_DATA_SOURCE_READ_ONLY
 - Corrección del error de inicialización COM durante la autenticación interactiva de Azure Active Directory
@@ -94,7 +94,7 @@ Esta página contiene una lista de los errores corregidos en cada versión, a pa
 
 - Se corrigió un error en el que, al usar la autenticación de Kerberos, la inserción masiva podía generar el error de acceso denegado
 - Se quitó la solución alternativa para un error unixODBC presente en versiones anteriores a 2.3.1 (el controlador ha duplicado los tamaños de ciertos búferes pasados a unixODBC)
-- Se corrigió el bloque de la resistencia de la conexión (reconexión) al usar ColumnEncryption=Enabled
+- Se ha corregido la falta de respuesta de la resistencia de la conexión (reconexión) al usar ColumnEncryption=Enabled
 - Se corrigió el error de creación de DSN donde, al usar la opción "Autenticación interactiva de Active Directory ", la ventana de autenticación de Azure podría dejar de responder (Windows)
 - Se corrigió un bloqueo inusual durante el cierre de ODBC cuando la ejecución asincrónica está habilitada (se produjo al borrar el identificador de conexión)
 - Se corrigió un problema en el que el controlador de SQL generó un alto consumo de CPU al ejecutar procedimientos almacenados largos

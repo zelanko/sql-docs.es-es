@@ -1,5 +1,6 @@
 ---
 title: Crear una cadena de conexión válida con TCP/IP
+description: Aprenda a crear una cadena de conexión válida al usar TCP/IP para conectarse a una instancia de SQL Server. Vea ejemplos de cadenas válidas.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1d257a0b1f6a6022ff5816ce6fab7378f05f89e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71c1c8e7dfa12a270ee32cc7740efc6770026d1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306475"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899709"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Crear una cadena de conexión válida con TCP/IP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Para crear una cadena de conexión válida con TCP/IP, debe:  
   
 -   Especifique un **Nombre de alias**.  
@@ -168,7 +169,7 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  Para más información sobre la especificación del protocolo de red como un parámetro **sqlcmd** , vea "Cómo conectarse al motor de base de datos mediante sqlcmd.exe" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>   Para más información sobre la especificación del protocolo de red como un parámetro **sqlcmd** , consulte "Conectarse al motor de base de datos con sqlcmd" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear una cadena de conexión válida con el protocolo de memoria compartida](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

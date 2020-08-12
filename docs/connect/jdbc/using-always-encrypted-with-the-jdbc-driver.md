@@ -2,7 +2,7 @@
 title: Usar Always Encrypted con el controlador JDBC
 description: Obtenga información sobre cómo usar Always Encrypted en la aplicación Java con JDBC Driver para SQL Server para cifrar datos confidenciales en el servidor.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886358"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279624"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Usar Always Encrypted con el controlador JDBC
 
@@ -44,11 +44,11 @@ Microsoft JDBC Driver para SQL Server se comunica con un almacén de claves m
 ### <a name="using-built-in-column-master-key-store-providers"></a>Usar proveedores integrados de almacenamiento de claves maestras de columna
 Microsoft JDBC Driver para SQL Server incluye estos proveedores de almacenamiento de claves maestras de columna integrados. Algunos de estos proveedores se registran previamente con los nombres de proveedores específicos (que se usan para buscar el proveedor) y algunos requieren credenciales adicionales o registro explícito.
 
-| Clase                                                 | Descripción                                        | Nombre del proveedor (búsqueda)  | ¿Está registrado previamente? |
-| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Proveedor para un almacén de claves para Azure Key Vault. | AZURE_KEY_VAULT         | _No_ antes de la versión 7.4.1 del controlador JDBC, pero _sí_ a partir de la versión 7.4.1 del controlador JDBC. |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | Un proveedor para el Almacén de certificados de Windows.      | MSSQL_CERTIFICATE_STORE | _Sí_                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Proveedor del almacén de claves de Java.                  | MSSQL_JAVA_KEYSTORE     | _Sí_                |
+| Clase                                                 | Descripción                                        | Nombre del proveedor (búsqueda)  | ¿Está registrado previamente? | Plataforma |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- | :------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Proveedor para un almacén de claves para Azure Key Vault. | AZURE_KEY_VAULT         | _No_ antes de la versión 7.4.1 del controlador JDBC, pero _sí_ a partir de la versión 7.4.1 del controlador JDBC. | Windows, Linux, macOS |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Un proveedor para el Almacén de certificados de Windows.      | MSSQL_CERTIFICATE_STORE | _Sí_                | Windows |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Proveedor del almacén de claves de Java.                  | MSSQL_JAVA_KEYSTORE     | _Sí_                | Windows, Linux, macOS |
 |||||
 
 En el caso de proveedores de almacén de claves registrados previamente, no es necesario realizar ningún cambio en el código de aplicación para usar estos proveedores, pero tenga en cuenta los elementos siguientes:
@@ -152,7 +152,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> Si bien los otros proveedores de almacén de claves mencionados en este artículo están disponibles en todas las plataformas compatibles con el controlador, la implementación de SQLServerColumnEncryptionCertificateStoreProvider del controlador JDBC solo está disponible en los sistemas operativos de Windows. Tiene una dependencia del archivo mssql-jdbc_auth-\<versión>-\<arch>.dll que está disponible en el paquete de controladores. Para usar este proveedor, copie el archivo mssql-jdbc_auth-\<versión>-\<arch>.dll en un directorio de la ruta del sistema de Windows del equipo en el que esté instalado el controlador JDBC. También puede especificar la propiedad del sistema java.libary.path para especificar el directorio de mssql-jdbc_auth-\<versión>-\<arch>.dll. Si ejecuta una máquina virtual Java (JVM, Java Virtual Machine) de 32 bits, use el archivo mssql-jdbc_auth-\<versión>-x86.dll de la carpeta x86, incluso si la versión del sistema operativo es x64. Si ejecuta una JVM de 64 bits en un procesador x64, use el archivo mssql-jdbc_auth-\<versión>-x64.dll de la carpeta x64. Por ejemplo, si está usando JVM de 32 bits y el controlador JDBC está instalado en el directorio predeterminado, puede especificar la ubicación de la DLL con el siguiente argumento de máquina virtual (VM) si la aplicación de Java se ha iniciado: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Si bien los otros proveedores de almacén de claves mencionados en este artículo están disponibles en todas las plataformas compatibles con el controlador, la implementación de SQLServerColumnEncryptionCertificateStoreProvider del controlador JDBC solo está disponible en los sistemas operativos de Windows. Tiene una dependencia del archivo mssql-jdbc_auth-\<version>-\<arch>.dll que está disponible en el paquete de controladores. Para usar este proveedor, copie el archivo mssql-jdbc_auth-\<version>-\<arch>.dll en un directorio de la ruta del sistema de Windows del equipo en el que esté instalado el controlador JDBC. También puede establecer la propiedad del sistema java.libary.path para especificar el directorio de mssql-jdbc_auth-\<version>-\<arch>.dll. Si ejecuta una máquina virtual Java (JVM) de 32 bits, use el archivo mssql-jdbc_auth-\<version>-x86.dll de la carpeta x86, incluso si la versión del sistema operativo es x64. Si ejecuta una JVM de 64 bits en un procesador x64, use el archivo mssql-jdbc_auth-\<version>-x64.dll de la carpeta x64. Por ejemplo, si está usando JVM de 32 bits y el controlador JDBC está instalado en el directorio predeterminado, puede especificar la ubicación de la DLL con el siguiente argumento de máquina virtual (VM) si la aplicación de Java se ha iniciado: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Uso del proveedor del almacén de claves de Java
 El controlador JDBC incluye una clave integrada para la implementación del proveedor del almacén de claves para el almacén de claves de Java. Si la propiedad **keyStoreAuthentication** de la cadena de conexión está presente en la cadena de conexión y está establecida en "JavaKeyStorePassword", el controlador crea automáticamente una instancia del proveedor y lo registra para el almacén de claves de Java. El nombre del proveedor del almacén de claves de Java es MSSQL_JAVA_KEYSTORE. Este nombre también se puede consultar mediante la API SQLServerColumnEncryptionJavaKeyStoreProvider.getName(). 

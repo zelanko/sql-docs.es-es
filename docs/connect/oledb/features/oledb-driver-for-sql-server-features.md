@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 46f7de1e57686a0f54368407580d90236152d147
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3cb73bb9ea3685793de692ae9cff1508e8a7656c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989047"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006902"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Controlador OLE DB para las características de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -100,6 +100,9 @@ Describe los nuevos métodos de autenticación introducidos en el controlador OL
   
  [Controlador OLE DB para la compatibilidad de SQL Server con LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  Describe la compatibilidad de OLE DB Driver for SQL Server con la característica LocalDB.  
+  
+ [Uso de resolución de IP de red transparente](../../oledb/features/using-transparent-network-ip-resolution.md)  
+ Se describe cómo OLE DB Driver for SQL Server admite la resolución de IP de red transparente en un clúster de conmutación por error.  
   
 ## <a name="see-also"></a>Consulte también  
  [Controlador OLE DB para SQL Server](../../oledb/oledb-driver-for-sql-server.md)      

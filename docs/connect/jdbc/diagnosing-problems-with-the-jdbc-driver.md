@@ -1,5 +1,6 @@
 ---
-title: Diagnóstico de problemas del controlador JDBC | Microsoft Docs
+title: Diagnóstico de problemas del controlador JDBC
+description: Obtenga información sobre cómo diagnosticar y solucionar problemas como el control de errores, la comprobación de la versión del controlador y el seguimiento.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3728ac03477099b81ee51e8cbb779d9773984dbb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f51f21c3ede1a3bd11cb73e5b9b2fbecfdd851d9
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922426"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381035"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>Diagnóstico de problemas del controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -1,21 +1,21 @@
 ---
 title: Cadenas de conexión y permisos
+description: Obtenga información sobre las cadenas de conexión, las cuentas y los permisos que necesita para ejecutar pruebas unitarias de SQL Server. Vea cómo configurar las cadenas de conexión.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 292901b39a4c4f6732290ba7425f26f0bc1e6c48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243760"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901102"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Información general acerca de las cadenas de conexión y los permisos
 
@@ -27,7 +27,7 @@ En el cuadro de diálogo **Configuración de prueba de SQL Server**, puede espec
 > [!NOTE]  
 > El contexto de ejecución y el contexto privilegiado solo se diferencian si usa la autenticación de SQL Server. Si usa la autenticación de Windows, se utilizarán las mismas credenciales para ambas cadenas de conexión.  
   
--   Contexto de ejecución (Requerido): Una cuenta de usuario para ejecutar el script de prueba. Esta cadena de conexión debe tener las mismas credenciales que se espera que tengan los usuarios. Esto es importante porque asegura que se hayan aplicado los permisos adecuados a la base de datos. Para obtener más información, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+-   Contexto de ejecución (Requerido): Una cuenta de usuario para ejecutar el script de prueba. Esta cadena de conexión debe tener las mismas credenciales que se espera que tengan los usuarios. Esto es importante porque asegura que se hayan aplicado los permisos adecuados a la base de datos. Para más información, vea: [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
     En el archivo app.config del proyecto de prueba, es el elemento `ExecutionContext`.  
   

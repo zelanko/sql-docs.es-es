@@ -1,23 +1,23 @@
 ---
 title: Notas de la versión de OLE DB Driver
 description: En este artículo sobre notas de la versión se describen los cambios de cada versión de Microsoft OLE DB Driver for SQL Server.
-ms.date: 02/27/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 70f3239f1e644850bc391a0be5ef8918e1e9e617
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81727964"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011911"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de la versión del controlador Microsoft OLE DB para SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 En esta página se describe lo que se ha agregado en cada versión del controlador Microsoft OLE DB para SQL Server.
 
@@ -27,6 +27,37 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1840"></a>18.4.0
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2129954)  
+![descargar](../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2131003)  
+
+Fecha de publicación: Mayo de 2020
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)  
+
+### <a name="features-added"></a>Características agregadas
+
+| Característica agregada | Detalles |
+| :------------ | :------ |
+| Compatibilidad con la resolución de IP de red transparente (TNIR) |[Resolución de IP de red transparente (TNIR)](features/using-transparent-network-ip-resolution.md)|
+| Compatibilidad con la codificación de cliente UTF-8 | [Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+
+### <a name="bugs-fixed"></a>Errores corregidos
+
+| Error corregido | Detalles |
+| :-------- | :------ |
+| Se han corregido varios errores en la interfaz [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) | Algunos errores que afectan a las páginas de códigos multibyte hacen que la interfaz notifique prematuramente el final de la secuencia durante la operación de lectura.|
+| Se ha corregido una fuga de memoria en la interfaz [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)). | Se ha corregido una fuga de memoria en la interfaz [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) cuando se habilita la propiedad `SSPROP_IRowsetFastLoad`. |
+| Se ha corregido un error en escenarios con un tipo de datos `sql_variant` y cadenas no ASCII. | La ejecución de ciertos escenarios en los que participan un tipo de datos `sql_variant` y cadenas no ASCII puede provocar daños en los datos. Para obtener detalles, consulte: [Problemas conocidos](ole-db-data-types/ssvariant-structure.md#known-issues). |
+| Se han corregido problemas con el botón *Probar conexión* del cuadro de diálogo [Configuración de UDL](help-topics/data-link-pages.md) | El botón *Probar conexión* del cuadro de diálogo [Configuración de UDL](help-topics/data-link-pages.md) ahora respeta las propiedades de inicialización establecidas en la pestaña *Todos*. |
+| Se ha corregido el control de los valores predeterminados de la propiedad `SSPROP_INIT_PACKETSIZE`. | Se ha corregido un error inesperado cuando la propiedad `SSPROP_INIT_PACKETSIZE` se establece en su valor predeterminado de `0`. Para obtener más información sobre esta propiedad, vea [Propiedades de inicialización y autorización](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Problemas de desbordamiento de búfer corregidos en [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Se han corregido problemas de desbordamiento de búfer cuando se usan archivos de datos mal formados. |
+| Problemas de accesibilidad corregidos | Se han corregido problemas de accesibilidad en la interfaz de usuario del instalador y en el [cuadro de diálogo Inicio de sesión SQL Server](help-topics/sql-server-login-dialog.md) (lectura de contenido, tabulaciones). |
+
+## <a name="previous-releases"></a>Versiones anteriores
 
 ## <a name="1830"></a>18.3.0
 
@@ -53,8 +84,6 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 | :-------- | :------ |
 | Se corrigió la lógica de DROP INDEX en [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Las versiones anteriores del controlador de OLE DB no pueden quitar un índice de clave principal cuando el identificador de esquema y el identificador de usuario del propietario del índice no son iguales. |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>Versiones anteriores
 
 Para descargar las versiones anteriores del controlador OLE DB, haga clic en los vínculos de descarga de las secciones siguientes:
 

@@ -1,5 +1,6 @@
 ---
 title: Configuración de la recopilación de datos de uso y diagnóstico para herramientas de SQL Server (CEIP) | Microsoft Docs
+description: Obtenga información sobre la información que CEIP recopila de los usuarios para mejorar los productos. Vea cómo participar o no en el programa en SQL Server Data Tools (SSDT).
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: baf3a205-a6bb-4564-8b64-3a0475bb9273
 author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 556d60a4c7f2cc8003f6b9a29fa20dad8c5b72ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c93a4023ebcdb9716d7e7790ea97c8df186081f9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68091811"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000428"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configuración de la recopilación de datos de uso y diagnóstico para herramientas de SQL Server (CEIP)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Obtenga información sobre el modo en que el Programa para la mejora de la experiencia del usuario (CEIP) ayuda a Microsoft a identificar formas de mejorar el software.  Puede configurar herramientas para participar o dejar de hacerlo en cualquier momento.  
   
@@ -71,7 +72,7 @@ Valor = (DWORD)
 
   
 > [!CAUTION]  
->  Una modificación incorrecta del Registro puede provocar daños graves en el sistema. Antes de efectuar cambios en el Registro, debe realizar una copia de seguridad de los datos importantes del equipo. También puede usar la opción de inicio Última configuración buena conocida en caso de detectar problemas una vez aplicados cambios manuales.  
+>  La edición incorrecta del Registro puede dañar gravemente el sistema. Antes de realizar cambios en el Registro, debe hacer una copia de seguridad de los datos de valor guardados en el equipo. También puede usar la opción de inicio Última configuración buena conocida en caso de detectar problemas una vez aplicados cambios manuales.  
   
  Para obtener más información acerca de los datos que se recopilan, procesan o transmiten en el CEIP, consulte la [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkID=868444).  
  
@@ -113,7 +114,7 @@ Valor = (DWORD)
 -   1 para utilizarlo  
   
 > [!CAUTION]  
->  Una modificación incorrecta del Registro puede provocar daños graves en el sistema. Antes de efectuar cambios en el Registro, debe realizar una copia de seguridad de los datos importantes del equipo. También puede usar la opción de inicio Última configuración buena conocida en caso de detectar problemas una vez aplicados cambios manuales.  
+>  La edición incorrecta del Registro puede dañar gravemente el sistema. Antes de realizar cambios en el Registro, debe hacer una copia de seguridad de los datos de valor guardados en el equipo. También puede usar la opción de inicio Última configuración buena conocida en caso de detectar problemas una vez aplicados cambios manuales.  
   
  Para obtener más información acerca de los datos que se recopilan, procesan o transmiten en el CEIP, consulte la [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkID=868444).  
   

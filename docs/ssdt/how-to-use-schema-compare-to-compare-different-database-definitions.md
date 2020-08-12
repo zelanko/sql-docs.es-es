@@ -1,5 +1,6 @@
 ---
 title: Uso de Comparación de esquemas para comparar distintas definiciones de base de datos
+description: Obtenga información sobre cómo comparar definiciones de base de datos con Comparación de esquemas. Vea cómo excluir diferencias específicas y actualizar el destino o crear un script de actualización.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,16 +13,15 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2347297adfbc9d4df88c7df32fffefa4990010d8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226851"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895823"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procedimientos: Uso de Comparación de esquemas para comparar distintas definiciones de base de datos
 
@@ -41,7 +41,7 @@ En el procedimiento siguiente se compara el esquema de un proyecto de base de da
   
 ### <a name="to-compare-database-definitions"></a>Para comparar definiciones de base de datos  
   
-1.  En el menú **SQL**, seleccione **Comparación de esquemas** y haga clic en **Nueva comparación de esquemas**.  
+1.  En el menú **Herramientas**, seleccione **SQL Server** y, después, haga clic en **Nueva comparación de esquemas**.  
   
     O bien, haga clic con el botón derecho en el proyecto **TradeDev** en el **Explorador de soluciones** y seleccione **Comparación de esquemas**.  
   
@@ -59,7 +59,7 @@ En el procedimiento siguiente se compara el esquema de un proyecto de base de da
   
 5.  En el cuadro de diálogo **Propiedades de conexión**, escriba el nombre del servidor donde reside la base de datos `TradeDev` y asegúrese de que se proporcionen las credenciales de autenticación correctas. Después, seleccione **TradeDev** en **Conectar con una base de datos** y haga clic en **Aceptar**.  
   
-    También puede hacer clic en el botón **Opciones** de la barra de herramientas de la ventana  **Comparación de esquemas** para especificar los objetos que se van a comparar, qué tipos de diferencias se van a omitir y otras opciones.  
+    También puede hacer clic en el botón **Opciones** de la barra de herramientas de la ventana ** Comparación de esquemas** para especificar los objetos que se van a comparar, qué tipos de diferencias se van a omitir y otras opciones.  
   
 6.  Haga clic en el botón **Comparar** de la barra de herramientas de la ventana **Comparación de esquemas** para iniciar el proceso de comparación.  
   

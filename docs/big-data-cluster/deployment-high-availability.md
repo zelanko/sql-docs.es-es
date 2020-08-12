@@ -9,18 +9,18 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b614373ee8517c0b0aa369c9793dec323a137044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286049"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279467"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Dado que los clústeres de macrodatos de SQL Server se encuentran en Kubernetes como aplicaciones en contenedores y usan características como los conjuntos con estado y el almacenamiento persistente, esta infraestructura tiene supervisión de estado integrada, detección de errores y mecanismos de conmutación por error que los componentes de los clústeres aprovechan para mantener el estado del servicio. Para mayor confiabilidad, también puede configurar un nodo de nombre HDFS o de instancia maestra de SQL Server y servicios compartidos de Spark para implementar con réplicas adicionales en una configuración de alta disponibilidad. La supervisión, la detección de errores y la conmutación automática por error se administran mediante un servicio de administración de clústeres de macrodatos, es decir, el servicio de control. Este servicio proporciona sin intervención del usuario desde configuración del grupo de disponibilidad y configuración de puntos de conexión de creación de reflejo de la base de datos hasta adición de bases de datos al grupo de disponibilidad o conmutación por error y coordinación de actualizaciones. 
+Dado que los clústeres de macrodatos de SQL Server se encuentran en Kubernetes como aplicaciones en contenedores y usan características como los conjuntos con estado y el almacenamiento persistente, esta infraestructura tiene supervisión de estado integrada, detección de errores y mecanismos de conmutación por error que los componentes de los clústeres aprovechan para mantener el estado del servicio. Para mayor confiabilidad, también puede configurar un nodo de nombre HDFS o de instancia maestra de SQL Server y servicios compartidos de Spark para implementar con réplicas adicionales en una configuración de alta disponibilidad. La supervisión, la detección de errores y la conmutación automática por error se administran mediante un servicio de administración de clústeres de macrodatos, es decir, el servicio de control. Este servicio se proporciona sin intervención del usuario, desde la configuración del grupo de disponibilidad y la configuración de puntos de conexión de creación de reflejo de la base de datos, hasta la incorporación de bases de datos al grupo de disponibilidad, o conmutación por error y coordinación de actualizaciones. 
 
 En la imagen siguiente se refleja cómo se implementa un grupo de disponibilidad en un clúster de macrodatos de SQL Server:
 

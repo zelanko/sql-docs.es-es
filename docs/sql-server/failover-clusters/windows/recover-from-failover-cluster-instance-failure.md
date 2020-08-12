@@ -1,6 +1,6 @@
 ---
 title: Recuperación de un error en una instancia de clúster de conmutación por error
-description: Describe cómo recuperarse de una conmutación por error de una instancia de clúster de conmutación por error de SQL Server.
+description: Obtenga información sobre cómo recuperarse de una conmutación por error de una instancia de clúster de conmutación por error mediante el complemento Administrador de clústeres de conmutación por error después de que se produzca en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44f178d5433a1d3de1670b762b6e1d7e60bad033
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901199"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Recuperación de un error en una instancia de clúster de conmutación por error
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   En este tema se describe cómo puede recuperarse de los errores de clúster usando el complemento Administrador de clústeres de conmutación por error después de que se produzca una conmutación por error en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. El complemento Administrador de clústeres de conmutación por error es la aplicación de administración de clústeres del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
 -   [Recuperarse de un error irreparable](#Scenario1)  

@@ -5,53 +5,51 @@ description: Obtenga información sobre cómo implementar clústeres de macrodat
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 828ad42bd6ecdc31d6e1c99a489fb4cbe8548d0e
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 4bca65dbae188c02ddc85bc385f6ada912111efb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531081"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159373"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Procedimientos para implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Un clúster de macrodatos de SQL Server se implementa como contenedores de Docker en un clúster de Kubernetes. Esta es una introducción a los pasos de instalación y configuración:
 
-- Configure un clúster de Kubernetes en una sola máquina virtual, un clúster de máquinas virtuales o en Azure Kubernetes Service (AKS).
+- Configure un clúster de Kubernetes en una sola máquina virtual, un clúster de máquinas virtuales, en Azure Kubernetes Service (AKS), Red Hat OpenShift o Red Hat OpenShift en Azure (ARO).
 - Instale la herramienta de configuración de clúster `azdata` en el equipo cliente.
 - Implemente un clúster de macrodatos de SQL Server en un clúster de Kubernetes.
 
-## <a name="install-sql-server-2019-big-data-tools"></a>Instalación de las herramientas de macrodatos de SQL Server 2019
+## <a name="supported-platforms"></a>Plataformas compatibles
 
-Antes de implementar un clúster de macrodatos de SQL Server 2019, [instale primero las herramientas de macrodatos](deploy-big-data-tools.md):
+Vea [Plataformas admitidas](release-notes-big-data-cluster.md#supported-platforms) para obtener una lista completa de las distintas plataformas validadas por Kubernetes para implementar clústeres de macrodatos de SQL Server.
 
-- `azdata`
-- `kubectl`
-- Azure Data Studio
-- [Extensión de virtualización de datos](../azure-data-studio/data-virtualization-extension.md) para Azure Data Studio
+### <a name="sql-server-editions"></a>Ediciones de SQL Server
 
-## <a name="kubernetes-prerequisites"></a><a id="prereqs"></a> Requisitos previos de Kubernetes
+|Edición|Notas|
+|---------|---------|
+|Enterprise<br/>Estándar<br/>Desarrollador| La edición del clúster de macrodatos la determina la edición de la instancia maestra de SQL Server. En el momento de la implementación, se implementa de forma predeterminada la edición Developer. Puede cambiar la edición después de la implementación. Vea [Configuración de la instancia maestra de SQL Server](../big-data-cluster/configure-sql-server-master-instance.md). |
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] requieren como mínimo la versión 1.13 de Kubernetes para el servidor y el cliente (kubectl).
-
-> [!NOTE]
-> Tenga en cuenta que las versiones de Kubernetes del cliente y el servidor deben ser la versión secundaria +1 o -1. Para obtener más información, consulte [Notas de la versión de Kubernetes y directiva de SKU de sesgo de versión](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+## <a name="kubernetes"></a><a id="prereqs"></a> Kubernetes
 
 ### <a name="kubernetes-cluster-setup"></a><a id="kubernetes"></a> Configuración del clúster de Kubernetes
 
 Si ya tiene un clúster de Kubernetes que cumple los requisitos previos anteriores, puede ir directamente al [paso de implementación](#deploy). En esta sección se da por supuesto que tiene un conocimiento básico de los conceptos de Kubernetes.  Para obtener información detallada sobre Kubernetes, consulte la [documentación de Kubernetes](https://kubernetes.io/docs/home).
 
-Puede optar por implementar Kubernetes de tres maneras:
+Puede optar por implementar Kubernetes de estas maneras:
 
 | Implementar Kubernetes en: | Descripción | Vínculo |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | Un servicio de contenedor de Kubernetes administrado en Azure. | [Instrucciones](deploy-on-aks.md) |
 | **Una o varias máquinas (`kubeadm`)** | Un clúster de Kubernetes implementado en máquinas físicas o virtuales mediante `kubeadm` | [Instrucciones](deploy-with-kubeadm.md) |
+|**Red Hat OpenShift en Azure** | Una oferta administrada de OpenShift que se ejecuta en Azure. | [Instrucciones](deploy-openshift.md)|
+|**Red Hat OpenShift**|Una plataforma de aplicaciones de Kubernetes empresarial de nube híbrida.| [Instrucciones](deploy-openshift.md)|
 
 > [!TIP]
 > También puede crear un script de la implementación de AKS y un clúster de macrodatos en un único paso. Para obtener más información, vea cómo realizar este procedimiento en un [script de Python](quickstart-big-data-cluster-deploy.md) o en un [cuaderno](notebooks-deploy.md) de Azure Data Studio.
@@ -75,6 +73,16 @@ La mayoría de las implementaciones de clúster de macrodatos deben tener almace
 
 Si implementa en AKS, no es necesario realizar ninguna configuración de almacenamiento. AKS proporciona clases de almacenamiento integradas con aprovisionamiento dinámico. Puede personalizar la clase de almacenamiento (`default` o `managed-premium`) en el archivo de configuración de implementación. Los perfiles integrados usan una clase de almacenamiento `default`. Si va a realizar la implementación en un clúster de Kubernetes que se ha implementado mediante `kubeadm`, deberá asegurarse de tener suficiente espacio de almacenamiento para un clúster de la escala deseada disponible y configurado para su uso. Si quiere personalizar la forma en que se usa el almacenamiento, debe hacerlo antes de continuar. Vea [Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes](concept-data-persistence.md).
 
+## <a name="install-sql-server-2019-big-data-tools"></a>Instalación de las herramientas de macrodatos de SQL Server 2019
+
+Antes de implementar un clúster de macrodatos de SQL Server 2019, [instale primero las herramientas de macrodatos](deploy-big-data-tools.md):
+
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- [Extensión de virtualización de datos](../azure-data-studio/data-virtualization-extension.md) para Azure Data Studio
+
+
 ## <a name="deployment-overview"></a><a id="deploy"></a> Información general sobre la implementación
 
 La mayoría de la configuración del clúster de macrodatos se define en un archivo de configuración de implementación JSON. Puede usar un perfil de implementación predeterminado para clústeres de AKS o Kubernetes creados con `kubeadm`, o bien puede personalizar un archivo de configuración de implementación propio para usarlo durante la instalación. Por motivos de seguridad, la configuración de autenticación se pasa mediante variables de entorno.
@@ -94,23 +102,18 @@ Ejecute este comando para encontrar las plantillas disponibles:
 azdata bdc config list -o table 
 ```
 
-Por ejemplo, para la versión SQL Server 2019 RTM Servicing (GDR1), lo anterior devuelve:
-
-```
-Result
-----------------
-aks-dev-test
-aks-dev-test-ha
-kubeadm-dev-test
-kubeadm-prod
-```
+Las plantillas siguientes están disponibles desde SQL Server 2019 CU5: 
 
 | Perfil de implementación | Entorno de Kubernetes |
 |---|---|
 | `aks-dev-test` | Implementación de un clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)|
 | `aks-dev-test-ha` | Implemente un clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS). Los servicios críticos como la instancia maestra de SQL Server y el nodo de nombre de HDFS se configuran para lograr alta disponibilidad.|
+| `aro-dev-test`|Implemente un clúster de macrodatos de SQL Server en Red Hat OpenShift en Azure para desarrollo y pruebas. <br/><br/>Introducido en SQL Server 2019 CU5.|
+| `aro-dev-test-ha`|Implemente un clúster de macrodatos de SQL Server con alta disponibilidad en un clúster de Red Hat OpenShift para desarrollo y pruebas. <br/><br/>Introducido en SQL Server 2019 CU5.|
 | `kubeadm-dev-test` | Implemente un clúster de macrodatos de SQL Server en un clúster de Kubernetes creado con kubeadm mediante una o varias máquinas virtuales o físicas.|
 | `kubeadm-prod`| Implemente un clúster de macrodatos de SQL Server en un clúster de Kubernetes creado con kubeadm mediante una o varias máquinas virtuales o físicas. Use esta plantilla para permitir que los servicios de clúster de macrodatos se integren con Active Directory. Los servicios críticos como la instancia maestra de SQL Server y el nodo de nombre de HDFS se implementan en una configuración de alta disponibilidad.  |
+| `openshift-dev-test`|Implemente un clúster de macrodatos de SQL Server en un clúster de Red Hat OpenShift para desarrollo y pruebas. <br/><br/>Introducido en SQL Server 2019 CU5.|
+| `openshift-prod`|Implemente un clúster de macrodatos de SQL Server con alta disponibilidad en un clúster de Red Hat OpenShift. <br/><br/>Introducido en SQL Server 2019 CU5.|
 
 Puede implementar un clúster de macrodatos mediante la ejecución de `azdata bdc create`. Esto le pedirá que elija una de las configuraciones predeterminadas y después le guiará por la implementación.
 
@@ -127,7 +130,7 @@ En este escenario, se le pide la configuración que no forme parte de la configu
 
 ## <a name="custom-configurations"></a><a id="customconfig"></a> Configuraciones personalizadas
 
-También es posible personalizar la implementación para acomodar las cargas de trabajo que planea ejecutar. Tenga en cuenta que no puede cambiar la escala (el número de réplicas) ni la configuración de almacenamiento para los servicios de clúster de macrodatos después de las implementaciones, por lo que debe planear cuidadosamente la configuración de implementación para evitar problemas de capacidad. Para personalizar la implementación, siga estos pasos:
+También es posible personalizar la implementación para acomodar las cargas de trabajo que planea ejecutar. No puede cambiar la escala (el número de réplicas) ni la configuración de almacenamiento para los servicios de clúster de macrodatos después de las implementaciones, por lo que debe planear cuidadosamente la configuración de implementación para evitar problemas de capacidad. Para personalizar la implementación, siga estos pasos:
 
 1. Comience con uno de los perfiles de implementación estándar que coincidan con su entorno de Kubernetes. Puede usar el comando `azdata bdc config list` para enumerarlos:
 
@@ -171,8 +174,8 @@ Las siguientes variables de entorno se usan para la configuración de seguridad 
 
 | Variable de entorno | Requisito |Descripción |
 |---|---|---|
-| `AZDATA_USERNAME` | Obligatorio |El nombre de usuario para el administrador de clústeres de macrodatos de SQL Server. En la instancia maestra de SQL Server se crea un inicio de sesión de sysadmin con el mismo nombre. Como procedimiento de seguridad recomendado, la cuenta `sa` está deshabilitada. |
-| `AZDATA_PASSWORD` | Obligatorio |La contraseña para la cuenta de usuario que se ha creado antes. La misma contraseña se usa para el usuario `root`, que se utiliza para proteger la puerta de enlace Knox y HDFS. |
+| `AZDATA_USERNAME` | Obligatorio |El nombre de usuario para el administrador de clústeres de macrodatos de SQL Server. En la instancia maestra de SQL Server se crea un inicio de sesión de sysadmin con el mismo nombre. Como procedimiento de seguridad recomendado, la cuenta `sa` está deshabilitada. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
+| `AZDATA_PASSWORD` | Obligatorio |La contraseña para la cuenta de usuario que se ha creado antes. En los clústeres implementados antes de SQL Server 2019 CU5, se usa la misma contraseña para el usuario `root`, a fin de proteger la puerta de enlace Knox y HDFS. |
 | `ACCEPT_EULA`| Obligatorio para el primer uso de `azdata`| Establecido en "Sí". Cuando se establece como una variable de entorno, aplica el CLUF a SQL Server y `azdata`. Si no se establece como variable de entorno, puede incluir `--accept-eula=yes` en el primer uso del comando `azdata`.|
 | `DOCKER_USERNAME` | Opcional | Nombre de usuario para acceder a las imágenes de contenedor en caso de que se almacenen en un repositorio privado. Consulte el tema [Implementaciones sin conexión](deploy-offline.md) para obtener más información sobre cómo usar un repositorio privado de Docker para la implementación del clúster de macrodatos.|
 | `DOCKER_PASSWORD` | Opcional |Contraseña para acceder al repositorio privado anterior. |
@@ -193,9 +196,9 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> Debe utilizar el usuario `root` para la puerta de enlace de Knox con la contraseña anterior. `root` es el único usuario que se admite en esta autenticación básica (nombre de usuario y contraseña).
+> En los clústeres implementados antes de SQL Server 2019 CU5, debe utilizar el usuario `root` para la puerta de enlace Knox con la contraseña anterior. `root` es el único usuario que se admite en esta autenticación básica (nombre de usuario y contraseña).
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 > Para conectarse a SQL Server con autenticación básica, utilice los mismos valores que las [variables de entorno](#env) AZDATA_USERNAME y AZDATA_PASSWORD. 
-
 
 Después de establecer las variables de entorno, debe ejecutar `azdata bdc create` para desencadenar la implementación. En este ejemplo se usa el perfil de configuración de clúster creado anteriormente:
 

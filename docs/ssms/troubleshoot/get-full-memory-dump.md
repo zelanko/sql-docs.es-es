@@ -1,6 +1,6 @@
 ---
 title: Obtención de un volcado de memoria completo para solucionar problemas de SSMS
-Description: Solución de problemas de un bloqueo de SSMS mediante la recopilación de un volcado de memoria completo
+Description: Solución de problemas de un servidor SSMS que no responde o se bloquea mediante la recopilación de un volcado de memoria completo
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,18 +11,18 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 95e88b8bbf61e04251ce17ad0a4fcd5aff91cc9e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247169"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091286"
 ---
 # <a name="get-full-memory-dump"></a>Obtención de un volcado de memoria completo
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-En este artículo, aprenderá a capturar información de diagnóstico para solucionar problemas o un bloqueo que haya experimentado desde SQL Server Management Studio (SSMS).
+En este artículo, obtendrá información sobre cómo capturar información de diagnóstico para solucionar problemas de un sistema que no responde o se bloquea, que haya experimentado en SQL Server Management Studio (SSMS).
 
 Para capturar información de diagnóstico para solucionar problemas, siga estos pasos.
 

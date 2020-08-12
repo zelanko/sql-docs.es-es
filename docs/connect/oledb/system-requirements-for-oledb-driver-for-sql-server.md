@@ -1,6 +1,6 @@
 ---
-title: Requisitos del sistema del controlador OLE DB para SQL Server | Microsoft Docs
-description: Requisitos del controlador OLE DB para SQL Server
+title: Requisitos del sistema del controlador OLE DB para SQL Server
+description: Se enumeran los requisitos del sistema para OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - MSOLEDBSQL, system requirements
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 584b5ebddf4f4f48c7fba2ed2c95002c43bfb6e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9c9bbda0480d4d1e85da3962392fe14a241e4840
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79526840"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393023"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Requisitos del sistema del controlador OLE DB para SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 

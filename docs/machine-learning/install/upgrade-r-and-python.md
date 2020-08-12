@@ -2,21 +2,21 @@
 title: Actualización de los componentes de Python y R
 description: Actualice R y Python en SQL Server Machine Learning Services o en SQL Server R Services mediante sqlbindr.exe para enlazarlos con Machine Learning Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4aebb9e64c73762166aa81aebd1bfbab22191bfc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487399"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900069"
 ---
 # <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>Actualización de los componentes de aprendizaje automático (R y Python) en instancias de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 La integración de R y Python en SQL Server incluye paquetes de código abierto y de propiedad de Microsoft.
                                                                                
@@ -263,9 +263,9 @@ Es posible que haya agregado otros paquetes de código abierto o de terceros a l
 
 |Nombre|Descripción|
 |------|------|
-|*list*| Muestra una lista de todos los identificadores de instancia de SQL Database en el equipo actual.|
-|*bind*| Actualiza la instancia de SQL Database especificada a la versión más reciente de R Server y garantiza que la instancia obtenga automáticamente las actualizaciones futuras de R Server.|
-|*unbind*|Desinstala la versión más reciente de R Server de la instancia de SQL Database especificada e impide que las actualizaciones futuras de R Server afecten a la instancia.|
+|*list*| Muestra una lista de todos los id. de instancia de SQL Server en el equipo actual.|
+|*bind*| Actualiza la instancia de SQL Server especificada a la versión más reciente de R Server y garantiza que la instancia obtenga automáticamente las actualizaciones futuras de R Server.|
+|*unbind*|Desinstala la versión más reciente de R Server de la instancia de SQL Server especificada e impide que las actualizaciones futuras de R Server afecten a la instancia.|
 
 <a name="sqlbindr-error-codes"><a/>
 

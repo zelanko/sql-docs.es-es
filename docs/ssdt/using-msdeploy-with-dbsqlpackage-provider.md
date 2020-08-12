@@ -1,21 +1,21 @@
 ---
 title: Usar MSDeploy con el proveedor de dbSqlPackage
+description: Obtenga información sobre el proveedor DbSqlPackage obsoleto de MSDeploy. Vea parámetros, ejemplos y herramientas de publicación de bases de datos alternativas de SQL Server y SQL Azure.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243562"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899748"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usar MSDeploy con el proveedor de dbSqlPackage
 
@@ -23,11 +23,11 @@ ms.locfileid: "75243562"
   
 -   **Extract**: crea un archivo de instantánea de base de datos (.dacpac) a partir de bases de datos de SQL Server o SQL Azure.  
   
--   **Publicar**: actualiza de forma incremental un esquema de la base de datos para que coincida con el esquema de un archivo .dacpac de origen.  
+-   **Publicar**: actualiza de forma incremental un esquema de la base de datos para coincidir con el esquema de un archivo .dacpac de origen.  
   
--   **DeployReport**: crea un informe XML de los cambios que una acción de publicación realizarían.  
+-   **DeployReport**: crea un informe XML de los cambios que realizaría una acción de publicación.  
   
--   **Script**: crea un script Transact\-SQL equivalente al script ejecutado por la acción de publicación.  
+-   **Script**: crea un script de Transact\-SQL equivalente al script ejecutado por la acción de publicación.  
   
 Para más información sobre DACFx, consulte la documentación sobre la API administrada de DACFx en [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) o [SqlPackage.exe](../tools/sqlpackage.md) (herramienta de línea de comandos de DACFx).  
   

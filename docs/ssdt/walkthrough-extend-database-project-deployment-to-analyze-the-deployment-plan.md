@@ -1,23 +1,23 @@
 ---
 title: Ampliación de la implementación del proyecto de base de datos para analizar el plan de implementación
+description: Cree un tipo de colaborador de implementación DeploymentPlanExecutor. Configure un colaborador que mantenga un registro de los eventos que se producen al implementar un proyecto de base de datos.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242681"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897472"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Tutorial: Ampliar la implementación del proyecto de base de datos para analizar el plan de implementación
+# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Tutorial: Ampliación de la implementación del proyecto de base de datos para analizar el plan de implementación
 
 Puede crear colaboradores de implementación para realizar acciones personalizadas al implementar un proyecto de SQL. Puede crear un DeploymentPlanModifier o un DeploymentPlanExecutor. Utilice un DeploymentPlanModifier para cambiar el plan antes de ejecutarlo y un DeploymentPlanExecutor para realizar operaciones mientras se ejecuta el plan. En este tutorial, se crea un DeploymentPlanExecutor denominado DeploymentUpdateReportContributor que crea un informe sobre las acciones que se realizan al implementar un proyecto de base de datos. Dado que este colaborador de compilación acepta un parámetro para controlar si el informe se genera, debe efectuar un paso necesario adicional.  
   
@@ -29,7 +29,7 @@ En este tutorial, realizará las principales tareas siguientes:
   
 -   [Comprobar su colaborador de implementación](#TestDeploymentContributor)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Necesitará los componentes siguientes para completar este tutorial:  
   
 -   Debe haber instalado una versión de Visual Studio que incluya las herramientas (SSDT) de datos de SQL Server y admita el desarrollo de C# o VB.  
@@ -601,7 +601,7 @@ El segundo método es crear un archivo de destino que contenga los argumentos de
     </Project>  
     ```  
   
-4.  En el archivo .sqlproj para cualquier proyecto en el que desea ejecutar colaboradores, importe el archivo de destinos agregando la siguiente instrucción al archivo .sqlproj después del nodo \<Import project="$(MSBuildExtensionsPath) \Microsoft\VisualStudio\v$ (VisualStudioVersion) \SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> en el archivo:  
+4.  En el archivo .sqlproj de cualquier proyecto en el que quiera ejecutar colaboradores, importe el archivo de destinos mediante la adición de la siguiente instrucción al archivo .sqlproj después del nodo \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> en el archivo:  
   
     ```  
     <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -741,7 +741,7 @@ El proyecto se puede publicar o implementar de manera habitual en Visual Studio.
 Puede crear herramientas adicionales para realizar el procesamiento de los archivos XML de salida. Esto es solo un ejemplo de un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). También podría crear un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) para cambiar un plan de implementación antes de que se ejecute.  
   
 ## <a name="see-also"></a>Consulte también  
-[Tutorial: Ampliar la compilación del proyecto de base de datos para generar estadísticas de modelo](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Tutorial: Ampliar la implementación del proyecto de base de datos para modificar el plan de implementación](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+[Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[Tutorial: Ampliación de la implementación del proyecto de base de datos para modificar el plan de implementación](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

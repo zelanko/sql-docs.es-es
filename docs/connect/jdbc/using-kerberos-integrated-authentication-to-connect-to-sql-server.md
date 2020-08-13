@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 8eaa889f12adb2470040cab4c0fba5df295a1cb2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922311"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916241"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Empleo de autenticación integrada de Kerberos para conectar con SQL Server
 
@@ -37,13 +37,13 @@ Cuando se usa la autenticación integrada con **Krb5LoginModule** de Java, se pu
 
 ## <a name="remarks"></a>Observaciones
 
-Antes de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], las aplicaciones podían especificar la autenticación integrada (con Kerberos o NTLM, en función de la disponibilidad) mediante la propiedad de conexión **integratedSecurity** y por referencia a **mssql-jdbc_auth-\<versión>-\<arch>.dll**, como se describe en [Creación de la dirección URL de conexión](../../connect/jdbc/building-the-connection-url.md).
+Antes de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], las aplicaciones podían especificar la autenticación integrada (con Kerberos o NTLM, en función de la que estuviera disponible) mediante la propiedad de conexión **integratedSecurity** y por referencia a **mssql-jdbc_auth-\<version>-\<arch>.dll**, como se describe en [Creación de la dirección URL de conexión](../../connect/jdbc/building-the-connection-url.md).
 
 A partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], una aplicación puede usar la propiedad de conexión **authenticationScheme** para indicar que quiere conectar con una base de datos mediante la autenticación integrada de Kerberos con la implementación Kerberos pura de Java:
 
 - Si desea usar la autenticación integrada mediante **Krb5LoginModule**, debe seguir especificando la propiedad de conexión **integratedSecurity=true**. También especificaría la propiedad de conexión **authenticationScheme=JavaKerberos**.
 
-- Para seguir usando la autenticación integrada con **mssql-jdbc_auth-\<versión>-\<arch>.dll**, solo tiene que especificar la propiedad de conexión **integratedSecurity=true** (y opcionalmente **authenticationScheme=NativeAuthentication**).
+- Para seguir usando la autenticación integrada con **mssql-jdbc_auth-\<version>-\<arch>.dll**, solo tiene que especificar la propiedad de conexión **integratedSecurity=true** (y opcionalmente **authenticationScheme=NativeAuthentication**).
 
 - Si especifica **authenticationScheme=JavaKerberos** pero no **integratedSecurity=true**, el controlador omitirá la propiedad de conexión **authenticationScheme** y esperará hasta que encuentre las credenciales de nombre de usuario y contraseña en la cadena de conexión.
 
@@ -71,7 +71,7 @@ Por ejemplo, el SPN podría ser: “MSSQLSvc/some-server.zzz.corp.contoso.com:14
 
 Para obtener más información sobre los nombres de entidad de seguridad de servicio (SPN), vea:
 
-- [Cómo utilizar la autenticación Kerberos en SQL Server](https://support.microsoft.com/kb/319723)
+- [Registrar un nombre principal de servicio para las conexiones con Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
 - [Usar Kerberos con SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 

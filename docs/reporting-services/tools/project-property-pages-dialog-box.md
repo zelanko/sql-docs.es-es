@@ -1,5 +1,6 @@
 ---
 title: Páginas de propiedades del proyecto (cuadro de diálogo) | Microsoft Docs
+description: Obtenga información sobre las opciones del cuadro de diálogo Páginas de propiedades del proyecto que le permiten configurar las propiedades de implementación de un proyecto del servidor de informes.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a3be836ba4df9bcb4ef6f8b6ca24caa5c7a67bf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578239"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910011"
 ---
 # <a name="project-property-pages-dialog-box"></a>Páginas de propiedades del proyecto (cuadro de diálogo)
 
-  Utilice las páginas de propiedades del proyecto para configurar las propiedades de implementación de un proyecto del servidor de informes. Para abrir este cuadro de diálogo, en el menú **Proyecto**, haga clic en _\<Nombre del proyecto de informe>_ **Propiedades**.  
+  Utilice las páginas de propiedades del proyecto para configurar las propiedades de implementación de un proyecto del servidor de informes. Para abrir este cuadro de diálogo, haga clic en _\<Report Project Name>_ **Propiedades** en el menú **Proyecto**.  
   
  Después de definir las propiedades de configuración, puede seleccionar una configuración en la lista desplegable **Configuraciones de soluciones** de la barra de herramientas.  
 
@@ -29,7 +30,7 @@ ms.locfileid: "65578239"
   
 ## <a name="options"></a>Opciones  
  **Configuración**  
- Seleccione la configuración que desee editar. Inicialmente, están disponibles las configuraciones siguientes: **Debug**, **DebugLocal**y **Release**. La configuración activa aparece en primer lugar (por ejemplo, **Active(Debug)** ).  
+ Seleccione la configuración que desee editar. Inicialmente, están disponibles las configuraciones siguientes: **Debug**, **DebugLocal** y **Release**. La configuración activa aparece en primer lugar (por ejemplo, **Active(Debug)** ).  
   
  Para ver propiedades para más de una configuración al mismo tiempo, seleccione **Todas las config.** o **Varias configuraciones**.  
   

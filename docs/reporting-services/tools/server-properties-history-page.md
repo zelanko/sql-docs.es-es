@@ -1,5 +1,6 @@
 ---
 title: Propiedades del servidor (página Historial) | Microsoft Docs
+description: Aprenda a usar la página Historial de Reporting Services de SQL Server Management Studio para establecer un valor predeterminado para el número de copias del historial de informes que se deben conservar.
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 47238e11a5c4d1b455914fca948dacc680286a14
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571359"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913911"
 ---
 # <a name="server-properties-history-page"></a>Propiedades del servidor (página Historial)
   Use esta página de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] para establecer un valor predeterminado para el número de copias del historial de informes que es necesario conservar. El valor predeterminado proporciona un valor inicial que establece los límites del historial de informes para todos los informes. Existe la posibilidad de modificar esta configuración para informes individuales.  

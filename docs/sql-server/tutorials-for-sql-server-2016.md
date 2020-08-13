@@ -1,23 +1,22 @@
 ---
 title: Tutoriales de SQL Server | Microsoft Docs
-ms.custom: ''
+description: Use estos tutoriales sobre SQL Server para aprender nuevas tecnologías y características. Los tutoriales para versiones anteriores de SQL Server normalmente funcionan con las versiones más recientes.
 ms.date: 11/01/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.technology: performance
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95cf7a3b2d7be413df8ddc0f84ff8d71cffffdd0
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d86c5a3662417c1af39f12fc3d32167a73912c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000705"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913963"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriales de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] proporciona tutoriales para ayudarle a obtener más información sobre nuevas tecnologías y características. Normalmente se pueden usar los tutoriales de versiones anteriores con las versiones más recientes. Cuando un tutorial se dirige a una característica más reciente, se indicará la versión mínima necesaria para completarlo.  
      
 -   Si un tutorial usa una de las bases de datos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], debe descargar y usar la versión más reciente de CodePlex. Para obtener más información, consulte [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) (Scripts y bases de datos de AdventureWorks para SQL Server 2016 CTP3).    
@@ -27,7 +26,7 @@ ms.locfileid: "83000705"
  
 ## <a name="current-tutorials"></a>Tutoriales actuales  
   
-|Technology|Descripción|  
+|Tecnología|Descripción|  
 |--------------|---------------|  
 |[Tutoriales de Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
 |[Tutoriales del motor de base de datos](../relational-databases/database-engine-tutorials.md)|Aprenda a conectarse a una instancia del motor de base de datos, así como a escribir y ejecutar instrucciones Transact-SQL.|  

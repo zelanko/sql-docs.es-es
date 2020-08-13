@@ -1,5 +1,6 @@
 ---
 title: Almacenamiento de las credenciales en un origen de datos de Reporting Services | Microsoft Docs
+description: Aprenda a configurar credenciales almacenadas para los servidores de informes en modo Nativo y en modo de SharePoint.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0fd3f93cd38c562d5374ecfa65d52b082eef07b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68891854"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458207"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Almacenamiento de las credenciales en un origen de datos de Reporting Services
 
@@ -61,7 +62,7 @@ Es posible configurar credenciales almacenadas que un servidor de informes de [!
   
 7.  Escriba un nombre de usuario y una contraseña.  
   
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\> y seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**.  
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela en este formato: \<domain>\\<cuenta\> y seleccione **Usar como credenciales de Windows al conectarse al origen de datos.**  
   
     -   Si el nombre de usuario y la contraseña son credenciales de la base de datos, no seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**. Si el servidor de bases de datos admite la suplantación o la delegación, puede seleccionar **Suplantar al usuario autenticado después de realizar una conexión al origen de datos**.  
   
@@ -89,7 +90,7 @@ Es posible configurar credenciales almacenadas que un servidor de informes de [!
   
 7.  Escriba un **nombre de usuario** y una **contraseña**.  
   
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\> y seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**.  
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela en este formato: \<domain>\\<cuenta\> y seleccione **Usar como credenciales de Windows al conectarse al origen de datos.**  
   
     -   Si el nombre de usuario y la contraseña son credenciales de base de datos, no seleccione **Utilizar como credenciales de Windows**. Si el servidor de base de datos admite la suplantación o la delegación, puede seleccionar **Establecer contexto de ejecución en esta cuenta**.  
   
@@ -115,7 +116,7 @@ Es posible configurar credenciales almacenadas que un servidor de informes de [!
   
 5.  Escriba un nombre de usuario y una contraseña.  
   
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\> y seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**.  
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela en este formato: \<domain>\\<cuenta\> y seleccione **Usar como credenciales de Windows al conectarse al origen de datos.**  
   
     -   Si el nombre de usuario y la contraseña son credenciales de la base de datos, no seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**. Si el servidor de bases de datos admite la suplantación o la delegación, puede seleccionar **Suplantar al usuario autenticado después de realizar una conexión al origen de datos**.  
   
@@ -143,7 +144,7 @@ Es posible configurar credenciales almacenadas que un servidor de informes de [!
   
 6.  Escriba un nombre de usuario y una contraseña.  
   
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela con este formato: \<dominio>\\<cuenta\> y seleccione **Usar como credenciales de Windows**.  
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela con este formato: \<domain>\\<cuenta\> y seleccione **Usar como credenciales de Windows.**  
   
     -   Si el nombre de usuario y la contraseña son credenciales de base de datos, no seleccione **Utilizar como credenciales de Windows**. Si el servidor de base de datos admite suplantación o delegación, puede seleccionar **Establecer contexto de ejecución en esta cuenta**.  
   

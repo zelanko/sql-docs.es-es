@@ -1,5 +1,6 @@
 ---
 title: Establecer propiedades de implementación (Reporting Services) | Microsoft Docs
+description: Obtenga información sobre cómo establecer las propiedades de implementación que se usan en SQL Server Data Tools (SSDT) o Visual Studio para compilar, obtener una vista previa e implementar informes.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -13,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 9106c4c45845d1e31d65180c8f0fd979e7e3e14c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 45e168c5fa0e0edcb450ca4f302de2676303b5c3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66175342"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914893"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
 
@@ -62,7 +63,7 @@ ms.locfileid: "66175342"
     > [!NOTE]  
     > Para un servidor de informes que se ejecuta en modo nativo, debe disponer de permisos de **publicación** en la carpeta de destino para poder publicar informes en dicha carpeta. Los permisos de publicación se proporcionan mediante una asignación de roles que asigne la cuenta de usuario a un rol que disponga de operaciones de publicación. Para obtener más información, vea [Crear y administrar asignaciones de roles](../../reporting-services/security/create-and-manage-role-assignments.md). Para un servidor de informes que se ejecuta en el modo integrado de SharePoint, debe disponer del permiso **Miembro** o **Propietario** en el sitio de SharePoint. Para obtener más información, vea [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. En el cuadro de texto **TargetServerURL** , escriba la dirección URL del servidor de informes de destino. Antes de publicar un informe, establezca esta propiedad en la dirección URL de un servidor de informes válido. Al publicar en un servidor de informes que se ejecute en modo nativo, use la dirección URL del directorio virtual del servidor de informes (por ejemplo, http: *//servidor/servidorDeInformes* o https: *//servidor/servidorDeInformes)* . Se trata del directorio virtual del servidor de informes, y no del portal web.  
+10. En el cuadro de texto **TargetServerURL** , escriba la dirección URL del servidor de informes de destino. Antes de publicar un informe, establezca esta propiedad en la dirección URL de un servidor de informes válido. Al publicar en un servidor de informes que se ejecute en modo nativo, use la dirección URL del directorio virtual del servidor de informes (por ejemplo, http:*//servidor/servidorDeInformes* o https:*//servidor/servidorDeInformes)*. Se trata del directorio virtual del servidor de informes, y no del portal web.  
   
      Al publicar en un servidor de informes que se ejecute en el modo integrado de SharePoint, use una dirección URL a un sitio de nivel superior o un subsitio de SharePoint. Si no especifica ningún sitio, se usa el sitio de primer nivel predeterminado (por ejemplo, <https://*servername*>, <https://*servername*/*site*>o <https://*servername*/*site*/*subsite*>).  
   
@@ -72,7 +73,7 @@ ms.locfileid: "66175342"
   
 2. En el cuadro de diálogo **Páginas de propiedades** del proyecto, haga clic en **Administrador de configuración**.  
   
-3. En el cuadro de diálogo **Administrador de configuración** , seleccione la configuración que desea modificar. La configuración activa se muestra como **Active(***\<configuración>***)** .  
+3. En el cuadro de diálogo **Administrador de configuración** , seleccione la configuración que desea modificar. La configuración activa actualmente se muestra como **Active(***\<configuration>***)** .  
   
 4. En **Contextos del proyecto**, para cada proyecto de la solución, active o desactive **Generar** o **Implementar**.  
   

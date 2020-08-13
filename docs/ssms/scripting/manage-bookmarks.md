@@ -1,5 +1,6 @@
 ---
 title: Administrar marcadores
+description: La ventana Marcadores de un editor de código le permite crear vínculos a ubicaciones en el código. Obtenga información sobre cómo crear, eliminar, activar y deshabilitar marcadores y cómo usarlos para navegar por el código.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7879c6c7d07e7e0caeb075652b87b42fdf3ab66c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b75287c722757e6bb6f12a7eb282b7f141a9483
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261847"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122607"
 ---
 # <a name="manage-bookmarks"></a>Administrar marcadores
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Cuando trabaja en un editor de código, la ventana **Marcadores** permite crear vínculos a líneas específicas de código en el documento. Puede abrir esta ventana desde el menú **Ver** .  
   
  Para crear y navegar a través de los marcadores, haga clic en los botones que se ubican en la barra de herramientas del **Editor de texto** y en la parte superior de la ventana **Marcadores** . Puede agregar y quitar marcadores, activarlos o deshabilitarlos, y organizarlos en carpetas. También están disponibles algunos comandos desde el menú contextual de la ventana **Marcadores** . Para agregar o quitar un marcador, coloque el punto de inserción en la línea deseada del editor y haga clic en **Cambiar a un marcador de la línea actual**. Para activar un marcador, active su casilla en la ventana **Marcadores** ; para deshabilitarlo (pero no quitarlo), desactive la casilla.  

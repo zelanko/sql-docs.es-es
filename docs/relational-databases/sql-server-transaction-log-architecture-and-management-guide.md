@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 976fae5e1f906e80248ac11d1f89e889bcbb5e0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b41b9a68776a41b9b7aaab480ea749187becf5b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000527"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122673"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,11 +95,11 @@ Para obtener más información sobre los argumentos `FILEGROWTH` y `SIZE` de `AL
   
  El registro de transacciones es un archivo de registro circular. Considere, por ejemplo, una base de datos con un archivo de registro físico dividido en cuatro VLF. Cuando se crea la base de datos, el archivo de registro lógico empieza en el principio del archivo de registro físico. Las nuevas entradas del registro se agregan al final del registro lógico y se expanden hacia el final del archivo físico. El truncamiento del registro libera los registros virtuales cuyas entradas son anteriores al número de flujo de registro de recuperación mínimo (MinLSN). *MinLSN* es el número de flujo de registro de la entrada del registro más antigua necesaria para una reversión correcta de toda la base de datos. El registro de transacciones de ejemplo sería similar al de la siguiente ilustración.  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![Muestra cómo se divide un archivo de registro físico en registros virtuales](../relational-databases/media/tranlog3.png)  
   
  Cuando el final del registro lógico llega al final del archivo de registro físico, las nuevas entradas del registro se escriben al principio del archivo de registro físico.  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![Muestra cómo se encapsula un registro de transacciones lógico en su archivo de registro físico](../relational-databases/media/tranlog4.png)   
   
  El ciclo se repite indefinidamente, siempre que el final del registro lógico no alcance el inicio del registro lógico. Si las entradas antiguas se truncan con la frecuencia suficiente para disponer siempre de espacio para todas las nuevas entradas de registro que se van a crear hasta el próximo punto de comprobación, el registro no se llena nunca. Sin embargo, si el final del registro lógico llega al principio del registro lógico, se produce una de estas dos situaciones:  
   
@@ -117,11 +117,11 @@ Para obtener más información sobre los argumentos `FILEGROWTH` y `SIZE` de `AL
   
  En la siguiente ilustración se muestra un registro de transacciones antes y después del truncamiento. En la primera ilustración se muestra un registro de transacciones que no se ha truncado nunca. El registro lógico tiene actualmente cuatro archivos de registro virtuales en uso. El registro lógico comienza al principio del primer archivo de registro virtual y finaliza en el registro virtual 4. El registro de MinLSN está en el registro virtual 3. Los registros virtuales 1 y 2 solo contienen entradas de registro inactivas. Estas entradas pueden truncarse. El registro virtual 5 no se utiliza aún y no forma parte del registro lógico actual.  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![Muestra cómo aparece un registro de transacciones antes de que se trunque](../relational-databases/media/tranlog2.png)  
   
  En la segunda ilustración se muestra el registro después del truncamiento. Se han liberado los registros virtuales 1 y 2 para su reutilización. El registro lógico comienza ahora al principio del registro virtual 3. El registro virtual 5 no se utiliza aún y no forma parte del registro lógico actual.  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![Muestra cómo aparece un registro de transacciones después de truncarse](../relational-databases/media/tranlog3.png)  
   
  El truncamiento del registro se produce automáticamente después de los eventos siguientes, excepto cuando se retrasa por alguna razón:  
   
@@ -228,7 +228,7 @@ La parte del archivo de registro desde el MinLSN hasta el último registro escri
 
 En la ilustración siguiente se muestra una versión simplificada del final de un registro de transacciones con dos transacciones activas. Los registros de punto de comprobación se han compactado en un solo registro.
 
-![active_log](../relational-databases/media/active-log.gif) 
+![Muestra el final de un registro de transacciones con dos transacciones activas y un registro de punto de comprobación compactado](../relational-databases/media/active-log.png) 
 
 LSN 148 es la última entrada del registro de transacciones. En el momento en que se procesó el registro del punto de comprobación en LSN 147, Tran 1 se había confirmado y Tran 2 era la única transacción activa. Esto hace que la primera entrada del registro para Tran 2 sea la entrada de transacción activa más antigua del registro en el momento del último punto de comprobación. Esto convierte al registro de inicio del registro de transacciones para Tran 2, LSN 142, en el MinLSN.
 

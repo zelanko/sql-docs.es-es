@@ -1,5 +1,6 @@
 ---
 title: Buscar y reemplazar
+description: Obtenga información sobre cómo usar el cuadro de diálogo Buscar y reemplazar para buscar y reemplazar texto.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6598fafd54ba3b5e517e39869c45b3fd7ad7f47b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3eef56e8db1a92d021d074de9a1c821f8d3fbc9
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261883"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122950"
 ---
 # <a name="find-and-replace"></a>Buscar y reemplazar
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Utilice el cuadro de diálogo **Buscar y reemplazar** para buscar texto en un archivo y, opcionalmente, reemplazarlo. Pueden aparecer versiones del cuadro de diálogo **Buscar y reemplazar** con opciones ligeramente distintas, en función de la forma en que se haya abierto el cuadro de diálogo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Búsqueda rápida** para abrir el cuadro de diálogo con las opciones de búsqueda, pero sin las opciones de reemplazo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Reemplazo rápido** para abrir el cuadro de diálogo con las opciones de búsqueda y de reemplazo.  
   
  También hay botones de la barra de la herramientas y teclas de método abreviado disponibles para abrir el cuadro de diálogo **Buscar y reemplazar** .  

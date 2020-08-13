@@ -1,5 +1,6 @@
 ---
 title: Diseño de informes con el Diseñador de informes | Microsoft Docs
+description: Aprenda a usar el Diseñador de informes en SQL Server Reporting Services para crear informes paginados completos y soluciones de informes.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e4cfac1ba56647ae0218242d0fb9228a3e80579
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f83c1f169706af4a02d1940049d2a1814bc26ca
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286169"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914091"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Diseñar informes paginados de Reporting Services con el Diseñador de informes (SSRS)
 
@@ -99,7 +100,7 @@ Los informes paginados son archivos que se almacenan en un proyecto de informe. 
  Use la **Vista previa** para comprobar los datos del informe y el diseño del informe. Al obtener la vista previa de un informe, el procesador de este valida el esquema de definición del informe y la sintaxis de sus expresiones, y enumera los problemas en la ventana [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
->  Cuando se obtiene una vista previa de un informe, los datos de ese informe se almacenan en la caché en un archivo del equipo local. Cuando se obtiene de nuevo una vista previa del mismo informe mediante la misma consulta, los mismos parámetros y las mismas credenciales, el Diseñador de informes recupera la copia en caché en lugar de volver a ejecutar la consulta. El archivo de datos se guarda como *\<nombreDeInforme>* .rdl.data en el mismo directorio que el archivo de definición de informe. El archivo no se elimina cuando se cierra el Diseñador de informes.  
+>  Cuando se obtiene una vista previa de un informe, los datos de ese informe se almacenan en la caché en un archivo del equipo local. Cuando se obtiene de nuevo una vista previa del mismo informe mediante la misma consulta, los mismos parámetros y las mismas credenciales, el Diseñador de informes recupera la copia en caché en lugar de volver a ejecutar la consulta. El archivo de datos se guarda como *\<reportname>* .rdl.data en el mismo directorio que el archivo de definición de informe. El archivo no se elimina cuando se cierra el Diseñador de informes.  
   
  Puede obtener una vista previa de un informe de varias maneras:  
   

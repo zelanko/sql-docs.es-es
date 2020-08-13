@@ -1,5 +1,6 @@
 ---
 title: Implementación y compatibilidad de versiones en SQL Server Data Tools (SSDT) | Microsoft Docs
+description: Obtenga información sobre las versiones compatibles para crear y publicar informes en SQL Server Data Tools y cómo establecer las propiedades de configuración e implementación del proyecto.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571494"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917970"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Implementación y compatibilidad de versiones en SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] admite los escenarios siguientes:  
@@ -33,7 +34,7 @@ ms.locfileid: "65571494"
   
  Los informes se compilan antes de representarse como vistas previas en el Diseñador de informes o antes de implementarse en el servidor de informes.  
   
- Las propiedades de configuración se establecen en el cuadro de diálogo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Propiedad del proyecto**de**.  
+ Las propiedades de configuración se establecen en el cuadro de diálogo **Propiedad del proyecto** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Entre las propiedades de generación e implementación se incluyen:  
   

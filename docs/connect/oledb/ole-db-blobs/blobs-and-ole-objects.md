@@ -1,8 +1,8 @@
 ---
-title: BLOB y objetos OLE | Microsoft Docs
+title: BLOB y objetos OLE (controlador OLE DB) | Microsoft Docs
 description: BLOB y objetos OLE
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,20 +16,22 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54f8b4c38c22bcb32b039d9f0f0887c298051302
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67988673"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942804"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB y objetos OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server expone la interfaz **ISequentialStream** para admitir el acceso del consumidor a tipos de datos xml y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ntext **,** text **,** image **,** varchar(max) **,** nvarchar(max)**y**varbinary(max)**de** como objetos binarios grandes (BLOB). El método **Read** de **ISequentialStream** permite al consumidor recuperar muchos datos en fragmentos fáciles de administrar.  
-  
+  OLE DB Driver for SQL Server expone la interfaz **ISequentialStream** para admitir el acceso del consumidor a los tipos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**<a href="#text_note"><sup>**1**</sup></a>, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** y xml como objetos binarios grandes (BLOB). El método **Read** de **ISequentialStream** permite al consumidor recuperar muchos datos en fragmentos fáciles de administrar.
+
+ <b id="text_note">[1]:</b> El uso de la interfaz ISequentialStream para insertar datos con codificación UTF-8 en una columna de texto heredado solo se limita a los servidores que admiten UTF-8. Un intento de ejecutar este escenario cuando el destino es un servidor que no es compatible con UTF-8 hará que el controlador publique el mensaje de error siguiente: "*No se admiten secuencias en el tipo de columna seleccionado*".
+
  Para obtener un ejemplo que muestra esta característica, consulte [Establecimiento de datos grandes &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  El controlador OLE DB para SQL Server puede usar una interfaz **IStorage** implementada por el consumidor cuando este proporciona el puntero de interfaz en un descriptor de acceso enlazado para la modificación de datos.  

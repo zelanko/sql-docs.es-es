@@ -9,16 +9,16 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665361"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923421"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en versiones anteriores para potenciar SQL Server como una plataforma que proporciona diversas opciones de lenguajes de desarrollo, tipos de datos, entornos locales o en la nube, y sistemas operativos.
 
@@ -39,7 +39,7 @@ En las secciones siguientes se proporciona información general sobre estas cara
 
 ## <a name="data-virtualization-and-big-data-clusters-2019"></a>Virtualización de datos y [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-Hoy en día, las empresas son propietarias de ingentes cantidades de datos que constan de una amplia gama de conjuntos de datos en constante crecimiento y que están hospedados en orígenes de datos almacenados en toda la empresa. Obtenga información casi en tiempo real de todos sus datos con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] de SQL Server 2019, que proporcionan un entorno completo para trabajar con grandes conjuntos de datos, incluidas funciones de inteligencia artificial y aprendizaje automático.
+Hoy en día, las empresas son propietarias de ingentes cantidades de datos que constan de una amplia gama de conjuntos de datos en constante crecimiento y que están hospedados en orígenes de datos almacenados en toda la empresa. Obtenga información casi en tiempo real de todos los datos con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], que proporcionan un entorno completo para trabajar con grandes conjuntos de datos, incluidas funciones de inteligencia artificial y aprendizaje automático.
 
 | Nueva característica o actualización | Detalles |
 |:---|:---|
@@ -160,7 +160,7 @@ Cuando se produce un error en un proceso de extracción, transformación y carga
 |Always Encrypted con enclaves seguros|Expande Always Encrypted con cifrado en contexto y cálculos enriquecidos mediante la habilitación de cálculos en los datos de texto no cifrado dentro de un enclave seguro del lado servidor. El cifrado en contexto mejora el rendimiento y la confiabilidad de las operaciones criptográficas (cifrado de columnas, rotación de las claves de cifrado de columnas, etc.), puesto que evita mover los datos fuera de la base de datos.<br><br> La compatibilidad con cálculos enriquecidos (operaciones de coincidencia y comparación de patrones) abre Always Encrypted a un conjunto mucho más amplio de escenarios y aplicaciones que demandan protección de datos confidenciales, a la vez que requieren funciones más enriquecidas en las consultas de Transact-SQL. [Always Encrypted con enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Administración de certificados en el Administrador de configuración de SQL Server|Las tareas de administración de certificados, como ver e implementar certificados, ahora son posibles mediante el uso del Administrador de configuración de SQL Server. Vea [Administración de certificados (Administrador de configuración de SQL Server)](../database-engine/configure-windows/manage-certificates.md).|
 |Clasificación y detección de datos|La clasificación y detección de datos proporcionan funciones para clasificar y etiquetar columnas en las tablas de usuario. La clasificación de la información confidencial (empresarial, financiera, sanitaria, personal, etc.) puede desempeñar un papel fundamental en el estado de protección de la información de la organización. Puede servir como infraestructura para lo siguiente:<ul><li>Ayudar a cumplir los requisitos de cumplimiento reglamentario y los estándares de privacidad de datos</li><li>Varios escenarios de seguridad, como la supervisión (auditoría) y las alertas relacionadas con accesos anómalos a información confidencial</li><li>Facilitar la identificación de dónde reside la información confidencial de la empresa, para que los administradores pueden adoptar los pasos adecuados para proteger la base de datos.</li></ul>|
-|SQL Server Audit|La auditoría[auditoría](../relational-databases/security/auditing/sql-server-audit-database-engine.md) también se ha mejorado para incluir un campo nuevo `data_sensitivity_information` en el registro de auditoría, que contiene las clasificaciones de confidencialidad (etiquetas) de los datos reales que devuelve la consulta. Para información detallada y ejemplos, consulte [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
+|SQL Server Audit|La [auditoría](../relational-databases/security/auditing/sql-server-audit-database-engine.md) también se ha mejorado para incluir un campo nuevo `data_sensitivity_information` en el registro de auditoría, que contiene las clasificaciones de confidencialidad (etiquetas) de los datos reales que devuelve la consulta. Para información detallada y ejemplos, consulte [`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>Alta disponibilidad
@@ -222,7 +222,7 @@ La manera más sencilla de empezar a trabajar con [!INCLUDE[ssNoVersion](../incl
 
 |Nueva característica o actualización | Detalles |
 |:---|:---| 
-|Nuevas opciones de configuración de memoria | Durante la instalación, establece las configuraciones de servidor *memoria de servidor mínima (MB)* y *memoria de servidor máxima (MB)* . Consulte [Configuración del motor de base de datos: página de memoria](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) y los parámetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` y `SQLMAXMEMORY` en [Instalar SQL Server desde el símbolo del sistema](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). El valor propuesto se alinea con las directrices de configuración de memoria en [Opciones de configuración de memoria del servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
+|Nuevas opciones de configuración de memoria | Durante la instalación, establece las configuraciones de servidor *memoria de servidor mínima (MB)* y *memoria de servidor máxima (MB)* . Consulte [Configuración del motor de base de datos: página de memoria](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) y los parámetros `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` y `SQLMAXMEMORY` en [Instalar SQL Server desde el símbolo del sistema](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). El valor propuesto se alinea con las directrices de configuración de memoria en [Opciones de configuración de memoria del servidor](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).| 
 |Opciones de configuración de nuevo paralelismo | Durante la instalación, establece la configuración del servidor *Grado máximo de paralelismo*. Consulte [Configuración del motor de base de datos: página de MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) y el parámetro `SQLMAXDOP` en [Instalar SQL Server desde el símbolo del sistema](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). El valor predeterminado se alinea con las directrices sobre el grado máximo de paralelismo en [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 |Advertencia de configuración sobre la clave de producto de la licencia Server/CAL|Si se especifica una clave de producto de licencia Enterprise Server o CAL y el equipo tiene más de 20 núcleos físicos, o 40 núcleos lógicos si la tecnología Hyper-Threading está habilitada, se muestra una advertencia durante la instalación. Los usuarios pueden seguir confirmando la limitación y continuar con la instalación, o bien especificar una clave de licencia que admita el número máximo de procesadores del sistema operativo.|
 | &nbsp; | &nbsp; |

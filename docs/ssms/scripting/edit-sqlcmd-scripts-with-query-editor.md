@@ -1,5 +1,6 @@
 ---
 title: Modificar scripts SQLCMD con el Editor de consultas
+description: Los scripts SQLCMD se usan cuando es necesario procesar comandos del sistema de Windows e instrucciones de Transact-SQL en el mismo script. Aprenda a escribir y editar scripts SQLCMD con el Editor de consultas del motor de base de datos.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed1171649c422ccb451fc7540cae8ca6629b65b1
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253908"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122968"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modificar scripts SQLCMD con el Editor de consultas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Con el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , es posible escribir y modificar consultas como scripts SQLCMD. Los scripts SQLCMD se usan cuando es necesario procesar comandos del sistema de Windows e instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en el mismo script.  
   
 ## <a name="sqlcmd-mode"></a>Modo SQLCMD  
@@ -78,7 +79,7 @@ ms.locfileid: "75253908"
   
     -   (6 filas afectadas)  
   
-    -   \<La información del directorio>  
+    -   \<The directory information>  
   
     -   (4 filas afectadas)  
   
@@ -140,7 +141,7 @@ ms.locfileid: "75253908"
 > [!NOTE]  
 >  Tanto para `:error` como para `:out`, `stderr` y `stdout` envían los resultados a la pestaña de mensajes.  
   
- Los comandos SQLCMD que no aparecen en la lista anterior no son compatibles con el Editor de consultas. Cuando se ejecuta un script que contiene palabras clave SQLCMD no compatibles, el Editor de consultas enviará un mensaje al destino, por cada palabra clave no compatible, que indica que se omite el comando *\<comando omitido*>. El script se ejecutará correctamente, aunque los comandos no compatibles se omitirán.  
+ Los comandos SQLCMD que no aparecen en la lista anterior no son compatibles con el Editor de consultas. Cuando se ejecuta un script que contiene palabras clave de SQLCMD no compatibles, el Editor de consultas enviará un mensaje "Omitiendo el comando *\<ignored command*>" al destino, por cada palabra clave no compatible. El script se ejecutará correctamente, aunque los comandos no compatibles se omitirán.  
   
 > [!CAUTION]  
 >  Puesto que no se está iniciando SQLCMD desde la línea de comandos, existen algunas limitaciones al ejecutar el Editor de consultas en modo SQLCMD. No es posible enviar parámetros de línea de comandos como variables y, dado que el Editor de consultas no puede responder a las solicitudes del sistema operativo, hay que tener cuidado de no ejecutar instrucciones interactivas.  

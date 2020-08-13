@@ -1,23 +1,23 @@
 ---
-title: Escalar scripts de forma simultánea
+title: Configuración de la ejecución de scripts de R y Python paralela o simultánea
 description: Configure la ejecución de scripts de R y Python de forma simultánea o en paralelo en un grupo de cuentas de usuario para escalar SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 430af4eb1127ab5b924b2429e166f68e2dffa334
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 525e9d0931b3ff25d4258004680ed158a9baf82d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118808"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484452"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Escalar la ejecución simultánea de scripts externos en SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Obtenga información sobre las cuentas de trabajo para SQL Server Machine Learning Services y el procedimiento para cambiar la configuración predeterminada para escalar el número de ejecuciones simultáneas de scripts externos.
 

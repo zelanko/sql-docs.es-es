@@ -2,7 +2,7 @@
 title: Introducción a los controles del Visor de informes
 description: Los controles de Visor de informes sirven para integrar informes RDL de Reporting Services en aplicaciones WebForms y WinForms.
 ms.custom: seo-lt-2019
-ms.date: 12/12/2019
+ms.date: 06/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241825"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943198"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Integración de Reporting Services con los controles del Visor de informes: Introducción
 
@@ -252,10 +252,18 @@ El control del Visor de informes ahora se distribuye como un paquete de NuGet y 
     
 El control de visor está diseñado para los exploradores modernos. Puede que el control no funcione según lo esperado si el explorador representa la página mediante el modo de compatibilidad de IE. Es posible que los sitios de intranet necesiten una metaetiqueta para invalidar el comportamiento predeterminado del explorador.
 
-    ```
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    ```
-      
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+```
+
+## <a name="nugetorg-pages"></a>Páginas de NuGet.org
+
+Estos son los vínculos a los artículos del sitio NuGet.org sobre las versiones WebForm y WinForm del control Visor de informes:
+
+- Microsoft.ReportingServices.ReportViewerControl.WebForms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
+- Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
+
+
 ## <a name="feedback"></a>Comentarios
 
 Avise al equipo de cualquier problema a través de los [foros de Reporting Services](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).

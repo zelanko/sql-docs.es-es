@@ -1,24 +1,24 @@
 ---
 title: Funciones auxiliares de sqlrutils
-description: Use la biblioteca de funciones sqlrutils en SQL Server 2016 R Services y SQL Server Machine Learning Services con R para generar procedimientos almacenados que contengan scripts de R.
+description: Sqlrutils es un paquete de Microsoft que proporciona un mecanismo para que los usuarios de R inserten sus scripts de R en un procedimiento almacenado de T-SQL, registren dicho procedimiento almacenado en una base de datos y lo ejecuten desde un entorno de desarrollo de R. El paquete se incluye en SQL Server Machine Learning Services y en SQL Server 2016 R Services.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 12/15/2018
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7c989ad848324536122c042e2b5a823b16b72657
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117398"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406148"
 ---
-# <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (biblioteca de R en SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>Sqlrutils (paquete de R en SQL Server Machine Learning Services)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-El paquete **sqlrutils** proporciona un mecanismo para que los usuarios de R inserten sus scripts de R en un procedimiento almacenado de T-SQL, registren dicho procedimiento almacenado en una base de datos y lo ejecuten desde un entorno de desarrollo de R. 
+**Sqlrutils** es un paquete de Microsoft que proporciona un mecanismo para que los usuarios de R inserten sus scripts de R en un procedimiento almacenado de T-SQL, registren dicho procedimiento almacenado en una base de datos y lo ejecuten desde un entorno de desarrollo de R. El paquete se incluye en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) y en [SQL Server 2016 R Services](sql-server-r-services.md).
 
 Al convertir el código de R para que se ejecute en un solo procedimiento almacenado, puede hacer un uso más eficaz de SQL Server R Services, que requiere que el script de R se incruste como parámetro en [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). El paquete **sqlrutils** le ayuda a generar este script de R incrustado y a establecer correctamente los parámetros relacionados.
 
@@ -30,12 +30,12 @@ El paquete **sqlrutils** lleva a cabo estas tareas:
 
 También puede ejecutar el procedimiento almacenado desde un entorno de R pasando los parámetros correctos y procesando los resultados. Asimismo, puede usar el procedimiento almacenado de SQL Server para admitir escenarios de integración de base de datos comunes, como ETL, el entrenamiento del modelo y la puntuación de gran volumen.
 
-  > [!NOTE]
-  > Si va a ejecutar el procedimiento almacenado desde un entorno de R llamando a la función *executeStoredProcedure* , debe usar un proveedor ODBC 3.8, como ODBC Driver 13 para SQL Server.  
+> [!NOTE]
+> Si va a ejecutar el procedimiento almacenado desde un entorno de R llamando a la función *executeStoredProcedure* , debe usar un proveedor ODBC 3.8, como ODBC Driver 13 para SQL Server.  
   
 ## <a name="full-reference-documentation"></a>Documentación de referencia completa
 
-La biblioteca de **sqlrutils** se distribuye en varios productos de Microsoft, pero el uso es el mismo, se obtenga la biblioteca en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
+El paquete **sqlrutils** se distribuye en varios productos de Microsoft, pero el uso es el mismo independientemente de si se obtiene el paquete en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
 
 ## <a name="functions-list"></a>Lista de funciones
 
@@ -57,7 +57,7 @@ En la sección siguiente se proporciona un resumen de las funciones que se puede
 
 ## <a name="how-to-use-sqlrutils"></a>Cómo usar sqlrutils
 
-Las funciones de la biblioteca de **sqlrutils** deben ejecutarse en un equipo que tenga SQL Server Machine Learning con R. Si está trabajando en una estación de trabajo cliente, establezca un contexto de cálculo remoto para que la ejecución cambie a SQL Server. El flujo de trabajo para usar este paquete incluye los pasos siguientes:
+Las funciones del paquete de **sqlrutils** deben ejecutarse en un equipo que tenga SQL Server Machine Learning con R. Si está trabajando en una estación de trabajo cliente, establezca un contexto de cálculo remoto para que la ejecución cambie a SQL Server. El flujo de trabajo para usar este paquete incluye los pasos siguientes:
 
 + Definir los parámetros de los procedimientos almacenados (entradas, salidas o ambos) 
 + Generar y registrar el procedimiento almacenado    
@@ -66,7 +66,7 @@ Las funciones de la biblioteca de **sqlrutils** deben ejecutarse en un equipo qu
 En una sesión de R, cargue **sqlrutils** desde la línea de comandos escribiendo `library(sqlrutils)`.
 
 > [!Note]
-> Puede cargar esta biblioteca en un equipo que no tiene SQL Server (por ejemplo, en una instancia de cliente de R) si cambia el contexto de cálculo a SQL Server y ejecuta el código en ese contexto de cálculo.
+> Puede cargar este paquete en un equipo que no tenga SQL Server (por ejemplo, en una instancia de cliente de R) si cambia el contexto de cálculo a SQL Server y ejecuta el código en ese contexto de cálculo.
 
 
 ### <a name="define-stored-procedure-parameters-and-inputs"></a>Definición de parámetros y entradas del procedimiento almacenado

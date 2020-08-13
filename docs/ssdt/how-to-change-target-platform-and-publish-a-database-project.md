@@ -1,5 +1,6 @@
 ---
 title: Cambio de la plataforma de destino y publicación de un proyecto de base de datos
+description: Obtenga información sobre cómo cambiar la plataforma de un proyecto de base de datos de SQL Server Data Tools a una instancia compatible de SQL Server. Aprenda a publicar un proyecto de base de datos.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: a2af594db8c4f92028a9a36b8cc54f5f3712c9b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241600"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942471"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procedimientos: Cambio de la plataforma de destino y publicación de un proyecto de base de datos
 
@@ -41,7 +41,7 @@ SSDT también simplifica esta tarea, ya que reconoce la plataforma de destino y 
   
 2.  Anexe `ON [PRIMARY]` al final de la instrucción `CREATE TABLE` .  
   
-3.  El siguiente error se muestra en el panel **Lista de errores**:  SQL70015: SQL Azure no admite una referencia al grupo de archivos y un esquema de partición.  
+3.  Observe que aparece el siguiente error en el panel **Lista de errores**: SQL70015: 'Referencia de grupo de archivos y esquema de partición' no se admite en SQL Azure.  
   
     SSDT valida automáticamente el script según la plataforma de destino. En este caso, como el grupo de archivos no se admite en SQL Azure, SSDT devuelve un error. Para obtener una lista de instrucciones Transact\-SQL no admitidas en SQL Azure, consulte [Instrucciones Transact-SQL admitidas parcialmente (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx).  
   
@@ -67,5 +67,5 @@ SSDT también simplifica esta tarea, ya que reconoce la plataforma de destino y 
   
 **Un proyecto que especifique Microsoft SQL Server 2012 como plataforma de destino puede experimentar problemas de compatibilidad con SQL Server 2008**. Si dicho proyecto contiene entidades (por ejemplo, un objeto Sequence) que se introducen en Microsoft SQL Server 2012, se producirá un error en la operación de publicación.  
   
-    The deployment will fail if object predicates use **CONTAINS** or **FREETEXT** over a newly created full-text index and transactional scripts are used. If the option to include transactional scripts is enabled during deployment, then procedures and views are defined inside a transaction while a full-text index is defined outside of a transaction at the end of the deploy script. Because of this ordering in the script, procedures or views using CONTAINS or FREETEXT will not be resolved against the full-text index, resulting in a deployment error.  
+La implementación no se realizará si en los predicados de objeto se usa **CONTAINS** o **FREETEXT** sobre un índice de texto completo recién creado y se usan scripts transaccionales. Si la opción para incluir scripts transaccionales se habilita durante la implementación, los procedimientos y las vistas se definen dentro de una transacción mientras que un índice de texto completo se define fuera de una transacción al final del script de implementación. Debido a esta ordenación en el script, los procedimientos o vistas que usen CONTAINS o FREETEXT no se resolverán con el índice de texto completo, con lo que se produce un error de implementación.  
   

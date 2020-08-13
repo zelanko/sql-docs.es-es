@@ -1,5 +1,6 @@
 ---
 title: Herramientas de diseño de consultas | Microsoft Docs
+description: Obtenga información sobre las herramientas de diseño de consultas y también del tipo de origen de datos que admite cada herramienta de diseño de consultas.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b4d92cb7c7b669b4a3087790397a1965d460dd9a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3f7772dbfc2442929627ce30f5653404cbe4f8bc
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082008"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458022"
 ---
 # <a name="query-design-tools-ssrs"></a>Herramientas de diseño de consulta (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ofrece varias herramientas de diseño de consultas que puede usar para crear consultas de conjuntos de datos en el Diseñador de consultas. Algunos diseñadores de consultas ofrecen modos alternativos que le permiten elegir entre trabajar en modo visual o directamente en el idioma de la consulta. En este tema se presentan todas las herramientas y se describe el tipo de origen de datos que admite cada una de ellas. En esta sección se describen las siguientes herramientas:  

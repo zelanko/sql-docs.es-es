@@ -1,5 +1,6 @@
 ---
 title: Vista de diseño | Microsoft Docs
+description: Obtenga información sobre cómo usar la vista Diseño del Diseñador de informes de Reporting Services para organizar los elementos un informe.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: db7b82684edf89ef66bd033ab7ca6c673a873d0f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577880"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914071"
 ---
 # <a name="design-view"></a>Vista de diseño
 En el Diseñador de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use la vista Diseño para organizar los elementos del informe. En ocasiones, la vista Diseño se conoce como vista de presentación o vista de superficie de diseño.  

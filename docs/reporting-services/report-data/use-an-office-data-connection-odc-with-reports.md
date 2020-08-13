@@ -1,5 +1,6 @@
 ---
 title: Usar una Conexión de datos de Office (.odc) con informes | Microsoft Docs
+description: Aprenda a usar un archivo de conexión de datos de Office (.odc) existente para proporcionar información de conexión a un informe de Reporting Services.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b8fd87736e84336cc206235dd78aa76576bfdf1
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574947"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458508"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Usar una Conexión de datos de Office (.odc) con informes
   En escenarios limitados, puede usar un archivo de conexión de datos de Office (.odc) existente para proporcionar información de conexión a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Al crear un origen de datos compartido, puede usarse un archivo .odc en lugar de un archivo .rsds. El servidor de informes usa un archivo .odc de la misma forma que usa un archivo .rsds; lee el archivo para el tipo de origen de datos, una cadena de conexión y la información de credenciales.  

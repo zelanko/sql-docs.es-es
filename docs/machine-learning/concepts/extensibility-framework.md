@@ -1,30 +1,30 @@
 ---
 title: Arquitectura de extensibilidad
-description: En este artículo se describe la arquitectura del marco de extensibilidad para ejecutar un script externo, como R o Python, en SQL Server.
+description: En este artículo se describe la arquitectura del marco de extensibilidad para ejecutar un script externo de R o Python en SQL Server Machine Learning Services. El script se ejecuta en un entorno de ejecución de lenguajes como extensión del motor de base de datos principal.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 408125a3369d35a28893852a2f674e3e4562b063
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118828"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406298"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitectura de extensibilidad en SQL Server Machine Learning Services 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server tiene un marco de extensibilidad para ejecutar un script externo, como R o Python, en el servidor. El script se ejecuta en un entorno de ejecución de lenguajes como extensión del motor de base de datos principal.
+En este artículo se describe la arquitectura del marco de extensibilidad para ejecutar un script externo de R o Python en SQL Server Machine Learning Services. El script se ejecuta en un entorno de ejecución de lenguajes como extensión del motor de base de datos principal.
 
 ## <a name="background"></a>Información previa
 
-El marco de extensibilidad se introdujo en SQL Server 2016 para admitir el entorno de ejecución de R. SQL Server 2017 y las versiones posteriores incluyen compatibilidad con Python.
+El marco de extensibilidad se ha introducido en SQL Server 2016 para admitir el entorno de ejecución de R con [R Services](../r/sql-server-r-services.md). SQL Server 2017 y versiones posteriores admiten Python con [Machine Learning Services](../sql-server-machine-learning-services.md).
 
 El propósito del marco de extensibilidad es proporcionar una interfaz entre SQL Server y los lenguajes de ciencia de datos como R y Python. El objetivo es reducir la fricción al trasladar las soluciones de ciencia de datos al entorno de producción y proteger los datos expuestos durante el proceso de desarrollo. Al ejecutar un lenguaje de scripting de confianza en un marco seguro que administra SQL Server, los administradores de bases de datos pueden mantener la seguridad y, al mismo tiempo, permitir el acceso a los científicos de datos a los datos empresariales.
 

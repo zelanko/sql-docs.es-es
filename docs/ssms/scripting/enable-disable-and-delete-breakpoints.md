@@ -1,5 +1,6 @@
 ---
 title: Habilitar, deshabilitar y eliminar puntos de interrupción
+description: Aprenda a usar la ventana Puntos de interrupción para ver, eliminar, deshabilitar y habilitar puntos de interrupción.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,16 +13,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72acf04118e0b3b7f3f205a06d6e93e96bf13ecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ce9b445b5340680f53279a3c061f05c8999a5dd
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253924"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122934"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Habilitar, deshabilitar y eliminar puntos de interrupción
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Para ver y administrar todos los puntos de interrupción abiertos, puede usar la ventana **Puntos de interrupción** . Use la ventana para ver la información de punto de interrupción y para realizar acciones tales como eliminar, deshabilitar o habilitar puntos de interrupción.
 
@@ -95,7 +96,7 @@ Para ver y administrar todos los puntos de interrupción abiertos, puede usar la
   
  Puede eliminar todos los puntos de interrupción de una de las siguientes maneras:  
   
--   En el menú **Depurar** , haga clic en **Eliminar todos los puntos de interrupción**.  
+-   En el menú **Depurar**, haga clic en **Eliminar todos los puntos de interrupción**.  
   
 -   En la barra de herramientas de la ventana **Puntos de interrupción** , haga clic en el botón **Eliminar todos los puntos de interrupción** .  
   

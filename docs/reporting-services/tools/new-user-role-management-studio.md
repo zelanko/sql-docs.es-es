@@ -1,5 +1,6 @@
 ---
 title: Nuevo rol de usuario (Management Studio) | Microsoft Docs
+description: Obtenga información sobre cómo crear una definición de roles de nivel de elemento que enumere las tareas que un usuario puede realizar en la página Nuevo rol de usuario de SQL Server Management Studio.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 16f083c08a9d82a019ae98a8f9a71d7e596394da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 853ef460d56f1561b735ccaff1acfb95b6dfc580
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582179"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913921"
 ---
 # <a name="new-user-role-management-studio"></a>Nuevo rol de usuario (Management Studio)
   Utilice esta página para crear una definición de roles de nivel de elemento. Una definición de roles de nivel de elemento es una colección con nombre de las tareas que puede realizar un usuario con las carpetas, los informes, los modelos, los recursos y los orígenes de datos compartidos. Un ejemplo de definición de roles de nivel de elemento sería el rol predefinido Explorador, que identifica los tipos de acciones que podría necesitar el usuario final de un informe para navegar por carpetas y ver informes.  

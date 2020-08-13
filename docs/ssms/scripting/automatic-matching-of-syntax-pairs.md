@@ -1,5 +1,6 @@
 ---
 title: Coincidencia automática de pares en la sintaxis
+description: Obtenga información sobre la coincidencia automática de pares de sintaxis en el Editor de consultas (coincidencia de delimitadores), el Editor de consultas XMLA (coincidencia de llaves) y MDX y DMX (coincidencia de paréntesis).
 ms.date: 03/01/2017
 ms.prod: sql
 ms.technology: scripting
@@ -11,15 +12,15 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1251b6664266fdd1e4d91519186df95a52e52f35
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d23610ed602133b7c9c218a1da1a678c84954a93
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74834236"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920951"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Coincidencia automática de pares en la sintaxis
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La coincidencia automática de pares en la sintaxis informa de manera inmediata sobre si están escritos correctamente los elementos de sintaxis que deben ir emparejados en el código. Esto se conoce como coincidencia de delimitadores en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , coincidencia de llaves en el Editor de consultas XMLA de Analysis Services y coincidencia de paréntesis en los editores MDX y DMX.  
   
 ## <a name="database-engine-query-editor-delimiter-matching"></a>Coincidencia de delimitadores del Editor de consultas de Database Engine  
@@ -55,17 +56,17 @@ ms.locfileid: "74834236"
   
 -   Etiquetas de inicio y de cierre coincidentes.  
   
--   Cualquier par de corchetes angulares "\<" y ">".  
+-   Cualquier par de corchetes angulares "\<" and ">".  
   
--   Principio y final de los comentarios.  
+-   Inicio y fin de comentarios.  
   
--   Principio y final de las instrucciones de procesamiento.  
+-   Inicio y fin de instrucciones de procesamiento.  
   
--   Principio y final de los bloques CDATA.  
+-   Inicio y fin de bloques CDATA.  
   
--   Principio y final de las declaraciones DTD.  
+-   Inicio y fin de declaraciones DTD.  
   
--   Comillas de apertura y de cierre en los atributos.  
+-   Comillas de apertura y cierre en atributos.  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>Coincidencia de paréntesis de los editores MDX y DMX  
  El Editor MDX (Expresiones multidimensionales) y el Editor DMX (Expresiones de minería de datos) comprueban automáticamente la coincidencia de los pares de paréntesis en las funciones.

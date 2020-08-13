@@ -2,9 +2,9 @@
 title: Notas de la versión de SQL Server 2012 | Microsoft Docs
 description: En estas notas de la versión se describen los problemas conocidos con los que familiarizarse antes de instalar Microsoft SQL Server 2012 o solucionar problemas en este.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 07/22/2020
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d60d53f11096343e96c0c309ba3aeb7bed419856
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: f07d5ea10fbb762b46dcf47fb15e9acdfe8404a9
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999405"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111142"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de la versión de SQL Server 2012
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-En este documento de notas de la versión se describen los problemas conocidos que debe conocer antes de instalar o solucionar problemas de Microsoft SQL Server 2012 ([haga clic aquí para descargarlo](https://go.microsoft.com/fwlink/?LinkId=238647)). Este documento de notas de la versión solo está disponible en línea, no en el disco de instalación, y se actualiza periódicamente.  
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+En este documento Notas de la versión se describen los problemas conocidos que debe conocer antes de instalar [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647) o solucionar problemas en este. Este documento de notas de la versión solo está disponible en línea, no en el disco de instalación, y se actualiza periódicamente.  
   
 Para obtener una introducción e información acerca de cómo instalar SQL Server 2012, vea el documento Léame de SQL Server 2012. El documento Léame está disponible en el disco de instalación y en la página de descarga [Léame](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . También puede encontrar más información en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?LinkId=190948) y en los foros de [SQL Server](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
@@ -62,13 +62,17 @@ Antes de instalar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], tenga en c
 ### <a name="13-sql-server-setup-might-fail-while-trying-to-start-the-sql-server-browser-service"></a>1.3 El programa de instalación de SQL Server podría dar error al intentar iniciar el servicio SQL Server Browser  
 **Problema:** el programa de instalación de SQL Server podría dar error al intentar iniciar el servicio SQL Server Browser, con errores similares a los siguientes:  
   
-<pre>The following error has occurred:  
-Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
+```
+The following error has occurred:  
+Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
+```
   
 or  
   
-<pre>The following error has occurred:  
-SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
+```
+The following error has occurred:  
+SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.
+```
   
 **Solución alternativa:** esto puede ocurrir cuando el Motor de SQL Server o Analysis Services no se puede instalar. Para corregir este problema, consulte los registros del programa de instalación de SQL Server y solucione los errores del Motor de SQL Server y de Analysis Services. Para obtener más información, vea Ver y leer los archivos de registro de instalación de SQL Server. Para obtener más información, vea [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
@@ -105,8 +109,10 @@ Puede instalar SQL Server en Windows Server 2008 R2 Server Core SP1 con las limi
   
 Si estas tareas no se completan, verá un mensaje de error similar al siguiente al intentar crear un índice semántico.  
   
-<pre>Msg 41209, Level 16, State 3, Line 1  
-A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.</pre>  
+```
+Msg 41209, Level 16, State 3, Line 1  
+A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.
+```
   
 ### <a name="17-installation-prerequisite-handling-during-sql-server-2012-setup"></a>1.7 Tratamiento de la instalación de requisitos previos durante la instalación de SQL Server 2012  
 A continuación se describe el comportamiento de la instalación de requisitos previos durante la instalación de SQL Server 2012:  
@@ -378,9 +384,9 @@ En un proyecto de calidad de datos de limpieza, si ha asignado un campo en los d
 ### <a name="414-issue-with-date-or-datetime-values-in-unmapped-source-fields-in-excel-during-cleansing-and-matching"></a>4.14 Problema con los valores Date o DateTime en los campos de origen sin asignar en Excel durante la limpieza y coincidencia  
 **Problema:** si los datos de origen son de Excel y no ha asignado los campos de origen que contienen valores de un tipo de datos **Date** o **DateTime**, ocurre lo siguiente durante las actividades de limpieza y coincidencia:  
   
--   Los valores **Date** sin asignar se muestran y se exportan en el formato aaaammdd.  
+-   Los valores **Date** sin asignar se muestran y se exportan en el formato aaaa-mm-dd.  
   
--   El valor de hora se pierde para los valores **DateTime** sin asignar y se muestran y exportan en el formato aaaammdd.  
+-   El valor de tiempo se pierde para los valores **DateTime** sin asignar y se muestran y exportan en el formato aaaa-mm-dd.  
   
 **Solución alternativa:** puede ver los valores de campos sin asignar en el panel inferior derecho de la página **Administrar y ver resultados** de la actividad de limpieza y en la página **Coincidencia** en la actividad de coincidencia.  
   
@@ -464,12 +470,12 @@ Vamos a ilustrarlo con un ejemplo. Imagine un usuario, Dominio\usuario1. El usua
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 Se podría producir un error al navegar por el Asistente para generar scripts  
 **Problema:** después de generar un script en el Asistente para generar scripts al hacer clic en **Guardar o publicar scripts**, navegar haciendo clic en **Elegir opciones** o **Establecer opciones de scripting** y haciendo clic en **Guardar o publicar scripts** de nuevo se podría producir el siguiente error:  
   
-<pre>
+```
 An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 ADDITIONAL INFORMATION:  
 Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
-</pre>  
+```
   
 **Solución alternativa:** cierre y vuelva a abrir el Asistente para generar scripts.  
   
@@ -631,9 +637,8 @@ SQL Server 2012 incluye StreamInsight 2.0. StreamInsight 2.0 necesita una licenc
 ## <a name="100-upgrade-advisor"></a><a name="UA"></a>10.0 Asesor de actualizaciones  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 El vínculo para instalar el Asesor de actualizaciones no está habilitado en los sistemas operativos en chino (HK)  
-Problema: al intentar instalar el Asesor de actualizaciones en alguna versión admitida de Windows en sistemas operativos en chino (Hong Kong), es posible que descubra que el vínculo para instalar el asesor no está habilitado.  
+Problema: al intentar instalar el Asesor de actualizaciones en cualquier versión admitida de Windows en sistemas operativos en chino (RAE de Hong Kong), es posible que descubra que el vínculo para instalarlo no está habilitado.  
   
 **Solución alternativa**: busque los archivos **SQLUA.msi** en el disco de SQL Server 2012 en `\1028_CHT_LP\x64\redist\Upgrade Advisor` o en `\1028_CHT_LP\x86\redist\Upgrade Advisor`, en función de la arquitectura del sistema operativo.  
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
-  

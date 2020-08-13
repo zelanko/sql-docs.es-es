@@ -1,5 +1,6 @@
 ---
 title: Propiedades de campo extendidas para una base de datos de Analysis Services | Microsoft Docs
+description: Obtenga información sobre las propiedades de campo extendidas de una base de datos de Analysis Services y cómo incluir valores de propiedades de campo extendidas en el informe.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: beae593bc4673a1fd31d27c5f807553a2b960872
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077681"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458360"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
   La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo **Value** e **IsMissing** en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Para incluir valores de propiedades de campo extendidas en el informe, escriba expresiones que las especifiquen por su nombre con la colección **Fields** integrada.  
@@ -40,7 +41,7 @@ ms.locfileid: "77077681"
   
  En la siguiente tabla se ofrece una lista de las propiedades de campo predefinidas que se pueden usar.  
   
-|**Propiedad**|**Tipo**|**Descripción o valor esperado**|  
+|**Property**|**Type**|**Descripción o valor esperado**|  
 |------------------|--------------|---------------------------------------|  
 |**Valor**|**Object**|Especifica el valor de los datos del campo.|  
 |**IsMissing**|**Boolean**|Indica si se ha encontrado el campo en el conjunto de datos resultante.|  

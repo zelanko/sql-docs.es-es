@@ -1,34 +1,32 @@
 ---
-title: Biblioteca de funciones de R de MicrosoftML
-description: Introducción a la biblioteca de funciones de MicrosoftML en SQL Server 2016 R Services y SQL Server Machine Learning Services con R.
+title: Paquete MicrosoftML R
+description: MicrosoftML es un paquete de R de Microsoft que proporciona algoritmos de aprendizaje automático de alto rendimiento. Incluye funciones para el entrenamiento y las transformaciones, la puntuación, el análisis de texto y de imágenes, y la extracción de características para derivar valores a partir de datos existentes. El paquete se incluye en SQL Server Machine Learning Services y SQL Server 2016 R y admite un alto rendimiento en macrodatos, mediante el procesamiento de varios núcleos y un flujo de datos rápido. MicrosoftML también incluye numerosas transformaciones para el procesamiento de texto e imágenes.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 28f043ea0005f1020581218c358aed559285a5a4
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117448"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406178"
 ---
-# <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (biblioteca de R en SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML (paquete de R en SQL Server Machine Learning Services)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**MicrosoftML** es una biblioteca de funciones de R de Microsoft que proporciona algoritmos de aprendizaje automático de alto rendimiento. Incluye funciones para el entrenamiento y las transformaciones, la puntuación, el análisis de texto y de imágenes, y la extracción de características para derivar valores a partir de datos existentes.
-
-Microsoft desarrolló las API de aprendizaje automático para aplicaciones de aprendizaje automático internas, y las ha ido perfeccionando a lo largo de los años para que admitan un alto rendimiento en macrodatos, mediante el procesamiento de varios núcleos y la transmisión rápida de datos. MicrosoftML también incluye numerosas transformaciones para el procesamiento de texto e imágenes.
+**MicrosoftML** es un paquete de R de Microsoft que proporciona algoritmos de aprendizaje automático de alto rendimiento. Incluye funciones para el entrenamiento y las transformaciones, la puntuación, el análisis de texto y de imágenes, y la extracción de características para derivar valores a partir de datos existentes. El paquete se incluye en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) y [SQL Server 2016 R](sql-server-r-services.md) y admite un alto rendimiento en macrodatos, mediante el procesamiento de varios núcleos y un flujo de datos rápido. MicrosoftML también incluye numerosas transformaciones para el procesamiento de texto e imágenes.
 
 ## <a name="full-reference-documentation"></a>Documentación de referencia completa
 
-La biblioteca de **MicrosoftML** se distribuye en varios productos de Microsoft, pero el uso es el mismo, se obtenga la biblioteca en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
+El paquete **MicrosoftML** se distribuye en varios productos de Microsoft, pero el uso es el mismo independientemente de si se obtiene el paquete en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
 
 ## <a name="versions-and-platforms"></a>Versiones y plataformas
 
-La biblioteca de **MicrosoftML** se basa en R 3.4.3 y solo está disponible cuando se instala uno de los siguientes productos o descargas de Microsoft:
+El paquete **MicrosoftML** se basa en R 3.4.3 y solo está disponible cuando se instala uno de los siguientes productos o descargas de Microsoft:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
@@ -43,7 +41,7 @@ La biblioteca de **MicrosoftML** se basa en R 3.4.3 y solo está disponible cua
 Los algoritmos de **MicrosoftML** dependen de [RevoScaleR](ref-r-revoscaler.md) para:
 
 + Objetos de origen de datos. Los datos consumidos por las funciones de **MicrosoftML** se crean mediante las funciones de **RevoScaleR**.
-+ Informática remota (cambio de la ejecución de la función a una instancia de SQL Server remota). La biblioteca de **RevoScaleR** proporciona funciones para crear y activar un contexto de proceso remoto para SQL Server.
++ Informática remota (cambio de la ejecución de la función a una instancia de SQL Server remota). El paquete **RevoScaleR** proporciona funciones para crear y activar un contexto de cálculo remoto para SQL Server.
 
 En la mayoría de los casos, los paquetes se cargarán juntos siempre que se use **MicrosoftML**.
 

@@ -8,12 +8,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7997b4e7bf9ccf51198e317c2e175f115fa6973
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63225699"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942987"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Agregar un servidor de informes adicional a una granja de servidores (escalado horizontal de SSRS)
 
@@ -66,13 +66,15 @@ ms.locfileid: "63225699"
 ##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> Configuración adicional  
  Puede optimizar servidores individuales de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una implementación escalada horizontalmente para realizar el procesamiento en segundo plano únicamente ya que no compiten por los recursos con la ejecución de informes interactiva. El procesamiento en segundo plano incluye programaciones, suscripciones y alertas de datos.  
   
- Para cambiar el comportamiento de servidores de informes individuales, establezca **\<IsWebServiceEnable>** en el archivo de configuración **RSreportServer.config**.  
+ Para cambiar el comportamiento de servidores de informes individuales, establezca **\<IsWebServiceEnable>** en false en el archivo de configuración **RSreportServer.config**.  
   
- De forma predeterminada, los servidores están configurados con \<IsWebServiceEnable> establecido en TRUE. Cuando todos los servidores están configurados en TRUE, los interactivos y los de reserva tendrán equilibrio de carga en todos los nodos de la granja.  
+ De forma predeterminada, los servidores de informes están configurados con \<IsWebServiceEnable> establecido en TRUE. Cuando todos los servidores están configurados en TRUE, los interactivos y los de reserva tendrán equilibrio de carga en todos los nodos de la granja.  
   
  Si configura todos los servidores de informes con \<IsWebServiceEnable> establecido en False, verá un mensaje de error similar al siguiente al intentar usar las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
-      The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
+```output
+The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true.
+```
  
  Para obtener más información, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
 

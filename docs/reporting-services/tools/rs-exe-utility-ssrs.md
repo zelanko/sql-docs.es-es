@@ -1,5 +1,6 @@
 ---
 title: Utilidad RS.exe | Microsoft Docs
+description: Obtenga información sobre los comandos y la sintaxis de la utilidad rs.exe que procesa los scripts utilizados para automatizar las tareas de implementación y administración del servidor de informes.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e92646e27dcabed21aa387a8cf22caf95770ff6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081693"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914983"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilidad RS.exe (SSRS)
   La utilidad rs.exe procesa el script que proporcione en un archivo de entrada. Use esta utilidad para automatizar las tareas de implementación y administración del servidor de informes.  
@@ -90,7 +91,7 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Se crean variables globales con los nombres indicados y se establecen en los valores proporcionados. Por ejemplo, **-v a=** "**1**" **-v b=** "**2**" da como resultado una variable llamada **a** con un valor de "**1**" y una variable **b** con un valor de "**2**".  
+ Se crean variables globales con los nombres indicados y se establecen en los valores proporcionados. Por ejemplo, **-v a=**"**1**" **-v b=**"**2**" da como resultado una variable llamada **a** con un valor de "**1**" y una variable **b** con un valor de "**2**".  
   
  Las variables globales están disponibles para todas las funciones del script. Si se especifica una barra diagonal inversa y comillas ( **\\"** ), se interpreta como comillas dobles. Las comillas solo son necesarias si la cadena contiene un espacio. Los nombres de las variables deben ser válidos para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; deben comenzar por un carácter alfabético o de subrayado y deben contener caracteres alfabéticos, dígitos o caracteres de subrayado. No se pueden utilizar palabras reservadas como nombres de variables. Para más información sobre las variables globales, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

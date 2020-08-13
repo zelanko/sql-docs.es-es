@@ -1,5 +1,6 @@
 ---
 title: Tipo de conexión XML | Microsoft Docs
+description: Obtenga información sobre el tipo de conexión XML para conectarse y recuperar datos de documentos XML, servicios web o código XML insertado en la consulta.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9355ac713c502acbbd319ec7bdc9cb035079ca34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081679"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458512"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexión XML (SSRS)
   Para incluir los datos de un origen de datos XML en el informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo XML. Este tipo de origen de datos integrado se basa en la extensión de datos XML. Utilice este tipo de origen de datos para conectarse y recuperar datos de documentos XML, servicios web o XML incrustado en la consulta.  
@@ -79,7 +80,7 @@ ms.locfileid: "77081679"
   
          `-- or --`  
   
-         `<SoapAction>` *acción soap* `</SoapAction>`  
+         `<SoapAction>`*acción soap*`</SoapAction>`  
   
          Elementos XML opcionales:  
   
@@ -93,7 +94,7 @@ ms.locfileid: "77081679"
   
     -   **Origen de datos XML es un documento XML**  
   
-         Elementos XML obligatorios: Ninguno  
+         Elementos XML obligatorios: None  
   
          Elementos XML opcionales:  
   
@@ -115,12 +116,12 @@ ms.locfileid: "77081679"
   
  Para más información sobre la sintaxis de consulta, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Para obtener ejemplos, vea la página en que se describe cómo [usar orígenes de datos XML y de servicio web en Reporting Services](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Para obtener ejemplos, vea [Reporting Services: uso de XML y orígenes de datos del servicio web](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisitos para recuperar datos del servicio web XML  
  La extensión de procesamiento de datos XML no detecta el esquema de forma automática. Por tanto, debe tener alguna manera de determinar los métodos SOAP que recuperarán los datos que desea. También debe comprender el esquema de direcciones o el espacio de nombres que utiliza el servicio web para sus datos.  
   
- Para un servicio web, se puede proporcionar un elemento \<**Consulta**> que especifique un método al que se debe llamar o una acción SOAP. Es posible dejar la consulta vacía y utilizar la consulta predeterminada si el origen de datos XML tiene una estructura jerárquica que genera los datos que se desea utilizar en el informe. Los valores y los atributos de los nodos de elemento XML recuperados cuando se ejecuta la consulta se asignan a los campos de conjunto de datos que se usan en el informe.  
+ Para un servicio web, puede proporcionar un elemento \<**Query**> que especifique un método al que se debe llamar o una acción SOAP. Es posible dejar la consulta vacía y utilizar la consulta predeterminada si el origen de datos XML tiene una estructura jerárquica que genera los datos que se desea utilizar en el informe. Los valores y los atributos de los nodos de elemento XML recuperados cuando se ejecuta la consulta se asignan a los campos de conjunto de datos que se usan en el informe.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Requisitos para recuperar datos de un documento XML  
  El servidor debe devolver los datos XML mediante el protocolo HTTP o los datos XML deben estar incrustados en el elemento XML **Query** . Si se hace referencia directa a un documento XML mediante el protocolo HTTP, la extensión debe ser .xml.  

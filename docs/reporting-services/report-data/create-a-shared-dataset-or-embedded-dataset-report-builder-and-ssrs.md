@@ -1,5 +1,6 @@
 ---
 title: Creación de un conjunto de datos compartido o incrustado (Generador de informes) | Microsoft Docs
+description: Obtenga información sobre cómo crear conjuntos de datos insertados y compartidos para usarlos en varios informes. Para crear un conjunto de datos, necesita un origen de datos incrustado o compartido.
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b19b5442731bf52e299450a32cb8536c0f95467f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76e1482bf441401b02de984529d7fd178d88975c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081409"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457807"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS)
 Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Los conjuntos de datos compartidos en un servidor de informes se pueden usar en varios informes, tanto móviles como paginados. Para crear un conjunto de datos, necesita un origen de datos incrustado o compartido.  

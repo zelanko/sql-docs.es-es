@@ -1,5 +1,6 @@
 ---
 title: Reemplazar en archivos
+description: Obtenga información sobre cómo usar la pestaña Reemplazar en archivos de la ventana Buscar y reemplazar para buscar el texto de un conjunto de archivos para una cadena o expresión, y cambiar parte o todo el texto encontrado.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 062fd4a1ecdf9e858e75d4d36292296bdee619fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b14b359a71de345a245e874cca0c191296c823f7
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261684"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122531"
 ---
 # <a name="replace-in-files"></a>Reemplazar en archivos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La pestaña **Reemplazar en archivos** de la ventana Buscar y reemplazar permite buscar una cadena o expresión en el código de un conjunto específico de archivos y cambiar algunas o todas las coincidencias halladas. Las coincidencias que se encuentran y las acciones que se toman aparecen en la ventana Resultados de la búsqueda seleccionada en **Opciones de resultados**.  
   
  También hay botones de la barra de la herramientas y teclas de método abreviado disponibles para abrir el cuadro de diálogo **Buscar y reemplazar** .  
@@ -67,7 +68,7 @@ ms.locfileid: "78261684"
  La opción elegida en la lista desplegable **Buscar en** determina si **Reemplazar en archivos** busca solo en los archivos actualmente activos o busca en todos los archivos almacenados en algunas carpetas. Seleccione un ámbito de búsqueda de la lista, escriba una ruta de carpeta o haga clic en el botón **Examinar** para que aparezca el cuadro de diálogo **Elegir carpetas de búsqueda** y elija un grupo de carpetas en las que se va a buscar.  
   
 > [!NOTE]  
->  Si la opción **Buscar en** seleccionada hace que busque un archivo que ha desprotegido del control de código fuente, solo se buscará en la versión del archivo descargada en el equipo local.  
+>   Si la opción **Buscar en** seleccionada hace que busque un archivo que ha desprotegido del control de código fuente, solo se buscará en la versión del archivo descargada en el equipo local.  
   
  **Look in**  
  Seleccione un ámbito predefinido de búsqueda en esta lista, o use el cuadro de diálogo **Elegir carpetas de búsqueda** para escribir su propio grupo de directorios.  
@@ -88,7 +89,7 @@ ms.locfileid: "78261684"
  Especifica que se buscarán las subcarpetas de la carpeta especificada en **Buscar en** . Requiere un grupo de directorios personalizados.  
   
  **Examinar (...)**  
- Haga clic en este botón para que aparezca el cuadro de diálogo **Elegir carpetas de búsqueda** , donde puede reunir, editar, guardar y seleccionar los conjuntos de directorios con nombre que se van a especificar en el cuadro **Buscar en** .  
+ Haga clic en este botón para que aparezca el cuadro de diálogo **Elegir carpetas de búsqueda**, donde puede reunir, editar, guardar y seleccionar los grupos de directorios con nombre que se van a utilizar en el cuadro **Buscar en**.  
   
 ## <a name="find-options"></a>Opciones de búsqueda  
  Puede expandir y contraer la sección **Opciones de búsqueda** . Pueden activarse y desactivarse las siguientes opciones.  

@@ -1,5 +1,6 @@
 ---
 title: Establecer las propiedades del servidor de informes (Management Studio) | Microsoft Docs
+description: Aprenda a establecer las propiedades del sistema del servidor de informes en SQL Server Management Studio para habilitar características o establecer valores predeterminados de servidor.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 360c2408e7078845d58e28dff42fdf932d5e311a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578995"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918021"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Establecer las propiedades del servidor de informes (Management Studio)
   Puede establecer las propiedades del sistema del servidor de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar características o establecer valores predeterminados de servidor.  

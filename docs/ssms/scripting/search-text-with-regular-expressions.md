@@ -1,5 +1,6 @@
 ---
 title: Buscar texto mediante expresiones regulares
+description: Aprenda a usar una expresión regular en el campo "Buscar" de un cuadro de diálogo Buscar y reemplazar para especificar un patrón con el que comparar.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69ce1c16013b9ad27e390ddd91b0655aee2986d5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44c9350ef8134382a413018bcfde1d36351f808d
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253679"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122786"
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Buscar y reemplazar**.  
   
@@ -108,7 +109,7 @@ Las expresiones regulares son una notación concisa y flexible para buscar y ree
 |Marca de no-espaciado|:Mn|Devuelve marcas de no-espaciado.|  
 |Marca de combinación|:Mc|Devuelve marcas de combinación.|  
 |Marca contenedora|:Me|Devuelve marcas contenedoras.|  
-|Símbolo matemático|:Sm|Devuelve +, =, ~, &#124;, \<, y >.|  
+|Símbolo matemático|:Sm|Coincide con +, =, ~, &#124;, \<, and >.|  
 |Símbolo de moneda|:Sc|Devuelve $ y otros símbolos de moneda.|  
 |Símbolo de modificador|:Sk|Devuelve símbolos de modificador, como acentos circunflejos, acentos graves y acentos largos.|  
 |Otro símbolo|:So|Devuelve otros símbolos, como el signo de Copyright, el signo de antígrafo y el signo de grado.|  

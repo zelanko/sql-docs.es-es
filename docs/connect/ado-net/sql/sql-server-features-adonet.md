@@ -1,7 +1,7 @@
 ---
 title: Características de SQL Server y ADO.NET
 description: Describe características de SQL Server que son útiles para los desarrolladores de aplicaciones de ADO.NET.
-ms.date: 08/15/2019
+ms.date: 07/09/2020
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3c2a2c1597caa95c15f41de0e16f9cf9290d2a8a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d1c1911905c1ddf0af01a2592d0be49796cd3596
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902091"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393113"
 ---
 # <a name="sql-server-features-and-adonet"></a>Características de SQL Server y ADO.NET
 
@@ -55,6 +55,9 @@ Describe la compatibilidad de SqlClient con las bases de datos de LocalDB.
 
 [Compatibilidad de SqlClient para Always Encrypted](sqlclient-support-always-encrypted.md)  
 Describe la compatibilidad de SqlClient con la característica Always Encrypted.
+
+[Compatibilidad de SqlClient con la clasificación y detección de datos](data-classification.md)  
+Describe cómo acceder a la información de clasificación y detección de datos a través de SqlClient.
 
 ## <a name="next-steps"></a>Pasos siguientes
 - [Operaciones de datos de SQL Server en ADO.NET](sql-server-data-operations.md)

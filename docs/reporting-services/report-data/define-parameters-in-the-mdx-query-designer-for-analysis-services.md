@@ -1,5 +1,6 @@
 ---
 title: Definir parámetros en el diseñador de consultas MDX para Analysis Services | Microsoft Docs
+description: Obtenga información sobre cómo definir parámetros de consulta en el diseñador de consultas de expresiones multidimensionales (MDX) para Analysis Services.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02b9884d4f1f9d7928db80091c68678dbc55fa10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72fe1a64e1aa474d0aa0233e8065cf351acfe432
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573654"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458203"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Definir parámetros en el diseñador de consultas MDX para Analysis Services
   Si desea incluir parámetros en una consulta MDX para un origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , debe agregar un parámetro de consulta a la consulta. En el diseñador de consultas MDX, puede agregar un parámetro de consulta tanto en el modo de diseño como en el modo de consulta mediante la especificación de un filtro. Después de definir la consulta con un parámetro de consulta, Reporting Services crea automáticamente un parámetro de informe y un conjunto de datos para proporcionar la lista de valores válidos. Esto permite al usuario especificar un valor que se pasa directamente a la consulta.  
@@ -59,7 +60,7 @@ ms.locfileid: "65573654"
   
 3.  En la barra de herramientas del diseñador de consultas MDX, haga clic en **Parámetros de consulta** (![Icono del cuadro de diálogo Parámetros de consulta](../../reporting-services/report-data/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")). Se abrirá el cuadro de diálogo Parámetros de consulta.  
   
-4.  En la columna **Parámetro**, haga clic en **\<Escribir parámetro>** y luego escriba el nombre de un parámetro.  
+4.  En la columna **Parámetro**, haga clic en **\<Enter Parameter>** y luego escriba el nombre de un parámetro.  
   
 5.  En la columna **Dimensión** , elija un valor en la lista desplegable.  
   

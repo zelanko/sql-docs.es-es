@@ -1,5 +1,6 @@
 ---
 title: Dar formato a un archivo de script de Reporting Services | Microsoft Docs
+description: Aprenda a dar formato a un archivo de script de Reporting Services en Microsoft Visual Basic .NET que contiene procedimientos definidos por el usuario y variables de nivel de módulo.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85a207dd-4e0f-4d40-a41e-0c75f65d719c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1979e19b3d93e9687d6abb137758bc71548b10ce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1733a3f8a5e87086b696f81fec669229a443a275
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65577797"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923391"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Dar formato a un archivo de script de Reporting Services
   Un script de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es un archivo de código de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET, escrito frente a un proxy generado en el Lenguaje de descripción de servicios web (WSDL), que define la API de SOAP de Reporting Services. Un archivo de script se almacena como archivo de texto Unicode o UTF-8 con la extensión .rss.  
@@ -46,7 +47,7 @@ End Sub
 > [!IMPORTANT]  
 >  Las credenciales de usuario se administran por el entorno de script y pasan a través de los argumentos del símbolo del sistema mediante el uso de RS.exe. Aunque puede usar la variable *rs* para establecer la autenticación del servicio web, se recomienda que use el entorno de script. No tiene que autenticar el servicio web en el propio archivo de script. Para más información sobre la autenticación del entorno de scripts, vea [Utilidad RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md).  
   
- No declara espacios de nombres dentro del archivo de script. El entorno de scripting hace que haya varios espacios de nombres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] útiles disponibles: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml** y **System.IO**.  
+ No declara espacios de nombres dentro del archivo de script. El entorno de scripting hace que varios espacios de nombres [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] útiles estén disponibles: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**y **System.IO**.  
   
  Para obtener ejemplos del script, vea [Muestras de productos de SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   

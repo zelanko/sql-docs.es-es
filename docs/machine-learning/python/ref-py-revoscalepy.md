@@ -1,24 +1,26 @@
 ---
 title: revoscalepy (paquete de Python)
-description: Introducción al módulo revoscalepy en SQL Server Machine Learning Services con Python.
+description: revoscalepy es un paquete de Python de Microsoft que admite computación distribuida, contextos de cálculo remoto y algoritmos de ciencia de datos de alto rendimiento. El paquete se incluye en SQL Server Machine Learning Services.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 145c1f571cc76bd8c26fc781ee7f4edcbfd3cb3a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ae5d05658d94f6967049d9b6857d407286661f3f
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117928"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406188"
 ---
-# <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (módulo de Python en SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (paquete de Python en SQL Server Machine Learning Services)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**revoscalepy** es un módulo compatible con Python35 de Microsoft que admite computación distribuida, contextos de cálculo remoto y algoritmos de ciencia de datos de alto rendimiento. Se basa en el paquete de **RevoScaleR** para R (distribuido con Microsoft R Server y SQL Server R Services), lo que ofrece una funcionalidad similar:
+**revoscalepy** es un paquete de Python de Microsoft que admite computación distribuida, contextos de cálculo remoto y algoritmos de ciencia de datos de alto rendimiento. El paquete se incluye en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+
+El paquete ofrece la capacidad siguiente:
 
 + Contextos de cálculo local y remoto en sistemas que tienen la misma versión de **revoscalepy**
 + Funciones de visualización y transformación de datos
@@ -29,7 +31,7 @@ Los orígenes de datos y los contextos de cálculo que se creen en **revoscalepy
 
 ## <a name="full-reference-documentation"></a>Documentación de referencia completa
 
-La biblioteca de **revoscalepy** se distribuye en varios productos de Microsoft, pero el uso es el mismo, se obtenga la biblioteca en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) se publica en una sola ubicación en la [referencia de Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
+El paquete de **revoscalepy** se distribuye en varios productos de Microsoft, pero el uso es el mismo, se obtenga el paquete en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) se publica en una sola ubicación en la [referencia de Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
 
 ## <a name="versions-and-platforms"></a>Versiones y plataformas
 
@@ -40,7 +42,7 @@ El módulo de **revoscalepy** se basa en Python 3.5 y solo está disponible cua
 + [Bibliotecas de cliente de Python para un cliente de ciencia de datos](setup-python-client-tools-sql.md)
 
 > [!NOTE]
-> En SQL Server 2017, las versiones completas del producto son solo para Windows. Para **revoscalepy** en [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md), se admiten tanto Windows como Linux.
+> En SQL Server 2017, las versiones completas del producto son solo para Windows. Para **revoscalepy** en [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) y versiones posteriores, se admiten tanto Windows como Linux.
 
 ## <a name="functions-by-category"></a>Funciones por categoría
 
@@ -107,7 +109,7 @@ Las entradas y salidas deben ser tramas de datos **Pandas**. Una vez hecho esto,
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>Uso de revoscalepy con microsoftml
 
-Las funciones de Python para [microsoftml](ref-py-microsoftml.md) se integran con los contextos de cálculo y los orígenes de datos que se proporcionan en revoscalepy. Al llamar a funciones desde microsoftml, por ejemplo, al definir y entrenar un modelo, use las funciones de revoscalepy para ejecutar el código de Python localmente o en un contexto de proceso remoto de SQL Server.
+Las funciones de Python para [microsoftml](ref-py-microsoftml.md) se integran con los contextos de cálculo y los orígenes de datos que se proporcionan en revoscalepy. Al llamar a funciones desde microsoftml —por ejemplo, al definir y entrenar un modelo—, use las funciones de revoscalepy para ejecutar el código de Python localmente o en un contexto de proceso remoto de SQL Server.
 
 En el ejemplo siguiente se muestra la sintaxis para la importación de módulos en el código de Python. Después, puede hacer referencia a las funciones individuales que necesite.
 

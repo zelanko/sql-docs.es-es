@@ -1,5 +1,6 @@
 ---
 title: Arrastrar y colocar texto
+description: Aprenda a arrastrar texto desde un editor o el Explorador de objetos, y después colocarlo en una ubicación del editor o en la papelera de reciclaje.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13211d07b1846dd89826e1e1854f76b6c6cd16af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 948601fd2e15f29a4dcda98ace7e07eeb0863a50
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253929"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122976"
 ---
 # <a name="drag-and-drop-text"></a>Arrastrar y colocar texto
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Se puede seleccionar texto para arrastrarlo y colocarlo en otra ubicación. Se puede arrastrar y colocar texto:  
   
 -   Desde el Explorador de objetos al editor para crear una consulta.  

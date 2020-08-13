@@ -1,5 +1,6 @@
 ---
 title: Palabra completa (IntelliSense)
+description: La característica Palabra completa de Microsoft IntelliSense puede completar lo que escribe una vez que haya escrito lo suficiente para identificarlo de forma exclusiva, o bien puede proporcionar una lista de posibilidades entre las que elegir. Obtenga información sobre las cuatro formas de invocar esta característica.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b516e75ce312dbc2970ccb31975d892f7ab98cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fb33d179463383e41f73ddba30525ce908e2cb5
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253988"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122888"
 ---
 # <a name="complete-word-intellisense"></a>Palabra completa (IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La opción Palabra completa de [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense escribe el resto de una variable, un comando o un nombre de función una vez que se han especificado los suficientes caracteres para identificar de forma exclusiva esos elementos.  
   
  Existen cuatro formas de invocar la característica Palabra completa:  

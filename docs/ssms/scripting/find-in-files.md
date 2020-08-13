@@ -1,5 +1,6 @@
 ---
 title: Buscar en archivos
+description: Obtenga información sobre cómo buscar una cadena o expresión en un conjunto de archivos especificado y cómo especificar la ubicación de los resultados de la búsqueda.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81ddd51b2b005a104e2311dc7853484d081c3391
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5d22ecc6a36e64d064a9429eea02644428762c44
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261884"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122943"
 ---
 # <a name="find-in-files"></a>Buscar en archivos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La pestaña **Buscar en archivos** de la ventana Buscar y reemplazar permite buscar en el código de un conjunto especificado de archivos una cadena o expresión. Las coincidencias que se encuentran y las acciones que se toman aparecen en la ventana Resultados de la búsqueda seleccionada en **Opciones de resultados**.  
   
  También hay botones de la barra de la herramientas y teclas de método abreviado disponibles para abrir el cuadro de diálogo **Buscar y reemplazar** .  
@@ -47,7 +48,7 @@ ms.locfileid: "78261884"
  La opción elegida en **Buscar en** determina si **Buscar en archivos** busca únicamente en los archivos activos o en todos los archivos almacenados en determinadas carpetas. Seleccione un ámbito de búsqueda en la lista, escriba una ruta de acceso a una carpeta o haga clic en el botón **Examinar** para mostrar el cuadro de diálogo **Elegir carpetas de búsqueda** y elija un conjunto de carpetas para realizar la búsqueda.  
   
 > [!NOTE]  
->  Si la opción **Buscar en** seleccionada hace que busque un archivo que ha desprotegido del control de código fuente, solo se buscará en la versión del archivo descargada en el equipo local.  
+>   Si la opción **Buscar en** seleccionada hace que busque un archivo que ha desprotegido del control de código fuente, solo se buscará en la versión del archivo descargada en el equipo local.  
   
  **Look in**  
  Seleccione un ámbito predefinido de búsqueda en esta lista, o use el cuadro de diálogo **Elegir carpetas de búsqueda** para escribir su propio grupo de directorios.  

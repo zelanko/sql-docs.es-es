@@ -5,20 +5,20 @@ description: Conéctese a clústeres de macrodatos mediante sparklyr desde RStud
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 375993e4fd9506c129e4f98d9ad2193472e03edb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: e6767d32ae1f6c5f397141d1eddb15a5ec3f94a6
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531617"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970016"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Uso de sparklyr en clústeres de macrodatos de SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Sparklyr proporciona una interfaz de R para Apache Spark. Sparklyr es una forma popular para que los desarrolladores de R usen Spark. En este artículo se describe cómo usar sparklyr en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] mediante RStudio.
 
@@ -49,7 +49,11 @@ Puede usar sparklyr para conectarse desde un cliente al clúster de macrodatos m
 En RStudio, cree un script de R y conéctese a Spark como en el ejemplo siguiente:
 
 > [!TIP]
-> Para los valores `<AZDATA_USERNAME>` y `<AZDATA_PASSWORD>`, use el nombre de usuario (por ejemplo, raíz) y la contraseña que haya establecido durante la implementación del clúster de macrodatos. Para los valores `<IP>` y `<PORT>`, vea la documentación sobre [cómo conectarse a un clúster de macrodatos](connect-to-big-data-cluster.md).
+> Para los valores `<AZDATA_USERNAME>` y `<AZDATA_PASSWORD>`, use el nombre de usuario y la contraseña que haya establecido durante la implementación del clúster de macrodatos.
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
+
+Para los valores `<IP>` y `<PORT>`, vea la documentación sobre [cómo conectarse a un clúster de macrodatos](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)
@@ -80,7 +84,7 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>Cálculos de R distribuidos
 
-Una característica de sparklyr es la capacidad de [distribuir cálculos de R](https://spark.rstudio.com/guides/distributed-r/) con [spark_apply](https://spark.rstudio.com/reference/spark_apply/).
+Una característica de sparklyr es la capacidad de [distribuir cálculos de R](https://spark.rstudio.com/guides/distributed-r/) con [spark_apply](https://spark.rstudio.com/guides/distributed-r/#apply-an-r-function-to-a-spark-object).
 
 Como los clústeres de macrodatos usan conexiones Livy, debe establecer `packages = FALSE` en la llamada a **spark_apply**. Para obtener más información, vea la [sección sobre Livy](https://spark.rstudio.com/guides/distributed-r/#livy) de la documentación de sparklyr sobre cálculos de R distribuidos. Con esta configuración, solo puede usar los paquetes de R que ya estén instalados en el clúster de Spark en el código de R que se pasa a **spark_apply**. En el ejemplo siguiente se muestra esta funcionalidad:
 

@@ -1,5 +1,6 @@
 ---
 title: Introducción a los datos de informe en SQL Server Reporting Services (SSRS)
+description: Obtenga información introductoria sobre los datos de informe en SQL Server Reporting Services (SRRS), como la forma de crear orígenes de datos.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
-ms.openlocfilehash: 6317e8161871d7094486ed8b6178847549d8ab96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba53401168c1b16bb4b61186c6883f0612b7ba60
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190728"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458907"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Introducción a los datos de informe en SQL Server Reporting Services (SSRS)
 

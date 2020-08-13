@@ -1,5 +1,6 @@
 ---
 title: Tipo de conexión de Teradata | Microsoft Docs
+description: Use la información de este artículo sobre el tipo de conexión Teradata para aprender a crear un origen de datos.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b02779c2-a6b9-453c-815f-adad53353952
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7fffacee190197125cf283be6ad9263dfae1f1d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a97d0320affe87e039f4369d699f1998caa8d153
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081702"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458318"
 ---
 # <a name="teradata-connection-type-ssrs"></a>Tipo de conexión de Teradata (SSRS)
   Para incluir en el informe los datos de Teradata, debe tener un conjunto de datos que se base en un origen de datos de informe de tipo Teradata. Este tipo de origen de datos integrado está basado en la extensión de procesamiento de datos del proveedor administrado de .NET para Teradata.  
@@ -27,7 +28,7 @@ ms.locfileid: "77081702"
 data source=<IP Address>  
 ```  
   
- Para más ejemplos de cadenas de conexión, consulte [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para más ejemplos de cadenas de conexión, vea [Creación de cadenas de conexión de datos - Generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ##  <a name="credentials"></a><a name="Credentials"></a> Credenciales  
  Se necesitan credenciales para ejecutar consultas y obtener una vista previa del informe localmente y desde el servidor de informes.  

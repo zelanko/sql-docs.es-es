@@ -1,5 +1,6 @@
 ---
 title: Conectar con un servidor de informes en Management Studio | Microsoft Docs
+description: Obtenga información sobre cómo conectarse a cualquier servidor de la familia de SQL Server y examinar de forma gráfica su contenido mediante el Explorador de objetos de SQL Server Management Studio.
 ms.date: 05/07/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 602c939c382bc5946e64340736f73bb88f17c655
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: adcbb82d80fae35889202fe8702a98b6315da100
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574109"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918421"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Conectar con un servidor de informes en Management Studio
 
@@ -49,7 +50,7 @@ ms.locfileid: "65574109"
 
 2. Haga clic en **Conectar** para ver la lista de tipos de servidor y, a continuación, seleccione **Reporting Services**.
 
-3. En el cuadro de diálogo **Conectar al servidor** , escriba el nombre de la instancia del servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, el nombre de una instancia del servidor de informes local es únicamente el nombre del equipo. Si instaló el servidor de informes como una instancia con nombre, use esta sintaxis para especificar el servidor: *\<nombreDeServidor>[\\<nombreDeInstancia\>]* .
+3. En el cuadro de diálogo **Conectar al servidor** , escriba el nombre de la instancia del servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, el nombre de una instancia del servidor de informes local es únicamente el nombre del equipo. Si ha instalado el servidor de informes como una instancia con nombre, use esta sintaxis para especificarlo: *\<servername>[\\<nombreDeInstancia\>]* .
 
 4. Seleccione el **tipo de autenticación**. Si está usando la autenticación de Windows, conéctese con las credenciales. Si selecciona la autenticación básica o la autenticación de formularios, escriba la cuenta y la contraseña.  
   
@@ -81,7 +82,7 @@ ms.locfileid: "65574109"
 
 4. Para **Nombre del servidor**, escriba un valor. Especifique el valor según el modo de servidor:
 
-    - Para un servidor de informes en modo nativo, escriba el nombre de la instancia del servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, el nombre de una instancia del servidor de informes local es únicamente el nombre del equipo. Si instaló el servidor de informes como una instancia con nombre, use esta sintaxis para especificar el servidor: *\<nombreDeServidor>[\\<nombreDeInstancia\>]* .
+    - Para un servidor de informes en modo nativo, escriba el nombre de la instancia del servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, el nombre de una instancia del servidor de informes local es únicamente el nombre del equipo. Si ha instalado el servidor de informes como una instancia con nombre, use esta sintaxis para especificarlo: *\<servername>[\\<nombreDeInstancia\>]* .
 
     - Para un servidor de informes que se ejecuta en el modo integrado con SharePoint, el servidor al que se va a conectar es el sitio de SharePoint con el que el servidor de informes está conectado. Conéctese al sitio de SharePoint para poder ver los niveles de permisos. Los permisos controlan el acceso a las operaciones y el contenido del servidor de informes. Puede especificar cualquier sitio de la colección de sitios. En el ejemplo siguiente se ilustra la sintaxis: `https://mysharepointsite`.
 
@@ -104,10 +105,10 @@ ms.locfileid: "65574109"
 
 |Conectar a|   Tareas   |   Permisos   |
 |----------|-----------|-----------------|  
-|Servidor de informes en modo nativo, conectado como la instancia con nombre o predeterminada:<br /><br /> \<nombreDeServidor>\<_instancia<br /><br /> La conexión al servidor de informes se realiza a través del proveedor WMI del servidor de informes.|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.<br /><br /> Crear y administrar programaciones compartidas.<br /><br /> Crear, modificar o eliminar definiciones de roles.|Se asigna al rol Administrador del sistema.|  
+|Servidor de informes en modo nativo, conectado como la instancia con nombre o predeterminada:<br /><br /> \<server name>\<_instance><br /><br /> La conexión al servidor de informes se realiza a través del proveedor WMI del servidor de informes.|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.<br /><br /> Crear y administrar programaciones compartidas.<br /><br /> Crear, modificar o eliminar definiciones de roles.|Se asigna al rol Administrador del sistema.|  
 |Servidor de informes en modo nativo, conectado como la instancia con nombre o predeterminada, a través del extremo al servicio web del servidor de informes:<br /><br /> `https://<servername>/reportserver`<br /><br /> La especificación de una dirección URL al servidor de informes ofrece una manera alternativa de conectarse al servidor de informes.|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.<br /><br /> Crear y administrar programaciones compartidas.<br /><br /> Crear, modificar o eliminar definiciones de roles.|Se asigna al rol Administrador del sistema.|  
 |Servidor de informes en el modo integrado con SharePoint, conectado a través del sitio de SharePoint:<br /><br /> `https://<webserver>/<SharePointSite>`|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.<br /><br /> Crear y administrar programaciones compartidas definidas para el sitio al que está conectado.<br /><br /> Ver los niveles de permisos definidos para el sitio al que está conectado.|Nivel de permiso de Control total en el sitio de SharePoint al que está conectado.|
-|Servidor de informes en el modo con SharePoint, conectado a través del nombre de la instancia del servidor de informes:<br /><br /> \<nombreDeServidor>\<_instancia|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.|El nivel de permiso Control total en el sitio de SharePoint que está integrado con el servidor de informes.<br /><br /> Tenga en cuenta que, cuando se conecta al servidor de informes en lugar de al sitio de SharePoint, se reduce el número de tareas que puede realizar. Esto se debe a que el servidor de informes solamente puede devolver datos de aplicación almacenados o administrados en la base de datos del servidor de informes, y no en la configuración de SharePoint y en las bases de datos de contenido.|
+|Servidor de informes en el modo con SharePoint, conectado a través del nombre de la instancia del servidor de informes:<br /><br /> \<server name>\<_instance>|Ver y establecer las propiedades del servidor y los valores predeterminados.<br /><br /> Ver y cancelar trabajos.|El nivel de permiso Control total en el sitio de SharePoint que está integrado con el servidor de informes.<br /><br /> Tenga en cuenta que, cuando se conecta al servidor de informes en lugar de al sitio de SharePoint, se reduce el número de tareas que puede realizar. Esto se debe a que el servidor de informes solamente puede devolver datos de aplicación almacenados o administrados en la base de datos del servidor de informes, y no en la configuración de SharePoint y en las bases de datos de contenido.|
 
 ## <a name="see-also"></a>Consulte también
 

@@ -1,5 +1,6 @@
 ---
 title: Acoplamiento del panel Datos de informe en el Diseñador de informes | Microsoft Docs
+description: Obtenga información sobre cómo ver y acoplar el panel Datos de informe en el que se muestra una vista jerárquica de los objetos de datos de informe en el Diseñador de informes de Reporting Services en SQL Server Data Tools.
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e865cb5d12a66a1225a037fdc3a191333de7179c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e1faf69fd193279e4f914651b483402ff993da3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080576"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914056"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Acoplar el panel Datos de informe en el Diseñador de informes (SSRS)
   En el Diseñador de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el panel Datos de informe muestra una vista jerárquica de los objetos de datos que se pueden usar en un informe, como son orígenes de datos, conjuntos de datos, campos, parámetros e imágenes. Los orígenes de datos de esta vista pueden estar incrustados o ser referencias a orígenes de datos compartidos que se muestran en el Explorador de soluciones.  

@@ -1,5 +1,6 @@
 ---
-title: Seguimiento del funcionamiento del controlador | Microsoft Docs
+title: Seguimiento del funcionamiento del controlador
+description: Obtenga información sobre cómo usar el seguimiento para registrar detalles y resolver problemas e incidencias al usar el controlador JDBC para SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219364"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393133"
 ---
 # <a name="tracing-driver-operation"></a>Seguimiento del funcionamiento del controlador
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "81219364"
 |INFO|Proporciona mensajes informativos.|  
 |CONFIG|Proporciona mensajes de configuración. Tenga en cuenta que el controlador JDBC no proporciona actualmente mensajes de configuración.|  
 |FINE|Proporciona información de seguimiento básica, que incluye todas las excepciones producidas por los métodos públicos.|  
-|FINER|Proporciona información de seguimiento detallada, que incluye todos los puntos de entrada y salida de los métodos públicos junto con los tipos de datos de parámetro asociados y todas las propiedades públicas de la clase pública. Además, los parámetros de entrada, los parámetros de salida y el método devuelven valores salvo los tipos de valor de devolución CLOB, BLOB, NCLOB, Reader y \<stream>.|  
+|FINER|Proporciona información de seguimiento detallada, que incluye todos los puntos de entrada y salida de los métodos públicos junto con los tipos de datos de parámetro asociados y todas las propiedades públicas de la clase pública. Además, parámetros de entrada y de salida, y valores devueltos de métodos, menos los tipos de valor devuelto CLOB, BLOB, NCLOB, Reader y \<stream>.|  
 |FINEST|Proporciona información de seguimiento muy detallada. Se trata del nivel de registro mínimo.|  
 |Apagado|Desactiva el registro.|  
 |ALL|Habilita el registro de todos los mensajes.|  
@@ -59,7 +60,7 @@ ms.locfileid: "81219364"
 |WARNING|Indica un posible problema.|  
 |INFO|Proporciona mensajes informativos.|  
 |FINE|Proporciona información de seguimiento que incluye la creación y destrucción de objetos básicos. Además, incluye todas las excepciones producidas por los métodos públicos.|  
-|FINER|Proporciona información de seguimiento detallada, que incluye todos los puntos de entrada y salida de los métodos públicos junto con los tipos de datos de parámetro asociados y todas las propiedades públicas de la clase pública. Además, los parámetros de entrada, los parámetros de salida y el método devuelven valores salvo los tipos de valor de devolución CLOB, BLOB, NCLOB, Reader y \<stream>.<br /><br /> En la versión 1.2 del controlador JDBC existían las siguientes categorías de registro y tenían el nivel de registro FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA y [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Desde la versión 2.0, se han actualizado al nivel FINER.|  
+|FINER|Proporciona información de seguimiento detallada, que incluye todos los puntos de entrada y salida de los métodos públicos junto con los tipos de datos de parámetro asociados y todas las propiedades públicas de la clase pública. Además, parámetros de entrada y de salida, y valores devueltos de métodos, menos los tipos de valor devuelto CLOB, BLOB, NCLOB, Reader y \<stream>.<br /><br /> En la versión 1.2 del controlador JDBC existían las siguientes categorías de registro y tenían el nivel de registro FINE: [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md), [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), XA y [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Desde la versión 2.0, se han actualizado al nivel FINER.|  
 |FINEST|Proporciona información de seguimiento muy detallada. Se trata del nivel de registro mínimo.<br /><br /> En la versión 1.2 del controlador JDBC existían las siguientes categorías de registro y tenían el nivel de registro FINEST: TDS.DATA y TDS.TOKEN. Desde la versión 2.0, conservan el nivel de registro FINEST.|  
 |Apagado|Desactiva el registro.|  
 |ALL|Habilita el registro de todos los mensajes.|  

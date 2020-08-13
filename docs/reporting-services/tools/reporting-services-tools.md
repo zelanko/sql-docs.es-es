@@ -1,5 +1,6 @@
 ---
 title: Herramientas de Reporting Services | Microsoft Docs
+description: Obtenga información sobre las herramientas de desarrollo, configuración, administración y visualización de informes que se incluyen en SQL Server Reporting Services.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e5a060e58019d79b44d42feeb396854807c19f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8adb6775be47b2d064e97c74e6888c64af75fe2e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826917"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915019"
 ---
 # <a name="reporting-services-tools"></a>Herramientas de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiene un conjunto de herramientas gráficas y de scripting que admiten el desarrollo y la utilización de informes completos en un entorno administrado. El conjunto de herramientas incluye herramientas de desarrollo, herramientas de configuración y administración, y herramientas de visualización de informes. En este artículo se proporciona una breve información general de cada herramienta de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y cómo se puede obtener acceso a ella.  
   
- Para buscar una herramienta inmediatamente, vea [Tutorial: Cómo buscar e iniciar herramientas de Reporting Services &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Para buscar una herramienta inmediatamente, vea [Tutorial: Búsqueda e inicio de las herramientas de Reporting Services &#40;SSRS&#41;](../../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="tools-for-report-authoring"></a>Herramientas de creación de informes  
  En la tabla siguiente se enumeran las herramientas disponibles para la creación de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -49,7 +50,7 @@ ms.locfileid: "66826917"
   
 |Herramienta|Descripción|Cómo obtener acceso|  
 |----------|-----------------|-------------------|  
-|Administrador de configuración de Reporting Services|Use esta herramienta para configurar una instalación de Reporting Services. Entre las tareas disponibles se incluyen:<br /><br />  Configurar la cuenta de servicio del servidor de informes.<br /><br /> Crear y configurar una o más direcciones URL de servicios web.<br /><br /> Configurar la dirección URL del portal web.<br /><br /> Crear y configurar la base de datos del servidor de informes.<br /><br /> Configurar una implementación escalada.<br /><br /> Realizar copias de seguridad, restaurar o reemplazar la clave simétrica que se usa para cifrar las cadenas de conexión almacenadas y las credenciales.<br /><br /> Configurar la cuenta de ejecución desatendida.<br /><br /> Establecer configuración de la suscripción.<br /><br /> Configurar un servidor SMTP para la entrega por correo electrónico.<br /><br /> Configurar el servicio de Power BI (nube).<br /><br /> Nota: El Administrador de configuración de Reporting Services no ayuda a administrar el contenido del servidor de informes, a habilitar características adicionales o a conceder acceso al servidor.<br /><br /> Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).|Menú Inicio|  
+|Administrador de configuración de Reporting Services|Use esta herramienta para configurar una instalación de Reporting Services. Entre las tareas disponibles se incluyen:<br /><br />  Configurar la cuenta de servicio del servidor de informes.<br /><br /> Crear y configurar una o más direcciones URL de servicios web.<br /><br /> Configurar la dirección URL del portal web.<br /><br /> Crear y configurar la base de datos del servidor de informes.<br /><br /> Configurar una implementación escalada.<br /><br /> Realizar copias de seguridad, restaurar o reemplazar la clave simétrica que se usa para cifrar las cadenas de conexión almacenadas y las credenciales.<br /><br /> Configurar la cuenta de ejecución desatendida.<br /><br /> Establecer configuración de la suscripción.<br /><br /> Configurar un servidor SMTP para la entrega por correo electrónico.<br /><br /> Configurar el servicio de Power BI (nube).<br /><br /> Nota: El Administrador de configuración de Reporting Services no ayuda a administrar el contenido del servidor de informes, habilitar características adicionales ni conceder acceso al servidor.<br /><br /> Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).|Menú Inicio|  
 |SQL Server Management Studio|Use esta herramienta para administrar una o varias instancias del servidor de informes en un entorno único, lo que incluye:<br /><br /> Administrar las instancias local y remota del servidor de informes<br /><br /> Establecer las propiedades del servidor de informes<br /><br /> Modificar las definiciones de roles<br /><br /> Desactivar las características del servidor de informes que no se están usando<br /><br /> Administración de trabajos<br /><br /> Administrar las programaciones compartidas|Menú Inicio|   
 |Utilidad rsconfig|Use esta herramienta para configurar y administrar una conexión del servidor de informes a la base de datos del servidor de informes. También puede utilizarla para especificar la cuenta de usuario que se va a utilizar para el procesamiento de informes desatendidos.<br /><br /> Para más información, vea [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Símbolo del sistema|  
 |Utilidad Rskeymgmt|Use esta herramienta para lo siguiente:<br /><br /> Extraer, restaurar, crear y eliminar la clave simétrica usada para cifrar datos del servidor de informes<br /><br /> Combinar instancias del servidor de informes en una implementación escalada<br /><br /> <br /><br /> Para más información, vea [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Símbolo del sistema|  

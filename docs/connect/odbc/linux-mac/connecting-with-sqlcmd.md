@@ -2,7 +2,7 @@
 title: Conexión con sqlcmd
 description: Obtenga información sobre cómo usar la utilidad sqlcmd con Microsoft ODBC Driver for SQL Server en Linux y macOS.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e96d05b14cb9922572ee5f5c9e773f1c7bc35590
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632825"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465312"
 ---
 # <a name="connecting-with-sqlcmd"></a>Conexión con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ La utilidad [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) está dispo
   
 Los siguientes comandos muestran cómo usar la autenticación de Windows (Kerberos) y la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], respectivamente:
   
-```  
+```console
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
 sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
@@ -170,22 +170,30 @@ En la versión actual, no están disponibles las siguientes opciones:
   
 Puede usar el siguiente método alternativo: Coloque los parámetros dentro de un archivo, que puede anexar a otro archivo. Esto le ayudará a utilizar un archivo de parámetros para reemplazar los valores. Por ejemplo, cree un archivo llamado `a.sql` (el archivo de parámetros) con el siguiente contenido:
   
+```console
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
+```
   
 Después, cree un archivo denominado `b.sql` con los parámetros de reemplazo:  
   
+```sql
     select $(ColumnName) from $(TableName)  
+```
 
 En la línea de comandos, combine `a.sql` y `b.sql` en `c.sql` con los siguientes comandos:  
   
+```console
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
+```
   
 Ejecute `sqlcmd` y use `c.sql` como archivo de entrada:  
   
-    slqcmd -S<...> -P<..> -U<..> -I c.sql  
+```console
+    sqlcmd -S<...> -P<..> -U<..> -I c.sql  
+```
 
 - -z *password* cambia la contraseña.  
   
@@ -203,24 +211,12 @@ En la versión actual, no están disponibles los siguientes comandos:
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>Compatibilidad con DSN en sqlcmd y bcp
 
-Puede especificar un nombre de origen de datos (DSN) en lugar de un nombre de servidor en la opción **sqlcmd** o **bcp**`-S` (o el comando **sqlcmd** :Connect) si se especifica -D. -D hace que **sqlcmd** o **bcp** se conecten al servidor especificado en el DSN mediante la opción -S.  
+Puede especificar un nombre de origen de datos (DSN) en lugar de un nombre de servidor en la opción **sqlcmd** o **bcp** `-S` (o el comando **sqlcmd** :Connect) si especifica `-D`. `-D` hace que **sqlcmd** o **bcp** se conecten al servidor especificado en el DSN mediante la opción `-S`.  
   
 Los DSN del sistema se almacenan en el archivo `odbc.ini` que se encuentra en el directorio SysConfigDir de ODBC (`/etc/odbc.ini` en instalaciones estándar). Los DSN de usuario se almacenan en `.odbc.ini` en el directorio particular de un usuario (`~/.odbc.ini`).
-  
-Se admiten las siguientes entradas en un DSN de Linux o MacOS:
 
--   **ApplicationIntent=ReadOnly**  
+Vea [Atributos y palabras clave de cadena de conexión y DSN](../dsn-connection-string-attribute.md) para obtener la lista de entradas que admite el controlador.
 
--   **Database=** _database\_name_  
-  
--   **Driver=ODBC Driver 11 for SQL Server** o **Driver=ODBC Driver 13 for SQL Server**
-  
--   **MultiSubnetFailover=Yes**  
-  
--   **Server=** _server\_name\_o\_IP\_name_  
-  
--   **Trusted_Connection=yes**|**no**  
-  
 En un DSN, solo se requiere la entrada DRIVER, pero para conectarse a un servidor, `sqlcmd` o `bcp` necesitan el valor de la entrada SERVER.  
 
 Si se especifica la misma opción en el DSN y la línea de comandos `sqlcmd` o `bcp`, la opción de línea de comandos invalida el valor utilizado en el DSN. Por ejemplo, si el DSN tiene una entrada DATABASE y la línea de comandos `sqlcmd` incluye **-d**, se utiliza el valor transmitido a **-d**. Si se especifica **Trusted_Connection=yes** en el DSN, se utiliza la autenticación Kerberos, y el nombre de usuario ( **–U**) y la contraseña ( **–P**), si se proporcionan, se omiten.

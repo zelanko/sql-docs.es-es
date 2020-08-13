@@ -1,5 +1,6 @@
 ---
 title: Tipo de conexión de PowerPivot | Microsoft Docs
+description: Use la información de este artículo sobre el tipo de conexión PowerPivot para obtener información sobre cómo crear un origen de datos.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fb4fe31bfddb1c2312ae7e99e8a53609b5e5d70c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba0c6616c2a99007a379a71e0169b2bac85e5be5
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79112354"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458010"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexión de PowerPivot (SSRS)
   Puede utilizar la extensión de procesamiento de datos de SQL Server Analysis Services para recuperar datos de un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicado en una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SharePoint.  
   
  Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  El origen de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se debe publicar en una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un sitio de SharePoint.  
   
  Para admitir conexiones del Generador de informes con un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , debe tener SQL Server 2008 R2 ADOMD.NET en el equipo de la estación de trabajo. Esta biblioteca cliente se instala con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, pero si está usando un equipo que no tiene esta aplicación, debe descargar e instalar ADOMD.NET de la página [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  

@@ -1,5 +1,6 @@
 ---
 title: Utilidades del símbolo del sistema del servidor de informes | Microsoft Docs
+description: Obtenga información sobre las utilidades de línea de comandos de SQL Server Reporting Services que se usan para administrar un servidor de informes.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db8be061664d720ba3be1a4f66ed05062bb1af21
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 034d051548e3a4ae498128b37a5bbdc8ba75f422
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081923"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914181"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Utilidades del símbolo del sistema del servidor de informes (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye varias utilidades de la línea de comandos que se pueden utilizar para administrar un servidor de informes. Estas utilidades se instalan automáticamente cuando se instala el servidor de informes.  
@@ -32,7 +33,7 @@ ms.locfileid: "77081923"
 |Utilidad Rskeymgmt|rskeymgmt.exe|Solo nativo|La utilidad [rskeymgmt](../../reporting-services/tools/rskeymgmt-utility-ssrs.md) es una herramienta de administración de claves de cifrado. Puede utilizarla para realizar copias de seguridad, aplicar y volver a crear claves simétricas. También puede utilizar esta herramienta para adjuntar una instancia del servidor de informes a una base de datos compartida del servidor de informes. Rskeymgmt puede utilizarse en operaciones de recuperación de base de datos. Para volver a utilizar una base de datos existente en una nueva instalación, aplique una copia de seguridad de la clave simétrica. Si las claves no se pueden recuperar, esta herramienta proporciona un método para eliminar el contenido cifrado que ya no utilice. Para más información sobre la administración de claves y el almacenamiento de información confidencial, vea [Almacenar datos cifrados del servidor de informes &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md) y [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
   
 > [!NOTE]  
->  Si prefiere usar una herramienta que tenga una interfaz gráfica de usuario, puede usar el Administrador de configuración de Reporting Services en lugar de **rsconfig** y **rskeymgmt**.  
+>   Si prefiere utilizar una herramienta que tenga una interfaz gráfica de usuario, puede utilizar el Administrador de configuración de Reporting Services en lugar de **rsconfig** y **rskeymgmt**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

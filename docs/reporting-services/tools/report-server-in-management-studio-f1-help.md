@@ -1,5 +1,6 @@
 ---
 title: Servidor de informes en Management Studio (Ayuda F1) | Microsoft Docs
+description: Vea información sobre las características para administrar servidores de informes en SQL Server Management Studio.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 026583e0093812dbf683c93de9d11fd8ffabb7e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8df79e7a132d699428860c076a19ea734f3ce48d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576143"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916602"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Servidor de informes en Management Studio ayuda F1
   En esta sección se incluyen temas acerca de los cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que pueden usarse para administrar servidores de informes.  

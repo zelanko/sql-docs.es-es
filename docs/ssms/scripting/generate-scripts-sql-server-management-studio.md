@@ -1,5 +1,6 @@
 ---
 title: Generar scripts
+description: Aprenda a usar el Asistente para generar y publicar scripts a fin de crear scripts de Transact-SQL para varios objetos, y el menú Crear script como del Explorador de objetos para generar scripts para objetos individuales o varios objetos.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25249c04d322e2faa4c876b1afd2822896038b6
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151871"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123136"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generar scripts (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona dos mecanismos para generar scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Puede crear scripts para varios objetos con el **Asistente Generar y publicar scripts**. También puede generar un script para objetos individuales o varios objetos con el menú **Incluir como** del **Explorador de objetos**.
 
@@ -48,7 +49,7 @@ Puede usar el menú **Incluir como del Explorador de objetos** para generar un s
 
 3. Expanda la categoría del objeto. Por ejemplo, expanda el nodo **Vistas** o **Tablas** .
 
-4. Haga clic con el botón derecho en el objeto y vaya a **Incluir \<tipo de objeto> como**; por ejemplo, vaya a **Incluir tabla como**.
+4. Haga clic con el botón derecho en el objeto y seleccione **Incluir \<object type> como**; por ejemplo, seleccione **Incluir tabla como**.
 
 5. Seleccione el tipo de script, como **Create to** o **Alter to**.
 
@@ -72,6 +73,6 @@ Puede usar el panel **Detalles del Explorador de objetos** para generar un scrip
 
 6. Presione Crtl y haga clic con el botón primario en el segundo objeto que desea incluir en el script.
 
-7. Haga clic con el botón derecho en uno de los objetos seleccionados y elija **Incluir \<tipo de objeto> como**.
+7. Haga clic con el botón derecho en uno de los objetos seleccionados y seleccione **Incluir \<object type> como**.
 
     ![Explorador de objetos](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

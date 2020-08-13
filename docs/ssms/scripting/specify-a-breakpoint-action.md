@@ -1,5 +1,6 @@
 ---
 title: Especificar una acción del punto de interrupción
+description: 'Obtenga información sobre cómo especificar una acción de detección: una tarea personalizada para el depurador de Transact-SQL que se realizará cuando se alcance un punto de interrupción y se cumplan otras condiciones concretas.'
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -14,16 +15,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4bffc7742a9833d8715c9479e051cdd732d7596
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253651"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122740"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar una acción del punto de interrupción
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Las acciones **Cuando se llama** de punto de interrupción especifican una tarea personalizada que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] realiza en un punto de interrupción. Si se alcanza el número de llamadas especificado y se satisface la condición de punto de interrupción especificada, el depurador realiza la acción definida para el punto de interrupción.
 
@@ -41,7 +42,7 @@ Los mensajes de impresión se especifican en la opción **Imprimir un mensaje** 
   
     1.  $ADDRESS devuelve el nombre del procedimiento almacenado o la función definida por el usuario donde se ha establecido el punto de interrupción. Si el punto de interrupción está establecido en la ventana del editor, $ADDRESS devuelve el nombre del archivo de script que se está editando. $ADDRESS y $FUNCTION devuelven la misma información en el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-    2.  $CALLER devuelve el nombre de la unidad de código de [!INCLUDE[tsql](../../includes/tsql-md.md)] encargada de llamar a un procedimiento almacenado o una función. Si el punto de interrupción se encuentra en la ventana del editor, $CALLER devuelve un mensaje que indica \<No hay ningún autor de llamada disponible>. Si el punto de interrupción es un procedimiento almacenado o una función definida por el usuario que se ha llamado desde el código de la ventana del editor, $CALLER devuelve el nombre del archivo que se está editando. Si el punto de interrupción es un procedimiento almacenado o una función definida por el usuario que se ha llamado desde otro procedimiento almacenado o función, $CALLER devuelve el nombre del procedimiento o la función de llamada.  
+    2.  $CALLER devuelve el nombre de la unidad de código de [!INCLUDE[tsql](../../includes/tsql-md.md)] encargada de llamar a un procedimiento almacenado o una función. Si el punto de interrupción se encuentra en la ventana del editor, $CALLER devuelve \<No caller available>. Si el punto de interrupción es un procedimiento almacenado o una función definida por el usuario que se ha llamado desde el código de la ventana del editor, $CALLER devuelve el nombre del archivo que se está editando. Si el punto de interrupción es un procedimiento almacenado o una función definida por el usuario que se ha llamado desde otro procedimiento almacenado o función, $CALLER devuelve el nombre del procedimiento o la función de llamada.  
   
     3.  $CALLSTACK devuelve la pila de llamadas de las funciones de la cadena que llamaron al procedimiento almacenado o la función definida por el usuario actual. Si el punto de interrupción está establecido en la ventana del editor, $CALLSTACK devuelve en nombre del archivo de script que se está editando.  
   

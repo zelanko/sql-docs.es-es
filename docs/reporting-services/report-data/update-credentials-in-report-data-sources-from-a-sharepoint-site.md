@@ -1,5 +1,6 @@
 ---
 title: Actualizar credenciales en orígenes de datos de informe desde un sitio de SharePoint | Microsoft Docs
+description: Aprenda a actualizar los orígenes de datos insertados en informes y los orígenes de datos compartidos que se guardan en una biblioteca de documentos de SharePoint.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a9908e340dadeb1108e68ca10f466276c14df23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575434"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458961"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Actualizar credenciales en orígenes de datos de informe desde un sitio de SharePoint
   En este tema se describe cómo actualizar los orígenes de datos incrustados en informes y los orígenes de datos compartidos en una biblioteca de documentos de SharePoint.  
@@ -46,7 +47,7 @@ ms.locfileid: "65575434"
   
 7.  Escriba un nombre de usuario y una contraseña.  
   
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\> y seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**.  
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela en este formato: \<domain>\\<cuenta\> y seleccione **Usar como credenciales de Windows al conectarse al origen de datos**.  
   
     -   Si el nombre de usuario y la contraseña son credenciales de la base de datos, no seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**. Si el servidor de base de datos admite la suplantación o la delegación, puede seleccionar **Establecer contexto de ejecución en esta cuenta**.  
   
@@ -72,7 +73,7 @@ ms.locfileid: "65575434"
   
 5.  Escriba un nombre de usuario y una contraseña.  
   
-    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquelo con este formato: \<dominio>\\<cuenta\> y seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**.  
+    -   Si la cuenta es una cuenta de usuario de dominio de Windows, especifíquela en este formato: \<domain>\\<cuenta\> y seleccione **Usar como credenciales de Windows al conectarse al origen de datos.**  
   
     -   Si el nombre de usuario y la contraseña son credenciales de la base de datos, no seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**. Si el servidor de base de datos admite la suplantación o la delegación, puede seleccionar **Establecer contexto de ejecución en esta cuenta**.  
   

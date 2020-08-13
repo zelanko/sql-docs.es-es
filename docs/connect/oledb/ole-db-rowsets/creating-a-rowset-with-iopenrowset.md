@@ -1,5 +1,5 @@
 ---
-title: Creación de un conjunto de filas con IOpenRowset | Microsoft Docs
+title: Creación de un conjunto de filas con IOpenRowset (controlador OLE DB) | Microsoft Docs
 description: Creación de un conjunto de filas con la interfaz IOpenRowset de OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB rowsets, creating
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 721a54d4e423675fa5dad39d22e8f94c178228d6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994308"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942395"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Crear un conjunto de filas con IOpenRowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

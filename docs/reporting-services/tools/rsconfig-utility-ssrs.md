@@ -1,5 +1,6 @@
 ---
 title: rsconfig (utilidad) | Microsoft Docs
+description: Obtenga información sobre la utilidad rsconfig.exe que cifra y almacena valores de conexión de base de datos de servidor de informes y de cuenta en el archivo RSReportServer.config.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8397412801d38107c3532bea377d7bd150561f17
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082181"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913647"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig (utilidad) (SSRS)
   La utilidad **rsconfig.exe** cifra y almacena valores de cuenta y conexión en el archivo RSReportServer.config. Los valores cifrados incluyen la información de conexión de la base de datos del servidor de informes y los valores de cuenta utilizados para el procesamiento de informes desatendido.  

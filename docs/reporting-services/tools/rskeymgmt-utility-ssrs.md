@@ -1,5 +1,6 @@
 ---
 title: Utilidad rskeymgmt | Microsoft Docs
+description: Obtenga información sobre la utilidad rskeymgmt que administra la clave simétrica que protege los datos confidenciales del servidor de informes frente al acceso no autorizado.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ebbda456c402372e7505968414bc044eec87ec4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082149"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916273"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
   Extrae, restaura, crea y elimina la clave simétrica usada para proteger contra el acceso no autorizado los datos importantes del servidor de informes. Esta utilidad también se usa para unir instancias del servidor de informes en una implementación de ampliación horizontal. Una *implementación escalada del servidor de informes* se refiere a varias instancias del servidor de informes que comparten una sola base de datos de servidor de informes.  
@@ -145,9 +146,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Implementación de ampliación horizontal del servidor de informes se refiere a un modelo de implementación en el que varias instancias del servidor de informes comparten la misma base de datos del servidor de informes. Una base de datos del servidor de informes la puede usar cualquier instancia del servidor de informes que almacene sus claves simétricas en la base de datos. Por ejemplo, si una base de datos del servidor de informes contiene información de clave para tres instancias del servidor de informes, las tres instancias se consideran miembros de la misma implementación de ampliación horizontal.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Combinar instancias del servidor de informes en el mismo equipo  
- Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos **-u** y **-v** si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos **-u** y **-v** se usan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, recibirá un error que indica que las credenciales de usuario no se pueden utilizar para las conexiones locales.  
+ Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos **-u** y **-v** si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos **-u** y **-v** se usan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, obtendrá el siguiente error: "No se pueden usar las credenciales de usuario para conexiones locales".  
   
- El ejemplo siguiente muestra la sintaxis para crear una implementación escalada con varias instancias locales. En este ejemplo, \<**initializedinstance**> es el nombre de una instancia que ya está inicializada para usar la base de datos del servidor de informes y \<**newinstance**> es el nombre de la instancia que quiere agregar a la implementación:  
+ El ejemplo siguiente muestra la sintaxis para crear una implementación escalada con varias instancias locales. En este ejemplo, \<**initializedinstance**> es el nombre de una instancia que ya está inicializada para usar la base de datos del servidor de informes, y \<**newinstance**> es el nombre de la instancia que quiere agregar a la implementación:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
@@ -163,7 +164,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>Ubicación del archivo  
- Rskeymgmt.exe se encuentra en **\<*unidad*>:\Archivos de programa\Microsoft SQL Server\110\Tools\Binn** o en **\<*unidad*>:\Archivos de programa (x86)\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
+ Rskeymgmt.exe se encuentra en **\<*drive*>:\Archivos de programa\Microsoft SQL Server\110\Tools\Binn** o en **\<*drive*>:\Archivos de programa (x86)\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
   
 ## <a name="remarks"></a>Observaciones  
  El servidor de informes cifra las credenciales almacenadas y la información de la conexión. Para cifrar los datos, se utiliza una clave pública y una clave simétrica. Para que el servidor de informes funcione, la base de datos debe tener claves válidas. Puede usar **rskeymgmt** para realizar una copia de seguridad de las claves, eliminarlas o restaurarlas. Si las claves no se pueden restaurar, esta herramienta proporciona un método para eliminar el contenido cifrado que ya no se pueda usar.  

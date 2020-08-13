@@ -1,5 +1,6 @@
 ---
 title: Vista previa | Microsoft Docs
+description: Obtenga información sobre la vista previa del Diseñador de informes de Reporting Services en la que se muestra la presentación de un informe representado.
 ms.date: 05/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7c546ee5bdc941a5b0dba77b9c110bd283b217d7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bdfb752b3d78f037e1ce5a9202c2ef564b12bc2d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65582162"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915581"
 ---
 # <a name="preview-view"></a>Vista previa, vista
 En el Diseñador de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , use la vista **Vista previa** para mostrar el informe representado. Antes de abrir un informe en Vista previa, el Diseñador de informes lo ejecuta localmente. En el modo de vista previa, el informe se procesa por completo. Si el informe tiene una consulta compleja o una gran cantidad de datos, es posible que se necesiten algunos minutos para que se complete la vista previa la primera vez que la muestre. Para los cambios posteriores que solo afectan al formato del informe, la vista previa utiliza datos en caché.

@@ -2,21 +2,21 @@
 title: Notas de la versión de SQL Server 2014 | Microsoft Docs
 description: En estas notas de la versión se describen los problemas conocidos con los que familiarizarse antes de instalar cualquier versión de Microsoft SQL Server 2014 (12.x) o solucionar problemas en ella.
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 6346b8e611fc70f07211abe3060781d548a6a929
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001145"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111128"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ No se admite esta acción.
 **Solución alternativa:** no hay ninguna solución alternativa para la degradación. Se recomienda hacer una copia de seguridad de la base de datos antes de actualizarse a SQL Server 2014 RTM.  
   
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Versión incorrecta del cliente StreamInsight en SQL Server 2014 media/ISO/CAB  
-En la ruta de acceso de SQL Server media /ISO/CAB se encuentra la versión incorrecta de StreamInsight.msi y StreamInsightClient.msi (StreamInsight\\\<Architecture\>\\\<Language ID\>).  
+En la ruta de acceso de siguiente de SQL Server media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>) se encuentra la versión incorrecta de StreamInsight.msi y StreamInsightClient.msi.  
   
 **Solución alternativa:** descargue e instale la versión correcta del paquete de descarga de [SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709).  
   
@@ -287,7 +287,7 @@ Si ya tiene el problema con valores no coincidentes de instance_id, la única ma
 5.  Identifique las filas que deben corresponder a la instancia que está corrigiendo. 
 6.  Actualice el valor de sysdac_history_internal.instance_id al valor que anotó en el paso 3 (de la tabla sysdac_instances_internal):  
   
-    `update` sysdac_history_internal `set` instance_id = '\<valor del paso 3\>' `where` \<expresión que coincide con las filas que desea actualizar\>  
+    `update` sysdac_history_internal `set` instance_id = "\<value from step 3\>" `where` \<expression that matches the rows you want to update\>  
   
 ### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   

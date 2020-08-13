@@ -1,5 +1,6 @@
 ---
 title: Cuadro de diálogo de inicio de sesión de Reporting Services | Microsoft Docs
+description: Aprenda a usar el cuadro de diálogo Inicio de sesión de Reporting Services para proporcionar credenciales que permitan publicar informes en el servidor de informes.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d60450f0f4c7feb7d6a00f66fcedeb89c764bf5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d3e34d7ff9f92506f1225aea173521ee7d30e79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082172"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919621"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Inicio de sesión de Reporting Services (cuadro de diálogo de SSRS)
   Utilice el cuadro de diálogo **Inicio de sesión de Reporting Services** para proporcionar credenciales para publicar informes en el servidor de informes.  

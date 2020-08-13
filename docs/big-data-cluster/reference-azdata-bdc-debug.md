@@ -5,38 +5,43 @@ description: Artículo de referencia sobre los comandos de azdata bdc debug.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cccdc543a572df19849afec16d0a2a71413ed19e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bda7fc541c0c89827df28e368d0cf8cc9db8bed5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820893"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943048"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En el artículo siguiente se proporciona una referencia de los comandos `bdc debug` de la herramienta `azdata`. Para más información sobre otros comandos `azdata`, vea la [referencia de azdata](reference-azdata.md).
+En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Comandos:
-|     |     |
+| Comando | Descripción |
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copie registros.
-[azdata bdc debug dump](#azdata-bdc-debug-dump) | Desencadene el volcado de registros.
+[azdata bdc debug dump](#azdata-bdc-debug-dump) | Volcado de memoria del desencadenador.
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
 Copia los registros de depuración del clúster de macrodatos; es necesario que Kubernetes esté configurado en el sistema.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
-                           [--target-folder -d]  
-                           [--pod -p]  
-                           [--timeout -t]  
-                           [--skip-compress -sc]  
-                           [--exclude-dumps -ed]
+                           
+[--target-folder -d]  
+                           
+[--pod -p]  
+                           
+[--timeout -t]  
+                           
+[--skip-compress -sc]  
+                           
+[--exclude-dumps -ed]
 ```
 ### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--namespace -n`
@@ -62,24 +67,25 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
-Desencadena el volcado de registros y lo copia del contenedor; es necesario que Kubernetes esté configurado en el sistema.
+Desencadene el volcado de registros y cópielo del contenedor; es necesario que Kubernetes esté configurado en el sistema.
 ```bash
 azdata bdc debug dump --namespace -n 
-                      --container -c  
-                      [--target-folder -d]
+                      [--container -c]  
+                      
+[--target-folder -d]
 ```
 ### <a name="required-parameters"></a>Parámetros obligatorios
 #### `--namespace -n`
 Nombre del clúster de macrodatos; se usa para el espacio de nombres de Kubernetes.
-#### `--container -c`
-Copie los registros de los contenedores con un nombre similar. Opcional, de forma predeterminada, copia los registros de todos los contenedores. No se puede especificar varias veces. Si se especifica varias veces, se usará la última.
 ### <a name="optional-parameters"></a>Parámetros opcionales
+#### `--container -c`
+Contenedor de destino que se va a desencadenar para volcar los procesos en ejecución. `controller`
 #### `--target-folder -d`
-Ruta de acceso de la carpeta de destino en la que copiar los registros. Opcional, de forma predeterminada, crea el resultado en la carpeta local.  No se puede especificar varias veces. Si se especifica varias veces, la última se usará `./output/dump`.
+Carpeta de destino en la que se va a copiar el volcado. `./output/dump`
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
@@ -88,7 +94,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 

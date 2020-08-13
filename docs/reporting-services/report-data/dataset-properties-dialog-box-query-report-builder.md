@@ -1,5 +1,6 @@
 ---
 title: Propiedades del conjunto de datos (cuadro de diálogo), Consulta (Generador de informes) | Microsoft Docs
+description: Aprenda a usar Consulta en el cuadro de diálogo Propiedades del conjunto de datos del Generador de informes para elegir un conjunto de datos compartido de un servidor de informes o para crear un conjunto de datos insertado.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 14380ba698101c76a84d0b9eef27a4ea31953f2d
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500454"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458937"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Consulta (Generador de informes)
  

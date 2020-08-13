@@ -1,5 +1,6 @@
 ---
 title: Conjuntos de datos de informe | Microsoft Docs
+description: Obtenga información sobre los conjuntos de datos de informe, por ejemplo que un conjunto de datos contiene la información necesaria para recuperar un conjunto de datos concreto de un origen de datos.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0677b5c5cdf5ff01009a81da01668ff977d2fcff
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081936"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458350"
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de datos de informe (SSRS)
   Para agregar datos a un informe, cree conjuntos de datos. Cada conjunto de datos representa el conjunto de resultados obtenidos al ejecutar un comando de consulta en un origen de datos. Las columnas del conjunto de resultados son la colección de campos y las filas, los datos. Un conjunto de resultados no contiene los datos reales, sino la información necesaria para recuperar un conjunto de datos específico a partir de un origen de datos.  
@@ -36,7 +37,7 @@ ms.locfileid: "77081936"
   
  Además, puede agregar conjuntos de datos a un informe agregando elementos de informe que incluyan los conjuntos de datos de los que dependen. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para aprender a crear un informe donde se muestren datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Para crear un informe que contenga sus propios datos, vea [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Para aprender a crear un informe donde se muestren datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md). Para compilar un informe que incluya sus propios datos, vea [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

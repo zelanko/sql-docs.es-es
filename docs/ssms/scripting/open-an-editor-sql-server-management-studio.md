@@ -1,5 +1,6 @@
 ---
 title: Abrir un editor (SQL Server Management Studio)
+description: Aprenda a abrir los editores de consultas, MDX, DMX y XML/A del motor de base de datos en SQL Server Management Studio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,27 +11,27 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253778"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122576"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir un editor (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se abre, cada ventana del editor aparece como una pestaña en el panel central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] admite cuatro editores: el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para editar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , los editores DMX y MDX para editar scripts con esos lenguajes y el editor XML/A para editar scripts XML/A o archivos XML. Cualquiera de los editores también se puede usar para editar archivos de texto.  
   
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
- Si comparte archivos con usuarios de otros sitios que usan páginas de códigos diferentes, guarde el archivo con la página de códigos Unicode correspondiente para evitar errores al leerlo. Asimismo, cuando guarde archivos para UNIX o Macintosh, asegúrese de guardarlos con el formato de documento correcto. En el menú **Archivo** , haga clic en **Guardar como**, **Guardar con codificación** en la flecha hacia abajo situada junto al botón **Guardar** y, a continuación, elija **Unix** o **Macintosh** en **Fin de línea**.  
+ Si comparte archivos con usuarios de otros sitios que usan páginas de códigos diferentes, guarde el archivo con la página de códigos Unicode correspondiente para evitar errores al leerlo. Asimismo, cuando guarde archivos para UNIX o Macintosh, asegúrese de guardarlos con el formato de documento correcto. En el menú **Archivo**, haga clic en **Guardar como**, **Guardar con codificación** en la flecha hacia abajo situada junto al botón **Guardar** y, a continuación, elija **Unix** o **Macintosh** en **Fin de línea**.  
   
 ### <a name="permissions"></a>Permisos  
  Las operaciones que realiza en un editor de código están sujetas a los permisos concedidos a la cuenta de autenticación que usó para iniciar sesión. Por ejemplo, si abre una ventana del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante la autenticación de Windows, no puede ejecutar instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que hacen referencia a los objetos para los que no tiene acceso la cuenta de inicio de sesión de Windows.  
   
-## <a name="how-to-open-editors"></a>Cómo: abrir editores  
+## <a name="how-to-open-editors"></a>Procedimientos: Abrir editores  
  En esta sección se explica cómo abrir varios editores en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Mediante el menú Archivo/Nuevo  

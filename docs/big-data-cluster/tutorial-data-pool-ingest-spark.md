@@ -10,16 +10,16 @@ ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ff4038fd5a09b0776533c2ffa94cb6c1afeb567b
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: d87d817f2bc7c23e2df3dd18d55ce21d12304cb4
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531135"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943217"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingestión de datos en un grupo de datos de SQL Server con trabajos de Spark
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 En este tutorial se muestra cómo usar trabajos de Spark para cargar datos en el [grupo de datos](concept-data-pool.md) de un elemento [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
@@ -111,7 +111,12 @@ El paso siguiente es crear un trabajo de streaming de Spark que cargue datos de 
 2. Cree un cuaderno y seleccione Spark | Scala como el kernel.
 
 3. Ejecute el trabajo de ingesta de Spark.
+
    1. Configure los parámetros del conector de Spark-SQL.
+
+    > [!NOTE]
+    > Si el clúster de macrodatos se implementa con la integración de Active Directory, reemplace el valor de **hostname** siguiente para incluir el FQDN anexado al nombre del servicio. Por ejemplo, *hostname=master-p-svc.\<domainName>* .
+
       ```
       import org.apache.spark.sql.types._
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
@@ -129,7 +134,7 @@ El paso siguiente es crear un trabajo de streaming de Spark que cargue datos de 
       StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
-      val hostname = "master-0.master-svc"
+      val hostname = "master-p-svc"
       val port = 1433
       val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
       ```

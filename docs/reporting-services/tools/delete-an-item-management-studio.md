@@ -1,5 +1,6 @@
 ---
 title: Eliminar un elemento (Management Studio) | Microsoft Docs
+description: Obtenga información sobre cómo eliminar definiciones de roles y programaciones compartidas en SQL Management Studio.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8eaed89901b98cecb90e0c3a4ecae24714c7c180
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 840a61a34389c1013d26f2ef87791b376bfd19cf
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574326"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918397"
 ---
 # <a name="delete-an-item-management-studio"></a>Eliminar un elemento (Management Studio)
   Cuando se conecta a una instancia del servidor de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], puede eliminar definiciones de roles y programaciones compartidas. No puede eliminar informes, modelos u otros elementos de un servidor de informes. Para eliminar el contenido del servidor de informes, use el Administrador de informes en su lugar. O bien, si el servidor de informes está configurado para el modo integrado de SharePoint, use las características de administración de elementos en la biblioteca de SharePoint que incluye su contenido.  

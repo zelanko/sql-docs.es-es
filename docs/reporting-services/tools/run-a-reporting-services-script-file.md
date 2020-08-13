@@ -1,5 +1,6 @@
 ---
 title: Ejecutar un archivo de script de Reporting Services | Microsoft Docs
+description: Vea ejemplos de cómo ejecutar un archivo de script de Reporting Services desde el símbolo del sistema mediante el entorno de script de Reporting Services (RS.exe).
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0de4995c-85ec-4d4c-aaef-fbd30edfb20f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ad3c0bb7ea7700f457cfaa9e7cb08684624dc73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79d96354c497977b780078ccbe94b25738b0f522
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571532"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914798"
 ---
 # <a name="run-a-reporting-services-script-file"></a>Ejecutar un archivo de script de Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] los archivos de script se ejecutan desde el símbolo del sistema con el entorno de scripts de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RS.exe). RS.exe tiene muchos argumentos del símbolo del sistema disponibles para su uso. Para más información sobre las opciones del símbolo del sistema, vea [Utilidad RS.exe &#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md). Para obtener mas muestras de script, vea [Muestras de productos de SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  

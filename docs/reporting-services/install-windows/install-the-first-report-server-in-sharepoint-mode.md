@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05ab2bfea73d7419613d21a3cce85135743e48f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286179"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941307"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Instalar el primer servidor de informes en el modo de SharePoint
 
@@ -92,13 +92,17 @@ ms.locfileid: "79286179"
     > [!NOTE]
     > Procure especificar el nombre correcto del servidor de SharePoint.
     
-        Set-SPServer SERVERNAME -Role Custom
+    ```powershell
+    Set-SPServer SERVERNAME -Role Custom
+    ```
 
 4. Debería ver una respuesta que indica que se ha programado un trabajo del temporizador. Debe esperar a que el trabajo se ejecute.
 
 5. Use el siguiente comando para comprobar el rol asignado del servidor.
 
-        Get-SPServer SERVERNAME 
+    ```powershell
+    Get-SPServer SERVERNAME 
+    ```
  
  6. **Rol** debe reflejar **Personalizado**.
  
@@ -209,7 +213,9 @@ ms.locfileid: "79286179"
     > [!IMPORTANT]
     > Si ve un mensaje de error similar al siguiente:  
     >   
-    >     Install-SPRSService: el término 'Install-SPRSService' **no se reconoce** como nombre de un cmdlet, una función, un archivo de script o un programa ejecutable. Compruebe si escribió correctamente el nombre o, si incluyó una ruta de acceso, compruebe que dicha ruta es correcta e inténtelo de nuevo.  
+    ```powershell
+    >     Install-SPRSService : The term 'Install-SPRSService' **is not recognized** as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
+    ```
     >
     > Está en Windows Powershell en lugar del Shell de administración de SharePoint o el modo de SharePoint de Reporting Services no está instalado. Para más información sobre Reporting Services y PowerShell, vea [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -224,7 +230,7 @@ ms.locfileid: "79286179"
     > [!NOTE]  
     >  Si el servicio de Reporting Services se queda en estado **Iniciando** y no cambia a **Iniciado**, compruebe que el servicio "Administración de SharePoint 2013" se ha iniciado en el Administrador de Windows Server.  
   
-##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Paso 3: crear una aplicación de servicio de Reporting Services  
+##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Paso 3: Crear una aplicación de servicio de Reporting Services  
  En esta sección se proporcionan los pasos para crear una aplicación de servicio y una descripción de las propiedades, si está revisando una aplicación de servicio existente.  
   
 1.  En Administración central de SharePoint, en el grupo **Administración de aplicaciones** , seleccione **Administrar aplicaciones de servicio**.  
@@ -260,7 +266,7 @@ ms.locfileid: "79286179"
   
 -   Tema [Para crear una aplicación de servicio de Reporting Services mediante PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
 
-##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Paso 4: activar la característica de colección de sitios de Power View
+##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Paso 4: Active la característica de colección de sitios de la vista avanzada.
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica del complemento de SQL Server 2016 Reporting Services para productos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint, es una característica de colección de sitios. La característica se activa automáticamente para colecciones de sitios raíz y se crean las colecciones de sitios tras instalar el complemento de Reporting Services. Si tiene previsto utilizar [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], compruebe que la característica está activada.  
   
@@ -270,7 +276,7 @@ ms.locfileid: "79286179"
   
 1.  En los pasos siguientes se da por hecho que el sitio de SharePoint está configurado para la **versión de la experiencia**2013 de SharePoint 2013.  
   
-     Abra el explorador en el sitio de SharePoint que desee. Por ejemplo https://\<nombreDelServidor >/sites/bi  
+     Abra el explorador en el sitio de SharePoint que desee. Por ejemplo, https://\<servername>/sites/bi  
   
 2.  Seleccione **Configuración**![Configuración de SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint").  
   

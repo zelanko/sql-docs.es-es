@@ -1,5 +1,6 @@
 ---
 title: Reporting Services en SQL Server Data Tools (SSDT) | Microsoft Docs
+description: Aprenda a usar el entorno de creación Diseñador de informes de SQL Server Data Tools en Microsoft Visual Studio para crear soluciones para Reporting Services.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 30e7824d1519fb09a7947dde1cfdc2b818ebc144
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68889841"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916591"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
 
@@ -93,7 +94,7 @@ ms.locfileid: "68889841"
   
  Use el panel de propiedades para:  
   
--   Establecer las propiedades del elemento seleccionado en la superficie de diseño. Algunas propiedades proporcionan una lista desplegable de valores. También puede escribir directamente el valor en la celda. En algunas propiedades se incluye una colección de valores, que se indica con el valor **(Colección)** . La mayoría de las propiedades pueden aceptar una expresión (las expresiones complejas se indican con el valor **\<Expression>** ). Haga clic en **\<Expression>** para abrir el cuadro de diálogo **Expresión**. Para obtener más información, vea [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   Establecer las propiedades del elemento seleccionado en la superficie de diseño. Algunas propiedades proporcionan una lista desplegable de valores. También puede escribir directamente el valor en la celda. En algunas propiedades se incluye una colección de valores, que se indica con el valor **(Colección)** . La mayoría de las propiedades pueden aceptar una expresión; las expresiones complejas se indican mediante el valor **\<Expression>** . Haga clic en **\<Expression>** para abrir el cuadro de diálogo **Expresión**. Para obtener más información, vea [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Use los botones de la barra de herramientas del panel de propiedades para cambiar la cuadrícula de la vista por categorías a la vista alfabética. En la vista por categorías, es probable que tenga que expandir una categoría para ver todas las propiedades de la misma. Para abrir el cuadro de diálogo Propiedades de un elemento, haga clic en el botón **Páginas de propiedades** en la barra de herramientas, o bien haga clic con el botón derecho en el elemento y seleccione **Propiedades**.  
   

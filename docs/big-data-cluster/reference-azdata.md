@@ -5,43 +5,47 @@ description: Artículo de referencia de los comandos de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 94adabb2ace2f5619abd700b2652aa7d88f3e1aa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7a3862dca974efc0ef035a0b52edfff39d2f5bcf
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822343"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942977"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En este artículo de referencia se describen comandos `azdata`.
+En el artículo siguiente se proporciona una referencia de los comandos `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos:
-|     |     |
+## <a name="commands"></a>Comandos
+| Comando | Descripción |
 | --- | --- |
-|[azdata bdc](reference-azdata-bdc.md) | Para seleccionar, administrar y poner en funcionamiento clústeres de macrodatos de SQL Server. |
 |[azdata app](reference-azdata-app.md) | Para crear, eliminar, ejecutar y administrar aplicaciones. |
+|[azdata bdc](reference-azdata-bdc.md) | Para seleccionar, administrar y poner en funcionamiento clústeres de macrodatos de SQL Server. |
+|[azdata sql](reference-azdata-sql.md) | La CLI de SQL DB permite al usuario interactuar con SQL Server mediante T-SQL. |
 [azdata login](#azdata-login) | Inicie sesión en el punto de conexión del controlador del clúster y establezca su espacio de nombres como su contexto activo. Para usar una contraseña en el inicio de sesión, debe establecer la variable de entorno AZDATA_PASSWORD.
 [azdata logout](#azdata-logout) | Para cerrar la sesión del clúster.
 |[azdata context](reference-azdata-context.md) | Comandos de administración de contexto. |
-|[azdata control](reference-azdata-control.md) | Cree, elimine y administre planos de control. |
-|[azdata sql](reference-azdata-sql.md) | La CLI de SQL DB permite al usuario interactuar con SQL Server mediante T-SQL. |
+|[azdata extension](reference-azdata-extension.md) | Administre y actualice extensiones de la CLI. |
 |[azdata notebook](reference-azdata-notebook.md) | Comandos para ver, ejecutar y administrar cuadernos desde un terminal. |
 ## <a name="azdata-login"></a>azdata login
 Una vez implementado el clúster, mostrará el punto de conexión del controlador durante la implementación que se debe usar para iniciar sesión.  Si no conoce el punto de conexión del controlador, puede iniciar sesión teniendo el archivo kubeconfig del clúster en el sistema en la ubicación predeterminada, <user home>/.kube/config, o usar la variable de entorno KUBECONFIG, esto es, export KUBECONFIG=path/to/.kube/config.  Al iniciar sesión, el espacio de nombres de este clúster se establecerá en el contexto activo.
 ```bash
 azdata login [--auth] 
              [--endpoint -e]  
-             [--accept-eula -a]  
-             [--namespace -n]  
-             [--username -u]  
-             [--principal -p]
+             
+[--accept-eula -a]  
+             
+[--namespace -n]  
+             
+[--username -u]  
+             
+[--principal -p]
 ```
 ### <a name="examples"></a>Ejemplos
 Iniciar sesión mediante la autenticación básica.
@@ -89,7 +93,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-logout"></a>azdata logout
@@ -110,7 +114,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 

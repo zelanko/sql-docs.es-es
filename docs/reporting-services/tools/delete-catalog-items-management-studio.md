@@ -1,5 +1,6 @@
 ---
 title: Eliminar elementos del catálogo (Management Studio) | Microsoft Docs
+description: Obtenga información sobre las opciones de la página Eliminar elementos del catálogo de Management Studio que le permiten eliminar programaciones compartidas y definiciones de roles.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6a41e1ed676a00f05837ed502f020b888fe05ca1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573935"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918381"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Eliminar elementos del catálogo (Management Studio)
   Utilice esta página para eliminar programaciones compartidas y definiciones de roles.  

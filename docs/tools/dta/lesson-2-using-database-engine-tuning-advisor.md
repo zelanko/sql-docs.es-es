@@ -1,5 +1,6 @@
 ---
 title: Uso del Asistente para la optimización de motor de base de datos
+description: Obtenga información sobre cómo la GUI del Asistente para la optimización de motor de base de datos de SQL Server optimiza las bases de datos, administra las sesiones de optimización y muestra recomendaciones de optimización.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: performance
@@ -9,24 +10,23 @@ helpviewer_keywords:
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 6352a5d32f7b173343729582cdb1bfb0c1de99b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 385171c8465a06595a65c02ff457d003ce723a7f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285749"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458697"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lección 2: Uso del Asistente para la optimización de motor de base de datos
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 El Asistente para la optimización de motor de base de datos le permite optimizar bases de datos, administrar sesiones de optimización y ver recomendaciones. Los usuarios con conocimientos avanzados de estructuras de diseño físico pueden utilizar esta herramienta para realizar un análisis de exploración de optimización de la base de datos. Los principiantes en optimizaciones de bases de datos también pueden utilizar esta herramienta para determinar cuál es la mejor configuración de las estructuras de diseño físico para las cargas de trabajo que optimicen. Esta lección proporciona una práctica básica para los administradores que no conocen la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos y los administradores del sistema que no tengan amplios conocimientos acerca de las estructuras de diseño físico.  
 
-## <a name="prerequisites"></a>Prerrequisitos 
+## <a name="prerequisites"></a>Requisitos previos 
 
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 

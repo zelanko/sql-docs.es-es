@@ -1,6 +1,7 @@
 ---
 title: 'Solucionar problemas de informes: Informes de mapa (Generador de informes) | Microsoft Docs'
-ms.date: 01/17/2018
+description: Explore ideas de solución de problemas para situaciones que pueden producirse al personalizar, agregar una capa o publicar un informe con un mapa en el Generador de informes.
+ms.date: 07/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 87c034202eb5a4c17fd73e75f881361c04b3b636
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3dc21f30222704622f86732c11bd5f1db7b46d1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080842"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112028"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de informes: informes de mapa (Generador de informes y SSRS)
   Podrían producirse problemas con los mapas de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] al agregar un mapa o una capa de mapa a un informe, personalizar un mapa o una capa de mapa existentes en un informe, obtener una vista previa de un mapa en un informe o publicar un informe con un mapa. Utilice este tema como ayuda para solucionar estos problemas.  
@@ -206,6 +207,6 @@ ms.locfileid: "77080842"
   
 ## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas del Generador de informes](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
+ [Solucionar problemas del Generador de informes](/previous-versions/sql/2014/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

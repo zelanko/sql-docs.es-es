@@ -1,5 +1,6 @@
 ---
 title: Buscar documentos de forma interactiva
+description: Obtenga información sobre cómo usar el cuadro de diálogo Buscar y reemplazar para buscar en uno o varios archivos o ventanas abiertos, y detenerse después de cada coincidencia para revisar lo que se ha encontrado, en su contexto. También puede realizar una operación de búsqueda masiva y revisar las coincidencias de la búsqueda en formato de informe.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bcdb8d269deb90d7c88c0f88a98e55289c89635
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c6bfdd07a0af13e5b0e8923a7549b3401db485b
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253664"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122850"
 ---
 # <a name="search-documents-interactively"></a>Buscar documentos de forma interactiva
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Mediante el cuadro de diálogo **Buscar y reemplazar** , puede buscar en uno o más archivos o ventanas abiertos y desplazarse por las coincidencias una a una. Esta técnica permite revisar cada coincidencia individual en el contexto en que se encuentra. El cuadro de diálogo **Buscar y reemplazar** también ofrece la opción de realizar operaciones de búsqueda masiva y revisión de coincidencias en formato de informe.  
   
 ### <a name="to-search-all-open-documents"></a>Para buscar en todos los documentos abiertos  

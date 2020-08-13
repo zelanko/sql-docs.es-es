@@ -1,5 +1,6 @@
 ---
 title: Uso de la utilidad del símbolo del sistema dta
+description: Obtenga información sobre la funcionalidad de la utilidad del símbolo del sistema dta, además de la que ofrece el Asistente para la optimización de motor de base de datos de SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306975"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457524"
 ---
-# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lección 3: Usar la utilidad del símbolo del sistema dta
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lección 3: Uso de la utilidad del símbolo del sistema dta
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La utilidad del símbolo del sistema **dta** ofrece funcionalidad adicional a la del Asistente para la optimización de motor de base de datos.  
   
 Puede utilizar las herramientas XML que desee para crear archivos de entrada para la utilidad mediante el esquema XML del Asistente para la optimización de motor de base de datos. Este esquema se instala al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se encuentra en: C:\Archivos de programa (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
@@ -34,13 +34,13 @@ Además, al usar el esquema XML del Asistente para la optimización de motor de 
   
 Esta lección no cubre el uso de la funcionalidad de entrada XML del Asistente para la optimización de motor de base de datos.  
   
-Esta tarea le guía por los pasos necesarios para iniciar la utilidad **dta** , ver su Ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Se usará la carga de trabajo (MyScript.sql) que ha creado para la práctica sobre la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos: [Optimizar una carga de trabajo](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload).  
+ Esta tarea le guía por los pasos necesarios para iniciar la utilidad **dta**, ver su Ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Se usará la carga de trabajo (MyScript.sql) que ha creado para la práctica sobre la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos: [Optimizar una carga de trabajo](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload).  
   
 El tutorial usa la base de datos de ejemplo de AdventureWorksLT2017. Por motivos de seguridad, las bases de datos de ejemplo no se instalan de manera predeterminada. Para instalarlas, consulte [Instalar ejemplos de SQL Server y bases de datos de ejemplo](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   
 Las tareas siguientes le guían por los pasos necesarios para abrir un símbolo del sistema, iniciar la utilidad **dta** , ver la Ayuda de la sintaxis y optimizar una carga de trabajo sencilla (MyScript.sql) que ha creado en [Optimizar una carga de trabajo](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
 
-## <a name="prerequisites"></a>Prerequisites 
+## <a name="prerequisites"></a>Requisitos previos 
 
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 
@@ -48,7 +48,7 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, ac
 - Descargue la [base de datos de ejemplo de AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
 
-Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
+Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
   > Este tutorial está destinado a un usuario familiarizado con el uso de SQL Server Management Studio y las tareas básicas de administración de bases de datos. 
@@ -93,7 +93,7 @@ Cuando haya finalizado las lecciones de este tutorial, consulte los temas siguie
 -   [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md) para obtener descripciones sobre cómo realizar tareas con esta herramienta. 
 -   [dta (utilidad)](../../tools/dta/dta-utility.md) para obtener material de referencia sobre la utilidad de símbolo del sistema y el archivo XML opcional que puede usar para controlar el funcionamiento de la utilidad.  
   
-Para volver al principio del tutorial, consulte [Tutorial: Asistente para la optimización de motor de base de datos](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
+Para volver al inicio del tutorial, consulte [Tutorial: Asistente para la optimización de motor de base de datos](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>Consulte también  
 [Tutoriales del motor de base de datos](../../relational-databases/database-engine-tutorials.md)  

@@ -1,5 +1,6 @@
 ---
 title: Script con la utilidad rs.exe y el servicio web | Microsoft Docs
+description: Obtenga información sobre la utilidad RS.exe que se puede usar para administrar mediante programación un servidor de informes mediante scripts escritos con Microsoft Visual Basic.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f20551117454ca742c8c681cd43f2704695dd276
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 689f77476a6b1f9931dc9ed82e8e9cd63f2083a7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571417"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914414"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Script con la utilidad rs.exe y el servicio Web
   Los desarrolladores y administradores del servidor de informes pueden realizar operaciones en un servidor de informes con la utilidad **rs** (RS.exe). Con esta utilidad, puede administrar un servidor de informes mediante programación usando los scripts escritos con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  

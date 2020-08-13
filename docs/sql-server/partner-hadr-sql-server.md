@@ -1,22 +1,22 @@
 ---
 title: Asociados de alta disponibilidad y recuperación ante desastres de SQL Server
 description: Listas de asociados externos que cuentan con soluciones para supervisar Server.
-services: sql-server
 ms.topic: conceptual
 ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
+ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 4d01deaf94e18fcf277e11e4a880f99a70693ead
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5fd19ca04a383ca8485d2668a7988c8558040f76
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75656980"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923051"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>Asociados de alta disponibilidad y recuperación ante desastres de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Para proporcionar alta disponibilidad y recuperación ante desastres para los servicios de SQL Server, elija entre una amplia variedad de herramientas líderes del sector.  En este artículo se destacan las compañías asociadas de Microsoft que cuentan con soluciones de alta disponibilidad y recuperación ante desastres compatibles con Microsoft SQL Server.
 
 ## <a name="high-availability-and-disaster-recovery-partners"></a>Asociados de alta disponibilidad y recuperación ante desastres
@@ -25,7 +25,7 @@ Para proporcionar alta disponibilidad y recuperación ante desastres para los se
 | --- | --- | --- |
 |![Azure][5] |**Azure Site Recovery**<br>Site Recovery replica las cargas de trabajo que se ejecutan en servidores físicos o máquinas virtuales para que sigan estando disponibles en una ubicación secundaria si el sitio primario no lo está. Puede replicar y conmutar por error máquinas de virtuales de SQL Server desde el centro de datos local a Azure o a otro centro de datos local o entre centros de datos de Azure.<br><br> Ediciones Enterprise y Standard de SQL Server 2008 R2 a SQL Server 2016|[Sitio web][azure_website]<br>[Marketplace][azure_marketplace]<br>[Hoja de datos][azure_datasheet]<br>[Twitter][azure_twitter]<br>[Vídeo][azure_youtube]|
 |![DH2i][2] |**DH2i**<br>DxEnterprise es un software de disponibilidad inteligente para Windows, Linux y Docker que ayuda a conseguir el tiempo de inactividad planeado y no planeado más próximo a cero, permite un ahorro significativo en costos, simplifica drásticamente la administración y permite conseguir una consolidación tanto física como lógica.<br><br>SQL Server 2005+, Windows Server 2008R2+, Ubuntu 16+, RHEL 7+ y CentOS 7+|[Sitio web][dh2i_website]<br>[Hoja de datos][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[Vídeo][dh2i_youtube]|
-|![HPE][4] |**HPE Serviceguard**<br>Proteja las cargas de trabajo de SQL Server 2017 críticas en Linux® frente a tiempos de inactividad planeados y no planeados con multitud de errores de infraestructura y aplicaciones en entornos físicos y virtuales a cualquier distancia con HPE Serviceguard para Linux (SGLX). HPE SGLX A.12.20.00 y versiones posteriores ofrecen opciones de recuperación y supervisión contextuales para cargas de trabajo de instancias de clúster de conmutación por error y grupos de disponibilidad AlwaysOn en cargas de trabajo de SQL Server. Maximice el tiempo de actividad con HPE SGLX sin comprometer el rendimiento ni la integridad de los datos.<br><br>SQL Server 2017 en Linux: RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Sitio web][hpe_website]<br>[Hoja de datos][hpe]<br>[Descargar evaluación][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
+|![HPE][4] |**HPE Serviceguard**<br>Proteja las cargas de trabajo de SQL Server 2017 críticas en Linux &reg; frente a tiempos de inactividad planeados y no planeados con multitud de errores de infraestructura y aplicaciones en entornos físicos y virtuales a cualquier distancia con HPE Serviceguard para Linux (SGLX). HPE SGLX A.12.20.00 y versiones posteriores ofrecen opciones de recuperación y supervisión contextuales para cargas de trabajo de instancias de clúster de conmutación por error y grupos de disponibilidad AlwaysOn en cargas de trabajo de SQL Server. Maximice el tiempo de actividad con HPE SGLX sin comprometer el rendimiento ni la integridad de los datos.<br><br>SQL Server 2017 en Linux: RedHat 7.3, 7.4, SUSE 12 SP2, SP3|[Sitio web][hpe_website]<br>[Hoja de datos][hpe]<br>[Descargar evaluación][hpe_download]<br>[Blog][hpe_download]<br>[Twitter][hpe_twitter]
 |![IDERA][3]|**IDERA**<br>SQL Safe Backup es una solución de copia de seguridad y recuperación de alto rendimiento para SQL Server que ahorra dinero gracias a la reducción del tiempo de copia de seguridad de la base de datos y del tamaño del archivo de copia de seguridad y también por el acceso de lectura y escritura instantáneo a las bases de datos en los archivos de copia de seguridad.<br><br>Microsoft SQL Server: 2005 SP1 o posterior, 2008, 2008 R2, 2012, 2014, 2016; todas las ediciones |[Sitio web][idera_website]|
 |![NEC][7]|**NEC**<br>ExpressCluster es una solución completa de recuperación ante desastres y alta disponibilidad totalmente automatizada que ofrece protección ante los principales errores, incluidos los de hardware, software, red y sitio para SQL Server y las aplicaciones asociadas ejecutadas en máquinas virtuales o físicas, en entornos locales o de nube.<br><br>Microsoft SQL Server: 2005 o posterior; todas las ediciones |[Sitio web][necec_website]<br>[Hoja de datos][necec_datasheet]<br>[Vídeo][necec_youtube]<br>[Descargar][necec_download]|
 |![Portworx][6] |**Portworx**<br>Portworx es la solución para contenedores con estado que se ejecutan en producción. Con Portworx, los usuarios pueden administrar cualquier base de datos o servicio con estado en infraestructuras de todo tipo mediante cualquier programador de contenedores, entre otros, Kubernetes, Mesosphere DC/OS y Docker Swarm. Portworx resuelve los cinco problemas más comunes que los equipos de DevOps encuentran al ejecutar bases de datos en contenedores y otros servicios con estado en producción: persistencia, alta disponibilidad, automatización de datos, compatibilidad con múltiples almacenes de datos e infraestructuras y seguridad.<br><br>SQL Server 2017 en Docker |[Sitio web][portworx_website]<br>[Documentación][portworx_docs]<br>[Vídeo][portworx_youtube]|

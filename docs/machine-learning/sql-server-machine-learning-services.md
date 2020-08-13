@@ -3,21 +3,21 @@ title: ¿Qué es SQL Server Machine Learning Services (Python y R)?
 titleSuffix: ''
 description: Machine Learning Services es una característica de SQL Server que proporciona la capacidad de ejecutar scripts de Python y R con datos relacionales. Para llevar a cabo análisis predictivo y aprendizaje automático, se pueden usar marcos y paquetes de código abierto, además de paquetes de Python y R de Microsoft. Los scripts se ejecutan en la base de datos sin mover los datos fuera de SQL Server o a través de la red. En este artículo se explican los conceptos básicos de SQL Server Machine Learning Services y cómo empezar a usarlo.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 04/16/2020
+ms.technology: machine-learning-services
+ms.date: 06/19/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8a3ce585c69cd0ee026d81c4bd1f75c235af4752
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: da72781fa2a2076d1cd2ff0bd9bb8b84635d4b68
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606597"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913681"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>¿Qué es SQL Server Machine Learning Services (Python y R)?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Machine Learning Services es una característica de SQL Server que proporciona la capacidad de ejecutar scripts de Python y R con datos relacionales. Para llevar a cabo análisis predictivo y aprendizaje automático, se pueden usar marcos y paquetes de código abierto, además de [paquetes de Python y R de Microsoft](#packages). Los scripts se ejecutan en la base de datos sin mover los datos fuera de SQL Server o a través de la red. En este artículo se explican los conceptos básicos de SQL Server Machine Learning Services y cómo empezar a usarlo.
 
@@ -111,6 +111,6 @@ Para obtener más información sobre los paquetes que se instalan con Machine Le
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-+ [Instalación de SQL Server Machine Learning Services](install/sql-machine-learning-services-windows-install.md) o [en Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)
++ [Instalación de SQL Server Machine Learning Services en Windows](install/sql-machine-learning-services-windows-install.md) o [en Linux](../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json)
 + [Tutoriales de Python para aprendizaje automático de SQL](tutorials/python-tutorials.md)
 + [Tutoriales de R para aprendizaje automático de SQL](tutorials/r-tutorials.md)

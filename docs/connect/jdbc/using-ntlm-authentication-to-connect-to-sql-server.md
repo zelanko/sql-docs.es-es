@@ -1,5 +1,6 @@
 ---
-title: Empleo de autenticación NTLM para conectar con SQL Server | Microsoft Docs
+title: Uso de autenticación NTLM para conectarse con SQL Server
+description: Obtenga información sobre cómo establecer una conexión de base de datos SQL mediante la autenticación NTLM con el controlador JDBC.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026100"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393153"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Empleo de autenticación NTLM para conectar con SQL Server
 
@@ -72,7 +73,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Un nombre principal de servicio (SPN) es el nombre por el que un cliente identifica de forma unívoca una instancia de un servicio.
 
-Puede especificar el SPN con la propiedad de conexión **serverSpn** o dejar que el controlador lo genere automáticamente (el valor predeterminado). Esta propiedad es en forma de: "MSSQLSvc/fqdn:port\@REALM" donde fqdn es el nombre de dominio completo, port es el número de puerto y el REALM es el dominio Kerberos de SQL Server en letras mayúsculas. La parte correspondiente al dominio Kerberos de esta propiedad es opcional, ya que el dominio Kerberos predeterminado es el mismo que el dominio Kerberos del servidor.
+Puede especificar el SPN con la propiedad de conexión **serverSpn** o dejar que el controlador lo genere automáticamente (el valor predeterminado). Esta propiedad tiene el formato "MSSQLSvc/fqdn:port\@REALM", donde fqdn es el nombre de dominio completo, port es el número de puerto y REALM es el dominio de SQL Server en letras mayúsculas. La parte correspondiente al dominio Kerberos de esta propiedad es opcional, ya que el dominio Kerberos predeterminado es el mismo que el dominio Kerberos del servidor.
 
 Por ejemplo, el SPN podría ser: "MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 

@@ -1,5 +1,6 @@
 ---
 title: Buscar en documentos mediante las listas de resultados
+description: Obtenga información sobre cómo buscar y reemplazar texto en todos los archivos de un proyecto, una solución o una carpeta del sistema de archivos. Las coincidencias aparecen en la ventana Resultados de la búsqueda 1 y puede hacer doble clic en una coincidencia para ver la línea que la contiene.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b06660f3bc175e9869d669e7996f31d1a704f9b3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa62cc76deab4f40f7db63ebd119fc9cd227c72e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253666"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122840"
 ---
 # <a name="search-documents-using-results-lists"></a>Buscar en documentos mediante las listas de resultados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Con el cuadro de diálogo **Buscar y reemplazar** es posible buscar y reemplazar texto en todos los archivos de un proyecto o una solución, o en una carpeta del sistema de archivos, aunque no estén abiertos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Las coincidencias de las búsquedas realizadas con el cuadro de diálogo **Buscar y reemplazar** aparecen en las ventanas Resultados de la búsqueda 1 y Resultados de la búsqueda 2, que permiten ver el texto exacto de la línea que contiene la coincidencia.  
   
 ### <a name="to-search-in-multiple-files"></a>Para buscar en varios archivos  

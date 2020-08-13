@@ -1,5 +1,6 @@
 ---
 title: Administrar orígenes de datos de informe | Microsoft Docs
+description: Obtenga información sobre la administración de orígenes de datos de informe, incluida la forma de conectarse a los orígenes de datos externos a los que se hace referencia en un informe.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 68125acb2c810e7463c8612936e545026ea94d69
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a433169d694f9f2d71a049c906267a64b6c0756
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190814"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458262"
 ---
 # <a name="manage-report-data-sources"></a>Administrar orígenes de datos de informe
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los informes, los modelos de informe y las suscripciones controladas por datos recuperan datos desde orígenes de datos externos. Para conectarse a un origen de datos externo, un servidor de informes utiliza la información de conexión de origen de datos cuya definición o referencia se halla en el informe, el modelo o la suscripción. Las propiedades de conexión de origen de datos siempre se definen con el informe o modelo al crearlo, pero se pueden administrar independientemente una vez que el informe o el modelo se publican en un servidor de informes.  

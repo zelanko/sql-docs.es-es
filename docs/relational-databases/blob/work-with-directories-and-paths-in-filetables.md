@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28c1d78a4def2b3549957715c754e55b0d91e743
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765463"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246414"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabajar con directorios y rutas de acceso de FileTables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,9 +93,8 @@ GO
 ##  <a name="the-is_directory-column-in-the-filetable-schema"></a><a name="is_directory"></a> Columna is_directory del esquema de la FileTable  
  En la siguiente tabla se describe la interacción entre la columna **is_directory** y la columna **file_stream** que contiene los datos FILESTREAM de un objeto FileTable.  
   
-||||  
-|-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**Comportamiento**|  
+|Valor is_directory|Valor file_stream|Comportamiento|  
+|-|-|-|    
 |FALSE|NULL|Esta combinación no es válida y la detectará una restricción definida por el sistema.|  
 |FALSE|\<value>|El elemento representa un archivo.|  
 |TRUE|NULL|El elemento representa un directorio.|  

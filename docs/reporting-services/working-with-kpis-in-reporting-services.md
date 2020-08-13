@@ -1,5 +1,6 @@
 ---
 title: Uso de los KPI en Reporting Services | Microsoft Docs
+description: Obtenga información sobre cómo puede medir fácilmente el estado y el rendimiento mediante el uso de KPI en SQL Server Reporting Services.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b92f19c74e5b5e3215836e174bf895f7cb61c36b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68329363"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247444"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
 
@@ -57,7 +58,7 @@ Puede asignar valores estáticos o utilizar los datos de un conjunto de datos co
 | Formato del valor | Se utiliza para cambiar el formato del valor que se muestra. |
 | Value | El valor para mostrar del KPI. |
 | Objetivo | Se utiliza como comparación con un valor numérico y se muestra en forma de diferencia porcentual. |
-| Status | Valor numérico que se usa para determinar el color del icono de KPI. Los valores válidos son 1 (verde), 0 (ámbar) y -1 (rojo). |
+| Estado | Valor numérico que se usa para determinar el color del icono de KPI. Los valores válidos son 1 (verde), 0 (ámbar) y -1 (rojo). |
 | Conjunto de tendencias | Valores numéricos separados por comas usados para la visualización de gráficos. También puede establecerse en una columna de un conjunto de datos con valores que representen la tendencia. |
 | Contenido relacionado | La capacidad de establecer un vínculo detallado. Este vínculo puede ser un informe móvil publicado en el portal o una dirección URL personalizada. |
   

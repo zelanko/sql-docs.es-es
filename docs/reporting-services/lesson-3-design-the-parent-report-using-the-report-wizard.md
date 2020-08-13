@@ -1,5 +1,6 @@
 ---
 title: 'Lección 3: Diseñar el informe primario mediante el Asistente para informes | Microsoft Docs'
+description: Obtenga información sobre cómo diseñar el informe primario mediante el Asistente para informes del Diseñador de informes después de crear una conexión de datos y una tabla de datos para el informe primario.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 2f69dcd3-cd6d-45a9-a62a-ba6f5f3179d8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad06a5a76344348c71838873edcc490c75b7b2e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74b71002f5f84f4d9b80966f6b44721b9942c8b4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651281"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247534"
 ---
-# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lección 3: Diseñar el informe primario usando el Asistente para informes
+# <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lección 3: Diseño del informe primario usando el Asistente para informes
 Después de crear una conexión de datos y una tabla de datos para el informe primario, el paso siguiente consiste en diseñar dicho informe usando el Asistente para informes del Diseñador de informes. Para más información sobre el Diseñador de informes, vea [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-parent-report-using-the-report-wizard"></a>Para diseñar el informe primario usando el Asistente para informes  
@@ -47,7 +48,7 @@ Después de crear una conexión de datos y una tabla de datos para el informe pr
 8.  Guarde el archivo .rdlc.  
   
 ## <a name="next-task"></a>Tarea siguiente  
-Ha diseñado correctamente el informe primario usando el Asistente para informes. A continuación, creará una conexión de datos y una tabla de datos para el informe secundario. Consulte la [Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+Ha diseñado correctamente el informe primario usando el Asistente para informes. A continuación, creará una conexión de datos y una tabla de datos para el informe secundario. Consulte [Lección 4: Definición de una conexión de datos y una tabla de datos para el informe secundario](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
   
   

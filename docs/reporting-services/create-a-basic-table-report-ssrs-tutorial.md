@@ -1,5 +1,6 @@
 ---
 title: Crear un informe de tabla básico (Tutorial de SSRS) | Microsoft Docs
+description: Use la herramienta Diseñador de informes de Visual Studio o SQL Server Data Tools (SSDT) y, después, cree un informe paginado de SQL Server Reporting Services (SSRS).
 ms.date: 04/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1549d3ba775d598902fd0fd4b5cc33bab2f54de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65103314"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245144"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Crear un informe de tabla básico (Tutorial de SSRS)
 
@@ -49,17 +50,17 @@ También debe disponer de permisos de solo lectura para recuperar datos de la ba
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Lección 1: Crear un proyecto de servidor de informes &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)
+[Lección 1: Creación de un proyecto de servidor de informes &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)
 
-[Lección 2: Especificar información de conexión &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
+[Lección 2: Especificación de información de conexión &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)
 
-[Lección 3: Definir un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
+[Lección 3: Definición de un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
 
-[Lección 4: Agregar una tabla al informe &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
+[Lección 4: Adición de una tabla al informe &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)
 
-[Lección 5: Aplicar formato a un informe &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
+[Lección 5: Aplicación de formato a un informe &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)
 
-[Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
+[Lección 6: Adición de grupos y totales &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)
 
 ## <a name="see-also"></a>Consulte también
 

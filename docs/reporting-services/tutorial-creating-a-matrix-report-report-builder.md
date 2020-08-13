@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Crear un informe de matriz (Generador de informes) | Microsoft Docs'
+description: Obtenga información sobre cómo crear un informe paginado de Reporting Services con una matriz de datos de ventas de ejemplo en grupos anidados de filas y columnas.
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4891a25815d1efb14f230cbab9bcaaa75cad0a16
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63294663"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247454"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz (Generador de informes)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz [Generador de informes]
 Este tutorial le enseña a crear un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con una matriz de datos de ventas de ejemplo en los grupos anidados de filas y columnas. 
 
 También creará un grupo de columnas adyacente, dará formato a columnas y girará el texto. En la siguiente ilustración se muestra un informe similar al que creará.  
@@ -49,7 +50,7 @@ En esta sección, elegirá un origen de datos compartido, creará un conjunto de
   
 5.  Haga clic en **Next**.  
   
-6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para más información sobre cómo crear un origen de datos insertado, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para obtener más información sobre la creación de un origen de datos incrustados, vea [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Haga clic en **Next**.  
   

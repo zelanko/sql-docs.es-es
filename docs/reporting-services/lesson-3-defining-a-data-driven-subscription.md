@@ -1,5 +1,6 @@
 ---
 title: 'Lección 3: Definir una suscripción controlada por datos | Microsoft Docs'
+description: Use las páginas de suscripción controladas por datos del portal web de Reporting Services para conectarse a un origen de datos de suscripción y crear una consulta que recupera datos de suscripción.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 332a1cbcda7bee87c16167179ef488fe02334474
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826856"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247184"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Lección 3: Definir una suscripción controlada por datos
 En esta lección del tutorial [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)], usará las páginas de suscripción controlada por datos de los portales web de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para conectarse a un origen de datos de suscripción, crear una consulta que recupere datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  
   
 > [!NOTE]  
 > Antes de empezar, compruebe que el servicio del **Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]** esté en ejecución. Si no es así, no podrá guardar la suscripción.  Un método para comprobarlo es abrir el [Administrador de configuración de SQL Server](../relational-databases/sql-server-configuration-manager.md).
-En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, consulte [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+En esta lección se supone que completó la lección 1 y la lección 2, y que el origen de datos del informe usa credenciales almacenadas.  Para obtener más información, vea [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
   
 ## <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Iniciar el Asistente para suscripciones controladas por datos  
   
@@ -86,7 +87,7 @@ Parámetro  |Origen del valor  | Valor/campo
 **Formato de representación** | Obtener valor de conjunto de datos | Formato
 **Modo de escritura**| Escribir valor| Incremento automático    
 **Extensión de archivo** |Escribir valor |True
-**Nombre de usuario** | Escribir valor | Escriba su cuenta de usuario de dominio. Escríbalo con este formato: \<dominio>\\\<cuenta>. La cuenta de usuario tiene que disponer de permisos en la ruta de acceso que ha configurado. 
+**Nombre de usuario** | Escribir valor | Escriba su cuenta de usuario de dominio. Escríbalo en este formato: \<domain>\\\<account>. La cuenta de usuario tiene que disponer de permisos en la ruta de acceso que ha configurado. 
 **Contraseña** | Escribir valor | Escribir la contraseña
 **Usar la cuenta de recurso compartido de archivos** | Escribir valor | False
 

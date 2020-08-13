@@ -1,5 +1,6 @@
 ---
 title: Administrar mis alertas de datos en el Administrador de alertas de datos | Microsoft Docs
+description: Aprenda a ver una lista de las alertas de datos que se han creado e información sobre las alertas en el Administrador de alertas de datos.
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9feef3af6a4506f3daa6fab793a3c76a5dd84cae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd2a6edd53f73eeac5b2033ad399f0a46bee66ab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581040"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245079"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Administrar mis alertas de datos en el Administrador de alertas de datos
 

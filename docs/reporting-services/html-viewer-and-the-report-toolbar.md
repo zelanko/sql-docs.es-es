@@ -1,5 +1,6 @@
 ---
 title: Visor HTML y barra de herramientas de informe | Microsoft Docs
+description: Obtenga información sobre el Visor HTML y la barra de herramientas de informes, y cómo puede ver informes a petición a medida que se solicitan desde el servidor de informes.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503072"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247204"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visor HTML y la barra de herramientas del informe
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona un Visor HTML que se usa para mostrar informes a petición conforme se solicitan del servidor de informes. El Visor HTML ofrece un marco para ver informes en HTML. Incluye una barra de herramientas de informe, una sección de parámetros, una sección de credenciales y un mapa del documento. La barra de herramientas de informe del Visor HTML incluye características que se pueden usar para trabajar con un informe, incluidas las opciones de exportación para verlo con formatos distintos de HTML. La sección de parámetros y el mapa del documento solamente aparecen cuando se abren informes configurados para usar parámetros y un control de mapa de documento.  

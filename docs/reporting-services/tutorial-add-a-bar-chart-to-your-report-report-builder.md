@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Agregar un gráfico de barras a un informe (Generador de informes) | Microsoft Docs'
+description: Aprenda a crear un informe paginado de Reporting Services con un gráfico de columnas en el que se muestre una serie como un conjunto de barras verticales agrupadas por categoría.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d650fd4b93df758ccaa39d716cf122c66adf7ab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041191"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245702"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Incorporación de un gráfico de barras a un informe (Generador de informes)
 En este tutorial, usará un asistente en [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] para crear un gráfico de barras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Después, agregará un filtro y mejorará el gráfico. 
 
 Un gráfico de barras muestra los datos de categoría horizontalmente. Esto puede ayudar a:  
@@ -93,7 +94,7 @@ En el que puede crear un conjunto de datos incrustado, elegir un origen de datos
   
 2.  Haga clic en **Barras**y después en **Siguiente**.  
   
-    En la página **Organizar campos del gráfico** , hay cuatro campos en el panel **Campos disponibles** : FirstName, LastName, SalesYear2015 y SalesYear2014.  
+    En la página **Organizar campos del gráfico** hay cuatro campos en el panel **Campos disponibles**: FirstName, LastName, SalesYear2015 y SalesYear2014.  
   
 3.  Arrastre LastName hasta el panel Categorías.  
   
@@ -226,7 +227,7 @@ De forma predeterminada, el eje horizontal muestra los valores en un formato gen
   
 7.  En el cuadro **Título del eje** , escriba **Ventas en miles** y presione Entrar.  
 
-    >**Nota:** mientras escribe, el cuadro Título del eje aparece en el eje vertical. Pero cuando presione Entrar, pasa al eje horizontal.
+    >**Nota:** Mientras escribe, el cuadro Título del eje aparece en el eje vertical. Pero cuando presione Entrar, pasa al eje horizontal.
   
 9. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   

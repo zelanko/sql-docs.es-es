@@ -1,5 +1,6 @@
 ---
 title: 'Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario | Microsoft Docs'
+description: Aprenda a usar Reporting Services para crear una conexión de datos y una tabla de datos para el informe secundario.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651365"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245124"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lección 4: Definición de una conexión de datos y una tabla de datos para el informe secundario
 Después de diseñar el informe primario, el paso siguiente es crear una conexión de datos y una tabla de datos para el informe secundario. En este tutorial, la conexión de datos se produce con la base de datos AdventureWorks2014.  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>Para definir una conexión de datos y una DataTable agregando un DataSet (para el informe secundario)  
@@ -68,6 +69,6 @@ Después de diseñar el informe primario, el paso siguiente es crear una conexi�
 12. Para obtener una vista previa de los datos, seleccione **Vista previa de los datos** en el menú **Datos** y seleccione **Vista previa**.  
   
 ## <a name="next-task"></a>Tarea siguiente  
-Ha creado correctamente una conexión de datos y una tabla de datos para el informe secundario. Después, diseñará el informe secundario usando el Asistente para informes. Consulte [Lección 5: Diseñar el informe secundario usando el Asistente para informes](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
+Ha creado correctamente una conexión de datos y una tabla de datos para el informe secundario. Después, diseñará el informe secundario usando el Asistente para informes. Consulte [Lección 5: Diseño del informe secundario mediante el Asistente para informes](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
   
 

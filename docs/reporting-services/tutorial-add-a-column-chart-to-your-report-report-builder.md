@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes) | Microsoft Docs'
+description: Aprenda a crear un informe paginado de Reporting Services con un gráfico de columnas en el que se muestre una serie como un conjunto de barras verticales agrupadas por categoría.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041397"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245692"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
 En este tutorial, creará un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un gráfico de columnas que muestra una serie como un conjunto de barras verticales agrupadas por categoría. 
@@ -135,7 +136,7 @@ La fecha se mostrará en el formato de fecha que haya seleccionado. El gráfico 
   
 Puede personalizar la presentación de las etiquetas girándolas y especificando el intervalo.  
   
-## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Girar las etiquetas de eje en el eje horizontal  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. Girar las etiquetas del eje en el eje horizontal  
   
 1.  Cambie a la vista de diseño del informe.  
   

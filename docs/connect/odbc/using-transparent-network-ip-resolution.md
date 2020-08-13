@@ -11,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a003b4817868516c6acfac10df80cafdf044c01
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 12a8a151902bd4f191fbc79f165f936e991a0226
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922293"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245004"
 ---
-# <a name="using-transparent-network-ip-resolution"></a>Uso de resolución de IP de red transparente
+# <a name="using-transparent-network-ip-resolution-with-the-odbc-driver"></a>Uso de la resolución de IP de red transparente con el controlador ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 TransparentNetworkIPResolution es una revisión de la característica existente MultiSubnetFailover, disponible en Microsoft ODBC Driver 13.1 for SQL Server, que afecta a la secuencia de conexión del controlador en el caso donde la primera IP resuelta del nombre de host no responde y hay varias direcciones IP asociadas al nombre de host. Interactúa con MultiSubnetFailover para proporcionar las tres secuencias de conexión siguientes:

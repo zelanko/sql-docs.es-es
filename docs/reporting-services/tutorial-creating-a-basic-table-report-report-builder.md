@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Crear un informe de tabla básico (Generador de informes) | Microsoft Docs'
+description: Aprenda a usar un asistente para crear un informe de tabla básico basado en datos de ventas de ejemplo en el Generador de informes.
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bffaef60422d47484968ad30b5bc8d625549a74e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041211"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247484"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
 Este tutorial muestra cómo crear un informe de tabla básico basado en datos de ventas de ejemplo. En la siguiente ilustración se muestra el informe que va a crear.  
@@ -56,7 +57,7 @@ En este tutorial, utilizará un origen del datos incrustado. Para obtener más i
   
 4.  En **Seleccionar un tipo de conexión**, compruebe que está seleccionado **Microsoft SQL Server** .  
   
-5.  En **Cadena de conexión**, escriba el siguiente texto, donde \<nombreServidor> es el nombre de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
+5.  En **Cadena de conexión**, escriba el texto siguiente, donde \<servername> es el nombre de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
     ```  
     Data Source=<servername>  

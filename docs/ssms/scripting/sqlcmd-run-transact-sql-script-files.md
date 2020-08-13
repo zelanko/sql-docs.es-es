@@ -1,5 +1,6 @@
 ---
 title: Ejecutar archivos de scripts Transact-SQL mediante sqlcmd
+description: Aprenda a usar sqlcmd para ejecutar un archivo de script de Transact-SQL. Puede contener instrucciones de Transact-SQL, comandos de sqlcmd y variables de scripting.
 ms.custom: seo-lt-2019
 ms.date: 07/15/2016
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed85470d8e054ba60ae0b2525f773f83d70d0da3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 560eb5c224c700d5936c53c888af6af4eae08c6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253210"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247414"
 ---
 # <a name="sqlcmd---run-transact-sql-script-files"></a>sqlcmd - Ejecutar archivos de scripts Transact-SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  Use **sqlcmd** para ejecutar un archivo de script de Transact-SQL. Un archivo de script de Transact-SQL es un archivo de texto que puede incluir una combinación de instrucciones Transact-SQL, comandos **sqlcmd** y variables de scripting.  
 
 ## <a name="create-a-script-file"></a>Crear un archivo de script  

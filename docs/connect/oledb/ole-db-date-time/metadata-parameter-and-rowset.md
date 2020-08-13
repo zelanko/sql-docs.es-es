@@ -1,5 +1,5 @@
 ---
-title: Metadatos de parámetros y conjuntos de filas | Microsoft Docs
+title: Parámetros y metadatos de conjuntos de filas (controlador OLE DB)
 description: Parámetros y metadatos de conjuntos de filas
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - metadata [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a3356134c542cf90c194924a8fbfc44b357c7123
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995098"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244909"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadatos: Parámetro y conjunto de filas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

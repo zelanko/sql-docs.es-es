@@ -1,6 +1,6 @@
 ---
 title: 'Características compatibles con las distintas ediciones: SQL Server Reporting Services | Microsoft Docs'
-description: En este tema se explican las características de SQL Server Reporting Services (SSRS) admitidas en las diferentes ediciones de SQL Server. La edición de evaluación de SQL Server está disponible durante un período de prueba de 180 días.
+description: Obtenga información sobre las características de SQL Server Reporting Services (SSRS) admitidas en las diferentes ediciones de SQL Server.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 12/16/2019
-ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbb3196349c648b955e5d27bf1d5fcfdadb9085f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76516606"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246664"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-editions"></a>Características de SQL Server Reporting Services admitidas en las ediciones
 

@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a13f70bfffbdbeba0ba08882c4dcc9b53aaa69
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668879"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247084"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,7 +195,7 @@ END
   
  Los procedimientos almacenados compilados de forma nativa se compilan en el momento de su creación, mientras que los procedimientos almacenados interpretados se compilan la primera vez que se ejecutan. (Una parte de la compilación, en particular el análisis y la algebrización, tienen lugar en la creación. Sin embargo, para los procedimientos almacenados interpretados, la optimización de los planes de consulta tiene lugar en la primera ejecución). La lógica de la recompilación es similar. Los procedimientos almacenados compilados de forma nativa se recompilan en la primera ejecución del procedimiento si el servidor se reinicia. Los procedimientos almacenados interpretados se recompilan si el plan ya no está en la memoria caché de planes. En la tabla siguiente se resumen los casos de compilación y de recompilación tanto para los procedimientos almacenados interpretados como para los compilados de forma nativa:  
   
-||Compilado de forma nativa|Acceso de|  
+|Tipo de compilación|Compilado de forma nativa|Acceso de|  
 |-|-----------------------|-----------------|  
 |Compilación inicial|En el momento de la creación.|En la primera ejecución.|  
 |Recompilación automática|En la primera ejecución del procedimiento después del reinicio de la base de datos o del servidor.|Al reiniciar el servidor. O bien, se expulsa de la memoria caché de planes, generalmente según los cambios de esquema o de estadísticas, o por presión en la memoria.|  

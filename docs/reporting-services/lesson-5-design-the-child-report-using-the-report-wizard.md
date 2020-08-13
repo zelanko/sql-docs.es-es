@@ -1,5 +1,6 @@
 ---
 title: 'Lección 5: Diseñar el informe secundario usando el Asistente para informes | Microsoft Docs'
+description: Obtenga información sobre cómo diseñar el informe secundario mediante el Asistente para informes del Diseñador de informes después de crear una conexión de datos y una tabla de datos para el informe secundario.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cb9555522638ab6c8132f3422c7f0ca30928f893
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512649"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246260"
 ---
-# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lección 5: Diseñar el informe secundario usando el Asistente para informes
+# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lección 5: Diseño del informe secundario usando el Asistente para informes
 Después de crear una conexión de datos y una tabla de datos para el informe secundario, el paso siguiente consiste en diseñar dicho informe usando el Asistente para informes del Diseñador de informes. Para más información sobre el Diseñador de informes, vea [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-child-report-using-the-report-wizard"></a>Para diseñar el informe secundario usando el Asistente para informes  
@@ -38,7 +39,7 @@ Después de crear una conexión de datos y una tabla de datos para el informe se
   
     1.  Arrastre **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**y **StockedQty** desde **Campos disponibles** hasta el cuadro **Valores** .  
   
-    2.  Seleccione la flecha situada junto a **Sum(ProductID)** , **Sum(PurchaseOrderID)** , **Sum(PurchaseOrderDetailID)** , **Sum(OrderQty)** , **Sum(ReceivedQty)** , **Sum(RejectedQty)** y **Sum(StockedQty)** y desactive la selección de **Suma** .  
+    2.  Seleccione la flecha situada junto a **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)** y **Sum(StockedQty)** y desactive la selección de **Suma** .  
   
 7.  Seleccione **Siguiente** dos veces y, después, haga clic en **Finalizar** para cerrar el **Asistente para informes**.  
   
@@ -57,7 +58,7 @@ Después de crear una conexión de datos y una tabla de datos para el informe se
 9. Guarde el archivo .rdlc.  
   
 ## <a name="next-task"></a>Tarea siguiente  
-Ha diseñado correctamente el informe secundario usando el Asistente para informes. Luego, agregará un control ReportViewer a la aplicación de sitio Web. Vea [Lección 6: agregar un control ReportViewer a la aplicación](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md).  
+Ha diseñado correctamente el informe secundario usando el Asistente para informes. Luego, agregará un control ReportViewer a la aplicación de sitio Web. Consulte [Lección 6: Adición de un control ReportViewer a la aplicación](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md).  
   
   
   

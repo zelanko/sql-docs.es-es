@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Crear un informe de forma libre (Generador de informes) | Microsoft Docs'
+description: Aprenda a crear un informe paginado que actúe como un boletín y donde cada página muestre texto estático, objetos visuales de resumen y datos de ventas de ejemplo detallados.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b189c494f887faca2b6d3d4bb00253992470132
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499561"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247464"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Crear un informe de forma libre (Generador de informes)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Creación de un informe de forma libre (Report Builder)
 En este tutorial, creará un informe paginado que actúa como un boletín. Cada página muestra texto estático, objetos visuales de resumen y datos de ventas de ejemplo detallados.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -48,13 +49,13 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
 1.  En el panel Datos de informe, haga clic en **Nuevo** > **Origen de datos**.  
   
-2.  En el cuadro **Nombre** , escriba: **ListDataSource**.  
+2.  En el cuadro **Nombre**, escriba: **ListDataSource**  
   
 3.  Haga clic en **Usar una conexión incrustada en mi informe**.  
   
-4.  Compruebe que el tipo de conexión es Microsoft SQL Server y luego en el cuadro **Cadena de conexión**, escriba: **Origen de datos = \<nombre de servidor>** .  
+4.  Compruebe que el tipo de conexión sea Microsoft SQL Server y, luego, en el cuadro **Cadena de conexión** , escriba: **Origen de datos = \<servername>**  
   
-    **\<nombre de servidor>** , por ejemplo Report001, especifica un equipo en el que se ha instalado una instancia del motor de base de datos de SQL Server. Dado que los datos del informe no se extraen de una base de datos de SQL Server, no necesita incluir el nombre de una base de datos. Para analizar la consulta se usa la base de datos predeterminada en el servidor especificado.  
+    **\<servername>** , por ejemplo Informe001, especifica un equipo en el que se ha instalado una instancia del motor de base de datos de SQL Server. Dado que los datos del informe no se extraen de una base de datos de SQL Server, no necesita incluir el nombre de una base de datos. Para analizar la consulta se usa la base de datos predeterminada en el servidor especificado.  
   
 5.  Haga clic en **Credenciales**e introduzca las credenciales necesarias para conectarse a la instancia del Motor de base de datos de SQL Server.  
   
@@ -64,7 +65,7 @@ Para obtener más información sobre los requisitos, consulte [Requisitos previo
   
 1.  En el panel Datos de informe, haga clic en **Nuevo** > **Conjunto de datos**.  
   
-2.  En el cuadro **Nombre** , escriba: **ListDataset**.  
+2.  En el cuadro **Nombre**, escriba: **ListDataset**.  
   
 3.  Haga clic en **Usar un conjunto de datos insertado en el informe**y compruebe que el origen de datos es **ListDataSource**.  
   

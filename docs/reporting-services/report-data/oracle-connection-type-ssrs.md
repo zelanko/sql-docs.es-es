@@ -1,5 +1,6 @@
 ---
-title: Tipo de conexión de Oracle (Generador de informes y Power BI Report Server) | Microsoft Docs
+title: Tipo de conexión de Oracle (SSRS y Power BI Report Server)
+description: Use la información de este artículo sobre el tipo de conexión de Oracle para obtener información sobre cómo crear un origen de datos.
 ms.date: 03/12/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 188e054487099e8db96ded6066b71ad09a49c762
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 32972e17c7dee83c1099cf8826eefe874db9d7dd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342730"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246484"
 ---
-# <a name="oracle-connection-type-report-builder--power-bi-report-server--microsoft-docs"></a>Tipo de conexión de Oracle (Generador de informes y Power BI Report Server) | Microsoft Docs
+# <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Tipo de conexión de Oracle (SSRS y Power BI Report Server)
 
 Para utilizar en el informe los datos de una base de datos de Oracle, debe tener un conjunto de datos basado en un origen de datos de informe de tipo Oracle. Este tipo de origen de datos integrado usa el proveedor de datos de Oracle directamente y requiere un componente de software del cliente Oracle. En este artículo se explica cómo descargar e instalar controladores para Reporting Services, Power BI Report Server, Generador de informes y Power BI Desktop.
 

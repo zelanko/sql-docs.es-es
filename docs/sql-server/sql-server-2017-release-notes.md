@@ -5,21 +5,21 @@ ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 33d6fd836bd4676e9f178fb5a3c59cc9fba67f80
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001135"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245609"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de la versión de SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 En este artículo se describen las limitaciones y los problemas de SQL Server 2017. Para obtener información relacionada, consulte:
 - [Novedades de SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Notas de la versión de SQL Server en Linux](../linux/sql-server-linux-release-notes.md)
@@ -74,7 +74,7 @@ No hay notas de la versión de SQL Server en Windows relacionadas con esta versi
 - **Problema e impacto en el cliente:** Se cambió el nombre del parámetro *runincluster* del procedimiento almacenado **[catálogo].[create_execution]** a *runinscaleout* para mejorar la coherencia y la legibilidad.
 - **Solución alternativa:** Si tiene scripts existentes para ejecutar paquetes en Escalabilidad horizontal, debe cambiar el nombre del parámetro de *runincluster* a *runinscaleout* para que los scripts funcionen en RC1.
 
-- **Problema e impacto en el cliente:** SQL Server Management Studio (SSMS) 17.1 y versiones anteriores no pueden desencadenar la ejecución de paquetes en Escalabilidad horizontal en RC1. El mensaje de error es este: " *@runincluster* no es un parámetro para el procedimiento **create_execution**". Este problema se corrige en la versión siguiente de SSMS, la versión 17.2. La versión 17.2 y versiones posteriores de SSMS admiten el nuevo nombre de parámetro y la ejecución de paquetes en Escalabilidad horizontal. 
+- **Problema e impacto en el cliente:** SQL Server Management Studio (SSMS) 17.1 y versiones anteriores no pueden desencadenar la ejecución de paquetes en Escalabilidad horizontal en RC1. El mensaje de error es: " *\@runincluster* no es un parámetro para el procedimiento **create_execution**". Este problema se corrige en la versión siguiente de SSMS, la versión 17.2. La versión 17.2 y versiones posteriores de SSMS admiten el nuevo nombre de parámetro y la ejecución de paquetes en Escalabilidad horizontal. 
 - **Solución alternativa:** hasta que esté disponible la versión 17.2 de SSMS, siga estos pasos:
   1. Utilice la versión existente de SSMS para generar el script de ejecución de paquetes.
   2. En el script, cambie el nombre del parámetro *runincluster* a *runinscaleout*.
@@ -150,7 +150,7 @@ No hay notas de la versión de SQL Server en Windows relacionadas con esta versi
 
 ## <a name="more-information"></a>Más información
 - [notas de la versión de SQL Server Reporting Services](../reporting-services/release-notes-reporting-services.md).
-- [Problemas conocidos de Machine Learning Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
+- [Problemas conocidos de Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
 - [Vínculos e información del Centro de actualizaciones de SQL Server sobre todas las versiones compatibles](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

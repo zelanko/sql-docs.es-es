@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2964e02ad49ef21b61949da7eec2f48ede553b02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5f8da43f32319c45c94a8a6f82b012c4460e8e1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728440"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246390"
 ---
 # <a name="master-database"></a>Base de datos maestra
 
@@ -87,6 +87,7 @@ Para obtener una descripción de estas opciones de la base de datos, vea [ALTER 
 Las siguientes operaciones no se pueden realizar en la base de datos **maestra** :  
   
 - Agregar archivos o grupos de archivos.  
+- Copias de seguridad; solo se puede realizar una copia de seguridad completa de la base de datos maestra.
 - Cambiar intercalaciones. La intercalación predeterminada es la intercalación de servidor.  
 - Cambiar el propietario de la base de datos. **master** es propiedad de **sa**.  
 - Crear un catálogo de texto completo o un índice de texto completo.  

@@ -1,5 +1,6 @@
 ---
 title: Planeación del diseño y la implementación de informes | Reporting Services | Microsoft Docs
+description: Obtenga información sobre cómo planear un entorno de servidor de informes y creación de informes que operen de forma conjunta en Reporting Services.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581249"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247544"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planeación del diseño y la implementación de informes | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios enfoques para la creación e implementación de informes paginados. Sepa cómo planear un entorno de servidor de informes y creación de informes que operen en conjunto.
@@ -46,19 +47,19 @@ En este tema se proporciona información general sobre la compatibilidad de defi
 ##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Compatibilidad del servidor de informes y el esquema RDL  
  Un archivo de definición de informe se puede implementar en un servidor de informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] de las maneras siguientes:  
   
--   **Diseñador de informes** : implemente un informe desde el Diseñador de informes de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Diseñador de informes:** implemente un informe desde el Diseñador de informes de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Generador de informes** : guarde un informe en el servidor de informes desde el Generador de informes.  
+-   **Report Builder:** guarde un informe en el servidor de informes desde Report Builder.  
   
 -   **Portal web:** cargue un informe en un servidor de informes en modo nativo desde el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint** : cargue un informe en un sitio de SharePoint que esté configurado con un servidor de informes en modo de SharePoint.  
+-   **SharePoint:** cargue un informe en un sitio de SharePoint que esté configurado con un servidor de informes en modo de SharePoint.  
 
 ::: moniker-end
   
--   **Mediante programación** : publique un informe mediante programación usando las interfaces de API SOAP en un servidor de informes. Para obtener más información, vea [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **Mediante programación:** publique un informe mediante programación usando las interfaces de API SOAP en un servidor de informes. Para obtener más información, vea [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  En la tabla siguiente se indica la versión de esquema rdl admitida según la versión del servidor de informes.  
   

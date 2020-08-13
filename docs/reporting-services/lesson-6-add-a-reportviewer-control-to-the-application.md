@@ -1,5 +1,6 @@
 ---
 title: 'Lección 6: Agregar un control ReportViewer a la aplicación | Microsoft Docs'
+description: Aprenda a agregar un control ReportViewer a la aplicación de sitio web después de diseñar el informe secundario con el Asistente de informes.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b13a3653b19d4079a47941a0bb05faa2821c823
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4090a01d4aa50fcbbfa64182dcd23a3e01c50e78
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512540"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245104"
 ---
-# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lección 6: agregar un control ReportViewer a la aplicación
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Lección 6: Adición de un control ReportViewer a la aplicación
 Después de diseñar el informe secundario con el Asistente de informes, el paso siguiente consiste en agregar un control ReportViewer a la aplicación del sitio Web. Si usa el sitio web de informes ASP.NET, habrá agregado el control ReportViewer a la página default.aspx.   
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>Para agregar un control ReportViewer a la aplicación  
@@ -37,6 +38,6 @@ Después de diseñar el informe secundario con el Asistente de informes, el paso
     Se compila el informe y errores como un error de sintaxis en una expresión de informe aparecen en el área de **Lista de errores** . Haga clic en **Lista de errores** en la parte inferior de la ventana de Visual Studio para mostrar el área de **Lista de errores** .  
   
 ## <a name="next-task"></a>Tarea siguiente  
-Ha agregado correctamente un control ReportViewer a la aplicación del sitio Web. Después, agregará una acción de obtención de detalles en el informe primario. Consulte [Lección 7: Agregar una acción de obtención de detalles en el informe primario](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md).  
+Ha agregado correctamente un control ReportViewer a la aplicación del sitio Web. Después, agregará una acción de obtención de detalles en el informe primario. Vea [Lección 7: Incorporación de una acción de obtención de detalles en el informe primario](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md).  
   
 

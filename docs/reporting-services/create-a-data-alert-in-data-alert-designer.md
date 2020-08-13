@@ -1,5 +1,6 @@
 ---
 title: Crear una alerta de datos en el Diseñador de alertas de datos | Microsoft Docs
+description: Aprenda a crear definiciones de alertas de datos en el Diseñador de alertas de datos. Además, obtenga información sobre cómo editar las alertas y guardar las modificaciones cuando haya terminado.
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a7ef1c053dbf22bc1717a47d9a662d1d29fd55f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571577"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247571"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
 
@@ -114,7 +115,7 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
   
 20. Si lo desea, en el cuadro de texto **Asunto** , actualice la línea de asunto del mensaje de alerta.  
   
-     El asunto predeterminado es **Alerta de datos para \<nombre de alerta>** .  
+     El asunto predeterminado es **Alerta de datos para \<data alert name>** .  
   
 21. Si lo desea, en el cuadro de texto **Descripción** , escriba una descripción del mensaje de alerta.  
   

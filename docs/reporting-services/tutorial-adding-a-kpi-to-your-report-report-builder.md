@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Agregar un KPI a un informe (Generador de informes) | Microsoft Docs'
+description: Obtenga información sobre cómo agregar un indicador clave de rendimiento (KPI) a un informe paginado de Reporting Services en el Generador de informes.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3446eb921f0a731a571f2ad5e7a6f275612f2776
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041887"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245652"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes y SSRS)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], agregará un indicador clave de rendimiento (KPI) a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
 
 Los KPI son valores medibles con significado empresarial. En este escenario, el resumen de ventas por subcategorías de producto es el KPI. El estado actual del KPI se muestra con colores, medidores e indicadores.
@@ -51,7 +52,7 @@ En esta sección, elija un origen de datos compartido, cree un conjunto de datos
   
 5.  Haga clic en **Next**.  
   
-6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para más información, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para más información, consulte el [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Haga clic en **Next**.  
   

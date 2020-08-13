@@ -1,5 +1,6 @@
 ---
 title: Modificar una alerta de datos en el Diseñador de alertas | Microsoft Docs
+description: Aprenda a editar una alerta de datos. Puede editar las alertas de datos si accede a ellas desde el Administrador de alertas de datos.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c3a2f7a889d856e589a3471eadc74f5bc9010c5d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 77ea4640834cff6b2ca28127aef55e14de94fe97
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571518"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245171"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>Modificar una alerta de datos en el Diseñador de alertas
 

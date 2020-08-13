@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Agregar un gráfico circular a un informe (Generador de informes) | Microsoft Docs'
+description: Aprenda a crear un gráfico circular en un informe paginado de Reporting Services, agregar porcentajes y combinar sectores pequeños en uno solo.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041338"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245672"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico circular a un informe (Generador de informes)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Incorporación de un gráfico circular a un informe (Generador de informes)
 En este tutorial, creará un gráfico circular en un informe paginado de Reporting Services. Agregue porcentajes y combine segmentos pequeños en un único segmento.
 
 Los gráficos circulares y de anillos muestran los datos como una proporción del total. No tienen ejes. Al agregar un campo numérico en un gráfico circular, el gráfico calcula el porcentaje de cada valor en relación con el total.  

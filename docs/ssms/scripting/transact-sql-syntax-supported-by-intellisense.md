@@ -1,5 +1,6 @@
 ---
 title: Sintaxis de Transact-SQL compatible con IntelliSense
+description: Obtenga información sobre qué instrucciones y elementos de sintaxis de Transact-SQL son compatibles con IntelliSense de SQL Server Management Studio en SQL Server 2019 (15.x).
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -15,15 +16,15 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5acada236056a5691ceebe81d0372f1fa06543f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 772574d5f50c9c3f9666c56abab80d3ce5181d82
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252981"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247375"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="statements-supported-by-intellisense"></a>Instrucciones admitidas por IntelliSense  
@@ -35,14 +36,47 @@ ms.locfileid: "75252981"
 ### <a name="select-statement"></a>Instrucción SELECT  
  El Editor de consultas del [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona compatibilidad con IntelliSense para los elementos de sintaxis siguientes de la instrucción SELECT:  
   
-|||  
-|-|-|  
-|SELECT|WHERE|  
-|FROM|ORDER BY|  
-|HAVING|UNION|  
-|FOR|GROUP BY|  
-|TOP|OPTION (sugerencia)|  
-  
+:::row:::
+    :::column:::
+        SELECT
+    :::column-end:::
+    :::column:::
+        WHERE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FROM
+    :::column-end:::
+    :::column:::
+        ORDER BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        HAVING
+    :::column-end:::
+    :::column:::
+        UNION
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FOR
+    :::column-end:::
+    :::column:::
+        GROUP BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        TOP
+    :::column-end:::
+    :::column:::
+        OPTION (sugerencia)
+    :::column-end:::
+:::row-end:::
+
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>Instrucciones Transact-SQL adicionales compatibles  
  El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] también proporciona compatibilidad con IntelliSense para las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se muestran en la tabla siguiente.  
   

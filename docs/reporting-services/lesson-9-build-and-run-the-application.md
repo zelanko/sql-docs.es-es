@@ -1,5 +1,6 @@
 ---
 title: 'Lección 9: Compilar y ejecutar la aplicación | Microsoft Docs'
+description: Aprenda a compilar y ejecutar la aplicación de sitio web después de crear un filtro de datos para la tabla de datos.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00f139a6b7b334e3a3e8254a742874cfc28145b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b72153a14a20509feeb71bfdec0f2eb08b18c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651261"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245094"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
+# <a name="lesson-9-build-and-run-the-application"></a>Lección 9: Generación y ejecución de la aplicación
 Después de crear un filtro para los datos de la tabla de datos, el paso siguiente consiste en generar y ejecutar la aplicación del sitio Web.  
   
 ### <a name="to-build-and-run-the-application"></a>Para generar y ejecutar la aplicación  

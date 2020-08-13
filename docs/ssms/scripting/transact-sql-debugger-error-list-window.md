@@ -1,5 +1,6 @@
 ---
 title: Ventana de lista de errores
+description: Obtenga información sobre cómo usar Lista de errores para ver los errores y las advertencias que IntelliSense genera al editar scripts de Transact-SQL.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -16,18 +17,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4755c439edafb5f38740e12f6ec57abf468bc01a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243393"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247355"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Depurador de Transact-SQL: ventana Lista de errores
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-La ventana [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Lista de errores**de** muestra los errores sintácticos y semánticos generados a partir del código de IntelliSense en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+La ventana **Lista de errores** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muestra los errores sintácticos y semánticos generados a partir del código de IntelliSense en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -74,7 +75,7 @@ La ventana **Lista de errores** proporciona la funcionalidad siguiente:
 > [!NOTE]  
 >  En **Lista de errores** solo se muestran los errores del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; no se muestran los errores de los editores MDX, DMX ni XML/A. Todos los errores de MDX, DMX y XML/A se muestran en la pestaña **Mensajes** de dichos editores.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Cuando está abierta la ventana **Lista de errores** , la información se muestra en las columnas siguientes:  
   
  **Orden predeterminado**  

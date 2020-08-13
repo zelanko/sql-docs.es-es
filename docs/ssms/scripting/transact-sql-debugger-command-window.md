@@ -1,5 +1,6 @@
 ---
 title: Ventana de comandos
+description: Obtenga información sobre cómo usar la ventana Comandos del depurador de Transact-SQL para ejecutar comandos de depuración y editar comandos en el código que depura.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,18 +14,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 226acc4696b5edacde3b6950c10c8b5370e29b42
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e9a1e432de7b9bb0871ffc094f7d37cd1709aff
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243432"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248069"
 ---
 # <a name="transact-sql-debugger---command-window"></a>Depurador de Transact-SQL: ventana Comandos
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Use la **ventana Comandos** para ejecutar comandos, como debug y edit, con el código de la ventana Editor de consultas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que se está depurando. Debe estar en modo de depuración para utilizar el **Ventana de comandos**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] admite muchos de los comandos que también se admiten en la ventana [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Comando**. Para obtener más información, vea [Ventana de comandos de Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
+Use la **ventana Comandos** para ejecutar comandos, como debug y edit, en el código de la ventana Editor de consultas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que se depura actualmente. Debe estar en modo de depuración para utilizar el **Ventana de comandos**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] admite muchos de los comandos que también se admiten en la ventana [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Comando**. Para obtener más información, vea [Ventana de comandos de Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -36,7 +37,7 @@ Use la **ventana Comandos** para ejecutar comandos, como debug y edit, con el c�
 
 **Para imprimir el valor de una variable**
 
-- En la **ventana Comandos**, escriba **Debug.Print \<nombreDeVariable>** y pulse ENTRAR.
+- En la **ventana Comandos**, escriba **Debug.Print \<VariableName>** y presione ENTRAR.
 
 **Para mostrar información sobre el subproceso actual**
 
@@ -44,7 +45,7 @@ Use la **ventana Comandos** para ejecutar comandos, como debug y edit, con el c�
 
 **Para agregar una variable a la ventana Inspección rápida**
 
-- En la **ventana Comandos**, escriba **Debug.QuickWatch \<nombreDeVariable** y pulse ENTRAR.
+- En la **ventana Comandos**, escriba **Debug.QuickWatch \<VariableName>** y presione ENTRAR.
 
 ## <a name="see-also"></a>Consulte también
 

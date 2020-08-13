@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Agregar un parámetro a un informe (Generador de informes) | Microsoft Docs'
+description: Aprenda a agregar un parámetro a un informe paginado de Reporting Services para que los lectores del informe puedan filtrar los datos del informe por uno o más valores.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72252141"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245682"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adición de un parámetro al informe (Generador de informes)
 En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que los lectores del informe puedan filtrar los datos del informe para uno o más valores. 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -136,7 +137,7 @@ Al agregar un parámetro de consulta a una consulta, el Generador de informes cr
   
 2.  En el panel Datos de informe, expanda la carpeta **Conjuntos de datos** , haga clic con el botón derecho en **DataSet1**y haga clic en **Consulta**.  
   
-3.  Agregue la siguiente cláusula [!INCLUDE[tsql](../includes/tsql-md.md)]WHERE**de** como última línea de la consulta:  
+3.  Agregue la siguiente cláusula **WHERE** de [!INCLUDE[tsql](../includes/tsql-md.md)] como última línea de la consulta:  
   
     ```  
     WHERE StoreID = (@StoreID)  
@@ -308,7 +309,7 @@ Un conjunto de datos podría contener el identificador y el campo de nombre corr
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    El encabezado de columna del almacén contiene el texto para mostrar de una expresión compleja: **Expr**.  
+    El encabezado de columna de almacén contiene el texto para mostrar de una expresión compleja: **Expr**.  
   
 8.  Obtenga una vista previa del informe.  
   

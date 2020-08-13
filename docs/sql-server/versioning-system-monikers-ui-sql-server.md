@@ -1,20 +1,18 @@
 ---
 title: Sistema de control de versiones para la documentación de SQL
-ms.date: 10/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: ''
-ms.custom: ''
+ms.technology: release-landing
 ms.topic: conceptual
-ms.reviewer: ''
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b343f34e0d7fdc30e2549095f5731d93e863414c
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150605"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247371"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Sistema de control de versiones para la documentación de SQL
 
@@ -36,7 +34,7 @@ Este enfoque anterior significaba que, si se detectaba un error en la documentac
 
 ## <a name="multiple-versions-in-the-same-files"></a>Varias versiones en los mismos archivos
 
-Por este y otros motivos, los archivos de documentación para SQL Server 2016 también son para 2017, 2019 y, probablemente, para \<vNext\>. Esta consolidación se ha hecho práctica porque ahora se asignan _monikers de control de versiones_ a los archivos de documentación de SQL Server. Los monikers de control de versiones se asignan, o se insertan explícitamente, en el grado de granularidad que tenga sentido para cada archivo de documentación determinado.
+Por este y otros motivos, los archivos de documentación para SQL Server 2016 también sirven para 2017, 2019 y, probablemente, para \<vNext\>. Esta consolidación se ha hecho práctica porque ahora se asignan _monikers de control de versiones_ a los archivos de documentación de SQL Server. Los monikers de control de versiones se asignan, o se insertan explícitamente, en el grado de granularidad que tenga sentido para cada archivo de documentación determinado.
 
 ## <a name="versioning-control-in-the-ui"></a>Control de versiones en la interfaz de usuario
 
@@ -136,7 +134,7 @@ Hay un nombre de producto de moniker especial, **All SQL** (Todo SQL) y su únic
 
 Algunos artículos tienen información relacionada con varias versiones de SQL Server. Cada moniker normal oculta las secciones con versiones que, de lo contrario, podrían mostrar información inexacta, confusa o contradictoria para la versión del moniker. El moniker **All SQL** especial mostraría todas las secciones de la versión y es posible que no sea evidente que se muestra información inexacta.
 
-## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> Mensaje: La página solicitada no está disponible para el \<moniker\>
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> Mensaje: La página solicitada no está disponible para \<moniker\>.
 
 El siguiente escenario conduce a la presentación de un mensaje informativo junto a la parte superior de la página web :::no-loc text="Docs"::::
 
@@ -163,10 +161,11 @@ El sistema de control de versiones está totalmente implementado para SQL Server
     - [Versiones anteriores de SQL Server, 2012-2005](../toc/previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; el sistema de control de versiones está implementado parcialmente para SQL Server 2014. Puede elegir SQL Server 2014 en el control de versiones y funcionará. Pero los archivos de 2014 están dedicados exclusivamente a 2014, al igual que los archivos de 2008 están dedicados únicamente a 2008.
-    - [Documentación de SQL Server 2014](/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014)
+    - [Documentación de SQL Server 2014 sin conexión](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 y versiones posteriores:_ &nbsp; el sistema de control de versiones está totalmente implementado para SQL Server 2016 y versiones posteriores.
     - [Bienvenido a la documentación de SQL Server 2016 y versiones posteriores](/sql/sql-server/?view=sql-server-2016)
+    - [Documentación de SQL Server 2016 sin conexión](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>Consulte también
 

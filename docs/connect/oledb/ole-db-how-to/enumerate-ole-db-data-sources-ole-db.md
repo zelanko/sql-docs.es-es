@@ -1,5 +1,5 @@
 ---
-title: Enumeración de orígenes de datos OLE DB (OLE DB) | Microsoft Docs
+title: Enumeración de orígenes de datos OLE DB (controlador OLE DB) | Microsoft Docs
 description: Enumeración de orígenes de datos OLE DB mediante el enumerador MSOLEDBSQL
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b9e14ef426a07705c51c0aa77c908dd1c2b8bbcf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 33006af4eee9d97566144e66c984d55cabd5765d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994830"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244820"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Enumerar orígenes de datos OLE DB (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "67994830"
 6.  Recupere los datos de la copia de la fila del conjunto de filas llamando a **IRowset::GetData**y procéselos.  
   
 ## <a name="example"></a>Ejemplo  
- Compile con ole32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que en la variable de entorno INCLUDE se incluya el directorio que contiene msoledbsql.h.  
+ Compile con ole32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que en la variable de entorno INCLUDE se incluya el directorio que contiene msoledbsql.h.  
   
 ```  
 // compile with: ole32.lib  

@@ -1,5 +1,6 @@
 ---
 title: Trabajar con informes paginados (portal web) | Microsoft Docs
+description: Aprenda a ver y administrar las propiedades de un informe paginado en el portal web. Además, aprenda a usar el Generador de informes para crear o editar informes paginados.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222627"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243584"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Trabajar con informes paginados (portal web)
 
@@ -77,7 +78,7 @@ Especifique la extensión de procesamiento de datos que se va a usar para proces
   
 Especifique la cadena de conexión que utiliza el servidor de informes para conectarse al origen de datos. El tipo de conexión determina la sintaxis que debería usar. Por ejemplo, una cadena de conexión para la extensión de procesamiento de datos XML es una dirección URL a un documento XML. En la mayoría de los casos, la cadena de conexión típica especifica el servidor de bases de datos y un archivo de datos. En el siguiente ejemplo, se muestra la cadena de conexión usada para conectarse a una base de datos de SQL Server denominada MyData:  
   
-    data source=(a SQL Server instance);initial catalog=MyData  
+`data source=(a SQL Server instance);initial catalog=MyData`
   
 La cadena de conexión puede configurarse como expresión para que pueda especificar el origen de datos en tiempo de ejecución. Las expresiones de origen de datos se definen en el informe en el Diseñador de informes. Las expresiones de origen de datos no se pueden definir, ver ni modificar en el portal web. Sin embargo, una expresión de origen de datos se puede reemplazar haciendo clic en **Reemplazar predeterminado** para escribir una cadena de conexión estática. Si quiere recuperar la expresión, haga clic en **Volver al valor predeterminado**. El servidor de informes almacena la cadena de conexión original por si necesita restaurarla. Para usar expresiones de origen de datos, debe usar la información de conexión a un origen de datos que se publicó originalmente en el informe. Los orígenes de datos compartidos no admiten el uso de expresiones en la cadena de conexión.  
   

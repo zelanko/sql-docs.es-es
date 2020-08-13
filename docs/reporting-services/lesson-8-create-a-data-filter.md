@@ -1,5 +1,6 @@
 ---
 title: 'Lección 8: Crear un filtro de datos | Microsoft Docs'
+description: Aprenda a crear un filtro de datos para la tabla de datos que ha definido para el informe secundario. Cree un filtro basado en una tabla o un filtro de consulta para el informe de obtención de detalles.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d64d2557945bc7fdd7b602652e23d52c0a052da7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512397"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243246"
 ---
-# <a name="lesson-8-create-a-data-filter"></a>Lección 8: Crear un filtro de datos
+# <a name="lesson-8-create-a-data-filter"></a>Lección 8: Creación de un filtro de datos
 Después de agregar una acción de obtención de detalles en el informe primario, el paso siguiente consiste en crear un filtro de los datos de la tabla de datos que definió para el informe secundario.  
   
 Puede crear un filtro basado en una tabla **o** un filtro de consulta para el informe de obtención de detalles. Esta lección proporciona instrucciones para ambas opciones.  
@@ -165,7 +166,7 @@ Debe completar las tareas siguientes para implementar un filtro de consulta.
   
     1.  Crea una instancia del conjunto de datos, **DataSet2**, que se ha creado en el paso 2 de la [Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Cree una conexión a la base de datos de SQL Server para ejecutar la consulta definida en la **Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario**.  
+    2.  Cree una conexión a la base de datos SqlServer para ejecutar la consulta definida en **Lección 4: Definición de una conexión de datos y una tabla de datos para el informe secundario**.  
   
     3.  La consulta incluirá un parámetro, **productid**, para asegurarse de que los datos devueltos se filtran en función del **ProductID** seleccionado en el informe primario.  
   
@@ -287,7 +288,7 @@ Debe completar las tareas siguientes para implementar un filtro de consulta.
 6.  Guarde el archivo.  
   
 ## <a name="next-task"></a>Tarea siguiente  
-Ha creado correctamente un filtro de datos para la tabla de datos que definió para el informe secundario. A continuación, compilará y ejecutará la aplicación del sitio Web. Vea [Lección 9: Generar y ejecutar la aplicación](../reporting-services/lesson-9-build-and-run-the-application.md).  
+Ha creado correctamente un filtro de datos para la tabla de datos que definió para el informe secundario. A continuación, compilará y ejecutará la aplicación del sitio Web. Vea [Lección 9: Compilación y ejecución de la aplicación](../reporting-services/lesson-9-build-and-run-the-application.md).  
   
   
   

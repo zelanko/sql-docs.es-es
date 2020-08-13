@@ -1,5 +1,6 @@
 ---
 title: Conectarse al motor de base de datos con sqlcmd
+description: 'Aprenda a seleccionar el protocolo que usa sqlcmd para comunicarse con SQL Server. Las opciones son: TCP/IP, canalizaciones con nombre y memoria compartida.'
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b286c817895cf45c2cdffbb75ef3ccf83fd01ccd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b64449cb8e63b4295d86023c60cd51cec50084e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243481"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243597"
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd - Conectarse al motor de base de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite las comunicaciones de clientes con el protocolo de red TCP/IP (valor predeterminado) y el protocolo de canalizaciones con nombre. El protocolo de memoria compartida también está disponible si el cliente se está conectando a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el mismo equipo. Hay varios métodos habituales para seleccionar el protocolo. El protocolo que la utilidad **sqlcmd** utiliza se determina en el siguiente orden:  
   
 -   **sqlcmd** usa el protocolo especificado como parte de la cadena de conexión, como se describe a continuación.  

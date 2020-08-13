@@ -1,5 +1,6 @@
 ---
 title: 'Lección 1: Crear una base de datos de suscriptor de ejemplo | Microsoft Docs'
+description: Aprenda a crear una pequeña base de datos de "suscriptor" para almacenar los datos de suscripción que usará una suscripción controlada por datos.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513167"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243276"
 ---
-# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lección 1: Crear una base de datos de suscriptor de ejemplo
+# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lección 1: Creación de una base de datos de suscriptor de ejemplo
 
 En esta lección del tutorial de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , creará una pequeña base de datos "suscriptor" para almacenar los datos de suscripción que usados por una suscripción controlada por datos. Cuando la suscripción se haya procesado, el servidor de informes recupera estos datos y los usa para personalizar los resultados del informe. Por ejemplo, las filas de datos incluyen números de pedido específicos para usar como filtros y qué formato de archivo tendrán los informes generados cuando se creen.  
   
@@ -55,14 +56,14 @@ En esta lección se da por hecho que está usando [!INCLUDE[ssManStudioFull_md](
     GO  
     ```  
   
-7.  Haga clic en **! en Ejecutar** en la barra de herramientas.  
+7.  Haga clic en **! Ejecutar** en la barra de herramientas.  
   
 8.  Use una instrucción SELECT para comprobar que tiene tres filas de datos. Por ejemplo: `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>Pasos siguientes  
 + Ha creado correctamente los datos de suscripción que controlarán la distribución de informes y cambiarán los resultados del informe para cada suscriptor. 
 + Después, modificará las propiedades del origen de datos del informe para usar las credenciales almacenadas. 
-+ Además, modificará el diseño de informe para que incluya un parámetro usará la suscripción con los datos del suscriptor. [Lección 2: Modificar las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
++ Además, modificará el diseño de informe para que incluya un parámetro usará la suscripción con los datos del suscriptor. [Lección 2: Modificación de las propiedades del origen de datos de informe](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

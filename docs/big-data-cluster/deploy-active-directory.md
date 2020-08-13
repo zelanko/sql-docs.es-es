@@ -5,36 +5,41 @@ description: Obtenga información sobre cómo actualizar los clústeres de macro
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/28/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bbacb2bdeeb409f08e6e68438535bc0d6671b01
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79487623"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243086"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En este documento se describe la implementación de un clúster de macrodatos SQL Server 2019 (BDC) en el modo de autenticación de Active Directory, el cual usará un dominio de AD existente para la autenticación.
+En este documento se explica cómo implementar un clúster de macrodatos (BDC) de SQL Server en el modo de autenticación de Active Directory. El clúster usa un dominio de AD existente para la autenticación.
+
+>[!Note]
+>Antes de la versión SQL Server 2019 CU5, existe una restricción en los clústeres de macrodatos para que solo se pueda implementar un clúster en un dominio de Active Directory. Esta restricción se quita con la versión CU5. Vea [Concepto: implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](active-directory-deployment-background.md) para obtener información detallada sobre las capacidades nuevas. Los ejemplos de este artículo se ajustan para adaptarse a ambos casos de uso de implementación.
 
 ## <a name="background"></a>Información previa
 
-Para habilitar la autenticación Active Directory (AD), el BDC crea automáticamente los usuarios, los grupos, las cuentas de máquina y los nombres de entidad de seguridad de servicio (SPN) que necesitan los distintos servicios del clúster. Para proporcionar cierta independencia respecto de estas cuentas y posibilitar el uso de permisos de ámbito, designe una unidad organizativa (UO) durante la implementación, donde se crearán todos los objetos de AD relacionados con el BDC. Cree esta UO antes de la implementación del clúster.
+Para habilitar la autenticación Active Directory (AD), el BDC crea automáticamente los usuarios, los grupos, las cuentas de máquina y los nombres de entidad de seguridad de servicio (SPN) que necesitan los distintos servicios del clúster. Para proporcionar cierta independencia respecto de estas cuentas y posibilitar el uso de permisos de ámbito, elija una unidad organizativa (UO) durante la implementación, donde se crearán todos los objetos de AD relacionados con el BDC. Cree esta UO antes de la implementación del clúster.
 
 Para crear automáticamente todos los objetos necesarios en Active Directory, el BDC necesita una cuenta de AD durante la implementación. Esta cuenta debe tener permisos para crear usuarios, grupos y cuentas de máquina dentro de la UO proporcionada.
 
 En los pasos siguientes se da por hecho que ya cuenta con un controlador de dominio de Active Directory. Si no se tiene un controlador de dominio, la [guía](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) siguiente incluye pasos que pueden resultar útiles.
 
+Para obtener una lista de cuentas y grupos de AD, vea [Objetos de Active Directory generados automáticamente](active-directory-objects.md).
+
 ## <a name="create-ad-objects"></a>Creación de objetos de AD
 
 Antes de implementar un BDC con la integración de AD, haga lo siguiente:
 
-1. Cree una unidad organizativa (UO) donde se almacenarán todos los objetos de AD del BDC. También puede optar por designar una UO existente durante la implementación.
+1. Cree una unidad organizativa (UO) donde se almacenarán todos los objetos de AD del BDC. También puede optar por elegir una UO existente durante la implementación.
 1. Cree una cuenta de AD para el BDC o use una cuenta existente y proporcione los permisos adecuados a esta cuenta de AD del BDC.
 
 ### <a name="create-a-user-in-ad-for-bdc-domain-service-account"></a>Creación de un usuario en AD para la cuenta de servicio de dominio del BDC
@@ -47,21 +52,21 @@ Para crear un nuevo usuario en AD, puede hacer clic con el botón derecho en el 
 
 En este artículo se hará referencia a este usuario como la *cuenta de servicio de dominio del BDC*.
 
-### <a name="creating-an-ou"></a>Creación de una unidad organizativa
+### <a name="create-an-ou"></a>Creación de una unidad organizativa
 
-En el controlador de dominio, abra **Usuarios y equipos de Active Directory**. En el panel izquierdo, haga clic con el botón derecho en el directorio en el que quiera crear la UO y seleccione Nuevo \>**Unidad organizativa** y, después, siga las indicaciones del asistente para crearla. También puede crear una UO con PowerShell:
+En el controlador de dominio, abra **Usuarios y equipos de Active Directory**. En el panel izquierdo, haga clic con el botón derecho en el directorio en el que quiera crear la UO y seleccione **Nuevo** \> **Unidad organizativa** y, después, siga las indicaciones del asistente para crearla. También puede crear una UO con PowerShell:
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
 ```
 
-En los ejemplos de este artículo, vamos a asignar el nombre `bdc` a la UO.
+En los ejemplos de este artículo se usa `bdc` para el nombre de la UO.
 
 ![image13](./media/deploy-active-directory/image13.png)
 
 ![image14](./media/deploy-active-directory/image14.png)
 
-### <a name="setting-permissions-the-bdc-ad-account"></a>Establecimiento de permisos para la cuenta de AD del BDC
+### <a name="set-permissions-for-an-ad-account"></a>Establecimiento de permisos para una cuenta de AD 
 
 Tanto si se ha creado un nuevo usuario de AD como si se usa uno existente, existen ciertos permisos que el usuario debe tener. Esta cuenta es la cuenta de usuario que el controlador del BDC usará al unir el clúster a AD.
 
@@ -145,7 +150,7 @@ La cuenta de servicio de dominio (DSA) del BDC debe ser capaz de crear usuarios,
 
 Para la implementación del BDC con la integración de AD, hay cierta información adicional que se debe proporcionar para la creación de los objetos relacionados con el BDC en AD.
 
-Con el uso del perfil `kubeadm-prod`, tendrá automáticamente los marcadores de posición para la información relacionada con la seguridad y con el punto de conexión que se necesitan para la integración de AD.
+Con el uso del perfil `kubeadm-prod`, (o `openshift-prod` a partir de la versión CU5), tendrá automáticamente los marcadores de posición para la información relacionada con la seguridad y con el punto de conexión que se necesitan para la integración de AD.
 
 Además, debe proporcionar las credenciales que [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] usará para crear los objetos necesarios en AD. Estas credenciales se proporcionan como variables de entorno.
 
@@ -160,7 +165,7 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 ## <a name="provide-security-and-endpoint-parameters"></a>Suministro de seguridad y parámetros de punto de conexión
 
-Además de las variables de entorno para las credenciales, también debe proporcionar información de seguridad y de punto de conexión para que la integración de AD funcione. Los parámetros necesarios forman parte automáticamente del [perfil de implementación](deployment-guidance.md#configfile) de `kubeadm-prod`.
+Además de las variables de entorno para las credenciales, también debe proporcionar información de seguridad y de punto de conexión para que la integración de AD funcione. Los parámetros necesarios forman parte automáticamente del [perfil de implementación](deployment-guidance.md#configfile) de `kubeadm-prod`/`openshift-prod`.
 
 La integración de AD necesita los parámetros siguientes. Agregue estos parámetros a los archivos `control.json` y `bdc.json` con los comandos `config replace` que se muestran más adelante en este artículo. Todos los ejemplos siguientes utilizan `contoso.local` de dominio de ejemplo.
 
@@ -168,35 +173,99 @@ La integración de AD necesita los parámetros siguientes. Agregue estos paráme
 
 - `security.activeDirectory.dnsIpAddresses`: contiene la lista de direcciones IP de los servidores DNS del dominio. 
 
-- `security.activeDirectory.domainControllerFullyQualifiedDns`: lista de FQDN del controlador de dominio. El FQDN contiene el nombre de host o de la máquina del controlador de dominio. Si tiene varios controladores de dominio, aquí se puede proporcionar una lista. Ejemplo: `HOSTNAME.CONTOSO.LOCAL`
+- `security.activeDirectory.domainControllerFullyQualifiedDns`: lista de FQDN del controlador de dominio. El FQDN contiene el nombre de host o de la máquina del controlador de dominio. Si tiene varios controladores de dominio, aquí se puede proporcionar una lista. Ejemplo: `HOSTNAME.CONTOSO.LOCAL`.
 
-- **Parámetro opcional** `security.activeDirectory.realm`: en la mayoría de casos, el dominio es igual al nombre de dominio. En los casos en los que no sean iguales, use este parámetro para definir el nombre del dominio (por ejemplo, `CONTOSO.LOCAL`).
+  > [!IMPORTANT]
+  > Cuando hay varios controladores de dominio que atienden a un dominio, utilice el controlador de dominio principal (PDC) como primera entrada en la lista de `domainControllerFullyQualifiedDns` de la configuración de seguridad. Para obtener el nombre del PDC, escriba `netdom query fsmo` en el símbolo del sistema y luego presione **Entrar**.
 
-- `security.activeDirectory.domainDnsName`: nombre del dominio (por ejemplo, `contoso.local`).
+- **Parámetro opcional** `security.activeDirectory.realm`: en la mayoría de casos, el dominio es igual al nombre de dominio. En los casos en los que no sean iguales, use este parámetro para definir el nombre del dominio (por ejemplo, `CONTOSO.LOCAL`). El valor proporcionado para este parámetro debe ser completo.
 
-- `security.activeDirectory.clusterAdmins`: este parámetro toma un grupo de AD. El ámbito del grupo de AD debe ser universal o global del dominio. Los miembros de este grupo obtienen permisos de administrador en el clúster. Esto significa que tendrán permisos `sysadmin` en SQL Server, permisos de superusuario en HDFS y de administrador en el controlador. 
+- `security.activeDirectory.domainDnsName`: Nombre del dominio DNS que se usará para el clúster (por ejemplo, `contoso.local`).
+
+- `security.activeDirectory.clusterAdmins`: este parámetro toma un grupo de AD. El ámbito del grupo de AD debe ser universal o global. Los miembros de este grupo tendrán el rol de clúster *bdcAdmin*, que les concederá permisos de administrador en el clúster. Esto significa que tendrán [permisos de `sysadmin` en SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [permisos de `superuser` en HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User) y permisos de administrador cuando se conecten al punto de conexión del controlador.
 
   >[!IMPORTANT]
   >Cree este grupo en AD antes de comenzar la implementación. Si el ámbito de este grupo de AD es el dominio local, se produce un error en la implementación.
 
-- `security.activeDirectory.clusterUsers`: lista de los grupos de AD que son usuarios normales (sin permisos de administrador) en el clúster de macrodatos. La lista puede incluir grupos de AD cuyo ámbito sean grupos de dominio universal o global. No pueden ser grupos de dominio local.
+- `security.activeDirectory.clusterUsers`: lista de los grupos de AD que son usuarios normales (sin permisos de administrador) en el clúster de macrodatos. La lista puede incluir grupos de AD cuyo ámbito sean grupos universales o globales. No pueden ser grupos de dominio local.
+
+Los grupos de AD de esta lista se asignan al rol de clúster de macrodatos *bdcUser* y se les debe conceder acceso a SQL Server (vea [Permisos de SQL Server](../relational-databases/security/permissions-hierarchy-database-engine.md)) o a HDFS (vea [Guía de permisos de HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). Al conectarse al punto de conexión del controlador, estos usuarios solo pueden mostrar los puntos de conexión disponibles en el clúster mediante el comando *azdata bdc endpoint list*.
+
+A fin de obtener información detallada sobre cómo actualizar los grupos de AD para esta configuración, vea [Administración del acceso al Clúster de macrodatos en el modo de Active Directory](manage-user-access.md).
 
   >[!IMPORTANT]
   >Cree estos grupos en AD antes de comenzar la implementación. Si el ámbito de cualquiera de estos grupos de AD es el dominio local, se produce un error en la implementación.
 
-- **Parámetro opcional** `security.activeDirectory.appOwners`: lista de grupos de AD que tienen permisos para crear, eliminar y ejecutar cualquier aplicación. La lista puede incluir grupos de AD cuyo ámbito sean grupos de dominio universal o global. No pueden ser grupos de dominio local.
+  >[!IMPORTANT]
+  >Si los usuarios del dominio cuentan con muchas pertenencias a grupos, debe ajustar los valores de la configuración de puerta de enlace *httpserver.requestHeaderBuffer* (el valor predeterminado es *8192*) y la configuración de HDFS *hadoop.security.group.mapping.ldap.search.group.hierarchy.levels* (el valor predeterminado es *10*), mediante el archivo de configuración personalizado de implementación *bdc.json*. Se trata de un procedimiento recomendado para evitar los tiempos de espera de conexión a las respuestas de puerta de enlace o HTTP con un código de estado 431 (*Campos del encabezado de solicitud demasiado grandes*). Esta es una sección del archivo de configuración que muestra cómo definir los valores de esta configuración y cuáles son los valores recomendados para un número mayor de pertenencias de grupo: 
+
+```json
+{
+    ...
+    "spec": {
+        "resources": {
+            ...
+            "gateway": {
+                "spec": {
+                    "replicas": 1,
+                    "endpoints": [{...}],
+                    "settings": {
+                        "gateway-site.gateway.httpserver.requestHeaderBuffer": "65536"
+                    }
+                }
+            },
+            ...
+        },
+        "services": {
+            ...
+            "hdfs": {
+                "resources": [...],
+                "settings": {
+                  "core-site.hadoop.security.group.mapping.ldap.search.group.hierarchy.levels": "4"
+                }
+            },
+            ...
+        }
+    }
+}
+```
 
   >[!IMPORTANT]
-  >Cree estos grupos en AD antes de comenzar la implementación. Si el ámbito de cualquiera de estos grupos de AD es el dominio local, se produce un error en la implementación.
+  >Cree los grupos proporcionados para la configuración siguiente en AD antes de comenzar la implementación. Si el ámbito de cualquiera de estos grupos de AD es el dominio local, se produce un error en la implementación.
 
-- **Parámetro opcional** `security.activeDirectory.appReaders`: lista de grupos de AD que tienen permisos para ejecutar cualquier aplicación. La lista puede incluir grupos de AD cuyo ámbito sean grupos de dominio universal o global. No pueden ser grupos de dominio local.
+- **Parámetro opcional** `security.activeDirectory.appOwners`: lista de grupos de AD que tienen permisos para crear, eliminar y ejecutar cualquier aplicación. La lista puede incluir grupos de AD cuyo ámbito sean grupos universales o globales. No pueden ser grupos de dominio local.
+
+- **Parámetro opcional** `security.activeDirectory.appReaders`: lista de grupos de AD que tienen permisos para ejecutar cualquier aplicación. La lista puede incluir grupos de AD cuyo ámbito sean grupos universales o globales. No pueden ser grupos de dominio local.
+
+En la tabla siguiente se muestra el modelo de autorización para la administración de aplicaciones:
+
+|   Roles autorizados   |   comando azdata   |
+|----------------------|--------------------|
+|   appOwner           | azdata app create  |
+|   appOwner           | azdata app update  |
+|   appOwner, appReader| azdata app list    |
+|   appOwner, appReader| azdata app describe|
+|   appOwner           | azdata app delete  |
+|   appOwner, appReader| azdata app run     |
+
+- `security.activeDirectory.subdomain`: **Parámetro opcional** Este parámetro se incluye en la versión SQL Server 2019 CU5 para admitir la implementación de varios clústeres de macrodatos en el mismo dominio. Con esta opción, puede especificar nombres DNS diferentes para cada uno de los clústeres de macrodatos implementados. Si el valor de este parámetro no se especifica en la sección Active Directory del archivo `control.json`, de forma predeterminada se usará el nombre del clúster de macrodatos (igual que el nombre del espacio de nombres de Kubernetes) para calcular el valor de la configuración de subdominio. 
+
+  >[!NOTE]
+  >El valor que se pasa a través de la configuración de subdominio no es un nuevo dominio de AD, sino solo un dominio DNS que el clúster de BDC usa internamente.
 
   >[!IMPORTANT]
-  >Cree estos grupos en AD antes de comenzar la implementación. Si el ámbito de cualquiera de estos grupos de AD es el dominio local, se produce un error en la implementación.
+  >Debe instalar o actualizar la versión más reciente de la **CLI de azdata** a partir de la versión SQL Server 2019 CU5 para aprovechar estas capacidades nuevas e implementar varios clústeres de macrodatos en el mismo dominio.
+
+  Vea [Concepto: Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](active-directory-deployment-background.md) para obtener más información sobre la implementación de varios clústeres de macrodatos en el mismo dominio de Active Directory.
+
+- `security.activeDirectory.accountPrefix`: **Parámetro opcional** Este parámetro se incluye en la versión SQL Server 2019 CU5 para admitir la implementación de varios clústeres de macrodatos en el mismo dominio. Esta configuración garantiza la exclusividad de los nombres de cuenta de varios servicios de clúster de macrodatos, que deben ser diferentes entre cualquier par de clústeres. La personalización del nombre del prefijo de la cuenta es opcional; de forma predeterminada, el nombre del subdominio se usa como prefijo de la cuenta. Si el nombre de subdominio es mayor de 12 caracteres, los primeros 12 caracteres del nombre de subdominio se usan como el prefijo de la cuenta.  
+
+  >[!NOTE]
+  >Active Directory requiere que los nombres de cuenta se limiten a 20 caracteres. El clúster de BDC debe usar 8 caracteres de estos para distinguir entre pods y StatefulSets. Esto nos deja 12 caracteres como límite para el prefijo de la cuenta.
 
 [Compruebe el ámbito del grupo de AD](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), para determinar si es DomainLocal.
 
-Si aún no ha inicializado el archivo de configuración de la implementación, puede ejecutar este comando para obtener una copia de la configuración.
+Si aún no ha inicializado el archivo de configuración de la implementación, puede ejecutar este comando para obtener una copia de la configuración. En los ejemplos siguientes se usa el perfil de `kubeadm-prod` y lo mismo se aplica a `openshift-prod`.
 
 ```bash
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
@@ -204,8 +273,11 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 Para establecer los parámetros anteriores en el archivo `control.json`, use los siguientes comandos de `azdata`. Los comandos reemplazan la configuración y proporcionan sus propios valores antes de que se realice la implementación.
 
- > [!IMPORTANT]
- > En la versión SQL Server 2019 CU2, la estructura de la sección de configuración de seguridad del perfil de implementación ha cambiado ligeramente y todos los valores relacionados con Active Directory están en el nuevo directorio *activeDirectory* en el árbol de JSON, bajo *security*, en el archivo *control.json*.
+> [!IMPORTANT]
+> En la versión SQL Server 2019 CU2, la estructura de la sección de configuración de seguridad del perfil de implementación ha cambiado ligeramente y todos los valores relacionados con Active Directory están en el nuevo directorio *activeDirectory* en el árbol de JSON, bajo *security*, en el archivo *control.json*.
+
+>[!NOTE]
+> Además de proporcionar valores diferentes para el subdominio, tal y como se describe en esta sección, también debe usar números de puerto diferentes para los puntos de conexión de BDC al implementar varios BDC en el mismo clúster de Kubernetes. Estos números de puerto son configurables en el momento de la implementación a través de los perfiles de [configuración de implementación](deployment-custom-configuration.md).
 
 El ejemplo siguiente se basa en el uso de SQL Server 2019 CU2. Se muestra cómo reemplazar los valores de parámetros relacionados con AD en la configuración de implementación. Los detalles del dominio siguientes son valores de ejemplo.
 
@@ -217,6 +289,13 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
 #Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+Opcionalmente, solo a partir de la versión SQL Server 2019 CU5, puede invalidar los valores predeterminados para la configuración de `subdomain` y `accountPrefix`.
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.subdomain=[\"bdctest\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.accountPrefix=[\"bdctest\"]"
 ```
 
 Del mismo modo, en las versiones anteriores a SQL Server 2019 CU2, puede ejecutar lo siguiente:
@@ -231,10 +310,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clu
 #Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
-Además de la información anterior, también debe proporcionar nombres de DNS para los distintos puntos de conexión del clúster. Las entradas DNS que usan los nombres de DNS proporcionados se crearán automáticamente en el servidor DNS tras la implementación. Usará estos nombres al conectarse a los diferentes puntos de conexión del clúster. Por ejemplo, si el nombre de DNS de la instancia maestra de SQL es `mastersql`, usará `mastersql.contoso.local,31433` para conectarse a la instancia maestra desde las herramientas.
-
-> [!NOTE]
-> Asegúrese de crear entradas DNS en el servidor DNS para los nombres que va a definir a continuación. En el caso de las implementaciones de `kubeadm`, puede usar, por ejemplo, la dirección IP del nodo maestro de Kubernetes al crear las entradas DNS.
+Además de la información anterior, también debe proporcionar nombres de DNS para los distintos puntos de conexión del clúster. Las entradas DNS que usan los nombres de DNS proporcionados se crearán automáticamente en el servidor DNS tras la implementación. Usará estos nombres al conectarse a los diferentes puntos de conexión del clúster. Por ejemplo, si el nombre DNS de la instancia maestra de SQL es `mastersql` y se tiene en cuenta que el subdominio usará el valor predeterminado del nombre del clúster en *control.json*, usará `mastersql.contoso.local,31433` o `mastersql.mssql-cluster.contoso.local,31433` (en función de los valores que se han proporcionado en los archivos de configuración de implementación para los nombres DNS del punto de conexión) a fin de conectarse a la instancia maestra desde las herramientas. 
 
 ```bash
 # DNS names for BDC services
@@ -246,7 +322,22 @@ azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.g
 azdata bdc config replace -c custom-prod-kubeadm/bdc.json -j "$.spec.resources.appproxy.spec.endpoints[0].dnsName=<app proxy DNS name>.<Domain name. e.g. contoso.local>"
 ```
 
+> [!IMPORTANT]
+> Puede usar los nombres DNS del punto de conexión que prefiera, siempre y cuando estén completos y no entren en conflicto entre dos clústeres de macrodatos implementados en el mismo dominio. Opcionalmente, puede usar el valor del parámetro `subdomain` para garantizar que los nombres DNS son diferentes en los clústeres. Por ejemplo:
+
+```bash
+# DNS names for BDC services
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoints[0].dnsName=<controller DNS name>.<subdomain e.g. mssql-cluster>.contoso.local"
+```
+
 Puede encontrar un script de ejemplo aquí para la [implementación de un clúster de macrodatos de SQL Server en un clúster de Kubernetes de un solo nodo (kubeadm) con integración de AD](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad).
+
+> [!Note]
+> Puede haber escenarios en los que no pueda adaptar el parámetro `subdomain` recientemente introducido. Por ejemplo, debe implementar una versión anterior a CU5 y ya se ha actualizado la **CLI de azdata**. Esto es muy improbable, pero si necesita revertir al comportamiento anterior a CU5, puede establecer el parámetro `useSubdomain` en `false` en la sección Active Directory de `control.json`.  Este es el comando para hacerlo:
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false"
+```
 
 Ahora debe haber establecido todos los parámetros necesarios para una implementación del BDC con la integración de Active Directory.
 
@@ -293,11 +384,18 @@ Desde Azure Data Studio:
 
 #### <a name="connect-to-controller-with-ad-authentication-from-linuxmac"></a>Conexión al controlador con la autenticación de AD desde Linux/Mac
 
-Puede conectarse al punto de conexión del controlador mediante `azdata` y la autenticación de AD.
+Hay dos opciones para conectarse al punto de conexión del controlador mediante `azdata` y la autenticación de AD. Puede usar el parámetro *--endpoint/-e*:
 
 ```bash
 kinit <username>@<domain name>
 azdata login -e https://<controller DNS name>:30080 --auth ad
+```
+
+También puede conectarse mediante el parámetro *--namespace/-n*, que es el nombre del clúster de macrodatos:
+
+```bash
+kinit <username>@<domain name>
+azdata login -n <clusterName> --auth ad
 ```
 
 #### <a name="connect-to-controller-with-ad-authentication-from-windows"></a>Conexión al controlador con la autenticación de AD desde Windows
@@ -316,14 +414,20 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 ## <a name="known-issues-and-limitations"></a>Limitaciones y problemas conocidos
 
-**Limitaciones que deben tenerse en cuenta en esta versión:**
+**Limitaciones que deben tenerse en cuenta en SQL Server 2019 CU5**
 
-- Actualmente, los paneles Búsqueda de registros y Métricas no admiten la autenticación de AD. La compatibilidad de AD con este punto de conexión está prevista para una versión futura. El nombre de usuario y la contraseña básicos establecidos tras la implementación se pueden usar para la autenticación en estos paneles. El resto de puntos de conexión del clúster admiten la autenticación de AD.
+- Actualmente, los paneles Búsqueda de registros y Métricas no admiten la autenticación de AD. El nombre de usuario y la contraseña básicos establecidos tras la implementación se pueden usar para la autenticación en estos paneles. El resto de puntos de conexión del clúster admiten la autenticación de AD.
 
-- Por el momento, el modo de AD seguro solo funcionará en entornos de implementación de `kubeadm`, pero no en AKS. De forma predeterminada, el perfil de implementación de `kubeadm-prod` incluye las secciones de seguridad.
+- El modo de AD seguro solo funcionará en entornos de implementación de `kubeadm` y `openshift`, pero no en AKS o en ARO por el momento. Los perfiles de implementación de `kubeadm-prod` y `openshift-prod` incluyen las secciones de seguridad de forma predeterminada.
 
-- Por el momento solo se permite un BDC por dominio (Active Directory). La habilitación de varios BDC por dominio está prevista para una versión futura.
+- Antes de la versión SQL Server 2019 CU5 solo se permite un BDC por dominio (Active Directory). La habilitación de varios BDC por dominio está disponible a partir de la versión CU5.
 
 - Ninguno de los grupos de AD especificados en las configuraciones de seguridad puede tener definido el ámbito DomainLocal. Puede comprobar el ámbito de un grupo de AD siguiendo [estas instrucciones](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
 
-- Se permite la cuenta de AD que se puede usar para iniciar sesión en BDC desde el mismo dominio que se ha configurado para BDC; la habilitación de inicios de sesión desde otro dominio de confianza está planeada para una versión futura.
+- Se permite el uso de la cuenta de AD que se puede usar para iniciar sesión en BDC en el mismo dominio en el que se ha configurado para BDC. No se admite la habilitación de inicios de sesión desde otro dominio de confianza.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+[Solución de problemas de integración de Active Directory de un Clúster de macrodatos de SQL Server](troubleshoot-active-directory.md)
+
+[Concepto: Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](active-directory-deployment-background.md)

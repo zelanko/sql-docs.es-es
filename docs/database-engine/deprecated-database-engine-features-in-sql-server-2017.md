@@ -1,5 +1,5 @@
 ---
-title: Características en desuso del Motor de base de datos | Microsoft Docs
+title: Características en desuso del motor de base de datos de SQL Server 2017 | Microsoft Docs
 titleSuffix: SQL Server 2019
 description: Obtenga información sobre las características en desuso del motor de base de datos que siguen disponibles en SQL Server 2017 (14.x), pero que no se deben usar en las aplicaciones nuevas.
 ms.custom: seo-lt-2019
@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ff7a91230daff2aab0e031fa2b87803e379921b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759130"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244086"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
 
@@ -38,7 +38,7 @@ Cuando se establece que una característica está en desuso, significa que:
 
 Puede supervisar el uso de características desusadas utilizando el contador de rendimiento del objeto de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Características desusadas y eventos de seguimiento. Para obtener más información, vea [Usar objetos de SQL Server](../relational-databases/performance-monitor/use-sql-server-objects.md).  
 
-El valor de estos contadores también está disponible si se ejecuta la siguiente instrucción:  
+Los valores de estos contadores también están disponibles si se ejecuta la siguiente instrucción:  
 
 ```sql
 SELECT * FROM sys.dm_os_performance_counters
@@ -127,7 +127,7 @@ Las siguientes características del Motor de base de datos de SQL Server se adm
 | Sintaxis de**timestamp** para el tipo de datos **rowversion** | Sintaxis del tipo de datos**rowversion** | timestamp |
 | Capacidad de insertar valores NULL en columnas **timestamp** . | Utilice DEFAULT en su lugar. | INSERT NULL en columnas TIMESTAMP |
 | Opción de tabla 'text in row'|Use los tipos de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** . Para obtener más información, vea [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Opción de tabla Text in row |
-| Tipos de datos:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Use los tipos de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** .|Tipos de datos: **text**, **ntext** o **image**. |
+| Tipos de datos:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|Use los tipos de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** .|Tipos de datos: **text**, **ntext** o **image** |
 
 ### <a name="database-management"></a>Administración de bases de datos
 

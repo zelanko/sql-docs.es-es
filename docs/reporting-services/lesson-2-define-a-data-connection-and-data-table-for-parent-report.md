@@ -1,5 +1,6 @@
 ---
 title: 'Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario | Microsoft Docs'
+description: Aprenda a crear una conexión de datos y una tabla de datos para el informe primario después de crear un proyecto de sitio web con la plantilla Sitio web de ASP.NET para Visual C#.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26599029af2b4fd6a52e85dc9b7567e9a7152038
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651603"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235661"
 ---
-# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lección 2: Definición de una conexión de datos y una tabla de datos para el informe primario
 Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web ASP.NET para Visual C#, el paso siguiente consiste en crear una conexión de datos y una tabla de datos para el informe primario. En este tutorial, la conexión de datos se produce con la base de datos AdventureWorks2014.  
   
 ## <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>Para definir una conexión de datos y una tabla de datos agregando un DataSet (para el informe primario)  
@@ -70,6 +71,6 @@ Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web A
 13. Para obtener una vista previa de los datos, seleccione **Vista previa de los datos** en el menú **Datos** y seleccione **Vista previa**.  
   
 ## <a name="next-task"></a>Tarea siguiente  
-Ha creado correctamente una conexión de datos y una tabla de datos para el informe primario. Después, diseñará el informe primario usando el Asistente para informes. Consulte [Lección 3: Diseñar el informe primario usando el Asistente para informes](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md).  
+Ha creado correctamente una conexión de datos y una tabla de datos para el informe primario. Después, diseñará el informe primario usando el Asistente para informes. Consulte [Lección 3: Diseño del informe primario mediante el Asistente para informes](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md).  
   
 

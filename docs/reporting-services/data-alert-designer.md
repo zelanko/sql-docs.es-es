@@ -1,5 +1,6 @@
 ---
 title: Diseñador de alertas de datos | Microsoft Docs
+description: Obtenga información sobre las definiciones de alertas de datos y cómo crearlas y editarlas en el diseñador de alertas de datos.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0d166462c2a542d834e92da03735e6e8294290d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571592"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243308"
 ---
 # <a name="data-alert-designer"></a>Diseñador de alertas de datos
 
@@ -170,7 +171,7 @@ Las definiciones de alertas de datos se crean y editan en el Diseñador de alert
 ### <a name="email-settings"></a>Configuración de correo electrónico  
  Las direcciones de correo electrónico de los destinatarios que reciben mensajes de alertas de datos por correo electrónico se especifican en la opción **Destinatarios** . Si usa varias direcciones de correo electrónico, sepárelas mediante signos de punto y coma, tal como hace en los mensajes de correo electrónico de Microsoft Office Outlook. También puede especificar grupos de distribución como destinatarios, lo que permite administrar más fácil y eficazmente la lista de destinatarios. Si SharePoint puede determinar su dirección de correo electrónico mientras crea una definición de alerta, su dirección de correo electrónico se agrega automáticamente a la lista de destinatarios; en caso contrario, debe agregarse explícitamente como destinatario.  
   
- El asunto predeterminado del mensaje de correo electrónico es **Alerta de datos para \<nombre de alerta>** . Puede cambiar el asunto de acuerdo con sus necesidades.  
+ El asunto predeterminado del mensaje de correo electrónico es **Alerta de datos para \<alert name>** . Puede cambiar el asunto de acuerdo con sus necesidades.  
   
  Puede proporcionar también una descripción para incluirla en el mensaje de alerta de datos en la opción **Descripción** . Incluir una descripción, especialmente si tiene alertas de datos similares, le ayudará a diferenciar rápidamente los mensajes de alertas. Además del mensaje de alerta que se envía cuando los datos del informe satisfacen las reglas especificadas, se envía un mensaje de alerta a todos los destinatarios cuando se produce un error. Para más información, consulte [Data Alert Messages](../reporting-services/data-alert-messages.md).  
   

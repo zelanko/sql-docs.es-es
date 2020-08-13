@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 19dafa831f6763c5c2da5b54f14326db38372be4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529049"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243417"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Página principal de la programación de clientes de Microsoft SQL Server
 
@@ -51,13 +51,27 @@ En las páginas web de *compilación de una aplicación* aparecen ejemplos de c�
 
 En la tabla siguiente, cada imagen de lenguaje es un vínculo a los detalles sobre cómo usar el lenguaje con SQL Server. Cada vínculo salta a una sección posterior de este artículo.
 
-| &nbsp; | &nbsp; | &nbsp; |
-| :-- | :-- | :-- |
-| &nbsp; [![Logotipo de C#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework, de .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Logotipo de Java][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Logotipo de Node.js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logotipo de PHP][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[![Logotipo de Python][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Logotipo de Ruby][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
-| &nbsp; | &nbsp; | <br />|
+:::row:::
+    :::column:::
+        [![Logotipo de C#][image-ref-320-csharp]](#an-110-ado-net-docu)  
 
+        [![Logotipo de Node.js][image-ref-340-node]](#an-140-node-js-docu)  
+
+        [![Logotipo de Python][image-ref-370-python]](#an-180-python-docu)  
+    :::column-end:::
+    :::column:::
+        [![ORM Entity Framework, de .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm)  
+
+        [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu)  
+
+        [![Logotipo de Ruby][image-ref-380-ruby]](#an-190-ruby-docu)  
+    :::column-end:::
+    :::column:::
+        [![Logotipo de Java][image-ref-330-java]](#an-130-jdbc-docu)  
+
+        [![Logotipo de PHP][image-ref-360-php]](#an-170-php-docu)  
+    :::column-end:::
+:::row-end:::
 
 #### <a name="downloads-and-installs"></a>Descargas e instalaciones
 
@@ -75,7 +89,7 @@ Los lenguajes administrados de .NET, como C# y Visual Basic, son los usuarios m
 
 #### <a name="code-examples"></a>Ejemplos de código
 
-|||
+| Ejemplo | Descripción |
 | :-- | :-- |
 | [Prueba de concepto de la conexión a SQL mediante ADO.NET](./ado-net/step-3-connect-sql-ado-net.md) | Un pequeño ejemplo de código centrado en la conexión y consulta de SQL Server. |
 | [Conectar de forma resistente a SQL con ADO.NET](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | Lógica de reintento en un ejemplo de código, ya que en ocasiones las conexiones pueden experimentar momentos de pérdida de conectividad.<br /><br />La lógica de reintento se aplica bien a las conexiones que se mantienen a través de Internet a cualquier base de datos en la nube, como Azure SQL Database. |
@@ -85,7 +99,7 @@ Los lenguajes administrados de .NET, como C# y Visual Basic, son los usuarios m
 
 #### <a name="documentation"></a>Documentación
 
-|||
+| Área | Descripción |
 | :-- | :-- |
 | [C# con ADO.NET](./ado-net/index.md)| Raíz de la documentación. |
 | [Espacio de nombres: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | Un conjunto de clases usadas para ADO.NET. |
@@ -116,7 +130,7 @@ La [página de inicio de Entity Framework](https://docs.microsoft.com/ef/) prese
 
 *Entity Framework* es un nombre compartido por dos ramas de código fuente independientes. Una rama EF es más antigua, y el público ahora puede mantener su código fuente. La otra instancia de EF es nueva. Las dos instancias de EF se describen a continuación:
 
-|     |     |
+| Versión | Descripción |
 | :-- | :-- |
 | [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft lanzó por primera vez EF en agosto de 2008. En marzo 2015, Microsoft anunció que EF 6.x era la versión final que desarrollaría Microsoft. Microsoft publicó el código fuente en el dominio público.<br /><br />Inicialmente, EF formaba parte de .NET Framework. Pero EF 6. x se quitó de .NET Framework.<br /><br />[Código fuente de EF 6.x en GitHub, en el repositorio *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft lanzó la instancia de EF Core recién desarrollada en junio de 2016. EF Core está diseñado para ofrecer una mayor flexibilidad y portabilidad. EF Core puede ejecutarse en sistemas operativos diferentes de Microsoft Windows. Y EF Core puede interactuar con bases de datos diferentes de Microsoft SQL Server y otras bases de datos relacionales.<br /><br />**Ejemplos de código de C&#x23:**<br />[Introducción a Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Introducción a EF Core en .NET Framework con una base de datos existente](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
@@ -136,7 +150,7 @@ Microsoft proporciona un controlador de Java Database Connectivity (JDBC) para u
 
 #### <a name="code-examples"></a>Ejemplos de código
 
-|||
+| Ejemplo | Descripción |
 | :-- | :-- |
 | [Ejemplos de código](./jdbc/code-samples/index.md) | Ejemplos de código que enseñan sobre los tipos de datos, los conjuntos de resultados y los datos de gran tamaño. |
 | [Ejemplo de URL de conexión](./jdbc/connection-url-sample.md) | Describe cómo usar una dirección URL de conexión para conectarse a SQL Server. A continuación, úselo para emplear una instrucción SQL para recuperar datos. |
@@ -149,7 +163,7 @@ Microsoft proporciona un controlador de Java Database Connectivity (JDBC) para u
 
 La documentación de JDBC incluye las siguientes áreas principales:
 
-|||
+| Área | Descripción |
 | :-- | :-- |
 | [Java Database Connectivity (JDBC)](./jdbc/index.md) | Raíz de nuestra documentación de JDBC. |
 | [Referencia](./jdbc/reference/index.md) | Interfaces, clases y miembros. |
@@ -168,7 +182,7 @@ El controlador de conexión de Node.js para SQL Server se implementa en JavaScr
 
 #### <a name="code-examples"></a>Ejemplos de código
 
-|||
+| Ejemplo | Descripción |
 | :-- | :-- |
 | [Prueba de concepto de la conexión a SQL mediante Node.js](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | Código fuente básico para conectarse a SQL Server y ejecutar una consulta. |
 | [Azure SQL Database: Uso de Node.js para consultar](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | Ejemplo de Azure SQL Database en la nube. |
@@ -223,7 +237,7 @@ Puede usar PHP para interactuar con SQL Server. La raíz de la documentación d
 
 #### <a name="code-examples"></a>Ejemplos de código
 
-|||
+| Ejemplo | Descripción |
 | :-- | :-- |
 | [Prueba de concepto de la conexión a SQL mediante PHP](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | Un pequeño ejemplo de código centrado en la conexión y consulta de SQL Server. |
 | [Paso 4: Conectar de forma resistente a SQL con PHP](./php/step-4-connect-resiliently-to-sql-with-php.md) | Lógica de reintento en un ejemplo de código, ya que en ocasiones las conexiones a través de Internet y la nube pueden experimentar momentos de pérdida de conectividad. |
@@ -242,7 +256,7 @@ Puede usar Python para interactuar con SQL Server.
 
 #### <a name="code-examples"></a>Ejemplos de código
 
-|||
+| Ejemplo | Descripción |
 | :-- | :-- |
 | [Prueba de concepto de la conexión a SQL con Python mediante pyodbc](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | Un pequeño ejemplo de código centrado en la conexión y consulta de SQL Server. |
 | [Azure SQL Database: uso de Python para consultar](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Ejemplo de Azure SQL Database. |
@@ -267,7 +281,7 @@ Puede usar Ruby para interactuar con SQL Server. La raíz de nuestra documentac
 
 #### <a name="code-examples"></a>Ejemplos de código
 
-|||
+| Ejemplo | Descripción |
 | :-- | :-- |
 | [Prueba de concepto de la conexión a SQL con Ruby](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | Un pequeño ejemplo de código centrado en la conexión y consulta de SQL Server. |
 | [Azure SQL Database: Uso de Ruby para consultar](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Ejemplo de Azure SQL Database. |

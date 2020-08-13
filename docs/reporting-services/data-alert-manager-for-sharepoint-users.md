@@ -1,5 +1,6 @@
 ---
 title: Administrador de alertas de datos para los usuarios de SharePoint | Microsoft Docs
+description: Obtenga información sobre cómo Reporting Services proporciona el Administrador de alertas de datos para SharePoint, que permite a los trabajadores de la información administrar las alertas de datos.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbb1dda8e708d08fae32e920406ea2b60fa39496
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571488"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243286"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>Administrador de alertas de datos para los usuarios de SharePoint
 
@@ -50,7 +51,7 @@ Cuando se habilita un sitio de SharePoint para las alertas de datos, se crean do
   
  En la tabla siguiente se muestran datos de ejemplo de una tabla del Administrador de alertas de datos. Cuando se produce un error, el mensaje de error y el identificador de la entrada del registro (un GUID) se incluyen en el campo **Estado** de la tabla.  
   
-|Nombre de la alerta|Nombre del informe|Creado por|Alertas enviadas|Última ejecución|Modificado por última vez|Status|  
+|Nombre de la alerta|Nombre del informe|Creado por|Alertas enviadas|Última ejecución|Modificado por última vez|Estado|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|La última alerta se ejecutó correctamente y se envió.|  
 |UnitsSold|ProductsSalesByQTR|Lauren Johnson|2|7/1/2011|6/28/2011|La última alerta se ejecutó correctamente, pero los datos no se modificaron y no se envió la alerta.|  

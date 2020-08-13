@@ -1,5 +1,6 @@
 ---
 title: 'Lección 7: Agregar una acción de obtención de detalles en el informe primario | Microsoft Docs'
+description: Obtenga información sobre agregar una acción de obtención de detalles en el informe primario. después de agregar un control ReportViewer a la aplicación de sitio web.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ade2bf3463ca2efc139cfea661dba0a83394f804
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6a6e588cb79ffbc97450a4ad0a627957dc73b75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651271"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243256"
 ---
-# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lección 7: Agregar una acción de obtención de detalles en el informe primario
+# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lección 7: Incorporación de una acción de obtención de detalles en el informe primario
 Después de agregar un control ReportViewer a la aplicación de sitio Web, el paso siguiente consiste en agregar una acción de obtención de detalles en el informe primario.  
   
 ### <a name="to-add-drillthrough-action-on-the-parent-report"></a>Para agregar una acción de obtención de detalles en el informe primario  
@@ -40,7 +41,7 @@ Después de agregar un control ReportViewer a la aplicación de sitio Web, el pa
 8.  Seleccione **Aceptar** para finalizar.  
   
 ## <a name="next-task"></a>Tarea siguiente  
-Ha agregado correctamente una acción de obtención de detalles en el informe primario. A continuación, creará un filtro de los datos para la tabla de datos que definió para el informe secundario. Consulte [Lección 8: Crear un filtro de datos](../reporting-services/lesson-8-create-a-data-filter.md).  
+Ha agregado correctamente una acción de obtención de detalles en el informe primario. A continuación, creará un filtro de los datos para la tabla de datos que definió para el informe secundario. Vea [Lección 8: Creación de un filtro de datos](../reporting-services/lesson-8-create-a-data-filter.md).  
   
   
   

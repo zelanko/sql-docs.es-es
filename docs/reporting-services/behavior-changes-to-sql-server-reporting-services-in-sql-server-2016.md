@@ -1,5 +1,6 @@
 ---
 title: Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016 | Microsoft Docs
+description: Obtenga información sobre los cambios de comportamiento en Reporting Services y cómo funcionan o interactúan las características en SQL Server 2016 en comparación con versiones anteriores de SQL Server.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c0288f0ed1bad041e05068512cec88538977acde
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c082446922d1305ce5d9c27d6e301e6b452db45
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503932"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243316"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016
 

@@ -1,5 +1,5 @@
 ---
-title: Temas de procedimientos de OLE DB | Microsoft Docs
+title: Temas de procedimientos (controlador OLE DB)
 description: Temas de procedimientos de OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, how-to topics
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 5e1a6ea1debfb4a432ef63395e3e8b7fd476d891
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c8491c084e166b48e9436838879fd66386b9da38
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015619"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244746"
 ---
 # <a name="ole-db-how-to-topics"></a>Temas de procedimientos de OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

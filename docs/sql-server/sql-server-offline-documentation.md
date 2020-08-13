@@ -8,17 +8,18 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/08/2020
-ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/22/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151545"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237983"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>Instalación de la documentación de SQL Server para la vista sin conexión en SSMS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 En este artículo se describe cómo descargar y ver el contenido de SQL Server sin conexión en [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). El contenido sin conexión le permite acceder a la documentación sin conexión a Internet (aunque se necesita una conexión a Internet para descargarla).
 
@@ -34,7 +35,7 @@ Con los siguientes pasos se explica cómo cargar contenido sin conexión en SQL�
 
 1. En SSMS, seleccione **Agregar y quitar contenido de la Ayuda** en el menú Ayuda.
 
-   ![Agregar y quitar contenido en el Visor de Ayuda](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
+   ![Incorporación y eliminación de contenido de ayuda](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
 
    El Visor de Ayuda se abre en la pestaña Administrar contenido.
 
@@ -50,7 +51,7 @@ Con los siguientes pasos se explica cómo cargar contenido sin conexión en SQL�
    ![Opciones Agregar y Actualizar para libros en línea de SQL Server](../sql-server/media/sql-server-offline-documentation/sql-add-update.png)
 
    > [!NOTE]
-   > Si el Visor de Ayuda se bloquea al agregar contenido, cambie la línea Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" en los archivos %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings a una fecha en el futuro. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio)(El Visor de Ayuda de Visual Studio se bloquea).
+   > Si el Visor de ayuda se bloquea al agregar contenido, cambie la línea Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" en los archivos %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings a una fecha en el futuro. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio)(El Visor de Ayuda de Visual Studio se bloquea).
 
 4. Para comprobar si el contenido de SQL Server 2016 y versiones posteriores está cargado, busque *sql server 2016* en el panel de contenido de la izquierda.
 
@@ -58,11 +59,14 @@ Con los siguientes pasos se explica cómo cargar contenido sin conexión en SQL�
 
 ## <a name="sql-server-2014-offline-content"></a>Contenido sin conexión de SQL Server 2014
 
+> [!IMPORTANT]
+> El contenido de Transact-SQL de SQL 2014 solo está disponible sin conexión.
+
 Con los siguientes pasos se explica cómo cargar contenido sin conexión en SQL Server 2014.
 
 1. Descargue el contenido de la [Documentación del producto de Microsoft SQL Server 2014 para los entornos restringidos de firewall y proxy](https://www.microsoft.com/download/details.aspx?id=42557) del centro de descarga y guárdelo en una carpeta.
 
-2. Descomprima el archivo para ver el archivo .msha.
+2. Descomprima el archivo para ver el archivo *.msha*.
 
    ![Archivo de instalación de la documentación de Ayuda de SQL Server 2014](../sql-server/media/sql-server-offline-documentation/sql-2014-help-content-setup-msha.png)
 
@@ -91,14 +95,11 @@ Con los siguientes pasos se explica cómo cargar contenido sin conexión en SQL�
    ![Libros de SQL Server 2014 sobre adición y actualización en el Visor de Ayuda](../sql-server/media/sql-server-offline-documentation/sql-2014-add-update.png)
 
     > [!NOTE]
-    > Si el Visor de Ayuda se bloquea al agregar contenido, cambie la línea Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" en los archivos %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings a una fecha en el futuro. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio)(El Visor de Ayuda de Visual Studio se bloquea).
+    > Si el Visor de ayuda se bloquea al agregar contenido, cambie la línea Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" en los archivos %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings a una fecha en el futuro. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio)(El Visor de Ayuda de Visual Studio se bloquea).
 
 7. Puede comprobar si el contenido de SQL Server 2014 está instalado; para ello, busque *sql server 2014* en el panel de contenido de la izquierda.
 
    ![Libros de SQL Server 2014 actualizados automáticamente](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
-
-> [!Tip]
-> El contenido de Transact-SQL de SQL 2014 solo está disponible sin conexión.
 
 ## <a name="sql-server-2012-offline-content"></a>Contenido sin conexión de SQL Server 2012
 
@@ -106,7 +107,7 @@ Con los siguientes pasos se explica cómo cargar contenido sin conexión en SQL�
 
 1. Descargue el contenido de la [Documentación del producto de Microsoft SQL Server 2012 para los entornos restringidos de firewall y proxy](https://www.microsoft.com/download/details.aspx?id=35750) del centro de descarga y guárdelo en una carpeta.
 
-2. Descomprima el archivo para ver el archivo .msha.
+2. Descomprima el archivo para ver el archivo *.msha*.
 
    ![Archivo de instalación del contenido de Ayuda de SQL Server 2012](../sql-server/media/sql-server-offline-documentation/sql-2012-help-content-setup-msha.png)
 
@@ -135,7 +136,7 @@ Con los siguientes pasos se explica cómo cargar contenido sin conexión en SQL�
    ![Libros de SQL Server 2012 sobre adición y actualización en el Visor de Ayuda](../sql-server/media/sql-server-offline-documentation/sql-2012-add-update.png)
 
     > [!NOTE]
-    > Si el Visor de Ayuda se bloquea al agregar contenido, cambie la línea Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" en los archivos %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings a una fecha en el futuro. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio)(El Visor de Ayuda de Visual Studio se bloquea).
+    > Si el Visor de ayuda se bloquea al agregar contenido, cambie la línea Cache LastRefreshed="\<mm/dd/yyyy> 00:00:00" en los archivos %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings o HlpViewer_VisualStudiox_en-US.settings a una fecha en el futuro. Para obtener más información sobre este problema, vea [Visual Studio Help Viewer freezes](/visualstudio/welcome-to-visual-studio)(El Visor de Ayuda de Visual Studio se bloquea).
 
 7. Puede comprobar si el contenido de SQL Server 2012 está cargado; para ello, busque *sql server 2012* en el panel de contenido de la izquierda.
 
@@ -153,7 +154,7 @@ Para ver la Ayuda instalada en SSMS, seleccione **Iniciar en el Visor de Ayuda**
 
 Este se abrirá en la pestaña Administrar contenido, con la tabla de contenido de la Ayuda instalada en el panel izquierdo. Seleccione los artículos de la tabla de contenido para que se muestren en el panel de la derecha.
 
-> [!TIP]
+> [!Important]
 > Si el panel de contenido no está visible, seleccione Contenido en el margen izquierdo. Seleccione el icono de marcador para mantener abierto el panel de contenido.  
 
    ![Visor de Ayuda con contenido](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)
@@ -170,7 +171,7 @@ Revise el ciclo de vida de los productos de Microsoft para obtener información 
 
 Para obtener más información sobre el contenido archivado y el visor de la Ayuda, vea los siguientes vínculos.
 
-- [Documentación de SQL Server](../sql-server/index.yml?view=sql-server-2016)
-- [Documentación de SQL Server 2014](../2014/database-engine/install-windows/installation-for-sql-server.md)
-- [Documentación de versiones anteriores de SQL Server](https://docs.microsoft.com/previous-versions/sql/)
+- [Documentación en línea de SQL Server](../sql-server/index.yml?view=sql-server-2016)
+- [Documentación en línea de SQL Server 2014](/sql/2014-toc/)
+- [Versiones anteriores de la documentación en línea de SQL Server](previous-versions-sql-server.md)
 - [Control del sistema de versiones de la documentación de SQL](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

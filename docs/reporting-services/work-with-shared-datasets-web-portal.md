@@ -1,5 +1,6 @@
 ---
 title: Trabajar con conjuntos de datos compartidos (portal web) | Microsoft Docs
+description: Vea y administre las propiedades de un conjunto de datos compartido en el portal web. Use el portal web para crear o editar conjuntos de datos compartidos en el Generador de informes.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222795"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243606"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Trabajar con conjuntos de datos compartidos: portal web
 

@@ -1,5 +1,6 @@
 ---
 title: Permisos necesarios
+description: Obtenga información sobre los permisos que necesita para varias tareas de SQL Server Data Tools, como la creación de una base de datos, la ejecución de pruebas unitarias y la comparación de esquemas.
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.prod: sql
@@ -8,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
-ms.openlocfilehash: fbe44c84b2a1974981dff5173015ecf0fc5e74b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5637af0406176ba8099038eaa8a2500d2f03629e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256990"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243726"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Permisos necesarios para SQL Server Data Tools
 
@@ -38,9 +38,8 @@ Para poder realizar una acción en una base de datos en Visual Studio, debe inic
 ## <a name="permissions-to-create-or-deploy-a-database"></a><a name="DatabaseCreationAndDeploymentPermissions"></a>Permisos para crear o implementar una base de datos  
 Para crear o implementar una base de datos, debe disponer de los siguientes permisos.  
   
-|||  
-|-|-|  
 |Acciones|Permisos necesarios|  
+|-|-|  
 |Importar objetos y configuración de base de datos|Debe poder conectarse a la base de datos de origen.<br /><br />Si la base de datos de origen se basa en SQL Server 2005, también debe ser el propietario o tener el permiso **VIEW DEFINITION** en cada objeto.<br /><br />Si la base de datos de origen se basa en SQL Server 2008 o una versión posterior, también debe ser el propietario o tener el permiso **VIEW DEFINITION** en cada objeto. Su inicio de sesión debe tener el permiso **VIEW SERVER STATE** (para claves de cifrado de base de datos).|  
 |Importar objetos y configuración de servidor|Debe poder conectarse a la base de datos maestra en el servidor especificado.<br /><br />Si el servidor ejecuta SQL Server 2005, debe tener el permiso **VIEW ANY DEFINITION** en el servidor.<br /><br />Si la base de datos de origen se basa en SQL Server 2008 o una versión posterior, también debe ser el propietario o tener el permiso **VIEW ANY DEFINITION** en el servidor. Su inicio de sesión debe tener el permiso **VIEW SERVER STATE** (para claves de cifrado de base de datos).|  
 |Crear o actualizar un proyecto de base de datos|No se necesita ningún permiso de base de datos para crear o modificar un proyecto de base de datos.|  
@@ -57,14 +56,13 @@ La *refactorización de una base de datos* solo tiene lugar dentro del proyecto 
 ## <a name="permissions-to-perform-unit-testing-on-a-sql-server-database"></a><a name="DatabaseUnitTestingPermissions"></a>Permisos para ejecutar pruebas unitarias en una base de datos de SQL Server  
 Para ejecutar pruebas unitarias en una base de datos, debe disponer de los siguientes permisos.  
   
-|||  
-|-|-|  
 |Acciones|Permisos necesarios|  
+|-|-|   
 |Ejecutar una acción de prueba|Debe usar la conexión de base de datos del contexto de ejecución. Para obtener más información, consulte [Información general acerca de las cadenas de conexión y los permisos](../ssdt/overview-of-connection-strings-and-permissions.md).|  
 |Ejecutar una acción anterior o posterior a la prueba|Debe usar la conexión de base de datos del contexto con privilegios. Esta conexión de base de datos puede tener más permisos que la conexión del contexto de ejecución.|  
 |Ejecutar los scripts TestInitialize y TestCleanup|Debe usar la conexión de base de datos del contexto con privilegios.|  
-|Implementar cambios en una base de datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para obtener más información, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
-|Generar datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para obtener más información, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Implementar cambios en una base de datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para más información, vea: [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Generar datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para más información, vea: [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
 ## <a name="permissions-to-generate-data"></a><a name="DataGenerationPermissions"></a>Permisos para generar datos  
 Debe tener los permisos **INSERT** y **SELECT** en los objetos de la base de datos de destino para generar datos de prueba con el Generador de datos. Si depura los datos antes de generarlos, debe tener también el permiso **DELETE** en los objetos de la base de datos de destino. Para restablecer la columna **IDENTITY** en una tabla, debe ser el propietario de la tabla o un miembro del rol db_owner o db_ddladmin.  
@@ -72,9 +70,8 @@ Debe tener los permisos **INSERT** y **SELECT** en los objetos de la base de dat
 ## <a name="permissions-to-compare-schemas-and-data"></a><a name="SchemaAndDataComparePermissions"></a>Permisos para comparar esquemas y datos  
 Para comparar esquemas o datos, debe disponer de los siguientes permisos.  
   
-|||  
-|-|-|  
 |Acciones|Permisos necesarios|  
+|-|-|   
 |Comparar los esquemas de dos bases de datos|Debe tener los permisos para importar objetos y configuraciones de las bases de datos que se describen en [Permisos para crear o implementar una base de datos](#DatabaseCreationAndDeploymentPermissions).|  
 |Comparar los esquemas de una base de datos y un proyecto de base de datos|Debe tener los permisos para importar objetos y configuraciones de la base de datos que se describen en [Permisos para crear o implementar una base de datos](#DatabaseCreationAndDeploymentPermissions). Además, el proyecto de base de datos debe estar abierto en Visual Studio.|  
 |Escribir actualizaciones en la base de datos de destino|Debe tener los permisos para implementar actualizaciones en la base de datos de destino que se describen en [Permisos para crear o implementar una base de datos](#DatabaseCreationAndDeploymentPermissions).|  

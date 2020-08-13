@@ -1,5 +1,5 @@
 ---
-title: Captura de una sola fila con IRow | Microsoft Docs
+title: Captura de una sola fila mediante IRow (controlador OLE DB) | Microsoft Docs
 description: Captura de una sola fila mediante la interfaz IRow de OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fba517134c69914914da95daacafdf634de7b15c
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994293"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244288"
 ---
-# <a name="fetching-a-single-row-with-irow"></a>Capturar una única fila con IRow
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="fetching-a-single-row-with-irow-ole-db-driver"></a>Captura de una sola fila mediante IRow (controlador OLE DB)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

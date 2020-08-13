@@ -1,5 +1,6 @@
 ---
 title: 'Lección 2: Modificar las propiedades del origen de datos de informe | Microsoft Docs'
+description: Aprenda a usar el portal web para seleccionar un informe que se entregará a los destinatarios y también a modificar las propiedades del origen de datos del informe.
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b45f2145efcca54d577db370b436e27c36ce987
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651742"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235671"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lección 2: Modificación de las propiedades del origen de datos de informe
 En esta lección de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará el portal web para seleccionar un informe que se entregará a los destinatarios. La suscripción controlada por datos que va a definir distribuirá el informe **Sales Order** creado en el tutorial [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  En los pasos siguientes, modificará la información de conexión del origen de datos que el informe utiliza para obtener los datos. Solo los informes que usan **credenciales almacenadas** para obtener acceso a un origen de datos del informe se pueden distribuir a través de una suscripción controlada por datos. Las credenciales almacenadas son necesarias para el procesamiento desatendido de informes.  
   
 También modificará el conjunto de datos y el informe para usar un parámetro que filtrar el informe en `[Order]` de modo que la suscripción pueda dar como resultado diferentes instancias del informe para pedidos concretos y formatos de representación.  
@@ -105,13 +106,13 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
   
 ## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>Volver a implementar el informe  
   
-1.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto que se usan en el tutorial de tablas, vea la sección "Para publicar el informe en el servidor de informes (opcional)" de la [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto que se usan en el tutorial sobre tablas, vea la sección "Para publicar el informe en el servidor de informes (opcional)" de [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 2.  En la barra de herramientas, haga clic en **Generar** y, a continuación, haga clic en **Tutorial de implementación**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
 + Configuró correctamente el informe para obtener datos usando credenciales almacenadas y los datos se pueden filtrar con un parámetro. 
-+ En la siguiente lección, configurará la suscripción mediante las páginas del portal web Suscripción controlada por datos. Consulte la [Lección 3: Definir una suscripción controlada por datos](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
++ En la siguiente lección, configurará la suscripción mediante las páginas del portal web Suscripción controlada por datos. Consulte [Lección 3: Definición de una suscripción controlada por datos](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## <a name="see-also"></a>Consulte también  
 [Administrar orígenes de datos de informe](../reporting-services/report-data/manage-report-data-sources.md)  

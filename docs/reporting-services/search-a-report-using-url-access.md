@@ -1,5 +1,6 @@
 ---
 title: Buscar un informe mediante un acceso URL | Microsoft Docs
+description: Aprenda a buscar en un informe mediante el acceso URL. Por ejemplo, establezca el valor del parámetro rc:FindString en la URL igual al texto que quiera buscar.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2568c2930080ddbb060f2c4d014c40476ab38f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7d5ba7b312bb89942fd899f4c769179a0c97bab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570886"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238437"
 ---
 # <a name="search-a-report-using-url-access"></a>Buscar un informe mediante un acceso URL
   Puede buscar un conjunto concreto de texto en un informe utilizando el acceso URL. Para buscar en un informe, establezca el valor del parámetro *rc:FindString* en la URL igual al texto que desea buscar. Además, utilice los parámetros *rc:StartFind* y *rc:EndFind* para restringir su búsqueda a las páginas determinadas dentro del informe.  

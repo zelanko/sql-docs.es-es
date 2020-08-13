@@ -15,12 +15,12 @@ ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12dc8a03cbf65a0c07e9a5985f1ffade813a3e5f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012147"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243716"
 ---
 # <a name="memory-management-architecture-guide"></a>guía de arquitectura de administración de memoria
 
@@ -55,7 +55,7 @@ Mediante AWE y el privilegio Bloquear páginas en memoria, puede proporcionar la
 > [!NOTE]
 > En la siguiente tabla se incluye una columna para las versiones de 32 bits que ya no están disponibles.
 
-| |32 bits <sup>1</sup> |64 bits|
+|Directiva de memoria|32 bits <sup>1</sup> |64 bits|
 |-------|-------|-------| 
 |Memoria convencional |Todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Hasta el límite de espacio de direcciones virtuales del proceso: <br>- 2 GB<br>- 3 GB con el parámetro de arranque /3gb <sup>2</sup> <br>- 4 GB en WOW64 <sup>3</sup> |Todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Hasta el límite de espacio de direcciones virtuales del proceso: <br>- 7 TB con la arquitectura IA64 (IA64 no se admite en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y versiones superiores)<br>- Sistema operativo máximo con arquitectura x64 <sup>4</sup>
 |Mecanismo AWE (permite a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] superar el límite del espacio de direcciones virtuales del proceso en plataformas de 32 bits). |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ediciones Standard, Enterprise y Developer: el grupo de búferes es capaz de acceder hasta 64 GB de memoria.|No aplicable <sup>5</sup> |
@@ -94,7 +94,7 @@ En la tabla siguiente se indica si un tipo de asignación de memoria específico
 |Asignaciones de página única|Sí|Sí, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
 |Asignaciones de varias páginas|No|Sí, consolidadas bajo las asignaciones de páginas de cualquier tamaño|
 |Asignaciones de CLR|No|Sí|
-|Memoria de pilas de subprocesos|No|No|
+|Memoria de pilas de subprocesos|No|Sin|
 |Asignaciones directas de Windows|No|No|
 
 A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podría asignar más memoria que el valor especificado en el valor de memoria de servidor máxima. Esto puede ocurrir cuando el valor de **_Memoria total del servidor (KB_**) ya ha alcanzado la configuración de **_Memoria total del servidor (KB)_** (tal y como se especifica en la memoria de servidor máxima). Si no hay memoria libre contigua suficiente para atender a la demanda de solicitudes de memoria de varias páginas (más de 8 KB) debido a la fragmentación de memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede realizar compromisos por encima de lo indicado en vez de rechazar las solicitudes de memoria. 

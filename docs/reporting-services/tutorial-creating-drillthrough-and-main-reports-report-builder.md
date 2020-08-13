@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Crear informes principales y de obtención de detalles (Generador de informes) | Microsoft Docs'
+description: 'Aprenda crear dos tipos de informes paginados de Reporting Services: un informe de obtención de detalles y un informe principal.'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73637984"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238440"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Creación de informes principales y de obtención de detalles (Generador de informes)
 En este tutorial se explica cómo crear dos tipos de informes paginados de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. 
 
 En la ilustración siguiente se muestran los informes que se van a crear y cómo aparece en el título del informe detallado el valor de campo Games and Toys del informe principal. Los datos del informe detallado pertenecen a la categoría de producto de Games and Toys.  
@@ -120,7 +121,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea**, en **Distribuidor**y, después, en **Aceptar**.  
   
-    La consulta incluye ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
+    Ahora la consulta contiene un filtro para incluir solo estos canales: En línea y Distribuidor.  
   
 6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
   
@@ -411,7 +412,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea** y en **Distribuidor**y, después, en **Aceptar**.  
   
-    La consulta incluye ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
+    Ahora la consulta contiene un filtro para incluir solo estos canales: En línea y Distribuidor.  
   
 6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
   
@@ -627,7 +628,7 @@ Agregar un título al informe principal.
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Ventas por categoría de producto de 2009: categoría En línea y Distribuidor**.  
+2.  Escriba **Ventas por categoría de producto de 2009: categoría En línea y Distribuidor:** .  
   
 3.  Seleccione el texto que escribió.  
   

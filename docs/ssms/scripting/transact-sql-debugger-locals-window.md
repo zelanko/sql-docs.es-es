@@ -1,5 +1,6 @@
 ---
 title: Ventana de locales
+description: Aprenda a usar la ventana Variables locales del depurador de Transact-SQL para mostrar y modificar expresiones en el marco de pila de llamadas actual.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70ee1eee120c94e7f851bc37c3becf1983a57d09
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00c6704418210c0913470688ae4c8d7a55facaf4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253051"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243777"
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Depurador de Transact-SQL: ventana Variables locales
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 La ventana **Variables locales** muestra información sobre las expresiones locales en el ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El ámbito está establecido en el marco de la pila de llamadas actual que está seleccionado en la ventana **Pila de llamadas** . Debe estar en modo de depuración para mostrar las expresiones locales.  
 

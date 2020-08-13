@@ -1,5 +1,5 @@
 ---
-title: Inserción de datos en parámetros con valores de tabla | Microsoft Docs
+title: Inserción de datos en parámetros con valores de tabla (controlador OLE DB) | Microsoft Docs
 description: Uso de OLE DB Driver for SQL Server para insertar datos en parámetros con valores de tabla
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,24 +12,24 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 064dcfa74cd6471c8c279ef4b08e874097d98d64
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31cfbbd1afd2e5b249c3f3106aec471965038c86
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994130"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244171"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertar datos en parámetros con valores de tabla
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server admite dos modelos para que el consumidor especifique datos para filas de parámetros con valores de tabla: un modelo de inserción y un modelo de extracción. Hay disponible un ejemplo que muestra el modelo de extracción; vea [Ejemplos de programación de datos de SQL Server](https://msftdpprodsamples.codeplex.com/).  
+  OLE DB Driver for SQL Server admite dos modelos para que el consumidor especifique datos para filas de parámetros con valores de tabla: un modelo de inserción y uno de extracción. Hay disponible un ejemplo que muestra el modelo de extracción; vea [Ejemplos de programación de datos de SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
 > [!NOTE]  
 >  Una columna de parámetros con valores de tabla debe tener valores no predeterminados en todas las filas o valores predeterminados en todas las filas. No es posible tener valores predeterminados en algunas filas y en otras no. Por lo tanto, en enlaces de parámetros con valores de tabla, los únicos valores de estado permitidos en datos de columnas de conjunto de filas de parámetros con valores de tabla son DBSTATUS_S_ISNULL y DBSTATUS_S_OK. DBSTATUS_S_DEFAULT generará un error y el valor de estado enlazado se establecerá en DBSTATUS_E_BADSTATUS.  
   
-## <a name="push-model-loads-all-table-valued-paremeter-data-in-memory"></a>Modelo de inserción (carga todos los datos de parámetros con valores de tabla en memoria)  
+## <a name="push-model-loads-all-table-valued-parameter-data-in-memory"></a>Modelo de inserción (carga todos los datos de parámetros con valores de tabla en memoria)  
  El modelo de inserción es similar al uso de conjuntos de parámetros (es decir, el parámetro DBPARAMS de ICommand::Execute). El modelo de inserción solo se usa si los objetos de conjunto de filas de parámetros con valores de tabla se usan sin una implementación personalizada de las interfaces IRowset. Se recomienda usar el modelo de inserción cuando el número de filas del conjunto de filas de parámetros con valores de tabla sea pequeño y no se espere que vaya a haber un exceso de presión de memoria en la aplicación. Este modelo es más sencillo que el modelo de extracción, ya que no requiere ninguna otra funcionalidad por parte de la aplicación del consumidor más que la actualmente común en aplicaciones OLE DB típicas.  
   
  Se espera que el consumidor proporcione todos los datos de parámetro con valores de tabla al proveedor antes de ejecutar un comando. Para proporcionar los datos, el consumidor rellena un objeto de conjunto de filas de parámetros con valores de tabla por cada parámetro con valores de tabla. El objeto de conjunto de filas de parámetro con valores de tabla expone las operaciones Insert, Set y Delete del conjunto de filas, que el consumidor usará para manipular los datos de parámetros con valores de tabla. El proveedor capturará los datos de este objeto de conjunto de filas de parámetros con valores de tabla en tiempo de ejecución.  

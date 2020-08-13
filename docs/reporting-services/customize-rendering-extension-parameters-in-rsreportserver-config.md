@@ -1,5 +1,6 @@
 ---
 title: Personalizar los parámetros de extensión de representación en RSReportServer.Config | Microsoft Docs
+description: Especifique parámetros de extensión de representación en el archivo de configuración RSReportServer para invalidar el comportamiento de representación predeterminado de los informes de Reporting Services.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d5266de3f5fe52a75c1027addd02ca32488c38b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae82af83d1933e204e405995864c9f17cfe3521a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571590"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242495"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizar los parámetros de extensión de representación en RSReportServer.Config
   Es posible especificar parámetros de extensión de representación en el archivo de configuración RSReportServer para invalidar el comportamiento predeterminado de la representación de los informes que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Los parámetros de extensión de representación se pueden modificar para lograr los siguientes objetivos:  

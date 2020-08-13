@@ -1,5 +1,6 @@
 ---
 title: Pasar un parámetro de informe en una dirección URL | Microsoft Docs
+description: Obtenga información sobre cómo pasar parámetros de informe directamente al motor de procesamiento de informes si los incluye en una dirección URL de informe.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 551fc19b3d39ef6cf12c5fdd4e77196b0abbb9fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2eca700dbe01abdb94ff2b60763db840fc4f3d53
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580839"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242935"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pasar un parámetro de informe en una dirección URL
   Puede pasar parámetros de informe a un informe incluyéndolos en un informe URL. Estos parámetros de dirección URL no tienen prefijo porque se pasan directamente al motor de procesamiento de informes.  

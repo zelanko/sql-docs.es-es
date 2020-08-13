@@ -1,5 +1,5 @@
 ---
-title: Eliminación de una columna de una tabla de SQL Server | Microsoft Docs
+title: Eliminación de una columna de una tabla de SQL Server (controlador OLE DB)
 description: Eliminación de una columna de una tabla de SQL Server con OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, columns
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 7e367c1b0664b0b43007db3a465dcbec0ffa90d9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7467d30e8cb13badbea21eff9804710ff4361259
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67993988"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244116"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Quitar una columna de una tabla de SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

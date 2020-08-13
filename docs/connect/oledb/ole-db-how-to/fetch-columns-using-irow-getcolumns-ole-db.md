@@ -1,5 +1,5 @@
 ---
-title: Capturar columnas mediante IRow::GetColumns (OLE DB) | Microsoft Docs
+title: Captura de columnas mediante IRow::GetColumns (controlador OLE DB) | Microsoft Docs
 description: Capturar columnas mediante IRow::GetColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 336b5b12eaf0744afd63510ce287edbb5439c3ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d2ca2ba9284c0e1fca7eef3f6b8911111c4559f6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015584"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244811"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Capturar columnas mediante IRow::GetColumns (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -58,7 +58,7 @@ ms.locfileid: "68015584"
   
  La primera lista de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) crea una tabla usada por el ejemplo.  
   
- Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que en la variable de entorno INCLUDE se incluya el directorio que contiene msoledbsql.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la segunda lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que en la variable de entorno INCLUDE se incluya el directorio que contiene msoledbsql.h.  
   
  La tercera lista de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) elimina la tabla usada por el ejemplo.  
   

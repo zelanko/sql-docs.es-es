@@ -8,40 +8,40 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/26/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 237b8d5ac797b6e17a48bde2fff12de55844755e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 6114ae9acf3ecdf8444dd6aec657d5c293fc4dae
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607148"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242323"
 ---
-# <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: Preparación de los datos para entrenar un modelo predictivo en R con el aprendizaje automático de SQL.
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="tutorial-develop-a-predictive-model-in-r-with-sql-machine-learning"></a>Tutorial: Desarrollo de un modelo predictivo en R con el aprendizaje automático de SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En esta serie de tutoriales de cuatro partes, usará R y un modelo de Machine Learning en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o en [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md) para predecir el número de alquileres de esquíes.
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 En esta serie de tutoriales de cuatro partes, usará R y un modelo de Machine Learning en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) para predecir el número de alquileres de esquíes.
 ::: moniker-end
-
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 En esta serie de tutoriales de cuatro partes, usará R y un modelo de Machine Learning en [SQL Server R Services](../r/sql-server-r-services.md) para predecir el número de alquileres de esquíes.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En esta serie de tutoriales de cuatro partes, usará R y un modelo de Machine Learning en [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) para predecir el número de alquileres de esquíes.
 ::: moniker-end
 
 Imagine que es el propietario de una empresa de alquiler de esquíes y quiere predecir el número de alquileres que tendrá en una fecha futura. Esta información le ayudará a preparar las existencias, el personal y las instalaciones.
 
-En la primera parte de esta serie, configurará los requisitos previos. En las partes dos y tres, desarrollará scripts de R en un cuaderno para preparar sus datos y entrenar un modelo de Machine Learning. Después, en la parte tres, ejecutará esos scripts de R en SQL Server con procedimientos almacenados en T-SQL.
+En la primera parte de esta serie, configurará los requisitos previos. En las partes dos y tres, desarrollará scripts de R en un cuaderno para preparar sus datos y entrenar un modelo de Machine Learning. Luego, en la tercera parte, ejecutará esos scripts de R en una base de datos mediante procedimientos almacenados de T-SQL.
 
 En este artículo, aprenderá a:
 
 > [!div class="checklist"]
-> * Restaurar una base de datos de ejemplo en SQL Server 
+> * Restauración de una base de datos de ejemplo 
 
 En la [parte dos](r-predictive-model-prepare-data.md), aprenderá a cargar los datos desde una base de datos en una trama de datos de Python y a preparar los datos en R.
 
@@ -54,9 +54,16 @@ En la [parte cuatro](r-predictive-model-deploy.md), aprenderá a almacenar el mo
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 * SQL Server Machine Learning Services: para obtener información sobre cómo instalar Machine Learning Services, vea la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md) o la [Guía de instalación para Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). También puede [habilitar Machine Learning Services en clústeres de macrodatos de SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * SQL Server Machine Learning Services: para obtener información sobre cómo instalar Machine Learning Services, vea la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+* SQL Server 2016 R Services. Para obtener más instrucciones sobre cómo instalar R Services, consulte la [Guía de instalación de Windows](../install/sql-r-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Machine Learning Services en Azure SQL Managed Instance. Para obtener información sobre cómo registrarse, vea la [información general de Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+
+* [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) para restaurar la base de datos de ejemplo en Azure SQL Managed Instance.
 ::: moniker-end
 
 * IDE de R: en este tutorial se usa [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
@@ -74,6 +81,7 @@ La base de datos de ejemplo usada en este tutorial se ha guardado en un archivo 
 > Si usa Machine Learning Services en clústeres de macrodatos, consulte [Restauración de una base de datos en la instancia maestra del clúster de macrodatos de SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. Descargue el archivo [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
 1. Siga las indicaciones de [Restauración de una base de datos a partir de un archivo de copia de seguridad](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) en Azure Data Studio con estos datos:
@@ -87,20 +95,32 @@ La base de datos de ejemplo usada en este tutorial se ha guardado en un archivo 
    USE TutorialDB;
    SELECT * FROM [dbo].[rental_data];
    ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. Descargue el archivo [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
-1. Para habilitar los scripts externos, ejecute los comandos SQL siguientes:
+1. Siga las instrucciones de [Restauración de una base de datos en un Instancia administrada](/azure/sql-database/sql-database-managed-instance-get-started-restore) en SQL Server Management Studio, con los detalles siguientes:
 
-    ```sql
-    sp_configure 'external scripts enabled', 1;
-    RECONFIGURE WITH override;
-    ```
+   * Importación del archivo **TutorialDB.bak** que ha descargado
+   * Asignación del nombre "TutorialDB" a la base de datos de destino
 
+1. Para comprobar que la base de datos restaurada existe, consulte la tabla **DBO.rental_data**:
+
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+::: moniker-end
+
+## <a name="clean-up-resources"></a>Limpieza de recursos
+
+Si no quiere continuar con este tutorial, elimine la base de datos TutorialDB.
 ## <a name="next-steps"></a>Pasos siguientes
 
 En la parte uno de esta serie de tutoriales, ha completado estos pasos:
 
 * Instalación de los requisitos previos
-* Restauración de una base de datos de ejemplo en SQL Server
+* Restauración de una base de datos de ejemplo
 
 Para preparar los datos para el modelo de aprendizaje automático, siga la parte dos de esta serie de tutoriales:
 

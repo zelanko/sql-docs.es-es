@@ -1,5 +1,6 @@
 ---
 title: Barra de estado (Editor de consultas del motor de base de datos)
+description: Obtenga información sobre cómo codificar mediante colores la barra de estado de una ventana del Editor de consultas del motor de base de datos para indicar a qué instancia del motor de base de datos está conectada.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a579eeeb12795c76bbe585a982a159d6e069813d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95cccb6c8f63e149de806c4c956e1371a83f3619
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243447"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243775"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra de estado (Editor de consultas del motor de base de datos)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 La barra de estado de las ventanas del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede codificarse por colores para indicar la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a la que está conectada cada ventana.
 

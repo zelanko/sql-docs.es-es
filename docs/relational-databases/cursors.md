@@ -1,5 +1,5 @@
 ---
-title: Cursores | Microsoft Docs
+title: Cursores (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a589358edabaf25e3dfcadf9395e7771a965c5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d4bec8b13cd060801e99e4c6cb842c2b0f38c25e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733906"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236225"
 ---
-# <a name="cursors"></a>Cursores
+# <a name="sql-server-cursors"></a>Cursores de SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   Las operaciones de una base de datos relacional actúan en un conjunto completo de filas. Por ejemplo, el conjunto de filas que devuelve una instrucción `SELECT` está compuesto por todas las filas que satisfacen las condiciones de la cláusula `WHERE` de la instrucción. Este conjunto completo de filas que devuelve la instrucción se conoce como conjunto de resultados. Las aplicaciones, especialmente las aplicaciones interactivas en línea, no siempre trabajan de forma eficaz con el conjunto de resultados completo si lo toman como una unidad. Estas aplicaciones necesitan un mecanismo que trabaje con una fila o un pequeño bloque de filas cada vez. Los cursores son una extensión de los conjuntos de resultados que proporcionan dicho mecanismo.  
   

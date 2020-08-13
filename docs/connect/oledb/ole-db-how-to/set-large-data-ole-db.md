@@ -1,5 +1,5 @@
 ---
-title: Establecimiento de datos de gran tamaño (OLE DB) | Microsoft Docs
+title: Establecimiento de datos de gran tamaño (controlador OLE DB)
 description: Establecer datos de gran tamaño (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - large data
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 72827ffa7866b624c50a83c0d3695f0f011cfe5c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9650f475da3fd15d2956cc8a64c9fcb995b562ce
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994678"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244684"
 ---
 # <a name="set-large-data-ole-db"></a>Establecer datos de gran tamaño (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "67994678"
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que en la variable de entorno INCLUDE se incluya el directorio que contiene msoledbsql.h.  
+ Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que en la variable de entorno INCLUDE se incluya el directorio que contiene msoledbsql.h.  
   
 ### <a name="code"></a>Código  
   

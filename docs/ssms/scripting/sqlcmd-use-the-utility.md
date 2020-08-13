@@ -1,5 +1,6 @@
 ---
 title: Usar la utilidad sqlcmd
+description: Aprenda a usar la utilidad sqlcmd para la ejecución ad hoc e interactiva de instrucciones y scripts de Transact-SQL, y para la automatización de tareas de creación de scripts de Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 06/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0bd8f259e253083627a32f6f8a8b25b95c9159e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090593"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238045"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd: usar la utilidad
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   La utilidad **sqlcmd** es una herramienta de línea de comandos para la ejecución ad hoc e interactiva de instrucciones y scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] y para la automatización de tareas de creación de scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para usar **sqlcmd** interactivamente o para compilar archivos de script que se ejecutan mediante **sqlcmd**, los usuarios deben estar familiarizados con [!INCLUDE[tsql](../../includes/tsql-md.md)]. La utilidad **sqlcmd** se usa normalmente de las formas siguientes:  
   
 -   Los usuarios escriben instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] de una forma similar al modo en que trabajan con el símbolo del sistema. Los resultados se muestran en el símbolo del sistema. Para abrir una ventana del símbolo del sistema, escriba "cmd" en el cuadro de búsqueda de Windows y haga clic en **Símbolo del sistema** para abrirla. En el símbolo del sistema, escriba **sqlcmd** seguido de una lista de opciones que quiera. Para obtener una lista completa de las opciones admitidas por **sqlcmd**, vea [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md).  
@@ -410,28 +411,6 @@ ms.locfileid: "79090593"
   
     ```  
     :exit(select 100)  
-    @echo off  
-    C:\windowsscript.bat  
-    @echo off  
-  
-    echo Running badscript.sql  
-    sqlcmd -i badscript.sql -b -o out.log  
-    if not errorlevel 1 goto next1  
-    echo == An error occurred   
-  
-    :next1  
-  
-    echo Running goodscript.sql  
-    sqlcmd -i goodscript.sql -b -o out.log  
-    if not errorlevel 1 goto next2  
-    echo == An error occurred   
-  
-    :next2  
-    echo Running returnvalue.sql  
-    sqlcmd -i returnvalue.sql -o out.log  
-    echo SQLCMD returned %errorlevel% to the command shell  
-  
-    :exit  
     ```  
   
 -   C:\windowsscript.bat  

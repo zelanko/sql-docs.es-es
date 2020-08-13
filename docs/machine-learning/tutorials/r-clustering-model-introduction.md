@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/26/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 558d6b9aaa47288de7c75e61ee38d379a3fc1e68
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a9dab3e7cf8bda374b26003db83281bb1db275e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607108"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244046"
 ---
-# <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Tutorial: Preparación de datos para realizar la agrupación en clústeres en R con el aprendizaje automático de SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="tutorial-develop-a-clustering-model-in-r-with-sql-machine-learning"></a>Tutorial: Desarrollo de un modelo de agrupación en clústeres en R con el aprendizaje automático de SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En esta serie de tutoriales de cuatro partes, usará R para desarrollar e implementar un modelo de agrupación en clústeres k-means en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md) para categorizar datos de clientes.
@@ -31,17 +30,19 @@ En esta serie de tutoriales de cuatro partes, usará R para desarrollar e implem
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 En esta serie de tutoriales de cuatro partes, usará R para desarrollar e implementar un modelo de agrupación en clústeres k-means en [SQL Server R Services](../r/sql-server-r-services.md) para agrupar en clústeres datos de clientes.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+En esta serie de tutoriales de cuatro partes, usará R para desarrollar e implementar un modelo de agrupación en clústeres k-means en [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview) para agrupar en clústeres datos de clientes.
+::: moniker-end
 
 En la primera parte de esta serie, configurará los requisitos previos para el tutorial y, después, restaurará un conjunto de datos de ejemplo en una base de datos. En las partes dos y tres, desarrollará scripts de R en un cuaderno de Azure Data Studio para analizar y preparar los datos de ejemplo y entrenar un modelo de Machine Learning. Luego, en la parte cuatro, ejecutará esos scripts de R en una base de datos mediante procedimientos almacenados.
 
 *Agrupar en clústeres* es organizar datos en grupos, donde los miembros de un grupo son de alguna forma similares. Para esta serie de tutoriales, imagine que es el propietario de un negocio de venta al por menor. Usará el algoritmo **k-means** para realizar la agrupación de clientes en clústeres en un conjunto de datos de compras y devoluciones de productos. Al agrupar los clientes en clústeres, puede centrar sus actividades de marketing de forma más eficaz al dirigirse a grupos específicos. La agrupación en clústeres k-means es un algoritmo de *aprendizaje no supervisado* que analiza patrones en datos basándose en similitudes.
 
-
 En este artículo, aprenderá a:
 
 > [!div class="checklist"]
 > * Restauración de una base de datos de ejemplo
-> 
+
 En la [parte dos](r-clustering-model-prepare-data.md), aprenderá a preparar los datos de una base de datos para realizar la agrupación en clústeres.
 
 En la [parte tres](r-clustering-model-build.md), aprenderá a crear y entrenar un modelo de agrupación en clústeres k-means en R.
@@ -56,6 +57,11 @@ En la [parte cuatro](r-clustering-model-deploy.md), aprenderá a crear un proced
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) con la opción de lenguaje de R: siga las instrucciones de instalación en la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md).
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Machine Learning Services en Azure SQL Managed Instance. Para obtener información sobre cómo registrarse, vea la [información general de Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+
+* [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) para restaurar la base de datos de ejemplo en Azure SQL Managed Instance.
+::: moniker-end
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md) Usará un cuaderno en Azure Data Studio para SQL. Para obtener más información sobre los cuadernos, vea [Uso de los cuadernos en Azure Data Studio](../../azure-data-studio/notebooks-guidance.md).
 
@@ -65,13 +71,14 @@ En la [parte cuatro](r-clustering-model-deploy.md), aprenderá a crear un proced
 
 ## <a name="restore-the-sample-database"></a>Restauración de la base de datos de ejemplo
 
-El conjunto de datos de ejemplo usado en este tutorial se ha guardado en un archivo de copia de seguridad de base de datos **.bak** para que pueda descargarlo y usarlo. Este conjunto de datos se basa en el conjunto de datos [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) proporcionado por [Transaction Processing Performance Council (TPC)](http://www.tpc.org/default.asp).
+El conjunto de datos de ejemplo usado en este tutorial se ha guardado en un archivo de copia de seguridad de base de datos **.bak** para que pueda descargarlo y usarlo. Este conjunto de datos se basa en el conjunto de datos [tpcx-bb](http://www.tpc.org/tpcx-bb/default5.asp) proporcionado por [Transaction Processing Performance Council (TPC)](http://www.tpc.org/).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]
 > Si usa Machine Learning Services en clústeres de macrodatos, consulte [Restauración de una base de datos en la instancia maestra del clúster de macrodatos de SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. Descargue el archivo [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak).
 
 1. Siga las indicaciones de [Restauración de una base de datos a partir de un archivo de copia de seguridad](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) en Azure Data Studio con estos datos:
@@ -85,6 +92,22 @@ El conjunto de datos de ejemplo usado en este tutorial se ha guardado en un arch
     USE tpcxbb_1gb;
     SELECT * FROM [dbo].[customer];
     ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. Descargue el archivo [tpcxbb_1gb.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/tpcxbb_1gb.bak).
+
+1. Siga las instrucciones de [Restauración de una base de datos en un Instancia administrada](/azure/sql-database/sql-database-managed-instance-get-started-restore) en SQL Server Management Studio, con los detalles siguientes:
+
+   * Importe el archivo **tpcxbb_1gb.bak** que ha descargado.
+   * Asigne a la base de datos de destino el nombre "tpcxbb_1gb".
+
+1. Para asegurarse de que el conjunto de datos exista después de restaurar la base de datos, ejecute la siguiente consulta en la tabla **dbo.customer**:
+
+    ```sql
+    USE tpcxbb_1gb;
+    SELECT * FROM [dbo].[customer];
+    ```
+::: moniker-end
 
 ## <a name="clean-up-resources"></a>Limpieza de recursos
 
@@ -95,7 +118,7 @@ Si no quiere continuar con este tutorial, elimine la base de datos tpcxbb_1gb.
 En la parte uno de esta serie de tutoriales, ha completado estos pasos:
 
 * Instalación de los requisitos previos
-* Restauración de una base de datos de ejemplo en SQL Server
+* Restauración de una base de datos de ejemplo
 
 Para preparar los datos para el modelo de aprendizaje automático, siga la parte dos de esta serie de tutoriales:
 

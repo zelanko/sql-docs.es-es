@@ -1,5 +1,5 @@
 ---
-title: Propiedades y comportamientos del conjunto de filas | Microsoft Docs
+title: Propiedades y comportamientos de conjunto de filas (controlador OLE DB)
 description: Propiedades y comportamientos del conjunto de filas en OLE DB driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1e2fff64739942539fd4fc34c736e32578555f93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e541289c5ae71a7289cd005ba03ca2f886fc0bb7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015352"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244186"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propiedades y comportamientos de conjuntos de filas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "68015352"
 |DBPROP_BLOCKINGSTORAGEOBJECTS|R (lectura) y W (escritura): Solo lectura<br /><br /> Valor predeterminado: VARIANT_TRUE<br /><br /> Descripción: Los objetos de almacenamiento de OLE DB Driver for SQL Server se bloquean mediante otros métodos de conjunto de filas.|  
 |DBPROP_BOOKMARKS DBPROP_LITERALBOOKMARKS|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: OLE DB Driver for SQL Server admite marcadores para la identificación de filas del conjunto de filas cuando DBPROP_BOOKMARKS o DBPROP_LITERALBOOKMARKS es VARIANT_TRUE.<br /><br /> Al establecer una de estas propiedades en VARIANT_TRUE no se habilita el posicionamiento por marcador del conjunto de filas. Establezca DBPROP_IRowsetLocate o DBPROP_IRowsetScroll en VARIANT_TRUE para crear un conjunto de filas que admita el posicionamiento por marcador del conjunto de filas.<br /><br /> OLE DB Driver for SQL Server usa un cursor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para admitir un conjunto de filas que contiene marcadores. Para obtener más información, vea [Conjuntos de filas y cursores de SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).<br /><br /> Nota: Si estas propiedades entran en conflicto con otras propiedades de definición de cursor del controlador OLE DB para SQL Server, se producirá un error. Por ejemplo, si DBPROP_BOOKMARKS se establece en VARIANT_TRUE cuando la propiedad DBPROP_OTHERINSERT también está establecida en VARIANT_TRUE, se genera un error cuando el consumidor intenta abrir un conjunto de filas.|  
 |DBPROP_BOOKMARKSKIPPED|R (lectura) y W (escritura): Solo lectura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: OLE DB Driver for SQL Server devuelve DB_E_BADBOOKMARK si el consumidor indica un marcador no válido al colocar o buscar un conjunto de filas marcado.|  
-|DBPROP_BOOKMARKTYPE|R (lectura) y W (escritura): Solo lectura<br /><br /> Valor predeterminado: DBPROPVAL_BMK_NUMERIC<br /><br /> Descripción: OLE DB Driver for SQL Server solo implementa marcadores numéricos. Un marcador de OLE DB Driver for SQL Server es un entero sin signo de 32 bits, tipo DBTYPE_UI4.|  
+|DBPROP_BOOKMARKTYPE|R (lectura) y W (escritura): Solo lectura<br /><br /> Valor predeterminado: DBPROPVAL_BMK_NUMERIC<br /><br /> Descripción: OLE DB Driver for SQL Server solo implementa marcadores numéricos. Un marcador de OLE DB Driver for SQL Server es un entero sin signo de 32 bits, de tipo DBTYPE_UI4.|  
 |DBPROP_CACHEDEFERRED|OLE DB Driver for SQL Server no implementa esta propiedad de conjunto de filas. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
 |DBPROP_CANFETCHBACKWARDS DBPROP_CANSCROLLBACKWARDS|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: OLE DB Driver for SQL Server admite la captura y el desplazamiento hacia atrás en conjuntos de filas no secuenciales. El controlador OLE DB para SQL Server crea un conjunto de filas que admite cursores cuando DBPROP_CANFETCHBACKWARDS o DBPROP_CANSCROLLBACKWARDS es VARIANT_TRUE. Para obtener más información, vea [Conjuntos de filas y cursores de SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_CANHOLDROWS|R (lectura) y W (escritura): Lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: de forma predeterminada, OLE DB Driver for SQL Server devuelve DB_E_ROWSNOTRELEASED si el consumidor intenta obtener más filas de un conjunto de filas mientras hay cambios pendientes en las que están actualmente en el conjunto de filas. Este comportamiento puede modificarse.<br /><br /> El establecimiento de DBPROP_CANHOLDROWS y DBPROP_IRowsetChange en VARIANT_TRUE, implica un conjunto de filas marcado. Si ambas propiedades son VARIANT_TRUE, la interfaz **IRowsetLocate** estará disponible en el conjunto de filas y las propiedades DBPROP_BOOKMARKS y DBPROP_LITERALBOOKMARKS serán ambas VARIANT_TRUE.<br /><br /> Los cursores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admiten conjuntos de filas de OLE DB Driver for SQL Server que contienen marcadores.|  

@@ -1,5 +1,6 @@
 ---
 title: Cambios substanciales de SQL Server Reporting Services en SQL Server 2016 | Microsoft Docs
+description: Obtenga información sobre los cambios en Reporting Services que podrían interrumpir aplicaciones, scripts o funcionalidades que se basen en versiones anteriores de SQL Server.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 41aad02f9f5b65dd1cf1474abd0c152f3face8c0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 332e026d402e54fa56f14a0f5a48face05213eb1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503950"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248613"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2016"></a>Cambios substanciales de SQL Server Reporting Services en SQL Server 2016
 

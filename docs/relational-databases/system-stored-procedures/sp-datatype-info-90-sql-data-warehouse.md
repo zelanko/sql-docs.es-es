@@ -11,12 +11,12 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d19a2ef405fef8b62de96f621ddc13a816b4fc5
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: aef742c3dd6993830e1402a041979ca73a2a4ea0
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196930"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180188"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "86196930"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_datatype_info_90 [ [ @data_type = ] data_type ]   
@@ -40,7 +40,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`Es la versión de ODBC que se utiliza. *odbc_version* es de **tinyint**y su valor predeterminado es 2.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- Ninguno  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -76,7 +76,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el ejemplo siguiente se recupera información de los tipos de datos **sysname** y **nvarchar** especificando el valor de *data_type* de `-9` .  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_datatype_info_90 -9;  

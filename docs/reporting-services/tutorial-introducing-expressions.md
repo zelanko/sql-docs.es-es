@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Introducción a las expresiones | Microsoft Docs'
+description: Aprenda a usar expresiones con operadores y funciones comunes para crear informes paginados de Reporting Services eficaces y flexibles.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63295608"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248544"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , se usan expresiones con operadores y funciones comunes para crear informes paginados eficaces y flexibles de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -89,7 +90,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
     ```  
 
   
-10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra 23 filas de datos en las siguientes columnas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
+10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra 23 líneas de datos con las columnas siguientes: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +148,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Mostrar First Initial y Last Name  
-En esta sección, usará la función **Left** y el operador **Concatenate** ( **&** ) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión** .   
+En esta sección, usará la función **Left** y el operador **Concatenate** (**&**) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión** .   
   
 1.  Haga clic con el botón derecho en la columna **StateProvince** , seleccione **Insertar columna**y haga clic en **Izquierda**.  
   
@@ -357,7 +358,7 @@ En esta sección, creará el conjunto de datos CountryRegion y usará la funció
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Para buscar valores en el conjunto de datos CountryRegion  
   
-1.  Haga clic en el encabezado de columna **Country Region ID** y elimine el texto: **ID**para que quede **Country Region**.  
+1.  Haga clic en el encabezado de columna **Country Region ID** y elimine el texto: **ID** para que se lea **Country Region**.  
   
 2.  Haga clic con el botón derecho en la celda de datos de la columna **Country Region** y haga clic en **Expresión**.  
   

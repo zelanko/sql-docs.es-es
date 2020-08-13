@@ -1,5 +1,6 @@
 ---
 title: Conceptos de Reporting Services | Microsoft Docs
+description: Obtenga información sobre los conceptos de SQL Server Reporting Services (SSRS), como la programación de informes, roles y permisos, y las suscripciones y entrega de informes.
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb4d1592b2541c16a34c96820a27942ef8bc08e3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078185"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248591"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceptos de Reporting Services (SSRS)
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

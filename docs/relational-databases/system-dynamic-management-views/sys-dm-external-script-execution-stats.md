@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8267c35e2453873269ae94d1bff331d025a76fd8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4bdf4215b01df0f9011123eb42232bba594554ed
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734645"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180108"
 ---
 # <a name="sysdm_external_script_execution_stats"></a>sys.dm_external_script_execution_stats
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Devuelve una fila por cada tipo de solicitud de script externo. Las solicitudes de script externo se agrupan según el lenguaje compatible del script externo. Se genera una fila para cada función registrada de script externo. Las funciones de script externo arbitrarias no se registran a menos que las envíe un proceso principal, como `rxExec`.
   
@@ -37,7 +37,7 @@ Devuelve una fila por cada tipo de solicitud de script externo. Las solicitudes 
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|lenguaje|**nvarchar**|Nombre del lenguaje de script externo registrado. Cada script externo debe especificar el lenguaje en la solicitud de script para iniciar el iniciador asociado. |  
+|language|**nvarchar**|Nombre del lenguaje de script externo registrado. Cada script externo debe especificar el lenguaje en la solicitud de script para iniciar el iniciador asociado. |  
 |counter_name|**nvarchar**|Nombre de una función de script externo seleccionada. No admite valores NULL.|  
 |counter_value|**integer**|Número total de instancias que en que se ha llamado la función registrada de script externo en el servidor. Este valor es acumulativo, comienza en el momento en que se instaló la característica en la instancia y no se puede restablecer.|  
 
@@ -48,7 +48,7 @@ Devuelve una fila por cada tipo de solicitud de script externo. Las solicitudes 
 > [!NOTE]  
 > Los usuarios que ejecuten scripts externos deben tener el permiso adicional EXECUTE ANY EXTERNAL SCRIPT, sin embargo, los administradores pueden usar esta DMV sin este permiso.
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
   Esta DMV se proporciona para la telemetría interna, a fin de supervisar el uso general de la nueva característica de ejecución de scripts externos que se proporciona en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. El servicio de telemetría comienza cuando LaunchPad comienza e incrementa un contador basado en disco cada vez que se llama una función registrada de script externo.
 
@@ -96,7 +96,7 @@ FROM sys.dm_external_script_execution_stats
 WHERE language = 'Python';
 ```  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)

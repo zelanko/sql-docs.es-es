@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c7be9d3eb55800c2fa5c4f155aff6fd81301490c
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4a6f551012a744d8659e0f3a4cee83b1fd39fbdf
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197342"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173228"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "86197342"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
@@ -67,7 +67,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Agregar credenciales para realizar una copia de seguridad de base de datos  
  En el ejemplo siguiente se asocian las credenciales de nombre de usuario y contraseña para el usuario de dominio seattle\david con un servidor de destino que tiene una dirección IP de 10.172.63.255. El usuario seattle\david tiene permisos de lectura y escritura en el servidor de destino. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]almacenará estas credenciales y las usará para leer y escribir en el servidor de destino, según sea necesario para las operaciones de copia de seguridad y restauración.  
   
-```  
+```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
 ```  
   

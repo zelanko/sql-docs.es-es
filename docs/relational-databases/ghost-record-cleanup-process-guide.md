@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 557f76e3f54811581e41ad15a5270a0c1e6e4057
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 16c9aa51475b00998b3c7aa9e71529bbbc292464
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859097"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248164"
 ---
 # <a name="ghost-cleanup-process-guide"></a>Guía de procesos de limpieza de registros fantasma
 
@@ -46,7 +46,7 @@ La consulta siguiente puede identificar el número de registros fantasma que exi
 
 ## <a name="disable-the-ghost-cleanup"></a>Deshabilitar la limpieza de registros fantasma
 
-En sistemas de carga alta con muchas operaciones de eliminación, el proceso de limpieza de registros fantasma puede provocar un problema de rendimiento al conservar las páginas en el grupo de búferes y generar E/S. Por tanto, este proceso se puede deshabilitar mediante la marca de seguimiento 661. Encontrará más información al respecto en [Opciones de optimización de SQL Server cuando se ejecuta en las cargas de trabajo de alto rendimiento](https://support.microsoft.com/help/920093/tuning-options-for-sql-server-when-running-in-high-performance-workloa). Pero la deshabilitación del proceso tiene implicaciones en el rendimiento.
+En sistemas de carga alta con muchas operaciones de eliminación, el proceso de limpieza de registros fantasma puede provocar un problema de rendimiento al conservar las páginas en el grupo de búferes y generar E/S. Por tanto, este proceso se puede deshabilitar mediante la [marca de seguimiento 661](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Pero la deshabilitación del proceso tiene implicaciones en el rendimiento.
 
 Deshabilitar el proceso de limpieza de registros fantasma puede hacer que la base de datos crezca de forma innecesaria y se produzcan problemas de rendimiento. Como el proceso de limpieza de registros fantasma quita los registros que se marcan como fantasma, deshabilitar el proceso dejará estos registros en la página, lo que impide que SQL Server vuelva a usar este espacio. Esto obliga a SQL Server a agregar datos a las páginas nuevas en su lugar, lo que da lugar a archivos de base de datos sobredimensionados y también [divisiones de página](indexes/specify-fill-factor-for-an-index.md). Las divisiones de páginas generan problemas de rendimiento al crear planes de ejecución y al realizar operaciones de análisis. 
 

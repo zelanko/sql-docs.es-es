@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 13d5355bd1798af1514d16965059916e42e1ade0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: dd1359fa3430e45ae54cadacd75f9ee261021b8d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243766"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173058"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server 2016 Windows only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 Genera un valor de predicción para una entrada determinada que consta de un modelo de aprendizaje automático almacenado en un formato binario en una base de datos de SQL Server.
 
@@ -53,7 +53,7 @@ Una consulta SQL válida
 Se devuelve una columna de puntuación, así como todas las columnas de paso a través del origen de datos de entrada.
 Se pueden devolver columnas de puntuación adicionales, como el intervalo de confianza, si el algoritmo admite la generación de estos valores.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Para habilitar el uso del procedimiento almacenado, SQLCLR debe estar habilitado en la instancia.
 

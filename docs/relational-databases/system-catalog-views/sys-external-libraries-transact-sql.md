@@ -19,15 +19,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a825843a69d9ba2f65f272adba86e6d8656aedde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b6a24a142deef2283c58e21941293f31479f997b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750700"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180095"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Admite la administración de bibliotecas de paquetes relacionadas con los tiempos de ejecución externos como R, Python y Java.
 
@@ -43,11 +43,11 @@ La vista de catálogo sys. external_libraries muestra una fila para cada bibliot
 |external_library_id |int | IDENTIFICADOR del objeto de biblioteca externa. |
 |name |sysname |Nombre de la biblioteca externa. Es único en la base de datos por propietario.|
 |principal_id |int |IDENTIFICADOR de la entidad de seguridad que posee esta biblioteca externa. |
-|lenguaje | sysname | Nombre del lenguaje o tiempo de ejecución que admite la biblioteca externa. Los valores válidos son ' R ', ' Python ' y ' Java '. Los tiempos de ejecución adicionales pueden agregarse en el futuro.|
+|language | sysname | Nombre del lenguaje o tiempo de ejecución que admite la biblioteca externa. Los valores válidos son ' R ', ' Python ' y ' Java '. Los tiempos de ejecución adicionales pueden agregarse en el futuro.|
 |scope |int |0 para el ámbito público; 1 para ámbito privado |  
 |scope_desc |VARCHAR (7) |Indica si el paquete es público o privado.|
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [CREAR BIBLIOTECA EXTERNA](../../t-sql/statements/create-external-library-transact-sql.md)  

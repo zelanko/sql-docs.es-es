@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68737e96c3c2c90592b1cccf807675ae5518ee4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891194"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88172904"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 `[ @pollinginterval ] = polling\_interval_`Número de segundos entre los ciclos de recorrido del registro. *polling_interval* es de tipo **BIGINT** y su valor predeterminado es 5.  
   
- *polling_interval* solo es válido para los trabajos de captura cuando *Continuous* está establecido en 1. Si se especifica, el valor no puede ser negativo y no puede superar 24 horas. Si se especifica el valor 0, no hay ninguna espera entre los exámenes del registro.  
+ *polling_interval* solo es válido para los trabajos de captura cuando *Continuous* está establecido en 1. Si se especifica, el valor debe ser mayor o igual que 0 y menor que 24 horas (máx.: 86399 segundos). Si se especifica el valor 0, no hay ninguna espera entre los exámenes del registro.  
   
 `[ @retention ] = retention_`Número de minutos que las filas de datos de cambio se conservarán en las tablas de cambios. la *retención* es **BIGINT** con un valor predeterminado de 4320 (72 horas). El valor máximo es 52494800 (100 años). Si se especifica, el valor debe ser un entero positivo.  
   

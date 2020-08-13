@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Dar formato a texto (Generador de informes) | Microsoft Docs'
+description: Obtenga información sobre cómo dar formato al texto de varias maneras en un informe paginado de Reporting Services. Por ejemplo, puede experimentar con diferentes formatos.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6f71447f2e0f83c87d9b48a464a99dbbb7a1d4c9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043043"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248124"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Tutorial: Dar formato a texto (Generador de informes)
+# <a name="tutorial-format-text-report-builder"></a>Tutorial: Aplicación de formato a un texto (Generador de informes)
 
 En este tutorial, puede practicar el proceso de dar formato al texto de varias maneras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Puede experimentar con diferentes formatos. 
 
@@ -50,7 +51,7 @@ Para obtener información sobre los requisitos, vea [Requisitos previos para los
 
     Si no ve el panel **Datos de informe** , en la pestaña **Ver** haga clic en **Datos de informe**.
   
-2.  En el cuadro **Nombre** , escriba: **TextDataSource**  
+2.  En el cuadro **Nombre**, escriba: **TextDataSource**  
   
 3.  Haga clic en **Usar una conexión incrustada en mi informe**.  
   
@@ -67,7 +68,7 @@ Para obtener información sobre los requisitos, vea [Requisitos previos para los
   
 2.  Compruebe que el origen de datos es **TextDataSource**.  
   
-3.  En el cuadro **Nombre** , escriba: **TextDataset.**  
+3.  En el cuadro **Nombre**, escriba: **TextDataset.**  
   
 4.  Compruebe que el tipo de consulta **Texto** está seleccionado, y, a continuación, haga clic en **Diseñador de consultas**.  
   
@@ -179,7 +180,7 @@ Cree esta tabla para tener un lugar donde colocar los hipervínculos y el texto 
   
 1.  En la pestaña **Insertar** > **Tabla** > **Asistente para tablas**.  
   
-2.  En la página **Elegir un conjunto de datos** del nuevo Asistente para tablas o matrices, haga clic en **Elegir un conjunto de datos existente en este informe o un conjunto de datos compartido** > **TextDataset (en este Informe)**  > **Siguiente**.  
+2.  En la página **Elegir un conjunto de datos** del nuevo Asistente para tablas o matrices, haga clic en **Elegir un conjunto de datos existente en este informe o un conjunto de datos compartido** > **TextDataset (en este Informe)** > **Siguiente**.  
   
 3.  En la página **Organizar campos** , arrastre los campos **Territory**, **LinkText**y **Product** hasta **Grupos de filas**, arrastre el campo **Sales** hasta **Valores**y después haga clic en **Siguiente**.  
 
@@ -355,7 +356,7 @@ El informe se guarda en el servidor de informes. El nombre del servidor de infor
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Existen numerosas formas de dar formato al texto en el Generador de informes. [Tutorial: Crear un informe de forma libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contiene más ejemplos.  
+Existen numerosas formas de dar formato al texto en el Generador de informes. [Tutorial: Creación de un informe de forma libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contiene más ejemplos.  
 
 [Tutoriales del Generador de informes ](../reporting-services/report-builder-tutorials.md) 
 [Aplicar formato a elementos de informe](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

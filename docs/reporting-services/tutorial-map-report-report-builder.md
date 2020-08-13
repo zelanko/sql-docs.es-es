@@ -1,5 +1,6 @@
 ---
 title: 'Tutorial: Informe de asignaciones (Generador de informes) | Microsoft Docs'
+description: Obtenga información sobre las características de mapa que puede usar para mostrar datos sobre un fondo geográfico en un informe paginado de Reporting Services.
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 069fb0c365e3ecb5353e9dad99f116779222af87
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041670"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248134"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , obtendrá información sobre las características de mapa que puede usar para mostrar datos en un fondo geográfico de un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -174,7 +175,7 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
     *   **SellingArea**: el área disponible para la visualización del producto, que va de 138 a 342 metros cuadrados.
     *   **City**.
     *   **County**.
-    *   **Sales**: ventas totales. 
+    *   **Ventas**: Ventas totales. 
     *   **SpatialLocation**: ubicación en longitud y latitud. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 

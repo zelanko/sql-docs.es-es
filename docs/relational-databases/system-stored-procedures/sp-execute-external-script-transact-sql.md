@@ -20,16 +20,15 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 074836973123ae4f0f49acf72cf7bf6f56b17cf5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87877960"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180262"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
-
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 El **sp_execute_external_script** procedimiento almacenado ejecuta un script proporcionado como argumento de entrada para el procedimiento, y se usa con [las extensiones](../../language-extensions/language-extensions-overview.md)de [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) y de lenguaje. 
@@ -322,7 +321,7 @@ Para generar un modelo similar mediante Python, tendría que cambiar el identifi
 
 Para puntuar, también puede usar la función nativa [PREDICT](../../t-sql/queries/predict-transact-sql.md), que es normalmente más rápida porque evita llamar al runtime de Python o R.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 + [Aprendizaje automático de SQL](../../machine-learning/index.yml)
 + [Extensiones de lenguaje de SQL Server](../../language-extensions/language-extensions-overview.md). 

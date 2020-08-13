@@ -11,12 +11,12 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5541d065b24e349e4a784b7db1b8245df0a8aaf4
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: ea363af9a4f9362e7aa9d09ab29b8a5a9e1a2b5c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196983"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173214"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "86196983"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
@@ -68,7 +68,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se habilita el enmascaramiento de datos de usuario de registro de TDE en el dispositivo.  
   
-```  
+```sql  
 EXEC sp_pdw_log_user_data_masking 1;  
 ```  
   

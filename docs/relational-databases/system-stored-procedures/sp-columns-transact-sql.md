@@ -18,11 +18,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83f46ddd70061ef0f0647c902221b7f906917048
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5ac9e5647193899335af494ac87f8ecdafe6390d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999904"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180302"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85999904"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_columns [ @table_name = ] object  
@@ -70,10 +71,10 @@ sp_columns [ @table_name = ] object
 |**COLUMN_NAME**|**sysname**|Nombre de columna para cada columna del **TABLE_NAME** devuelto. Este campo siempre devuelve un valor.|  
 |**DATA_TYPE**|**smallint**|Código entero del tipo de datos ODBC. Si se trata de un tipo de datos que no se puede asignar a un tipo ODBC, se considera NULL. El nombre del tipo de datos nativo se devuelve en la columna **TYPE_NAME** .|  
 |**TYPE_NAME**|**sysname**|Cadena que representa un tipo de datos. El DBMS subyacente presenta este nombre del tipo de datos.|  
-|**PRECISIÓN**|**int**|Número de dígitos significativos. El valor devuelto para la columna **Precision** está en base 10.|  
+|**PRECISION**|**int**|Número de dígitos significativos. El valor devuelto para la columna **Precision** está en base 10.|  
 |**LENGTH**|**int**|Tamaño de la transferencia de los datos. <sup>1</sup>|  
 |**ESCALA**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
-|**FIJO**|**smallint**|Base para tipos de datos numéricos.|  
+|**RADIX**|**smallint**|Base para tipos de datos numéricos.|  
 |**ACEPTA valores NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
 |**COMENTARIOS**|**VARCHAR (254)**|Este campo siempre devuelve NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valor predeterminado de la columna.|  
@@ -95,7 +96,7 @@ sp_columns [ @table_name = ] object
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se devuelve información de columna para una tabla especificada.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_columns @table_name = N'Department',  
@@ -105,7 +106,7 @@ EXEC sp_columns @table_name = N'Department',
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el ejemplo siguiente se devuelve información de columna para una tabla especificada.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_columns @table_name = N'DimEmployee',  

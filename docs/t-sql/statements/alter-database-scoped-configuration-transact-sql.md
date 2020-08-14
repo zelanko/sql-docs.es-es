@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 698048be11f3514762f27c23ec16bf4ef18041a5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279501"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864486"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -350,7 +350,7 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 Permite la configuración de la funcionalidad para colocar automáticamente las [tablas temporales globales](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). El valor predeterminado es ON, lo que significa que las tablas temporales globales se quitan automáticamente cuando no están en uso en ninguna sesión. Cuando se establece en OFF, las tablas temporales globales deben quitarse explícitamente mediante una instrucción DROP TABLE o se quitarán automáticamente al reiniciar el servidor.
 
 - En los grupos elásticos y bases de datos únicas de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta opción se puede establecer en las bases de datos de usuario individuales del servidor de SQL Database.
-- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Instancia administrada de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta opción se establece en `TempDB` y la configuración de las bases de datos de usuario individuales no surte ningún efecto.
+- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Azure SQL Managed Instance, esta opción se establece en `TempDB` y la configuración de las bases de datos de usuario individuales no surte ningún efecto.
 
 <a name="lqp"></a>
 

@@ -20,16 +20,16 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f854ae440a51d1f9b3b873dad9f0aa21e88f3ab5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8a21168cd89dd2604c7c1f593ca5ca7d2532eb4d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247294"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864982"
 ---
 # <a name="track-data-changes-sql-server"></a>Seguimiento de cambios de datos (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona dos características que realizan el seguimiento de los cambios en los datos de una base de datos: [captura de datos modificados](#Capture) y [seguimiento de cambios](#Tracking). Estas características permiten a las aplicaciones determinar los cambios de DML (operaciones de inserción, actualización y eliminación) que se realizaron en las tablas de usuario de una base de datos. La captura de datos modificados y el seguimiento de cambios pueden habilitarse en la misma base de datos; no se requiere ninguna consideración especial. Para obtener las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admitan la captura de datos modificados y el seguimiento de cambios, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]admite el seguimiento de cambios. La captura de datos modificados solo es posible en SQL Server y en Instancia administrada de Azure SQL Database.
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona dos características que realizan el seguimiento de los cambios en los datos de una base de datos: [captura de datos modificados](#Capture) y [seguimiento de cambios](#Tracking). Estas características permiten a las aplicaciones determinar los cambios de DML (operaciones de inserción, actualización y eliminación) que se realizaron en las tablas de usuario de una base de datos. La captura de datos modificados y el seguimiento de cambios pueden habilitarse en la misma base de datos; no se requiere ninguna consideración especial. Para obtener las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admitan la captura de datos modificados y el seguimiento de cambios, vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]admite el seguimiento de cambios. La captura de datos modificados solo es posible en SQL Server y en Azure SQL Managed Instance.
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Ventajas de utilizar la captura de datos modificados y el seguimiento de cambios  
  La capacidad para consultar los datos que han cambiado en una base de datos es un requisito importante para conseguir que algunas aplicaciones sean eficaces. Normalmente, para determinar los datos modificados, los desarrolladores de aplicaciones deben implementar un método de seguimiento personalizado en sus aplicaciones utilizando una combinación de desencadenadores, columnas de marca de tiempo y tablas adicionales. La creación de estas aplicaciones implica normalmente mucho trabajo de implementación, provoca actualizaciones del esquema y, a menudo, supone una gran sobrecarga en el rendimiento.  

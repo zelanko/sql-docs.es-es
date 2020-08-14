@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 27649f57640f6a4575ab9465525e1a89e504da5b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5edf147637d7e9e9ca94c4e1daa53f9beabaeb4f
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113212"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988402"
 ---
 # <a name="title-transact-sql"></a>Título (Transact-SQL)
 
@@ -38,10 +38,10 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](pick-a-product-template.md?view=azuresqldb-current)
+        [SQL Database](pick-a-product-template.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instancia administrada de<br />SQL Database](pick-a-product-template.md?view=azuresqldb-mi-current)
+        [Instancia administrada de <br />SQL Database](pick-a-product-template.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](pick-a-product-template.md?view=azure-sqldw-latest)
@@ -61,10 +61,10 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Base de datos única/grupo elástico de<br />SQL Database \*_** &nbsp;
+        **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instancia administrada de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Instancia administrada de <br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -73,7 +73,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Grupo de bases de datos elásticas o base de datos única de Azure SQL Database
+## <a name="sql-database"></a>SQL Database
 
 
 
@@ -85,7 +85,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Instancia administrada de <br />SQL Database \*_** &nbsp;
@@ -97,9 +97,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instancia administrada de Azure SQL Database
-
-
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -109,10 +107,10 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Instancia administrada de<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [Instancia administrada de <br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

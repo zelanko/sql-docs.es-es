@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0505a5e6c715558b34d2f1a86e88a0b7b938e7d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52a669c7a624b2bb88b9f392cf4ecc71be7d681a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781704"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823991"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar una aplicación de capa de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85781704"
 ###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  La exportación de una DAC requiere al menos permisos ALTER ANY LOGIN y VIEW DEFINITION en el ámbito de la base de datos, así como permisos SELECT en **sys.sql_expression_dependencies**. La exportación de una DAC la pueden realizar los miembros del rol fijo de servidor securityadmin que sean también miembros del rol fijo de base de datos database_owner en la base de datos de la que se exporta la DAC. Los miembros del rol fijo de servidor sysadmin o de la cuenta de administrador del sistema de SQL Server integrada denominada **sa** también pueden exportar una DAC.
  
-En Azure SQL DB deberá conceder **en cada base de datos** los permisos VIEW DEFINITION y SELECT en todas las tablas o en tablas específicas.
+En Azure SQL Database deberá conceder **en cada base de datos** los permisos VIEW DEFINITION y SELECT en todas las tablas o en tablas específicas.
 
   
 ##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a> Usar el Asistente Exportar aplicación de capa de datos  

@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 194ad3581252d5baaca6d5bfaf4c8c2272efc610
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a69ebabab91a9c257e96afb312e5498217bb967
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915317"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864612"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Programar la ejecución de paquetes SSIS implementados en Azure con SQL Server Management Studio (SSMS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "86915317"
 
 
 
-Puede usar SQL Server Management Studio (SSMS) para programar paquetes SSIS implementados en Azure SQL Database. SQL Server local e Instancia administrada de Azure SQL Database tienen el Agente SQL Server y el Agente de Instancia administrada respectivamente como programador de trabajos SSIS de primera clase. Por otro lado, SQL Database no tiene ningún programador de trabajos SSIS de primera clase integrado. La característica de SSMS descrita en este artículo proporciona una interfaz de usuario conocida que se parece al Agente SQL Server para programar paquetes implementados en SQL Database.
+Puede usar SQL Server Management Studio (SSMS) para programar paquetes SSIS implementados en Azure SQL Database. SQL Server local SQL Managed Instance tienen el Agente SQL Server y el Agente de Instancia administrada respectivamente como programador de trabajos SSIS de primera clase. Por otro lado, SQL Database no tiene ningún programador de trabajos SSIS de primera clase integrado. La característica de SSMS descrita en este artículo proporciona una interfaz de usuario conocida que se parece al Agente SQL Server para programar paquetes implementados en SQL Database.
 
 Si usa SQL Database para hospedar el catálogo de SSIS, `SSISDB`, puede usar esta característica de SSMS para generar las canalizaciones, las actividades y los desencadenadores de Data Factory necesarios para programar los paquetes SSIS. Después, tiene la opción de editar y extender estos objetos en Data Factory.
 

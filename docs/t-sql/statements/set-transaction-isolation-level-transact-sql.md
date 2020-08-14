@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23d39a7b7149f6ac75873389c1ac90c6daca8a90
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 73b805149ca1061c73572d742875fa11d9d81b23
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483936"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932046"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   Si READ_COMMITTED_SNAPSHOT se establece en OFF (el valor predeterminado de SQL Server), el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa bloqueos compartidos para impedir que otras transacciones modifiquen las filas mientras la transacción actual esté ejecutando una operación de lectura. Los bloqueos compartidos impiden también que la instrucción lea las filas modificadas por otras transacciones hasta que la otra transacción haya finalizado. El tipo de bloqueo compartido determina cuándo se liberará. Los bloqueos de fila se liberan antes de que se procese la fila siguiente. Los bloqueos de página se liberan cuando se lee la página siguiente, y los bloqueos de tabla se liberan cuando la instrucción finaliza.  
   
--   Si READ_COMMITTED_SNAPSHOT se establece en ON (el valor predeterminado de Base de datos SQL Azure), el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos.
+-   Si READ_COMMITTED_SNAPSHOT se establece en ON (el valor predeterminado de Azure SQL Database), el [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa versiones de fila para presentar a cada instrucción una instantánea coherente, desde el punto de vista transaccional, de los datos tal como se encontraban al comenzar la instrucción. No se emplean bloqueos para impedir que otras transacciones actualicen los datos.
 
 > [!IMPORTANT]  
 > La elección de un nivel de aislamiento de transacción no afecta a los bloqueos adquiridos para proteger la modificación de datos. Siempre se obtiene un bloqueo exclusivo en los datos modificados de una transacción, bloqueo que se mantiene hasta que se completa la transacción, independientemente del nivel de aislamiento seleccionado para la misma. Además, una actualización realizada en el nivel de aislamiento READ_COMMITTED usa bloqueos de actualización en las filas de datos seleccionadas, mientras que una actualización realizada en el nivel de aislamiento SNAPSHOT emplea versiones de fila para seleccionar filas para actualizar. En el caso de las operaciones de lectura, los niveles de aislamiento de transacción definen básicamente el nivel de protección contra los efectos de las modificaciones que realizan otras transacciones. Vea [Guía de versiones de fila y bloqueo de transacciones](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide) para obtener más información.

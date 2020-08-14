@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 27556251ca186661928de29b8a1f6dd4ac0e9fb0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc3af385e52e998aa8bab2d84fc117987f522ebf
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694951"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864536"
 ---
 # <a name="database-mail"></a>Correo electrónico de base de datos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  El Correo electrónico de base de datos es una solución empresarial para enviar mensajes de correo electrónico desde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). El Correo electrónico de base de datos permite a las aplicaciones de base de datos enviar mensajes de correo electrónico a los usuarios. Los mensajes enviados pueden incluir resultados de consultas y archivos de cualquier recurso de la red.  
+  El Correo electrónico de base de datos es una solución empresarial para enviar mensajes de correo electrónico desde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). El Correo electrónico de base de datos permite a las aplicaciones de base de datos enviar mensajes de correo electrónico a los usuarios. Los mensajes enviados pueden incluir resultados de consultas y archivos de cualquier recurso de la red.  
   
 > [!NOTE] 
-> El Correo electrónico de base de datos está disponible en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), pero no en los grupos de bases de datos elásticas y la base de datos única de Azure SQL Database. 
+> El Correo electrónico de base de datos está disponible en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), pero no en los grupos de bases de datos elásticas y la base de datos única de Azure SQL Database. 
 
 ##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> Ventajas de usar el Correo electrónico de base de datos  
  El Correo electrónico de base de datos está diseñado para proporcionar confiabilidad, escalabilidad, seguridad y compatibilidad.  

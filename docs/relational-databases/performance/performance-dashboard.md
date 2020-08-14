@@ -1,6 +1,6 @@
 ---
 title: Panel de rendimiento | Microsoft Docs
-description: Obtenga más información sobre el panel de rendimiento de SQL Server Management Studio, que proporciona información rápida sobre SQL Server e Instancia administrada de Azure SQL Database.
+description: Obtenga más información sobre el panel de rendimiento de SQL Server Management Studio, que proporciona información rápida sobre SQL Server y Azure SQL Managed Instance.
 ms.custom: ''
 ms.date: 12/14/2019
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 78fa35daa043d698cd8205a4d698c3855e853fcb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 61abc33a31948bca020f4a6cf7c9539ae0546af5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458397"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863400"
 ---
 # <a name="performance-dashboard"></a>Panel de rendimiento
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

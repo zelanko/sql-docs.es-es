@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a78ef76f0b8a1c133d09747e460837e1d68dd318
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2afa40749326b5b7a69179001787e5fa9469bee6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918693"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87952390"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture para Oracle de Attunity
 
@@ -29,4 +29,9 @@ La descarga de Change Data Capture para Oracle de Attunity incluye los dos compo
 -   [Servicio de captura de datos modificados para Oracle de Attunity](../../integration-services/change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)   
 
 ## <a name="get-the-change-data-capture-for-oracle-by-attunity-download"></a>Obtener la descarga de Change Data Capture para Oracle de Attunity
-El servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft para Microsoft SQL Server 2016 forman parte de SQL Server 2016 Feature Pack. Descargue los componentes del Feature Pack, en la [página web de SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
+
+Descargue Microsoft Change Data Capture Designer y Service para Oracle de Attunity para la versión de SQL Server correspondiente de los vínculos siguientes:
+
+- [Feature pack de CDC Designer/Service para Oracle de Attunity de Microsoft SQL Server 2016 Integration Services](https://www.microsoft.com/download/details.aspx?id=55802)
+- [Microsoft SQL Server 2017 Integration Services Attunity Oracle CDC Designer/Service Feature Pack](https://www.microsoft.com/download/details.aspx?id=56610)
+- [Microsoft SQL Server 2019 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=100303)

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f7da670d93de95d06fb7a602332011f9218cdc2b
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411101"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87861976"
 ---
 # <a name="azure-data-studio-faq"></a>Preguntas más frecuentes sobre Azure Data Studio
 
@@ -183,7 +183,7 @@ Los desarrolladores y DBA suelen ser los usuarios de Azure Data Studio.
 
 ## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>¿Azure Data Studio se integra con Azure SQL Data Warehouse?
 
-Sí. La compatibilidad de Azure Data Studio con Azure SQL Data Warehouse se encuentra actualmente en versión preliminar, al igual que la instancia administrada de Azure SQL Database y los macrodatos de SQL Server 2019.
+Sí. La compatibilidad de Azure Data Studio con Azure SQL Data Warehouse se encuentra actualmente en versión preliminar, al igual que la Azure SQL Managed Instance y los macrodatos de SQL Server 2019.
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>¿Por qué es importante Azure Data Studio para la nueva versión de SQL Server?
 

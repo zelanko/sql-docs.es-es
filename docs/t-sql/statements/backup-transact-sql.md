@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 568a3824405798cf7fc23f9dc0b28f6b43d0fff9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332514"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864416"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [Instancia administrada de <br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
@@ -950,9 +950,9 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instancia administrada de Azure SQL Database
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
-Realiza una copia de seguridad de una base de datos SQL colocada u hospedada en una instancia administrada de Azure SQL Database. La [Instancia administrada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) de SQL Database tiene copias de seguridad automáticas y permite a los usuarios crear copias de seguridad `COPY_ONLY` de la base de datos completas. No se admiten las copias de seguridad de instantáneas de archivos, de registros ni diferenciales.
+Realiza una copia de seguridad de una base de datos SQL colocada u hospedada en Azure SQL Managed Instance. SQL [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) realiza copias de seguridad automáticas y permite a los usuarios crear copias de seguridad `COPY_ONLY` de bases de datos completas. No se admiten las copias de seguridad de instantáneas de archivos, de registros ni diferenciales.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -990,12 +990,12 @@ BACKUP DATABASE { database_name | @database_name_var }
 
 ## <a name="arguments"></a>Argumentos
 
-DATABASE Especifica una copia de seguridad completa de la base de datos. Durante una copia de seguridad de una base de datos, la instancia administrada realiza la copia de seguridad de una parte suficiente del registro de transacciones para producir una base de datos coherente cuando se restaure la base de datos.
+DATABASE Especifica una copia de seguridad completa de la base de datos. Durante una copia de seguridad de una base de datos, Azure SQL Managed Instance realiza la copia de seguridad de una parte suficiente del registro de transacciones para producir una base de datos coherente cuando se restaure la base de datos.
 
 > [!IMPORTANT]
-> Una copia de seguridad de base de datos creada en una instancia administrada solo se puede restaurar en otra instancia administrada. No se puede restaurar en una instancia local de SQL Server (de la misma forma que no se puede restaurar una copia de seguridad de una base de datos de SQL Server 2016 en una instancia de SQL Server 2012).
+> Una copia de seguridad de base de datos creada en una instancia administrada solo se puede restaurar en otra instancia de Azure SQL Managed Instance. No se puede restaurar en una instancia local de SQL Server (de la misma forma que no se puede restaurar una copia de seguridad de una base de datos de SQL Server 2016 en una instancia de SQL Server 2012).
 
-Al restaurar una copia de seguridad creada por BACKUP DATABASE (una *copia de seguridad de datos*), se restaura la copia de seguridad completa. Para restaurar a partir de copias de seguridad automáticas de instancias administradas de Azure SQL Database, vea [Restauración de una base de datos en una instancia administrada](/azure/sql-database/sql-database-managed-instance-get-started-restore).
+Al restaurar una copia de seguridad creada por BACKUP DATABASE (una *copia de seguridad de datos*), se restaura la copia de seguridad completa. Para restaurar a partir de copias de seguridad automáticas de SQL Managed Instance, vea [Restauración de una base de datos en una instancia administrada](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* |  **@** _database\_name\_var_ } Es la base de datos para la que se realiza la copia de seguridad de la base de datos completa. Si se proporciona como una variable ( **@** _database\_name\_var_), este nombre se puede especificar como una constante de cadena ( **@** _database\_name\_var_ **=** _database name_) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.
 
@@ -1097,7 +1097,7 @@ STATS [ **=** _percentage_ ] Muestra un mensaje cada vez que se completa otro *p
 
 La opción STATS informa del porcentaje completado desde el umbral para informar del próximo intervalo. Éste es aproximadamente el porcentaje especificado; por ejemplo, con STATS=10, si la cantidad completada equivale al 40 por ciento, la opción puede mostrar el 43 por ciento. En el caso de los conjuntos de copia de seguridad de gran tamaño, esto no representa ningún problema porque el porcentaje completado se mueve muy lentamente entre las llamadas de E/S.
 
-## <a name="limitations-for-sql-database-managed-instance"></a>Limitaciones de Instancia administrada de SQL Database
+## <a name="limitations-for-sql-managed-instance"></a>Limitaciones de SQL Managed Instance
 
 El tamaño máximo de la franja de copia de seguridad es de 195 GB (tamaño máximo de blob). Aumente el número de franjas en el comando de copia de seguridad para reducir el tamaño de las franjas y permanecer dentro de este límite.
 
@@ -1131,7 +1131,7 @@ WITH STATS = 5, COPY_ONLY;
         [SQL Server](backup-transact-sql.md?view=sql-server-2016)
     :::column-end:::
     :::column:::
-        [Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)
+        [Instancia administrada de <br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
@@ -1359,6 +1359,6 @@ WITH (
 
 ## <a name="see-also"></a>Consulte también
 
-[RESTORE DATABASE - Almacenamiento de datos paralelos](../../t-sql/statements/restore-statements-transact-sql.md)
+[RESTORE DATABASE - Parallel Data Warehouse](../../t-sql/statements/restore-statements-transact-sql.md)
 
 ::: moniker-end

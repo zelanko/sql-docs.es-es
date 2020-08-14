@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e4a00b8bff85625cf48f8ba1f5abf3fb14ce94a8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a2874fa0cd20ed8ff80f7815b0725ce14dd800b5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113242"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864436"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opciones File y Filegroup de ALTER DATABASE (Transact-SQL)
 
@@ -66,7 +66,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Instancia administrada de<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [Instancia administrada de <br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
     :::column-end:::
 :::row-end:::
 
@@ -693,11 +693,11 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instancia administrada de Azure SQL Database
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
-Use esta instrucción con una base de datos en Instancia administrada de Azure SQL Database.
+Use esta instrucción con una base de datos en Azure SQL Managed Instance.
 
-## <a name="syntax-for-databases-in-a-managed-instance"></a>Sintaxis de las bases de datos en una Instancia administrada
+## <a name="syntax-for-azure-sql-managed-instance"></a>Sintaxis para Azure SQL Managed Instance
 
 ```syntaxsql
 ALTER DATABASE database_name

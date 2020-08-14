@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1409125ca324117a3b7bba1792ff0a3f3361fe05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768080"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988746"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

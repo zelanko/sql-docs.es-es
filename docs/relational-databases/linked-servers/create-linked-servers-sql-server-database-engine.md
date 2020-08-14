@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e4252d018df169f6fac238b4cb0b39991f9c8996
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1bb0bc0ec1b16af3882880ac1d528a8c7907994
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719033"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823756"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Crear servidores vinculados (motor de base de datos de SQL Server)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "85719033"
      Use el usuario remoto para asignar usuarios no definidos en **Inicio de sesión local**. El **Usuario remoto** debe ser un inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor remoto.  
 
     > [!WARNING]
-    > Solo un usuario de SQL Server se puede usar como "Usuario remoto" en una implementación de instancia administrada de Azure SQL Database.  
+    > Solo un usuario de SQL Server se puede usar como "Usuario remoto" en una implementación de instancia administrada.  
 
      **Contraseña remota**  
      Permite especificar la contraseña del usuario remoto.  

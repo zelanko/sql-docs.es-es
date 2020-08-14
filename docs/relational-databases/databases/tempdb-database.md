@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf911fae5cc8df106cc2a4be9556cf873dd49eaa
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: d4b7c4f52c5d0e70ac6c7f59eebf5fd8a5e47e29
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332484"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864882"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
 
@@ -39,8 +39,8 @@ La base de datos del sistema `tempdb` es un recurso global disponible para todos
   > [!NOTE]
   > Cada objeto interno usa un mínimo de nueve páginas, una página IAM y una extensión de ocho páginas. Para obtener más información acerca de las páginas y las extensiones, vea [Páginas y extensiones](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
   > [!IMPORTANT]
-  > Los grupos elásticos y las bases de datos únicas de Azure SQL Database admiten tablas temporales globales y procedimientos almacenados temporales globales que se almacenan en `tempdb` y que tienen como ámbito el nivel de base de datos. Las tablas temporales globales y los procedimientos almacenados temporales globales se comparten entre todos los usuarios en la misma base de datos de Azure SQL. Las sesiones de usuario de otras bases de datos de Azure SQL no pueden acceder a tablas temporales globales. Para obtener más información, vea [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database) (Tablas temporales globales con ámbito de base de datos [Azure SQL Database]). [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) admite los mismos objetos temporales que SQL Server.
-  > En el caso de los grupos elásticos y las bases de datos únicas de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos `tempdb`. Para obtener más información, vea la [Qué es un servidor de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Para obtener una explicación de `tempdb` en el contexto de los grupos elásticos y las bases de datos únicas de Azure SQL Database, consulte [Base de datos TempDB en SQL Database](#tempdb-database-in-sql-database). En el caso de Instancia administrada de Azure SQL Database, se aplican todas las bases de datos del sistema.
+  > Los grupos elásticos y las bases de datos únicas de Azure SQL Database admiten tablas temporales globales y procedimientos almacenados temporales globales que se almacenan en `tempdb` y que tienen como ámbito el nivel de base de datos. Las tablas temporales globales y los procedimientos almacenados temporales globales se comparten entre todos los usuarios en la misma base de datos de Azure SQL. Las sesiones de usuario de otras bases de datos de Azure SQL no pueden acceder a tablas temporales globales. Para obtener más información, vea [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database) (Tablas temporales globales con ámbito de base de datos [Azure SQL Database]). [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) admite los mismos objetos temporales que SQL Server.
+  > En el caso de los grupos elásticos y las bases de datos únicas de Azure SQL Database, solo se aplican la base de datos maestra y la base de datos `tempdb`. Para obtener más información, vea la [Qué es un servidor de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Para obtener una explicación de `tempdb` en el contexto de los grupos elásticos y las bases de datos únicas de Azure SQL Database, consulte [Base de datos TempDB en SQL Database](#tempdb-database-in-sql-database). En el caso de Azure SQL Managed Instance, se aplican todas las bases de datos del sistema.
 
 - **Almacenes de versiones**, que son una colección de páginas de datos que contiene las filas de datos que son necesarias para admitir las características que utilizan versiones de fila. Hay dos almacenes de versiones: un almacén de versiones común y otro de generación de índices en línea. Los almacenes de versión contienen:
   - Versiones de fila generadas por las transacciones de modificación de datos en una base de datos que utiliza transacciones de lectura confirmada que usan transacciones de aislamiento de versiones de fila o de aislamiento de instantáneas.  

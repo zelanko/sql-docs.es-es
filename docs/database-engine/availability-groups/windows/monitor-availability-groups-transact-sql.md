@@ -1,6 +1,6 @@
 ---
 title: Supervisión de grupos de disponibilidad con Transact-SQL (T-SQL)
-description: Descripción de cómo supervisar grupos de disponibilidad Always On mediante Transact-SQL (T-SQL).
+description: Use instrucciones SELECT de Transact-SQL para supervisar los Grupos de disponibilidad Always On y sus réplicas y bases de datos.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b21deb3019a2d31c16a61f98ad9a1953ad65174
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13c92b7783605eb501a73522d0820be9856588a6
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897373"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565581"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Supervisar grupos de disponibilidad (Transact-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

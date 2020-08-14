@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 0ff1117c601cc42d8fa14147df18b90a10fc97bd
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411047"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87987965"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,7 +51,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Base de datos única/grupo elástico<br /> de Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Instancia administrada<br /> de Azure SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -284,7 +284,7 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Base de datos única/grupo elástico<br />d e Azure SQL Database\*_**
+        **_\* Azure SQL Database \*_**
     :::column-end:::
     :::column:::
         [Instancia administrada<br /> de Azure SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -299,7 +299,7 @@ CHECK_EXPIRATION = OFF ;
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Grupo de bases de datos elásticas o base de datos única de Azure SQL Database
+## <a name="sql-database"></a>SQL Database
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -402,7 +402,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Base de datos única/grupo elástico<br /> de Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Instancia administrada<br />de Azure SQL\*_**
@@ -417,12 +417,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Instancia administrada de Azure SQL Database
+## <a name="azure-sql-managed-instance"></a>Azure SQL Managed Instance
 
 ## <a name="syntax"></a>Sintaxis
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for Azure SQL Managed Instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 <option_list> ::=
@@ -469,7 +469,7 @@ Solo pueden crear inicios de sesión el inicio de sesión de entidad de segurida
 
 De forma predeterminada, el permiso estándar que se concede a un inicio de sesión de Azure AD recién creado en la base de datos principal es el siguiente: **CONNECT SQL** y **VIEW ANY DATABASE**.
 
-### <a name="sql-database-managed-instance-logins"></a>Inicios de sesión de Instancia administrada de SQL Database
+### <a name="sql-managed-instance-logins"></a>Inicios de sesión de SQL Managed Instance
 
 - Debe tener el permiso **ALTER ANY LOGIN** en el servidor o la pertenencia a uno de los roles fijos de servidor `securityadmin` o `sysadmin`. Solo la cuenta de Azure Active Directory (Azure AD) con el permiso **ALTER ANY LOGIN** en el servidor o la pertenencia a uno de estos roles puede ejecutar el comando de creación.
 - Si el inicio de sesión es una entidad de seguridad de SQL, solo los inicios de sesión que forman parte del rol `sysadmin` pueden utilizar el comando create para crear inicios de sesión para una cuenta de Azure AD.
@@ -478,9 +478,9 @@ De forma predeterminada, el permiso estándar que se concede a un inicio de sesi
 ## <a name="after-creating-a-login"></a>Después de crear un inicio de sesión
 
 > [!NOTE]
-> La funcionalidad de administrador de Azure AD para instancia administrada después de la creación ha cambiado. Para obtener más información, consulte [Nueva funcionalidad de administrador de Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> La funcionalidad de administrador de Azure AD para Azure SQL Managed Instance después de la creación ha cambiado. Para obtener más información, consulte [Nueva funcionalidad de administrador de Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-Después de crear un inicio de sesión, se puede conectar a una Instancia administrada de SQL Database, pero solo tiene los permisos concedidos al rol **public**. Considere la posibilidad de realizar algunas de las actividades siguientes.
+Después de crear un inicio de sesión, se puede conectar a una instancia administrada, pero solo tiene los permisos concedidos al rol **public**. Considere la posibilidad de realizar algunas de las actividades siguientes.
 
 - Para crear un usuario de Azure AD a partir de un inicio de sesión de Azure AD, vea [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE**... **ADD MEMBER** para agregar al usuario a uno de los roles de base de datos integrados o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](../../t-sql/statements/grant-transact-sql.md). Para más información, consulte [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Roles administrativos de nivel de servidor adicional](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) y las instrucciones [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [GRANT](grant-transact-sql.md).
@@ -601,7 +601,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Base de datos única/grupo elástico<br /> de Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Instancia administrada<br /> de Azure SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -729,7 +729,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Base de datos única/grupo elástico<br /> de Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Instancia administrada<br /> de Azure SQL](create-login-transact-sql.md?view=azuresqldb-mi-current)

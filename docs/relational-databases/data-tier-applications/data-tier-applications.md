@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7f5fb29c15fbd8532a6852477ed9376df92f72
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781733"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988775"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85781733"
   
     -   Puede usar SQL Server Management Studio para extraer un DACPAC de una base de datos existente y también realizar otras operaciones DAC.  
   
-    -   Además, el administrador de una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] puede utilizar el portal de administración de SQL Azure para las operaciones DAC.  
+    -   Además, el administrador de una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] puede utilizar Azure Portal para las operaciones DAC.  
   
 -   Fabricantes de software independientes:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85781733"
   
 -   **EXTRACT**: el usuario puede extraer una base de datos en un DACPAC.  
   
--   **DEPLOY**: el usuario puede implementar un DACPAC en un servidor de host. Cuando la implementación se realiza con una herramienta de administración como SQL Server Management Studio o el portal de administración de SQL Azure, la base de datos resultante en el servidor de host se registra implícitamente como una aplicación de capa de datos.  
+-   **DEPLOY**: el usuario puede implementar un DACPAC en un servidor de host. Cuando la implementación se realiza con una herramienta de administración como SQL Server Management Studio o Azure Portal, la base de datos resultante en el servidor de host se registra implícitamente como una aplicación de capa de datos.  
   
 -   **REGISTER**: el usuario puede registrar una base de datos como una aplicación de capa de datos.  
   

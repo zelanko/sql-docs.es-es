@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 211b16d4b03439295c4970449ef61855c09addc4
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776000"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988549"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscribir una instancia de SQL Server (Utilidad de SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85776000"
   
 -   Las cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el UCP y todas las instancias administradas de SQL Server deben disponer de permisos de lectura para los usuarios de Active Directory.  
   
--   La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para inscribir no puede ser SQL Azure.  
+-   La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para inscribir no puede ser Azure SQL Database.  
   
  En esta versión, el UCP debe satisfacer los siguientes requisitos:  
   

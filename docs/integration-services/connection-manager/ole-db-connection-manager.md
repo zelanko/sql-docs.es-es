@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9068f7e2807c4883dc94094cd67d23ec04cf6a0a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7936a8f83bf110592e142f0ff7d033233592c64
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915092"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863397"
 ---
 # <a name="ole-db-connection-manager"></a>Administrador de conexiones OLE DB
 
@@ -87,10 +87,10 @@ Use el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** p
  Seleccione una conexión y, luego, **Eliminar** para eliminarla.  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Identidades administradas para la autenticación de los recursos de Azure
-Al ejecutar paquetes SSIS en el [entorno de ejecución de integración de Azure-SSIS en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), use la [identidad administrada](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) asociada a su factoría de datos para la autenticación en Azure SQL Database (o en la instancia administrada). Puede acceder a la factoría designada y copiar datos desde la base de datos o en la base de datos usando esta identidad.
+Al ejecutar paquetes SSIS en el [entorno de ejecución de integración de Azure-SSIS en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), use la [identidad administrada](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) asociada a su factoría de datos para la autenticación en Azure SQL Database o Managed Instance. Puede acceder a la factoría designada y copiar datos desde la base de datos o en la base de datos usando esta identidad.
 
 > [!NOTE]
->  Al usar la autenticación de Azure Active Directory (Azure AD) (incluida la autenticación de identidad administrada) para conectarse a Azure SQL Database (o a la instancia administrada), podría encontrarse con un problema relacionado con un error en la ejecución de paquetes o un cambio de comportamiento inesperado. Consulte [Características y limitaciones de Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations) para más información.
+>  Al usar la autenticación de Azure Active Directory (Azure AD) (incluida la autenticación de identidad administrada) para conectarse a Azure SQL Database o Managed Instance, podría encontrarse con un problema relacionado con un error en la ejecución de paquetes o un cambio de comportamiento inesperado. Consulte [Características y limitaciones de Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations) para más información.
 
 Para usar la autenticación de la identidad administrada en Azure SQL Database, siga estos pasos para configurar la base de datos:
 
@@ -108,7 +108,7 @@ Para usar la autenticación de la identidad administrada en Azure SQL Database, 
     EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
-Para usar la autenticación de identidad administrada en la instancia administrada de Azure SQL Database, siga estos pasos para configurar la base de datos:
+Para usar la autenticación de identidad administrada en Azure SQL Managed Instance, siga estos pasos para configurar la base de datos:
     
 1. [Aprovisione un administrador de Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) para la instancia administrada en Azure Portal, si aún no lo ha hecho. El administrador de Azure AD puede ser un usuario o un grupo de Azure AD. Si concede un rol de administrador al grupo con identidad administrada, omita los pasos 2-4. El administrador tendrá acceso completo a la base de datos.
 

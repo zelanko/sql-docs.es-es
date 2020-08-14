@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472481"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823487"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>Herramientas de DevOps para SQL Server Integration Services
 
@@ -95,7 +95,7 @@ Tipo de destino. Actualmente, la tarea de implementación de SSIS admite dos tip
 
 #### <a name="destination-server"></a>Servidor de destino
 
-Nombre del servidor de SQL de destino. Puede ser el nombre de una instancia administrada de SQL Server, Azure SQL Database o Azure SQL Database local. Esta propiedad solo es visible cuando el tipo de destino es SSISDB.
+Nombre del servidor de SQL de destino. Puede ser el nombre de una instancia administrada de SQL Server, Azure SQL Database o Azure SQL Managed Instance local. Esta propiedad solo es visible cuando el tipo de destino es SSISDB.
 
 #### <a name="destination-path"></a>Ruta de acceso de destino
 
@@ -184,7 +184,7 @@ Indica si se va a revertir la configuración realizada por esta tarea cuando se 
 
 #### <a name="target-server"></a>Servidor de destino
 
-Nombre del servidor SQL de destino. Puede ser el nombre de una instancia administrada de SQL Server, Azure SQL Database o Azure SQL Database local.
+Nombre del servidor SQL de destino. Puede ser el nombre de una instancia administrada de SQL Server, Azure SQL Database o Azure SQL Managed Instance local.
 
 #### <a name="authentication-type"></a>Tipo de autenticación
 

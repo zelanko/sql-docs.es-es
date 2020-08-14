@@ -1,6 +1,6 @@
 ---
 title: Grupo de disponibilidad sin conexión
-description: Identifique las posibles causas de la desconexión de un grupo de disponibilidad Always On.
+description: Aprenda a identificar las ocasiones y las posibles causas de por qué un grupo de disponibilidad Always On se queda sin conexión.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad3f81452b6b3abad43eaff1d7771b688c84638a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7d0c6a3864bec577c1d030da4fc828cd0c095fd9
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900844"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565363"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Grupo de disponibilidad Always On sin conexión
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

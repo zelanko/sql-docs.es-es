@@ -24,21 +24,21 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 760da1491a7fbf4633cb02fe1fea8568e7ab9fa1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb06761f06f315191234e5166f098182c515cd97
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684494"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988820"
 ---
 # <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-Esta función devuelve el nombre de la zona horaria observada por un servidor o una instancia. Para Instancia administrada de SQL Database, el valor devuelto se basa en la zona horaria de la propia instancia asignada durante la creación de la instancia, no en la zona horaria del sistema operativo subyacente.
+Esta función devuelve el nombre de la zona horaria observada por un servidor o una instancia. Para SQL Managed Instance, el valor devuelto se basa en la zona horaria de la propia instancia asignada durante la creación de la instancia, no en la zona horaria del sistema operativo subyacente.
   
 > [!NOTE]  
-> Para instancias de SQL Database individuales y agrupadas, la zona horaria siempre se establece en UTC y `CURRENT_TIMEZONE` devuelve el nombre de la zona horaria UTC.
+> Para SQL Database, la zona horaria siempre se establece en UTC y `CURRENT_TIMEZONE` devuelve el nombre de la zona horaria UTC.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -71,6 +71,6 @@ SELECT CURRENT_TIMEZONE();
   
 ## <a name="see-also"></a>Consulte también
 
-[Zona horaria de Instancia administrada de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[Zonas horarias de SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE_ID()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-id-transact-sql)

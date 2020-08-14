@@ -21,12 +21,12 @@ ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 272bfdacbf11207539f75c2c51045eff4e8c5c90
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3a92f830f4880278afacf10f59072b29dede6026
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112192"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863425"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Funciones de configuración Transact SQL
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87112192"
 > [!NOTE]  
 > Somos conscientes de que hay un problema con el número de versión de producto en Azure SQL Database del que nos ha informado @@VERSION. La versión del motor de base de datos de SQL Server que ejecuta Azure SQL Database va siempre por delante de la versión local de SQL Server e incluye las correcciones de seguridad más recientes. Esto significa que el nivel de revisión siempre va a la par de la versión local de SQL Server, o incluso por delante, y que las características más recientes disponibles en SQL Server están disponibles en Azure SQL Database.
 >
-> Para determinar mediante programación la edición del motor, use SELECT SERVERPROPERTY('EngineEdition'). Esta consulta devolverá "5" para los grupos elásticos y bases de datos únicas y "8" para las instancias administradas en Azure SQL Database. 
+> Para determinar mediante programación la edición del motor, use SELECT SERVERPROPERTY('EngineEdition'). Esta consulta devolverá "5" para Azure SQL Database y "8" para Azure SQL Managed Instance.
 >
 > Una vez que se resuelva este problema, se actualizará la documentación.
 

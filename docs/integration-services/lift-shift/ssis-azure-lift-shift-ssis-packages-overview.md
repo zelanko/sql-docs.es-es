@@ -10,19 +10,19 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 1276720eb7dcdb83421732164490eeb58ba89c30
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8b3e01fbded713f59832c30eb8cd9d8149e5b469
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915349"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864602"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-Ahora los proyectos, paquetes y cargas de trabajo de SQL Server Integration Services (SSIS) se pueden mover a la nube de Azure. Implemente, ejecute y administre proyectos y paquetes de SSIS del catálogo de SSIS (SSISDB) en Azure SQL Database o Instancia administrada de SQL Database con herramientas conocidas, como SQL Server Management Studio (SSMS).
+Ahora los proyectos, paquetes y cargas de trabajo de SQL Server Integration Services (SSIS) se pueden mover a la nube de Azure. Implemente, ejecute y administre proyectos y paquetes de SSIS del catálogo de SSIS (SSISDB) en Azure SQL Database o Azure SQL Managed Instance con herramientas conocidas, como SQL Server Management Studio (SSMS).
 
 ## <a name="benefits"></a>Ventajas
 El movimiento de las cargas de trabajo de SSIS local a Azure presenta las siguientes ventajas potenciales:
@@ -38,7 +38,7 @@ La diferencia más importante es la separación del almacenamiento y el tiempo d
 | Location | Storage | Tiempo de ejecución | Escalabilidad |
 |---|---|---|---|
 | En el entorno local | SQL Server | Tiempo de ejecución de SSIS hospedado por SQL Server | Escalabilidad horizontal de SSIS (en SQL Server 2017 y versiones posteriores)<br/><br/>Soluciones personalizadas (en versiones anteriores de SQL Server) |
-| En Azure | SQL Database o Instancia administrada de SQL Database | Azure SSIS Integration Runtime, un componente de Azure Data Factory | Opciones de escalado de Azure SSIS Integration Runtime |
+| En Azure | Instancia administrada de SQL o SQL Database:SQL Database o SQL Managed Instance | Azure SSIS Integration Runtime, un componente de Azure Data Factory | Opciones de escalado de Azure SSIS Integration Runtime |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>Aprovisionar SSIS en Azure

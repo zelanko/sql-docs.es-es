@@ -1,6 +1,6 @@
 ---
-title: Extensión de instancia administrada de Azure SQL Database
-description: Uso de Azure Data Studio con una instancia administrada de Azure SQL
+title: Extensión de Instancia administrada de Azure°SQL
+description: Uso de Azure Data Studio con una instancia administrada de Azure SQL Managed Instance
 ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 6a406efdd7c07d2740ebf33b6e84cd7d7175fde2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774707"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988605"
 ---
-# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Panel de instancias administradas de Azure SQL Database para Azure Data Studio (versión preliminar)
+# <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Panel de Azure SQL Managed Instance para Azure Data Studio (versión preliminar)
 
-La extensión de instancia administrada de Azure SQL Database proporciona un panel para trabajar con una [instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) en [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Esta extensión proporciona las características siguientes:
+La extensión de Azure SQL Managed Instance proporciona un panel para trabajar con una instancia de [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) en [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Esta extensión proporciona las características siguientes:
 
-- Muestra las propiedades de instancia administrada, incluidos los núcleos virtuales y el almacenamiento usado.
+- Muestra las propiedades de SQL Managed Instance, incluidos los núcleos virtuales y el almacenamiento usado.
 - Supervisa el uso de CPU y de almacenamiento de las dos horas anteriores.
 - Muestra recomendaciones de ajustes y advertencias de configuración.
 - Muestra el estado de las réplicas de bases de datos.
@@ -30,7 +30,7 @@ La extensión de instancia administrada de Azure SQL Database proporciona un pan
 ## <a name="install"></a>Instalar
 
 Puede instalar la versión oficial de esta extensión. Siga los pasos descritos en la [documentación de Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-En el panel **Extensiones**, busque "instancia administrada" e instálela ahí. Una vez que esté instalada, recibirá notificaciones automáticamente sobre las futuras actualizaciones de la extensión.
+En el panel **Extensiones**, busque "Instancia administrada" e instálela ahí. Una vez que esté instalada, recibirá notificaciones automáticamente sobre las futuras actualizaciones de la extensión.
 
 Con la extensión instalada, verá la pestaña **Instancia administrada** en Azure Data Studio. Aquí puede encontrar información específica para su instancia administrada.
 
@@ -62,7 +62,7 @@ Es posible que vea algunas de las siguientes recomendaciones:
 - **Límites de los archivos de datos**. Si sus archivos de datos están llegando a los [límites de E/S en el nivel de servicio de uso general](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), es posible que tenga que aumentar el tamaño del archivo para obtener un mejor rendimiento. Este problema podría generar presión de memoria y ralentizar las copias de seguridad.
 - **Problemas de disponibilidad**. Un gran número de archivos de registro virtuales puede afectar al rendimiento. Si se produce un error de proceso, estos problemas pueden dar lugar a una recuperación de bases de datos más larga en el nivel de servicio de uso general.
 
-Revise periódicamente estas recomendaciones, investigue las causas principales y tome medidas para corregir cualquier problema. La extensión de instancia administrada de Azure SQL Database proporciona scripts que puede ejecutar para mitigar algunos de los problemas detectados.
+Revise periódicamente estas recomendaciones, investigue las causas principales y tome medidas para corregir cualquier problema. La extensión SQL Managed Instance proporciona scripts que puede ejecutar para mitigar algunos de los problemas detectados.
 
 ## <a name="replicas"></a>Réplicas
 
@@ -80,11 +80,11 @@ En el cuarto panel de **Instancia administrada** se muestran las entradas más r
 
 Aunque su instancia administrada genera un gran número de entradas de registro, la mayoría de ellas son internas o de información del sistema. Además, algunas entradas del registro muestran los nombres de las bases de datos físicas (valores `GUID`) en lugar de los nombres de las bases de datos lógicas reales.
 
-La extensión de instancia administrada de Azure SQL Database filtra las entradas de registro innecesarias según el [método Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). La extensión también muestra los nombres de los archivos lógicos reales en lugar de los nombres físicos.
+La extensión SQL Managed Instance filtra las entradas de registro innecesarias según el [método Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). La extensión también muestra los nombres de los archivos lógicos reales en lugar de los nombres físicos.
 
 ## <a name="reporting-problems"></a>Informar de problemas
 
-Si tiene problemas con la extensión de instancia administrada de Azure SQL Database, vaya al [proyecto de extensión de GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) e informe del problema.
+Si tiene problemas con la extensión SQL Managed Instance, vaya al [proyecto de extensión de GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) e informe del problema.
 
 ## <a name="code-of-conduct"></a>Código de conducta
 

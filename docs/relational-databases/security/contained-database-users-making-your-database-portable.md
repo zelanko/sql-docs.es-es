@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e297be837d954217aa9197494d6734f53d5a6aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005602"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988797"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuarios de base de datos independiente: hacer que la base de datos sea portátil
 
@@ -75,9 +75,9 @@ ms.locfileid: "86005602"
 |-----------------------|-----------------------------------|  
 |Para cambiar la contraseña, en el contexto de la base de datos maestra:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Para cambiar la contraseña, en el contexto de la base de datos de usuario:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
 
-### <a name="managed-instance"></a>instancia administrada
+### <a name="managed-instance"></a>de SQL DB
 
-Una instancia administrada de Azure SQL Database se comporta como SQL Server local en el contexto de las bases de datos independientes. Asegúrese de cambiar el contexto de la base de datos de la base de datos maestra a la de usuario al crear el usuario contenido. Además, no debería haber ninguna conexión activa con la base de datos de usuario al establecer la opción de contención. 
+Azure SQL Managed Instance se comporta como SQL Server local en el contexto de las bases de datos independientes. Asegúrese de cambiar el contexto de la base de datos de la base de datos maestra a la de usuario al crear el usuario contenido. Además, no debería haber ninguna conexión activa con la base de datos de usuario al establecer la opción de contención. 
 
 Por ejemplo: 
 

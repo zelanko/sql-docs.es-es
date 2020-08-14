@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4660b5f0bd16d4373498e472452b61aa4be3f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 29c625eb5b169e1811f880416a027eb3ac32c027
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111172"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864386"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -899,7 +899,7 @@ Construcciones y operaciones no admitidas:
 
 Limitaciones de las consultas:
 
-PolyBase puede consumir un máximo de 33 000 archivos por carpeta cuando se ejecutan 32 consultas simultáneas de PolyBase. Esta cifra máxima engloba los archivos y las subcarpetas de cada carpeta de HDFS. Si el grado de simultaneidad es inferior a 32, un usuario puede ejecutar consultas de PolyBase en carpetas de HDFS que contengan más de 33 000 archivos. Se recomienda tener unas rutas de acceso de archivos externos cortas y no usar más de 30.000 archivos por carpeta de HDFS. Si hay referencias a demasiados archivos, podría producirse una excepción de memoria insuficiente de Máquina virtual Java (JVM).
+Se recomienda no superar un máximo de 30 000 archivos por carpeta. Si hay referencias a demasiados archivos, podría producirse una excepción de memoria insuficiente de Máquina virtual Java (JVM), o el rendimiento podría verse degradado.
 
 Limitaciones de ancho de tabla:
 

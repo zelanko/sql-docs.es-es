@@ -41,7 +41,7 @@ IMPORTANCE es local para el grupo de recursos de servidor; los grupos de cargas 
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *valor*</br>
 Especifica la cantidad máxima de memoria que una única solicitud puede tomar del grupo. *valor* es un porcentaje relativo al tamaño del grupo de recursos de servidor especificado por MAX_MEMORY_PERCENT.
 
-El elemento *value* es un entero hasta [!INCLUDE[ssSQL17](sssql17-md.md)], y un elemento float a partir de [!INCLUDE[sql-server-2019](sssqlv15-md.md)] y en la instancia administrada [!INCLUDE[ssSDSfull](sssdsfull-md.md)]. El valor predeterminado es de 25. El intervalo permitido para *value* es de 1 a 100.
+El elemento *value* es un entero hasta [!INCLUDE[ssSQL17](sssql17-md.md)], y un elemento float a partir de [!INCLUDE[sql-server-2019](sssqlv15-md.md)] y en Azure SQL Managed Instance. El valor predeterminado es de 25. El intervalo permitido para *value* es de 1 a 100.
 
 > [!IMPORTANT]  
 > La cantidad especificada se refiere únicamente a la memoria concedida para la ejecución de la consulta.

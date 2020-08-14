@@ -1,6 +1,6 @@
 ---
 title: Errores comunes con las claves administradas por el cliente en Azure Key Vault
-description: Solucione errores comunes con el cifrado de datos transparente (TDE) y claves administradas por el cliente en Azure Key Vault.
+description: Obtenga información sobre cómo identificar y solucionar problemas de acceso y errores comunes con el cifrado de datos transparente (TDE) y claves administradas por el cliente en Azure Key Vault.
 ms.custom: seo-lt-2019
 helpviewer_keywords:
 - troublshooting, tde akv
@@ -14,16 +14,17 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16368fe948d2cefeb052d503385c99cedfb097ff
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909905"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899001"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errores comunes en el cifrado de datos transparente con claves administradas por el cliente en Azure Key Vault
 
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[asdb-asdbmi-asa](../../../includes/applies-to-version/asdb-asdbmi-asa.md)]
+
 En este artículo se describe cómo identificar y resolver los problemas de acceso a la clave de Azure Key Vault que causaron que una base de datos configurada para utilizar el cifrado de datos transparente (TDE) de [ con claves administradas por el cliente en Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) dejara de estar accesible.
 
 ## <a name="introduction"></a>Introducción

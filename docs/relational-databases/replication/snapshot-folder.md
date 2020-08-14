@@ -13,12 +13,12 @@ ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d66be3ee4f5d4a5eb7237dbec55160b4d263d626
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21fe129f15022532e9e7c8613159cfc7617fd6e4
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767617"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864872"
 ---
 # <a name="snapshot-folder"></a>Carpeta de instantáneas
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -27,14 +27,14 @@ La página **Carpeta de instantáneas** aparece en el Asistente para configurar 
   
 La carpeta de instantáneas es simplemente un directorio designado como recurso compartido; los agentes que leen y escriben en esta carpeta deben tener permisos de acceso suficientes a ella. Para obtener más información sobre cómo proteger la carpeta adecuadamente, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md). Antes de implementar la replicación, compruebe que los agentes de replicación podrán conectarse a la carpeta de instantáneas. Inicie la sesión con la cuenta que utilizará cada agente y, a continuación, intente tener acceso a la carpeta de instantáneas.  
 
-Para una instancia administrada de Azure SQL Database, la carpeta de instantáneas debe ser un recurso compartido de archivos de Azure. 
+Para Azure SQL Managed Instance, la carpeta de instantáneas debe ser un recurso compartido de archivos de Azure. 
   
 ## <a name="options"></a>Opciones  
  **Carpeta de instantáneas**  
  Escriba la ruta de acceso de la carpeta donde desea almacenar los archivos de instantáneas.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda utilizar un recurso de red compartido como ubicación para la carpeta de instantáneas. Los agentes en otros equipos no tienen acceso a las rutas de acceso locales (las que empiezan con una letra de unidad como C:\\).  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda utilizar un recurso de red compartido como ubicación para la carpeta de instantáneas. Los agentes en otros equipos no tienen acceso a las rutas de acceso locales (las que empiezan con una letra de unidad como C:\\).  
   
 ## <a name="see-also"></a>Consulte también  
  [Modificación de las opciones de instantánea](../../relational-databases/replication/snapshot-options.md)   

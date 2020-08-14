@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 6d18996610899fd348b179495ab78af2e2717f83
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396014"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807508"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versión preliminar)
 
@@ -428,9 +428,9 @@ No es necesario dividir los archivos ORC o Parquet porque el comando COPY lo har
 ### <a name="when-will-the-copy-command-be-generally-available"></a>¿Cuándo estará disponible el comando COPY con carácter general?
 El comando COPY estará disponible con carácter general a principios del siguiente año natural (2020). 
 
-### <a name="are-there-any-known-issues-with-the-copy-command"></a>¿Hay algún problema conocido con el comando COPY?
+### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>¿Hay alguna limitación en el número o el tamaño de los archivos?
+Los archivos deben tener al menos 4 MB.
 
-- La compatibilidad con LOB como (n)varchar(max) no está disponible en la instrucción COPY. Estará disponible a comienzos del próximo año.
 
 Envíe cualquier comentario o problema a la lista de distribución sqldwcopypreview@service.microsoft.com.
 

@@ -1,6 +1,6 @@
 ---
 title: Configuración de un grupo de disponibilidad distribuido
-description: 'Se describe cómo crear y configurar un grupo de disponibilidad Always On distribuido. '
+description: Obtenga información sobre cómo configurar un grupo de disponibilidad distribuido mediante un ejemplo de Transact-SQL. Conozca también dónde encontrar información sobre los grupos de disponibilidad distribuidos.
 ms.custom: seodec18
 ms.date: 01/28/2020
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 629aceee12a89498d763fde2d3510f69e0cde452
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896128"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565292"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configuración de un grupo de disponibilidad Always On distribuido  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +24,7 @@ Para crear un grupo de disponibilidad distribuido, debe crear dos grupos de disp
 
 Para ver una introducción técnica de los grupos de disponibilidad distribuidos, vea [Distributed availability groups](distributed-availability-groups.md) (Grupos de disponibilidad distribuidos).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Establecer los agentes de escucha de punto de conexión para que escuchen en todas las direcciones IP
 

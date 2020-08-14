@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11994d1dc3ec931f729c2739a107848464ed7f8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781698"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988760"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implementar una base de datos mediante una DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Use el asistente para **implementar una base de datos en SQL Azure** para implementar una base de datos entre una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un servidor de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o entre dos servidores de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+  Use el **asistente para implementar una base de datos en Azure SQL Database** para implementar una base de datos entre una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y un servidor de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o entre dos servidores de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> Antes de comenzar  
  El asistente emplea un archivo de almacenamiento BACPAC de aplicación de capa de datos (DAC) para implementar los datos y las definiciones de los objetos de base de datos. Realiza una operación de exportación de DAC de la base de datos de origen y una importación de DAC al destino.  
@@ -68,7 +68,7 @@ ms.locfileid: "85781698"
   
 3.  Expanda el nodo **Bases de datos** .  
   
-4.  Haga clic con el botón derecho en la base de datos que quiera implementar, seleccione **Tareas** y, después, seleccione **Implementar base de datos en SQL Azure...** .  
+4.  Haga clic con el botón derecho en la base de datos que desea implementar, seleccione **Tareas** y, luego, seleccione **Implementar la base de datos en Microsoft Azure SQL Database**.  
   
 5.  Complete los cuadros de diálogo del asistente:  
   

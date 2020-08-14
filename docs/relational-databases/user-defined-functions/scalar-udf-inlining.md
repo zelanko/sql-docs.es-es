@@ -2,7 +2,7 @@
 title: Inserción de UDF escalares en Microsoft SQL Server | Microsoft Docs
 description: Característica Inserción de UDF escalares para mejorar el rendimiento de las consultas que llaman a UDF escalares en SQL Server (a partir de SQL Server 2019).
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 0d9a618e8170d08250c15c75e83d5d2dbc627447
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435582"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790308"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
@@ -164,6 +164,9 @@ Según la complejidad de la lógica de la UDF, es posible que el plan de consult
 - La UDF no contiene varias instrucciones RETURN<sup>6</sup>.
 - No se llama a la UDF desde una instrucción RETURN<sup>6</sup>.
 - La UDF no hace referencia a la función `STRING_AGG`<sup>6</sup>. 
+- La UDF no hace referencia a tablas remotas <sup>7</sup>.
+- La consulta de llamada a UDF no utiliza `GROUPING SETS`, `CUBE` ni `ROLLUP` <sup>7</sup>.
+- La consulta de llamada a UDF no contiene una variable que se use como parámetro UDF para la asignación (por ejemplo, `SELECT @y = 2`, `@x = UDF(@y)`)<sup>7</sup>.
 
 <sup>1</sup> `SELECT` con acumulación o agregación de variables no se admite para la inserción (por ejemplo, `SELECT @val += col1 FROM table1`).
 
@@ -176,6 +179,8 @@ Según la complejidad de la lógica de la UDF, es posible que el plan de consult
 <sup>5</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
 
 <sup>6</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+
+<sup>7</sup> Restricción agregada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6
 
 > [!NOTE]
 > Para obtener información sobre las correcciones más recientes de la inserción de UDF escalares de T-SQL y los cambios en escenarios de elegibilidad de inserción, vea el artículo de Knowledge Base: [FIX: Problemas de inserción de UDF escalares en SQL Server 2019](https://support.microsoft.com/help/4538581).

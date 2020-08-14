@@ -15,12 +15,12 @@ ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 718c095fb544c2c0b9436a3cfa70040fcf31d71c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b1338f4e935a2c7e8662a09aacff1cc4b7df9d3
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111738"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988818"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Cuadro de diálogo Propiedades de la suscripción de Replicación de SQL Server 
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite 
   
 > [!NOTE]  
 >  - Si aún no ha creado un Agente de distribución o un Agente de mezcla para la suscripción, no se mostrarán muchas de las propiedades de la suscripción. Para crear un trabajo de agente para una suscripción de extracción, ejecute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (para una suscripción a una publicación de instantáneas o transaccional) o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (para una suscripción a una publicación de mezcla).  
-> - Una instancia administrada de Azure SQL Database puede ser un publicador, un distribuidor y un suscriptor para la replicación transaccional y de instantáneas. Las bases de datos únicas y agrupadas de Azure SQL Database solo pueden ser suscriptores de extracción para la replicación transaccional y de instantáneas. Para más información, consulte [Replicación transaccional con Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
+> - Las bases de datos de Azure SQL Managed Instance pueden ser un publicador, un distribuidor y un suscriptor para la replicación transaccional y de instantáneas. Las bases de datos de Azure SQL Database solo pueden ser suscriptores de extracción para la replicación transaccional y de instantáneas. Para más información, consulte [Replicación transaccional con Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication). 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Opciones de publicador para todas las suscripciones  
  **Seguridad**  

@@ -8,7 +8,7 @@
 Algunos ejemplos de código de Transact-SQL escritos para SQL Server local necesitan pequeños cambios para ejecutarse en el servicio Azure SQL Database en la nube. Una categoría de estos ejemplos de código implica vistas del sistema cuyos prefijos de nombre difieren ligeramente entre los dos sistemas de base de datos:
 
 - **server\_** &nbsp; - &nbsp; _prefijo para el entorno local_
-- **database\_** &nbsp; - &nbsp; _prefijo para el servicio Azure SQL DB en la nube_
+- **database\_** &nbsp; - &nbsp; _prefijo para Azure SQL Database_
 
 Como ilustración, en la tabla siguiente se enumeran y comparan dos subconjuntos de las vistas del sistema. Por motivos de brevedad, los subconjuntos están restringidos a los nombres de vista que también contienen la cadena `_event`. Los subconjuntos tienen prefijos de nombre diferentes porque incluyen los dos sistemas de base de datos diferentes.
 

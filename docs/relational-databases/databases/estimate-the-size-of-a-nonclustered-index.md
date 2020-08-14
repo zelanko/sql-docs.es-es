@@ -21,12 +21,12 @@ ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 00132b65b2dc5e21fbc57c376ac005d968871f62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7f5c8f910d4fd9d5af81789a62eea86d609ec7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743331"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864506"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar el tamaño de un índice no clúster
 
@@ -176,13 +176,13 @@ ms.locfileid: "85743331"
   
 4.  Calcule el tamaño de los datos de longitud variable:  
   
-     Si hay columnas de longitud variable en la clave de índice, incluidas las columnas de clave de agrupación en clústeres necesarias según se describe en el Paso 2.2, determine cuánto espacio se utiliza para almacenar las columnas de la fila de índice:  
+     Si hay columnas de longitud variable (columnas de clave o incluidas), incluidas las columnas de clave de agrupación en clústeres necesarias según se describe en el Paso 2.2, determine cuánto espacio se utiliza para almacenar las columnas de la fila de índice:  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
      Los bytes agregados a ***Max_Var_Key_Size*** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100 %. Si prevé que va a usarse un porcentaje inferior del espacio de almacenamiento de las columnas de longitud variable, puede ajustar el valor de ***Max_Var_Leaf_Size*** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
   
-     Si no hay columnas de longitud variable, establezca ***Variable_Leaf_Size*** en 0.  
+     Si no hay columnas de longitud variable (columnas de clave o incluidas), establezca ***Variable_Leaf_Size*** en 0.  
   
 5.  Calcule el tamaño de la fila del índice:  
   

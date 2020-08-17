@@ -1,4 +1,5 @@
 ---
+description: Instalación de componentes de SSMA en SQL Server (SybaseToSQL)
 title: Instalación de componentes de SSMA en SQL Server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/14/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1c66255f57a69db0807ab1620cafd60444f296c8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 33b5663e7693de8c031f2b39c0436a771920be56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372371"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Instalación de componentes de SSMA en SQL Server (SybaseToSQL)
 
@@ -30,8 +31,8 @@ Además, al migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 
 Antes de instalar los componentes de servidor de SSMA para Sybase en, asegúrese de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el sistema cumple los requisitos siguientes:
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la instancia de está instalada.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o una versión posterior.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la instancia de está instalada.
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 o una versión posterior.
 - La [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] versión 4.7.2 o una versión posterior. Puede obtenerlo en el [Centro para desarrolladores de .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - El proveedor de Sybase OLE DB/ADO.Net/ODBC y la conectividad con el servidor de base de datos de SAP ASE que contiene las bases de datos que desea migrar. Puede instalar proveedores desde los medios del producto de SAP ASE. Para obtener información sobre la conectividad, consulte [conexión a Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).
 - El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio Browser debe estar en ejecución durante la instalación. Se utiliza para rellenar una lista de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el Asistente para la instalación. Puede deshabilitar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio Browser después de la instalación.
@@ -109,7 +110,7 @@ Las instrucciones siguientes proporcionan los pasos de instalación básica para
 3. En la página selección de características, seleccione los proveedores de datos ODBC, OLE DB y ADO.NET.
 4. Compruebe las características seleccionadas y, a continuación, haga clic en **Finalizar** para instalar el proveedor de datos.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Instalación de SSMA para el cliente de Sybase](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)
 - [Migración de bases de datos de Sybase ASE a SQL Server-Azure SQL Database](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

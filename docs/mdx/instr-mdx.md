@@ -1,4 +1,5 @@
 ---
+description: Instr (MDX)
 title: Instr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 877fc4658081108e810e404dfc8d4a368c6964ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387361"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -48,7 +49,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |---------------|------------------|  
 |String1 es de longitud cero|cero (0)|  
 |String1 es NULL|no definido|  
-|String2 es de longitud cero|start.|  
+|String2 es de longitud cero|start|  
 |String2 es NULL|no definido|  
 |String2 no se encuentra|cero (0)|  
 |start es mayor que Len(String2)|cero (0)|  
@@ -95,7 +96,7 @@ from [Adventure Works]
   
  La tabla siguiente muestra los resultados obtenidos.  
   
-|Campo en medidas|Results|  
+|Campo en medidas|Resultados|  
 |-|-|  
 |lowercase found in lowercase string|16|  
 |uppercase found in lowercase string|16|  

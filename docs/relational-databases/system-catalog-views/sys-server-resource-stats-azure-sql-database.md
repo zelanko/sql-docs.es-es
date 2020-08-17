@@ -1,4 +1,5 @@
 ---
+description: Sys. server_resource_stats (Azure SQL Database)
 title: Sys. server_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: ef3f27b814405cf6ca56a47ffcac8dd467f939f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376711"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>Sys. server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]

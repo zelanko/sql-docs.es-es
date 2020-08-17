@@ -1,4 +1,5 @@
 ---
+description: Instrucciones de definición de datos de MDX (MDX)
 title: Instrucciones de definición de datos de MDX (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b499fe50854e979b9407487903324b80e16ede77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4792a7c35d1af1a51227dacf16f2874826e12f0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387019"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>Instrucciones de definición de datos de MDX (MDX)
 

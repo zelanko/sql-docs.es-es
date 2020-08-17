@@ -1,4 +1,5 @@
 ---
+description: Estados de importación (Master Data Services)
 title: Estados de importación
 ms.custom: ''
 ms.date: 04/01/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 40cc57e3d8ba66c36c52906f5d134325178a37e4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 718565fb0da60062c211493f5578b44c392c3a3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388371"
 ---
 # <a name="import-statuses-master-data-services"></a>Estados de importación (Master Data Services)
 
@@ -27,7 +28,7 @@ ms.locfileid: "85812961"
 |------------|-----------------|----------------|  
 |En cola para ejecutar|No se ha iniciado el procesamiento del lote.|1|  
 |En ejecución|Se está procesando el lote.|2|  
-|Completado|Se ha terminado de procesar el lote.|3|  
+|Completed|Se ha terminado de procesar el lote.|3|  
 |En cola para borrar|El lote ha finalizado su procesamiento y se borrará.|4|  
 |Desactivado|Se ha borrado el lote.|5|  
   

@@ -1,4 +1,5 @@
 ---
+description: INSERT INTO (DMX)
 title: INSERT INTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eedff3b14960fae68ad4e3a9ac54a0034c1a9300
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352921"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,7 +35,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  Identificador de modelo.  
   
- *estructuras*  
+ *structure*  
  Identificador de estructura.  
   
  *columnas del modelo asignado*  
@@ -64,7 +65,7 @@ INSERT INTO [MINING MODEL] <model>
 ||La estructura de minería de datos no está procesada.|Se procesan el modelo y la estructura de minería de datos.|  
 ||La estructura de minería de datos contiene modelos de minería de datos adicionales.|Se produce un error en el proceso. Deberá volver a procesar la estructura y los modelos de minería de datos asociados.|  
 |INSERTAR EN ESTRUCTURA DE MINERÍA DE DATOS*\<structure>*|La estructura de minería de datos está procesada o sin procesar.|Se procesan la estructura de minería de datos y los modelos de minería de datos asociados.|  
-|INSERTAR en el modelo *\<model>* de minería de datos que contiene una consulta de origen<br /><br /> o<br /><br /> INSERTAR en la estructura *\<structure>* de minería de datos que contiene una consulta de origen|La estructura o el modelo ya tienen contenido.|Se produce un error en el proceso. Debe borrar los objetos antes de realizar esta operación, mediante [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERTAR en el modelo *\<model>* de minería de datos que contiene una consulta de origen<br /><br /> or<br /><br /> INSERTAR en la estructura *\<structure>* de minería de datos que contiene una consulta de origen|La estructura o el modelo ya tienen contenido.|Se produce un error en el proceso. Debe borrar los objetos antes de realizar esta operación, mediante [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Columnas de modelo asignadas  
  Mediante el \<mapped model columns> elemento, puede asignar las columnas del origen de datos a las columnas del modelo de minería de datos. El \<mapped model columns> elemento tiene el formato siguiente:  

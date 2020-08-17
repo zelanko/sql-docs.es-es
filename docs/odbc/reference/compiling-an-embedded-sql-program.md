@@ -1,4 +1,5 @@
 ---
+description: Compilar un programa SQL incrustado
 title: Compilar un programa SQL incrustado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb801dc532009410055b67031b3e036cc6b9c3d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5065d50bd9ae23cc7db8a2310b13792b461da2a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386081"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compilar un programa SQL incrustado
 Dado que un programa SQL incrustado contiene una combinación de instrucciones de lenguaje de host y SQL, no se puede enviar directamente a un compilador para el idioma del host. En su lugar, se compila a través de un proceso de varios pasos. Aunque este proceso difiere del producto al producto, los pasos son aproximadamente los mismos para todos los productos.  

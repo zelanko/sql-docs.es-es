@@ -1,4 +1,5 @@
 ---
+description: Permisos de entidad (Master Data Services)
 title: Permisos de entidad
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3a0ca2773d513137adeb9e803b66930536e3a28a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b71ffdf22c3a6758ee81d92f5f25300784d73fff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389191"
 ---
 # <a name="entity-permissions-master-data-services"></a>Permisos de entidad (Master Data Services)
 
@@ -40,8 +41,8 @@ ms.locfileid: "85811957"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
-|**Creación**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
-|**Update**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
+|**Crear**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
+|**Actualizar**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
 |**Eliminar**|El usuario puede eliminar miembros.|  
 |**Deny**|Denegar todo acceso a la entidad.|  
   

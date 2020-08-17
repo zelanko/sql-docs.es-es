@@ -1,4 +1,5 @@
 ---
+description: StrToSet (MDX)
 title: StrToSet (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 729dae70fce03b3dec1394900126b216d09dc497
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 882ab646af51d4b1edbe0a1240eaaed7cbfa5422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386781"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
@@ -34,7 +35,7 @@ StrToSet(Set_Specification [,CONSTRAINED] )
 ## <a name="remarks"></a>Observaciones  
  La función **StrToSet** devuelve el conjunto especificado en la expresión de cadena. La función **StrToSet** se utiliza normalmente con funciones definidas por el usuario para devolver una especificación de conjunto desde una función externa a una instrucción MDX o cuando se parametriza una consulta MDX.  
   
--   Cuando se utiliza la marca CONSTRAINED, la especificación Set debe contener nombres de miembro calificados o no calificados, o un conjunto de tuplas que contengan nombres de miembro calificados {}o no calificados entre llaves. Esta marca se utiliza para reducir el riesgo de ataques por inyección de código a través de la cadena especificada. Si se proporciona una cadena que no se resuelve directamente en nombres de miembro calificados o no calificados, aparece el siguiente error: "Se infringieron las restricciones impuestas por la marca CONSTRAINED en la función STRTOSET."  
+-   Cuando se utiliza la marca CONSTRAINED, la especificación Set debe contener nombres de miembro calificados o no calificados, o un conjunto de tuplas que contengan nombres de miembro calificados o no calificados entre llaves {} . Esta marca se utiliza para reducir el riesgo de ataques por inyección de código a través de la cadena especificada. Si se proporciona una cadena que no se resuelve directamente en nombres de miembro calificados o no calificados, aparece el siguiente error: "Se infringieron las restricciones impuestas por la marca CONSTRAINED en la función STRTOSET."  
   
 -   Cuando no se utiliza la marca CONSTRAINED, la especificación de conjunto especificada se puede resolver en una expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   

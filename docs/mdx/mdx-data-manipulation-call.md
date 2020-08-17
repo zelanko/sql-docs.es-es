@@ -1,4 +1,5 @@
 ---
+description: 'Manipulación de datos de MDX: CALL'
 title: CALL (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a8f3b550e3fed3fe28e74896c3c4ff764db8810
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387048"
 ---
 # <a name="mdx-data-manipulation---call"></a>Manipulación de datos de MDX: CALL
 
@@ -47,7 +48,7 @@ CALL SP_Name
  Si no se especifica un cubo, la instrucción ejecuta el procedimiento almacenado en el cubo actual.  
   
 > [!NOTE]  
->  Si el procedimiento almacenado no está registrado en el cliente, la instrucción **Call** intenta llamar al procedimiento almacenado desde una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+>  Si el procedimiento almacenado no está registrado en el cliente, la instrucción **Call** intenta llamar al procedimiento almacenado desde una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte también  
  [Instrucciones de manipulación de datos de MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   

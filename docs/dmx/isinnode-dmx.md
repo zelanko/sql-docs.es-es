@@ -1,4 +1,5 @@
 ---
+description: IsInNode (DMX)
 title: IsInNode (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 063c436f2e0d76ca891f332f25be385c2f16fdfa
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 68f88915209a3a15cb7e8f1fd64e9d877655f3ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969678"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352351"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +29,7 @@ IsInNode(<NodeID>)
 ```  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- Un tipo booleano.  
+ Tipo Boolean.  
   
 ## <a name="remarks"></a>Observaciones  
  **IsInNode** solo se usa en [SELECT desde &#60;&#62; de modelo. Los casos &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md) y [seleccionar de &#60;Modelo&#62;. SAMPLE_CASES las consultas &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md) .  

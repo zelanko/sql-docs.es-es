@@ -1,4 +1,5 @@
 ---
+description: Filter (MDX)
 title: Filtrar (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a70bceed4cdccf6a22f0cfea4e5093634f88f1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 026e4720803d828ae9ba96a4d3df7f5a72d59e8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387511"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 
@@ -37,7 +38,7 @@ Filter(Set_Expression, Logical_Expression )
 ## <a name="remarks"></a>Observaciones  
  La función **Filter** evalúa la expresión lógica especificada en cada tupla del conjunto especificado. La función devuelve un conjunto que consta de cada tupla del conjunto especificado, donde la expresión lógica se evalúa como **true**. Si ninguna tupla se evalúa como **true**, se devuelve un conjunto vacío.  
   
- La función **Filter** funciona de manera similar a la de la función [IIf](../mdx/iif-mdx.md) . La función **IIf** devuelve solo una de las dos opciones en función de la evaluación de una expresión lógica de MDX, mientras que la función de **filtro** devuelve un conjunto de tuplas que cumplen la condición de búsqueda especificada. En efecto, la función de **filtro** se `IIf(Logical_Expression, Set_Expression.Current, NULL)` ejecuta en cada tupla del conjunto y devuelve el conjunto resultante.  
+ La función **Filter** funciona de manera similar a la de la función [IIf](../mdx/iif-mdx.md) . La función **IIf** devuelve solo una de las dos opciones en función de la evaluación de una expresión lógica de MDX, mientras que la función de **filtro** devuelve un conjunto de tuplas que cumplen la condición de búsqueda especificada. En efecto, la función de **filtro** se ejecuta `IIf(Logical_Expression, Set_Expression.Current, NULL)` en cada tupla del conjunto y devuelve el conjunto resultante.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra el uso de la función Filter en el eje de filas de una consulta para devolver únicamente las fechas en las que Internet Sales Amount es mayor que 10000 dólares:  
@@ -56,7 +57,7 @@ Filter(Set_Expression, Logical_Expression )
   
  `[Adventure Works]`  
   
- La función Filter también puede usarse dentro de definiciones de miembros calculados. En el ejemplo siguiente se devuelve la suma `Measures.[Order Quantity]` del miembro, agregada durante los primeros nueve meses de 2003 contenidos en `Date` la dimensión, del cubo **Adventure Works** . La función **PeriodsToDate** define las tuplas en el conjunto sobre el que funciona la función de **agregado** . La función de **filtro** limita las tuplas que se devuelven a aquellas con valores inferiores para la medida reseller sales amount para el período de tiempo anterior.  
+ La función Filter también puede usarse dentro de definiciones de miembros calculados. En el ejemplo siguiente se devuelve la suma del `Measures.[Order Quantity]` miembro, agregada durante los primeros nueve meses de 2003 contenidos en la `Date` dimensión, del cubo **Adventure Works** . La función **PeriodsToDate** define las tuplas en el conjunto sobre el que funciona la función de **agregado** . La función de **filtro** limita las tuplas que se devuelven a aquellas con valores inferiores para la medida reseller sales amount para el período de tiempo anterior.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  

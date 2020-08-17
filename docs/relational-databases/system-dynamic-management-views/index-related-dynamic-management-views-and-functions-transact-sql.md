@@ -1,4 +1,5 @@
 ---
+description: Funciones y vistas de administración dinámica relacionadas con índices (Transact-SQL)
 title: Funciones y vistas de administración dinámica relacionadas con índices (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad9ad40f-b018-4bae-b003-691f08dcefdf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b6e968fca44a8c6c36322f1ebd76561190bfb01f
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7171bc1bc44a4f9892eb3bd6012588848e919e5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374271"
 ---
 # <a name="index-related-dynamic-management-views-and-functions-transact-sql"></a>Funciones y vistas de administración dinámica relacionadas con índices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

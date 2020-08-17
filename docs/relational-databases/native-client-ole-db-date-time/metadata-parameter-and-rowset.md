@@ -1,4 +1,5 @@
 ---
+description: 'Metadata: Parameter y Rowset en SQL Server Native Client'
 title: Metadatos de parámetros y conjuntos de filas (proveedor de OLE DB de Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fb12ebfb1e158ae71c2e8bbc72a7159a10a91e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f45147881ec8cc2c62f8d023a1fe443164682678
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381751"
 ---
 # <a name="metadata---parameter-and-rowset-in-sql-server-native-client"></a>Metadata: Parameter y Rowset en SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,12 +57,12 @@ ms.locfileid: "87245820"
   
 |*pwszDataSourceType*<br /><br /> (depende del proveedor)|*pwszDataSourceType*<br /><br /> (OLE DB genérico)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
-||DBTYPE_DATE|6|Se ignora.|  
-|date|DBTYPE_DBDATE|6|Se ignora.|  
-||DBTYPE_DBTIME|10|Se ignora.|  
+||DBTYPE_DATE|6|Omitido|  
+|date|DBTYPE_DBDATE|6|Omitido|  
+||DBTYPE_DBTIME|10|Omitido|  
 |time|DBTYPE_DBTIME2|10|0..7|  
-|smalldatetime||16|Se ignora.|  
-|datetime||16|Se ignora.|  
+|smalldatetime||16|Omitido|  
+|datetime||16|Omitido|  
 |datetime2 o DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   

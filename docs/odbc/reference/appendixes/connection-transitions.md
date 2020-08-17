@@ -1,4 +1,5 @@
 ---
+description: Transiciones de conexión
 title: Transiciones de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 225f8517a78f8e9d4d765163649da174d72e490c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5f7fecf0ad25311e9d96f4db8554c1cdbf24e91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339451"
 ---
 # <a name="connection-transitions"></a>Transiciones de conexión
 Las conexiones ODBC tienen los Estados siguientes.  
@@ -53,7 +54,7 @@ Las conexiones ODBC tienen los Estados siguientes.
   
  [4] esta fila muestra las transiciones cuando se SQL_HANDLE_DESC *HandleType* .  
   
- [5] si se llama a **SQLAllocHandle** con *OutputHandlePtr* que apuntan a un identificador válido, se sobrescribe ese identificador sin tener en cuenta el contenido anterior de ese control y podrían producirse problemas con los controladores ODBC. La programación de aplicaciones ODBC es incorrecta para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para * \*OutputHandlePtr* sin llamar a **SQLFreeHandle** para liberar el identificador antes de reasignarlo. Si se sobrescriben los identificadores ODBC de este modo, se puede producir un comportamiento incoherente o errores en la parte de los controladores ODBC.  
+ [5] si se llama a **SQLAllocHandle** con *OutputHandlePtr* que apuntan a un identificador válido, se sobrescribe ese identificador sin tener en cuenta el contenido anterior de ese control y podrían producirse problemas con los controladores ODBC. La programación de aplicaciones ODBC es incorrecta para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para * \* OutputHandlePtr* sin llamar a **SQLFreeHandle** para liberar el identificador antes de reasignarlo. Si se sobrescriben los identificadores ODBC de este modo, se puede producir un comportamiento incoherente o errores en la parte de los controladores ODBC.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

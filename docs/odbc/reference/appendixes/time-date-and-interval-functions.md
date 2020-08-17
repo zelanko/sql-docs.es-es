@@ -1,4 +1,5 @@
 ---
+description: Funciones de hora, fecha e intervalo
 title: Funciones de hora, fecha e intervalo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aec3d6b23383edcc9659ff884e8cd71b0595dae1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcbdf9f40a9cd1f1296920e3d2ea71fcb5ce6b39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386381"
 ---
 # <a name="time-date-and-interval-functions"></a>Funciones de hora, fecha e intervalo
 En la tabla siguiente se enumeran las funciones de fecha y hora que se incluyen en el conjunto de funciones escalares de ODBC. Una aplicación puede determinar qué funciones de fecha y hora son compatibles con un controlador mediante una llamada a **SQLGetInfo** con un *tipo de información* de SQL_TIMEDATE_FUNCTIONS.  

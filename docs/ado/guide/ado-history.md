@@ -1,4 +1,5 @@
 ---
+description: Características de ADO para cada versión
 title: Historial de ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 726487d366450f003ca745624a916d400990723b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d97e81eca94867ad00317667d08ef6bdf4c6f058
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355431"
 ---
 # <a name="ado-features-for-each-release"></a>Características de ADO para cada versión
 
@@ -55,7 +56,7 @@ Ahora, un comando de forma anidada devuelve un máximo de 512 **conjuntos de reg
 
  El [dialecto](../../ado/reference/ado-api/dialect-property.md) de la_propiedad_ de **dialecto**es una nueva propiedad que define la sintaxis y las reglas generales que el proveedor utiliza para analizar la cadena o el flujo.  
 
- **Comando. Execute**(_método_ ) el [método Execute](../../ado/reference/ado-api/execute-method-ado-command.md) del objeto **Command** de ADO se ha mejorado para usar secuencias para la entrada y la salida.  
+ **Command.Exe**  _método_ de la función de [ejecución el método Execute](../../ado/reference/ado-api/execute-method-ado-command.md) del objeto **Command** de ADO se ha mejorado para usar secuencias para la entrada y la salida.
 
  *Campo statusvalues* Si el usuario encuentra un error DB_E_ERRORSOCCURRED al modificar un **campo** de un **conjunto de registros**, ADO rellenará ahora la propiedad **Field. status** con la información de estado adecuada para que el usuario tenga más información sobre lo que ha ido mal. Vea [propiedad Status (campo ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 

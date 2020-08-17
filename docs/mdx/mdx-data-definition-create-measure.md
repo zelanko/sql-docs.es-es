@@ -1,4 +1,5 @@
 ---
+description: 'Definición de datos de MDX: CREATE MEASURE'
 title: CREATE MEASURE (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3bac5d7d067186e2b84277a5c0dc02cd31cba011
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: cdbee6f6ede5e46926f1a8189792d86cf9e99f5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387271"
 ---
 # <a name="mdx-data-definition---create-measure"></a>Definición de datos de MDX: CREATE MEASURE
 
@@ -40,7 +41,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  Expresión DAX válida que devuelve un solo valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
- El *Measure_Name* debe ir entre paréntesis.  
+ El *Measure_Name*  debe ir entre paréntesis.  
   
  La instrucción CREATE MEASURE solo se puede usar dentro de una definición de script MDX; Vea el [elemento MdxScript &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
   

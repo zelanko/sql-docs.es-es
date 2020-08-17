@@ -1,4 +1,5 @@
 ---
+description: Crear un flujo de trabajo personalizado (Master Data Services)
 title: Crear un flujo de trabajo personalizado
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b30b9a9c8adf7386e0a645b082466dec5afe9220
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7328d550697e1c6e0edd076d748a594946372915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389861"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Crear un flujo de trabajo personalizado (Master Data Services)
 
@@ -53,7 +54,7 @@ ms.locfileid: "85897438"
 5.  Aplique la regla de negocio a un miembro que desencadene el flujo de trabajo personalizado.  
   
 ### <a name="create-the-workflow-handler-assembly"></a>Crear el ensamblado controlador del flujo de trabajo  
- Un flujo de trabajo personalizado es un ensamblado de biblioteca de clases .NET que implementa la interfaz [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . SQL Server servicio de integración de flujos de trabajo de MDS llama al método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) para ejecutar el código. Para obtener un ejemplo de código que implementa [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) , vea [ejemplo de flujo de trabajo personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  
+ Un flujo de trabajo personalizado es un ensamblado de biblioteca de clases .NET que implementa la interfaz [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . SQL Server servicio de integración de flujos de trabajo de MDS llama al método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  para ejecutar el código. Para obtener un ejemplo de código que implementa [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) , vea [ejemplo de flujo de trabajo personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  
   
  Siga estos pasos para utilizar Visual Studio 2010 para crear un ensamblado al que el servicio de integración de flujos de trabajo MDS de SQL Server pueda llamar para controlar un flujo de trabajo personalizado:  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85897438"
   
 4.  Herede de [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) en la declaración de clase. La declaración de clase debe ser similar a: "public class WorkflowTester : IWorkflowTypeExtender".  
   
-5.  Implemente la interfaz [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . SQL Server servicio de integración de flujos de trabajo de MDS llama al método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) para iniciar el flujo de trabajo.  
+5.  Implemente la interfaz [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . SQL Server servicio de integración de flujos de trabajo de MDS llama al método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  para iniciar el flujo de trabajo.  
   
 6.  Copie el ensamblado en la ubicación del SQL Server archivo ejecutable del servicio de integración de flujos de trabajo MDS, denominado Microsoft.MasterDataServices.Workflow.exe, en \<Your installation folder> \Master Data Services\WebApplication\bin.  
   
@@ -90,7 +91,7 @@ ms.locfileid: "85897438"
     </setting>  
     ```  
   
-     El texto interno de la \<value> etiqueta tiene el formato \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag>es un nombre que se usa para identificar el ensamblado del controlador de flujo de trabajo cuando se crea una regla de negocios en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name>es el nombre completo del espacio de nombres de la clase de flujo de trabajo, seguido de una coma, seguido del nombre para mostrar del ensamblado. Si su ensamblado tiene un nombre seguro, tendrá que incluir también la información de versión y su PublicKeyToken. Puede incluir varias \<setting> etiquetas si ha creado varios controladores de flujo de trabajo para distintos tipos de flujos de trabajo.  
+     El texto interno de la \<value> etiqueta tiene el formato \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag> es un nombre que se usa para identificar el ensamblado del controlador de flujo de trabajo cuando se crea una regla de negocios en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name> es el nombre completo del espacio de nombres de la clase de flujo de trabajo, seguido de una coma, seguido del nombre para mostrar del ensamblado. Si su ensamblado tiene un nombre seguro, tendrá que incluir también la información de versión y su PublicKeyToken. Puede incluir varias \<setting> etiquetas si ha creado varios controladores de flujo de trabajo para distintos tipos de flujos de trabajo.  
   
 > [!NOTE]  
 >  En función de la configuración del servidor, puede que aparezca un error "Acceso denegado" al intentar guardar el archivo Microsoft.MasterDataServices.Workflow.exe.config. En tal caso, deshabilite temporalmente Control de cuentas de usuario (UAC) en el servidor. Para ello, abra el Panel de control y haga clic en **Sistema y seguridad**. En **Centro de actividades**, haga clic en **Cambiar configuración de Control de cuentas de usuario**. En el cuadro de diálogo **Configuración del Control de cuentas de usuario**, desplace la barra hasta abajo para no recibir nunca ninguna notificación. Reinicie su equipo y repita el procedimiento anterior para editar el archivo de configuración. Después de guardar el archivo, restaure la configuración de UAC al nivel predeterminado.  

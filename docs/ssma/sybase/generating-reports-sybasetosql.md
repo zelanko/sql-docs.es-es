@@ -1,4 +1,5 @@
 ---
+description: Generación de informes (SybaseToSQL)
 title: Generación de informes (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: df30186091344addef429bfb125e90b898d21467
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ff4e618126d9bb720d5bd4e8323e333c421f74f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372181"
 ---
 # <a name="generating-reports-sybasetosql"></a>Generación de informes (SybaseToSQL)
 Los informes de ciertas actividades realizadas con comandos se generan en la consola de SSMA en el nivel de árbol de objetos.  

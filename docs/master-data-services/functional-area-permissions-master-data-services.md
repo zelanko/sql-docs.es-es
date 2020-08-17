@@ -1,4 +1,5 @@
 ---
+description: Permisos del área funcional (Master Data Services)
 title: Permisos del área funcional
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d4a76feabce6834ba260980044772e2ee53b953d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0f3f863a6c08de5a4194c9fd6a08e4ee3e207e50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388331"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Permisos del área funcional (Master Data Services)
 
@@ -27,7 +28,7 @@ ms.locfileid: "85811761"
 
   Puede asignar permisos a cada una de las áreas funcionales de la interfaz de usuario de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Las siguientes son las áreas funcionales:  
   
--   **Internet**  
+-   **Explorador**  
   
 -   **Administración de versiones**  
   
@@ -37,7 +38,7 @@ ms.locfileid: "85811761"
   
 -   **Permisos de usuario y de grupo**  
   
--   **Superusuario.**  
+-   **Superusuario**  
   
  Cuando se asignan permisos a un área funcional, está haciendo que el área de la IU sea visible al usuario o grupo.  
   

@@ -1,4 +1,5 @@
 ---
+description: Permisos de colección (Master Data Services)
 title: Permisos de colección
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 04ffb34b92aa43c521a9a454a8068e74cf4fd615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390291"
 ---
 # <a name="collection-permissions-master-data-services"></a>Permisos de colección (Master Data Services)
 
@@ -32,8 +33,8 @@ ms.locfileid: "85811632"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer los miembros de las colecciones y los atributos de los miembros.|  
-|**Creación**|El usuario puede crear miembros de colecciones y asignar valores de atributos.|  
-|**Update**|El usuario puede actualizar los miembros de las colecciones, así como los atributos y relaciones.|  
+|**Crear**|El usuario puede crear miembros de colecciones y asignar valores de atributos.|  
+|**Actualizar**|El usuario puede actualizar los miembros de las colecciones, así como los atributos y relaciones.|  
 |**Eliminar**|El usuario puede eliminar miembros de colecciones.|  
 |**Deny**|Denegar todo el acceso a los miembros de las colecciones.|  
   

@@ -1,4 +1,5 @@
 ---
+description: sys.key_encryptions (Transact-SQL)
 title: Sys. key_encryptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
@@ -20,12 +21,12 @@ ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b670c3e30cb3aa6e2125a6120dfff5621bf38d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c2c8f8126e3b9a1216e30801dc1d23be5b74cd48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88377831"
 ---
 # <a name="syskey_encryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

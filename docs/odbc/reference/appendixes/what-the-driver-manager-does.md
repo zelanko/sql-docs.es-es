@@ -1,4 +1,5 @@
 ---
+description: Lo que hace el Administrador de controladores
 title: Qué hace el administrador de controladores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07ab0784e6f6ad4487a02a179a5fa3be2617c930
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 399dec39e18c9e31ce4a93172d0597c333fb40cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386171"
 ---
 # <a name="what-the-driver-manager-does"></a>Lo que hace el Administrador de controladores
 En la tabla siguiente se resume el modo en que el administrador de controladores ODBC *3. x* asigna las llamadas a los controladores ODBC *2. x* y ODBC *3. x* .  

@@ -1,4 +1,5 @@
 ---
+description: Informe de migración de datos (AccessToSQL)
 title: Informe de migración de datos (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0544ba7d4c0a1d2b896cc7667c4386effc070824
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d7d81b695aaf09fd601b47e67c187676b82f7349
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321011"
 ---
 # <a name="data-migration-report-accesstosql"></a>Informe de migración de datos (AccessToSQL)
 El cuadro de diálogo **Informe de migración de datos** aparece después de migrar los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,7 +36,7 @@ El número de filas de datos de la tabla de origen.
 **Número de filas migradas correctamente**  
 El número de filas de datos que se migraron correctamente a la tabla de destino.  
   
-**Proporción**  
+**Relación**  
 Porcentaje de filas migradas correctamente.  
   
 **Detalles**  

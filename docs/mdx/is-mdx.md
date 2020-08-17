@@ -1,4 +1,5 @@
 ---
+description: IS (MDX)
 title: ES (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aaf4151d8291ccd4249892c6ef8fce8a3d280f6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eab5fc86d89fccbe6ae56c4dba78ccde60e26d50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387351"
 ---
 # <a name="is-mdx"></a>IS (MDX)
 
@@ -28,7 +29,7 @@ Expression1 IS ( Expression2 | NULL )
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Argumento*  
+ *Expression1*  
  Expresión de expresiones multidimensionales (MDX) válida que devuelve una referencia a un objeto MDX.  
   
  *Expression2*  

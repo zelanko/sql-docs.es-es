@@ -1,4 +1,5 @@
 ---
+description: Características de diseño de seguridad de ADO
 title: Problemas de diseño de seguridad de ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dde159e0b04b319b978e9a3743d866d05c64253
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fc525a10d6211ee5f15517618f2cc5b99c8abee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355401"
 ---
 # <a name="ado-security-design-features"></a>Características de diseño de seguridad de ADO
 En las secciones siguientes se describen las características de diseño de seguridad de Objetos de datos ActiveX (ADO) 2,8 y versiones posteriores. Estos cambios se realizaron en ADO 2,8 para mejorar la seguridad. ADO 6,0, que se incluye en Windows DAC 6,0 en Windows Vista, es funcionalmente equivalente a ADO 2,8, que se incluyó en MDAC 2,8 en Windows XP y Windows Server 2003. En este tema se proporciona información sobre cómo proteger mejor las aplicaciones en ADO 2,8 o posterior.
@@ -107,7 +108,7 @@ This Website is using your identity to access a data source. If you trust this W
  Si usa proveedores de OLE DB de terceros (es decir, que no son de Microsoft) con el código de aplicación ADO, puede comprobar cómo se implementa la propiedad **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** para determinar si se permite la inclusión de información de contraseña con cadenas de conexión ADO.
 
 ## <a name="checking-for-non-file-devices-when-loading-and-saving-recordsets-or-streams"></a>Comprobando si hay dispositivos que no son archivos al cargar y guardar conjuntos de registros o secuencias
- En el caso de ADO 2,7 y versiones anteriores, las operaciones de entrada/salida de archivos como [abrir](../../ado/reference/ado-api/open-method-ado-recordset.md) y [Guardar](../../ado/reference/ado-api/save-method.md) que se usaron para leer y escribir datos basados en archivos podrían, en algunos casos, permitir el uso de una dirección URL o un nombre de archivo que especifica un tipo de archivo no basado en disco. Por ejemplo, LPT1, COM2, PRN. TXT, AUX podría usarse como alias para la entrada/salida entre impresoras y dispositivos auxiliares en el sistema mediante determinados
+ En el caso de ADO 2,7 y versiones anteriores, las operaciones de entrada/salida de archivos como [abrir](../../ado/reference/ado-api/open-method-ado-recordset.md) y [Guardar](../../ado/reference/ado-api/save-method.md) que se usaron para leer y escribir datos basados en archivos podrían, en algunos casos, permitir el uso de una dirección URL o un nombre de archivo que especifica un tipo de archivo no basado en disco. Por ejemplo, LPT1, COM2, PRN.TXT, AUX podría usarse como alias para la entrada/salida entre impresoras y dispositivos auxiliares en el sistema mediante determinados
 
  Para ADO 2,8 y versiones posteriores, esta funcionalidad se ha actualizado. Para abrir y guardar objetos **Recordset** y **Stream** , ADO ahora realiza una comprobación de tipo de archivo para asegurarse de que el dispositivo de entrada o salida especificado en una dirección URL o un nombre de archivo es un archivo real.
 

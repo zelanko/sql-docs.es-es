@@ -1,4 +1,5 @@
 ---
+description: Aplicaciones
 title: Aplicaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9184986883f64bd082ca1db472d887609d3071bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc811b075eb698e5127fc321406bf906012c6d12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386141"
 ---
-# <a name="applications"></a>APLICACIONES
+# <a name="applications"></a>Aplicaciones
 Una *aplicación* es un programa que llama a la API de ODBC para obtener acceso a los datos. Aunque muchos tipos de aplicaciones son posibles, la mayoría de ellas se dividen en tres categorías, que se usan como ejemplos a lo largo de esta guía.  
   
 -   **Aplicaciones genéricas** También se conocen como aplicaciones ajustadas para la reducción o aplicaciones de uso no controlado. Las aplicaciones genéricas están diseñadas para trabajar con distintos DBMS. Entre los ejemplos se incluye una hoja de cálculo o un paquete de estadísticas que usa ODBC para importar datos para su posterior análisis y un procesador de textos que usa ODBC para obtener una lista de distribución de correo de una base de datos.  

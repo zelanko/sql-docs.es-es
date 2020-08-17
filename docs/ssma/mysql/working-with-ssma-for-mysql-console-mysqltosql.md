@@ -1,4 +1,5 @@
 ---
+description: SSMA para la consola de MySQL (MySQLToSQL)
 title: Trabajar con la consola de SSMA para MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 757bcd943b1af7c428d666fecacdaf6db7afcae3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 540f09b2fe8de23b9912dc695e0cf1c9c1d69b86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372781"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>SSMA para la consola de MySQL (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para MySQL es ahora accesible a través de una aplicación de consola en la línea de comandos. Los archivos de script forman la entrada a la aplicación para ejecutar los comandos. Como aplicación de consola, SSMA habilita la interconexión de nivel de script, reduce el ciclo de migración y escala el trabajo de migración.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para MySQL es ahora accesible a través de una aplicación de consola en la línea de comandos. Los archivos de script forman la entrada a la aplicación para ejecutar los comandos. Como aplicación de consola, SSMA habilita la interconexión de nivel de script, reduce el ciclo de migración y escala el trabajo de migración.  
   
 En esta sección se explica el procedimiento para migrar la base de datos MySQL mediante la aplicación de consola SSMA.  
   

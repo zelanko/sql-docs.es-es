@@ -1,4 +1,5 @@
 ---
+description: Orígenes de datos
 title: Orígenes de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b7e464963471b0cad41c5b93d50507d0fa9bf96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b9f980ad9ccd1fa38b6fce863703ec706e21a76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386061"
 ---
 # <a name="data-sources"></a>Orígenes de datos
 Un *origen de datos* es simplemente el origen de los datos. Puede ser un archivo, una base de datos determinada en un DBMS o incluso una fuente de distribución de datos activa. Los datos pueden estar ubicados en el mismo equipo que el programa o en otro equipo de una red. Por ejemplo, un origen de datos podría ser un DBMS de Oracle que se ejecute en un SO/2® sistema operativo, al que accede Novell® NetWare; un DBMS de IBM DB2 al que se tiene acceso a través de una puerta de enlace; colección de archivos xBase en un directorio del servidor; o un archivo de base de datos local de Microsoft® Access.  

@@ -1,4 +1,5 @@
 ---
+description: IsDescendant (DMX)
 title: IsDescendant (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bab465fe98c9509eaa99999a321317ee8013a74d
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 9fe1c150f243e78c379823427e9940bba3680cb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352651"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +29,7 @@ IsDescendant(<NodeID>)
 ```  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- Un tipo booleano.  
+ Tipo Boolean.  
   
 ## <a name="remarks"></a>Observaciones  
  **IsDescendant** solo se usa en [SELECT desde &#60;&#62; de modelo. CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md) y [seleccione de &#60;Modelo&#62;. DIMENSION_CONTENT las consultas &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md) .  

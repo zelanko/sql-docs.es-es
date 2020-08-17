@@ -1,4 +1,5 @@
 ---
+description: Informe de evaluación (SybaseToSQL)
 title: Informe de evaluación (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 11b47065fe180956d58361ec80eda1dac25fa4b1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5bf7a2ac886165fa4228f78394065124a05bb67a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372391"
 ---
 # <a name="assessment-report-sybasetosql"></a>Informe de evaluación (SybaseToSQL)
 La ventana Informe de evaluación muestra los resultados de la conversión de objetos de base de datos a [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis y también puede ayudarle a calcular la complejidad y el costo de los proyectos de migración.  

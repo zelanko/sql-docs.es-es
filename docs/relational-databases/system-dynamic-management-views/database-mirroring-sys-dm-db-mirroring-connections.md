@@ -1,4 +1,5 @@
 ---
+description: 'Creación de reflejo de la base de datos: sys. dm_db_mirroring_connections'
 title: Sys. dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223b940f9568c764885ab214278fc97928cc1b7f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b10aa1339769b49a6bd05fbc96a102583960cd99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374681"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>Creación de reflejo de la base de datos: sys. dm_db_mirroring_connections
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

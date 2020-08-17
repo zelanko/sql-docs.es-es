@@ -1,4 +1,5 @@
 ---
+description: Términos del glosario de ADO
 title: Términos del glosario de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4b92f9c8b65db459d46aff51b7aed58c3ff6e307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76940438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355461"
 ---
 # <a name="ado-glossary-terms"></a>Términos del glosario de ADO
 En este tema se definen los términos relevantes para ADO.
 
-## <a name="a"></a>Un
+## <a name="a"></a>A
  Dirección URL absoluta es una dirección URL completa que especifica la ubicación de un recurso que reside en Internet o en una intranet. Vea también *dirección URL* y *dirección URL relativa*.
 
  Registro automático de controles ActiveX, componente COM en proceso que suele tener un elemento visual en tiempo de diseño o en tiempo de ejecución. Los controles ActiveX también tienen la capacidad de comunicarse con un contenedor de documentos activo, como Microsoft Internet Explorer.
@@ -77,7 +78,7 @@ En este tema se definen los términos relevantes para ADO.
 
  operador de comparación: operador que compara dos expresiones y devuelve un valor booleano.
 
- Un parámetro de criterios que se puede expresar como ">" (mayor que),\<"" (menor que), "=" (igual), ">=" (mayor o igual que), "<=" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de patrones).
+ Un parámetro de criterios que se puede expresar como ">" (mayor que), " \<" (less than), "=" (equal), "> =" (mayor o igual que), "<=" (menor o igual que), "<>" (no igual) o "like" (coincidencia de patrones).
 
  componente objeto que encapsula datos y código, y proporciona un conjunto bien especificado de servicios disponibles públicamente.
 
@@ -119,7 +120,7 @@ En este tema se definen los términos relevantes para ADO.
  propiedad dinámica: propiedad específica de un proveedor de datos o del servicio de cursor. La colección de **propiedades** de un objeto se rellena automáticamente ("dinámicamente"). Un objeto no tiene ninguna propiedad dinámica hasta que se conecta a un origen de datos a través de un proveedor de datos determinado. Vea también proveedor de datos, cursor.
 
 ## <a name="e"></a>E
- Enumeración una lista de constantes con nombre. Los valores enumerados no deben ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito en el que se define la enumeración. En ADO, las enumeraciones se utilizan para los valores devueltos y los parámetros numéricos, para agregar significado al código ADO y para proteger al desarrollador de los valores numéricos (que pueden cambiar de una versión a una versión). Por ejemplo, para abrir un **conjunto de registros**estático, use el valor enumerado **adOpenStatic** :`Recordset.Open ,,adOpenStatic`
+ Enumeración una lista de constantes con nombre. Los valores enumerados no deben ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito en el que se define la enumeración. En ADO, las enumeraciones se utilizan para los valores devueltos y los parámetros numéricos, para agregar significado al código ADO y para proteger al desarrollador de los valores numéricos (que pueden cambiar de una versión a una versión). Por ejemplo, para abrir un **conjunto de registros**estático, use el valor enumerado **adOpenStatic** : `Recordset.Open ,,adOpenStatic`
 
  También se conoce como *constante enumerada*. Vea también *constante*.
 

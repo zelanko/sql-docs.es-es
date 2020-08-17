@@ -1,4 +1,5 @@
 ---
+description: Implementar un paquete de implementación de modelo mediante el asistente
 title: Implementar un paquete de implementación de modelo (asistente)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 16e1ff64a2c5178eda70fb681c11a7d7a1b79bc0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 86170829ee1ae3f5116497f8435bf207edb3d5a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344461"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Implementar un paquete de implementación de modelo mediante el asistente
 
@@ -50,7 +51,7 @@ ms.locfileid: "85811790"
   
 5.  Busque el paquete de implementación (archivo .pkg) y haga clic en **Abrir**.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 7.  Una vez cargado el paquete, haga clic en **Siguiente**.  
   
@@ -75,7 +76,7 @@ ms.locfileid: "85811790"
      Al actualizar un modelo, si el proceso produce un error durante alguno de los tres primeros pasos, no pasa al siguiente paso; sin embargo, los cambios ya realizados no se revierten.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Los atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para obtener más información, vea:  
+ Los atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para más información, consulte:  
   
 -   [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   

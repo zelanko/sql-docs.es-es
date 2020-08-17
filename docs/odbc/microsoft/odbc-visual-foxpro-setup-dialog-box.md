@@ -1,4 +1,5 @@
 ---
+description: Cuadro de diálogo de configuración de Visual FoxPro ODBC
 title: Cuadro de diálogo Configuración de ODBC Visual FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef7ac702a69342833c6dfffa0ffc9cdd0ac2857e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2083f76300ed19e047b0a138aed6c65ecef4da3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340711"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Cuadro de diálogo de configuración de Visual FoxPro ODBC
 El cuadro de diálogo **configuración de ODBC para Visual FoxPro** le permite agregar o cambiar un origen de datos de Visual FoxPro.  
@@ -45,7 +46,7 @@ El cuadro de diálogo **configuración de ODBC para Visual FoxPro** le permite a
  **Path**  
  Muestra la ruta de acceso y el nombre de la base de datos o el directorio de las tablas disponibles a las que se conecta el origen de datos.  
   
- **Examinar**  
+ **Browse**  
  Permite buscar en el sistema y la red la base de datos o el directorio al que desea conectar el origen de datos.  
   
  **Opciones**  

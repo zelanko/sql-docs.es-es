@@ -1,4 +1,5 @@
 ---
+description: Compatibilidad con controladores de escritorio de la base de datos
 title: Compatibilidad de controladores de bases de datos de escritorio | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89eea7ab112eaefdc73c7cbc72ee3555797c7efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b15ec35a01b61eef401f217733917a80bbe32b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340781"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Compatibilidad con controladores de escritorio de la base de datos
 Unicode es un método de codificación de caracteres de software que trata todos los caracteres como si tuvieran un ancho fijo de dos bytes. Este método se usa como alternativa a la codificación de caracteres ANSI de Windows, que, dado que representa los caracteres de un byte, está limitado a 256 caracteres. Dado que Unicode puede representar más de 65.000 caracteres, admite muchos idiomas cuyos caracteres no se representan en codificación ANSI.  

@@ -1,4 +1,5 @@
 ---
+description: Servicios de soporte técnico
 title: Soporte técnico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 585c41c6-5c5a-437e-a4b4-e32a346b478d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: baabb4b5beb1c089ae1d53b7de08d14955d83158
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e723c1d8e5fa87af8c15c85c29c6de4606beb78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340441"
 ---
 # <a name="product-support"></a>Servicios de soporte técnico
 Los servicios de soporte técnico de Microsoft proporcionan soporte técnico para ODBC. Dado que muchos productos de Microsoft usan ODBC como componente principal y también redistribuyen los controladores ODBC, los servicios de soporte técnico de Microsoft consideran que ODBC forme parte de cada producto que incorpora ODBC como componente. La compatibilidad con ODBC se proporciona según el contrato de soporte técnico de dicho producto. Para obtener más información, consulte la documentación del producto individual.

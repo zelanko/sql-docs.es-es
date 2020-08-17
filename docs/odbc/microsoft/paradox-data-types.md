@@ -1,4 +1,5 @@
 ---
+description: Tipos de datos de Paradox
 title: Tipos de datos de Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a85cf643a6d22b9b2fce15984539d74dc43c62ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44494e9945a84f978449b6bab02bd967e40d9a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340461"
 ---
 # <a name="paradox-data-types"></a>Tipos de datos de Paradox
 El controlador ODBC Paradox asigna tipos de datos de Paradox a tipos de datos SQL de ODBC. En la tabla siguiente se enumeran todos los tipos de datos de Paradox y se muestran los tipos de datos SQL de ODBC a los que están asignados.  

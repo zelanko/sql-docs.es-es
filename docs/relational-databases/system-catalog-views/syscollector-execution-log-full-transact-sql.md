@@ -1,4 +1,5 @@
 ---
+description: syscollector_execution_log_full (Transact-SQL)
 title: syscollector_execution_log_full (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 978066ab84368e7a483978e2eef500bcf1a1c7eb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0178d7e6458cc5cdf35e66313d00268f20b35363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88375451"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85896761"
 |last_iteration_time|**datetime**|Para los paquetes que se ejecutan de manera continua, la última vez que el paquete capturó una instantánea. Acepta valores NULL.|  
 |finish_time|**datetime**|La hora de finalización de la ejecución de los conjuntos de recopilación y paquetes completados. Acepta valores NULL.|  
 |duration|**int**|El tiempo, en segundos, de ejecución del paquete o conjunto de recopilación. Acepta valores NULL.|  
-|failure_message|**nvarchar(2048)**|En caso de error del paquete o conjunto de recopilación, el mensaje de error más reciente para ese componente. Acepta valores NULL. Para obtener información más detallada sobre el error, use el [fn_syscollector_get_execution_details &#40;función de&#41;de Transact-SQL](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
+|failure_message|**nvarchar(2048)**|En caso de error del paquete o conjunto de recopilación, el mensaje de error más reciente para ese componente. Acepta valores NULL. Para obtener información más detallada sobre el error, use el [fn_syscollector_get_execution_details &#40;función de&#41;de Transact-SQL ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
 |operator|**nvarchar(128)**|Identifica quién inició el paquete o conjunto de recopilación. Acepta valores NULL.|  
 |package_execution_id|**uniqueidentifier**|Proporciona un vínculo a la tabla de registros [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Acepta valores NULL.|  
 |collection_set_id|**int**|Proporciona un vínculo a la tabla de configuración de recopilaciones de datos en msdb. Acepta valores NULL.|  

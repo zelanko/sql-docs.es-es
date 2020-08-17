@@ -1,4 +1,5 @@
 ---
+description: Administrar contraseñas (AccessToSQL)
 title: Administración de contraseñas (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0023e6d04b2f339fbd67337b7b241da2df275a79
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: dc47389afdd9b8241a0d06960baf592639daa6cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372861"
 ---
 # <a name="managing-passwords-accesstosql"></a>Administrar contraseñas (AccessToSQL)
 Esta sección trata sobre la protección de contraseñas de base de datos y el procedimiento para importarlas o exportarlas entre servidores:  

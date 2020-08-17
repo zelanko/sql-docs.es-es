@@ -1,4 +1,5 @@
 ---
+description: Funciones y vistas de administración dinámica relacionadas con transacciones (Transact-SQL)
 title: Funciones y vistas de administración dinámica relacionadas con transacciones (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90f2f5034e0cb1e7b3d437dfeebc104d741f5dc9
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 12e887f2fee4a86e3c7ceb8affb6866ddf3e1f8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322391"
 ---
 # <a name="transaction-related-dynamic-management-views-and-functions-transact-sql"></a>Funciones y vistas de administración dinámica relacionadas con transacciones (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

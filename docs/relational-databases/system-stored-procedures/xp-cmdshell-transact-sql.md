@@ -1,4 +1,5 @@
 ---
+description: xp_cmdshell (Transact-SQL)
 title: xp_cmdshell (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9faada50dc5e48f0b3835f65c69a2a1d130e7594
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae4a2ca88d6c0ffd76e489e7cda186bbedf2471a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88374141"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El proceso de Windows generado por **xp_cmdshell** tiene los mismos derechos de seguridad que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio.  
   
  **xp_cmdshell** funciona de forma sincrónica. No se devolverá el control al llamador hasta que el comando del shell de comandos esté completo.  
@@ -174,6 +175,6 @@ EXEC master..xp_cmdshell @cmd;
  [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_cmdshell (opción de configuración del servidor)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [Configuración de Área expuesta](../../relational-databases/security/surface-area-configuration.md)   
- [sp_xp_cmdshell_proxy_account &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+ [sp_xp_cmdshell_proxy_account &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

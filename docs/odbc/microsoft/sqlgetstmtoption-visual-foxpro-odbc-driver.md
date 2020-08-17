@@ -1,4 +1,5 @@
 ---
+description: SQLGetStmtOption (controlador ODBC de Visual FoxPro)
 title: SQLGetStmtOption (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2624783f7bd55903f5741c62190626e455a9096d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e57456ca05e39c12b83da80cd19c34f482c3d8df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340091"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -29,7 +30,7 @@ ms.locfileid: "81295145"
   
  Devuelve el valor actual de una opción de instrucción.  
   
-|*FOption*|Devuelve|  
+|*FOption*|Devoluciones|  
 |---------------|-------------|  
 |SQL_GET_BOOKMARK|valor entero de 32 bits que es el marcador para el número de registro actual.|  
 |SQL_ROW_NUMBER|entero de 32 bits que especifica la posición de la fila actual dentro del conjunto de resultados|  

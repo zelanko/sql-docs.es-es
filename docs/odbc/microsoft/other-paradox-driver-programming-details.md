@@ -1,4 +1,5 @@
 ---
+description: Otros detalles de programación del controlador de Paradox
 title: Otros detalles de programación del controlador de Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f2b19abbb3c1a05342707cf80c9266bc19ee689d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c47e7eabe0ad1d767e5a5b0f7489418009f8d7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340501"
 ---
 # <a name="other-paradox-driver-programming-details"></a>Otros detalles de programación del controlador de Paradox
 > [!NOTE]  

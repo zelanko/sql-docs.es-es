@@ -1,4 +1,5 @@
 ---
+description: Configuración del proyecto (asignación de tipo) (OracleToSQL)
 title: Configuración del proyecto (asignación de tipo) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ab1b453fb85d7b9c6ee0cf9a271c1af55a337b4a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0facd2ecca0ff6cc0a4bc28fe709a7adfc0c5acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320451"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Configuración del proyecto (asignación de tipo) (OracleToSQL)
 La página asignación de tipos del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan el modo en que SSMA convierte los tipos de datos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.  
@@ -42,7 +43,7 @@ Vea las tablas de la sección siguiente para obtener las asignaciones predetermi
 **Add (Agregar)**  
 Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
-**Editar**  
+**Edición**  
 Haga clic en esta opción para modificar el tipo de datos seleccionado en la lista asignación.  
   
 **Remove**  
@@ -106,9 +107,9 @@ La tabla siguiente contiene la asignación de tipo de datos predeterminada para 
 |VARCHAR2|ntext|  
 |XmlType|Xml|  
   
-<sup>*</sup>Solo se aplica a la asignación de tipo de valor devuelto.  
+<sup>*</sup> Solo se aplica a la asignación de tipo de valor devuelto.  
   
-<sup>**</sup>Solo se aplica a la asignación de tipos de argumento.  
+<sup>**</sup> Solo se aplica a la asignación de tipos de argumento.  
   
 ### <a name="default-column-type-mapping"></a>Asignación de tipo de columna predeterminada  
 La tabla siguiente contiene la asignación de tipos predeterminada para las columnas.  

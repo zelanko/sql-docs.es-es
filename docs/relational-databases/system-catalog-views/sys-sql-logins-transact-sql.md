@@ -1,4 +1,5 @@
 ---
+description: sys.sql_logins (Transact-SQL)
 title: Sys. sql_logins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
@@ -20,12 +21,12 @@ ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3dba46f4d0e2ecdebda13fe3fe9412219c2a755
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfa2b330d03b7480021487983e9ff1a3a210ad11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79448475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88375511"
 ---
 # <a name="syssql_logins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "79448475"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<columnas heredadas>**|--|Hereda de **Sys. server_principals**.|  
+|**\<inherited columns>**|--|Hereda de **Sys. server_principals**.|  
 |**is_policy_checked**|**bit**|Se comprueba la directiva de contraseñas.|  
 |**is_expiration_checked**|**bit**|Se comprueba la expiración de contraseñas.|  
 |**password_hash**|**varbinary (256)**|Hash de la contraseña de inicio de sesión de SQL. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la información de la contraseña almacenada se calcula con las funciones SHA-512 de la contraseña salada.|  
@@ -42,9 +43,9 @@ ms.locfileid: "79448475"
  Para obtener una lista de las columnas que hereda esta vista, vea [Sys. server_principals &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Las columnas `owning_principal_id` y `is_fixed_role` no se heredan de sys. server_principals.
   
 ## <a name="remarks"></a>Observaciones  
- Para ver los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión de autenticación de y los inicios de sesión de autenticación de Windows, vea [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Para ver los inicios de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de autenticación de y los inicios de sesión de autenticación de Windows, vea [sys. Server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Cuando los usuarios de base de datos independiente están habilitados, las conexiones se pueden realizar sin inicios de sesión. Para identificar esas cuentas, vea [Sys. database_principals &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ Cuando los usuarios de base de datos independiente están habilitados, las conexiones se pueden realizar sin inicios de sesión. Para identificar esas cuentas, vea  [Sys. database_principals &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
  Cualquier inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ver su propio nombre de inicio de sesión y el de sa. Para ver otros inicios de sesión, se requiere ALTER ANY LOGIN o un permiso en el inicio de sesión.  

@@ -1,4 +1,5 @@
 ---
+description: Crear perfiles de datos de rendimiento del controlador (ODBC)
 title: Datos de rendimiento del controlador de perfil (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,11 +14,12 @@ ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eab6ed2d2f02526d8167275b24800c267001b194
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bedad59ad9f61b7ab12b207bc87bf1c7e250c8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88329441"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>Generar perfiles de datos de rendimiento del controlador ODBC
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +27,7 @@ ms.locfileid: "86001125"
   En este ejemplo se muestran las opciones específicas del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar estadísticas de rendimiento. En el ejemplo se crea un archivo: odbcperf.log. En este ejemplo se muestra la creación de un registro de datos de rendimiento y se muestran estos datos directamente a partir de la estructura de datos SQLPERF (la estructura de datos SQLPERF se define en Odbcss.h). Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Para registrar los datos de rendimiento del controlador mediante el Administrador ODBC  
   

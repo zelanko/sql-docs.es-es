@@ -1,4 +1,5 @@
 ---
+description: Permisos de miembros de la jerarquía (Master Data Services)
 title: Permisos de los miembros de la jerarquía
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 39470b09370db89cdba3e8c8f26e8b08376c1c07
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344101"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permisos de miembros de la jerarquía (Master Data Services)
 
@@ -40,8 +41,8 @@ ms.locfileid: "85813341"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|Los miembros se muestran.<br /><br /> <br /><br /> Nota: Si solo asigna el permiso **Lectura** a **Raíz**, los miembros de **Raíz** son de solo lectura; en cambio, en las jerarquías explícitas y en las colecciones, el usuario puede mover miembros a **Raíz** y agregar miembros nuevos a **Raíz**.|  
-|**Creación**|La creación de permisos no está disponible para los permisos de los miembros de jerarquías.|  
-|**Update**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario también puede mover los miembros en cualquier jerarquía explícita o colección a la que los miembros pertenezcan.|  
+|**Crear**|La creación de permisos no está disponible para los permisos de los miembros de jerarquías.|  
+|**Actualizar**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario también puede mover los miembros en cualquier jerarquía explícita o colección a la que los miembros pertenezcan.|  
 |**Eliminar**|Se muestran los miembros, y el usuario puede eliminarlos.|  
 |**Deny**|Los miembros no se muestran.|  
   

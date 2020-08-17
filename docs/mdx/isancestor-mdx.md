@@ -1,4 +1,5 @@
 ---
+description: IsAncestor (MDX)
 title: IsAncestor (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5cc8352b0d087b54a623cce892a05dfed29258b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ccc61de94c87972eda3dbebdba798f9b1c4028b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341491"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
 
@@ -51,7 +52,7 @@ IsAncestor(Member_Expression1, Member_Expression2)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Consulte también  
- [&#41;&#40;de MDX](../mdx/ancestor-mdx.md)   
+ [&#41;&#40;de MDX ](../mdx/ancestor-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

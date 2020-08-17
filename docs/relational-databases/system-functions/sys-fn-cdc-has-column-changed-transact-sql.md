@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_has_column_changed (Transact-SQL)
 title: Sys. fn_cdc_has_column_changed (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce79c24b75fb0efd3b9934e90c7cb748cfe2f154
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b89b4a42df7e0f1481d55fb7d011e947d3e12cf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322021"
 ---
 # <a name="sysfn_cdc_has_column_changed-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
 ## <a name="return-type"></a>Tipo de valor devuelto  
  **bit**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede utilizar esta función para extraer información de una máscara de actualización devuelta en una consulta de datos de cambio. Resulta muy útil en el procesamiento posterior de la máscara de actualización para saber si se ha modificado una columna en particular en la fila de cambio asociada. Para obtener más información, vea [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
  Cuando esta información se devuelva como parte de una consulta de datos modificados, se recomienda usar las funciones [Sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) y [Sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) en lugar de esta función. Utilice la función fn_cdc_get_column_ordinal antes de consultar los datos modificados para que se calcule el ordinal de columna deseado solo una vez. Utilice fn_cdc_is_bit_set dentro de la consulta para extraer la información de la máscara de actualización para cada fila devuelta.  

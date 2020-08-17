@@ -1,4 +1,5 @@
 ---
+description: Except (MDX), operador
 title: '- CEPT (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cf0121d1be3cd2943a801f3c72ca4952b70ec681
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f45c01cb4a2c3e4383790637b6603f789048078d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341501"
 ---
 # <a name="except-mdx-operator"></a>Except (MDX), operador
 

@@ -1,4 +1,5 @@
 ---
+description: Usar expresiones de cubo y de subcubo
 title: Usar expresiones de cubo y subcubo | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341131"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Usar expresiones de cubo y de subcubo
 
@@ -72,7 +73,7 @@ ms.locfileid: "68893536"
  [Consulta MDX básica &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
  [Generar subcubos en MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [Instrucción CREATE subcube &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [Expresiones &#40;&#41;MDX](../mdx/expressions-mdx.md)   
+ [Expresiones &#40;&#41;MDX ](../mdx/expressions-mdx.md)   
  [SCOPE &#40;Instrucción, MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

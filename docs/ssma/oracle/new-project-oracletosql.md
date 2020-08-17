@@ -1,4 +1,5 @@
 ---
+description: Nuevo proyecto (OracleToSQL)
 title: Nuevo proyecto (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: eb608e61207f32567eca576c2ab9040b1451968a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d16a3aee923d7b57e7195799ed26a72571f4d92d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320541"
 ---
 # <a name="new-project-oracletosql"></a>Nuevo proyecto (OracleToSQL)
 Utilice el cuadro de diálogo **nuevo proyecto** para crear un nuevo proyecto de SSMA. Para tener acceso al cuadro de diálogo **nuevo proyecto** , en el menú **archivo** , haga clic en **nuevo proyecto**.  
@@ -36,7 +37,7 @@ Seleccione una de las siguientes versiones de la base de datos de destino en la 
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

@@ -1,4 +1,5 @@
 ---
+description: sys.fn_get_audit_file (Transact-SQL)
 title: Sys. fn_get_audit_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2020
@@ -21,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 4d280a00eb9d972cea510ae650c4598561b77fef
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: cda66aed0e3ddea4bcb14bc30ca5805bf943afb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321801"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -51,7 +52,7 @@ fn_get_audit_file ( file_pattern,
     
     Este argumento debe incluir una ruta de acceso (letra de unidad o recurso compartido de red) y un nombre de archivo que pueda contener un carácter comodín. Se puede usar un solo asterisco (*) para recopilar varios archivos de un conjunto de archivos de auditoría. Por ejemplo:  
   
-    -   **\<path>\\\***: Recopila todos los archivos de auditoría en la ubicación especificada.  
+    -   **\<path>\\\*** : Recopila todos los archivos de auditoría en la ubicación especificada.  
   
     -   ** \<path> \ LOGINSAUDIT_ {GUID}***: recopila todos los archivos de auditoría que tienen el nombre y el par GUID especificados.  
   
@@ -61,7 +62,7 @@ fn_get_audit_file ( file_pattern,
  
     Este argumento se usa para especificar una dirección URL de BLOB (incluido el punto de conexión de almacenamiento y el contenedor). Aunque no admite un carácter comodín de asterisco, puede usar un prefijo de nombre de archivo parcial (BLOB) (en lugar del nombre de BLOB completo) para recopilar varios archivos (BLOB) que comienzan con este prefijo. Por ejemplo:
  
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**: recopila todos los archivos de auditoría (BLOB) para la base de datos específica.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** : recopila todos los archivos de auditoría (BLOB) para la base de datos específica.    
       
       - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . Xel** : recopila un archivo de auditoría específico (BLOB).
   
@@ -102,8 +103,8 @@ fn_get_audit_file ( file_pattern,
 | event_time | **datetime2** | Fecha y hora en que se desencadena la acción auditable. No admite valores NULL. |  
 | file_name | **varchar(260)** | Ruta de acceso y nombre del archivo de registro de auditoría del que procede el registro. No admite valores NULL. |
 | is_column_permission | **bit** | Marca que indica si se trata de un permiso de nivel de columna. No admite valores NULL. Devuelve 0 si permission_bitmask = 0.<br /> 1 = verdadero<br /> 0 = falso |
-| object_id | **int** | Identificador de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> No admite valores NULL. Devuelve 0 si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |  
-| object_name | **sysname** | Nombre de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> Acepta valores NULL. Devuelve NULL si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |
+| object_id | **int** | Identificador de la entidad en la que se produjo la auditoría. Entre estas estructuras se incluyen las siguientes:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> No admite valores NULL. Devuelve 0 si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |  
+| object_name | **sysname** | Nombre de la entidad en la que se produjo la auditoría. Entre estas estructuras se incluyen las siguientes:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> Acepta valores NULL. Devuelve NULL si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |
 | permission_bitmask | **varbinary(16)** | En algunas acciones, este es el permiso que se concedió, denegó o revocó. |
 | response_rows | **bigint** | **Se aplica a**: Azure SQL Database y SQL instancia administrada<br /><br /> Número de filas devueltas en el conjunto de resultados. |  
 | schema_name | **sysname** | Contexto de esquema en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se producen fuera de un esquema. |  
@@ -127,7 +128,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, Azure SQL Database y SQL instancia administrada<br /><br /> Se usa para registrar información adicional que el usuario desea grabar en el registro de auditoría mediante el **sp_audit_write** procedimiento almacenado. |  
 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el argumento *file_pattern* pasado a **fn_get_audit_file** hace referencia a una ruta o un archivo que no existe, o si el archivo no es un archivo de auditoría, se devuelve el mensaje de error **MSG_INVALID_AUDIT_FILE** .  
   
 ## <a name="permissions"></a>Permisos
@@ -149,7 +150,7 @@ fn_get_audit_file ( file_pattern,
   GO  
   ```  
 
-- **Azure SQL Database**
+- **Azure SQL Database**
 
   En este ejemplo se lee un archivo denominado `ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel` :  
   

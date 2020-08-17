@@ -1,4 +1,5 @@
 ---
+description: Seguridad de objetos de base de datos (Master Data Services)
 title: Seguridad de objetos de base de datos
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 656b36f796d05d6ea7533c8c35e4b6ffe9572f99
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f9b2089b72f11872df0dc0c0b2758fb8272a4c06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344911"
 ---
 # <a name="database-object-security-master-data-services"></a>Seguridad de objetos de base de datos (Master Data Services)
 
@@ -57,7 +58,7 @@ ms.locfileid: "85811590"
   
  Para obtener más información, vea [información general: importar datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>Validar datos según las reglas de negocios  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a> Validar datos según las reglas de negocios  
   
 |Acción|Elemento protegible|Permisos|  
 |------------|---------------|-----------------|  
@@ -65,7 +66,7 @@ ms.locfileid: "85811590"
   
  Para obtener más información, consulte [Procedimiento almacenado de validación &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="deleting-versions"></a><a name="Versions"></a>Eliminar versiones  
+##  <a name="deleting-versions"></a><a name="Versions"></a> Eliminar versiones  
   
 |Acción|Elementos protegibles|Permisos|  
 |------------|----------------|-----------------|  
@@ -74,7 +75,7 @@ ms.locfileid: "85811590"
   
  Para obtener más información, consulte [Eliminar una versión &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>Aplicar inmediatamente los permisos de los miembros de la jerarquía  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a> Aplicar inmediatamente los permisos de los miembros de la jerarquía  
   
 |Acción|Elementos protegibles|Permisos|  
 |------------|----------------|-----------------|  
@@ -82,7 +83,7 @@ ms.locfileid: "85811590"
   
  Para obtener más información, consulte [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>Configuración del sistema  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a> Configuración del sistema  
  Hay opciones del sistema que puede configurar para controlar el comportamiento en [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Puede ajustar estos valores en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o, si tiene el acceso ACTUALIZAR, puede ajustarlos directamente en la tabla de base de datos mdm.tblSystemSetting. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>Consulte también  

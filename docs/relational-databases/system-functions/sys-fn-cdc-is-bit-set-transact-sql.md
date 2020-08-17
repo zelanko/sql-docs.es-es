@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_is_bit_set (Transact-SQL)
 title: Sys. fn_cdc_is_bit_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b099f578ebe60a7caaf1f0179af549cd42679c11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab93830bd9e2b164f5b76412b2b412dc095c6c9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321621"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ## <a name="return-type"></a>Tipo de valor devuelto  
  **bit**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta función se utiliza normalmente como parte de una consulta de datos modificados para indicar si una columna ha cambiado. En este escenario, la función [Sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) se utiliza antes de la consulta para obtener el ordinal de columna necesario. a continuación, se aplica **Sys. fn_cdc_is_bit_set** a cada fila de datos modificados que se devuelve, y proporciona la información específica de la columna como parte del conjunto de resultados devuelto.  
   
  Se recomienda usar esta función en lugar de la función [Sys. fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) cuando se determine si las columnas han cambiado en todas las filas de un conjunto de resultados devuelto.  

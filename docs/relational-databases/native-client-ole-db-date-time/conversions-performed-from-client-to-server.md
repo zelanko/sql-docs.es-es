@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client las conversiones realizadas de cliente a servidor
 title: Conversiones realizadas de cliente a servidor
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da80b44c2b24d58906d4b8fab6c0989caceec544
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 3bd997af611ec04a67d937752bde8318eb70ee84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328021"
 ---
 # <a name="sql-server-native-client-conversions-performed-from-client-to-server"></a>SQL Server Native Client las conversiones realizadas de cliente a servidor
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

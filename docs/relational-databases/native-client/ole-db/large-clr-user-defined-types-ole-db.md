@@ -1,4 +1,5 @@
 ---
+description: Tipos definidos por el usuario CLR grandes en SQL Server Native Client (OLE DB)
 title: Tipos definidos por el usuario de CLR de gran tamaño (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e851332ad3f8485e7c716101942b1cdc0c6838bb
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5342dcab8dee628f074963a7ddc56a0ecc1d940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328291"
 ---
 # <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>Tipos definidos por el usuario CLR grandes en SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87243899"
   
 |Tipo de datos de OLE DB (*wType*)|*pwszTypeName*|Tipos de datos de SQL Server|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
-|DBTYPE_UDT|Se ignora.|UDT|Debe incluir un conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.|  
+|DBTYPE_UDT|Omitido|UDT|Debe incluir un conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.|  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  La información que se devuelve en la estructura DBPARAMINFO mediante **prgParamInfo** es la que se indica a continuación:  

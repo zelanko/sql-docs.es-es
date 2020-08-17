@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xtp_system_memory_consumers (Transact-SQL)
 title: Sys. dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4dbecba15c5f60c0b3818739ccd842d5a31a66a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322601"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|Identificador interno del consumidor de memoria.|  
 |memory_consumer_type|**int**|Entero que representa el tipo de consumidor de memoria con uno de los valores siguientes:<br /><br /> 0: no debe mostrarse. Agrega el uso de memoria de dos o varios consumidores.<br /><br /> 1-pista: realiza un seguimiento del consumo de memoria de una traducción del sistema.<br /><br /> 2-VARHEAP: realiza el seguimiento del consumo de memoria para un montón de longitud variable.<br /><br /> 4-Grupo de páginas de e/s: realiza un seguimiento del consumo de memoria de un grupo de páginas del sistema utilizado para operaciones de e/s.|  

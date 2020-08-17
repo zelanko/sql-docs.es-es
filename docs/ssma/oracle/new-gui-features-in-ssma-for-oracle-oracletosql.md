@@ -1,4 +1,5 @@
 ---
+description: Nuevas características de la interfaz gráfica de usuario de SSMA para Oracle (OracleToSQL)
 title: Nuevas características de la interfaz gráfica de usuario de SSMA para Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 511095f8b6910f95a7f3e4105fce102bb2a9522e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0606e20611d9857b3ee258504143e013f15b4996
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320341"
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Nuevas características de la interfaz gráfica de usuario de SSMA para Oracle (OracleToSQL)
 En este capítulo se describen las nuevas características de la interfaz de usuario de SSMA.  

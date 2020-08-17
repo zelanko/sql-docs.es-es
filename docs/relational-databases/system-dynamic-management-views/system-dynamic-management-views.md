@@ -1,4 +1,5 @@
 ---
+description: Vistas de administración dinámica (Transact-SQL)
 title: Vistas de administración dinámica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
@@ -24,12 +25,12 @@ ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbeef1cf93e9ea2c9556a7f68b550fc2da0c9508
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: a1644a542a7f7c70b3f2293fbd340ddda9474721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86941977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322691"
 ---
 # <a name="system-dynamic-management-views"></a>Vistas de administración dinámica del sistema +
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

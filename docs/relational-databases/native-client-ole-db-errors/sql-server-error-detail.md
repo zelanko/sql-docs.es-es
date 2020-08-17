@@ -1,4 +1,5 @@
 ---
+description: Detalle del error de SQL Server Native Client
 title: Detalle del error de SQL Server (proveedor de OLE DB de Native Client)
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cc3f7ff6550361baf616d26edf19aad3d6640d7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 34e98418c65a4c00dab1c344c53249dd27457b66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328391"
 ---
 # <a name="sql-server-native-client-error-detail"></a>Detalle del error de SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  El consumidor interpreta los miembros de la estructura SSERRORINFO de la siguiente manera.  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
 |*pwszMessage*|Mensaje de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Idéntico a la cadena que se devuelve en **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la sesión.|  
@@ -58,7 +59,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*wLineNumber*|Si procede, número de línea del procedimiento almacenado donde se produjo el error.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Posibles](../../relational-databases/native-client-ole-db-errors/errors.md)   
+ [Errores](../../relational-databases/native-client-ole-db-errors/errors.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

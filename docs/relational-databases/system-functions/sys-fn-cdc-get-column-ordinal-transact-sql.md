@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_get_column_ordinal (Transact-SQL)
 title: Sys. fn_cdc_get_column_ordinal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97c9c8d5b8c15bd2400874104bc1595aa93a4def
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: edf094b9476813e649bb12038f243407e8d11f2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322131"
 ---
 # <a name="sysfn_cdc_get_column_ordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
 ## <a name="return-type"></a>Tipo de valor devuelto  
  **int**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta función se utiliza para identificar la posición ordinal de una columna capturada dentro de la máscara de actualización de la captura de datos modificados. Se usa principalmente junto con la función [Sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) para extraer información de la máscara de actualización al consultar los datos modificados.  
   
 ## <a name="permissions"></a>Permisos  

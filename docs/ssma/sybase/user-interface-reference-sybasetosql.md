@@ -1,4 +1,5 @@
 ---
+description: Referencia de la interfaz de usuario (SybaseToSQL)
 title: Referencia de la interfaz de usuario (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: afe4c2fe8ad2ff254a44cc2aba477f4ef411fdd7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fba0cb8e85556411085a0502364d9b2cd3008ce6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320241"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Referencia de la interfaz de usuario (SybaseToSQL)
 En esta sección se incluyen los temas de ayuda de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para Sybase.  

@@ -1,4 +1,5 @@
 ---
+description: Instrucciones para scripting de MDX (MDX)
 title: Instrucciones de scripting de MDX (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5564c73ec8d10b37285c1d3e7e7f65fd295894a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 633a44f28852898e2638438a5e8395d8d865fca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341480"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>Instrucciones para scripting de MDX (MDX)
 

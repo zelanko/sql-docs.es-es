@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xtp_gc_queue_stats (Transact-SQL)
 title: Sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -19,12 +20,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 76acad96bb43b23487490cab79072311906f7e8e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca5ac3081c1075c6252eb7f33480e47c22ea78bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322821"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
@@ -39,7 +40,7 @@ ms.locfileid: "85648108"
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Identificador único de la cola.|  
 |total_enqueues|**bigint**|El número total de elementos de trabajo de la recolección de elementos no utilizados puestos en esta cola desde que se inició el servidor.|  

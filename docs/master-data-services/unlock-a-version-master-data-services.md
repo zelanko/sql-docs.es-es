@@ -1,4 +1,5 @@
 ---
+description: Desbloquear una versión (Master Data Services)
 title: Desbloquear una versión
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d5d616aead3e1e54171e1ed92c81679ae1d2ef88
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4dae01ed37e875c06234be7925a85d5c9a2608ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342371"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Desbloquear una versión (Master Data Services)
 

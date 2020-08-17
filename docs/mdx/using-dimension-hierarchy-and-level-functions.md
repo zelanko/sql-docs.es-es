@@ -1,4 +1,5 @@
 ---
+description: Usar funciones de dimensión, jerarquía y nivel
 title: Usar las funciones de dimensión, jerarquía y nivel | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8fa374ef93f56f8cddaed81bc9e3872d1eb206c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb7d324a2a4450a4df09ec3493954f0566a2cfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341111"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>Usar funciones de dimensión, jerarquía y nivel
 
 
   Las funciones de dimensión, jerarquía y nivel resultan útiles para recorrer las estructuras multidimensionales de Analysis Services. Por lo general, estas funciones se suelen utilizar junto con otras para obtener información acerca de los miembros de una dimensión, jerarquía o nivel.  
   
- En el ejemplo siguiente se muestra cómo utilizar **. Dimensión**, **. Jerarquía**y **. **Funciones de nivel:  
+ En el ejemplo siguiente se muestra cómo utilizar **. Dimensión**, **. Jerarquía**y **. ** Funciones de nivel:  
   
  `WITH`  
   
@@ -46,6 +47,6 @@ ms.locfileid: "68097185"
  [Dimension &#40;MDX&#41;](../mdx/dimension-mdx.md)   
  [Funciones &#40;sintaxis de MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Jerarquía &#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
- [Nivel &#40;&#41;MDX](../mdx/level-mdx.md)  
+ [Nivel &#40;&#41;MDX ](../mdx/level-mdx.md)  
   
   

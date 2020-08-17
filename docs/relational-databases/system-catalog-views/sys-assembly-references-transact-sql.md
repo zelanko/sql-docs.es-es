@@ -1,4 +1,5 @@
 ---
+description: sys.assembly_references (Transact-SQL)
 title: Sys. assembly_references (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5cfd8202754872f73e4462d43adaaba27b4b7386
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b9560a2fd64c2d58e6cc39746acb5c99dae008ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324417"
 ---
 # <a name="sysassembly_references-transact-sql"></a>sys.assembly_references (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Informe de evaluación (OracleToSQL)
 title: Informe de evaluación (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: c0861f8f05f4cc386a21a1b7ac867e124a71df81
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 955c87838f92f15f22e937829f95a34ad8cccdad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320601"
 ---
 # <a name="assessment-report-oracletosql"></a>Informe de evaluación (OracleToSQL)
 La ventana Informe de evaluación muestra los resultados de la conversión de objetos de base de datos a [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis y también puede ayudarle a calcular la complejidad y el costo de los proyectos de migración.  

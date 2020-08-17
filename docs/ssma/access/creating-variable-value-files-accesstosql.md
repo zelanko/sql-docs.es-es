@@ -1,4 +1,5 @@
 ---
+description: Crear archivos de valor variable (AccessToSQL)
 title: Crear archivos de valor variable (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6d208be8fb7ebf8d1c33b0df5d7c49dd28a412a7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8815b6d3f6d4f825082b0c2eac4d8bfa45cb98de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320881"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Crear archivos de valor variable (AccessToSQL)
 Un archivo de valores de variable es un archivo XML que contiene los valores de los parámetros de los comandos (como el nombre del servidor de origen o de destino) que cambian con frecuencia en las migraciones del servidor. Cuando se produce un gran número de migraciones de base de datos, se crean y se hace referencia a varios archivos de variables para almacenar el valor de cada servidor de origen en un archivo de script maestro con el modificador **-v** en la línea de comandos. Este comportamiento ayuda a mantener valores estáticos en algunos archivos de script con los valores de variable en varios archivos de variables.  

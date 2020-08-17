@@ -1,4 +1,5 @@
 ---
+description: backupfilegroup (Transact-SQL)
 title: backupfilegroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1494796dd0a57e786abae0c97a7278892aa422e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc0f1651c0c5532e387e4b878182a2cb99f66936
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373941"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85890682"
 |**is_readonly**|**bit**|1 = El grupo de archivos es de solo lectura.|  
 |**log_filegroup_guid**|**uniqueidentifier**|Puede ser NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 > [!IMPORTANT]  
 >  El mismo nombre de grupo de archivos puede aparecer en diferentes bases de datos; no obstante, cada grupo de archivos tiene su propio GUID. Por lo tanto, **(backup_set_id, filegroup_guid)** es una clave única que identifica un grupo de archivos en **backupfilegroup**.  

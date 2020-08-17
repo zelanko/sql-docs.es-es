@@ -1,4 +1,5 @@
 ---
+description: Descriptores de y controladores de escritorio de la base de datos
 title: Descriptores y controladores de base de datos de escritorio | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4ef79855f71d23e5a884822371f1894eb83442a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80565f912ef3136dc03cf7216ff3f997ee3eeba3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340801"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descriptores de y controladores de escritorio de la base de datos
 Un descriptor es una estructura de datos que contiene información sobre los datos de columna o los parámetros dinámicos. **SQLGetDescField** se puede usar para recuperar los descriptores admitidos que se enumeran a continuación. Los descriptores de parámetros de implementación (IPD) no se rellenan automáticamente porque no se admite **SQLDescribeParam** . Tampoco se admiten los campos de descriptor que no están disponibles a través de jet (como SQL_DESC_BASE_TABLE_NAME).  
@@ -42,7 +43,7 @@ Un descriptor es una estructura de datos que contiene información sobre los dat
 |SQL_DESC_BASE_COLUMN_NAME|Compatible (nuevo)|  
 |SQL_DESC_BASE_TABLE_NAME|Compatible (nuevo)|  
 |SQL_DESC_CASE_SENSITIVE|Siempre FALSE|  
-|SQL_DESC_CATALOG_NAME|Incompatible|  
+|SQL_DESC_CATALOG_NAME|No compatible|  
 |SQL_DESC_CONCISE_TYPE|Compatible|  
 |SQL_DESC_DATA_PTR|Compatible|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|Compatible|  
@@ -63,9 +64,9 @@ Un descriptor es una estructura de datos que contiene información sobre los dat
 |SQL_DESC_PARAMETER_TYPE|Solo parámetros de entrada|  
 |SQL_DESC_PRECISION|Compatible|  
 |SQL_DESC_SCALE|Compatible|  
-|SQL_DESC_SCHEMA_NAME|Incompatible|  
+|SQL_DESC_SCHEMA_NAME|No compatible|  
 |SQL_DESC_SEARCHABLE|Compatible|  
-|SQL_DESC_TABLE_NAME|Incompatible|  
+|SQL_DESC_TABLE_NAME|No compatible|  
 |SQL_DESC_TYPE|Compatible|  
 |SQL_DESC_TYPE_NAME|Compatible|  
 |SQL_DESC_UNNAMED|Compatible|  

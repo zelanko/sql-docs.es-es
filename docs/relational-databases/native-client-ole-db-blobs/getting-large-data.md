@@ -1,4 +1,5 @@
 ---
+description: Obtención de datos de gran tamaño de un proveedor de OLE DB de SQL Server Native Client
 title: Obtención de datos de gran tamaño (proveedor de OLE DB de Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -16,12 +17,12 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 298a442dbb93ca2c0bb95d79e341d712cd3651ea
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 372f8c7c24c94330decd807bef1393a0dfbd7d49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328631"
 ---
 # <a name="getting-large-data-from-a-sql-server-native-client-ole-db-provider"></a>Obtención de datos de gran tamaño de un proveedor de OLE DB de SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -149,7 +150,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Blobs y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Usar tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

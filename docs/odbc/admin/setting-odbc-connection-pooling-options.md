@@ -1,4 +1,5 @@
 ---
+description: Establecer opciones de agrupación de conexiones ODBC
 title: Establecer opciones de agrupación de conexiones ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1d8e66c506518b77320347ce9120254aa1cae287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d6f741654f9765e909a8a2e33bce5e7e596f8b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386601"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Establecer opciones de agrupación de conexiones ODBC
 La agrupación de conexiones permite a una aplicación utilizar una conexión de un grupo de conexiones que no es necesario restablecer para cada uso. Puede usar la pestaña **agrupación de conexiones** del cuadro de diálogo **Administrador de orígenes de datos ODBC** para habilitar y deshabilitar la supervisión de rendimiento. Haga doble clic en un nombre de controlador para establecer el período de tiempo de espera de la conexión.  

@@ -1,4 +1,5 @@
 ---
+description: Transferir la longitud en octetos
 title: Longitud del octeto de transferencia | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4204b47816747506a5672241eeeef736eca54856
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c89a9cb1423693e7d92114233f967d6fb5dcee1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386351"
 ---
 # <a name="transfer-octet-length"></a>Transferir la longitud en octetos
 La longitud del octeto de transferencia de una columna es el número máximo de bytes que se devuelven a la aplicación cuando los datos se transfieren a su tipo de datos C predeterminado. En el caso de los datos de caracteres, la longitud del octeto de transferencia no incluye espacio para el carácter de terminación null. La longitud del octeto de transferencia de una columna puede ser diferente del número de bytes necesarios para almacenar los datos en el origen de datos.  

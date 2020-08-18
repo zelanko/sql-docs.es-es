@@ -1,4 +1,5 @@
 ---
+description: Acerca de controladores y orígenes de datos
 title: Acerca de los controladores y los orígenes de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2bb83ef1-4bbe-4be3-8c32-c4d1140aae1d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7dffeea3bea7e3fbfa66e534ecaa758fbc2064d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 141a8e99a219923fa8e658c2600e79cad6f4ae93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386591"
 ---
 # <a name="about-drivers-and-data-sources"></a>Acerca de controladores y orígenes de datos
 Los *Controladores* son los componentes que procesan las solicitudes ODBC y devuelven datos a la aplicación. Si es necesario, los controladores modifican la solicitud de una aplicación en un formulario comprensible para el origen de datos. Debe usar el programa de instalación del controlador para agregar o eliminar un controlador del equipo.  

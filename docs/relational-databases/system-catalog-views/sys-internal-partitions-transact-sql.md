@@ -1,4 +1,5 @@
 ---
+description: Sys. internal_partitions (Transact-SQL)
 title: Sys. internal_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -13,16 +14,17 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9da410954f4fedce101ca95a9a3571898b4cd349
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: abfff1a5f8a9ed447566e5f6a91fe23c51654890
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401461"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>Sys. internal_partitions (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  Devuelve una fila por cada conjunto de filas que realiza un seguimiento de los datos internos de los índices de almacén de columnas en las tablas basadas en disco. Estos conjuntos de filas son internos a los índices de almacén de columnas y realizan un seguimiento de las filas eliminadas, las asignaciones de filas y el filas de almacenamiento Delta. Realizan un seguimiento de los datos para cada partición de tabla; cada tabla tiene al menos una partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vuelve a crear los conjuntos de filas cada vez que vuelve a generar el índice de almacén de columnas.   
+  Devuelve una fila por cada conjunto de filas que realiza un seguimiento de los datos internos de los índices de almacén de columnas en las tablas basadas en disco. Estos conjuntos de filas son internos a los índices de almacén de columnas y realizan un seguimiento de las filas eliminadas, las asignaciones de filas y el filas de almacenamiento Delta. Realizan un seguimiento de los datos para cada partición de tabla; cada tabla tiene al menos una partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a crear los conjuntos de filas cada vez que vuelve a generar el índice de almacén de columnas.   
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +45,7 @@ ms.locfileid: "86002721"
  Requiere la pertenencia al rol `public`. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Notas generales  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vuelve a crear nuevos índices internos de almacén de columnas cada vez que crea o vuelve a generar un índice de almacén de columnas.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a crear nuevos índices internos de almacén de columnas cada vez que crea o vuelve a generar un índice de almacén de columnas.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -59,7 +61,7 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

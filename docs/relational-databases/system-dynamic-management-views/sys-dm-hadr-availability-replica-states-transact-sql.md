@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_availability_replica_states (Transact-SQL)
 title: Sys. dm_hadr_availability_replica_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/16/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b01d8ebe8f9a880e7f4a1dc06e324770dddaf1d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e8242f81b78c943590785aea03cbc798a7d632f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398701"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85676317"
 |**last_connect_error_description**|**nvarchar(1024)**|Texto del mensaje de **last_connect_error_number** .|  
 |**last_connect_error_timestamp**|**datetime**|Marca de tiempo de fecha y hora que indica cuándo se produjo el error de **last_connect_error_number** .|  
   
-##  <a name="roles-and-operational-states"></a><a name="RolesAndOperationalStates"></a>Roles y Estados operativos  
+##  <a name="roles-and-operational-states"></a><a name="RolesAndOperationalStates"></a> Roles y Estados operativos  
  El rol, **rol**, refleja el estado de una réplica de disponibilidad determinada y el estado operativo, **operational_state**, describe si la réplica está lista para procesar las solicitudes de cliente para toda la base de datos de la réplica de disponibilidad. A continuación se indica un resumen de los Estados operativos que son posibles para cada rol: resolver, principal y secundario.  
   
  **Resolviendo:** Cuando una réplica de disponibilidad está en el rol de resolución, los Estados operativos posibles son los que se muestran en la tabla siguiente.  

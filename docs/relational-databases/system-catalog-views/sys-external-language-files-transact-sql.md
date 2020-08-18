@@ -1,4 +1,5 @@
 ---
+description: Sys. external_language_files (Transact-SQL)-SQL Server
 title: Sys. external_language_files (Transact-SQL)-SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -19,12 +20,12 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e90925354a9a48d3a2b0ff8e789d940ece6cb476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe6da94cc085e14667ee0518452fc6043eed60e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401071"
 ---
 # <a name="sysexternal_language_files-transact-sql"></a>Sys. external_language_files (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -47,7 +48,7 @@ La vista de catálogo sys. external_language_files muestra una fila para cada ex
 |parámetros|nvarchar(4000)|Prameters de lenguaje externo|
 |environment_variables |nvarchar(4000)|Variables de entorno de lenguaje externo|
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
 + [CREAR LENGUAJE EXTERNO](../../t-sql/statements/create-external-language-transact-sql.md)  

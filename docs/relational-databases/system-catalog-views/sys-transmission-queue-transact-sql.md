@@ -1,4 +1,5 @@
 ---
+description: sys.transmission_queue (Transact-SQL)
 title: Sys. transmission_queue (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 775dde0940802962cfdae09c55749fec751d5b6c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e3fbd63f399b54af919fd791f33e5d6f7b75a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88400301"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85897711"
 |**is_end_of_dialog**|**bit**|Indica si este mensaje es un mensaje de final de conversación. No acepta valores NULL.<br /><br /> 0 = No es un mensaje de final de conversación.<br /><br /> 1 = Mensaje de final de conversación.<br /><br /> No acepta valores NULL.|  
 |**message_body**|**varbinary(max)**|El cuerpo de este mensaje. Acepta valores NULL.|  
 |**transmission_status**|**nvarchar(4000)**|Razón por la que este mensaje está en la cola. Normalmente es un mensaje de error que explica la razón por la que no se ha enviado el mensaje. Si está en blanco, el mensaje no se ha enviado todavía. Acepta valores NULL.|  
-|**Prior**|**tinyint**|Nivel de prioridad asignado a este mensaje. No acepta valores NULL.|  
+|**priority**|**tinyint**|Nivel de prioridad asignado a este mensaje. No acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

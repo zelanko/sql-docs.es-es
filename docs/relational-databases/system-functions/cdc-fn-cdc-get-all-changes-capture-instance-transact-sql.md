@@ -1,5 +1,6 @@
 ---
-title: CDC. fn_cdc_get_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Microsoft Docs
+description: cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
+title: CDC. fn_cdc_get_all_changes_ &lt; capture_instance &gt;  (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4946bff122f64da126291bb797effe60c361663f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3877214c5df16b8c9bf48f9ee20bd2ec83109d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397571"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,14 +73,14 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|LSN de confirmación asociado con el cambio que conserva el orden de confirmación del cambio. Los cambios confirmados en la misma transacción comparten el mismo valor LSN de confirmación.|  
 |**__$seqval**|**binary(10)**|Valor de secuencia utilizado para ordenar los cambios en una fila dentro de una transacción.|  
-|**_ _ $ Operation**|**int**|Identifica la operación del lenguaje de manipulación de datos (DML) necesaria para aplicar la fila de datos modificados al origen de datos de destino. Puede ser uno de los siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualización (los valores de columna capturados son los de antes de la operación de actualización). Este valor solamente se aplica cuando se especifica la opción de filtro de filas 'all update old'.<br /><br /> 4 = actualización (los valores de columna capturados son los de después de la operación de actualización)|  
+|**__$operation**|**int**|Identifica la operación del lenguaje de manipulación de datos (DML) necesaria para aplicar la fila de datos modificados al origen de datos de destino. Puede ser uno de los siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualización (los valores de columna capturados son los de antes de la operación de actualización). Este valor solamente se aplica cuando se especifica la opción de filtro de filas 'all update old'.<br /><br /> 4 = actualización (los valores de columna capturados son los de después de la operación de actualización)|  
 |**__$update_mask**|**varbinary(128)**|Máscara de bits con un bit que corresponde a cada columna capturada identificada para la instancia de captura. Este valor tiene todos los bits definidos establecidos en 1 cuando **_ _ $ Operation** = 1 o 2. Cuando **_ _ $ Operation** = 3 o 4, solo los bits que corresponden a las columnas que han cambiado se establecen en 1.|  
 |**\<captured source table columns>**|Varía|Las columnas restantes devueltas por la función son las columnas capturadas identificadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** . Para el resto de usuarios, requiere el permiso SELECT en todas las columnas capturadas en la tabla de origen y, si se ha definido un rol de acceso para la instancia de captura, la pertenencia a ese rol de base de datos. Cuando el autor de la llamada no tiene permiso para ver los datos de origen, la función devuelve el error 229 ("se denegó el permiso SELECT en el objeto ' fn_cdc_get_all_changes_... ', base de datos ' \<DatabaseName> ', esquema ' CDC '.").  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el intervalo de LSN especificado no cae dentro de la escala de tiempo del seguimiento de cambios de la instancia de captura, la función devuelve el error 208 ("Se ha especificado un número insuficiente de argumentos para el procedimiento o la función cdc.fn_cdc_get_all_changes".).  
   
  A las columnas de tipo de datos **Image**, **Text**y **ntext** siempre se les asigna un valor NULL cuando **_ _ $ Operation** = 1 o **_ _ $ Operation** = 3. A las columnas de tipo de datos **varbinary (Max)**, **VARCHAR (Max)** o **nvarchar (Max)** se les asigna un valor NULL cuando **_ _ $ Operation** = 3, a menos que la columna cambie durante la actualización. Cuando **_ _ $ Operation** = 1, a estas columnas se les asigna su valor en el momento de la eliminación. Las columnas calculadas que están incluidas en una instancia de captura siempre tienen el valor NULL.  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_memory_objects (Transact-SQL)
 title: Sys. dm_os_memory_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31af260a5290b899bb64fa3942d1e2aa0a076d31
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3378ee753ebc9205ac4607930801fdf3cc434b3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398071"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,14 +55,14 @@ ms.locfileid: "85999040"
 |**contention_factor**|**real**|**Válido para** : [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> Valor que especifica la contención en este objeto de memoria, donde 0 significa que no hay contención. El valor se actualiza cada vez que se realiza un número especificado de asignaciones de memoria que reflejan la contención durante ese período. Solo se aplica a los objetos de memoria seguros para subprocesos.|  
 |**waiting_tasks_count**|**bigint**|**Válido para** : [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> Número de esperas en este objeto de memoria. Este contador se incrementa siempre que se asigna memoria de este objeto de memoria. El incremento es el número de tareas que actualmente esperan el acceso a este objeto de memoria. Solo se aplica a los objetos de memoria seguros para subprocesos. Este es un mejor valor de esfuerzo sin una garantía de corrección.|  
 |**exclusive_access_count**|**bigint**|**Válido para** : [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] y versiones posteriores.<br /><br /> Especifica la frecuencia de acceso exclusivo a este objeto de memoria. Solo se aplica a los objetos de memoria seguros para subprocesos.  Este es un mejor valor de esfuerzo sin una garantía de corrección.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**y **exclusive_access_count** todavía no se han implementado en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .  
   
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="remarks"></a>Observaciones  
  Los objetos de memoria son montones. Proporcionan asignaciones con una granularidad más fina que las que proporcionan los distribuidores de memoria. Los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan objetos de memoria en lugar de distribuidores de memoria. Los objetos de memoria utilizan la interfaz del asignador de la página del distribuidor de memoria para asignar páginas. Los objetos de memoria no utilizan interfaces de memoria virtual o compartida. Según los patrones de asignación, los componentes pueden crear diferentes tipos de objetos de memoria para asignar regiones de tamaño arbitrario.  

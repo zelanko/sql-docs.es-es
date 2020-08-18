@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_pdw_wait_stats (Transact-SQL)
 title: Sys. dm_pdw_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: cfb8d905-c34f-44de-9574-dde81e170916
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 28fb7ffe37631fc7f77333683f6bda4ccf1ddedf
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: f5a8d40b7181f932f5e42192224e91f5c6aa4c8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397831"
 ---
 # <a name="sysdm_pdw_wait_stats-transact-sql"></a>Sys. dm_pdw_wait_stats (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]

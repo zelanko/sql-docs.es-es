@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_exec_distributed_requests (Transact-SQL)
 title: Sys. dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52a1ee453d0a516bc2dc1fd42dcd4439272d844c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f0f878ef98d0935920db9b4abedbc753d10124a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398771"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>Sys. dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]

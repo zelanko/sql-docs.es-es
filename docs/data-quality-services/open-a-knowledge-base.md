@@ -1,4 +1,5 @@
 ---
+description: Abrir una base de conocimiento
 title: Abrir una base de conocimiento
 ms.date: 06/04/2013
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3eec1826d383f51933a9d47ae4acd932ebda7759
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d93731b7e28aafbffdf659678c0017d37ce61db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395891"
 ---
 # <a name="open-a-knowledge-base"></a>Abrir una base de conocimiento
 
@@ -34,7 +35,7 @@ ms.locfileid: "85882738"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para abrir una base de conocimiento, debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN.  
   
-##  <a name="open-a-knowledge-base"></a><a name="Open"></a>Abrir una base de conocimiento  
+##  <a name="open-a-knowledge-base"></a><a name="Open"></a> Abrir una base de conocimiento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,13 +71,13 @@ ms.locfileid: "85882738"
   
 -   Para abrir una base de conocimiento de la lista que ha bloqueado otra persona, póngase en contacto con dicha persona y pídale que la desbloquee.  
   
-##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a>Seguimiento: después de abrir una base de conocimiento  
+##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a> Seguimiento: después de abrir una base de conocimiento  
  Después de abrir una base de conocimiento, esta adquiere el estado indicado en la columna Estado de la tabla de bases de conocimiento. Para las actividades de detección de conocimiento y directiva de coincidencia, la base de conocimiento se abre en una página específica del asistente. Para la actividad de administración de dominios, la base de conocimiento se abre en la página Administración de dominios. Para más información sobre los estados, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a>Si la base de conocimiento está bloqueada  
+##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a> Si la base de conocimiento está bloqueada  
  El icono de candado en la primera columna indica si la base de conocimiento está bloqueada. Cuando una base de conocimiento está bloqueada, su nombre aparece en color rojo. Si un usuario específico está modificando una base de conocimiento a través de una actividad, la base de conocimiento se marca como bloqueada. En una base de conocimiento bloqueada no puede trabajar un segundo usuario. Si el usuario que está trabajando en la base de conocimiento desea desbloquearla, solo tiene que hacer clic en ella con el botón secundario dentro de la tabla de la página Abrir base de conocimiento y, a continuación, seleccionar **Desbloquear**, o bien, publicarla. Cuando el cursor se sitúa en una base de conocimiento bloqueada, DQS muestra una sugerencia que indica quién la bloqueó y cuándo lo hizo.  
   
-##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Estado de una base de conocimiento  
+##  <a name="state-of-a-knowledge-base"></a><a name="State"></a> Estado de una base de conocimiento  
  El campo Estado indica en qué fase de una actividad se encuentra la base de conocimiento. Si abre la base de conocimiento, se abrirá en esa fase.  
   
 -   **\<Empty>**: El campo Estado está vacío para una base de conocimiento si la base de conocimiento se ha publicado haciendo clic en **publicar** en la actividad administración de dominios y haciendo clic en **sí-publicar la base de conocimiento y salir**.  

@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_exec_dms_workers (Transact-SQL)
 title: Sys. dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -22,12 +23,12 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4951954bb9f6336c2c984a8d74c2224eab4dfbb0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b1dd32f2bd3a810e01dc7bf50347b0a23a884796
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398621"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>Sys. dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "82821095"
 |dms_step_index|`int`|Paso del plan DMS en el que se ejecuta este trabajador.|Vea [Sys. dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|`int`|Nodo en el que se está ejecutando el trabajo.|Vea [Sys. dm_exec_compute_nodes &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|tipo|`nvarcha(32)`|||  
+|type|`nvarcha(32)`|||  
 |status|`nvarchar(32)`|Estado de este paso|' Pending ', ' Running ', ' complete ', ' failed ', ' UndoFailed ', ' PendingCancel ', ' Canceled ', ' Undone ', ' Aborted '|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
@@ -59,7 +60,7 @@ ms.locfileid: "82821095"
 |error_id|`nvarchar(36)`|||  
 |source_info|`nvarchar(4000)`|||  
 |destination_info|`nvarchar(4000)`|||  
-|.|`nvarchar(4000)`|||
+|command|`nvarchar(4000)`|||
 |compute_pool_id|`int`|Identificador único para el grupo.|
 
 ## <a name="see-also"></a>Consulte también  

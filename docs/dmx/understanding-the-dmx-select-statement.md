@@ -1,4 +1,5 @@
 ---
+description: Descripción de la instrucción Select de DMX
 title: Descripción de la instrucción SELECT de DMX | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a31be8bc6d7bf5e747b9228229efc892c1462339
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 93744da59ad7149203da8fd14179045b63dc798f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395221"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Descripción de la instrucción Select de DMX
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86970314"
   
  **Importante:** Todo lo que se incluye en la lista de expresiones o en la cláusula **Where** debe proviene del dominio de datos definido por la cláusula **from** . No puede mezclar dominios de datos.  
   
-##  <a name="select-types"></a><a name="Select_Types"></a>SELECCIONAR tipos  
+##  <a name="select-types"></a><a name="Select_Types"></a> SELECCIONAR tipos  
  La sintaxis de la instrucción **Select** admite muchas tareas diferentes. Use los patrones siguientes para realizar estas tareas:  
   
 -   [Predecir](#Predicting)  
@@ -55,7 +56,7 @@ ms.locfileid: "86970314"
   
 -   [Obtención de detalles](#Drillthrough)  
   
-###  <a name="predicting"></a><a name="Predicting"></a>Predecir  
+###  <a name="predicting"></a><a name="Predicting"></a> Predecir  
  Puede realizar predicciones basadas en un modelo de minería usando los siguientes tipos de consulta.  
   
  Puede incluir cualquiera de las instrucciones **Select** de exploración o de predicción en las cláusulas **from** y **Where** de una instrucción de **selección** de combinación de predicción.  
@@ -63,32 +64,32 @@ ms.locfileid: "86970314"
 |Tipo de consulta|Descripción|  
 |----------------|-----------------|  
 |SELECCIONAR DESDE [NATURAL] COMBINACIÓN DE PREDICCIÓN|Devuelve una predicción que se crea combinando las columnas del modelo de minería de datos con las columnas de un origen de datos interno.<br /><br /> El dominio de este tipo de consulta lo forman las columnas de predicción del modelo y las columnas del origen de datos de entrada.<br /><br /> [Seleccione entre &#60;modelo&#62; combinación de predicción &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [Consultas de predicción &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
-|SELECCIONAR DE*\<model>*|Devuelve el estado más probable de la columna de predicción, basándose únicamente en el modelo de minería de datos. Este tipo de consulta es un método abreviado para crear una predicción con una combinación de predicción vacía.<br /><br /> El dominio de este tipo de consulta lo forman las columnas de predicción del modelo.<br /><br /> [SELECT FROM &#60;Model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Consultas de predicción &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
+|SELECCIONAR DE *\<model>*|Devuelve el estado más probable de la columna de predicción, basándose únicamente en el modelo de minería de datos. Este tipo de consulta es un método abreviado para crear una predicción con una combinación de predicción vacía.<br /><br /> El dominio de este tipo de consulta lo forman las columnas de predicción del modelo.<br /><br /> [SELECT FROM &#60;Model&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [Consultas de predicción &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/prediction-queries-data-mining)|  
   
  [Volver a Tipos SELECT](#Select_Types)  
   
-###  <a name="browsing"></a><a name="Browsing"></a>Exploración  
+###  <a name="browsing"></a><a name="Browsing"></a> Exploración  
  Puede examinar el contenido de un modelo de minería de datos usando los siguientes tipos de consulta.  
   
 |Tipo de consulta|Descripción|  
 |----------------|-----------------|  
-|SELECCIONE DISTINCT FROM*\<model>*|Devuelve todos los valores de estado del modelo de minería de datos para la columna especificada.<br /><br /> El dominio de datos de este tipo de consulta es el modelo de minería de datos.<br /><br /> [Seleccione DISTINCt FROM &#60;Model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Consultas de contenido &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
+|SELECCIONE DISTINCT FROM *\<model>*|Devuelve todos los valores de estado del modelo de minería de datos para la columna especificada.<br /><br /> El dominio de datos de este tipo de consulta es el modelo de minería de datos.<br /><br /> [Seleccione DISTINCt FROM &#60;Model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Consultas de contenido &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
 |Seleccione desde *\<model>* . CONTENT|Devuelve contenido que describe el modelo de minería de datos.<br /><br /> El dominio de datos este tipo de consulta es el conjunto de filas de esquema CONTENT.<br /><br /> [Seleccione entre &#60;modelo&#62;. CONTENIDO &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Consultas de contenido &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
 |Seleccione desde *\<model>* . DIMENSION_CONTENT|Devuelve contenido que describe el modelo de minería de datos.<br /><br /> El dominio de datos este tipo de consulta es el conjunto de filas de esquema CONTENT.<br /><br /> [Seleccione entre &#60;modelo&#62;. DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
 |Seleccione desde *\<model>* . PMML|Devuelve la representación PMML (Lenguaje de marcado de modelos de predicción) del modelo de minería de datos para los algoritmos que admiten esta funcionalidad.<br /><br /> El dominio de este tipo de consulta es el conjunto de filas de esquema PMML.<br /><br /> [Conjunto de filas DMSCHEMA_MINING_MODEL_CONTENT_PMML](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126283(v=sql.110))|  
   
  [Volver a Tipos SELECT](#Select_Types)  
   
-###  <a name="copying"></a><a name="Copying"></a>Instantánea  
+###  <a name="copying"></a><a name="Copying"></a> Instantánea  
  Puede copiar un modelo de minería de datos y su estructura de minería de datos asociada a un nuevo modelo y cambiar después el nombre del modelo dentro de la instrucción.  
   
 |Tipo de consulta|Descripción|  
 |----------------|-----------------|  
-|SELECT INTO*\<new model>*|Crea una copia del modelo de minería de datos.<br /><br /> El dominio de este tipo de consulta es el modelo de minería de datos.<br /><br /> [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|  
+|SELECT INTO *\<new model>*|Crea una copia del modelo de minería de datos.<br /><br /> El dominio de este tipo de consulta es el modelo de minería de datos.<br /><br /> [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|  
   
  [Volver a Tipos SELECT](#Select_Types)  
   
-###  <a name="drillthrough"></a><a name="Drillthrough"></a>Detalles  
+###  <a name="drillthrough"></a><a name="Drillthrough"></a> Detalles  
  Puede examinar los escenarios (o una representación de los escenarios) que se emplearon para entrenar el modelo usando los siguientes tipos de consulta.  
   
 |Tipo de consulta|Descripción|  

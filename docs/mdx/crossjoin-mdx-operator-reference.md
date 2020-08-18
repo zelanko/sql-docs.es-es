@@ -1,4 +1,5 @@
 ---
+description: Crossjoin-referencia del operador de MDX
 title: '* Crossjoin (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2f8377acec8f213c423de5d19d8859c8b3d93a06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c957b72736fa8038f01175e3c65898a85704a56b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413151"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin-referencia del operador de MDX
 
@@ -35,7 +36,7 @@ Set_Expression * Set_Expression
  Conjunto que contiene el producto cruzado de ambos parámetros especificados.  
   
 ## <a name="remarks"></a>Observaciones  
- El ** \* operador (Crossjoin)** es funcionalmente equivalente a la función [Crossjoin](../mdx/crossjoin-mdx.md) .  
+ El operador ** \* (Crossjoin)** es funcionalmente equivalente a la función [Crossjoin](../mdx/crossjoin-mdx.md) .  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra el uso de este operador.  

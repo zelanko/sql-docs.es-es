@@ -1,4 +1,5 @@
 ---
+description: Atributos y el formato de cadena de conexión
 title: Formato de cadena de conexión y atributos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c360112-8720-4e54-a1a6-b9b18d943557
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d95866976d2e83c058f83b3a0ae5e9a4e8888ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53efb4dd010913029185f0cbf27f0991f34815fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412939"
 ---
 # <a name="connection-string-format-and-attributes"></a>Atributos y el formato de cadena de conexión
 > [!IMPORTANT]  
@@ -31,9 +32,9 @@ ms.locfileid: "81281155"
 ```  
   
 > [!NOTE]  
->  Microsoft ODBC driver for Oracle admite el formato de cadena de conexión de la primera versión del controlador, que usa `CONNECTSTRING`= en lugar de `SERVER=`.  
+>  Microsoft ODBC driver for Oracle admite el formato de cadena de conexión de la primera versión del controlador, que usa `CONNECTSTRING` = en lugar de `SERVER=` .  
   
- Si se va a conectar a un proveedor de origen de datos que admite la autenticación de `Trusted_Connection=yes` Windows, debe especificar en lugar de la información de ID. de usuario y contraseña en la cadena de conexión.  
+ Si se va a conectar a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar `Trusted_Connection=yes` en lugar de la información de ID. de usuario y contraseña en la cadena de conexión.  
   
  Debe especificar el nombre del origen de datos si no especifica los atributos UID, PWD, SERVER (o CONNECTSTRING) y DRIVER. Sin embargo, todos los demás atributos son opcionales. Si no especifica ningún atributo, ese atributo tiene como valor predeterminado el que se especifica en la ficha DSN correspondiente del cuadro de diálogo **Administrador de orígenes de datos ODBC** . El valor del atributo puede distinguir entre mayúsculas y minúsculas.  
   

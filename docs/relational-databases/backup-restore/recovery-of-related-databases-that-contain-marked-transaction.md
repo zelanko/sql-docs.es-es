@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4f959ddb388be7f0f21441629239a3d479a0c711
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669821"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088173"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperación de bases de datos relacionadas que contienen transacciones marcadas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85669821"
 ## <a name="transact-sql-syntax-for-inserting-named-marks-into-a-transaction-log"></a>Sintaxis de Transact-SQL para insertar marcas con nombre en un registro de transacciones  
  Para insertar marcas en los registros de transacciones, use la instrucción [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) y la cláusula WITH MARK [*description*]. La marca recibe el mismo nombre que la transacción. La descripción ( *description* ) es opcional y es un texto descriptivo de la marca, no su nombre. Por ejemplo, el nombre de la transacción y de la marca que se crea en la siguiente instrucción `BEGIN TRANSACTION` es `Tx1`:  
   
-```wmimof  
+```sql  
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   

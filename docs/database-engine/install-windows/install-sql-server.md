@@ -15,12 +15,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e11f2aa1a553933882e844dbf7c9452183c63c28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 426df300ba160d9a19ff8c29edb7e413d28e6ec6
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900354"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216717"
 ---
 # <a name="sql-server-installation-guide"></a>Guía de instalación de SQL Server
 
@@ -42,7 +42,7 @@ A partir de [!INCLUDE[sssql15](../../includes/sssql15-md.md)], [!INCLUDE[ssnover
     - [[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)]](~/sql-server/editions-and-components-of-sql-server-version-15.md).  
     - [[!INCLUDE[ss2017](../../includes/sssqlv14-md.md)]](~/sql-server/editions-and-components-of-sql-server-2017.md).  
     - [[!INCLUDE[ss2016](../../includes/sssql15-md.md)]](~/sql-server/editions-and-components-of-sql-server-2016.md).  
-    - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://technet.microsoft.com/library/cc645993(v=sql.120).aspx)
+    - [[!INCLUDE[ss2014](../../includes/sssql14-md.md)]](https://docs.microsoft.com/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014)
 
 *  **Requisitos**: revise los requisitos de instalación de hardware y software para [SQL Server 2016 y 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) o [SQL Server en Linux](../../linux/sql-server-linux-setup.md), además de las comprobaciones de la configuración del sistema y las consideraciones de seguridad en [Planeación de una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) 
 

@@ -1,4 +1,5 @@
 ---
+description: CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
 title: CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414031"
 ---
 # <a name="create-mining-structure-dmx"></a>CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,7 +35,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *estructuras*  
+ *structure*  
  Nombre único de la estructura.  
   
  *lista de definiciones de columna*  
@@ -106,7 +107,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Puede definir varios valores de marcas de modelado para una columna. Sin embargo, solo puede haber un tipo de contenido y un tipo de datos para cada columna.  
   
 ### <a name="column-relationships"></a>Relaciones entre columnas  
- Puede agregar una cláusula a cualquier instrucción de definición de columna para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de la siguiente \<column relationship> cláusula.  
+ Puede agregar una cláusula a cualquier instrucción de definición de columna para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite el uso de la siguiente \<column relationship> cláusula.  
   
  **RELACIONADO CON**  
  Indica una jerarquía de valores. El destino de una columna RELATED TO puede ser una columna de clave de una tabla anidada, una columna de valores discretos en la fila de caso u otra columna con una cláusula RELATED TO, que indica una jerarquía de más niveles.  

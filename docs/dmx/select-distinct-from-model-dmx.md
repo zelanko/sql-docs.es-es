@@ -1,4 +1,5 @@
 ---
+description: SELECT DISTINCt FROM &lt; Model &gt; (DMX)
 title: Seleccione DISTINCt FROM &lt; Model &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413271"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCt FROM &lt; Model &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

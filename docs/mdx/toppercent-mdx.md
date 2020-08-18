@@ -1,4 +1,5 @@
 ---
+description: TopPercent (MDX)
 title: Porcentaje (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f0ae1e59a46c03300018f3243926bb30cef0398
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412870"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -44,7 +45,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  La función de **porcentaje** calcula la suma de la expresión numérica especificada evaluada sobre el conjunto especificado, ordenando el conjunto en orden descendente. A continuación, la función devuelve los elementos con los valores más altos cuyo porcentaje acumulado del valor total sumado sea al menos el porcentaje especificado. Esta función devuelve el subconjunto más pequeño de un conjunto cuyo total acumulado sea al menos el porcentaje especificado. Los elementos devueltos se ordenan de mayor a menor.  
   
 > [!WARNING]  
->  Si *Numeric_Expression* devuelve cualquier valor negativo, el **porcentaje** devuelve solo una fila (1).  
+>  Si *Numeric_Expression*  devuelve cualquier valor negativo, el **porcentaje** devuelve solo una fila (1).  
 >   
 >  Vea en el segundo ejemplo una presentación detallada de este comportamiento.  
   

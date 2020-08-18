@@ -1,4 +1,5 @@
 ---
+description: Referencia de operadores de Extensiones de minería de datos (DMX)
 title: Referencia del operador de extensiones de minería de datos (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 60271f810de7d577bebdaac4ed0ceb6e48c08d68
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ba8f03b86a93122b2dcd9b825adc656feae80cd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414301"
 ---
 # <a name="data-mining-extensions-dmx-operator-reference"></a>Referencia de operadores de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

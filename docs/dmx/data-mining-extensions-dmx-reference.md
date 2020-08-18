@@ -1,4 +1,5 @@
 ---
+description: Referencia de Extensiones de minería de datos (DMX)
 title: Referencia de extensiones de minería de datos (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02c7185ebbf264ebf8ed8adda4915170f888e74b
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414091"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Referencia de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86971793"
   
  **Para obtener más información:** [estructuras de minería de datos &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
-##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a>Instrucciones DMX  
+##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> Instrucciones DMX  
  Puede usar instrucciones DMX para crear, procesar, eliminar, copiar, examinar y realizar predicciones con modelos de minería de datos. Hay dos tipos de instrucciones en DMX: instrucciones de definición de datos e instrucciones de manipulación de datos. Cada tipo de instrucción lleva a cabo distintos tipos de tareas.  
   
  En las siguientes secciones se proporciona más información acerca de cómo trabajar con instrucciones DMX:  
@@ -44,7 +45,7 @@ ms.locfileid: "86971793"
   
 -   [Aspectos básicos de las consultas](#BKMK_Queries)  
   
-###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a>Instrucciones de definición de datos  
+###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a> Instrucciones de definición de datos  
  Las instrucciones de definición de datos de DMX sirven para crear y definir nuevas estructuras y modelos de minería de datos, para importar y exportar modelos y estructuras de minería de datos y para quitar modelos existentes de una base de datos. Las instrucciones de definición de datos de DMX forman parte del lenguaje de definición de datos (DDL).  
   
  Puede realizar las siguientes tareas con las instrucciones de definición de datos de DMX:  
@@ -63,7 +64,7 @@ ms.locfileid: "86971793"
   
  [Volver a Instrucciones DMX](#BKMK_DMXStatements)  
   
-###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a>Instrucciones de manipulación de datos  
+###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a> Instrucciones de manipulación de datos  
  Use instrucciones de manipulación de datos en DMX para trabajar con modelos de minería de datos existentes con el fin de examinar los modelos y crear predicciones con ellos. Las instrucciones de manipulación de datos de DMX forman parte del lenguaje de manipulación de datos (DML).  
   
  Puede realizar las siguientes tareas con las instrucciones de manipulación de datos de DMX:  
@@ -90,7 +91,7 @@ ms.locfileid: "86971793"
   
  [Volver a Instrucciones DMX](#BKMK_DMXStatements)  
   
-###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a>Aspectos básicos de las consultas DMX  
+###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a> Aspectos básicos de las consultas DMX  
  La instrucción SELECT es la base de la mayoría de las consultas DMX. En función de las cláusulas que use con esas instrucciones, puede examinar, copiar o realizar predicciones con modelos de minería de datos. La consulta de predicción usa una forma de SELECT para crear predicciones basadas en modelos de minería de datos existentes. Las funciones amplían la capacidad de examinar y consultar los modelos de minería de datos más allá de las capacidades intrínsecas del modelo de minería de datos.  
   
  Puede usar funciones DMX para obtener información descubierta durante el entrenamiento de los modelos y para calcular información nueva. Estas funciones pueden utilizarse con muchos fines, por ejemplo, para devolver estadísticas que describan los datos subyacentes o la precisión de una predicción. O bien, para devolver una explicación ampliada de una predicción.  

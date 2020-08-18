@@ -1,4 +1,5 @@
 ---
+description: Auditoría de seguridad (categoría de eventos, SQL Server Profiler)
 title: 'Auditoría de seguridad (categoría de eventos): Profiler'
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,16 +15,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c7f92e7c56cd6b13527d1d2e658dd04f51c4988f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1e6bcb89b8206f34c8438f6ebab2ef983210057
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88330441"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Auditoría de seguridad (categoría de eventos, SQL Server Profiler)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La categoría de eventos **Auditoría de seguridad** contiene eventos de auditoría de seguridad.  
+   La categoría de eventos **Auditoría de seguridad** contiene eventos de auditoría de seguridad.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -41,7 +42,7 @@ ms.locfileid: "85726197"
 |[Audit Change Audit (clase de eventos)](../../relational-databases/event-classes/audit-change-audit-event-class.md)|Indica que se ha realizado una modificación de seguimiento de auditoría.|  
 |[Audit Change Database Owner (clase de eventos)](../../relational-databases/event-classes/audit-change-database-owner-event-class.md)|Indica que se han comprobado los permisos para cambiar el propietario de una base de datos.|  
 |[Audit Database Management (clase de eventos)](../../relational-databases/event-classes/audit-database-management-event-class.md)|Indica que se ha creado, modificado o quitado una base de datos.|  
-|[Audit Database Mirroring Login (clase de eventos)](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)|Informa de los mensajes de auditoría relacionados con la seguridad en el transporte para la creación del reflejo de una base de datos.|  
+|[Audit Database Mirroring Login, clase de eventos](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)|Informa de los mensajes de auditoría relacionados con la seguridad en el transporte para la creación del reflejo de una base de datos.|  
 |[Audit Database Object Access (clase de eventos)](../../relational-databases/event-classes/audit-database-object-access-event-class.md)|Indica que se ha obtenido acceso a un objeto de base de datos, como un esquema.|  
 |[Audit Database Object GDR (clase de eventos)](../../relational-databases/event-classes/audit-database-object-gdr-event-class.md)|Indica que se ha producido un evento GDR para un objeto de base de datos.|  
 |[Audit Database Object Management (clase de eventos)](../../relational-databases/event-classes/audit-database-object-management-event-class.md)|Indica que se ha ejecutado una instrucción CREATE, ALTER o DROP en un objeto de base de datos.|  
@@ -51,7 +52,7 @@ ms.locfileid: "85726197"
 |[Audit Database Principal Management (clase de eventos)](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|Indica que se han creado, modificado o quitado entidades de seguridad en una base de datos.|  
 |[Audit Database Scope GDR (clase de eventos)](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|Indica que un usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha emitido una instrucción GRANT, REVOKE o DENY para un permiso de instrucción.|  
 |[Audit DBCC (clase de eventos)](../../relational-databases/event-classes/audit-dbcc-event-class.md)|Indica que se ha emitido un comando DBCC.|  
-|[Audit Fulltext (clase de eventos)](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Indica que se ha producido un evento de texto completo.|  
+|[Clase de eventos Audit Fulltext](../../relational-databases/event-classes/audit-fulltext-event-class.md)|Indica que se ha producido un evento de texto completo.|  
 |[Audit Login Change Password (clase de eventos)](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|Indica que un usuario ha cambiado su contraseña de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Audit Login Change Property (clase de eventos)](../../relational-databases/event-classes/audit-login-change-property-event-class.md)|Indica que se ha usado **sp_defaultdb**, **sp_defaultlanguage**o ALTER LOGIN para modificar una propiedad de un inicio de sesión.|  
 |[Audit Login (clase de eventos)](../../relational-databases/event-classes/audit-login-event-class.md)|Indica que un usuario ha iniciado una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

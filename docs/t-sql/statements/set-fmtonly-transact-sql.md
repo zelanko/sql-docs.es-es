@@ -1,4 +1,5 @@
 ---
+description: SET FMTONLY (Transact-SQL)
 title: SET FMTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -22,12 +23,12 @@ ms.assetid: 02a1d9ac-2e58-433c-9a07-2c5a4a2214e1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a610546822965def77ff5dcc973c77c0dbb292e9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ef1047125b3c923de910e046a0e92a3380480699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355951"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
 
@@ -51,7 +52,7 @@ ms.locfileid: "81634341"
 SET FMTONLY { ON | OFF }   
 ```  
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Cuando `FMTONLY` se establece en `ON`, se devuelve un conjunto de filas con los nombres de columna, pero sin ninguna fila de datos.
 
@@ -148,7 +149,7 @@ go
 ****/
 ```
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

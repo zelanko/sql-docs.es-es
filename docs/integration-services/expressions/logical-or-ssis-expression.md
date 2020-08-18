@@ -1,4 +1,5 @@
 ---
+description: '|| (OR lógico) (expresión de SSIS)'
 title: '|| (OR lógico) (expresión de SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 72e8bb24671524b77585d4a3e151eab9bc225a85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b613adbf102e1103506e6d86efb3bf87d81d72eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347551"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (OR lógico) (expresión de SSIS)
 
@@ -42,7 +43,7 @@ boolean_expression1 || boolean_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En la siguiente tabla se muestra el resultado del operador ||.  
   
 |Resultado|Expression|Expression|  
@@ -52,7 +53,7 @@ boolean_expression1 || boolean_expression2
 |FALSE|FALSE|FALSE|  
 |NULL|NULL|NULL|  
 |TRUE|NULL|TRUE|  
-|NULL|NULL|FALSE|  
+|NULL|NULL|false|  
   
 ## <a name="ssis-expression-examples"></a>Ejemplos de expresiones de SSIS  
  En este ejemplo se usan las columnas **StandardCost** y **ListPrice** . Este ejemplo devuelve TRUE si el valor de la columna **StandardCost** es menor que 300 o el valor de la columna **ListPrice** es mayor que 500.  
@@ -67,7 +68,7 @@ StandardCost < 300 || ListPrice > 500
 StandardCost < @SPrice || ListPrice > @LPrice  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [&#124; &#40;OR inclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
  [^ &#40;OR exclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   

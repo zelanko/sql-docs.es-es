@@ -1,4 +1,5 @@
 ---
+description: Referencia de Transact-SQL de catálogo de Integration Services (SSIS)
 title: Referencia de Transact-SQL de catálogo de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9553cef4-36aa-4088-a9db-eee45a4502df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c07990c5e564c12a072b9326611473663b81a686
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4334a18c00eb040307b5fa2116c9a3edb4a011d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351991"
 ---
 # <a name="integration-services-ssis-catalog-transact-sql-reference"></a>Referencia de Transact-SQL de catálogo de Integration Services (SSIS)
 

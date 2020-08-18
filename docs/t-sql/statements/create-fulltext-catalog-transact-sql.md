@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT CATALOG (Transact-SQL)
 title: CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d335faa965f3cd03cffcdece6f5e782ada8a59c5
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 655f6e2ac9a3e564ac141f78d986e247856263bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305836"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,12 +79,12 @@ CREATE FULLTEXT CATALOG catalog_name
   
  A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], esta cláusula no tiene ningún efecto.  
   
- ACCENT_SENSITIVITY = {ON|OFF}  
+ ACCENT_SENSITIVITY = {ON|OFF}   
  Especifica si el catálogo distingue los acentos para la indización de texto completo. Cuando se cambia esta propiedad, el índice debe volver a crearse. La opción predeterminada es utilizar la distinción de acentos que se haya especificado en la intercalación de base de datos. Para mostrar la intercalación de base de datos, use la vista de catálogo **sys.databases**.  
   
  Para determinar la configuración de la propiedad de distinción de acentos actual de un catálogo de texto completo, use la función FULLTEXTCATALOGPROPERTY con el valor de propiedad **accentsensitivity** en *catalog_name*. Si el valor devuelto es '1', el catálogo de texto completo distingue acentos; si el valor es '0', el catálogo no distingue acentos.  
   
- AS DEFAULT  
+ AS DEFAULT   
  Especifica que el catálogo es el predeterminado. Cuando se crean índices de texto completo sin especificar de forma explícita un catálogo de texto completo, se utiliza el catálogo predeterminado. Si un catálogo de texto completo existente ya se ha marcado como AS DEFAULT, configurar este nuevo catálogo como AS DEFAULT lo convertirá en el catálogo de texto completo predeterminado.  
   
  AUTHORIZATION *owner_name*  
@@ -99,7 +100,7 @@ CREATE FULLTEXT CATALOG catalog_name
   
  *owner_name* también debe tener el permiso TAKE OWNERSHIP en el catálogo de texto completo especificado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los identificadores de los catálogos de texto completo comienzan por 00005 y se incrementan en uno con cada catálogo nuevo que se crea.  
   
 ## <a name="permissions"></a>Permisos  
@@ -117,7 +118,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume) KEY INDEX PK_JobCan
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   

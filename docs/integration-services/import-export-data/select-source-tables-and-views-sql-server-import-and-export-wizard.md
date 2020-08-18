@@ -1,4 +1,5 @@
 ---
+description: Seleccionar tablas y vistas de origen (Asistente para importación y exportación de SQL Server)
 title: Seleccionar tablas y vistas de origen (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 788aef06cb86897735c91e2407e488b053f128f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dad9a87c5055e8dfd8292dca048b5f9d239c1e94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346791"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Seleccionar tablas y vistas de origen (Asistente para importación y exportación de SQL Server)
 
@@ -74,21 +75,21 @@ Después de obtener una vista previa de los datos, es posible que quiera cambiar
 
 ### <a name="excel-source-tables"></a>Tablas de origen de Excel
 En la lista de vistas y tablas de origen para un origen de datos de Excel se incluyen dos tipos de objetos de Excel.
--   **Hojas de cálculo.** Los nombres de las hojas de cálculo van seguidos del signo de dólar ($) (por ejemplo, **"Hoja1$"** ).
+-   **Hojas de cálculo.** Los nombres de las hojas de cálculo van seguidos del signo de dólar ($) (por ejemplo, **"Hoja1$"**).
 -   **Rangos con nombre.** Los rangos con nombre, si los hay, se enumeran por nombre.
 
-Si quiere cargar datos desde un intervalo de celdas específico y sin nombre (por ejemplo, **[Hoja1$A1:B4]** ) o con destino a ese intervalo, tendrá que escribir una consulta. Vuelva a la página **Especificar copia de tabla o consulta** y seleccione **Escribir una consulta para especificar los datos que se van a transferir**.
+Si quiere cargar datos desde un intervalo de celdas específico y sin nombre (por ejemplo, **[Hoja1$A1:B4]**) o con destino a ese intervalo, tendrá que escribir una consulta. Vuelva a la página **Especificar copia de tabla o consulta** y seleccione **Escribir una consulta para especificar los datos que se van a transferir**.
 
 ### <a name="excel-destination-tables"></a>Tablas de destino de Excel
 Si va a exportar datos a Excel, puede especificar el destino de una de las tres formas siguientes.
--   **Hoja de cálculo.** Para especificar una hoja de cálculo, anexe el carácter $ al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]** ).
+-   **Hoja de cálculo.** Para especificar una hoja de cálculo, anexe el carácter $ al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]**).
 -   **Rango con nombre.** Para especificar un rango con nombre, use simplemente el nombre del rango (por ejemplo, **MiRangoDeDatos**).
 -   **Rango sin nombre.** Para especificar un rango de celdas al que no ha asignado un nombre, anexe el carácter $ al final del nombre de la hoja, agregue la especificación del rango y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$A1:B4]** ).
 
 > [!TIP]
 > Si usa Excel como origen o destino, es una buena idea hacer clic en **Editar asignaciones** y revisar las asignaciones de tipos de datos de la página **Asignaciones de columnas** . 
 
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>A continuación  
  Después de seleccionar las tablas y vistas existentes que quiere copiar y de asignarlas a sus destinos, la página siguiente es **Guardar y ejecutar el paquete**. En esta página, especifique si quiere ejecutar la operación de copia inmediatamente. Según la configuración, también puede guardar el paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creado por el asistente para personalizarlo y volver a usarlo más adelante. Para más información, vea [Guardar y ejecutar paquete](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Consulte también

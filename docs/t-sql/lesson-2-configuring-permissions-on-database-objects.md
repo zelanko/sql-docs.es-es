@@ -1,4 +1,5 @@
 ---
+description: 'Lección 2: Configuración de permisos en objetos de base de datos'
 title: 'Tutorial: Configuración de permisos en objetos de base de datos'
 ms.custom: seo-lt-2019
 ms.date: 07/31/2018
@@ -12,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 195390d76716bcad18df884491fa07335c70665b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306635"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Lección 2: Configuración de permisos en objetos de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -26,7 +27,7 @@ La concesión de acceso de usuario a una base de datos implica tres pasos. Prime
   >[!NOTE]
   > En esta sección se utilizan los objetos creados en [Lección 1: Creación de objetos de base de datos](lesson-1-creating-database-objects.md). Complete la primera lección antes de continuar con la segunda. 
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, así como acceso a una instancia de SQL Server. 
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -44,7 +45,7 @@ De forma predeterminada, los administradores del equipo tienen acceso total a [!
   
 ### <a name="create-a-new-windows-account"></a>Creación de una cuenta de Windows  
   
-1.  Haga clic en **Inicio**y en **Ejecutar**, en el cuadro **Abrir** , escriba **%SystemRoot%\system32\compmgmt.msc /s**y, después, haga clic en **Aceptar** para abrir el programa Administración de equipos. 
+1.  Haga clic en **Inicio** y en **Ejecutar**, en el cuadro **Abrir**, escriba **%SystemRoot%\system32\compmgmt.msc /s** y, a continuación, haga clic en **Aceptar** para abrir el programa Administración de equipos. 
 2.  En **Herramientas del sistema**, expanda **Usuarios y grupos locales**, haga clic con el botón derecho en **Usuarios**y luego haga clic en **Nuevo usuario**.    
 3.  En el cuadro **Nombre de usuario** , escriba **Mary**.    
 4.  En los cuadros **Contraseña** y **Confirmar contraseña** , escriba una contraseña segura y, a continuación, haga clic en **Crear** para crear un nuevo usuario de Windows local.  
@@ -86,7 +87,7 @@ Escriba y ejecute las siguientes instrucciones (reemplace `computer_name` con el
 
 
 ## <a name="create-views-and-stored-procedures"></a>Creación de vistas y procedimientos almacenados
-Como administrador, puede ejecutar la instrucción SELECT desde la tabla **Products** y la vista **vw_Names** , y ejecutar el procedimiento **pr_Names** ; en cambio, Mary no puede hacerlo. Para conceder a Mary los permisos necesarios, use la instrucción GRANT.  
+ Como administrador, puede ejecutar la instrucción SELECT desde la tabla **Products** y la vista **vw_Names** y ejecutar el procedimiento **pr_Names**; en cambio, Mary no puede hacerlo. Para conceder a Mary los permisos necesarios, use la instrucción GRANT.  
 
 ### <a name="grant-permission-to-stored-procedure"></a>Concesión de permiso a procedimientos almacenados  
 Ejecute la siguiente instrucción para conceder a `Mary` el permiso `EXECUTE` para el procedimiento almacenado `pr_Names` .

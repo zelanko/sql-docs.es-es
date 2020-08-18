@@ -1,4 +1,5 @@
 ---
+description: Modificar un esquema de partición
 title: Modificación de un esquema de partición | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50498877a1d26adf50f4af466301b7dc7da7b9f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bc39ec02fe5059bb8b1ae561be732244cbb07791
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327181"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar un esquema de partición
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "85787523"
   
 1.  Haga clic en el signo más para expandir la base de datos donde desea eliminar el esquema de partición.  
   
-2.  Haga clic en el signo más para expandir la carpeta **Almacenamiento** .  
+2.  Haga clic en el signo más para expandir la carpeta **Almacenamiento**.  
   
 3.  Haga clic en el signo más para expandir la carpeta **Esquemas de partición** .  
   

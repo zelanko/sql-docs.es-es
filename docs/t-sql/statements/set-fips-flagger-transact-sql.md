@@ -1,4 +1,5 @@
 ---
+description: SET FIPS_FLAGGER (Transact-SQL)
 title: SET FIPS_FLAGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcbc4df284ef9fdd6467cf5bbe52e91c5c98da18
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d915f45f9b73b6701ac0994ec87bcf31acb999bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356861"
 ---
 # <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 |INTERMEDIATE|Comprobación de los estándares ISO de compatibilidad con el nivel intermedio.|  
 |Apagado|Sin comprobación del estándar.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El valor de `SET FIPS_FLAGGER` se establece en tiempo de análisis, en lugar de en tiempo de ejecución. El hecho de que se establezca en tiempo de análisis supone que si la instrucción SET está presente en el lote o el procedimiento almacenado, se aplica aunque la ejecución del código no llegue al punto donde se encuentre. Además, la instrucción `SET` se aplica antes de que se ejecute ninguna otra instrucción. Por ejemplo, aunque la instrucción `SET` se encuentre en un bloque de instrucciones de `IF...ELSE` al que nunca se llega durante la ejecución, la instrucción `SET` se seguirá aplicando porque se ha analizado el bloque de instrucciones `IF...ELSE`.  
   
  Si `SET FIPS_FLAGGER` se establece en un procedimiento almacenado, el valor de `SET FIPS_FLAGGER` se restablecerá cuando el procedimiento almacenado devuelva el control. Por tanto, una instrucción `SET FIPS_FLAGGER` especificada en SQL dinámico no tiene ningún efecto en las instrucciones siguientes de SQL dinámico.  
@@ -64,7 +65,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: UPDATETEXT (Transact-SQL)
 title: UPDATETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5da5354681ff38fbcf818294f85b9381db21659a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c78bf19d7264d0f1c7d073cbe0ce76e2e5b6f4e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306564"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  Es el nombre de la tabla y la columna **text**, **ntext** o **image** que se van a actualizar. Los nombres de las tablas y de las columnas deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). La especificación de los nombres de la base de datos y del propietario es opcional.  
   
  *dest_text_ptr*  
- Es el valor de un puntero de texto (devuelto por la función TEXTPTR) que señala a los datos **text**, **ntext** o **image** que se van a actualizar. *dest_text_ptr* debe ser **binary(** 16 **)** .  
+ Es el valor de un puntero de texto (devuelto por la función TEXTPTR) que señala a los datos **text**, **ntext** o **image** que se van a actualizar. *dest_text_ptr* debe ser **binary(** 16 **)**.  
   
  *insert_offset*  
  Es la posición de inicio de la actualización a partir de cero. En columnas **text** o **image**, *insert_offset* es el número de bytes que se van a omitir desde el principio de la columna existente antes de insertar nuevos datos. En columnas **ntext**, *insert_offset* es el número de caracteres (cada carácter **ntext** usa dos bytes). Los datos **text**, **ntext** o **image** existentes a partir de esta posición de inicio basada en cero se desplazan a la derecha para dejar espacio a los nuevos datos. Un valor 0 inserta los nuevos datos al principio de los datos existentes. Un valor NULL anexa los nuevos datos al valor de datos existente.  
@@ -85,7 +86,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  El valor *scr_text_ptr* no debe ser igual que el valor *dest_text_ptr*.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los datos recién insertados pueden ser una única constante *inserted_data*, un nombre de tabla, un nombre de columna o un puntero de texto.  
   
 |Acción de actualización|Parámetros de UPDATETEXT|  
@@ -125,7 +126,7 @@ ALTER DATABASE pubs SET RECOVERY FULL;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   
  [TEXTPTR &#40;Transact-SQL&#41;](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/writetext-transact-sql.md)  

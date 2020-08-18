@@ -1,4 +1,5 @@
 ---
+description: NULLIF (Transact-SQL)
 title: NULLIF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
@@ -21,12 +22,12 @@ ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5db97fd036dfa614a5a9c6c399a3100d5128d73
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6ceef62e268cc34f036423b2e55b56152d24ea2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361331"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ NULLIF ( expression , expression )
   
  NULLIF devuelve el primer parámetro *expression* si las dos expresiones no son iguales. Si las expresiones son iguales, NULLIF devuelve un valor NULL del tipo del primer parámetro *expression*.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  NULLIF equivale a una expresión CASE buscada en la que las dos expresiones son iguales y la expresión resultante es NULL.  
   
  Se recomienda no usar funciones dependientes del tiempo, como RAND(), dentro de una función NULLIF. La función podría evaluarse dos veces y las dos invocaciones podrían devolver resultados diferentes.  

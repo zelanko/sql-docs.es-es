@@ -1,4 +1,5 @@
 ---
+description: Guardar y ejecutar el paquete (Asistente para importación y exportación de SQL Server)
 title: Guardar y ejecutar el paquete (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33e4ec58943372643ca25518634fdeea47047b27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8739c955343207a9a91660a9f8643ea807741e0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346891"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Guardar y ejecutar el paquete (Asistente para importación y exportación de SQL Server)
 
@@ -89,14 +90,14 @@ Si inició el asistente desde un proyecto de Integration Services en Visual Stud
   
  Estas opciones solo están disponibles si selecciona la opción **Guardar el paquete SSIS** en esta página.  
   
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>A continuación  
  Después de especificar si quiere ejecutar la operación de copia inmediatamente y si quiere guardar el paquete, la siguiente página depende de las opciones que elija.  
   
 -   Si ha seleccionado la opción para ejecutar el paquete inmediatamente, pero no para guardarlo, la página siguiente es **Finalización del asistente**. En esta página, revise las opciones seleccionadas en el asistente y luego inicie la operación de copia. Para obtener más información, vea [Finalización del asistente](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
   
 -   Si ha seleccionado la opción para guardar el paquete, la página siguiente es **Guardar el paquete SSIS**. En esta página, especifique opciones adicionales para guardar el paquete. (Una vez guardado el paquete, la página siguiente es **Finalización del asistente**). Para obtener más información, vea [Guardar el paquete SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Guardar paquetes](../../integration-services/save-packages.md)  
 [Ejecutar paquetes de Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

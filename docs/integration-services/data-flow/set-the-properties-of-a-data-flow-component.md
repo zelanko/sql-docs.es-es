@@ -1,4 +1,5 @@
 ---
+description: Establecer las propiedades de un componente de flujo de datos
 title: Establecer las propiedades de un componente de flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae953f5267c9facc141c823941fae645a5d05e0e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7799b5d2f5f541b6713821dccbec820697371ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348951"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Establecer las propiedades de un componente de flujo de datos
 
@@ -74,21 +75,21 @@ ms.locfileid: "86917811"
 4.  En el diseñador de flujos de datos, haga clic con el botón derecho en el componente de flujo de datos y luego haga clic en **Mostrar editor avanzado**.  
   
     > [!NOTE]  
-    >  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los componentes de flujo de datos que admiten varias entradas no pueden usar el **Editor avanzado**.  
+    >   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los componentes de flujo de datos que admiten varias entradas no pueden usar el **Editor avanzado**.  
   
 5.  En el cuadro de diálogo **Editor avanzado** , realice cualquiera de los pasos siguientes:  
   
     -   Para ver y especificar la conexión que el componente utiliza, haga clic en la pestaña **Administradores de conexiones** .  
   
         > [!NOTE]  
-        >  La pestaña **Administradores de conexiones** está disponible solamente para los componentes de flujo de datos que usan administradores de conexiones para conectarse a orígenes de datos como archivos y bases de datos  
+        >   La pestaña **Administradores de conexiones** está disponible solamente para los componentes de flujo de datos que usan administradores de conexiones para conectarse a orígenes de datos tales como archivos y bases de datos  
   
     -   Para ver y modificar propiedades de nivel de componente, haga clic en la pestaña **Propiedades de componente** .  
   
     -   Para ver y modificar asignaciones entre columnas externas y la salida disponible, haga clic en la pestaña **Asignaciones de columnas** .  
   
         > [!NOTE]  
-        >  La pestaña **Asignaciones de columnas** solo está disponible al ver o editar orígenes o destinos.  
+        >   La pestaña **Asignaciones de columnas** solo está disponible al ver o modificar orígenes o destinos.  
   
     -   Para ver una lista de las columnas de entrada disponibles y para actualizar los nombres de las columnas de salida, haga clic en la pestaña **Columnas de entrada** .  
   
@@ -132,7 +133,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ComponentClassID|String|CLSID del componente.|  
 |ContactInfo|String|Información de contacto para el programador de un componente.|  
 |Descripción|String|Descripción del componente de flujo de datos. El valor predeterminado de esta propiedad es el nombre del componente de flujo de datos.|  
-|id|Entero|Valor que identifica de forma única esta instancia del componente.|  
+|ID|Entero|Valor que identifica de forma única esta instancia del componente.|  
 |IdentificationString|String|Identifica el componente.|  
 |IsDefaultLocale|Boolean|Indica si el componente utiliza la configuración regional de la tarea Flujo de Datos a la que pertenece.|  
 |LocaleID|Entero|Configuración regional que el componente de flujo de datos utiliza cuando el paquete se ejecuta. Todas las configuraciones regionales de Windows están disponibles para su uso en componentes de flujo de datos.|  
@@ -153,7 +154,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
 |HasSideEffects|Boolean|Indica si un componente se puede quitar del plan de ejecución del flujo de datos cuando no está adjunto a un componente de nivel inferior y cuando **RunInOptimizedMode** es **true**.|  
-|id|Entero|Valor que identifica la entrada de forma inequívoca.|  
+|ID|Entero|Valor que identifica la entrada de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la entrada.|  
 |IsSorted|Boolean|Indica si los datos de la entrada están ordenados.|  
 |Nombre|String|Nombre de la entrada.|  
@@ -174,7 +175,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|El Id. de la columna de metadatos externa asignado a una columna de entrada.|  
-|id|Entero|Valor que identifica la columna de entrada de forma inequívoca.|  
+|ID|Entero|Valor que identifica la columna de entrada de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna de entrada.|  
 |LineageID|Entero|El Id. de columna para la columna de nivel superior.|  
 |LineageIdentificationString|String|La cadena de identificación que incluye el nombre de la columna de nivel superior.|  
@@ -199,7 +200,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**.|  
 |ExclusionGroup|Entero|Valor que identifica un grupo de salidas mutuamente excluyentes.|  
 |HasSideEffects|Boolean|Valor que indica si un componente puede quitarse del plan de ejecución del flujo de datos cuando no está adjunto con un componente de nivel superior y cuando **RunInOptimizedMode** es **true**.|  
-|id|Entero|Valor que identifica la salida de forma inequívoca.|  
+|ID|Entero|Valor que identifica la salida de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la salida.|  
 |IsErrorOut|Boolean|Indica si la salida es una salida de errores.|  
 |IsSorted|Boolean|Indica si la salida está ordenada. El valor predeterminado es **False**.<br /><br /> **\*\* Importante \*\*** Aunque se establezca el valor de la propiedad **IsSorted** en **True**, los datos no se ordenan. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente. Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
@@ -219,7 +220,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |ErrorOrTruncationOperation|String|Cadena opcional que especifica los tipos de errores o truncamientos que pueden producirse al procesar una fila.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que especifica el control de errores. Los valores son **Fail component**, **Ignore failure**y **Redirect row**. El valor predeterminado es **Error de componente**.|  
 |ExternalMetadataColumnID|Entero|El Id. de la columna de metadatos externa asignado a una columna de entrada.|  
-|id|Entero|Valor que identifica la columna de resultados de forma inequívoca.|  
+|ID|Entero|Valor que identifica la columna de resultados de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna de resultados.|  
 |LineageID|Entero|El Id. de columna para la columna de resultados. Los componentes de nivel inferior hacen referencia a la columna utilizando este valor.|  
 |LineageIdentificationString|String|La cadena de identificación que incluye el nombre de la columna.|  
@@ -238,7 +239,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |Descripción|String|Describe la columna externa.|  
-|id|Entero|Valor que identifica la columna de forma inequívoca.|  
+|ID|Entero|Valor que identifica la columna de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna.|  
 |Nombre|String|Nombre de la columna de externa.|  
   
@@ -254,7 +255,7 @@ Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../
 |CodePage|Entero|Especifica la página de códigos para cadenas en un formato que no es Unicode.|  
 |DataType|Integer (enumeración)|Tipo de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de la columna. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |Length|Entero|Longitud de una columna en caracteres.|  
-|Precision|Entero|Precisión de una columna numérica.|  
+|Precisión|Entero|Precisión de una columna numérica.|  
 |Escala|Entero|Escala de una columna numérica.|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>Propiedades personalizadas de los componentes de flujo de datos
@@ -262,7 +263,7 @@ Para obtener información acerca de propiedades personalizadas, vea los siguient
   
 -   [Propiedades personalizadas de ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
--   [Propiedades personalizadas de la tarea Control CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
+-   [Propiedades personalizadas de la tarea de control CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
 -   [Propiedades personalizadas del origen de CDC](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
@@ -278,7 +279,7 @@ Para obtener información acerca de propiedades personalizadas, vea los siguient
   
 -   [Propiedades personalizadas de los destinos de ODBC](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
--   [Propiedades personalizadas del origen ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 -   [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)Propiedades personalizadas de OLE DB  
   
@@ -288,9 +289,9 @@ Para obtener información acerca de propiedades personalizadas, vea los siguient
   
 -   [Propiedades personalizadas del destino de conjunto de registros](../../integration-services/data-flow/recordset-destination-custom-properties.md)  
   
--   [Propiedades personalizadas del destino de SQL Server Compact Edition](../../integration-services/data-flow/sql-server-compact-edition-destination-custom-properties.md)  
+-   [Propiedades personalizadas del destino SQL Server Compact Edition](../../integration-services/data-flow/sql-server-compact-edition-destination-custom-properties.md)  
   
--   [Propiedades personalizadas del destino de SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
+-   [Propiedades personalizadas del destino SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
 -   [Propiedades personalizadas de transformación](../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -324,7 +325,7 @@ Este procedimiento describe cómo agregar una expresión a la transformación Di
     -   En el cuadro de diálogo **Editor de transformación Columna derivada** , arrastre las variables, columnas, funciones, operadores y conversiones a la columna **Expresión** . O bien, puede escribir una expresión directamente en la columna **Expresión** .  
   
         > [!NOTE]  
-        >  Al quitar el foco de la columna **Condición** o **Expresión** , el texto de la expresión podría resaltarse para indicar que la sintaxis de la expresión es incorrecta.  
+        >   Al quitar el foco de la columna **Condición** o **Expresión** , el texto de la expresión podría resaltarse para indicar que la sintaxis de la expresión es incorrecta.  
   
 10. Haga clic en **Aceptar** para salir del cuadro de diálogo.  
   

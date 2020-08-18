@@ -1,4 +1,5 @@
 ---
+description: Administrador de conexiones de Hadoop
 title: Administrador de conexiones de Hadoop | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93565cbcc0140dd439dc2e7c52880879c6d815ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 72f5629e6ac5200324a149ff7242122b0ae0c16c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350221"
 ---
 # <a name="hadoop-connection-manager"></a>Administrador de conexiones de Hadoop
 
@@ -69,7 +70,7 @@ Hay dos opciones para configurar el entorno local de forma que pueda usar la aut
 -   Opción 1: [Unir el equipo SSIS al dominio Kerberos](#kerberos-join-realm)
 -   Opción 2: [Habilitar la confianza mutua entre el dominio de Windows y el dominio Kerberos](#kerberos-mutual-trust)
 
-### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>Opción 1: Unir el equipo SSIS al dominio Kerberos
+### <a name="option-1-join-the-ssis-computer-to-the-kerberos-realm"></a><a name="kerberos-join-realm"></a>Opción 1: unir el equipo SSIS al dominio Kerberos
 
 #### <a name="requirements"></a>Requisitos:
 
@@ -175,7 +176,7 @@ En el controlador de dominio:
 
     1. Vaya a **Administrador del servidor** > **Administración de directivas de grupo** > **Dominio**. Desde allí, vaya a **Objetos de directiva de grupo** > **Default or Active Domain Policy** (Directiva de dominio predeterminada o activa)  > **Editar**.
 
-    2. En la ventana emergente del **Editor de administración de directivas de grupo**, vaya a **Configuración del equipo** > **Directivas** > **Configuración de Windows**. Desde allí, vaya a **Configuración de seguridad** > **Directivas locales** > **Opciones de seguridad**. Configure la**seguridad de red: Configure los tipos de cifrado permitidos para Kerberos**.
+    2. En la ventana emergente del **Editor de administración de directivas de grupo**, vaya a **Configuración del equipo** > **Directivas** > **Configuración de Windows**. Desde allí, vaya a **Configuración de seguridad** > **Directivas locales** > **Opciones de seguridad**. Configure **Seguridad de red: configurar tipos de cifrado permitidos para Kerberos**.
 
     3. Seleccione el algoritmo de cifrado que quiere usar para conectarse al KDC. Normalmente, se puede seleccionar cualquiera de las opciones.
 
@@ -206,7 +207,7 @@ C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
 C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
 ```
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Tarea de Hive de Hadoop](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Tarea de Pig con Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Tarea Sistema de archivos de Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  

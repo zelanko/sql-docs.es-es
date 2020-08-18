@@ -1,4 +1,5 @@
 ---
+description: DATEPART (expresión de SSIS)
 title: DATEPART (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a87b6ca0118d181c21e46620a3cfd5e4c050d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d4509e356193391b903b764771dca170c06026d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348251"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (expresión de SSIS)
 
@@ -44,7 +45,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  DATEPART devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -54,15 +55,15 @@ DATEPART(datepart, date)
 |parte de fecha|Abreviaturas|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
-|Trimestre|qq, q|  
+|Quarter (Trimestre)|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
 |Día|dd, d|  
 |Semana|wk, ww|  
 |Día de la semana|dw|  
-|Hour|Hh|  
+|Hora|Hh|  
 |Minute|mi, n|  
-|Segundo|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
 ## <a name="ssis-expression-examples"></a>Ejemplos de expresiones de SSIS  
@@ -84,7 +85,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [DATEADD &#40;expresión de SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF &#40;expresión de SSIS&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DAY &#40;expresión de SSIS&#41;](../../integration-services/expressions/day-ssis-expression.md)   

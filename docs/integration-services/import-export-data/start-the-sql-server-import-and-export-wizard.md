@@ -1,4 +1,5 @@
 ---
+description: Iniciar el Asistente para importación y exportación de SQL Server
 title: Iniciar el Asistente para importación y exportación de SQL Server
 titleSuffix: Integration Services (SSIS)
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.author: chugu
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/18/2019
-ms.openlocfilehash: a80b12db0f303ee82f91be9e3eb60c975396063e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: adbb8eee477e9f021c011b91e586492e64747851
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346581"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Iniciar el Asistente para importación y exportación de SQL Server
 
@@ -123,7 +124,7 @@ Si quiere ejecutar el asistente, pero no tiene [!INCLUDE[msCoName](../../include
 > [!TIP]
 > Pulse la tecla F1 en cualquier página o cuadro de diálogo del Asistente para ver la documentación de la página actual.   
 
-## <a name="whats-next"></a>¿Qué sigue?
+## <a name="whats-next"></a>A continuación
 
 Al iniciar el Asistente, la primera página es **Asistente para importación y exportación de SQL Server**. No es necesario que realice ninguna acción en esta página. Para obtener más información, vea [Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   

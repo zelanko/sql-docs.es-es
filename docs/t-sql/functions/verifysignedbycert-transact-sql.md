@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYCERT (Transact-SQL)
 title: VERIFYSIGNEDBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d214adb3915ab7d4df137c23cc7bcea31bb9b51
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362061"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
  *signed_data*  
  Es una variable de tipo **nvarchar**, **char**, **varchar** o **nchar** que contiene los datos que se han firmado con un certificado.  
   
- *signature*  
+ *firma*  
  Es la firma adjunta a los datos firmados. *signature* es **varbinary**.  
   
 ## <a name="return-types"></a>Tipos de valor devuelto  
@@ -61,7 +62,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  Devuelve 1 cuando no se han cambiado los datos firmados; de lo contrario, devuelve 0.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **VerifySignedBycert** descifra la firma de los datos utilizando la clave pública del certificado especificado y compara el valor descifrado con un hash MD5 de los datos calculado recientemente. Si los valores coinciden, se confirma que la firma es válida.  
   
 ## <a name="permissions"></a>Permisos  
@@ -91,7 +92,7 @@ AND Description = N'data signed by certificate ''Shipping04''';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
  [SIGNBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/signbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   

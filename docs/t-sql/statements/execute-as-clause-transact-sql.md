@@ -1,4 +1,5 @@
 ---
+description: EXECUTE AS (cláusula de Transact-SQL)
 title: EXECUTE AS (cláusula de Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 999773d8e8406dac20f86e9f19a2b886a4988619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358411"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS (cláusula de Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -107,7 +108,7 @@ DDL Triggers with Database Scope
   
  *login_name* no puede ser un grupo, rol, certificado, clave o cuenta integrada, como NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService o NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Como [!INCLUDE[ssDE](../../includes/ssde-md.md)] evalúa los permisos en los objetos a los que el módulo hace referencia, depende de la cadena de propiedad que existe entre los objetos que llaman y los objetos a los que se hace referencia. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la cadena de propiedad era el único método disponible para evitar tener que conceder al usuario que llama acceso a todos los objetos a los que se hace referencia.  
   
  La cadena de propiedad tiene las siguientes limitaciones:  
@@ -223,7 +224,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.service_queues &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   

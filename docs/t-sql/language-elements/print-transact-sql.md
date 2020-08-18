@@ -1,4 +1,5 @@
 ---
+description: PRINT (Transact-SQL)
 title: PRINT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 058c87be49d3089d699b0abbafb0d500f3cb9580
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: be33ffe8e52349e2eb7daad69b0648ae9ea53494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307308"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,8 +56,8 @@ PRINT msg_str | @local_variable | string_expr
  *string_expr*  
  Es una expresión que devuelve una cadena. Puede incluir valores literales concatenados, funciones y variables. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="remarks"></a>Observaciones  
- Una cadena de mensaje puede tener una longitud de hasta 8.000 caracteres si es una cadena no Unicode, y de 4.000 caracteres si es una cadena Unicode. Las cadenas de mayor longitud se truncarán. Los tipos de datos **varchar(max)** y **nvarchar(max)** se truncan en tipos de datos que no sean mayores que **varchar(8000)** y **nvarchar(4000)** .  
+## <a name="remarks"></a>Comentarios  
+ Una cadena de mensaje puede tener una longitud de hasta 8.000 caracteres si es una cadena no Unicode, y de 4.000 caracteres si es una cadena Unicode. Las cadenas de mayor longitud se truncarán. Los tipos de datos **varchar(max)** y **nvarchar(max)** se truncan en tipos de datos que no sean mayores que **varchar(8000)** y **nvarchar(4000)**.  
   
  RAISERROR también se puede utilizar para devolver mensajes. RAISERROR ofrece una serie de ventajas en comparación con PRINT:  
   

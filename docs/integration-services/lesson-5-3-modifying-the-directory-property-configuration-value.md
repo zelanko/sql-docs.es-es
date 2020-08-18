@@ -1,4 +1,5 @@
 ---
+description: 'Lección 5-3: Modificar el valor de configuración de la propiedad Directory'
 title: 'Paso 3: Modificar el valor de configuración de la propiedad Directory | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a609b6c5edc5518904432cc199e5e624fb114ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2a727a5c8d709e982582c26cff8d6cf09eb44ccc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345701"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Lección 5-3: Modificar el valor de configuración de la propiedad Directory
 
@@ -29,7 +30,7 @@ En esta tarea se modifica el parámetro de configuración almacenado en el archi
   
 1.  En el Bloc de notas o cualquier otro editor de texto, busque y abra el archivo de configuración **SSISTutorial.dtsConfig** creado mediante el Asistente para configuración de paquetes en la tarea anterior.  
   
-2.  Cambie el valor del elemento **ConfiguredValue** para que coincida con la ruta de acceso de la carpeta **New Sample Data** que ha creado en la tarea anterior. No especifique la ruta de acceso entre comillas. Si la carpeta **Nuevos datos de ejemplo** está en el nivel raíz de la unidad (por ejemplo, **C:\\** ), el XML actualizado debería ser similar al siguiente ejemplo:  
+2.  Cambie el valor del elemento **ConfiguredValue** para que coincida con la ruta de acceso de la carpeta **New Sample Data** que ha creado en la tarea anterior. No especifique la ruta de acceso entre comillas. Si la carpeta **Nuevos datos de ejemplo** está en el nivel raíz de la unidad (por ejemplo, **C:\\**), el XML actualizado debería ser similar al siguiente ejemplo:  
   
     ```
     <?xml version="1.0"?>

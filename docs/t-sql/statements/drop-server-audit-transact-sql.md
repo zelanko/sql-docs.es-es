@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER AUDIT  (Transact-SQL)
 title: DROP SERVER AUDIT  (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 790a477ecda6380a779b08b6c09b52db1a5b0ab0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 589334b9834a6f64c2a50bed77d890c5da013efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304366"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,9 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentarios
  Para poder realizar cambios en una auditoría, es necesario establecer su estado en OFF. Si se ejecuta DROP AUDIT mientras una auditoría está habilitada con opciones distintas de STATE=OFF, aparecerá un mensaje de error de MSG_NEED_AUDIT_DISABLED.  
   
  Una instrucción DROP SERVER AUDIT quita los metadatos para la auditoría, pero no los datos de auditoría recopilados antes de la emisión del comando.  
@@ -60,7 +63,7 @@ DROP SERVER AUDIT HIPAA_Audit;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

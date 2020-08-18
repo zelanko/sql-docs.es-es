@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves (tipo de datos de geografía)
 title: BufferWithCurves (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 614e099ef075ac4bb4ce5ad4755eded9860c6b7b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4f4c5943dd69d651a9038e5e8e27798115911a9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360471"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo de datos de geografía)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "86555510"
   
 -   **NULL** se pasa al método, como en `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En la siguiente tabla se muestran los resultados devueltos para distintos valores de distancia.  
   
 |Valor de distancia|Dimensiones de tipo|Tipo espacial devuelto|  
@@ -141,7 +142,7 @@ ms.locfileid: "86555510"
   
  Observe que en los dos ejemplos anteriores se pasa un literal de cadena al método `BufferWithCurves()`. El primer ejemplo funciona porque el literal de cadena se puede convertir en un valor numérico. Sin embargo, el segundo ejemplo inicia una excepción `ArgumentException`.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [BufferWithCurves &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   

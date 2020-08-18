@@ -1,4 +1,5 @@
 ---
+description: Origen de SAP BW
 title: Origen de SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 894d94e277f1304a5d9d1e1986e5f769fbc5f4e9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0506eb531462702870ef726b585dd5f07c1d4db4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349031"
 ---
 # <a name="sap-bw-source"></a>Origen de SAP BW
 
@@ -52,7 +53,7 @@ ms.locfileid: "86917829"
   
     2.  Para **Tipo de activación**, seleccione **Programa de servidor registrado**.  
   
-    3.  Para **Tipo de comunicación con sistema de destino**, seleccione **No Unicode (valores inactivos de MDMP)** .  
+    3.  Para **Tipo de comunicación con sistema de destino**, seleccione **No Unicode (valores inactivos de MDMP)**.  
   
     4.  Asignar un identificador de programa adecuado  
   
@@ -129,7 +130,7 @@ ms.locfileid: "86917829"
   
 -   [Editor de origen de SAP BW &#40;página Salida de error&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Editor de origen de SAP BW &#40;página Avanzadas&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Editor de origen de SAP BW &#40;página Opciones avanzadas&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
  Mientras configura el origen de SAP BW, también puede usar varios cuadros de diálogo para buscar los objetos de SAP Netweaver BW o para obtener una vista previa de los datos de origen. Para obtener más información sobre estos cuadros de diálogo, haga clic en uno de los temas siguientes:  
   
@@ -141,7 +142,7 @@ ms.locfileid: "86917829"
   
 -   [Versión preliminar](../../integration-services/data-flow/preview.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Componentes de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

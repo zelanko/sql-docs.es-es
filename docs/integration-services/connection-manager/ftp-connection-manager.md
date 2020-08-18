@@ -1,4 +1,5 @@
 ---
+description: FTP, administrador de conexiones
 title: Administrador de conexiones FTP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb0b1a81a495639aa170b2047df3dd517fac1716
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6aac44dfdbbe1c88965ff7aa37249651d3f7c199
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350921"
 ---
 # <a name="ftp-connection-manager"></a>FTP, administrador de conexiones
 
@@ -99,7 +100,7 @@ ms.locfileid: "86918951"
  **Probar conexión**  
  Después de configurar el Administrador de conexiones FTP, haga clic en **Probar conexión**para confirmar que la conexión es viable.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Tarea FTP](../../integration-services/control-flow/ftp-task.md)   
  [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

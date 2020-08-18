@@ -1,4 +1,5 @@
 ---
+description: 'Lección 5-2: Habilitar y configurar configuraciones de paquetes'
 title: 'Paso 2: Habilitar y configurar configuraciones de paquetes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84f37f49d1b2a688463fcb974f6777bda601def4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7237d7356ffb97861779c4d5427fd4fb05083695
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88345331"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lección 5-2: Habilitar y configurar configuraciones de paquetes
 
@@ -44,11 +45,11 @@ En esta tarea se convierte el proyecto al modelo de implementación de paquetes 
   
 7.  Vuelva a la pestaña **Flujo de control** y haga doble clic en el contenedor **Foreach File in Folder** .  
   
-8.  En la página **Colección** del **Editor de bucles Foreach**, seleccione **Expresiones** y luego el botón de puntos suspensivos **(…)** .  
+8.  En la página **Colección** del **Editor de bucles Foreach**, seleccione **Expresiones** y luego el botón de puntos suspensivos **(…)**.  
   
 9. En el **Editor de expresiones de propiedad**, seleccione la lista **Propiedad** y luego **Directory**.  
   
-10. En el cuadro **Expresión**, seleccione el botón de puntos suspensivos **(…)** .  
+10. En el cuadro **Expresión**, seleccione el botón de puntos suspensivos **(…)**.  
   
 11. En el **Generador de expresiones**, expanda la carpeta **Variables y parámetros** y arrastre la variable **User::varFolderName** al cuadro **Expresión**.  
   
@@ -108,7 +109,7 @@ En esta tarea se convierte el proyecto al modelo de implementación de paquetes 
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Crear y rellenar una carpeta de nuevos datos de ejemplo  
   
-1.  En el Explorador de Windows, en el nivel raíz de la unidad (por ejemplo, **C:\\** ), cree una carpeta denominada **Nuevos datos de ejemplo**.  
+1.  En el Explorador de Windows, en el nivel raíz de la unidad (por ejemplo, **C:\\**), cree una carpeta denominada **Nuevos datos de ejemplo**.  
   
 2.  Busque los archivos de ejemplo en su equipo y copie tres de los archivos de la carpeta.  
   

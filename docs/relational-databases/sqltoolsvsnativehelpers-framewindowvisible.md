@@ -1,4 +1,5 @@
 ---
+description: SqlToolsVSNativeHelpers - FrameWindowVisible
 title: FrameWindowVisible | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -11,12 +12,12 @@ ms.assetid: 9091d714-98bc-43ec-b8d1-9c892cb57f19
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0a370d81be0c5220e23a04a45c3db5c9be0fca4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f0a144768bce3e7b0f5eb7614b7cf55b6d5b7bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325020"
 ---
 # <a name="sqltoolsvsnativehelpers---framewindowvisible"></a>SqlToolsVSNativeHelpers - FrameWindowVisible
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ BOOL WINAPI IsFrameWindowVisible(IVsWindowFrame* frame)
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor booleano que especifica si el marco de la ventana especificada por *frame* está visible.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [SqlToolsVSNativeHelpers](../relational-databases/sqltoolsvsnativehelpers.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Proporcionar una consulta de origen (Asistente para importación y exportación de SQL Server)
 title: Proporcionar una consulta de origen (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 267db7655133669266b9fc0c9f6b54819333a6fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: edd3812cce0a5d0b956691f3a6bfb4f708495819
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920172"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347171"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Proporcionar una consulta de origen (Asistente para importación y exportación de SQL Server)
 
@@ -50,7 +51,7 @@ Para más información sobre las consultas SELECT, seleccione [Ejemplos de SELEC
 
 Si el origen de datos es Excel, consulte [Proporcionar una consulta de origen para Excel](#excelQueries) más adelante en este tema para obtener información sobre cómo especificar rangos y hojas de cálculo de Excel en una consulta.
   
- **Analizar**  
+ **Parse**  
  Compruebe la sintaxis de la instrucción SQL que ha introducido en el cuadro de texto **Instrucción SQL** .  
   
 > [!NOTE]
@@ -65,7 +66,7 @@ Si el origen de datos es Excel, consulte [Proporcionar una consulta de origen pa
 > Para obtener información detallada sobre cómo conectarse a archivos de Excel y sobre las limitaciones y problemas conocidos a la hora de cargar datos de o a archivos de Excel, vea [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
 
 Hay tres tipos de objetos de Excel que puede consultar.
--   **Hoja de cálculo.** Para consultar una hoja de cálculo, anexe el carácter $ al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]** ).
+-   **Hoja de cálculo.** Para consultar una hoja de cálculo, anexe el carácter $ al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]**).
 
     ```sql
     SELECT * FROM [Sheet1$]
@@ -83,7 +84,7 @@ Hay tres tipos de objetos de Excel que puede consultar.
     SELECT * FROM [Sheet1$A1:B4]
     ```
 
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>A continuación  
  Después de escribir y probar la consulta SQL que selecciona los datos que se van a copiar, la siguiente página depende el destino de los datos.  
   
 -   Para la mayoría de los destinos, la página siguiente es **Seleccionar tablas y vistas de origen**. En esta página, se revisa la consulta proporcionada y, opcionalmente, se eligen las columnas que se van a copiar y se obtiene una vista previa de los datos de ejemplo. Para más información, vea [Seleccionar tablas y vistas de origen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md).  

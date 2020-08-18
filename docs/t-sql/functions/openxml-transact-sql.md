@@ -1,4 +1,5 @@
 ---
+description: OPENXML (Transact-SQL)
 title: OPENXML (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ca8ececca1e40762aa386ba05a53bdf8a1932090
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f081b224d80537943946b5d4e31eff43bbf88de1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363641"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Puede combinarse (OR lógico) con XML_ATTRIBUTES o XML_ELEMENTS. Si se trata de una recuperación, esta marca informa de que los datos consumidos no se deberían copiar a la propiedad de desbordamiento **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
- Es la definición de esquema de la forma: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ Es la definición de esquema de la forma: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  Es el nombre de columna en el conjunto de filas.  
@@ -82,7 +83,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *TableName*  
  Es el nombre de tabla que puede proporcionarse (en lugar de *SchemaDeclaration*) si ya existe una tabla con el esquema deseado y no se requieren patrones de columna.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La cláusula WITH proporciona un formato de conjunto de filas (e información de asignación adicional si es necesario) mediante *SchemaDeclaration* o la especificación de un *TableName* existente. Si no se especifica la cláusula opcional WITH, los resultados se devuelven en un formato de tabla **irregular**. Las tablas irregulares representan la estructura refinada del documento XML (por ejemplo, los nombres de elementos o atributos, la jerarquía del documento, los espacios de nombre, las instrucciones de proceso, etc.) en una única tabla.  
   
  En la tabla siguiente se describe la estructura de la tabla **irregular**.  
@@ -165,7 +166,7 @@ NULL       NULL
   
 -   La columna `ProdID` del conjunto de filas se asigna al atributo `ProductID`, y la columna `Qty` del conjunto de filas se asigna al atributo `Quantity` de los nodos identificados en *rowpattern*.  
   
- Aunque el parámetro **flags** especifica la asignación *centrada en elementos*, la asignación especificada en *ColPattern* sobrescribe la anterior.  
+ Aunque el parámetro *flags* especifica la asignación **centrada en elementos**, la asignación especificada en *ColPattern* sobrescribe la anterior.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   
@@ -246,6 +247,6 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [Ejemplos: Usar OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
+## <a name="see-also"></a>Vea también  
+ [Ejemplos: Uso de OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Broker:Message Classify, clase de eventos
 title: Clase de eventos Broker:Message Classify | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62227ad9938f94a1381431b57ebed7c3f63c0169
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e5e8e0bc84e26798716ba1635580b81dbfc08c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88331081"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify, clase de eventos
 
@@ -50,7 +51,7 @@ ms.locfileid: "85762998"
 |**TargetUserName**|**nvarchar**|Dirección de red del siguiente agente de saltos.|39|No|  
 |**TransactionID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

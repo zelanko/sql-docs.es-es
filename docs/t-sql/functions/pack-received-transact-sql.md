@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PACK_RECEIVED (Transact-SQL)'
 title: '@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 235308a339c1e1e668a2243acfadefeb1323480f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3fea7af807dee5ff6307817992fe2f034ca00e78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363491"
 ---
 # <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87110368"
 ## <a name="return-types"></a>Tipos de valor devuelto
  **integer**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para mostrar un informe con varias estadísticas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluidos los paquetes enviados y recibidos, ejecute **sp_monitor**.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -62,7 +63,7 @@ Packets Received
 128  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
  [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [Funciones estadísticas del sistema](../../t-sql/functions/system-statistical-functions-transact-sql.md)  

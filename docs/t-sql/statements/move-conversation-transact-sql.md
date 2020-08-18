@@ -1,4 +1,5 @@
 ---
+description: MOVE CONVERSATION (Transact-SQL)
 title: MOVE CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c06776bc9d3c8080349607a6d349b3bd0b7505de
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2bfd1e22b79749abf8747362a8e7181def375643
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358171"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,11 +56,11 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  Es una variable o una constante que contiene el identificador del grupo de conversación donde se va a mover la conversación. *conversation_group_id* debe ser de tipo **uniqueidentifier**.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La instrucción MOVE CONVERSATION mueve la conversación especificada por *conversation_handle* al grupo de conversaciones identificado por *conversation_group_id*. Los diálogos solo se pueden redirigir entre grupos de conversación que están asociados a la misma cola.  
   
 > [!IMPORTANT]  
->  Si la instrucción MOVE CONVERSATION no es la primera de un lote o un procedimiento almacenado, la instrucción anterior debe terminar en un punto y coma ( **;** ), que es el terminador de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Si la instrucción MOVE CONVERSATION no es la primera de un lote o un procedimiento almacenado, la instrucción anterior debe terminar en un punto y coma (**;**), que es el terminador de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  La instrucción MOVE CONVERSATION bloquea el grupo de conversaciones asociado con *conversation_handle* y el grupo de conversaciones especificado por *conversation_group_id* hasta que la transacción que contiene la instrucción se confirma o se revierte.  
   
@@ -83,7 +84,7 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   

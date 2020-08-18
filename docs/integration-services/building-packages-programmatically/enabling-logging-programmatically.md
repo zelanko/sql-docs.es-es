@@ -1,4 +1,5 @@
 ---
+description: Habilitar el registro mediante programación
 title: Habilitar el registro mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 297b5730db79d1a47295a2e454f6bd3433c56d44
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 358bd8e70acba47961909583c153669e21389105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352141"
 ---
 # <a name="enabling-logging-programmatically"></a>Habilitar el registro mediante programación
 
@@ -52,7 +53,7 @@ ms.locfileid: "86922722"
 |SQL Server Profiler|Genera archivos de Seguimiento de SQL que se pueden capturar y ver en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. La extensión predeterminada de los nombres de archivo de este proveedor es .trc.|No se requiere ninguna configuración.|  
 |SQL Server|Escribe las entradas del registro de eventos en la tabla **sysssislog** de cualquier base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|El proveedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que se especifique la conexión a la base de datos y el nombre de la base de datos de destino.|  
 |Archivo de texto|Escribe las entradas de registro de eventos en archivos de texto ASCII con un formato de valores separados por comas (CSV). La extensión predeterminada de los nombres de archivo de este proveedor es .log.|El nombre de un administrador de conexión de archivos.|  
-|Registro de eventos de Windows|Escribe las entradas en el registro de eventos estándar de Windows en el equipo local, en el registro de aplicaciones.|No se requiere ninguna configuración.|  
+|Registro de sucesos de Windows|Escribe las entradas en el registro de eventos estándar de Windows en el equipo local, en el registro de aplicaciones.|No se requiere ninguna configuración.|  
 |Archivo XML|Escribe las entradas del registro de eventos en archivos con formato XML. La extensión predeterminada de los nombres de archivo de este proveedor es .xml.|El nombre de un administrador de conexión de archivos.|  
   
  Los eventos se incluyen en el registro de eventos o se excluyen del mismo mediante las propiedades **EventFilterKind** y **EventFilter** del contenedor. La estructura **EventFilterKind** contiene dos valores, **ExclusionFilter** y **InclusionFilter**, que indican si los eventos que se agregan a **EventFilter** se incluyen en el registro de eventos. A continuación, se asigna una matriz de cadenas que contiene los nombres de los eventos sujetos del filtrado a la propiedad **EventFilter**.  

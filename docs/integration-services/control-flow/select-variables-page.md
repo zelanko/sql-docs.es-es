@@ -1,4 +1,5 @@
 ---
+description: Página Seleccionar variables
 title: Página Seleccionar variables | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9527c0d73ed47e893e51e8e192c170a310172e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1eec7f57655dd86ef62ee8cef40f2c2a9454a8f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349311"
 ---
 # <a name="select-variables-page"></a>Página Seleccionar variables
 
@@ -41,7 +42,7 @@ ms.locfileid: "86921137"
  **Tipo**  
  Especifica el tipo de datos de una variable.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Editor de la tarea Script &#40;página Script&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

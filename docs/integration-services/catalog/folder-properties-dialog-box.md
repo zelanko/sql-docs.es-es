@@ -1,4 +1,5 @@
 ---
+description: Propiedades de la carpeta (cuadro de diálogo)
 title: Cuadro de diálogo Propiedades de la carpeta | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2016
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 334105bde7936543fd1dba3167fd61e1b440fd5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fb988b6c326f9c6bb6ef39d5d1fc031d12f908
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351911"
 ---
 # <a name="folder-properties-dialog-box"></a>Propiedades de la carpeta (cuadro de diálogo)
 
@@ -34,13 +35,13 @@ ms.locfileid: "86922651"
   
 2.  En la página **General** , seleccione **Descripción** en **General** y escriba una descripción opcional.  
   
-3.  En la página **Permisos** , haga clic **Examinar…** , seleccione una o más entidades de base de datos y haga clic en **Aceptar**.  
+3.  En la página **Permisos** , haga clic **Examinar…**, seleccione una o más entidades de base de datos y haga clic en **Aceptar**.  
   
 4.  Seleccione un nombre en **Inicios de sesión o roles** y especifique los permisos adecuados en **Permisos**.  
   
 5.  Haga clic en **Aceptar** para aceptar los cambios y cierre el cuadro de diálogo **Propiedades de carpetas** .  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Servidor de Integration Services &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
  [catalog.grant_permission &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   

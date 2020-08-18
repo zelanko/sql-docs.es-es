@@ -1,4 +1,5 @@
 ---
+description: COL_LENGTH (Transact-SQL)
 title: COL_LENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a03934759aa32ca9c852eef0588d9cec17b0983
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a46720f3752e5588221a3af686d2449554dc0fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310931"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ Devuelve NULL si se produce un error o si el autor de la llamada no tiene el per
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de los elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos como COL_LENGTH es posible que devuelvan NULL, si el usuario no tiene el permiso correcto para el objeto. Vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md) para obtener más información.
   
 ## <a name="remarks"></a>Observaciones  
-Para las columnas de tipo **varchar** declaradas con el especificador **max** (**varchar(max)** ), COL_LENGTH devuelve el valor -1.
+Para las columnas de tipo **varchar** declaradas con el especificador **max** (**varchar(max)**), COL_LENGTH devuelve el valor -1.
   
 ## <a name="examples"></a>Ejemplos  
 En este ejemplo se muestran los valores devueltos para una columna de tipo `varchar(40)` y una columna de tipo `nvarchar(40)`:

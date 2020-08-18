@@ -1,4 +1,5 @@
 ---
+description: Propiedades del proyecto (cuadro de diálogo)
 title: Cuadro de diálogo Propiedades del proyecto | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8abf0faafe21b01c34875968cac43c501f951a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 25b6f01f5966f7d157fd76bd5082567a95854fbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351611"
 ---
 # <a name="project-properties-dialog-box"></a>Propiedades del proyecto (cuadro de diálogo)
 

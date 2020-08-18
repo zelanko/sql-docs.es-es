@@ -1,4 +1,5 @@
 ---
+description: 'Apéndice D: Tipo de datos'
 title: 'Apéndice D: tipos de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c1abadb962e3a1ee9327bbb8d84e52d180b4a7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77ca1ac4b4628880e6f0a87237b347aadb66584d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411491"
 ---
 # <a name="appendix-d-data-types"></a>Apéndice D: Tipo de datos
 ODBC define dos conjuntos de tipos de datos: tipos de datos de SQL y tipos de datos de C. Los tipos de datos de SQL indican el tipo de datos de los datos almacenados en el origen de datos. Los tipos de datos de C indican el tipo de datos de los datos almacenados en los búferes de la aplicación.  
@@ -38,7 +39,7 @@ ODBC define dos conjuntos de tipos de datos: tipos de datos de SQL y tipos de da
   
 -   [Usar identificadores de tipo de datos](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
   
--   [Tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md)  
+-   [Tipos de datos de SQL](../../../odbc/reference/appendixes/sql-data-types.md)  
   
 -   [Tipos de datos C](../../../odbc/reference/appendixes/c-data-types.md)  
   

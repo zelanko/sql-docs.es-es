@@ -1,4 +1,5 @@
 ---
+description: Funciones de replicación - PUBLISHINGSERVERNAME
 title: PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5ce454f544fd1c1216b0c72dbdad3490e5fb11e6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 67a2f52fa6fcf54204a28dc37604bebc1546736d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309011"
 ---
 # <a name="replication-functions---publishingservername"></a>Funciones de replicación - PUBLISHINGSERVERNAME
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ PUBLISHINGSERVERNAME()
   
  Esta función debe ejecutarse dentro del contexto de una base de datos de publicaciones. Cuando PUBLISHINGSERVERNAME se ejecuta en una base de datos de publicaciones en la instancia del servidor reflejado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se obtiene el nombre de la instancia del publicador desde el que se publica la base de datos. Cuando esta función se ejecuta en una base de datos en la instancia del servidor reflejado que no se ha publicado o que se ha publicado desde la misma tras una conmutación por error, se obtiene el nombre de esta instancia. Cuando esta función se ejecuta en la instancia del publicador original, se obtiene el nombre del publicador.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
  [Funciones de replicación &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
   

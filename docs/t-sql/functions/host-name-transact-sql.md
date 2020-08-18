@@ -1,4 +1,5 @@
 ---
+description: HOST_NAME (Transact-SQL)
 title: HOST_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/21/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec753666e5baac90e9098bc8718d0f0b8fa1878e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 120580a238307981610179389f39cd7639baf785
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309751"
 ---
 # <a name="host_name-transact-sql"></a>HOST_NAME (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87113489"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 HOST_NAME ()  
 ```  
@@ -42,7 +43,7 @@ HOST_NAME ()
 ## <a name="return-types"></a>Tipos de valor devuelto
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando el parámetro de una función del sistema es opcional, se asumen la base de datos, el equipo host, el usuario del servidor o el usuario de la base de datos actuales. Las funciones integradas siempre deben ir seguidas de paréntesis.  
   
  Las funciones del sistema se pueden usar en la lista de selección, en la cláusula WHERE y en cualquier lugar donde se permita una expresión.  

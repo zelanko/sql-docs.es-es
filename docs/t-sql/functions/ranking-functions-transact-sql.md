@@ -1,4 +1,5 @@
 ---
+description: Funciones de categoría (Transact-SQL)
 title: Funciones de categoría (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8aa10e165dff3f32227f52880afebb8de24f2d12
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b21cca9750aeb85ae75f0b0ad8699262d7b696cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309151"
 ---
 # <a name="ranking-functions-transact-sql"></a>Funciones de categoría (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +73,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|Nombre|Apellidos|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
+|FirstName|Apellidos|Row Number|Rank|Dense Rank|Quartile|SalesYTD|PostalCode|  
 |---------------|--------------|----------------|----------|----------------|--------------|--------------|----------------|  
 |Michael|Blythe|1|1|1|1|4 557 045,0459|98027|  
 |Linda|Mitchell|2|1|1|1|5 200 475,2313|98027|  

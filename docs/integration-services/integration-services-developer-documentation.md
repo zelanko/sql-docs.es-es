@@ -1,4 +1,5 @@
 ---
+description: Documentación para desarrolladores de Integration Services
 title: Documentación para desarrolladores de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cb77e73651347d0a06be5aba0675372984948a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5202d583a6b4b5ba0b27d25aa7c0a3ed87c9e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346101"
 ---
 # <a name="integration-services-developer-documentation"></a>Documentación para desarrolladores de Integration Services
 
@@ -70,7 +71,7 @@ ms.locfileid: "86919961"
  [Ampliar paquetes con objetos personalizados](../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Describe cómo crear y programar tareas personalizadas de programa, componentes de flujo de datos y otros objetos de paquete para su uso en varios paquetes.  
   
- [Compilar paquetes mediante programación](../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [Generar paquetes mediante programación](../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Describe cómo crear, configurar y guardar los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mediante programación.  
   
  [Ejecutar y administrar paquetes mediante programación](../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
@@ -88,7 +89,7 @@ ms.locfileid: "86919961"
   
 -   Ejemplos de CodePlex, en la página [Integration Services Product Samples](https://go.microsoft.com/fwlink/?LinkID=131204)de www.codeplex.com/MSFTISProdSamples.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   

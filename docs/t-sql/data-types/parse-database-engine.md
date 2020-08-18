@@ -1,4 +1,5 @@
 ---
+description: Parse (motor de base de datos)
 title: Parse (motor de base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e024024726ab6366b6dbb3580f1c27367195c130
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 78ff3df45fd3d835d273d2f00f4d7ddf65170a62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311511"
 ---
 # <a name="parse-database-engine"></a>Parse (motor de base de datos)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ CLR: Valor de cadena que se va a evaluar.
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Si Parse recibe un valor que no es una representación de cadena válida de un **hierarchyid**, se producirá una excepción. Por ejemplo, si los tipos de datos **char** contienen espacios finales, se producirá una excepción.
   
 ## <a name="examples"></a>Ejemplos  

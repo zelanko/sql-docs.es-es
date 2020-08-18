@@ -1,4 +1,5 @@
 ---
+description: XQuery Static Type, clase de eventos
 title: Clase de eventos XQuery Static Type | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 30df7ba9-1e5f-432b-b90b-4310ef0473c0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f5442ab8cd6858fa95c29c2e37acf63c0f89f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b0ee8a38a74c90763b64e287ad041a367d63fa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328941"
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery Static Type, clase de eventos
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS
 title: Actualizar paquetes de Integration Services mediante el asistente para actualizar paquetes SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 452ad0e1fec7ac1f4773a1d6a2491ba903f83884
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a9e27d3d7379ad4e0c16d47bcdb97abab38741e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346401"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS
 
@@ -81,13 +82,13 @@ ms.locfileid: "86915872"
     > [!NOTE]  
     >  La opción de copia de seguridad en el asistente solo está disponible cuando los paquetes actualizados están almacenados en la misma carpeta que los originales.  
   
-5.  En la página **Seleccionar opciones de administración de paquetes** del asistente, seleccione la opción **Realizar copia de seguridad de paquetes originales** .  
+5.  En la página **Seleccionar opciones de administración de paquetes** del asistente, seleccione la opción **Realizar copia de seguridad de paquetes originales**.  
   
 #### <a name="to-back-up-the-original-packages-in-sql-server-data-tools"></a>Para hacer una copia de seguridad de los paquetes originales en las herramientas de datos de SQL Server  
   
 1.  Guarde los paquetes originales en una ubicación del sistema de archivos.  
   
-2.  En la página **Seleccionar opciones de administración de paquetes** del asistente, seleccione la opción **Realizar copia de seguridad de paquetes originales** .  
+2.  En la página **Seleccionar opciones de administración de paquetes** del asistente, seleccione la opción **Realizar copia de seguridad de paquetes originales**.  
   
     > [!WARNING]  
     >  La opción **Realizar copia de seguridad de paquetes originales** no se muestra cuando se abre un proyecto de [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] o posterior en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que inicia el asistente automáticamente.  

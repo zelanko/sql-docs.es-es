@@ -1,4 +1,5 @@
 ---
+description: STMPolyFromWKB (tipo de datos geography)
 title: STMPolyFromWKB (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 24d691b695a326e24a74a6489be33f41cebf9aa1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 76adf5bfff925c74f728d19b6781f346646354fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306183"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *WKB_multipolygon*  
- Es la representación WKB de la instancia de **geographyMultiPolygon** que se quiere devolver. *WKB_multipolygon* es una expresión **varbinary(max)** .  
+ Es la representación WKB de la instancia de **geographyMultiPolygon** que se quiere devolver. *WKB_multipolygon* es una expresión **varbinary(max)**.  
   
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geographyMultiPolygon** que se quiere devolver.  

@@ -1,4 +1,5 @@
 ---
+description: SQUARE (expresión de SSIS)
 title: SQUARE (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f4894a3fea551a6ca428920910900164d7f94a62
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 314c6c36b7a7de24065e1051086158823feff46a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348101"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (expresión de SSIS)
 
@@ -41,7 +42,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  SQUARE devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Antes de realizar la operación de raíz cuadrada, se convierte el argumento al tipo de datos DT_R8.  

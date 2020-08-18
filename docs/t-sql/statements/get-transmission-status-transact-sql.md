@@ -1,4 +1,5 @@
 ---
+description: GET_TRANSMISSION_STATUS (Transact-SQL)
 title: GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22293acb123af48eee2806a9536b9bcebc3f07bf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a2523504a518497a86b9d4ebcd15fed2b75ce5af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304732"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +56,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="return-types"></a>Tipos de valor devuelto  
  **nchar**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Devuelve una cadena que describe el estado del último intento de transmisión de la conversación especificada. Devuelve una cadena vacía si el último intento de transmisión fue correcto, si aún no se ha realizado ningún intento de transmisión o si *conversation_handle* no existe.  
   
  La información devuelta por esta función es la misma que se muestra en la columna last_transmission_error de la vista de administración sys.transmission_queue. No obstante, esta función se puede utilizar para encontrar el estado de transmisión de conversaciones que actualmente no tienen mensajes en la cola de transmisión.  
@@ -81,7 +82,7 @@ SELECT Status =
   
  En este caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurado para permitir que [!INCLUDE[ssSB](../../includes/sssb-md.md)] se comunique en la red.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.transmission_queue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   

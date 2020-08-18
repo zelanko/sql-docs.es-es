@@ -4,6 +4,8 @@
   href: ../sql-server/index.yml
 - name: Controladores de SQL Server
   href: ../connect/sql-connection-libraries.md
+- name: Matriz de compatibilidad de características del controlador
+  href: ../connect/driver-feature-matrix.md
 - name: Historial de controladores de SQL Server
   href: ../connect/connect-history.md
 - name: Desarrollador de datos SQL
@@ -30,6 +32,10 @@
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
         - name: Descarga del proveedor de datos SqlClient de Microsoft para SQL Server
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: Habilitación del seguimiento de eventos en SqlClient
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: Modificadores de AppContext en SqlClient
+          href: ../connect/ado-net/appcontext-switches.md
         - name: Ciclo de vida de la compatibilidad del controlador SqlClient
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
         - name: Búsqueda de información adicional del controlador SqlClient
@@ -92,6 +98,8 @@
                   href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
                 - name: Operaciones de transacción y de copia masiva
                   href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+                - name: Sugerencias de orden para operaciones de copia masiva
+                  href: ../connect/ado-net/sql/bulk-copy-order-hints.md
             - name: Conjuntos de resultados activos múltiples (MARS)
               href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
               items:
@@ -142,6 +150,15 @@
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
             - name: Compatibilidad de SqlClient para Always Encrypted
               href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+              items:
+                - name: "Desarrollo de una aplicación de .NET mediante Always\_Encrypted con enclaves seguros"
+                  href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+                - name: Uso de Azure Key Vault con Always Encrypted
+                  href: ado-net/sql/azure-key-vault-example.md
+                - name: Uso de Azure Key Vault con Always Encrypted y enclaves seguros
+                  href: ado-net/sql/azure-key-vault-enclave-example.md
+            - name: Clasificación y detección de datos en SqlClient
+              href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC
   items:
     - name: Microsoft JDBC Driver para SQL Server
@@ -2631,8 +2648,8 @@
         - name: Usar Always Encrypted con el controlador JDBC
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: Always Encrypted con enclaves seguros
-              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+            - name: Uso de Always Encrypted con enclaves seguros y el controlador JDBC
+              href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: Artículos de la guía
           items:
             - name: Usar instrucciones con SQL
@@ -2747,6 +2764,8 @@
               href: ../connect/jdbc/using-sql-escape-sequences.md
             - name: Usar instrucciones con procedimientos almacenados
               href: ../connect/jdbc/using-statements-with-stored-procedures.md
+            - name: Autenticación de certificados de cliente para escenarios de bucles invertidos
+              href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
             - name: Ejemplos de Azure Key Vault para la versión 7.0 y otras.
               href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
               items:
@@ -2790,14 +2809,16 @@
               href: ../connect/odbc/linux-mac/programming-guidelines.md
             - name: Herramientas
               items:
-                - name: Conexión con bcp.exe
+                - name: Conexión con bcp
                   href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-                - name: Conexión con sqlcmd.exe
+                - name: Conexión con sqlcmd
                   href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
             - name: Uso de la autenticación integrada
               href: ../connect/odbc/linux-mac/using-integrated-authentication.md
         - name: Notas de la versión
           href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+        - name: Notas de la versión (mssql-tools)
+          href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: Problemas conocidos
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: Preguntas más frecuentes (P+F) sobre ODBC en Linux y macOS
@@ -2836,7 +2857,7 @@
       items:
         - name: Proveedores de almacén de claves personalizados
           href: ../connect/odbc/custom-keystore-providers.md
-        - name: Atributos y palabras clave de cadena de conexión de DSN
+        - name: Atributos y palabras clave de cadena de conexión y DSN
           href: ../connect/odbc/dsn-connection-string-attribute.md
         - name: Uso de Always Encrypted
           href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md
@@ -5111,6 +5132,8 @@
           href: ../connect/oledb/features/using-large-value-types.md
         - name: Utilizar conjuntos de resultados activos múltiples (MARS)
           href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+        - name: Uso de resolución de IP de red transparente
+          href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
         - name: Usar tipos definidos por el usuario
           href: ../connect/oledb/features/using-user-defined-types.md
         - name: Usar tipos de datos XML
@@ -5500,7 +5523,7 @@
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: Agrupar conexiones
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: 'Procedimientos: Desactivación de los conjuntos de resultados activos múltiples (MARS)'
+            - name: 'Procedimientos: Deshabilitación de conjuntos de resultados activos múltiples (MARS)'
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: Opciones de conexión
               href: ../connect/php/connection-options.md
@@ -6076,7 +6099,7 @@
           href: ../ado/guide/data/streams-and-persistence.md
         - name: Secuencias de comandos
           href: ../ado/guide/data/command-streams.md
-        - name: Recuperar conjuntos de resultados en secuencias
+        - name: Recuperación de conjuntos de resultados sin secuencias
           href: ../ado/guide/data/retrieving-resultsets-into-streams.md
         - name: Utilizar ADO para publicación en Internet
           href: ../ado/guide/data/using-ado-for-internet-publishing.md

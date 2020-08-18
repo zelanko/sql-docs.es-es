@@ -8,7 +8,7 @@
   href: legal-notice-mysqltosql.md
 - name: Configuración de conversión
   href: conversion-settings-mysqltosql.md
-- name: Instalar SSMA para el cliente de MySQL
+- name: Instalación de SSMA para el cliente de MySQL
   href: installing-ssma-for-mysql-client-mysqltosql.md
 - name: Ejecución de la consola de SSMA
   href: executing-the-ssma-console-mysqltosql.md
@@ -18,7 +18,7 @@
   href: sql-modes-mysqltosql.md
 - name: Conectar a SQL Server
   href: connect-to-sql-server-mysqltosql.md
-- name: Conexión a Azure SQL DB
+- name: Conexión con Azure SQL Database
   href: connecting-to-azure-sql-db-mysqltosql.md
 - name: Creación de archivos de script
   href: creating-script-files-mysqltosql.md
@@ -26,7 +26,7 @@
   href: loading-converted-database-objects-into-sql-server-mysqltosql.md
 - name: Convertir bases de datos de MySQL
   href: converting-mysql-databases-mysqltosql.md
-- name: 'Migrar a SQL Server: Azure SQL DB'
+- name: Migración a SQL Server - Azure SQL Database
   href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
 - name: Opciones de la línea de comandos en la consola SSMA
   href: command-line-options-in-ssma-console-mysqltosql.md
@@ -44,9 +44,9 @@
   href: connect-to-mysql-mysqltosql.md
 - name: Desinstalar los componentes de SSMA para MySQL
   href: removing-the-ssma-for-mysql-components-mysqltosql.md
-- name: Conectarse a Azure SQL DB
+- name: Conexión a Azure SQL Database
   href: connect-to-azure-sql-db-mysqltosql.md
-- name: Migrar bases de datos de MySQL a Azure SQL DB
+- name: Migración de bases de datos de MySQL a Azure SQL Database
   href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
 - name: Trabajar con archivos de script de ejemplo de la consola
   href: working-with-the-sample-console-script-files-mysqltosql.md
@@ -102,7 +102,7 @@
   items:
     - name: GUI
       href: project-settings-gui-mysqltosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL Database
       href: project-settings-azure-sql-db-mysqltosql.md
     - name: Asignación de tipo
       href: project-settings-type-mapping-mysqltosql.md

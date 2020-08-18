@@ -9,13 +9,13 @@ metadata:
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 04/24/2020
-  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
-  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+  ms.date: 05/27/2020
+  ms.openlocfilehash: 72f9fc36ace86dda5c38b7713376d83dbe1e8230
+  ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83606829"
+  ms.lasthandoff: 07/20/2020
+  ms.locfileid: "86485306"
 landingContent:
 - title: Aprendizaje automático en SQL Server
   linkLists:
@@ -65,11 +65,47 @@ landingContent:
       url: tutorials/quickstart-r-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: Uso de R en T-SQL
-      url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: Uso de Machine Learning Services en herramientas de R
-      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: Aprendizaje automático en clústeres de macrodatos
+    - text: Predecir el alquiler de esquíes con el árbol de decisión
+      url: tutorials/r-predictive-model-introduction.md
+    - text: Categorización de clientes con agrupación en clústeres k-means
+      url: tutorials/r-clustering-model-introduction.md
+- title: Azure SQL Managed Instance
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Machine Learning Services en Azure SQL Managed Instance
+      url: /azure/azure-sql/managed-instance/machine-learning-services-overview
+    - text: Diferencias principales entre ML en Instancia administrada de Azure SQL y SQL Server
+      url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+  - linkListType: how-to-guide
+    links:
+    - text: Implementación y creación de predicciones con un modelo de ONNX en Instancia administrada de Azure SQL
+      url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
+- title: Azure SQL Database Edge
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Aprendizaje automático e inteligencia artificial con ONNX en SQL Database Edge
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: Implementación y creación de predicciones con un modelo de ONNX en SQL Database Edge
+      url: /azure/sql-database-edge/deploy-onnx
+- title: Extensión de ML para Azure Data Studio
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ¿Qué es la extensión de Machine Learning para Azure Data Studio?
+      url: ../azure-data-studio/machine-learning-extension.md
+  - linkListType: how-to-guide
+    links:
+    - text: Administración de paquetes en la base de datos
+      url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+    - text: Realización de predicciones
+      url: ../azure-data-studio/machine-learning-extension-predictions.md
+    - text: Importación o visualización de modelos
+      url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+- title: Clústeres de macrodatos de SQL Server
   linkLists:
   - linkListType: overview
     links:
@@ -87,7 +123,7 @@ landingContent:
       url: ../big-data-cluster/sparklyr-from-rstudio.md
     - text: Integración de Spark con SQL Server
       url: ../big-data-cluster/spark-mssql-connector.md
-- title: Aprendizaje automático en Azure Synapse Analytics
+- title: Azure Synapse Analytics
   linkLists:
   - linkListType: overview
     links:
@@ -101,13 +137,3 @@ landingContent:
     links:
     - text: Creación, desarrollo y mantenimiento de cuadernos de Azure Synapse Studio
       url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
-- title: Aprendizaje automático en Azure SQL Database Edge
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Aprendizaje automático e inteligencia artificial con ONNX en SQL Database Edge
-      url: /azure/sql-database-edge/onnx-overview
-  - linkListType: how-to-guide
-    links:
-    - text: Implementación y creación de predicciones con un modelo de ONNX en SQL Database Edge
-      url: /azure/sql-database-edge/deploy-onnx

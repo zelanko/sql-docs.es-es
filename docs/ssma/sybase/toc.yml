@@ -10,7 +10,7 @@
   href: legal-notice-ssma-for-sybase.md
 - name: Novedades de SSMA
   href: what-s-new-in-ssma-for-sybase-sybasetosql.md
-- name: Instalar el cliente de SSMA para Sybase
+- name: Instalación de SSMA para el cliente de Sybase
   href: installing-ssma-for-sybase-client-sybasetosql.md
 - name: Nuevas características de la interfaz gráfica de usuario de SSMA
   href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
@@ -20,7 +20,7 @@
   href: initializing-test-cases-sybasetosql.md
 - name: Archivos de script de ejemplo de la consola
   href: working-with-the-sample-console-script-files-sybasetosql.md
-- name: Migrar bases de datos de Sybase ASE a Azure SQL DB
+- name: Migración de bases de datos de Sybase ASE a Azure SQL Database
   href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
 - name: Evaluar objetos de base de datos de Sybase ASE para la conversión
   href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
@@ -56,13 +56,13 @@
   href: connecting-to-sybase-ase-sybasetosql.md
 - name: Seleccionar y configurar objetos afectados
   href: selecting-and-configuring-affected-objects-sybasetosql.md
-- name: Conexión a Azure SQL DB
+- name: Conexión con Azure SQL Database
   href: connecting-to-azure-sql-db-sybasetosql.md
 - name: Administrar contraseñas
   href: managing-passwords-sybasetosql.md
 - name: Configuración de opciones de proyecto
   href: setting-project-options-sybasetosql.md
-- name: Conectarse a Azure SQL DB
+- name: Conexión a Azure SQL Database
   href: connect-to-azure-sql-db-sybasetosql.md
 - name: Configuración de la migración de datos
   href: data-migration-settings-sybasetosql.md
@@ -76,7 +76,7 @@
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
 - name: Instalación de componentes de SSMA en SQL Server
   href: installing-ssma-components-on-sql-server-sybasetosql.md
-- name: Migrar datos de Sybase ASE a Azure SQL DB
+- name: Migración de datos de Sybase ASE a Azure SQL Database
   href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
 - name: Conectarse a Sybase
   href: connect-to-sybase-sybasetosql.md
@@ -124,7 +124,7 @@
       href: project-settings-type-mapping-sybasetosql.md
     - name: Synchronization
       href: project-settings-synchronization-sybasetosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL Database
       href: project-settings-azure-sql-db-sybasetosql.md
     - name: (Migración
       href: project-settings-migration-sybasetosql.md

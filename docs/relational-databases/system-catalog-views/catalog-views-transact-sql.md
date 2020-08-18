@@ -1,4 +1,5 @@
 ---
+description: Vistas de catálogo del sistema (Transact-SQL)
 title: Vistas de catálogo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/02/2016
@@ -23,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b106652573b5324794848dff69e9ae51c81a20
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e0fd2e8ee936d9ecf9b7b433870edd3f6da19f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402611"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Vistas de catálogo del sistema (Transact-SQL)
 

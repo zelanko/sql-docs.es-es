@@ -1,4 +1,5 @@
 ---
+description: Vistas de catálogo de la función de partición (Transact-SQL)
 title: Vistas de catálogo de funciones de partición (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc35d5cf881880a6fdee18b80c50ffa7b7ce6933
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 312f6bef7c6b8e4139d68f1564a3163cd8797f37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402351"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>Vistas de catálogo de la función de partición (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

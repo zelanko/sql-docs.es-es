@@ -1,4 +1,5 @@
 ---
+description: sys.bandwidth_usage (Azure SQL Database)
 title: Sys. bandwidth_usage (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -19,12 +20,12 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402531"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -52,13 +53,13 @@ ms.locfileid: "85752920"
 
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ### <a name="external-and-internal-classes"></a>Clases externas e internas
 
  Para cada base de datos que se utiliza en un momento dado, la vista **Sys. bandwidth_usage** devuelve filas que muestran la clase y la dirección del uso del ancho de banda. En el ejemplo siguiente se muestran los datos que se pueden exponer para una base de datos determinada. En este ejemplo, el tiempo son las 17:00 2012-04-21: 00, que se produce durante el período de tiempo máximo. El nombre de base de datos es Db1. En este ejemplo, **Sys. bandwidth_usage** ha devuelto una fila para las cuatro combinaciones de las direcciones de entrada y salida, y las clases externas e internas, como se indica a continuación:  
   
-|time|database_name|direction|class|time_period|quantity|  
+|time|database_name|direction|clase|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Entrada|Externo|Peak|66|  
 |2012-04-21 17:00:00|Db1|Salida|Externo|Peak|741|  

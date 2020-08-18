@@ -1,4 +1,5 @@
 ---
+description: sys.cryptographic_providers (Transact-SQL)
 title: Sys. cryptographic_providers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 489baa68c8fe37d4f240d26cb93d65b73016d7dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 898522531177d562ce15f81512efd49b47762958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402401"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85787179"
 |**dll_path**|**nvarchar(512)**|Ruta de acceso a DLL que implementa la interfaz de programación de aplicaciones (API) de la Administración extensible de claves (EKM).|  
 |**is_enabled**|**bit**|Si el proveedor está habilitado en el servidor o no.<br /><br /> 0 = no habilitado (predeterminado)<br /><br /> 1 = habilitado|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La vista **Sys. cryptographic_providers** es visible para el público.  
   
 ## <a name="permissions"></a>Permisos  

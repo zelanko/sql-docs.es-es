@@ -1,4 +1,5 @@
 ---
+description: TopCount (DMX)
 title: Topcount (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d4c83626c11def14f1ed9f745fca54e94995c97
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ae44534ae51f0bc49ca687ce73a17f9486bc1b31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395731"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -113,7 +114,7 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
 ## <a name="see-also"></a>Consulte también  
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [&#41;BottomCount &#40;DMX](../dmx/bottomcount-dmx.md)   
+ [&#41;BottomCount &#40;DMX ](../dmx/bottomcount-dmx.md)   
  [&#40;DMX&#41;](../dmx/toppercent-dmx.md)   
  [&#40;DMX&#41;](../dmx/topsum-dmx.md)  
   

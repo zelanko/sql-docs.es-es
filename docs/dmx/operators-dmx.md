@@ -1,4 +1,5 @@
 ---
+description: Operadores (DMX)
 title: Operadores (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f274ebc498e5b88b8ae1fbac17c3c972686e348f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4c523ea9150f7d3361f93582e01b703be35d2366
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395741"
 ---
 # <a name="operators-dmx"></a>Operadores (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

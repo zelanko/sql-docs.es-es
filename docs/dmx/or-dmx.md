@@ -1,4 +1,5 @@
 ---
+description: OR (DMX)
 title: O (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 21ac78f6ee0ed77bb9549f1749d73d29344a49d1
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 86a9aede9f1b9b12f465fa52b0343cf22c04b295
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395441"
 ---
 # <a name="or-dmx"></a>OR (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -44,10 +45,10 @@ Expression1 OR Expression2
   
 |Si Expression1 es|Si Expression2 es|El valor devuelto es|  
 |-----------------------|-----------------------|---------------------|  
-|VERDADERO|VERDADERO|VERDADERO|  
-|TRUE|FALSO|VERDADERO|  
-|FALSO|VERDADERO|TRUE|  
-|FALSE|FALSE|FALSO|  
+|TRUE|TRUE|TRUE|  
+|TRUE|false|true|  
+|false|VERDADERO|TRUE|  
+|false|false|false|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de operadores &#40;DMX&#41; de extensiones de minería de datos](../dmx/data-mining-extensions-dmx-operator-reference.md)   

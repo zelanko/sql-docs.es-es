@@ -1,4 +1,5 @@
 ---
+description: Operadores unarios (DMX)
 title: Operadores unarios (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5dd4df26faad2c52a803db90122e6bb78a3f1a75
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fdd97dcd07eec1c8518d8dfcb9ed2f206e706310
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395771"
 ---
 # <a name="operators---unary"></a>Operadores: unarios
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "86971610"
   
 |Operator|Descripción|  
 |--------------|-----------------|  
-|[-&#40;negativo&#41; &#40;&#41;MDX](../mdx/negative-mdx.md)|Devuelve el valor negativo de una expresión numérica.|  
+|[-&#40;negativo&#41; &#40;&#41;MDX ](../mdx/negative-mdx.md)|Devuelve el valor negativo de una expresión numérica.|  
 |[+ &#40;positivo&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|Devuelve el valor positivo de una expresión numérica.|  
   
 ## <a name="see-also"></a>Consulte también  

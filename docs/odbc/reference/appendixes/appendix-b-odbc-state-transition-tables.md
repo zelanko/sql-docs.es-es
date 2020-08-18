@@ -1,4 +1,5 @@
 ---
+description: 'Apéndice B: Tablas de transición de estado de ODBC'
 title: 'Apéndice B: tablas de transición de estado de ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db20c492ababbe6bf8f065fce88067c643f2694d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b81b43d40d3552959ade377cb7b967eb7331b7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411621"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apéndice B: Tablas de transición de estado de ODBC
 En las tablas de este apéndice se muestra cómo las funciones ODBC causan transiciones del entorno, la conexión, la instrucción y los Estados del descriptor. Normalmente, el estado del entorno, la conexión, la instrucción o el descriptor determina cuándo se puede llamar a las funciones que utilizan el tipo de identificador (entorno, conexión, instrucción o descriptor) correspondiente. Los Estados del entorno, la conexión, la instrucción y el descriptor se superponen aproximadamente, tal y como se muestra en las ilustraciones siguientes. Por ejemplo, la superposición exacta de los Estados de conexión C5 y C6 y los Estados de instrucción S1 a través de S12 es dependiente del origen de datos, ya que las transacciones se inician en distintos momentos en orígenes de datos diferentes, y el estado de descriptor D1i (descriptor asignado implícitamente) depende del estado de la instrucción a la que está asociado el descriptor, Para obtener una descripción de cada Estado, vea [transiciones de entorno](../../../odbc/reference/appendixes/environment-transitions.md), [transiciones de conexión](../../../odbc/reference/appendixes/connection-transitions.md), [transiciones de instrucciones](../../../odbc/reference/appendixes/statement-transitions.md)y [transiciones de descriptor](../../../odbc/reference/appendixes/descriptor-transitions.md), más adelante en este apéndice.  
@@ -42,7 +43,7 @@ En las tablas de este apéndice se muestra cómo las funciones ODBC causan trans
   
  Cada entrada de una tabla de transición puede tener uno de los valores siguientes:  
   
--   **--**-El estado no cambia después de ejecutar la función.  
+-   **--** -El estado no cambia después de ejecutar la función.  
   
 -   **E:.**  
 
@@ -52,7 +53,7 @@ En las tablas de este apéndice se muestra cómo las funciones ODBC causan trans
   
 -   **NS** -siguiente estado. La transición de la instrucción es la misma que si la instrucción no hubiera pasado por los Estados asincrónicos. Por ejemplo, supongamos que una instrucción que crea un conjunto de resultados entra en el estado S11 desde el estado S1 porque **SQLExecDirect** devolvió SQL_STILL_EXECUTING. La notación NS en State S11 significa que las transiciones de la instrucción son las mismas que las de una instrucción en el estado S1 que crea un conjunto de resultados. Si **SQLExecDirect** devuelve un error, la instrucción permanece en el estado S1; Si se realiza correctamente, la instrucción pasa al estado S5; Si necesita datos, la instrucción pasa al estado S8; y si todavía se está ejecutando, permanece en el estado S11.  
 
--   **_Xxxxx_** o **(*xxxxx*)** : un SQLSTATE que está relacionado con la tabla de transición; Los SQLSTATEs detectados por el administrador de controladores se incluyen entre paréntesis. La función devolvió SQL_ERROR y el SQLSTATE especificado, pero el estado no cambia. Por ejemplo, si se llama a **SQLExecute** antes que a **SQLPrepare**, devuelve SQLSTATE HY010 (error de secuencia de función).  
+-   **_Xxxxx_**  o **(*xxxxx*)** : un SQLSTATE que está relacionado con la tabla de transición; Los SQLSTATEs detectados por el administrador de controladores se incluyen entre paréntesis. La función devolvió SQL_ERROR y el SQLSTATE especificado, pero el estado no cambia. Por ejemplo, si se llama a **SQLExecute** antes que a **SQLPrepare**, devuelve SQLSTATE HY010 (error de secuencia de función).  
 
 > [!NOTE]  
 >  Las tablas no muestran errores no relacionados con las tablas de transición que no cambian el estado. Por ejemplo, cuando se llama a **SQLAllocHandle** en el estado del entorno E1 y se devuelve SQLSTATE HY001 (error de asignación de memoria), el entorno permanece en el estado E1; Esto no se muestra en la tabla de transición de entorno para **SQLAllocHandle**.  

@@ -1,4 +1,5 @@
 ---
+description: Configuración global (evaluador) (SybaseToSQL)
 title: Configuración global (evaluador) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f1ebf6d1122db6b28b13c33320dabef520a40f5a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c03a52c837d2f07e5a6027b181a2047a5f53add6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492181"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Configuración global (evaluador) (SybaseToSQL)
 Use la página evaluador del cuadro de diálogo **configuración global** para especificar la configuración de SSMA Tester.  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_xtp_object_stats (Transact-SQL)
 title: Sys. dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -20,12 +21,12 @@ ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a01a1d5bb61e72a00e7a140e5f6767fab8af57d7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0b350b45f22ab520508ebb799fcba62b0f9fb525
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399031"
 ---
 # <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "87442832"
 |row_delete_attempts|**bigint**|Número de filas eliminadas de la tabla desde el último reinicio de la base de datos por las transacciones confirmadas y anuladas.|  
 |write_conflicts|**bigint**|Número de conflictos de escritura que se produjeron desde el último reinicio de la base de datos.|  
 |unique_constraint_violations|**bigint**|Número de infracciones de la restricción UNIQUE que se han producido desde el último reinicio de la base de datos.|  
-|object_address|**varbinary(8**|Solo para uso interno.|  
+|object_address|**varbinary(8**|Exclusivamente para uso interno.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos actual.  

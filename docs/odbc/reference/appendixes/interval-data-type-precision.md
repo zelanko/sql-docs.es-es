@@ -1,4 +1,5 @@
 ---
+description: Precisión del tipo de datos de intervalo
 title: Precisión del tipo de datos Interval | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 746293c545c47917abd084ec3eb105051fc2fbcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 138cb4cae21b1c1fc0fd742cefac1b6f3a3e5978
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483287"
 ---
 # <a name="interval-data-type-precision"></a>Precisión del tipo de datos de intervalo
 La precisión de un tipo de datos Interval incluye la precisión inicial del intervalo, la precisión del intervalo y la precisión de los segundos.  

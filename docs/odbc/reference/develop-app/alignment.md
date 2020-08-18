@@ -1,4 +1,5 @@
 ---
+description: Alignment
 title: Alineación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 205cc3ff95dd60db215150f46ae894fbb99bd9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1402eee289111ca100e80730d8df4a6d0e3299cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483148"
 ---
 # <a name="alignment"></a>Alignment
 Los problemas de alineación en una aplicación ODBC no suelen ser diferentes de los de cualquier otra aplicación. Es decir, la mayoría de las aplicaciones ODBC tienen pocos o ningún problema con la alineación. Las penalizaciones por no alinear las direcciones varían con el hardware y el sistema operativo, y pueden ser tan pequeñas como una ligera disminución del rendimiento o como un error grave en tiempo de ejecución. Por lo tanto, las aplicaciones ODBC y las aplicaciones ODBC portables en concreto deben tener cuidado al alinear los datos correctamente.  

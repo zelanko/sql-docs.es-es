@@ -1,4 +1,5 @@
 ---
+description: Opciones de la implementación de modelos (Master Data Services)
 title: Opciones de la implementación de modelos
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b4de75b7f5cc65fa3d7a080f3317630a9af4d53a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d6b2c29038934034c39ea7699328504d418989d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471929"
 ---
 # <a name="model-deployment-options-master-data-services"></a>Opciones de la implementación de modelos (Master Data Services)
 
@@ -23,14 +24,14 @@ ms.locfileid: "85813271"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], al implementar un archivo de modelo del paquete, debe decidir si implementar un modelo nuevo o clonado, o actualizar un modelo que se clonó previamente.  
   
-## <a name="workflows"></a>Workflows  
+## <a name="workflows"></a>Flujos de trabajo  
  Al trabajar con paquetes de modelos, hay dos flujos de trabajo principales.  
   
 -   Cree un paquete de un modelo en un entorno de pruebas e implemente un clon del modelo en un entorno de producción. Con el tiempo, implemente las actualizaciones del entorno de prueba en el entorno de producción.  
   
 -   Cree un paquete de un modelo e impleméntelo como modelo en el mismo entorno. En este caso, debe proporcionar al modelo un nuevo nombre.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>Opciones  
  En la base de datos MDS, cada objeto de modelo tiene un identificador único (ID). Estos identificadores se incluyen en los paquetes de implementación de modelos. Al implementar el paquete, debe elegir qué hacer con estos identificadores.  
   
  La tabla siguiente puede ayudarle a determinar qué opción realizar cuando implemente un modelo usando el Asistente para la implementación de modelo de administración del sistema o la herramienta MDSModelDeploy.  

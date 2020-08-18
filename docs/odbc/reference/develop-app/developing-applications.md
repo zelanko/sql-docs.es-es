@@ -1,4 +1,5 @@
 ---
+description: Desarrollo de aplicaciones
 title: Desarrollo de aplicaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 995d6b9ada4576bb5792042a1f0b5b6a25cde452
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3996987d8aa110da5646db883ff7cb1a98dfc98e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483098"
 ---
 # <a name="developing-applications"></a>Desarrollo de aplicaciones
 Esta sección contiene información acerca del desarrollo de aplicaciones que usan la interfaz ODBC y los controladores que la implementan.  
@@ -46,7 +47,7 @@ Esta sección contiene información acerca del desarrollo de aplicaciones que us
   
 -   [Descriptores de](../../../odbc/reference/develop-app/descriptors.md)  
   
--   [Transacciones](../../../odbc/reference/develop-app/transactions-odbc.md)  
+-   [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
 -   [Diagnóstico](../../../odbc/reference/develop-app/diagnostics.md)  
   
@@ -54,5 +55,5 @@ Esta sección contiene información acerca del desarrollo de aplicaciones que us
   
 -   [Consideraciones sobre la programación](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia del programador de ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)

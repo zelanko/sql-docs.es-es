@@ -1,4 +1,5 @@
 ---
+description: Editar asignación de tipo (OracleToSQL)
 title: Editar la asignación de tipos (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1df40b843064513f6b2c135355b26f745c336011
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7b90da225116a2221d5a2492e1b7e5bfdc33ab91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492406"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Editar asignación de tipo (OracleToSQL)
 El cuadro de diálogo **Editar asignación de tipos** permite especificar cómo se asignan los tipos entre los objetos de base de datos de origen y de destino.  
@@ -45,6 +46,6 @@ Seleccione el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de 
   
 Si el tipo de datos es de longitud variable, el siguiente campo aparecerá en **tipo de destino**:  
   
-**Reemplazar por**  
+**Replace with**  
 Especifique la longitud de destino de esta asignación. Por ejemplo, para el tipo de datos **nvarchar** , puede especificar 20 para especificar que el tipo de datos de origen especificado debe estar asignado a **nvarchar (20)**.  
   

@@ -1,4 +1,5 @@
 ---
+description: Función SQLGetDiagField
 title: Función SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a26319868a4b94b895da73d39b284f612fe35889
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92043f5deb505d60ebe168a9c219c4d37a304ed5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461030"
 ---
 # <a name="sqlgetdiagfield-function"></a>Función SQLGetDiagField
 
@@ -79,7 +80,7 @@ SQLRETURN SQLGetDiagField(
  Si *DiagInfoPtr* es null, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de caracteres) disponible para devolver en el búfer señalado por *DiagInfoPtr*.  
   
  *BufferLength*  
- Entradas Si *DiagIdentifier* es un diagnóstico definido por ODBC y *DiagInfoPtr* apunta a una cadena de caracteres o a un búfer binario, este argumento debe ser \*la longitud de *DiagInfoPtr*. Si *DiagIdentifier* es un campo definido por ODBC y \* *DiagInfoPtr* es un entero, se omite *BufferLength* . Si el valor de * \*DiagInfoPtr* es una cadena Unicode (al llamar a **SQLGetDiagFieldW**), el argumento *BufferLength* debe ser un número par.  
+ Entradas Si *DiagIdentifier* es un diagnóstico definido por ODBC y *DiagInfoPtr* apunta a una cadena de caracteres o a un búfer binario, este argumento debe ser la longitud de \* *DiagInfoPtr*. Si *DiagIdentifier* es un campo definido por ODBC y \* *DiagInfoPtr* es un entero, se omite *BufferLength* . Si el valor de * \* DiagInfoPtr* es una cadena Unicode (al llamar a **SQLGetDiagFieldW**), el argumento *BufferLength* debe ser un número par.  
   
  Si *DiagIdentifier* es un campo definido por el controlador, la aplicación indica la naturaleza del campo en el administrador de controladores estableciendo el argumento *BufferLength* . *BufferLength* puede tener los siguientes valores:  
   
@@ -89,12 +90,12 @@ SQLRETURN SQLGetDiagField(
   
 -   Si *DiagInfoPtr* es un puntero a un valor distinto de una cadena de caracteres o una cadena binaria, *BufferLength* debe tener el valor SQL_IS_POINTER.  
   
--   Si * \*DiagInfoPtr* contiene un tipo de datos de longitud fija, *BufferLength* es SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, según corresponda.  
+-   Si * \* DiagInfoPtr* contiene un tipo de datos de longitud fija, *BufferLength* es SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, según corresponda.  
   
  *StringLengthPtr*  
- Genere Puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el número de bytes necesario para el carácter de terminación null) \*disponible para devolver en *DiagInfoPtr*, para los datos de caracteres. Si el número de bytes disponibles para devolver es mayor o igual que *BufferLength*, el texto de \* *DiagInfoPtr* se trunca en *BufferLength* menos la longitud de un carácter de terminación null.  
+ Genere Puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el número de bytes necesario para el carácter de terminación null) disponible para devolver en \* *DiagInfoPtr*, para los datos de caracteres. Si el número de bytes disponibles para devolver es mayor o igual que *BufferLength*, el texto de \* *DiagInfoPtr* se trunca en *BufferLength* menos la longitud de un carácter de terminación null.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE o SQL_NO_DATA.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -160,7 +161,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="header-fields"></a>Campos de encabezado  
  Los campos de encabezado que se enumeran en la tabla siguiente pueden incluirse en el argumento *DiagIdentifier* .  
   
-|DiagIdentifier|Tipo de valor devuelto|Devuelve|  
+|DiagIdentifier|Tipo de valor devuelto|Devoluciones|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|Este campo contiene el recuento de filas en el cursor. Su semántica depende de los tipos de información de **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 y SQL_STATIC_CURSOR_ATTRIBUTES2, que indican qué recuentos de filas están disponibles para cada tipo de cursor (en el SQL_CA2_CRC_EXACT y SQL_CA2_CRC_APPROXIMATE bits).<br /><br /> El contenido de este campo solo se define para los identificadores de instrucciones y solo después de llamar a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** . La llamada a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_CURSOR_ROW_COUNT que no sea un identificador de instrucción devolverá SQL_ERROR.|  
 |SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR|Se trata de una cadena que describe la instrucción SQL ejecutada por la función subyacente. (Vea "valores de los campos de funciones dinámicas", más adelante en esta sección, para ver los valores específicos). El contenido de este campo solo se define para los identificadores de instrucciones y solo después de una llamada a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults**. La llamada a **SQLGetDiagField** con un *DiagIdentifier* de SQL_DIAG_DYNAMIC_FUNCTION que no sea un identificador de instrucción devolverá SQL_ERROR. El valor de este campo no está definido antes de llamar a **SQLExecute** o **SQLExecDirect**.|  
@@ -172,7 +173,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="record-fields"></a>Campos de registro  
  Los campos de registro enumerados en la tabla siguiente pueden incluirse en el argumento *DiagIdentifier* .  
   
-|DiagIdentifier|Tipo de valor devuelto|Devuelve|  
+|DiagIdentifier|Tipo de valor devuelto|Devoluciones|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CLASS_ORIGIN|SQLCHAR|Cadena que indica el documento que define la parte de la clase del valor SQLSTATE de este registro. Su valor es "ISO 9075" para todos los SQLSTATEs definidos por el grupo abierto y la interfaz de nivel de llamada ISO. Para SQLSTATEs específicos de ODBC (todos aquellos cuya clase SQLSTATE es "IM"), su valor es "ODBC 3,0".|  
 |SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|Si el SQL_DIAG_ROW_NUMBER campo es un número de fila válido en un conjunto de filas o en un conjunto de parámetros, este campo contiene el valor que representa el número de columna en el conjunto de resultados o el número de parámetro del conjunto de parámetros. Los números de columna del conjunto de resultados siempre empiezan en 1; Si este registro de estado pertenece a una columna de marcador, el campo puede ser cero. Los números de parámetro empiezan en 1. Tiene el valor SQL_NO_COLUMN_NUMBER si el registro de estado no está asociado a un número de columna o un número de parámetro. Si el controlador no puede determinar el número de columna o el número de parámetro con el que está asociado este registro, este campo tiene el valor SQL_COLUMN_NUMBER_UNKNOWN.<br /><br /> El contenido de este campo solo se define para los identificadores de instrucción.|  
@@ -218,7 +219,7 @@ SQLRETURN SQLGetDiagField(
 |*Traducción: definición*|"CREAR TRADUCCIÓN"|SQL_DIAG_CREATE_TRANSLATION|  
 |*Update-Statement-posicionada*|"CURSOR DE ACTUALIZACIÓN DINÁMICA"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*Update-Statement-buscada*|"ACTUALIZAR DÓNDE"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*cadena vacía*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Desconocido|*cadena vacía*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.

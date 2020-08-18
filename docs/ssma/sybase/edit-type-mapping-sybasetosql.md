@@ -1,4 +1,5 @@
 ---
+description: Editar asignación de tipo (SybaseToSQL)
 title: Editar la asignación de tipos (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 043eb1a2eaf9325d8a252598b26317017d92fa94
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3f9f5e0f498dbe6a8fe45a9c80cbf3c512f04bac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492289"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Editar asignación de tipo (SybaseToSQL)
 El cuadro de diálogo **Editar asignación de tipos** permite especificar cómo se asignan los tipos entre los objetos de base de datos de origen y de destino.  
@@ -44,6 +45,6 @@ Seleccione el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de 
   
 Si el tipo de datos es de longitud variable, el siguiente campo aparecerá en **tipo de destino**:  
   
-**Reemplazar por**  
+**Replace with**  
 Especifique la longitud de destino de esta asignación. Por ejemplo, para el tipo de datos **nvarchar** , puede especificar 20 para especificar que el tipo de datos de origen especificado debe estar asignado a **nvarchar (20)**.  
   

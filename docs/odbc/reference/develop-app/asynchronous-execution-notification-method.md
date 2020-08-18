@@ -1,4 +1,5 @@
 ---
+description: Ejecución asincrónica (método de notificación)
 title: Ejecución asincrónica (método de notificación) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 250e71dcb47d44a6e437d12c269ea23fa6fb3c2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c201d71d42c40277ad67cef25922e55e97de12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483128"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Ejecución asincrónica (método de notificación)
 ODBC permite la ejecución asincrónica de las operaciones de conexión y de instrucción. Un subproceso de aplicación puede llamar a una función ODBC en modo asincrónico y la función puede devolver antes de que se complete la operación, lo que permite que el subproceso de la aplicación realice otras tareas. En el SDK de Windows 7, para las operaciones de conexión o instrucción asincrónicas, una aplicación determinó que la operación asincrónica se completó con el método de sondeo. Para obtener más información, vea [ejecución asincrónica (método de sondeo)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). A partir del SDK de Windows 8, puede determinar que una operación asincrónica se ha completado con el método de notificación.  
@@ -330,7 +331,7 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
 |Habilitar|no NULL|Notificación asincrónica|  
 |Habilitar|null|Sondeo asincrónico|  
-|Disable|cualquiera|Sincrónica|  
+|Deshabilitar|cualquiera|Sincrónico|  
   
  Una aplicación puede deshabilitar temporalmente el modo de operación asincrónica. ODBC omite los valores de SQL_ATTR_ASYNC_DBC_EVENT si la operación asincrónica de nivel de conexión está deshabilitada. ODBC omite los valores de SQL_ATTR_ASYNC_STMT_EVENT si la operación asincrónica de nivel de instrucción está deshabilitada.  
   

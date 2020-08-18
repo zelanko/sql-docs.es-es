@@ -1,4 +1,5 @@
 ---
+description: Proyectos de SSMA (MySQLToSQL)
 title: Trabajar con proyectos de SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 98315541dc7eb2df1e77e32bcd34744b98708557
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6a1bbc7b47531c66e27818e8673a7c6aa9723c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492428"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Proyectos de SSMA (MySQLToSQL)
 Para migrar las bases de datos de MySQL a SQL Server o SQL Azure, primero debe crear un proyecto de SSMA. El proyecto es un archivo que contiene la siguiente información:  
@@ -81,7 +82,7 @@ Para migrar datos de bases de datos MySQL a SQL Server o SQL Azure, debe crear u
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   Azure SQL Database  
   
@@ -105,7 +106,7 @@ Si las bases de datos del proyecto han cambiado o no se han convertido, SSMA le 
   
 1.  Para cada base de datos que muestra el estado **falta de metadatos**, active la casilla situada junto al nombre de la base de datos. El almacenamiento de metadatos puede tardar varios minutos. Si no desea guardar los metadatos en este momento, no active las casillas de verificación.  
   
-2.  Haga clic en **Guardar**.  
+2.  Haga clic en **Save**(Guardar).  
   
 SSMA analizará los esquemas de MySQL y guardará los metadatos en el archivo de proyecto.  
   
@@ -131,7 +132,7 @@ Al abrir un proyecto, se desconecta de MySQL y de SQL Server o SQL Azure. Esto l
 ## <a name="next-step"></a>siguiente paso  
 El siguiente paso del proceso de migración consiste en [conectarse a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Conexión a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
 [Migración de bases de datos de MySQL a SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Conexión a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  

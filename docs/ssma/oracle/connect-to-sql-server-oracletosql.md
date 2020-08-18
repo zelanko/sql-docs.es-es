@@ -1,4 +1,5 @@
 ---
+description: Conectarse a SQL Server (OracleToSQL)
 title: Conexión a SQL Server (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 2a4575f02194ffc97f4c3c23b419c3edb12df5fc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1d97fd4a9aa4c92fe1e6376b4b472519b89e4bc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492424"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>Conectarse a SQL Server (OracleToSQL)
 Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que desea migrar. Para tener acceso al cuadro de diálogo **conectar con SQL Server** , en el menú **archivo** , haga clic en **conectar a SQL Server**.  

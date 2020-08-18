@@ -1,4 +1,5 @@
 ---
+description: Guardar metadatos (OracleToSQL)
 title: Guardar metadatos (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d7287c5ed79834629c5cded6e29b87cf46d0e9ef
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ceac171c2eed43e1ee0c1feff2db9a3b4f21e7e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492328"
 ---
 # <a name="save-metadata--oracletosql"></a>Guardar metadatos (OracleToSQL)
 El cuadro de diálogo **guardar metadatos** le solicita que cargue los metadatos en el proyecto de SSMA antes de guardarlo. Esto le permite tener un archivo de proyecto completo que puede usar sin conexión y enviar a otras personas, como personal de soporte técnico.  

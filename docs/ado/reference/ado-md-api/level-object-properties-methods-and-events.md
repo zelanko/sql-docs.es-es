@@ -1,4 +1,5 @@
 ---
+description: Eventos, métodos y propiedades de objeto de nivel
 title: Propiedades, métodos y eventos del objeto LEVEL | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27b13f5f3163fa3d39c2e2bb7945a02e312e5f67
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ec04416433339fcec45da199fb3291154fce330a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440937"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Eventos, métodos y propiedades de objeto de nivel
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -29,7 +30,7 @@ ms.locfileid: "82753479"
   
  [Colección de miembros](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
   
- [Propiedad Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Name (propiedad)](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
  [Colección de propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
   

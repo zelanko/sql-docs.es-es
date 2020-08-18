@@ -1,4 +1,5 @@
 ---
+description: sys.dm_continuous_copy_status (Azure SQL Database)
 title: sys.dm_continuous_copy_status
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b2c90c3a6e6251da7b8e318a57002f224e074ac5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 44da877ab3977f9c17746e935a588cef402c685e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460457"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -51,7 +52,7 @@ Si usa SQL Database V12, debe usar [Sys. dm_geo_replication_link_status](../../r
 ## <a name="permissions"></a>Permisos  
  Para recuperar datos, es necesario pertenecer al rol de base de datos **db_owner** . El usuario DBO, los miembros del rol de base de datos **dbmanager** y el inicio de sesión SA también pueden consultar esta vista.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La vista **Sys. dm_continuous_copy_status** se crea en la base de datos de **recursos** y está visible en todas las bases de datos, incluida la maestra lógica. Sin embargo, al consultar esta vista en la maestra lógica se devuelve un conjunto vacío.  
   
  Si la relación de copia continua se termina en una base de datos, la fila de esa base de datos en la vista **Sys. dm_continuous_copy_status** desaparece.  

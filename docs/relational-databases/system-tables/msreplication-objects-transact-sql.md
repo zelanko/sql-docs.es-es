@@ -1,4 +1,5 @@
 ---
+description: MSreplication_objects (Transact-SQL)
 title: MSreplication_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57a4c20f6aac12f1671b88dc04b0366290abe127
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64cb218090b811b60bd45ec598b4615be9150ce8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881486"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492728"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85881486"
 |**publisher**|**sysname**|El nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
-|**object_name**|**sysname**|Nombre del objeto.|  
+|**object_name**|**sysname**|El nombre del objeto.|  
 |**object_type**|**char(2)**|El tipo de objeto:<br /><br /> **u** = tabla.<br /><br /> **t** = desencadenador.<br /><br /> **p** = procedimiento almacenado.|  
 |**artículo**|**sysname**|Nombre del artículo con el que está asociado el objeto.|  
   

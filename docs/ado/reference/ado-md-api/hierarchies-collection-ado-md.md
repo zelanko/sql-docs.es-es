@@ -1,4 +1,5 @@
 ---
+description: Colección Hierarchies (ADO MD)
 title: Colección Hierarchies (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7d8605b52ead95433548095015497b6b42220d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 81161819bd03b4261a0da321579f6df32dd824ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441007"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Colección Hierarchies (ADO MD)
 Contiene el conjunto de objetos [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) de una dimensión.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **Hierarchies** es una colección estándar de ADO. Con las propiedades y los métodos de una colección, puede hacer lo siguiente:  
   
 -   Obtiene el número de objetos de la colección con la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) .  

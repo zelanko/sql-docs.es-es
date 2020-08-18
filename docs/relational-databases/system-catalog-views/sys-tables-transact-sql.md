@@ -1,4 +1,5 @@
 ---
+description: sys.tables (Transact-SQL)
 title: Sys. Tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
@@ -20,11 +21,12 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13e37cd873b3158fcde41f0e3b5836a27d370f6e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83362a976690875df7d45a8ba6a186441bd10283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460597"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +58,7 @@ ms.locfileid: "86002703"
 |temporal_type|**tinyint**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Valor numérico que representa el tipo de tabla:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |temporal_type_desc|**nvarchar(60)**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> La descripción de texto del tipo de tabla:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Cuando temporal_type en (2, 4) devuelve object_id de la tabla que mantiene los datos históricos; de lo contrario, devuelve NULL.|  
-|is_remote_data_archive_enabled|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores y[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indica si la tabla está habilitada para Stretch.<br /><br /> 0 = la tabla no está habilitada para Stretch.<br /><br /> 1 = la tabla está habilitada para Stretch.<br /><br /> Para obtener más información, vea [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
+|is_remote_data_archive_enabled|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indica si la tabla está habilitada para Stretch.<br /><br /> 0 = la tabla no está habilitada para Stretch.<br /><br /> 1 = la tabla está habilitada para Stretch.<br /><br /> Para obtener más información, vea [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |is_external|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] .<br /><br /> Indica que la tabla es una tabla externa.<br /><br /> 0 = la tabla no es una tabla externa.<br /><br /> 1 = la tabla es una tabla externa.| 
 |history_retention_period|**int**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Valor numérico que representa la duración del período de retención del historial temporal en unidades especificadas con history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Valor numérico que representa el tipo de unidad de período de retención de historial temporal. <br /><br />-1: INFINITO <br /><br />3: DÍA <br /><br />4: SEMANA <br /><br />5: MES <br /><br />6: AÑO |  
@@ -109,7 +111,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   

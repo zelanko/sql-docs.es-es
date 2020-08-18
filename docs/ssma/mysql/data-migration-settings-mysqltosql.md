@@ -1,4 +1,5 @@
 ---
+description: Configuración de la migración de datos (MySQLToSQL)
 title: Configuración de migración de datos (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c8e673a4a12952303cb9b355698ed15742c9a704
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3dbf44933ae4abe26f5dacfc79bad0d971bfe5ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492457"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Configuración de la migración de datos (MySQLToSQL)
   
@@ -51,6 +52,6 @@ Hay dos botones presentes:
   
 -   **Cancelar:** Haga clic en **Cancelar** para restaurar la configuración presente antes de que se realizaran los cambios.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Migración de datos de MySQL a SQL Server/SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   

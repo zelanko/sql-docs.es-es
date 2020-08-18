@@ -1,4 +1,5 @@
 ---
+description: sysmergeschemaarticles (Transact-SQL)
 title: sysmergeschemaarticles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9239181b95485b42e839d7dd6d98de6d4186e750
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c4357681a782b878b9cc9bfe4df002d706e1d1f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473141"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85881359"
 |**destination_object**|**sysname**|Nombre del objeto de destino en la base de datos de suscripciones. Este valor se aplica únicamente a los artículos solo de esquema, como procedimientos almacenados, vistas y UDF.|  
 |**destination_owner**|**sysname**|Propietario del objeto en la base de datos de suscripciones, si no es **DBO**.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

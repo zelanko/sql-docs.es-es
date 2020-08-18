@@ -1,4 +1,5 @@
 ---
+description: Ascendants (MDX)
 title: Antecesores (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 16c6f812d1d7cae5a81a8e64fb425f4d33f4cb5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb485e2785facba4a47647f8a51548e0140b3efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491471"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
 
@@ -35,7 +36,7 @@ Ascendants(Member_Expression)
  La función **antecesoras** devuelve todos los antecesores de un miembro del miembro en sí hasta la parte superior de la jerarquía del miembro; más concretamente, realiza un recorrido de postorden de la jerarquía para el miembro especificado y, a continuación, devuelve todos los miembros antecesores relacionados con el miembro, incluido él mismo, en un conjunto. Esto contrasta con la función [ancestor](../mdx/ancestor-mdx.md) , que devuelve un miembro antecesor específico, o antecesor, en un nivel específico.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve el recuento de pedidos de distribuidor `[Sales Territory].[Northwest]` para el miembro y todos los antecesores de ese miembro del cubo **Adventure Works** . La función **antecesoras** crea el conjunto que incluye el `[Sales Territory].[Northwest]` miembro y sus antecesores para el eje Rows.  
+ En el ejemplo siguiente se devuelve el recuento de pedidos de distribuidor para el `[Sales Territory].[Northwest]` miembro y todos los antecesores de ese miembro del cubo **Adventure Works** . La función **antecesoras** crea el conjunto que incluye el `[Sales Territory].[Northwest]` miembro y sus antecesores para el eje Rows.  
   
 ```  
 SELECT  

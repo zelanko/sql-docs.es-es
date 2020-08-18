@@ -1,4 +1,5 @@
 ---
+description: Administrar contraseñas (DB2ToSQL)
 title: Administración de contraseñas (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: af41c1a9eed355d75d5bd3e48886845b9a3069d1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472484"
 ---
 # <a name="managing-passwords-db2tosql"></a>Administrar contraseñas (DB2ToSQL)
 Esta sección trata sobre la protección de contraseñas de base de datos y el procedimiento para importarlas o exportarlas entre servidores:  

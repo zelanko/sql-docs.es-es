@@ -1,4 +1,5 @@
 ---
+description: Objeto Position (ADO MD)
 title: Objeto Position (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46d619f268816b356e115a60d07a48fbe7e1d758
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 61b30ea92756de6f2ff4c9cf3d0e0b56cdedf155
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440777"
 ---
 # <a name="position-object-ado-md"></a>Objeto Position (ADO MD)
 Representa un conjunto de uno o más miembros de distintas dimensiones que define un punto a lo largo de un eje.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Con las propiedades y las colecciones de un objeto **Position** , puede hacer lo siguiente:  
   
 -   Use la propiedad **ordinal** para devolver la posición ordinal de la **posición** a lo largo del [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  

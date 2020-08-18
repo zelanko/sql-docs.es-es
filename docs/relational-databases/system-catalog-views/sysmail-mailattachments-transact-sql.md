@@ -1,4 +1,5 @@
 ---
+description: sysmail_mailattachments (Transact-SQL)
 title: sysmail_mailattachments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0fd6122ec99d4f5788fbe9f2b33478df7723f238
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3bdec861d8793d2943111a692d5bcde98b582cfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460542"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85900978"
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Al solucionar problemas del Correo electrónico de base de datos, utilice esta vista para ver las propiedades de los datos adjuntos.  
   
  Los datos adjuntos almacenados en las tablas del sistema pueden hacer que la base de datos **msdb** crezca. Utilice **sysmail_delete_mailitems_sp** para eliminar elementos de correo y sus datos adjuntos asociados. Para obtener más información, vea [crear un trabajo de Agente SQL Server para archivar mensajes de correo electrónico de base de datos y registros de eventos](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
@@ -48,10 +49,10 @@ ms.locfileid: "85900978"
  Se concede al rol fijo de servidor **sysadmin** y al rol de base de datos **DatabaseMailUserRole** . Cuando lo ejecuta un miembro del rol fijo de servidor **sysadmin** , esta vista muestra todos los datos adjuntos. Todos los demás usuarios verán únicamente los archivos adjuntos que envíen ellos mismos.  
   
 ## <a name="see-also"></a>Consulte también  
- [sysmail_allitems &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_faileditems &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
- [sysmail_sentitems &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
- [sysmail_unsentitems &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
+ [sysmail_allitems &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_faileditems &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_sentitems &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)   
+ [sysmail_unsentitems &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)   
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
   
   

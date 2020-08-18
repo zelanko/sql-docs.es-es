@@ -1,4 +1,5 @@
 ---
+description: Finalización de la preparación del caso de prueba (SybaseToSQL)
 title: Finalizando preparación del caso de prueba (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bbc833070b127d885bf223340a1c5e35388f9cdb
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a1a3c415e8c13bf0ed1eaf4c75baf0230544964c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492226"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Finalización de la preparación del caso de prueba (SybaseToSQL)
 La página final del asistente muestra la descripción del caso de prueba e información sobre los objetos implicados en la prueba. Además, en esta página puede establecer las opciones de ejecución de pruebas.  

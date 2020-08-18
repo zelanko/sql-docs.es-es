@@ -1,4 +1,5 @@
 ---
+description: SELECCIONAR del &lt; modelo &gt; (DMX)
 title: SELECT FROM &lt; Model &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6244581b4d9a383c2d09af351c5fbe3149207ebd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472027"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECCIONAR del &lt; modelo &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -56,7 +57,7 @@ SELECT ([Bike Buyer]) FROM [TM_Naive_Bayes]
 ```  
   
 ## <a name="time-series-example"></a>Ejemplo de serie temporal  
- En el siguiente ejemplo se realiza una predicción en la columna Amount del modelo Forecasting, que devuelve los siguientes cuatro estadios temporales. La columna Model Region combina modelos de bicicleta y regiones en un único identificador. La consulta utiliza la función [&#41;DMX &#40;PredictTimeSeries](../dmx/predicttimeseries-dmx.md) para realizar la predicción.  
+ En el siguiente ejemplo se realiza una predicción en la columna Amount del modelo Forecasting, que devuelve los siguientes cuatro estadios temporales. La columna Model Region combina modelos de bicicleta y regiones en un único identificador. La consulta utiliza la función [&#41;DMX &#40;PredictTimeSeries ](../dmx/predicttimeseries-dmx.md) para realizar la predicción.  
   
 ```  
 SELECT [Model Region], PredictTimeSeries(Amount, 4)   

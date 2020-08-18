@@ -1,4 +1,5 @@
 ---
+description: Agregar un grupo (Master Data Services)
 title: Agregar un grupo
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5c9bbcdca2cdbab0d3d92e90e5b343fda196a027
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 2a5693bfcc62beaad8f5423d6e5d3dbee5cd7fb7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491527"
 ---
 # <a name="add-a-group-master-data-services"></a>Agregar un grupo (Master Data Services)
 
@@ -43,7 +44,7 @@ ms.locfileid: "85812851"
   
 5.  Si lo desea, haga clic en **Comprobar nombres**.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
     > [!NOTE]  
     >  Cuando el usuario obtiene acceso por primera vez a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], su nombre se agrega a la lista de usuarios de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .  

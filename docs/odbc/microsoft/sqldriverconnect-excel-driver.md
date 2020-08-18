@@ -1,4 +1,5 @@
 ---
+description: SQLDriverConnect (controlador de Excel)
 title: SQLDriverConnect (controlador de Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1108206bf38183887540b114fda5a1e913aa67d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6320033d83e9b46c3567b3bf0b845144dbe9250e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449197"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (controlador de Excel)
 > [!NOTE]  
@@ -36,5 +37,5 @@ ms.locfileid: "81307126"
 |Controlador|Palabras clave necesarias|Ejemplos|  
 |------------|-----------------------|--------------|  
 |Microsoft Excel 3,0 o 4,0|Controlador, DriverID|Driver = {controlador de Microsoft Excel (*. xls)}; DBQ = c:\temp; DriverID = 278|  
-|Microsoft Excel 5.0/7.0|Driver, DriverID, DBQ|Driver = {controlador de Microsoft Excel (*. xls)}; DBQ = c:\temp\sample.xls; DriverID = 22|  
-|Microsoft Excel 97 y versiones posteriores|Driver, DriverID, DBQ|Driver = {controlador de Microsoft Excel (*. xls)}; DBQ = c:\temp\sample.xls; DriverID = 790|
+|Microsoft Excel 5.0/7.0|Driver, DriverID, DBQ|Driver = {controlador de Microsoft Excel (*. xls)}; DBQ =c:\temp\sample.xls; DriverID = 22|  
+|Microsoft Excel 97 y versiones posteriores|Driver, DriverID, DBQ|Driver = {controlador de Microsoft Excel (*. xls)}; DBQ =c:\temp\sample.xls; DriverID = 790|

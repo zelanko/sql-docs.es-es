@@ -1,4 +1,5 @@
 ---
+description: sys.sysindexes (Transact-SQL)
 title: Índices de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b78a272e9fa2ec3a0cc3d4418986078ff02f457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399411"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,11 +64,11 @@ ms.locfileid: "85786331"
 |**pgmodctr**|**int**|Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**mykeys**|**varbinary (816)**|Lista de los Id. de columna para las columnas que forman la clave de índice.<br /><br /> Devuelve NULL.<br /><br /> Para mostrar las columnas de clave de índice, use [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Nombre del índice o estadística. Devuelve NULL cuando **indid** = 0. Modifique la aplicación para que busque un nombre de montón NULL.|  
-|**statblob**|**imagen**|Objeto binario grande de estadística (BLOB).<br /><br /> Devuelve NULL.|  
+|**statblob**|**image**|Objeto binario grande de estadística (BLOB).<br /><br /> Devuelve NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**las**|**int**|Recuento de filas de nivel de datos basado en **indid** = 0 e **indid** = 1, y el valor se repite para **indid** >1.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las columnas definidas como reservadas no deben utilizarse.  
   
  Las columnas **DPAGES**, **Reserved**y **Used** no devolverán resultados precisos si la tabla o el índice contienen datos en la unidad de asignación ROW_OVERFLOW. Además, se realiza el seguimiento para el total de páginas de cada índice por separado y no se agregan para la tabla base. Para ver los recuentos de páginas, use las vistas de catálogo [Sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) o [Sys. partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) , o la vista de administración dinámica [Sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) .  

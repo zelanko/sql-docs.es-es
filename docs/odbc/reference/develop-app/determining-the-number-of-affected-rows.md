@@ -1,4 +1,5 @@
 ---
+description: Determinar el número de filas afectadas
 title: Determinar el número de filas afectadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e56297d-a786-415e-b66d-b42d1b2a8d45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 156a5fe41d2c9b57a33bbc2bdb4540d1f5b00340
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14114700c4d79f83f0388509056dd0b49bb21a8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483078"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>Determinar el número de filas afectadas
 Después de que una aplicación actualiza, elimina o inserta filas, puede llamar a **SQLRowCount** para determinar el número de filas afectadas. **SQLRowCount** devuelve este valor si las filas se actualizaron, eliminaron o insertaron mediante la ejecución de una instrucción **Update**, **Delete**o **Insert** , ejecutando una instrucción UPDATE o DELETE posicionada o llamando a **SQLSetPos**.  

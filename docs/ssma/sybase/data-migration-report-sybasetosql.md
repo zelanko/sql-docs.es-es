@@ -1,4 +1,5 @@
 ---
+description: Informe de migración de datos (SybaseToSQL)
 title: Informe de migración de datos (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b55228d51099c8c48c181a85d2615039f764b8a4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c13b2536ddada33a6b9a3f14d53b208dd177098c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492298"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Informe de migración de datos (SybaseToSQL)
 El cuadro de diálogo **Informe de migración de datos** aparece después de migrar los datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,7 +36,7 @@ El número de filas de datos de la tabla de origen.
 **Número de filas migradas correctamente**  
 El número de filas de datos que se migraron correctamente a la tabla de destino.  
   
-**Proporción**  
+**Relación**  
 Porcentaje de filas migradas correctamente.  
   
 **Detalles**  

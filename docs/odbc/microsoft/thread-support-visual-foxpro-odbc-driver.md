@@ -1,4 +1,5 @@
 ---
+description: Compatibilidad con subprocesos (el controlador ODBC de Visual FoxPro)
 title: Compatibilidad con subprocesos (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2aa19eb233525b5a65ef67fe9903814fc1163177
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 013ccd1f5d202794ba6b7a44c10339dd14c08d17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449077"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Compatibilidad con subprocesos (el controlador ODBC de Visual FoxPro)
 El controlador ODBC de Visual FoxPro es seguro para subprocesos. El acceso a los identificadores de entorno (*gallina*), los identificadores de conexión (*hdbc*) y los identificadores de instrucción (*hstmt*) se encapsula en los semáforos adecuados para evitar que otros procesos obtengan acceso a las estructuras de datos internas del controlador y puedan alterarlas.  

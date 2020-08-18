@@ -1,4 +1,5 @@
 ---
+description: Formato de archivo de texto (controlador de archivo de texto)
 title: Formato de archivo de texto (controlador de archivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5801433e0180bb07cb2d09a59db2bb74be012cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb402f0f186529da33974b77ffeecdd7ed788d53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449097"
 ---
 # <a name="text-file-format-text-file-driver"></a>Formato de archivo de texto (controlador de archivo de texto)
 El controlador de texto de ODBC admite archivos de texto delimitados y de ancho fijo. Un archivo de texto consta de una línea de encabezado opcional y cero o más líneas de texto.  
@@ -42,7 +43,7 @@ El controlador de texto de ODBC admite archivos de texto delimitados y de ancho 
 |No cursiva|Caracteres que se deben escribir como se muestra|  
 |*cursiva*|Argumentos definidos en otra parte de la gramática|  
 |corchetes ([])|Elementos opcionales|  
-|llaves ({})|Una lista de opciones mutuamente excluyentes|  
+|llaves ( {} )|Una lista de opciones mutuamente excluyentes|  
 |barras verticales (&#124;)|Separación de opciones mutuamente excluyentes|  
 |puntos suspensivos (...)|Elementos que se pueden repetir una o más veces|  
   
@@ -67,7 +68,7 @@ fixed-width-data ::= fixed-width-string | number | date | fixed-width-null
 ```  
   
 > [!NOTE]  
->  El ancho de cada columna en un archivo de texto de ancho fijo se especifica en el archivo Schema. ini.  
+>  El ancho de cada columna en un archivo de texto de ancho fijo se especifica en el archivo de Schema.ini.  
   
 ```  
   
@@ -87,7 +88,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  El delimitador de un archivo de texto delimitado personalizado se especifica en el archivo Schema. ini.  
+>  El delimitador de un archivo de texto delimitado personalizado se especifica en el archivo de Schema.ini.  
   
 ```  
 quote-character ::= "  

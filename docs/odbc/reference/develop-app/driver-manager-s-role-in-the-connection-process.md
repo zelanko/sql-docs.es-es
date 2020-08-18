@@ -1,4 +1,5 @@
 ---
+description: Rol&#39;s del administrador de controladores en el proceso de conexión
 title: Rol&#39;s del administrador de controladores en el proceso de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0227a4063573cb05ecaa9434605ba35f2811bd06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb4eea978604960d87ef6c5b621e5801121c5f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483048"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Rol&#39;s del administrador de controladores en el proceso de conexión
 Recuerde que las aplicaciones no llaman directamente a las funciones de controlador. En su lugar, llaman a las funciones del administrador de controladores con el mismo nombre y el administrador de controladores llama a las funciones del controlador. Normalmente, esto sucede casi inmediatamente. Por ejemplo, la aplicación llama a **SQLExecute** en el administrador de controladores y después de algunas comprobaciones de error, el administrador de controladores llama a **SQLExecute** en el controlador.  

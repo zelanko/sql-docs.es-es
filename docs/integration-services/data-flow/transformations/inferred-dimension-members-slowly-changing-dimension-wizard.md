@@ -1,4 +1,5 @@
 ---
+description: Miembros de dimensión deducidos (Asistente para dimensiones variables)
 title: Miembros de dimensión deducidos (Asistente para dimensiones de variación lenta) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 809e395f-2e10-48ff-8860-56403f130628
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e6a71efbd5036a409cad5613fc35612724538d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4066795817035e6ac149de7fd86b2f4fb816f828
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425777"
 ---
 # <a name="inferred-dimension-members-slowly-changing-dimension-wizard"></a>Miembros de dimensión deducidos (Asistente para dimensiones variables)
 
@@ -42,6 +43,6 @@ ms.locfileid: "86919284"
  Si ha elegido utilizar una columna booleana para indicar los miembros deducidos, como se ha descrito en la opción anterior, seleccione la columna en la lista.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configuración de salidas con el Asistente para dimensiones de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configurar salidas mediante el Asistente para dimensión de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

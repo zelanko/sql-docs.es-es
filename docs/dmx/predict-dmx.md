@@ -1,4 +1,5 @@
 ---
+description: Predict (DMX)
 title: Predicción (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d323794af598cb621b7fb8f9939cd2ae1c0f2746
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4f53f331b078fce4f02e548a83a145dce8ba6a91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426207"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,7 +35,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Tipo de valor devuelto  
  \<scalar column reference>  
   
- o  
+ or  
   
  \<table column reference>  
   

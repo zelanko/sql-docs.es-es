@@ -1,4 +1,5 @@
 ---
+description: Nombre de intercalación de Windows (Transact-SQL)
 title: Nombre de intercalación de Windows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2019
@@ -18,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe6578107f87eddb62f5f31efd93778f8c2af96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2a95152ded1edc82ea153c40b6f9df68c1d3dea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426527"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nombre de intercalación de Windows (Transact-SQL)
 
@@ -74,12 +75,12 @@ Al omitir esta opción se especifica que no se distinguen tipos de kana, **KS** 
 Al omitir esta opción se especifica que no se distinguen tipos de ancho, **KS** especifica que se distinguen tipos de ancho.
 
 *VariationSelectorSensitivity*  
-- **Se aplica a**: a partir de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Se aplica a**: A partir de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - Al omitir esta opción se especifica que no se distingue el selector de variación, **VSS** especifica que se distingue el selector de variación.
 
 **UTF8**  
-- **Se aplica a**: a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Se aplica a**: A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Especifica la codificación UTF-8 que se va a usar para los tipos de datos válidos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 

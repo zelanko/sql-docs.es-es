@@ -1,4 +1,5 @@
 ---
+description: Tarea Script
 title: Tarea Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18ff96f3fd227507d57051cec69f5704b7b64749
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425887"
 ---
 # <a name="script-task"></a>Tarea Script
 
@@ -130,13 +131,13 @@ ms.locfileid: "86921163"
  Si cambia el nombre del método en el proyecto VSTA, deberá cambiar el valor de la propiedad **EntryPoint** .  
   
  **Variables de solo lectura**  
- Escriba una lista separada por comas de variables de solo lectura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos ( **…** ) y seleccione las variables en el cuadro de diálogo **Seleccionar variables**.  
+ Escriba una lista separada por comas de variables de solo lectura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos (**…**) y seleccione las variables en el cuadro de diálogo **Seleccionar variables**.  
   
 > [!NOTE]  
 >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
   
  **Variables de lectura/escritura**  
- Escriba una lista separada por comas de variables de lectura y escritura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos ( **…** ) y seleccione las variables en el cuadro de diálogo **Seleccionar variables**.  
+ Escriba una lista separada por comas de variables de lectura y escritura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos (**…**) y seleccione las variables en el cuadro de diálogo **Seleccionar variables**.  
   
 > [!NOTE]  
 >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  

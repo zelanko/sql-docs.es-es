@@ -1,4 +1,5 @@
 ---
+description: Origen OData
 title: Origen OData| Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06cb4ec3bbc74779ad2fcb4f36d6e75a4e7cb55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425827"
 ---
 # <a name="odata-source"></a>Origen OData
 
@@ -68,7 +69,7 @@ En el caso del tipo de datos **decimal**, los metadatos de origen determinan la 
   
 -   [Modificar una consulta de origen OData en tiempo de ejecución](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
--   [Propiedades del origen OData](../../integration-services/data-flow/odata-source-properties.md)  
+-   [Propiedades de orígenes OData](../../integration-services/data-flow/odata-source-properties.md)  
   
 ## <a name="odata-source-editor-connection-page"></a>Editor de origen OData (página Conexión)
   Use la página **Conexión** del cuadro de diálogo **Editor de origen OData** para seleccionar el administrador de conexiones OData para el origen OData. Esta página también permite especificar una ruta de acceso de colección o a recursos y las opciones de consulta deseadas para indicar qué datos hay que recuperar del origen OData. 
@@ -107,7 +108,7 @@ En el caso del tipo de datos **decimal**, los metadatos de origen determinan la 
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Usar ruta de acceso de colección o de recurso = Ruta de acceso a recursos  
  **Resource path**  
- Escriba una ruta de acceso a recursos. Por ejemplo: Employees  
+ Escriba una ruta de acceso a recursos. Por ejemplo: Empleados  
   
 ## <a name="odata-source-editor-columns-page"></a>Editor de origen OData (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen OData** para seleccionar las columnas externas (origen) que se van a incluir en la salida y asignarlas a columnas de salida.  

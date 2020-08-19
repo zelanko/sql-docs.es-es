@@ -1,4 +1,5 @@
 ---
+description: PredictHistogram (DMX)
 title: PredictHistogram (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ecc213e023483245fb8b40a55de749c23ae16a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426167"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -47,11 +48,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]los algoritmos de minería de datos no admiten **$ProbabilityVariance**. Esta columna siempre contiene 0 para los algoritmos de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] los algoritmos de minería de datos no admiten **$ProbabilityVariance**. Esta columna siempre contiene 0 para los algoritmos de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]los algoritmos de minería de datos no admiten **$ProbabilityStdev**. Esta columna siempre contiene 0 para los algoritmos de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] los algoritmos de minería de datos no admiten **$ProbabilityStdev**. Esta columna siempre contiene 0 para los algoritmos de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   **$AdjustedProbability**  
   
@@ -84,14 +85,14 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [&#41;de &#40;DMX de clúster](../dmx/cluster-dmx.md)   
- [&#41;ClusterProbability &#40;DMX](../dmx/clusterprobability-dmx.md)   
- [&#41;PredictAdjustedProbability &#40;DMX](../dmx/predictadjustedprobability-dmx.md)   
- [&#41;PredictProbability &#40;DMX](../dmx/predictprobability-dmx.md)   
- [&#41;PredictStdev &#40;DMX](../dmx/predictstdev-dmx.md)   
- [&#41;PredictSupport &#40;DMX](../dmx/predictsupport-dmx.md)   
- [&#41;PredictVariance &#40;DMX](../dmx/predictvariance-dmx.md)   
- [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [&#41;de &#40;DMX de clúster ](../dmx/cluster-dmx.md)   
+ [&#41;ClusterProbability &#40;DMX ](../dmx/clusterprobability-dmx.md)   
+ [&#41;PredictAdjustedProbability &#40;DMX ](../dmx/predictadjustedprobability-dmx.md)   
+ [&#41;PredictProbability &#40;DMX ](../dmx/predictprobability-dmx.md)   
+ [&#41;PredictStdev &#40;DMX ](../dmx/predictstdev-dmx.md)   
+ [&#41;PredictSupport &#40;DMX ](../dmx/predictsupport-dmx.md)   
+ [&#41;PredictVariance &#40;DMX ](../dmx/predictvariance-dmx.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

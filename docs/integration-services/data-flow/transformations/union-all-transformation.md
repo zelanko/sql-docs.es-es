@@ -1,4 +1,5 @@
 ---
+description: Unión de todo, transformación
 title: Transformación Unión | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45b21ea454e7c40f7af28863802d1678b3095d50
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cb32c68f05e4be6b25d0fc20ae088aa6760bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425627"
 ---
 # <a name="union-all-transformation"></a>Unión de todo, transformación
 
@@ -56,7 +57,7 @@ ms.locfileid: "86920351"
   Use el cuadro de diálogo **Editor de transformación Unión de todo** para combinar varios conjuntos de filas de entrada en un solo conjunto de filas de salida. Al incluir la transformación Unión de todo en un flujo de datos, puede combinar datos de varios flujos, crear conjuntos de datos complejos anidando transformaciones Unión de todo y volver a combinar filas después de corregir errores en los datos.  
   
 ### <a name="options"></a>Opciones  
- **Nombre de la columna de salida**  
+ **Nombre de columna de salida**  
  Escriba un alias para cada columna. El valor predeterminado es el nombre de la columna de entrada de la primera entrada (referencia); no obstante, puede elegir un nombre descriptivo único.  
   
  **Entrada de Unión de todo 1**  
@@ -66,6 +67,6 @@ ms.locfileid: "86920351"
  Seleccione la segunda entrada y las adicionales de la lista de columnas de entrada disponibles. Los metadatos de las columnas asignadas deben coincidir.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Combinación de datos con la transformación Unión de todo](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
+ [Combinar datos mediante la transformación Unión de todo](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  
   
   

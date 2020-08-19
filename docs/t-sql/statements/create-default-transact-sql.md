@@ -1,4 +1,5 @@
 ---
+description: CREATE DEFAULT (Transact-SQL)
 title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 361963d6836cb4c4b89c62f8ca1481b292bc803e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 8d1001196c5b4e88c105f0fa7e0355e97e3ee884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426787"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ AS constant_expression [ ; ]
  El nombre del valor predeterminado. Los nombres predeterminados deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). Especificar el nombre del propietario del valor predeterminado es opcional.  
   
 *constant_expression*  
-Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que contiene solo valores constantes (no puede contener el nombre de ninguna columna u otros objetos de base de datos). Puede utilizar cualquier constante, función integrada o expresión matemática, excepto las que contienen tipos de datos de alias. No es posible utilizar funciones definidas por el usuario. Incluya las constantes de caracteres y fechas entre comillas simples ( **'** ); las constantes de moneda, de enteros y de coma flotante no necesitan comillas. Los datos binarios deben precederse de 0x y los datos de moneda deben precederse de un signo de dólar ($). El valor predeterminado debe ser compatible con el tipo de datos de la columna.  
+Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que contiene solo valores constantes (no puede contener el nombre de ninguna columna u otros objetos de base de datos). Puede utilizar cualquier constante, función integrada o expresión matemática, excepto las que contienen tipos de datos de alias. No es posible utilizar funciones definidas por el usuario. Incluya las constantes de caracteres y fechas entre comillas simples (**'**); las constantes de moneda, de enteros y de coma flotante no necesitan comillas. Los datos binarios deben precederse de 0x y los datos de moneda deben precederse de un signo de dólar ($). El valor predeterminado debe ser compatible con el tipo de datos de la columna.  
   
 ## <a name="remarks"></a>Observaciones  
  Solo puede crear un nombre predeterminado en la base de datos actual. En una base de datos, los nombres predeterminados deben ser únicos para cada esquema. Al crear un valor predeterminado, use **sp_bindefault** para enlazarlo a una columna o a un tipo de datos de alias.  

@@ -1,4 +1,5 @@
 ---
+description: Origen XML
 title: Origen XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 310381f04bc48eeb3d4732ea1e9b0d7fd99aed43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 14aeae01cecd283ae480b337543fa0e1c4fe8bfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425617"
 ---
 # <a name="xml-source"></a>Origen XML
 
@@ -125,11 +126,11 @@ ms.locfileid: "86920304"
  Use el cuadro de diálogo **Abrir** para buscar el archivo de datos XML.  
   
 #### <a name="data-access-mode--xml-file-from-variable"></a>Modo de acceso a datos = Datos XML de variable  
- **Nombre de la variable**  
+ **Nombre de variable**  
  Seleccione la variable que contiene la ruta de acceso y el nombre del archivo XML.  
   
 #### <a name="data-access-mode--xml-data-from-variable"></a>Modo de acceso a datos = Datos XML de variable  
- **Nombre de la variable**  
+ **Nombre de variable**  
  Seleccione la variable que contiene los datos XML.  
   
 ## <a name="xml-source-editor-columns-page"></a>Editor de origen de XML (página Columnas)

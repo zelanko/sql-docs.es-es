@@ -1,4 +1,5 @@
 ---
+description: Restricciones de precedencia
 title: Restricciones de precedencia | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba2b9f0e9dbf23eea54da531305553db712ad677
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee2c1ffab719566875a7c9f7f6090a12aef5675f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425917"
 ---
 # <a name="precedence-constraints"></a>Restricciones de precedencia
 
@@ -120,7 +121,7 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
  Especifique el valor de restricción: **Correcto**, **Error** o **Finalización**.  
   
 > [!NOTE]  
->  La línea de restricción de precedencia es verde para **Correcto**, resaltada para **Error**y azul para **Conclusión**.  
+>   La línea de restricción de precedencia es verde para **Correcto**, resaltada para **Error**y azul para **Conclusión**.  
   
  **Expression**  
  Si usa las operaciones **Expresión**, **Expresión y restricción**o **Expresión o restricción**, escriba una expresión o inicie el Generador de expresiones para crear la expresión. La expresión debe evaluarse como un valor booleano.  
@@ -156,7 +157,7 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
     |EvalOp|Seleccionar una operación de evaluación. Si seleccionan las operaciones **Expression**, **ExpressionAndConstant**o **ExpressionOrConstant** , se puede especificar una expresión.|  
     |Expression|Si la operación de evaluación contiene una expresión, se debe proporcionar una expresión. La expresión debe evaluarse como un valor booleano. Para más información sobre el lenguaje de expresiones, vea [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |AND lógico|Configure **AND lógico** para especificar si la restricción de precedencia se evalúa en conjunto con otras restricciones de precedencia, cuando preceden varios ejecutables y están vinculados al ejecutable restringido.|  
-    |Nombre|Actualizar el nombre de la restricción de precedencia.|  
+    |Name|Actualizar el nombre de la restricción de precedencia.|  
     |ShowAnnotation|Especificar el tipo de anotación que se va a usar. Elija **Never** para deshabilitar anotaciones, **AsNeeded** para habilitar anotaciones a petición, **ConstraintName** para realizar anotaciones automáticamente usando el valor de la propiedad Name, **ConstraintDescription** para realizar anotaciones automáticamente usando el valor de la propiedad Description y **ConstraintOptions** para realizar anotaciones automáticamente al usar el valor de las propiedades Value y Expression.|  
     |Value|Si la operación de evaluación especificada en la propiedad EvalOP contiene una restricción, seleccione el resultado de la ejecución del ejecutable de restricción.|  
   
@@ -217,12 +218,12 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
 |Operación de evaluación|La restricción se evalúa como|La expresión se evalúa como|El ejecutable restringido se ejecuta|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
 |Restricción|True|N/D|True|  
-|Restricción|False|N/D|False|  
+|Restricción|Falso|N/D|Falso|  
 |Expression|N/D|True|True|  
 |Expression|N/D|False|False|  
 |Restricción y expresión|True|True|True|  
 |Restricción y expresión|True|False|False|  
-|Restricción y expresión|False|True|False|  
+|Restricción y expresión|False|True|Falso|  
 |Restricción y expresión|False|False|False|  
 |Restricción o expresión|True|True|True|  
 |Restricción o expresión|True|False|True|  

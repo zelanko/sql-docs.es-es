@@ -1,4 +1,5 @@
 ---
+description: Anulación de dinamización, transformación
 title: Transformación Anulación de dinamización | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0a0d34a154b9b92258424718bb7cd62e4ed295e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e4dd81bf33b43f4adf73225faa199fd9c5f792fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425637"
 ---
 # <a name="unpivot-transformation"></a>Anulación de dinamización, transformación
 
@@ -61,7 +62,7 @@ ms.locfileid: "86914881"
   Use el cuadro de diálogo **Editor de transformación Anulación de dinamización** para seleccionar las columnas que se van a dinamizar en filas y especificar la columna de datos y la nueva columna de salida del valor dinámico.  
   
 > [!NOTE]  
->  Este tema usa el escenario Anulación de dinamización descrito en [Transformación Anulación de dinamización](../../../integration-services/data-flow/transformations/unpivot-transformation.md) para mostrar el uso de las opciones.  
+>   Este tema utiliza el escenario Anulación de dinamización descrito en [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) para ilustrar el uso de las opciones.  
   
 ### <a name="options"></a>Opciones  
  **Columnas de entrada disponibles**  

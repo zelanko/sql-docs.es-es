@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT STOPLIST (Transact-SQL)
 title: CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec2dac854349ad7e05fcbf9738b4cafb78228cc6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c121018444ef6fca9f021da6e8d57683ad41b035
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426697"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

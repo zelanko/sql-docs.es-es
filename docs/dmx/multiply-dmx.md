@@ -1,4 +1,5 @@
 ---
+description: '* Multiplica DMX'
 title: '* Multiplica (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a8df192cc04741ca1136f0c89c46893e5463370
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3c7ef5a8893d29e2d20d31517c85abacfc4a3a9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426287"
 ---
 # <a name="-multiply-dmx"></a>* (Multiplicar) (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

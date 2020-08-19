@@ -1,4 +1,5 @@
 ---
+description: Script de registro complementario de Oracle
 title: Script de registro complementario de Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2c2a71afd526aa177490c817631dd9cd1f5fdc2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ec1835467ed0fb3ac23d570d26d8416cd83521b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425997"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script de registro complementario de Oracle
 
@@ -37,7 +38,7 @@ ms.locfileid: "86901285"
  **Guardar como**  
  Guarda el script en un archivo de texto. Se emplea si un administrador de bases de datos (DBA) de Oracle necesita examinar y ejecutar el script de registro complementario; el programa le permite guardar el script en un archivo de texto que puede enviar posteriormente al DBA de Oracle por correo electrónico o por otros medios para su ejecución posterior (mediante la utilidad SQL*Plus de Oracle u otra herramienta para ejecutar scripts en una base de datos de Oracle).  
   
- **Copy**  
+ **Copiar**  
  Copia el script en el Portapapeles. Cuando esté listo, puede pegar el script en cualquier ubicación que desee por si un administrador de bases de datos (DBA) de Oracle necesita examinar y ejecutar el script de registro complementario.  
   
 ## <a name="see-also"></a>Consulte también  

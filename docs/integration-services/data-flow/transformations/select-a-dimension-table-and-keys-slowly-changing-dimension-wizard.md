@@ -1,4 +1,5 @@
 ---
+description: Seleccionar una tabla de dimensiones y claves (Asistente para dimensión de variación lenta)
 title: Seleccionar una tabla de dimensiones y claves (Asistente para dimensión de variación lenta) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48d0d57c66a05a28a41de37b6bea0867fbe2c8e5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5d49d23a670ae5de5b0084acb90758201cbeff74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425757"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>Seleccionar una tabla de dimensiones y claves (Asistente para dimensión de variación lenta)
 
@@ -51,6 +52,6 @@ ms.locfileid: "86919502"
  Seleccione una de las columnas de dimensión para que sea la clave empresarial. Es necesario disponer de una clave empresarial.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configuración de salidas con el Asistente para dimensiones de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configurar salidas mediante el Asistente para dimensión de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

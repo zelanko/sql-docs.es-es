@@ -1,4 +1,5 @@
 ---
+description: Administrador de conexiones de SAP BW
 title: Administrador de conexiones de SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c619db7e6386bb31b39b7a347f319ae45ddfacbc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426007"
 ---
 # <a name="sap-bw-connection-manager"></a>Administrador de conexiones de SAP BW
 
@@ -72,7 +73,7 @@ ms.locfileid: "86921441"
   
     -   Haga doble clic en administrador de conexiones de SAP BW.  
   
-         O bien  
+         o bien  
   
     -   Haga clic con el botón derecho en el administrador de conexiones de SAP BW y, después, seleccione **Editar**.  
   
@@ -115,23 +116,23 @@ ms.locfileid: "86921441"
   
  Para conectarse a un único servidor de aplicaciones, use en su lugar la opción **Usar un solo servidor de aplicaciones** .  
   
- **Servidor de Mensajería**  
+ **Servidor de mensajes**  
  Si se conecta a un grupo de servidores con equilibrio de carga, especifique el nombre del servidor del mensaje.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
+>   Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
   
  **Grupo**  
  Si se conecta a un grupo de servidores con equilibrio de carga, especifique el nombre del grupo de servidores.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
+>   Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
   
  **SID**  
  Si se conecta a un grupo de servidores con equilibrio de carga, especifique el identificador del sistema para la conexión.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
+>   Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
   
  **Directorio de registro**  
  Permite habilitar el registro para los componentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW.  

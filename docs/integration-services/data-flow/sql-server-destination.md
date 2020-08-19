@@ -1,4 +1,5 @@
 ---
+description: SQL Server, destino
 title: Destino de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 278cfb16ddc6c00fba9570d7912a6d5fa3a31727
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425807"
 ---
 # <a name="sql-server-destination"></a>SQL Server, destino
 
@@ -68,7 +69,7 @@ ms.locfileid: "86917771"
   
  Para obtener más información sobre las opciones de carga masiva, vea [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-#### <a name="performance-improvements"></a>Mejoras de rendimiento  
+#### <a name="performance-improvements"></a>Mejoras en el rendimiento  
  Para mejorar el rendimiento de una inserción masiva y el acceso a los datos de tablas durante la operación de inserción masiva, se deben cambiar las opciones predeterminadas de la manera siguiente:  
   
 -   No comprobar las restricciones en la tabla o vista de destino durante la operación de importación masiva.  
@@ -100,7 +101,7 @@ ms.locfileid: "86917771"
   
 -   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Propiedades personalizadas del destino de SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
+-   [Propiedades personalizadas del destino SQL Server](../../integration-services/data-flow/sql-server-destination-custom-properties.md)  
   
  Para obtener más información sobre cómo establecer valores de propiedades, haga clic en uno de los temas siguientes:  
   

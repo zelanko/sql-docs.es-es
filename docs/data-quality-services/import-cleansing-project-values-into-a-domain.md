@@ -1,4 +1,5 @@
 ---
+description: Importar valores de un proyecto de limpieza en un dominio
 title: Importar valores de un proyecto de limpieza en un dominio
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8688d5d20f1b5ac600e75327725ab18e9f8dba1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06600482f843ecf014b5ec8648bc8079c871be6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426357"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de un proyecto de limpieza en un dominio
 
@@ -37,7 +38,7 @@ ms.locfileid: "85892390"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para importar en un dominio el conocimiento de calidad de datos obtenido durante el proceso de limpieza.  
   
-##  <a name="import-cleansing-project-values"></a><a name="Import"></a>Importar valores de proyecto de limpieza  
+##  <a name="import-cleansing-project-values"></a><a name="Import"></a> Importar valores de proyecto de limpieza  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -58,7 +59,7 @@ ms.locfileid: "85892390"
   
     -   Seleccione **Agregar valores de la pestaña Nuevo** para importar los valores de la pestaña Nuevo, además de los valores de las pestañas **Correcto** y **Corregido** .  
   
-    -   Haga clic en **Aceptar**.  
+    -   Haga clic en **OK**.  
   
 6.  Vuelve a la pestaña **Valores del dominio** y aparece un mensaje que indica que la importación de los valores fue correcta. Los valores que se han importado y que, por lo tanto, son nuevos en el dominio, se mostrarán en la tabla **Valores** .  
   

@@ -1,4 +1,5 @@
 ---
+description: Asistente para dimensiones variables (Ayuda F1)
 title: Asistente para dimensiones de variación lenta (Ayuda F1) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4147da3260a2b8620d880e2d20c3ed4fd610d05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d97c2228226b86a2f1700311743b99039c781025
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425737"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Asistente para dimensiones variables (Ayuda F1)
 
@@ -28,7 +29,7 @@ ms.locfileid: "86919468"
   
  Para obtener más información acerca de este asistente, vea [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
- [Asistente para dimensiones de variación lenta (página de bienvenida)](../../../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md)  
+ [Asistente para dimensiones variables (página de bienvenida)](../../../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md)  
  Presenta el Asistente para dimensiones variables.  
   
  [Seleccionar una tabla de dimensiones y claves &#40;Asistente para dimensiones de variación lenta&#41;](../../../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
@@ -46,11 +47,11 @@ ms.locfileid: "86919468"
  [Miembros de dimensión deducidos &#40;Asistente para dimensiones de variación lenta&#41;](../../../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md)  
  Especifique opciones para miembros de dimensión deducidos.  
   
- [Finalización del Asistente para dimensiones de variación lenta](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
+ [Finalizar el Asistente para dimensiones variables](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
  Muestra las opciones de configuración seleccionadas por el usuario.  
   
 ## <a name="see-also"></a>Consulte también  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)   
- [Configuración de salidas con el Asistente para dimensiones de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Configurar salidas mediante el Asistente para dimensión de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

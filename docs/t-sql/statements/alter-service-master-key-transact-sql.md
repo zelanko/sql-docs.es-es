@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVICE MASTER KEY (Transact-SQL)
 title: ALTER SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9cc3706e371f1c9c4fcc031fd4665459e65937ca
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 53526aa2ba6a59b623382aa1c47b11443759756b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426827"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,25 +69,25 @@ ALTER SERVICE MASTER KEY
  Especifica el nombre de la antigua cuenta de servicio de Windows.  
   
 > [!WARNING]  
->  Esta opción es obsoleta. No debe usarse. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
+>  Esta opción es obsoleta. No utilizar. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
   
  OLD_PASSWORD **='***password***'**  
  Especifica la contraseña de la antigua cuenta de servicio de Windows.  
   
 > [!WARNING]  
->  Esta opción es obsoleta. No debe usarse. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
+>  Esta opción es obsoleta. No utilizar. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
   
  NEW_ACCOUNT **='***account_name***'**  
  Especifica el nombre de la nueva cuenta de servicio de Windows.  
   
 > [!WARNING]  
->  Esta opción es obsoleta. No debe usarse. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
+>  Esta opción es obsoleta. No utilizar. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
   
  NEW_PASSWORD **='***password***'**  
  Especifica la contraseña de la nueva cuenta de servicio de Windows.  
   
 > [!WARNING]  
->  Esta opción es obsoleta. No debe usarse. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
+>  Esta opción es obsoleta. No utilizar. Utilice el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su lugar.  
   
 ## <a name="remarks"></a>Observaciones  
  La clave maestra de servicio se vuelve a generar automáticamente la primera vez que se necesita para cifrar una contraseña de servidor vinculado, una credencial o una clave maestra de base de datos. La clave maestra del servicio se cifra mediante la clave del equipo local o la API de protección de datos de Windows. Esta API usa una clave derivada de las credenciales de Windows de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,4 +1,5 @@
 ---
+description: NOT (DMX)
 title: NO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 98c40dba282c82f124d4e4ac009a046a44a283cb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 03a8ea859160af36b9c822bf01c4197e8b4c3175
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426267"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -39,8 +40,8 @@ NOT Expression1
   
 |Si Expression1 es|El valor devuelto es|  
 |-----------------------|---------------------|  
-|TRUE|FALSE|  
-|FALSO|VERDADERO|  
+|true|false|  
+|false|true|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de operadores &#40;DMX&#41; de extensiones de minería de datos](../dmx/data-mining-extensions-dmx-operator-reference.md)   

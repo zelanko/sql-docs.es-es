@@ -1,4 +1,5 @@
 ---
+description: CREATE DIAGNOSTICS SESSION (Transact-SQL)
 title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12a6e49e477ce3e61560438a6db141bfb5aab721
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 99f0c8b66e45fafa806848efa2f979fbbb0da054
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417101"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -90,7 +91,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |Duration|Duración del evento.|  
 |SPID|Identificador de proceso del servicio.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Se permite para cada usuario un máximo de 10 sesiones de diagnóstico simultáneas. Vea [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) para obtener una lista de las sesiones actuales y anule las que ya no necesite mediante `DROP DIAGNOSTICS SESSION`.  
   
  Las sesiones de diagnóstico seguirán recopilando metadatos hasta que se anulen.  
@@ -106,7 +107,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 ### <a name="a-creating-a-diagnostics-session"></a>A. Creación de una sesión de diagnóstico  
  En este ejemplo se crea una sesión de diagnóstico para registrar las métricas del rendimiento del motor de base de datos. En el ejemplo se crea una sesión de diagnóstico que escucha los eventos de ejecución y finalización de la consulta del motor y un evento DMS de bloqueo. Lo que se devuelve es el texto del comando, el nombre del equipo, el identificador de la solicitud (identificador de consulta) y la sesión en la que se ha creado el evento.  
   
-```  
+```sql  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
 <Session>  
    <MaxItemCount>100</MaxItemCount>  
@@ -130,13 +131,13 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
   
  Después de crear la sesión de diagnóstico, ejecute una consulta.  
   
-```  
+```sql  
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
  Después, vea los resultados de la sesión de diagnóstico. Para ello, selecciónela en el esquema sysdiag.  
   
-```  
+```sql  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
@@ -146,14 +147,14 @@ SELECT * FROM master.sysdiag.MYDIAGSESSION;
   
  Cuando haya terminado con la sesión de diagnóstico, anúlela con el comando **DROP DIAGNOSTICS**.  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
 ### <a name="b-alternative-diagnostic-session"></a>B. Sesión de diagnóstico alternativo  
  Un segundo ejemplo con propiedades ligeramente diferentes.  
   
-```  
+```sql  
 -- Determine the session_id of your current session  
 SELECT TOP 1 session_id();  
 -- Replace \<*session_number*> in the code below with the numbers in your session_id  
@@ -184,7 +185,7 @@ CREATE DIAGNOSTICS SESSION PdwOptimizationDiagnostics AS N'
   
  Ejecute una consulta, por ejemplo:  
   
-```  
+```sql  
 USE ssawPDW;  
 GO  
 SELECT * FROM dbo.FactFinance;  
@@ -192,7 +193,7 @@ SELECT * FROM dbo.FactFinance;
   
  La consulta siguiente devuelve el intervalo de autorización:  
   
-```  
+```sql  
 SELECT *   
 FROM master.sysdiag.PdwOptimizationDiagnostics   
 ORDER BY DateTimePublished;  
@@ -200,7 +201,7 @@ ORDER BY DateTimePublished;
   
  Cuando haya terminado con la sesión de diagnóstico, anúlela con el comando **DROP DIAGNOSTICS**.  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;  
 ```  
   

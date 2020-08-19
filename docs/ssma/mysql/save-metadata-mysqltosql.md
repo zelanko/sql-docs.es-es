@@ -1,4 +1,5 @@
 ---
+description: Guardar metadatos (MySQLToSQL)
 title: Guardar metadatos (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c032cfd8707524e64b68f6fcb7cd0223342602bb
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b19ba78707fb596fde5ab73f04003a9d2d3feb9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418461"
 ---
 # <a name="save-metadata--mysqltosql"></a>Guardar metadatos (MySQLToSQL)
 El cuadro de diálogo **guardar metadatos** le solicita que cargue los metadatos en el proyecto de SSMA antes de guardarlo. Esto le permite tener un archivo de proyecto completo que puede usar sin conexión y enviar a otras personas, como personal de soporte técnico.  

@@ -1,4 +1,5 @@
 ---
+description: Configuración del proyecto (Azure SQL Database) (SybaseToSQL)
 title: Configuración del proyecto (Azure SQL Database) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b79d4e94126676e128d803176463b314348ed8a1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 39a099eb243d767d18402bcd6baeb6280dbeaad4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418281"
 ---
 # <a name="project-settings-azure-sql-database--sybasetosql"></a>Configuración del proyecto (Azure SQL Database) (SybaseToSQL)
 La configuración del proyecto Azure SQL Database permite configurar el sufijo de la base de datos Azure SQL Database que se va a agregar en el cuadro de diálogo de conexión y también permitir la implementación del mecanismo de latido en Azure SQL Database conexión.  

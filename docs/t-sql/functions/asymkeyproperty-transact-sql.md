@@ -1,4 +1,5 @@
 ---
+description: ASYMKEYPROPERTY (Transact-SQL)
 title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2cef30d8155c0a44820b9ab639c2a28964b02f76
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2ebd38bae5c1a2ad001f03e9ff2a192bf95a0de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417491"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Valor Key_ID de una clave asimétrica en la base de datos. Para buscar el valor 
 Especifica que la salida devuelve la descripción del algoritmo de la clave asimétrica. Solo está disponible para las claves asimétricas creadas a partir de un módulo EKM.
   
 **'** string_sid **'**  
-Especifica que la salida devuelve el SID de la clave asimétrica en formato **nvarchar()** .
+Especifica que la salida devuelve el SID de la clave asimétrica en formato **nvarchar()**.
   
 **'** sid **'**  
 Especifica que la salida devuelve el SID de la clave asimétrica en formato binario.
@@ -69,7 +70,7 @@ ASYMKEYPROPERTY(256, 'sid') AS SID ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
 [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
 [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  

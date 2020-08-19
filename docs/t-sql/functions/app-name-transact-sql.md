@@ -1,4 +1,5 @@
 ---
+description: APP_NAME (Transact-SQL)
 title: APP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5bba743ec083c5eda630e9d14799cae34726a848
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c8522004e6852ebb3e874811ec7eb198cdf0416a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417521"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ APP_NAME  ( )
 ## <a name="return-types"></a>Tipos de valor devuelto
 **nvarchar(128)**
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Use `APP_NAME` para distinguir entre otras aplicaciones, como una manera de realizar otras acciones para esas aplicaciones. Por ejemplo, `APP_NAME` puede distinguir entre aplicaciones diferentes, lo que permite otro formato de fecha para cada aplicación. También puede permitir el envío de un mensaje informativo a ciertas aplicaciones.
   
 Para establecer el nombre de una aplicación en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic en **Opciones** en el cuadro de diálogo **Conectar al motor de base de datos**. En la pestaña **Parámetros de conexión adicionales**, indique un atributo **app** con el formato `;app='application_name'`.
@@ -68,7 +69,7 @@ PRINT 'This process was started by ' + APP_NAME() + '. The date is ' + CONVERT (
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
 [Funciones](../../t-sql/functions/functions.md)
   

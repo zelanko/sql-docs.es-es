@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;REMSERVER (Transact-SQL)'
 title: '@@REMSERVER (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0a0d2b5d50144ca96b9208dfa1c0d6844b456fe6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 385f492a91e740dfea04f83b1da8c8a67861f05b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417211"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "87110829"
 ## <a name="return-types"></a>Tipos de valor devuelto
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  @@REMSERVER permite a un procedimiento almacenado comprobar el nombre del servidor de base de datos desde el que se ejecuta.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -73,7 +74,7 @@ EXEC SEATTLE1...usp_CheckServer;
 LONDON2  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones de configuración &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Servidores remotos](../../database-engine/configure-windows/remote-servers.md)  
   

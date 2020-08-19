@@ -1,4 +1,5 @@
 ---
+description: FETCH (Transact-SQL)
 title: FETCH (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 005ec67edba5dd57a42d1866dbba169c0d32f070
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a15d8c06e47dd7ae651d0034037f2e3a4cd21bcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417121"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +85,7 @@ FETCH
  INTO \@*nombre_de_variable*[ ,...*n*]  
  Permite colocar en variables locales los datos de las columnas de una captura. Todas las variables de la lista, de izquierda a derecha, están asociadas a las columnas correspondientes del conjunto de resultados del cursor. El tipo de datos de cada variable tiene que coincidir o ser compatible con la conversión implícita del tipo de datos de la columna correspondiente del conjunto de resultados. El número de variables debe coincidir con el número de columnas de la lista de selección del cursor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si la opción `SCROLL` no se especifica con una instrucción `DECLARE CURSOR` de estilo ISO, `NEXT` es la única opción de `FETCH` admitida. Si `SCROLL` se especifica con un `DECLARE CURSOR` de estilo ISO, se admiten todas las opciones de `FETCH`.  
   
  Cuando se utilizan las extensiones de cursor DECLARE de [!INCLUDE[tsql](../../includes/tsql-md.md)], se aplican las reglas siguientes:  
@@ -208,7 +209,7 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   

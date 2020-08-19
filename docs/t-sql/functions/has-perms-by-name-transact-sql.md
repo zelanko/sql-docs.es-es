@@ -1,4 +1,5 @@
 ---
+description: HAS_PERMS_BY_NAME (Transact-SQL)
 title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417351"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Es el nombre del elemento protegible. Si el elemento protegible es el servidor mismo, este valor debe establecerse en NULL. *securable* es una expresión escalar de tipo **sysname**. No tiene ningún valor predeterminado.  
   
  *securable_class*  
- Es el nombre de la clase de elemento protegible en la cual se prueba el permiso. *securable_class* es una expresión escalar de tipo **nvarchar(60)** .  
+ Es el nombre de la clase de elemento protegible en la cual se prueba el permiso. *securable_class* es una expresión escalar de tipo **nvarchar(60)**.  
   
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el argumento securable_class debe establecerse en uno de los valores siguientes: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** o **USER**.  
   
@@ -62,7 +63,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Expresión escalar opcional de tipo **sysname** que representa el nombre de la subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
   
 > [!NOTE]  
->  En las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y posteriores, las subentidades protegibles no pueden usar corchetes con el formato **"[** _sub name_ **]"** . Es mejor usar **'** _sub name_ **'** .  
+>  En las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y posteriores, las subentidades protegibles no pueden usar corchetes con el formato **"[**_sub name_**]"**. Es mejor usar **'** _sub name_ **'** .  
   
  *sub-securable_class*  
  Expresión escalar opcional de tipo **nvarchar(60)** que representa la clase de subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
@@ -74,7 +75,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  Devuelve NULL cuando la consulta da error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función integrada determina si la entidad de seguridad actual tiene un permiso efectivo específico sobre un elemento protegible determinado. HAS_PERMS_BY_NAME devuelve 1 cuando el usuario tiene un permiso efectivo sobre el elemento protegible, 0 cuando el usuario no tiene ningún permiso efectivo sobre el elemento protegible y NULL cuando la clase protegible o el permiso no son válidos. Un permiso efectivo puede ser cualquiera de los siguientes:  
   
 -   Un permiso concedido directamente a la entidad de seguridad, no denegado.  
@@ -181,7 +182,7 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

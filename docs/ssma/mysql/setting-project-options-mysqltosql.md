@@ -1,4 +1,5 @@
 ---
+description: Configuración de opciones de proyecto (MySQLToSQL)
 title: Establecer opciones de proyecto (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cf8ac834b014fe49a851d3887fb36e29f59e069e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 642d6df01fc5855ece9bd06ea2860de076f754bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418431"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Configuración de opciones de proyecto (MySQLToSQL)
 Para cada proyecto de SSMA, puede establecer opciones de nivel de proyecto. Estas opciones especifican cómo se convierten los objetos, cómo se migran los datos y cómo se asignan los tipos de datos de origen a los tipos de datos de destino.  Antes de convertir los objetos en SQL Server o SQL Azure o migrar datos a SQL Server o SQL Azure, compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -38,13 +39,13 @@ SSMA tiene cinco conjuntos de opciones de configuración del proyecto:
   
 La configuración del proyecto se puede configurar de cuatro maneras:  
   
--   Valor predeterminado  
+-   Default  
   
 -   Optimistic  
   
 -   Completo  
   
--   Personalizada  
+-   Personalizado  
   
 El modo predeterminado es el recomendado para la mayoría de los usuarios. El modo optimista mantiene más la sintaxis actual de MySQL y es más fácil de leer. Sin embargo, mantener la sintaxis actual podría no ser preciso. Si la sintaxis de MySQL se debe convertir en una sintaxis equivalente SQL Server o SQL Azure, el modo completo realiza la conversión más completa. Sin embargo, el código resultante puede ser más difícil de leer. En el modo personalizado, puede establecer las opciones.  
   

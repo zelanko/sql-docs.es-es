@@ -1,4 +1,5 @@
 ---
+description: datetimeoffset (Transact-SQL)
 title: datetimeoffset (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -23,12 +24,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 274af7a5c9a1e8f12f661305e1e2d1206bf64664
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417671"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 
@@ -53,8 +54,8 @@ Define una fecha que se combina con una hora del día con reconocimiento de zona
 |Precisión|100 nanosegundos|  
 |Valor predeterminado|1900-01-01 00:00:00 00:00|  
 |Calendario|Gregoriano|  
-|Precisión de fracciones de segundo definida por el usuario|Sí|  
-|Conservación y reconocimiento del ajuste de zona horaria|Sí|  
+|Precisión de fracciones de segundo definida por el usuario|Yes|  
+|Conservación y reconocimiento del ajuste de zona horaria|Yes|  
 |Reconocimiento del horario de verano|No|  
   
 |Escala especificada|Resultado (precisión, escala)|Longitud de la columna (bytes)|Precisión de fracciones de segundo|  
@@ -131,7 +132,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-Si la conversión es a **time(n)** , se copian la hora, los minutos, los segundos y las fracciones de segundo. Se trunca el valor de zona horaria. Cuando la precisión del valor de **datetimeoffset(n)** es mayor que la precisión del valor de **time(n)** , el valor se redondea. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `time(3)`.
+Si la conversión es a **time(n)**, se copian la hora, los minutos, los segundos y las fracciones de segundo. Se trunca el valor de zona horaria. Cuando la precisión del valor de **datetimeoffset(n)** es mayor que la precisión del valor de **time(n)**, el valor se redondea. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `time(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -181,7 +182,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Si la conversión es a **datetime2(n)** , se copia la fecha y la hora al valor **datetime2** y se trunca la zona horaria. Cuando la precisión del valor de **datetime2(n)** es mayor que la precisión del valor de **datetimeoffset(n)** , el valor de las fracciones de segundo se trunca para ajustarse. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `datetime2(3)`.
+Si la conversión es a **datetime2(n)**, se copia la fecha y la hora al valor **datetime2** y se trunca la zona horaria. Cuando la precisión del valor de **datetime2(n)** es mayor que la precisión del valor de **datetimeoffset(n)**, el valor de las fracciones de segundo se trunca para ajustarse. En el código siguiente se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `datetime2(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  
@@ -236,7 +237,7 @@ SELECT
 |Tipo de datos|Output|  
 |---|---|
 |**Time**|12:35:29. 1234567|  
-|**Date**|2007-05-08|  
+|**Fecha**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
 |**Datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  

@@ -1,4 +1,5 @@
 ---
+description: SWITCHOFFSET (Transact-SQL)
 title: SWITCHOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/02/2015
@@ -24,12 +25,12 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d6b5595e0a6489919768ab5a4ba9e21d04f7837
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f8cffc510ca7d089be5326abf3d3823807b416e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417201"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 
 ## <a name="arguments"></a>Argumentos
  *DATETIMEOFFSET*  
- Es una expresión que se puede resolver como un valor **datetimeoffset(n)** .  
+ Es una expresión que se puede resolver como un valor **datetimeoffset(n)**.  
   
  *time_zone*  
  Es una cadena de caracteres en formato [+|-]TZH:TZM o un entero con signo (de minutos) que representa el ajuste de zona horaria y se supone que reconoce y está ajustado para el horario de verano.  
@@ -58,7 +59,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 ## <a name="return-type"></a>Tipo de valor devuelto  
  **datetimeoffset** con la precisión fraccionaria del argumento *DATETIMEOFFSET*.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use SWITCHOFFSET para seleccionar un valor **datetimeoffset** en el ajuste de zona horaria que sea diferente del que se almacenó originalmente. SWITCHOFFSET no actualiza el valor *time_zone* almacenado.  
   
  SWITCHOFFSET se puede usar para actualizar una columna **datetimeoffset**.  
@@ -93,7 +94,7 @@ FROM dbo.test;
 --Returns: 1998-09-20 07:45:50.7134500 -05:00  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   

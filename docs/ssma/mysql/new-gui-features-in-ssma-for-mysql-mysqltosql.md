@@ -1,4 +1,5 @@
 ---
+description: Nuevas características de la interfaz gráfica de usuario de SSMA para MySQL (MySQLToSQL)
 title: Nuevas características de la interfaz gráfica de usuario de SSMA para MySQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b54d407ed77d15e4b79e94b94a24b8021cb7902a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f36a775e1aebe1b22b18571475ddfaeb07fe1ada
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418501"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Nuevas características de la interfaz gráfica de usuario de SSMA para MySQL (MySQLToSQL)
 En este capítulo se describen las nuevas características de la interfaz de usuario de SSMA  

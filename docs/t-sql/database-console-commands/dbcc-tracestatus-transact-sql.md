@@ -1,4 +1,5 @@
 ---
+description: DBCC TRACESTATUS (Transact-SQL)
 title: DBCC TRACESTATUS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 2ae272f6d60670ffd1f3841e45b5b15fac9cc42d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 046c8fa60fc4bc4930089d8c7e9a87a3480bff23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417601"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +56,7 @@ Es el número de la marca de seguimiento cuyo estado se muestra. Si no se especi
 Es una marca de posición que indica que se pueden especificar varias marcas de seguimiento.
   
 -1  
-Muestra el estado de las marcas de seguimiento habilitadas globalmente. Si se especifica -1 sin *trace#* , se muestran todas las marcas de seguimiento globales habilitadas.
+Muestra el estado de las marcas de seguimiento habilitadas globalmente. Si se especifica -1 sin *trace#*, se muestran todas las marcas de seguimiento globales habilitadas.
   
 WITH NO_INFOMSGS  
 Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.
@@ -68,11 +69,11 @@ En la tabla siguiente se describe la información del conjunto de resultados.
 |**TraceFlag**|Nombre de la marca de seguimiento.|  
 |**Estado**|Indica si la marca de seguimiento está establecida en ON o en OFF, ya sea globalmente o para la sesión.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|Indica si la marca de seguimiento está establecida globalmente.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**De sesión**|Indica si la marca de seguimiento está establecida para la sesión.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**Sesión**|Indica si la marca de seguimiento está establecida para la sesión.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS devuelve una columna para el número de la marca de seguimiento y otra para el estado. Esto indica si la marca de seguimiento está establecida en ON (1) o en OFF (0). El encabezado de columna para el número de la marca de seguimiento es **Global Trace Flag** o **Session Trace Flag**, según se esté comprobando el estado de una marca de seguimiento global o de sesión.
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], hay dos tipos de marcas de seguimiento: sesión y global. Las marcas de seguimiento de sesión se activan para una conexión y solo están visibles para esa conexión. Las marcas de seguimiento globales se establecen en el nivel del servidor y están visibles para todas las conexiones del servidor.
   
 ## <a name="permissions"></a>Permisos  

@@ -1,4 +1,5 @@
 ---
+description: TRANSLATE (Transact-SQL)
 title: TRANSLATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -16,12 +17,12 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1fbd5285ff4b794ea90ad3f8513e24ac166c0be
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 49a16c2b5f18eeda3a6abd1396650131543ead4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417141"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
@@ -49,7 +50,7 @@ TRANSLATE ( inputString, characters, translations)
 
 Devuelve una expresión de caracteres del mismo tipo de datos que `inputString`, donde se reemplazan los caracteres del segundo argumento con los caracteres coincidentes del tercer argumento.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 La función `TRANSLATE` devolverá un error si las expresiones *characters* y *translations* tienen longitudes diferentes. `TRANSLATE` devolverá NULL si alguno de los argumentos es NULL.  
 

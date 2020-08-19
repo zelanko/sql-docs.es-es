@@ -1,4 +1,5 @@
 ---
+description: Palabras clave reservadas (Transact-SQL)
 title: Palabras clave reservadas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417111"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Palabras clave reservadas (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -628,7 +629,7 @@ ms.locfileid: "87396368"
 :::row-end:::  
 :::row:::
     :::column:::
-        END
+        FIN
     :::column-end:::
     :::column:::
         OVER
@@ -770,7 +771,7 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
 :::row-end:::  
 :::row:::
     :::column:::
-        **ADD**
+        **AGREGAR**
     :::column-end:::
     :::column:::
         **EXTERNAL**
@@ -1944,7 +1945,7 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
         MATCH
     :::column-end:::
     :::column:::
-        STATE
+        ESTADO
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2175,7 +2176,7 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
         OCCURRENCES_REGEX
     :::column-end:::
     :::column:::
-        TRUE
+        true
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2455,7 +2456,7 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
 :::row-end:::  
 :::row:::
     :::column:::
-        FALSE
+        false
     :::column-end:::
     :::column:::
         READS
@@ -2608,7 +2609,7 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   

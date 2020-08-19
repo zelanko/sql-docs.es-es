@@ -1,4 +1,5 @@
 ---
+description: BETWEEN (Transact-SQL)
 title: BETWEEN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/28/2017
@@ -23,12 +24,12 @@ ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5d3108c49eb60a478c375e2afed320ee965361d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 709af562247c040508627527c299ee6f5181da49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417191"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
  NOT BETWEEN devuelve **TRUE** si el valor de *test_expression* es menor que el valor de *begin_expression* y mayor que el valor de *end_expression*.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para especificar un intervalo exclusivo, use los operadores "mayor que" (>) y "menor que" ( <). Si alguna entrada del predicado BETWEEN o NOT BETWEEN es NULL, el resultado es UNKNOWN.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -183,7 +184,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  La consulta recupera las filas previstas porque los valores de fecha de la consulta y los valores de **datetime** almacenados en la columna `RateChangeDate` se han especificado sin la parte de hora de la fecha. Si no se especifica la parte de hora, toma el valor predeterminado 12:00 a.m. Tenga en cuenta que esta consulta no devolverá una fila que contenga una parte de hora posterior a 12:00 a.m. del 05-01-2002, ya que está fuera del rango.  
   
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [&#62; &#40;Mayor que&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
  [&#60; &#40;Menor que&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

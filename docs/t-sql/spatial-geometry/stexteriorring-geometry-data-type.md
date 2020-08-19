@@ -1,4 +1,5 @@
 ---
+description: STExteriorRing (tipo de datos geometry)
 title: STExteriorRing (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a70e75cb86187c01f37738efbae8d5ead6bd35e8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7bdf05ddaa39a225bf77538fd492387c481c4749
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416921"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ Devuelve el anillo exterior de una instancia de **geometry** que es un polígono
   
  Tipo Open Geospatial Consortium (OGC): **LineString**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este método devuelve **null** si la instancia de **geometry** no es un polígono.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -57,7 +58,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STExteriorRing().ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

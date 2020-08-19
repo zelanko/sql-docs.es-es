@@ -1,4 +1,5 @@
 ---
+description: Personalización del orden de las llamadas (OracleToSQL)
 title: Personalizar el orden de las llamadas (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 8f02452ce32b25893b9a724a09112ed1ea83eb6d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b12bec088690f5f83d8e2c40cdeb9fc6e003a88d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418381"
 ---
 # <a name="customizing-calls-order-oracletosql"></a>Personalización del orden de las llamadas (OracleToSQL)
 En este paso, seleccionará el orden en el que se invocarán los objetos que se van a probar.  

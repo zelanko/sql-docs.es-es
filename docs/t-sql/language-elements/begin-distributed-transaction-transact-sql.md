@@ -1,4 +1,5 @@
 ---
+description: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2016
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e33ca36bc30cd5f2420ca67db94bba3163cc5156
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 04b4284795a48e15f56c99fee4c868e26250fd4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417151"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  @*tran_name_variable*  
  Se trata del nombre de una variable definida por el usuario que contiene el nombre de una transacción utilizada para realizar el seguimiento de la transacción distribuida en las utilidades de MS DTC. La variable debe declararse con un tipo de datos **char**, **varchar**, **nchar** o **nvarchar**.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que ejecuta la instrucción BEGIN DISTRIBUTED TRANSACTION es el originador de la transacción y controla su realización. Posteriormente, cuando en la sesión se ejecuta una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION, la instancia que controla la transacción solicita a MS DTC que administre la realización de la transacción distribuida entre todas las instancias participantes.  
   
  El aislamiento de instantáneas de nivel de instantánea no admite transacciones distribuidas.  

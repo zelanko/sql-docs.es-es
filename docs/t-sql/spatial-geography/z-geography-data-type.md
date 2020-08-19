@@ -1,4 +1,5 @@
 ---
+description: Z (tipo de datos geography)
 title: Z (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5f10566504e9f0f982175249f627ddba7106a4d4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4a07d0999854ac26f275c2f983157b7513b0b141
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416991"
 ---
 # <a name="z-geography-data-type"></a>Z (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86555766"
 ## <a name="return-types"></a>Tipos de valor devuelto
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Observaciones  
  Si la instancia de **geography** no es un punto, se asignará el valor null a esta propiedad, así como a cualquier instancia de **Point** para la que no se establezca dicha propiedad.  
@@ -59,7 +60,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [M &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [AsTextZM &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  

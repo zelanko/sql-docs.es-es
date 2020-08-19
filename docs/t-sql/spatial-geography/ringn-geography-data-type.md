@@ -1,4 +1,5 @@
 ---
+description: RingN (tipo de datos geography)
 title: RingN (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 420fe265e6871fe02d4f3dc62936b5de9d0da3de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 58325135db25b79d7c38fb3447f6b7e5bfd8c89a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417021"
 ---
 # <a name="ringn-geography-data-type"></a>RingN (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,11 +32,10 @@ ms.locfileid: "86555841"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
-.RingN (expression )  
-```  
-  
+```syntaxsql
+.RingN (expression )
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
@@ -59,7 +59,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.RingN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [NumRings &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   

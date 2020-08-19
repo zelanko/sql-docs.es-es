@@ -1,4 +1,5 @@
 ---
+description: IS_ROLEMEMBER (Transact-SQL)
 title: IS_ROLEMEMBER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ca3410ae5fe2b8f3d1504141d07d4d6856eaa21
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0df369f34c1993132ff6df45b1495c81f6ef6665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417381"
 ---
 # <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 |1|*database_principal* es miembro de *role*.|  
 |NULL|*database_principal* o *role* no es válido o no tiene permiso para ver la pertenencia a roles.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice IS_ROLEMEMBER para determinar si el usuario actual puede realizar una acción que necesite los permisos del rol de base de datos.  
   
  Si *database_principal* está basado en un inicio de sesión de Windows, como Contoso\Mary5, IS_ROLEMEMBER devuelve NULL, a menos que se haya concedido o denegado a *database_principal* el acceso directo a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -96,7 +97,7 @@ ELSE IF IS_ROLEMEMBER ('db_datareader') IS NULL
    print 'ERROR: The database role specified is not valid.';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: INDEXPROPERTY (Transact-SQL)
 title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -20,12 +21,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deeed76ed033531695b321c3e185e03dd988739c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 065b792b1e9edec5bc8e1b12859e9152797ebfb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417371"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Es una expresión que contiene el número de identificación de objeto de la tabla o de la vista indizada de la que se va a proporcionar información de propiedades del índice. *object_ID* es **int**.  
   
  *index_or_statistics_name*  
- Es una expresión que contiene el nombre del índice o las estadísticas para los cuales se va a devolver la información de la propiedad. *index_or_statistics_name* es **nvarchar(128)** .  
+ Es una expresión que contiene el nombre del índice o las estadísticas para los cuales se va a devolver la información de la propiedad. *index_or_statistics_name* es **nvarchar(128)**.  
   
  *property*  
  Es una expresión que contiene el nombre de la propiedad de base de datos que se va a devolver. *property* es de tipo **varchar(128)** y puede tener uno de estos valores.  
@@ -121,7 +122,7 @@ INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [Utilizar las estadísticas para mejorar el rendimiento de las consultas](../../relational-databases/statistics/statistics.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   

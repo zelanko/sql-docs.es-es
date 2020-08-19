@@ -1,4 +1,5 @@
 ---
+description: STDistance (tipo de datos geography)
 title: STDistance (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 795fa917f598ed1dd477916f42808d4abb0c8a69
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a20279a70d2e68e1cb4b34eb36ffe7de633518a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417001"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (tipo de datos geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86555160"
   
  Tipo de valor devuelto de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El resultado se expresa en la unidad de medida definida por el [identificador de referencia espacial &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) de datos espaciales.
 STDistance() siempre devuelve *null* si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geography**.  
   
@@ -68,7 +69,7 @@ SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.STDistance(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+## <a name="see-also"></a>Vea también  
+ [Métodos de OGC en instancias de Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: GetDescendant (motor de base de datos)
 title: GetDescendant (motor de base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e6471b791a4ff1196321de649c645d8775d9308
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c8642be92d56b2900abd4cb5c6b4d77fcac78c0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417641"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (motor de base de datos)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ NULL o el **hierarchyid** de un nodo secundario del nodo actual.
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Devuelve un nodo secundario que es un descendiente del nodo primario.
 -   Si el elemento primario es NULL, devolverá NULL.  
 -   Si el elemento primario no es NULL, y child1 y child2 son NULL, devuelve un elemento secundario del elemento primario.  

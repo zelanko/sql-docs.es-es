@@ -1,4 +1,5 @@
 ---
+description: Upgrade a Data-tier Application
 title: Actualizar una aplicación de capa de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ed1b1698fb945d92fce7cb2a0d1a9d0e2713afb5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cba55e7c9f979098b9f761fbc43cad7a8edc2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386451"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85781626"
   
 -   **Antes de empezar:**  [Elegir opciones de actualización de DAC](#ChoseDACUpgOptions), [Limitaciones y restricciones](#LimitationsRestrictions), [Requisitos previos](#Prerequisites), [Seguridad](#Security), [Permisos](#Permissions)  
   
--   **Para actualizar una DAC mediante:**  [el Asistente Actualizar aplicación de capa de datos](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Para actualizar una DAC con:**  [Asistente Actualizar aplicación de capa de datos](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Una actualización de DAC es un proceso en contexto que modifica el esquema de la base de datos existente para coincidir con el esquema definido en una nueva versión de la DAC. La nueva versión de la DAC se proporciona en un archivo de paquete DAC. Para obtener más información sobre cómo crear un paquete DAC, vea [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md).  
@@ -170,7 +171,7 @@ ms.locfileid: "85781626"
   
  **< Anterior:** vuelve a la página **Seleccionar paquete DAC**.  
   
- **Siguiente >** : avanza a la página **Opciones**.  
+ **Siguiente >**: avanza a la página **Opciones**.  
   
  **Cancelar:** termina el asistente sin implementar la DAC.  
   
@@ -204,7 +205,7 @@ ms.locfileid: "85781626"
   
  **< Anterior:** vuelve a la página **Detectar cambio**.  
   
- **Siguiente >** : avanza a la página **Resumen**.  
+ **Siguiente >**: avanza a la página **Resumen**.  
   
  **Cancelar:** termina el asistente sin implementar la DAC.  
   
@@ -215,7 +216,7 @@ ms.locfileid: "85781626"
   
  **< Anterior:** vuelve a la página **Revisar el plan de actualización**.  
   
- **Siguiente >** : implementa la DAC y muestra los resultados en la página **Actualizar DAC**.  
+ **Siguiente >**: implementa la DAC y muestra los resultados en la página **Actualizar DAC**.  
   
  **Cancelar:** termina el asistente sin implementar la DAC.  
   

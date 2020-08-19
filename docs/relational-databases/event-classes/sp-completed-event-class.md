@@ -1,4 +1,5 @@
 ---
+description: SP:Completed, clase de eventos
 title: Clase de eventos SP:Completed |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea9a64554d09116d3562b2f31079f882affd3337
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 574b53cfe078d2ef050cd645ecebcbf27abff62b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383981"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed, clase de eventos
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

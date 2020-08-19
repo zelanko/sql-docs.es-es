@@ -1,4 +1,5 @@
 ---
+description: Audit Database Principal Management, clase de eventos
 title: Audit Database Principal Management (clase de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33477cc0d9a975f1938d3358b38437b2298d2978
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e38d4da6ff664cfb0b781aeca9e0f50f16e518dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384501"
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management, clase de eventos
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La clase de eventos **Audit Database Principal Management** tiene lugar cuando se crean, modifican o quitan principales, por ejemplo los usuarios, en una base de datos.  
+   La clase de eventos **Audit Database Principal Management** tiene lugar cuando se crean, modifican o quitan entidades de seguridad; por ejemplo, los usuarios, en una base de datos.  
   
 ## <a name="audit-database-principal-management-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Database Principal Management  
   

@@ -1,4 +1,5 @@
 ---
+description: Audit Add DB User [clase de eventos]
 title: Audit Add DB User (clase de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,18 +13,18 @@ ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 752361d6ebf7d8171a2a40551932db5beed69a71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b953d49716cb6a99879ebc94c750fc1e765916e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385341"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User [clase de eventos]
 
 [!INCLUDE [sql-asdb.md](../../includes/applies-to-version/sql-asdb.md)]
 
-  La clase de eventos **Audit Add DB User** tiene lugar cuando se agrega o quita un inicio de sesión como un usuario de base de datos en una base de datos. Esta clase de eventos se usa con los procedimientos almacenados **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**y **sp_dropuser** .  
+   La clase de eventos **Audit Add DB User** tiene lugar cuando se agrega o quita un inicio de sesión como un usuario de base de datos en una base de datos. Esta clase de eventos se usa con los procedimientos almacenados **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**y **sp_dropuser** .  
   
  Es posible que esta clase de eventos se elimine en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En su lugar, se recomienda usar la clase de eventos **Audit Database Principal Management** .  
   
@@ -54,8 +55,8 @@ ms.locfileid: "85635747"
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**Success**|**int**|1 = correcto. 0 = error Por ejemplo, el valor 1 significa que se ha comprobado un permiso correctamente y el valor 0 indica que se ha producido un error en la comprobación.|23|Sí|  
-|**TargetLoginName**|**nvarchar**|Nombre del inicio de sesión cuyo acceso a la base de datos se va a modificar.|42|Sí|  
-|**TargetLoginSid**|**image**|Para acciones dirigidas a un inicio de sesión (por ejemplo, agregar un nuevo inicio de sesión), el número de identificación de seguridad (SID) del inicio de sesión de destino.|43|Sí|  
+|**TargetLoginName**|**nvarchar**|Nombre del inicio de sesión cuyo acceso a la base de datos se va a modificar.|42|Yes|  
+|**TargetLoginSid**|**image**|Para acciones dirigidas a un inicio de sesión (por ejemplo, agregar un nuevo inicio de sesión), el número de identificación de seguridad (SID) del inicio de sesión de destino.|43|Yes|  
 |**TargetUserName**|**nvarchar**|Nombre del usuario de la base de datos que se va a agregar.|39|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**XactSequence**|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  

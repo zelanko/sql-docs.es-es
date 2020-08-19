@@ -1,4 +1,5 @@
 ---
+description: Showplan XML Statistics Profile, clase de eventos
 title: Clase de eventos Showplan XML Statistics Profile | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d54c21b5eba94bab12292ca856a5b00fc60c8d74
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d575705919219b038c3fd98126c0b751bf496a57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383980"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile, clase de eventos
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85717765"
   
  La clase de eventos Showplan XML Statistics Profile muestra datos completos de tiempo de compilación, por lo que los seguimientos que contienen esta clase de eventos pueden producir una importante sobrecarga en el rendimiento. Para minimizar la sobrecarga, limite el uso de esta clase de evento a los seguimientos que supervisen problemas específicos durante periodos breves.  
   
- Los documentos de Showplan XML tienen un esquema asociado. Puede encontrar este esquema en el [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740), o como parte de su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Los documentos de Showplan XML tienen un esquema asociado. Puede encontrar este esquema en el [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740) o como parte de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="showplan-xml-statistics-profile-event-class-data-columns"></a>Columnas de datos de la clase de evento Showplan XML Statistics Profile  
   

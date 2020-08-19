@@ -1,4 +1,5 @@
 ---
+description: Audit Addlogin, clase de eventos
 title: Audit Addlogin (clase de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bad68dc1125b50d956b1580751d5911d031a37bf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3d203dc1924706732bfc8c672308123ce662d879
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384871"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin, clase de eventos
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85693792"
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**Success**|**int**|1 = correcto. 0 = error Por ejemplo, el valor 1 indica que se ha comprobado un permiso correctamente y el valor 0 indica que se ha producido un error en la comprobación.|23|Sí|  
-|**TargetLoginName**|**nvarchar**|Nombre del inicio de sesión que se va a agregar o quitar.|42|Sí|  
+|**TargetLoginName**|**nvarchar**|Nombre del inicio de sesión que se va a agregar o quitar.|42|Yes|  
 |**TargetLoginSid**|**image**|Número de identificación de seguridad (SID) del inicio de sesión de destino (si se pasa como un parámetro).|43|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**XactSequence**|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  

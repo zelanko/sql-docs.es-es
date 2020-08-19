@@ -1,4 +1,5 @@
 ---
+description: Cuadro de diálogo Vista detallada de resultados
 title: Cuadro de diálogo Vista detallada de resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5b9681bc22ea07ed3bed1d218ba752c2d4d6a666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38102297ee7ac0a29bbe37e83d1bfe834d9faaa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380741"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Cuadro de diálogo Vista detallada de resultados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85716850"
  **Ayuda adicional**  
  Haga clic en el hipervínculo para abrir una página web que esté relacionada con esta directiva. Al crear la directiva, se configura un hipervínculo de ayuda adicional que podría estar en blanco o no disponible.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Nodo Administración de directivas &#40;Explorador de objetos&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

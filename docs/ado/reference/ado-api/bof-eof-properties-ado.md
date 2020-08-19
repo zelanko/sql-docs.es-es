@@ -1,4 +1,5 @@
 ---
+description: BOF, EOF (propiedades) (ADO)
 title: Propiedades BOF, EOF (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451137"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF (propiedades) (ADO)
 -   **BOF** Indica que la posición del registro actual es anterior al primer registro de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -32,7 +33,7 @@ ms.locfileid: "82748734"
 ## <a name="return-value"></a>Valor devuelto  
  Las propiedades **BOF** y **EOF** devuelven valores **booleanos** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use las propiedades **BOF** y **EOF** para determinar si un objeto de **conjunto de registros** contiene registros o si ha ido más allá de los límites de un objeto de conjunto de **registros** al desplazarse de un registro a otro.  
   
  La propiedad **BOF** devuelve **true** (-1) si la posición del registro actual es anterior al primer registro y **false** (0) si la posición del registro actual está en el primer registro o después del mismo.  

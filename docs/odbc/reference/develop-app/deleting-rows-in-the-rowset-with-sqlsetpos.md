@@ -1,4 +1,5 @@
 ---
+description: Eliminación de filas en el conjunto de filas con SQLSetPos
 title: Eliminar filas del conjunto de filas con SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 940bcc3e2ee6a042394797d6038028cce64862f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42b61aa9af15526420b6f2d4ef7e8c945e0da105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476777"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>Eliminación de filas en el conjunto de filas con SQLSetPos
 La operación de eliminación de **SQLSetPos** hace que el origen de datos elimine una o varias filas seleccionadas de una tabla. Para eliminar filas con **SQLSetPos**, la aplicación llama a **SQLSetPos** con la *operación* establecida en SQL_DELETE y *RowNumber* establecida en el número de la fila que se va a eliminar. Si *RowNumber* es 0, se eliminan todas las filas del conjunto de filas.  

@@ -1,4 +1,5 @@
 ---
+description: Configurar notificaciones por correo electrónico (Master Data Services)
 title: Configuración de notificaciones de correo electrónico
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4e7c96e07ef421c4cc9a31efe359b963770e8886
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e4368235b528b1537ebb8b4302c58769509cfebb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430017"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>Configurar notificaciones por correo electrónico (Master Data Services)
 
@@ -34,7 +35,7 @@ ms.locfileid: "85813151"
   
 3.  Complete todos los campos obligatorios. Para obtener más información, consulte [Cuadro de diálogo Crear perfil y cuenta de Correo electrónico de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/create-database-mail-profile-and-account-dialog-box.md).  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
     > [!NOTE]  
     >  Después de configurar las notificaciones, no puede utilizar [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] para realizar cambios. Debe realizar las modificaciones directamente  en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para más información, consulte [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md).  

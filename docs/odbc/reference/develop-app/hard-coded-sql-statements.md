@@ -1,4 +1,5 @@
 ---
+description: Instrucciones SQL codificadas de forma rígida
 title: Instrucciones SQL codificadas de forma rígida | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 341dc642f0529fd779eccf9f2d1d1b50a4977479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476667"
 ---
 # <a name="hard-coded-sql-statements"></a>Instrucciones SQL codificadas de forma rígida
 Las aplicaciones que realizan una tarea fija normalmente contienen instrucciones SQL codificadas de forma rígida. Por ejemplo, un sistema de entrada de pedidos podría usar la siguiente llamada para enumerar los pedidos de venta abiertos:  

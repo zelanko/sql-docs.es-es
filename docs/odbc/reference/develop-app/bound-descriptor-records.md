@@ -1,4 +1,5 @@
 ---
+description: Registros de Descriptor de enlace
 title: Registros de descriptor enlazado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55d09344-6682-40f6-b634-036b134ff650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 155ef4951abddc7a73d9d4abfbc45248f33d653c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcf88374967b5a9d8426d16c9e92c06e4eef32cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476807"
 ---
 # <a name="bound-descriptor-records"></a>Registros de Descriptor de enlace
 Cuando la aplicación establece el campo de SQL_DESC_DATA_PTR de un registro de descriptor para que ya no contenga un valor null, se dice que el registro está *enlazado*.  

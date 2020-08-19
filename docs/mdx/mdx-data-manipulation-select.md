@@ -1,4 +1,5 @@
 ---
+description: 'Manipulación de datos de MDX: SELECT'
 title: Instrucción SELECT (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477017"
 ---
 # <a name="mdx-data-manipulation---select"></a>Manipulación de datos de MDX: SELECT
 
@@ -88,7 +89,7 @@ FROM
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Integer*  
+ *Entero*  
  Entero entre 0 y 127.  
   
  *Cube_Name*  
@@ -161,11 +162,11 @@ FROM
   
 |Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0,53 %**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47 %**|  
+|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
 |**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
@@ -212,11 +213,11 @@ FROM
   
 |Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
 |**Road-250**|**$9,377,457.68**|**$4,032.47**|**0,04%**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**Road-650**|**$7,442,141.81**|**$39,698.30**|**0,53 %**|  
-|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47 %**|  
+|**Touring-1000**|**$6,723,794.29**|**$166,144.17**|**2,47%**|  
 |**Road-550-W**|**$3,668,383.88**|**$1,901.97**|**0,05%**|  
 |**Road-350-W**|**$3,665,932.31**|**$20,946.50**|**0,57%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
@@ -245,8 +246,8 @@ FROM
   
 |Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
 |**Mountain-300**|**$1,907,249.38**|**$876.95**|**0,05%**|  
 |**Mountain-500**|**$1,067,327.31**|**$17,266.09**|**1,62%**|  
@@ -302,8 +303,8 @@ FROM
   
 |Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
  En los resultados anteriores, la segmentación arroja un resultado que solamente incluye los productos Preferred10Products que forman parte del grupo [Mountain] de [Product].[Product Line]; es el resultado esperado, porque Preferred10Products es una expresión constante.  
@@ -330,8 +331,8 @@ FROM
   
 |Nombre del modelo + medidas|Reseller Sales Amount|Discount Amount|PCT Discount|  
 |-|-|-|-|  
-|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13 %**|  
-|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63 %**|  
+|**Mountain-200**|**$14,356,699.36**|**$19,012.71**|**0,13%**|  
+|**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1,63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0,01%**|  
   
  El comportamiento de autoexists se puede modificar mediante el parámetro autoexists = [1 | 2 | 3] en la cadena de conexión; vea [las propiedades XMLA admitidas &#40;xmla&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) y <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> para el uso de parámetros.  
@@ -393,7 +394,7 @@ WHERE
   
  Produce los siguientes resultados:  
   
-|Tipo de negocio + categoría|All Products|Accesorios|Ropa|  
+|Tipo de negocio + categoría|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
@@ -419,7 +420,7 @@ WHERE
   
  La consulta anterior genera los resultados siguientes:  
   
-|Tipo de negocio + categoría|All Products|Accesorios|Ropa|  
+|Tipo de negocio + categoría|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  

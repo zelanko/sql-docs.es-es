@@ -1,4 +1,5 @@
 ---
+description: Usar procedimientos almacenados (MDX)
 title: Usar procedimientos almacenados (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7cc3a7ba79b15b0eee36ac6907013673a5b7bf9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2c9bd8f20ffae61656dd30f139ce12665ff57f4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476977"
 ---
 # <a name="using-stored-procedures-mdx"></a>Usar procedimientos almacenados (MDX)
 

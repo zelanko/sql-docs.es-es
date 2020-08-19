@@ -1,4 +1,5 @@
 ---
+description: sp_help (Transact-SQL)
 title: sp_help (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
@@ -18,17 +19,17 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486068"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Proporciona información sobre un objeto de base de datos (cualquier objeto enumerado en la vista de compatibilidad de **objetossys.sys** ), un tipo de datos definido por el usuario o un tipo de datos.  
+  Proporciona información sobre un objeto de base de datos (cualquier objeto enumerado en la vista de compatibilidad de ** objetossys.sys** ), un tipo de datos definido por el usuario o un tipo de datos.  
   
  
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -41,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'name'`Es el nombre de cualquier objeto, en **sysobjects** o cualquier tipo de datos definido por el usuario en la tabla **systypes** . *Name* es de tipo **nvarchar (** 776 **)** y su valor predeterminado es NULL. No se aceptan nombres de bases de datos.  Se deben delimitar dos o tres nombres de partes, como "Person.AddressType" o [Person.AddressType].   
+`[ @objname = ] 'name'` Es el nombre de cualquier objeto, en **sysobjects** o cualquier tipo de datos definido por el usuario en la tabla **systypes** . *Name* es de tipo **nvarchar (** 776 **)** y su valor predeterminado es NULL. No se aceptan nombres de bases de datos.  Se deben delimitar dos o tres nombres de partes, como "Person.AddressType" o [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -54,7 +55,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     |Nombre de la columna|Tipo de datos|Descripción|  
     |-----------------|---------------|-----------------|  
-    |**Name**|**nvarchar (** 128 **)**|Nombre del objeto|  
+    |**Nombre**|**nvarchar (** 128 **)**|Nombre del objeto|  
     |**Propietario**|**nvarchar (** 128 **)**|Propietario del objeto (esta es la entidad de seguridad de base de datos que posee el objeto. De forma predeterminada, es el propietario del esquema que contiene el objeto).|  
     |**Object_type**|**nvarchar (** 31 **)**|Tipo de objeto|  
   
@@ -76,9 +77,9 @@ sp_help [ [ @objname = ] 'name' ]
 
     |Nombre de la columna|Tipo de datos|Descripción|  
     |-----------------|---------------|-----------------|  
-    |**Name**|**nvarchar (** 128 **)**|Nombre de la tabla|  
+    |**Nombre**|**nvarchar (** 128 **)**|Nombre de la tabla|  
     |**Propietario**|**nvarchar (** 128 **)**|Propietario de la tabla.|  
-    |**Type**|**nvarchar (** 31 **)**|Tipo de tabla.|  
+    |**Tipo**|**nvarchar (** 31 **)**|Tipo de tabla.|  
     |**Created_datetime**|**datetime**|Tabla de fechas de creación|  
   
      Dependiendo del objeto de base de datos especificado, **sp_help** devuelve conjuntos de resultados adicionales.  
@@ -90,7 +91,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de la columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|Nombre de la columna.|  
-        |**Type**|**nvarchar (** 128 **)**|Tipo de datos de la columna.|  
+        |**Tipo**|**nvarchar (** 128 **)**|Tipo de datos de la columna.|  
         |**Calculada**|**VARCHAR (** 35 **)**|Indica si los valores de la columna son calculados: Yes o No.|  
         |**Longitud**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de la columna es un tipo de valor grande (**VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)** o **XML**), el valor se mostrará como-1.|  
         |**Prec**|**Char (** 5 **)**|Precisión de la columna.|  
@@ -105,8 +106,8 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de la columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Identidad**|**nvarchar (** 128 **)**|Nombre de la columna cuyo tipo de datos se declara como identidad.|  
-        |**Seed**|**numeric**|Valor inicial de la columna de identidad.|  
-        |**Importación**|**numeric**|Incremento que se va a utilizar en los valores de esta columna.|  
+        |**Propagación**|**numeric**|Valor inicial de la columna de identidad.|  
+        |**Incremento**|**numeric**|Incremento que se va a utilizar en los valores de esta columna.|  
         |**No para replicación**|**int**|La propiedad IDENTITY no se aplica cuando un inicio de sesión de replicación, como **sqlrepl**, inserta datos en la tabla:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Conjunto de resultados adicional devuelto en las columnas:  
@@ -152,13 +153,13 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de la columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Nombre del parámetro del procedimiento almacenado.|  
-        |**Type**|**nvarchar (** 128 **)**|Tipo de datos del parámetro del procedimiento almacenado.|  
+        |**Tipo**|**nvarchar (** 128 **)**|Tipo de datos del parámetro del procedimiento almacenado.|  
         |**Longitud**|**smallint**|Longitud máxima de almacenamiento físico en bytes.|  
         |**Prec**|**int**|Precisión o número total de dígitos.|  
         |**Escala**|**int**|Número de dígitos a la derecha del separador decimal.|  
         |**Param_order**|**smallint**|Orden del parámetro.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El procedimiento **sp_help** solo busca un objeto en la base de datos actual.  
   
  Cuando no se especifica *Name* , **sp_help** enumera los nombres de objeto, los propietarios y los tipos de objeto para todos los objetos de la base de datos actual. **sp_helptrigger** proporciona información acerca de los desencadenadores.  
@@ -190,14 +191,14 @@ EXEC sp_help 'Person.Person';
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpindex &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [sp_helprotect &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_helpindex &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
- [sp_helpuser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Objetossys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [ Objetossys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

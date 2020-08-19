@@ -1,4 +1,5 @@
 ---
+description: Head (MDX)
 title: Head (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51a832bf38d3834c44f9b31f5bbfd27833d6d691
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906008"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429927"
 ---
 # <a name="head-mdx"></a>Head (MDX)
 
@@ -56,7 +57,7 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Consulte también  
  [Tail &#40;MDX&#41;](../mdx/tail-mdx.md)   
- [&#41;de&#41; &#40;de tupla de &#40;de elemento MDX](../mdx/item-tuple-mdx.md)   
+ [&#41;de&#41; &#40;de tupla de &#40;de elemento MDX ](../mdx/item-tuple-mdx.md)   
  [Elemento &#40;miembro&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
  [Rango &#40;MDX&#41;](../mdx/rank-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

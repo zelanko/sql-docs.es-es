@@ -1,4 +1,5 @@
 ---
+description: Pruebas con objetos de base de datos migrados (OracleToSQL)
 title: Probar objetos de base de datos migrados (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,15 +11,15 @@ ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 9e7c63986cde88c7a1ccbf67f8dd3751bb6d41b0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ffc8a0d83bac1ca6e08b3f42bf8fda82aa3555a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468871"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Pruebas con objetos de base de datos migrados (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant for Oracle Tester (SSMA Tester) prueba automáticamente la conversión de objetos de base de datos y la migración de datos realizada por SSMA. Una vez finalizados todos los pasos de migración de SSMA, utilice SSMA Tester para comprobar que los objetos convertidos funcionan de la misma manera y que todos los datos se transfirieron correctamente.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle Tester (SSMA Tester) prueba automáticamente la conversión de objetos de base de datos y la migración de datos realizada por SSMA. Una vez finalizados todos los pasos de migración de SSMA, utilice SSMA Tester para comprobar que los objetos convertidos funcionan de la misma manera y que todos los datos se transfirieron correctamente.  
   
 Puede probar los siguientes tipos de objeto con el evaluador de SSMA:  
   
@@ -61,7 +62,7 @@ Tenga en cuenta que la versión actual de SSMA Tester no admite la ejecución en
 ## <a name="getting-started"></a>Introducción  
 [Crear casos de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Instalación de componentes de SSMA en SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
 [Configuración del proyecto &#40;conversión&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   

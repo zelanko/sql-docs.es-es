@@ -1,4 +1,5 @@
 ---
+description: IN (Transact-SQL)
 title: IN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
@@ -23,12 +24,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 207043037a5f75e71f4d385abec42dd296ea4528
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a642ad617c1c466306f5beb3f11d41f9181b8458
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459391"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ test_expression [ NOT ] IN
  *subquery*  
  Es una subconsulta que tiene un conjunto de resultados de una columna. Esta columna debe tener el mismo tipo de datos que *test_expression*.  
   
- *expression*[ **,** ... *n* ]  
+ *expression*[ **,**... *n* ]  
  Es una lista de expresiones en la que se buscará una coincidencia. Todas las expresiones deben ser del mismo tipo que *test_expression*.  
   
 ## <a name="result-types"></a>Tipos de resultado  
@@ -68,7 +69,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Los valores NULL que devuelve *subquery* o *expression* comparados con *test_expression* por medio de IN o NOT IN devuelven UNKNOWN. La utilización de valores NULL con IN o NOT IN puede provocar resultados inesperados.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si se incluye de manera explícita un número sumamente grande de valores (muchos miles de valores separados por comas) entre paréntesis en una cláusula IN, se pueden agotar los recursos y recibir los errores 8623 o 8632. Para evitar este problema, almacene los elementos de la lista IN en una tabla y use una subconsulta SELECT en una cláusula IN.  
   
  Error 8623:  

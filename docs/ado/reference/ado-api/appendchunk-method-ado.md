@@ -1,4 +1,5 @@
 ---
+description: Método AppendChunk (ADO)
 title: AppendChunk (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e3d58ae93285accc9cf7a71e43579be4f54b21d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 290155a3e6ea7e8ec0110d2bc2672cc74f6895b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451237"
 ---
 # <a name="appendchunk-method-ado"></a>Método AppendChunk (ADO)
 Anexa datos a un [campo](../../../ado/reference/ado-api/field-object.md)de datos binario o de texto grande, o a un objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) .  
@@ -65,7 +66,7 @@ object.AppendChunk Data
         [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
     :::column-end:::
     :::column:::
-        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)  
     :::column-end:::
 :::row-end:::
 

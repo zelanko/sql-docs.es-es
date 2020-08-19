@@ -1,4 +1,5 @@
 ---
+description: Funciones de VBA en MDX y DAX
 title: Funciones de VBA en MDX y DAX | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429707"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funciones de VBA en MDX y DAX
 
@@ -25,69 +26,69 @@ ms.locfileid: "68135018"
 |Nombre de la función|Compatible|Notas|  
 |-------------------|---------------|-----------|  
 |Abs|DAX, MDX||  
-|Matriz|Incompatible||  
+|Array|No compatible||  
 |Asc|Solo MDX||  
 |AscW|Solo MDX||  
 |Atn|Solo MDX||  
-|CallByName|Incompatible||  
+|CallByName|No compatible||  
 |CBool|Solo MDX||  
 |CByte|Solo MDX||  
 |CCur|Solo MDX||  
 |CDate|Solo MDX||  
 |CDbl|Solo MDX||  
 |CDec|Solo MDX||  
-|Choose|Solo MDX||  
+|Elegir|Solo MDX||  
 |Chr|Solo MDX||  
 |CInt|Solo MDX||  
 |CLng|Solo MDX||  
-|CLngLng|Incompatible||  
-|CLngPtr|Incompatible||  
-|Get-Help|Incompatible||  
+|CLngLng|No compatible||  
+|CLngPtr|No compatible||  
+|Get-Help|No compatible||  
 |Cos|Solo MDX||  
-|CreateObject|Incompatible||  
+|CreateObject|No compatible||  
 |CSng|Solo MDX||  
 |CStr|Solo MDX||  
-|CurDir|Incompatible||  
+|CurDir|No compatible||  
 |CVar|Solo MDX||  
-|CVErr|Incompatible||  
+|CVErr|No compatible||  
 |Date|Solo MDX|**ADVERTENCIA** de DAX implementa una función diferente con el mismo nombre. la función DATE (Year, month, Day), que se usa para generar un valor de tipo Date a partir de los argumentos especificados.|  
-|DateAdd|Solo MDX|**ADVERTENCIA** de DAX implementa una función diferente con el mismo nombre. la función DATEADD\<(dates>, <number_of_intervals\<>, Interval>), que se usa para desplazar las fechas dadas por un número de intervalos determinados|  
+|DateAdd|Solo MDX|**ADVERTENCIA** de DAX implementa una función diferente con el mismo nombre. la función DATEADD ( \<dates> , <number_of_intervals>, \<interval> ) que se usa para desplazar las fechas dadas por un número de intervalos determinados|  
 |DateDiff|Solo MDX||  
 |DatePart|Solo MDX||  
 |DateSerial|Solo MDX||  
 |DateValue|DAX, MDX||  
 |Día|DAX, MDX||  
 |DDB|Solo MDX||  
-|Dir|Incompatible||  
-|DoEvents|Incompatible||  
-|Environ|Incompatible||  
-|EOF|Incompatible||  
-|Error|Incompatible||  
+|Dir|No compatible||  
+|DoEvents|No compatible||  
+|Environ|No compatible||  
+|EOF|No compatible||  
+|Error|No compatible||  
 |Exp|DAX, MDX||  
-|FileAttr|Incompatible||  
-|FileDateTime|Incompatible||  
-|FileLen|Incompatible||  
-|Filter|Incompatible|**ADVERTENCIA** de MDX implementa una función diferente con el mismo nombre. la función FILTER (Set_Expression, Logical_Expression) devuelve el conjunto resultante de filtrar un conjunto especificado en función de una condición de búsqueda de los argumentos especificados.<br /><br /> **ADVERTENCIA** de DAX implementa una función diferente con el mismo nombre. la función FILTER\<(tabla>\<, Filter>) devuelve una tabla que representa un subconjunto de otra tabla o expresión de los argumentos especificados|  
-|Fix|Solo MDX||  
+|FileAttr|No compatible||  
+|FileDateTime|No compatible||  
+|FileLen|No compatible||  
+|Filtrar|No compatible|**ADVERTENCIA** de MDX implementa una función diferente con el mismo nombre. la función FILTER (Set_Expression, Logical_Expression) devuelve el conjunto resultante de filtrar un conjunto especificado en función de una condición de búsqueda de los argumentos especificados.<br /><br /> **ADVERTENCIA** de DAX implementa una función diferente con el mismo nombre. la función FILTER ( \<table> , \<filter> ) devuelve una tabla que representa un subconjunto de otra tabla o expresión de los argumentos especificados|  
+|Corrección|Solo MDX||  
 |Format (Visual Basic para Aplicaciones)|DAX, MDX||  
-|FormatCurrency|Incompatible||  
-|FormatDateTime|Incompatible||  
-|FormatNumber|Incompatible||  
-|FormatPercent|Incompatible||  
-|FreeFile|Incompatible||  
+|FormatCurrency|No compatible||  
+|FormatDateTime|No compatible||  
+|FormatNumber|No compatible||  
+|FormatPercent|No compatible||  
+|FreeFile|No compatible||  
 |FV|Solo MDX||  
-|GetAllSettings|Incompatible||  
-|GetAttr|Incompatible||  
-|GetObject|Incompatible||  
-|GetSetting|Incompatible||  
+|GetAllSettings|No compatible||  
+|GetAttr|No compatible||  
+|GetObject|No compatible||  
+|GetSetting|No compatible||  
 |Hex|Solo MDX||  
-|Hour|DAX, MDX||  
+|Hora|DAX, MDX||  
 |Iif|Solo MDX|**ADVERTENCIA** de DAX implementa una función similar con la función Name: IF (logical_test, value_if_true, value_if_false).|  
-|IMEStatus|Incompatible||  
-|Entrada|Incompatible||  
-|InputBox|Incompatible||  
+|IMEStatus|No compatible||  
+|Entrada|No compatible||  
+|InputBox|No compatible||  
 |InStr|Solo MDX||  
-|InStrRev|Incompatible||  
+|InStrRev|No compatible||  
 |Int|DAX, MDX||  
 |IPmt|Solo MDX||  
 |IRR|Solo MDX||  
@@ -98,24 +99,24 @@ ms.locfileid: "68135018"
 |IsMissing|Solo MDX||  
 |IsNull|Solo MDX||  
 |IsNumeric|Solo MDX||  
-|IsObject|Incompatible||  
-|Join|Incompatible||  
-|LBound|Incompatible||  
+|IsObject|No compatible||  
+|Join|No compatible||  
+|LBound|No compatible||  
 |LCase|Solo MDX||  
 |Left|DAX, MDX||  
 |Len|DAX, MDX||  
-|Loc|Incompatible||  
-|LOF|Incompatible||  
+|Loc|No compatible||  
+|LOF|No compatible||  
 |Log|Solo MDX|**Importante** DAX implementa una función diferente con el mismo nombre. la función LOG (número, base). Devuelve el logaritmo de un número en la base de los argumentos proporcionados.|  
 |LTrim|Solo MDX||  
-|MacID|Incompatible||  
-|MacScript|Incompatible||  
+|MacID|No compatible||  
+|MacScript|No compatible||  
 |Mid|DAX, MDX||  
 |Minute|DAX, MDX||  
 |MIRR|Solo MDX||  
-|Mes|DAX, MDX||  
-|MonthName|Incompatible||  
-|MsgBox|Incompatible||  
+|Month|DAX, MDX||  
+|MonthName|No compatible||  
+|MsgBox|No compatible||  
 |Ahora|DAX, MDX||  
 |NPer|Solo MDX||  
 |NPV|Solo MDX||  
@@ -126,43 +127,43 @@ ms.locfileid: "68135018"
 |PV|Solo MDX||  
 |QBColor|Solo MDX||  
 |Tarifa|Solo MDX||  
-|Replace|Incompatible||  
+|Replace|No compatible||  
 |RGB|Solo MDX||  
 |Right|DAX, MDX||  
 |Rnd|Solo MDX||  
 |Round|DAX, MDX||  
 |RTrim|Solo MDX||  
-|Segundo|DAX, MDX||  
-|Seek|Incompatible||  
+|Second|DAX, MDX||  
+|Seek|No compatible||  
 |Sgn|DAX, MDX||  
-|Shell|Incompatible||  
-|Sin|Solo MDX||  
+|Shell|No compatible||  
+|Seno|Solo MDX||  
 |SLN|Solo MDX||  
 |Space|Solo MDX||  
-|Spc|Incompatible||  
-|Dividir|Incompatible||  
+|Spc|No compatible||  
+|Dividir|No compatible||  
 |Sqr|Solo MDX||  
 |Str|Solo MDX||  
 |StrComp|Solo MDX||  
 |StrConv|Solo MDX||  
 |String|Solo MDX||  
-|StrReverse|Incompatible||  
+|StrReverse|No compatible||  
 |Modificador|Solo MDX||  
 |SYD|Solo MDX||  
-|Pestaña|Incompatible||  
+|Pestaña|No compatible||  
 |Tan|Solo MDX||  
-|Tiempo|Incompatible||  
-|Timer|Solo MDX||  
+|Tiempo|No compatible||  
+|Temporizador|Solo MDX||  
 |TimeSerial|Solo MDX||  
 |TimeValue|DAX, MDX||  
 |Trim|DAX, MDX||  
 |TypeName|Solo MDX||  
-|UBound|Incompatible||  
+|UBound|No compatible||  
 |UCase|Solo MDX||  
 |Val|Solo MDX||  
-|VarType|Incompatible||  
+|VarType|No compatible||  
 |Día de la semana|DAX, MDX||  
-|WeekdayName|Incompatible||  
-|Año|DAX, MDX||  
+|WeekdayName|No compatible||  
+|Year|DAX, MDX||  
   
   

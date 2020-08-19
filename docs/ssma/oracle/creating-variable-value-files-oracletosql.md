@@ -1,4 +1,5 @@
 ---
+description: Creación de archivos de valor variable (OracleToSQL)
 title: Crear archivos de valor variable (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 763785b09adf1a562d497d4c1b448ec03d502bfc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 766bbd6b8908983726a18d5d66bf9700600e66e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468806"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Creación de archivos de valor variable (OracleToSQL)
 El archivo de valores de variable es un archivo XML que comprende los valores de parámetro de comandos como, el nombre de servidor de origen o de destino que cambian con frecuencia de una migración de servidor a otra. Cuando se produce un gran número de migraciones de base de datos, se crearán varios archivos de variables para almacenar el valor de cada servidor de origen y se hará referencia a ellos en un archivo de script maestro con el modificador **-v** en la línea de comandos. Esto ayuda a mantener valores estáticos en algunos archivos de script con los valores de variable en varios archivos de variables.  
@@ -90,6 +91,6 @@ El archivo de valores de variable es un archivo XML que comprende los valores de
 ## <a name="next-step"></a>siguiente paso  
 El siguiente paso en el funcionamiento de la consola es [la creación de los archivos de conexión del servidor &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Crear los archivos de servidor (Oracle)](https://msdn.microsoft.com/002f129e-0868-48ad-a4b4-c68b5007e12e)  
   

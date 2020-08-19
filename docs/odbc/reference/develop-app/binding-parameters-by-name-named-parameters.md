@@ -1,4 +1,5 @@
 ---
+description: Enlazar parámetros por nombre (parámetros con nombre)
 title: Enlazar parámetros por nombre (parámetros con nombre) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1e214f50488c4600ed39f76e91618cc5ce53de4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75227b26b5f9f060089e6568e233d327e3f7faa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476847"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Enlazar parámetros por nombre (parámetros con nombre)
 Algunos DBMS permiten a una aplicación especificar los parámetros de un procedimiento almacenado por nombre en lugar de por posición en la llamada al procedimiento. Estos parámetros se denominan *parámetros con nombre*. ODBC admite el uso de parámetros con nombre. En ODBC, los parámetros con nombre solo se usan en las llamadas a procedimientos almacenados y no se pueden usar en otras instrucciones SQL.  
@@ -38,7 +39,7 @@ Algunos DBMS permiten a una aplicación especificar los parámetros de un proced
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- En este procedimiento, el primer parámetro, @title_id, tiene un valor predeterminado de 1. Una aplicación puede utilizar el siguiente código para invocar este procedimiento, de modo que solo especifique un parámetro dinámico. Este parámetro es un parámetro con nombre denominado "\@quote".  
+ En este procedimiento, el primer parámetro, @title_id , tiene un valor predeterminado de 1. Una aplicación puede utilizar el siguiente código para invocar este procedimiento, de modo que solo especifique un parámetro dinámico. Este parámetro es un parámetro con nombre denominado " \@ Quote".  
   
 ```  
 // Prepare the procedure invocation statement.  

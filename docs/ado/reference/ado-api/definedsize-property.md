@@ -1,4 +1,5 @@
 ---
+description: Propiedad DefinedSize
 title: Propiedad DefinedSize | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08a7842a2fbfb2bd34f02ad2e45871132111a68f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa6b01afc3a8643f7e4f28917ebaa8283bf1876e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444187"
 ---
 # <a name="definedsize-property"></a>Propiedad DefinedSize
 Indica la capacidad de los datos de un objeto de [campo](../../../ado/reference/ado-api/field-object.md) .  
@@ -36,7 +37,7 @@ Indica la capacidad de los datos de un objeto de [campo](../../../ado/reference/
   
 4.  En los tipos de datos que no tienen una longitud, se establece en ~ 0 (bit a bit, el valor no es 0; todos los bits se establecen en 1).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use la propiedad **DefinedSize** para determinar la capacidad de los datos de un objeto de **campo** .  
   
  Las propiedades **DefinedSize** y [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) son diferentes. Por ejemplo, considere un objeto de **campo** con un tipo declarado de **advarchar** y un valor de propiedad **DefinedSize** de 50, que contiene un solo carácter. El valor de la propiedad **ActualSize** que devuelve es la longitud en bytes del carácter único.  

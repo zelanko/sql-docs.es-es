@@ -1,4 +1,5 @@
 ---
+description: Hierarchize (MDX)
 title: Jerarquía (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c1683819420d150e2f9b330ba94bc9e228d167f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429917"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 
@@ -58,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- En el ejemplo siguiente se devuelve la suma `Measures.[Order Quantity]` del miembro, agregada durante los primeros nueve meses de 2003 contenidos en `Date` la dimensión, del cubo **Adventure Works** . La función **PeriodsToDate** define las tuplas en el conjunto sobre el que funciona la función de agregado. La función **Hierarchy** organiza los miembros del conjunto de miembros especificado de la dimensión Product en orden jerárquico.  
+ En el ejemplo siguiente se devuelve la suma del `Measures.[Order Quantity]` miembro, agregada durante los primeros nueve meses de 2003 contenidos en la `Date` dimensión, del cubo **Adventure Works** . La función **PeriodsToDate** define las tuplas en el conjunto sobre el que funciona la función de agregado. La función **Hierarchy** organiza los miembros del conjunto de miembros especificado de la dimensión Product en orden jerárquico.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  

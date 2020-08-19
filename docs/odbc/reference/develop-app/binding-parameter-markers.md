@@ -1,4 +1,5 @@
 ---
+description: Marcadores de parámetros de enlace
 title: Marcadores de parámetros de enlace | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be99bc884a8baa66f3d632ee4731985f0cc85732
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 259faf84e0388f74662471583657da1fd95bb007
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476857"
 ---
 # <a name="binding-parameter-markers"></a>Marcadores de parámetros de enlace
 La aplicación enlaza los parámetros llamando a **SQLBindParameter**. **SQLBindParameter** enlaza un parámetro cada vez. Con él, la aplicación especifica lo siguiente:  

@@ -1,4 +1,5 @@
 ---
+description: Variables (Transact-SQL)
 title: Variables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -13,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abbfbd518796041c18f9bfe97522791c2ddf5f1f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459268"
 ---
 # <a name="variables-transact-sql"></a>Variables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -179,7 +180,7 @@ SELECT @EmpIDVariable;
 GO
 ```
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Declare @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  

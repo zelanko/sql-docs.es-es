@@ -1,4 +1,5 @@
 ---
+description: Archivos de encabezado
 title: Archivos de encabezado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62364d828e7b1f1ed8c70cae7ae1fc7dc3bc33fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec8eede80f88f10e0b1ca43696e75dddec121ffe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476657"
 ---
 # <a name="header-files"></a>Archivos de encabezado
 El archivo de encabezado SQL. h contiene prototipos para las funciones y características en el nivel de conformidad de la interfaz ODBC principal. El archivo de encabezado Sqlext. h contiene prototipos para las funciones y características en los niveles de cumplimiento de la API de nivel 1 y nivel 2. El archivo de encabezado SqlTypes. h contiene definiciones e indicadores de tipos para los tipos de datos de SQL.  

@@ -1,4 +1,5 @@
 ---
+description: Anexar y ejemplo de los métodos CreateParameter (VB)
 title: Ejemplo de los métodos Append y CreateParameter (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72964e1c3c44b389d8aabee9b794fb3dc5e1fd36
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb26d148aff616f36f3244cbe65b315378573278
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451287"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Anexar y ejemplo de los métodos CreateParameter (VB)
 En este ejemplo se utilizan los métodos [Append](../../../ado/reference/ado-api/append-method-ado.md) y [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) para ejecutar un procedimiento almacenado con un parámetro de entrada.  
@@ -124,4 +125,4 @@ End Sub
  [CreateParameter (método) (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
  [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)

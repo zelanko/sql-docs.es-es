@@ -1,4 +1,5 @@
 ---
+description: Propiedad DefaultDatabase
 title: Propiedad DefaultDatabase | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a68a41985515e63e6e8520c30fc662c69e1ced6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7e16a5a5bc3a711477cca1507c889bd15e0f37a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444197"
 ---
 # <a name="defaultdatabase-property"></a>Propiedad DefaultDatabase
 Indica la base de datos predeterminada para un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -28,7 +29,7 @@ Indica la base de datos predeterminada para un objeto de [conexión](../../../ad
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor de **cadena** que se evalúa como el nombre de una base de datos disponible en el proveedor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Utilice la propiedad **DefaultDatabase** para establecer o devolver el nombre de la base de datos predeterminada en un objeto de **conexión** específico.  
   
  Si hay una base de datos predeterminada, las cadenas SQL pueden usar una sintaxis incompleta para tener acceso a los objetos de esa base de datos. Para obtener acceso a los objetos de una base de datos distinta de la especificada en la propiedad **DefaultDatabase** , debe calificar los nombres de objeto con el nombre de base de datos deseado. Tras la conexión, el proveedor escribirá información de base de datos predeterminada en la propiedad **DefaultDatabase** . Algunos proveedores solo permiten una base de datos por conexión, en cuyo caso no se puede cambiar la propiedad **DefaultDatabase** .  

@@ -1,4 +1,5 @@
 ---
+description: Rellenado automático de la IPD
 title: Rellenado automático de IPD | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1998ea1992ee7f14d87d01e348d955b017166088
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73c0456f1c78ccc19f1ff55a1ab288baedae2e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476887"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Rellenado automático de la IPD
 Algunos controladores pueden establecer los campos de IPD después de preparar una consulta con parámetros. Los campos de descriptor se rellenan automáticamente con información sobre el parámetro, incluidos el tipo de datos, la precisión, la escala y otras características. Esto es equivalente a admitir **SQLDescribeParam**. Esta información puede ser especialmente valiosa para una aplicación cuando no tiene ninguna otra manera de detectarla, por ejemplo, cuando se realiza una consulta ad hoc con parámetros que la aplicación no conoce.  

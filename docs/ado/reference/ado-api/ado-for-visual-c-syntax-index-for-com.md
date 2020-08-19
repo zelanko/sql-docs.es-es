@@ -1,4 +1,5 @@
 ---
+description: ADO para el índice de sintaxis de Visual C++ para COM
 title: ADO para Visual C++ Índice de sintaxis para COM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 044dcc2fb10463e592a953725afc2413c3a5880f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1c5febeb8727348525a9fe4a4dd5f8e22a17678b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451417"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO para el índice de sintaxis de Visual C++ para COM
 Este índice es una referencia cruzada a la referencia del lenguaje ADO basada en Microsoft Visual C++.  
@@ -32,7 +33,7 @@ Este índice es una referencia cruzada a la referencia del lenguaje ADO basada e
   
  La sintaxis de método y propiedad de Visual C++ se muestra para los siguientes elementos:  
   
--   [Recopilaciones](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
+-   [Colecciones](../../../ado/reference/ado-api/collections-ado-for-visual-c-syntax.md)  
   
 -   [Objeto Command](../../../ado/reference/ado-api/command-ado-for-visual-c-syntax.md)  
   
@@ -42,7 +43,7 @@ Este índice es una referencia cruzada a la referencia del lenguaje ADO basada e
   
 -   [Field (objeto)](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
   
--   [Parameter (objeto)](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
+-   [Objeto de parámetro](../../../ado/reference/ado-api/parameter-ado-for-visual-c-syntax.md)  
   
 -   [Objeto record](../../../ado/reference/ado-api/record-ado-for-visual-c-syntax.md)  
   
@@ -50,6 +51,6 @@ Este índice es una referencia cruzada a la referencia del lenguaje ADO basada e
   
 -   [Stream (objeto)](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [ADO para Visual C++ Índice de sintaxis con #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

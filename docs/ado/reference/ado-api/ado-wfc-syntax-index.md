@@ -1,4 +1,5 @@
 ---
+description: ADO - índice de sintaxis WFC
 title: 'ADO: índice de sintaxis de WFC | Microsoft Docs'
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ae2ddf07e2e687aec0b507b9ff9f2640087ef74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b6e5c4fd54b5784e76067231096752a68dd52a6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451347"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - índice de sintaxis WFC
 La referencia del lenguaje ADO utiliza el lenguaje de programación de Microsoft Visual Basic para ilustrar la sintaxis de métodos y propiedades de ADO. Este índice es una referencia cruzada a los temas de referencia del lenguaje ADO, basado en ADO para Windows Foundation Classes (ADO/WFC). Cuando surjan diferencias en la sintaxis, use las firmas de función de este índice, en lugar de las listas de sintaxis en el tema de referencia del lenguaje.  
@@ -38,7 +39,7 @@ La referencia del lenguaje ADO utiliza el lenguaje de programación de Microsoft
   
 -   [Field (objeto)](../../../ado/reference/ado-api/field-ado-wfc-syntax.md)  
   
--   [Parameter (objeto)](../../../ado/reference/ado-api/parameter-ado-wfc-syntax.md)  
+-   [Objeto de parámetro](../../../ado/reference/ado-api/parameter-ado-wfc-syntax.md)  
   
 -   [Objeto de conjunto de registros](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
   
@@ -48,6 +49,6 @@ La referencia del lenguaje ADO utiliza el lenguaje de programación de Microsoft
   
 -   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Controlar eventos de ADO](../../../ado/guide/data/handling-ado-events.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

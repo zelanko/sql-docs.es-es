@@ -1,4 +1,5 @@
 ---
+description: Usar funciones de conjuntos
 title: Usar funciones set | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1325055017eeee392cd098d9168dd247a2664aa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476987"
 ---
 # <a name="using-set-functions"></a>Usar funciones de conjuntos
 
@@ -22,7 +23,7 @@ ms.locfileid: "68038053"
   
  Las funciones de conjunto, al igual que las funciones de tupla y de conjunto, son esenciales para negociar las estructuras multidimensionales de Analysis Services. Las funciones de conjuntos son vitales para obtener resultados de las consultas MDX (Expresiones multidimensionales) porque las expresiones de conjuntos definen los ejes de una consulta MDX.  
   
- Una de las funciones de conjunto más comunes son los [miembros &#40;establecer&#41; &#40;función&#41;de MDX](../mdx/members-set-mdx.md) , que recupera un conjunto que contiene todos los miembros de una dimensión, jerarquía o nivel. A continuación se muestra un ejemplo de su uso dentro de una consulta:  
+ Una de las funciones de conjunto más comunes son los [miembros &#40;establecer&#41; &#40;función&#41;de MDX ](../mdx/members-set-mdx.md) , que recupera un conjunto que contiene todos los miembros de una dimensión, jerarquía o nivel. A continuación se muestra un ejemplo de su uso dentro de una consulta:  
   
  `SELECT`  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68038053"
   
  `FROM [Adventure Works]`  
   
- Otra función que se usa con frecuencia es la función de [&#41;de &#40;MDX](../mdx/crossjoin-mdx.md) . Devuelve un conjunto de tuplas que representan el producto cartesiano de los conjuntos pasados en el mismo como parámetros. En términos prácticos, esta función permite crear ejes 'anidados' o 'de referencias cruzadas' en las consultas:  
+ Otra función que se usa con frecuencia es la función de [&#41;de &#40;MDX ](../mdx/crossjoin-mdx.md) . Devuelve un conjunto de tuplas que representan el producto cartesiano de los conjuntos pasados en el mismo como parámetros. En términos prácticos, esta función permite crear ejes 'anidados' o 'de referencias cruzadas' en las consultas:  
   
  `SELECT`  
   
@@ -122,7 +123,7 @@ ms.locfileid: "68038053"
   
  Esta consulta también muestra la forma en que el conjunto devuelto por una función de conjunto, Descendants, puede pasarse como parámetro a otra función de conjunto, Order.  
   
- Filtrar un conjunto según ciertos criterios resulta muy útil al escribir consultas y, para este propósito, puede utilizar el [filtro &#40;función&#41;MDX](../mdx/filter-mdx.md) , como se muestra en el ejemplo siguiente:  
+ Filtrar un conjunto según ciertos criterios resulta muy útil al escribir consultas y, para este propósito, puede utilizar el [filtro &#40;función&#41;MDX ](../mdx/filter-mdx.md) , como se muestra en el ejemplo siguiente:  
   
  `SELECT`  
   
@@ -150,7 +151,7 @@ ms.locfileid: "68038053"
   
  `FROM [Adventure Works]`  
   
- Existen otras funciones más sofisticadas que permiten filtrar un conjunto de otras maneras. Por ejemplo, en la consulta siguiente se muestra la función [&#40;&#41;MDX de](../mdx/topcount-mdx.md) devuelve los n elementos superiores de un conjunto:  
+ Existen otras funciones más sofisticadas que permiten filtrar un conjunto de otras maneras. Por ejemplo, en la consulta siguiente se muestra la función [&#40;&#41;MDX de ](../mdx/topcount-mdx.md) devuelve los n elementos superiores de un conjunto:  
   
  `SELECT`  
   

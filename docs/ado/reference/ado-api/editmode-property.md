@@ -1,4 +1,5 @@
 ---
+description: Propiedad EditMode
 title: Propiedad EditMode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cbe93a06eb6521b2210edc08cdca421cd5de982
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e330e1bbe559940324962cfde772258d3345594b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444067"
 ---
 # <a name="editmode-property"></a>Propiedad EditMode
 Indica el estado de edición del registro actual.  
@@ -28,7 +29,7 @@ Indica el estado de edición del registro actual.
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un valor de [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  ADO mantiene un búfer de edición asociado al registro actual. Esta propiedad indica si se han realizado cambios en este búfer o si se ha creado un nuevo registro. Utilice la propiedad **EditMode** para determinar el estado de edición del registro actual. Puede comprobar los cambios pendientes si se ha interrumpido un proceso de edición y determinar si necesita usar el método [Update](../../../ado/reference/ado-api/update-method.md) o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
  En el *modo de actualización inmediata* , la propiedad **EditMode** se restablece a **adEditNone** después de que se llame a la llamada correcta al método **Update** . Cuando una llamada a [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) no elimina correctamente el registro o los registros del origen de datos (por ejemplo, debido a infracciones de la integridad referencial), el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) permanece en modo de edición (**EditMode**  =  **adEditInProgress**). Por consiguiente, se debe llamar a **CancelUpdate** antes de salir del registro actual (por ejemplo, con [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)o [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  

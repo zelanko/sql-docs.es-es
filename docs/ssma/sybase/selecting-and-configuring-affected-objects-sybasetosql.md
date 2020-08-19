@@ -1,4 +1,5 @@
 ---
+description: Selección y configuración de objetos afectados (SybaseToSQL)
 title: Selección y configuración de objetos afectados (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 793430d548053b8d4c1cbf8dd07dd4e7d691c6d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468749"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selección y configuración de objetos afectados (SybaseToSQL)
 En esta página puede seleccionar las tablas y las claves externas, los cambios en los que debe compararse cuando SSMA comprueba los resultados de la ejecución de los objetos elegidos en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -39,7 +40,7 @@ La pestaña tabla contiene la vista de cuadrícula de la tabla seleccionada. La 
   
 -   Regla  
   
--   Valor predeterminado  
+-   Default  
   
 -   Identidad  
   

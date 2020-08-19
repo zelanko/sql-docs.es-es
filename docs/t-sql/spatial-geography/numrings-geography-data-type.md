@@ -1,4 +1,5 @@
 ---
+description: NumRings (tipo de datos geography)
 title: NumRings (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0b85a8842a7bc33753394c5de96582ca41b9d635
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fddcc951ae438b054c68d6e9755e62388fb098e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422329"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Devuelve el número total de anillos de una instancia de **Polygon**. En el tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography**de**, no se distingue entre los anillos externos y los internos, dado que cualquier anillo puede usarse como anillo externo.  
+  Devuelve el número total de anillos de una instancia de **Polygon**. En el tipo  **geography** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no se distingue entre los anillos externos y los internos, dado que cualquier anillo puede usarse como anillo externo.  
   
 ## <a name="syntax"></a>Sintaxis  
   

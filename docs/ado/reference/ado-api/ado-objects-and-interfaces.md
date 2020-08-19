@@ -1,4 +1,5 @@
 ---
+description: Interfaces y objetos ADO
 title: Objetos e interfaces de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6deb8166c775fcdcfe8fb0975662dda0be3b3581
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 80a47336bb6453033a28b2d62eeda3700431594a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451377"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfaces y objetos ADO
 Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md).  
   
  Cada objeto puede estar contenido en su colección correspondiente. Por ejemplo, un objeto de [error](../../../ado/reference/ado-api/error-object.md) puede estar contenido en una colección de [errores](../../../ado/reference/ado-api/errors-collection-ado.md) . Para obtener más información, vea [colecciones de ADO](../../../ado/reference/ado-api/ado-collections.md) o un tema específico de la colección.  
   
-|Objeto o interfaz|Description|  
+|Objeto o interfaz|Descripción|  
 |-|-|  
 |[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Se usa para recuperar el comando OLEDB subyacente de un objeto ADOCommand.|  
 |[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Construye un objeto **Record** de ADO a partir de un objeto de **fila** OLE DB en una aplicación de C/C++.|  
@@ -42,7 +43,7 @@ Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](
 |[DataRecordsets](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa el conjunto de registros de una tabla base o los resultados de un comando ejecutado. En cualquier momento, el objeto de **conjunto de registros** hace referencia a un único registro del conjunto como el registro actual.<br /><br /> El objeto de **conjunto de registros** es seguro para el scripting.|  
 |[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Representa un flujo binario de datos.<br /><br /> El objeto de **secuencia** es seguro para el scripting.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Colecciones de ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

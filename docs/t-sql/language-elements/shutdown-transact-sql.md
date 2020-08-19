@@ -1,4 +1,5 @@
 ---
+description: SHUTDOWN (Transact-SQL)
 title: SHUTDOWN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db543ba464af2c71ba3390cb4574797713b8c764
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8d3d0bc74e2d928b81e00947095aa992669bcb54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459265"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ SHUTDOWN [ WITH NOWAIT ]
  WITH NOWAIT  
  Opcional. Cierra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin ejecutar puntos de comprobación en cada base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se cierra tras intentar finalizar todos los procesos de usuario. Cuando el servidor se reinicia, se produce una operación de reversión para las transacciones incompletas.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  A menos que se use la opción WITHNOWAIT, SHUTDOWN cierra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al:  
   
 1.  Deshabilitar inicios de sesión (salvo en el caso de los miembros de los roles fijos de servidor **sysadmin** y **serveradmin**).  
@@ -66,7 +67,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   Con el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Mediante la ejecución de **net stop mssqlserver** desde un símbolo del sistema para una instancia predeterminada, o la ejecución de **net stop mssql$** _nombre_de_instancia_ desde un símbolo del sistema para una instancia con nombre.  
+-   Mediante la ejecución de **net stop mssqlserver** desde un símbolo del sistema para una instancia predeterminada, o la ejecución de **net stop mssql$**_nombre_de_instancia_ desde un símbolo del sistema para una instancia con nombre.  
   
 -   Con Servicios del Panel de control.  
   

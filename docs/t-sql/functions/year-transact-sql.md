@@ -1,4 +1,5 @@
 ---
+description: YEAR (Transact-SQL)
 title: YEAR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5ce9bf9bc9c1e9c03e86ff696a8684c9f54bafc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f3f8ad5bd4d39b0fc55fad2dd68b43552bf15ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422589"
 ---
 # <a name="year-transact-sql"></a>YEAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87111778"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 YEAR ( date )  
 ```  
   
@@ -62,20 +63,20 @@ YEAR ( date )
 ## <a name="examples"></a>Ejemplos  
  La siguiente instrucción devuelve `2010`. Este número corresponde al año.  
   
-```  
+```sql  
 SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
  La siguiente instrucción devuelve `1900, 1, 1`. El argumento para *date* es el número `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como 1 de enero de 1900.  
   
-```  
+```sql 
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  La siguiente instrucción devuelve `1900, 1, 1`. El argumento para *date* es el número `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpreta `0` como 1 de enero de 1900.  
   
-```  
+```sql  
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);  
 ```  
   

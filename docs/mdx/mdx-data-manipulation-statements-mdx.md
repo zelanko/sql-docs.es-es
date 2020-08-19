@@ -1,4 +1,5 @@
 ---
+description: Instrucciones de manipulación de datos de MDX (MDX)
 title: Instrucciones de manipulación de datos de MDX (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0aa7017cd82dce5da8d3424ed67565e9fda101c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b22bf9a923fad3e27330a86421258de29ea29a1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68003519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477007"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>Instrucciones de manipulación de datos de MDX (MDX)
 

@@ -1,4 +1,5 @@
 ---
+description: Barra diagonal y asterisco (comentario de bloque) (Transact-SQL)
 title: Barra diagonal y asterisco (comentario de bloque) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2407e539d30c3467c4fa6d8b87d831c190a9d00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 481701a7d2167e1d45f5aa77f715a380a63e97af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459238"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>Barra diagonal y asterisco (comentario de bloque) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ text_of_comment
  *text_of_comment*  
  Es el texto del comentario. Es una o más cadenas de caracteres.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los comentarios se pueden insertar en una línea aparte o dentro de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los comentarios con varias líneas deben indicarse con /* y \*/. Una regla de estilo que se usa a menudo para los comentarios de varias líneas es comenzar la primera línea con /\*, las siguientes con \*\* y finalizar con \*/.  
   
  No hay límite de longitud para los comentarios.  
@@ -103,7 +104,7 @@ JOIN Person.Address AS a ON ea.AddressID = a.AddressID;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   

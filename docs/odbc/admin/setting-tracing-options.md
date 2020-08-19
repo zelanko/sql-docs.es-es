@@ -1,4 +1,5 @@
 ---
+description: Establecer las opciones de seguimiento
 title: Estableciendo opciones de seguimiento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21bee5d903459423a134389e62db844f5f63c9c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72e3805eded00b1bfa0c984d5ff0ace1ae1494fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476957"
 ---
 # <a name="setting-tracing-options"></a>Establecer las opciones de seguimiento
 La pestaña **seguimiento** del cuadro de diálogo **Administrador de orígenes de datos ODBC** le permite configurar la forma en que se realiza el seguimiento de las llamadas a funciones ODBC.  
@@ -42,7 +43,7 @@ La pestaña **seguimiento** del cuadro de diálogo **Administrador de orígenes 
   
 2.  En herramientas administrativas, abra el administrador de orígenes de datos ODBC.  
   
-3.  Haga clic en la pestaña **seguimiento** .  
+3.  Haga clic en la pestaña **Tracing** (Seguimiento).  
   
 4.  Configure el modo de seguimiento mediante la casilla **seguimiento en todo el equipo para todas las identidades de usuario** :  
   

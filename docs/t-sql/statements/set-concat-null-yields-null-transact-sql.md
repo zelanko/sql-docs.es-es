@@ -1,4 +1,5 @@
 ---
+description: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 title: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ ms.assetid: 3091b71c-6518-4eb4-88ab-acae49102bc5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0bd39f63162511ba0541ecf4c218da2e18bc11
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cdca657421c2508ed05a25302f85e4bba365891d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87392694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415241"
 ---
 # <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -54,7 +55,9 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>Observaciones  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentarios
  Cuando SET CONCAT_NULL_YIELDS_NULL es ON, al concatenar un valor NULL con una cadena se produce como resultado NULL. Por ejemplo, `SELECT 'abc' + NULL` produce `NULL`. Cuando SET CONCAT_NULL_YIELDS_NULL es OFF, al concatenar un valor NULL con una cadena se obtiene la propia cadena (el valor NULL se trata como una cadena vacía). Por ejemplo, `SELECT 'abc' + NULL` produce `abc`.  
   
  Si no se especifica SET CONCAT_NULL_YIELDS_NULL, se aplica la configuración de la opción de base de datos **CONCAT_NULL_YIELDS_NULL**.  

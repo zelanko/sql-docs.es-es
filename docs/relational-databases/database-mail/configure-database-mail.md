@@ -1,4 +1,5 @@
 ---
+description: Configuración de Correo electrónico de base de datos
 title: Configuración de Correo electrónico de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -39,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3c52311482f8ad7107e384e3ed8e20100c094243
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421089"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85737629"
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
   
--   **Para configurar Correo electrónico de base de datos con:**  [Asistente para configuración de Correo electrónico de base de datos](#DBWizard), [Plantillas](#Template)  
+-   **Para configurar Correo electrónico de base de datos, mediante:**  [Asistente para configuración de Correo electrónico de base de datos](#DBWizard), [Usar plantillas](#Template)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Use la opción **DatabaseMail XPs** para habilitar Correo electrónico de base de datos en este servidor. Para obtener más información, vea el tema de referencia [Database Mail XPs (opción de configuración del servidor)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
@@ -115,7 +116,7 @@ ms.locfileid: "85737629"
  Use la página **Seleccionar tarea de configuración** para indicar qué tarea se completará cada vez que se use el Asistente. Si cambia de opinión antes de completar el Asistente, utilice el botón **Atrás** para volver a esta página y seleccionar otra tarea.  
   
 > [!NOTE]  
->  Si no se ha habilitado el Correo electrónico de base de datos, recibirá el mensaje: **La característica Correo electrónico de base de datos no está disponible.  ¿Quiere habilitar esta característica?** Responder **Sí**es equivalente a habilitar Correo electrónico de base de datos con la [opción Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) del procedimiento almacenado del sistema **sp_configure** .  
+>  Si no se ha habilitado el Correo electrónico de base de datos, recibirá el mensaje **La característica Correo electrónico de base de datos no está disponible.  ¿Quiere habilitar esta característica?** Responder **Sí**es equivalente a habilitar Correo electrónico de base de datos con la [opción Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) del procedimiento almacenado del sistema **sp_configure** .  
   
  **Instalar Correo electrónico de base de datos realizando las siguientes tareas**  
  Realiza todas las tareas necesarias para configurar el Correo electrónico de base de datos por primera vez. Esta opción incluye las otras tres.  
@@ -237,7 +238,7 @@ ms.locfileid: "85737629"
   
  Utilice los botones **Subir** y **Bajar** para cambiar el orden en que se utilizan las cuentas del Correo electrónico de base de datos. Este orden se determina mediante un valor denominado número de secuencia. El botón**Subir** reduce el número de secuencia y el botón **Bajar** aumenta el número de secuencia. El número de secuencia determina el orden en que el Correo electrónico de base de datos utiliza las cuentas en el perfil. En el caso de un mensaje de correo electrónico nuevo, el Correo electrónico de base de datos se inicia con la cuenta con el número de secuencia más bajo. Si la cuenta genera un error, el Correo electrónico de base de datos utiliza la cuenta con el siguiente número de secuencia superior y así sucesivamente hasta que el Correo electrónico de base de datos envía el mensaje correctamente o la cuenta con el número de secuencia superior genera un error. Si la cuenta con el número de secuencia superior genera un error, el Correo electrónico de base de datos pausa los intentos de envío del correo electrónico durante la cantidad de tiempo configurada en el parámetro **AccountRetryDelay** y, a continuación, inicia nuevamente el proceso de intento de envío del correo electrónico comenzando por el número de secuencia más bajo. Use el parámetro **AccountRetryAttempts** del Correo electrónico de base de datos para configurar el número de veces que el proceso de correo electrónico externo intenta enviar el mensaje de correo electrónico al usar cada cuenta del perfil especificado. Puede configurar los parámetros **AccountRetryDelay** y **AccountRetryAttempts** en la página **Configurar parámetros del sistema** del Asistente para configuración del Correo electrónico de base de datos.  
   
- **Nombre del perfil**  
+ **Nombre de perfil**  
  Escriba el nombre del nuevo perfil. El perfil se crea con este nombre. No utilice el nombre de un perfil existente.  
   
  **Descripción**  
@@ -265,7 +266,7 @@ ms.locfileid: "85737629"
   
  Utilice los botones **Subir** y **Bajar** para cambiar el orden en que se utilizan las cuentas del Correo electrónico de base de datos. Este orden se determina mediante un valor denominado número de secuencia. El botón**Subir** reduce el número de secuencia y el botón **Bajar** aumenta el número de secuencia. El número de secuencia determina el orden en que el Correo electrónico de base de datos utiliza las cuentas en el perfil. En el caso de un mensaje de correo electrónico nuevo, el Correo electrónico de base de datos se inicia con la cuenta con el número de secuencia más bajo. Si la cuenta genera un error, el Correo electrónico de base de datos utiliza la cuenta con el siguiente número de secuencia superior y así sucesivamente hasta que el Correo electrónico de base de datos envía el mensaje correctamente o la cuenta con el número de secuencia superior genera un error. Si la cuenta con el número de secuencia superior genera un error, el Correo electrónico de base de datos pausa los intentos de envío del correo electrónico durante la cantidad de tiempo configurada en el parámetro **AccountRetryDelay** y, a continuación, inicia nuevamente el proceso de intento de envío del correo electrónico comenzando por el número de secuencia más bajo. Use el parámetro **AccountRetryAttempts** del Correo electrónico de base de datos para configurar el número de veces que el proceso de correo electrónico externo intenta enviar el mensaje de correo electrónico al usar cada cuenta del perfil especificado. Puede configurar los parámetros **AccountRetryDelay** y **AccountRetryAttempts** en la página **Configurar parámetros del sistema** del Asistente para configuración del Correo electrónico de base de datos.  
   
- **Nombre del perfil**  
+ **Nombre de perfil**  
  Permite seleccionar el nombre del perfil que se va a administrar.  
   
  **Eliminar**  
@@ -320,7 +321,7 @@ ms.locfileid: "85737629"
 ###  <a name="manage-accounts-and-profiles-page"></a><a name="AccountsProfiles"></a> Página Administrar perfiles y cuentas  
  Utilice esta página para elegir una tarea para administrar un perfil o una cuenta.  
   
- **Crear nueva cuenta**  
+ **Creación de una nueva cuenta**  
  Crea una nueva cuenta.  
   
  **Ver, cambiar o eliminar cuenta existente**  
@@ -344,7 +345,7 @@ ms.locfileid: "85737629"
  **Pública**  
  Seleccione esta opción para convertir en público el perfil especificado.  
   
- **Profile Name**  
+ **Nombre del perfil**  
  Muestra el nombre del perfil.  
   
  **Perfil predeterminado**  
@@ -368,7 +369,7 @@ ms.locfileid: "85737629"
  **Acceder**  
  Seleccione si el usuario o el rol tienen acceso al perfil especificado.  
   
- **Nombre del perfil**  
+ **Nombre de perfil**  
  Muestra el nombre del perfil.  
   
  **Es el perfil predeterminado**  
@@ -392,7 +393,7 @@ ms.locfileid: "85737629"
  Tamaño máximo de los datos adjuntos en bytes.  
   
  **Extensiones de archivo adjunto prohibidas**  
- Lista de extensiones separadas por comas que no se puede enviar como datos adjuntos en un mensaje de correo electrónico. Haga clic en el botón Examinar ( **...** ) para agregar extensiones adicionales.  
+ Lista de extensiones separadas por comas que no se puede enviar como datos adjuntos en un mensaje de correo electrónico. Haga clic en el botón Examinar (**...**) para agregar extensiones adicionales.  
   
  **Vigencia mínima del ejecutable de Correo electrónico de base de datos (segundos)**  
  Cantidad de tiempo mínima en segundos que el proceso de correo electrónico externo permanece activo. El proceso permanecerá activo mientras queden mensajes en la cola del Correo electrónico de base de datos. Este parámetro especifica el tiempo que permanece activo el proceso si no hay ningún mensaje por procesar.  
@@ -419,7 +420,7 @@ ms.locfileid: "85737629"
  [Asistente para configuración de Correo electrónico de base de datos](#DBWizard)  
   
 ###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a> Send Test E-Mail Page  
- Use la página **Enviar correo electrónico de prueba desde** _<nombreDeInstancia>_ para enviar un mensaje de correo electrónico con el perfil de Correo electrónico de base de datos especificado. Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden enviar un mensaje de correo electrónico de prueba mediante esta página.  
+ Use la página **Enviar correo electrónico de prueba desde**_<nombreDeInstancia>_ para enviar un mensaje de correo electrónico con el perfil de Correo electrónico de base de datos especificado. Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden enviar un mensaje de correo electrónico de prueba mediante esta página.  
   
  **Perfil de Correo electrónico de base de datos**  
  Seleccione un perfil de Correo electrónico de base de datos de la lista. Este campo es obligatorio. Si no aparece ningún perfil, significa que no hay ninguno o que no tiene permiso para ninguno. Utilice el **Asistente para configuración de Correo electrónico de base de datos** para crear y configurar perfiles. Si no aparece ningún perfil, utilice el Asistente para configuración de Correo electrónico de base de datos para crear un perfil para su utilización.  
@@ -450,7 +451,7 @@ ms.locfileid: "85737629"
   
 2.  En la ventana **Explorador de plantillas** , expanda la carpeta **Correo electrónico de base de datos** .  
   
-3.  Haga doble clic en **Simple Database Mail Configuration (Configuración de correo electrónico de base de datos simple)** . Se abre la plantilla en una ventana de consulta nueva.  
+3.  Haga doble clic en **Simple Database Mail Configuration (Configuración de correo electrónico de base de datos simple)**. Se abre la plantilla en una ventana de consulta nueva.  
   
 4.  En el menú **Consulta** , seleccione **Especificar valores para parámetros de plantilla**. Se abre la ventana **Reemplazar parámetros de plantilla** .  
   

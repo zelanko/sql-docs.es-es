@@ -1,4 +1,5 @@
 ---
+description: Función SQLInstallDriverEx
 title: Función SQLInstallDriverEx | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 054e8b6b9eae26bd5f973f3d46d7ef37363a8e79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c200615c9d3bc71ccb146d3b898517611b53eed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421189"
 ---
 # <a name="sqlinstalldriverex-function"></a>Función SQLInstallDriverEx
 **Conformidad**  
  Versión introducida: ODBC 3,0  
   
  **Resumen**  
- **SQLInstallDriverEx** agrega información sobre el controlador a la entrada Odbcinst. ini en la información del sistema e incrementa el *UsageCount* del controlador en 1. Sin embargo, si ya existe una versión del controlador pero el valor de *UsageCount* para el controlador no existe, el nuevo valor de *UsageCount* se establece en 2.  
+ **SQLInstallDriverEx** agrega información sobre el controlador a la entrada Odbcinst.ini en la información del sistema e incrementa el *UsageCount* del controlador en 1. Sin embargo, si ya existe una versión del controlador pero el valor de *UsageCount* para el controlador no existe, el nuevo valor de *UsageCount* se establece en 2.  
   
  Esta función no copia realmente ningún archivo. Es responsabilidad del programa de llamada copiar los archivos del controlador en el directorio de destino correctamente.  
   
- También se puede tener acceso a la funcionalidad de **SQLInstallDriverEx** con [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ También se puede tener acceso a la funcionalidad de **SQLInstallDriverEx** con [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -79,11 +80,11 @@ BOOL SQLInstallDriverEx(
   
  Las aplicaciones no deben establecer el recuento de uso. ODBC mantendrá este recuento.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLInstallDriverEx** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLInstallDriverEx** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
@@ -99,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Comentarios  
  El argumento *lpszDriver* es una lista de atributos en forma de pares palabra clave-valor. Cada par se termina con un byte nulo y la lista completa finaliza con un byte nulo. (Es decir, dos bytes nulos marcan el final de la lista). El formato de esta lista es el siguiente:  
   
- _driver-DESC_ **\\**0Driver**=**_driver-dll-FILENAME_**\\**0 [Setup**=**_setup-dll-FILENAME_<b>\\</b>0]  
+ _driver-DESC_ **\\** 0Driver **=** _driver-dll-nombredearchivo_ **\\** 0 [Setup **=** _setup-dll-FILENAME_ <b>\\</b> 0]  
   
- [_driver-ATTR-palabraclave1_**=**_value1_<b>\\</b>0] [_driver-ATTR-palabraclave2_**=**_valor2_<b>\\</b>0]... <b>\\</b>0  
+ [_driver-ATTR-palabraclave1_ **=** _valor1_ <b>\\</b> 0] [_driver-ATTR-palabraclave2_ **=** _valor2_ <b>\\</b> 0]... <b>\\</b> 0,1  
   
  donde \ 0 es un byte nulo y *driver-ATTR-keywordn* es cualquier palabra clave del atributo driver. Las palabras clave deben aparecer en el orden especificado. Por ejemplo, supongamos que un controlador para archivos de texto con formato tiene archivos dll de instalación y controladores independientes y puede usar archivos con las extensiones. txt y. csv. El argumento *lpszDriver* para este controlador podría ser el siguiente:  
   
@@ -116,7 +117,7 @@ FileExtns=*.txt,*.csv\0\0
 SQL Server\0Driver=SQLSRVR.DLL\0\0  
 ```  
   
- Después de que **SQLInstallDriverEx** recupera información sobre el controlador del argumento *lpszDriver* , agrega la descripción del controlador a la sección [ODBC drivers] de la entrada Odbcinst. ini en la información del sistema. A continuación, crea una sección titulada con la descripción del controlador y agrega las rutas de acceso completas de la DLL del controlador y del archivo DLL de instalación. Por último, devuelve la ruta de acceso del directorio de destino de la instalación, pero no copia los archivos del controlador en él. En realidad, el programa de llamada debe copiar los archivos del controlador en el directorio de destino.  
+ Después de que **SQLInstallDriverEx** recupera información sobre el controlador del argumento *lpszDriver* , agrega la descripción del controlador a la sección [ODBC drivers] de la entrada Odbcinst.ini de la información del sistema. A continuación, crea una sección titulada con la descripción del controlador y agrega las rutas de acceso completas de la DLL del controlador y del archivo DLL de instalación. Por último, devuelve la ruta de acceso del directorio de destino de la instalación, pero no copia los archivos del controlador en él. En realidad, el programa de llamada debe copiar los archivos del controlador en el directorio de destino.  
   
  **SQLInstallDriverEx** incrementa en 1 el recuento de uso de componentes para el controlador instalado. Si ya existe una versión del controlador pero el recuento de uso de componentes para el controlador no existe, el nuevo valor de recuento de uso de componentes se establece en 2.  
   

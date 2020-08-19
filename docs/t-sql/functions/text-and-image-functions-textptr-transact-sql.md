@@ -1,4 +1,5 @@
 ---
+description: Funciones de texto e imagen - TEXTPTR (Transact-SQL)
 title: TEXTPTR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0150b1b9dace457b76130b7b0b3f863471637970
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422599"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funciones de texto e imagen - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +76,7 @@ TEXTPTR ( column )
 >  Para ejecutar estos ejemplos, es necesario instalar la base de datos **pubs**.  
   
 ### <a name="a-using-textptr"></a>A. Usar TEXTPTR  
- En el ejemplo siguiente se utiliza la función `TEXTPTR` para encontrar la columna **de**image`logo` asociada a `New Moon Books` en la tabla `pub_info` de la base de datos `pubs`. El puntero de texto se coloca en la variable local `@ptrval.`  
+ En el ejemplo siguiente se utiliza la función `TEXTPTR` para encontrar la columna `logo` de **image** asociada a `New Moon Books` en la tabla `pub_info` de la base de datos `pubs`. El puntero de texto se coloca en la variable local `@ptrval.`  
   
 ```  
 USE pubs;  

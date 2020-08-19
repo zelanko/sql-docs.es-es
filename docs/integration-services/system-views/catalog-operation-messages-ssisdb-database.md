@@ -1,4 +1,5 @@
 ---
+description: catalog.operation_messages (base de datos de SSISDB)
 title: catalog.operation_messages (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e2dddde1f4c6ac3cf058e45b0c049bd89fb76bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7b15cffb2f04217586e58fd53ff5b5224c66527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422029"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (base de datos de SSISDB)
 

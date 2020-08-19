@@ -1,4 +1,5 @@
 ---
+description: Habilitación de Always Encrypted con enclaves seguros para las columnas cifradas existentes
 title: Habilitación de Always Encrypted con enclaves seguros para las columnas cifradas existentes | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d7028cc1d1789d65da424e985e191f9217b9328
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 4ef6fe83bd2d9671ccf43b4957497a8c1fc7a4cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420339"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>Habilitación de Always Encrypted con enclaves seguros para las columnas cifradas existentes 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -26,8 +27,8 @@ Si tiene columnas existentes cifradas con claves que no están habilitadas para 
 
 Puede habilitar los cálculos de enclave para las columnas cifradas existentes de varias maneras diferentes, en función de lo siguiente:
 
-- **Ámbito y granularidad:** ¿quiere habilitar la funcionalidad de enclave para un subconjunto de columnas, o bien para todas las columnas protegidas con una clave maestra de columna especificada?
-- **Tamaño de los datos:** ¿cuál es el tamaño de las tablas que incluyen las columnas que quiere hacer que estén habilitadas para el enclave?
+- **Ámbito/granularidad:** ¿desea habilitar la funcionalidad de enclave para un subconjunto de columnas, o bien para todas las columnas protegidas con una clave maestra de columna especificada?
+- **Tamaño de los datos:** ¿cuál es el tamaño de las tablas que incluyen las columnas que desea hacer que estén habilitadas para el enclave?
 - ¿Desea también cambiar el tipo de cifrado para sus columnas? Recuerde que solo el cifrado aleatorio admite los cálculos completos (búsqueda de patrones, operadores de comparación). Si su columna se cifra mediante el cifrado determinista, también tendrá que volver a cifrarla con el cifrado aleatorio para desbloquear los cálculos completos.
 
 En las secciones siguientes se describen los tres enfoques para habilitar los enclaves para las columnas existentes.

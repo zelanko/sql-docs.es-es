@@ -1,4 +1,5 @@
 ---
+description: Función SQLInstallTranslatorEx
 title: Función SQLInstallTranslatorEx | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,21 +20,21 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5cf52c26bf9e4a26f13a27a0e763fbaa30bd18ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7957a04e0dafaeb2177401f775c5cdbb75135569
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421149"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>Función SQLInstallTranslatorEx
 **Conformidad**  
  Versión introducida: ODBC 3,0  
   
  **Resumen**  
- **SQLInstallTranslatorEx** agrega información acerca de un traductor a la sección Odbcinst. ini de la información del sistema (HKEY_LOCAL_MACHINE \software\odbc\odbcinst. Clave del registro de INI\ODBC Translator).  
+ **SQLInstallTranslatorEx** agrega información acerca de un traductor a la sección Odbcinst.ini de la clave del registro de información del sistema (HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI \odbc Translator).  
   
- También se puede tener acceso a la funcionalidad de **SQLInstallTranslatorEx** con [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ También se puede tener acceso a la funcionalidad de **SQLInstallTranslatorEx** con [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -81,11 +82,11 @@ BOOL SQLInstallTranslatorEx(
   
  Las aplicaciones no deben establecer el recuento de uso. ODBC mantendrá este recuento.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLInstallTranslatorEx** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLInstallTranslatorEx** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  

@@ -1,4 +1,5 @@
 ---
+description: Utilizar servidores vinculados en SMO
 title: Usar servidores vinculados en SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -13,11 +14,12 @@ ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06f81e9474a17e8f721d05fa1ba4df3468d3abb0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e71d4601c594062b0ab4a2ac26510c5354ee8362
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420239"
 ---
 # <a name="using-linked-servers-in-smo"></a>Utilizar servidores vinculados en SMO
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

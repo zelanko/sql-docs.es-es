@@ -1,4 +1,5 @@
 ---
+description: Función SQLGetPrivateProfileString
 title: Función SQLGetPrivateProfileString | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c12fc8d08535960cbb239c14e017b2ad5faa6c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2223d46d507df2a9cf82e7feb800caf5b8f82cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421239"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>Función SQLGetPrivateProfileString
 **Conformidad**  
@@ -65,11 +66,11 @@ int SQLGetPrivateProfileString(
  *lpszFilename*  
  Entradas Apunta a una cadena terminada en null que nombra el archivo de inicialización. Si este argumento no contiene una ruta de acceso completa al archivo, se busca en el directorio predeterminado.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  **SQLGetPrivateProfileString** devuelve un valor entero que indica el número de caracteres leídos.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando se produce un error en una llamada a **SQLGetPrivateProfileString** , se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando se produce un error en una llamada a **SQLGetPrivateProfileString** , se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
@@ -77,9 +78,9 @@ int SQLGetPrivateProfileString(
 |ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a una falta de memoria.|  
   
 ## <a name="comments"></a>Comentarios  
- **SQLGetPrivateProfileString** se proporciona como una forma sencilla de portar controladores y dll de instalación de controladores de Microsoft® Windows® a Microsoft windows NT®/Windows 2000. Las llamadas a **GetPrivateProfileString** que recuperan una cadena de perfil del archivo ODBC. ini deben reemplazarse por llamadas a **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** llama a las funciones de la API de® Win32 para recuperar los nombres solicitados de los valores o datos correspondientes a un valor de la subclave ODBC. ini de la información del sistema.  
+ **SQLGetPrivateProfileString** se proporciona como una forma sencilla de portar controladores y dll de instalación de controladores de Microsoft® Windows® a Microsoft windows NT®/Windows 2000. Las llamadas a **GetPrivateProfileString** que recuperan una cadena de perfil del archivo Odbc.ini deben reemplazarse por llamadas a **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** llama a las funciones de la API de® Win32 para recuperar los nombres solicitados de los valores o los datos correspondientes a un valor de la subclave Odbc.ini de la información del sistema.  
   
- El modo de configuración (establecido por **SQLSetConfigMode**) indica dónde se encuentra la entrada de ODBC. ini que enumera los valores de DSN en la información del sistema. Si el DSN es un DSN de usuario (el modo de configuración es USERDSN_ONLY), la función Lee de la entrada ODBC. ini en HKEY_CURRENT_USER. Si el DSN es un DSN del sistema (SYSTEMDSN_ONLY), la función Lee de la entrada ODBC. ini en HKEY_LOCAL_MACHINE. Si el modo de configuración es BOTHDSN, se intenta HKEY_CURRENT_USER y, si se produce un error, se usa HKEY_LOCAL_MACHINE.  
+ El modo de configuración de (como se establece en **SQLSetConfigMode**) indica dónde se encuentra la entrada Odbc.ini valores de DSN en la información del sistema. Si el DSN es un DSN de usuario (el modo de configuración es USERDSN_ONLY), la función Lee de la entrada Odbc.ini de HKEY_CURRENT_USER. Si el DSN es un DSN del sistema (SYSTEMDSN_ONLY), la función Lee de la entrada Odbc.ini de HKEY_LOCAL_MACHINE. Si el modo de configuración es BOTHDSN, se intenta HKEY_CURRENT_USER y, si se produce un error, se usa HKEY_LOCAL_MACHINE.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   

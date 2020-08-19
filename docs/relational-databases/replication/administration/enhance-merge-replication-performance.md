@@ -1,4 +1,5 @@
 ---
+description: Aumentar el rendimiento de la replicación de mezcla
 title: Aumentar el rendimiento de la replicación de mezcla | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eee65227e767ec92fbb6d2c9d0f304b29cbc6aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70399a3d0e21fc75014828837e7b4cb7738d9966
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423609"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85897883"
   
 -   Considere la posibilidad de aplicar una normalización excesiva a las tablas que incluyan tipos de datos de objetos grandes (LOB).  
   
-     Cuando se produce la sincronización, el Agente de mezcla puede tener que leer y transferir todas las filas de datos de un publicador o un suscriptor. Si la fila contiene columnas que utilizan LOB, este proceso puede requerir una asignación de memoria adicional y causar un impacto negativo en el rendimiento aunque no se hayan actualizado estas columnas. Para reducir la probabilidad de que se produzca este impacto en el rendimiento, considere colocar las columnas LOB en una tabla independiente con una relación de uno a uno al resto de datos de las filas. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** , respectivamente.  
+     Cuando se produce la sincronización, el Agente de mezcla puede tener que leer y transferir todas las filas de datos de un publicador o un suscriptor. Si la fila contiene columnas que utilizan LOB, este proceso puede requerir una asignación de memoria adicional y causar un impacto negativo en el rendimiento aunque no se hayan actualizado estas columnas. Para reducir la probabilidad de que se produzca este impacto en el rendimiento, considere colocar las columnas LOB en una tabla independiente con una relación de uno a uno al resto de datos de las filas. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**, respectivamente.  
   
 ## <a name="publication-design"></a>Diseño de la publicación  
   

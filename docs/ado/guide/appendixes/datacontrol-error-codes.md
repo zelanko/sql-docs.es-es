@@ -1,4 +1,5 @@
 ---
+description: Códigos de error de objetos DataControl
 title: Códigos de error de DataControl | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90501e24a9d4ec3dd5a68f641bf25c3adade1a62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422199"
 ---
 # <a name="datacontrol-object-error-codes"></a>Códigos de error de objetos DataControl
-En la tabla siguiente se muestra el [objeto RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Códigos de error del objeto DataControl. La traducción decimal positiva de los dos bytes inferiores, la traducción decimal negativa del código de error completo y los valores hexadecimales se muestran.
+En la tabla siguiente se muestra el [objeto RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Códigos de error del objeto DataControl. La traducción decimal positiva de los dos bytes inferiores, la traducción decimal negativa del código de error completo y los valores hexadecimales se muestran.
 
 |ActiveX. Códigos de error de DataControl|Number|Descripción|
 |---------------------------------|------------|-----------------|
@@ -44,7 +45,7 @@ En la tabla siguiente se muestra el [objeto RDS. ](../../../ado/reference/rds-ap
 |**IDS_RowsetNotUpdateable**|4104-2146824184 0x800A1008|El conjunto de filas no es actualizable.|
 |**IDS_UnexpectedError**|4351-2146823937 0x800A10FF|error inesperado.|
 |**IDS_UpdatesFailed**|4098-2146824190 0x800A1002|No se puede actualizar la base de datos.|
-|**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|La propiedad de **dirección URL** de DataControl requiere el archivo de sistema urlmon. dll, que no se encuentra.|
+|**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|La propiedad de **dirección URL** de DataControl requiere el archivo del sistema Urlmon.dll, que no se encuentra.|
 
 ## <a name="see-also"></a>Consulte también
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

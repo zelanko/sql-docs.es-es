@@ -1,4 +1,5 @@
 ---
+description: Plan de mantenimiento (Servidores)
 title: Plan de mantenimiento (Servidores) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,20 +14,20 @@ f1_keywords:
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b94b427f2523dce7057e835aeae48b2d40d24e83
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a991404f0acaba448958773f54a4836032ecd07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420859"
 ---
 # <a name="maintenance-plan-servers"></a>Plan de mantenimiento (Servidores)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Use el cuadro de diálogo **Servidores** para seleccionar los servidores donde desea ejecutar el plan de mantenimiento.  
+   Use el cuadro de diálogo **Servidores** para seleccionar los servidores donde desea ejecutar el plan de mantenimiento.  
   
  Para crear un plan de mantenimiento multiservidor debe configurarse un entorno multiservidor que contenga un servidor maestro y uno o varios servidores de destino. En los planes de mantenimiento multiservidor, el servidor local debe configurarse como servidor maestro. En entornos multiservidor, este cuadro de diálogo muestra el servidor maestro **(local)** y todos los servidores de destino correspondientes. Para el servidor local, se crea un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se habilita o deshabilita dependiendo de si se selecciona el servidor **(local)** . Si se seleccionan servidores de destino, se crea un trabajo multiservidor y se descarga en cada uno de los servidores de destino seleccionados. Si no se seleccionan servidores de destino, el trabajo multiservidor se elimina.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Crear un entorno multiservidor](../../ssms/agent/create-a-multiserver-environment.md)   
  [Establecer un servidor maestro](../../ssms/agent/make-a-master-server.md)   

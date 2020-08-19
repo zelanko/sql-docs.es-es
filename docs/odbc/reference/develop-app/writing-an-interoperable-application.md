@@ -1,4 +1,5 @@
 ---
+description: Escribir una aplicación Interoperable
 title: Escritura de una aplicación interoperable | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 553e718e0759e47701e7f8c04561693358d5dc52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d8bff1848e20705ab64b8284ed42331c80fb23a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421369"
 ---
 # <a name="writing-an-interoperable-application"></a>Escribir una aplicación Interoperable
 Cada vez que una aplicación utiliza el mismo código en más de un controlador, ese código debe ser interoperable entre estos controladores. En la mayoría de los casos, se trata de una tarea sencilla. Por ejemplo, el código para capturar filas con un cursor de solo avance es el mismo para todos los controladores. En algunos casos, esto puede ser más difícil. Por ejemplo, el código para construir identificadores para su uso en las instrucciones SQL debe tener en cuenta las convenciones de nomenclatura de mayúsculas y minúsculas de identificadores, y de una parte, dos partes y tres partes.  

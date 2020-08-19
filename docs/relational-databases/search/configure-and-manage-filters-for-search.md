@@ -1,4 +1,5 @@
 ---
+description: Configurar y administrar filtros para búsquedas
 title: Configurar y administrar filtros para búsquedas | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,21 +14,21 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6dc1e17228e9ccf5f4f7bf17d8083ffd7a9f390d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ebeaebbc4a082bcb7051dc3d6c784b6ce1ec11fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420359"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Configurar y administrar filtros para búsquedas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  La indexación de documentos en una columna de tipo de datos **varbinary**, **varbinary(max)** , **image**, o **xml** exige un procesamiento adicional. Un filtro debe realizar este procesamiento. El filtro extrae la información de texto del documento y quita el formato. A continuación, el filtro envía el texto al componente separador de palabras correspondiente al idioma asociado a la columna de la tabla.  
+  La indexación de documentos en una columna de tipo de datos **varbinary**, **varbinary(max)**, **image**, o **xml** exige un procesamiento adicional. Un filtro debe realizar este procesamiento. El filtro extrae la información de texto del documento y quita el formato. A continuación, el filtro envía el texto al componente separador de palabras correspondiente al idioma asociado a la columna de la tabla.  
  
 ## <a name="filters-and-document-types"></a>Tipos de documento y filtro
 Un filtro determinado es específico de un tipo de documento concreto (.doc, .pdf, .xls, .xml, etc.). Estos filtros implementan la interfaz IFilter. Para obtener más información de estos tipos de documento, consulte la vista de catálogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  
   
-Los documentos binarios se pueden almacenar en una sola columna de tipo **varbinary(max)** o **image** . Para cada documento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elige el filtro correcto de acuerdo con la extensión de archivo. Dado que la extensión de archivo no está visible cuando el archivo se almacena en una columna de tipo **varbinary(max)** o **image** , la extensión de archivo (.doc, .xls, .pdf, etcétera) debe almacenarse en una columna independiente de la tabla, denominada columna de tipo. Esta columna de tipo debe ser de cualquier tipo de datos basado en caracteres y debe contener la extensión del archivo, como .doc para los documentos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. En la tabla **Document** en [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], la columna **Document** es de tipo **varbinary(max)** y la columna de tipo **FileExtension**es de tipo **nvarchar(8)** .  
+Los documentos binarios se pueden almacenar en una sola columna de tipo **varbinary(max)** o **image** . Para cada documento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elige el filtro correcto de acuerdo con la extensión de archivo. Dado que la extensión de archivo no está visible cuando el archivo se almacena en una columna de tipo **varbinary(max)** o **image** , la extensión de archivo (.doc, .xls, .pdf, etcétera) debe almacenarse en una columna independiente de la tabla, denominada columna de tipo. Esta columna de tipo debe ser de cualquier tipo de datos basado en caracteres y debe contener la extensión del archivo, como .doc para los documentos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word. En la tabla **Document** en [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], la columna **Document** es de tipo **varbinary(max)** y la columna de tipo **FileExtension**es de tipo **nvarchar(8)**.  
 
 **Para ver la columna de tipo en un índice de texto completo existente**  
   
@@ -50,7 +51,7 @@ EXEC sp_help_fulltext_system_components 'filter';
 Para poder usar filtros para formatos que no son de [!INCLUDE[msCoName](../../includes/msconame-md.md)], debe cargarlos manualmente en la instancia del servidor. Para obtener información sobre cómo instalar filtros adicionales, vea [Ver o cambiar los filtros y separadores de palabras registrados](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
  [Compatibilidad de FILESTREAM con otras características de SQL Server](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)  
   

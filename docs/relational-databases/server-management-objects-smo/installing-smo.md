@@ -1,4 +1,5 @@
 ---
+description: Instalar SMO
 title: Instalación de SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a0c23d91785a453bcbf7857211e524b15a4ec3f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b98ce67e61c1fe6f9370508d34cecc8d9289a44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420269"
 ---
 # <a name="installing-smo"></a>Instalar SMO
 
@@ -42,5 +44,5 @@ Consulte [Inicio rápido NuGet: usar un paquete](https://docs.microsoft.com/nuge
   
 ## <a name="system-requirements"></a>Requisitos del sistema
   
- SMO requiere [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4,0 o .net Core 2,0 para ejecutarse, por lo que cualquier aplicación que lo use debe asegurarse de que los equipos cliente tengan instalada esa versión o superior. Algunos binarios nativos que se instalan con las bibliotecas SMO de NetFx también requieren la instalación del tiempo de ejecución de VC 2013. ese Runtime no se incluye en el paquete. Puede descargar el paquete redistribuible adecuado para su arquitectura de destino desdehttps://www.microsoft.com/download/details.aspx?id=40784
+ SMO requiere [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4,0 o .net Core 2,0 para ejecutarse, por lo que cualquier aplicación que lo use debe asegurarse de que los equipos cliente tengan instalada esa versión o superior. Algunos binarios nativos que se instalan con las bibliotecas SMO de NetFx también requieren la instalación del tiempo de ejecución de VC 2013. ese Runtime no se incluye en el paquete. Puede descargar el paquete redistribuible adecuado para su arquitectura de destino desde https://www.microsoft.com/download/details.aspx?id=40784
   

@@ -1,4 +1,5 @@
 ---
+description: Cuadro de herramientas (Ayuda F1)
 title: Cuadro de herramientas (Ayuda F1) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67681c110015ae119c9f5a28812f9fba68f968a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b2cc50fc56b82ac8e98a6bcbb4b31f7db5beb81c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420759"
 ---
 # <a name="toolbox-component-f1-help"></a>Cuadro de herramientas (Ayuda F1)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85715330"
  Los elementos del**cuadro de herramientas** se pueden arrastrar y colocar, o bien copiar y pegar en los editores de código o en superficies de vistas de diseño de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="how-the-toolbox-works"></a>Cómo funciona el cuadro de herramientas  
- El cuadro de herramientas es un control de árbol deslizante cuyo comportamiento es muy parecido al del Explorador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, pero sin líneas de cuadrícula ni de conexión. Pueden expandirse varios segmentos del **cuadro de herramientas** (denominados "pestañas") al mismo tiempo, y todo el árbol se desplaza dentro de la ventana del **cuadro de herramientas** . Para expandir una pestaña del **cuadro de herramientas**, haga clic en el signo más ( **+** ) que aparece junto a su nombre. Para contraer una pestaña, haga clic en el signo menos ( **-** ) que aparece junto a su nombre.  
+ El cuadro de herramientas es un control de árbol deslizante cuyo comportamiento es muy parecido al del Explorador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, pero sin líneas de cuadrícula ni de conexión. Pueden expandirse varios segmentos del **cuadro de herramientas** (denominados "pestañas") al mismo tiempo, y todo el árbol se desplaza dentro de la ventana del **cuadro de herramientas** . Para expandir una pestaña del **cuadro de herramientas**, haga clic en el signo más (**+**) que aparece junto a su nombre. Para contraer una pestaña, haga clic en el signo menos ( **-** ) que aparece junto a su nombre.  
   
  Cada vez que regresa a un editor a diseñador, el **cuadro de herramientas** se desplaza automáticamente hasta la pestaña y el elemento seleccionado de forma más reciente. Al cambiar el foco a un editor o diseñador distinto, la selección actual del **cuadro de herramientas** también cambia.  
   

@@ -1,4 +1,5 @@
 ---
+description: Trabajar con valores vacíos
 title: Trabajar con valores vacíos | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f497ba1ccf84ac642144340af4d5597d773dcadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421899"
 ---
 # <a name="working-with-empty-values"></a>Trabajar con valores vacíos
 
@@ -54,7 +55,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 -   Si el valor de la celda vacía es un operando correspondiente al operador de concatenación de cadenas (+), el valor de la celda vacía se trata como si fuera una cadena vacía cuando el otro operando no es un valor vacío. Si ambos operandos están vacíos, el operador de concatenación de cadenas devuelve el valor de la celda vacía.  
   
--   Si el valor de la celda vacía es un operando de uno de los operadores de comparación (=. <>, >=, \<=, >, <), el valor de la celda vacía se trata como cero o como una cadena vacía, dependiendo de si el tipo de datos del otro operando es numérico o de cadena, respectivamente. Si ambos operandos están vacíos, los dos se tratan como cero.  
+-   Si el valor de la celda vacía es un operando de uno de los operadores de comparación (=. <>, >=, \<=, > , <), el valor de la celda vacía se trata como cero o como una cadena vacía, dependiendo de si el tipo de datos del otro operando es numérico o de cadena, respectivamente. Si ambos operandos están vacíos, los dos se tratan como cero.  
   
 -   Cuando se intercalan valores numéricos, el valor de la celda vacía se intercala en el mismo lugar que el cero. Entre el valor de la celda vacía y el cero, la celda vacía se intercala antes que el cero.  
   
@@ -120,31 +121,31 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  En la siguiente tabla se muestra el resultado de aplicar un operador AND a dos operandos booleanos.  
   
-|y|TRUE|EMPTY|FALSE|  
+|AND|true|EMPTY|false|  
 |---------|----------|-----------|-----------|  
-|**TRUE**|TRUE|FALSE|FALSE|  
-|**VACÍA**|FALSE|EMPTY|FALSE|  
-|**FALSE**|FALSE|FALSE|FALSE|  
+|**TRUE**|true|false|false|  
+|**VACÍA**|false|EMPTY|false|  
+|**FALSE**|false|false|false|  
   
  En la siguiente tabla se muestra el resultado de aplicar un operador OR a dos operandos booleanos.  
   
-|O BIEN|TRUE|FALSE|  
+|O BIEN|true|false|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**VACÍA**|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|  
+|**FALSE**|true|false|  
   
  En esta tabla se muestra cómo el operador NOT niega, o invierte, el resultado de un operador booleano.  
   
 |Expresión booleana a la que se aplica el operador NOT|Se evalúa como|  
 |-------------------------------------------------------------|------------------|  
-|TRUE|FALSE|  
+|true|false|  
 |EMPTY|EMPTY|  
-|FALSE|TRUE|  
+|false|true|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Expresiones &#40;&#41;MDX](../mdx/expressions-mdx.md)  
+ [Expresiones &#40;&#41;MDX ](../mdx/expressions-mdx.md)  
   
   

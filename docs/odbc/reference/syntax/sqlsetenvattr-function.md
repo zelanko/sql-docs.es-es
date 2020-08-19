@@ -1,4 +1,5 @@
 ---
+description: Función SQLSetEnvAttr
 title: Función SQLSetEnvAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640b1e6947d67b92e2b7f8e623597e1d99d4a877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f535c860df212c708f11339165b2d05d4a79647
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421119"
 ---
 # <a name="sqlsetenvattr-function"></a>Función SQLSetEnvAttr
 **Conformidad**  
@@ -49,7 +50,7 @@ SQLRETURN SQLSetEnvAttr(
  *EnvironmentHandle*  
  Entradas Identificador de entorno.  
   
- *Atribui*  
+ *Atributo*  
  Entradas Atributo que se va a establecer, mostrado en "Comentarios".  
   
  *ValuePtr*  
@@ -60,7 +61,7 @@ SQLRETURN SQLSetEnvAttr(
   
  Si *ValuePtr* es un entero, *StringLength* se omite.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -70,7 +71,7 @@ SQLRETURN SQLSetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S02|Valor de opción cambiado|El controlador no admitía el valor especificado en *ValuePtr* y sustituyó un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY009|Uso no válido de puntero nulo|El argumento de atributo identificó un atributo de entorno que requería un valor de cadena y el argumento *ValuePtr* era un puntero nulo.|  
 |HY010|Error de secuencia de función|(DM) se ha asignado un identificador de conexión en *EnvironmentHandle*.<br /><br /> No se ha establecido el **SQL_ATTR_ODBC_VERSION** (DM) con **SQLSetEnvAttr** y el *atributo* no es igual a **SQL_ATTR_ODBC_VERSION**. No es necesario establecer **SQL_ATTR_ODBC_VERSION** explícitamente si se usa **SQLAllocHandleStd**.|  
@@ -90,7 +91,7 @@ SQLRETURN SQLSetEnvAttr(
   
  No se pueden establecer los atributos de conexión mediante una llamada a **SQLSetEnvAttr**. Si intenta hacerlo, se devolverá SQLSTATE HY092 (identificador de opción o atributo no válido).  
   
-|*Atribui*|Contenido de *ValuePtr*|  
+|*Atributo*|Contenido de *ValuePtr*|  
 |-----------------|-------------------------|  
 |SQL_ATTR_CONNECTION_POOLING (ODBC 3,8)|Un valor SQLUINTEGER que incluya de 32 bits que habilita o deshabilita la agrupación de conexiones en el nivel de entorno. Se usan los siguientes valores:<br /><br /> SQL_CP_OFF = la agrupación de conexiones está desactivada. Este es el valor predeterminado.<br /><br /> SQL_CP_ONE_PER_DRIVER = se admite un único grupo de conexiones para cada controlador. Cada conexión de un grupo está asociada a un controlador.<br /><br /> SQL_CP_ONE_PER_HENV = se admite un único grupo de conexiones para cada entorno. Cada conexión de un grupo está asociada a un entorno.<br /><br /> SQL_CP_DRIVER_AWARE = use la característica de reconocimiento del grupo de conexiones del controlador, si está disponible. Si el controlador no admite el reconocimiento del grupo de conexiones, SQL_CP_DRIVER_AWARE se omite y se usa SQL_CP_ONE_PER_HENV. Para obtener más información, consulte [agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). En un entorno en el que algunos controladores admitan y algunos controladores no admitan el reconocimiento del grupo de conexiones, SQL_CP_DRIVER_AWARE pueden habilitar la característica de reconocimiento del grupo de conexiones en esos controladores auxiliares, pero equivale a establecer en SQL_CP_ONE_PER_HENV en los controladores que no admiten la característica de reconocimiento del grupo de conexiones.<br /><br /> La agrupación de conexiones se habilita llamando a **SQLSetEnvAttr** para establecer el atributo de SQL_ATTR_CONNECTION_POOLING en SQL_CP_ONE_PER_DRIVER o SQL_CP_ONE_PER_HENV. Esta llamada debe realizarse antes de que la aplicación asigne el entorno compartido para el que se va a habilitar la agrupación de conexiones. El identificador de entorno en la llamada a **SQLSetEnvAttr** se establece en null, lo que hace que SQL_ATTR_CONNECTION_POOLING un atributo de nivel de proceso. Una vez habilitada la agrupación de conexiones, la aplicación asigna un entorno compartido implícito llamando a **SQLAllocHandle** con el argumento *InputHandle* establecido en SQL_HANDLE_ENV.<br /><br /> Una vez que se ha habilitado la agrupación de conexiones y se ha seleccionado un entorno compartido para una aplicación, no se puede restablecer SQL_ATTR_CONNECTION_POOLING para ese entorno, porque se llama a **SQLSetEnvAttr** con un identificador de entorno nulo al establecer este atributo. Si se establece este atributo mientras la agrupación de conexiones ya está habilitada en un entorno compartido, el atributo solo afecta a los entornos compartidos que se asignan posteriormente.<br /><br /> También es posible habilitar la agrupación de conexiones en un entorno. Tenga en cuenta lo siguiente acerca de la agrupación de conexiones de entorno:<br /><br /> -La habilitación de la agrupación de conexiones en un identificador NULL es un atributo de nivel de proceso. Los entornos asignados posteriormente serán un entorno compartido y heredarán la configuración de la agrupación de conexiones de nivel de proceso.<br />-Después de que se haya asignado un entorno, una aplicación puede cambiar la configuración del grupo de conexiones.<br />-Si está habilitada la agrupación de conexiones de entorno y el controlador de la conexión usa la agrupación de controladores, la agrupación de entornos tiene preferencia.<br /><br /> SQL_ATTR_CONNECTION_POOLING se implementa en el administrador de controladores. No es necesario que un controlador implemente SQL_ATTR_CONNECTION_POOLING. Las aplicaciones ODBC 2,0 y 3,0 pueden establecer este atributo de entorno.<br /><br /> Para obtener más información, consulte este artículo sobre la [agrupación de conexiones ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md).|  
 |SQL_ATTR_CP_MATCH (ODBC 3,0)|Un valor SQLUINTEGER que incluya de 32 bits que determina cómo se elige una conexión de un grupo de conexiones. Cuando se llama a **SQLConnect** o **SQLDriverConnect** , el administrador de controladores determina qué conexión se reutiliza desde el grupo. El administrador de controladores intenta hacer coincidir las opciones de conexión de la llamada y los atributos de conexión establecidos por la aplicación con las palabras clave y los atributos de conexión de las conexiones del grupo. El valor de este atributo determina el nivel de precisión de los criterios de coincidencia.<br /><br /> Los valores siguientes se usan para establecer el valor de este atributo:<br /><br /> SQL_CP_STRICT_MATCH = solo se reutilizan las conexiones que coinciden exactamente con las opciones de conexión de la llamada y los atributos de conexión establecidos por la aplicación. Este es el valor predeterminado.<br /><br /> SQL_CP_RELAXED_MATCH = se pueden usar conexiones con palabras clave de cadena de conexión coincidentes. Las palabras clave deben coincidir, pero no todos los atributos de conexión deben coincidir.<br /><br /> Para obtener más información acerca del modo en que el administrador de controladores realiza la conexión a una conexión agrupada, vea [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md). Para obtener más información sobre la agrupación de conexiones, vea [agrupación de conexiones ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md).|  
@@ -104,7 +105,7 @@ SQLRETURN SQLSetEnvAttr(
 |Asignación de un identificador|[Función SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Devolver el valor de un atributo de entorno|[Función SQLGetEnvAttr](../../../odbc/reference/syntax/sqlgetenvattr-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Novedades de ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

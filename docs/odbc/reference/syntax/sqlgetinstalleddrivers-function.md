@@ -1,4 +1,5 @@
 ---
+description: Función SQLGetInstalledDrivers
 title: Función SQLGetInstalledDrivers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24793473bf4f25253ac11673df852d10cfb2c558
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0599cb187dee9d3b860f619538b1e0dc148ad58d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421269"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>Función SQLGetInstalledDrivers
 **Conformidad**  
@@ -53,11 +54,11 @@ BOOL SQLGetInstalledDrivers(
  *pcbBufOut*  
  Genere Número total de bytes (sin incluir el byte de terminación nula) devueltos en *lpszBuf*. Si el número de bytes disponibles para devolver es mayor o igual que *cbBufMax*, la lista de descripciones de los controladores de *lpszBuf* se trunca en *cbBufMax* menos el carácter de terminación null. El argumento *pcbBufOut* puede ser un puntero nulo.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLGetInstalledDrivers** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLGetInstalledDrivers** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  

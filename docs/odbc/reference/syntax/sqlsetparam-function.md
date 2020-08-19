@@ -1,4 +1,5 @@
 ---
+description: Función SQLSetParam
 title: Función SQLSetParam | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8de09f7a17e87c70b40865cb690554af7f3cae1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af1dea558853a56b303a02c45606614c9580766c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421109"
 ---
 # <a name="sqlsetparam-function"></a>Función SQLSetParam
 **Conformidad**  
@@ -39,6 +40,6 @@ ms.locfileid: "81290635"
 ## <a name="remarks"></a>Observaciones  
  Consulte la [información de ODBC 64](../../../odbc/reference/odbc-64-bit-information.md)bits, si la aplicación se ejecutará en un sistema operativo de 64 bits.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

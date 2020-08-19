@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo devuelve valores para el acceso
 title: SQLGetInfo devuelve valores para Access | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 27af9272132b2e7f2489def0d1e6720bfdeb4195
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421739"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo devuelve valores para el acceso
 En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento *fInfoType* y los valores correspondientes devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el #defines del lenguaje C indicado a **SQLGetInfo** en el argumento *fInfoType* . Para obtener más información sobre los valores devueltos por **SQLGetInfo**, vea la *Referencia del programador de ODBC*.  
@@ -81,7 +82,7 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|El DSN de ODBC. ini o "" si se usa la palabra clave DRIVER en ODBC. ini|  
+|SQL_DATA_SOURCE_NAME|El DSN de Odbc.ini o "" si se usa la palabra clave DRIVER en Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|Nombre de archivo|  
 |SQL_DATETIME_LITERALS|0|  
@@ -94,7 +95,7 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_DRIVER_HENV|Controlado por el administrador de controladores.|  
 |SQL_DRIVER_HLIB|Controlado por el administrador de controladores.|  
 |SQL_DRIVER_HSTMT|Controlado por el administrador de controladores.|  
-|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* especifica la fecha de compilación)|  
 |SQL_DROP_ASSERTION|0|  
@@ -111,7 +112,7 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_GETDATA_EXTENSIONS|Varios valores|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (comilla inversa)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (comilla inversa)|  
 |SQL_KEYWORDS|Varios valores|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -156,7 +157,7 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_SCROLL_OPTIONS|Varios valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|ACCESO|  
-|SQL_SPECIAL_CHARACTERS|"\`@#$%^&\*~\_} {"\';:?/><,.!-+=\\ \'[] &#124; "|  
+|SQL_SPECIAL_CHARACTERS|"~ \` @#$%^& \* \_ -+= \\ } {" \' ;:?/><,.! \' [] &#124; "|  
 |SQL_STRING_FUNCTIONS|Varios valores|  
 |SQL_SUBQUERIES|Varios valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  

@@ -1,4 +1,5 @@
 ---
+description: Función SQLSetDescField
 title: Función SQLSetDescField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 122d4b26d1d75811d4a8e252378ce8f81ca2c66b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c21d3a21e863d62a3cc8d685e81c6e3265c1551
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421139"
 ---
 # <a name="sqlsetdescfield-function"></a>Función SQLSetDescField
 
@@ -73,7 +74,7 @@ SQLRETURN SQLSetDescField(
   
 -   Si *ValuePtr* contiene un valor de longitud fija, *BufferLength* es SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, según corresponda.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -82,19 +83,19 @@ SQLRETURN SQLSetDescField(
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S02|Valor de opción cambiado|El controlador no admitía el valor especificado en * \*ValuePtr* (si *ValuePtr* era un puntero) o el valor de *ValuePtr* (si *ValuePtr* era un valor entero) o * \*ValuePtr* no era válido debido a las condiciones de trabajo de implementación, por lo que el controlador sustituyó un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|07009|Índice de descriptor no válido|El argumento *FieldIdentifier* era un campo registro, el argumento *RecNumber* era 0 y el argumento *DescriptorHandle* hacía referencia a un identificador IPD.<br /><br /> El argumento *RecNumber* era menor que 0 y el argumento *DescriptorHandle* hacía referencia a ARD o APD.<br /><br /> El argumento *RecNumber* era mayor que el número máximo de columnas o parámetros que el origen de datos puede admitir, y el argumento *DescriptorHandle* hace referencia a APD o ARD.<br /><br /> (DM) el argumento *FieldIdentifier* se SQL_DESC_COUNT y * \** el argumento ValuePtr era menor que 0.<br /><br /> El argumento *RecNumber* era igual a 0 y el argumento *DescriptorHandle* hacía referencia a un APD asignado implícitamente. (Este error no se produce con un descriptor de aplicación asignado explícitamente, porque no se sabe si un descriptor de aplicación asignado explícitamente es un APD o ARD hasta el tiempo de ejecución).|  
+|01S02|Valor de opción cambiado|El controlador no admitía el valor especificado en * \* ValuePtr* (si *ValuePtr* era un puntero) o el valor de *ValuePtr* (si *ValuePtr* era un valor entero) o * \* ValuePtr* no era válido debido a las condiciones de trabajo de implementación, por lo que el controlador sustituyó un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|07009|Índice de descriptor no válido|El argumento *FieldIdentifier* era un campo registro, el argumento *RecNumber* era 0 y el argumento *DescriptorHandle* hacía referencia a un identificador IPD.<br /><br /> El argumento *RecNumber* era menor que 0 y el argumento *DescriptorHandle* hacía referencia a ARD o APD.<br /><br /> El argumento *RecNumber* era mayor que el número máximo de columnas o parámetros que el origen de datos puede admitir, y el argumento *DescriptorHandle* hace referencia a APD o ARD.<br /><br /> (DM) el argumento *FieldIdentifier* se SQL_DESC_COUNT y el argumento * \* ValuePtr* era menor que 0.<br /><br /> El argumento *RecNumber* era igual a 0 y el argumento *DescriptorHandle* hacía referencia a un APD asignado implícitamente. (Este error no se produce con un descriptor de aplicación asignado explícitamente, porque no se sabe si un descriptor de aplicación asignado explícitamente es un APD o ARD hasta el tiempo de ejecución).|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
 |22001|Datos de cadena, truncados a la derecha|Se SQL_DESC_NAME el argumento *FieldIdentifier* y el argumento *BufferLength* era un valor mayor que SQL_MAX_IDENTIFIER_LEN.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|(DM) el *DescriptorHandle* estaba asociado a un *StatementHandle* para el que se llamó a una función que se ejecuta de forma asincrónica (no a este) y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para el *StatementHandle* con el que se asoció *DescriptorHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *DescriptorHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLSetDescField** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para uno de los identificadores de instrucciones asociados a *DescriptorHandle* y se devolvieron SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY016|No se puede modificar un descriptor de fila de implementación|El argumento *DescriptorHandle* estaba asociado a IRD y el argumento *FieldIdentifier* no era SQL_DESC_ARRAY_STATUS_PTR ni SQL_DESC_ROWS_PROCESSED_PTR.|  
 |HY021|Información de descriptor incoherente|Los campos SQL_DESC_TYPE y SQL_DESC_DATETIME_INTERVAL_CODE no forman un tipo SQL de ODBC válido o un tipo SQL específico del controlador válido (para IPD) o un tipo C de ODBC válido (para APD o ARDs).<br /><br /> La información del descriptor comprobada durante una comprobación de coherencia no era coherente. (Vea "comprobación de coherencia" en **SQLSetDescRec**).|  
-|HY090|Longitud de búfer o cadena no válida|(DM) * \*ValuePtr* es una cadena de caracteres y *BufferLength* era menor que cero pero no era igual que SQL_NTS.<br /><br /> (DM) el controlador era un controlador ODBC 2 *. x* , el descriptor era ARD, el argumento *ColumnNumber* se estableció en 0 y el valor especificado para el argumento *BufferLength* no era igual a 4.|  
+|HY090|Longitud de búfer o cadena no válida|(DM) * \* ValuePtr* es una cadena de caracteres y *BufferLength* era menor que cero pero no era igual que SQL_NTS.<br /><br /> (DM) el controlador era un controlador ODBC 2 *. x* , el descriptor era ARD, el argumento *ColumnNumber* se estableció en 0 y el valor especificado para el argumento *BufferLength* no era igual a 4.|  
 |HY091|Identificador de campo descriptor no válido|El valor especificado para el argumento *FieldIdentifier* no era un campo definido por ODBC y no era un valor definido por la implementación.<br /><br /> El argumento *FieldIdentifier* no era válido para el argumento *DescriptorHandle* .<br /><br /> El argumento *FieldIdentifier* era un campo definido por ODBC de solo lectura.|  
-|HY092|Identificador de opción/atributo no válido|El valor de * \*ValuePtr* no era válido para el argumento *FieldIdentifier* .<br /><br /> Se SQL_DESC_UNNAMED el argumento *FieldIdentifier* y *ValuePtr* se SQL_NAMED.|  
+|HY092|Identificador de opción/atributo no válido|El valor de * \* ValuePtr* no era válido para el argumento *FieldIdentifier* .<br /><br /> Se SQL_DESC_UNNAMED el argumento *FieldIdentifier* y *ValuePtr* se SQL_NAMED.|  
 |HY105|Tipo de parámetro no válido|(DM) el valor especificado para el campo SQL_DESC_PARAMETER_TYPE no era válido. (Para obtener más información, vea la sección "argumento*InputOutputType* " en **SQLBindParameter**).|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, vea [novedades de ODBC 3,8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).|  
 |HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El período de tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -310,7 +311,7 @@ SQLRETURN SQLSetDescField(
  El número de registros de este campo de un ARD no incluye una columna de marcador enlazada. La única manera de desenlazar una columna de marcador es establecer el SQL_DESC_DATA_PTR campo en un puntero nulo.  
   
  **SQL_DESC_ROWS_PROCESSED_PTR [descriptores de implementación]**  
- En un IRD, este campo \* de encabezado SQLULEN apunta a un búfer que contiene el número de filas recuperadas después de una llamada a **SQLFetch** o **SQLFetchScroll**, o el número de filas afectadas en una operación masiva realizada por una llamada a **SQLBulkOperations** o **SQLSetPos**, incluidas las filas de error.  
+ En un IRD, este \* campo de encabezado SQLULEN apunta a un búfer que contiene el número de filas recuperadas después de una llamada a **SQLFetch** o **SQLFetchScroll**, o el número de filas afectadas en una operación masiva realizada por una llamada a **SQLBulkOperations** o **SQLSetPos**, incluidas las filas de error.  
   
  En un IPD, este campo de encabezado SQLUINTEGER que incluya * apunta a un búfer que contiene el número de conjuntos de parámetros que se han procesado, incluidos los conjuntos de errores. No se devolverá ningún número si se trata de un puntero nulo.  
   
@@ -546,6 +547,6 @@ SQLRETURN SQLSetDescField(
 |Obtener varios campos de descriptor|[Función SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |Establecer varios campos de descriptor|[Función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Referencia de API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)

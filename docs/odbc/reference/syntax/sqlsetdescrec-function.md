@@ -1,4 +1,5 @@
 ---
+description: Función SQLSetDescRec
 title: Función SQLSetDescRec | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b29879ff7635d6eb7d5a0f7489ff3994758d4a35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f0e423de06acf82e6c883531514c57c29d9407
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421129"
 ---
 # <a name="sqlsetdescrec-function"></a>Función SQLSetDescRec
 **Conformidad**  
@@ -58,7 +59,7 @@ SQLRETURN SQLSetDescRec(
  *RecNumber*  
  Entradas Indica el registro del descriptor que contiene los campos que se van a establecer. Los registros de descriptor se numeran a partir de 0, con el número de registro 0 como registro del marcador. Este argumento debe ser igual o mayor que 0. Si *RecNumber* es mayor que el valor de SQL_DESC_COUNT, SQL_DESC_COUNTis cambiar al valor de *RecNumber*.  
   
- *Type*  
+ *Tipo*  
  Entradas Valor en el que se va a establecer el SQL_DESC_TYPE campo del registro del descriptor.  
   
  *Subtipo*  
@@ -84,7 +85,7 @@ SQLRETURN SQLSetDescRec(
  *IndicatorPtr*  
  [Entrada o salida diferida] Valor en el que se va a establecer el SQL_DESC_INDICATOR_PTR campo del registro del descriptor. *IndicatorPtr* se puede establecer en un puntero nulo para establecer el SQL_DESC_INDICATOR_PTR campo en un puntero nulo.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -95,7 +96,7 @@ SQLRETURN SQLSetDescRec(
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07009|Índice de descriptor no válido|El argumento *RecNumber* se estableció en 0 y *DescriptorHandle* hacía referencia a un identificador IPD.<br /><br /> El argumento *RecNumber* era menor que 0.<br /><br /> El argumento *RecNumber* era mayor que el número máximo de columnas o parámetros que el origen de datos puede admitir y el argumento *DescriptorHandle* era APD, IPD o ARD.<br /><br /> El argumento *RecNumber* era igual a 0 y el argumento *DescriptorHandle* hacía referencia a un APD asignado implícitamente. (Este error no se produce con un descriptor de aplicación asignado explícitamente porque no se sabe si un descriptor de aplicación asignado explícitamente es un APD o ARD hasta el tiempo de ejecución).|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|(DM) el *DescriptorHandle* estaba asociado a un *StatementHandle* para el que se llamó a una función que se ejecuta de forma asincrónica (no a este) y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para el *StatementHandle* con el que se asoció *DescriptorHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *DescriptorHandle*. Esta función aynchronous todavía se estaba ejecutando cuando se llamó a la función **SQLSetDescRec** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para uno de los identificadores de instrucciones asociados a *DescriptorHandle* y se devolvieron SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
@@ -160,6 +161,6 @@ SQLRETURN SQLSetDescRec(
 |Obtener varios campos de descriptor|[Función SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |Establecimiento de campos de descriptor único|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

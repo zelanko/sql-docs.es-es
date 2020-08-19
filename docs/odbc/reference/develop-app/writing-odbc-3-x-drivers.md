@@ -1,4 +1,5 @@
 ---
+description: Controladores ODBC 3.x de escritura
 title: Escribiendo controladores ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62f2a701fd5ac94c92d41494a4fd1ab023edaf25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5fec9b94dbcf60868c44e49d92bddb4bb73e9cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421349"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Controladores ODBC 3.x de escritura
 En la tabla siguiente se muestra la compatibilidad con funciones en ODBC 3. controlador *x* y una aplicación ODBC, así como la asignación que realiza el administrador de controladores cuando se llama a las funciones en un ODBC 3. controlador *x* .  
@@ -111,7 +112,7 @@ En la tabla siguiente se muestra la compatibilidad con funciones en ODBC 3. cont
   
  [3] los escritores de controladores deben tener en cuenta que ODBC 2. los atributos de columna *x* SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE y SQL_COLUMN_LENGTH deben ser compatibles con **SQLColAttribute**.  
   
- [4] **SQLCopyDesc** se implementa parcialmente por el administrador de controladores cuando se copia un descriptor entre conexiones que pertenecen a controladores diferentes. Los controladores son necesarios para admitir **SQLCopyDesc** en dos de sus propias conexiones. Las funciones como **SQLDrivers**, que se implementan únicamente por el administrador de controladores, no se muestran en esta lista.  
+ [4]   **SQLCopyDesc** se implementa parcialmente por el administrador de controladores cuando se copia un descriptor entre conexiones que pertenecen a controladores diferentes. Los controladores son necesarios para admitir **SQLCopyDesc** en dos de sus propias conexiones. Las funciones como **SQLDrivers**, que se implementan únicamente por el administrador de controladores, no se muestran en esta lista.  
   
  [5] en determinadas circunstancias, es posible que los controladores necesiten admitir esta función. Para obtener más información, vea la página de referencia de esta función.  
   

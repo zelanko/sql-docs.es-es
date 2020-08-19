@@ -1,4 +1,5 @@
 ---
+description: 'Apéndice D: ejemplos de ADO en el Windows SDK'
 title: 'Apéndice D: ejemplos de ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9c3e853910f0be04b8cd483f5a21264ca096e9e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae72176eb0913ef8563612e0847fe346a60eadc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422209"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Apéndice D: ejemplos de ADO en el Windows SDK
 El Windows SDK contiene varias aplicaciones de ejemplo que muestran el uso del código ADO y RDS. Estos ejemplos están diseñados para ayudarle a aprender a usar ADO y RDS, pero no están diseñados para implementarse en servidores de producción.
@@ -28,7 +29,7 @@ El Windows SDK contiene varias aplicaciones de ejemplo que muestran el uso del c
 
  Para encontrar los ejemplos de ADO, navegue hasta la carpeta raíz de Windows SDK, como C:\Archivos de Programa\microsoft SDKs\Windows\v6.0. A continuación, vaya a la subcarpeta Samples\dataaccess\ADO.
 
- Para empezar a trabajar con las aplicaciones de ejemplo ADO y RDS, abra default. htm desde las carpetas de ejemplos ADO y RDS, respectivamente. Estos archivos describen cada aplicación de ejemplo disponible y explican cómo configurar y ejecutar los ejemplos cómo examinar el código fuente de ejemplo.
+ Para empezar a trabajar con las aplicaciones de ejemplo ADO y RDS, abra default.htm desde las carpetas de ejemplos ADO y RDS, respectivamente. Estos archivos describen cada aplicación de ejemplo disponible y explican cómo configurar y ejecutar los ejemplos cómo examinar el código fuente de ejemplo.
 
  La documentación de ADO también contiene ejemplos de código en varios lenguajes, que se incluyen como temas en esta ayuda en pantalla. Para obtener más información sobre estos ejemplos, vea [ejemplos de código ADO](../../../ado/reference/ado-api/ado-code-examples.md).
 

@@ -1,4 +1,5 @@
 ---
+description: Función SQLGetPoolID
 title: Función SQLGetPoolID | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 32cc973f4dab5bde7bcedade0365d233987dda72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2cd38008b90a1299bdd78c4a56d7394f85876ab0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421259"
 ---
 # <a name="sqlgetpoolid-function"></a>Función SQLGetPoolID
 **Conformidad**  
@@ -42,7 +43,7 @@ SQLRETURN  SQLGetPoolID (
  *pPoolID*  
  Genere El identificador del grupo, que se usa para identificar un conjunto de conexiones que se pueden usar indistintamente (posiblemente requiriendo un restablecimiento adicional).  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -59,7 +60,7 @@ SQLRETURN  SQLGetPoolID (
   
  Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

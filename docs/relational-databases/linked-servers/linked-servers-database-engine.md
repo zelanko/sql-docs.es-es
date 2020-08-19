@@ -1,4 +1,5 @@
 ---
+description: Servidores vinculados (motor de base de datos)
 title: Servidores vinculados (motor de base de datos) | Microsoft Docs
 ms.date: 06/16/2020
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 070dbf1c8f79a0f89364e9d0705051d9ee076627
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b471d7e0f6ab13c5718e1ec37a87d423e7115f94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420929"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (motor de base de datos)
 

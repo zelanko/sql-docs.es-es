@@ -1,4 +1,5 @@
 ---
+description: Función SQLBulkOperations
 title: Función SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61f4f294a6d84856bc3065b599a370bb5658e3ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e065bc06150c3b12e469489c4d115d02c2142f14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421299"
 ---
 # <a name="sqlbulkoperations-function"></a>Función SQLBulkOperations
 **Conformidad**  
@@ -54,7 +55,7 @@ SQLRETURN SQLBulkOperations(
   
  Para obtener más información, vea "Comentarios".  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -83,7 +84,7 @@ SQLRETURN SQLBulkOperations(
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
 |42000|Error de sintaxis o infracción de acceso|El controlador no pudo bloquear la fila según sea necesario para realizar la operación solicitada en el argumento de la *operación* .|  
 |44000|Infracción de WITH CHECK OPTION|El argumento *Operation* se SQL_ADD o SQL_UPDATE_BY_BOOKMARK y la instrucción INSERT o Update se realizó en una tabla vista (o una tabla derivada de la tabla vista) que se creó especificando **with check Option**, de tal manera que una o varias filas afectadas por la inserción o actualización ya no estarán presentes en la tabla vista.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*. A continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLBulkOperations** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) el *StatementHandle* especificado no se encontraba en un estado ejecutado. Se llamó a la función sin llamar primero a **SQLExecDirect**, **SQLExecute**o a una función de catálogo.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) el controlador era ODBC 2. se llamó a un controlador *x* y a **SQLBulkOperations** para *StatementHandle* antes de llamar a **SQLFetchScroll** o **SQLFetch** .<br /><br /> Se llamó a (DM) **SQLBulkOperations** después de llamar a **SQLExtendedFetch** en *StatementHandle*.|  
@@ -230,20 +231,20 @@ SQLRETURN SQLBulkOperations(
 ## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>Proporcionar datos largos para inserciones y actualizaciones masivas  
  Se pueden proporcionar datos largos para las inserciones masivas y las actualizaciones realizadas por las llamadas a **SQLBulkOperations**. Para insertar o actualizar datos largos, una aplicación realiza los pasos siguientes, además de los pasos descritos en las secciones "realizar inserciones masivas" y "realizar actualizaciones masivas mediante marcadores", anteriormente en este tema.  
   
-1.  Cuando enlaza los datos mediante **SQLBindCol**, la aplicación coloca un valor definido por la aplicación, como el número de columna, en el * \** búfer de TargetValuePtr para las columnas de datos en ejecución. El valor se puede usar más adelante para identificar la columna.  
+1.  Cuando enlaza los datos mediante **SQLBindCol**, la aplicación coloca un valor definido por la aplicación, como el número de columna, en el búfer de * \* TargetValuePtr* para las columnas de datos en ejecución. El valor se puede usar más adelante para identificar la columna.  
   
-     La aplicación coloca el resultado de la macro SQL_LEN_DATA_AT_EXEC (*longitud*) en el * \** búfer de StrLen_or_IndPtr. Si el tipo de datos SQL de la columna es SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo de datos específico de origen de datos largo y el controlador devuelve "Y" para el tipo de información SQL_NEED_LONG_DATA_LEN en **SQLGetInfo**, *length* es el número de bytes de datos que se van a enviar para el parámetro; de lo contrario, debe ser un valor no negativo y se omite.  
+     La aplicación coloca el resultado de la macro SQL_LEN_DATA_AT_EXEC (*longitud*) en el búfer de * \* StrLen_or_IndPtr* . Si el tipo de datos SQL de la columna es SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo de datos específico de origen de datos largo y el controlador devuelve "Y" para el tipo de información SQL_NEED_LONG_DATA_LEN en **SQLGetInfo**, *length* es el número de bytes de datos que se van a enviar para el parámetro; de lo contrario, debe ser un valor no negativo y se omite.  
   
 2.  Cuando se llama a **SQLBulkOperations** , si hay columnas de datos en ejecución, la función devuelve SQL_NEED_DATA y continúa en el paso 3, que sigue a. (Si no hay columnas de datos en ejecución, el proceso se ha completado).  
   
-3.  La aplicación llama a **SQLParamData** para recuperar la dirección del búfer * \*TargetValuePtr* de la primera columna de datos en ejecución que se va a procesar. **SQLParamData** devuelve SQL_NEED_DATA. La aplicación recupera el valor definido por la aplicación del búfer * \*TargetValuePtr* .  
+3.  La aplicación llama a **SQLParamData** para recuperar la dirección del búfer * \* TargetValuePtr* de la primera columna de datos en ejecución que se va a procesar. **SQLParamData** devuelve SQL_NEED_DATA. La aplicación recupera el valor definido por la aplicación del búfer * \* TargetValuePtr* .  
   
     > [!NOTE]  
     >  Aunque los parámetros de datos en ejecución se parecen a las columnas de datos en ejecución, el valor devuelto por **SQLParamData** es diferente para cada uno.  
   
      Las columnas de datos en ejecución son columnas de un conjunto de filas para el que se enviarán datos con **SQLPutData** cuando una fila se actualice o se inserte con **SQLBulkOperations**. Están enlazadas con **SQLBindCol**. El valor devuelto por **SQLParamData** es la dirección de la fila del búfer **TargetValuePtr* que se está procesando.  
   
-4.  La aplicación llama a **SQLPutData** una o más veces para enviar los datos de la columna. Se necesita más de una llamada si no se pueden devolver todos los valores de datos * \** en el búfer de TargetValuePtr especificado en **SQLPutData**; solo se permiten varias llamadas a **SQLPutData** para la misma columna cuando se envían datos de caracteres c a una columna con un tipo de datos de caracteres, binarios o de orígenes de datos, o cuando se envían datos binarios de c a una columna con un tipo de datos de caracteres, binarios o de orígenes de datos.  
+4.  La aplicación llama a **SQLPutData** una o más veces para enviar los datos de la columna. Se necesita más de una llamada si no se pueden devolver todos los valores de datos en el búfer de * \* TargetValuePtr* especificado en **SQLPutData**; se permiten varias llamadas a **SQLPutData** para la misma columna solo cuando se envían datos de caracteres c a una columna con un tipo de datos de caracteres, binarios o de origen de datos, o cuando se envían datos binarios de c a una columna con un tipo de datos de  
   
 5.  La aplicación llama a **SQLParamData** de nuevo para indicar que se han enviado todos los datos para la columna.  
   
@@ -461,6 +462,6 @@ int main() {
 |Colocar el cursor, actualizar los datos del conjunto de filas o actualizar o eliminar los datos del conjunto de filas|[Función SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

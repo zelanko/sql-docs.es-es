@@ -1,4 +1,5 @@
 ---
+description: Conversiones del tipo de datos de fecha y hora de SQL a C
 title: Conversiones de SQL a C | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bd8bff34cca52da2e865a020ff97211b09d9882
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: b317f23ef9e960fe407e68ef108f31ba0fcfa2c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420639"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Conversiones del tipo de datos de fecha y hora de SQL a C
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

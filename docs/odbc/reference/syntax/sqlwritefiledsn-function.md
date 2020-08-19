@@ -1,4 +1,5 @@
 ---
+description: Función SQLWriteFileDSN
 title: Función SQLWriteFileDSN | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e781f1be79e0079f33b3d0800c665f5f5e9fda4d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bd63c368f4055821df41faceb7b9c33cf20bde3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421009"
 ---
 # <a name="sqlwritefiledsn-function"></a>Función SQLWriteFileDSN
 **Conformidad**  
@@ -57,11 +58,11 @@ BOOL SQLWriteFileDSN(
  *lpszString*  
  Genere Apunta a la cadena asociada a la clave que se va a escribir. La longitud máxima de la cadena a la que apunta este argumento es de 32.767 bytes.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLWriteFileDSN** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLWriteFileDSN** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  

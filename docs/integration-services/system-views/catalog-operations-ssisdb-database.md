@@ -1,4 +1,5 @@
 ---
+description: catalog.operations (base de datos de SSISDB)
 title: catalog.operations (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46f17290ddc026d66910e4a28c1ea36d7ad0286b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 231fa098ababe70c8a375e3f3f357bcbe90d6f09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422019"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (base de datos de SSISDB)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86912481"
 |created_time|**datetimeoffset**|Hora de creación de la operación.|  
 |object_type|**smallint**|Tipo de objeto afectado por la operación. El objeto puede ser una carpeta (`10`), proyecto (`20`), paquete (`30`), entorno (`40`) o instancia de ejecución (`50`).|  
 |object_id|**bigint**|Identificador del objeto afectado por la operación.|  
-|object_name|**nvarchar(260)**|Nombre del objeto.|  
+|object_name|**nvarchar(260)**|El nombre del objeto.|  
 |status|**int**|Estado de la operación. Los valores posibles son creado (`1`), en ejecución (`2`), cancelado (`3`), con errores (`4`), pendiente (`5`), finalizado inesperadamente (`6`), correcto (`7`), deteniendo (`8`) y completado (`9`).|  
 |start_time|**datetimeoffset**|Hora a la que se inició la operación.|  
 |end_time|**datetimeoffsset**|Hora a la que finalizó la operación.|  

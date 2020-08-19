@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_languages (Transact-SQL)
 title: Sys. fulltext_languages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab4f793c243671edeaf2684d40b87c40cddaf8cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420169"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85764708"
 ## <a name="values-returned-for-default-languages"></a>Valores devueltos para los idiomas predeterminados  
  En la tabla siguiente se muestran los valores para los idiomas cuyos separadores de palabras están registrados de forma predeterminada.  
   
-|Lenguaje|LCID|  
+|Language|LCID|  
 |--------------|----------|  
 |Árabe|1025|  
 |Bengali (India)|1093|  
@@ -74,7 +75,7 @@ ms.locfileid: "85764708"
 |Malayalam|1100|  
 |Maratí|1102|  
 |Neutra|0|  
-|Noruego (bokmal)|1044|  
+|Noruego (Bokmål)|1044|  
 |**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Polaco|1045|  
 |Portugués (Brasil)|1046|  
 |Portugués (Portugal)|2070|  
@@ -97,15 +98,15 @@ ms.locfileid: "85764708"
 |Urdu|1056|  
 |Vietnamita|1066|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para actualizar la lista de idiomas registrados en la búsqueda de texto completo, use [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**".  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_fulltext_load_thesaurus_file &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
- [sp_fulltext_service &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [sp_fulltext_load_thesaurus_file &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_service &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar y administrar archivos de sinónimos para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [Configurar y administrar palabras irrelevantes y palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

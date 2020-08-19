@@ -1,4 +1,5 @@
 ---
+description: Filtrar datos publicados
 title: Filtrar datos publicados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cefde8d6bf6e947815894605cd385164aa673d9c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c52250061e78f663e4046d53b5c101f13367407d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423439"
 ---
 # <a name="filter-published-data"></a>Filtrar datos publicados
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "86915399"
 ## <a name="column-filters"></a>Filtros de columnas  
  En la siguiente ilustración se muestra una publicación que filtra la columna C.  
   
- ![Filtrado de columnas](../../../relational-databases/replication/publish/media/repl-17.gif "Filtros de columnas")  
+ ![Filtros de columnas](../../../relational-databases/replication/publish/media/repl-17.gif "Filtros de columnas")  
   
  También puede utilizar conjuntamente el filtrado de filas y columnas, como se ilustra a continuación.  
   

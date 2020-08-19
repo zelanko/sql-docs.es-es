@@ -1,4 +1,5 @@
 ---
+description: Archivos y números de versión
 title: Archivos y números de versión | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -17,11 +18,12 @@ ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d682ca3d6768da16d43c3c09471a6c722561dd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 850268d303106e8c07a19915f9284b6c4dc3f7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420279"
 ---
 # <a name="files-and-version-numbers"></a>Archivos y números de versión
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

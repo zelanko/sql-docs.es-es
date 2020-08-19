@@ -1,4 +1,5 @@
 ---
+description: catalog.explicit_object_permissions (base de datos de SSISDB)
 title: catalog.explicit_object_permissions (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cf55832764b595aac01b8fb8c69fb0516898bad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e7052caddf7087239e734d6474c4d829f13e9948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422089"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions (base de datos de SSISDB)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86912541"
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Permite a la entidad de seguridad leer información que se considera parte del objeto, como las propiedades. No permite a la entidad de seguridad enumerar o leer el contenido de otros objetos contenidos dentro del objeto.|Carpeta, proyecto, entorno, operación|  
 |`2`|MODIFY|Permite a la entidad de seguridad modificar información que se considera parte del objeto, como las propiedades. No permite a la entidad de seguridad modificar otros objetos contenidos dentro del objeto.|Carpeta, proyecto, entorno, operación|  
-|`3`|Ejecute|Permite a la entidad de seguridad ejecutar todos los paquetes del proyecto.|proyecto|  
+|`3`|Ejecute|Permite a la entidad de seguridad ejecutar todos los paquetes del proyecto.|Project|  
 |`4`|MANAGE_PERMISSIONS|Permite a la entidad de seguridad asignar permisos a los objetos.|Carpeta, proyecto, entorno, operación|  
 |`100`|CREATE_OBJECTS|Permite a la entidad de seguridad crear objetos en la carpeta.|Carpeta|  
 |`101`|READ_OBJECTS|Permite a la entidad de seguridad leer todos los objetos de la carpeta.|Carpeta|  

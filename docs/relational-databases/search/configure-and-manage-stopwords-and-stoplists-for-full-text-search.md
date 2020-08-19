@@ -1,4 +1,5 @@
 ---
+description: Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo
 title: Configuración y administración de palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo
 ms.date: 02/02/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3f3274fa08c121fc9dfd3ee4c5268c975eca2661
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423389"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ Use [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-t
   
 2.  Expanda **Bases de datos**y luego la base de datos en la que quiere crear la lista de palabras irrelevantes de texto completo.  
   
-3.  Expanda **Almacenamiento**y luego haga clic con el botón derecho en **Lista de palabras irrelevantes de texto completo**.  
+3.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario en **Listas de palabras irrelevantes de texto completo**.  
   
 4.  Seleccione **Nueva lista de palabras irrelevantes de texto completo**.  
   
@@ -127,7 +128,7 @@ Utilice la [opción de configuración del servidor transform noise words](../../
 |Instructions|1|  
 |are|2|  
 |applicable|3|  
-|to|4|  
+|en|4|  
 |these|5|  
 |Adventure|6|  
 |Works|7|  

@@ -1,4 +1,5 @@
 ---
+description: catalog.extended_operation_info (base de datos de SSISDB)
 title: catalog.extended_operation_info (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dfc87963af1a7d55a8368b31d1ed94ccdc04b717
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4082c0bbf428a96776ae18fece7333f0401a2b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422079"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info (base de datos de SSISDB)
 
@@ -30,7 +31,7 @@ ms.locfileid: "86912564"
 |-----------------|---------------|-----------------|  
 |info_id|**bigint**|El identificador único (id.) de la información extendida.|  
 |operation_id|**bigint**|El Identificador único de la operación que corresponde a la información extendida.|  
-|object_name|**nvarchar(260)**|Nombre del objeto.|  
+|object_name|**nvarchar(260)**|El nombre del objeto.|  
 |object_type|**smallint**|Tipo de objeto afectado por la operación. El objeto puede ser una carpeta (`10`), proyecto (`20`), paquete (`30`), entorno (`40`) o instancia de ejecución (`50`).|  
 |reference_id|**bigint**|El Identificador único de la referencia que se utiliza en la operación.|  
 |status|**int**|Estado de la operación. Los valores posibles son creado (`1`), en ejecución (`2`), cancelado (`3`), con errores (`4`), pendiente (`5`), finalizado inesperadamente (`6`), correcto (`7`), deteniendo (`8`) y completado (`9`).|  

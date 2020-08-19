@@ -1,4 +1,5 @@
 ---
+description: catalog.validations (base de datos de SSISDB)
 title: catalog.validations (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6847053a171fbfac422457de2411e8329e339ec8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4bfa8f9b0ba11574059e3dc05ef7b731d259999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421979"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (base de datos de SSISDB)
 
@@ -37,8 +38,8 @@ ms.locfileid: "86912478"
 |use32bitruntime|**bit**|Indica si el motor en tiempo de ejecución de 32 bits se usa para ejecutar el paquete en un sistema operativo de 64 bits. Si el valor es `1`, se realiza la ejecución con el motor en tiempo de ejecución de 32 bits. Si el valor es `0`, se realiza la ejecución con el motor en tiempo de ejecución de 64 bits.|  
 |reference_id|**bigint**|Identificador único de la referencia del entorno del proyecto que el proyecto usa para hacer referencia a un entorno.|  
 |operation_type|**smallint**|Tipo de operación. Las operaciones mostradas en esta vista incluyen la validación del proyecto (`300`) y la validación del paquete (`301`).|  
-|object_name|**nvarhcar(260)**|Nombre del objeto.|  
-|object_type|**smallint**|Tipo de objeto. El objeto puede ser un proyecto (`20`) o un paquete (`30`).|  
+|object_name|**nvarhcar(260)**|El nombre del objeto.|  
+|object_type|**smallint**|Tipo del objeto. El objeto puede ser un proyecto (`20`) o un paquete (`30`).|  
 |object_id|**bigint**|Identificador del objeto afectado por la operación.|  
 |start_time|**datetimeoffset(7)**|Hora a la que se inició la operación.|  
 |end_time|**datetimeoffset(7)**|Hora a la que finalizó la operación.|  

@@ -1,4 +1,5 @@
 ---
+description: 'Consultas distribuidas de Microsoft SQL Server: Conectividad OLE DB'
 title: Creación de un proveedor de servidor vinculado
 ms.date: 07/01/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 528d1f6e1c7eea06b69fc60e2208eeb37ce3e36f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420849"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Consultas distribuidas de Microsoft SQL Server: Conectividad OLE DB
 
@@ -190,26 +191,26 @@ Estos son los pasos generales que realiza SQL Server cuando se conecta a un prov
 
    SQL Server recopila varias propiedades de proveedor que se usarán en la evaluación de la consulta distribuida; estas propiedades se recuperan mediante una llamada a `IDBProperties::GetProperties`. Todas estas propiedades son opcionales; pero si se admiten todas las propiedades relevantes, SQL Server puede sacar el máximo partido de las funciones del proveedor. Por ejemplo, se necesita `DBPROP_SQLSUPPORT` para determinar si SQL Server puede enviar consultas al proveedor. Si esta propiedad no se admite, SQL Server no usará el proveedor remoto como proveedor de comandos SQL aunque lo sea. En la tabla siguiente, en la columna Valor predeterminado se indica qué valor asume SQL Server si el proveedor no admite la propiedad.
 
-Propiedad| Valor predeterminado| Uso |
+Propiedad| Valor predeterminado| Usar |
 |:----|:----|:----|
-|`DBPROP_DBMSNAME`|None|Se usa para mensajes de error.|
-|`DBPROP_DBMSVER` |None|Se usa para mensajes de error.|
-|`DBPROP_PROVIDERNAME`|None|Se usa para mensajes de error.|
+|`DBPROP_DBMSNAME`|Ninguno|Se usa para mensajes de error.|
+|`DBPROP_DBMSVER` |Ninguno|Se usa para mensajes de error.|
+|`DBPROP_PROVIDERNAME`|Ninguno|Se usa para mensajes de error.|
 |`DBPROP_PROVIDEROLEDBVER1`|1.5|Se usa para determinar la disponibilidad de las características de la versión 2.0.
-|`DBPROP_CONCATNULLBEHAVIOR`|None|Se usa para determinar si el comportamiento de concatenación `NULL` del proveedor es el mismo que el de SQL Server.|
-|`DBPROP_NULLCOLLATION`|None|Permite la ordenación o el uso de índices solo si `NULLCOLLATION` coincide con el comportamiento de intercalación NULL de la instancia de SQL Server.|
-|`DBPROP_OLEOBJECTS`|None|Determina si el proveedor admite interfaces de almacenamiento estructurado para columnas de objetos de datos de gran tamaño.|
-|`DBPROP_STRUCTUREDSTORAGE`|None|Determina cuáles de las interfaces de almacenamiento estructurado se admiten para los tipos de objetos grandes (entre `ILockBytes`, `Istream` e `ISequentialStream`).|
-|`DBPROP_MULTIPLESTORAGEOBJECTS`|False|Determina si se puede abrir más de una columna de objetos grandes al mismo tiempo.|
-|`DBPROP_SQLSUPPORT`|None|Determina si se pueden enviar consultas SQL al proveedor.|
+|`DBPROP_CONCATNULLBEHAVIOR`|Ninguno|Se usa para determinar si el comportamiento de concatenación `NULL` del proveedor es el mismo que el de SQL Server.|
+|`DBPROP_NULLCOLLATION`|Ninguno|Permite la ordenación o el uso de índices solo si `NULLCOLLATION` coincide con el comportamiento de intercalación NULL de la instancia de SQL Server.|
+|`DBPROP_OLEOBJECTS`|Ninguno|Determina si el proveedor admite interfaces de almacenamiento estructurado para columnas de objetos de datos de gran tamaño.|
+|`DBPROP_STRUCTUREDSTORAGE`|Ninguno|Determina cuáles de las interfaces de almacenamiento estructurado se admiten para los tipos de objetos grandes (entre `ILockBytes`, `Istream` e `ISequentialStream`).|
+|`DBPROP_MULTIPLESTORAGEOBJECTS`|Falso|Determina si se puede abrir más de una columna de objetos grandes al mismo tiempo.|
+|`DBPROP_SQLSUPPORT`|Ninguno|Determina si se pueden enviar consultas SQL al proveedor.|
 |`DBPROP_CATALOGLOCATION`|`DBPROPVAL_CL_START`|Se usa para crear nombres de tabla de varias partes.
-|`SQLPROP_DYNAMICSQL`|False|Propiedad específica de SQL Server: si devuelve `VARIANT_TRUE`, indica que se admiten marcadores de parámetro `?` para la ejecución de consultas con parámetros.
-|`SQLPROP_NESTEDQUERIES`|False|Propiedad específica de SQL Server: si devuelve `VARIANT_TRUE`, indica que el proveedor admite instrucciones `SELECT` anidadas en la cláusula `FROM`.
-|`SQLPROP_GROUPBY`|False|Propiedad específica de SQL Server: si devuelve `VARIANT_TRUE`, indica que el proveedor admite la cláusula GROUP BY en la instrucción `SELECT` como se especifica en el estándar SQL-92.
-|`SQLPROP_DATELITERALS `|False|Propiedad específica de SQL Server: si devuelve `VARIANT_TRUE`, indica que el proveedor admite literales de fecha y hora según la sintaxis Transact-SQL de SQL Server.
-|`SQLPROP_ANSILIKE `|False|Propiedad específica de SQL Server: esta propiedad es de interés para un proveedor que admite el nivel Minimum de SQL y el operador `LIKE` de acuerdo al nivel de entrada SQL-92 (\'%\' y \'_\' como caracteres comodín).
-|`SQLPROP_SUBQUERIES `|False|Propiedad de SQL Server: esta propiedad es de interés para un proveedor que admita el nivel Minimum de SQL. Esta propiedad indica que el proveedor admite subconsultas, como se especifica en el nivel de entrada SQL-92. Esto incluye las subconsultas de la lista `SELECT` y la cláusula `WHERE` con compatibilidad con las subconsultas correlacionadas, y los operadores `IN`, `EXISTS`, `ALL` y `ANY`.
-|`SQLPROP_INNERJOIN`|False|Propiedad específica de SQL Server: esta propiedad es de interés para los proveedores que admiten el nivel Minimum de SQL. Esta propiedad indica la compatibilidad con las combinaciones que usan varias tablas en la cláusula `FROM`. ------ ---
+|`SQLPROP_DYNAMICSQL`|Falso|Propiedad específica de SQL Server: si devuelve `VARIANT_TRUE`, indica que se admiten marcadores de parámetro `?` para la ejecución de consultas con parámetros.
+|`SQLPROP_NESTEDQUERIES`|Falso|Propiedad específica de SQL Server: si devuelve `VARIANT_TRUE`, indica que el proveedor admite instrucciones `SELECT` anidadas en la cláusula `FROM`.
+|`SQLPROP_GROUPBY`|Falso|Propiedad específica de SQL Server: si devuelve `VARIANT_TRUE`, indica que el proveedor admite la cláusula GROUP BY en la instrucción `SELECT` como se especifica en el estándar SQL-92.
+|`SQLPROP_DATELITERALS `|Falso|Propiedad específica de SQL Server: si devuelve `VARIANT_TRUE`, indica que el proveedor admite literales de fecha y hora según la sintaxis Transact-SQL de SQL Server.
+|`SQLPROP_ANSILIKE `|Falso|Propiedad específica de SQL Server: esta propiedad es de interés para un proveedor que admite el nivel Minimum de SQL y el operador `LIKE` de acuerdo al nivel de entrada SQL-92 (\'%\' y \'_\' como caracteres comodín).
+|`SQLPROP_SUBQUERIES `|Falso|Propiedad de SQL Server: esta propiedad es de interés para un proveedor que admita el nivel Minimum de SQL. Esta propiedad indica que el proveedor admite subconsultas, como se especifica en el nivel de entrada SQL-92. Esto incluye las subconsultas de la lista `SELECT` y la cláusula `WHERE` con compatibilidad con las subconsultas correlacionadas, y los operadores `IN`, `EXISTS`, `ALL` y `ANY`.
+|`SQLPROP_INNERJOIN`|Falso|Propiedad específica de SQL Server: esta propiedad es de interés para los proveedores que admiten el nivel Minimum de SQL. Esta propiedad indica la compatibilidad con las combinaciones que usan varias tablas en la cláusula `FROM`. ------ ---
 
 Los tres literales siguientes se recuperan de `IDBInfo::GetLiteralInfo`: `DBLITERAL_CATALOG_SEPARATOR`, `DBLITERAL_SCHEMA_SEPARATOR` (para crear un nombre de objeto completo a partir de sus partes de catálogo, esquema y nombre de objeto) y `DBLITERAL_QUOTE` (para incluir entre comillas los nombres de identificador en una consulta SQL enviada al proveedor).
 
@@ -323,7 +324,7 @@ Tabla de asignación de tipos de datos de SQL Server y OLE DB.
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>or<br> Longitud máxima > 4000 caracteres|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>o bien<br> Longitud máxima > 4000 caracteres|ntext|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
 |`DBTYPE_IDISPATCH`| |Error|
@@ -332,16 +333,16 @@ Tabla de asignación de tipos de datos de SQL Server y OLE DB.
 |`DBTYPE_VARIANT`*| |NVARCHAR|
 |`DBTYPE_IUNKNOWN`| |Error|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longitud máxima > 8000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, Tamaño de columna = 8 <br>or<br> Longitud máxima no indicada. | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>o bien<br> Longitud máxima > 8000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, Tamaño de columna = 8 <br>o bien<br> Longitud máxima no indicada. | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longitud máxima > 8000 caracteres <br>or<br>   Longitud máxima no indicada. | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>o bien<br> Longitud máxima > 8000 caracteres <br>o bien<br>   Longitud máxima no indicada. | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longitud máxima > 4000 caracteres <br>or<br>   Longitud máxima no indicada. | `ntext`|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>o bien<br> Longitud máxima > 4000 caracteres <br>o bien<br>   Longitud máxima no indicada. | `ntext`|
 |`DBTYPE_UDT`| |Error|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime` (se requiere conversión explícita)|
@@ -648,7 +649,7 @@ En el caso de las interfaces opcionales, en la columna Escenarios se indican uno
 | |`ICommandPrepare`|No|Se usa para preparar un comando con el fin de obtener metadatos (en consultas de paso a través si están disponibles).|Consulta remota, rendimiento.|
 |Objeto de error|`IErrorRecords`|Sí|Se usa para obtener un puntero a una interfaz `IErrorInfo` correspondiente a un registro de error único.| |
 | |`IErrorInfo`|Sí|Se usa para obtener un puntero a una interfaz `IErrorInfo` correspondiente a un registro de error único.| |
-|Cualquier objeto|`ISupportErrorInfo`|No|Se usa para comprobar si una interfaz determinada admite objetos de error.| |
+|Cualquier objeto.|`ISupportErrorInfo`|No|Se usa para comprobar si una interfaz determinada admite objetos de error.| |
 |  |  |  |  |  |
 
 >[!NOTE]

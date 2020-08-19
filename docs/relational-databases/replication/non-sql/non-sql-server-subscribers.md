@@ -1,4 +1,5 @@
 ---
+description: suscriptores que no son de SQL Server
 title: Suscriptores que no sean de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25073bd212ec8b468c0388d11d7701744998d036
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c394eb67d8ce57443497e7a31caa52c17380d038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420489"
 ---
 # <a name="non-sql-server-subscribers"></a>suscriptores que no son de SQL Server  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -113,7 +114,7 @@ Para obtener información acerca de cómo crear suscripciones a Oracle e IBM DB2
   
 -   Los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se pueden inicializar automáticamente desde una copia de seguridad.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Replicación de bases de datos heterogéneas](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md)  
   

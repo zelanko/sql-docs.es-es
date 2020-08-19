@@ -1,4 +1,5 @@
 ---
+description: WRITETEXT (Transact-SQL)
 title: WRITETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b264935bd4cbbeaffe9ad3228734cd7acc542476
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e55a8822677162472d9f005eec213e184003cf00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422399"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ WRITETEXT [BULK]
  Es el nombre de la tabla y la columna **text**, **ntext** o **image** que se van a actualizar. Los nombres de tablas y columnas deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). La especificación de los nombres de la base de datos y del propietario es opcional.  
   
  *text_ptr*  
- Es un valor que almacena el puntero a los datos **text**, **ntext** o **image**. *text_ptr* debe ser de tipo **binary(16)** . Para crear un puntero de texto, ejecute una instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md) con datos que no sean NULL para la columna **text**, **ntext** o **image**.  
+ Es un valor que almacena el puntero a los datos **text**, **ntext** o **image**. *text_ptr* debe ser de tipo **binary(16)**. Para crear un puntero de texto, ejecute una instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md) con datos que no sean NULL para la columna **text**, **ntext** o **image**.  
   
  WITH LOG  
  Omitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El registro está determinado por el modelo de recuperación vigente para la base de datos.  

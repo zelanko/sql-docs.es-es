@@ -1,4 +1,5 @@
 ---
+description: Función SQLInstallerError
 title: Función SQLInstallerError | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e749237cf87c5054b8273f38531d9336d316e040
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcc5f89a40802e6efa405771474cda3e86f4519c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421169"
 ---
 # <a name="sqlinstallererror-function"></a>Función SQLInstallerError
 **Conformidad**  
@@ -64,7 +65,7 @@ RETCODE SQLInstallerError(
  *pcbErrorMsg*  
  Genere Puntero al número total de bytes (sin incluir el carácter de terminación null) disponible para devolver en *lpszErrorMsg*. Si el número de bytes disponibles para devolver es mayor o igual que *cbErrorMsgMax*, el texto del mensaje de error en *lpszErrorMsg* se trunca a *cbErrorMsgMax* menos los bytes de carácter de terminación null. El argumento *pcbErrorMsg* puede ser un puntero nulo.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA o SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnóstico  

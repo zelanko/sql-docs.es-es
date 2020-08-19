@@ -1,4 +1,5 @@
 ---
+description: Depurar el flujo de control
 title: Depurar el flujo de control | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e3602a8e21d6d7fd9371331914c6157c5db2ca4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bea31577692752b028bdbddbf0ed440dfee7e493
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421969"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
 

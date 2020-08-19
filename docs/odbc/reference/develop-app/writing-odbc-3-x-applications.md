@@ -1,4 +1,5 @@
 ---
+description: Escribir ODBC 3.x aplicaciones
 title: Escribir aplicaciones ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ba48d76babcaa5fcc49a541088f7c4cc349b569
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7df97b99df10e613ee45aaa3c01174b46160e740
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421359"
 ---
 # <a name="writing-odbc-3x-applications"></a>Escribir ODBC 3.x aplicaciones
 Cuando una aplicación ODBC *2. x* se actualiza a ODBC *3. x*, debe escribirse de modo que funcione con los controladores ODBC *2. x* y *3. x* . La aplicación debe incorporar código condicional para sacar el máximo partido de las características de ODBC *3. x* .  

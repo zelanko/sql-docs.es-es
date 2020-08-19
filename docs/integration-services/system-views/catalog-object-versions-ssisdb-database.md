@@ -1,4 +1,5 @@
 ---
+description: catalog.object_versions (base de datos de SSISDB)
 title: catalog.object_versions (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 59f757c4c3ae851131059bbac059decc643ec385
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1a2371508c40e60ebacbe60d656d4d9ffa3f70ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422039"
 ---
 # <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions (base de datos de SSISDB)
 
@@ -30,8 +31,8 @@ ms.locfileid: "86912504"
 |-----------------|---------------|-----------------|  
 |object_version_lsn|**bigint**|Identificador único (ID) de la versión del objeto. No se garantiza que este número sea secuencial.|  
 |object_id|**bigint**|Identificador único del objeto.|  
-|object_type|**smallint**|Tipo de objeto. Se mostrará un valor `20` para los proyectos.|  
-|object_name|**sysname(nvarchar(128))**|Nombre del objeto.|  
+|object_type|**smallint**|Tipo del objeto. Se mostrará un valor `20` para los proyectos.|  
+|object_name|**sysname(nvarchar(128))**|El nombre del objeto.|  
 |description|**nvarchar(1024)**|Descripción del proyecto.|  
 |created_by|**nvarchar(128)**|Nombre del usuario que agregó el objeto al catálogo.|  
 |created_time|**datetimeoffset**|Fecha y hora en que el objeto se agregó al catálogo.|  

@@ -1,4 +1,5 @@
 ---
+description: Función SQLGetInfo
 title: SQLGetInfo (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a88eb1a4aff7d166a81bbf6ec64ae2b878fd5fa
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b60dcdd90c71e1790464f24cd34dedfaa22e7c61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421279"
 ---
 # <a name="sqlgetinfo-function"></a>Función SQLGetInfo
 
@@ -71,7 +72,7 @@ SQLRETURN SQLGetInfo(
   
  En el caso de todos los demás tipos de datos, se omite el valor de *BufferLength* y el controlador asume que el tamaño de \* *INFOVALUEPTR* es SQLUSMALLINT o sqluinteger que incluya, en función de la *InfoType*.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
@@ -115,7 +116,7 @@ SQLRETURN SQLGetInfo(
   
  Un controlador debe devolver un valor para cada tipo de información que se define en las tablas siguientes. Si un tipo de información no se aplica al controlador o el origen de datos, el controlador devuelve uno de los valores enumerados en la tabla siguiente.  
 
-|Tipo de información|Valor|
+|Tipo de información|Value|
 |-|-|
 |Cadena de caracteres ("Y" o "N")|"N"|
 |Cadena de caracteres (no es "Y" o "N")|cadena vacía.|
@@ -124,7 +125,7 @@ SQLRETURN SQLGetInfo(
   
  Por ejemplo, si un origen de datos no admite procedimientos, **SQLGetInfo** devuelve los valores que se muestran en la tabla siguiente para los valores de *InfoType* relacionados con los procedimientos.  
 
-|InfoType|Valor|
+|InfoType|Value|
 |-|-|
 |SQL_PROCEDURES|"N"|
 |SQL_ACCESSIBLE_PROCEDURES|"N"|
@@ -482,7 +483,7 @@ SQLRETURN SQLGetInfo(
 
 En la tabla siguiente se enumera alfabéticamente cada tipo de información, la versión de ODBC en la que se presentó y su descripción.  
   
-|Tipo de información|Versión de ODBC|Description|
+|Tipo de información|Versión de ODBC|Descripción|
 |-|-|-|
 |SQL_ACCESSIBLE_PROCEDURES|1.0|Cadena de caracteres: "Y" si el usuario puede ejecutar todos los procedimientos devueltos por **SQLProcedures**; "N" si es posible que se devuelvan procedimientos que el usuario no pueda ejecutar.|
 |SQL_ACCESSIBLE_TABLES|1.0|Una cadena de caracteres: "Y" si se garantiza que el usuario tiene privilegios **Select** para todas las tablas devueltas por **SQLTables**; "N" si es posible que se devuelvan tablas a las que el usuario no pueda tener acceso.|
@@ -676,7 +677,7 @@ else
  Devolver información sobre los tipos de datos de un origen de datos  
  [Función SQLGetTypeInfo](sqlgettypeinfo-function.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 
  [Referencia de API ODBC](odbc-api-reference.md)  
  [Archivos de encabezado de ODBC](../install/odbc-header-files.md)

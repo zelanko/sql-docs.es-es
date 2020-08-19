@@ -1,4 +1,5 @@
 ---
+description: Monitor de actividad de trabajo (Configuración del filtro)
 title: Monitor de actividad de trabajo (Configuración del filtro) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d143c4c52c122c159e7c80dd58d8cee847849360
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7533366a28517fcc2fdb8ca5c2e4ad0c0dd01c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424057"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de actividad de trabajo (Configuración del filtro)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85666941"
  **Categoría**  
  Filtra trabajos por su categoría.  
   
- **Programada**  
+ **Programado**  
  Muestra todos los trabajos con o sin programaciones.  
   
  **Estado**  

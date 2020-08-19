@@ -1,4 +1,5 @@
 ---
+description: Búsqueda aproximada, transformación
 title: Transformación Búsqueda aproximada | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -33,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a9db9f2e015a75e4ad132c21bd770a27d70f487
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df26e437d7c03510f7e634693296a928696a96b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430687"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
 
@@ -58,7 +59,7 @@ ms.locfileid: "86919328"
   
  Esta transformación tiene una entrada y una salida.  
   
- Para la coincidencia aproximada, solo se pueden usar columnas de entrada con tipos de datos **DT_WSTR** y **DT_STR** . La coincidencia exacta puede usar cualquier tipo de datos DTS, excepto **DT_TEXT**, **DT_NTEXT**y **DT_IMAGE**. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el tipo de datos DTS **DT_WSTR** con una columna con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nvarchar**de**, pero no se puede combinar una columna con el tipo de datos **DT_WSTR** con otra que tenga el tipo de datos **int**.  
+ Para la coincidencia aproximada, solo se pueden usar columnas de entrada con tipos de datos **DT_WSTR** y **DT_STR** . La coincidencia exacta puede usar cualquier tipo de datos DTS, excepto **DT_TEXT**, **DT_NTEXT**y **DT_IMAGE**. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el tipo de datos DTS **DT_WSTR** con una columna con el tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** de , pero no se puede combinar una columna con el tipo de datos **DT_WSTR** con otra que tenga el tipo de datos **int**.  
   
  Puede personalizar esta transformación, especificando la cantidad máxima de memoria, el algoritmo de comparación de filas y el almacenamiento en caché de índices y tablas de referencia que utiliza la transformación.  
   

@@ -1,4 +1,5 @@
 ---
+description: Sys. pdw_nodes_tables (Transact-SQL)
 title: Sys. pdw_nodes_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 7b50d1757371a1ca379a4cf8f79410ceaef9a614
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475378"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>Sys. pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,9 +29,9 @@ ms.locfileid: "86196873"
 |-----------------|---------------|-----------------|-----------|  
 |\<inherited columns>||Para obtener una lista de las columnas que hereda esta vista, vea [Sys. Objects](../system-catalog-views/sys-objects-transact-sql.md).||  
 |lob_data_space_id|**int**||Siempre es 0.|  
-|filestream_data_space_id|**int**|IDENTIFICADOR de espacio de datos para un grupo de archivos FILESTREAM o[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
+|filestream_data_space_id|**int**|IDENTIFICADOR de espacio de datos para un grupo de archivos FILESTREAM o [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|IDENTIFICADOR de columna máximo usado por esta tabla.||  
-|lock_on_bulk_load|**bit**|La tabla está bloqueada en una carga masiva.|Por determinar|  
+|lock_on_bulk_load|**bit**|La tabla está bloqueada en una carga masiva.|TBD|  
 |uses_ansi_nulls|**bit**|La tabla se creó con la opción de base de datos SET ANSI_NULLS establecida en ON.|1|  
 |is_replicated|**bit**|1 = la tabla se publica mediante la replicación.|0,1 no se admite la replicación.|  
 |has_replication_filter|**bit**|1 = La tabla tiene un filtro de replicación.|0|  

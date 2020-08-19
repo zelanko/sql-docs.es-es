@@ -1,4 +1,5 @@
 ---
+description: '| = (Asignación de OR bit a bit) (Transact-SQL)'
 title: '| = (OR bit a bit)'
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
@@ -22,12 +23,12 @@ ms.assetid: bd746a4f-6498-4196-bf2e-b6f457a15d44
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7bb8a457873a40eb4023ce780946428e6294430
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: fc2fdfc46c53b5a345d6ac27847592485043f934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459494"
 ---
 # <a name="-bitwise-or-assignment-transact-sql"></a>| = (Asignación de OR bit a bit) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,10 +52,10 @@ expression |= expression
 ## <a name="result-types"></a>Tipos de resultado  
  Devuelve el tipo de datos del argumento con mayor prioridad. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para más información, vea [&#124; &#40;OR bit a bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Operadores compuestos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

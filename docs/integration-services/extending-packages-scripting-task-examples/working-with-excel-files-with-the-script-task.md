@@ -1,4 +1,5 @@
 ---
+description: Trabajar con archivos de Excel con la tarea Script
 title: Trabajar con archivos de Excel con la tarea Script | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f851b7a3cbbf665838a8b8c6d6af19cc0797040e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1016c9746ba1cfe266ef944eeb66f7c0327d69dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430357"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabajar con archivos de Excel con la tarea Script
 
@@ -80,7 +81,7 @@ ms.locfileid: "86921097"
   
     -   Escriba **ExcelFile**.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable **ExcelFile**.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "86921097"
   
     -   Escriba **ExcelFileExists**.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable **ExcelFileExists**.  
   
@@ -150,7 +151,7 @@ public class ScriptMain
   
     -   Escriba **ExcelTable** y **ExcelFile** separado por comas **.**  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione las variables **ExcelTable** y **ExcelFile**.  
   
@@ -158,7 +159,7 @@ public class ScriptMain
   
     -   Escriba **ExcelTableExists**.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable **ExcelTableExists**.  
   
@@ -257,7 +258,7 @@ public class ScriptMain
   
     -   Escriba **ExcelFolder**  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelFolder.  
   
@@ -265,7 +266,7 @@ public class ScriptMain
   
     -   Escriba **ExcelFiles**.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelFiles.  
   
@@ -332,7 +333,7 @@ public class ScriptMain
   
     -   Escriba **ExcelFile**.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelFile.  
   
@@ -340,7 +341,7 @@ public class ScriptMain
   
     -   Escriba **ExcelTables**.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione la variable ExcelTablesvariable.  
   
@@ -445,7 +446,7 @@ public class ScriptMain
   
     -   Escriba el nombre de cada variable separado por comas.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos ( **…** ) junto al campo de propiedades y, en el cuadro de diálogo **Seleccionar variables**, seleccione las variables.  
   

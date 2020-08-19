@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de las propiedades ActiveConnection, CommandText, CommandTimeout, CommandType, size y Direction (JScript)
 title: Ejemplo de propiedades de procedimiento almacenado (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fb389dd9761ff4e310d5047f85085b7f9ff6a43
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 44bfda3dc902af0398d26481c307b90926133654
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451697"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>Ejemplo de las propiedades ActiveConnection, CommandText, CommandTimeout, CommandType, size y Direction (JScript)
 En este ejemplo se usan las propiedades [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md)y [Direction](../../../ado/reference/ado-api/direction-property.md) para ejecutar un procedimiento almacenado. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **ActiveConnectionJS. asp**.  

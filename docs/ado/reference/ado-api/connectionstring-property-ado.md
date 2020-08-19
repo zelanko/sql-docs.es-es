@@ -1,4 +1,5 @@
 ---
+description: Propiedad ConnectionString (ADO)
 title: ConnectionString (propiedad, ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39eb67a98d710e27c051d77aa7843663c853b9e0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444457"
 ---
 # <a name="connectionstring-property-ado"></a>Propiedad ConnectionString (ADO)
 Indica la información utilizada para establecer una conexión con un origen de datos.  

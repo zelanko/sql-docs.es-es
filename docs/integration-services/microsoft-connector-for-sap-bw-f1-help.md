@@ -1,4 +1,5 @@
 ---
+description: Ayuda F1 de Microsoft Connector 1.1 for SAP BW
 title: Ayuda de F1 de Microsoft Connector for SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aee724d88bfc203472c09d80e3e3ceec9bafa7f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f52bd1f1c56a8f9dc84b1474bf4447c6311cb508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430167"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Ayuda F1 de Microsoft Connector 1.1 for SAP BW
 
@@ -46,7 +47,7 @@ ms.locfileid: "86924022"
   
 -   [Editor de origen de SAP BW &#40;página Salida de error&#41;](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Editor de origen de SAP BW &#40;página Avanzadas&#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Editor de origen de SAP BW &#40;página Opciones avanzadas&#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
 -   [Buscar destino RFC](../integration-services/data-flow/look-up-rfc-destination.md)  
   
@@ -64,19 +65,19 @@ ms.locfileid: "86924022"
   
 -   [Editor de destino de SAP BW &#40;página Salida de error&#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Editor de destino de SAP BW &#40;página Avanzadas&#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Editor de destino de SAP BW &#40;página Opciones avanzadas&#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
 -   [Buscar InfoPackage](../integration-services/data-flow/look-up-infopackage.md)  
   
--   [Crear InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
+-   [Crear nuevo InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
   
--   [Crear InfoCube para datos de transacción](../integration-services/data-flow/create-infocube-for-transaction-data.md)  
+-   [Crear InfoCube para los datos de transacción](../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
 -   [Buscar InfoObject](../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [Crear InfoSource](../integration-services/data-flow/create-infosource.md)  
   
--   [Crear InfoSource para datos de transacción](../integration-services/data-flow/create-infosource-for-transaction-data.md)  
+-   [Crear Infosource para datos de transacción](../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
 -   [Crear InfoSource para datos maestros](../integration-services/data-flow/create-infosource-for-master-data.md)  
   

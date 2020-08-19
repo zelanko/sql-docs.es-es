@@ -1,4 +1,5 @@
 ---
+description: Información de distribuidor, Publicaciones
 title: Información de distribuidor, Publicaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2018
@@ -17,12 +18,12 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e2cdb7832e97c575af79c322e1cd21d1d8f09f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498771"
 ---
 # <a name="distributor-information-publications"></a>Información de distribuidor, Publicaciones
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +43,7 @@ La información que se muestra sobre las publicaciones admitidas por el distribu
   El nombre del publicador se incluye en la información para las suscripciones de publicaciones de instantáneas. De lo contrario, la funcionalidad y la información proporcionadas en este cuadro de diálogo son las mismas que las de la vista Publicador. Para más información sobre cómo utilizar este cuadro de diálogo, vea [Publisher Information, Subscription Watch List &#40;Snapshot Publication, SQL Server 2005 and Later&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md) (Información del publicador, Lista de supervisión de suscripciones (Publicación de instantáneas, SQL Server 2005 y versiones posteriores)).  
 
 ## <a name="agents"></a>Agentes
-La pestaña **Agentes** muestra información acerca de los agentes y trabajos de mantenimiento asociados con el publicador y el suscriptor.  
+ La pestaña **Agentes** muestra información acerca de los agentes y trabajos de mantenimiento asociados con el publicador y el suscriptor.  
   
  Los agentes que están disponibles en la pestaña **Agentes** de un distribuidor en la vista Distribuidor incluyen todos los agentes que están disponibles en la pestaña **Agentes** de un publicador. Sin embargo, la pestaña **Agentes** para un distribuidor en la vista Distribuidor también incluye un Agente de distribuidor y un Agente de mezcla.  
   
@@ -160,7 +161,7 @@ La pestaña **Agentes** muestra información acerca de los agentes y trabajos de
  Número de conflictos producidos en el suscriptor durante el proceso de mezcla.  
 
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)  
   

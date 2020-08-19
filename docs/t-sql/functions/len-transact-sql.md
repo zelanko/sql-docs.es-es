@@ -1,4 +1,5 @@
 ---
+description: LEN (Transact-SQL)
 title: LEN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/03/2015
@@ -20,12 +21,12 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce435d3fbc4f6549dfb654914b377541309cbfe
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bdcfe164aa08677887c1c494309bcf1d9af4c6d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459715"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ LEN ( string_expression )
   
  Si utiliza intercalaciones de SC, el valor entero devuelto cuenta los pares suplentes UTF-16 como un solo carácter. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 LEN no incluye espacios finales. Si esto supone un problema, considere la opción de usar la función [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md), que no recorta la cadena. Si se procesa una cadena unicode, DATALENGTH devolverá un número que tal vez no sea igual al número de caracteres. En este ejemplo se muestra LEN y DATALENGTH con un espacio final.  
   
 ```sql  
@@ -101,7 +102,7 @@ FNameLength  FirstName  LastName
 4            Lynn       Tsoflias
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  

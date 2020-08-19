@@ -1,4 +1,5 @@
 ---
+description: ToString (motor de base de datos)
 title: ToString (motor de base de datos)
 ms.custom: ''
 ms.date: 07/23/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c1bf4c72881482ed1b4d99224554576f6a7a3cc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5f12eefb4f84b7ee936bfcbd736c3d22ba9162c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459948"
 ---
 # <a name="tostring-database-engine"></a>ToString (motor de base de datos)
 
@@ -31,19 +32,19 @@ ms.locfileid: "86555933"
 Devuelve una cadena con la representación lógica de *this*. Se llama implícitamente a ToString cuando se produce una conversión de **hierarchyid** en un tipo de cadena. Tiene el efecto contrario de [Parse &#40;motor de base de datos&#41;](../../t-sql/data-types/parse-database-engine.md).
   
 ## <a name="syntax"></a>Sintaxis  
-  
-```sql
--- Transact-SQL syntax  
-node.ToString  ( )   
+
+```syntaxsql
+-- Transact-SQL syntax
+node.ToString  ( )
 -- This is functionally equivalent to the following syntax  
 -- which implicitly calls ToString():  
 CAST(node AS nvarchar(4000))  
 ```  
   
-```sql
--- CLR syntax  
-string ToString  ( )   
-```  
+```syntaxsql
+-- CLR syntax
+string ToString  ( )
+```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 

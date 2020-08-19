@@ -1,4 +1,5 @@
 ---
+description: Controladores basados en archivos
 title: Controladores basados en archivos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 223bd838754f1d656ac71ae37926389097af3ea1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 770e8560c540e8423aebf0a79c0e8ee5c124c8e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429087"
 ---
 # <a name="file-based-drivers"></a>Controladores basados en archivos
 Los controladores basados en archivos se usan con orígenes de datos como dBASE que no proporcionan un motor de base de datos independiente para que los utilice el controlador. Estos controladores acceden directamente a los datos físicos y deben implementar un motor de base de datos para procesar instrucciones SQL. Como práctica estándar, los motores de base de datos de los controladores basados en archivos implementan el subconjunto de SQL ODBC definido por el nivel de conformidad mínimo de SQL. para obtener una lista de las instrucciones SQL en este nivel de cumplimiento, vea [Apéndice C: gramática de SQL](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  

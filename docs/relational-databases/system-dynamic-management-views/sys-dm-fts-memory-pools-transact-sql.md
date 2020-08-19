@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_memory_pools (Transact-SQL)
 title: Sys. dm_fts_memory_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
@@ -20,12 +21,12 @@ ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f14acaaf8e4f92a603270619c181e9d97108c5d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 720c3a3727f332c289b08480f6367babc0213ad4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489897"
 ---
 # <a name="sysdm_fts_memory_pools-transact-sql"></a>sys.dm_fts_memory_pools (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,14 +44,14 @@ ms.locfileid: "85734525"
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
  
 ## <a name="physical-joins"></a>Combinaciones físicas  
  ![Combinaciones significativas de esta vista de administración dinámica](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-pools-1.gif "Combinaciones significativas de esta vista de administración dinámica")  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|Varios a uno|  
   

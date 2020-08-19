@@ -1,4 +1,5 @@
 ---
+description: 'Paso 2: Inicialización de la aplicación'
 title: 'Paso 2: inicializar la aplicación | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 843155ba6b641ea26717e63af55c8774f963a800
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 26d20a5b10ee7b414b9285a388359b3a93029f16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482888"
 ---
 # <a name="step-2-initialize-the-application"></a>Paso 2: Inicialización de la aplicación
 El segundo paso consiste en inicializar la aplicación, tal como se muestra en la siguiente ilustración. Exactamente lo que se hace aquí varía en función de la aplicación.  

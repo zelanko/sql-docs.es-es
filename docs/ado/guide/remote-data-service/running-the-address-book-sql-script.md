@@ -1,4 +1,5 @@
 ---
+description: Ejecución del script de SQL de la libreta de direcciones
 title: Ejecutando el script SQL de la libreta de direcciones | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 133ff64f2c15fefac072ecfa28a7f772cea4f465
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 17ea6bc39986239f0dc7c16c245bc08807b3f207
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451997"
 ---
 # <a name="running-the-address-book-sql-script"></a>Ejecución del script de SQL de la libreta de direcciones
 > [!IMPORTANT]

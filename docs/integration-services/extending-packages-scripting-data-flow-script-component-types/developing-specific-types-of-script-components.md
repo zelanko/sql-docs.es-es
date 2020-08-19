@@ -1,4 +1,5 @@
 ---
+description: Desarrollar tipos específicos de los componentes de script
 title: Desarrollar tipos específicos de los componentes de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 860a629af6962614c19b77ffaea277ee02fc3b04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fc1942c156469def05a8cf9aaa12ac3e09a8167c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430447"
 ---
 # <a name="developing-specific-types-of-script-components"></a>Desarrollar tipos específicos de los componentes de script
 
@@ -46,7 +47,7 @@ ms.locfileid: "86923841"
  [Crear una transformación asincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
  Explica y muestra cómo crear una transformación de flujo de datos con salidas asincrónicas mediante el componente de script. Este tipo de transformación tiene que leer todas las filas de datos antes de poder agregar más información, como agregados calculados, a los datos que pasan a través del componente.  
   
- [Crear un destino con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+ [Creating a Destination with the Script Component (Crear un destino con el componente de script)](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
  Explica y muestra cómo crear un destino de flujo de datos mediante el componente de script.  
   
 ## <a name="see-also"></a>Consulte también  

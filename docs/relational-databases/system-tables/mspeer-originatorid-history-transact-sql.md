@@ -1,4 +1,5 @@
 ---
+description: MSpeer_originatorid_history (Transact-SQL)
 title: MSpeer_originatorid_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c1f53d0f-4080-43ff-be38-2b10395c68c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d54a534ac63dee6e07220327c5b4890f08deefb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 957ec6b764e18043aab4d68acff4db056cefb2fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469051"
 ---
 # <a name="mspeer_originatorid_history-transact-sql"></a>MSpeer_originatorid_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

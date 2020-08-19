@@ -1,4 +1,5 @@
 ---
+description: Supervisar el rendimiento con el Monitor de replicación
 title: Supervisión del rendimiento con el Monitor de replicación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d98498fa2f63ef4e4c3cd977c7612fd3277fbf91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a881bfd928d8a8d1c84d85ea8d226bc2751126a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498751"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Supervisar el rendimiento con el Monitor de replicación
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "86918721"
   
 -   Bueno  
   
--   Regular  
+-   Aceptable  
   
 -   Insuficiente  
   
@@ -75,7 +76,7 @@ ms.locfileid: "86918721"
   
 -   En la replicación transaccional, la calidad del rendimiento se determina mediante el umbral de latencia. Si no se establece el umbral, no se muestra ningún valor. En la siguiente tabla se muestra la correlación entre el umbral y el valor de calidad del rendimiento. Por ejemplo, si el umbral se establece en 60 segundos y la latencia actual es de 30 segundos, la latencia supone un 50% del umbral, lo que da como resultado un valor de Bueno.  
   
-    |Excelente|Bueno|Regular|Insuficiente|Crítico|  
+    |Excelente|Bueno|Aceptable|Insuficiente|Crítico|  
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
@@ -83,7 +84,7 @@ ms.locfileid: "86918721"
   
      En la siguiente tabla se muestra la correlación entre el rendimiento medio y el valor de calidad del rendimiento. Por ejemplo, si diez suscriptores se han sincronizado mediante una conexión LAN con una velocidad media de 100 filas por segundo, y una de las suscripciones se sincroniza después a una velocidad de 125 filas por segundo, el rendimiento de la sincronización de ese suscriptor es 125% de la media, lo que da como resultado un valor de Bueno.  
   
-    |Excelente|Bueno|Regular|Insuficiente|  
+    |Excelente|Bueno|Aceptable|Insuficiente|  
     |---------------|----------|----------|----------|  
     |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
@@ -100,6 +101,6 @@ ms.locfileid: "86918721"
   
 ## <a name="see-also"></a>Consulte también  
  [Monitoring Replication](../../../relational-databases/replication/monitor/monitoring-replication.md)  (Supervisar la replicación)  
- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Establecer umbrales y advertencias en el Monitor de replicación](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

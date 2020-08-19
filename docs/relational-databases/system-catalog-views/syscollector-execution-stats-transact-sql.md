@@ -1,4 +1,5 @@
 ---
+description: syscollector_execution_stats (Transact-SQL)
 title: syscollector_execution_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6e545beb3969387ba642dff6dec1657120c6e885
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed50c37df682bf3ea41478c29847ca7daba0e448
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490073"
 ---
 # <a name="syscollector_execution_stats-transact-sql"></a>syscollector_execution_stats (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

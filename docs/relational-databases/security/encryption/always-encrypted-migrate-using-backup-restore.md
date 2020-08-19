@@ -1,4 +1,5 @@
 ---
+description: Copia de seguridad y restauración de bases de datos con Always Encrypted
 title: Copia de seguridad y restauración de bases de datos con Always Encrypted | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb529b9cc518cd7802dfdbbddba8b88e399dbcba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475525"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Copia de seguridad y restauración de bases de datos con Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ Al restaurar una base de datos, se restauran todos los datos cifrados y todos lo
 Si ha restaurado la base de datos en un servidor diferente o con un nombre diferente, no es necesario hacer nada especial para permitir que la aplicación consulte los datos cifrados en la base de datos de destino, ya que las claves de ambas bases de datos son las mismas.
 
 Para obtener más información sobre cómo realizar una copia de seguridad de una base de datos y cómo restaurarla, vea:
-- [Información general de copia de seguridad (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
+- [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [Restauración de una base de datos en una instancia administrada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>Pasos siguientes

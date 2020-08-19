@@ -1,4 +1,5 @@
 ---
+description: 'Paso 4: Devolución del conjunto de registros por parte del servidor (Tutorial de RDS)'
 title: 'Paso 4: el servidor devuelve el conjunto de registros (tutorial de RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce53c987a43ed208a4d7120fb3655b3a3acd5083
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 80db98699916cea22cd2815871f99159b1f1a7c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451927"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>Paso 4: Devolución del conjunto de registros por parte del servidor (Tutorial de RDS)
 > [!IMPORTANT]

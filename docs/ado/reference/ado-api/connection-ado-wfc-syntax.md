@@ -1,4 +1,5 @@
 ---
+description: Conexión (ADO - sintaxis WFC)
 title: Conexión (ADO-sintaxis WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8602b170d4c067744fd002a98c949b8d0836d2e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4a9d467a2ab9073bd287fd0cf6a3fc36c60cabda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444527"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Conexión (ADO - sintaxis WFC)
 ## <a name="package-commswfcdata"></a>paquete com. ms. wfc. Data  
@@ -44,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- El método **ExecuteUpdate** es un método especial de case que llama al método **Execute** de ADO subyacente con ciertos parámetros. El método **ExecuteUpdate** no admite la devolución de un objeto de **conjunto de registros** , por lo que el parámetro *Options* del método **Execute** se modifica con **AdoEnums. ExecuteOptions. NORECORDS**. Una vez completado el método **Execute** , el parámetro *RecordsAffected* actualizado se vuelve a pasar al método **ExecuteUpdate** , que finalmente se devuelve como un valor **int**.  
+ El método **ExecuteUpdate** es un método especial de case que llama al método **Execute** de ADO subyacente con ciertos parámetros. El método **ExecuteUpdate** no admite la devolución de un objeto de **conjunto de registros** , por lo que el parámetro *Options* del método **Execute** se modifica con **AdoEnums.ExecuteOptions. NORECORDS**. Una vez completado el método **Execute** , el parámetro *RecordsAffected* actualizado se vuelve a pasar al método **ExecuteUpdate** , que finalmente se devuelve como un valor **int**.  
   
 ```  
 public void open()   

@@ -1,4 +1,5 @@
 ---
+description: AVG (Transact-SQL)
 title: AVG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -22,12 +23,12 @@ ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d0825b40f469e31f12c0fd9d3ebca91fd4d4c69
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 183cc509061439bdc2792e7e81ed0d8f1e847ca1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459866"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +72,7 @@ El resultado evaluado de la *expresión* determina el tipo de valor devuelto.
 |Categorías **money** y **smallmoney**|**money**|  
 |Categorías **float** y **real**|**float**|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Si el tipo de datos de *expression* es un tipo de datos de alias, el tipo de valor devuelto es también del tipo de datos de alias. No obstante, si se asciende el tipo de datos base del tipo de datos de alias, por ejemplo, de **tinyint** a **int**, el valor devuelto adquirirá el tipo de datos ascendido, no el tipo de datos de alias.
   
 AVG () calcula la media de un conjunto de valores dividiendo la suma de estos valores por el recuento de valores no NULL. Si la suma supera el valor máximo para el tipo de datos del valor devuelto, AVG() devolverá un error.
@@ -235,7 +236,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_partition_stats (Transact-SQL)
 title: Sys. dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
@@ -20,11 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 191dc00caa5ab39d3a3adf7882aa3bb88ea0d3f3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: eddc690043c541c3726c66bba40f4a81d188e91a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490019"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,8 +52,8 @@ ms.locfileid: "86011634"
 |**used_page_count**|**bigint**|Número total de páginas usadas para la partición. Se calcula como **in_row_used_page_count**  +  **lob_used_page_count**  +  **row_overflow_used_page_count**.|  
 |**reserved_page_count**|**bigint**|Número total de páginas reservadas para la partición. Se calcula como **in_row_reserved_page_count**  +  **lob_reserved_page_count**  +  **row_overflow_reserved_page_count**.|  
 |**row_count**|**bigint**|Número aproximado de filas de la partición.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
-|**distribution_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador numérico único asociado a la distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**distribution_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador numérico único asociado a la distribución.|  
   
 ## <a name="remarks"></a>Observaciones  
  **sys.dm_db_partition_stats** muestra información acerca del espacio usado para almacenar y administrar datos LOB de datos consecutivos y datos de desbordamiento de fila para todas las particiones en una base de datos. Se muestra una fila por partición.  
@@ -103,7 +105,7 @@ WHERE object_id=OBJECT_ID('HumanResources.Employee')    AND (index_id=0 or index
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

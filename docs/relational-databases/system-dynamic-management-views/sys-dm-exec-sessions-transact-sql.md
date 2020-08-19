@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_sessions (Transact-SQL)
 title: Sys. dm_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -20,12 +21,12 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eff5e947caed2471d63c980418688f6945c78b21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 364b8c255054d10d8ae7ee10d1231ade99615bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490031"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "85734681"
 |logical_reads|**bigint**|Número de lecturas lógicas realizadas en la sesión. No admite valores NULL.|  
 |is_user_process|**bit**|0 si es una sesión de sistema; De lo contrario, es 1. No admite valores NULL.|  
 |text_size|**int**|Valor de TEXTSIZE para la sesión. No admite valores NULL.|  
-|lenguaje|**nvarchar(128)**|Valor de LANGUAGE para la sesión. Acepta valores NULL.|  
+|language|**nvarchar(128)**|Valor de LANGUAGE para la sesión. Acepta valores NULL.|  
 |date_format|**nvarchar (3)**|Valor de DATEFORMAT para la sesión. Acepta valores NULL.|  
 |date_first|**smallint**|Valor de DATEFIRST para la sesión. No admite valores NULL.|  
 |quoted_identifier|**bit**|Valor de QUOTED_IDENTIFIER para la sesión. No admite valores NULL.|  
@@ -88,16 +89,16 @@ ms.locfileid: "85734681"
 |database_id|**smallint**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Identificador de la base de datos actual para cada sesión.|  
 |authenticating_database_id|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Identificador de la base de datos que autentica la entidad de seguridad. Para los inicios de sesión, el valor será 0. Para los usuarios de base de datos independiente, el valor será el identificador de base de datos de la base de datos independiente.|  
 |open_transaction_count|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Número de transacciones abiertas por sesión.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
 |page_server_reads|**bigint**|**Se aplica a**: hiperescala Azure SQL Database<br /><br /> Número de lecturas del servidor de páginas realizadas, por solicitudes de esta sesión, durante esta sesión. No admite valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
 Todos pueden ver su propia información de sesión.  
 ** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** Requiere el `VIEW SERVER STATE` permiso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] para ver todas las sesiones en el servidor.  
-** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Requiere `VIEW DATABASE STATE` para ver todas las conexiones a la base de datos actual. `VIEW DATABASE STATE`no se puede conceder en la `master` base de datos. 
+** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Requiere `VIEW DATABASE STATE` para ver todas las conexiones a la base de datos actual. `VIEW DATABASE STATE` no se puede conceder en la `master` base de datos. 
   
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando está habilitada la opción de configuración del servidor **Common Criteria Compliance Enabled** , las estadísticas de inicio de sesión se muestran en las siguientes columnas.  
   
 -   last_successful_logon  
@@ -114,7 +115,7 @@ Todos pueden ver su propia información de sesión.
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|En/aplicar|Relación|  
+|De|En|En/aplicar|Relación|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Uno a ninguno o uno a varios|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Uno a ninguno o uno a varios|  
@@ -183,7 +184,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

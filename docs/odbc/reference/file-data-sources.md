@@ -1,4 +1,5 @@
 ---
+description: Orígenes de datos de archivo
 title: Orígenes de datos de archivo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0661aa424a7a118b8b12f4bf8433987ff83bd788
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d02c767adab90ee4a7b6ff93a34886c03b87780c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429047"
 ---
 # <a name="file-data-sources"></a>Orígenes de datos de archivo
 Los *orígenes de datos de archivo* se almacenan en un archivo y permiten que un solo usuario pueda usar la información de conexión de forma repetida o compartida entre varios usuarios. Cuando se utiliza un origen de datos de archivo, el administrador de controladores realiza la conexión al origen de datos utilizando la información de un archivo. DSN. Este archivo se puede manipular como cualquier otro archivo. Un origen de datos de archivo no tiene un nombre de origen de datos, como un origen de datos de la máquina, y no está registrado en ningún usuario o equipo.  

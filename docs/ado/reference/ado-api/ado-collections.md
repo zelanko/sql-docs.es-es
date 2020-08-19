@@ -1,4 +1,5 @@
 ---
+description: Colecciones de ADO
 title: Colecciones de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c19252e14ba5a04329c9cdc1c38b5ee6398b7874
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7fb960d7539dd2d47be6eb2aad424808d44db10d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451477"
 ---
 # <a name="ado-collections"></a>Colecciones de ADO
 Las relaciones entre estas colecciones y los objetos de ADO se representan en el [modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md).  
   
  Cada colección puede contener su objeto correspondiente. Por ejemplo, un objeto de [error](../../../ado/reference/ado-api/error-object.md) puede estar contenido en una colección de [errores](../../../ado/reference/ado-api/errors-collection-ado.md) . Para obtener más información acerca de los objetos, vea [objetos de ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) o un tema de objeto específico.  
   
-|Colección|Description|  
+|Colección|Descripción|  
 |-|-|  
 |[Errores](../../../ado/reference/ado-api/errors-collection-ado.md)|Contiene todos los objetos de **error** creados en respuesta a un error único relacionado con el proveedor.|  
-|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contiene todos los objetos de **campo** de un objeto de **conjunto de registros** .|  
+|[Campos](../../../ado/reference/ado-api/fields-collection-ado.md)|Contiene todos los objetos de **campo** de un objeto de **conjunto de registros** .|  
 |[Parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contiene todos los objetos de **parámetro** de un objeto **Command** .|  
 |[Propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)|Contiene todos los objetos de **propiedad** para una instancia específica de un objeto.|  
   

@@ -1,4 +1,5 @@
 ---
+description: Configurar la tarea Script en el editor de la tarea Script
 title: Configurar la tarea Script en el Editor de la tarea Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40edbb718dac8f1be4a33fa1766c757aa1962306
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8b4a052ea59e3c72adda887c3084bca278059f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430257"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurar la tarea Script en el editor de la tarea Script
 

@@ -1,4 +1,5 @@
 ---
+description: Objeto de conexión (ADO)
 title: Objeto de conexión (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49a270f143e57c1e093ac94732b67b6424c88607
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 68b6a8dd0b0cd75f511c042981672444d9b3bcb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444517"
 ---
 # <a name="connection-object-ado"></a>Objeto de conexión (ADO)
 Representa una conexión abierta a un origen de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un objeto de **conexión** representa una sesión única con un origen de datos. En un sistema de base de datos cliente/servidor, puede ser equivalente a una conexión de red real al servidor. Dependiendo de la funcionalidad admitida por el proveedor, es posible que algunas colecciones, métodos o propiedades de un objeto de **conexión** no estén disponibles.  
   
  Con las colecciones, los métodos y las propiedades de un objeto de **conexión** , puede hacer lo siguiente:  

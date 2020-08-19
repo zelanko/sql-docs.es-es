@@ -1,4 +1,5 @@
 ---
+description: PARSE (Transact-SQL)
 title: PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/05/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 36649527ab73d15de4c811bcbe5c3234980e6a86
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7dac50281c264412e288fe3fce25fda84d99b659
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459662"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  Valor literal que representa el tipo de datos solicitado para el resultado.  
   
- *referencia cultural*  
+ *culture*  
  Cadena opcional que identifica la referencia cultural en la que se da formato a *string_value*.  
   
  Si no se proporciona el argumento *culture*, se usará el idioma de la sesión actual. Este idioma se establece implícitamente, o explícitamente mediante la instrucción SET LANGUAGE. *culture* acepta cualquier referencia cultural compatible con .NET Framework; no se limita a los idiomas admitidos explícitamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el argumento *culture* no es válido, PARSE desencadena un error.  
@@ -57,7 +58,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>Tipos de valor devuelto  
  Devuelve el resultado de la expresión, traducido al tipo de datos solicitado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los valores NULL que se pasan como argumentos a PARSE se tratan de dos maneras:  
   
 1.  Si se pasa una constante NULL, se produce un error. Un valor NULL no se puede analizar en otro tipo de datos diferente teniendo en cuenta la referencia cultural.  

@@ -1,4 +1,5 @@
 ---
+description: Ampliar paquetes con objetos personalizados
 title: Ampliar paquetes con objetos personalizados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2c6aa25210cff5f5663c4684728caee1f01db01
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3837f3fe73a3ee9d099199e959d65afd1df4e95b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430577"
 ---
 # <a name="extending-packages-with-custom-objects"></a>Ampliar paquetes con objetos personalizados
 
@@ -61,7 +62,7 @@ ms.locfileid: "86902627"
  [Ampliar paquetes con scripting](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Describe cómo extender el flujo de control mediante la tarea Script o el flujo de datos mediante el componente de script.  
   
- [Compilar paquetes mediante programación](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [Generar paquetes mediante programación](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Describe cómo crear, configurar, ejecutar, cargar, guardar y administrar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante programación.  
   
 ## <a name="see-also"></a>Consulte también  

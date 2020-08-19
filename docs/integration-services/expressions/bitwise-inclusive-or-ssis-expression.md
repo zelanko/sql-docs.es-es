@@ -1,4 +1,5 @@
 ---
+description: '| (OR inclusivo bit a bit) (expresión de SSIS)'
 title: '| (OR inclusivo bit a bit) (expresión de SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 47a5ad352069006a43a3c2f24c89dae9caf09bc8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6736267708612a67314959b74cb4c91d0f6f39c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430627"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (OR inclusivo bit a bit) (expresión de SSIS)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Lleva a cabo una operación OR bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si cualquiera de los bits es 1, el bit de resultado correspondiente se establece en 1. De lo contrario, se establece en cero (0).  
+  Lleva a cabo una operación OR bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si uno de los dos bits es 1, el bit del resultado correspondiente se establece en 1. De lo contrario, se establece en cero (0).  
   
  Ambas condiciones deben ser de tipo entero con signo o de tipo entero sin signo.  
   

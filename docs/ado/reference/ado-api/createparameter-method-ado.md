@@ -1,4 +1,5 @@
 ---
+description: Método CreateParameter (ADO)
 title: CreateParameter (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6bf45e2d458784972d7057e95878c9db3526ffac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444327"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Crea un nuevo objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) con las propiedades especificadas.  
@@ -46,7 +47,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Dirección*  
  Opcional. Valor [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) que especifica el tipo de objeto de **parámetro** .  
   
- *Size*  
+ *Tamaño*  
  Opcional. Valor de **tipo Long** que especifica la longitud máxima del valor del parámetro en caracteres o bytes.  
   
  *Valor*  

@@ -1,4 +1,5 @@
 ---
+description: Tipos de datos SQL
 title: SQL Data Types | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3cc91213533aa39f30be1bc838cc014c20e70884
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483158"
 ---
 # <a name="sql-data-types"></a>Tipos de datos SQL
 Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo los tipos de datos de SQL que define el DBMS asociado. La información sobre el modo en que un controlador asigna tipos de SQL DBMS a los identificadores de tipo SQL definidos por ODBC y cómo un controlador asigna tipos SQL de DBMS a sus propios identificadores de tipo SQL específicos del controlador se devuelve a través de una llamada a **SQLGetTypeInfo**. Un controlador también devuelve los tipos de datos de SQL al describir los tipos de datos de las columnas y los parámetros a través de las llamadas a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**y **SQLSpecialColumns**.  
@@ -42,8 +43,8 @@ Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo los ti
 |SQL_WCHAR|WCHAR (*n*)|Cadena de caracteres Unicode de longitud fija de cadena *n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|Cadena de caracteres Unicode de longitud variable con una longitud máxima de cadena *n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Datos de caracteres Unicode de longitud variable. La longitud máxima depende del origen de datos|  
-|SQL_DECIMAL|DECIMAL (*p*,*s*)|Valor numérico con signo, exacto, con una precisión de al menos *p* y escala *s.* (La precisión máxima está definida por el controlador). (1 <= *p* <= 15; *s* <= *p*). 4|  
-|SQL_NUMERIC|NUMERIC (*p*,*s*)|Valor numérico con signo y exacto con una precisión *p* y escala *s* (1 <= *p* <= 15; *s* <= *p*). 4|  
+|SQL_DECIMAL|DECIMAL (*p*,*s*)|Valor numérico con signo, exacto, con una precisión de al menos *p* y escala *s.* (La precisión máxima está definida por el controlador). (1 <= *p* <= 15; *s*  <=  *p*). 4|  
+|SQL_NUMERIC|NUMERIC (*p*,*s*)|Valor numérico con signo y exacto con una precisión *p* y escala *s* (1 <= *p* <= 15; *s*  <=  *p*). 4|  
 |SQL_SMALLINT|SMALLINT|Valor numérico exacto con una precisión de 5 y una escala de 0 (con signo:-32.768 <= *n* <= 32.767, sin signo: 0 <= *n* <= 65535) [3].|  
 |SQL_INTEGER|INTEGER|Valor numérico exacto con una precisión de 10 y una escala de 0 (con signo:-2 [31] <= *n* <= 2 [31]-1, sin signo: 0 <= *n* <= 2 [32]-1) [3].|  
 |SQL_REAL|real|Valor numérico con signo, aproximado, con una precisión binaria de 24 (cero o valor absoluto de 10 [-38] a 10 [38]).|  

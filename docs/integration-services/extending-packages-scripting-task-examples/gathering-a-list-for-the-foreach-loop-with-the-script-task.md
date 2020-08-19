@@ -1,4 +1,5 @@
 ---
+description: Recopilar una lista para el bucle Foreach con la tarea Script
 title: Recopilar una lista para el bucle Para cada uno con la tarea Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a1ac7a00a9f181f511b214a28ed020827575db1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aabae9ce08729c5dab6a0ea57c5e75900c9aaff8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430407"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Recopilar una lista para el bucle Foreach con la tarea Script
 

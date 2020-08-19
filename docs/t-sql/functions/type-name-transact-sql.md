@@ -1,4 +1,5 @@
 ---
+description: TYPE_NAME (Transact-SQL)
 title: TYPE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4c194a533f53704b5979dd88587869a1c67fb7
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: def376308310d249dfe65f0a66d38095e67733eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459520"
 ---
 # <a name="type_name-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,10 +57,10 @@ TYPE_NAME ( type_id )
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como TYPE_NAME, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  TYPE_NAME devolverá un NULL cuando *type_id* no sea válido o cuando el autor de la llamada no cuente con los permisos necesarios para hacer referencia al tipo.  
   
- TYPE_NAME funciona con tipos de datos de sistema así como con tipos de datos definidos por el usuario. El tipo puede estar contenido en cualquier esquema, pero siempre se devuelve un nombre de tipo no calificado. Esto significa que el nombre no tiene el prefijo _schema_ **.** Prefix.  
+ TYPE_NAME funciona con tipos de datos de sistema así como con tipos de datos definidos por el usuario. El tipo puede estar contenido en cualquier esquema, pero siempre se devuelve un nombre de tipo no calificado. Esto significa que el nombre no tiene el prefijo _schema_**.** Prefix.  
   
  Las funciones del sistema se pueden usar en la lista de selección, en la cláusula WHERE y en cualquier lugar donde se permita una expresión. Para más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) y [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   
@@ -108,7 +109,7 @@ SELECT * FROM sys.types;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

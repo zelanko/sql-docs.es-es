@@ -1,4 +1,5 @@
 ---
+description: Método SetServiceAccount (clase SqlService)
 title: Método SetServiceAccount (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b555be42db6d364cf6efe6fcd161fc5b6a5ea64
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 898d6a1eae5cf82915bc4647690b3ce991aa3352
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460052"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>Método SetServiceAccount (clase SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,7 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de **uint32** que es igual a 0 si se modificó el servicio correctamente o igual a 1 si no se admite la solicitud. Cualquier otro número indica que hubo un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

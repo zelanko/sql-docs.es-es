@@ -1,4 +1,5 @@
 ---
+description: Comparar la tarea Script y el componente de script
 title: Comparar la tarea Script y el componente de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 808e2fa48eee5deb6d9e612a1c2dd57e5d5b7813
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 732de7f6d7c9e75d436dca721b370f63a46a4c60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430327"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparar la tarea Script y el componente de script
 

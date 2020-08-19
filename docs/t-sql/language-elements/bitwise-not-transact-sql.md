@@ -1,4 +1,5 @@
 ---
+description: ~ (NOT bit a bit) (Transact-SQL)
 title: ~ (NOT bit a bit) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/10/2017
@@ -23,12 +24,12 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb8dc14764feeeb8ebc83f424d1b1e979e160e2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 498c2a81c0d7b94cd6288c24165f051bfc073fbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459498"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (NOT bit a bit) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "86915821"
   
  **bit** si los valores de entrada son **bit**.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El operador bit a bit **~** realiza una operación lógica NOT bit a bit para *expression*, tomando un bit cada vez. Si *expression* tiene un valor de 0, los bits en el conjunto de resultados están establecidos en 1; de lo contrario, el bit en el resultado se borra a un valor de 0. En otras palabras, los unos pasan a los ceros y los ceros pasan a unos.  
   
 > [!IMPORTANT]  

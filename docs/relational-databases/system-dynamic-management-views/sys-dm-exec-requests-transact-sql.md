@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_requests (Transact-SQL)
 title: Sys. dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
@@ -20,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 375dc6e15f8bf592ff3d5d9e8f9388f188008d3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489981"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -38,8 +39,8 @@ Devuelve información sobre cada una de las solicitudes que se ejecutan en [!INC
 |session_id|**smallint**|Identificador de la sesión con la que está relacionada esta solicitud. No admite valores NULL.|  
 |request_id|**int**|Id. de la solicitud. Es único en el contexto de la sesión. No admite valores NULL.|  
 |start_time|**datetime**|Marca de tiempo de la llegada de la solicitud. No admite valores NULL.|  
-|status|**nvarchar(30)**|Estado de la solicitud. Este puede ser uno de los siguientes:<br /><br /> Fondo<br />En ejecución<br />Ejecutable<br />En espera<br />Suspended<br /><br /> No admite valores NULL.|  
-|.|**nvarchar(32)**|Identifica el tipo de comando actual que se está procesando. Los tipos de comandos comunes incluyen lo siguiente:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> El texto de la solicitud se puede recuperar mediante sys.dm_exec_sql_text con el correspondiente sql_handle para la solicitud. Los procesos internos del sistema establecen el comando según el tipo de tarea que realizan. Las tareas pueden incluir las siguientes:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> No admite valores NULL.|  
+|status|**nvarchar(30)**|Estado de la solicitud. Este puede ser uno de los siguientes:<br /><br /> Información previa<br />En ejecución<br />Ejecutable<br />En espera<br />Suspended<br /><br /> No admite valores NULL.|  
+|command|**nvarchar(32)**|Identifica el tipo de comando actual que se está procesando. Los tipos de comandos comunes incluyen lo siguiente:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> El texto de la solicitud se puede recuperar mediante sys.dm_exec_sql_text con el correspondiente sql_handle para la solicitud. Los procesos internos del sistema establecen el comando según el tipo de tarea que realizan. Las tareas pueden incluir las siguientes:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> No admite valores NULL.|  
 |sql_handle|**varbinary (64)**|Es un token que identifica de forma única el lote o el procedimiento almacenado del que forma parte la consulta. Acepta valores NULL.| 
 |statement_start_offset|**int**|Indica, en bytes, empezando por 0, la posición inicial de la instrucción que se está ejecutando actualmente para el lote que se está ejecutando actualmente o el objeto almacenado. Se puede usar junto con `sql_handle` , `statement_end_offset` y la `sys.dm_exec_sql_text` función de administración dinámica para recuperar la instrucción que se está ejecutando actualmente para la solicitud. Acepta valores NULL.|  
 |statement_end_offset|**int**|Indica, en bytes, empezando por 0, la posición final de la instrucción que se está ejecutando actualmente para el lote que se está ejecutando actualmente o el objeto almacenado. Se puede usar junto con `sql_handle` , `statement_start_offset` y la `sys.dm_exec_sql_text` función de administración dinámica para recuperar la instrucción que se está ejecutando actualmente para la solicitud. Acepta valores NULL.|  
@@ -66,7 +67,7 @@ Devuelve información sobre cada una de las solicitudes que se ejecutan en [!INC
 |Escrituras|**bigint**|Número de escrituras realizadas por esta solicitud. No admite valores NULL.|  
 |logical_reads|**bigint**|Número de lecturas lógicas realizadas por la solicitud. No admite valores NULL.|  
 |text_size|**int**|Valor de TEXTSIZE para esta solicitud. No admite valores NULL.|  
-|lenguaje|**nvarchar(128)**|Configuración de idioma para esta solicitud. Acepta valores NULL.|  
+|language|**nvarchar(128)**|Configuración de idioma para esta solicitud. Acepta valores NULL.|  
 |date_format|**nvarchar (3)**|Valor de DATEFORMAT para esta solicitud. Acepta valores NULL.|  
 |date_first|**smallint**|Valor de DATEFIRST para esta solicitud. No admite valores NULL.|  
 |quoted_identifier|**bit**|1 = El valor de QUOTED_IDENTIFIER es ON para la solicitud. De lo contrario, es 0.<br /><br /> No admite valores NULL.|  
@@ -98,13 +99,13 @@ Devuelve información sobre cada una de las solicitudes que se ejecutan en [!INC
 |page_server_reads|**bigint**|**Se aplica a**: hiperescala Azure SQL Database<br /><br /> Número de lecturas del servidor de páginas realizadas por esta solicitud. No admite valores NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Comentarios 
+## <a name="remarks"></a>Observaciones 
 Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente. Los valores de tiempo que devuelve esta vista de administración dinámica no incluyen el tiempo transcurrido en modo preferente.
 
 Al ejecutar solicitudes paralelas en [modo de fila](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un subproceso de trabajo para coordinar los subprocesos de trabajo responsables de completar las tareas asignadas. En esta DMV solo el subproceso de coordinador es visible para la solicitud. Las columnas **Read**, **writes**, **logical_reads**y **ROW_COUNT** **no se actualizan** para el subproceso de coordinador. Las columnas **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**y **granted_query_memory** solo se **actualizan** para el subproceso de coordinador. Para más información, consulte la [guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Permisos
-Si el usuario tiene `VIEW SERVER STATE` permiso en el servidor, el usuario verá todas las sesiones en ejecución en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; de lo contrario, el usuario solo verá la sesión actual. `VIEW SERVER STATE`no se puede conceder en Azure SQL Database por lo que `sys.dm_exec_requests` siempre está limitado a la conexión actual.
+Si el usuario tiene `VIEW SERVER STATE` permiso en el servidor, el usuario verá todas las sesiones en ejecución en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; de lo contrario, el usuario solo verá la sesión actual. `VIEW SERVER STATE` no se puede conceder en Azure SQL Database por lo que `sys.dm_exec_requests` siempre está limitado a la conexión actual.
 
 En escenarios de AlwaysOn, si la réplica secundaria se establece en **solo intención de lectura**, la conexión a la secundaria debe especificar su intención de aplicación en los parámetros de cadena de conexión agregando `applicationintent=readonly` . De lo contrario, la comprobación de acceso para `sys.dm_exec_requests` no pasará para las bases de datos del grupo de disponibilidad, aunque el `VIEW SERVER STATE` permiso esté presente.
 
@@ -186,7 +187,7 @@ FROM sys.dm_exec_requests AS req
 GO
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [Funciones y vistas de administración dinámica](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [Funciones y vistas de administración dinámica relacionadas con la ejecución](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)      
 [Sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)     

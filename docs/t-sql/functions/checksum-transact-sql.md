@@ -1,4 +1,5 @@
 ---
+description: CHECKSUM (Transact-SQL)
 title: CHECKSUM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f93b8ac9dc503d60f095add6e4a98050a93544d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: d9d8db55081e82657966e98a22345076bdd83108
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459882"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -105,7 +106,7 @@ GO
   
 La creación del índice en la columna calculada se materializa en la columna de suma de comprobación y cualquier cambio en el valor de `ProductName` se propagará a la columna de suma de comprobación. Como alternativa se puede crear un índice directamente en la columna que se quiere indizar, aunque para los valores de clave largos es probable que un índice normal no se comporte tan bien como un índice de suma de comprobación.
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

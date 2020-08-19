@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKALLOC (Transact-SQL)
 title: DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3b85dbd8d97583b6895dfb61bf7d0f50197f0635
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b4631e88e76aeb9657327d9dbe4d6300b36b70df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459972"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 
@@ -100,7 +101,7 @@ Los nombres de las bases de datos deben cumplir las reglas de los [identificador
  ESTIMATEONLY  
  Muestra la cantidad estimada de espacio de tempdb que se necesita para ejecutar DBCC CHECKALLOC cuando todas las demás opciones están especificadas.
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 DBCC CHECKALLOC comprueba la asignación de todas las páginas de la base de datos, independientemente del tipo de página u objeto al que pertenezcan. También valida las diversas estructuras internas que se utilizan para realizar un seguimiento de estas páginas y de las relaciones entre ellas.
 Si no se especifica NO_INFOMSGS, DBCC CHECKALLOC recopila información sobre uso de espacio de todos los objetos de la base de datos. Esta información se imprime junto con los errores encontrados.
   
@@ -153,7 +154,7 @@ DBCC CHECKALLOC también devuelve un resumen de asignación de cada índice y pa
 |Id. de partición|Exclusivamente para uso interno.|  
 |Alloc Unit ID|Exclusivamente para uso interno.|  
 |Datos de fila|Las páginas contienen datos de índice o de montón.|  
-|Datos LOB|Las páginas contienen datos de tipo **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext**, **xml** e **image**.|  
+|Datos LOB|Las páginas contienen datos de tipo **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml** e **image**.|  
 |Datos de desbordamiento de fila|Las páginas contienen datos de columna de longitud variable que se han insertado de manera no consecutiva.|  
   
 DBCC CHECKALLOC devuelve el siguiente conjunto de resultados (los valores pueden variar), excepto si se especifica ESTIMATEONLY o NO_INFOMSGS.

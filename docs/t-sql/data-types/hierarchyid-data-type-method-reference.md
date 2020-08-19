@@ -1,4 +1,5 @@
 ---
+description: Referencia de los métodos del tipo de datos hierarchyid
 title: hierarchyid (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 367f467a7b4a4d497897adf1c56f8053600d0a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459979"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Referencia de los métodos del tipo de datos hierarchyid
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,14 +36,14 @@ Un valor del tipo de datos **hierarchyid** representa una posición en una jerar
 -   Muy compactos  
      El número medio de bits necesarios para representar un nodo en un árbol con *n* nodos depende del promedio de distribución ramificada secundarios (el promedio de elementos secundarios de un nodo). Para distribuciones ramificadas pequeñas (0-7), el tamaño es aproximadamente 6\*logA*n* bits, donde A es el promedio de distribución ramificada. Un nodo en una jerarquía organizativa de 100.000 personas con un promedio de nodos secundarios de 6 niveles supone aproximadamente 38 bits. Esto se redondea a 40 bits (o 5 bytes) para el almacenamiento.  
 -   La comparación se realiza con prioridad a la profundidad  
-     Dados dos valores **hierarchyid** **a** y **b**, **a<b** significa que a viene antes que b en un corte transversal de prioridad a la profundidad del árbol. Los índices de los tipos de datos **hierarchyid** están en orden con prioridad a la profundidad y los nodos cercanos entre sí en un corte transversal de prioridad a la profundidad se almacenan casi uno junto a otro. Por ejemplo, los elementos secundarios de un registro se almacenan adyacentes a ese registro. Para más información, vea [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
+     Dados dos valores **hierarchyid****a** y **b**, **a<b** significa que a viene antes que b en un corte transversal de prioridad a la profundidad del árbol. Los índices de los tipos de datos **hierarchyid** están en orden con prioridad a la profundidad y los nodos cercanos entre sí en un corte transversal de prioridad a la profundidad se almacenan casi uno junto a otro. Por ejemplo, los elementos secundarios de un registro se almacenan adyacentes a ese registro. Para más información, vea [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
 -   Compatibilidad con inserciones y eliminaciones arbitrarias  
      Con el método [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) siempre es posible generar un miembro del mismo nivel a la derecha de cualquier nodo determinado, a la izquierda de cualquier nodo determinado, o entre dos miembros cualesquiera del mismo nivel. Se mantiene la propiedad comparison cuando se inserta o elimina un número arbitrario de nodos de la jerarquía. La mayoría de las inserciones y eliminaciones conservan la propiedad compactness. Sin embargo, las inserciones entre dos nodos generarán valores hierarchyid con una representación ligeramente menos compacta.  
 -   La codificación usada en el tipo **hierarchyid** está limitada a 892 bytes. Por consiguiente, el tipo **hierarchyid** no podrá representar los nodos con demasiados niveles en su representación como para caber en los 892 bytes.  
   
 El tipo **hierarchyid** está disponible para clientes CLR como el tipo de datos **SqlHierarchyId**.
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 El tipo **hierarchyid** codifica lógicamente la información de un nodo único en un árbol de jerarquía mediante la codificación de la ruta de acceso desde la raíz del árbol hasta el nodo. Este tipo de ruta de acceso se representa lógicamente como una secuencia de etiquetas de nodo de todos los elementos secundarios visitados después de la raíz. Una barra diagonal inicia la representación y una barra diagonal única representa una ruta de acceso que solo visita la raíz. Para los niveles por debajo de la raíz, cada etiqueta se codifica como una secuencia de enteros separados por puntos. La comparación entre los elementos secundarios se realiza comparando las secuencias de enteros separados por puntos en orden alfabético. Una barra diagonal termina cada nivel. Por consiguiente, una barra diagonal separa los elementos primarios de los secundarios. Por ejemplo, estas son rutas de acceso de **hierarchyid** válidas con longitudes 1, 2, 2, 3 y 3 niveles, respectivamente:
   
 -   /  
@@ -55,11 +56,11 @@ El tipo **hierarchyid** codifica lógicamente la información de un nodo único 
   
 -   /0.1/0.2/  
   
-Pueden insertarse los nodos en cualquier ubicación. Los nodos insertados después de **/1/2/** pero antes de **/1/3/** pueden representarse como **/1/2.5/** . Los nodos insertados antes de 0 tienen la representación lógica de un número negativo. Por ejemplo, un nodo que viene antes de **/1/1/** puede representarse como **/1/-1/** . Los nodos no pueden tener ceros a la izquierda. Por ejemplo, **/1/1.1/** es válido, pero **/1/1.01/** no lo es. Para evitar errores, inserte los nodos mediante el método [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
+Pueden insertarse los nodos en cualquier ubicación. Los nodos insertados después de **/1/2/** pero antes de **/1/3/** pueden representarse como **/1/2.5/**. Los nodos insertados antes de 0 tienen la representación lógica de un número negativo. Por ejemplo, un nodo que viene antes de **/1/1/** puede representarse como **/1/-1/**. Los nodos no pueden tener ceros a la izquierda. Por ejemplo, **/1/1.1/** es válido, pero **/1/1.01/** no lo es. Para evitar errores, inserte los nodos mediante el método [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
   
-## <a name="data-type-conversion"></a>Conversión de tipo de datos
+## <a name="data-type-conversion"></a>Conversión de tipos de datos
 El tipo de datos **hierarchyid** puede convertirse a otros tipos de datos de la siguiente manera:
--   Use el método [ToString()](../../t-sql/data-types/tostring-database-engine.md) para convertir el valor **hierarchyid** a la representación lógica como un tipo de datos **nvarchar(4000)** .  
+-   Use el método [ToString()](../../t-sql/data-types/tostring-database-engine.md) para convertir el valor **hierarchyid** a la representación lógica como un tipo de datos **nvarchar(4000)**.  
 -   Use [Read ()](../../t-sql/data-types/read-database-engine.md) y [Write ()](../../t-sql/data-types/write-database-engine.md) para convertir **hierarchyid** en **varbinary**.  
 -   Para transmitir los parámetros de **hierarchyid** a través de SOAP, conviértalos previamente a cadenas.  
   
@@ -90,7 +91,7 @@ La replicación bidireccional incluye la replicación transaccional con suscripc
 -   Los filtros de columnas no pueden filtrar las columnas **hierarchyid** que no admiten valores NULL: la operación de inserción desde el suscriptor generará un error porque no hay ningún valor predeterminado de la columna **hierarchyid** en el publicador.  
 -   Se admite el filtrado de filas con tal de que el filtro no incluya una columna **hierarchyid**.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

@@ -1,4 +1,5 @@
 ---
+description: Trabajar con tipos de datos del flujo de datos
 title: Trabajar con tipos de datos del flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5563b1f77167a68a0c24deb74f63a699c0a75eb5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d3ca770924ba29785c3bf662bfa5df8ef87f341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86903372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430597"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Trabajar con tipos de datos del flujo de datos
 
@@ -34,7 +35,7 @@ ms.locfileid: "86903372"
 ### <a name="set-methods-to-use-with-data-types"></a>Establecer los métodos que se van a usar con los tipos de datos  
  En la tabla siguiente se enumeran los tipos de datos en la primera columna y, a continuación, se enumeran los métodos **Set** y **Get** correspondientes.  
   
-|Tipo de datos|Método Set|Método Get|  
+|Tipo de datos|Método Set|Get (Método)|  
 |---------------|----------------|----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_BOOL>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetBoolean%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetBoolean%2A>|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_BYTES>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetBytes%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetBytes%2A>|  
@@ -99,7 +100,7 @@ ms.locfileid: "86903372"
 > [!NOTE]  
 >  Los archivos de asignación en formato XML que se instalan de forma predeterminada en C:\Archivos de programa\Microsoft SQL Server\130\DTS\MappingFiles no tienen que ver con la asignación de tipo de datos descrita en este tema. Estos archivos asignan los tipos de datos de una versión de base de datos o sistema a otra (por ejemplo, de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a Oracle) y solo los usa el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información sobre estos archivos de asignación, vea [Asistente para importación y exportación de SQL Server](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
-### <a name="mapping-between-integration-services-and-managed-data-types"></a>Realizar asignaciones entre los tipos de datos de Integration Services y los administrados  
+### <a name="mapping-between-integration-services-and-managed-data-types"></a>Realizar asignaciones entre los tipos de datos de Integration Services y los administrados   
  Los métodos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> asignan los tipos de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] a los tipos de datos administrados.  
   
 > [!CAUTION]  

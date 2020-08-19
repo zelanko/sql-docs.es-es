@@ -1,4 +1,5 @@
 ---
+description: Conversión (expresión de SSIS)
 title: Conversión (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c10996317ce033b6d6437ff989de8d66d31f006
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a958fcc49fb5991baa770bc1c9609ebd13876dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430637"
 ---
 # <a name="cast-ssis-expression"></a>Conversión (expresión de SSIS)
 

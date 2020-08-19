@@ -1,4 +1,5 @@
 ---
+description: Actualizar las filas por marcador con SQLBulkOperations
 title: Actualizar filas por marcador con SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9c755297e8beadad92b5be81d78ca534bb96ecae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9981136d546d53b131cff0d71edcdeab5b2e650c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482878"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Actualizar las filas por marcador con SQLBulkOperations
 Al actualizar una fila por marcador, **SQLBulkOperations** hace que el origen de datos actualice una o más filas de la tabla. Las filas se identifican mediante el marcador de una columna de marcador enlazada. La fila se actualiza con los datos de los búferes de la aplicación para cada columna enlazada (excepto cuando el valor del búfer de longitud/indicador de una columna es SQL_COLUMN_IGNORE). No se actualizarán las columnas sin enlazar.  

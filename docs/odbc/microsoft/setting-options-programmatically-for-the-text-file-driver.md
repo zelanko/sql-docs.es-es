@@ -1,4 +1,5 @@
 ---
+description: Establecer opciones mediante programación para el controlador de archivo de texto
 title: Establecer opciones mediante programación para el controlador de archivo de texto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e19c3b49479047bc92a7b6f72359d4951d8df16e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdc130904266dcdaedf84e826d4812aa6cfbb607
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483458"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>Establecer opciones mediante programación para el controlador de archivo de texto
 
@@ -33,4 +34,4 @@ ms.locfileid: "81300755"
 |Lista de extensiones|Enumera las extensiones de nombre de archivo de los archivos de texto en el origen de datos. Cuando se usa el controlador de texto, se crea un archivo sin extensión cuando se ejecuta la instrucción CREATE TABLE con un nombre que no tiene ninguna extensión. Otros controladores crean un archivo con una extensión predeterminada cuando no se proporciona ninguna extensión. Para crear un archivo con la extensión. txt, la extensión debe incluirse en el nombre. Para mostrar archivos sin extensiones en el cuadro de diálogo **definir formato de texto** , "*." se debe agregar a la lista de extensiones.|Para establecer esta opción de forma dinámica, utilice la palabra clave **extensions** en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Solo lectura|Designa la base de datos como de solo lectura.|Para establecer esta opción de forma dinámica, utilice la palabra clave **ReadOnly** en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Filas que se van a examinar|Número de filas que se van a examinar para determinar el tipo de datos de cada columna. El tipo de datos determina el número máximo de tipos de datos encontrados. Si se encuentran datos que no coinciden con el tipo de datos adivinado para la columna, el tipo de datos se devolverá como un valor NULL.<br /><br /> En el caso del controlador de texto, puede escribir un número comprendido entre 1 y 32767 para el número de filas que se van a examinar; sin embargo, el valor siempre se establecerá de forma predeterminada en 25. (Un número fuera del límite devolverá un error).|Para establecer esta opción de forma dinámica, utilice la palabra clave **MAXSCANROWS** en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
-|Seleccionar directorio|Muestra un cuadro de diálogo en el que puede seleccionar un directorio que contenga los archivos a los que desea obtener acceso.<br /><br /> Al definir un directorio de origen de datos, especifique el directorio donde se encuentran los archivos que se usan con más frecuencia. El controlador ODBC utiliza este directorio como directorio predeterminado. Copie otros archivos en este directorio si se usan con frecuencia. Como alternativa, puede calificar nombres de archivo en una instrucción SELECT con el nombre de directorio:`SELECT * FROM C:\MYDIR\EMP`<br /><br /> O bien, puede especificar un nuevo directorio predeterminado mediante la función **SQLSetConnectOption** con la opción SQL_CURRENT_QUALIFIER.|Para establecer esta opción de forma dinámica, utilice la palabra clave **DEFAULTDIR** en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|
+|Seleccionar directorio|Muestra un cuadro de diálogo en el que puede seleccionar un directorio que contenga los archivos a los que desea obtener acceso.<br /><br /> Al definir un directorio de origen de datos, especifique el directorio donde se encuentran los archivos que se usan con más frecuencia. El controlador ODBC utiliza este directorio como directorio predeterminado. Copie otros archivos en este directorio si se usan con frecuencia. Como alternativa, puede calificar nombres de archivo en una instrucción SELECT con el nombre de directorio: `SELECT * FROM C:\MYDIR\EMP`<br /><br /> O bien, puede especificar un nuevo directorio predeterminado mediante la función **SQLSetConnectOption** con la opción SQL_CURRENT_QUALIFIER.|Para establecer esta opción de forma dinámica, utilice la palabra clave **DEFAULTDIR** en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|

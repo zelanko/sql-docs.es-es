@@ -1,4 +1,5 @@
 ---
+description: sp_tables (Transact-SQL)
 title: sp_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a11d686bef327e4e3daba1ed5365289f78169853
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 66081d1f9dd7af2e368aea4d00d645bf62317d83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469193"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,20 +49,20 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'name'`Es la tabla que se usa para devolver información de catálogo. *Name* es de tipo **nvarchar (384)** y su valor predeterminado es NULL. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ @table_name = ] 'name'` Es la tabla que se usa para devolver información de catálogo. *Name* es de tipo **nvarchar (384)** y su valor predeterminado es NULL. Se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ @table_owner = ] 'owner'`Es el propietario de la tabla que se utiliza para devolver información del catálogo. *Owner* es **nvarchar (384)** y su valor predeterminado es NULL. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica el propietario, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
+`[ @table_owner = ] 'owner'` Es el propietario de la tabla que se utiliza para devolver información del catálogo. *Owner* es **nvarchar (384)** y su valor predeterminado es NULL. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica el propietario, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual posee una tabla en la que se especifica el nombre, se devuelven las columnas de esa tabla. Si no se especifica el propietario y el usuario actual no es el propietario de una tabla con el nombre especificado, este procedimiento busca una tabla con el nombre especificado que pertenezca al propietario de la base de datos. Si existe una, se devuelven las columnas de esa tabla.  
   
-`[ @table_qualifier = ] 'qualifier'`Es el nombre del calificador de tabla. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @table_qualifier = ] 'qualifier'` Es el nombre del calificador de tabla. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]``Es una lista de valores, separados por comas, que proporciona información sobre todas las tablas de los tipos de tabla especificados. Estos incluyen **TABLE**, **SYSTEMTABLE**y **View**. *Type* es de tipo **VARCHAR (100)** y su valor predeterminado es NULL.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` Es una lista de valores, separados por comas, que proporciona información sobre todas las tablas de los tipos de tabla especificados. Estos incluyen **TABLE**, **SYSTEMTABLE**y **View**. *Type* es de tipo **VARCHAR (100)** y su valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Cada tipo de tabla debe especificarse entre comillas simples y todo el parámetro debe especificarse entre comillas dobles. Los tipos de tabla deben especificarse en mayúsculas. Si SET QUOTED_IDENTIFIER está establecido en ON (activado), las comillas simples deben ser comillas dobles y todo el parámetro debe especificarse entre comillas simples.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Determina si los caracteres de subrayado (_), porcentaje (%) y corchete ([o]) se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es de **bit**y su valor predeterminado es 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina si los caracteres de subrayado (_), porcentaje (%) y corchete ([o]) se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es de **bit**y su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  

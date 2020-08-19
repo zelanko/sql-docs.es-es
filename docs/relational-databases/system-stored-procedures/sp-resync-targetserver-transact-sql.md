@@ -1,4 +1,5 @@
 ---
+description: sp_resync_targetserver (Transact-SQL)
 title: sp_resync_targetserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 868e203866890c1f13405ddc7ed3949487e821da
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 858c2ffe0740c43892ff2245047823c9cecbd12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469239"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server'`Nombre del servidor que se va a volver a sincronizar. *server* es de tipo **sysname**y no tiene ningún valor predeterminado. Si se especifica **All** , se vuelven a sincronizar todos los servidores de destino.  
+`[ @server_name = ] 'server'` Nombre del servidor que se va a volver a sincronizar. *server* es de tipo **sysname**y no tiene ningún valor predeterminado. Si se especifica **All** , se vuelven a sincronizar todos los servidores de destino.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -48,7 +49,7 @@ sp_resync_targetserver
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Informa del resultado de **sp_post_msx_operation** acciones.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_resync_targetserver** elimina el conjunto actual de instrucciones para el servidor de destino y envía un nuevo conjunto para que lo descargue el servidor de destino. El nuevo conjunto está compuesto de la instrucción que va a eliminar todos los trabajos multiservidor, seguida de una inserción por cada trabajo que haya actualmente en el servidor de destino.  
   
 ## <a name="permissions"></a>Permisos  
@@ -67,8 +68,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_help_downloadlist &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
- [sp_post_msx_operation &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
+ [sp_help_downloadlist &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
+ [sp_post_msx_operation &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

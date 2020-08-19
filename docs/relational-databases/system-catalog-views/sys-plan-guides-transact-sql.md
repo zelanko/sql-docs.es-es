@@ -1,4 +1,5 @@
 ---
+description: sys.plan_guides (Transact-SQL)
 title: Sys. plan_guides (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 390b7d0c1fd34827580562b16074028465cb8ae3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e37b5da28e5c4f00cc9a6e0f2faedcfcf104e3b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490210"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85678411"
 |**plan_guide_id**|**int**|Identificador único de la guía de plan en la base de datos.|  
 |**name**|**sysname**|Nombre de la guía de plan.|  
 |**create_date**|**datetime**|Fecha y hora de creación de la guía de plan.|  
-|**modify_date**|**DateTime**|Fecha de la última modificación de la guía de plan.|  
+|**modify_date**|**Datetime**|Fecha de la última modificación de la guía de plan.|  
 |**is_disabled**|**bit**|1 = La guía de plan está deshabilitada.<br /><br /> 0 = La guía de plan está habilitada.|  
 |**query_text**|**nvarchar(max)**|Es el texto de la consulta en que se crea la guía de plan.|  
 |**scope_type**|**tinyint**|Identifica el ámbito de la guía de plan.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  

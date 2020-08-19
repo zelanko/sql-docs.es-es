@@ -1,4 +1,5 @@
 ---
+description: sys.resource_governor_workload_groups (Transact-SQL)
 title: Sys. resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d08497d856a7b6600e5d3b3a8b0407aa969aa239
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd6371b31316d874d43a33f797fa826e1d6bbc40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490176"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85901218"
 |pool_id|**int**|Identificador del grupo de recursos de servidor que usa este grupo de cargas de trabajo.|  
 |external_pool_id|**int**|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR del grupo de recursos externos que usa este grupo de cargas de trabajo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La vista de catálogo muestra los metadatos almacenados. Para ver la configuración en memoria, use la vista de administración dinámica correspondiente, [Sys. dm_resource_governor_workload_groups &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
   
  La configuración almacenada puede ser diferente a la configuración en memoria si se ha cambiado la configuración del regulador de recursos pero sin aplicar la instrucción ALTER RESOURCE GOVERNOR RECONFIGURE.  

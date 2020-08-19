@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_set_cache_directory (Transact-SQL)
 title: sp_syscollector_set_cache_directory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd2a18570770f8a7eeecc1fc9b15c7cacf3e3eb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4f3a049a0433ed41c9ebb1f82f6f16f6222544
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469197"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,12 +41,12 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @cache_directory = ] 'cache_directory'`El directorio del sistema de archivos donde se almacenan temporalmente los datos recopilados. *cache_directory* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Si no se especifica ningún valor, se utiliza el directorio temporal predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @cache_directory = ] 'cache_directory'` El directorio del sistema de archivos donde se almacenan temporalmente los datos recopilados. *cache_directory* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Si no se especifica ningún valor, se utiliza el directorio temporal predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Debe deshabilitar el recopilador de datos antes de cambiar la configuración del directorio de la memoria caché. Se produce un error en este procedimiento almacenado si se habilita el recopilador de datos. Para obtener más información, vea [habilitar o deshabilitar la recopilación de datos](../../relational-databases/data-collection/enable-or-disable-data-collection.md)y administrar la recopilación de [datos](../../relational-databases/data-collection/manage-data-collection.md).  
   
  No es necesario que el directorio especificado exista en el momento en que se ejecuta el sp_syscollector_set_cache_directory; sin embargo, los datos no se pueden almacenar en caché y cargar correctamente hasta que se cree el directorio. Recomendamos crear el directorio antes de ejecutar este procedimiento almacenado.  

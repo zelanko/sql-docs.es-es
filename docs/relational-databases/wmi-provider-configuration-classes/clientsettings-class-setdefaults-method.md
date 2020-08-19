@@ -1,4 +1,5 @@
 ---
+description: 'Clase ClientSettings: método SetDefaults'
 title: Método SetDefaults (ClientSettings)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd88ef9b93dd20a7cf77e70dddb8a2733ee5a4ea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 862e03c447e6c7e0c80318b89bcd9cbf5ecd92aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460170"
 ---
 # <a name="clientsettings-class---setdefaults-method"></a>Clase ClientSettings: método SetDefaults
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,5 +49,5 @@ object.SetDefaults(OverwriteAll)
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   

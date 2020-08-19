@@ -1,4 +1,5 @@
 ---
+description: dbo.syssubsystems (Transact-SQL)
 title: Subsistemas de dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7de71454c59ede4bfea182ea605a0e9d59da2c00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f208311142cd5f58efdbda884d0e336de70e37c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469117"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85890358"
 |**stop_entry_point**|**nvarchar(30)**|Función a la que se llama cuando un subsistema deja de ejecutarse.|  
 |**max_worker_threads**|**int**|Número máximo de pasos simultáneos para un subsistema dado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden tener acceso a esta tabla.  
   
 ## <a name="see-also"></a>Consulte también  

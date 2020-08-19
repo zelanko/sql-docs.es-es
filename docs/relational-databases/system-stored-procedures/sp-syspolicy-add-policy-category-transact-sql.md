@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_add_policy_category (Transact-SQL)
 title: sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca8eca5643fb0021111c00abdce45e6de2c09878
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2722671523f14177a92084a4d896eec3ccdd6e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469174"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`Es el nombre de la categoría de directiva. *Name* es de **tipo sysname**y es obligatorio. *el nombre* no puede ser null ni una cadena vacía.  
+`[ @name = ] 'name'` Es el nombre de la categoría de directiva. *Name* es de **tipo sysname**y es obligatorio. *el nombre* no puede ser null ni una cadena vacía.  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`Determina si la suscripción a la base de datos se asigna a la categoría de directiva. *mandate_database_subscriptions* es un valor de **bit** y su valor predeterminado es 1 (habilitado).  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Determina si la suscripción a la base de datos se asigna a la categoría de directiva. *mandate_database_subscriptions* es un valor de **bit** y su valor predeterminado es 1 (habilitado).  
   
-`[ @policy_category_id = ] policy_category_id`Es el identificador de la categoría de directiva. *policy_category_id* es de **tipo int**y se devuelve como salida.  
+`[ @policy_category_id = ] policy_category_id` Es el identificador de la categoría de directiva. *policy_category_id* es de **tipo int**y se devuelve como salida.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Debe ejecutar sp_syspolicy_add_policy_category en el contexto de la base de datos del sistema msdb.  
   
 ## <a name="permissions"></a>Permisos  
@@ -75,7 +76,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_delete_policy_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
+ [sp_syspolicy_add_policy_category_subscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   
   

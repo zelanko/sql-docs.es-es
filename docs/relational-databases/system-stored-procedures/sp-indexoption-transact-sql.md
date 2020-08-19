@@ -1,4 +1,5 @@
 ---
+description: sp_indexoption (Transact-SQL)
 title: sp_indexoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc11f219d98e4b8018bc7d763345feb279790e13
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509d58a28f768fe774c813a8235ae4c0d9cd718a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469262"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85893241"
  El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] selecciona automáticamente el bloqueo de nivel de página, fila o tabla. No es necesario establecer estas opciones manualmente. **sp_indexoption** se proporciona a los usuarios expertos que saben con certeza que un tipo de bloqueo determinado siempre es adecuado.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]En su lugar, use [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] En su lugar, use [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,23 +47,23 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @IndexNamePattern = ] 'table_or_index_name'`Es el nombre completo o no completo de una tabla o índice definido por el usuario. *table_or_index_name* es de tipo **nvarchar (1035)** y no tiene ningún valor predeterminado. Las comillas solo son necesarias si se especifica un índice o nombre de tabla completo. Si se proporciona un nombre de tabla completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el nombre de la base de datos actual. Si se especifica un nombre de tabla sin ningún índice, el valor de la opción especificada se define para todos los índices de dicha tabla y para la tabla misma si no existe ningún índice clúster.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` Es el nombre completo o no completo de una tabla o índice definido por el usuario. *table_or_index_name* es de tipo **nvarchar (1035)** y no tiene ningún valor predeterminado. Las comillas solo son necesarias si se especifica un índice o nombre de tabla completo. Si se proporciona un nombre de tabla completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el nombre de la base de datos actual. Si se especifica un nombre de tabla sin ningún índice, el valor de la opción especificada se define para todos los índices de dicha tabla y para la tabla misma si no existe ningún índice clúster.  
   
-`[ @OptionName = ] 'option_name'`Es un nombre de opción de índice. *option_name* es de tipo **VARCHAR (35)** y no tiene ningún valor predeterminado. *option_name* puede tener uno de los valores siguientes.  
+`[ @OptionName = ] 'option_name'` Es un nombre de opción de índice. *option_name* es de tipo **VARCHAR (35)** y no tiene ningún valor predeterminado. *option_name* puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Cuando el valor es TRUE, se permiten bloqueos de fila al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila. Cuando es FALSE, no se utilizan bloqueos de fila. El valor predeterminado es TRUE.|  
 |**AllowPageLocks**|Cuando el valor es TRUE, se permiten bloqueos de página al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página. Cuando es FALSE, no se utilizan bloqueos de página. El valor predeterminado es TRUE.|  
 |**DisAllowRowLocks**|Cuando es TRUE no se utilizan bloqueos de fila. Cuando el valor es FALSE, se permiten bloqueos de fila al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila.|  
 |**DisAllowPageLocks**|Cuando es TRUE, no se utilizan bloqueos de página. Cuando el valor es FALSE, se permiten bloqueos de página al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página.|  
   
-`[ @OptionValue = ] 'value'`Especifica si el valor *option_name* está habilitado (true, on, Yes o 1) o deshabilitado (false, OFF, no o 0). el *valor* es **VARCHAR (12)** y no tiene ningún valor predeterminado.  
+`[ @OptionValue = ] 'value'` Especifica si el valor *option_name* está habilitado (true, on, Yes o 1) o deshabilitado (false, OFF, no o 0). el *valor* es **VARCHAR (12)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o mayor que 0 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los índices XML no se admiten. Si se especifica un índice XML o un nombre de tabla sin ningún nombre de índice y la tabla contiene un índice XML, la instrucción produce un error. Para establecer estas opciones, utilice [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) en su lugar.  
   
  Para mostrar las propiedades actuales de bloqueo de fila y de página, use [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) o la vista de catálogo [Sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  

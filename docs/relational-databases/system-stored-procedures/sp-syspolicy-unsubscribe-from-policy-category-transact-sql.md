@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 title: sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c1ec70cea37a8cfcb0b017a98989d00c445860d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4591c3b20702923d7f9ea418951b8510977dc840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469166"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +40,14 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @policy_category = ] 'policy_category'`Es el nombre de la suscripción de categoría de directiva que desea eliminar. *policy_category* es **sysname**y es obligatorio.  
+`[ @policy_category = ] 'policy_category'` Es el nombre de la suscripción de categoría de directiva que desea eliminar. *policy_category* es **sysname**y es obligatorio.  
   
  Para obtener los valores de *policy_category*, consulte la vista del sistema policy_policy_categories msdb.dbo.sys.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Debe ejecutar sp_syspolicy_unsubscribe_from_policy_category en el contexto de la base de datos donde desee quitar una suscripción de categoría de directiva.  
   
 ## <a name="permissions"></a>Permisos  
@@ -65,6 +66,6 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_subscribe_to_policy_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
+ [sp_syspolicy_subscribe_to_policy_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
   
   

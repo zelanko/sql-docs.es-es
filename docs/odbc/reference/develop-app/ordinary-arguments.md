@@ -1,4 +1,5 @@
 ---
+description: Argumentos normales
 title: Argumentos ordinarios | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a18cdae1-6b85-41cb-875c-b5a01ec90aeb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97362f93e91ccd8b592b4c05a0714b7602c1ba94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6e4e7a30efe5735aa87665d7d0247bef06390ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429177"
 ---
 # <a name="ordinary-arguments"></a>Argumentos normales
 Cuando un argumento de cadena de función de catálogo es un argumento normal, se trata como una cadena literal. Un argumento normal no acepta ni un modelo de búsqueda de cadenas ni una lista de valores. El caso de un argumento normal es significativo y los caracteres de comilla en la cadena se toman literalmente. Estos argumentos se tratan como argumentos ordinarios si el atributo de instrucción SQL_ATTR_METADATA_ID está establecido en SQL_FALSE; se tratan como argumentos de identificador en su lugar si este atributo se establece en SQL_TRUE.  

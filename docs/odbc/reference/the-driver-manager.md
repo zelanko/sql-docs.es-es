@@ -1,4 +1,5 @@
 ---
+description: El Administrador de controladores
 title: Administrador de controladores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 686a2b9673fb392f969a42f4cc86dd95a95668a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70508eba3f5fce81c6f6185f0ec6befbe0d33b26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428877"
 ---
 # <a name="the-driver-manager"></a>El Administrador de controladores
 El *Administrador de controladores* es una biblioteca que administra la comunicación entre aplicaciones y controladores. Por ejemplo, en las plataformas de Microsoft® Windows®, el administrador de controladores es una biblioteca de vínculos dinámicos (DLL) escrita por Microsoft y se puede redistribuir por los usuarios del SDK de MDAC 2,8 SP1 redistribuible.  
@@ -33,6 +34,6 @@ El *Administrador de controladores* es una biblioteca que administra la comunica
   
  En su mayor parte, el administrador de controladores simplemente pasa las llamadas de función de la aplicación al controlador correcto. Sin embargo, también implementa algunas funciones (**SQLDataSources**, **SQLDrivers**y **SQLGetFunctions**) y realiza una comprobación de errores básica. Por ejemplo, el administrador de controladores comprueba que los identificadores no son punteros nulos, que se llama a las funciones en el orden correcto y que determinados argumentos de función son válidos. Para obtener una descripción completa de los errores que comprueba el administrador de controladores, consulte la sección de referencia de cada función y el [Apéndice B: tablas de transición de estado de ODBC](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- El rol principal final del administrador de controladores es cargar y descargar controladores. La aplicación carga y descarga solo el administrador de controladores. Cuando desea usar un controlador determinado, llama a una función de conexión (**SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect**) en el administrador de controladores y especifica el nombre de un origen de datos o un controlador determinados, como "contabilidad" o "SQL Server". Con este nombre, el administrador de controladores busca en la información del origen de datos el nombre de archivo del controlador, como Sqlsrvr. dll. A continuación, carga el controlador (suponiendo que no esté ya cargado), almacena la dirección de cada función en el controlador y llama a la función de conexión en el controlador, que se inicializa a continuación y se conecta al origen de datos.  
+ El rol principal final del administrador de controladores es cargar y descargar controladores. La aplicación carga y descarga solo el administrador de controladores. Cuando desea usar un controlador determinado, llama a una función de conexión (**SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect**) en el administrador de controladores y especifica el nombre de un origen de datos o un controlador determinados, como "contabilidad" o "SQL Server". Con este nombre, el administrador de controladores busca en la información del origen de datos el nombre de archivo del controlador, como Sqlsrvr.dll. A continuación, carga el controlador (suponiendo que no esté ya cargado), almacena la dirección de cada función en el controlador y llama a la función de conexión en el controlador, que se inicializa a continuación y se conecta al origen de datos.  
   
  Cuando la aplicación se realiza mediante el controlador, llama a **SQLDisconnect** en el administrador de controladores. El administrador de controladores llama a esta función en el controlador, que se desconecta del origen de datos. Sin embargo, el administrador de controladores mantiene el controlador en memoria en caso de que la aplicación se vuelva a conectar a él. Descarga el controlador solo cuando la aplicación libera la conexión usada por el controlador o usa la conexión para un controlador diferente y ninguna otra conexión utiliza el controlador. Para obtener una descripción completa del rol del administrador de controladores en la carga y descarga de controladores, consulte la [función del administrador de controladores en el proceso de conexión](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).

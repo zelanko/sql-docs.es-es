@@ -1,4 +1,5 @@
 ---
+description: Función SQLNativeSql
 title: Función SQLNativeSql | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9666bc767affb3b6bb624c416614079193d4b921
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbdf43d1120065f981d43e58490e328c6ef7691c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428907"
 ---
 # <a name="sqlnativesql-function"></a>Función SQLNativeSql
 **Conformidad**  
@@ -62,12 +63,12 @@ SQLRETURN SQLNativeSql(
  Si *OutStatementText* es null, *TextLength2Ptr* seguirá devolviendo el número total de caracteres (excepto el carácter de terminación null para los datos de caracteres) disponible para devolver en el búfer señalado por *OutStatementText*.  
   
  *BufferLength*  
- Entradas Número de caracteres en el \*búfer de *OutStatementText* . Si el valor devuelto en * \*InStatementText* es una cadena Unicode (al llamar a **SQLNativeSqlW**), el argumento *BufferLength* debe ser un número par.  
+ Entradas Número de caracteres en el \* búfer de *OutStatementText* . Si el valor devuelto en * \* InStatementText* es una cadena Unicode (al llamar a **SQLNativeSqlW**), el argumento *BufferLength* debe ser un número par.  
   
  *TextLength2Ptr*  
- Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excluyendo la terminación nula) \*disponible para devolver en *OutStatementText*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, la cadena SQL traducida en \* *OutStatementText* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
+ Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excluyendo la terminación nula) disponible para devolver en \* *OutStatementText*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, la cadena SQL traducida en \* *OutStatementText* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -76,12 +77,12 @@ SQLRETURN SQLNativeSql(
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01004|Datos de cadena, truncados a la derecha|El búfer \* *OutStatementText* no era lo suficientemente grande como para devolver la cadena SQL completa, por lo que se truncó la cadena SQL. La longitud de la cadena de SQL no truncada se devuelve en **TextLength2Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01004|Datos de cadena, truncados a la derecha|El búfer \* *OutStatementText* no era lo suficientemente grande como para devolver la cadena SQL completa, por lo que se TRUNCÓ la cadena SQL. La longitud de la cadena de SQL no truncada se devuelve en **TextLength2Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08003|Conexión no abierta|El estado de *ConnectionHandle* no estaba conectado.|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
 |22007|Formato de fecha y hora no válido|**InStatementText* contenía una cláusula escape con un valor de fecha, hora o marca de tiempo no válido.|  
 |24000|Estado de cursor no válido|El cursor al que se hace referencia en la instrucción se colocó antes del inicio del conjunto de resultados o después del final del conjunto de resultados. Es posible que un controlador que tenga una implementación de cursor DBMS nativa no devuelva este error.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY009|Uso no válido de puntero nulo|(DM) **InStatementText* era un puntero nulo.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.|  

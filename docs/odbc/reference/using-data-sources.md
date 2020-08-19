@@ -1,4 +1,5 @@
 ---
+description: Usar orígenes de datos
 title: Usar orígenes de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df9b09e4c5519e0fff44902bd83b8e3d92a67ca8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 162f1c2bf8d75757ac2c29d60f675ac07ba8b00d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428846"
 ---
 # <a name="using-data-sources"></a>Usar orígenes de datos
 Los orígenes de datos suelen ser creados por el usuario final o un técnico con un programa llamado *Administrador de ODBC*. El administrador de ODBC solicita al usuario que use el controlador y, a continuación, llama a ese controlador. El controlador muestra un cuadro de diálogo que solicita la información necesaria para conectarse al origen de datos. Una vez que el usuario escribe la información, el controlador la almacena en el sistema.  

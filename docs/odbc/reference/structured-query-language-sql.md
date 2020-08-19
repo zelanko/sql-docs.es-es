@@ -1,4 +1,5 @@
 ---
+description: Lenguaje de consulta estructurado (SQL)
 title: Lenguaje de consulta estructurado (SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c669b4424271fc1a3c91dea37159474fb52b97cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c68f14bd3e1ae5df29f52332d29393bf15c3b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428977"
 ---
 # <a name="structured-query-language-sql"></a>Lenguaje de consulta estructurado (SQL)
 Un DBMS típico permite a los usuarios almacenar, acceder y modificar datos de una manera organizada y eficaz. Originalmente, los usuarios de DBMS eran programadores. El acceso a los datos almacenados requiere la escritura de un programa en un lenguaje de programación como COBOL. Aunque estos programas solían escribirse para presentar una interfaz sencilla a un usuario no técnico, el acceso a los propios datos requería los servicios de un programador con conocimientos. El acceso esporádico a los datos no era práctico.  

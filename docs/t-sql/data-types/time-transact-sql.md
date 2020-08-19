@@ -1,4 +1,5 @@
 ---
+description: hora (Transact-SQL)
 title: time (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/07/2017
@@ -22,12 +23,12 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce15115e059018e7065f2a3fefc6943a110cf97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fe87d9a583c60ba6d627168ade3eef07a47467b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368261"
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
 
@@ -53,11 +54,11 @@ ms.locfileid: "86007980"
 |Tamaño de almacenamiento|5 bytes (fijo) es el valor predeterminado con el valor predeterminado de 100 ns de precisión de fracciones de segundo. En Informatica, el valor predeterminado es 4 bytes y fijo, con el valor predeterminado de 1 ms de precisión de fracciones de segundo.|  
 |Precisión|100 nanosegundos (1 milisegundo en Informatica)|  
 |Valor predeterminado|00:00:00<br /><br /> Este valor se usa para la parte de fecha anexada en la conversión implícita de **date** a **datetime2** o **datetimeoffset**.|  
-|Precisión de fracciones de segundo definida por el usuario|Sí|  
+|Precisión de fracciones de segundo definida por el usuario|Yes|  
 |Conservación y reconocimiento del ajuste de zona horaria|No|  
 |Reconocimiento del horario de verano|No|  
   
-|Escala especificada|Resultado (precisión, escala)|Longitud de la columna (bytes)|Fracciones<br /><br /> segundos<br /><br /> precision|  
+|Escala especificada|Resultado (precisión, escala)|Longitud de la columna (bytes)|Fracciones<br /><br /> segundos<br /><br /> Precisión|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
 |**time**|(16,7) [(12,3) en Informatica]|5 (4 en Informatica)|7 (3 en Informatica)|  
 |**time(0)**|(8,0)|3|0-2|  
@@ -105,7 +106,7 @@ ms.locfileid: "86007980"
 ### <a name="converting-timen-data-type-to-other-date-and-time-types"></a>Convertir el tipo de datos time(n) en otros tipos de fecha y hora  
  En esta sección se describe lo que ocurre cuando un tipo de datos **time** se convierte a otros tipos de datos de fecha y hora.  
   
- Cuando la conversión es a **time(n)** , se copian las horas, los minutos y los segundos. Cuando la precisión de destino es menor que la precisión de origen, las fracciones de segundo se redondean para ajustarse a la precisión de destino. En el siguiente ejemplo se muestran los resultados de convertir un valor `time(4)` en un valor `time(3)`.  
+ Cuando la conversión es a **time(n)**, se copian las horas, los minutos y los segundos. Cuando la precisión de destino es menor que la precisión de origen, las fracciones de segundo se redondean para ajustarse a la precisión de destino. En el siguiente ejemplo se muestran los resultados de convertir un valor `time(4)` en un valor `time(3)`.  
   
 ```  
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
@@ -166,7 +167,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- Cuando la conversión es a **datetimeoffset(n)** , la fecha se establece en '1900-01-01' y la hora se copia. El ajuste de zona horaria se establece en +00:00. Cuando la precisión de las fracciones de segundo del valor de **time(n)** es mayor que la precisión del valor de **datetimeoffset(n)** , el valor se redondea para ajustarse. El ejemplo siguiente muestra los resultados de convertir un valor de `time(4)` en un tipo `datetimeoffset(3)`.  
+ Cuando la conversión es a **datetimeoffset(n)**, la fecha se establece en '1900-01-01' y la hora se copia. El ajuste de zona horaria se establece en +00:00. Cuando la precisión de las fracciones de segundo del valor de **time(n)** es mayor que la precisión del valor de **datetimeoffset(n)**, el valor se redondea para ajustarse. El ejemplo siguiente muestra los resultados de convertir un valor de `time(4)` en un tipo `datetimeoffset(3)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -183,7 +184,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- Cuando la conversión es a **datetime2(n)** , la fecha se establece en '1900-01-01', se copia el componente de hora y el ajuste de zona horaria se establece en 00:00. Cuando la precisión de las fracciones de segundo del valor de **datetime2(n)** es mayor que el valor de **time(n)** , el valor se redondeará para ajustarse.  En el siguiente ejemplo se muestran los resultados de convertir un valor `time(4)` en un valor `datetime2(2)`.  
+ Cuando la conversión es a **datetime2(n)**, la fecha se establece en '1900-01-01', se copia el componente de hora y el ajuste de zona horaria se establece en 00:00. Cuando la precisión de las fracciones de segundo del valor de **datetime2(n)** es mayor que el valor de **time(n)**, el valor se redondeará para ajustarse.  En el siguiente ejemplo se muestran los resultados de convertir un valor `time(4)` en un valor `datetime2(2)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  

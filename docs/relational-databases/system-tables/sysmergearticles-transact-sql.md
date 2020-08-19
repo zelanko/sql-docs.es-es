@@ -1,4 +1,5 @@
 ---
+description: sysmergearticles (Transact-SQL)
 title: sysmergearticles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b1678b9430127452fafa9e63cc2719efed088b8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 677fc8a30daa3b9a921bb194c6f4d06635b43284
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427597"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85881375"
 |**description**|**nvarchar(255)**|Descripción breve del artículo.|  
 |**pre_creation_command**|**tinyint**|La acción predeterminada que debe llevarse a cabo cuando se crea el artículo en la base de datos de suscripciones:<br /><br /> **0 =** Ninguno: Si la tabla ya existe en el suscriptor, no se realiza ninguna acción.<br /><br /> **1** = quita la tabla antes de volver a crearla.<br /><br /> **2** = delete: emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.<br /><br /> **3** = TRUNCATE: igual que **2**, pero elimina páginas en lugar de filas. Sin embargo, no precisa la cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|Id. de la publicación a la que pertenece el artículo actual.|  
-|**deseado**|**int**|Alias asignado para la identificación del artículo.|  
+|**nickname**|**int**|Alias asignado para la identificación del artículo.|  
 |**column_tracking**|**int**|Hace referencia a si se ha implementado el seguimiento de columnas para el artículo.|  
 |**status**|**tinyint**|Indica el estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = sin sincronizar: el script de procesamiento inicial para publicar la tabla se ejecutará la próxima vez que se ejecute el agente de instantáneas.<br /><br /> **2** = activo: se ha ejecutado el script de procesamiento inicial para publicar la tabla.<br /><br /> **5** = New_inactive-que se va a agregar.<br /><br /> **6** = New_active-que se va a agregar.|  
 |**conflict_table**|**sysname**|Nombre de la tabla local que contiene los registros en conflicto del artículo actual. Esta tabla solo tiene fines informativos y su contenido puede ser modificado o eliminado con rutinas de resolución de conflictos personalizadas, o directamente por el administrador.|  
@@ -94,8 +95,8 @@ ms.locfileid: "85881375"
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_addmergearticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_changemergearticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
   
   

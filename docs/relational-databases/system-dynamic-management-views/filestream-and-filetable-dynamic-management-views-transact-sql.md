@@ -1,4 +1,5 @@
 ---
+description: Vistas de administración dinámica de secuencia de archivo y FileTable (Transact-SQL)
 title: Vistas de administración dinámica de FileStream y FileTable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 782885ddccf486cb74b0b79b60422f1564d4ddbc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ca18eb28d70fb2b9d479a629545f46bae8ef3d9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427857"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica de secuencia de archivo y FileTable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Creación de los archivos de conexión del servidor (MySQLToSQL)
 title: Crear los archivos de conexión del servidor (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fa9505c0f5c40dcf2ff7cd84fc956240728385b3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: df3eaf968bb43b9b6e3adac1027f8fe1a49db2d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935734"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426887"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>Creación de los archivos de conexión del servidor (MySQLToSQL)
 La información del servidor se puede especificar en la sección servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión de servidor es, `-c <serverconnectionfile>` . Si el mismo identificador de servidor está presente en el archivo de script y en el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  

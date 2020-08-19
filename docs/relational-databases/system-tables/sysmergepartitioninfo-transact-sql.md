@@ -1,4 +1,5 @@
 ---
+description: sysmergepartitioninfo (Transact-SQL)
 title: sysmergepartitioninfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 44f44ede09eaf6eabfee9ef6b240e599c8eec744
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b987adef188e580b38f5f4df5b24b4f6ab22825b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427587"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

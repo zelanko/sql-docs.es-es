@@ -1,4 +1,5 @@
 ---
+description: SQLColAttribute
 title: SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1815a76dcfde42e45cb3b2ca1ffe4186ff52a238
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86590239e22f19ba0858af583193675bc711a0ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428347"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86012436"
 |SQL_DESC_TABLE_NAME|Disponible en conjuntos de resultados recuperados de instrucciones que generan cursores de servidor o en instrucciones SELECT ejecutadas que contienen una cláusula FOR BROWSE.|  
 |SQL_DESC_UNNAMED|SQL_NAMED en todas las columnas de un conjunto de resultados, a menos que una columna sea el resultado de una expresión que no contiene ninguna asignación de etiqueta como parte de la expresión. Cuando SQL_DESC_UNNAMED devuelve SQL_UNNAMED, todos los atributos de identificador de columna de ODBC contienen cadenas de longitud cero en la columna.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]El controlador ODBC de Native Client usa la instrucción SET FMTONLY para reducir la sobrecarga del servidor cuando se llama a **SQLColAttribute** para las instrucciones preparadas pero no ejecutadas.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El controlador ODBC de Native Client usa la instrucción SET FMTONLY para reducir la sobrecarga del servidor cuando se llama a **SQLColAttribute** para las instrucciones preparadas pero no ejecutadas.  
   
  Para tipos de valor grande, **SQLColAttribute** devolverá los valores siguientes:  
   
@@ -73,11 +75,11 @@ ms.locfileid: "86012436"
 |SQL_CA_SS_NUM_COMPUTES|Número de cláusulas COMPUTE especificadas en la instrucción SELECT de Transact-SQL actual.|  
 |SQL_CA_SS_NUM_ORDERS|Número de columnas especificadas en la cláusula ORDER BY de una instrucción SELECT de Transact-SQL u ODBC.|  
   
- \*Available si el atributo de instrucción SQL_SOPT_SS_HIDDEN_COLUMNS está establecido en SQL_HC_ON.  
+ \*   Available si el atributo de instrucción SQL_SOPT_SS_HIDDEN_COLUMNS está establecido en SQL_HC_ON.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]se introdujeron campos descriptores específicos del controlador para proporcionar información adicional para indicar el nombre de la colección de esquemas XML, el nombre de esquema y el nombre de catálogo, respectivamente. Estas propiedades no requieren comillas ni un carácter de escape si contienen caracteres no alfanuméricos. En la tabla siguiente se enumeran estos nuevos campos descriptores:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se introdujeron campos descriptores específicos del controlador para proporcionar información adicional para indicar el nombre de la colección de esquemas XML, el nombre de esquema y el nombre de catálogo, respectivamente. Estas propiedades no requieren comillas ni un carácter de escape si contienen caracteres no alfanuméricos. En la tabla siguiente se enumeran estos nuevos campos descriptores:  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|Nombre del catálogo donde se define el nombre de una colección de esquemas XML. Si no se encuentra el nombre de catálogo, esta variable contiene una cadena vacía.<br /><br /> Esta información se devuelve del campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME de IRD, que es un campo de lectura y escritura.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|Nombre del esquema donde se define el nombre de una colección de esquemas XML. Si no se encuentra el nombre de esquema, esta variable contiene una cadena vacía.<br /><br /> Esta información se devuelve del campo de registro SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME de IRD, que es un campo de lectura y escritura.|  

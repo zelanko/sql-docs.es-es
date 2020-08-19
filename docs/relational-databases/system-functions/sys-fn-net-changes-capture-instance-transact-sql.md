@@ -1,4 +1,5 @@
 ---
+description: Sys. fn_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
 title: Sys. fn_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59d8214083046510d9c4d71724d1aab1c96b1e1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427767"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>Sys. fn_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,13 +94,13 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de columna|Descripción|  
+|Nombre de la columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  
 |\<columns from @column_list>|**varía**|Las columnas que se identifican en el argumento **column_list** en el sp_cdc_generate_wrapper_function cuando se llama a para generar el script con el fin de crear el contenedor. Si *column_list* es null, todas las columnas de origen sometidas a seguimiento aparecerán en el conjunto de resultados.|  
 |__CDC_OPERATION|**nvarchar (2)**|Código de operación que indica la operación necesaria para aplicar la fila al entorno de destino. La operación variará en función del valor del argumento *row_filter_option* que se proporciona en la llamada siguiente:<br /><br /> *row_filter_option* = ' All ', ' All with Mask '<br /><br /> 'D' - operación de eliminación<br /><br /> 'I' - operación de inserción<br /><br /> 'UN' - operación de actualización<br /><br /> *row_filter_option* = ' All with Merge '<br /><br /> 'D' - operación de eliminación<br /><br /> 'M' - operación de inserción o de actualización|  
 |\<columns from @update_flag_list>|**bit**|Marca de bits que se denomina anexando _uflag al nombre de columna. La marca solo toma un valor no nulo cuando *row_filter_option* **= ' All with mask '** y \_ _CDC_OPERATION **= ' un '**. Se establece en 1 si la columna correspondiente se modificó dentro de la ventana de consulta. De lo contrario, es 0.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La fn_net_changes_<capture_instance función> actúa como contenedor de la función de consulta CDC. fn_cdc_get_net_changes_<capture_instance>. El procedimiento almacenado sys.sp_cdc_generate_wrapper se utiliza para crear el script del contenedor.  
   
  Las funciones contenedoras no se crean automáticamente. Para crear funciones contenedoras hay que seguir dos pasos:  

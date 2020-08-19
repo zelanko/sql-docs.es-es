@@ -1,4 +1,5 @@
 ---
+description: Propiedad Description (clase SqlService)
 title: Propiedad Description (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af8cfff1bc0fe3d62792eab95134915f76d638d2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 49b9beaec4a7ea2263b6d56de276eb1d45f99c6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427217"
 ---
 # <a name="description-property-sqlservice-class"></a>Propiedad Description (clase SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ object.Description [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que contiene una descripción textual del servicio al que se hace referencia.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

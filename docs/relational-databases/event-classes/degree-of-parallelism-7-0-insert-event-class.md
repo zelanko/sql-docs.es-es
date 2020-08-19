@@ -1,4 +1,5 @@
 ---
+description: Degree of Parallelism (7.0 Insert), clase de eventos
 title: Degree of Parallelism (7.0 Insert), clase de eventos (7.0 Insert) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58d6b43d2ffc2ea3c41ebe9a17b5cb9dc5d01471
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97800bdd8137d20fabec298bce235bd2a4232b79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428587"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Degree of Parallelism (7.0 Insert), clase de eventos
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La clase de eventos **Degree of Parallelism (7.0 Insert)** se produce cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SELECT, INSERT, UPDATE o DELETE.  
+   La clase de eventos **Degree of Parallelism (7.0 Insert)** se produce cada vez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SELECT, INSERT, UPDATE o DELETE.  
   
  Cuando se incluye esta clase de eventos en un seguimiento, la sobrecarga que conlleva puede reducir mucho el rendimiento si estos eventos se producen frecuentemente. Para minimizar la sobrecarga provocada, limite el uso de esta clase de eventos a los seguimientos que supervisan brevemente problemas específicos.  
   

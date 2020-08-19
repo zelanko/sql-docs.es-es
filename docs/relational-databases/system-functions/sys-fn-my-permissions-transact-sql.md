@@ -1,4 +1,5 @@
 ---
+description: sys.fn_my_permissions (Transact-SQL)
 title: Sys. fn_my_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9bb57e2d01c4942955e838cf358444636bf7aedb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75ff0dfb3355158a3dedbc9d5e066dbce0ac441f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427757"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *elemento protegible*  
+ *securable*  
  Es el nombre del elemento protegible. Si el elemento protegible es el servidor o una base de datos, este valor debe establecerse en NULL. *securable* es una expresión escalar de tipo **sysname**. el elemento *protegible* puede ser un nombre de varias partes.  
   
  '*securable_class*'  
@@ -51,13 +52,13 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>Columnas devueltas  
  En la tabla siguiente se enumeran las columnas que **fn_my_permissions** devuelve. En cada fila devuelta se describe un permiso correspondiente al contexto de seguridad actual del elemento protegible. Devuelve NULL si la consulta da error.  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Nombre del elemento protegible en el que se conceden los permisos indicados.|  
 |subentity_name|**sysname**|Nombre de columna si el elemento protegible tiene columnas; de lo contrario, es NULL.|  
 |permission_name|**nvarchar**|Nombre del permiso.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta función con valores de tabla devuelve una lista de los permisos efectivos correspondientes a la entidad de seguridad que realiza la llamada para un elemento protegible determinado. Un permiso efectivo es cualquiera de los siguientes:  
   
 -   Un permiso concedido directamente a la entidad de seguridad, no denegado.  
@@ -161,10 +162,10 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones de seguridad &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [Permisos &#40;Motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Proteger](../../relational-databases/security/securables.md)   
- [Jerarquía de permisos &#40;Motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [Sys. fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Securables](../../relational-databases/security/securables.md)   
+ [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   

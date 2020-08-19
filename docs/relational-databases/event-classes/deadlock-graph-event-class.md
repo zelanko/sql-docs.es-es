@@ -1,4 +1,5 @@
 ---
+description: Deadlock Graph, clase de eventos
 title: Deadlock Graph, clase de eventos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22b77db3d47f0398377be4c7d3c57feda6b82b3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a2f0ff2d9798534358e57f56c5952d6b4746807
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428537"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph, clase de eventos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85765262"
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se detectó el interbloqueo.|14|Sí|  
 |**TextData**|**ntext**|Descripción en formato XML del interbloqueo.|1|Sí|  
-|**TransactionID**|**bigint**|No se usa.|4|Sí|  
+|**TransactionID**|**bigint**|No se utiliza.|4|Sí|  
   
 ## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

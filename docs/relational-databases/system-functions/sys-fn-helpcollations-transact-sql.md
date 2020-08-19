@@ -1,4 +1,5 @@
 ---
+description: sys.fn_helpcollations (Transact-SQL)
 title: Sys. fn_helpcollations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
@@ -20,11 +21,12 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d91ff0f85ba496397025ea99012509edea9dd865
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 66b0a9ad6c68e209cbcf21a05ef015f43535ec4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427837"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -49,7 +51,7 @@ fn_helpcollations ()
 |Nombre|**sysname**|Nombre de intercalación estándar|  
 |Descripción|**nvarchar(1000)**|Descripción de la intercalación|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite intercalaciones de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]también admite un número limitado (<80) de intercalaciones denominadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intercalaciones, desarrolladas antes de las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intercalaciones de Windows admitidas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las intercalaciones todavía se admiten por compatibilidad con versiones anteriores, pero no deben usarse para nuevos trabajos de desarrollo. Para obtener más información sobre la intercalación de Windows, consulte [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Para obtener más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite intercalaciones de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también admite un número limitado (<80) de intercalaciones denominadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intercalaciones, desarrolladas antes de las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intercalaciones de Windows admitidas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las intercalaciones todavía se admiten por compatibilidad con versiones anteriores, pero no deben usarse para nuevos trabajos de desarrollo. Para obtener más información sobre la intercalación de Windows, consulte [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Para obtener más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Ejemplos
 

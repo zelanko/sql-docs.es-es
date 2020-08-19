@@ -1,4 +1,5 @@
 ---
+description: Introducción con SSMA para la consola de acceso (AccessToSQL)
 title: Introducción con SSMA para la consola de acceso (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e9ca0ef87aac60849d114d0e43dd349e063e8c83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1923323699282e40fcca8afa1a8079edd8163c09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426987"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introducción con SSMA para la consola de acceso (AccessToSQL)
 En esta sección se describe el procedimiento para iniciar y comenzar a usar la aplicación de consola de Access. Además, aquí se enumeran las convenciones que se usan en una ventana de salida de la consola de SSMA típica.  
@@ -61,6 +62,6 @@ Interpretación de color de la salida de la consola en la tabla siguiente:
 |Verde|Solicitar la entrada del usuario|  
 |Cian|Inicio, finalización y resultado de una operación|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Instalación de SQL Server Migration Assistant para el acceso](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

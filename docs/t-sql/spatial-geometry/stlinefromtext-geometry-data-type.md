@@ -1,4 +1,5 @@
 ---
+description: STLineFromText (tipo de datos geometry)
 title: STLineFromText (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d050440ae605b5bb43cb3ac5c423929088a48626
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 77d76ddaeab5952db35f6395d0d2b14a5b904290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427047"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *linestring_tagged_text*  
- Es la representación WKT de la instancia de **geometryLineString** que quiere devolver. *linestring_tagged_text* es una expresión **nvarchar(max)** .  
+ Es la representación WKT de la instancia de **geometryLineString** que quiere devolver. *linestring_tagged_text* es una expresión **nvarchar(max)**.  
   
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryLineString** que quiere devolver.  
@@ -50,7 +51,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Tipo de OGC: **LineString**  
+ Tipo OGC: **LineString**  
   
 ## <a name="remarks"></a>Observaciones  
 Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto. No se admiten las características simples de la notación de WKT de geometría medida y de tres dimensiones de Open Geospatial Consortium (OGC) para la especificación de SQL, versión 1.2.1. Vea los ejemplos de la representación compatible de los valores Z (elevación) y M (medida).

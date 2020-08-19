@@ -1,4 +1,5 @@
 ---
+description: Cuadro de diálogo "Configuración del publicador" de Replicación de SQL Server
 title: "\"Configuración del publicador\" (SSMS) | Microsoft Docs"
 descripton: Describes the 'Publisher Settings' dialog box found in Replication Monitor within SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -16,16 +17,16 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a6232fc78b4c9b1d68a9cc96e6fed69138e5075f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 92a2570f2d591f3eb2fb3c2c460c60809bc0f5fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427927"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>Cuadro de diálogo "Configuración del publicador" de Replicación de SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  El cuadro de diálogo **Configuración del publicador** permite cambiar la configuración de los publicadores que se han agregado al panel izquierdo del Monitor de replicación.  
+   El cuadro de diálogo **Configuración del publicador** permite cambiar la configuración de los publicadores que se han agregado al panel izquierdo del Monitor de replicación.  
   
 ## <a name="options"></a>Opciones  
  **Conexión del publicador**  

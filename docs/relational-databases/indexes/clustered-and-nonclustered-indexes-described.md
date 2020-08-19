@@ -1,4 +1,5 @@
 ---
+description: Índices agrupados y no agrupados descritos
 title: Índices agrupados y no agrupados descritos | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
@@ -14,12 +15,12 @@ ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7987fe81a4c55093dca6875074d752a72789a3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d64eedf43ee8ef64a5a2e5e958df02ea8e20b2cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428427"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Índices agrupados y no agrupados descritos
 
@@ -66,7 +67,7 @@ Cuando el optimizador de consultas utiliza un índice, busca en las columnas de 
 > [!IMPORTANT]
 > Para obtener más información sobre las directrices de diseño de índices y los datos internos, consulte la [Guía de diseño de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
-## <a name="related-content"></a>Contenido relacionado
+## <a name="related-content"></a>Contenidos relacionados
 
 - [Guía de diseño de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md)
 - [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)

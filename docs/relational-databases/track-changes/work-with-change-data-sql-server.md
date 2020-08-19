@@ -1,4 +1,5 @@
 ---
+description: Trabajar con datos modificados (SQL Server)
 title: Trabajar con datos modificados
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90513b794e7d7125e46aa5f1d6cdb2d85ad34880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889092"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427377"
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabajar con datos modificados (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85889092"
  Vea la plantilla para enumerar cambios netos con TRY CATCH, que contiene una demostración acerca de cómo se pueden interceptar estos errores de TVF conocidos y se puede devolver información más significativa sobre el error.  
   
 > [!NOTE]  
->  Para buscar las plantillas de captura de datos modificados en SQL Server Management Studio, en el menú **Ver** , haga clic en **Explorador de plantillas**, expanda **Plantillas de SQL Server** y, luego, la carpeta **Captura de datos modificados** .  
+>   Para buscar las plantillas de captura de datos modificados en SQL Server Management Studio, en el menú **Ver** , haga clic en **Explorador de plantillas**, expanda **Plantillas de SQL Server** y, a continuación, expanda la carpeta **Captura de datos modificados** .  
   
 ##  <a name="query-functions"></a><a name="Functions"></a> Funciones de consulta  
  Según sean las características de la tabla de origen que se someta a seguimiento y la manera en que se configure su instancia de captura, se generarán una o las dos funciones TVF para la consulta de datos modificados.  

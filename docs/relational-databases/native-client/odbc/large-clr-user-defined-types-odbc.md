@@ -1,4 +1,5 @@
 ---
+description: Tipos CLR grandes definidos por el usuario (ODBC)
 title: Tipos definidos por el usuario CLR grandes (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428167"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos CLR grandes definidos por el usuario (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -108,7 +110,7 @@ ms.locfileid: "86009755"
 ## <a name="column-metadata-returned-by-sqlcolumns-and-sqlprocedurecolumns-catalog-metadata"></a>Metadatos de columna devueltos por SQLColumns y SQLProcedureColumns (metadatos de catálogo)  
  Para los UDT se devuelven los siguientes valores de columna:  
   
-|Nombre de columna|SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|  
+|Nombre de la columna|SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|  
 |-----------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |TYPE_NAME|Nombre del UDT.|Nombre del UDT.|  
@@ -135,7 +137,7 @@ ms.locfileid: "86009755"
 |SQL_C_BINARY|Compatible|  
 |SQL_C_CHAR|Realizar|  
   
- \*Los datos binarios se convierten en una cadena hexadecimal.  
+ \* Los datos binarios se convierten en una cadena hexadecimal.  
   
  Las conversiones compatibles de tipos de datos C a SQL son las siguientes:  
   
@@ -145,7 +147,7 @@ ms.locfileid: "86009755"
 |SQL_C_BINARY|Compatible|  
 |SQL_C_CHAR|Realizar|  
   
- \*Se produce una conversión de cadena hexadecimal a datos binarios.  
+ \* Se produce una conversión de cadena hexadecimal a datos binarios.  
   
 ## <a name="sql_variant-support-for-udts"></a>Compatibilidad de SQL_VARIANT con los UDT  
  Los UDT no se admiten en columnas SQL_VARIANT.  
@@ -158,8 +160,8 @@ ms.locfileid: "86009755"
   
 |Versión del servidor|SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
-|SQL Server 2005|**DEFINIDO**|**varbinary(max)**|  
-|SQL Server 2008 y posterior|**DEFINIDO**|**DEFINIDO**|  
+|SQL Server 2005|**UDT**|**varbinary(max)**|  
+|SQL Server 2008 y posterior|**UDT**|**UDT**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Funciones ODBC compatibles con UDT de CLR grandes  
  En esta sección se describen los cambios realizados en las funciones ODBC de SQL Server Native Client para admitir UDT de CLR grandes.  
@@ -212,7 +214,7 @@ ms.locfileid: "86009755"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Los valores devueltos para los UDT son los siguientes:  
   
-|Tipo de datos de SQL|Tipo|SubType|Longitud|Precisión|Escala|  
+|Tipo de datos de SQL|Tipo|SubType|Length|Precisión|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -232,7 +234,7 @@ ms.locfileid: "86009755"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Los valores que se permiten para los UDT son los siguientes:  
   
-|Tipo de datos de SQL|Tipo|SubType|Longitud|Precisión|Escala|  
+|Tipo de datos de SQL|Tipo|SubType|Length|Precisión|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

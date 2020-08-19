@@ -1,4 +1,5 @@
 ---
+description: Actualizar una aplicación desde SQL Server 2005 Native Client
 title: Actualización desde SQL 2005
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,11 +13,12 @@ ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 540816610dacdd14ca47ba07c34c2752abc3dcbb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b192f9080973c34ca5c054595b586bd9aa14f7e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428227"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Actualizar una aplicación desde SQL Server 2005 Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +32,7 @@ ms.locfileid: "86005709"
 |Cambios de comportamiento en SQL Server Native Client desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Descripción|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB solamente rellena los datos hasta la escala definida.|En el caso de las conversiones en las que los datos convertidos se envían al servidor, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (a partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ) rellena los ceros finales de los datos solo hasta la longitud máxima de los valores **DateTime** . En SQL Server Native Client 9.0 los datos se rellenaban hasta 9 dígitos.|  
-|Valide DBTYPE_DBTIMESTAMP para ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (a partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ) implementa el requisito OLE DB de *BScale* en ICommandWithParameter:: SetParameterInfo para establecerse en la precisión de fracciones de segundo para DBTYPE_DBTIMESTAMP.|  
+|Valide DBTYPE_DBTIMESTAMP para ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (a partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ) implementa el requisito OLE DB de *BScale* en ICommandWithParameter:: SetParameterInfo para establecerse en la precisión de fracciones de segundo para DBTYPE_DBTIMESTAMP.|  
 |El procedimiento almacenado **sp_columns** ahora devuelve **"NO"** en lugar de **"NO "** para la columna IS_NULLABLE.|A partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10,0 ( [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ), **sp_columns** procedimiento almacenado devuelve ahora **"no"** en lugar de **"no"** para una columna IS_NULLABLE.|  
 |SQLSetDescRec, SQLBindParameter y SQLBindCol ahora realizan la comprobación de coherencia.|Antes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10,0, el establecimiento de SQL_DESC_DATA_PTR no provocaba una comprobación de coherencia para ningún tipo de descriptor en SQLSetDescRec, SQLBindParameter o SQLBindCol.|  
 |SQLCopyDesc Now realiza la comprobación de coherencia del descriptor.|Antes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10,0, SQLCopyDesc no realizaba una comprobación de coherencia cuando el campo SQL_DESC_DATA_PTR estaba establecido en un registro determinado.|  

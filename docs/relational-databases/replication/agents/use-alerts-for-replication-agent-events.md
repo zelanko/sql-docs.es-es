@@ -1,4 +1,5 @@
 ---
+description: Usar alertas para eventos del Agente de replicación
 title: Usar alertas para eventos del Agente de replicación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a52154d55f1703cc2f7d1a9221021ab11d94177
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0fbec0a8ff1bcd6416ab0c24166a5bf5559cb8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428047"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar alertas para eventos del Agente de replicación
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +42,9 @@ ms.locfileid: "86919751"
 |14151|**Replicación: error de agente**|Un agente termina con un error.|Sí|  
 |14152|**Replicación: reintento de agente**|El agente termina después de volver a intentar sin éxito una operación (el agente encuentra un error, por ejemplo que el servidor no está disponible, interbloqueo, error en la conexión o error de tiempo de espera).|Sí|  
 |14157|**Replicación: suscripción expirada quitada**|Se quitó la suscripción expirada.|No|  
-|20572|**Replicación: Suscripción reinicializada por no pasar la validación**|El trabajo de respuesta "Reinicializar suscripciones con errores de validación de datos" reinicializa correctamente una suscripción.|No|  
+|20572|**Replicación: suscripción reinicializada por no pasar la validación**|El trabajo de respuesta "Reinicializar suscripciones con errores de validación de datos" reinicializa correctamente una suscripción.|No|  
 |20574|**Replicación: el suscriptor no ha superado la validación de datos**|Un agente de distribución o de mezcla no puede validar los datos.|Sí|  
-|20575|**Replicación: El suscriptor ha pasado la validación de datos**|Un agente de distribución o de mezcla pasa la validación de los datos.|Sí|  
+|20575|**Replicación: el suscriptor ha superado la validación de datos**|Un agente de distribución o de mezcla pasa la validación de los datos.|Sí|  
 |20578|**Replicación: cierre personalizado del agente**|||  
 |22815|**Alerta de detección de conflictos punto a punto**|El Agente de distribución detecta un conflicto cuando intenta aplicar un cambio en un nodo punto a punto.|Sí|  
   

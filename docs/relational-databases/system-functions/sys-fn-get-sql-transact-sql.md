@@ -1,4 +1,5 @@
 ---
+description: sys.fn_get_sql (Transact-SQL)
 title: Sys. fn_get_sql (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a20cd13526bcee06e4f4ce3aa93c52a9fd156456
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6f5e3f4af1cd1bae33f0a340333cb6afd3268158
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427807"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ sys.fn_get_sql ( SqlHandle )
 |encrypted|**bit**|Indica si el objeto está cifrado.<br /><br /> 0 = No cifrado<br /><br /> 1 = Cifrada|  
 |text|**text**|Texto de la instrucción SQL. Este valor es NULL para objetos cifrados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede obtener un identificador SQL válido de la columna sql_handle de la vista de administración dinámica [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
   
  Si pasa un identificador que ya no existe en la memoria caché, fn_get_sq**l** devuelve un conjunto de resultados vacío. Si pasa un identificador no válido, el archivo por lotes se detiene y aparece un mensaje de error.  

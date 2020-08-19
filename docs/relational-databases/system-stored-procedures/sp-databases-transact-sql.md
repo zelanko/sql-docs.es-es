@@ -1,4 +1,5 @@
 ---
+description: sp_databases (Transact-SQL)
 title: sp_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 862101470f004c1e3681bd91745e9e2d10aab6bc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 427014e08e10a018fd8b04841a1082f2cdce292a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447396"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ sp_databases
 |**DATABASE_SIZE**|**int**|Tamaño de la base de datos, en kilobytes.|  
 |**COMENTARIOS**|**VARCHAR (254)**|Para el [!INCLUDE[ssDE](../../includes/ssde-md.md)], este campo siempre devuelve NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los nombres de bases de datos devueltos pueden utilizarse como parámetros en la instrucción USE para cambiar el contexto de la base de datos actual.  
   
  **sp_databases** no tiene ningún equivalente en Conectividad abierta de bases de datos (ODBC).  
@@ -68,6 +69,6 @@ EXEC sp_databases;
   
 ## <a name="see-also"></a>Consulte también  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [HAS_DBACCESS &#40;&#41;de Transact-SQL](../../t-sql/functions/has-dbaccess-transact-sql.md)  
+ [HAS_DBACCESS &#40;&#41;de Transact-SQL ](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   
   

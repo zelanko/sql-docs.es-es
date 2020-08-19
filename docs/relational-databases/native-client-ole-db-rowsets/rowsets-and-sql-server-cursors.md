@@ -1,4 +1,5 @@
 ---
+description: Conjuntos de filas y cursores de SQL Server (proveedor de OLE DB de Native Client)
 title: Conjuntos de filas y cursores de SQL Server (proveedor de OLE DB de Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1829d375ad8a870f1d2d24a40bfd26f6e790e261
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 71c5f372ef0a985aaba3016eee398bb7183dcbb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448377"
 ---
 # <a name="rowsets-and-sql-server-cursors-native-client-ole-db-provider"></a>Conjuntos de filas y cursores de SQL Server (proveedor de OLE DB de Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -92,7 +93,7 @@ ms.locfileid: "87246844"
   
  Para usar un tipo de modelo de cursor determinado, busque la columna correspondiente al modelo de cursor y busque todas las propiedades de conjunto de filas que tengan el valor 'T' en la columna. Establezca estas propiedades de conjunto de filas en VARIANT_TRUE para usar ese modelo de cursor específico. Las propiedades del conjunto de filas que contienen '-' como valor pueden establecerse en VARIANT_TRUE o VARIANT_FALSE.  
   
-|Propiedades de conjunto de filas o modelos de cursores|Valor predeterminado<br /><br /> resultado<br /><br /> set<br /><br /> (SL)|Fast (rápido)<br /><br /> solo <br /><br /> solo<br /><br /> (SL)|estática<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
+|Propiedades de conjunto de filas o modelos de cursores|Valor predeterminado<br /><br /> resultado<br /><br /> set<br /><br /> (SL)|Fast (rápido)<br /><br /> solo<br /><br /> solo<br /><br /> (SL)|estática<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

@@ -1,4 +1,5 @@
 ---
+description: sp_cursorfetch (Transact-SQL)
 title: sp_cursorfetch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7d68223e7ed12477b446934f01b600b840b6651a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447366"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -96,7 +97,7 @@ sp_cursorfetch cursor
 |Para los cursores KEYSET y STATIC|Normalmente, el tamaño del conjunto de claves actual.<br /><br /> **-m** si el cursor está en la creación asincrónica con *m* filas encontradas en este punto.|  
 |Para los cursores DYNAMIC|-1|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="cursor-parameter"></a>Parámetro cursor  
  Antes de que se produzca ninguna operación de captura, la posición predeterminada de un cursor está antes de la primera fila del conjunto de resultados.  
@@ -133,7 +134,7 @@ sp_cursorfetch cursor
   
  El parámetro de estado de RPC se establece en uno de los valores mostrados en la siguiente tabla.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0|El procedimiento se ejecutó correctamente.|  
 |0x0001|Se produjo un error en el procedimiento.|  
@@ -142,7 +143,7 @@ sp_cursorfetch cursor
   
  Las filas se devuelven como un conjunto de resultados típico, es decir, formato de columna (0x2a), filas (0xd1), seguido de Done (0xfd). Los tokens de metadatos se envían en el mismo formato que el especificado para sp_cursoropen, es decir, 0x81, 0xa5 y 0xa4 para los usuarios de SQL Server 7.0, etc. Los indicadores del estado de la fila se envían como columnas ocultas, similar al modo BROWSE, al final de cada fila con el nombre de columna rowstat y el tipo de datos INT4. Esta columna rowstat tiene uno de los valores que se muestran en la tabla siguiente.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -192,7 +193,7 @@ row3 contents
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_cursoropen &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursoropen &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

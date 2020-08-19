@@ -1,4 +1,5 @@
 ---
+description: Desconectar de una instancia de SQL Server
 title: Desconectar de una instancia de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,18 +17,19 @@ ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b7d361ab7648c4cc196aaf9ee2d7be88d980e4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c302932183baee6528ad364693af68e4ce2a84e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448099"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>Desconectar de una instancia de SQL Server
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   No se requiere cerrar ni desconectar manualmente los objetos de Objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO). Las conexiones se abren y se cierra según se requiere.  
   
-## <a name="connection-pooling"></a>Agrupar conexiones  
+## <a name="connection-pooling"></a>Agrupación de conexiones  
  Cuando se llama al método [Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect) , la conexión no se libera automáticamente. Se debe llamar al método [Disconnect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect) explícitamente para liberar la conexión al grupo de conexiones. También puede solicitar una conexión no agrupada. Para ello, establezca la propiedad [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection) de la <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> propiedad que hace referencia al objeto [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) .  
   
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>Desconectar de una instancia de SQL Server para RMO  

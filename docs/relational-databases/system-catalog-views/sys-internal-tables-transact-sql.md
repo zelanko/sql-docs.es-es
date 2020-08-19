@@ -1,4 +1,5 @@
 ---
+description: sys.internal_tables (Transact-SQL)
 title: Sys. internal_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73be0af1fd81cfc415417ff2ff233bbfa5e6ca41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447945"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +44,12 @@ ms.locfileid: "85898913"
 |**parent_id**|**int**|Id. del primario, independientemente de si es de ámbito de esquema o no. Es 0 si no hay primario.<br /><br /> **queue_messages**  =  **object_id** de la cola<br /><br /> **xml_index_nodes**  =  **object_id** del índice XML<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** del catálogo de texto completo<br /><br /> **fulltext_index_map**  =  **object_id** del índice de texto completo<br /><br /> **query_notification**o **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** de un índice extendido, como un índice espacial<br /><br /> **object_id** de la tabla para la que está habilitado el seguimiento de tablas = **change_tracking**|  
 |**parent_minor_id**|**int**|Id. secundario del primario.<br /><br /> **xml_index_nodes**  =  **index_id** del índice XML<br /><br /> **extended_indexes**  =  **index_id** de un índice extendido, como un índice espacial<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**o **change_tracking**|  
 |**lob_data_space_id**|**int**|Un valor distinto de cero es el Id. del espacio de datos (grupo de archivos o esquema de partición) que almacena los datos de objetos grandes (LOB) para esta tabla.|  
-|**filestream_data_space_id**|**int**|Reservado para uso futuro.|  
+|**filestream_data_space_id**|**int**|Reservado para un uso futuro.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las tablas internas se colocan en el mismo grupo de archivos que la entidad primaria. Puede usar la consulta del catálogo que se muestra en el ejemplo F a continuación para devolver el número de páginas que usan las tablas internas para los datos almacenados consecutivamente, no consecutivamente y de objetos grandes (LOB).  
   
  Puede usar el procedimiento del sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) para devolver datos de uso de espacio para las tablas internas. **sp_spaceused** informa del espacio de tabla interno de las siguientes maneras:  

@@ -1,4 +1,5 @@
 ---
+description: sp_detach_schedule (Transact-SQL)
 title: sp_detach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19988c59d020d0f77d1f23bf0a210f2ae1488933
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f81a771e8dc40d6eb27cb68ea3a62e37c3b6b99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447278"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,21 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`Número de identificación del trabajo del que se va a quitar la programación. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` Número de identificación del trabajo del que se va a quitar la programación. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'`Nombre del trabajo del que se va a quitar la programación. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo del que se va a quitar la programación. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @schedule_id = ] schedule_id`El número de identificación de la programación que se va a quitar del trabajo. *schedule_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @schedule_id = ] schedule_id` El número de identificación de la programación que se va a quitar del trabajo. *schedule_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @schedule_name = ] 'schedule_name'`Nombre de la programación que se va a quitar del trabajo. *schedule_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @schedule_name = ] 'schedule_name'` Nombre de la programación que se va a quitar del trabajo. *schedule_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`Especifica si se deben eliminar las programaciones de trabajos no utilizadas. *delete_unused_schedule* es de **bit**y su valor predeterminado es **0**, lo que significa que se conservarán todas las programaciones, incluso si no hay ningún trabajo que haga referencia a ellas. Si se establece en **1**, las programaciones de trabajos sin usar se eliminan si no hay ningún trabajo que haga referencia a ellas.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Especifica si se deben eliminar las programaciones de trabajos no utilizadas. *delete_unused_schedule* es de **bit**y su valor predeterminado es **0**, lo que significa que se conservarán todas las programaciones, incluso si no hay ningún trabajo que haga referencia a ellas. Si se establece en **1**, las programaciones de trabajos sin usar se eliminan si no hay ningún trabajo que haga referencia a ellas.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -93,8 +94,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

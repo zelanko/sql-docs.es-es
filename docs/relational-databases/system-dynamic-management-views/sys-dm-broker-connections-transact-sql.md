@@ -1,4 +1,5 @@
 ---
+description: sys.dm_broker_connections (Transact-SQL)
 title: Sys. dm_broker_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5dc4329cdd9b5ba5588a20a67aca8ae664f0041f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e921c4bf0920f6586a7a837ccfea73c759f8b10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894634"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447764"
 ---
 # <a name="sysdm_broker_connections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

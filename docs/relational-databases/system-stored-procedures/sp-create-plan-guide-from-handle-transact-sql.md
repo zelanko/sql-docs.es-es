@@ -1,4 +1,5 @@
 ---
+description: sp_create_plan_guide_from_handle (Transact-SQL)
 title: sp_create_plan_guide_from_handle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2a43abe560238f13f76cebc837adaac6a536f7fb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 909bd7489421abb4b9ee1650c267eb7a35c1e072
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447409"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Si se especifica NULL o no se especifica un desplazamiento de instrucción, se crea una guía de plan para cada instrucción del lote utilizando el plan de consulta para el identificador de plan especificado. Las guías de plan resultantes son equivalentes a las guías de plan que utilizan la sugerencia de consulta USE PLAN para forzar el uso de un plan concreto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  No se puede crear una guía de plan para todos los tipos de instrucción. Si no puede crearse una guía de plan para una instrucción del lote, el procedimiento almacenado omite la instrucción y continúa en la instrucción siguiente del lote. Si una instrucción aparece varias veces en el mismo lote, se habilita el plan para la última aparición y se deshabilitan los planes anteriores para la instrucción. Si no se puede utilizar ninguna instrucción del lote en una guía de plan, se producirá el error 10532 y la instrucción producirá un error. Se recomienda obtener siempre el identificador de plan a partir de la vista de administración dinámica sys.dm_exec_query_stats para evitar en lo posible la aparición de este error.  
   
 > [!IMPORTANT]  
@@ -120,7 +121,7 @@ GO
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [Guías de plan](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

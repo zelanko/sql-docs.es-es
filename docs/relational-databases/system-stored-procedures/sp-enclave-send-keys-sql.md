@@ -1,4 +1,5 @@
 ---
+description: sp_enclave_send_keys (Transact-SQL)
 title: sp_enclave_send_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/19/2019
@@ -19,23 +20,23 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 57a7af110956bdf557ad751723f2497b6aa3ede0
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 09409a3c3b71a668d897d50d6bb22e51f21e51d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447205"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Envía las claves de cifrado de columnas, definidas en la base de datos, al enclave seguro de servidor que se usa con [Always Encrypted con enclaves seguro](../security/encryption/always-encrypted-enclaves.md).
 
-`sp_enclave_send_keys`solo envía las claves que están habilitadas para enclave y cifran las columnas que usan el cifrado aleatorio y tienen índices. Para una consulta de usuario normal, un controlador cliente proporciona el enclave con las claves necesarias para los cálculos de la consulta. `sp_enclave_send_keys`envía todas las claves de cifrado de columna definidas en la base de datos y se utiliza para los índices columnas cifradas. 
+`sp_enclave_send_keys` solo envía las claves que están habilitadas para enclave y cifran las columnas que usan el cifrado aleatorio y tienen índices. Para una consulta de usuario normal, un controlador cliente proporciona el enclave con las claves necesarias para los cálculos de la consulta. `sp_enclave_send_keys` envía todas las claves de cifrado de columna definidas en la base de datos y se utiliza para los índices columnas cifradas. 
 
-`sp_enclave_send_keys`proporciona una manera sencilla de enviar claves a enclave y rellenar la memoria caché de claves de cifrado de columnas para operaciones de indexación posteriores. Use `sp_enclave_send_keys` para habilitar:
+`sp_enclave_send_keys` proporciona una manera sencilla de enviar claves a enclave y rellenar la memoria caché de claves de cifrado de columnas para operaciones de indexación posteriores. Use `sp_enclave_send_keys` para habilitar:
 - Un DBA para recompilar o modificar índices o estadísticas en columnas de base de datos cifradas, si el DBA no tiene acceso a las claves maestras de columna. Consulte [invocar operaciones de indexación mediante claves de cifrado de columnas almacenadas en caché](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
-- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]para completar la recuperación de índices en columnas cifradas. Consulte [recuperación de base de datos](../security/encryption/always-encrypted-enclaves.md#database-recovery).
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] para completar la recuperación de índices en columnas cifradas. Consulte [recuperación de base de datos](../security/encryption/always-encrypted-enclaves.md#database-recovery).
 - Una aplicación que usa .NET Framework proveedor de datos para SQL Server cargar datos de forma masiva en columnas cifradas.
 
 Para invocar correctamente `sp_enclave_send_keys` , debe conectarse a la base de datos con los cálculos de Always Encrypted y enclave habilitados para la conexión de base de datos. También debe tener acceso a las claves maestras de columna, proteger las claves de cifrado de columna, va a enviar y necesita permisos para obtener acceso a los metadatos de la clave de Always Encrypted en la base de datos. 

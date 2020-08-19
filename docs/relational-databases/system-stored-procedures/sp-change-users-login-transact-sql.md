@@ -1,4 +1,5 @@
 ---
+description: sp_change_users_login (Transact-SQL)
 title: sp_change_users_login (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/13/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ecd2576cac046984394b093832769363968e637a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c82241030646e2ef20c978cb1905cf836f9a589b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447420"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85715894"
   Asigna un usuario de base de datos existente a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
  > [!IMPORTANT]
- > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [ALTER User](../../t-sql/statements/alter-user-transact-sql.md) en su lugar.  
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilice [ALTER User](../../t-sql/statements/alter-user-transact-sql.md) en su lugar.  
   
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -50,7 +51,7 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action =] '*acción*'  
  Describe la acción que llevará a cabo el procedimiento. la *acción* es **VARCHAR (10)**. la *acción* puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Auto_Fix**|Vincula una entrada de usuario de la vista de catálogo del sistema sys.database_principals de la base de datos actual con el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del mismo nombre. Si no existe un inicio de sesión con el mismo nombre, se creará uno. Examine el resultado de la instrucción **Auto_Fix** para confirmar que se ha realizado el vínculo correcto. Evite usar **Auto_Fix** en situaciones de seguridad.<br /><br /> Al usar **Auto_Fix**, debe especificar el *usuario* y la *contraseña* si el inicio de sesión aún no existe; de lo contrario, debe especificar *usuario* pero se omitirá la *contraseña* . *login* debe ser null. el *usuario* debe ser un usuario válido en la base de datos actual. El inicio de sesión no puede tener otro usuario asignado.|  
 |**Report**|Enumera los usuarios y sus identificadores de seguridad (SID) correspondientes, que se encuentran en la base de datos actual y no están vinculados con ningún inicio de sesión. el *usuario*, el *Inicio de sesión*y la *contraseña* deben ser null o no especificarse.<br /><br /> Para reemplazar la opción de informe por una consulta mediante las tablas del sistema, compare las entradas de **Sys. server_prinicpals** con las entradas de **Sys. database_principals**.|  
@@ -77,7 +78,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserName|**sysname**|Nombre del usuario de la base de datos.|  
 |UserSID|**varbinary(85)**|Identificador de seguridad del usuario.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use sp_change_users_login para vincular un usuario de la base de datos actual a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si ha cambiado el inicio de sesión para el usuario, utilice sp_change_users_login para vincular el usuario al nuevo inicio de sesión sin que se pierdan los permisos del usuario. El nuevo *Inicio de sesión* no puede ser SA y el *usuario* no puede ser DBO, guest o un usuario INFORMATION_SCHEMA.  
   
  sp_change_users_login no se puede utilizar para asignar usuarios de la base de datos a entidades de seguridad de Windows, certificados o claves asimétricas.  
@@ -124,9 +125,9 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREAR inicio de sesión &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_adduser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
+ [sp_helplogins &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   

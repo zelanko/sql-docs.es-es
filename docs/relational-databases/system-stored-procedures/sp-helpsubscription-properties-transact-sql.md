@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription_properties (Transact-SQL)
 title: sp_helpsubscription_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebef567c36028f63317be3e00ea4c8078a765b6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa2eb1c4389c6dd5f3f30b42967aa7cec82808d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446994"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,15 +41,15 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todos los publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todas las bases de datos del publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todas las bases de datos del publicador.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todas las publicaciones.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todas las publicaciones.  
   
-`[ @publication_type = ] publication_type`Es el tipo de publicación. *publication_type* es de **tipo int**y su valor predeterminado es NULL. Si se proporciona, *publication_type* debe ser uno de los siguientes valores:  
+`[ @publication_type = ] publication_type` Es el tipo de publicación. *publication_type* es de **tipo int**y su valor predeterminado es NULL. Si se proporciona, *publication_type* debe ser uno de los siguientes valores:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional|  
 |**1**|Publicación de instantáneas|  
@@ -93,7 +94,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpsubscription_properties** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

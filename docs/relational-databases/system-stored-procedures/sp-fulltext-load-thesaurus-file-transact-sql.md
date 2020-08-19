@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_load_thesaurus_file (Transact-SQL)
 title: sp_fulltext_load_thesaurus_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 105ce6682e17e30e010c4ab7c78aa078048609b8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: de200151bf6c17119e9926ac848e33a5dd84751b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447156"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -47,7 +48,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  ** \@ **  =  *acción* loadOnlyIfNotLoaded  
  Especifica si el archivo de diccionario de sinónimos se carga en las tablas de diccionario de sinónimos internas aun cuando ya se haya cargado. la *acción* es una de las siguientes:  
   
-|Valor|Definición|  
+|Value|Definición|  
 |-----------|----------------|  
 |**0**|Se carga el archivo de diccionario de sinónimos sin tener en cuenta si ya está cargado. Éste es el comportamiento predeterminado de **sp_fulltext_load_thesaurus_file**.|  
 |1|Solo se carga el archivo de diccionario de sinónimos si todavía no está cargado.|  

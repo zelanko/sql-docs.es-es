@@ -1,4 +1,5 @@
 ---
+description: sp_mergecleanupmetadata (Transact-SQL)
 title: sp_mergecleanupmetadata (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 385176695fe9600250eaa5b6a839ebd833910618
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 356c0aefb862d37d4c87af995e3b8d676a33e8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446951"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,14 +39,14 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que limpia los metadatos de todas las publicaciones. La publicación debe existir, si se especifica explícitamente.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que limpia los metadatos de todas las publicaciones. La publicación debe existir, si se especifica explícitamente.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'`Especifica si se debe reinicializar el suscriptor. *Subscriber* es de tipo **nvarchar (5)**, puede ser **true** o **false**y su valor predeterminado es **true**. Si **es true**, las suscripciones se marcan para reinicializarse. Si **es false**, las suscripciones no se marcan para reinicializarlas.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Especifica si se debe reinicializar el suscriptor. *Subscriber* es de tipo **nvarchar (5)**, puede ser **true** o **false**y su valor predeterminado es **true**. Si **es true**, las suscripciones se marcan para reinicializarse. Si **es false**, las suscripciones no se marcan para reinicializarlas.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_mergecleanupmetadata** solo debe utilizarse en topologías de replicación que incluyan servidores que ejecuten versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores al [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Las topologías que solo incluyan [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 o posterior deben usar la limpieza de metadatos basada en la retención automática. Al ejecutar este procedimiento almacenado, se debe tener en cuenta que el archivo de registro necesita y puede llegar a aumentar en gran medida en el equipo donde se está ejecutando el procedimiento almacenado.  
   
 > [!CAUTION]
@@ -100,7 +101,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'inactive'  
     ```  
   
- Cuando haya completado el paso 3 de ejecutar **sp_mergecleanupmetadata**, reanude las mezclas en modo continuo en función de cómo las haya detenido. Opciones:   
+ Cuando haya completado el paso 3 de ejecutar **sp_mergecleanupmetadata**, reanude las mezclas en modo continuo en función de cómo las haya detenido. Tener instaladas localmente una de las siguientes:  
   
 -   Vuelva a agregar el parámetro **-Continuous** para el agente de mezcla.  
   
@@ -116,8 +117,8 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  Para utilizar este procedimiento almacenado, el publicador debe estar ejecutando [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Los suscriptores deben ejecutar [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0, Service Pack 2.  
   
 ## <a name="see-also"></a>Consulte también  
- [MSmerge_genhistory &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   

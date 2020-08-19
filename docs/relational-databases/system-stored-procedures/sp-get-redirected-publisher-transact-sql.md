@@ -1,4 +1,5 @@
 ---
+description: sp_get_redirected_publisher (Transact-SQL)
 title: sp_get_redirected_publisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ac8b37eb3c21a9dbe7fa69eb6805a502993b7b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1019f42b7edb8a82a3f655632aee64a61fbbcb99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447115"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,11 +39,11 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @original_publisher = ] 'original_publisher'`Nombre de la instancia de SQL Server que publicó originalmente la base de datos. *original_publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.
+`[ @original_publisher = ] 'original_publisher'` Nombre de la instancia de SQL Server que publicó originalmente la base de datos. *original_publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.
   
-`[ @publisher_db = ] 'publisher_db'`Nombre de la base de datos que se está publicando. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Nombre de la base de datos que se está publicando. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @bypass_publisher_validation = ] [0 | 1 ]`Se utiliza para omitir la validación del publicador redirigido. Si es 0, se realiza la validación. Si es 1, no se realiza la validación. *bypass_publisher_validation* es de **bit**y su valor predeterminado es 0.  
+`[ @bypass_publisher_validation = ] [0 | 1 ]` Se utiliza para omitir la validación del publicador redirigido. Si es 0, se realiza la validación. Si es 1, no se realiza la validación. *bypass_publisher_validation* es de **bit**y su valor predeterminado es 0.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -56,12 +57,12 @@ sp_get_redirected_publisher
 |**error_severity**|**int**|La gravedad del error de validación.|  
 |**error_message**|**nvarchar(4000)**|El texto del mensaje de error de validación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  *redirected_publisher* devuelve el nombre del publicador actual. Devuelve NULL si el publicador y las bases de datos de publicación no se han redirigido mediante **sp_redirect_publisher**.  
   
  Si no se solicita la validación o si no existe ninguna entrada para el publicador y la base de datos de publicación, *error_number* y *error_severity* devuelven 0 y *error_message* devuelve NULL.  
   
- Si se solicita la validación, se llama al procedimiento almacenado de validación [sp_validate_redirected_publisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) para comprobar que el destino de la redirección es un host adecuado para la base de datos de publicación. Si la validación se realiza correctamente, **sp_get_redirected_publisher** devuelve el nombre del publicador Redirigido, 0 para las columnas *error_number* y *error_severity* , y null en la columna *error_message* .  
+ Si se solicita la validación, se llama al procedimiento almacenado de validación [sp_validate_redirected_publisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md) para comprobar que el destino de la redirección es un host adecuado para la base de datos de publicación. Si la validación se realiza correctamente, **sp_get_redirected_publisher** devuelve el nombre del publicador Redirigido, 0 para las columnas *error_number* y *error_severity* , y null en la columna *error_message* .  
   
  Si se solicita la validación y se produce un error, se devuelve el nombre del publicador redirigido junto con información sobre el error.  
   
@@ -70,8 +71,8 @@ sp_get_redirected_publisher
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_redirect_publisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_validate_redirected_publisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

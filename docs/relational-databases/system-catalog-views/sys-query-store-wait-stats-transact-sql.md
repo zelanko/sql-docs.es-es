@@ -1,4 +1,5 @@
 ---
+description: Sys. query_store_wait_stats (Transact-SQL)
 title: Sys. query_store_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
@@ -19,12 +20,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af0f04d9fce1fbcb455590d0e68a79bd98bdd73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41f66150a3a5c604889dc29d96abaea6d0418c6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447852"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>Sys. query_store_wait_stats (Transact-SQL)
 
@@ -46,7 +47,7 @@ ms.locfileid: "85717628"
 |**last_query_wait_time_ms**|**bigint**|Duración de la última espera del plan de consulta en el intervalo de agregación y la categoría de espera (en milisegundos).|
 |**min_query_wait_time_ms**|**bigint**|`CPU wait`Tiempo mínimo para el plan de consulta dentro del intervalo de agregación y la categoría de espera (en milisegundos).|
 |**max_query_wait_time_ms**|**bigint**|`CPU wait`Tiempo máximo para el plan de consulta dentro del intervalo de agregación y la categoría de espera (en milisegundos).|
-|**stdev_query_wait_time_ms**|**float**|`Query wait`desviación estándar de la duración del plan de consulta en el intervalo de agregación y la categoría de espera (en milisegundos).|
+|**stdev_query_wait_time_ms**|**float**|`Query wait` desviación estándar de la duración del plan de consulta en el intervalo de agregación y la categoría de espera (en milisegundos).|
 
 ## <a name="wait-categories-mapping-table"></a>Tabla de asignación de categorías de espera
 
@@ -54,16 +55,16 @@ ms.locfileid: "85717628"
   
 |Valor entero|Categoría de espera|Los tipos de espera se incluyen en la categoría|  
 |-----------------|---------------|-----------------|  
-|**0**|**Desconocido**|Desconocido |  
+|**0**|**Unknown**|Desconocido |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**Subproceso de trabajo**|THREADPOOL|
-|**3**|**Lock**|LCK_M_%|
+|**3**|**Bloquear**|LCK_M_%|
 |**4**|**Abrazadera**|LATCH_%|
 |**5**|**Bloqueo temporal de búfer**|PAGELATCH_%|
 |**6**|**E/s de búfer**|PAGEIOLATCH_%|
 |**7**|**Previa***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR%, SQLCLR%|
-|**9**|**Reflejo**|DBMIRROR%|
+|**9**|**Creación de reflejo**|DBMIRROR%|
 |**10**|**Transacción**|% DE TRANSACCIONES%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_% TRANSACTION_MUTEX|
 |**11**|**Inactivo**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE XE_TIMER_EVENT|
 |**12**|**Preemptive**|PREEMPTIVE_%|
@@ -76,7 +77,7 @@ ms.locfileid: "85717628"
 |**19**|**Seguimiento**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT TRACE_EVTNOTIFF|
 |**20**|**Búsqueda de texto completo**|FT_RESTART_CRAWL, RECOPILADOR DE TEXTO COMPLETO, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR, PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|
 |**21**|**Otra e/s de disco**|ASYNC_IO_COMPLETION, IO_COMPLETION, BACKUPIO, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
-|**22**|**replicación**|SE_REPL_%, REPL_%, HADR_% **(pero no HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ PWAIT_HADRSIM|
+|**22**|**Replicación**|SE_REPL_%, REPL_%, HADR_% **(pero no HADR_THROTTLE_LOG_RATE_GOVERNOR)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ PWAIT_HADRSIM|
 |**23**|**Regulador de velocidad de registro**|LOG_RATE_GOVERNOR, POOL_LOG_RATE_GOVERNOR, HADR_THROTTLE_LOG_RATE_GOVERNOR, INSTANCE_LOG_RATE_GOVERNOR|
 
 La categoría de espera de **compilación** no se admite actualmente.

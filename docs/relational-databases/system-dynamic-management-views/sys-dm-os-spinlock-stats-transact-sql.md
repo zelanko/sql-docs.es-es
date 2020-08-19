@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_os_spinlock_stats (Transact-SQL)
 title: Sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -22,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447597"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>Sys. dm_os_spinlock_stats (Transact-SQL)
 
@@ -48,9 +49,9 @@ Devuelve información sobre todas las esperas de Spinlock organizadas por tipo.
 
 ## <a name="permissions"></a>Permisos  
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .    
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .    
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  
  Sys. dm_os_spinlock_stats se puede usar para identificar el origen de la contención de Spinlock. En algunas situaciones, es posible que pueda resolver o reducir la contención de Spinlock. No obstante, puede haber situaciones que requerirán ponerse en contacto con los servicios de soporte al cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
@@ -404,7 +405,7 @@ GO
  
 
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  

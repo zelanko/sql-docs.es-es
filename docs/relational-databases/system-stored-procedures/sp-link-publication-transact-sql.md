@@ -1,4 +1,5 @@
 ---
+description: sp_link_publication (Transact-SQL)
 title: sp_link_publication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c3c414507b0dfe58cc4b13bc18c992e3a46bea9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c1df8b2f62ce305b89b061526415c73e07a18511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446963"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,30 +50,30 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador al que se va a vincular. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador al que se va a vincular. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador a la que se va a vincular. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador a la que se va a vincular. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación a la que se va a vincular. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación a la que se va a vincular. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @security_mode = ] security_mode`Es el modo de seguridad utilizado por el suscriptor para conectarse a un publicador remoto para la actualización inmediata. *security_mode* es de **tipo int**y puede tener uno de estos valores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` Es el modo de seguridad utilizado por el suscriptor para conectarse a un publicador remoto para la actualización inmediata. *security_mode* es de **tipo int**y puede tener uno de estos valores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación con el inicio de sesión especificado en este procedimiento almacenado como *Inicio de sesión* y *contraseña*.<br /><br /> Nota: en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta opción se usaba para especificar una llamada a procedimiento remoto (RPC) dinámica.|  
 |**1**|Utiliza el contexto de seguridad (autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticación de Windows) del usuario que realiza el cambio en el suscriptor.<br /><br /> Nota: esta cuenta también debe existir en el publicador con privilegios suficientes. Al usar la autenticación de Windows, se debe admitir la delegación de cuentas de seguridad.|  
 |**2**|Utiliza un inicio de sesión de servidor vinculado definido por el usuario existente creado mediante **sp_link_publication**.|  
   
-`[ @login = ] 'login'`Es el inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. Este parámetro debe especificarse cuando *security_mode* es **0**.  
+`[ @login = ] 'login'` Es el inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. Este parámetro debe especificarse cuando *security_mode* es **0**.  
   
-`[ @password = ] 'password'`Es la contraseña. *password* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro debe especificarse cuando *security_mode* es **0**.  
+`[ @password = ] 'password'` Es la contraseña. *password* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro debe especificarse cuando *security_mode* es **0**.  
   
-`[ @distributor = ] 'distributor'`Es el nombre del distribuidor. *Distributor* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @distributor = ] 'distributor'` Es el nombre del distribuidor. *Distributor* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_link_publication** se usa en las suscripciones de actualización inmediata en la replicación transaccional.  
   
  **sp_link_publication** puede usarse para las suscripciones de inserción y extracción. Se puede llamar antes o después de haber creado la suscripción. Una entrada se inserta o se actualiza en el MSsubscription_properties &#40;tabla del sistema de [Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) .  
@@ -88,9 +89,9 @@ sp_link_publication [ @publisher = ] 'publisher'
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_link_publication**.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_droppullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
- [sp_subscription_cleanup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_droppullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [sp_subscription_cleanup &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

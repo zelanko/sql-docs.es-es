@@ -1,4 +1,5 @@
 ---
+description: Rotación de claves de Always Encrypted con PowerShell
 title: Rotación de claves de Always Encrypted con PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -11,12 +12,12 @@ ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5e9cbaffe30849f5e2bb2385f49fabd603bc1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f2010ad30f38d2e7bf89a18b833d93e00aec1f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448117"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Rotación de claves de Always Encrypted con PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ El método de rotación de una clave maestra de columna que se describe en esta 
 |Paso 5. Cree los metadatos sobre la nueva clave maestra de columna en la base de datos. | [New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)<br><br>**Nota:** En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) para crear metadatos de clave. | No | Sí
 |Paso 6. Autentíquese en Azure si la clave maestra de columna actual o la nueva clave maestra de columna se almacenan en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sí | No
 |Paso 7. Inicie la rotación al cifrar las claves de cifrado de columna que actualmente están protegidas con la antigua clave maestra de columna con la nueva clave maestra de columna. Después de este paso, cada clave de cifrado de columna afectada (asociada a la antigua clave maestra de columna y rotada) se cifra con la antigua y la nueva clave maestra de columna y tiene dos valores cifrados en los metadatos de la base de datos.| [Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation) | Sí | Sí
-|Paso 8. Coordínese con los administradores de todas las aplicaciones que consultan columnas cifradas de la base de datos (y protegidas con la clave maestra de columna anterior) para que puedan garantizar el acceso de las aplicaciones a la nueva clave maestra de columna.| [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Sí | No
+|Paso 8. Coordínese con los administradores de todas las aplicaciones que consultan columnas cifradas de la base de datos (y protegidas con la clave maestra de columna anterior) para que puedan garantizar el acceso de las aplicaciones a la nueva clave maestra de columna.| [Crear y almacenar claves maestras de columna (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) | Sí | No
 |Paso 9. Finalice la rotación.<br><br>**Nota:** Antes de ejecutar este paso, asegúrese de que todas las aplicaciones que consultan columnas cifradas protegidas con la clave maestra de columna anterior se hayan configurado para usar la nueva clave maestra de columna. Si realiza este paso antes de tiempo, es posible que algunas de esas aplicaciones no puedan descifrar los datos. Finalice la rotación mediante la eliminación de los valores cifrados de la base de datos que se crearon con la clave maestra de columna anterior. Esto quita la asociación entre la antigua clave maestra de columna y las claves de cifrado de columna que protege. |[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)| No | Sí
 |Paso 10. Quite los metadatos de la clave maestra de columna antigua. |[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)| No | Sí
 
@@ -94,7 +95,7 @@ El flujo de trabajo de rotación de claves maestras de columna que se describe e
 > [!IMPORTANT]
 > Antes de ejecutar cualquiera de los pasos donde *Accede a claves de texto no cifrado o a almacén de claves*=**Sí** en la tabla siguiente (pasos que acceden a claves de texto no cifrado o a almacén de claves), asegúrese de que el entorno de PowerShell se ejecuta en un equipo seguro distinto al que hospeda la base de datos. Para obtener más información, vea [Security Considerations for Key Management (Consideraciones de seguridad para la administración de claves)](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
-### <a name="part-1-dba"></a>Parte 1: DBA
+### <a name="part-1-dba"></a>Parte 1: DBA
 
 Un DBA recupera metadatos sobre la clave maestra de columna que se va a rotar y sobre las claves de cifrado de columna afectadas asociadas a la clave maestra de columna actual. El DBA comparte toda esta información con un Administrador de seguridad.
 
@@ -102,12 +103,12 @@ Un DBA recupera metadatos sobre la clave maestra de columna que se va a rotar y 
 | Tarea | Artículo | Accede a claves de texto no cifrado o a almacén de claves| Accede a base de datos
 |:---|:---|:---|:---
 |Paso 1. Inicie un entorno de PowerShell e importe el módulo SqlServer. | [Importar el módulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | None
-|Paso 2. Conecte con el servidor y una base de datos. | [Conexión a una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Sí
-|Paso 3. Recupere los metadatos sobre la clave maestra de columna antigua.| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | No | Sí
+|Paso 2. Conecte con el servidor y una base de datos. | [Conexión a una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Sí
+|Paso 3. Recupere los metadatos sobre la clave maestra de columna antigua.| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | No | Sí
 |Paso 4. Recupere los metadatos sobre las claves de cifrado de columna protegidas por la antigua clave maestra de columna, incluidos sus valores cifrados. | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | No | Sí
 |Paso 5. Comparta la ubicación de la clave maestra de columna (el nombre del proveedor y una ruta de acceso de la clave maestra de columna) y los valores cifrados de las claves de cifrado de columna correspondientes protegidos con la clave maestra de columna anterior.| Consulte los ejemplos siguientes. | No | No
 
-### <a name="part-2-security-administrator"></a>Parte 2: Administrador de seguridad
+### <a name="part-2-security-administrator"></a>Parte 2: Administrador de seguridad
 
 El Administrador de seguridad genera una nueva clave maestra de columna, vuelve a cifrar las claves de cifrado de columna afectadas con la nueva clave maestra de columna y comparte la información sobre la nueva clave maestra de columna, así como el conjunto de nuevos valores cifrados de las claves de cifrado de columna afectadas, con el DBA.
 
@@ -119,13 +120,13 @@ El Administrador de seguridad genera una nueva clave maestra de columna, vuelve 
 |Paso 4. Cree un objeto SqlColumnMasterKeySettings que contenga información sobre la ubicación de la **antigua** clave maestra de columna. SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). |New-SqlColumnMasterKeySettings| No | No
 |Paso 5. Cree un objeto SqlColumnMasterKeySettings que contenga información sobre la ubicación de la **nueva** clave maestra de columna. SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Para crearlo, debe usar el cmdlet específico del almacén de claves. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| No | No
 |Paso 6. Autentíquese en Azure si la clave maestra de columna antigua (actual) o la nueva clave maestra de columna se almacenan en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sí | No
-|Paso 7. Vuelva a cifrar cada valor de la clave de cifrado de columna que actualmente está protegida con la antigua clave maestra de columna con la nueva clave maestra de columna. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**Nota:** Al llamar a este cmdlet, pase los objetos SqlColumnMasterKeySettings de la clave maestra de columna nueva y antigua, junto con un valor de la clave de cifrado de columna, para que se vuelvan a cifrar.|Sí|No
+|Paso 7. Vuelva a cifrar cada valor de la clave de cifrado de columna que actualmente está protegida con la antigua clave maestra de columna con la nueva clave maestra de columna. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**Nota:** Al llamar a este cmdlet, pase los objetos SqlColumnMasterKeySettings de la antigua y la nueva clave maestra de columna, junto con un valor de la clave de cifrado de columna, para que se vuelvan a cifrar.|Sí|No
 |Paso 8. Comparta la ubicación de la nueva clave maestra de columna (el nombre del proveedor y la ruta de acceso de la clave maestra de columna) y el conjunto de valores cifrados nuevos de las claves de cifrado de columna con el DBA.| Consulte los ejemplos siguientes. | No | No
 
 > [!NOTE]
 > Es muy recomendable no eliminar permanentemente la antigua clave maestra de columna después de la rotación. Debería conservarla en su almacén de claves actual o archivarla en otra ubicación segura. Si restaura la base de datos desde un archivo de copia de seguridad a un punto en el tiempo *anterior* a la configuración de la nueva clave maestra de columna, necesitará la clave antigua para acceder a los datos.
 
-### <a name="part-3-dba"></a>Parte 3: DBA
+### <a name="part-3-dba"></a>Parte 3: DBA
 
 El DBA crea metadatos para la nueva clave maestra de columna y actualiza los metadatos de las claves de cifrado de columna afectadas para agregar el nuevo conjunto de valores cifrados. En este paso, el DBA también se coordina con los administradores de las aplicaciones que consultan las columnas de cifrado para asegurarse de que la aplicación pueda acceder a la nueva clave maestra de columna. Una vez que todas las aplicaciones están configuradas para usar la nueva clave maestra de columna, el DBA quita el conjunto anterior de valores cifrados y los metadatos antiguos de claves maestras de columna.
 
@@ -146,7 +147,7 @@ El DBA crea metadatos para la nueva clave maestra de columna y actualiza los met
 
 El siguiente script es un ejemplo completo para generar una nueva clave maestra de columna que es certificado en el almacén de certificados de Windows y rotar una clave maestra de columna existente (actual) para reemplazarla por la nueva clave maestra de columna. El script da por hecho que la base de datos de destino contiene la clave maestra de columna, denominada CMK1 (que se va a rotar), que cifra algunas claves de cifrado de columna.
 
-Parte 1: DBA
+Parte 1: DBA
 
 ```powershell
 # Import the SqlServer module.
@@ -191,7 +192,7 @@ for($i=0; $i -lt $ceks.Length; $i++){
 ```
 
 
-Parte 2: Administrador de seguridad
+Parte 2: Administrador de seguridad
 
 ```powershell
 # Obtain the location of the old column master key and the encrypted values of the corresponding column encryption keys, from your DBA, via a CSV file on a share drive.
@@ -233,7 +234,7 @@ $newCmkSettings.KeyStoreProviderName +", " + $newCmkSettings.KeyPath >> $newCmkD
 ```
 
 
-Parte 3: DBA
+Parte 3: DBA
 
 ```powershell
 # Obtain the location of the new column master key and the new encrypted values of the corresponding column encryption keys, from your Security Administrator, via a CSV file on a share drive.
@@ -294,7 +295,7 @@ Puede girar una clave de cifrado de columna con un enfoque sin conexión o un en
 |:---|:---|:---|:---
 |Paso 1. Inicie un entorno de PowerShell e importe el módulo SqlServer. | [Importar el módulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
 |Paso 2. Conecte con el servidor y una base de datos. | [Conexión a una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Sí
-|Paso 3. Autentíquese en Azure si la clave maestra de columna (que protege la clave de cifrado de columna que se va a rotar) se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sí | No
+|Paso 3. Autentíquese en Azure si la clave maestra de columna (que protege la clave de cifrado de columna que se va a rotar) se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sí | No
 |Paso 4. Genere una nueva clave de cifrado de columna, cífrela con la clave maestra de columna y cree los metadatos de clave de cifrado de columna en la base de datos.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Nota:** Use una variación del cmdlet que genera y cifra internamente una clave de cifrado de columna.<br>En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para crear los metadatos de clave. | Sí | Sí
 |Paso 5. Busque todas las columnas cifradas con la clave de cifrado de columna anterior. | [Guía de programación para objetos de administración de SQL Server (SMO)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | No | Sí
 |Paso 6. Cree un objeto *SqlColumnEncryptionSettings* para cada columna afectada.  SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Especifica el esquema de cifrado de destino de una columna. En este caso, el objeto debe especificar que la columna afectada debe cifrarse con la nueva clave de cifrado de columna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No

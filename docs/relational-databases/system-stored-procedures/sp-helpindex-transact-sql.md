@@ -1,4 +1,5 @@
 ---
+description: sp_helpindex (Transact-SQL)
 title: sp_helpindex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43bf9b75af8cc43af8c45e4cc2fe4f9d4e66e595
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b73c4a9e15feddb0d52d7ccdaaaf1132e71996f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447008"
 ---
 # <a name="sp_helpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'name'`Es el nombre completo o no completo de una vista o tabla definida por el usuario. Solo son necesarias las comillas si se especifica una tabla o nombre de vista calificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *Name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado.  
+`[ @objname = ] 'name'` Es el nombre completo o no completo de una vista o tabla definida por el usuario. Solo son necesarias las comillas si se especifica una tabla o nombre de vista calificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *Name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -55,7 +56,7 @@ sp_helpindex [ @objname = ] 'name'
   
  Aparecerá listada una columna de índice descendente en el conjunto de resultados con un signo menos (-) tras el nombre; la columna predeterminada de índice ascendente aparecerá listada solamente por su nombre.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si los índices se han establecido mediante la opción NORECOMPUTE de UPDATE STATISTICs, esa información se incluye en la columna **index_description** .  
   
  **sp_helpindex** solo expone columnas de índice ordenable; por lo tanto, no expone información sobre índices XML o índices espaciales.  
@@ -74,9 +75,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [Sys. index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
   

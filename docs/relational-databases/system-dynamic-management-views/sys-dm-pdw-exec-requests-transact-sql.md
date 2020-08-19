@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_pdw_exec_requests (Transact-SQL)
 title: Sys. dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/05/2019
@@ -12,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447476"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>Sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -38,7 +39,7 @@ ms.locfileid: "86197072"
 |etiqueta|**nvarchar(255)**|Cadena de etiqueta opcional asociada a algunas instrucciones de consulta SELECT.|Cualquier cadena que contenga "a-z", "A-Z", "0-9", "_".|  
 |error_id|**nvarchar (36)**|IDENTIFICADOR único del error asociado a la solicitud, si existe.|Vea [Sys. dm_pdw_errors &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); se establece en NULL si no se produjo ningún error.|  
 |database_id|**int**|Identificador de la base de datos utilizada por el contexto explícito (por ejemplo, USE DB_X).|Vea ID en [Sys. databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|.|**nvarchar(4000)**|Contiene el texto completo de la solicitud enviado por el usuario.|Cualquier consulta o texto de solicitud válido. Las consultas que tienen más de 4000 bytes se truncan.|  
+|command|**nvarchar(4000)**|Contiene el texto completo de la solicitud enviado por el usuario.|Cualquier consulta o texto de solicitud válido. Las consultas que tienen más de 4000 bytes se truncan.|  
 |resource_class|**nvarchar (20)**|Grupo de cargas de trabajo que se usa para esta solicitud. |Clases de recursos estáticos</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Clases de recursos dinámicos</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importance|**nvarchar(128)**|La importancia del establecimiento de la solicitud ejecutada a las.  Esta es la importancia relativa de una solicitud en este grupo de cargas de trabajo y entre grupos de cargas de trabajo para los recursos compartidos.  La importancia especificada en el clasificador invalida la configuración de importancia del grupo de cargas de trabajo.</br>Se aplica a: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>normal (valor predeterminado)</br>above_normal</br>high|
 |group_name|**sysname** |En el caso de las solicitudes que usan recursos, group_name es el nombre del grupo de cargas de trabajo en el que se ejecuta la solicitud.  Si la solicitud no emplea recursos, group_name es NULL.</br>Se aplica a: Azure SQL Data Warehouse|
@@ -76,6 +77,6 @@ ms.locfileid: "86197072"
 >[!WARNING]  
 >Un atacante puede usar sys. dm_pdw_exec_requests para recuperar información acerca de objetos de base de datos específicos con solo tener el permiso VIEW SERVER STATE y no tiene permiso específico de la base de datos.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
  [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

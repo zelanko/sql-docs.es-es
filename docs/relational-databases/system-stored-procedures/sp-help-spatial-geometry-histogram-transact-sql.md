@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geometry_histogram (Transact-SQL)
 title: sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8829d5f259f9a2e2b26b1e3252907ba9bd0b25dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d6e17d2e4ae048c563a2130918d137d5c186b60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447044"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,23 +45,23 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'tabname'`Es el nombre completo o no completo de la tabla para la que se ha especificado el índice espacial.  
+`[ @tabname = ] 'tabname'` Es el nombre completo o no completo de la tabla para la que se ha especificado el índice espacial.  
   
  Se requieren comillas únicamente si se especifica una tabla certificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *tabname* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @colname = ] 'colname'`Es el nombre de la columna espacial especificada. *colname* es un **sysname**y no tiene ningún valor predeterminado.  
+`[ @colname = ] 'colname'` Es el nombre de la columna espacial especificada. *colname* es un **sysname**y no tiene ningún valor predeterminado.  
   
-`[ @resolution = ] 'resolution'`Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. la *resolución* es de **tinyint**y no tiene ningún valor predeterminado.  
+`[ @resolution = ] 'resolution'` Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. la *resolución* es de **tinyint**y no tiene ningún valor predeterminado.  
   
-`[ @xmin = ] 'xmin'`Es la propiedad del cuadro de límite X mínimo. *xmin* es de **tipo float**y no tiene ningún valor predeterminado.  
+`[ @xmin = ] 'xmin'` Es la propiedad del cuadro de límite X mínimo. *xmin* es de **tipo float**y no tiene ningún valor predeterminado.  
   
-`[ @ymin = ] 'ymin'`Es la propiedad del cuadro de límite Y mínimo. *YMIN* es de **tipo float**y no tiene ningún valor predeterminado.  
+`[ @ymin = ] 'ymin'` Es la propiedad del cuadro de límite Y mínimo. *YMIN* es de **tipo float**y no tiene ningún valor predeterminado.  
   
-`[ @xmax = ] 'xmax'`Es la propiedad del cuadro de límite X máximo. *Xmax* es de **tipo float**y no tiene ningún valor predeterminado.  
+`[ @xmax = ] 'xmax'` Es la propiedad del cuadro de límite X máximo. *Xmax* es de **tipo float**y no tiene ningún valor predeterminado.  
   
-`[ @ymax = ] 'ymax'`Es la propiedad del cuadro de límite Y máximo. *YMAX* es de **tipo float**y no tiene ningún valor predeterminado.  
+`[ @ymax = ] 'ymax'` Es la propiedad del cuadro de límite Y máximo. *YMAX* es de **tipo float**y no tiene ningún valor predeterminado.  
   
-`[ @sample = ] 'sample'`Es el porcentaje de la tabla que se utiliza. Los valores válidos son de 0 a 100. el *ejemplo* es **float**. El valor predeterminado es 100.  
+`[ @sample = ] 'sample'` Es el porcentaje de la tabla que se utiliza. Los valores válidos son de 0 a 100. el *ejemplo* es **float**. El valor predeterminado es 100.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Se devuelve un valor de tabla. En la siguiente cuadrícula se describe el contenido de la columna de la tabla.  
@@ -74,7 +75,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permisos  
  El usuario debe ser miembro del rol **Public** . Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La pestaña Resultados espaciales de SSMS muestra una representación gráfica de los resultados. Puede consultar los resultados en la ventana espacial para obtener un número aproximado de elementos de resultados. Los objetos de la tabla pueden ocupar más de una celda. Por tanto, la suma de las celdas puede ser mayor que el número de objetos reales.  
   
  Puede que se agregue una fila adicional al conjunto de resultados que contiene el número de objetos situados fuera del cuadro de límite o que están en contacto con el borde de dicho cuadro. El valor de **CellID** de esta fila es 0 y la **celda** de esta fila contiene una **LineString** que representa el rectángulo de selección. Esta fila representa todo el espacio fuera del cuadro de límite.  

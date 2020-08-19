@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_pdw_component_health_active_alerts (Transact-SQL)
 title: Sys. dm_pdw_component_health_active_alerts (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 03/07/2017
@@ -10,12 +11,12 @@ ms.assetid: c53e4a36-b841-424a-b8e2-255b1878deb6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0a8a1808e20accfadd3adc6f5a5c326f78870ed7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1dd5369c30de5ce70601b51c47cac2b7ad7f3014
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447507"
 ---
 # <a name="sysdm_pdw_component_health_active_alerts-transact-sql"></a>Sys. dm_pdw_component_health_active_alerts (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87395206"
   
  Para obtener información acerca de las filas máximas retenidas en esta vista, vea "valores mínimos y máximos" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

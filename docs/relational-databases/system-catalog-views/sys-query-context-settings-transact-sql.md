@@ -1,4 +1,5 @@
 ---
+description: Sys. query_context_settings (Transact-SQL)
 title: Sys. query_context_settings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2018
@@ -20,12 +21,12 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2413e629e969fb0aa7dff93dc2959f1b7a007b10
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: fff1697d8452bac65f3af00dab1e373103f97f13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447907"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>Sys. query_context_settings (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87394027"
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|Clave principal. Este valor se expone en SHOWPLAN XML for queries.|  
 |**set_options**|**varbinary(8**|Máscara de bits que refleja el estado de varias opciones SET. Para obtener más información, vea [Sys. dm_exec_plan_attributes &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
-|**language_id**|**smallint**|Identificador del idioma. Para obtener más información, vea [lenguajes desys.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|**language_id**|**smallint**|Identificador del idioma. Para obtener más información, vea [ lenguajes desys.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**date_format**|**smallint**|El formato de la fecha. Para más información, vea [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|El primer valor de fecha. Para más información, vea [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |**status**|**varbinary (2)**|Campo de máscara de máscara que indica el tipo de consulta o contexto en el que se ejecutó la consulta. <br />El valor de la columna puede ser una combinación de varias marcas (expresadas en hexadecimal):<br /><br /> 0X0: consulta normal (sin marcas específicas)<br /><br /> 0x1: consulta que se ejecutó a través de uno de los procedimientos almacenados de las API de cursor<br /><br /> 0X2: consulta de notificación<br /><br /> 0x4: consulta interna<br /><br /> 0x8: consulta parametrizada automática sin parametrización universal<br /><br /> 0x10-cursor fetch de la consulta de actualización<br /><br /> 0x20: consulta que se usa en las solicitudes de actualización de cursor<br /><br /> 0x40: se devuelve el conjunto de resultados inicial cuando se abre un cursor (captura automática de cursor)<br /><br /> 0x80: consulta cifrada<br /><br /> 0x100-Query en contexto del predicado de seguridad de nivel de fila|  

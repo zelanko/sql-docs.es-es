@@ -1,4 +1,5 @@
 ---
+description: sp_help_notification (Transact-SQL)
 title: sp_help_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e680c10037119020a1f667e40a7f77817a08cdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447070"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,28 +45,28 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @object_type = ] 'object_type'`Tipo de información que se va a devolver. *object_type*es **Char (9)** y no tiene ningún valor predeterminado. *object_type* pueden ser alertas, que enumeran las alertas asignadas al nombre del operador proporcionado *,* o a los operadores, que enumera los operadores responsables del nombre de alerta proporcionado *.*  
+`[ @object_type = ] 'object_type'` Tipo de información que se va a devolver. *object_type*es **Char (9)** y no tiene ningún valor predeterminado. *object_type* pueden ser alertas, que enumeran las alertas asignadas al nombre del operador proporcionado *,* o a los operadores, que enumera los operadores responsables del nombre de alerta proporcionado *.*  
   
-`[ @name = ] 'name'`Un nombre de operador (si *object_type* es Operators) o un nombre de alerta (si *object_type* es Alerts). *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'` Un nombre de operador (si *object_type* es Operators) o un nombre de alerta (si *object_type* es Alerts). *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @enum_type = ] 'enum_type'`La información *object_type*que se devuelve. *enum_type* es real en la mayoría de los casos. *enum_type*es **Char (10)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
+`[ @enum_type = ] 'enum_type'` La información *object_type*que se devuelve. *enum_type* es real en la mayoría de los casos. *enum_type*es **Char (10)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |ACTUAL|Muestra solo el *object_types* asociado al *nombre*.|  
 |ALL|Enumera todos los*object_types* incluidos los que no están asociados con *el nombre*.|  
 |TARGET|Muestra solo el *object_types* que coincide con el *target_name*proporcionado, independientemente de la asociación con el*nombre*.|  
   
-`[ @notification_method = ] notification_method`Valor numérico que determina las columnas del método de notificación que se van a devolver. *notification_method* es **tinyint**y puede tener uno de los valores siguientes.  
+`[ @notification_method = ] notification_method` Valor numérico que determina las columnas del método de notificación que se van a devolver. *notification_method* es **tinyint**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico: devuelve solo el **use_email** columna.|  
 |**2**|Buscapersonas: devuelve solo el **use_pager** columna.|  
 |**4**|NetSend: devuelve solo el **use_netsend** columna.|  
 |**7**|Todas: devuelve todas las columnas.|  
   
-`[ @target_name = ] 'target_name'`Nombre de alerta que se va a buscar (si *object_type* es alertas) o un nombre de operador que se va a buscar (si *object_type* es Operators). *target_name* solo es necesario si *enum_type* es Target. *target_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @target_name = ] 'target_name'` Nombre de alerta que se va a buscar (si *object_type* es alertas) o un nombre de operador que se va a buscar (si *object_type* es Operators). *target_name* solo es necesario si *enum_type* es Target. *target_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-valves"></a>Válvulas del código de retorno  
  0 (correcto) o 1 (error)  
@@ -77,9 +78,9 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Número de identificador de la alerta.|  
 |**alert_name**|**sysname**|Nombre de la alerta.|  
-|**use_email**|**int**|Se utiliza el correo electrónico para notificar al operador:<br /><br /> **1** = sí<br /><br /> **0** = no|  
-|**use_pager**|**int**|Se utiliza un buscapersonas para notificar al operador:<br /><br /> **1** = sí<br /><br /> **0** = no|  
-|**use_netsend**|**int**|Se utiliza un mensaje de red para notificar al operador:<br /><br /> **1** = sí<br /><br /> **0** = no|  
+|**use_email**|**int**|Se utiliza el correo electrónico para notificar al operador:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**use_pager**|**int**|Se utiliza un buscapersonas para notificar al operador:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**use_netsend**|**int**|Se utiliza un mensaje de red para notificar al operador:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
 |**has_email**|**int**|Número de notificaciones por correo electrónico enviadas para esta alerta.|  
 |**has_pager**|**int**|Número de notificaciones por buscapersonas enviadas para esta alerta.|  
 |**has_netsend**|**int**|Número de notificaciones de **net send** enviadas para esta alerta.|  
@@ -90,14 +91,14 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Número de identificación del operador.|  
 |**operator_name**|**sysname**|Nombre del operador.|  
-|**use_email**|**int**|Para enviar la notificación al operador se utiliza el correo electrónico:<br /><br /> **1** = sí<br /><br /> **0** = no|  
-|**use_pager**|**int**|Para enviar la notificación al operador se utiliza un buscapersonas:<br /><br /> **1** = sí<br /><br /> **0** = no|  
-|**use_netsend**|**int**|Para enviar la notificación al operador se utiliza un mensaje de red:<br /><br /> **1** = sí<br /><br /> **0** = no|  
-|**has_email**|**int**|El operador tiene una dirección de correo electrónico:<br /><br /> **1** = sí<br /><br /> **0** = no|  
-|**has_pager**|**int**|El operador tiene una dirección de buscapersonas:<br /><br /> **1** = sí<br /><br /> **0** = no|  
-|**has_netsend**|**int**|El operador tiene configurada la notificación mediante net send.<br /><br /> **1** = sí<br /><br /> **0** = no|  
+|**use_email**|**int**|Para enviar la notificación al operador se utiliza el correo electrónico:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**use_pager**|**int**|Para enviar la notificación al operador se utiliza un buscapersonas:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**use_netsend**|**int**|Para enviar la notificación al operador se utiliza un mensaje de red:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**has_email**|**int**|El operador tiene una dirección de correo electrónico:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**has_pager**|**int**|El operador tiene una dirección de buscapersonas:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
+|**has_netsend**|**int**|El operador tiene configurada la notificación mediante net send.<br /><br /> **1** = Sí<br /><br /> **0** = No|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este procedimiento almacenado se debe ejecutar desde la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
@@ -136,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_add_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_update_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_notification &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_update_notification &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_resource_pools (Transact-SQL)
 title: Sys. dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4bf49fd0d828bd4f287431f2b95c47e07315448
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f19c80cd75788a2bc0f5bad73e0eb0098f9a8315
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447548"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "87396732"
 |write_io_stall_queued_ms|**bigint**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Tiempo total (en milisegundos) desde que llegó la operación de E/S de escritura hasta que hubo el problema. Acepta valores NULL. Es NULL si el grupo de recursos de servidor no está regulado para las operaciones de E/S. Es decir, el MIN_IOPS_PER_VOLUME de grupo de recursos y la configuración de MAX_IOPS_PER_VOLUME son 0.<br /><br /> Este es el retraso que introduce la gobernanza de recursos de E/S.|  
 |io_issue_violations_total|**int**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Total de infracciones de emisiones de operaciones de E/S. Es decir, el número de veces en que la tasa de emisiones de operaciones de E/S ha sido inferior a la tasa reservada. Acepta valores NULL. Es NULL si el grupo de recursos de servidor no está regulado para las operaciones de E/S. Es decir, el MIN_IOPS_PER_VOLUME de grupo de recursos y la configuración de MAX_IOPS_PER_VOLUME son 0.|  
 |io_issue_delay_total_ms|**bigint**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Tiempo total (en milisegundos) entre la emisión programada y la emisión real de operaciones de E/S. Acepta valores NULL. Es NULL si el grupo de recursos de servidor no está regulado para las operaciones de E/S. Es decir, el MIN_IOPS_PER_VOLUME de grupo de recursos y la configuración de MAX_IOPS_PER_VOLUME son 0.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="remarks"></a>Observaciones  
  Los grupos de cargas de trabajo y los grupos de recursos de servidor del regulador de recursos tienen una asignación de varios a uno. Como resultado, muchas de las estadísticas del grupo de recursos de servidor se derivan de las estadísticas del grupo de cargas de trabajo.  
@@ -86,7 +87,7 @@ ms.locfileid: "87396732"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Sys. dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
  [Sys. resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   

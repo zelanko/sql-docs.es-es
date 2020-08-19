@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_table (Transact-SQL)
 title: sp_fulltext_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 283fdb387e60eeed95cc33dc89711631f2465380
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447137"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -49,15 +50,15 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'qualified_table_name'`Es un nombre de tabla de una o dos partes. La tabla debe existir en la base de datos actual. *qualified_table_name* es de tipo **nvarchar (** de-bajo) y no tiene ningún valor predeterminado.  
+`[ @tabname = ] 'qualified_table_name'` Es un nombre de tabla de una o dos partes. La tabla debe existir en la base de datos actual. *qualified_table_name* es de tipo **nvarchar (** de-bajo) y no tiene ningún valor predeterminado.  
   
-`[ @action = ] 'action'`Es la acción que se va a realizar. *Action* es de tipo **nvarchar (50)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
+`[ @action = ] 'action'` Es la acción que se va a realizar. *Action* es de tipo **nvarchar (50)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**Crear**|Crea los metadatos de un índice de texto completo para la tabla a la que hace referencia *qualified_table_name* y especifica que los datos del índice de texto completo de esta tabla deben residir en *fulltext_catalog_name*. Esta acción también designa el uso de *unique_index_name* como columna de clave de texto completo. Este índice único ya debe estar presente y debe estar definido en una columna de la tabla.<br /><br /> No se puede realizar ninguna búsqueda de texto completo sobre esta tabla hasta que se rellene el catálogo de texto completo.|  
+|**Creación**|Crea los metadatos de un índice de texto completo para la tabla a la que hace referencia *qualified_table_name* y especifica que los datos del índice de texto completo de esta tabla deben residir en *fulltext_catalog_name*. Esta acción también designa el uso de *unique_index_name* como columna de clave de texto completo. Este índice único ya debe estar presente y debe estar definido en una columna de la tabla.<br /><br /> No se puede realizar ninguna búsqueda de texto completo sobre esta tabla hasta que se rellene el catálogo de texto completo.|  
 |**Omisiones**|Quita los metadatos del índice de texto completo para *qualified_table_name*. Si el índice de texto completo está activo, se desactiva automáticamente antes de quitarlo. No es necesario quitar columnas antes de quitar el índice de texto completo.|  
-|**Activación**|Activa la capacidad de recopilar datos de índice de texto completo para *qualified_table_name*, después de que se haya desactivado. Debe haber al menos una columna que participe en el índice de texto completo antes de que se pueda activar.<br /><br /> Un índice de texto completo se convierte automáticamente en activo para su rellenado en el momento en que se agrega la primera columna para la indización. Si se quita la última columna del índice, éste se desactiva. Si está en proceso un seguimiento de cambios, al activar un índice inactivo se inicia otro rellenado.<br /><br /> Tenga en cuenta que esto no rellena realmente el índice de texto completo, sino que simplemente registra la tabla en el catálogo de texto completo en el sistema de archivos para que se puedan recuperar filas de *qualified_table_name* durante el siguiente rellenado del índice de texto completo.|  
+|**Activar**|Activa la capacidad de recopilar datos de índice de texto completo para *qualified_table_name*, después de que se haya desactivado. Debe haber al menos una columna que participe en el índice de texto completo antes de que se pueda activar.<br /><br /> Un índice de texto completo se convierte automáticamente en activo para su rellenado en el momento en que se agrega la primera columna para la indización. Si se quita la última columna del índice, éste se desactiva. Si está en proceso un seguimiento de cambios, al activar un índice inactivo se inicia otro rellenado.<br /><br /> Tenga en cuenta que esto no rellena realmente el índice de texto completo, sino que simplemente registra la tabla en el catálogo de texto completo en el sistema de archivos para que se puedan recuperar filas de *qualified_table_name* durante el siguiente rellenado del índice de texto completo.|  
 |**Desactivación**|Desactiva el índice de texto completo para *qualified_table_name* de forma que los datos del índice de texto completo ya no se puedan recopilar para el *qualified_table_name*. Los metadatos del índice de texto completo permanecen y se puede volver a activar la tabla.<br /><br /> Si está activo el seguimiento de cambios, desactivar un índice activo inmoviliza el estado del índice: se detiene cualquier rellenado en curso y no se propagan más cambios al índice.|  
 |**start_change_tracking**|Inicia un rellenado incremental del índice de texto completo. Si la tabla no incluye marca de tiempo, inicia un rellenado completo del índice de texto completo. Inicia un seguimiento de cambios en la tabla.<br /><br /> El seguimiento de cambios de texto completo no realiza un seguimiento de las operaciones WRITETEXT o UPDATETEXT realizadas en columnas indizadas de texto completo que son de tipo **Image**, **Text**o **ntext**.|  
 |**stop_change_tracking**|Detiene el seguimiento de cambios en la tabla.|  
@@ -68,9 +69,9 @@ sp_fulltext_table
 |**start_incremental**|Inicia un rellenado incremental del índice de texto completo de la tabla.|  
 |**Detención**|Detiene un rellenado completo o incremental.|  
   
-`[ @ftcat = ] 'fulltext_catalog_name'`Es un nombre de catálogo de texto completo válido y existente para una acción **Create** . Para todas las demás acciones, este parámetro debe ser NULL. *fulltext_catalog_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Es un nombre de catálogo de texto completo válido y existente para una acción **Create** . Para todas las demás acciones, este parámetro debe ser NULL. *fulltext_catalog_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @keyname = ] 'unique_index_name'`Es un índice válido único de columna de clave única que no admite valores NULL en *qualified_table_name* para una acción **Create** . Para todas las demás acciones, este parámetro debe ser NULL. *unique_index_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @keyname = ] 'unique_index_name'` Es un índice válido único de columna de clave única que no admite valores NULL en *qualified_table_name* para una acción **Create** . Para todas las demás acciones, este parámetro debe ser NULL. *unique_index_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -130,9 +131,9 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_help_fulltext_tables &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [sp_helpindex &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables_cursor &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [sp_helpindex &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Búsqueda de texto completo y procedimientos almacenados de búsqueda semántica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

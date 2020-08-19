@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_memory_grants (Transact-SQL)
 title: Sys. dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -20,12 +21,12 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f39ef72cb01ecef7fca9d26cc87d003807089e16
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ecaeedccefc4d385cacaa1198dcb6dd9189998
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447583"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "85734764"
 |**pool_id**|**int**|Id. del grupo de recursos de servidor al que pertenece este grupo de cargas de trabajo.|  
 |**is_small**|**tinyint**|Cuando se establece en 1, indica que esta concesión utiliza el semáforo de recursos pequeño. Cuando se establece en 0, indica que se utiliza un semáforo normal.|  
 |**ideal_memory_kb**|**bigint**|Tamaño, en kilobytes (KB), de la concesión de memoria para ajustar todo en la memoria física. Está basado en la estimación de la cardinalidad.|  
-|**pdw_node_id**|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br /> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|**pdw_node_id**|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br /> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
 |**reserved_worker_count**|**bigint**|Número de [subprocesos de trabajo](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling)reservados.<br /><br />**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
 |**used_worker_count**|**bigint**|Número de [subprocesos de trabajo](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) usados en este momento.<br /><br />**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**max_used_worker_count**|**bigint**|Número máximo de [subprocesos de trabajo](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) usados hasta este momento.<br /><br />**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -74,7 +75,7 @@ ms.locfileid: "85734764"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
    
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un escenario de depuración típico para un tiempo de espera de consulta puede tener el siguiente aspecto:  
   
 -   Compruebe el estado de la memoria del sistema global con [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) y diversos contadores de rendimiento.  
@@ -120,7 +121,7 @@ En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `V
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
- [Sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
+ [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
  [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)   
   

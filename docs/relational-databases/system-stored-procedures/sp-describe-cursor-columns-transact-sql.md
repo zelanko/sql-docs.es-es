@@ -1,4 +1,5 @@
 ---
+description: sp_describe_cursor_columns (Transact-SQL)
 title: sp_describe_cursor_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2fe6880bb3669639b92c8625b21f942f1b454bf9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d16e5f12f10d744fa1faa6b7b7858f1363dca5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447272"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +90,7 @@ sp_describe_cursor_columns
 |dbid|**int**|Id. de la base de datos que contiene la tabla base que proporciona la columna. Si se generó la columna del conjunto de resultados a partir de una expresión, dbid es -1.|  
 |dbname|**sysname**<br /><br /> (acepta valores NULL)|Nombre de la base de datos que contiene la tabla base que proporciona la columna. Si se generó la columna del conjunto de resultados a partir de una expresión, dbname es NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_describe_cursor_columns describe los atributos de las columnas en el conjunto de resultados de un cursor de servidor, como, por ejemplo, el nombre y el tipo de datos de cada cursor. Utilice sp_describe_cursor para obtener una descripción de los atributos globales del cursor de servidor. Utilice sp_describe_cursor_tables para obtener un informe de las tablas base a las que hace referencia el cursor. Para obtener un informe de los cursores de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)] visibles en la conexión, use sp_cursor_list.  
   
 ## <a name="permissions"></a>Permisos  
@@ -137,11 +138,11 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Cursores](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40;&#41;de Transact-SQL](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;&#41;de Transact-SQL ](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [sp_describe_cursor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
- [sp_cursor_list &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [sp_describe_cursor_tables &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
+ [sp_describe_cursor &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
+ [sp_cursor_list &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor_tables &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

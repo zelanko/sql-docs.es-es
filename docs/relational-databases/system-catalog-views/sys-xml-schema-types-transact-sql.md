@@ -1,4 +1,5 @@
 ---
+description: sys.xml_schema_types (Transact-SQL)
 title: sys.xml_schema_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c7c3dc90f505f406583f36980ac758033aeb1519
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8d4765cf10d8712146931bbde0992ce798ebab7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447732"
 ---
 # <a name="sysxml_schema_types-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

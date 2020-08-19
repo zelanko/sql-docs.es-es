@@ -1,4 +1,5 @@
 ---
+description: Escenario de persistencia del conjunto de registros XML
 title: Escenario de persistencia de conjunto de registros XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a1110db8505a2a721c3503e51276cfb895fb965
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c61663a1fc88f4e8efe464da0220df22133bdc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452507"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Escenario de persistencia del conjunto de registros XML
 En este escenario, creará una aplicación de Active Server páginas (ASP) que guarda el contenido de un objeto de conjunto de registros directamente en el objeto de respuesta de ASP.  
@@ -38,7 +39,7 @@ En este escenario, creará una aplicación de Active Server páginas (ASP) que g
 -   Recibir y mostrar los datos  
   
 ## <a name="step-1-set-up-the-application"></a>Paso 1: configuración de la aplicación  
- Cree un directorio virtual de IIS denominado "XMLPersist" con permisos de script. Cree dos nuevos archivos de texto en la carpeta a la que apunta el directorio virtual, uno denominado "XMLResponse. asp", el otro con el nombre "default. htm".  
+ Cree un directorio virtual de IIS denominado "XMLPersist" con permisos de script. Cree dos nuevos archivos de texto en la carpeta a la que apunta el directorio virtual, uno denominado "XMLResponse. asp", el otro denominado "Default.htm".  
   
 ## <a name="step-2-get-the-data"></a>Paso 2: obtener los datos  
  En este paso, escribirá el código para abrir un conjunto de registros ADO y prepararlo para enviarlo al cliente. Abra el archivo XMLResponse. asp con un editor de texto, como el Bloc de notas, e inserte el código siguiente.  
@@ -89,7 +90,7 @@ En este escenario, creará una aplicación de Active Server páginas (ASP) que g
  Guarde y cierre XMLResponse. asp antes de ir al paso siguiente. Copie también el archivo adovbs. Inc de la carpeta de instalación de la biblioteca de ADO predeterminada en la misma carpeta donde guardó el archivo XMLResponse. asp.  
   
 ## <a name="step-4-receive-and-display-the-data"></a>Paso 4: recepción y visualización de los datos  
- En este paso, creará un archivo HTML con un objeto de [objeto de control de objetos (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) incrustado que apunta al archivo XMLResponse. asp para obtener el conjunto de registros. Abra default. htm con un editor de texto, como el Bloc de notas, y agregue el código siguiente. Reemplace "SQLServer" en la dirección URL por el nombre del servidor.  
+ En este paso, creará un archivo HTML con un objeto de [objeto de control de objetos (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) incrustado que apunta al archivo XMLResponse. asp para obtener el conjunto de registros. Abra default.htm con un editor de texto, como el Bloc de notas, y agregue el código siguiente. Reemplace "SQLServer" en la dirección URL por el nombre del servidor.  
   
 ```  
 <HTML>  
@@ -110,7 +111,7 @@ En este escenario, creará una aplicación de Active Server páginas (ASP) que g
 </HTML>  
 ```  
   
- Cierre el archivo default. htm y guárdelo en la misma carpeta donde guardó XMLResponse. asp. Con Internet Explorer 4,0 o posterior, abra la dirección URL https://*SQLServer*/XMLPersist/default.htm y observe los resultados. Los datos se muestran en una tabla DHTML enlazada. Ahora, abra la dirección URL https:// *SQLServer* /XMLPersist/XMLResponse.asp y observe los resultados. Se muestra el XML.  
+ Cierre el archivo de default.htm y guárdelo en la misma carpeta donde guardó XMLResponse. asp. Con Internet Explorer 4,0 o posterior, abra la dirección URL https://*SQLServer*/XMLPersist/default.htm y observe los resultados. Los datos se muestran en una tabla DHTML enlazada. Ahora, abra la dirección URL https:// *SQLServer* /XMLPersist/XMLResponse.asp y observe los resultados. Se muestra el XML.  
   
 ## <a name="see-also"></a>Consulte también  
  [Save (método)](../../../ado/reference/ado-api/save-method.md)   

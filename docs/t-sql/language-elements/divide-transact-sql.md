@@ -1,4 +1,5 @@
 ---
+description: / (División) (Transact-SQL)
 title: (División) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: 1d69893b-e5c3-441d-8dd8-0e5eb872ecfc
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffecf5a297864765b7ce995ce9b39d1cbff97644
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: da987dbea422db8ab6e26ce9b84ff55b5d5abb2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459420"
 ---
 # <a name="-division-transact-sql"></a>/ (División) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ dividend / divisor
   
  Si un *dividend* de tipo entero se divide entre un *divisor* de tipo entero, el resultado es un entero en el que se trunca la parte fraccionaria del resultado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El valor real que devuelve el operador / es el cociente de la primera expresión, dividida entre la segunda expresión.  
   
 ## <a name="examples"></a>Ejemplos  

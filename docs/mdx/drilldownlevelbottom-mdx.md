@@ -1,4 +1,5 @@
 ---
+description: DrilldownLevelBottom (MDX)
 title: DrilldownLevelBottom (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2ddfb32ec5d7d5fb93e6dff12c41e56a7f789604
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2d77e40e322ab3489070061b1fc466f2e212ba36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483998"
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (MDX)
 
@@ -49,7 +50,7 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
   
  La función **DrilldownLevelBottom** es similar a la función [DrilldownLevel](../mdx/drilldownlevel-mdx.md) , pero en lugar de incluir todos los elementos secundarios de cada miembro en el nivel especificado, la función **DrilldownLevelBottom** devuelve el número más bajo de miembros secundarios.  
   
- La consulta de la propiedad XMLA MdpropMdxDrillFunctions permite comprobar el nivel de compatibilidad que el servidor proporciona para las funciones de perforación. para más información, consulte [las propiedades XMLA compatibles &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ La consulta de la propiedad XMLA MdpropMdxDrillFunctions permite comprobar el nivel de compatibilidad que el servidor proporciona para las funciones de perforación. para más información, consulte [las propiedades XMLA compatibles &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve los tres elementos secundarios más bajos del nivel Product Category según la medida predeterminada. En el cubo de ejemplo de Adventure Works, los tres últimos elementos de Accessories son Tires and Tubes, Pumps y Panniers. En Management Studio, en la ventana de consulta MDX, puede ir a Products | Product Categories | Members | All Products | Accessories para ver la lista completa. Puede incrementar el argumento Count para que devuelva más miembros.  
@@ -81,7 +82,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [&#41;DrilldownLevel &#40;MDX](../mdx/drilldownlevel-mdx.md)   
+ [&#41;DrilldownLevel &#40;MDX ](../mdx/drilldownlevel-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Referencia de API ODBC
 title: Referencia de la API de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1627838d3f34f8092dce2806a1b1d8f885b9bf6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476186"
 ---
 # <a name="odbc-api-reference"></a>Referencia de API ODBC
 En los temas de esta sección se describe cada función ODBC en orden alfabético. Cada función se define como una función del lenguaje de programación C. Entre las descripciones se incluyen las siguientes:  

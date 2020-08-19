@@ -1,4 +1,5 @@
 ---
+description: Métodos de ADO
 title: Métodos de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 10f9aaf7aefa87586df77dd0da5ac1be336d4f53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451387"
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 
 |Método|Descripción|  
 |-|-|  
 |[AgregarNuevo](../../../ado/reference/ado-api/addnew-method-ado.md)|Crea un nuevo registro para un objeto de **conjunto de registros** actualizable.|  
-|[Append](../../../ado/reference/ado-api/append-method-ado.md)|Anexa un objeto a una colección. Si la colección es **campos**, puede crearse un nuevo objeto de **campo** antes de que se anexe a la colección.|  
+|[Anexar](../../../ado/reference/ado-api/append-method-ado.md)|Anexa un objeto a una colección. Si la colección es **campos**, puede crearse un nuevo objeto de **campo** antes de que se anexe a la colección.|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Anexa datos a un **campo**de datos binario o de texto grande, o a un objeto de **parámetro** .|  
 |[BeginTrans, CommitTrans y RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Administra el procesamiento de transacciones dentro de un objeto de **conexión** de la manera siguiente:<br /><br /> **BeginTrans** : inicia una nueva transacción.<br /><br /> **CommitTrans** : guarda los cambios y finaliza la transacción actual. También puede iniciar una nueva transacción.<br /><br /> **RollbackTrans** : cancela cualquier cambio y finaliza la transacción actual. También puede iniciar una nueva transacción.|  
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela la ejecución de una llamada de método pendiente y asincrónica.|  
@@ -33,7 +34,7 @@ ms.locfileid: "87242865"
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela los cambios realizados en la fila actual o nueva de un objeto de **conjunto de registros** , o la colección de **campos** de un objeto de **registro** , antes de llamar al método **Update** .|  
 |[Borrar](../../../ado/reference/ado-api/clear-method-ado.md)|Quita todos los objetos de **error** de la colección de **errores** .|  
 |[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Crea un objeto de **conjunto de registros** duplicado a partir de un objeto de conjunto de **registros** existente. Opcionalmente, especifica que el clon es de solo lectura.|  
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Cierra un objeto abierto y los objetos dependientes.|  
+|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Cierra un objeto abierto y los objetos dependientes.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Compara dos marcadores y devuelve una indicación de sus valores relativos.|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Copia un archivo o un directorio, y su contenido, en otra ubicación.|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|Copia el número especificado de caracteres o bytes (dependiendo del **tipo**) de la **secuencia** en otro objeto de **flujo** .|  
@@ -44,7 +45,7 @@ ms.locfileid: "87242865"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Elimina un archivo o un directorio y todos sus subdirectorios.|  
 |[Execute (comando de ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Ejecuta la consulta, la instrucción SQL o el procedimiento almacenado especificado en la propiedad **CommandText** .|  
 |[Execute (conexión ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Ejecuta la consulta, la instrucción SQL, el procedimiento almacenado o el texto específico del proveedor especificados.|  
-|[Buscar](../../../ado/reference/ado-api/find-method-ado.md)|Busca en un **conjunto de registros** la fila que cumple los criterios especificados.|  
+|[Localización](../../../ado/reference/ado-api/find-method-ado.md)|Busca en un **conjunto de registros** la fila que cumple los criterios especificados.|  
 |[Vaciar](../../../ado/reference/ado-api/flush-method-ado.md)|Fuerza el contenido de la **secuencia** que queda en el búfer de ADO al objeto subyacente al que está asociada la **secuencia** .|  
 |[get_OLEDBCommand (método)](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Devuelve el comando OLEDB subyacente, propagando primero cualquier información de parámetros establecida en el comando de ADO al comando OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Devuelve un **conjunto de registros** cuyas filas representan los archivos y subdirectorios del directorio representado por este **registro**.|  
@@ -80,7 +81,7 @@ ms.locfileid: "87242865"
 |[Escritura](../../../ado/reference/ado-api/write-method.md)|Escribe datos binarios en un objeto de **secuencia** .|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Escribe una cadena de texto especificada en un objeto de **secuencia** .|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Colecciones de ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

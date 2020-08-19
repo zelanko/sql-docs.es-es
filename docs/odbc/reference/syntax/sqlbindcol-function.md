@@ -1,4 +1,5 @@
 ---
+description: SQLBindCol (función)
 title: SQLBindCol (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90bb1c1aa4dbfa2614f689faa47eb0c41a6cecd6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84793bdd1261c4a2f65b1bdb60eec4a516a1a1d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476173"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol (función)
 **Conformidad**  
@@ -55,7 +56,7 @@ SQLRETURN SQLBindCol(
  Entradas Número de la columna del conjunto de resultados que se va a enlazar. Las columnas se numeran al aumentar el orden de las columnas empezando por 0, donde la columna 0 es la columna de marcador. Si no se utilizan marcadores, es decir, el atributo de instrucción SQL_ATTR_USE_BOOKMARKS está establecido en SQL_UB_OFF-los números de columna empiezan en 1.  
   
  *TargetType*  
- Entradas Identificador del tipo de datos C del \*búfer *TargetValuePtr* . Cuando se recuperan datos del origen de datos con **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**o **SQLSetPos**, el controlador convierte los datos a este tipo. Cuando envía datos al origen de datos con **SQLBulkOperations** o **SQLSetPos**, el controlador convierte los datos de este tipo. Para obtener una lista de tipos de datos e identificadores de tipo de C válidos, vea la sección tipos de datos de [c](../../../odbc/reference/appendixes/c-data-types.md) en el Apéndice D: tipos de datos.  
+ Entradas Identificador del tipo de datos C del \* búfer *TargetValuePtr* . Cuando se recuperan datos del origen de datos con **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**o **SQLSetPos**, el controlador convierte los datos a este tipo. Cuando envía datos al origen de datos con **SQLBulkOperations** o **SQLSetPos**, el controlador convierte los datos de este tipo. Para obtener una lista de tipos de datos e identificadores de tipo de C válidos, vea la sección tipos de datos de [c](../../../odbc/reference/appendixes/c-data-types.md) en el Apéndice D: tipos de datos.  
   
  Si el argumento *TargetType* es un tipo de datos de intervalo, se usan para los datos la precisión inicial del intervalo predeterminado (2) y la precisión de segundos del intervalo predeterminado (6), tal como se establece en los campos SQL_DESC_DATETIME_INTERVAL_PRECISION y SQL_DESC_PRECISION de ARD, respectivamente. Si el argumento *TargetType* es SQL_C_NUMERIC, se usa la precisión predeterminada (definida por el controlador) y la escala predeterminada (0), como se establece en los campos SQL_DESC_PRECISION y SQL_DESC_SCALE de ARD, para los datos. Si una precisión o escala predeterminada no es adecuada, la aplicación debe establecer explícitamente el campo de descriptor adecuado mediante una llamada a **SQLSetDescField** o **SQLSetDescRec**.  
   
@@ -67,9 +68,9 @@ SQLRETURN SQLBindCol(
  Si *TargetValuePtr* es un puntero nulo, el controlador desenlaza el búfer de datos de la columna. Una aplicación puede Desenlazar todas las columnas llamando a **SQLFreeStmt** con la opción SQL_UNBIND. Una aplicación puede desenlazar el búfer de datos de una columna pero todavía tiene un búfer de longitud/indicador enlazado para la columna, si el argumento *TargetValuePtr* de la llamada a **SQLBindCol** es un puntero nulo, pero el argumento *StrLen_or_IndPtr* es un valor válido.  
   
  *BufferLength*  
- Entradas Longitud del búfer \*de *TargetValuePtr* en bytes.  
+ Entradas Longitud del búfer de \* *TargetValuePtr* en bytes.  
   
- El controlador usa *BufferLength* para evitar escribir más allá del final del \*búfer de *TargetValuePtr* cuando devuelve datos de longitud variable, como datos de caracteres o binarios. Observe que el controlador cuenta el carácter de terminación NULL cuando devuelve datos de caracteres a \* *TargetValuePtr*. \*Por lo tanto, *TargetValuePtr* debe contener espacio para el carácter de terminación null o el controlador truncará los datos.  
+ El controlador usa *BufferLength* para evitar escribir más allá del final del \* búfer de *TargetValuePtr* cuando devuelve datos de longitud variable, como datos de caracteres o binarios. Observe que el controlador cuenta el carácter de terminación NULL cuando devuelve datos de caracteres a \* *TargetValuePtr*. \*Por lo tanto, *TargetValuePtr* debe contener espacio para el carácter de terminación null o el controlador truncará los datos.  
   
  Cuando el controlador devuelve datos de longitud fija, como un entero o una estructura de fecha, el controlador omite *BufferLength* y asume que el búfer es lo suficientemente grande como para contener los datos. Por lo tanto, es importante que la aplicación asigne un búfer suficientemente grande para los datos de longitud fija o que el controlador escriba más allá del final del búfer.  
   
@@ -108,7 +109,7 @@ SQLRETURN SQLBindCol(
   
  Consulte la [información de ODBC 64](../../../odbc/reference/odbc-64-bit-information.md)bits, si la aplicación se ejecutará en un sistema operativo de 64 bits.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -119,7 +120,7 @@ SQLRETURN SQLBindCol(
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07006|Infracción de atributo de tipo de datos restringido|(DM) el argumento *ColumnNumber* era 0 y el argumento *TargetType* no se SQL_C_BOOKMARK ni SQL_C_VARBOOKMARK.|  
 |07009|Índice de descriptor no válido|El valor especificado para el argumento *ColumnNumber* ha superado el número máximo de columnas del conjunto de resultados.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY003|Tipo de búfer de aplicación no válido|El *TargetType* del argumento no era un tipo de datos válido ni SQL_C_DEFAULT.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a **SQLBindCol** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
@@ -232,7 +233,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>Direcciones de búfer  
  La *dirección del búfer* es la dirección real de los datos o el búfer de longitud/indicador. El controlador calcula la dirección del búfer justo antes de escribir en los búferes (por ejemplo, durante el tiempo de captura). Se calcula a partir de la fórmula siguiente, que usa las direcciones especificadas en los argumentos *TargetValuePtr* y *StrLen_or_IndPtr* , el desplazamiento de enlace y el número de fila:  
   
- *Bound Address* + *Desplazamiento de enlace* de dirección enlazado + ((*número de fila* -1) x *tamaño de elemento*)  
+ *Dirección*  +  enlazada *Desplazamiento de enlace* + ((*número de fila* -1) x tamaño de *elemento*)  
   
  donde las variables de la fórmula se definen como se describe en la tabla siguiente.  
   
@@ -240,7 +241,7 @@ SQLRETURN SQLBindCol(
 |--------------|-----------------|  
 |*Dirección enlazada*|En el caso de los búferes de datos, la dirección especificada con el argumento *TargetValuePtr* en **SQLBindCol**.<br /><br /> En el caso de los búferes de longitud/indicador, la dirección especificada con el argumento *StrLen_or_IndPtr* en **SQLBindCol**. Para obtener más información, vea "comentarios adicionales" en la sección "descriptores y SQLBindCol".<br /><br /> Si la dirección enlazada es 0, no se devuelve ningún valor de datos, aunque la dirección calculada por la fórmula anterior sea distinto de cero.|  
 |*Desplazamiento de enlace*|Si se utiliza el enlace de modo de fila, el valor almacenado en la dirección especificada con el atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR.<br /><br /> Si se usa el enlace de modo de columna o si el valor del atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR es un puntero nulo, el *desplazamiento de enlace* es 0.|  
-|*Row Number*|Número basado en 1 de la fila del conjunto de filas. En el caso de las capturas de una sola fila, que son el valor predeterminado, es 1.|  
+|*Número de fila*|Número basado en 1 de la fila del conjunto de filas. En el caso de las capturas de una sola fila, que son el valor predeterminado, es 1.|  
 |*Tamaño del elemento*|Tamaño de un elemento de la matriz enlazada.<br /><br /> Si se usa el enlace de modo de columna, es **sizeof (sqlinteger donde)** para los búferes de longitud/indicador. En el caso de los búferes de datos, es el valor del argumento *BufferLength* de **SQLBindCol** si el tipo de datos es de longitud variable y el tamaño del tipo de datos si el tipo de datos es de longitud fija.<br /><br /> Si se usa el enlace de modo de fila, este es el valor del atributo de la instrucción SQL_ATTR_ROW_BIND_TYPE para los búferes de datos y longitud/indicador.|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>Descriptores y SQLBindCol  
@@ -388,6 +389,6 @@ int main() {
 |Capturar parte o toda una columna de datos|[Función SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |Devolver el número de columnas del conjunto de resultados|[SQLNumResultCols (función)](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

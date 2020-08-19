@@ -1,4 +1,5 @@
 ---
+description: Compatibilidad con transacciones distribuidas en SQL Server Native Client
 title: Compatibilidad con transacciones distribuidas (proveedor de OLE DB de Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,17 +20,17 @@ ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f3d67feb719a887b713800f780f5b7d64ee913a
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 4512cea869bae06bde3343db1487e060a35928b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498990"
 ---
 # <a name="supporting-distributed-transactions-in-sql-server-native-client"></a>Compatibilidad con transacciones distribuidas en SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Los consumidores de proveedores de OLE DB de Native Client pueden utilizar el método **ITransactionJoin:: JoinTransaction** para participar en una transacción distribuida coordinada por Microsoft Coordinador de transacciones distribuidas (MS DTC).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Los consumidores de proveedores de OLE DB de Native Client pueden utilizar el método **ITransactionJoin:: JoinTransaction** para participar en una transacción distribuida coordinada por Microsoft Coordinador de transacciones distribuidas (MS DTC).  
   
  MS DTC expone objetos COM que permiten a los clientes iniciar y participar en transacciones coordinadas a través de varias conexiones a una variedad de almacenes de datos. Para iniciar una transacción, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor del proveedor de OLE DB de Native Client usa la interfaz **ITRANSACTIONDISPENSER** de MS DTC. El miembro **BeginTransaction** de **ITransactionDispenser** devuelve una referencia en un objeto de transacción distribuida. Esta referencia se pasa al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client mediante **JoinTransaction**.  
   
@@ -142,6 +143,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Transacciones](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

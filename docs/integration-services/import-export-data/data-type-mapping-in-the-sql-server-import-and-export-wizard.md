@@ -1,4 +1,5 @@
 ---
+description: Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server
 title: Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 73c837f4bbdd8cb7c7a6060beaea6bc97eba0a02
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 946bb57a3d821186ebcca132539713cf515ab20f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484098"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server
 

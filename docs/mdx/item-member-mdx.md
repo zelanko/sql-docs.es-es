@@ -1,4 +1,5 @@
 ---
+description: Item (Member) (MDX)
 title: Elemento (miembro) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d7afa88f9d6239c8da7cb9c406ef11f0764f8dcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a374d1fcc7f972828832c2f82375acf640d45fb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483968"
 ---
 # <a name="item-member-mdx"></a>Item (Member) (MDX)
 
@@ -31,7 +32,7 @@ Tuple_Expression.Item( Index )
  *Tuple_Expression*  
  Expresión MDX válida que devuelve una tupla.  
   
- *Índice*  
+ *Index*  
  Expresión numérica válida que especifica el miembro concreto mediante la posición en la tupla que se devolverá.  
   
 ## <a name="remarks"></a>Observaciones  

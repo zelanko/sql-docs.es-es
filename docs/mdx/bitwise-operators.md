@@ -1,4 +1,5 @@
 ---
+description: Operadores bit a bit
 title: Operadores bit a bit | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed7036599f6415162514c2b9d9a243430ff30d9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484058"
 ---
 # <a name="bitwise-operators"></a>Operadores bit a bit
 
@@ -25,10 +26,10 @@ ms.locfileid: "68016967"
 |Operator|Descripción|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|Realiza una conjunción lógica de dos expresiones numéricas.|  
-|[ENCUENTRA](../mdx/is-mdx.md)|Realiza una comparación lógica entre dos expresiones de objeto.|  
+|[IS](../mdx/is-mdx.md)|Realiza una comparación lógica entre dos expresiones de objeto.|  
 |[NOT](../mdx/not-mdx.md)|Realiza una negación lógica de una expresión numérica.|  
 |[OR](../mdx/or-mdx.md)|Realiza una disyunción lógica de dos expresiones numéricas.|  
-|[XOR](../mdx/xor-mdx.md)|Realiza una exclusión lógica de dos expresiones numéricas.|  
+|[XO](../mdx/xor-mdx.md)|Realiza una exclusión lógica de dos expresiones numéricas.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   

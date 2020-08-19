@@ -1,4 +1,5 @@
 ---
+description: 'Definición de datos de MDX: CREATE SESSION CUBE'
 title: CREATE SESSION CUBE (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33cdbc4a018245249771ff350227d13f4e0f772e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483878"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Definición de datos de MDX: CREATE SESSION CUBE
 
@@ -101,13 +102,13 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  Nombre de la dimensión del cubo de sesión.  
   
- FROM \<DIM from (cláusula)>  
+ FROM \<dim from clause>  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
  NOT_RELATED_TO_FACTS  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
- \<tipo de nivel>  
+ \<level type>  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
 ## <a name="remarks"></a>Observaciones  

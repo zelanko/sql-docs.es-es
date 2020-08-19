@@ -1,4 +1,5 @@
 ---
+description: 'Vistas de aplicación de capa de datos: dbo.sysdac_instances'
 title: dbo.sysdac_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18031fac584eea39e5901276b597fc556263b18e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77aafe21c2aa67b55d7c2d9319ab2699585c697c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475527"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>Vistas de aplicación de capa de datos: dbo.sysdac_instances
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85752969"
 |created_by|**sysname**|Inicio de sesión que creó la instancia de DAC.|  
 |database_name|**sysname**|Nombre de la base de datos creada para la instancia de DAC.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Una DAC incluye un tipo de DAC, que es una definición de los objetos de capa de datos lógicos utilizados por una aplicación, como las tablas y las vistas. Un paquete DAC es un archivo que se utiliza para implementar una DAC. El paquete DAC contiene una representación de todos los objetos lógicos contenidos en el tipo de DAC. El paquete DAC se puede utilizar para implementar una o más copias, o instancias, de la DAC en una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cada instancia de DAC implementada a partir del mismo paquete DAC comparte el mismo tipo, pero tiene asignado un identificador y un nombre de instancia únicos.  
   
 ## <a name="permissions"></a>Permisos  

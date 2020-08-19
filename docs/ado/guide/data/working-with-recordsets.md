@@ -1,4 +1,5 @@
 ---
+description: Trabajar con conjuntos de registros
 title: Trabajar con conjuntos de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 84f60e269bcd01bdacc7647f1498c588620f049e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452527"
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
 El objeto de **conjunto de registros** tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados, buscar un registro específico en función de los criterios proporcionados e incluso optimizar esas operaciones de búsqueda mediante índices. El uso de estas características depende del proveedor y, en algunos casos, como el de la propiedad de [Índice](../../../ado/reference/ado-api/index-property.md) , la estructura del propio origen de datos.  
@@ -53,7 +54,7 @@ El objeto de **conjunto de registros** tiene características integradas que per
   
  Solo se puede especificar un nombre de una sola columna para el criterio. En otras palabras, este método no admite búsquedas en varias columnas.  
   
- El operador de comparación para el criterio puede ser " **>** " (mayor que), " **\<** " (menor que), "=" (igual), ">=" (mayor o igual que), "<=" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de patrones).  
+ El operador de comparación para el criterio puede ser " **>** " (mayor que), "* * \<**" (less than), "=" (equal), "> =" (mayor o igual que), "<=" (menor o igual que), "<>" (no igual) o "like" (coincidencia de patrones).  
   
  El valor del criterio puede ser una cadena, un número de punto flotante o una fecha. Los valores de cadena se delimitan con comillas simples o "#" (signo de número) (por ejemplo, "State = ' WA '" o "State = #WA #"). Los valores de fecha se delimitan con marcas "#" (signo de número) (por ejemplo, "start_date > #7/22/97 #").  
   
@@ -87,7 +88,7 @@ El objeto de **conjunto de registros** tiene características integradas que per
   
 -   *FieldName* debe ser un nombre de campo válido del **conjunto de registros**. Si el nombre del campo contiene espacios, debe escribir el nombre entre corchetes.  
   
--   El *operador* debe ser uno de los siguientes: **\<** , **>** , **\<=** , **>=** , **<>** , **=** o **like**.  
+-   El *operador* debe ser uno de los siguientes: **\<**, **>** , **\<=**, **>=** , **<>** , **=** o **like**.  
   
 -   *Value* es el valor con el que se comparan los valores de campo (por ejemplo,, `'Smith'` `#8/24/95#` , `12.345` o `$50.00` ). Use comillas simples (') con las cadenas y los signos de almohadilla ( `#` ) con las fechas. En el caso de los números, puede usar separadores decimales, signos de dólar y notación científica. Si el *operador* es **like**, *Value* puede usar caracteres comodín. Solo el asterisco ( \* ) y el signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. El *valor* no puede ser null.  
   

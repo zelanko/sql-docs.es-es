@@ -1,4 +1,5 @@
 ---
+description: Función SQLConfigDriver
 title: Función SQLConfigDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0da15cef06e5d8392408108ce88b53f7885eb65e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04ee54bba13730504ed08cfc1307858edea56282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476161"
 ---
 # <a name="sqlconfigdriver-function"></a>Función SQLConfigDriver
 **Conformidad**  
@@ -33,7 +34,7 @@ ms.locfileid: "81301250"
  **Resumen**  
  **SQLConfigDriver** carga el archivo dll de instalación del controlador adecuado y llama a la función **ConfigDriver** .  
   
- También se puede tener acceso a la funcionalidad de **SQLConfigDriver** con [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ También se puede tener acceso a la funcionalidad de **SQLConfigDriver** con [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -79,11 +80,11 @@ BOOL SQLConfigDriver(
  *pcbMsgOut*  
  Genere Número total de bytes disponibles que se van a devolver en *lpszMsg*. Si el número de bytes disponibles para devolver es mayor o igual que *cbMsgMax*, el mensaje de salida de *lpszMsg* se trunca en *cbMsgMax* menos el carácter de terminación null. El argumento *pcbMsgOut* puede ser un puntero nulo.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLConfigDriver** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLConfigDriver** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  

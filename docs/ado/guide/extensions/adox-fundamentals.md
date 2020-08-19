@@ -1,4 +1,5 @@
 ---
+description: Aspectos básicos de ADOX
 title: Aspectos básicos de ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 131df9d5712bf89c28e1b8e7eae30217b6c16947
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 74b7f3a17bddb068d82f4e05b13a28abff219c2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452467"
 ---
 # <a name="adox-fundamentals"></a>Aspectos básicos de ADOX
 Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and Security (ADOX) es una extensión de los objetos de ADO y del modelo de programación. ADOX incluye objetos para la creación y modificación de esquemas, así como para la seguridad. Dado que se trata de un enfoque basado en objetos para la manipulación de esquemas, puede escribir código que funcione con distintos orígenes de datos, independientemente de las diferencias en sus sintaxis nativas.  
   
  ADOX es una biblioteca complementaria para los objetos principales de ADO. Expone objetos adicionales para crear, modificar y eliminar objetos de esquema, como tablas y procedimientos. También incluye los objetos de seguridad para mantener a los usuarios y grupos, y para conceder y revocar los permisos en los objetos.  
   
- Para usar ADOX con la herramienta de desarrollo, debe establecer una referencia a la biblioteca de tipos ADOX. La descripción de la biblioteca ADOX es "Microsoft ADO ext. for DDL and Security". El nombre de archivo de biblioteca ADOX es Msadox. dll y el ID. de programa (ProgID) es "ADOX". Para obtener más información acerca de cómo establecer referencias a bibliotecas, consulte la documentación de la herramienta de desarrollo.  
+ Para usar ADOX con la herramienta de desarrollo, debe establecer una referencia a la biblioteca de tipos ADOX. La descripción de la biblioteca ADOX es "Microsoft ADO ext. for DDL and Security". El nombre de archivo de la biblioteca ADOX es Msadox.dll y el identificador de programa (ProgID) es "ADOX". Para obtener más información acerca de cómo establecer referencias a bibliotecas, consulte la documentación de la herramienta de desarrollo.  
   
  El proveedor de Microsoft OLE DB para Microsoft Jet Motor de base de datos es totalmente compatible con ADOX. Es posible que algunas características de ADOX no se admitan, en función del proveedor de datos.  
   

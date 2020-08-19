@@ -1,4 +1,5 @@
 ---
+description: Usar el Asistente para indización de texto completo
 title: Usar el Asistente para indización de texto completo | Microsoft Docs
 ms.date: 08/19/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2531d7f8034440b48a032ee1e9e74ae7fdb9df73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490595"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar el Asistente para indización de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

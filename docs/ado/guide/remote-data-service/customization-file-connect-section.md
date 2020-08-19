@@ -1,4 +1,5 @@
 ---
+description: Sección de conexión del archivo de personalización
 title: Sección de conexión del archivo de personalización | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452267"
 ---
 # <a name="customization-file-connect-section"></a>Sección de conexión del archivo de personalización
 El comportamiento predeterminado del controlador es denegar todas las conexiones. La sección **Connect** especifica excepciones a ese comportamiento. Por ejemplo, si todas las secciones de **conexión** faltan o están vacías, de forma predeterminada no se pueden realizar conexiones.  
@@ -51,7 +52,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 |Parte|Descripción|  
 |----------|-----------------|  

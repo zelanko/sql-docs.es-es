@@ -1,4 +1,5 @@
 ---
+description: Modelo de programación de RDS con objetos
 title: Modelo de programación de RDS con objetos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f41fd577b470493aa6a53c8ea9ad760287a3507
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2230a4082f79ea386dd02c7530e3af29c57f1b69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452117"
 ---
 # <a name="rds-programming-model-with-objects"></a>Modelo de programación de RDS con objetos
 El objetivo de RDS es obtener acceso a los orígenes de datos y actualizarlos a través de un intermediario como IIS. El modelo de programación especifica la secuencia de actividades necesaria para lograr este objetivo. El modelo de objetos de especifica los objetos cuyos métodos y propiedades afectan al modelo de programación.  

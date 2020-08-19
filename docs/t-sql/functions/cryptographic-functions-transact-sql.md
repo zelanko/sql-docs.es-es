@@ -1,4 +1,5 @@
 ---
+description: Funciones de cifrado (Transact-SQL)
 title: Funciones criptográficas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 77821dfc49bd1e3dba1bde1bc63da15bd9877bf6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f54a52f2fdb4e17d3e32ab47ca7e3dccfcb9aeb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468170"
 ---
 # <a name="cryptographic-functions-transact-sql"></a>Funciones criptográficas (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -165,7 +166,7 @@ Estas funciones admiten la firma digital, la validación de firma digital, el ci
 
 &nbsp;
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [Funciones](../../t-sql/functions/functions.md)  
 [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
 [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  

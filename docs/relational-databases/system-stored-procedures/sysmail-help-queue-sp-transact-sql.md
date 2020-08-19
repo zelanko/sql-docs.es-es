@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_queue_sp (Transact-SQL)
 title: sysmail_help_queue_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f47e06875d2076e4ae9510d7cb1c5bf5f706c45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2cda00932e9cca82ef93be1b4c00a8aabd583737
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469161"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @queue_type = ] 'queue_type'`Argumento opcional elimina los mensajes de correo electrónico del tipo especificado como *queue_type*. *queue_type* es de tipo **nvarchar (6)** y no tiene ningún valor predeterminado. Las entradas válidas son **mail** y **status**.  
+`[ @queue_type = ] 'queue_type'` Argumento opcional elimina los mensajes de correo electrónico del tipo especificado como *queue_type*. *queue_type* es de tipo **nvarchar (6)** y no tiene ningún valor predeterminado. Las entradas válidas son **mail** y **status**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -54,7 +55,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |**last_empty_rowset_time**|**DATETIME**|Fecha y hora en que la cola estuvo vacía por última vez. En formato de hora militar y zona horaria GMT.|  
 |**last_activated_time**|**DATETIME**|Fecha y hora en que la cola se activó por última vez. En formato de hora militar y zona horaria GMT.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para solucionar problemas de Correo electrónico de base de datos, utilice **sysmail_help_queue_sp** para ver cuántos elementos hay en la cola, el estado de la cola y cuándo se activó por última vez.  
   
 ## <a name="permissions"></a>Permisos  

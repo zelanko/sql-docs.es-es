@@ -1,4 +1,5 @@
 ---
+description: sys.database_firewall_rules (Azure SQL Database)
 title: Sys. database_firewall_rules (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d14ae77b15121b1344d3881f8966d6a707f71fa6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49a48533c800093090465819610052009633839f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475477"
 ---
 # <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85784985"
 |create_date|**DATETIME**|Fecha y hora UTC en la que se creó la configuración del firewall de nivel de base de datos.|  
 |modify_date|**DATETIME**|Fecha y hora UTC en la que se modificó por última vez la configuración del firewall de nivel de base de datos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para devolver información acerca de la configuración de Firewall de nivel de servidor asociada con el Microsoft Azure SQL Database, utilice [Sys. firewall_rules (Azure SQL Database)](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md).  
   
 ## <a name="permissions"></a>Permisos  

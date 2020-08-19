@@ -1,4 +1,5 @@
 ---
+description: Modelo detallado de programación de RDS
 title: Modelo de programación de RDS en detalle | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6bf59580985a4c46fa163a00423bb7dd90ad9463
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad3cd950c958fce95c0264533040fbe9e1df634b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452127"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo detallado de programación de RDS
 Los siguientes son elementos clave del modelo de programación de RDS:  
@@ -60,7 +61,7 @@ Los siguientes son elementos clave del modelo de programación de RDS:
   
  **Objeto RDS. DataControl** tiene dos aspectos. Un aspecto pertenece al origen de datos. Si establece la información de conexión y comando mediante las propiedades **Connect** y **SQL** de **RDS. DataControl**, usará automáticamente **RDS. DataSpace** para crear una referencia al objeto **RDSServer. DataFactory** predeterminado. A continuación, **RDSServer. DataFactory** usará el valor de la propiedad **Connect** para conectarse al origen de datos, usar el valor de la propiedad **SQL** para obtener un **conjunto de registros** del origen de datos y devolver el objeto de conjunto de **registros** a **RDS. DataControl**.  
   
- El segundo aspecto pertenece a la presentación de la información de **conjunto de registros** devuelta en un control visual. Puede asociar un control visual a **RDS. DataControl** (en un proceso llamado enlace) y obtener acceso a la información del objeto de **conjunto de registros** asociado, mostrando los resultados de la consulta en una página Web de Microsoft® Internet Explorer. Cada **RDS. **El objeto DataControl enlaza un objeto de **conjunto de registros** , que representa los resultados de una sola consulta, a uno o más controles visuales (por ejemplo, un cuadro de texto, un cuadro combinado, un control de cuadrícula, etc.). Puede haber más de un **RDS. Objeto DataControl** en cada página. Cada **RDS. **El objeto DataControl puede estar conectado a un origen de datos diferente y contener los resultados de una consulta independiente.  
+ El segundo aspecto pertenece a la presentación de la información de **conjunto de registros** devuelta en un control visual. Puede asociar un control visual a **RDS. DataControl** (en un proceso llamado enlace) y obtener acceso a la información del objeto de **conjunto de registros** asociado, mostrando los resultados de la consulta en una página Web de Microsoft® Internet Explorer. Cada **RDS. ** El objeto DataControl enlaza un objeto de **conjunto de registros** , que representa los resultados de una sola consulta, a uno o más controles visuales (por ejemplo, un cuadro de texto, un cuadro combinado, un control de cuadrícula, etc.). Puede haber más de un **RDS. Objeto DataControl** en cada página. Cada **RDS. ** El objeto DataControl puede estar conectado a un origen de datos diferente y contener los resultados de una consulta independiente.  
   
  **Objeto RDS. **El objeto DataControl también tiene sus propios métodos para navegar, ordenar y filtrar las filas del objeto de conjunto de **registros** asociado. Estos métodos son similares, pero no son los mismos que los métodos del objeto de **conjunto de registros** de ADO.  
   

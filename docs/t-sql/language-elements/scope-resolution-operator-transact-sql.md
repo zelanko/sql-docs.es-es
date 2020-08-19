@@ -1,4 +1,5 @@
 ---
+description: ':: (Resolución de ámbito)'
 title: ':: (Resolución de ámbito) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff16ec709e8ed3cf7e0d6a4b129641d1e553a11a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1372950c3262f86ca1b0d85ca7026d6560f4afb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68072295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459280"
 ---
 # <a name="-scope-resolution-transact-sql"></a>:: (Resolución de ámbito)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +38,6 @@ PRINT @hid.ToString();
   
  `/`  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
  

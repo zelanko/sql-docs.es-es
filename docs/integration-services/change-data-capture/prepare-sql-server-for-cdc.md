@@ -1,4 +1,5 @@
 ---
+description: Preparar SQL Server para CDC
 title: Preparar SQL Server para CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8b17436de4950b4dcda69e4c381477640821c9a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a98ff226c4e2e861b60d04cb50e8b201035c16a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431087"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Preparar SQL Server para CDC
 
@@ -40,7 +41,7 @@ ms.locfileid: "86921759"
   
 -   **Autenticación de Windows**  
   
--   **Autenticación de SQL Server**: si selecciona esta opción, debe escribir los valores de **Nombre de usuario** y **Contraseña** del usuario de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que se va a conectar.  
+-   **Autenticación de SQL Server**: si selecciona esta opción, debe escribir el **Nombre de usuario** y la **Contraseña** del usuario del servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que se está conectando.  
   
  Para preparar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para CDC de Oracle, el inicio de sesión debe tener permiso de escritura para la base de datos MSXDBCDC. Escriba las credenciales para un inicio de sesión que tenga permiso de escritura para la base de datos MSXDBCDC, como un miembro del rol `sysasmin` .  
   

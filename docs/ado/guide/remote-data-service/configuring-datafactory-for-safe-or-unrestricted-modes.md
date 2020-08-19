@@ -1,4 +1,5 @@
 ---
+description: Configuración de DataFactory para los modos seguro o sin restricciones
 title: Configuración de DataFactory para los modos SAFE o Unrestricted | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cff72ed7c02cb4f0e9dc2a719ee7e82b55e44408
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a0b01eada84095b94740319a6d63ed6b0066425d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452307"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Configuración de DataFactory para los modos seguro o sin restricciones
 > [!IMPORTANT]
@@ -29,7 +30,7 @@ ms.locfileid: "82750081"
   
 2.  El controlador predeterminado, MSDFMAP. handler, está registrado, presente en la lista de controladores seguros y marcado como controlador predeterminado.  
   
-3.  El archivo MSDFMAP. ini se instala en el directorio de Windows. Debe configurar este archivo en función de sus necesidades, antes de utilizar RDS en el modo de tres niveles.  
+3.  Msdfmap.ini archivo se instala en el directorio de Windows. Debe configurar este archivo en función de sus necesidades, antes de utilizar RDS en el modo de tres niveles.  
   
  Opcionalmente, puede configurar una instalación de **DataFactory** sin restricciones. **DataFactory** se puede usar directamente sin el controlador personalizado. Los usuarios pueden seguir usando un controlador personalizado modificando las cadenas de conexión, pero no es necesario. Para obtener más información sobre las implicaciones del uso del objeto **RDSServer. DataFactory** , vea [proteger aplicaciones RDS](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
   

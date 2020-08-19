@@ -1,4 +1,5 @@
 ---
+description: Conectarse a orígenes de datos del componente de script
 title: Conectarse a orígenes de datos del componente de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50b9b20381c413173c6a17fd578352f85f6e2c1e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b647745e46b2326ab247cd2ef67ec480835dc16e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430277"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Conectarse a orígenes de datos del componente de script
 

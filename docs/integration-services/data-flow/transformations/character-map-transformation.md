@@ -1,4 +1,5 @@
 ---
+description: Transformación Mapa de caracteres
 title: Transformación Mapa de caracteres | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46d4833b6879330e62b89470b8a542f8f6ed910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 84e3e3593e2a3cbee72d6df5cc7565bb908a8b53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430717"
 ---
 # <a name="character-map-transformation"></a>Transformación Mapa de caracteres
 

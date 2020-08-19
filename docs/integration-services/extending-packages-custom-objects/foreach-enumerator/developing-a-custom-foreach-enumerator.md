@@ -1,4 +1,5 @@
 ---
+description: Desarrollar un enumerador foreach personalizado
 title: Desarrollar un enumerador Para cada uno personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5ec0861b846f3f741bbdada7d8b07d94fae1d64a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5a46ee0c16bba35c5153032784b6ce7ccde7721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430567"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>Desarrollar un enumerador foreach personalizado
 
@@ -33,13 +34,13 @@ ms.locfileid: "86923961"
 ## <a name="in-this-section"></a>En esta sección  
  En esta sección se describe cómo crear, configurar y codificar un enumerador foreach personalizado y su interfaz de usuario personalizada.  
   
- [Crear un enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)  
+ [Crear un enumerador foreach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)  
  Describe cómo crear las clases para un proyecto de enumerador foreach personalizado.  
   
- [Codificar un enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
+ [Codificar un enumerador foreach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/coding-a-custom-foreach-enumerator.md)  
  Describe cómo implementar un enumerador foreach personalizado invalidando los métodos y propiedades de la clase base.  
   
- [Desarrollar una interfaz de usuario para un enumerador ForEach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [Desarrollar una interfaz de usuario para un enumerador foreach personalizado](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
  Describe cómo implementar la clase de interfaz de usuario y el formulario que se utilizan para configurar el enumerador foreach personalizado.  
   
 ## <a name="related-topics"></a>Temas relacionados  

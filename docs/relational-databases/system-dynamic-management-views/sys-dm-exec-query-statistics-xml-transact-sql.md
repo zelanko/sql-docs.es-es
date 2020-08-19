@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_exec_query_statistics_xml (Transact-SQL)
 title: Sys. dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3b1621a89d38e8e241b69aadfb3f2016b63cdb7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 250b97f93eb7a40fe23b44da4b760ce4681f33aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490227"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>Sys. dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -56,7 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>Observaciones
 Esta función del sistema está disponible a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Consulte KB [3190871](https://support.microsoft.com/help/3190871)
 
-Esta función del sistema funciona en la infraestructura de generación de perfiles de estadísticas de ejecución de consultas **estándar** y **ligera** . Para obtener más información, consulte la [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).  
+Esta función del sistema funciona en la infraestructura de generación de perfiles de estadísticas de ejecución de consultas **estándar** y **ligera** . Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
 En las siguientes condiciones, no se devuelve ningún resultado del plan de presentación en la columna **query_plan** de la tabla devuelta para **Sys. dm_exec_query_statistics_xml**:  
   
@@ -95,7 +97,7 @@ CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);
 GO  
 ```   
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
   [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

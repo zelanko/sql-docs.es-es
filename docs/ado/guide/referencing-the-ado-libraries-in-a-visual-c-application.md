@@ -1,4 +1,5 @@
 ---
+description: Hacer referencia a las bibliotecas de ADO en una aplicación de Visual C++
 title: Hacer referencia a las bibliotecas de ADO en una aplicación Visual C++ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a790ace40aa31324ce8b22127d8f6948ae86e059
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d71a56b6cb09924e106b62ed5bbca542cf9e797f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452367"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Hacer referencia a las bibliotecas de ADO en una aplicación de Visual C++
 Para usar la versión más reciente de ADO en una aplicación Visual C++, utilice la siguiente `#import` Directiva:  
@@ -31,10 +32,10 @@ Para usar la versión más reciente de ADO en una aplicación Visual C++, utilic
     no_namespace rename("EOF", "EndOfFile")  
 ```  
   
- Para usar ADO MD o ADOX, debe importar *msadomd. dll* o *msadox. dll*con la sintaxis anterior.  
+ Para usar ADO MD o ADOX, debe importar *msadomd.dll* o *msadox.dll*mediante la sintaxis anterior.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- Para usar cualquier versión anterior de ADO, reemplace *msado15. dll* por encima de una de las siguientes bibliotecas de tipos.  
+ Para usar cualquier versión anterior de ADO, reemplace *msado15.dll* anterior por una de las siguientes bibliotecas de tipos.  
   
 -   Biblioteca de tipos *msado27. tlb*, ADO 2,7  
   

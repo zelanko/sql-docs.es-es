@@ -1,4 +1,5 @@
 ---
+description: Garantía de espacio suficiente de TempDB
 title: Garantizar suficiente espacio de TempDB | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a783c6b6cecbd1fb4139d0ffd3af1a960347f968
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452197"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantía de espacio suficiente de TempDB
 Si se producen errores al controlar objetos de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que necesitan espacio de procesamiento en Microsoft SQL Server 6,5, puede que necesite aumentar el tamaño de tempdb. (Algunas consultas requieren un espacio de procesamiento temporal; por ejemplo, una consulta con una cláusula ORDER BY requiere una ordenación del **conjunto de registros**, que requiere cierto espacio temporal).  

@@ -1,4 +1,5 @@
 ---
+description: ConnectPromptEnum
 title: ConnectPromptEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61a66866f8206f2df4cbdeb3f2144e0ac12ac695
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ad8fe77bb3472931d3b16d5849b047001922c96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444417"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Especifica si se debe mostrar un cuadro de diálogo para solicitar los parámetros que faltan al abrir una conexión a un origen de datos.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Solicita siempre.|  
 |**adPromptComplete**|2|Solicita si se requiere más información.|  

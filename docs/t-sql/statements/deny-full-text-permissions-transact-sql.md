@@ -1,4 +1,5 @@
 ---
+description: DENY (permisos de texto completo de Transact-SQL)
 title: DENY (permisos de texto completo de Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 296f30c5e8a6f8b296f09c5e9360ad4e81b7d2bf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 226ee1104f6be9bb50bfbcc87c774f05170abbd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444709"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY (permisos de texto completo de Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,10 +54,10 @@ DENY permission [ ,...n ] ON
  *permission*  
  Es el nombre de un permiso. Las asignaciones válidas de permisos a elementos protegibles se describen en la sección "Comentarios", más adelante en este tema.  
   
- ON FULLTEXT CATALOG **::** _nombre_catálogo_de_texto_completo_  
+ ON FULLTEXT CATALOG **::**_nombre_catálogo_de_texto_completo_  
  Especifica el catálogo de texto completo en el que se deniega el permiso. El calificador de ámbito **::** es obligatorio.  
   
- ON FULLTEXT STOPLIST **::** _nombre_de_la_lista_de_palabras_irrelevantes_de_texto_completo_  
+ ON FULLTEXT STOPLIST **::**_nombre_de_la_lista_de_palabras_irrelevantes_de_texto_completo_  
  Especifica la lista de palabras irrelevantes de texto completo en la que se deniega el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  

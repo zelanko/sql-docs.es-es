@@ -1,4 +1,5 @@
 ---
+description: Método Synchronize21 (RDS)
 title: Método Synchronize21 (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 454b012b8027b86256215721bdfca17122713c75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438567"
 ---
 # <a name="synchronize21-method-rds"></a>Método Synchronize21 (RDS)
 Sincronizar el conjunto de registros dado con la base de datos especificada por la cadena de conexión para su uso con ADO 2,1.  
@@ -57,8 +58,8 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *pStatusArray*  
  Variant que se usa para devolver una matriz segura de Estados de fila para las filas afectadas por la sincronización. No se establece si no se establece ninguna de las siguientes opciones de sincronización: *RefreshWithUpdate*, *Refresh* y *RefreshConflicts*.  
   
-## <a name="remarks"></a>Comentarios  
- El parámetro *HandlerString* puede ser null. Lo que sucede en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP. handler" indica que se debe usar el controlador proporcionado por Microsoft (MSDFMAP. dll). Una cadena de controlador de "MASDFMAP. handler, sample. ini" indica que se debe usar el controlador MSDFMAP. dll y que el argumento "sample. ini" se debe pasar al controlador. Después, MSDFMAP. dll interpretará el argumento como una dirección para usar el archivo Sample. ini con el fin de comprobar las cadenas de conexión y de consulta.  
+## <a name="remarks"></a>Observaciones  
+ El parámetro *HandlerString* puede ser null. Lo que sucede en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP. handler" indica que se debe usar el controlador proporcionado por Microsoft (Msdfmap.dll). Una cadena de controlador de "MASDFMAP. handler, sample.ini" indica que se debe usar el controlador de Msdfmap.dll y que el argumento "sample.ini" se debe pasar al controlador. A continuación, Msdfmap.dll interpretará el argumento como una dirección para usar el sample.ini para comprobar las cadenas de conexión y de consulta.  
   
 > [!NOTE]
 >  El método **Synchronize21** es simplemente una versión del [método Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md). En el caso de que necesite usar el método **Synchronize** para comunicarse con ADO 2,1, se puede llamar al método **Synchronize21** en su lugar. Las capacidades del método **Synchronize** en ADO 2,5 y versiones posteriores son un superconjunto de las funciones proporcionadas para el mismo método en ADO 2,1.  

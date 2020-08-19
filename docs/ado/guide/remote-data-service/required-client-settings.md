@@ -1,4 +1,5 @@
 ---
+description: Configuración de cliente requerida
 title: Configuración de cliente requerida | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ec52c594cb058ef8359c39d696d47d4cd3dd127
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452027"
 ---
 # <a name="required-client-settings"></a>Configuración de cliente requerida
 > [!IMPORTANT]
@@ -31,11 +32,11 @@ ms.locfileid: "82749384"
   
 -   Especifique el nombre del controlador que se va a usar en la propiedad de **controlador** del objeto [DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) o la palabra clave "**handler**=" de la cadena de conexión del objeto de [conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) . (El controlador no se puede establecer en la cadena de conexión del objeto de **conexión** ).  
   
- RDS proporciona un controlador predeterminado en el servidor denominado **MSDFMAP. Controlador**. (El archivo de personalización predeterminado se denomina MSDFMAP. INI).  
+ RDS proporciona un controlador predeterminado en el servidor denominado **MSDFMAP. Controlador**. (El archivo de personalización predeterminado se denomina MSDFMAP.INI).  
   
  **Ejemplo**  
   
- Supongamos que las siguientes secciones de **MSDFMAP. INI** y el nombre del origen de datos, AdvWorks, se han definido previamente:  
+ Supongamos que las siguientes secciones de **MSDFMAP.INI** y el nombre del origen de datos, AdvWorks, se han definido previamente:  
   
 ```console
 [connect CustomerDataBase]  

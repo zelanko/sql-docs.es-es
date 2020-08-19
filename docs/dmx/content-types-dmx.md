@@ -1,4 +1,5 @@
 ---
+description: Tipos de contenido (DMX)
 title: Tipos de contenido (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a0c44e0ea90b253cee5564a327d49c34c1ae78a
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: b4d69b516a06bd6d68c3f85e82b18be774ada0f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431107"
 ---
 # <a name="content-types-dmx"></a>Tipos de contenido (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "86969900"
  Para obtener una descripción completa de los tipos de contenido que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite, vea [tipos de contenido &#40;&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining).  
   
 ## <a name="see-also"></a>Consulte también  
- [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Referencia de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   

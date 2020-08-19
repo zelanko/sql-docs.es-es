@@ -1,4 +1,5 @@
 ---
+description: Ejemplos de tarea Script
 title: Ejemplos de tarea Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fa626ad14f1b7f467c84557ea22fcd12d95b3ca3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f001a8b784af159efff980a4fa1ca966af0892e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430387"
 ---
 # <a name="script-task-examples"></a>Ejemplos de tarea Script
 
@@ -41,7 +42,7 @@ ms.locfileid: "86914139"
  [Detectar un archivo plano vacío con la tarea Script](../../integration-services/extending-packages-scripting-task-examples/detecting-an-empty-flat-file-with-the-script-task.md)  
  Comprueba un archivo plano para determinar si contiene filas de datos, y guarda el resultado en una variable para su uso en una bifurcación del flujo de control.  
   
- [Recopilar una lista para el bucle ForEach con la tarea Script](../../integration-services/extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md)  
+ [Recopilar una lista para el bucle Foreach con la tarea Script](../../integration-services/extending-packages-scripting-task-examples/gathering-a-list-for-the-foreach-loop-with-the-script-task.md)  
  Recopila una lista de archivos que cumplen los criterios especificados por el usuario y rellena una variable para su uso posterior por parte del enumerador de variable para Foreach.  
   
  [Consultar Active Directory con la tarea Script](../../integration-services/extending-packages-scripting-task-examples/querying-the-active-directory-with-the-script-task.md)  
@@ -68,7 +69,7 @@ ms.locfileid: "86914139"
 ### <a name="other-examples"></a>Otros ejemplos  
  Los siguientes temas también contienen ejemplos de código para su uso con la tarea Script.  
   
- [Usar variables en la tarea Script](../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
+ [Utilizar variables en la tarea Script](../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
  Solicita al usuario confirmación de si el paquete debe continuar ejecutándose, basándose en el valor de una variable de paquete que puede superar el límite especificado en otra variable.  
   
  [Conectarse a orígenes de datos de la tarea Script](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  

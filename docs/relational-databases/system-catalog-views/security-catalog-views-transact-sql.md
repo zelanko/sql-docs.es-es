@@ -1,4 +1,5 @@
 ---
+description: Vistas de catálogo de seguridad (Transact-SQL)
 title: Vistas de catálogo de seguridad (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: daa2c988111cac7f026594bf0d8e6e5df4d22ebd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 09137e36c0b96193d5b9c48ebf8bbe5cf52a52ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475511"
 ---
 # <a name="security-catalog-views-transact-sql"></a>Vistas de catálogo de seguridad (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

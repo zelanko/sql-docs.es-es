@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYKEY (Transact-SQL)
 title: ENCRYPTBYKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da36a011f2999527218e668755a8c1d10c9ce692
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c90d864c80c3e54b8ea0cf1e1efcc51881e9eb80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366471"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +75,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  
  Devuelve NULL si el valor *cleartext* es NULL.
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  EncryptByKey usa una clave simétrica. Esta clave debe estar abierta. Si la clave simétrica ya está abierta en la sesión actual, no tiene que abrirla de nuevo en el contexto de la consulta.  
   
  El autenticador le ayudará a impedir la sustitución de todo el valor de los campos cifrados. Por ejemplo, considere la siguiente tabla de datos de nóminas:  
@@ -146,7 +147,7 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

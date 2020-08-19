@@ -1,5 +1,6 @@
 ---
-title: ERROR_LINE (Transact-SQL) | Microsoft Docs
+description: ERROR_LINE (Transact-SQL)
+title: ERROR_LINE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,29 +23,32 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d9d1c16c94f51bdfd961c0173bea635e38da3acb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 928cdcd92ceb2bfc6ace1be7d5cd6b1c785d5f48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366271"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Esta función devuelve el número de línea de la repetición de un error que provocó la ejecución del bloque CATCH de una construcción TRY…CATCH.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-ERROR_LINE ( )  
-```  
-  
-## <a name="return-type"></a>Tipo de valor devuelto  
-**int**  
-  
+## <a name="syntax"></a>Sintaxis
+
+```syntaxsql
+ERROR_LINE ( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-type"></a>Tipo de valor devuelto
+**int**
+
 ## <a name="return-value"></a>Valor devuelto  
 Cuando se llama en un bloque CATCH, `ERROR_LINE` devuelve  
   
@@ -52,7 +56,7 @@ Cuando se llama en un bloque CATCH, `ERROR_LINE` devuelve
 -   el número de línea de una rutina, si el error se produjo en un procedimiento almacenado o desencadenador.  
 -   NULL, si se llamó desde fuera del ámbito del bloque CATCH.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Una llamada a `ERROR_LINE` se puede producir en cualquier lugar del ámbito de un bloque CATCH.  
   
 `ERROR_LINE` devuelve el número de línea en que se produjo el error. Esto ocurre independientemente de la ubicación de la llamada a `ERROR_LINE` dentro del ámbito del bloque CATCH y del número de llamadas a `ERROR_LINE`. Esto contrasta con las funciones, como @@ERROR. @@ERROR devuelve el número de error en la instrucción inmediatamente posterior a la que produjo el error o en la primera instrucción de un bloque CATCH.  
@@ -122,7 +126,7 @@ END CATCH;
 GO  
 ``` 
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   

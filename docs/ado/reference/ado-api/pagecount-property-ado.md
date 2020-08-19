@@ -1,4 +1,5 @@
 ---
+description: PageCount (propiedad, ADO)
 title: PageCount (propiedad) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ebb85eee8ea976f1ef078ebfe22eca195081bba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7fe5d8c9533bf1c2b2e371b680ee67b3b8a86aa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442867"
 ---
 # <a name="pagecount-property-ado"></a>PageCount (propiedad, ADO)
 Indica el número de páginas de datos que contiene el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  

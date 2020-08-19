@@ -1,4 +1,5 @@
 ---
+description: Objeto de dimensión (ADO MD)
 title: Objeto Dimension (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d5b475600ef211d8203a64a1a2c6d917bb99914
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fc3661ef36c0b763ca6b0f04f52e4713d59b9a19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441117"
 ---
 # <a name="dimension-object-ado-md"></a>Objeto de dimensión (ADO MD)
 Representa una de las dimensiones de un cubo multidimensional que contiene una o más jerarquías de miembros.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Con las colecciones y las propiedades de un objeto **Dimension** , puede hacer lo siguiente:  
   
 -   Identifique la **dimensión** con las propiedades [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  

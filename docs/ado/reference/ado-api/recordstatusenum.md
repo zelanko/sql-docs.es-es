@@ -1,4 +1,5 @@
 ---
+description: RecordStatusEnum
 title: RecordStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f84f43a90479064c2a95d407b7f816fd48c1c679
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442397"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Especifica el [Estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) de un registro con respecto a las actualizaciones por lotes y otras operaciones masivas.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Indica que el registro no se guardó porque se canceló la operación.|  
 |**adRecCantRelease**|0x400|Indica que el nuevo registro no se guardó porque el registro existente estaba bloqueado.|  

@@ -1,4 +1,5 @@
 ---
+description: ObjectStateEnum
 title: ObjectStateEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6b8c5c9a593177155f2f22d7dba4e38515e0dce
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0c387240e36225f03c8ba1287618ab59a98fb63c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443027"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Especifica si un objeto está abierto o cerrado, se está conectando a un origen de datos, ejecutando un comando o recuperando datos.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|Indica que el objeto está cerrado.|  
 |**adStateOpen**|1|Indica que el objeto está abierto.|  

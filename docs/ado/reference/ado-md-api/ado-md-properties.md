@@ -1,4 +1,5 @@
 ---
+description: Propiedades de ADO MD
 title: Propiedades de ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70153e52186ac4f15629b32cca0c303fc81209a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e05befd8346dd66337be0b876d493b9b5a6fed19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441346"
 ---
 # <a name="ado-md-properties"></a>Propiedades de ADO MD
 
@@ -45,7 +46,7 @@ ms.locfileid: "87242535"
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Indica el miembro que es primario del miembro actual de una jerarquía.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Indica si el elemento primario de este miembro de posición es igual que el elemento primario del miembro inmediatamente anterior.|  
 |[Origen](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Indica el origen de los datos del Cellset.|  
-|[Estado](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica el estado actual del Cellset.|  
+|[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica el estado actual del Cellset.|  
 |[Tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Indica el tipo del miembro actual.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indica un nombre no ambiguo para el objeto actual.|  
 |[Valor](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Indica el valor de la celda actual.|  

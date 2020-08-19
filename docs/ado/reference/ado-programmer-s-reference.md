@@ -1,4 +1,5 @@
 ---
+description: Referencia del programador de ADO&#39;s
 title: Referencia del programador de ADO&#39;s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af7be261ee673bbc17a9118a414a54c92f70632c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: addfb9c6139f654e46cecda82ecd573b3cb1b3c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440677"
 ---
 # <a name="ado-programmer39s-reference"></a>Referencia del programador de ADO&#39;s
 Esta sección contiene los temas siguientes.  

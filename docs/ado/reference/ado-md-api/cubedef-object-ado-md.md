@@ -1,4 +1,5 @@
 ---
+description: Objeto CubeDef (ADO MD)
 title: Objeto CubeDef (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cf8de68674ee1cc33f0ba16c9a0b3604418d0332
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441157"
 ---
 # <a name="cubedef-object-ado-md"></a>Objeto CubeDef (ADO MD)
 Representa un cubo de un esquema multidimensional que contiene un conjunto de dimensiones relacionadas.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Con las colecciones y las propiedades de un objeto **CubeDef** , puede hacer lo siguiente:  
   
 -   Identifique un **CubeDef** con la propiedad [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) .  

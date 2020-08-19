@@ -1,4 +1,5 @@
 ---
+description: Propiedad Version (ADO)
 title: Version (propiedad) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dbd13ac245ad10d4300e76a4c86d326b8b9b9ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d9c2a05f829ff0e9751634e9e50893cd1004db5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441567"
 ---
 # <a name="version-property-ado"></a>Propiedad Version (ADO)
 Indica el número de versión de ADO.  
@@ -30,7 +31,7 @@ Indica el número de versión de ADO.
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un valor de **cadena** que indica la versión.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Utilice la propiedad **version** para devolver el número de versión de la implementación de ADO.  
   
  La versión del proveedor estará disponible como una propiedad dinámica en la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) .  

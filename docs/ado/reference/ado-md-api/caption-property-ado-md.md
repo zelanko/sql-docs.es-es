@@ -1,4 +1,5 @@
 ---
+description: Propiedad Caption (ADO MD)
 title: Propiedad Caption (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14fa40d7feb4c1f4318d48c38d00e4c734667855
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bb766bddb637133dfb46af53187c8c34f99c2660
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441300"
 ---
 # <a name="caption-property-ado-md"></a>Propiedad Caption (ADO MD)
 Indica el título de texto que se va a usar al mostrar un [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) o un objeto de [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) .  

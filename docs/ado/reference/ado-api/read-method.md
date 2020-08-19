@@ -1,4 +1,5 @@
 ---
+description: Método Read
 title: Read (método) | Microsoft Docs
 ms.prod: sql
 ms.technology: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75b39b758d48a173bcfbe84e3fecbd20cce5ee12
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6600c02af5c24fc1ce27a04422678f8a3f40a179
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442557"
 ---
 # <a name="read-method"></a>Método Read
 Lee un número especificado de bytes de un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) binario.  

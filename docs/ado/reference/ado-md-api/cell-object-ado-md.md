@@ -1,4 +1,5 @@
 ---
+description: Objeto Cell (ADO MD)
 title: Objeto Cell (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d309ba98c1e50d8eb6fbe47fb9452f8ea7df35ba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a6cb4d32a4a527cce7bc69eb39f8829bbf5cf58a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441247"
 ---
 # <a name="cell-object-ado-md"></a>Objeto Cell (ADO MD)
 Representa los datos en la intersección de las coordenadas del eje contenidas en un Cellset.  

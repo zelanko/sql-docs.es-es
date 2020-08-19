@@ -1,4 +1,5 @@
 ---
+description: Tipo (propiedad, ADO)
 title: Type (propiedad) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bfa47120814058adbc5c2e5f3650a79b2202afb
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: de97e62a8152e7d14d1442cc1da9b5138ddc39fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441747"
 ---
 # <a name="type-property-ado"></a>Tipo (propiedad, ADO)
 Indica el tipo operativo o el tipo de datos de un [parámetro](../../../ado/reference/ado-api/parameter-object.md), [campo](../../../ado/reference/ado-api/field-object.md)o objeto de [propiedad](../../../ado/reference/ado-api/property-object-ado.md) .  
@@ -41,7 +42,7 @@ Indica el tipo operativo o el tipo de datos de un [parámetro](../../../ado/refe
         [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
     :::column-end:::
     :::column:::
-        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)  
     :::column-end:::
     :::column:::
         [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  

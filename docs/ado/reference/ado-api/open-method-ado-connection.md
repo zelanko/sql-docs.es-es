@@ -1,4 +1,5 @@
 ---
+description: Open (método) (conexión de ADO)
 title: Open (método) (conexión de ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31ce05ce069e0eb3e7d6431b296f40824a8acd3a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1cfba7ddf3192d8bbc81d051e1c29ac27303ef68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442987"
 ---
 # <a name="open-method-ado-connection"></a>Open (método) (conexión de ADO)
 Abre una conexión a un origen de datos.  

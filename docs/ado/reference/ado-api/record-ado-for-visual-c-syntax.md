@@ -1,4 +1,5 @@
 ---
+description: Registro (ADO para la sintaxis Visual C++)
 title: Record (ADO para la sintaxis de Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6899059b58ef755e8561bdf26973e7ef7b0d6253
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: be4addb8a8a774a8128e721de9052ca5351959f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442527"
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>Registro (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  

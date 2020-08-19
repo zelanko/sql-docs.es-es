@@ -1,4 +1,5 @@
 ---
+description: ActiveConnection (propiedad, ADOX)
 title: ActiveConnection (propiedad, ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0318fbdafea09e3728699f448c1483ac53e5e80a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6ef9ab4f077f4ec44b602a3d70d90b5b45f6b9f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440657"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection (propiedad, ADOX)
 Indica el objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) ADO al que pertenece el [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) .  
@@ -34,7 +35,7 @@ Indica el objeto de [conexión](../../../ado/reference/ado-api/connection-object
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece un objeto de **conexión** o una **cadena** que contiene la definición de una conexión. Devuelve el objeto de **conexión** activo.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El valor predeterminado es una referencia de objeto null.  
   
 ## <a name="applies-to"></a>Se aplica a  

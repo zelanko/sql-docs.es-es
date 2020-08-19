@@ -1,4 +1,5 @@
 ---
+description: SchemaEnum
 title: SchemaEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb004c33ae413c93506bc1c90b331494b7e56adc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a4356ad974c45e16cec32d45fa2ed6aeb42209f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442177"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Especifica el tipo de **conjunto de registros** de esquema que recupera el método [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede encontrar información adicional sobre la función y las columnas devueltas para cada constante de ADO en los temas del [Apéndice B: conjuntos de filas de esquema](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de la referencia del programador de OLE DB. El nombre de cada tema se muestra entre paréntesis en la sección Descripción de la tabla siguiente.  
   
  Puede encontrar información adicional sobre la función y las columnas devueltas para cada ADO MD constante en los temas de [OLE DB para los objetos OLAP y los conjuntos de filas de esquema](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) en la OLE DB para la documentación de procesamiento analítico en línea (OLAP). El nombre de cada tema se muestra entre paréntesis en la columna Descripción de la tabla siguiente.  
@@ -34,7 +35,7 @@ Especifica el tipo de **conjunto de registros** de esquema que recupera el méto
   
  ADO genera resultados similares a los esquemas para las constantes, **adSchemaDBInfoKeywords** y **adSchemaDBInfoLiterals**. ADO crea un **conjunto de registros**y, a continuación, rellena cada fila con los valores devueltos por los métodos **IDBInfo:: GetKeywords** y **IDBInfo:: GetLiteralInfo** . Puede encontrar información adicional sobre estos métodos en la sección [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) de la referencia del programador de OLE DB.  
   
-|Constante|Valor|Descripción|Columnas de restricción|  
+|Constante|Value|Descripción|Columnas de restricción|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Devuelve las aserciones definidas en el catálogo que son propiedad de un usuario determinado.<br /><br /> (Conjunto de filas ASERCIONES)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Devuelve los atributos físicos asociados a los catálogos accesibles desde DBMS.<br /><br /> (Conjunto de filas CATALOGs)|CATALOG_NAME|  
@@ -47,8 +48,8 @@ Especifica el tipo de **conjunto de registros** de esquema que recupera el méto
 |**adSchemaConstraintColumnUsage**|6|Devuelve las columnas utilizadas por las restricciones referenciales, restricciones únicas, restricciones Check y aserciones definidas en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (CONSTRAINT_COLUMN_USAGE conjunto de filas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|Devuelve las tablas utilizadas por las restricciones referenciales, restricciones únicas, restricciones Check y aserciones definidas en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (CONSTRAINT_TABLE_USAGE conjunto de filas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|Devuelve información acerca de los cubos disponibles en un esquema (o el catálogo, si el proveedor no admite esquemas).<br /><br /> (Conjunto de filas CUBEs *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
-|**adSchemaDBInfoKeywords**|30|Devuelve una lista de palabras clave específicas del proveedor.<br /><br /> (IDBInfo:: GetKeywords)|\<Ninguno>|  
-|**adSchemaDBInfoLiterals**|31|Devuelve una lista de literales específicos del proveedor utilizados en los comandos de texto.<br /><br /> (IDBInfo:: GetLiteralInfo)|\<Ninguno>|  
+|**adSchemaDBInfoKeywords**|30|Devuelve una lista de palabras clave específicas del proveedor.<br /><br /> (IDBInfo:: GetKeywords)|\<None>|  
+|**adSchemaDBInfoLiterals**|31|Devuelve una lista de literales específicos del proveedor utilizados en los comandos de texto.<br /><br /> (IDBInfo:: GetLiteralInfo)|\<None>|  
 |**adSchemaDimensions**|33|Devuelve información sobre las dimensiones de un cubo determinado. Tiene una fila para cada dimensión.<br /><br /> (Conjunto de filas DIMENSIONs)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|Devuelve las columnas de clave externa definidas en el catálogo por un usuario determinado.<br /><br /> (FOREIGN_KEYS conjunto de filas)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|Devuelve información sobre las jerarquías disponibles en una dimensión.<br /><br /> (Conjunto de filas Hierarchies)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
@@ -62,17 +63,17 @@ Especifica el tipo de **conjunto de registros** de esquema que recupera el méto
 |**adSchemaProcedureParameters**|26|Devuelve información sobre los parámetros y los códigos devueltos de los procedimientos.<br /><br /> (PROCEDURE_PARAMETERS conjunto de filas)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PARAMETER_NAME|  
 |**adSchemaProcedures**|16|Devuelve los procedimientos definidos en el catálogo que son propiedad de un usuario determinado.<br /><br /> (Conjunto de filas PROCEDUREs)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PROCEDURE_TYPE|  
 |**adSchemaProperties**|37|Devuelve información sobre las propiedades disponibles para cada nivel de la dimensión.<br /><br /> (Conjunto de filas PROPERTIES)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME MEMBER_UNIQUE_NAME PROPERTY_TYPE PROPERTY_NAME|  
-|**adSchemaProviderSpecific**|-1|Se utiliza si el proveedor define sus propias consultas de esquema no estándar.|\<> específicas del proveedor|  
+|**adSchemaProviderSpecific**|-1|Se utiliza si el proveedor define sus propias consultas de esquema no estándar.|\<Provider specific>|  
 |**adSchemaProviderTypes**|22|Devuelve los tipos de datos (base) admitidos por el proveedor de datos.<br /><br /> (PROVIDER_TYPES conjunto de filas)|DATA_TYPE BEST_MATCH|  
 |**AdSchemaReferentialConstraints**|9|Devuelve las restricciones referenciales definidas en el catálogo que son propiedad de un usuario determinado.<br /><br /> (REFERENTIAL_CONSTRAINTS conjunto de filas)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaSchemata**|17|Devuelve los esquemas (objetos de base de datos) que son propiedad de un usuario determinado.<br /><br /> (Conjunto de filas de esquema)|CATALOG_NAME SCHEMA_NAME SCHEMA_OWNER|  
-|**adSchemaSQLLanguages**|18|Devuelve los niveles, opciones y dialectos de compatibilidad que admiten los datos de procesamiento de la implementación SQL definidos en el catálogo.<br /><br /> (SQL_LANGUAGES conjunto de filas)|\<Ninguno>|  
+|**adSchemaSQLLanguages**|18|Devuelve los niveles, opciones y dialectos de compatibilidad que admiten los datos de procesamiento de la implementación SQL definidos en el catálogo.<br /><br /> (SQL_LANGUAGES conjunto de filas)|\<None>|  
 |**adSchemaStatistics**|19|Devuelve las estadísticas definidas en el catálogo que son propiedad de un usuario determinado.<br /><br /> (Conjunto de filas STATISTICs)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaTableConstraints**|10|Devuelve las restricciones de tabla definidas en el catálogo que son propiedad de un usuario determinado.<br /><br /> (TABLE_CONSTRAINTS conjunto de filas)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME CONSTRAINT_TYPE|  
 |**adSchemaTablePrivileges**|14|Devuelve los privilegios en tablas definidas en el catálogo que están disponibles para un usuario determinado o que se le conceden.<br /><br /> (TABLE_PRIVILEGES conjunto de filas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
 |**adSchemaTables**|20|Recupera las tablas (incluidas las vistas) definidas en el catálogo a las que puede tener acceso un usuario determinado.<br /><br /> (Conjunto de filas TABLEs)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |**adSchemaTranslations**|21|Devuelve las traducciones de caracteres definidas en el catálogo a las que puede tener acceso un usuario determinado.<br /><br /> (Conjunto de filas Translations)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
-|**adSchemaTrustees**|39|Reservado para uso futuro.||  
+|**adSchemaTrustees**|39|Reservado para un uso futuro.||  
 |**adSchemaUsagePrivileges**|15|Devuelve los privilegios de uso de los objetos definidos en el catálogo que están disponibles para un usuario determinado o que se le conceden.<br /><br /> (USAGE_PRIVILEGES conjunto de filas)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE RECEPTOR DE GRANTOR|  
 |**adSchemaViewColumnUsage**|24|Devuelve las columnas de las que dependen las tablas vistas, definidas en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (VIEW_COLUMN_USAGE conjunto de filas)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|Devuelve las vistas definidas en el catálogo a las que puede tener acceso un usuario determinado.<br /><br /> (Conjunto de filas VIEWs)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  

@@ -1,4 +1,5 @@
 ---
+description: Eventos WillMove y MoveComplete (ADO)
 title: Eventos WillMove y MoveComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a714b0c8f6d41060dfe66e898f01d7ce1037e516
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4c992f95ae9caf96708f5fcde0c255ff8c7c6f11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441507"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>Eventos WillMove y MoveComplete (ADO)
 Se llama al evento **WillMove** antes de que una operación pendiente cambie la posición actual en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Se llama al evento **MoveComplete** después de que cambie la posición actual en el **conjunto de registros** .  
@@ -58,7 +59,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  Objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) . **Conjunto de registros** para el que se produjo este evento.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede producirse un evento **WillMove** o **MoveComplete** debido a las siguientes operaciones de **conjunto de registros** : [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)y [Requery](../../../ado/reference/ado-api/requery-method.md). Estos eventos pueden producirse debido a las siguientes propiedades: [Filter](../../../ado/reference/ado-api/filter-property.md), [index](../../../ado/reference/ado-api/index-property.md), [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)y [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md). Estos eventos también se producen si un **conjunto de registros** secundario tiene eventos de **conjunto de registros** conectados y se mueve el **conjunto de registros** primario.  
   
  Debe establecer el parámetro *adStatus* en **adStatusUnwantedEvent** para cada valor de *adReason* posible con el fin de detener por completo la notificación de eventos para cualquier evento que incluya un parámetro *adReason* .  

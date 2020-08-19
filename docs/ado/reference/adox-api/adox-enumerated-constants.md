@@ -1,4 +1,5 @@
 ---
+description: Constantes enumeradas de ADOX
 title: Constantes enumeradas de ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84a03af49152bc305f62aceb149d904ef0acf9a0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 555c1a83946cdb764f77085b31e83935e4fa2a2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440597"
 ---
 # <a name="adox-enumerated-constants"></a>Constantes enumeradas de ADOX
 Para ayudar a la depuración, las constantes enumeradas de ADOX muestran un valor para cada constante. Sin embargo, este valor es meramente consultivo y puede cambiar de una versión de ADOX a otra. El código solo debe depender del nombre, no del valor real, de las constantes enumeradas.  

@@ -1,4 +1,5 @@
 ---
+description: Propiedad FilterAxis (ADO MD)
 title: Propiedad FilterAxis (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7f9b34757970ce98dedaa9601340cad533ad002
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 07bc04f345659bbaeb97f754bb00b124977276c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441037"
 ---
 # <a name="filteraxis-property-ado-md"></a>Propiedad FilterAxis (ADO MD)
 Indica la información de filtro sobre el [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)actual.  
@@ -29,7 +30,7 @@ Indica la información de filtro sobre el [Cellset](../../../ado/reference/ado-m
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un objeto de [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md) y es de solo lectura.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use la propiedad **FilterAxis** para devolver información sobre las dimensiones que se usaron para segmentar los datos. La propiedad [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) del **eje** devuelve el número de dimensiones de segmentación. Este eje normalmente tiene solo una fila.  
   
  El **eje** devuelto por **FilterAxis** no está incluido en la colección [Axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) de un objeto [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  

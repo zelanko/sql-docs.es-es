@@ -1,4 +1,5 @@
 ---
+description: 'Tabla única, esquema único, propiedades de catálogo únicas: dinámica (ADO)'
 title: Controlar los cambios en la tabla base del conjunto de registros (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac7fa0cf50a92b2738d3e83d5e7b9d5fac46fd9b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5c3f5bdb8a52f686ae336aa51986591788669979
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441677"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabla única, esquema único, propiedades de catálogo únicas: dinámica (ADO)
 Permite controlar estrechamente las modificaciones realizadas en una tabla base determinada de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que formaba parte de una operación de combinación en varias tablas base.  

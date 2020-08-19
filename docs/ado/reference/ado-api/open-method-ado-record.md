@@ -1,4 +1,5 @@
 ---
+description: Open (método) (registro de ADO)
 title: Open (método) (record de ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 723d42cda8ac741f697dec7be4a2c4f5ad662508
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7661c142263a785565a7dabc92d9b7f31c93739
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442977"
 ---
 # <a name="open-method-ado-record"></a>Open (método) (registro de ADO)
 Abre un objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) existente o crea un nuevo elemento representado por el **registro**, como un archivo o un directorio.  
@@ -49,7 +50,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *Opciones*  
  Opcional. Valor de [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) que especifica las opciones para abrir el **registro**. El valor predeterminado es **adOpenRecordUnspecified**. Estos valores se pueden combinar.  
   
- *Nombre*  
+ *UserName*  
  Opcional. Valor de **cadena** que contiene el ID. de usuario que, si es necesario, autoriza el acceso al *origen*.  
   
  *Contraseña*  
@@ -58,7 +59,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ## <a name="remarks"></a>Observaciones  
  El *origen* puede ser:  
   
--   Una dirección URL. Si el protocolo de la dirección URL es http, se invocará el proveedor de Internet de forma predeterminada. Si la dirección URL apunta a un nodo que contiene un script ejecutable (como. Página ASP), se abre de forma predeterminada un **registro** que contiene el origen en lugar del contenido ejecutado. Use el argumento *Options* para modificar este comportamiento.  
+-   Dirección URL. Si el protocolo de la dirección URL es http, se invocará el proveedor de Internet de forma predeterminada. Si la dirección URL apunta a un nodo que contiene un script ejecutable (como. Página ASP), se abre de forma predeterminada un **registro** que contiene el origen en lugar del contenido ejecutado. Use el argumento *Options* para modificar este comportamiento.  
   
 -   Objeto de **registro** . Un objeto de **registro** abierto desde otro **registro** clonará el objeto de **registro** original.  
   

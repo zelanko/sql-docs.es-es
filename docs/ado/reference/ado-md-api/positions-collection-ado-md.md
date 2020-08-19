@@ -1,4 +1,5 @@
 ---
+description: Colección de posiciones (ADO MD)
 title: Colección positions (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28d0305daa755a501ff1214103b77a94bccff7ea
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 80e1e50fbfa6697f3f05a8cc9cf7a9ada98b9031
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440707"
 ---
 # <a name="positions-collection-ado-md"></a>Colección de posiciones (ADO MD)
 Contiene los objetos de [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) que definen un punto en un eje.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **Positions** es una colección estándar de ADO. Con las propiedades y los métodos de una colección, puede hacer lo siguiente:  
   
 -   Obtiene el número de objetos de la colección con la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) .  

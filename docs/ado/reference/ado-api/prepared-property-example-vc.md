@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad Prepared (VC ++)
 title: Ejemplo de propiedad Prepared (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2820f149c079a20e79297d98c1f265031a77ca7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d05e220717ad88ad52340d368a3b54a85365621d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442677"
 ---
 # <a name="prepared-property-example-vc"></a>Ejemplo de la propiedad Prepared (VC ++)
 En este ejemplo se muestra la propiedad [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) abriendo dos objetos de [comando](../../../ado/reference/ado-api/command-object-ado.md) : uno preparado y otro no preparado.  

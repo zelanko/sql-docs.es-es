@@ -1,4 +1,5 @@
 ---
+description: Name (propiedad, ADO MD)
 title: Propiedad Name (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40a392e355e2ec8a468034b382956489f554ac78
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 957afb5eaff886824c53069ad42721d5013adf25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440847"
 ---
 # <a name="name-property-ado-md"></a>Name (propiedad, ADO MD)
 Indica el nombre de un objeto.  

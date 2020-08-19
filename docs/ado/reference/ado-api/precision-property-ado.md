@@ -1,4 +1,5 @@
 ---
+description: Propiedad Precision (ADO)
 title: Propiedad Precision (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7a9b9a0a8416cb47adf8d959990ba1e39c60595
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4be9c3ae7e9f4cc8ac7f90b78b80ee96b64eaf5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442707"
 ---
 # <a name="precision-property-ado"></a>Propiedad Precision (ADO)
 Indica el grado de precisión de los valores numéricos de un objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) o de los objetos de [campo](../../../ado/reference/ado-api/field-object.md) numérico.  
@@ -43,7 +44,7 @@ Indica el grado de precisión de los valores numéricos de un objeto de [paráme
         [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
     :::column-end:::
     :::column:::
-        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)  
     :::column-end:::
 :::row-end:::
 

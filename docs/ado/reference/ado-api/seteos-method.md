@@ -1,4 +1,5 @@
 ---
+description: SetEOS (método)
 title: Seteos (método) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dbe2846674d760163fa9eb3ab78e07e68b80d0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fd1d0418fe0c6a0a475594605acc6f28851a777e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442127"
 ---
 # <a name="seteos-method"></a>SetEOS (método)
 Establece la posición que es el final de la secuencia.  

@@ -1,4 +1,5 @@
 ---
+description: Ejemplo del método Supports (VB)
 title: Ejemplo del método Supports (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5b9fd4327a25af3faf87b966c510d1d4016c89d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4042f1a7bffc935333232a6267d06d905a34545f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441777"
 ---
 # <a name="supports-method-example-vb"></a>Ejemplo del método Supports (VB)
 En este ejemplo se usa el método [Supports](../../../ado/reference/ado-api/supports-method.md) para mostrar las opciones admitidas por un conjunto de registros abierto con distintos tipos de cursor. El procedimiento DisplaySupport es necesario para que este procedimiento se ejecute.  

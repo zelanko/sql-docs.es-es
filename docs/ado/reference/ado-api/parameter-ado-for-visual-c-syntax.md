@@ -1,4 +1,5 @@
 ---
+description: Parámetro (ADO para la sintaxis Visual C++)
 title: Parámetro (ADO para la sintaxis de Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60d0c572386d31daa2a4ac4e3af1961c4436f399
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d80c216e6e62a523c26c5b9690a8135163873904
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442847"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>Parámetro (ADO para la sintaxis Visual C++)
 ## <a name="methods"></a>Métodos  
@@ -51,4 +52,4 @@ put_Value(VARIANT val)
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)

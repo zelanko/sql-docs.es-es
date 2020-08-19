@@ -1,4 +1,5 @@
 ---
+description: Propiedad-dinámica Prompt (ADO)
 title: 'Propiedad prompt: dinámica (ADO) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e99273a94fc38779b50203d3dd5b78106f6a90c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 337cfc2c0027f5c54ac5a9013975d50dc0f5d245
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442667"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Propiedad-dinámica Prompt (ADO)
 Especifica si el proveedor de OLE DB debe solicitar al usuario la información de inicialización.  

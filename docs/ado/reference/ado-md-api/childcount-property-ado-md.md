@@ -1,4 +1,5 @@
 ---
+description: Propiedad ChildCount (ADO MD)
 title: Propiedad ChildCount (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 858bed2c2fe04a1fbf0486b0e0bfc9a26447e4ef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 713958259b274e779802828d1940cabf25c5c222
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441207"
 ---
 # <a name="childcount-property-ado-md"></a>Propiedad ChildCount (ADO MD)
 Indica el número de miembros para los que el objeto [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) actual es el elemento primario de una jerarquía.  
@@ -29,7 +30,7 @@ Indica el número de miembros para los que el objeto [miembro](../../../ado/refe
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un entero **largo** y es de solo lectura.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use la propiedad **ChildCount** para devolver una estimación del número de elementos secundarios que tiene un **miembro** . Los elementos secundarios reales de un **miembro** pueden ser devueltos por la propiedad [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) .  
   
  Para los objetos **miembro** de un objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) , el número máximo devuelto es 65536. Si el número real de elementos secundarios supera 65536, el valor devuelto seguirá siendo 65536. Por lo tanto, la aplicación debe interpretar un valor de **ChildCount** de 65536 como igual o superior a 65536 elementos secundarios.  

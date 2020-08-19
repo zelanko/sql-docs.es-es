@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad Optimize (VC ++)
 title: Ejemplo de la propiedad Optimize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc8268f65e8bd7206ff0be1423785e1862147bed
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9f7db7d9ed14c91caf2551ef350833a67788920b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442887"
 ---
 # <a name="optimize-property-example-vc"></a>Ejemplo de la propiedad Optimize (VC ++)
 En este ejemplo se muestra la propiedad **optimizar** dinámica del objeto de [campo](../../../ado/reference/ado-api/field-object.md) . El campo **zip** de la tabla **authors** en la base de datos **pubs** no está indizado. Al establecer la propiedad [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) en **true** en el campo **zip** , se autoriza a ADO a generar un índice que mejora el rendimiento del método [Find](../../../ado/reference/ado-api/find-method-ado.md) .  

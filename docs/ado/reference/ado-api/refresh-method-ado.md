@@ -1,4 +1,5 @@
 ---
+description: Actualizar (método, ADO)
 title: Refresh (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 83a6153e0017dafb0ac48c27aebc49c51c9b22d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442357"
 ---
 # <a name="refresh-method-ado"></a>Actualizar (método, ADO)
 Actualiza los objetos de una colección para reflejar los objetos disponibles en el proveedor y específicos de este.  
@@ -34,7 +35,7 @@ Actualiza los objetos de una colección para reflejar los objetos disponibles en
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El método **Refresh** realiza diferentes tareas en función de la colección de la que se llama.  
   
 ### <a name="parameters"></a>Parámetros  
@@ -47,7 +48,7 @@ collection.Refresh
 > [!NOTE]
 >  Si usa el método **Refresh** para obtener información de parámetros del proveedor y devuelve uno o más objetos de [parámetro](../../../ado/reference/ado-api/parameter-object.md) de tipo de datos de longitud variable, ADO puede asignar memoria para los parámetros en función de su tamaño máximo potencial, lo que producirá un error durante la ejecución. Debe establecer explícitamente la propiedad [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) para estos parámetros antes de llamar al método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) para evitar errores.  
   
-### <a name="fields"></a>Fields  
+### <a name="fields"></a>Campos  
  El uso del método **Refresh** en la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) no tiene ningún efecto visible. Para recuperar los cambios de la estructura de base de datos subyacente, debe utilizar el método [Requery](../../../ado/reference/ado-api/requery-method.md) o, si el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) no admite marcadores, el método [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
 ### <a name="properties"></a>Propiedades  

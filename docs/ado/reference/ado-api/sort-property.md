@@ -1,4 +1,5 @@
 ---
+description: Propiedad de ordenación
 title: Propiedad Sort | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dc6f7799e28fff65a1b6e60329ba9fb94d84824
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a8ec5c6812e2800825677cd844756d1dd9325729
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442067"
 ---
 # <a name="sort-property"></a>Propiedad de ordenación
 Indica uno o más nombres de campo en los que se ordena el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) y si cada campo se ordena en orden ascendente o descendente.  
@@ -34,7 +35,7 @@ Indica uno o más nombres de campo en los que se ordena el [conjunto de registro
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor de **cadena** que indica los nombres de campo del **conjunto de registros** por los que se va a ordenar. Cada nombre está separado por una coma y, opcionalmente, va seguido de un espacio en blanco y de la palabra clave, **ASC**, que ordena el campo en orden ascendente, o **DESC**, que ordena el campo en orden descendente. De forma predeterminada, si no se especifica ninguna palabra clave, el campo se ordena en orden ascendente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta propiedad requiere que la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) esté establecida en **adUseClient**. Se creará un índice temporal para cada campo especificado en la propiedad **Sort** si aún no existe un índice.  
   
  La operación de ordenación es eficaz porque los datos no se reorganizan físicamente, pero solo se tiene acceso a ellos en el orden especificado por el índice.  

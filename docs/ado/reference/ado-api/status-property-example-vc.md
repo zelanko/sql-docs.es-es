@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad de estado (VC ++)
 title: Ejemplo de la propiedad de estado (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d477b23b384bcc8e059afb94e72a3f6fc12fa724
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad20679059706d9349fd6e4fd37dd6c6b5a8ea2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441907"
 ---
 # <a name="status-property-example-vc"></a>Ejemplo de la propiedad de estado (VC ++)
 En este ejemplo se usa la propiedad [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) para mostrar los registros que se han modificado en una operación por lotes antes de que se haya realizado una actualización por lotes.  

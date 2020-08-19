@@ -1,4 +1,5 @@
 ---
+description: Propiedades, métodos y eventos de la colección Properties
 title: Propiedades, métodos y eventos de la colección Properties | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 03dc1e08-5f03-49e5-8596-76b306b931bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb1c058fce72fb0321b961a72c8c27d5abfb2419
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aed04340ae89c5dbf80c91d85d592b657e6b627b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442647"
 ---
 # <a name="properties-collection-properties-methods-and-events"></a>Propiedades, métodos y eventos de la colección Properties
 ## <a name="properties"></a>Propiedades  

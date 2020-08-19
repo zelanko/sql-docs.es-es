@@ -1,4 +1,5 @@
 ---
+description: Métodos ADOX
 title: Métodos ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b2af54e33aeaa42cab3de76f1ffc6bf5fd758dd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9d8a2c7e02b4b7efeb17166e1fcab8ee2c457b6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440587"
 ---
 # <a name="adox-methods"></a>Métodos ADOX
 
@@ -33,7 +34,7 @@ ms.locfileid: "87243106"
 |[Append (usuarios)](../../../ado/reference/adox-api/append-method-adox-users.md)|Agrega un nuevo objeto de **usuario** a la colección de **usuarios** .|  
 |[Append (vistas)](../../../ado/reference/adox-api/append-method-adox-views.md)|Agrega un nuevo objeto de **vista** a la colección **views** .|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Cambia la contraseña de una cuenta de usuario.|  
-|[Creación](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuevo catálogo.|  
+|[Crear](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuevo catálogo.|  
 |[Eliminar](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Quita un objeto de una colección.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Devuelve el propietario de un objeto de un catálogo.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Devuelve los permisos de un grupo o usuario en un objeto.|  

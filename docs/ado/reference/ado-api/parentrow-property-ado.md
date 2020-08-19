@@ -1,4 +1,5 @@
 ---
+description: ParentRow (propiedad) (ADO)
 title: Propiedad ParentRow (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54d89c536145f413513fa67a8e76f7f00cf8322c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b81fc704c78b620c1319aa592336aba0489a3d37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442747"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow (propiedad) (ADO)
 Establece el contenedor de un objeto de **fila** OLE DB en un objeto **ADORecordConstruction** , de modo que el elemento primario de la fila se convierta en un objeto **Record** de ADO.  

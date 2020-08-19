@@ -1,4 +1,5 @@
 ---
+description: Método WriteText
 title: Método WriteText | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ee7f4b99b40b6aec3e384f9f5739f8f5d2280f4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b561c8d798236fa0c6df262e2fc2db4c4729cb90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441497"
 ---
 # <a name="writetext-method"></a>Método WriteText
 Escribe una cadena de texto especificada en un objeto de [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -40,7 +41,7 @@ Stream.WriteText Data, Options
  *Opciones*  
  Opcional. Valor [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) que especifica si se debe escribir un carácter separador de línea al final de la cadena especificada.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las cadenas especificadas se escriben en el objeto de **secuencia** sin espacios ni caracteres intermedios entre cada cadena.  
   
  La [posición](../../../ado/reference/ado-api/position-property-ado.md) actual se establece en el carácter que sigue a los datos escritos. El método **WRITETEXT** no trunca el resto de los datos de una secuencia. Si desea truncar estos caracteres, llame a [seteos](../../../ado/reference/ado-api/seteos-method.md).  

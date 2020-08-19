@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de las propiedades OriginalValue y UnderlyingValue (VC + +)
 title: Ejemplo de las propiedades OriginalValue y UnderlyingValue (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 142688ccbbd4e086592d419970a1c543e2211abc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442897"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Ejemplo de las propiedades OriginalValue y UnderlyingValue (VC + +)
 En este ejemplo se muestran las propiedades [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) al mostrar un mensaje si los datos subyacentes de un registro han cambiado durante una actualización por lotes del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  

@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad Sort (VC ++)
 title: Ejemplo de la propiedad de ordenación (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4c01370efddbd4163459d694772f3e581ddeadd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad4474e72485e8b69cc4c9f40f790e11fc6145d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442077"
 ---
 # <a name="sort-property-example-vc"></a>Ejemplo de la propiedad Sort (VC ++)
 En este ejemplo se usa la propiedad [Sort](../../../ado/reference/ado-api/sort-property.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para reordenar las filas de un **conjunto de registros** derivado de la tabla ***authors*** de la base de datos **pubs** . Una rutina de utilidad secundaria imprime cada fila.  

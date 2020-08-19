@@ -1,4 +1,5 @@
 ---
+description: 'Parámetro (Visual C++ Índice de sintaxis con #import)'
 title: 'Parameter (Visual C++ Índice de sintaxis con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b998aa20df1110c6708bf857d39e679ed871e68
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 678e7cb1ce09539bfc1c73989fde2702649c2070
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442797"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>Parámetro (Visual C++ Índice de sintaxis con #import)
 ## <a name="methods"></a>Métodos  
@@ -70,4 +71,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)

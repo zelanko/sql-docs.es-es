@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad Optimize (VB)
 title: Ejemplo de la propiedad Optimize (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70bb3e20b36faff0358fe91ea51f85ba125207d1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e6dbeea5a053a1395e051939e313b9f672c73d2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442907"
 ---
 # <a name="optimize-property-example-vb"></a>Ejemplo de la propiedad Optimize (VB)
 En este ejemplo se muestra la propiedad de **optimización** dinámica del objeto de [campo](../../../ado/reference/ado-api/field-object.md) . El campo ***zip*** de la tabla ***authors*** en la base de datos ***pubs*** no está indizado. Al establecer la propiedad [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) en **true** en el campo ***zip*** , se autoriza a ADO a generar un índice que mejora el rendimiento del método [Find](../../../ado/reference/ado-api/find-method-ado.md) .  

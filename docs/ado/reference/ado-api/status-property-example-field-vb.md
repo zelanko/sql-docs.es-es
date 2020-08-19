@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad de estado (campo) (VB)
 title: Ejemplo de la propiedad de estado (campo) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441947"
 ---
 # <a name="status-property-example-field-vb"></a>Ejemplo de la propiedad de estado (campo) (VB)
 En el ejemplo siguiente se abre un documento desde una carpeta de lectura/escritura mediante el [proveedor de publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La propiedad [status](../../../ado/reference/ado-api/status-property-ado-field.md) de un objeto [Field](../../../ado/reference/ado-api/field-object.md) del [registro](../../../ado/reference/ado-api/record-object-ado.md) se establecerá primero en **adFieldPendingInsert**y, a continuación, se actualizará a **adFieldOk**.  

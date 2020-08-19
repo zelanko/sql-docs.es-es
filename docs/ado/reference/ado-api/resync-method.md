@@ -1,4 +1,5 @@
 ---
+description: Método Resync
 title: Método Resync | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 68ece4d9ad109defafa8a0c64dbf901fb20a87b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442277"
 ---
 # <a name="resync-method"></a>Método Resync
 Actualiza los datos del objeto de conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md) actual, o la colección de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) de un objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) , de la base de datos subyacente.  
@@ -42,7 +43,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
  *ResyncValues*  
  Opcional. Valor [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) que especifica si se sobrescriben los valores subyacentes. El valor predeterminado es **adResyncAllValues**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="recordset"></a>DataRecordsets  
  Use el método **Resync** para volver a sincronizar los registros del **conjunto de registros** actual con la base de datos subyacente. Esto resulta útil si usa un cursor estático o de solo avance, pero desea ver los cambios en la base de datos subyacente.  
@@ -55,7 +56,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
  Si se establecen las propiedades dinámicas [tabla única](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) y [comando de resincronización](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) , y el **conjunto de registros** es el resultado de ejecutar una operación de combinación en varias tablas, el método **Resync** ejecutará el comando proporcionado en la propiedad **comando Resync** solo en la tabla denominada en la propiedad de **tabla única** .  
   
-## <a name="fields"></a>Fields  
+## <a name="fields"></a>Campos  
  Use el método **Resync** para volver a sincronizar los valores de la colección **Fields** de un objeto **Record** con el origen de datos subyacente. Este método no afecta a la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
   
  Si *ResyncValues* se establece en **adResyncAllValues** (el valor predeterminado), se sincronizan las propiedades [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md), [Value](../../../ado/reference/ado-api/value-property-ado.md)y [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) de los objetos de [campo](../../../ado/reference/ado-api/field-object.md) de la colección. Si *ResyncValues* se establece en **adResyncUnderlyingValues**, solo se sincroniza la propiedad **UnderlyingValue** .  

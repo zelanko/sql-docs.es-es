@@ -1,4 +1,5 @@
 ---
+description: MemberTypeEnum
 title: MemberTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e05d8307f4dca4479b407db7364ab4d893d684e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 00a15eed4abf9ceec57d89e147e3b489d126aab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440837"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 Especifica el valor para la propiedad [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) de un objeto [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) .  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adMemberAll**|4|Indica que el objeto **miembro** representa todos los miembros del nivel.|  
 |**adMemberFormula**|3|Indica que el objeto **miembro** se calcula mediante una expresión de fórmula.|  

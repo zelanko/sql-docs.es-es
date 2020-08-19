@@ -1,4 +1,5 @@
 ---
+description: Glosario de términos de ADO
 title: Glosario de ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441437"
 ---
 # <a name="ado-glossary"></a>Glosario de términos de ADO
 En este tema se definen los términos relevantes para ADO.  
   
-## <a name="a"></a>Un  
+## <a name="a"></a>A  
  Dirección URL absoluta  
  Una dirección URL completa que especifica la ubicación de un recurso que reside en Internet o en una intranet. Vea también *dirección URL* y *dirección URL relativa*.  
   
@@ -100,7 +101,7 @@ En este tema se definen los términos relevantes para ADO.
  operador de comparación  
  Operador que compara dos expresiones y devuelve un valor booleano.  
   
- Un parámetro de criterios que se puede expresar como ">" (mayor que), " \< " (menor que), "=" (igual), ">=" (mayor o igual que), "<=" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de patrones).  
+ Un parámetro de criterios que se puede expresar como ">" (mayor que), " \<" (less than), "=" (equal), "> =" (mayor o igual que), "<=" (menor o igual que), "<>" (no igual) o "like" (coincidencia de patrones).  
   
  component  
  Objeto que encapsula los datos y el código, y proporciona un conjunto bien especificado de servicios disponibles públicamente.  
@@ -160,7 +161,7 @@ En este tema se definen los términos relevantes para ADO.
   
 ## <a name="e"></a>E  
  Enumeración  
- Lista de constantes con nombre. Los valores enumerados no deben ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito en el que se define la enumeración. En ADO, las enumeraciones se utilizan para los valores devueltos y los parámetros numéricos, para agregar significado al código ADO y para proteger al desarrollador de los valores numéricos (que pueden cambiar de una versión a una versión). Por ejemplo, para abrir un **conjunto de registros**estático, use el valor enumerado **adOpenStatic** :`Recordset.Open ,,adOpenStatic`  
+ Lista de constantes con nombre. Los valores enumerados no deben ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito en el que se define la enumeración. En ADO, las enumeraciones se utilizan para los valores devueltos y los parámetros numéricos, para agregar significado al código ADO y para proteger al desarrollador de los valores numéricos (que pueden cambiar de una versión a una versión). Por ejemplo, para abrir un **conjunto de registros**estático, use el valor enumerado **adOpenStatic** : `Recordset.Open ,,adOpenStatic`  
   
  También se conoce como *constante enumerada*. Vea también *constante*.  
   

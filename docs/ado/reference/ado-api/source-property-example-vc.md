@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad Source (VC ++)
 title: Ejemplo de la propiedad Source (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d7d5fb516e1ec8ed5eb68f3fccdc834e0a06259
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b92cb5f1d2ba02b58237f9c7776a4bf243d73a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442037"
 ---
 # <a name="source-property-example-vc"></a>Ejemplo de la propiedad Source (VC ++)
 En este ejemplo se muestra la propiedad de [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) abriendo tres objetos de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basados en orígenes de datos diferentes.  

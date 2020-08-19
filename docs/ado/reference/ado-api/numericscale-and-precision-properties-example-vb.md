@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de código ADO de las propiedades NumericScale y Precision (VB)
 title: Ejemplo de código ADO de las propiedades NumericScale y Precision (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a5f34efc7063e4c644734f770bd3fe80f2b51de
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 0fdeaafe1a6f4362eb6a4bc912ce9267d179fe9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443067"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>Ejemplo de las propiedades NumericScale y Precision (VB)
 En este ejemplo se usan las propiedades [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) y [Precision](../../../ado/reference/ado-api/precision-property-ado.md) para mostrar la escala numérica y la precisión de los campos en la tabla de ***descuentos*** de la base de datos ***pubs*** .  

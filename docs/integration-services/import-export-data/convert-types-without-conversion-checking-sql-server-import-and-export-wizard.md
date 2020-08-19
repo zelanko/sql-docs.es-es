@@ -1,4 +1,5 @@
 ---
+description: Convertir tipos sin comprobar conversión (Asistente para importación y exportación de SQL Server)
 title: Convertir tipos sin comprobar conversión (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e94009fd87412d9d015158e9a3cc4f3edde1ede
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5d7c53d4117d7634b6651069260c289657f82315
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391471"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Convertir tipos sin comprobar conversión (Asistente para importación y exportación de SQL Server)
 
@@ -37,8 +38,8 @@ El problema es que el asistente no puede encontrar un archivo de asignación que
 
 La información de esta página no incluye el nombre del archivo de asignación que falta. Dado que el asistente no sabe si existe un archivo para el proveedor de datos especificado, no puede proporcionar un nombre para el archivo que falta.
 
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>A continuación  
  Después de hacer clic en **Siguiente** para continuar sin saber si las conversiones de tipos de datos se realizarán correctamente, la siguiente página es **Guardar y ejecutar paquete**. En esta página, especifique si quiere ejecutar la operación de copia inmediatamente. Según la configuración, también puede guardar el paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creado por el asistente para personalizarlo y volver a usarlo más adelante. Para más información, vea [Guardar y ejecutar paquete](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

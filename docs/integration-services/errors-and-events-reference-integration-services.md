@@ -1,4 +1,5 @@
 ---
+description: Referencia de errores y eventos (Integration Services)
 title: Referencia de errores y eventos (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a35fad106dfac49d0e2f227c506658d91c420b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 814c5bb9915e448f97f0c769033d5fd695f76d95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391711"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Referencia de errores y eventos (Integration Services)
 
@@ -80,7 +81,7 @@ ms.locfileid: "86914401"
 |SQLISService_273|Indica que el archivo de configuración no se puede leer o no es válido.|  
 |SQLISService_274|Indica que la entrada del Registro que contiene la ubicación del archivo de configuración no existe o esta vacía.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de errores y mensajes de Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

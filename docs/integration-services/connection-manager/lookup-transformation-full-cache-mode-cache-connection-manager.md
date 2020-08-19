@@ -1,4 +1,5 @@
 ---
+description: Transformación Búsqueda en el modo Caché completa - Administrador de conexiones de caché
 title: Transformación Búsqueda en el modo Caché completa - Administrador de conexiones de caché | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4e37921c8844b94c3974682ab8b088b0015c5ac6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394221"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformación Búsqueda en el modo Caché completa - Administrador de conexiones de caché
 
@@ -63,7 +64,7 @@ ms.locfileid: "86923144"
   
 -   [Tarea Ejecutar paquete](../../integration-services/control-flow/execute-package-task.md)  
   
--   [Contenedor de secuencias](../../integration-services/control-flow/sequence-container.md)  
+-   [contenedor de secuencias](../../integration-services/control-flow/sequence-container.md)  
   
  Para ver un vídeo donde se muestra cómo implementar una transformación de búsquedas en el modo de caché completa con el Administrador de conexiones de caché, visite [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
@@ -283,7 +284,7 @@ ms.locfileid: "86923144"
   
 9. Ejecute el paquete.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Implementación de una transformación Búsqueda en el modo Caché completa con el administrador de conexiones OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

@@ -1,4 +1,5 @@
 ---
+description: Origen ODBC
 title: Origen ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7382675ca38ecaabd685d68e0dc31f09e94be6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392121"
 ---
 # <a name="odbc-source"></a>Origen ODBC
 
@@ -56,7 +57,7 @@ ms.locfileid: "86914999"
  Para obtener información sobre los tipos de datos admitidos por el origen ODBC, vea Conector para conectividad abierta de base de datos (ODBC).  
   
 ## <a name="extract-options"></a>Opciones de extracción  
- El origen ODBC funciona en modo **Lote** o **Fila a fila** . La propiedad **FetchMethod** determina el modo usado. En la lista siguiente, se describen los modos.  
+ El origen ODBC funciona en modo **Lote** o **Fila a fila**. La propiedad **FetchMethod** determina el modo usado. En la lista siguiente, se describen los modos.  
   
 -   **Lote**: el componente intenta usar el método más eficaz de búsqueda en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, es SQLFetchScroll con enlace de matriz (donde el tamaño de la matriz se determina mediante la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
   
@@ -85,9 +86,9 @@ ms.locfileid: "86914999"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Extraer datos mediante el origen ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [Extraer datos mediante el origen de ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
--   [Propiedades personalizadas del origen ODBC](../../integration-services/data-flow/odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
 ## <a name="odbc-source-editor-connection-manager-page"></a>Editor de origen de ODBC (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de ODBC** para seleccionar el administrador de conexiones de ODBC para el origen. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -175,7 +176,7 @@ ms.locfileid: "86914999"
  Seleccione la forma en la que el origen de ODBC debe controlar el truncamiento en un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
 #### <a name="description"></a>Descripción  
- No se usa.  
+ No se utiliza.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Establecer este valor en las celdas seleccionadas  
  Seleccione cómo el origen de ODBC va a controlar todas las celdas seleccionadas cuando se produzca un error o un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  

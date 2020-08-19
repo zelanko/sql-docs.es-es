@@ -1,4 +1,5 @@
 ---
+description: 'Lección 1-5: Adición y configuración del origen de archivo plano'
 title: 'Paso 5: Adición y configuración del origen de archivo plano | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44750102897653d8ec1329e66ecf3fc78165db79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfc6ffa21bf3f6c1205b1c9c667cc6e75868cece
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390871"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lección 1-5: Adición y configuración del origen de archivo plano
 
@@ -44,12 +45,12 @@ Para esta tarea, configurará el origen de archivo plano para que use el adminis
   
 8.  Haga clic con el botón derecho en el origen del archivo plano y seleccione **Propiedades**.  
   
-9. En la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** .  
+9. En la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)**.  
   
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente
 [Paso 6: Adición y configuración de las transformaciones Lookup](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Origen de archivo plano](../integration-services/data-flow/flat-file-source.md)  
 [Administrador de conexiones de archivos planos](../integration-services/connection-manager/flat-file-connection-manager.md)  
   

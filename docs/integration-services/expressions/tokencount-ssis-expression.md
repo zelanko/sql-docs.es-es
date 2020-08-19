@@ -1,4 +1,5 @@
 ---
+description: TOKENCOUNT (expresión de SSIS)
 title: TOKENCOUNT (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed4642f566000bad133bbbb4a6d3afc57e16e0ab
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa242e7ab52115239554af8a74c71f9eea47dd49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391361"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expresión de SSIS)
 
@@ -40,7 +41,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las observaciones siguientes se aplican a la función TOKEN:  
   
 -   La cadena delimitadora puede contener uno o más caracteres delimitadores.  

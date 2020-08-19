@@ -1,4 +1,5 @@
 ---
+description: Reparar una instalación de SQL Server con errores
 title: Reparar una instalación de SQL Server con errores | Microsoft Docs
 deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ''
@@ -11,12 +12,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ba82179f31d8e6cef2e3e318187c26f448e8219
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b350c746d498dbaeb63f952f1ca172d4ffeaefff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395881"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>Reparar una instalación de SQL Server con errores
 
@@ -63,7 +64,7 @@ La operación de reparación se puede utilizar en los escenarios siguientes:
   
 4. Configure las reglas auxiliares del programa de instalación y las rutinas de archivo para asegurarse de que el sistema tiene instalados los requisitos previos y de que el equipo pasa las reglas de validación del programa de instalación. Haga clic en **Aceptar** o en **Instalar** para continuar. 
   
-5. En la página Seleccionar instancia, seleccione la instancia que desea reparar y, a continuación, haga clic en **Siguiente** para continuar. 
+5. En la página Seleccionar instancia , seleccione la instancia que desea reparar y, a continuación, haga clic en **Siguiente** para continuar. 
   
 6. Las reglas de reparación se ejecutarán para validar la operación. Para continuar, haga clic en **Siguiente**. 
   

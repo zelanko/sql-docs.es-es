@@ -1,4 +1,5 @@
 ---
+description: Tarea Ejecutar trabajo del Agente SQL Server
 title: Tarea Ejecutar trabajo del Agente SQL Server
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6e1aaaecf2c054a95fa33ec086c2119cb0edb8e0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fce39417b78aa5fea5a5423893ad8a4ca8cb1977
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394101"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>Tarea Ejecutar trabajo del Agente SQL Server
 

@@ -1,4 +1,5 @@
 ---
+description: Auditar, transformación
 title: Transformación Auditar | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e0f716564eee0d867081576a36eba81735966c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e04af79dc2020a2273717785fca57aac5e4de451
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392281"
 ---
 # <a name="audit-transformation"></a>Auditar, transformación
 
@@ -75,11 +76,11 @@ ms.locfileid: "86915762"
 |**GUID de instancia de ejecución**|Inserte el GUID que identifica exclusivamente la instancia de ejecución del paquete.|  
 |**Id. de paquete**|Inserte el GUID que identifica exclusivamente el paquete.|  
 |**Nombre del paquete**|Inserte el nombre del paquete.|  
-|**Id. de versión**|Inserte el GUID que identifica exclusivamente la versión del paquete.|  
+|**Id. de la versión**|Inserte el GUID que identifica exclusivamente la versión del paquete.|  
 |**Hora de inicio de ejecución**|Inserte la hora en la que se iniciará la ejecución del paquete.|  
 |**Nombre de la máquina**|Inserte el nombre del equipo en el que se inició el paquete.|  
 |**Nombre de usuario**|Inserte el nombre de inicio de sesión del usuario que inició el paquete.|  
-|**Nombre de tarea**|Inserte el nombre de la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
-|**Id. de tarea**|Inserte el GUID que identifica exclusivamente la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
+|**Nombre de la tarea**|Inserte el nombre de la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
+|**Identificador de tarea**|Inserte el GUID que identifica exclusivamente la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
   
   

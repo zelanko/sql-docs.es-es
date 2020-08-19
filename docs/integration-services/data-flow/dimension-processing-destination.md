@@ -1,4 +1,5 @@
 ---
+description: procesamiento de dimensiones, destino
 title: Destino de procesamiento de dimensiones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4c49bb95-7259-42f4-a785-bb6aaf5f8566
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3458ea4fd1a8c82896fd1c06a76ee4bfd8074bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5531a102eb4ec24fde1c9693c8f9939eb63b4335
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392641"
 ---
 # <a name="dimension-processing-destination"></a>procesamiento de dimensiones, destino
 

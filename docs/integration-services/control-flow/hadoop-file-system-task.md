@@ -1,4 +1,5 @@
 ---
+description: Tarea Sistema de archivos de Hadoop
 title: Tarea Sistema de archivos de Hadoop | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 006c9d5ae0ade37cc3ecbe4d7912c49eafbf4069
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e2f94ab41aafe0b23af470555870ba4a93b918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393141"
 ---
 # <a name="hadoop-file-system-task"></a>Tarea Sistema de archivos de Hadoop
 
@@ -43,7 +44,7 @@ ms.locfileid: "86918218"
 |**Local File Connection (Conexión de archivo local)**|Especifique un administrador de conexiones de archivos existente o cree uno nuevo. Este administrador de conexiones indica dónde se hospedan los archivos de origen.|  
 |**Is Recursive (Recursivo)**|Especifique si desea copiar todas las subcarpetas de forma recursiva.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Administrador de conexiones de Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md)  
   

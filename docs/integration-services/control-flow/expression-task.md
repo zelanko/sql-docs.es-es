@@ -1,4 +1,5 @@
 ---
+description: Texto Expresión
 title: Tarea de expresión | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 988157321eff73ecc9e4a77db9b09a52281f3f40
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 52ed6a20fa7b125b3d95d854a6e380512cc1e424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393871"
 ---
 # <a name="expression-task"></a>Texto Expresión
 
@@ -34,7 +35,7 @@ ms.locfileid: "86917911"
  Para obtener ejemplos de cómo usar expresiones para establecer propiedades, vea la sección **Ejemplo de expresiones de propiedad** de [Use Property Expressions in Packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Usar una expresión en un componente de flujo de datos](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [utilizar una expresión en un componente de flujo de datos](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://go.microsoft.com/fwlink/?LinkId=746575), en pragmaticworks.com  

@@ -1,4 +1,5 @@
 ---
+description: Transformación Importar columna
 title: Transformación Importar columna | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1db13057275f9a255ad247bd5f86ca35d7bd29d3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bce31855c0ddd8825401eefd2253172538159cdc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391921"
 ---
 # <a name="import-column-transformation"></a>Transformación Importar columna
 
@@ -56,7 +57,7 @@ ms.locfileid: "86919279"
 ## <a name="related-tasks"></a>Related Tasks  
  Para más información sobre cómo establecer las propiedades de este componente, vea [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Transformación Exportar columna](../../../integration-services/data-flow/transformations/export-column-transformation.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

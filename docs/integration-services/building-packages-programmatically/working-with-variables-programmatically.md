@@ -1,4 +1,5 @@
 ---
+description: Trabajar con variables mediante programación
 title: Trabajar con variables mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2eaa85cc4c4fe7a93ffe962b74527031bd7938e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8691874f1dc93371730b22f9ccaaa3d62cf84521
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395001"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabajar con variables mediante programación
 
@@ -162,7 +163,7 @@ End Module
  Observe que todas las variables en el ámbito del espacio de nombres **System** están disponibles para el paquete. Para más información, consulte [System Variables](../../integration-services/system-variables.md).  
   
 ## <a name="namespaces"></a>Espacios de nombres  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) proporciona dos espacios de nombres predeterminados donde residen las variables; los espacios de nombres **User** y **System**. De forma predeterminada, cualquier variable personalizada que crea el desarrollador se agrega al espacio de nombres **User**. Las variables System residen en el espacio de nombres **System**. Puede crear espacios de nombres adicionales distintos del espacio de nombres **User** para contener variables personalizadas y puede cambiar el nombre del espacio de nombres **User**, pero no puede agregar ni modificar variables en el espacio de nombres **System** ni asignar variables del sistema a un espacio de nombres diferente.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) proporciona dos espacios de nombres predeterminados donde residen las variables; los espacios de nombres **User** y **System**. De forma predeterminada, cualquier variable personalizada que crea el desarrollador se agrega al espacio de nombres **User**. Las variables System residen en el espacio de nombres **System**. Puede crear espacios de nombres adicionales distintos del espacio de nombres **User** para contener variables personalizadas y puede cambiar el nombre del espacio de nombres **User**, pero no puede agregar ni modificar variables en el espacio de nombres **System** ni asignar variables del sistema a un espacio de nombres diferente.  
   
  Las variables del sistema que están disponibles difieren en función del tipo de contenedor. Para obtener una lista de variables del sistema disponibles para paquetes, contenedores, tareas y controladores de eventos, vea [Variables del sistema](../../integration-services/system-variables.md).  
   

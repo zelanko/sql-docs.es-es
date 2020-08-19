@@ -1,4 +1,5 @@
 ---
+description: Trabajar con servicios CDC
 title: Trabajar con CDC Service | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6885167d84654866dcb9c1f433f5f11aaee77031
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e591992c3e03162ecdbb928b7ce41ced3037f5ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394501"
 ---
 # <a name="work-with-cdc-services"></a>Trabajar con servicios CDC
 
@@ -43,7 +44,7 @@ ms.locfileid: "86921451"
   
  Se abrirá el cuadro de diálogo Nuevo servicio CDC de Oracle.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Cómo trabajar con servicios CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Crear y editar un servicio CDC de Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   

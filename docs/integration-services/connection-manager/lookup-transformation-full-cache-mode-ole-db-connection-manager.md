@@ -1,4 +1,5 @@
 ---
+description: Transformación Búsqueda en el modo de caché completa - Administrador de conexiones OLE DB
 title: Transformación Búsqueda en el modo de caché completa - Administrador de conexiones OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c1b663d20972a8c4a788c9a12f6b9b5dcdf01307
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df4cde828997d68b15869000f111a99479369e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394211"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformación Búsqueda en el modo de caché completa - Administrador de conexiones OLE DB
 
@@ -49,17 +50,17 @@ ms.locfileid: "86923135"
   
 7.  En la lista **Especificar cómo tratar las filas sin entradas coincidentes** , seleccione una opción de control de errores para las filas sin entradas coincidentes.  
   
-8.  En la página Conexión, seleccione un administrador de conexiones en la lista **Administrador de conexiones OLE DB** o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+8.  En la página Conexión , seleccione un administrador de conexiones en la lista **Administradores de conexión OLE DB** o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 9. Realice una de las tareas siguientes:  
   
     -   Haga clic en **Usar una tabla o una vista**y, a continuación, seleccione una tabla o una vista, o haga clic en **Nueva** para crear una tabla o una vista.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en **Usar los resultados de una consulta SQL**y después genere una consulta en la ventana **Comando SQL** , o haga clic en **Generar consulta** para generar una consulta mediante las herramientas gráficas que proporciona el **Generador de consultas** .  
   
-         O bien  
+         o bien  
   
     -   Haga clic en **Examinar** para importar una instrucción SQL de un archivo.  
   
@@ -85,7 +86,7 @@ ms.locfileid: "86923135"
   
 13. Haga clic en **Aceptar** para guardar los cambios en la transformación Búsqueda y, a continuación, ejecute el paquete.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Implementación de una transformación Búsqueda en el modo de caché completa con el Administrador de conexiones de caché](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)   
  [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

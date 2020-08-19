@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_log_stats (Transact-SQL)
 title: Sys. dm_db_log_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25488898f7f8c6fb56ea75bc62480aefea171b59
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b70d0b23a55584bb866c278086bec7f437cedd2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423279"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ Devuelve atributos de nivel de resumen e información sobre los archivos de regi
 
 *database_id* | NULL | **Valor predeterminado**
 
-Es el ID. de la base de datos. `database_id` es `int`. Las entradas válidas son el número de identificación de una base de datos, `NULL` o `DEFAULT` . El valor predeterminado es `NULL`. `NULL`y `DEFAULT` son valores equivalentes en el contexto de la base de datos actual.  
+Es el ID. de la base de datos. `database_id` es `int`. Las entradas válidas son el número de identificación de una base de datos, `NULL` o `DEFAULT` . De manera predeterminada, es `NULL`. `NULL` y `DEFAULT` son valores equivalentes en el contexto de la base de datos actual.  
 Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Al usar `DB_ID` sin especificar un nombre de base de datos, el nivel de compatibilidad de la base de datos actual debe ser 90 o superior.
 
   
@@ -61,7 +62,7 @@ Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-t
 |total_log_size_mb  |**float**  |   Tamaño total del registro de transacciones en MB. |  
 |active_vlf_count   |**bigint** |   Número total de [archivos de registro virtuales activos (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) en el registro de transacciones.|  
 |active_log_size_mb |**float**  |   Tamaño total del registro de transacciones activo en MB.|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   Motivo del parada de truncamiento del registro. El valor es el mismo que el `log_reuse_wait_desc` de la columna de `sys.databases` .  (Para obtener explicaciones más detalladas de estos valores, consulte [el registro de transacciones](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Los valores posibles son: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICACIÓN<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />OTROS TRANSITORIOS |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   Motivo del parada de truncamiento del registro. El valor es el mismo que el  `log_reuse_wait_desc` de la columna de `sys.databases` .  (Para obtener explicaciones más detalladas de estos valores, consulte [el registro de transacciones](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Los valores posibles son: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICACIÓN<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />OTROS TRANSITORIOS |  
 |log_backup_time    |**datetime**   |   Hora de la última copia de seguridad del registro de transacciones.|   
 |log_backup_lsn |**nvarchar(24)**   |   Último número de secuencia de registro de la copia de seguridad del registro de transacciones [(LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|   
 |log_since_last_log_backup_mb   |**float**  |   Tamaño del registro en MB desde el último número de secuencia de registro de la copia de seguridad del registro de transacciones [(LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
@@ -72,7 +73,7 @@ Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-t
 |recovery_vlf_count |**bigint** |   Número total de [archivos de registro virtuales (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) que se van a recuperar, si se ha producido una conmutación por error o un reinicio del servidor. |  
 
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 Cuando `sys.dm_db_log_stats` se ejecuta en una base de datos que participa en un grupo de disponibilidad como una réplica secundaria, solo se devolverá un subconjunto de los campos descritos anteriormente.  Actualmente, solo `database_id` `recovery_model` `log_backup_time` se devolverá, y cuando se ejecute en una base de datos secundaria.   
 
 ## <a name="permissions"></a>Permisos  
@@ -102,6 +103,6 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 ## <a name="see-also"></a>Consulte también  
 [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[Sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

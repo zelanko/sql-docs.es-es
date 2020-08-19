@@ -1,4 +1,5 @@
 ---
+description: Lat (tipo de datos geography)
 title: Lat (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ede92951517dcbe8c5a58e27bb8db9573fd0354e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e6aff42dafc123d19fd8a2ea9a2ffa637cc54ee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422369"
 ---
 # <a name="lat-geography-data-type"></a>Lat (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86552912"
 ## <a name="return-types"></a>Tipos de valor devuelto
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Observaciones  
  En el modelo OpenGIS, Lat se define solo en instancias de **geography** que constan de un único punto. Esta propiedad devuelve NULL si las instancias de **geography** contienen más de un punto. Esta propiedad es precisa y de solo lectura.  

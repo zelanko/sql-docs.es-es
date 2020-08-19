@@ -1,4 +1,5 @@
 ---
+description: Descripción de las transformaciones sincrónicas y asincrónicas
 title: Descripción de las transformaciones sincrónicas y asincrónicas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c2748384a8ea4901a21ffa94498da5405043227
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 849f01ba00bddd67ca2de2c16b6953cff9b06c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495176"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Descripción de las transformaciones sincrónicas y asincrónicas
 
@@ -34,7 +35,7 @@ ms.locfileid: "86913721"
   
  Un ejemplo de transformación sincrónica es la transformación Conversión de datos. Para cada fila entrante, convierte el valor de la columna especificada y envía la fila a lo largo de su recorrido. Cada operación de conversión discreta es independiente del resto de las filas del conjunto de datos.  
   
- En scripting y programación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], para especificar una transformación sincrónica, debe buscar el identificador de entrada de un componente y asignarlo a la propiedad  **SynchronousInputID** de las salidas del componente. Esto indica al motor de flujo de datos que procese cada fila de entrada y se la envíe automáticamente a las salidas especificadas. Si desea que cada fila se dirija a cada una de las salidas, no es necesario que escriba código adicional para generar los datos. Si usa la propiedad **ExclusionGroup** para especificar que las filas solo se dirijan a uno u otro de los grupos de salidas, como en el caso de la transformación División condicional, debe llamar al método **DirectRow** para seleccionar el destino adecuado para cada fila. Cuando tenga una salida de error, deberá llamar a **DirectErrorRow** para enviar las filas con problemas a la salida de error en lugar de enviarlas a la salida predeterminada.  
+ En scripting y programación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], para especificar una transformación sincrónica, debe buscar el identificador de entrada de un componente y asignarlo a la propiedad ** SynchronousInputID** de las salidas del componente. Esto indica al motor de flujo de datos que procese cada fila de entrada y se la envíe automáticamente a las salidas especificadas. Si desea que cada fila se dirija a cada una de las salidas, no es necesario que escriba código adicional para generar los datos. Si usa la propiedad **ExclusionGroup** para especificar que las filas solo se dirijan a uno u otro de los grupos de salidas, como en el caso de la transformación División condicional, debe llamar al método **DirectRow** para seleccionar el destino adecuado para cada fila. Cuando tenga una salida de error, deberá llamar a **DirectErrorRow** para enviar las filas con problemas a la salida de error en lugar de enviarlas a la salida predeterminada.  
   
 ## <a name="asynchronous-transformations"></a>Transformaciones asincrónicas  
  Es posible que decida que su diseño requiere una transformación asincrónica cuando no es posible procesar cada fila independientemente del resto de las filas. En otras palabras, no es posible pasar cada fila al flujo de datos en cuanto se procesa, sino que los datos deben generarse de forma asincrónica o en un momento distinto al de la entrada. Por ejemplo, los siguientes escenarios requieren una transformación asincrónica:  

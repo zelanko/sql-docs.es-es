@@ -1,4 +1,5 @@
 ---
+description: Configuración de opciones de proyecto (SybaseToSQL)
 title: Establecer opciones de proyecto (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 04efa94a93cc313e520eaebb8448c48e1b106ec6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: df912a5a58bdcfb2777177bddef80899f31f38c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468730"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Configuración de opciones de proyecto (SybaseToSQL)
 Para cada proyecto de SSMA, puede establecer opciones de nivel de proyecto. Estas opciones especifican la conversión de objetos, la carga de objetos, SQL Azure, la interfaz de usuario y la configuración de migración de datos. Antes de convertir objetos a o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure o migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -38,13 +39,13 @@ SSMA tiene cinco conjuntos de opciones de configuración del proyecto:
   
 También tiene cuatro modos para configurar estas opciones:  
   
-1.  Valor predeterminado  
+1.  Default  
   
 2.  Optimistic  
   
 3.  Completo  
   
-4.  Personalizada  
+4.  Personalizado  
   
 El modo predeterminado es el recomendado para la mayoría de los usuarios. El modo optimista mantiene más la sintaxis actual de Sybase Adaptive Server Enterprise (ASE) y es más fácil de leer. Sin embargo, mantener la sintaxis actual podría no ser preciso. Si la sintaxis de ASE se debe convertir a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una sintaxis equivalente o SQL Azure, el modo completo realiza una conversión completa, pero es posible que el código resultante sea más difícil de leer. En el modo personalizado, se establecen las opciones.  
   
@@ -93,7 +94,7 @@ También puede personalizar la configuración del proyecto actual. Esta configur
   
 3.  Haga clic en **Aceptar** para guardar la configuración.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
 El siguiente paso de la migración depende de las necesidades del proyecto:  
   
 -   Si desea personalizar la asignación de los tipos de datos de origen y de destino, consulte [asignación de tipos de datos de Sybase ase y SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md).  

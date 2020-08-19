@@ -1,4 +1,5 @@
 ---
+description: MATCH (Transact-SQL)
 title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce954aaf4bab45b359bd57fea9af7b6e94933124
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8a98fd2557655672389f5372009f3cf0adaa3ba9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459147"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -136,7 +137,7 @@ El patrón de longitud arbitraria toma los cuantificadores del patrón de estilo
 * **+** : repite el patrón una o más veces. Finaliza en cuanto encuentra una ruta de acceso más corta.    
 * **{1, n}** : repite el patrón de 1 a "n" veces. Finaliza en cuanto encuentra una ruta de acceso más corta.     
 
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Los nombres de nodo dentro de MATCH se pueden repetir.  Dicho de otro, un nodo se puede atravesar un número arbitrario de veces en la misma consulta.  
 Los nombres de borde no se pueden repetir dentro de MATCH.  
 Un borde puede apuntar a cualquier dirección, pero debe tener una dirección explícita.  
@@ -216,7 +217,7 @@ AND Person1.name = 'Alice';
  ```
  
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Procesamiento de gráficos con SQL Server 2017)  

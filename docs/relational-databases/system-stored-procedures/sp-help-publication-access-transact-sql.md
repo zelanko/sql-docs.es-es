@@ -1,4 +1,5 @@
 ---
+description: sp_help_publication_access (Transact-SQL)
 title: sp_help_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11571a7a3fb97a164291a3f3949d30205305daf7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a40f12ade4dcbb08609da6184fa0a96ca9926cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485989"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación a la que se va a obtener acceso. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación a la que se va a obtener acceso. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @return_granted = ] 'return_granted'`Es el identificador de inicio de sesión. *return_granted* es de **bit**y su valor predeterminado es 1. Si se especifica **0** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de, se devuelven los inicios de sesión disponibles que aparecen en el publicador pero no en el distribuidor. Si se especifica **0** y se utiliza la autenticación de Windows, se devuelven los inicios de sesión que no deniegan específicamente el acceso en el publicador o el distribuidor.  
+`[ @return_granted = ] 'return_granted'` Es el identificador de inicio de sesión. *return_granted* es de **bit**y su valor predeterminado es 1. Si se especifica **0** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de, se devuelven los inicios de sesión disponibles que aparecen en el publicador pero no en el distribuidor. Si se especifica **0** y se utiliza la autenticación de Windows, se devuelven los inicios de sesión que no deniegan específicamente el acceso en el publicador o el distribuidor.  
   
-`[ @login = ] 'login'`Es el identificador de inicio de sesión de seguridad estándar. *login* es de **tipo sysname y su**valor predeterminado es **%** .  
+`[ @login = ] 'login'` Es el identificador de inicio de sesión de seguridad estándar. *login* es de **tipo sysname y su**valor predeterminado es **%** .  
   
-`[ @initial_list = ] initial_list`Especifica si se devuelven todos los miembros con acceso de publicación o solo aquellos que tenían acceso antes de que se agregaran nuevos miembros a la lista. *initial_list* es de bit y su valor predeterminado es **0**.  
+`[ @initial_list = ] initial_list` Especifica si se devuelven todos los miembros con acceso de publicación o solo aquellos que tenían acceso antes de que se agregaran nuevos miembros a la lista. *initial_list* es de bit y su valor predeterminado es **0**.  
   
  **1** devuelve información para todos los miembros del rol fijo de servidor **sysadmin** con inicios de sesión válidos en el distribuidor que existían al crear la publicación, así como el inicio de sesión actual.  
   
@@ -63,7 +64,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_help_publication_access** se utiliza en todos los tipos de replicación.  
   
  Cuando **Isntname** y **del** en el conjunto de resultados son **0**, se supone que el inicio de sesión es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión.  
@@ -72,8 +73,8 @@ sp_help_publication_access [ @publication = ] 'publication'
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_help_publication_access**.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_grant_publication_access &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_grant_publication_access &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

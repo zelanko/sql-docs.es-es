@@ -1,4 +1,5 @@
 ---
+description: sp_datatype_info (Transact-SQL)
 title: sp_datatype_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f35043a8886165431e42b4b8641a1abbcf0fb1cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486105"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -40,9 +41,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @data_type = ] data_type`Es el número de código del tipo de datos especificado. Para obtener una lista de todos los tipos de datos, omita este parámetro. *data_type* es de **tipo int**y su valor predeterminado es 0.  
+`[ @data_type = ] data_type` Es el número de código del tipo de datos especificado. Para obtener una lista de todos los tipos de datos, omita este parámetro. *data_type* es de **tipo int**y su valor predeterminado es 0.  
   
-`[ @ODBCVer = ] odbc_version`Es la versión de ODBC que se utiliza. *odbc_version* es de **tinyint**y su valor predeterminado es 2.  
+`[ @ODBCVer = ] odbc_version` Es la versión de ODBC que se utiliza. *odbc_version* es de **tinyint**y su valor predeterminado es 2.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -59,7 +60,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**VARCHAR (** 32 **)**|Descripción de los parámetros de creación para este tipo de datos. Por ejemplo, **decimal** es "Precision, Scale", **float** es NULL y **VARCHAR** es "max_length".|  
 |NULLABLE|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Permite valores NULL.<br /><br /> 0 = No permite valores NULL.|  
 |CASE_SENSITIVE|**smallint**|Especifica si deben distinguirse mayúsculas y minúsculas.<br /><br /> 1 = Todas las columnas de este tipo distinguen mayúsculas y minúsculas (para intercalaciones).<br /><br /> 0 = Las columnas de este tipo no distinguen mayúsculas y minúsculas.|  
-|SEARCHABLE|**smallint**|Especifica la capacidad de búsqueda del tipo de columna:<br /><br /> 1 = No se puede buscar.<br /><br /> 2 = Se puede buscar con LIKE.<br /><br /> 3 = Se puede buscar con WHERE.<br /><br /> 4 = Se puede buscar con WHERE o LIKE.|  
+|BUSCABLE|**smallint**|Especifica la capacidad de búsqueda del tipo de columna:<br /><br /> 1 = No se puede buscar.<br /><br /> 2 = Se puede buscar con LIKE.<br /><br /> 3 = Se puede buscar con WHERE.<br /><br /> 4 = Se puede buscar con WHERE o LIKE.|  
 |UNSIGNED_ATTRIBUTE|**smallint**|Especifica el signo del tipo de datos.<br /><br /> 1 = Tipo de datos sin signo.<br /><br /> 0 = Tipo de datos con signo.|  
 |MONEY|**smallint**|Especifica el tipo de datos **Money** .<br /><br /> 1 = tipo de datos **Money** .<br /><br /> 0 = no es un tipo de datos **Money** .|  
 |AUTO_INCREMENT|**smallint**|Especifica el incremento automático.<br /><br /> 1 = Incremento automático.<br /><br /> 0 = Sin incremento automático.<br /><br /> NULL = Atributo no aplicable.<br /><br /> Una aplicación puede insertar valores en una columna que tenga este atributo, pero no puede actualizar los valores de la columna. A excepción del tipo de datos **bit** , AUTO_INCREMENT solo es válido para los tipos de datos que pertenecen a las categorías de tipos de datos numéricos exacto y numéricos aproximados.|  
@@ -72,7 +73,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Valor de precisión inicial del intervalo si *data_type* es **Interval**; de lo contrario, NULL.|  
 |USERTYPE|**smallint**|valor **usertype** de la tabla systypes.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_datatype_info es equivalente a SQLGetTypeInfo en ODBC. Los resultados devueltos se ordenan por DATA_TYPE y, a continuación, por la proximidad de la asignación de los tipos de datos a los tipos de datos de ODBC SQL correspondientes.  
   
 ## <a name="permissions"></a>Permisos  
@@ -89,7 +90,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

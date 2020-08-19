@@ -1,4 +1,5 @@
 ---
+description: Convertir datos de C en tipos de datos SQL
 title: Convertir datos de tipos de datos de C a SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8fb707e77df7d793277d4a23146adc980eede6fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56af1e376edffa0268a2e27c840f035e5cda9763
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429717"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Convertir datos de C en tipos de datos SQL
 Cuando una aplicación llama a **SQLExecute** o **SQLExecDirect**, el controlador recupera los datos para todos los parámetros enlazados con **SQLBindParameter** desde las ubicaciones de almacenamiento de la aplicación. Cuando una aplicación llama a **SQLSetPos**, el controlador recupera los datos para una operación de actualización o adición de columnas enlazadas con **SQLBindCol**. En el caso de los parámetros de datos en ejecución, la aplicación envía los datos de parámetro con **SQLPutData**. Si es necesario, el controlador convierte los datos del tipo de datos especificado por el argumento *ValueType* en **SQLBindParameter** al tipo de datos especificado por el argumento *ParameterType* en **SQLBindParameter**y, a continuación, envía los datos al origen de datos.  
@@ -40,7 +41,7 @@ Cuando una aplicación llama a **SQLExecute** o **SQLExecDirect**, el controlado
   
  Si el argumento *ParameterType* de **SQLBindParameter** contiene el identificador de un tipo de datos SQL de ODBC que no se muestra en la tabla para un tipo de datos de C determinado, **SQLBindParameter** devuelve SQLSTATE 07006 (infracción de atributo de tipo de datos restringido). Si el argumento *ParameterType* contiene un identificador específico del controlador y el controlador no admite la conversión del tipo de datos de ODBC C específico a ese tipo de datos SQL específico del controlador, **SQLBINDPARAMETER** devuelve SQLSTATE HYC00 (característica opcional no implementada).  
   
- Si los argumentos *ParameterValuePtr* y *StrLen_or_IndPtr* especificados en **SQLBindParameter** son punteros nulos, esa función devuelve SQLSTATE HY009 (uso no válido de puntero nulo). Aunque no se muestra en las tablas, una aplicación establece el valor del búfer de longitud/indicador al que apunta el argumento *StrLen_or_IndPtr* de **SQLBindParameter** o el valor del argumento *StrLen_or_IndPtr* de **SQLPutData** a SQL_NULL_DATA para especificar un valor de datos SQL nulo. (El argumento *StrLen_or_IndPtr* corresponde al campo SQL_DESC_OCTET_LENGTH_PTR de APD). La aplicación establece estos valores en SQL_NTS para especificar que el valor de \* *ParameterValuePtr* en **SQLBindParameter** o \* *DataPtr* en **SQLPutData** (al que apunta el campo SQL_DESC_DATA_PTR de APD) es una cadena terminada en NULL.  
+ Si los argumentos *ParameterValuePtr* y *StrLen_or_IndPtr* especificados en **SQLBindParameter** son punteros nulos, esa función devuelve SQLSTATE HY009 (uso no válido de puntero nulo). Aunque no se muestra en las tablas, una aplicación establece el valor del búfer de longitud/indicador al que apunta el argumento *StrLen_or_IndPtr* de **SQLBindParameter** o el valor del argumento *StrLen_or_IndPtr* de **SQLPutData** a SQL_NULL_DATA para especificar un valor de datos SQL nulo. (El argumento *StrLen_or_IndPtr* corresponde al campo SQL_DESC_OCTET_LENGTH_PTR de APD). La aplicación establece estos valores en SQL_NTS para especificar que el valor de \* *ParameterValuePtr* en **SQLBindParameter** o \* *DataPtr* en **SQLPUTDATA** (al que apunta el campo SQL_DESC_DATA_PTR de APD) es una cadena terminada en NULL.  
   
  Los siguientes términos se usan en las tablas:  
   
@@ -53,7 +54,7 @@ Cuando una aplicación llama a **SQLExecute** o **SQLExecDirect**, el controlado
 -   **Número de dígitos** : número de caracteres que se usa para representar un número, incluido el signo menos, el separador decimal y el exponente (si es necesario).  
   
 -   **Palabras en**   
-     ***Italics*** : elementos de la gramática de SQL. Para obtener la sintaxis de los elementos de gramática, vea el [Apéndice C: gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***Italics***  : elementos de la gramática de SQL. Para obtener la sintaxis de los elementos de gramática, vea el [Apéndice C: gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Esta sección contiene los temas siguientes.  
   

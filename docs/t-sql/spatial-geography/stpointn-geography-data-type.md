@@ -1,4 +1,5 @@
 ---
+description: STPointN (tipo de datos geography)
 title: STPointN (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4bc3ce2749552ee5acca1ca3f2b50ebf007599de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 00604f3066c746057e1ffaaefc0cffb00244d57b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459008"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86552474"
   
  Tipo Open Geospatial Consortium (OGC): **Point**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si se trata de una instancia de **geography** creada por el usuario, STPointN() devuelve el punto especificado por *expression* considerando los puntos en el orden en el que se especificaron inicialmente.  
   
  Si se trata de una instancia de **geography** generada por el sistema, STPointN() devuelve el punto especificado por *expression* considerando todos los puntos en el orden en que se generarían: primero por instancias de **geography**, después por anillos dentro de la instancia (si procede) y, luego, por puntos dentro del anillo. Este orden es determinista.  
@@ -67,7 +68,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

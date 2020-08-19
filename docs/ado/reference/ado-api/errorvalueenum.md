@@ -1,4 +1,5 @@
 ---
+description: ErrorValueEnum
 title: ErrorValueEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0280faf3399c24015fd07ec2e62c688a3d8e799
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f3dfcb5e806ad67a17a5899a4b930eedab0928f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443937"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Especifica el tipo de error en tiempo de ejecución de ADO.  
@@ -36,7 +37,7 @@ Especifica el tipo de error en tiempo de ejecución de ADO.
 > [!NOTE]
 >  Se pueden pasar OLE DB errores a la aplicación ADO. Normalmente, se pueden identificar mediante un código de servicio de Windows de *4*. Por ejemplo, 0x800***4***.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|No se puede cambiar la propiedad **ActiveConnection** de un objeto de **conjunto de registros** que tiene un objeto **Command** como su origen.|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|El servidor no puede completar la operación.|  
@@ -90,8 +91,8 @@ Especifica el tipo de error en tiempo de ejecución de ADO.
 |**adErrURLNamedRowDoesNotExist**|3737-2146824551 0x800A0E99|El registro nombrado por esta dirección URL no existe.|  
 |**adErrVolumeNotFound**|3733-2146824555 0x800A0E95|El proveedor no encuentra el dispositivo de almacenamiento indicado por la dirección URL. Asegúrese de que la dirección URL está escrita correctamente.|  
 |**adErrWriteFile**|3004-2146825284 0x800A0BBC|No se pudo escribir en el archivo.|  
-|**adWrnSecurityDialog**|3717-2146824571 0x800A0E85|Solo para uso interno. No debe usarse.|  
-|**adWrnSecurityDialogHeader**|3718-2146824570 0x800A0E86|Solo para uso interno. No debe usarse.|  
+|**adWrnSecurityDialog**|3717-2146824571 0x800A0E85|Sólo para uso interno. No utilizar.|  
+|**adWrnSecurityDialogHeader**|3718-2146824570 0x800A0E86|Sólo para uso interno. No utilizar.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
  Paquete: **com. ms. wfc. Data**  

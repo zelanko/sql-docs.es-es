@@ -1,4 +1,5 @@
 ---
+description: Ejemplo del método Clone (VC ++)
 title: Ejemplo del método Clone (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a3952563b1aed3184bb2a659d3fda145f487639
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0bbca002bc1fe03f072aeeec844c08fcd6f92936
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450967"
 ---
 # <a name="clone-method-example-vc"></a>Ejemplo del método Clone (VC ++)
 En este ejemplo se usa el método [Clone](../../../ado/reference/ado-api/clone-method-ado.md) para crear copias de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) y, a continuación, se permite al usuario colocar el puntero de registro de cada copia de forma independiente.  

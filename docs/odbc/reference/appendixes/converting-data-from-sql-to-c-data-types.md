@@ -1,4 +1,5 @@
 ---
+description: Convertir datos de SQL a tipos de datos C
 title: Convertir datos de tipos de datos de SQL a C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1a10730cb3910c55679c264583801cd57c83bfc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1306564a9e4a5c1cbd9cac74508529a1e6df9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429697"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Convertir datos de SQL a tipos de datos C
 Cuando una aplicación llama a **SQLFetch**, **SQLFetchScroll**o **SQLGetData**, el controlador recupera los datos del origen de datos. Si es necesario, convierte los datos del tipo de datos en el que el controlador los recuperó en el tipo de datos especificado por el argumento *TargetType* en **SQLBindCol** o **SQLGetData.** Por último, almacena los datos en la ubicación a la que apunta el argumento *TargetValuePtr* de **SQLBindCol** o **SQLGetData** (y el campo SQL_DESC_DATA_PTR del ARD).  
@@ -40,7 +41,7 @@ Cuando una aplicación llama a **SQLFetch**, **SQLFetchScroll**o **SQLGetData**,
   
  Si el argumento *TargetType* de **SQLBindCol** o **SQLGetData** contiene un identificador para un tipo de datos C de ODBC que no se muestra en la tabla para un tipo de datos SQL de ODBC determinado, **SQLFetch**, **SQLFetchScroll**o **SQLGetData** devuelve SQLSTATE 07006 (infracción de atributo de tipo de datos restringida). Si el argumento *TargetType* contiene un identificador que especifica una conversión de un tipo de datos de SQL específico del controlador a un tipo de datos C de ODBC y esta conversión no es compatible con el controlador, **SQLFetch**, **SQLFETCHSCROLL**o **SQLGetData** devuelve SQLSTATE HYC00 (característica opcional no implementada).  
   
- Aunque no se muestra en las tablas, el controlador devuelve SQL_NULL_DATA en el búfer especificado por el argumento *StrLen_or_IndPtr* cuando el valor de datos SQL es NULL. Para obtener una explicación del uso de *StrLen_or_IndPtr* cuando se realizan varias llamadas para recuperar datos, vea la descripción de la función [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md). Cuando los datos de SQL se convierten en datos de caracteres C, el \*número de caracteres devueltos en *StrLen_or_IndPtr* no incluye el byte de terminación null. Si *TargetValuePtr* es un puntero nulo, **SQLGETDATA** devuelve SQLSTATE HY009 (uso no válido de puntero nulo); en **SQLBindCol**, este desenlaza la columna.  
+ Aunque no se muestra en las tablas, el controlador devuelve SQL_NULL_DATA en el búfer especificado por el argumento *StrLen_or_IndPtr* cuando el valor de datos SQL es NULL. Para obtener una explicación del uso de *StrLen_or_IndPtr* cuando se realizan varias llamadas para recuperar datos, vea la descripción de la función [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md). Cuando los datos de SQL se convierten en datos de caracteres C, el número de caracteres devueltos en \* *StrLen_or_IndPtr* no incluye el byte de terminación null. Si *TargetValuePtr* es un puntero nulo, **SQLGETDATA** devuelve SQLSTATE HY009 (uso no válido de puntero nulo); en **SQLBindCol**, este desenlaza la columna.  
   
  En las tablas se usan los siguientes términos y convenciones:  
   

@@ -1,4 +1,5 @@
 ---
+description: Administrar paquetes y carpetas mediante programación
 title: Administrar paquetes y carpetas mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c45f6a5b59a65046a0e48fd930fd27d689c0a0a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 56ebd88cab35af8dce81ba1fdabb26dc19845dae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430147"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Administrar paquetes y carpetas mediante programación
 
@@ -43,7 +44,7 @@ ms.locfileid: "86913317"
 |Almacén de paquetes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [Volver arriba](#top)    
+ [Volver al principio](#top)    
     
 ##  <a name="managing-packages-and-folders"></a><a name="managing"></a> Administrar paquetes y carpetas    
  La clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> del espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> proporciona métodos adicionales para administrar paquetes y las carpetas en las que están almacenados.    
@@ -56,7 +57,7 @@ ms.locfileid: "86913317"
 |Almacén de paquetes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFromSqlServer%2A>|    
     
- [Volver arriba](#top)    
+ [Volver al principio](#top)    
     
 ###  <a name="creating-a-folder"></a><a name="managing_create"></a> Crear una carpeta    
  Para crear mediante programación una carpeta de almacenamiento, llame a uno de los métodos siguientes:    
@@ -66,7 +67,7 @@ ms.locfileid: "86913317"
 |Almacén de paquetes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.CreateFolderOnSqlServer%2A>|    
     
- [Volver arriba](#top)    
+ [Volver al principio](#top)    
     
 ###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> Quitar una carpeta    
  Para quitar mediante programación una carpeta de almacenamiento, llame a uno de los métodos siguientes:    
@@ -76,7 +77,7 @@ ms.locfileid: "86913317"
 |Almacén de paquetes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RemoveFolderFromSqlServer%2A>|    
     
- [Volver arriba](#top)    
+ [Volver al principio](#top)    
     
 ###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> Cambiar el nombre de una carpeta    
  Para cambiar el nombre de una carpeta de almacenamiento mediante programación, llame a uno de los métodos siguientes:    
@@ -86,7 +87,7 @@ ms.locfileid: "86913317"
 |Almacén de paquetes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.RenameFolderOnSqlServer%2A>|    
     
- [Volver arriba](#top)    
+ [Volver al principio](#top)    
     
 ## <a name="see-also"></a>Consulte también    
  [Administración de paquetes &#40;servicio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)     

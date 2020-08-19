@@ -1,4 +1,5 @@
 ---
+description: Descripciones de parámetros
 title: Describir parámetros | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4d9284294707da0a469bf75ff9812ad5f7855bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a41bee40403cc3562c41ccc13a15c706a0772e27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476757"
 ---
 # <a name="describing-parameters"></a>Descripciones de parámetros
 **SQLBindParameter** tiene argumentos que describen el parámetro: su tipo SQL, precisión y escala. El controlador utiliza esta información, o *metadatos,* para convertir el valor del parámetro al tipo necesario para el origen de datos. A primera vista, podría parecer que el controlador está en una posición mejor para conocer los metadatos de los parámetros que la aplicación; después de todo, el controlador puede detectar fácilmente los metadatos de una columna de conjunto de resultados. Como resultó, no es así. En primer lugar, la mayoría de los orígenes de datos no proporcionan una manera para que el controlador detecte los metadatos de parámetros. En segundo lugar, la mayoría de las aplicaciones ya conocen los metadatos.  

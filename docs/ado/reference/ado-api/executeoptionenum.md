@@ -1,4 +1,5 @@
 ---
+description: ExecuteOptionEnum
 title: ExecuteOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7465ee994a0e09cf62b80d3317948479354780b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4ab70f52adb11d1b242dd0f1bbce11bea221ed55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443837"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Especifica cómo un proveedor debe ejecutar un comando.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|Indica que el comando debe ejecutarse de forma asincrónica.<br /><br /> Este valor no se puede combinar con el valor **adCmdTableDirect**de [commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md) .|  
 |**adAsyncFetch**|0x20|Indica que las filas restantes después de la cantidad inicial especificada en la propiedad [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) deben recuperarse de forma asincrónica.|  

@@ -1,4 +1,5 @@
 ---
+description: 'ADO para Visual C++ Índice de sintaxis con #import'
 title: 'ADO para Visual C++ Índice de sintaxis con #import | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88be8dbcee4633fc8c0014088c7996f95f3e2f73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f93ee0d10c3de2bbfe36673c6b521c0f38111ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451407"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO para Visual C++ Índice de sintaxis con #import
 Este índice es una referencia cruzada a la referencia del lenguaje ADO basada en Microsoft Visual C++ y la directiva **#import** .  
@@ -43,7 +44,7 @@ Este índice es una referencia cruzada a la referencia del lenguaje ADO basada e
   
 -   [Objeto Field](../../../ado/reference/ado-api/field-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objeto Parameter](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
+-   [Parameter (objeto)](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Property (objeto)](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -57,5 +58,5 @@ Este índice es una referencia cruzada a la referencia del lenguaje ADO basada e
   
 -   [Eventos de conjunto de registros](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [ADO para el índice de sintaxis de Visual C++ para COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

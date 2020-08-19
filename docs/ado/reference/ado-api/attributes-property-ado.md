@@ -1,4 +1,5 @@
 ---
+description: Propiedad Attributes (ADO)
 title: Propiedad Attributes (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe649e6636f33dfc73ee5aac949830b4175cd3ec
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451207"
 ---
 # <a name="attributes-property-ado"></a>Propiedad Attributes (ADO)
 Indica una o más características de un objeto.  
@@ -38,7 +39,7 @@ Indica una o más características de un objeto.
   
  Para un objeto de [propiedad](../../../ado/reference/ado-api/property-object-ado.md) , la propiedad **attributes** es de solo lectura y su valor puede ser la suma de uno o más valores [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Utilice la propiedad **attributes** para establecer o devolver características de objetos de **conexión** , objetos de **parámetro** , objetos de **campo** o objetos de **propiedad** .  
   
  Al establecer varios atributos, puede sumar las constantes adecuadas. Si establece el valor de la propiedad en una suma que incluye constantes incompatibles, se produce un error.  
@@ -54,7 +55,7 @@ Indica una o más características de un objeto.
         [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
     :::column-end:::
     :::column:::
-        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)  
         [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
     :::column-end:::
 :::row-end:::

@@ -1,4 +1,5 @@
 ---
+description: sp_clean_db_file_free_space (Transact-SQL)
 title: sp_clean_db_file_free_space (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8c45d25dd63149145fc732642b873bc4e7a6193
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 834521f77db142d8aba63f5638df05bd83b64811
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486196"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_clean_db_file_free_space
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @dbname= '*database_name*'  
+ @dbname = '*database_name*'  
  Es el nombre de la base de datos que se va a limpiar. *dbname* es de **tipo sysname** y no puede ser null.  
   
- @fileid= '*file_number*'  
+ @fileid = '*file_number*'  
  Es el id. del archivo de datos que se va a limpiar. *file_number* es de **tipo int** y no puede ser null.  
   
- @cleaning_delay= '*delay_in_seconds*'  
+ @cleaning_delay = '*delay_in_seconds*'  
  Especifica un intervalo de retardo entre la limpieza de páginas. Esto ayuda a reducir el efecto en el sistema de E/S. *delay_in_seconds* es de **tipo int** y su valor predeterminado es 0.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -76,7 +77,7 @@ EXEC sp_clean_db_file_free_space @dbname = N'AdventureWorks2012', @fileid = 1;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Guía del proceso de limpieza de Ghost](../ghost-record-cleanup-process-guide.md)    
  [sp_clean_db_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
    

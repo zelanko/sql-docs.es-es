@@ -1,4 +1,5 @@
 ---
+description: Evento FetchComplete (ADO)
 title: Evento FetchComplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 850709dd8b4370360f5c06105266fb2c2510916c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a4fd58f7783b8fdf2b98d8e295bbf96137cfa5ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443827"
 ---
 # <a name="fetchcomplete-event-ado"></a>Evento FetchComplete (ADO)
 Se llama al evento **FetchComplete** después de que todos los registros de una operación asincrónica larga se hayan recuperado en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -45,7 +46,7 @@ FetchComplete pError, adStatus, pRecordset
  *pRecordset*  
  Objeto de **conjunto de registros** . Objeto para el que se recuperaron los registros.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para usar **FetchComplete** con Microsoft Visual Basic, se requiere Visual Basic 6,0 o posterior.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -1,4 +1,5 @@
 ---
+description: sp_cleanup_log_shipping_history (Transact-SQL)
 title: sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7b69c82e4e2043c8647ba19a8b40306d6836307
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 42edf059f077f0896cd3c62b1420658c982b3d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486159"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @agent_id = ] 'agent_id',`El identificador principal de la copia de seguridad o el ID. secundario de la copia o restauración. *agent_id* es de tipo **uniqueidentifier** y no puede ser null.  
+`[ @agent_id = ] 'agent_id',` El identificador principal de la copia de seguridad o el ID. secundario de la copia o restauración. *agent_id* es de tipo **uniqueidentifier** y no puede ser null.  
   
-`[ @agent_type = ] 'agent_type'`El tipo de trabajo de trasvase de registros. 0 = Copia de seguridad, 1 = Copia, 2 = Restauración. *agent_type* es **tinyint** y no puede ser null.  
+`[ @agent_type = ] 'agent_type'` El tipo de trabajo de trasvase de registros. 0 = Copia de seguridad, 1 = Copia, 2 = Restauración. *agent_type* es **tinyint** y no puede ser null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -51,7 +52,7 @@ sp_cleanup_log_shipping_history
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_cleanup_log_shipping_history** se debe ejecutar desde la base de datos **maestra** en cualquier servidor de trasvase de registros. Este procedimiento almacenado limpia las copias locales y remotas de **log_shipping_monitor_history_detail** y **log_shipping_monitor_error_detail** según el período de retención del historial.  
   
 ## <a name="permissions"></a>Permisos  

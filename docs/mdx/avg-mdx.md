@@ -1,4 +1,5 @@
 ---
+description: Avg (MDX)
 title: AVG (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5cac19b597139274502d455fb5f8f4e5087c8a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017012"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477067"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -80,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- En el ejemplo siguiente se devuelve el promedio diario `Measures.[Gross Profit Margin]` de la medida, calculado a lo largo de los días de cada mes del año fiscal 2003, del cubo **Adventure Works** . La función **AVG** calcula el promedio del conjunto de días contenidos en cada mes de la `[Ship Date].[Fiscal Time]` jerarquía. La primera versión del cálculo muestra el comportamiento predeterminado de Avg en la exclusión de los días que no registraron ventas por valor del promedio; la segunda versión muestra cómo se incluyen los días que no hubo ventas en el promedio.  
+ En el ejemplo siguiente se devuelve el promedio diario de la `Measures.[Gross Profit Margin]` medida, calculado a lo largo de los días de cada mes del año fiscal 2003, del cubo **Adventure Works** . La función **AVG** calcula el promedio del conjunto de días contenidos en cada mes de la `[Ship Date].[Fiscal Time]` jerarquía. La primera versión del cálculo muestra el comportamiento predeterminado de Avg en la exclusión de los días que no registraron ventas por valor del promedio; la segunda versión muestra cómo se incluyen los días que no hubo ventas en el promedio.  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -126,7 +127,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE([Product].[Product Categories].[Product].&[344])`  
   
- En el ejemplo siguiente se devuelve el promedio diario `Measures.[Gross Profit Margin]` de la medida, calculado en los días de cada semestre del año fiscal 2003, del cubo **Adventure Works** .  
+ En el ejemplo siguiente se devuelve el promedio diario de la `Measures.[Gross Profit Margin]` medida, calculado en los días de cada semestre del año fiscal 2003, del cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS  

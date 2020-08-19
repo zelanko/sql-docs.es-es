@@ -1,4 +1,5 @@
 ---
+description: Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server
 title: Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -16,12 +17,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42898b255427c5f3d870a21e17e2cdeb17039919
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 89592db85cd95996274484d17fd968d70a552373
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423379"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -75,8 +76,8 @@ También necesita tener acceso a las claves maestras de columna configuradas par
 
 - **Almacén de certificados: equipo local**: debe tener acceso de lectura al certificado que se usa como clave maestra de columna, o bien ser el administrador del equipo.
 - **Azure Key Vault**: necesita los permisos _get_, _unwrapKey_ y _verify_ en el almacén que contiene la clave maestra de columna.
-- **Proveedor del almacén de claves (CNG)** : el permiso y las credenciales necesarios; se le podrían solicitar al usar una clave o un almacén de claves, en función de la configuración del almacén o del proveedor de almacenamiento de claves (KSP).
-- **Proveedor de servicios criptográficos (CAPI)** : el permiso y las credenciales necesarios; se le podrían solicitar al usar una clave o un almacén de claves, en función del almacén y de la configuración del proveedor de servicios criptográficos (CSP).
+- **Proveedor del almacén de claves (CNG)**: el permiso y las credenciales necesarios; se le podrían solicitar al usar una clave o un almacén de claves, en función de la configuración del almacén o del proveedor de almacenamiento de claves (KSP).
+- **Proveedor de servicios criptográficos (CAPI)**: el permiso y las credenciales necesarios; se le podrían solicitar al usar una clave o un almacén de claves, en función del almacén y de la configuración del proveedor de servicios criptográficos (CSP).
 Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ## <a name="next-steps"></a>Pasos siguientes

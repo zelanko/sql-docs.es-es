@@ -1,4 +1,5 @@
 ---
+description: EventStatusEnum
 title: EventStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1174538ec14eab150d5874b7d6b5b51bcd554ff
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3d696d7b971b5f6624a85addb3f023f2090ac90d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443907"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Especifica el estado actual de la ejecución de un evento.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|Solicita la cancelación de la operación que hizo que se produjera el evento.|  
 |**adStatusCantDeny**|3|Indica que la operación no puede solicitar la cancelación de la operación pendiente.|  

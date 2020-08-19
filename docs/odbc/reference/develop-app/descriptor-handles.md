@@ -1,4 +1,5 @@
 ---
+description: Identificadores de descriptor
 title: Identificadores de descriptor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed0595c97f3f4ad92d976c89327a01e25cb5b753
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 859071eacbfa65f360965cf5c5df17d4fbf6361d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476727"
 ---
 # <a name="descriptor-handles"></a>Identificadores de descriptor
 Un *descriptor* es una colección de metadatos que describe los parámetros de una instrucción SQL o las columnas de un conjunto de resultados, tal como la muestra la aplicación o el controlador (también conocido como *implementación*). Por lo tanto, un descriptor puede rellenar cualquiera de los cuatro roles siguientes:  

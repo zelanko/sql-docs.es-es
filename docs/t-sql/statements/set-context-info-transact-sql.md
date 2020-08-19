@@ -1,4 +1,5 @@
 ---
+description: SET CONTEXT_INFO (Transact-SQL)
 title: SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e5deb7adf0be9de47cdd05e04280a1eb8b9f6678
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bb9e8487303cb2d718eddc2052b453c55b520d97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414911"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
  **@** *binary_var*  
  Es una variable **varbinary** o **binary** que alberga un valor de contexto para asociarlo con la sesión o conexión actual.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El modo preferido para recuperar la información de contexto para la sesión actual es utilizar la función CONTEXT_INFO. La información de contexto de la sesión se almacena también en las columnas **context_info** de las siguientes vistas del sistema:  
   
 -   **sys.dm_exec_requests**  

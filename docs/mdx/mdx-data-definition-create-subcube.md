@@ -1,4 +1,5 @@
 ---
+description: 'Definición de datos de MDX: SUBCUBE'
 title: CREATE subcube (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477027"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definición de datos de MDX: SUBCUBE
 
@@ -89,7 +90,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Produce los resultados siguientes:  
   
-|Tipo de negocio + categoría|All Products|Accesorios|Ropa|  
+|Tipo de negocio + categoría|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$2.031.079,39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767.388,52|$175,002.81|$592,385.71|  
@@ -117,7 +118,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Produce los resultados diferentes siguientes:  
   
-|Tipo de negocio + categoría|All Products|Accesorios|Ropa|  
+|Tipo de negocio + categoría|All Products|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  

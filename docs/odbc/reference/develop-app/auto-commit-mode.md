@@ -1,4 +1,5 @@
 ---
+description: Modo de confirmación automática
 title: Modo de confirmación automática | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f19053eec7a48eba7a51425b01744f3acd10015
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4b532a2163f0c30a3bdb792cfada6bdf806c43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476897"
 ---
 # <a name="auto-commit-mode"></a>Modo de confirmación automática
 *En el modo de confirmación automática,* cada operación de base de datos es una transacción que se confirma cuando se realiza. Este modo es adecuado para muchas transacciones del mundo real que se componen de una única instrucción SQL. No es necesario delimitar o especificar la finalización de estas transacciones. En las bases de datos sin compatibilidad con transacciones, el modo de confirmación automática es el único que se admite. En esas bases de datos, las instrucciones se confirman cuando se ejecutan y no hay ninguna manera de revertirlos. por lo tanto, están siempre en modo de confirmación automática.  

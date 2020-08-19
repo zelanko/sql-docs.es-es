@@ -1,4 +1,5 @@
 ---
+description: AND (MDX)
 title: Y (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baff2f517f5fdd6dfbb23eb24ad51ed12589df52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429977"
 ---
 # <a name="and-mdx"></a>AND (MDX)
 
@@ -28,7 +29,7 @@ Expression1 AND Expression2
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Argumento*  
+ *Expression1*  
  Una expresión MDX (Expresiones multidimensionales) válida que devuelve un valor numérico.  
   
  *Expression2*  
@@ -40,7 +41,7 @@ Expression1 AND Expression2
 ## <a name="remarks"></a>Observaciones  
  El operador **and** trata ambas expresiones como valores booleanos (cero, 0, como **false**; de lo contrario, **true**) antes de que el operador realice la conjunción lógica. En la tabla siguiente se muestra cómo el operador **and** realiza la conjunción lógica.  
   
-|*Argumento*|*Expression2*|Valor devuelto|  
+|*Expression1*|*Expression2*|Valor devuelto|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
 |**true**|**false**|**false**|  

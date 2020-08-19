@@ -1,4 +1,5 @@
 ---
+description: catalog.move_environment (base de datos de SSISDB)
 title: catalog.move_environment (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 128970f410897b9c9797b27a6d1e3af28407f1f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c8fd91f3b37aa410ca3aa86d2825c27a78e1217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430097"
 ---
 # <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment (base de datos de SSISDB)
 
@@ -36,13 +37,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Argumentos  
  [ @source_folder = ] *source_folder*  
- Nombre de la carpeta de origen en la que está ubicado el entorno antes de moverlo. *source_folder* es **nvarchar(128)** .  
+ Nombre de la carpeta de origen en la que está ubicado el entorno antes de moverlo. *source_folder* es **nvarchar(128)**.  
   
  [ @environment_name = ] *environment_name*  
  Nombre del entorno que se va a mover. *environment_name* es **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Nombre de la carpeta de destino en la que está ubicado el entorno después de moverlo. *destination_folder* es **nvarchar(128)** .  
+ Nombre de la carpeta de destino en la que está ubicado el entorno después de moverlo. *destination_folder* es **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

@@ -1,4 +1,5 @@
 ---
+description: Colección de errores (ADO)
 title: Colección de errores (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c8f60951646e635d6124c9fe0fd4290c261c959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6f4719c9dcf182b6840ad950373b35c7ea8f0361
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443957"
 ---
 # <a name="errors-collection-ado"></a>Colección de errores (ADO)
 Contiene todos los objetos de [error](../../../ado/reference/ado-api/error-object.md) creados en respuesta a un error único relacionado con el proveedor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cualquier operación relacionada con objetos ADO puede generar uno o más errores de proveedor. Cuando se produce cada error, se pueden colocar uno o más objetos de **error** en la colección de **errores** del objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) . Cuando otra operación de ADO genera un error, la colección de **errores** se borra y el nuevo conjunto de objetos de **error** se puede colocar en la colección de **errores** .  
   
  Cada objeto de **error** representa un error de proveedor concreto, no un error de ADO. Los errores de ADO se exponen al mecanismo de control de excepciones en tiempo de ejecución. Por ejemplo, en Microsoft Visual Basic, la aparición de un error específico de ADO desencadenará un evento [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) y aparecerá en el objeto **Err** .  

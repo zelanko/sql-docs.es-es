@@ -1,4 +1,5 @@
 ---
+description: Referencia de la interfaz de usuario (AccessToSQL)
 title: Referencia de la interfaz de usuario (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0366c4549c557d2e5f90733f5dadba61cecdc22c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: db8dc2d233c76305a176e45e95ec7514354cf018
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468927"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Referencia de la interfaz de usuario (AccessToSQL)
 En esta sección se incluyen temas de ayuda para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para el acceso.  

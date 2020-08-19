@@ -1,4 +1,5 @@
 ---
+description: Herramientas para solucionar problemas con el desarrollo de paquetes
 title: Herramientas para solucionar problemas con el desarrollo de paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 652ebe1e842acd6b51b53f229bed09b60ab0fe41
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e4f59f38a15bf7a703bbdf18277b4e384d1f4c94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913759"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495149"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Herramientas para solucionar problemas con el desarrollo de paquetes
 

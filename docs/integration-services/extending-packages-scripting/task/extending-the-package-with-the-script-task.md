@@ -1,4 +1,5 @@
 ---
+description: Extender el paquete con la tarea Script
 title: Extender el paquete con la tarea Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c10db4b43ab6763d751af0eeb980979e74bf6c6e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c70136ad09aaa3cb24c04c2828e8335f96aef467
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425317"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Extender el paquete con la tarea Script
 
@@ -48,7 +49,7 @@ ms.locfileid: "86917619"
  [Codificar y depurar la tarea Script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
  Describe cómo utilizar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) para desarrollar los scripts contenidos en la tarea Script.  
   
- [Usar variables en la tarea Script](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
+ [Utilizar variables en la tarea Script](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)  
  Explica cómo utilizar las variables a través de la propiedad <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>.  
   
  [Conectarse a orígenes de datos de la tarea Script](../../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  

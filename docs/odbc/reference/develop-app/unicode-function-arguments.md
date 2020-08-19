@@ -1,4 +1,5 @@
 ---
+description: Argumentos de función de Unicode
 title: Argumentos de función Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 40ef9f63345572b5613942c1174ceeecadd146ee
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 54d79e59ac779efdb1a347531b7f536a074e9686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424447"
 ---
 # <a name="unicode-function-arguments"></a>Argumentos de función de Unicode
 El administrador de controladores ODBC 3,5 (o posterior) es compatible con las versiones ANSI y Unicode de todas las funciones que aceptan punteros a cadenas de caracteres o SQLPOINTER en sus argumentos. Las funciones Unicode se implementan como funciones (con un sufijo de *W*), no como macros. Las funciones ANSI (a las que se puede llamar con o sin un sufijo de) son idénticas a las funciones actuales de la *API de ODBC*.  

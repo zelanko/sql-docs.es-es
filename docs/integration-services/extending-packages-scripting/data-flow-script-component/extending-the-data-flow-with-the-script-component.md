@@ -1,4 +1,5 @@
 ---
+description: Ampliar el flujo de datos con el componente de script
 title: Ampliar el flujo de datos con el componente de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8818197bffefd42004dbd4d0cc4d1732d79029
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 82f34ab83935bee2972a4dbb2b007eb2632b9fba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425397"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Ampliar el flujo de datos con el componente de script
 
@@ -56,7 +57,7 @@ ms.locfileid: "86913421"
  [Descripción del modelo de objetos del componente de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)  
  Un proyecto de componente de script nuevo contiene tres elementos de proyecto con varias clases, así como propiedades y métodos autogenerados.  
   
- [Usar variables en el componente de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)  
+ [Utilizar variables en el componente de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)  
  El elemento de proyecto **ComponentWrapper** contiene propiedades de descriptor de acceso fuertemente tipado para variables de paquete.  
   
  [Conectarse a orígenes de datos del componente de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)  

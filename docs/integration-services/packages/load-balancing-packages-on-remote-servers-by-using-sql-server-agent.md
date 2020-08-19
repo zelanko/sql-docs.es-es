@@ -1,4 +1,5 @@
 ---
+description: Realizar el equilibrio de carga de paquetes en servidores remotos mediante el Agente SQL Server
 title: Realizar el equilibrio de carga de paquetes en servidores remotos mediante el Agente SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4df8e04fc2ef1c68dd1759db2915a13e0bbaf67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d80feda3402c1aedcc0c1016c3de903524f68f17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425217"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Realizar el equilibrio de carga de paquetes en servidores remotos mediante el Agente SQL Server
 
@@ -118,7 +119,7 @@ ms.locfileid: "86919191"
  Un error en este escenario solo significa que ha habido un error en la llamada a la tarea del trabajo del Agente SQL Server remoto. Una situación en la que esto puede ocurrir es cuando el servidor remoto está inactivo y el agente no responde. No obstante, en tanto se active el agente, el paquete primario completa su tarea sin problemas.  
   
 > [!NOTE]  
->  Puede usar una tarea Ejecutar SQL que contenga una instrucción Transact-SQL de **sp_start_job N'package_name'** . Para más información, vea [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
+>  Puede usar una tarea Ejecutar SQL que contenga una instrucción Transact-SQL de **sp_start_job N'package_name'**. Para más información, vea [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Entorno de depuración  
  Al probar el paquete primario, utilice el entorno de depuración del diseñador ejecutándolo mediante Depurar/Iniciar depuración (F5). También puede usar la utilidad del símbolo del sistema **dtexec**. Para obtener más información, consulte [utilidad dtexec](../../integration-services/packages/dtexec-utility.md).  

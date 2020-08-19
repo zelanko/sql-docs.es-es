@@ -1,4 +1,5 @@
 ---
+description: Cadenas de conexión
 title: Cadenas de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbbb5b4672a8ea393380063887cfd77b3e910238
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fbb2d4b0c80a93b225bac754d2905b27e8844cbb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424777"
 ---
 # <a name="connection-strings"></a>Cadenas de conexión
 Una cadena de conexión contiene información que se usa para establecer una conexión. Una cadena de conexión completa contiene toda la información necesaria para establecer una conexión. La cadena de conexión es una serie de pares de palabra clave y valor separados por punto y coma. (Para obtener la sintaxis completa de una cadena de conexión, consulte la descripción de la función [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) ). Utiliza la cadena de conexión:  

@@ -1,4 +1,5 @@
 ---
+description: Reiniciar paquetes de usando puntos de comprobación
 title: Reiniciar paquetes usando puntos de comprobación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de6329a45f43d27dfcabb05252a17eb0ed3c6a2e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 090e89467a7916295abdc31305cbe993872ade60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425247"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar paquetes de usando puntos de comprobación
 
@@ -72,7 +73,7 @@ ms.locfileid: "86919186"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Never**|Especifica que no se utilizará el archivo de punto de comprobación y que el paquete se ejecutará desde el inicio del flujo de trabajo del paquete.|  
+|**Nunca**|Especifica que no se utilizará el archivo de punto de comprobación y que el paquete se ejecutará desde el inicio del flujo de trabajo del paquete.|  
 |**Siempre**|Especifica que el archivo de punto de comprobación se utilizará siempre y que el paquete se reinicia desde el punto del error de ejecución anterior. Si no se encuentra el archivo de punto de comprobación, el paquete generará un error.|  
 |**IfExists**|Especifica que se utilizará el archivo de punto de comprobación, si existe. Si existe un archivo de punto de comprobación, el paquete se reiniciará desde el punto del error de ejecución anterior; de lo contrario, se ejecutará desde el inicio del flujo de trabajo del paquete.|  
   

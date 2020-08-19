@@ -1,4 +1,5 @@
 ---
+description: Información general sobre actualización de datos
 title: Información general sobre la actualización de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b1755ea75426030a96ed7b349cc82f0fc7e282a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424427"
 ---
 # <a name="updating-data-overview"></a>Información general sobre actualización de datos
 Las aplicaciones pueden actualizar datos mediante la ejecución de instrucciones SQL o mediante una llamada a **SQLSetPos** o **SQLBulkOperations**. Las instrucciones **Update**, **Delete**e **Insert** actúan directamente en el origen de datos y suelen ser compatibles con los controladores. Las instrucciones Update y DELETE buscadas contienen una especificación de las filas que se van a cambiar. Las instrucciones Update y DELETE posicionadas y **SQLSetPos** actúan en el origen de datos a través de un cursor y se admiten con menos frecuencia.  

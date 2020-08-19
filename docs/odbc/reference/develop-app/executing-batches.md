@@ -1,4 +1,5 @@
 ---
+description: Ejecución de lotes
 title: Ejecutar lotes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ce0c043fcfad41a624ad129a757a047d2c87fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3bb923f95dfcfb731d472aad8ead7ff35053171
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424647"
 ---
 # <a name="executing-batches"></a>Ejecución de lotes
 Antes de que una aplicación ejecute un lote de instrucciones, primero debe comprobar si se admiten. Para ello, la aplicación llama a **SQLGetInfo** con las opciones SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si las instrucciones de generación de recuento de filas y de generación de conjuntos de resultados se admiten en lotes y procedimientos explícitos, mientras que las dos últimas opciones devuelven información sobre la disponibilidad de los recuentos de filas y conjuntos de resultados en la ejecución parametrizada.  

@@ -1,4 +1,5 @@
 ---
+description: Audit Object Derived Permission [clase de eventos]
 title: Clase de eventos Audit Object Derived Permission | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bec9b17bd81481c68d5fdebac8f850ac8aedcf0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dfa1428c57e22068df27756b01cd73cd3e1c7ceb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424277"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission [clase de eventos]
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La clase de eventos **Audit Object Derived Permission** registra cuándo se envía un comando CREATE, ALTER o DROP para un objeto especificado. Este evento solo se produce si el objeto no dispone de permisos o propietarios asociados a él.  
+   La clase de eventos **Audit Object Derived Permission** registra cuándo se envía un comando CREATE, ALTER o DROP para un objeto especificado. Este evento solo se produce si el objeto no dispone de permisos o propietarios asociados a él.  
   
  Es posible que esta clase de eventos se elimine en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se recomienda utilizar la clase de eventos **Audit Schema Object Management** en su lugar.  
   

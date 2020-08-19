@@ -1,4 +1,5 @@
 ---
+description: DATEADD (expresión de SSIS)
 title: DATEADD (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2285a23325b91a78759d1dac26725e0e570b23fb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6dd42e81d3b1d2db558962cbb9843488dd1ad16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425557"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (expresión de SSIS)
 
@@ -54,15 +55,15 @@ DATEADD(datepart, number, date)
 |parte de fecha|Abreviaturas|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
-|Trimestre|qq, q|  
+|Quarter (Trimestre)|qq, q|  
 |Month|mm, m|  
 |Dayofyear|dy, y|  
 |Día|dd, d|  
 |Semana|wk, ww|  
 |Día de la semana|dw, w|  
-|Hour|Hh|  
+|Hora|Hh|  
 |Minute|mi, n|  
-|Segundo|ss, s|  
+|Second|ss, s|  
 |Millisecond|Ms|  
   
  El argumento *number* debe estar disponible al analizar la expresión. Puede ser una constante o una variable. No pueden usarse valores de columnas porque estos valores no se conocen en el momento de analizar la expresión.  

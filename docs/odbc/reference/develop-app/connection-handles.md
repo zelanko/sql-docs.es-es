@@ -1,4 +1,5 @@
 ---
+description: Identificadores de conexión
 title: Identificadores de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5b03e0733e35984350d2a218b885dc148ca8f8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4457fa72c40892e208057ac013d3da1e557a6d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424797"
 ---
 # <a name="connection-handles"></a>Identificadores de conexión
 Una *conexión* consta de un controlador y un origen de datos. Un identificador de conexión identifica cada conexión. El identificador de conexión define no solo el controlador que se va a usar pero el origen de datos que se va a usar con ese controlador. Dentro de un segmento de código que implementa ODBC (el administrador de controladores o un controlador), el identificador de conexión identifica una estructura que contiene información de conexión, como la siguiente:  

@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_parameter_value (base de datos de SSISDB)
 title: catalog.set_execution_parameter_value (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da59f45f073f579a02b84727fad0e5ffef3faec5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425117"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (base de datos de SSISDB)
 
@@ -65,7 +66,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  El parámetro *object_type* es de tipo **smallInt**.  
   
  [ @parameter_name = ] *parameter_name*  
- El nombre del parámetro. El parámetro *parameter_name* es de tipo **nvarchar(128)** .  
+ El nombre del parámetro. El parámetro *parameter_name* es de tipo **nvarchar(128)**.  
   
  [ @parameter_value = ] *parameter_value*  
  Valor del parámetro. El parámetro *parameter_value* es de tipo **sql_variant**.  
@@ -80,7 +81,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |Value|Descripción|  
 |-----------|-----------------|  
 |0|None<br /><br /> El registro está desactivado. Solo se registra el estado de ejecución del paquete.|  
-|1|Básica<br /><br /> Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Este es el valor predeterminado.|  
+|1|Básico<br /><br /> Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Este es el valor predeterminado.|  
 |2|Rendimiento<br /><br /> Solo se registran las estadísticas de rendimiento, y los eventos OnError y OnWarning.|  
 |3|Verbose<br /><br /> Se registran todos los eventos, incluidos los eventos personalizados y de diagnóstico. <br />Los eventos personalizados incluyen los eventos registrados por las tareas de Integration Services. Para más información, vea [Mensajes personalizados para registro](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
 |4|Linaje en tiempo de ejecución<br /><br /> Recopila los datos necesarios para realizar un seguimiento del linaje en el flujo de datos.|  

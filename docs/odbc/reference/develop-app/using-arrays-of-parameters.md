@@ -1,4 +1,5 @@
 ---
+description: Utilizar matrices de parámetros
 title: Usar matrices de parámetros | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b584dc3d635e9fa8ce3228e4e89b0f24451fe165
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a592131165e7dc2370ab1d22a3d9eba5f9609dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424417"
 ---
 # <a name="using-arrays-of-parameters"></a>Utilizar matrices de parámetros
 Para usar matrices de parámetros, la aplicación llama a **SQLSetStmtAttr** con un argumento de *atributo* de SQL_ATTR_PARAMSET_SIZE para especificar el número de conjuntos de parámetros. Llama a **SQLSetStmtAttr** con un argumento de *atributo* de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar la dirección de una variable en la que el controlador puede devolver el número de conjuntos de parámetros procesados, incluidos los conjuntos de errores. Llama a **SQLSetStmtAttr** con un argumento de *atributo* de SQL_ATTR_PARAM_STATUS_PTR para apuntar a una matriz en la que se va a devolver información de estado para cada fila de valores de parámetro. El controlador almacena estas direcciones en la estructura que mantiene para la instrucción.  
@@ -28,7 +29,7 @@ Para usar matrices de parámetros, la aplicación llama a **SQLSetStmtAttr** con
   
  Antes de ejecutar la instrucción, la aplicación establece el valor de cada elemento de cada matriz enlazada. Cuando se ejecuta la instrucción, el controlador usa la información almacenada para recuperar los valores de parámetro y enviarlos al origen de datos. Si es posible, el controlador debe enviar estos valores como matrices. Aunque el uso de matrices de parámetros se implementa mejor mediante la ejecución de la instrucción SQL con todos los parámetros de la matriz con una sola llamada al origen de datos, esta funcionalidad no está ampliamente disponible en DBMS en la actualidad. Sin embargo, los controladores pueden simularla mediante la ejecución de una instrucción SQL varias veces, cada una con un único conjunto de parámetros.  
   
- Antes de que una aplicación use matrices de parámetros, debe asegurarse de que son compatibles con los controladores utilizados por la aplicación. Existen dos modos para hacer esto:  
+ Antes de que una aplicación use matrices de parámetros, debe asegurarse de que son compatibles con los controladores utilizados por la aplicación. Existen dos formas de hacerlo:  
   
 -   Use solo los controladores que se sabe que admiten matrices de parámetros. La aplicación puede codificar de forma rígida los nombres de estos controladores o se puede indicar al usuario que use solo estos controladores. Las aplicaciones personalizadas y las aplicaciones verticales suelen usar un conjunto limitado de controladores.  
   

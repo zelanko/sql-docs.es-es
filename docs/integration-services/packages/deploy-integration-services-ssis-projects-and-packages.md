@@ -1,4 +1,5 @@
 ---
+description: Implementación de proyectos y paquetes de Integration Services (SSIS)
 title: Implementación de proyectos y paquetes de Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/26/2019
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 962b1db12c1208ea70c7cb906eb904bf17538a64
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425227"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
 
@@ -86,7 +87,7 @@ Este error suele ser el resultado de la falta de permisos de DCOM. Para corregir
 1.  Abra la consola **Servicios de componente** (o ejecute Dcomcnfg.exe).
 2.  En la consola **Servicios de componente**, expanda **Servicios de componente** > **Equipos** > **Mi PC** > **Configuración DCOM**.
 3.  En la lista, busque **Microsoft SQL Server Integration Services xx.0** para encontrar la versión de SQL Server que esté usando. Por ejemplo, SQL Server 2016 es la versión 13.
-4.  Haga clic con el botón derecho y seleccione **Propiedades**.
+4.  Haga clic con el botón secundario y seleccione **Propiedades**.
 5.  En el cuadro de diálogo **Propiedades de Microsoft SQL Server Integration Services 13.0**, seleccione la pestaña **Seguridad**.
 6.  Por cada uno de los tres conjuntos de permisos (inicio y activación, acceso y configuración), seleccione **Personalizar** y, luego, **Editar** para abrir el cuadro de diálogo **Permiso**.
 7.  En el cuadro de diálogo **Permiso**, agregue la cuenta de servicio no predeterminada y conceda los permisos **Permitir** según sea necesario. Normalmente, una cuenta tiene los permisos **Ejecución local** y **Activación local**.
@@ -135,7 +136,7 @@ Para más información sobre el error descrito en esta sección y los permisos n
   
 1.  Abra el proyecto en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y, en el Explorador de soluciones, haga clic con el botón derecho en el proyecto y seleccione **Convertir al modelo de implementación de proyectos**.  
   
-     O bien  
+     o bien  
   
      En el Explorador de objetos de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en el nodo **Proyectos** y seleccione **Importar paquetes**.  
   
@@ -145,17 +146,17 @@ Para más información sobre el error descrito en esta sección y los permisos n
   
 1.  Abra el proyecto en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y, en el menú **Proyecto** , seleccione **Implementar** para iniciar el **Asistente para implementación de Integration Services**.  
   
-     or  
+     o bien  
   
      En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** en el Explorador de objetos y busque la carpeta Proyectos correspondiente al proyecto que quiere implementar. Haga clic con el botón derecho en la carpeta **Proyectos** y, después, haga clic en **Implementar proyecto**.  
   
-     or  
+     o bien  
   
      En el símbolo del sistema, ejecute **isdeploymentwizard.exe** de **%Archivos de programa%\Microsoft SQL Server\130\DTS\Binn**. En equipos de 64 bits, también hay una versión de 32 bits de la herramienta en **%Archivos de programa (x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  En la página **Seleccionar origen** , haga clic en **Archivo de implementación de proyecto** para seleccionar el archivo de implementación del proyecto.  
   
-     or  
+     o bien  
   
      Haga clic en **Catálogo de Integration Services** para seleccionar un proyecto que ya se haya implementado en el catálogo de SSISDB.  
   
@@ -296,11 +297,11 @@ Inicie el asistente de una de estas dos formas:
 
  - Escriba **"Asistente de implementación de SQL Server"** en Windows Search 
 
- or
+ o bien
 
- - Busque el archivo ejecutable **ISDeploymentWizard.exe** en la carpeta de instalación de SQL Server; por ejemplo: "C:\Archivos de programa (x86)\Microsoft SQL Server\130\DTS\Binn". 
+ - Busque el archivo ejecutable **ISDeploymentWizard.exe** en la carpeta de instalación de SQL Server; por ejemplo: “C:\Archivos de programa (x86)\Microsoft SQL Server\130\DTS\Binn”. 
  
- > **NOTA:** Si ve la página **Introducción** , haga clic en **Siguiente** para cambiar a **Seleccionar origen** . 
+ > **NOTA:** Si ve la página **Introducción** , haga clic en **Siguiente** para cambiar a la página **Seleccionar origen** . 
  
  La configuración de esta página es diferente en cada modelo de implementación. Siga los pasos de la sección [Project Deployment Model](#ProjectModel) o [Package Deployment Model](#PackageModel) en función del modelo que haya seleccionado en esta página.  
   
@@ -363,7 +364,7 @@ Inicie el asistente de una de estas dos formas:
   
 2.  Haga clic con el botón derecho en la carpeta **Entornos** y, después, haga clic en **Crear entorno**.  
   
-3.  Escriba un nombre para el entorno y opcionalmente una descripción. Haga clic en **OK**.  
+3.  Escriba un nombre para el entorno y opcionalmente una descripción. Haga clic en **Aceptar**.  
   
 4.  Haga clic con el botón derecho en el nuevo entorno y, después, haga clic en **Propiedades**.  
   
@@ -567,7 +568,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a> Establecer las opciones de la página Buscar paquetes  
   
 > [!NOTE]  
->  La página **Buscar paquetes** solo está disponible cuando se ejecuta el asistente desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+>   La página **Buscar paquetes** está disponible solamente cuando ejecuta el asistente desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  La siguiente opción aparece en la página al seleccionar **Sistema de archivos** en la lista desplegable **Origen** . Seleccione esta opción si el paquete reside en el sistema de archivos.  
   
@@ -609,7 +610,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Estado**  
  Indica si un paquete está listo para convertir el modelo de implementación de proyectos.  
   
- **Mensaje**  
+ **Message**  
  Muestra un mensaje asociado al paquete.  
   
  **Contraseña**  
@@ -625,9 +626,9 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  En esta página, especifique el nombre y la ruta de un nuevo archivo de implementación del proyecto (.ispac) o seleccione un archivo existente.  
   
 > [!NOTE]  
->  La página **Seleccionar destino** solo está disponible cuando se ejecuta el asistente desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+>   La página **Seleccionar destino** está disponible solamente cuando ejecuta el asistente desde [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- **Ruta de acceso de resultados**  
+ **Ruta de acceso de salida**  
  Escriba la ruta de acceso al archivo de implementación, o bien haga clic en **Examinar**para abrir la ubicación del archivo.  
   
  **Nombre del proyecto**  
@@ -642,7 +643,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> Establecer las opciones de la página Especificar propiedades del proyecto  
   
 > [!NOTE]  
->  La página **Especificar las propiedades del proyecto** solo está disponible cuando se ejecuta el asistente desde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
+>   La página **Especificar propiedades del proyecto** solo está disponible cuando se ejecuta el asistente desde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
  **Nombre del proyecto**  
  Muestra el nombre del proyecto.  
@@ -659,7 +660,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Paquete primario**  
  Muestra el nombre del paquete que ejecuta el paquete secundario mediante la tarea Ejecutar paquete.  
   
- **Nombre de tarea**  
+ **Nombre de la tarea**  
  Muestra el nombre de la tarea Ejecutar paquete.  
   
  **Referencia original**  
@@ -671,7 +672,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> Establecer las opciones de la página Seleccionar configuraciones  
  Seleccione las configuraciones del paquete que desea reemplazar por parámetros.  
   
- **Package**  
+ **Paquete**  
  Muestra el archivo de paquete.  
   
  **Tipo**  
@@ -697,7 +698,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> Establecer las opciones de la página Crear parámetros  
  Seleccione el nombre y el ámbito de parámetro para cada propiedad de configuración.  
   
- **Package**  
+ **Paquete**  
  Muestra el archivo de paquete.  
   
  **Nombre de parámetro**  

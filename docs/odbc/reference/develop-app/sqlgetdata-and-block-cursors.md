@@ -1,4 +1,5 @@
 ---
+description: SQLGetData y cursores de bloque
 title: SQLGetData y cursores de bloque | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12599cdc-7725-4faf-bcae-e163ea0f5851
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b60d7093552b8f1dbed87d9ad8840ddb5a9e0799
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f53358b2d4d8dfef1a5a820ed3943f07a584a595
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424497"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData y cursores de bloque
 **SQLGetData** funciona en una sola columna de una sola fila y no puede capturar una matriz que contenga datos de varias filas. Esto se debe a que el uso principal de **SQLGetData** es capturar datos de gran tamaño en partes y hay poca o ninguna razón para hacerlo para más de una fila a la vez.  

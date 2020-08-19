@@ -1,4 +1,5 @@
 ---
+description: Palabras clave reservadas
 title: Palabras clave reservadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424987"
 ---
 # <a name="reserved-keywords"></a>Palabras clave reservadas
 Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no restringen la gramática de SQL mínima; sin embargo, para garantizar la compatibilidad con los controladores que admiten la gramática básica de SQL, las aplicaciones deben evitar el uso de cualquiera de estas palabras clave. El valor de #**define** SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  
@@ -90,7 +91,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
         DEFAULT  
         DEFERRABLE  
         DEFERRED  
-        Delete  
+        SUPRIMIR  
         DESC  
         DESCRIBE  
         DESCRIPTOR  
@@ -111,7 +112,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
         EXISTS  
         EXTERNAL  
         EXTRACT  
-        FALSO  
+        false  
         FETCH  
         FIRST  
         FLOAT  
@@ -143,7 +144,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
         INSENSITIVE  
         INSERT  
         INT  
-        ENTERO  
+        INTEGER  
         INTERSECT  
         INTERVAL  
         INTO  
@@ -202,7 +203,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
         PROCEDURE  
         PUBLIC  
         READ  
-        REAL  
+        real  
         REFERENCES  
         RELATIVE  
         RESTRICT  
@@ -246,7 +247,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
         TRANSLATE  
         TRANSLATION  
         TRIM  
-        VERDADERO  
+        true  
         UNION  
         UNIQUE  
         DESCONOCIDO  

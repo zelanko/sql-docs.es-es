@@ -1,4 +1,5 @@
 ---
+description: Niveles de compatibilidad de interfaz
 title: Niveles de cumplimiento de la interfaz | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fff555324746fcb92641126ddf11ea91ce5e3f89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb77ab0e77fc8a811acd956673a4ad4fe8664828
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424627"
 ---
 # <a name="interface-conformance-levels"></a>Niveles de compatibilidad de interfaz
 El propósito de la redistribución es informar a la aplicación de qué características están disponibles en el controlador. Un esquema de nivelación basado en funciones no logra de manera suficiente este objetivo. En ODBC 3. *x*, los controladores se clasifican en función de las características que poseen. La compatibilidad con la característica puede incluir compatibilidad con la función. también puede incluir compatibilidad con un campo de descriptor, un atributo de instrucción, un valor "Y" para un tipo de información devuelto por **SQLGetInfo**, etc.  

@@ -1,4 +1,5 @@
 ---
+description: Utilidad de ejecución de paquetes (dtexecui)
 title: Utilidad de ejecución de paquetes (dtexecui) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 630fea974e83507984cae8a4ec2b7938fc551d25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425287"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilidad de ejecución de paquetes (dtexecui)
 
@@ -79,7 +80,7 @@ ms.locfileid: "87472523"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Close**  
+ **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ### <a name="dynamic-options"></a>Opciones dinámicas  
@@ -100,11 +101,11 @@ ms.locfileid: "87472523"
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows.  
   
- **Package**  
+ **Paquete**  
  Escriba el nombre del paquete, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo **Seleccionar un paquete SSIS**.  
   
 #### <a name="package-source--file-system"></a>Origen del paquete = Sistema de archivos  
- **Package**  
+ **Paquete**  
  Escriba el nombre del paquete, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo Abrir. De forma predeterminada, el cuadro de diálogo solamente muestra archivos con la extensión .dtsx.  
   
 #### <a name="package-source--ssis-package-store"></a>Origen del paquete = Almacén de paquetes SSIS  
@@ -120,7 +121,7 @@ ms.locfileid: "87472523"
  **Utilizar autenticación de SQL Server**  
  Esta opción no está disponible si ejecuta un paquete almacenado en el **Almacén de paquetes SSIS**.  
   
- **Package**  
+ **Paquete**  
  Escriba el nombre del paquete, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar un paquete mediante el cuadro de diálogo **Seleccionar un paquete SSIS**.  
   
 ## <a name="configurations-page"></a>Página Configuraciones  
@@ -145,7 +146,7 @@ ms.locfileid: "87472523"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Close**  
+ **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="command-files-page"></a>Página Archivos de comandos  
@@ -167,7 +168,7 @@ ms.locfileid: "87472523"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Close**  
+ **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="connection-managers-page"></a>Página Administradores de conexión  
@@ -186,7 +187,7 @@ ms.locfileid: "87472523"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Close**  
+ **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="execution-options-page"></a>Página Opciones de ejecución  
@@ -220,7 +221,7 @@ ms.locfileid: "87472523"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Close**  
+ **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="reporting-page"></a>Página de informe  
@@ -272,7 +273,7 @@ ms.locfileid: "87472523"
  **GUID de ejecución**  
  Seleccione esta opción para notificar el GUID de la instancia de ejecución del paquete.  
   
- **Mensaje**  
+ **Message**  
  Seleccione esta opción para notificar mensajes.  
   
  **Hora de inicio y finalización**  
@@ -281,7 +282,7 @@ ms.locfileid: "87472523"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Close**  
+ **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="logging-page"></a>Página Registro  
@@ -300,7 +301,7 @@ ms.locfileid: "87472523"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Close**  
+ **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="set-values-page"></a>Página Valores establecidos  
@@ -319,7 +320,7 @@ ms.locfileid: "87472523"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Close**  
+ **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="verification-page"></a>Página Comprobación  
@@ -350,7 +351,7 @@ ms.locfileid: "87472523"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Close**  
+ **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="command-line-page"></a>Página Línea de comandos  
@@ -369,7 +370,7 @@ ms.locfileid: "87472523"
  **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Close**  
+ **Cerrar**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="see-also"></a>Consulte también  

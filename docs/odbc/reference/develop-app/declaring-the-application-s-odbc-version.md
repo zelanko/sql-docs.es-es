@@ -1,4 +1,5 @@
 ---
+description: Declaración de la versión de ODBC de Application&#39;s
 title: Declaración de la versión de ODBC de Application&#39;s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba346ed7f7a261446110c5513026d20a86fd3a19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ff41a7a8b56133b0a44947980805c5b46238bad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424727"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Declaración de la versión de ODBC de Application&#39;s
 Antes de que una aplicación asigne una conexión, debe establecer el atributo de entorno SQL_ATTR_ODBC_VERSION. Este atributo indica que la aplicación sigue la especificación ODBC *2. x* u ODBC *3. x* cuando se usan los siguientes elementos:  

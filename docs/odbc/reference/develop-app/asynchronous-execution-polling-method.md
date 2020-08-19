@@ -1,4 +1,5 @@
 ---
+description: Ejecución asincrónica (método de sondeo)
 title: Ejecución asincrónica (método de sondeo) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a188c607c499e16652e314c67c37914f6cc9b85f
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 17199fb610f707c77a6610d34c8b1a5f0166de13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424857"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Ejecución asincrónica (método de sondeo)
 Antes de ODBC 3,8 y el SDK de Windows 7, solo se permitían las operaciones asincrónicas en las funciones de instrucción. Para obtener más información, vea **operaciones de ejecución de instrucciones de forma asincrónica**, más adelante en este tema.  

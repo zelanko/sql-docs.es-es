@@ -1,4 +1,5 @@
 ---
+description: Controladores de Unicode
 title: Controladores Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aabdd899d78c1141716725d57e343dc002dc96ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1acdb0c630fe5f4b1b22f51015e7ee94e7d8a56a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424487"
 ---
 # <a name="unicode-drivers"></a>Controladores de Unicode
 El hecho de que un controlador sea un controlador Unicode o un controlador ANSI depende por completo de la naturaleza del origen de datos. Si el origen de datos admite datos Unicode, el controlador debe ser un controlador Unicode. Si el origen de datos solo admite datos ANSI, el controlador debe seguir siendo un controlador ANSI.  

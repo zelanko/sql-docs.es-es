@@ -1,4 +1,5 @@
 ---
+description: Conectarse a Azure Blob Storage (Asistente para importación y exportación de SQL Server)
 title: Conectarse a Azure Blob Storage (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c15c03c5041aeebb2ac46776eb65921f4725bd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425267"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Conectarse a Azure Blob Storage (Asistente para importación y exportación de SQL Server)
 
@@ -47,10 +48,10 @@ En la captura de pantalla siguiente se muestran las opciones para configurar una
 **Clave de cuenta**  
 Escriba la clave de la cuenta de almacenamiento de Azure.  
   
- **Usar HTTPS**  
+ **Use HTTPS**  
  Especifique si desea utilizar HTTP o HTTPS para conectarse a la cuenta de almacenamiento.  
   
- **Usar cuenta de desarrollador local**  
+ **Use local developer account (Usar cuenta de desarrollador local)**  
  Especifique si desea utilizar el emulador de almacenamiento en el equipo local.  
   
  **Nombre del contenedor de blob**  
@@ -62,7 +63,7 @@ Escriba la clave de la cuenta de almacenamiento de Azure.
  **Carácter delimitador de columna**  
  Si selecciona el formato de texto, escriba el carácter delimitador de columna.  
   
- **Usar la primera fila como nombres de columna**  
+ **Use first row as column names (Usar la primera fila como nombre de columna)**  
  Especifique si la primera fila de datos contiene nombres de columna.  
 
 ## <a name="see-also"></a>Consulte también

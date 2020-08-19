@@ -1,4 +1,5 @@
 ---
+description: Expresiones de Integration Services (SSIS)
 title: Expresiones de Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a5f9955f32db6b9d803541229a700671ec666b55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: def15673fbc8c92148fa8ab025d6e1769b2ee236
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425507"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expresiones de Integration Services (SSIS)
 
@@ -67,7 +68,7 @@ ms.locfileid: "86914563"
  Las variables tienen un ámbito y en la carpeta **Variables** del Generador de expresiones solo se muestran las variables que están en el ámbito y disponibles para su uso. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Usar una expresión en un componente de flujo de datos](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [utilizar una expresión en un componente de flujo de datos](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Artículo técnico, sobre [ejemplos de expresiones SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  

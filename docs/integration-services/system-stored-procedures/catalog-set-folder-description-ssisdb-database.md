@@ -1,4 +1,5 @@
 ---
+description: catalog.set_folder_description (base de datos de SSISDB)
 title: catalog.set_folder_description (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16dad0ab077a475cf495b11e958fa6336c189671
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18e7cb22f94e33328ed08968052d03b0261c73df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425067"
 ---
 # <a name="catalogset_folder_description-ssisdb-database"></a>catalog.set_folder_description (base de datos de SSISDB)
 
@@ -38,10 +39,10 @@ catalog.set_folder_description [ @folder_name = ] folder_name
  Nombre de la carpeta. *folder_name* es **nvarchar(128)** .  
   
  [ @folder_description = ] *folder_description*  
- Descripción de la carpeta. El parámetro *folder_description* es **nvarchar(MAX)** .  
+ Descripción de la carpeta. El parámetro *folder_description* es **nvarchar(MAX)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- None  
+ Ninguno  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  

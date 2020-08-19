@@ -1,4 +1,5 @@
 ---
+description: Tipos de datos de Integration Services en las expresiones
 title: Tipos de datos de Integration Services en las expresiones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae5e95da6599c4af10513ec72194671ba71561b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425537"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de datos de Integration Services en las expresiones
 
@@ -125,7 +126,7 @@ ms.locfileid: "86914587"
   
 -   Los argumentos pasados a funciones matemáticas deben devolver un tipo de datos numérico. Dependiendo de la función o la operación, puede ser necesario usar un tipo de datos numérico específico. Por ejemplo, la función HEX requiere un entero con o sin signo.  
   
--   Los argumentos pasados a funciones de cadena se deben evaluar con un tipo de datos de carácter: DT_STR o DT_WSTR. Por ejemplo, UPPER("flor"). Algunas funciones de cadena, como SUBSTRING, requieren argumentos enteros adicionales para la posición inicial y la longitud de la cadena.  
+-   Los argumentos pasados a funciones de cadena debe contener un tipo de datos de carácter: DT_STR o DT_WSTR. Por ejemplo, UPPER("flor"). Algunas funciones de cadena, como SUBSTRING, requieren argumentos enteros adicionales para la posición inicial y la longitud de la cadena.  
   
 -   Los argumentos pasados a funciones de fecha y hora deben contener una fecha válida. Por ejemplo, DAY(GETDATE()). Algunas funciones, como DATEADD, requieren un argumento entero adicional para el número de días que la función agrega a una fecha.  
   
@@ -134,7 +135,7 @@ ms.locfileid: "86914587"
  Los resultados de muchas operaciones y funciones tienen tipos de datos predeterminados. Pueden ser el tipo de datos del argumento o el tipo de datos al que el evaluador de expresiones convierte el resultado. Por ejemplo, el resultado de un operador lógico OR (||) es siempre un valor booleano, el resultado de la función ABS es el tipo de datos numérico del argumento y el resultado de la multiplicación es el tipo de datos numérico más pequeño que puede contener el resultado sin perder información. Para más información sobre los tipos de datos de los resultados, vea [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Usar una expresión en un componente de flujo de datos](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [utilizar una expresión en un componente de flujo de datos](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

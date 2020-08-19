@@ -1,4 +1,5 @@
 ---
+description: FLOOR (expresión de SSIS)
 title: FLOOR (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f0161fe842ad8271d04a69b9cb2726db3403314
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae36dec51176fd1e3d9b50f0c2697e9e17121412
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425547"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (expresión de SSIS)
 
@@ -41,7 +42,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  El tipo de datos numérico de la expresión del argumento. El resultado es la parte entera del valor calculado en el mismo tipo de datos que *numeric_expression*.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  FLOOR devuelve un resultado NULL si el valor del argumento es NULL.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  

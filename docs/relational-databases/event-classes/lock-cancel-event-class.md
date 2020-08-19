@@ -1,4 +1,5 @@
 ---
+description: Lock:Cancel (clase de eventos)
 title: Clase de eventos Lock:Cancel | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7818b47bcac286d409750d87eac0f728ca69fd8d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64a8f8d2ed20144b5f3de5b1d24fee3adf428a06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424237"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel (clase de eventos)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  La clase de evento **Lock:Cancel** indica que se ha cancelado la adquisición de un bloqueo de un recurso; por ejemplo, debido a la cancelación de una consulta.  
+   La clase de eventos **Lock:Cancel** indica que se ha cancelado la adquisición de un bloqueo de un recurso; por ejemplo, debido a la cancelación de una consulta.  
   
 ## <a name="lockcancel-event-class-data-columns"></a>Columnas de datos de la clase de evento Lock:Cancel  
   

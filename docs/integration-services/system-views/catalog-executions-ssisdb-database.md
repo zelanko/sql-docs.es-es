@@ -1,4 +1,5 @@
 ---
+description: catalog.executions (base de datos de SSISDB)
 title: catalog.executions (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33a7603502d1b43ea7cfdd1fa5f9c84720705ade
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 438d551f45447b0b03b075576af9cffb2bde8a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425107"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (base de datos de SSISDB)
 
@@ -43,7 +44,7 @@ ms.locfileid: "86912567"
 |executed_as_sid|**varbinary(85)**|SID del usuario que inició la instancia de ejecución.|  
 |executed_as_name|**nvarchar(128)**|Nombre de la entidad de seguridad de base de datos que se utilizó para iniciar la instancia de ejecución.|  
 |use32bitruntime|**bit**|Indica si el motor en tiempo de ejecución de 32 bits se usa para ejecutar el paquete en un sistema operativo de 64 bits. Si el valor es `1`, se realiza la ejecución con el motor en tiempo de ejecución de 32 bits. Si el valor es `0`, se realiza la ejecución con el motor en tiempo de ejecución de 64 bits.|  
-|object_type|**smallint**|Tipo de objeto. El objeto puede ser un proyecto (`20`) o un paquete (`30`).|  
+|object_type|**smallint**|Tipo del objeto. El objeto puede ser un proyecto (`20`) o un paquete (`30`).|  
 |object_id|**bigint**|Identificador del objeto afectado por la operación.|  
 |status|**int**|Estado de la operación. Los valores posibles son creado (`1`), en ejecución (`2`), cancelado (`3`), con errores (`4`), pendiente (`5`), finalizado inesperadamente (`6`), correcto (`7`), deteniendo (`8`) y completado (`9`).|  
 |start_time|**datetimeoffset**|Hora a la que se inició la instancia de ejecución.|  

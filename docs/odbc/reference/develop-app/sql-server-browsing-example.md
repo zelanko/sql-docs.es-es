@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de exploración de SQL Server
 title: Ejemplo de exploración de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b15aa8e3d573660a312fceb5b9100a41f0384d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14016832989c6fcba1dc39bc64434e72b049c18a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424567"
 ---
 # <a name="sql-server-browsing-example"></a>Ejemplo de exploración de SQL Server
 En el ejemplo siguiente se muestra cómo se puede usar **SQLBrowseConnect** para examinar las conexiones disponibles con un controlador para SQL Server. En primer lugar, la aplicación solicita un identificador de conexión:  
@@ -38,7 +39,7 @@ SQLBrowseConnect(hdbc, "DRIVER={SQL Server};", SQL_NTS, BrowseResult,
  Dado que se trata de la primera llamada a **SQLBrowseConnect**, el administrador de controladores carga el controlador de SQL Server y llama a la función **SQLBrowseConnect** del controlador con los mismos argumentos que recibió de la aplicación.  
   
 > [!NOTE]  
->  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de `Trusted_Connection=yes` Windows, debe especificar en lugar de la información de ID. de usuario y contraseña en la cadena de conexión.  
+>  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar `Trusted_Connection=yes` en lugar de la información de ID. de usuario y contraseña en la cadena de conexión.  
   
  El controlador determina que se trata de la primera llamada a **SQLBrowseConnect** y devuelve el segundo nivel de atributos de conexión: servidor, nombre de usuario, contraseña, nombre de la aplicación e identificador de la estación de trabajo. En el caso del atributo Server, devuelve una lista de nombres de servidor válidos. El código de retorno de **SQLBrowseConnect** es SQL_NEED_DATA. Esta es la cadena de resultado de la exploración:  
   

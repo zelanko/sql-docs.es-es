@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_property_override_value
 title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a009f23b1c6ca3520793a7c1f947afe0ff0516a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1d68015c56a6b5552ebee72f661c879c26aef4a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425087"
 ---
 # <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 
 
@@ -40,10 +41,10 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  Identificador único de la instancia de ejecución. El parámetro *execution_id* es de tipo **bigint**.  
   
  [ @property_path = ] *property_path*  
- Ruta de acceso a la propiedad en el paquete. El parámetro *property_path* es **nvarchar(4000)** .  
+ Ruta de acceso a la propiedad en el paquete. El parámetro *property_path* es **nvarchar(4000)**.  
   
  [ @property_value = ] *property_value*  
- El valor de invalidación que se va a asignar a la propiedad. El parámetro *property_value* es **nvarchar(max)** .  
+ El valor de invalidación que se va a asignar a la propiedad. El parámetro *property_value* es **nvarchar(max)**.  
   
  [ @sensitive = ] *sensitive*  
  Cuando el valor es 1, la propiedad es confidencial y se cifra cuando se almacena. Cuando el valor es 0, la propiedad no es confidencial y el valor se almacena como texto simple. El argumento *sensitive* es **bit**.  

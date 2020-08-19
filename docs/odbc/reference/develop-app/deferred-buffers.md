@@ -1,4 +1,5 @@
 ---
+description: Búferes diferidos
 title: Búferes diferidos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f34c6d3d886a0a75c309dc4f5c71f5c7ba3df447
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 320271c39c735eafcfb1d59d26e7d0400eaa6e6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424707"
 ---
 # <a name="deferred-buffers"></a>Búferes diferidos
 Un *búfer diferido* es aquél cuyo valor se utiliza en algún momento *después* de especificarse en una llamada de función. Por ejemplo, **SQLBindParameter** se utiliza para asociar o *enlazar* un búfer de datos con un parámetro en una instrucción SQL. La aplicación especifica el número del parámetro y pasa la dirección, la longitud de bytes y el tipo del búfer. El controlador guarda esta información, pero no examina el contenido del búfer. Más adelante, cuando la aplicación ejecuta la instrucción, el controlador recupera la información y la utiliza para recuperar los datos del parámetro y enviarlos al origen de datos. Por lo tanto, se aplaza la entrada de datos en el búfer. Dado que los búferes diferidos se especifican en una función y se usan en otro, se trata de un error de programación de aplicaciones para liberar un búfer diferido mientras el controlador espera que exista; para obtener más información, vea [asignar y liberar búferes](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), más adelante en esta sección.  

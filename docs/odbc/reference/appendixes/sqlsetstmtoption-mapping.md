@@ -1,4 +1,5 @@
 ---
+description: Asignación de SQLSetStmtOption
 title: Asignación de SQLSetStmtOption | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 91264cee0dfceeb7195e2bad40d1638a88e1e01a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f2c4a65ade202003d454988372895ba40fb6eeef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424886"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Asignación de SQLSetStmtOption
 Cuando una aplicación llama a **SQLSetStmtOption** a través de un controlador ODBC *3. x* , la llamada a  

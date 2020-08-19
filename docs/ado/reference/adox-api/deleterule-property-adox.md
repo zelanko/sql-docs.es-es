@@ -1,4 +1,5 @@
 ---
+description: DeleteRule (propiedad, ADOX)
 title: DeleteRule (propiedad, ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 508225919ae71461ef2e122171beede5cb7141c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 23262afa30ca28c226964ebc17d4a3ac52971d5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440078"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule (propiedad, ADOX)
 Indica la acción que se realiza cuando se elimina una clave principal.  
@@ -32,7 +33,7 @@ Indica la acción que se realiza cuando se elimina una clave principal.
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece y devuelve un valor **Long** que puede ser una de las constantes [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) . El valor predeterminado es **adRINone**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta propiedad es de solo lectura en objetos de [clave](../../../ado/reference/adox-api/key-object-adox.md) ya anexados a una colección.  
   
 ## <a name="applies-to"></a>Se aplica a  

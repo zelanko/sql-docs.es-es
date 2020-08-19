@@ -1,4 +1,5 @@
 ---
+description: Append (método) (índices ADOX)
 title: Append (método) (índices ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6996f3a0a3ad9f2ffa727a6cbd7b48d3fbf32777
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b13115a657f3bc25ae79cf3ba92a7fe339492536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440547"
 ---
 # <a name="append-method-adox-indexes"></a>Append (método) (índices ADOX)
 Agrega un nuevo objeto [index](../../../ado/reference/adox-api/index-object-adox.md) a la colección [Indexes](../../../ado/reference/adox-api/indexes-collection-adox.md) .  
@@ -33,13 +34,13 @@ Indexes.Append Index [,Columns]
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Índice*  
+ *Index*  
  Objeto de **Índice** que se va a anexar o nombre del índice que se va a crear y anexar.  
   
  *Columnas*  
  Opcional. Valor **Variant** que especifica los nombres de las columnas que se van a indizar. El parámetro *Columns* corresponde a los valores de la propiedad [Name](../../../ado/reference/adox-api/name-property-adox.md) de un objeto de [columna](../../../ado/reference/adox-api/column-object-adox.md) u objetos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El parámetro *Columns* puede tomar el nombre de una columna o una matriz de nombres de columna.  
   
  Se producirá un error si el proveedor no admite la creación de índices.  

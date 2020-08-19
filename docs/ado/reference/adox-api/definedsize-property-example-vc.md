@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de propiedad DefinedSize (VC++)
 title: Ejemplo de la propiedad DefinedSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cafc18fb00a0adeb6d219d901ea40ca79510be5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4d2f7ef20e5fb67450dccee7e7fb29b32d46286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440127"
 ---
 # <a name="definedsize-property-example-vc"></a>Ejemplo de propiedad DefinedSize (VC++)
 En este ejemplo se muestra la propiedad [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) de una [columna](../../../ado/reference/adox-api/column-object-adox.md). El código redefinirá el tamaño de la columna FirstName de la tabla **Employees** de la base de datos *Northwind* . A continuación, se muestra el cambio en los valores del [campo](../../../ado/reference/ado-api/field-object.md) FirstName de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basado en la tabla **Employees** . Tenga en cuenta que, de forma predeterminada, el campo FirstName se rellena con espacios después de volver a definir la propiedad **DefinedSize** .  

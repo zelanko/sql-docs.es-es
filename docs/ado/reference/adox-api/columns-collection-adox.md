@@ -1,4 +1,5 @@
 ---
+description: Colección de columnas (ADOX)
 title: Colección de columnas (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46168e694f87c4a8a827420f8b395b843da1d29b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 01598bb9c9b7258b33f66df6bf00db9b892f4ec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440287"
 ---
 # <a name="columns-collection-adox"></a>Colección de columnas (ADOX)
 Contiene todos los objetos de [columna](../../../ado/reference/adox-api/column-object-adox.md) de una tabla, un índice o una clave.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El método [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) de una colección **Columns** es único para ADOX. Puede:  
   
 -   Agregue una nueva columna a la colección con el método **Append** .  

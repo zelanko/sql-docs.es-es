@@ -1,4 +1,5 @@
 ---
+description: Attributes (propiedad, ADOX)
 title: Attributes (propiedad, ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba9b3094b9349288abc7849a38ac5baf0cb6b55c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eade69c5a19e3ffc8d6b6d933b9d4f8453b4b6f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440447"
 ---
 # <a name="attributes-property-adox"></a>Attributes (propiedad, ADOX)
 Describe las características de las columnas.  

@@ -1,4 +1,5 @@
 ---
+description: Create (método, ADOX)
 title: Create (método) (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15ea5cf8b565a943f4905a890cb08ba0afed202f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b291651caa93e93999d87a926c9abe391e71d21e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440217"
 ---
 # <a name="create-method-adox"></a>Create (método, ADOX)
 Crea un nuevo catálogo.  

@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de métodos GetObjectOwner y SetObjectOwner (VB)
 title: Ejemplo de los métodos GetObjectOwner y SetObjectOwner (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2cc708ed86c9fd06997ce21c2be8f6ab836c1725
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 502bad9d142df67096f23bf89f60184a958de55a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440087"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>Ejemplo de métodos GetObjectOwner y SetObjectOwner (VB)
 En este ejemplo se muestran los métodos [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) y [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) . Este código supone la existencia de la cuenta de grupo (vea el ejemplo de los [métodos Append y ChangePassword de grupos y usuarios (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) para ver cómo agregar este grupo al sistema). El propietario de la tabla Categories está establecido en Accounting.  

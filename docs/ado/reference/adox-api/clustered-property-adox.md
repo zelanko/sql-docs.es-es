@@ -1,4 +1,5 @@
 ---
+description: Clustered (propiedad, ADOX)
 title: Clustered (propiedad, ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f4cbd0a305d7e2eae29884223ec6a67aed5fb4f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b3c915fcaf1a3661e606f5e1c2cf9a04bafd91fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440367"
 ---
 # <a name="clustered-property-adox"></a>Clustered (propiedad, ADOX)
 Indica si el índice está agrupado.  
@@ -32,7 +33,7 @@ Indica si el índice está agrupado.
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece y devuelve un valor **booleano** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El valor predeterminado es **False**.  
   
  Esta propiedad es de solo lectura en objetos de [Índice](../../../ado/reference/adox-api/index-object-adox.md) que ya se han anexado a una colección.  

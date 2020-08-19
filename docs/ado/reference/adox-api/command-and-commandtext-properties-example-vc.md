@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de propiedades Command y CommandText (VC++)
 title: Ejemplo de propiedades de comando y CommandText (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35e43b2e9aaba281334af135a44510295f4179e4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 907636b5d883fcca57a9ea1211ea54078a5e312d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440257"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Ejemplo de propiedades Command y CommandText (VC++)
 En el código siguiente se muestra cómo utilizar la propiedad [Command](../../../ado/reference/adox-api/command-property-adox.md) para actualizar el texto de un procedimiento.  

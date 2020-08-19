@@ -1,4 +1,5 @@
 ---
+description: AllowNullsEnum
 title: AllowNullsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74bb82433d17bd47df71d3a9f8574d72ce39a265
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 058df53811bfbb48005f1f9c6f08f38410bc54cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440507"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 Especifica si los registros con valores NULL se indizan.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adIndexNullsAllow**|0|El índice permite entradas en las que las columnas de clave sean null. Si se especifica un valor null en una columna de clave, la entrada se inserta en el índice.|  
 |**adIndexNullsDisallow**|1|Predeterminada. El índice no permite entradas en las que las columnas de clave sean null. Si se especifica un valor null en una columna de clave, se producirá un error.|  

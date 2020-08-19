@@ -1,4 +1,5 @@
 ---
+description: Sys. pdw_materialized_view_distribution_properties (Transact-SQL) (versión preliminar)
 title: Sys. pdw_materialized_view_distribution_properties (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: be817e164cfa26baf6264dc83e73fddba82ed435
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9146e359bd200d688bc788a013392df407f0ba9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490231"
 ---
 # <a name="syspdw_materialized_view_distribution_properties-transact-sql-preview"></a>Sys. pdw_materialized_view_distribution_properties (Transact-SQL) (versión preliminar)
 

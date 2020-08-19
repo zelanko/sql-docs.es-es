@@ -1,4 +1,5 @@
 ---
+description: Botones de comando de la libreta de direcciones
 title: Botones de comando de la libreta de direcciones | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04f896b4a799e527e2442ef17e69a33f576950dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452337"
 ---
 # <a name="address-book-command-buttons"></a>Botones de comando de la libreta de direcciones
 La aplicación de libreta de direcciones incluye los siguientes botones de comando:  
@@ -71,7 +72,7 @@ Sub Update_OnClick
 End Sub  
 ```  
   
- Cuando `DC1.SubmitChanges` se ejecuta, el servicio de datos remoto empaqueta toda la información de actualización y la envía al servidor a través de http. La actualización es All-or-Nothing; Si una parte de la actualización no se realiza correctamente, no se realiza ningún cambio y se devuelve un mensaje de estado. `DC1.Refresh`no es necesario después de **SubmitChanges** con el servicio de datos remoto, pero garantiza datos actualizados.  
+ Cuando `DC1.SubmitChanges` se ejecuta, el servicio de datos remoto empaqueta toda la información de actualización y la envía al servidor a través de http. La actualización es All-or-Nothing; Si una parte de la actualización no se realiza correctamente, no se realiza ningún cambio y se devuelve un mensaje de estado. `DC1.Refresh` no es necesario después de **SubmitChanges** con el servicio de datos remoto, pero garantiza datos actualizados.  
   
 ## <a name="cancel-changes-button"></a>Botón Cancelar cambios  
  Al hacer clic en **Cancelar cambios** , se activa el procedimiento Sub de VBScript Cancel_OnClick, que ejecuta [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) ( `DC1)` método [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) .  

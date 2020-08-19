@@ -1,4 +1,5 @@
 ---
+description: Crear una tarea script que use el adaptador de destino de almacenamiento de datos paralelos de SSIS
 title: Crear una tarea script con el adaptador de destino PDW de SSIS
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
@@ -9,12 +10,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 857dbc39906f57da39de623daecf18e5be0d28f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438527"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Crear una tarea script que use el adaptador de destino de almacenamiento de datos paralelos de SSIS
 Este código de script de paquete SSIS es un ejemplo de código para usar el adaptador de destino PDW de SSIS.  La tarea script de Integration Services permite realizar prácticamente todas las operaciones que se pueden realizar en una aplicación .net dentro del contexto de un flujo de control de SSIS. 
@@ -27,7 +28,7 @@ Este código de script de paquete SSIS es un ejemplo de código para usar el ada
   
 3.  Edite el script para usar el código que se proporciona a continuación. Personalice el script para el entorno realizando los siguientes cambios:  
   
-    -   Debe conservar el espacio de nombres del script creado por la tarea script. Anote el nombre del espacio de `namespace ST_<GUID>` nombres y edite el siguiente script, cambiando *ST_<GUID> * al *GUID* original de la tarea script.  
+    -   Debe conservar el espacio de nombres del script creado por la tarea script. Anote el nombre del espacio de nombres `namespace ST_<GUID>` y edite el siguiente script, cambiando *ST_ <GUID> * al *GUID* original de la tarea script.  
   
     -   Reemplace cuatro apariciones del valor de marcador de posición *xxxxxxxx* por los valores adecuados para su entorno y la acción deseada.  
   

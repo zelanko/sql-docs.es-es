@@ -1,4 +1,5 @@
 ---
+description: Compatibilidad de tipos de datos con Microsoft Connector for Oracle
 title: Compatibilidad de tipos de datos con Microsoft Connector for Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: abbcea42546421fb7c0d3fef9824ef8ef56d2a0c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2193c93ff55ed38ff5c629072109036306bb72c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430777"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Compatibilidad de tipos de datos con Microsoft Connector for Oracle
 
@@ -40,13 +41,13 @@ En la tabla siguiente se muestran los tipos de datos de bases de datos de Oracle
 |CLOB|DT_TEXT|Los tipos de datos CLOB, NCLOB y BLOB solo se admiten en el modo de matriz y no en el modo de carga rápida.|
 |NCLOB|DT_NTEXT||
 |BLOB|DT_IMAGE||
-|UROWID|No compatible||
-|REF|No compatible||
-|BFILE|No compatible||
-|LONG|No compatible||
-|LONG RAW|No compatible||
-|ROWID|No compatible||
-|Tipo definido por el usuario (tipo de objeto, VARRAY, tabla anidada)|No compatible||
+|UROWID|No admitido||
+|REF|No admitido||
+|BFILE|No admitido||
+|LONG|No admitido||
+|LONG RAW|No admitido||
+|ROWID|No admitido||
+|Tipo definido por el usuario (tipo de objeto, VARRAY, tabla anidada)|No admitido||
 
 ## <a name="next-steps"></a>Pasos siguientes
 

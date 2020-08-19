@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYASYMKEY (Transact-SQL)
 title: ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b9695a2cec375cf2eb5a69bbe210478b9d0fa1e6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2a0031163de085d6de07aaf7a0e707a5e5ac5dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459785"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ Cadena de datos que `ENCRYPTBYASYMKEY` cifrará con la clave asimétrica. *clear
 + **nvarchar**
 + **varbinary**
   
-or
+o bien
   
 + **varchar**
  
@@ -69,7 +70,7 @@ Una variable que contiene un valor que `ENCRYPTBYASYMKEY` cifrará con la clave 
 + **nvarchar**
 + **varbinary**
   
-or
+o bien
   
 + **varchar**
  
@@ -99,7 +100,7 @@ INSERT INTO AdventureWorks2012.Sales.ProtectedData04
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  

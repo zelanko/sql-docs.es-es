@@ -1,4 +1,5 @@
 ---
+description: Cumplimiento de normas de SQL-92
 title: Cumplimiento de SQL-92 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ac0ae5873e545afb8fcac9dd003c984b1ed303a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d978b236c45d442732cd3602c3fbbb6d16dfd8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483438"
 ---
 # <a name="sql-92-compliance"></a>Cumplimiento de normas de SQL-92
 Los controladores de base de datos de escritorio ODBC y el motor de Microsoft Jet subyacente no son compatibles con SQL-92. Admiten muchas características que se han definido en SQL-92. Algunas características admitidas en el controlador no se admiten en SQL-92. Para obtener más información, vea la *Guía del programador de Microsoft Jet motor de base de datos*. Las siguientes son las principales diferencias entre los dos:  

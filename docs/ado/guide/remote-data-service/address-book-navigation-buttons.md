@@ -1,4 +1,5 @@
 ---
+description: Botones de navegación de la libreta de direcciones
 title: Botones de navegación de la libreta de direcciones | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcb9ef043f27cd36c57b35605c8bf8257613af5d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452327"
 ---
 # <a name="address-book-navigation-buttons"></a>Botones de navegación de la libreta de direcciones
 La aplicación de libreta de direcciones muestra los botones de navegación en la parte inferior de la Página Web. Puede usar los botones de navegación para desplazarse por los datos de la pantalla de la cuadrícula HTML seleccionando la primera o la última fila de datos o las filas adyacentes a la selección actual.  

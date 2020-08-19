@@ -1,4 +1,5 @@
 ---
+description: EVENTDATA (Transact-SQL)
 title: EVENTDATA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 95996934e6d8334376533b4abf04e2cc7607fd78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfa9a876d13a1c8827649c3fe8ad145b4cb8da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459787"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,12 +41,13 @@ Esta función devuelve información acerca de los eventos de base de datos o ser
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
-EVENTDATA( )  
-```  
-  
-## <a name="remarks"></a>Observaciones  
+```syntaxsql
+EVENTDATA( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentarios  
 `EVENTDATA` devuelve datos solo cuando se hace referencia al mismo directamente dentro de un desencadenador DDL o LOGON. `EVENTDATA` devuelve NULL si otras rutinas lo llaman, incluso si un desencadenador DDL o LOGON llama a esas rutinas.
   
 Los datos que `EVENTDATA` devuelve no son válidos después de una transacción que
@@ -111,7 +113,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Para devolver datos de evento, use el método XQuery **value()** en lugar del método **query()** . El método **query()** devuelve XML e instancias de retorno de carro y avance de línea (CR/LF) con el carácter de escape “y” comercial en el resultado, mientras que el método **value()** representa instancias de CR/LF invisibles en el resultado.  
+>  Para devolver datos de evento, use el método XQuery **value()** en lugar del método **query()**. El método **query()** devuelve XML e instancias de retorno de carro y avance de línea (CR/LF) con el carácter de escape “y” comercial en el resultado, mientras que el método **value()** representa instancias de CR/LF invisibles en el resultado.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Crear una tabla de registro con datos de evento en un desencadenador DDL  
 En este ejemplo se crea una tabla para almacenar información sobre todos los eventos de nivel de base de datos y rellena esa tabla con un desencadenador DDL. El uso de XQuery con los datos XML generados por `EVENTDATA` captura el tipo de evento y la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -150,7 +152,7 @@ DROP TABLE ddl_log;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Usar la función EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)   
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Notificaciones de eventos](../../relational-databases/service-broker/event-notifications.md)   

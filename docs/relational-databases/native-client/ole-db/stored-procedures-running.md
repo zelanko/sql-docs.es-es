@@ -1,4 +1,5 @@
 ---
+description: 'Procedimientos almacenados: ejecución en SQL Server Native Client'
 title: Ejecución de procedimientos almacenados (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca0211f6cab19b09ac0be43ba32768511f0f6a4f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5adab3feb731b9b4af69692ed8688ccbdccd64f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498852"
 ---
 # <a name="stored-procedures---running-in-sql-server-native-client"></a>Procedimientos almacenados: ejecución en SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

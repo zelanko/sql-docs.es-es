@@ -1,4 +1,5 @@
 ---
+description: Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos)
 title: Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 41f3c9d4fef15a99592421b3762515a15ef33b7b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 499f56a0ce11bc68ad046035ff0a43d80ae4bfe7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431047"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos)
 
@@ -80,7 +81,7 @@ ms.locfileid: "86913994"
  Muestra el nombre de la tabla seleccionada. Esta opción es de solo lectura.  
   
 #### <a name="keycolumns-options"></a>Opciones de KeyColumns  
- Las opciones siguientes se presentan para cada columna seleccionada para la generación de perfiles en **KeyColumns** o para la opción **(\*)** .  
+ Las opciones siguientes se presentan para cada columna seleccionada para la generación de perfiles en **KeyColumns** o para la opción **(\*)**.  
   
  Para obtener más información, vea la sección "Selección de columnas para la propiedad KeyColumns" anteriormente en este tema.  
   

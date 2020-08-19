@@ -1,4 +1,5 @@
 ---
+description: Programación ADO con JScript
 title: Programación ADO en JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b9fe403c0d51d53e79d978ff573556b73f5aec7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f1cad0a2717bb652759a7c8b0d60efc4b3f4541
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444567"
 ---
 # <a name="jscript-ado-programming"></a>Programación ADO con JScript
 ## <a name="creating-an-ado-project"></a>Crear un proyecto de ADO  

@@ -1,4 +1,5 @@
 ---
+description: Destino de Oracle
 title: Destino de Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f09d0cc0ad4a8d6ee1230bd846375b5b340cd4fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e029637f90afbb27e4b27c79c8a515a2e3aad823
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913781"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430787"
 ---
 # <a name="oracle-destination"></a>Destino de Oracle
 
@@ -141,8 +142,8 @@ Elija el método para la selección de datos desde el origen. Las opciones se mu
 
 |Opción|Descripción|
 |:-|:-|
-|Nombre de la tabla|Configure el destino de Oracle para que funcione en el modo por lotes. Opciones:<br><br> **Nombre de la tabla o la vista**: seleccione una tabla o vista disponible desde la base de datos de la lista.<br><br> **Tamaño de transacción**: indique el número de inserciones que puede haber en una sola transacción. El valor predeterminado es **BatchSize**.<br><br> **Tamaño del lote**: escriba el tamaño (el número de filas cargadas) del lote para la carga masiva.
-|Nombre de tabla – Carga rápida|Configure el destino de Oracle para que funcione en el modo de carga rápida (ruta directa). <br><br>Hay opciones disponibles:<br><br> **Nombre de la tabla o la vista**: seleccione una tabla o vista disponible desde la base de datos de la lista.<br><br> **Carga paralela**: si está habilitada la carga en paralelo. Para más información, consulte [Paralelismo](#parallelism).<br><br> **Sin registro**: active esta casilla para deshabilitar el registro de las bases de datos. Este registro es una base de datos de Oracle que se usa con fines de recuperación, sin relación con el seguimiento.<br><br> **Número máximo de errores**: el número máximo de errores que pueden ocurrir antes de que se detenga el flujo de datos. El valor predeterminado es 0, lo que significa que no hay ningún límite de número.<br><br> Todos los errores que puedan ocurrir se devuelven en la salida de error.<br><br> **Tamaño de búfer de transferencia (KB)** : indique el tamaño del búfer de transferencia. El tamaño predeterminado es 64 KB.|
+|Nombre de la tabla|Configure el destino de Oracle para que funcione en el modo por lotes. Opciones:<br><br> **Nombre de la tabla o la vista**: seleccione en la lista una tabla o vista disponible en la base de datos.<br><br> **Tamaño de transacción**: indique el número de inserciones que puede haber en una sola transacción. El valor predeterminado es **BatchSize**.<br><br> **Tamaño del lote**: escriba el tamaño (el número de filas cargadas) del lote para la carga masiva.
+|Nombre de tabla – Carga rápida|Configure el destino de Oracle para que funcione en el modo de carga rápida (ruta directa). <br><br>Hay opciones disponibles:<br><br> **Nombre de la tabla o la vista**: seleccione en la lista una tabla o vista disponible en la base de datos.<br><br> **Carga paralela**: si está habilitada la carga en paralelo. Para más información, consulte [Paralelismo](#parallelism).<br><br> **Sin registro**: active esta casilla para deshabilitar el registro de las bases de datos. Este registro es una base de datos de Oracle que se usa con fines de recuperación, sin relación con el seguimiento.<br><br> **Número máximo de errores**: el número máximo de errores que pueden ocurrir antes de que se detenga el flujo de datos. El valor predeterminado es 0, lo que significa que no hay ningún límite de número.<br><br> Todos los errores que puedan ocurrir se devuelven en la salida de error.<br><br> **Tamaño de búfer de transferencia (KB)** : indique el tamaño del búfer de transferencia. El tamaño predeterminado es 64 KB.|
 
 **Datos existentes de la vista**
 

@@ -1,4 +1,5 @@
 ---
+description: GROUP BY-lista de expresiones
 title: AGRUPAr por expresión-lista | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d203f69-ec46-457f-8d07-b22d282b6bf1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3981a076ca36a15a4dd4a2a8dd2b6d4d72702d26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f7b2f6c344bfd600663f4de457094701fe68afa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483572"
 ---
 # <a name="group-by-expression-list"></a>GROUP BY-lista de expresiones
 GROUP BY admite una lista de expresiones, así como un nombre de columna. La lista de selección de una instrucción SELECT que tiene una cláusula GROUP BY solo puede incluir expresiones de la cláusula GROUP BY o de funciones set.

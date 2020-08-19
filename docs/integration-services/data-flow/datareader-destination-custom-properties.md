@@ -1,4 +1,5 @@
 ---
+description: Propiedades personalizadas del destino DataReader
 title: Propiedades personalizadas del destino DataReader | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9394139b6085fc4f5d59a8202503f6c9e3d750f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8efd821c41f7a0eaa9a19633c7719795eaa12665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430877"
 ---
 # <a name="datareader-destination-custom-properties"></a>Propiedades personalizadas del destino DataReader
 

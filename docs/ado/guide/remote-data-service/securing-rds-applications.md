@@ -1,4 +1,5 @@
 ---
+description: Protección de aplicaciones de RDS
 title: Proteger aplicaciones RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f785eed6124970d8c270492b98dc8e5ea815f18a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0e40d5739de285c0655e9ab45f14ba3f342a420f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451977"
 ---
 # <a name="securing-rds-applications"></a>Protección de aplicaciones de RDS
 En este tema se proporciona información de seguridad para RDS.  
@@ -29,7 +30,7 @@ En este tema se proporciona información de seguridad para RDS.
  Con nuevas mejoras de seguridad agregadas a Microsoft Internet Explorer, algunos objetos ADO y RDS están restringidos a ejecutarse solo en un entorno de modo "seguro". Para ello, es necesario tener en cuenta estos problemas, entre los que se incluyen diferentes zonas, niveles de seguridad, comportamiento restrictivo, operaciones no seguras y configuraciones de seguridad personalizadas.  
   
 ## <a name="security-and-your-web-server"></a>Seguridad y su servidor Web  
- Si utiliza el objeto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) en el servidor Web de Internet, recuerde que, al hacerlo, se crea un posible riesgo de seguridad. Los usuarios externos que obtienen la información de nombre de origen de datos (DSN), ID. de usuario y contraseña válidos podrían escribir páginas para enviar cualquier consulta a ese origen de datos. Si desea un acceso más restringido a un origen de datos, una opción es anular el registro y eliminar el objeto **RDSServer. DataFactory** (msadcf. dll) y, en su lugar, usar objetos comerciales personalizados con consultas codificadas de forma rígida.  
+ Si utiliza el objeto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) en el servidor Web de Internet, recuerde que, al hacerlo, se crea un posible riesgo de seguridad. Los usuarios externos que obtienen la información de nombre de origen de datos (DSN), ID. de usuario y contraseña válidos podrían escribir páginas para enviar cualquier consulta a ese origen de datos. Si desea un acceso más restringido a un origen de datos, una opción es anular el registro y eliminar el objeto **RDSServer. DataFactory** (msadcf.dll) y, en su lugar, usar objetos comerciales personalizados con consultas codificadas de forma rígida.  
   
  Para obtener más información sobre las implicaciones de seguridad del uso del objeto RDSServer. DataFactory, vea el boletín de seguridad de Microsoft MS99-025 en el sitio web de seguridad de Microsoft.  
   

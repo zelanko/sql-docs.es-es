@@ -1,4 +1,5 @@
 ---
+description: SQLAllocConnect (controlador ODBC de Visual FoxPro)
 title: SQLAllocConnect (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70d48b12-def5-475c-b8e1-654a55fdfe0f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e5fa95bb958431f717c073673e0b4ad93056e62
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 548d8f1b0c4679f8cbfe8e5af39cfcf592087bc8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483408"
 ---
 # <a name="sqlallocconnect-visual-foxpro-odbc-driver"></a>SQLAllocConnect (controlador ODBC de Visual FoxPro)
 > [!NOTE]  

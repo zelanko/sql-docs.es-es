@@ -1,4 +1,5 @@
 ---
+description: Objeto de enlace de datos de la libreta de direcciones
 title: Objeto de enlace de datos de la libreta de direcciones | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71b1897830c4a5382e6903f5e05aa29d1ce37d1b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d9c9b8a4e64432b644b9d3bf66ce2f200f0c1de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452347"
 ---
 # <a name="address-book-data-binding-object"></a>Objeto de enlace de datos de la libreta de direcciones
 La aplicación de libreta de direcciones utiliza [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para enlazar datos de la base de datos SQL Server a un objeto visual (en este caso, una tabla DHTML) en la página HTML del cliente de la aplicación. La lógica del programa VBScript orientada a eventos utiliza [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) para:  
@@ -56,7 +57,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |***ID***|Define un identificador para todo el documento para el objeto incrustado que se utiliza para identificarlo en el código.|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>ActiveX. Parámetros de etiqueta DataControl  
- En la tabla siguiente se describen los parámetros específicos del **objeto RDS. Objeto DataControl** . (Para obtener una lista completa de **RDS. **Los parámetros del objeto DataControl y cuándo implementarlos, vea [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).  
+ En la tabla siguiente se describen los parámetros específicos del **objeto RDS. Objeto DataControl** . (Para obtener una lista completa de **RDS. ** Los parámetros del objeto DataControl y cuándo implementarlos, vea [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  

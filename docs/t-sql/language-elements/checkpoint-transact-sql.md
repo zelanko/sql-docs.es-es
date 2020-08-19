@@ -1,4 +1,5 @@
 ---
+description: CHECKPOINT (Transact-SQL)
 title: CHECKPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-ms.openlocfilehash: ec484e698234dc71282a11b07555be73cd2c694d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: da05183ae2b331f78f9692acc6aaff66a9455092
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459413"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +65,7 @@ CHECKPOINT [ checkpoint_duration ]
 ##  <a name="security"></a><a name="Security"></a> Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- De forma predeterminada, disponen de permisos de CHECKPOINT los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator**; estos permisos no se pueden transferir.  
+ Se conceden permisos CHECKPOINT de forma predeterminada a los miembros de la función fija de servidor **sysadmin** y a las funciones fijas de base de datos **db_owner** y **db_backupoperator** y no se pueden transferir.  
   
 ## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

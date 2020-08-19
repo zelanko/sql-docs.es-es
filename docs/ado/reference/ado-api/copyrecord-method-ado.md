@@ -1,4 +1,5 @@
 ---
+description: Método CopyRecord (ADO)
 title: CopyRecord (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fc8cfec5752f88909214301931c69dddfe89dc5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b6519ba504056966b8e237f73209e96855dd6c11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444387"
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
 Copia una entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md) en otra ubicación.  
@@ -40,7 +41,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Destino*  
  Opcional. Valor de **cadena** que contiene una dirección URL que especifica la ubicación donde se copiará el *origen* .  
   
- *Nombre*  
+ *UserName*  
  Opcional. Valor de **cadena** que contiene el identificador de usuario que, si es necesario, autoriza el acceso al *destino*.  
   
  *Contraseña*  
@@ -49,7 +50,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *Opciones*  
  Opcional. Un valor de [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) que tiene un valor predeterminado de **adCopyUnspecified**. Especifica el comportamiento de este método.  
   
- *Copystreamtostream*  
+ *Asincrónico*  
  Opcional. Valor **booleano** que, cuando **es true**, especifica que esta operación debe ser asincrónica.  
   
 ## <a name="return-value"></a>Valor devuelto  

@@ -1,4 +1,5 @@
 ---
+description: Modificar tabla - comando SQL
 title: ALTER TABLE-comando SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 587d721522503f9b392bb8be7433850fd7449efb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c72d03abff792ff103bf009cd12b718c74bd497d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483708"
 ---
 # <a name="alter-table---sql-command"></a>Modificar tabla - comando SQL
 Modifica mediante programación la estructura de una tabla.  
@@ -191,6 +192,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Si la tabla que se modifica está en una base de datos, ALTER TABLE-SQL requiere el uso exclusivo de la base de datos. Para abrir una base de datos para su uso exclusivo, incluya EXCLUSIVe en OPEN DATABASE.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Comando CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [Comando de índice](../../odbc/microsoft/index-command.md)

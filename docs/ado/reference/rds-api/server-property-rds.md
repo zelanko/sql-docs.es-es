@@ -1,4 +1,5 @@
 ---
+description: Propiedad del servidor (RDS)
 title: Propiedad Server (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5cd4f578a8146a8fa7d45dcfd8e2b58f795def13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb7ebc994d252fc8806c133c61239cce67b693bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438657"
 ---
 # <a name="server-property-rds"></a>Propiedad del servidor (RDS)
 Indica el nombre del Internet Information Services (IIS) y el protocolo de comunicación.  
@@ -116,8 +117,8 @@ DataControl.Server=""
  *DataControl*  
  Variable de objeto que representa un objeto **RDS. Objeto DataControl** .  
   
-## <a name="remarks"></a>Comentarios  
- El servidor es la ubicación donde se encuentra el **objeto RDS. **La solicitud DataControl (es decir, una consulta o una actualización) se procesa. De forma predeterminada, todas las solicitudes se procesan mediante el objeto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) , [MSDFMAP. ](../../../ado/guide/remote-data-service/datafactory-customization.md)Componente de controlador y [MSDFMAP. Archivo INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) en el servidor especificado. Recuerde que al cambiar los servidores para conciliar la configuración en el MSDFMAP anterior y el nuevo **. **Archivos. ini. Las incompatibilidades pueden provocar errores en las solicitudes que se realizan correctamente en un servidor en otro. Si la propiedad del servidor se establece en la cadena vacía "", estos objetos se utilizarán en el equipo local.  
+## <a name="remarks"></a>Observaciones  
+ El servidor es la ubicación donde se encuentra el **objeto RDS. ** La solicitud DataControl (es decir, una consulta o una actualización) se procesa. De forma predeterminada, todas las solicitudes se procesan mediante el objeto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) , [MSDFMAP. ](../../../ado/guide/remote-data-service/datafactory-customization.md) Componente de controlador y [MSDFMAP.INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) archivo en el servidor especificado. Recuerde que al cambiar los servidores para conciliar la configuración de los archivos de **MSDFMAP.INI** antiguos y nuevos. Las incompatibilidades pueden provocar errores en las solicitudes que se realizan correctamente en un servidor en otro. Si la propiedad del servidor se establece en la cadena vacía "", estos objetos se utilizarán en el equipo local.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

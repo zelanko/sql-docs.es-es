@@ -1,4 +1,5 @@
 ---
+description: Cuadro de diálogo Crear nueva directiva o Abrir directiva, página General
 title: Cuadro de diálogo "Crear nueva directiva" o "Abrir directiva", página General
 descripton: Describes the 'General Page' of the 'Create New Policy' and 'Open Policy' dialog boxes for Policy-Based Management in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: c00bebd0-d04b-4c64-840e-8b7a2c603436
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 110cdd1ac1a74986178b6d96803d20a1fc6284a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24d6ed05b1419c399f0a11d7de590a25f3d77077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475652"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Cuadro de diálogo Crear nueva directiva o Abrir directiva, página General
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85749477"
  Con las directivas que se ejecutan utilizando el modo de evaluación **A petición** no se usa esta casilla.  
   
  **Condición de comprobación**  
- Seleccione la condición de la administración basada en directivas que esta directiva utiliza. Se enumeran todas las condiciones del servidor para la faceta de administración basada en directivas asociada. Haga clic en **Nueva condición** para crear una condición nueva. Haga clic en el botón de puntos suspensivos ( **...** ) para modificar la condición.  
+ Seleccione la condición de la administración basada en directivas que esta directiva utiliza. Se enumeran todas las condiciones del servidor para la faceta de administración basada en directivas asociada. Haga clic en **Nueva condición** para crear una condición nueva. Haga clic en el botón de puntos suspensivos (**...**) para modificar la condición.  
   
  **Para destinos**  
  Seleccione los tipos de destino que están disponibles para que esta faceta complete una expresión de filtro.  
@@ -71,7 +72,7 @@ ms.locfileid: "85749477"
  **Restricción de servidor**  
  Seleccione los tipos de servidores que son adecuados para esta directiva. Las opciones son **Ninguno** o seleccionar una condición que filtre los servidores posibles.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

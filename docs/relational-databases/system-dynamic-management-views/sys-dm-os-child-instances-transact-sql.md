@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_child_instances (Transact-SQL)
 title: Sys. dm_os_child_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58830fc28bea6432e32629c43c103f2ba9cd7ad5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5bb2094b96ef90cd8fc05e6d8ace1afeec69de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489901"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,15 +49,15 @@ ms.locfileid: "85898805"
 |**instance_name**|**nvarchar(128)**|Nombre de esta instancia de usuario.|  
 |**instance_pipe_name**|**nvarchar(260)**|Cuando se crea una instancia de usuario, se crea una canalización con nombre para que las aplicaciones se conecten a ella. Este nombre se puede utilizar en una cadena de conexión para conectarse a esta instancia de usuario.|  
 |**os_process_id**|**Int**|Número del proceso de Windows para esta instancia de usuario.|  
-|**os_process_creation_date**|**DateTime**|Fecha y hora de la última vez que se inició el proceso de esta instancia de usuario.|  
+|**os_process_creation_date**|**Datetime**|Fecha y hora de la última vez que se inició el proceso de esta instancia de usuario.|  
 |**heart_beat**|**tipo**|Estado actual de esta instancia de usuario; puede ser ALIVE o DEAD.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
- Para obtener más información acerca de la vista de administración dinámica, vea [funciones y vistas de administración dinámica &#40;&#41;de Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla de.  
+## <a name="remarks"></a>Observaciones  
+ Para obtener más información acerca de la vista de administración dinámica, vea [funciones y vistas de administración dinámica &#40;&#41;de Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla de.  
   
 ## <a name="see-also"></a>Consulte también  
  [Instancias de usuario para usuarios que no son administradores](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  

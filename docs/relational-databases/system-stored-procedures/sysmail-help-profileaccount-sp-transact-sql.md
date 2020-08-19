@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_profileaccount_sp (Transact-SQL)
 title: sysmail_help_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f27384e614a929cc149d8ae48355fb75a4ce301b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469137"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id`Es el identificador del perfil que se va a enumerar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` Es el identificador del perfil que se va a enumerar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Es el nombre del perfil que se va a enumerar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Es el nombre del perfil que se va a enumerar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @account_id = ] account_id`Es el identificador de la cuenta que se va a mostrar. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL. Cuando *ACCOUNT_ID* y *ACCOUNT_NAME* son ambos null, enumera todas las cuentas del perfil.  
+`[ @account_id = ] account_id` Es el identificador de la cuenta que se va a mostrar. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL. Cuando *ACCOUNT_ID* y *ACCOUNT_NAME* son ambos null, enumera todas las cuentas del perfil.  
   
-`[ @account_name = ] 'account_name'`Es el nombre de la cuenta que se va a mostrar. *account_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando *ACCOUNT_ID* y *ACCOUNT_NAME* son ambos null, enumera todas las cuentas del perfil.  
+`[ @account_name = ] 'account_name'` Es el nombre de la cuenta que se va a mostrar. *account_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando *ACCOUNT_ID* y *ACCOUNT_NAME* son ambos null, enumera todas las cuentas del perfil.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -132,6 +133,6 @@ profile_id  profile_name                 account_id  account_name         sequen
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
  [Creación de una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Correo electrónico de base de datos objetos de configuración](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

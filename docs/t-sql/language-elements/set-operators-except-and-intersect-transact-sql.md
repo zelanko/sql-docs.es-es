@@ -1,4 +1,5 @@
 ---
+description: 'Operadores de conjuntos: EXCEPT e INTERSECT (Transact-SQL)'
 title: EXCEPT e INTERSECT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf59a6245de8c1520dcd8196cc207fe2761d84c6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06029c531fbdebfd74d3a2314221725a41647853
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459311"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Operadores de conjuntos: EXCEPT e INTERSECT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +72,7 @@ Devuelve todos los valores distintos de la consulta del lado izquierdo del opera
 INTERSECT  
 Devuelve los valores distintos devueltos por las consultas situadas a los lados izquierdo y derecho del operador INTERSECT.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Los tipos de datos de las columnas comparables los devuelven las consultas de los lados izquierdo y derecho de los operadores EXCEPT o INTERSECT. Estos tipos de datos pueden incluir tipos de datos de caracteres con intercalaciones diferentes. Cuando lo hacen, la comparación requerida se ejecuta según las reglas de [prioridad de intercalación](../../t-sql/statements/collation-precedence-transact-sql.md). Si no puede ejecutar esta conversión, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devuelve un error.  
   
 Cuando se comparan los valores de columna para determinar filas DISTINCT, dos valores NULL se consideran equivalentes.  

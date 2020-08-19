@@ -1,4 +1,5 @@
 ---
+description: sys.dm_clr_appdomains (Transact-SQL)
 title: Sys. dm_clr_appdomains (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2002b70dc0b949e3628f49e6b6bb9fa1fccbefb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490051"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,20 +52,20 @@ ms.locfileid: "85893978"
 |**total_allocated_memory_kb**|**bigint**|Tamaño total, en kilobytes, de todas las asignaciones de memoria realizadas por el dominio de aplicación desde que se creó, sin restar memoria recopilada. Esto es equivalente a **System. AppDomain. MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Número de kilobytes que sobrevivieron a la última colección de bloqueo completa a que debe hacer referencia el dominio de aplicación actual. Esto es equivalente a **System. AppDomain. MonitoringSurvivedMemorySize**.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Existe una relación de uno a varios entre **dm_clr_appdomains. appdomain_address** y **dm_clr_loaded_assemblies. appdomain_address**.  
   
  En las tablas siguientes se enumeran los posibles valores de **Estado** , sus descripciones y cuándo se producen en el ciclo de vida de **AppDomain** . Puede usar esta información para seguir el vida de un **AppDomain** y para ver la descarga de instancias de **AppDomain** sospechosas o repetitivas, sin tener que analizar el registro de eventos de Windows.  
   
 ## <a name="appdomain-initialization"></a>Inicialización de AppDomain  
   
-|Estado|Descripción|  
+|State|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|Se está creando el **AppDomain** .|  
   
 ## <a name="appdomain-usage"></a>Uso de AppDomain  
   
-|Estado|Descripción|  
+|State|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|El **AppDomain** en tiempo de ejecución está listo para que lo usen varios usuarios.|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain** está listo para su uso en operaciones DDL. Se diferencian de E_APPDOMAIN_SHARED en que AppDomains compartidos se usan para ejecuciones de integración CLR en contraposición con operaciones de DDL. Dichos AppDomains están aislados de las operaciones simultáneas.|  
@@ -72,9 +73,9 @@ ms.locfileid: "85893978"
   
 ## <a name="appdomain-cleanup"></a>Limpieza de AppDomain  
   
-|Estado|Descripción|  
+|State|Descripción|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ha solicitado que CLR Descargue el **AppDomain**, normalmente porque se ha modificado o quitado el ensamblado que contiene los objetos de base de datos administrados.|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha solicitado que CLR Descargue el **AppDomain**, normalmente porque se ha modificado o quitado el ensamblado que contiene los objetos de base de datos administrados.|  
 |E_APPDOMAIN_UNLOADED|CLR ha descargado el **AppDomain**. Esto suele ser el resultado de un procedimiento de extensión debido a **ThreadAbort**, **OutOfMemory**, o a una excepción no controlada en el código de usuario.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** se ha descargado en CLR y ha establecido que lo destruya [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |E_APPDOMAIN_DESTROY|El **AppDomain** está en proceso de ser destruido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -108,7 +109,7 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Sys. dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Vistas de administración dinámica relacionadas con Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Uso de tecnologías relacionadas con RDS
 title: Usar tecnologías relacionadas con RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 616a30e96664727248dbe852c6c73288808f670b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 506c20cddf6527e0d8c61a9a9c7133cefef0b1c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451857"
 ---
 # <a name="using-related-technologies-with-rds"></a>Uso de tecnologías relacionadas con RDS
 Esta sección contiene los temas siguientes.  

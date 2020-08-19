@@ -1,4 +1,5 @@
 ---
+description: 'Lección 2: Crear el paquete de implementación en SSIS'
 title: 'Lección 2: Crear el conjunto de implementación en SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c0ad24013ea2662898857cef3b1359e284e5244b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3f2117822d951d2a01ace369c61b32c630d74363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390401"
 ---
 # <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>Lección 2: Crear el paquete de implementación en SSIS
 
@@ -33,12 +34,12 @@ También comprobará la lista de archivos del paquete de implementación y exami
 ## <a name="lesson-tasks"></a>Tareas de la lección  
 Esta lección contiene las siguientes tareas:  
   
--   [Paso 1: Generar la utilidad de implementación](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+-   [Paso 1: Compilación de la utilidad de implementación](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
--   [Paso 2: Comprobar el paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+-   [Paso 2: Comprobación del paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
-[Paso 1: Generar la utilidad de implementación](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+[Paso 1: Compilación de la utilidad de implementación](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
   
   

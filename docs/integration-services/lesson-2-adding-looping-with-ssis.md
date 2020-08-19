@@ -1,4 +1,5 @@
 ---
+description: 'Lección 2: Adición de bucles con SSIS'
 title: 'Lección 2: Adición de bucles con SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f8a7cb05ea7768877ad15ba0d71c5f7636ac8d58
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0805b8709e2a0a689538f558672694c96ddff39b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920398"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390671"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>Lección 2: Adición de bucles con SSIS
 
@@ -68,7 +69,7 @@ Esta lección contiene las siguientes tareas:
 ## <a name="start-the-lesson"></a>Iniciar la lección  
 [Paso 1: Copia del paquete de la lección 1](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Contenedor de bucles For](../integration-services/control-flow/for-loop-container.md)  
   
   

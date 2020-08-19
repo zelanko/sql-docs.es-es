@@ -1,4 +1,5 @@
 ---
+description: Sección de datos
 title: Sección de datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453577"
 ---
 # <a name="data-section"></a>Sección de datos
 La sección de datos define los datos del conjunto de filas junto con las actualizaciones, inserciones o eliminaciones pendientes. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila esté definida por el esquema. Además, como se indicó antes, se pueden omitir las columnas sin datos. Si se utiliza un atributo o subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se pasa por alto de forma silenciosa.  
@@ -29,7 +30,7 @@ La sección de datos define los datos del conjunto de filas junto con las actual
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- Los caracteres siguientes están reservados en XML y deben reemplazarse por entidades de caracteres: {', ', &, \< , >}.  
+ Los caracteres siguientes están reservados en XML y deben reemplazarse por entidades de caracteres: {', ', &, \<,> }.  
   
 ## <a name="binary"></a>Binary  
  Los datos binarios son bin. hex codificado (es decir, un byte se asigna a dos caracteres, un carácter por recorte).  

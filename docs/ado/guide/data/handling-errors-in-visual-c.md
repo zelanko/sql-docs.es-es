@@ -1,4 +1,5 @@
 ---
+description: Control de errores en Visual C++
 title: Control de errores en Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1628522a6ef1c9498ea26e987070ee9f3a873d19
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b43b8314e47c8a96dadcf8cab841a37da0c0518
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453297"
 ---
 # <a name="handling-errors-in-visual-c"></a>Control de errores en Visual C++
 En COM, la mayoría de las operaciones devuelven un código de retorno HRESULT que indica si una función se ha completado correctamente. La Directiva #import genera código de contenedor alrededor de cada método o propiedad "RAW" y comprueba el HRESULT devuelto. Si el valor HRESULT indica un error, el código de contenedor produce un error COM llamando a _com_issue_errorex () con el código de retorno HRESULT como argumento. Los objetos de error COM se pueden detectar en un bloque **try-catch** . (Por motivos de eficacia, Capture una referencia a un objeto _com_error).  

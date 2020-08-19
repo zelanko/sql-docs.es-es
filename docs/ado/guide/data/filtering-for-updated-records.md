@@ -1,4 +1,5 @@
 ---
+description: Filtrar registros actualizados
 title: Filtrar registros actualizados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dae572da8f87051a58415929657f77be6c91d14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453387"
 ---
 # <a name="filtering-for-updated-records"></a>Filtrar registros actualizados
 Antes de llamar a UpdateBatch, puede usar la propiedad de filtro de conjunto de registros para ver solo los registros que se han modificado desde que se abrió el conjunto de registros o la última llamada a UpdateBatch. Para ello, establezca filtro igual a adFilterPendingRecords para determinar el número de registros que se van a actualizar, como se muestra en el ejemplo de código de la sección siguiente.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En este ejemplo se extiende el ejemplo de UpdateBatch anterior filtrando el conjunto de registros justo antes de llamar a UpdateBatch, mostrando al usuario qué registros cambiarán y permitiéndole cancelar la actualización (mediante el método CancelBatch).  
   
 ```  

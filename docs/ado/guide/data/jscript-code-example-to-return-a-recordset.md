@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de código JScript para devolver un conjunto de registros
 title: Ejemplo de código JScript para devolver un conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bffe36980f06bc187bdaf819b373cdb547ecc92
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e6aea6b2e423dab4fb58b3e683081f7d3fdb6850
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453207"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>Ejemplo de código JScript para devolver un conjunto de registros
-## <a name="jscript-code-rsjs"></a>Código JScript (RS. js)  
+## <a name="jscript-code-rsjs"></a>Código JScript (rs.js)  
   
 ```  
 main();  
@@ -81,8 +82,8 @@ function alert(str)
   
 #### <a name="try-it"></a>¡Inténtelo!  
   
-1.  Guarde el código anterior en un archivo de texto. Guarde el archivo como RS. js.  
+1.  Guarde el código anterior en un archivo de texto. Guarde el archivo como rs.js.  
   
-2.  Abra un símbolo del sistema y CD en el directorio donde ha guardado el archivo JScript (RS. js).  
+2.  Abra un símbolo del sistema y CD en el directorio donde ha guardado el archivo JScript (rs.js).  
   
 3.  Escriba `CScript rs.js` desde el símbolo del sistema.

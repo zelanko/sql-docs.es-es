@@ -1,4 +1,5 @@
 ---
+description: Control de errores en JScript
 title: Controlar errores en JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81ed99344a610e367b185f1acb1ae8cbae3da284
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a23d22225de26562feababc263c6bf2b41b4ff60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453336"
 ---
 # <a name="handling-errors-in-jscript"></a>Control de errores en JScript
 El código de Microsoft® JScript® debe comprobar la propiedad **Count** de la colección de **errores** del objeto de **conexión** . Si el valor es mayor que 0, recorra en iteración la colección e imprima los valores tal como lo haría en cualquiera de los demás lenguajes.  

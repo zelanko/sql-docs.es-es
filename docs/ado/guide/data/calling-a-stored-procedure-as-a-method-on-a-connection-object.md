@@ -1,4 +1,5 @@
 ---
+description: Llamar a un procedimiento almacenado como un método en un objeto de conexión
 title: Llamar a un procedimiento almacenado como un método en un objeto de conexión | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bb81e82e27decadbf6d31ce9bc391023474ecba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e5e019760c4496b7dab769cb96fbd7b2eab4f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453707"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Llamar a un procedimiento almacenado como un método en un objeto de conexión
 Puede llamar a un procedimiento almacenado como si fuera un método nativo en el objeto de **conexión** abierta asociado. Esto es similar a llamar a un comando con nombre en el objeto de **conexión** .  

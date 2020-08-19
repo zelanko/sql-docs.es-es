@@ -1,4 +1,5 @@
 ---
+description: Edición de datos
 title: Editar datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc80c8ad9985efc21e2f583d8ca72751e21c1a2b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b7fc5d177b05447637d635a9f132c9f9da086ef2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453467"
 ---
 # <a name="editing-data"></a>Edición de datos
 Hemos explicado cómo usar ADO para conectarse a un origen de datos, ejecutar un comando, obtener los resultados en un objeto de **conjunto de registros** y navegar por el **conjunto de registros**. Esta sección se centra en la siguiente operación fundamental de ADO: editar datos.  

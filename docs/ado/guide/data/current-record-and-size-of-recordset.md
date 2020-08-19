@@ -1,4 +1,5 @@
 ---
+description: Registro actual y el tamaño del conjunto de registros
 title: Registro y tamaño actuales del conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30b669a566270a0eff5d6cf93abb5b0acb7ff3c2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453607"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Registro actual y el tamaño del conjunto de registros
 En esta sección se describe cómo buscar la posición actual del cursor en el **conjunto de registros** de ejemplo en el [ejemplo de código JScript para devolver un conjunto de registros](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
   
 ## <a name="current-record"></a>Registro actual  
- El registro actual del conjunto de registros corresponde a que apunta a la posición del cursor del objeto de **conjunto de registros** . Cuando se devuelve un objeto de **conjunto de registros** desde el origen de datos como resultado de llamar a **Recordset. Open**, **Command. Execute**o **Connection. Execute** (incluidos **Connection. NamedCommand** y **Connection. StoredProcedure**), el cursor se establece para apuntar al primer registro. En el conjunto de registros de ejemplo, el registro actual inicial es el elemento "de la" tripas orgánicas orgánicos ".  
+ El registro actual del conjunto de registros corresponde a que apunta a la posición del cursor del objeto de **conjunto de registros** . Cuando se devuelve un objeto de **conjunto de registros** desde el origen de datos como resultado de la llamada a **Recordset. Open**, **Command.Exe**a la variable, o **Connection.Exe** de la misma (incluidos **Connection. NamedCommand** y **Connection. StoredProcedure**), el cursor se establece para apuntar al primer registro. En el conjunto de registros de ejemplo, el registro actual inicial es el elemento "de la" tripas orgánicas orgánicos ".  
   
 ## <a name="size-of-recordset"></a>Tamaño del conjunto de registros  
  Para averiguar el tamaño de un objeto de **conjunto de registros** , obtenga el valor de la propiedad **Recordset. RecordCount** . Este valor es un entero largo que indica el número de registros del **conjunto**de registros. Si el proveedor OLEDB devuelve el DataSet para Microsoft SQL Server, este valor proporciona el número de filas devueltas. La lectura de la propiedad **RecordCount** en un **conjunto de registros** cerrado produce un error.  

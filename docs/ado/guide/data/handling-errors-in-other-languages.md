@@ -1,4 +1,5 @@
 ---
+description: Control de errores en otros lenguajes
 title: Control de errores en otros lenguajes | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 498de75e624528a2d2bd9ab5aa4225c9d22f11db
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8eb9c8ae0abae492e3edb183c3b84b662ab13b38
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453337"
 ---
 # <a name="handling-errors-in-other-languages"></a>Control de errores en otros lenguajes
 Hasta ahora, en esta sección se han analizado los errores de un® de Microsoft Visual Basic® punto de vista. En el resto de esta sección se ofrece información general sobre el control de errores en idiomas distintos de Visual Basic.  

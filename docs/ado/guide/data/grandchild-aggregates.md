@@ -1,4 +1,5 @@
 ---
+description: Agregados secundarios
 title: Agregados terciarios | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4162d35f-2ce1-4218-80a5-b6933348837e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 148a2798d04bc7ec41832e5103d8ec097ffa9a0c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a1ea79e0246585898f068dfb55fa2a120ea2e6b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453347"
 ---
 # <a name="grandchild-aggregates"></a>Agregados secundarios
 A la columna de capítulo creada en una cláusula de un comando de forma se le puede asignar un *nombre de alias de capítulo* (normalmente con la palabra clave as). Puede identificar cualquier columna de cualquier capítulo del **conjunto de registros** con forma con un nombre completo que identifique el elemento secundario que contiene la columna. Por ejemplo, si el capítulo principal, chap1, contiene un capítulo secundario, chap2, que tiene una columna amount, AMT, el nombre completo sería chap1. chap2. AMT. El nombre completo se puede usar como argumento para una de las funciones de agregado (SUM, AVG, MAX, MIN, COUNT, STDEV o ANY).  

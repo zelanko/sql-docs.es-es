@@ -1,4 +1,5 @@
 ---
+description: Información de Error relacionado con el campo
 title: Información de error relacionada con campos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e61850ca788f6cff11d2a665000f68b89cd3ed45
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7402b8cf349d95869ff292194ce6d64c3fb6f4bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453397"
 ---
 # <a name="field-related-error-information"></a>Información de Error relacionado con el campo
 Si un error está relacionado directamente con un campo (por ejemplo, si faltan los datos o si es un tipo incorrecto para el campo), puede recuperar más información sobre la causa del problema examinando la propiedad de **Estado** del objeto de **campo** . Esta propiedad se ha mejorado para proporcionar información específica sobre el problema. Así, por ejemplo, cuando se produce un error en una llamada a **UpdateBatch** , la causa del problema se puede determinar mediante el examen de la propiedad **status** de los **campos** de cada uno de los registros afectados. La propiedad contendrá uno de los valores de la constante **FieldStatusEnum** . En la tabla siguiente se incluyen los valores que son de especial interés cuando se produce un error.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Indica que el campo no se puede recuperar ni almacenar sin pérdida de datos.|  
 |**adFieldDataOverflow**|6|Indica que los datos devueltos del proveedor han desbordado el tipo de datos del campo.|  

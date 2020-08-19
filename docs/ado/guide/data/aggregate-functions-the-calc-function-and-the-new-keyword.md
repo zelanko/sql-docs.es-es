@@ -1,4 +1,5 @@
 ---
+description: Las funciones de agregado, la función CALC y la palabra clave NEW
 title: Funciones de agregado, la función CALC y la palabra clave NEW | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bda85bae42b294fa63c67adfe51d8c60c5b56af
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453757"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Las funciones de agregado, la función CALC y la palabra clave NEW
 La forma de datos admite las siguientes funciones. El nombre asignado al capítulo que contiene la columna en la que se va a operar es el *alias de capítulo*.  
@@ -72,7 +73,7 @@ La forma de datos admite las siguientes funciones. El nombre asignado al capítu
   
  Cuando el nuevo campo es de tipo decimal (en OLE DB, DBTYPE_DECIMAL, o en ADO, adDecimal), debe especificar los valores de precisión y escala.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Ejemplo de forma de datos](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)

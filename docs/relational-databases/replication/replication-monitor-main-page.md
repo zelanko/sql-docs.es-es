@@ -1,4 +1,5 @@
 ---
+description: Monitor de replicación, página Principal
 title: Monitor de replicación, página Principal | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ff52e42beb47e69e3dab9af73573b42029f29710
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf9ee6397d9278017511f569be579438647759bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405201"
 ---
 # <a name="replication-monitor-main-page"></a>Monitor de replicación, página Principal
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "85716743"
   
     -   [Medir la latencia y validar las conexiones de la replicación transaccional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
-    -   [Set Thresholds and Warnings in Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+    -   [Establecer umbrales y advertencias en el Monitor de replicación](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
     -   [Permitir el uso del Monitor de replicación a los usuarios que no son administradores](../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

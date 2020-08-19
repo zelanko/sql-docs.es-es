@@ -1,4 +1,5 @@
 ---
+description: Índices en columnas calculadas
 title: Índices en columnas calculadas | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -17,12 +18,12 @@ ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de2efcf3b99e21284cf964b1cd43bc85027ecaac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408121"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices en columnas calculadas
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -95,7 +96,7 @@ La propiedad **IsPrecise** de la función COLUMNPROPERTY informa de si una expre
 ## <a name="data-type-requirements"></a>Requisitos de tipo de datos
   
 -   La expresión *computed_column_expression* definida para la columna calculada no se puede evaluar para los tipos de datos **text**, **ntext**o **image** .  
--   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** y **xml** se pueden indexar, siempre que el tipo de datos de la columna calculada esté disponible como una columna de clave de índice.  
+-   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** se pueden indexar, siempre que el tipo de datos de la columna calculada esté disponible como una columna de clave de índice.  
 -   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**y **text** pueden ser columnas sin clave (incluidas) en un índice no agrupado, siempre que el tipo de datos de la columna calculada esté disponible como una columna índice sin clave.  
 
 

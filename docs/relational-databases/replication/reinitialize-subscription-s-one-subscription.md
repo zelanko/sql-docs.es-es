@@ -1,4 +1,5 @@
 ---
+description: Reinicializar suscripciones - Una suscripción
 title: Reinicialización de suscripciones - Una suscripción | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c7992f3b9b27c219c2a28d226136442bddb2646f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84aeb92a82869376385f716c224b0cd0d02cf6b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405551"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Reinicializar suscripciones - Una suscripción
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85767711"
  **Marcar para reinicializar**  
  Haga clic para marcar la suscripción para reinicializar. Una vez que hay una instantánea disponible, se aplicará dicha instantánea al suscriptor la próxima vez que se ejecute el Agente de distribución o el Agente de mezcla para la suscripción.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

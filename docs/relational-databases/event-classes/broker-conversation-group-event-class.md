@@ -1,4 +1,5 @@
 ---
+description: Broker:Conversation Group, clase de eventos
 title: Clase de eventos Broker:Conversation Group | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c767f77683c46151fd0d9804a35f838d88ca0f0a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68afde98f2e219cacf20175bfa0cb71ad7afa90a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410131"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group, clase de eventos
 

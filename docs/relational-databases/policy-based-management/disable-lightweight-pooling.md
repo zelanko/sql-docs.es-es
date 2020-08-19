@@ -1,4 +1,5 @@
 ---
+description: Deshabilitar la agrupación ligera
 title: Deshabilitar la agrupación ligera | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 481bb43d-6fe5-497c-9096-971fb6bf733b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3c852121435357dc3d52ecca5a5d8bf69441d975
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 907ea87fc66c7ac3350fc1630f71f02529528678
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654196"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406461"
 ---
 # <a name="disable-lightweight-pooling"></a>Deshabilitar la agrupación ligera
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

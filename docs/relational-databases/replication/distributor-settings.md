@@ -1,4 +1,5 @@
 ---
+description: Configuración del distribuidor
 title: Configuración del distribuidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5fd12812dc7bafd03c542c8561182ff5ce82ac2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620cbc1dce63d4c2e14949866329d34207f7fc9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406411"
 ---
 # <a name="distributor-settings"></a>Configuración del distribuidor
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85653314"
  **Nuevo grupo**  
  Haga clic aquí para crear un nuevo grupo de publicadores. Un grupo de publicadores proporciona una forma cómoda de organizar publicadores dentro del Monitor de replicación. Los grupos no afectan a la replicación de datos ni a la relación entre los servidores de una topología de replicación.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

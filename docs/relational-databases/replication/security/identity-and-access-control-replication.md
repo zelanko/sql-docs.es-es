@@ -1,4 +1,5 @@
 ---
+description: Identidad y Access Control (replicación)
 title: Identidad y control de acceso (replicación) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2018
@@ -16,12 +17,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ea34f0b2b7e0a6ab2770178d926a5a9710f43575
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c44efad10aeade68f42e76d4aa5622807159110f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404831"
 ---
 # <a name="identity-and-access-control-replication"></a>Identidad y Access Control (replicación)
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +54,7 @@ Cuando configure la replicación, especifique los inicios de sesión y las contr
 
 La compatibilidad con el uso de cuentas de servicio administradas de grupo (gMSA) se introdujo en SQL Server 2014. Para más información, vea el blog de [Replicación y cuentas de servicio administradas de grupo](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/).
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Mitigar amenazas y vulnerabilidades &#40;replicación&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [Modelo de seguridad del Agente de replicación](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Procedimientos recomendados de seguridad de replicación](../../../relational-databases/replication/security/replication-security-best-practices.md)   
 

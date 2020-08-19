@@ -1,4 +1,5 @@
 ---
+description: Agente de lectura de cola
 title: Agente de lectura de cola | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f39bd1423977048c36e00dfae049293c1bcab689
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b3c11190db072518a506950bc5bf3409d1be770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405651"
 ---
 # <a name="queue-reader-agent"></a>Agente de lectura de cola
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "85737075"
  **Detalles del error o mensaje de la sesión seleccionada**  
  Solo se muestra si la sesión seleccionada presenta un valor de **Error** en la columna **Estado** . El área de texto muestra la información detallada del error y el comando que se intentaba ejecutar en el momento de producirse el error. También incluye vínculos a la información adicional relativa al error.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Visualización de información y realización de tareas mediante el Monitor de replicación](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  (Supervisar la replicación)  

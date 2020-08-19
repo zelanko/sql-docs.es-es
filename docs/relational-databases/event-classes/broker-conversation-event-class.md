@@ -1,4 +1,5 @@
 ---
+description: Broker:Conversation, clase de eventos
 title: Clase de eventos Broker:Conversation | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0be5e9b2a86f49fdb80b36ac33cb51a6df4ddae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410231"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation, clase de eventos
 
@@ -57,7 +58,7 @@ ms.locfileid: "85679506"
 |||**HACER**. Salida desconectada. El lado local de la conversación ha emitido un END CONVERSATION. La conversación permanece en este estado hasta que el lado remoto de la conversación confirma un END CONVERSATION. Una aplicación no puede seguir enviando ni recibiendo mensajes de la conversación. Cuando el lado remoto de la conversación confirma el END CONVERSATION, la conversación pasa al estado CD (Cerrada).|||  
 |||**ER**. Error. Se ha producido un error en este extremo. Las columnas Error, Severity y State contienen información sobre el error específico que se ha producido.|||  
 |||**CD**. Cerrada. El extremo de la conversación ya no se utiliza.|||  
-|**Identificador de transacción**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
+|**Transaction ID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
  En la tabla siguiente se indican los valores de la subclase de esta clase de eventos.  
   
@@ -77,7 +78,7 @@ ms.locfileid: "85679506"
 |12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Dialog Created** cuando [!INCLUDE[ssSB](../../includes/sssb-md.md)] crea un extremo para un diálogo. [!INCLUDE[ssSB](../../includes/sssb-md.md)] crea un extremo cada vez que se establece un nuevo diálogo, independientemente de si la base de datos actual es el iniciador o el destino del diálogo.|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento END CONVERSATION WITH CLEANUP cuando el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ejecuta una instrucción END CONVERSATION que incluye la cláusula WITH CLEANUP.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

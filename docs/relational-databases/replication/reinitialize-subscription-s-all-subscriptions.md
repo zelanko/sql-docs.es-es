@@ -1,4 +1,5 @@
 ---
+description: 'Reinicializar suscripciones: Todas las suscripciones'
 title: 'Reinicialización de suscripciones: todas las suscripciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,16 +16,16 @@ ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9da983b0f59625c6bd2404512e99d4f0928bff01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cee027fbc0e614e7aa6bbc14292b79141a9b4df1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405541"
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>Reinicializar suscripciones: Todas las suscripciones
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  El cuadro de diálogo **Reinicializar suscripciones** permite marcar todas las suscripciones a una publicación para reiniciarlas. La reinicialización implica aplicar una instantánea a cada suscriptor; la realiza el Agente de distribución para las suscripciones a publicaciones transaccionales y el Agente de mezcla para las suscripciones a publicaciones de combinación.  
+   El cuadro de diálogo **Reinicializar suscripciones** permite marcar todas las suscripciones a una publicación para reiniciarlas. La reinicialización implica aplicar una instantánea a cada suscriptor; la realiza el Agente de distribución para las suscripciones a publicaciones transaccionales y el Agente de mezcla para las suscripciones a publicaciones de combinación.  
   
 ## <a name="options"></a>Opciones  
  **Utilizar la instantánea actual**  
@@ -43,7 +44,7 @@ ms.locfileid: "85767698"
  **Marcar para reinicializar**  
  Haga clic en esta opción para marcar cada suscripción para reinicializarla. Una vez que hay una instantánea disponible, se aplicará dicha instantánea al suscriptor la próxima vez que se ejecute el Agente de distribución o el Agente de mezcla para la suscripción.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

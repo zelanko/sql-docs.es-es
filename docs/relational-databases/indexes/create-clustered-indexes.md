@@ -1,4 +1,5 @@
 ---
+description: Crear índices clúster
 title: Creación de índices clúster | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd2576b845d1cb04d69f2eef2ab32b6289a14480
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408501"
 ---
 # <a name="create-clustered-indexes"></a>Crear índices clúster
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "85760831"
   
 1.  En el Explorador de objetos, expanda la tabla en la que desea crear un índice clúster.  
   
-2.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...** .  
+2.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
   
 3.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
@@ -99,7 +100,7 @@ ms.locfileid: "85760831"
   
 1.  En el Explorador de objetos, expanda la base de datos en la que desea crear una tabla con un índice clúster.  
   
-2.  Haga clic con el botón derecho en la carpeta **Tablas** y, luego, haga clic en **Nueva tabla...** .  
+2.  Haga clic con el botón derecho en la carpeta **Tablas** y, luego, haga clic en **Nueva tabla...**.  
   
 3.  Cree una tabla nueva como lo haría normalmente. Para obtener más información, vea [Crear tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   
@@ -145,7 +146,7 @@ ms.locfileid: "85760831"
   
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Crear claves principales](../../relational-databases/tables/create-primary-keys.md)   
  [Crear restricciones UNIQUE](../../relational-databases/tables/create-unique-constraints.md)  
   

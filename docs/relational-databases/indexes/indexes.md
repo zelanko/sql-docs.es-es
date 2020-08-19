@@ -1,4 +1,5 @@
 ---
+description: Índices
 title: Índices | Microsoft Docs
 ms.custom: ''
 ms.date: 12/21/2016
@@ -13,12 +14,12 @@ ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e980013658fd83c4f8c934e6e8b2b51d27783893
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8487f821b698974744fdc18453a2a5c8285d889
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408011"
 ---
 # <a name="indexes"></a>Índices
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,7 @@ En la tabla siguiente se indican los tipos de índice disponibles en [!INCLUDE[s
 |columnstore|El índice de almacén de columnas en memoria almacena y administra los datos mediante el almacenamiento de datos basado en columnas y el procesamiento de consultas basado en columnas.<br /><br /> Los índices de almacén de columnas funcionan correctamente para las cargas de trabajo de almacenamiento de datos que ejecutan principalmente cargas masivas y consultas de solo lectura. Use el índice de almacén de columnas para aumentar **hasta en diez veces el rendimiento de las consultas** en relación con el almacenamiento tradicional orientado a filas, y hasta **en siete veces la compresión de datos** en relación con el tamaño de los datos sin comprimir.|[Descripción de los índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md)<br /><br /> [Directrices para diseñar índices de almacén de columnas](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)|  
 |Índice con columnas incluidas|Índice no clúster que se extiende para incluir columnas sin clave además de las columnas de clave.|[Crear índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md)|  
 |Índice en columnas calculadas|Índice de una columna que se deriva del valor de una o varias columnas, o algunas entradas deterministas.|[Índices en columnas calculadas](../../relational-databases/indexes/indexes-on-computed-columns.md)|  
-|Filtered|Índice no clúster optimizado, especialmente indicado para cubrir consultas que seleccionan de un subconjunto bien definido de datos. Utiliza un predicado de filtro para indizar una parte de las filas de la tabla. Un índice filtrado bien diseñado puede mejorar el rendimiento de las consultas y reducir los costos de almacenamiento del índice en relación con los índices de tabla completa, así como los costos de mantenimiento.|[Crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [Directrices para diseñar índices filtrados](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
+|Filtered|Índice no clúster optimizado, especialmente indicado para cubrir consultas que seleccionan de un subconjunto bien definido de datos. Utiliza un predicado de filtro para indizar una parte de las filas de la tabla. Un índice filtrado bien diseñado puede mejorar el rendimiento de las consultas y reducir los costos de almacenamiento del índice en relación con los índices de tabla completa, así como los costos de mantenimiento.|[Creación de índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md)<br /><br /> [Directrices para diseñar índices filtrados](../../relational-databases/sql-server-index-design-guide.md#Filtered)|  
 |Espacial|Un índice espacial permite realizar de forma más eficaz determinadas operaciones en objetos espaciales (*datos espaciales*) en una columna del tipo de datos de **geometry** . El índice espacial reduce el número de objetos a los que es necesario aplicar las operaciones espaciales, que son relativamente costosas.|[Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)|  
 |XML|Representación dividida y persistente de los objetos binarios grandes (BLOB) XML de la columna de tipo de datos **xml**.|[Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)|  
 |Texto completo|Tipo especial de índice funcional basado en símbolos (token) que compila y mantiene el motor de texto completo de Microsoft para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Proporciona la compatibilidad adecuada para búsquedas de texto complejas en datos de cadenas de caracteres.|[Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md)|  

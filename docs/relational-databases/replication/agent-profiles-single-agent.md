@@ -1,4 +1,5 @@
 ---
+description: Perfiles de agente (un solo agente)
 title: Perfiles de agente (un solo agente) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,16 +16,16 @@ ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 930c77bd4897c9a7f0b1118ac1014fe6f85d97f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6dcd33464b52c9ad42974c70ed72cc9ae4da746
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85740091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406451"
 ---
 # <a name="agent-profiles-single-agent"></a>Perfiles de agente (un solo agente)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Use el cuadro de diálogo **Perfiles de agente** para administrar los perfiles de un agente. Los perfiles de agente proporcionan una manera cómoda de administrar los parámetros en tiempo de ejecución para cada agente. Cada agente tiene un perfil predeterminado y algunos tienen perfiles adicionales predefinidos. Por ejemplo, el Agente de mezcla tiene un perfil de "vínculo lento" diseñado para conexiones de banda ancha lentas. Los perfiles predefinidos son suficientes para la mayoría de las aplicaciones, pero también pueden crearse perfiles definidos por el usuario, que permiten personalizar el comportamiento del agente.  
+   Use el cuadro de diálogo **Perfiles de agente** para administrar los perfiles de un agente. Los perfiles de agente proporcionan una manera cómoda de administrar los parámetros en tiempo de ejecución para cada agente. Cada agente tiene un perfil predeterminado y algunos tienen perfiles adicionales predefinidos. Por ejemplo, el Agente de mezcla tiene un perfil de "vínculo lento" diseñado para conexiones de banda ancha lentas. Los perfiles predefinidos son suficientes para la mayoría de las aplicaciones, pero también pueden crearse perfiles definidos por el usuario, que permiten personalizar el comportamiento del agente.  
   
 ## <a name="options"></a>Opciones  
  **Predeterminado para nuevos**  

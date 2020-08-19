@@ -1,4 +1,5 @@
 ---
+description: Broker:Forwarded Message Dropped, clase de eventos
 title: Clase de eventos Broker:Forwarded Message Dropped | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11ac4c7c86b2add288271d56b91f7d9ab0848476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe9b893b04f48a582e0ff0125c1fc33b77a16f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409871"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped, clase de eventos
 
@@ -49,9 +50,9 @@ ms.locfileid: "85715406"
 |ObjectId|**int**|Tiempo de vida del mensaje reenviado.|22|No|  
 |ObjectName|**nvarchar**|Identificador del mensaje reenviado.|34|No|  
 |OwnerName|**nvarchar**|Identificador de la instancia del agente del destino del mensaje.|37|No|  
-|RoleName|**nvarchar**|Rol del identificador de conversación. Uno de los valores siguientes:<br /><br /> \- Iniciador. Este agente inició la conversación.<br /><br /> \- Destino. Este agente es el destino de la conversación.|38|No|  
+|RoleName|**nvarchar**|Rol del identificador de conversación. Uno de los valores siguientes:<br /><br /> - Iniciador. Este agente inició la conversación.<br /><br /> - Destino. Este agente es el destino de la conversación.|38|No|  
 |nombreDeServidor|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
-|severity|**int**|Número de nivel de gravedad para el texto del evento.|29|No|  
+|Gravedad|**int**|Número de nivel de gravedad para el texto del evento.|29|No|  
 |SPID|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |State|**int**|Indica la ubicación en el código fuente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  
@@ -63,7 +64,7 @@ ms.locfileid: "85715406"
   
  La columna TextData de este evento contiene una descripción del motivo por el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quitó el mensaje.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

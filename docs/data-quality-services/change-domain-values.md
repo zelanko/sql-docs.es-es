@@ -1,4 +1,5 @@
 ---
+description: Cambiar valores de dominio
 title: Cambiar valores de dominio
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b07dd7b8d121d1be70a6522e716fc304bbf3d9f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450047"
 ---
 # <a name="change-domain-values"></a>Cambiar valores de dominio
 
@@ -44,7 +45,7 @@ ms.locfileid: "85901114"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para cambiar valores de dominio.  
   
-##  <a name="change-domain-values"></a><a name="Change"></a>Cambiar valores de dominio  
+##  <a name="change-domain-values"></a><a name="Change"></a> Cambiar valores de dominio  
  La tabla **Valor** muestra el conocimiento agregado a la base de conocimiento para un dominio individual. Puede seleccionar otro dominio en la lista de dominios en cualquier momento para mostrar sus valores. Las columnas del campo son las siguientes:  
   
 -   La columna **Valor** muestra todos los valores que el proceso de detección agregó al dominio seleccionado desde un campo de la muestra de datos. Cualquier valor proyectado como erróneo se mostrará como sinónimo de un valor proyectado como correcto.  
@@ -118,7 +119,7 @@ ms.locfileid: "85901114"
   
  Cuando se realiza la limpieza de datos interactiva en la página **Administrar y ver resultados** de la actividad **Limpieza** , tanto los valores no válidos como los erróneos se incluyen en la pestaña **No válido** de la página **Administrar y ver resultados** .  
   
-##  <a name="how-to-display-the-appropriate-values"></a><a name="Display"></a>Cómo mostrar los valores adecuados  
+##  <a name="how-to-display-the-appropriate-values"></a><a name="Display"></a> Cómo mostrar los valores adecuados  
  Puede modificar la presentación de la manera siguiente:  
   
 -   **Filtre** los resultados que desea en la tabla, en función de su estado, seleccionando este en la lista desplegable **Filtro** .  

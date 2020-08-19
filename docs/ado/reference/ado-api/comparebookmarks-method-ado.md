@@ -1,4 +1,5 @@
 ---
+description: Método CompareBookmarks (ADO)
 title: CompareBookmarks (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa4be74086e4d35af70ac52aa9db0066f4279e3e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4729574b92b841da48f7cf6de6f1dcabc369b4a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450807"
 ---
 # <a name="comparebookmarks-method-ado"></a>Método CompareBookmarks (ADO)
 Compara dos marcadores y devuelve una indicación de sus valores relativos.  
@@ -44,7 +45,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  Marcador de la segunda fila.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los marcadores se deben aplicar al mismo objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) , a un objeto de conjunto de **registros** y a su [clonación](../../../ado/reference/ado-api/clone-method-ado.md). No puede comparar de forma confiable los marcadores de distintos objetos de **conjunto de registros** , aunque se hayan creado a partir del mismo origen o comando. Ni puede comparar marcadores para un objeto de **conjunto de registros** cuyo proveedor subyacente no admita comparaciones.  
   
  Un marcador identifica de forma única una fila en un objeto de **conjunto de registros** . Use la propiedad [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) de la fila actual para obtener su marcador.  

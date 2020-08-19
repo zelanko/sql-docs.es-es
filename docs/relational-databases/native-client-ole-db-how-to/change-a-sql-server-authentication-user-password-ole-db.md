@@ -1,4 +1,5 @@
 ---
+description: Cambiar una contraseña de usuario de autenticación de SQL Server Native Client (OLE DB)
 title: Contraseña de usuario de autenticación de SQL (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41d15be4184152741c8e2a6c98efacb1cffcac33
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b12d8dd78c32ba0ea7c98e555f35d8831de9320b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448494"
 ---
 # <a name="change-a-sql-server-native-client-authentication-user-password-ole-db"></a>Cambiar una contraseña de usuario de autenticación de SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "87247894"
   En este ejemplo se muestra cómo usar OLE DB para cambiar la contraseña de una cuenta de usuario bajo autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## <a name="example"></a>Ejemplo  
  Antes de realizar la compilación, actualice el código de C++ para que se especifique el identificador de usuario, la antigua contraseña y la nueva.  

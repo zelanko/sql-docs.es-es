@@ -1,4 +1,5 @@
 ---
+description: DDL de FileTable, funciones, procedimientos almacenados y vistas
 title: Funciones FileTable, procedimientos almacenados, vistas | Microsoft Docs
 descriptions: Learn which Transact-SQL statements and which SQL Server functions, stored procedures, and views have been added or changed to support the FileTable feature.
 ms.custom: seo-lt-2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 548bb412a8fc5d7a3ccae46ea42575b8a8dcaf46
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f1736422ff6ff81a7e48931b390acc710abf41b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85744314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448997"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>DDL de FileTable, funciones, procedimientos almacenados y vistas
 
@@ -31,7 +32,7 @@ ms.locfileid: "85744314"
   
 ##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Instrucciones del lenguaje de definición de datos (DDL) de Transact-SQL  
   
-|Object|Status|Más información|  
+|Object|Estado|Más información|  
 |------------|------------|----------------------|  
 |[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)<br /><br /> [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)|Cambiado|[Habilitar los requisitos previos de FileTables](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)<br /><br /> [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)|  
 |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Cambiado|[Crear, modificar y quitar FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)|  
@@ -41,7 +42,7 @@ ms.locfileid: "85744314"
   
 ##  <a name="functions"></a><a name="func"></a> Funciones  
   
-|Object|Status|Más información|  
+|Object|Estado|Más información|  
 |------------|------------|----------------------|  
 |[FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md)|**Agregado**|[Trabajar con directorios y rutas de acceso de FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|**Agregado**|[Trabajar con directorios y rutas de acceso de FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)|  
@@ -49,13 +50,13 @@ ms.locfileid: "85744314"
   
 ##  <a name="stored-procedures"></a><a name="sproc"></a> Procedimientos almacenados  
   
-|Object|Status|Más información|  
+|Object|Estado|Más información|  
 |------------|------------|----------------------|  
 |[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)|**Agregado**|[Administrar FileTables](../../relational-databases/blob/manage-filetables.md)|  
   
 ##  <a name="catalog-views"></a><a name="cv"></a> Vistas de catálogo  
   
-|Object|Status|Más información|  
+|Object|Estado|Más información|  
 |------------|------------|----------------------|  
 |[sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md)|**Agregado**|[Habilitar los requisitos previos de FileTables](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)|  
 |[sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)|**Agregado**|[Crear, modificar y quitar FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)<br /><br /> [Administrar FileTables](../../relational-databases/blob/manage-filetables.md)|  
@@ -64,7 +65,7 @@ ms.locfileid: "85744314"
   
 ##  <a name="dynamic-management-views"></a><a name="dmv"></a> Vistas de administración dinámica  
   
-|Object|Status|Más información|  
+|Object|Estado|Más información|  
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)|**Agregado**|[Administrar FileTables](../../relational-databases/blob/manage-filetables.md)|  
   

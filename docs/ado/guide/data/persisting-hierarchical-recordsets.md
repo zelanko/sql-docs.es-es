@@ -1,4 +1,5 @@
 ---
+description: Almacenar conjuntos de registros jerárquicos
 title: Conservar conjuntos de registros jerárquicos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c671adb19bd2e955b67ce23f268738ccf9033f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4bfcb79e532609ad9b3eeb14fb07dec4fd1239f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453057"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>Almacenar conjuntos de registros jerárquicos
 Puede guardar un **conjunto de registros** jerárquico en un archivo en formato ADTG o XML llamando al método [Save](../../../ado/reference/ado-api/save-method.md) . Sin embargo, se aplican dos limitaciones al guardar los **conjuntos de registros**jerárquicos en formato XML: no se puede guardar en XML si el **conjunto de registros** jerárquico contiene actualizaciones pendientes y no se puede guardar un conjunto de **registros**jerárquico con parámetros.  

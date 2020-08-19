@@ -1,4 +1,5 @@
 ---
+description: Crear una base de conocimiento
 title: Crear una base de conocimiento
 ms.date: 07/31/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c9375c6050c3f401a47857c385348da1478f21ca
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e5914d97a8110f9b50ecfd20da7130c564aac840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450003"
 ---
 # <a name="building-a-knowledge-base"></a>Crear una base de conocimiento
 

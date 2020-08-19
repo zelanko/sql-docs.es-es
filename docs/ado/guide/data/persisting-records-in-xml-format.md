@@ -1,4 +1,5 @@
 ---
+description: Almacenar registros en formato XML
 title: Guardar registros en formato XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b88bef75b0cbe13402d90264b766adf5a3005efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453047"
 ---
 # <a name="persisting-records-in-xml-format"></a>Almacenar registros en formato XML
-Al igual que el formato ADTG, la persistencia del **conjunto de registros** en formato XML se implementa con el proveedor de persistencia de Microsoft OLE DB. Este proveedor genera un conjunto de filas de solo avance y de solo lectura desde un archivo o secuencia XML guardado que contiene la información de esquema generada por ADO. Del mismo modo, puede tomar un **conjunto de registros**ADO, generar XML y guardarlo en un archivo o en cualquier objeto que implemente la interfaz **IStream** com. (De hecho, un archivo es simplemente otro ejemplo de un objeto que admite **IStream**). En las versiones 2,5 y posteriores, ADO se basa en el analizador de Microsoft XML (MSXML) para cargar el XML en el **conjunto de registros**; por lo tanto, se requiere MSXML. dll.  
+Al igual que el formato ADTG, la persistencia del **conjunto de registros** en formato XML se implementa con el proveedor de persistencia de Microsoft OLE DB. Este proveedor genera un conjunto de filas de solo avance y de solo lectura desde un archivo o secuencia XML guardado que contiene la información de esquema generada por ADO. Del mismo modo, puede tomar un **conjunto de registros**ADO, generar XML y guardarlo en un archivo o en cualquier objeto que implemente la interfaz **IStream** com. (De hecho, un archivo es simplemente otro ejemplo de un objeto que admite **IStream**). En las versiones 2,5 y posteriores, ADO se basa en el analizador de Microsoft XML (MSXML) para cargar el XML en el **conjunto de registros**; por consiguiente msxml.dll es necesario.  
   
 > [!NOTE]
 >  Se aplican algunas limitaciones al guardar **conjuntos de registros** jerárquicos (formas de datos) en formato XML. No se puede guardar en XML si el **conjunto de registros** jerárquico contiene actualizaciones pendientes y no se puede guardar un conjunto de **registros**jerárquico con parámetros. Para obtener más información, vea [Guardar conjuntos de registros jerárquicos y filtrados](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  

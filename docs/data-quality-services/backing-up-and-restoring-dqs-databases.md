@@ -1,4 +1,5 @@
 ---
+description: Realizar copias de seguridad de bases de datos de DQS y restaurarlas
 title: Realizar copias de seguridad de bases de datos de DQS y restaurarlas
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5df48172681fef1ea75735702915ac1beedabee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03b58daec9def4e902e111719353110bfad1d69b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450013"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Realizar copias de seguridad de bases de datos de DQS y restaurarlas
 
@@ -40,7 +41,7 @@ ms.locfileid: "85897563"
   
 -   Debe disponer del rol dqs_administrator en la base de datos DQS_MAIN para terminar las actividades o detener los procesos en ejecución en DQS.  
   
-##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>Copia de seguridad y restauración de bases de datos de DQS  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a> Copia de seguridad y restauración de bases de datos de DQS  
   
 1.  Inicie Microsoft SQL Server Management Studio y conéctese a la instancia adecuada de SQL Server.  
   

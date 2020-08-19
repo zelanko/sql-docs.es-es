@@ -1,4 +1,5 @@
 ---
+description: 'Lección 1-4: Incorporación de una tarea Flujo de datos al paquete'
 title: 'Paso 4: Incorporación de una tarea Flujo de datos al paquete | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ba3ef8fe03b0f3057dbb443dfbf5ab257a70983
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d920b5f78d2d3e6dd3e557cbac4e50ad7952884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449693"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Lección 1-4: Incorporación de una tarea Flujo de datos al paquete
 
@@ -41,7 +42,7 @@ Después de haber creado los administradores de conexión para los datos de orig
   
     Proporcione nombres únicos para todos los componentes que agregue a una superficie de diseño. Para facilitar el uso y el mantenimiento, los nombres deben describir la función de cada componente. Seguir estas directrices de nomenclatura permite que los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sean autodocumentados. Los paquetes también pueden documentarse mediante anotaciones. Para más información sobre las anotaciones, consulte [Usar anotaciones en paquetes](../integration-services/use-annotations-in-packages.md).  
   
-4.  Haga clic con el botón derecho en la tarea Flujo de datos, seleccione **Propiedades** y, en esta ventana, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** .  
+4.  Haga clic con el botón derecho en la tarea Flujo de datos, seleccione **Propiedades** y, en esta ventana, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)**.  
   
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente
 [Paso 5: Incorporación y configuración del origen de archivo plano](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  

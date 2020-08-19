@@ -1,4 +1,5 @@
 ---
+description: Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)
 title: Compatibilidad con reglas, desencadenadores, valores predeterminados y procedimientos almacenados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a02aeea8f33e3a4d87fc771a7b0fa7b1a0067b6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449117"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)
 No se pueden crear reglas, desencadenadores, valores predeterminados o procedimientos almacenados de Visual FoxPro mediante el controlador ODBC de Visual FoxPro. Sin embargo, la aplicación podría interactuar con las reglas, los desencadenadores, los valores predeterminados o los procedimientos almacenados existentes a medida que inserta, actualiza o elimina los datos de Visual FoxPro almacenados en una base de datos.  

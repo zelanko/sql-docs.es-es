@@ -1,4 +1,5 @@
 ---
+description: Funcionamiento de los comandos con parámetros
 title: Operación de comandos parametrizados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453107"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funcionamiento de los comandos con parámetros
 Si está trabajando con un **conjunto de registros**secundario grande, especialmente en comparación con el tamaño del **conjunto de registros**primario, pero solo necesita tener acceso a algunos capítulos secundarios, es posible que le resulte más eficaz usar un comando con parámetros.  

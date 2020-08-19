@@ -1,4 +1,5 @@
 ---
+description: Recibir los resultados
 title: Recibiendo resultados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e05bd86b908c8c6d7ac08525e425333d3e2f1ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3317441322d0f1be94ee1c897946d83f6291143c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452997"
 ---
 # <a name="receiving-results"></a>Recibir los resultados
 En la mayoría de los comandos de ADO se devuelve cierta información al autor de la llamada. En el caso de los comandos que devuelven conjuntos de filas, los resultados se reciben en un objeto de **conjunto de registros** , que es probablemente el más usado de los objetos ADO.  
   
  Hay varias maneras de recibir datos en un objeto de **conjunto de registros** de un origen de datos, como llamar a lo siguiente:  
   
--   [Connection. Execute (método)](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Connection.Exe(método)](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [Comando. Execute (método)](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [Command.Exe(método)](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
 -   [Recordset. Open (método)](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   

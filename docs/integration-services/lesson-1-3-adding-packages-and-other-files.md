@@ -1,4 +1,5 @@
 ---
+description: 'Lección 1-3: Agregar paquetes y otros archivos'
 title: 'Paso 3: Agregar paquetes y otros archivos | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58cafdb2a547f5c911d2b53575327dc278d2ed61
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449727"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lección 1-3: Agregar paquetes y otros archivos
 
@@ -69,10 +70,10 @@ En la siguiente tarea, agregará configuraciones a los paquetes DataTransfer y L
   
 3.  En el cuadro de diálogo **Agregar elemento existente - Deployment Tutorial** , vaya a C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\, seleccione Readme.txt y haga clic en **Agregar**.  
   
-4.  En el menú Archivo, haga clic en **Guardar todo**.  
+4.  En el menú Archivo , haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 4: Agregar configuraciones de paquetes](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[Paso 4: Adición de configuraciones de paquete](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

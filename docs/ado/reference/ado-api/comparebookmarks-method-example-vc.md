@@ -1,4 +1,5 @@
 ---
+description: Ejemplo del método CompareBookmarks (VC ++)
 title: Ejemplo del método CompareBookmarks (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52c11d385b6ae77208843d8eac430f65e18d3a35
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ca1a9f62d293e3be0c7c27ce8dec8bc58e7d5c43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450777"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>Ejemplo del método CompareBookmarks (VC ++)
 En este ejemplo se muestra el método [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado sea de algún modo especial.  

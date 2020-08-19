@@ -1,4 +1,5 @@
 ---
+description: Interfaz de programación estándar
 title: Interfaz de programación estándar | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7767f113d0f70569ce253f0200cd35cb83915a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8fd0e9e3901ea6b3dcf9a09366b13fe532f1198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448888"
 ---
 # <a name="standard-programming-interface"></a>Interfaz de programación estándar
 La interfaz de programación es quizás el candidato más obvio para la normalización. De hecho, cuando se desarrolló ODBC, ANSI e ISO ya ofrecían estándares para los módulos SQL y SQL incrustados. Aunque no existían estándares para una CLI de base de datos, el grupo de acceso de SQL, un consorcio del sector de proveedores de bases de datos, estaba considerando la posibilidad de crear uno; las partes de ODBC se convirtieron posteriormente en la base de su trabajo.  

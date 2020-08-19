@@ -1,4 +1,5 @@
 ---
+description: Función SQLCompleteAsync
 title: Función SQLCompleteAsync | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: bb5ec8ff7c0aa96e37ce66cabb1e18c9993e95f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448766"
 ---
 # <a name="sqlcompleteasync-function"></a>Función SQLCompleteAsync
 **Conformidad**  
@@ -59,7 +60,7 @@ SQLRETURN SQLCompleteAsync(
 ## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_ERROR, SQL_NO_DATA o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnostics  
+## <a name="diagnostics"></a>Diagnóstico  
  Si **SQLCompleteAsync** devuelve SQL_SUCCESS, una aplicación debe obtener el código de retorno de la función asincrónica del búfer al que apunta *AsyncRetCodePtr*. El SQLSTATE asociado, si existe, se puede obtener llamando a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_STMT y un identificador de instrucción o un *HandleType* de SQL_HANDLE_DBC y un identificador de conexión. Estos registros de diagnóstico están asociados a la función asincrónica, no a esta función **SQLCompleteAsync** .  
   
  **SQLCompleteAsync** devuelve un código distinto de SQL_SUCCESS para indicar que no se llama a **SQLCompleteAsync** correctamente. En este caso, **SQLCompleteAsync** no publicará ningún registro de diagnóstico. Los códigos de retorno posibles son:  
@@ -73,5 +74,5 @@ SQLRETURN SQLCompleteAsync(
 ## <a name="comments"></a>Comentarios  
  En el modo de procesamiento asincrónico basado en sondeo, *AsyncRetCodePtr* podría ser SQL_STILL_EXECUTING cuando **SQLCompleteAsync** devuelve SQL_SUCCESS. La aplicación debe seguir sondeando hasta que no se SQL_STILL_EXECUTING *AsyncRetCodePtr* . En el modo de procesamiento asincrónico basado en notificaciones, *AsyncRetCodePtr* nunca se SQL_STILL_EXECUTING.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Ejecución asincrónica (método de sondeo)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Lección 4-4: Adición de un destino de archivo plano'
 title: 'Paso 4: Adición de un destino de archivo plano | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da6900fe4c109dfaf96d22824fbd79dc45ab0916
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 99266f19a7bb1476f16b5896deb8dfa3602e4032
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449679"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lección 4-4: Adición de un destino de archivo plano
 
@@ -47,7 +48,7 @@ En esta tarea, guardará toda esta información sobre las filas con errores en u
   
 9. En el cuadro de diálogo **Abrir**, en **Nombre de archivo**, escriba *ErrorOutput.txt* y haga clic en **Abrir**.  
   
-10. En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**, compruebe que el cuadro **Configuración regional** es **Inglés (Estados Unidos)** y la **Página de códigos** es **1252 (ANSI-Latin I)** .  
+10. En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**, compruebe que el cuadro **Configuración regional** es **Inglés (Estados Unidos)** y la **Página de códigos** es **1252 (ANSI-Latin I)**.  
   
 11. En el panel de opciones, haga clic en **Columnas**.  
   

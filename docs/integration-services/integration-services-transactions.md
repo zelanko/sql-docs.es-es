@@ -1,4 +1,5 @@
 ---
+description: Transacciones de Integration Services
 title: Transacciones de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46c42deda5b2b66d2979136ad6a82e0ad80042be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eee7131c831215278a8754efa913add075cfb57d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449788"
 ---
 # <a name="integration-services-transactions"></a>Transacciones de Integration Services
 
@@ -148,7 +149,7 @@ Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUD
   
  Solo los paquetes B, D y F pueden heredar transacciones de sus paquetes primarios.  
   
- Los paquetes B y D heredan la transacción iniciada por el paquete A.  
+ Los paquetes B y D heredan la transacción iniciada por el paquete A.   
   
  El paquete F hereda la transacción iniciada por el paquete C.  
   
@@ -161,7 +162,7 @@ Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUD
   
 -   Entrada de blog, [Cómo usar transacciones en SQL Server Integration Services (SSIS)](https://go.microsoft.com/fwlink/?LinkId=157783)(en inglés), en www.mssqltips.com  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Transacciones heredadas](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
  [Varias transacciones](https://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   

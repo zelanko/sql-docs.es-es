@@ -1,4 +1,5 @@
 ---
+description: Append (método) (ADO)
 title: Append (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd3ee907aa2a7081ca7204dcc1b0b3b069581832
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451267"
 ---
 # <a name="append-method-ado"></a>Append (método) (ADO)
 Anexa un objeto a una colección. Si la colección es [Fields](../../../ado/reference/ado-api/fields-collection-ado.md), se puede crear un nuevo objeto [Field](../../../ado/reference/ado-api/field-object.md) antes de que se anexe a la colección.  
@@ -58,7 +59,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  Opcional. **Variante** que representa el valor del nuevo campo. Si no se especifica, el campo se anexa con un valor null.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="parameters-collection"></a>Colección Parameters  
  Debe establecer la propiedad [Type](../../../ado/reference/ado-api/type-property-ado.md) de un objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) antes de anexarlo a la colección [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Si selecciona un tipo de datos de longitud variable, también debe establecer la propiedad [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) en un valor mayor que cero.  

@@ -1,4 +1,5 @@
 ---
+description: Copiar datos masiva con IRowsetFastLoad (OLE DB) en SQL Server Native Client
 title: Copia masiva de datos mediante IRowsetFastLoad (proveedor de OLE DB de Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a898f45d80a266b0d385b73832312e9046b157b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1a2586a6f3a741f81cb30756006c5a2b4ae84b02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448503"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>Copiar datos masiva con IRowsetFastLoad (OLE DB) en SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,12 +31,12 @@ ms.locfileid: "87247918"
   
  El consumidor notifica a SQLOLEDB su necesidad de realizar una copia masiva estableciendo la propiedad SSPROP_ENABLEFASTLOAD específica del proveedor SQLOLEDB en VARIANT_TRUE. Con la propiedad establecida en el origen de datos, el consumidor crea una sesión SQLOLEDB. La nueva sesión permite el acceso del consumidor a **IRowsetFastLoad**.  
   
- Hay disponible un ejemplo completo donde se muestra el uso de **IRowsetFastLoad** para la copia masiva de los registros en una tabla. En este ejemplo, se agregan 10 registros a la tabla **IRFLTable**. Debe crear la tabla **IRFLTable** en la base de datos.  
+ Hay disponible un ejemplo completo donde se muestra el uso de **IRowsetFastLoad** para la copia masiva de los registros en una tabla. En este ejemplo, se agregan 10 registros a la tabla **IRFLTable**. Es necesario crear la tabla **IRFLTable** en la base de datos.  
   
  Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>Para realizar una copia masiva de datos en una tabla de SQL Server  
   

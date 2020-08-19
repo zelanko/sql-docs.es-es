@@ -1,4 +1,5 @@
 ---
+description: Pasar parámetros a un comando con nombre
 title: Pasar parámetros a un comando con nombre | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: afa230584bd7ee93d56f814a998c886e433a9417
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa6ac56c3bb3e632ace019a2c8b2a97c96262421
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453077"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Pasar parámetros a un comando con nombre
 Del mismo modo que el resultado del comando se pasa como una variable *out* del comando con nombre, los parámetros de un comando con parámetros se pueden pasar como *variables al* comando con nombre.  

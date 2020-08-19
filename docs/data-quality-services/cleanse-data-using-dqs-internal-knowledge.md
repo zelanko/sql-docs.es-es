@@ -1,4 +1,5 @@
 ---
+description: Limpiar datos mediante el conocimiento de DQS (interno)
 title: Limpiar datos mediante el conocimiento de DQS (interno)
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1270595171ef164f29409f55a0083fa4f1afa49d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ee9c9e746dcc85e80ae96a7d04a84b12c594e98c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450001"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpiar datos mediante el conocimiento de DQS (interno)
 
@@ -109,7 +110,7 @@ ms.locfileid: "85894242"
 |---------|-----------------|  
 |**Posibles**|Muestra los valores de dominio para los que DQS detectó sugerencias con un nivel de confianza mayor que el *umbral de sugerencia automática* , pero inferior al *umbral de corrección automática* .<br /><br /> Los valores sugeridos se muestran en la columna **Corregir a** junto al valor original. Haga clic en el botón de opción de la columna **Aprobar** o **Rechazar** junto a un valor de la cuadrícula superior para aceptar o rechazar la sugerencia para todas las instancias de dicho valor. En este caso, el valor aceptado se desplaza a la pestaña **Corregido** y el valor rechazado se desplaza a la pestaña **No válido** .|  
 |**Nuevo**|Muestra el dominio válido para el que DQS no tiene suficiente información y, por tanto, no se puede asignar a ninguna otra pestaña. Además, esta pestaña también contiene valores con un nivel de confianza inferior al *umbral de sugerencia automática* , pero lo suficientemente alto como para marcarlos como válidos.<br /><br /> Si cree que el valor es correcto, haga clic en el botón de opción de la columna **Aprobar** . En caso contrario, haga clic en el botón de opción de la columna **Rechazar** . El valor aceptado se desplaza a la pestaña **correcto** y el valor rechazado se desplaza a la pestaña **no válido** . También puede escribir manualmente el valor correcto como sustituto del valor original en la columna **corregir a** en el valor y, a continuación, hacer clic en el botón de opción de la columna **aprobar** para aceptar el cambio. En este caso, el valor se desplaza a la pestaña **Corregido** .|  
-|**No válida**|Muestra los valores de dominio que se marcaron como no válidos en el dominio de la base de conocimiento o los valores que no cumplieron una regla de dominio. Esta pestaña también contiene los valores rechazados por el usuario en cualquiera de las otras cuatro pestañas.<br /><br /> Sin embargo, si cree que un valor es correcto, haga clic en el botón de opción de la columna **Aprobar** . El valor aceptado se desplaza a la pestaña **correcto** . También puede escribir manualmente el valor correcto como sustituto del valor original en la columna **corregir a** en el valor y, a continuación, hacer clic en el botón de opción de la columna **aprobar** para aceptar el cambio. En este caso, el valor se desplaza a la pestaña **Corregido** .|  
+|**No válido**|Muestra los valores de dominio que se marcaron como no válidos en el dominio de la base de conocimiento o los valores que no cumplieron una regla de dominio. Esta pestaña también contiene los valores rechazados por el usuario en cualquiera de las otras cuatro pestañas.<br /><br /> Sin embargo, si cree que un valor es correcto, haga clic en el botón de opción de la columna **Aprobar** . El valor aceptado se desplaza a la pestaña **correcto** . También puede escribir manualmente el valor correcto como sustituto del valor original en la columna **corregir a** en el valor y, a continuación, hacer clic en el botón de opción de la columna **aprobar** para aceptar el cambio. En este caso, el valor se desplaza a la pestaña **Corregido** .|  
 |**Corregido**|Muestra los valores de dominio corregidos por DQS durante el proceso de limpieza automatizada para los que DQS detectó una corrección para el valor con un nivel de confianza por encima del umbral de corrección automática.<br /><br /> Los valores corregidos se muestran en la columna **Corregir a** junto al valor original. De forma predeterminada, se selecciona el botón de opción de la columna **Aprobar** correspondiente al valor. Si procede, puede rechazar la corrección propuesta haciendo clic en el botón de radio de la columna **Rechazar** para desplazar el valor a la pestaña **No válido** , o escribir manualmente el valor correcto en la columna **Corregir a** y, a continuación, hacer clic en el botón de opción de la columna **Aprobar** para aceptar el cambio y desplazarlo a la pestaña **Corregido** .|  
 |**Correcto**|Muestra los valores de dominio que se estiman correctos. Por ejemplo, si el valor coincide con un valor de dominio. Esta pestaña también contiene los valores que aprobó el usuario haciendo clic en el botón de opción de la columna **Aprobar** de las pestañas **Nuevo** y **No válido** .<br /><br /> De forma predeterminada, el botón de opción de la columna **Aprobar** correspondiente a cada valor está seleccionado. Sin embargo, si cree que hay un valor incorrecto en esta pestaña, haga clic en el botón de opción de la columna **Rechazar** junto al valor para desplazarlo a la pestaña **No válido** , o escriba manualmente el valor correcto como sustituto del valor original en la columna **Corregir a** para el valor y, a continuación, haga clic en el botón de opción de la columna **Aprobar** para aceptar el cambio y desplazarlo a la pestaña **Corregido** .|  
   

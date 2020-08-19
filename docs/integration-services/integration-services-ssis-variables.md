@@ -1,4 +1,5 @@
 ---
+description: Variables de Integration Services (SSIS)
 title: Variables de Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4ee6dda0fbd91649a085cfda429ea3e554a83d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449783"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
 
@@ -109,7 +110,7 @@ ms.locfileid: "86917491"
   
 **Ámbito**    
  > [!NOTE]  
->  Para cambiar este valor de la propiedad, basta con hacer clic en **Mover variable** en la ventana **Variables** .  
+>   Para cambiar este valor de propiedades, basta con hacer clic en **Mover variable** en la ventana **Variables** .  
   
  Una variable se crea dentro del ámbito de un paquete o dentro del ámbito de un contenedor, tarea o controlador de evento en el paquete. Dado que el contenedor del paquete se encuentra en la parte superior de la jerarquía de contenedores, las variables con ámbito de paquete funcionan como variables globales y pueden ser usadas por todos los contenedores en el paquete. De manera similar, las variables definidas dentro del ámbito de un contenedor, como el contenedor de bucles For, pueden ser usadas por todas las tareas o contenedores dentro del contenedor de bucles For.  
   
@@ -147,7 +148,7 @@ Una variable tiene opciones para establecer el valor de la variable y el tipo de
   
 **ValueType**    
  > [!NOTE]  
->  El valor de la propiedad aparece en la columna **Tipo de datos** en la ventana **Variables** .  
+>   El valor de la propiedad aparece en la columna **Tipo de datos** en la ventana **Variables** .  
   
  Especifica el tipo de datos del valor de la variable.  
 
@@ -168,7 +169,7 @@ Una variable tiene opciones para establecer el valor de la variable y el tipo de
   
  **Tarea Script y componente de script** Se debe proporcionar a la tarea Script o al componente de script una lista de variables de solo lectura o lectura/escritura, actualizar las variables de lectura/escritura del script y, después, usar los valores actualizados dentro o fuera del script. Por ejemplo, en el código `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`, la variable de script `numberOfCars` se actualiza con el valor de la variable `NumberOfCars`. Para más información, consulte [Using Variables in the Script Task](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md).  
 
-## <a name="add-a-variable"></a>Agregar una variable  
+## <a name="add-a-variable"></a>Adición de una variable  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con el que desea trabajar.  
   

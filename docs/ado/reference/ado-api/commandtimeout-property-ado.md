@@ -1,4 +1,5 @@
 ---
+description: CommandTimeout (propiedad, ADO)
 title: CommandTimeout (propiedad, ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b708b2b79c22240468811732d2ffae0955ea204
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 49fc6e3a6e91908e1fd549a60efa751769d61bd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450837"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout (propiedad, ADO)
 Indica cuánto tiempo se debe esperar mientras se ejecuta un comando antes de terminar el intento y generar un error.  

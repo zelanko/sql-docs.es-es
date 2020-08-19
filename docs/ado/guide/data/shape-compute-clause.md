@@ -1,4 +1,5 @@
 ---
+description: Cláusula COMPUTE de forma
 title: Shape Compute (cláusula) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452847"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Una cláusula COMPUTE Shape genera un conjunto de **registros**primario cuyas columnas constan de una referencia al **conjunto de registros**secundario; columnas opcionales cuyo contenido es el capítulo, el nuevo o las columnas calculadas, o el resultado de la ejecución de funciones de agregado en el **conjunto de registros** secundario o en un **conjunto de registros**con forma anterior; y cualquier columna del conjunto de **registros** secundario incluido en la cláusula opcional by.  
@@ -132,7 +133,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |O BIEN|Portland|400.000|  
 |O BIEN|Corvallis|300 000|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Obtener acceso a las filas de un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Información general sobre la forma de datos](../../../ado/guide/data/data-shaping-overview.md)   
  [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   

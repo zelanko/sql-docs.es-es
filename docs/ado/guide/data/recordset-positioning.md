@@ -1,4 +1,5 @@
 ---
+description: Posición de conjunto de registros
 title: Posicionamiento del conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e48c80c59a51b007832b8c68c8e27c66333f57dc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d5cdea25dbf14ef5f26d02612f357768acdad61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452967"
 ---
 # <a name="recordset-positioning"></a>Posición de conjunto de registros
 Use la propiedad **AbsolutePosition** para moverse a un registro, en función de su posición ordinal en el objeto de **conjunto de registros** , o para determinar la posición ordinal del registro actual. El proveedor debe admitir la funcionalidad adecuada para que esta propiedad esté disponible.  

@@ -1,4 +1,5 @@
 ---
+description: Llamar a SQLSetPos para insertar datos
 title: Llamar a SQLSetPos para insertar datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cb374b2506d55b400207c8f60bdf42bb6bb4065e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 215d02e9b5bd92f6a22f7e45c8c29c7c5a0a6a4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449017"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>Llamar a SQLSetPos para insertar datos
 Cuando una aplicación ODBC *2. x* que trabaja con un controlador ODBC *3. x* llama a **SQLSetPos** con un argumento de *operación* de SQL_ADD, el administrador de controladores no asigna esta llamada a **SQLBulkOperations**. Si un controlador ODBC *3. x* debe trabajar con una aplicación que llame a **SQLSetPos** con SQL_ADD, el controlador debe admitir esa operación.  

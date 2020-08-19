@@ -1,4 +1,5 @@
 ---
+description: Funciones numéricas (controlador ODBC de Visual FoxPro)
 title: Funciones numéricas (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3993a9a1b2412cb15229f2763c7c3b38f6b7862
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8728446decd8a0ad04f08d88475ae08a7c69c5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449377"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Funciones numéricas (controlador ODBC de Visual FoxPro)
 En la tabla siguiente se describen las funciones numéricas de ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis de ODBC, se muestra el equivalente de Visual FoxPro.  

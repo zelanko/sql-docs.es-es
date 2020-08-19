@@ -1,4 +1,5 @@
 ---
+description: Configurar los niveles de gravedad de los archivos de registro de DQS
 title: Configurar los niveles de gravedad de los archivos de registro de DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6a23806f7b7def561d7cecc8e1592772c5675f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449917"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar los niveles de gravedad de los archivos de registro de DQS
 
@@ -49,7 +50,7 @@ ms.locfileid: "85894227"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para configurar niveles de gravedad, debe disponer del rol dqs_administrator en la base de datos DQS_MAIN.  
   
-##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Configurar niveles de gravedad en el nivel de actividad  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a> Configurar niveles de gravedad en el nivel de actividad  
  Puede configurar los niveles de gravedad del registro para las siguientes actividades de DQS: administración de dominios, detección de conocimiento, directiva de coincidencia, limpieza de datos, coincidencia de datos y servicios de datos de referencia. Para ello:  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -65,7 +66,7 @@ ms.locfileid: "85894227"
   
 5.  Haga clic en **Cerrar**.  
   
-##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Configurar niveles de gravedad en el nivel de módulo (avanzado)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a> Configurar niveles de gravedad en el nivel de módulo (avanzado)  
  La sección **Avanzadas** de la pestaña **Configuración del registro** permite configurar los niveles de gravedad del registro en el nivel de módulo. Los módulos son ensamblados del sistema de DQS que implementan funcionalidades en una característica de DQS. Por ejemplo, la actividad de administración de dominios contiene funcionalidades tales como la definición de reglas de dominio, la definición de condiciones de regla, la definición de reglas entre dominios para dominios compuestos, etc.  
   
  En ocasiones, el nivel de granularidad en el nivel de actividad no es suficiente. Es posible que desee investigar un problema que aparece en un determinado módulo de una actividad. Resulta de ayuda disponer de una opción que permita configurar los niveles de gravedad del registro en el nivel de módulo para poder aislar el problema y seguir su evolución con mayor precisión.  

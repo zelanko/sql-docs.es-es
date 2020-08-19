@@ -1,4 +1,5 @@
 ---
+description: Comandos de proceso de comandos con parámetros con intermedias
 title: Comandos con parámetros con comandos de proceso intermedios | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f66bde29a5036ed671f9af17bf5aab1df4acbca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9f5e4edf28f14763d4a7592f018f47135cae9981
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453097"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandos de proceso de comandos con parámetros con intermedias
 Un comando APPEND de forma parametrizada típico tiene una cláusula que crea un **conjunto de registros** primario con un comando de consulta y otra cláusula que crea un **conjunto de registros** secundario con un comando de consulta con parámetros, es decir, un comando que contiene un marcador de posición de parámetro (un signo de interrogación "?"). El conjunto de **registros** con forma resultante tiene dos niveles, en los que el elemento primario ocupa el nivel superior y el secundario ocupa el nivel inferior.  

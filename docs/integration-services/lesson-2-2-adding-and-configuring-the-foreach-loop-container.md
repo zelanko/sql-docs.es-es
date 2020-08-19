@@ -1,4 +1,5 @@
 ---
+description: 'Lección 2-2: Incorporación y configuración del contenedor de bucles Foreach'
 title: 'Paso 2: Incorporación y configuración del contenedor de bucles Foreach | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ada4d9c133bbcb96e1a5c19fa505c4d51eb8b343
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ddf7e26e4eba9a3120d5a0052e29e8a763689556
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449705"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Lección 2-2: Incorporación y configuración del contenedor de bucles Foreach
 

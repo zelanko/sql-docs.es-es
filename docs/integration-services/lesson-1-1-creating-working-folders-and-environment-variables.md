@@ -1,4 +1,5 @@
 ---
+description: 'Lección 1-1: Crear carpetas de trabajo y variables de entorno'
 title: 'Paso 1: Crear carpetas de trabajo y variables de entorno | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32e0f638af3978a0bf9b938b7131b7e86431f6a6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449753"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lección 1-1: Crear carpetas de trabajo y variables de entorno
 
@@ -36,9 +37,9 @@ Si planea implementar los paquetes en otro equipo, debe crear dos conjuntos de v
   
 1.  Haga clic con el botón secundario en el menú Inicio y haga clic en Explorar.  
   
-2.  Haga clic en **Disco local (C:)** .  
+2.  Haga clic en **Disco local (C:)**.  
   
-3.  En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Carpeta**.  
+3.  En el menú **Archivo**, seleccione **Nuevo** y, a continuación, haga clic en **Carpeta**.  
   
 4.  Cambie el nombre de la nueva carpeta a **DeploymentTutorial**.  
   
@@ -87,7 +88,7 @@ Si planea implementar los paquetes en otro equipo, debe crear dos conjuntos de v
 10. Opcionalmente, reinicie el equipo.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 2: Crear el proyecto de implementación](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+[Paso 2: Creación del proyecto de implementación](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
   
   

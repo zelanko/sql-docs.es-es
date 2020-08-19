@@ -1,4 +1,5 @@
 ---
+description: paquetes de Integration Services (SSIS)
 title: Paquetes de Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34da25ac87cbcfbeb815b4053d60c390a9140f5d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449829"
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
 
@@ -57,7 +58,7 @@ ms.locfileid: "86917523"
 ### <a name="event-handlers"></a>Controladores de eventos  
  Un controlador de eventos es un flujo de trabajo que se ejecuta en respuesta a los eventos provocados por un paquete, una tarea o un contenedor. Por ejemplo, puede usar un controlador de eventos para comprobar el espacio en disco cuando se produce un evento previo a la ejecución o si se produce un error, y enviar un mensaje de correo electrónico que notifique el espacio disponible o la información de error a un administrador. Un controlador de eventos se crea como un paquete, con un flujo de control y flujos de datos opcionales. Los controladores de eventos pueden agregarse a tareas individuales o a contenedores del paquete. Para más información, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-event-handlers.md).  
   
-### <a name="configurations"></a>Configurations  
+### <a name="configurations"></a>Configuraciones  
  Una configuración es un conjunto de pares propiedad-valor que define las propiedades del paquete y sus tareas, contenedores, variables, conexiones y controladores de eventos cuando se ejecuta el paquete. El uso de configuraciones permite actualizar propiedades sin modificar el paquete. Cuando se ejecuta el paquete, se carga la información de configuración y se actualizan los valores de las propiedades. Por ejemplo, una configuración puede actualizar la cadena de conexión de la conexión.  
   
  La configuración se guarda y se implementa con el paquete cuando se instala el paquete en otro equipo. Los valores de la configuración pueden actualizarse cuando se instala el paquete para ofrecer compatibilidad con un entorno diferente. Para obtener más información, vea [Crear configuraciones de paquetes](../integration-services/packages/create-package-configurations.md).  

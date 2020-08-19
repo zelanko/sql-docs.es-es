@@ -1,4 +1,5 @@
 ---
+description: Comando (ADO - sintaxis WFC)
 title: Comando (ADO-sintaxis WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61b5a54778bb680b68e923d198831d770973d1a7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fcbe8174b2866f3edfd9676d7873216fd16f5751
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450897"
 ---
 # <a name="command-ado---wfc-syntax"></a>Comando (ADO - sintaxis WFC)
 ## <a name="package-commswfcdata"></a>paquete com. ms. wfc. Data  
@@ -44,7 +45,7 @@ public int executeUpdate(Object[] parameters, int options)
 public int executeUpdate()  
 ```  
   
- El método **ExecuteUpdate** es un método especial de case que llama al método **Execute** de ADO subyacente con ciertos parámetros. El método **ExecuteUpdate** no admite la devolución de un objeto de **conjunto de registros** , por lo que el parámetro *Options* del método **Execute** se modifica con **AdoEnums. ExecuteOptions. NORECORDS**. Una vez completado el método **Execute** , el parámetro *RecordsAffected* actualizado se vuelve a pasar al método **ExecuteUpdate** , que finalmente se devuelve como un valor **int**.  
+ El método **ExecuteUpdate** es un método especial de case que llama al método **Execute** de ADO subyacente con ciertos parámetros. El método **ExecuteUpdate** no admite la devolución de un objeto de **conjunto de registros** , por lo que el parámetro *Options* del método **Execute** se modifica con **AdoEnums.ExecuteOptions. NORECORDS**. Una vez completado el método **Execute** , el parámetro *RecordsAffected* actualizado se vuelve a pasar al método **ExecuteUpdate** , que finalmente se devuelve como un valor **int**.  
   
 ### <a name="properties"></a>Propiedades  
   

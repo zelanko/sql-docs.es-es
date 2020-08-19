@@ -1,4 +1,5 @@
 ---
+description: 'Lección 1-2: Adición y configuración de un administrador de conexiones de archivos planos'
 title: 'Paso 2: Adición y configuración de un administrador de conexiones de archivos planos | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d03808293d5edbc9ae0be48b28f86df725304059
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d83b2c6a19b7a73be4293dcb66edc6cbc22909d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449741"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lección 1-2: Adición y configuración de un administrador de conexiones de archivos planos
 
@@ -34,7 +35,7 @@ En esta lección, configurará las propiedades siguientes en el administrador de
 -   **Asignaciones de datos:** las asignaciones de tipo de datos que especifique para el administrador de conexiones de archivos planos se usan en todos los componentes de origen de datos de archivo plano que hacen referencia al administrador de conexiones. Puede asignar los tipos de datos de forma manual mediante el administrador de conexiones de archivos planos o usar el cuadro de diálogo **Sugerir tipos de columna** . En esta tarea, verá las asignaciones sugeridas en el cuadro de diálogo **Sugerir tipos de columna** y luego creará de forma manual las asignaciones necesarias en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**.  
   
 > [!NOTE]
-> El administrador de conexiones de archivos planos proporciona información de configuración regional acerca del archivo de datos. Si el equipo no está configurado para usar la opción de configuración regional **Inglés (Estados Unidos)** , debe establecer propiedades adicionales en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**.  
+> El administrador de conexiones de archivos planos proporciona información de configuración regional acerca del archivo de datos. Si el equipo no está configurado para usar la opción de configuración regional **Inglés (Estados Unidos)**, debe establecer propiedades adicionales en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**.  
   
 ## <a name="add-a-flat-file-connection-manager-to-the-ssis-package"></a>Adición de un administrador de conexiones de archivos planos al paquete SSIS  
   

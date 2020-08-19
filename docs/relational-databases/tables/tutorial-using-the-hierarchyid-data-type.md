@@ -1,4 +1,5 @@
 ---
+description: 'Tutorial: Uso del tipo de datos hierarchyid'
 title: 'Tutorial: Uso del tipo de datos hierarchyid| Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bda10e885959504bdac67902db2ae1726656b92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1abc4ab38086afd380707b2eb12fafc48713bf08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418999"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>Tutorial: Uso del tipo de datos hierarchyid
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ Este tutorial está destinado a usuarios con experiencia en [!INCLUDE[tsql](../.
 ## <a name="what-you-will-learn"></a>Aprendizaje  
 El tutorial está compuesto por dos lecciones:  
   
-[Lección 1: Convertir una tabla en una estructura jerárquica](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+[Lección 1: Conversión de una tabla en una estructura jerárquica](../../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
 En esta lección, se toma una tabla existente de empleados, estructurada como una jerarquía de elementos primarios y secundarios, y se mueven los datos a una nueva tabla que representa la jerarquía mediante el tipo de datos **hierarchyid** . Esta lección requiere la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 [Lección 2: Creación y administración de los datos de una tabla jerárquica](../../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
@@ -43,7 +44,7 @@ El sistema debe tener instalado lo siguiente:
   
 -   Internet Explorer versión 6 o posterior.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Tutorial: Introducción al motor de base de datos](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 [Tutorial: Escribir instrucciones Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
 [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_sys_info (Transact-SQL)
 title: Sys. dm_os_sys_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -22,12 +23,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9350ed24d2f82930ff6852b950ee15ff0421ae6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419649"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "87928706"
 |**process_physical_affinity**|**nvarchar (a.** |**Se aplica a:** A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] .<br /><br />Información aún. |
 |**sql_memory_model**|**int**|**Se aplica a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 y versiones posteriores.<br /><br />Especifica el modelo de memoria utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para asignar memoria. No acepta valores NULL.<br /><br />1 = modelo de memoria convencional<br />2 = bloquear páginas en la memoria<br /> 3 = páginas grandes en memoria|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Se aplica a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 y versiones posteriores.<br /><br />Especifica el modelo de memoria utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para asignar memoria. No acepta valores NULL.<br /><br />**CONVENTIONAL**  =  Convencional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el modelo de memoria convencional para asignar memoria. Este es el modelo de memoria de SQL predeterminado cuando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio no tiene privilegios de bloqueo de páginas en memoria durante el inicio.<br />**LOCK_PAGES**  =  LOCK_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está utilizando bloquear páginas en la memoria para asignar memoria. Este es el administrador de memoria de SQL predeterminado cuando SQL Server cuenta de servicio posee el privilegio bloquear páginas en memoria durante SQL Server Inicio.<br /> **LARGE_PAGES**  =  LARGE_PAGES [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza páginas grandes en memoria para asignar memoria. SQL Server utiliza el asignador de páginas grandes para asignar memoria solo con Enterprise Edition cuando SQL Server cuenta de servicio posee el privilegio bloquear páginas en memoria durante el inicio del servidor y cuando la marca de seguimiento 834 está activada.|
-|**pdw_node_id**|**int**|**Se aplica a:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
 |**socket_count** |**int** | **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores<br /><br />Especifica el número de sockets de procesador disponibles en el sistema. |  
 |**cores_per_socket** |**int** | **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores<br /><br />Especifica el número de procesadores por socket disponibles en el sistema. |  
 |**numa_node_count** |**int** | **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores<br /><br />Especifica el número de nodos Numa disponibles en el sistema. Esta columna incluye los nodos Numa físicos y los nodos Numa de software. |  
@@ -83,7 +84,7 @@ ms.locfileid: "87928706"
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

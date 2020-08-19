@@ -1,4 +1,5 @@
 ---
+description: xp_sqlmaint (Transact-SQL)
 title: xp_sqlmaint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08db9ea2487f51267e7c1f1e4bac4fd807b59fcd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cfe66be84a9f631422c624eaf65152569d0405bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419189"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ xp_sqlmaint 'switch_string'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  Ninguno. Devuelve un error si se produce un error en la utilidad **SQLMAINT** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si un usuario que ha iniciado sesión con SQL Server autenticación llama a este procedimiento, los modificadores **-U "***login_id***"** y **-P "***contraseña***"** se anteponen a *switch_string* antes de la ejecución. Si el usuario ha iniciado sesión con la autenticación de Windows, *switch_string* se pasa sin cambiar a **SQLMAINT**.  
   
 ## <a name="permissions"></a>Permisos  

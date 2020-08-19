@@ -1,4 +1,5 @@
 ---
+description: syspolicy_policies (Transact-SQL)
 title: syspolicy_policies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 49ef90e030c2899e49adcb69e8765a57f623ace7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e56ab498d2502bcb7130ab2406a390d8bbd1055a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419809"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85900581"
 |policy_id|**int**|Identificador de la directiva.|  
 |name|**sysname**|Nombre de la directiva.|  
 |condition_id|**int**|Identificador de la condición exigida o probada por esta directiva.|  
-|root_condition_id|**int**|Solo para uso interno.|  
+|root_condition_id|**int**|Sólo para uso interno.|  
 |date_created|**datetime**|Fecha y hora cuando se creó la directiva.|  
 |execution_mode|**int**|Modo de evaluación para la directiva. Los valores posibles son:<br /><br /> 0 = A petición<br /><br /> Este modo evalúa la directiva cuando lo especifica el usuario directamente.<br /><br /> 1 = Al cambiar: impedir<br /><br /> Este modo automatizado utiliza desencadenadores DDL para evitar infracciones de las directivas.<br /><br /> 2 = Al cambiar: solo registrar<br /><br /> Este modo automatizado utiliza la notificación de eventos para evaluar una directiva cuando se produce un cambio relevante y registra las infracciones de la directiva.<br /><br /> 4 = Al programar<br /><br /> Este modo automatizado utiliza un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para evaluar una directiva periódicamente. El modo registra las infracciones de la directiva.<br /><br /> Nota: el valor 3 no es un valor posible.|  
 |policy_category|**int**|Identificador de la categoría de directivas de administración basada en directivas al que esta directiva pertenece. Es NULL si es el grupo de directivas predeterminado.|  
@@ -49,7 +50,7 @@ ms.locfileid: "85900581"
 |modified_by|**sysname**|Inicio de sesión que modificó la directiva por última vez. Es NULL si nunca se produjo una modificación.|  
 |date_modified|**datetime**|Fecha y hora cuando se creó la directiva. Es NULL si nunca se produjo una modificación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando solucione problemas de la administración basada en directivas, consulte la vista [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md) para determinar si la Directiva está habilitada. Esta vista también muestra quién creó la directiva o la cambió en último lugar.  
   
 ## <a name="permissions"></a>Permisos  

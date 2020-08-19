@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_backup_tapes (Transact-SQL)
 title: Sys. dm_io_backup_tapes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f20a55b0203486abd8fd67657ce91ccfc16ce74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13c44e5a65f351661d2d3b642beb7e08fe0604c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419709"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85898811"
 |**mount_request_time**|**datetime**|Hora a la que se solicitó el montaje. Es NULL si no hay ningún montaje pendiente (**status! = 2**). Acepta valores NULL.|  
 |**mount_expiration_time**|**datetime**|Hora a la que expirará la solicitud de montaje (tiempo de espera). Es NULL si no hay ningún montaje pendiente (**status! = 2**). Acepta valores NULL.|  
 |**database_name**|**nvarchar(256)**|Base de datos para la que se va a realizar una copia de seguridad en este dispositivo. Acepta valores NULL.|  
-|**identificador**|**int**|Id. de sesión. Identifica el usuario de la cinta. Acepta valores NULL.|  
+|**spid**|**int**|Id. de sesión. Identifica el usuario de la cinta. Acepta valores NULL.|  
 |**command**|**int**|Comando que realiza la copia de seguridad. Acepta valores NULL.|  
 |**command_desc**|**nvarchar(120)**|Descripción del comando. Acepta valores NULL.|  
 |**media_family_id**|**int**|Índice de la familia de medios (1...* n*), *n* es el número de familias de medios del conjunto de medios. Acepta valores NULL.|  

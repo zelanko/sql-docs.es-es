@@ -1,4 +1,5 @@
 ---
+description: Funciones de copia de seguridad administradas (Transact-SQL)
 title: Funciones de copia de seguridad administradas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,16 +16,17 @@ helpviewer_keywords:
 ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2130d6c9f42590b730d17a5c64de3cf9ee013d9a
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 3baaea338cc925c03c1bccc4cc0dcdbebc62fc2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419489"
 ---
 # <a name="managed-backup-functions-transact-sql"></a>Funciones de copia de seguridad administradas (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona las siguientes funciones para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona las siguientes funciones para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   
 ## <a name="in-this-section"></a>En esta sección  
  [managed_backup.fn_backup_db_config &#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql.md)  

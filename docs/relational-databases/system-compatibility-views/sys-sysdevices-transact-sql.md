@@ -1,4 +1,5 @@
 ---
+description: sys.sysdevices (Transact-SQL)
 title: Dispositivos sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56196f6a9e4ce1929bd7fd9b65a9853d3794da4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6bcc481e595dc2c061d736a6bee12da6d918b7e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419799"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +40,8 @@ ms.locfileid: "85883754"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nombre lógico del archivo de copia de seguridad o de base de datos.|  
 |**size**|**int**|Tamaño del archivo en páginas de 2 KB.|  
-|**low**|**int**|Se mantiene únicamente por compatibilidad con versiones anteriores.|  
-|**high**|**int**|Se mantiene únicamente por compatibilidad con versiones anteriores.|  
+|**habilita**|**int**|Se mantiene únicamente por compatibilidad con versiones anteriores.|  
+|**calidad**|**int**|Se mantiene únicamente por compatibilidad con versiones anteriores.|  
 |**status**|**smallint**|Mapa de bits que indica el tipo de dispositivo:<br /><br /> 1 = Disco predeterminado<br /><br /> 2 = Disco físico<br /><br /> 4 = Disco lógico<br /><br /> 8 = Omitir encabezado<br /><br /> 16 = Archivo de copia de seguridad<br /><br /> 32 = Escrituras en serie<br /><br /> 4096 = Solo lectura|  
 |**cntrltype**|**smallint**|Tipo de controlador:<br /><br /> 0 = Archivo de base de datos que no está en CD-ROM<br /><br /> 2 = Archivo de copia de seguridad en disco<br /><br /> 3 - 4 = Archivo de copia de seguridad en disquete<br /><br /> 5 = Archivo de copia de seguridad en cinta<br /><br /> 6 = Archivo de canalización con nombre|  
 |**phyname**|**nvarchar(260)**|Nombre del archivo físico.|  

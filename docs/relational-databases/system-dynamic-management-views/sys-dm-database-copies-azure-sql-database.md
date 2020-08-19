@@ -1,4 +1,5 @@
 ---
+description: sys.dm_database_copies (Azure SQL Database)
 title: Sys. dm_database_copies (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d4371de1240e64aa5465f6f2d58f5e2eef029acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4dd3890969a1820bd38712d9533c68f6fd9d0d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419779"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -58,7 +59,7 @@ Para devolver información sobre los vínculos de replicación geográfica, use 
 ## <a name="permissions"></a>Permisos  
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede usar la vista **Sys. dm_database_copies** en la base de datos **maestra** del servidor de origen o de destino [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Cuando la copia de la base de datos se completa correctamente y la nueva base de datos se vuelve a conectar, la fila de la vista **Sys. dm_database_copies** se quita automáticamente.  
   
   

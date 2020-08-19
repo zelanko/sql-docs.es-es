@@ -1,4 +1,5 @@
 ---
+description: dbo.sysalerts (Transact-SQL)
 title: Alertas de dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6113a7d05c7128df4b7691bd7f72d09ba8f0548b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509e401f70aadc8f4dc2eb625fb5b9cf1dcda5d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419249"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +37,11 @@ ms.locfileid: "85890533"
 |**id**|**int**|Id. de la alerta.|  
 |**name**|**sysname**|Nombre de la alerta.|  
 |**event_source**|**nvarchar(100**|Origen del evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**event_category_id**|**int**|Reservado para uso futuro.|  
-|**event_id**|**int**|Reservado para uso futuro.|  
+|**event_category_id**|**int**|Reservado para un uso futuro.|  
+|**event_id**|**int**|Reservado para un uso futuro.|  
 |**message_id**|**int**|IDENTIFICADOR de mensaje definido por el usuario o referencia al mensaje **sysmessages** que desencadena esta alerta.|  
 |**severity**|**int**|Gravedad que desencadena esta alerta.|  
-|**activó**|**tinyint**|Estado de la alerta:<br /><br /> **0** = deshabilitado.<br /><br /> **1** = habilitada.|  
+|**enabled**|**tinyint**|Estado de la alerta:<br /><br /> **0** = deshabilitado.<br /><br /> **1** = habilitada.|  
 |**delay_between_responses**|**int**|Intervalo de espera, en segundos, entre las notificaciones de esta alerta.|  
 |**last_occurrence_date**|**int**|Última repetición (fecha) de la alerta.|  
 |**last_occurrence_time**|**int**|Última repeticiónn (hora) de la alerta.|  
@@ -59,7 +60,7 @@ ms.locfileid: "85890533"
 |**performance_condition**|**nvarchar(512)**|Reservado.|  
 |**category_id**|**int**|Reservado.|  
   
- ## <a name="remarks"></a>Comentarios
+ ## <a name="remarks"></a>Observaciones
 
 En la tabla siguiente se muestran los valores de la máscara de include_event_description. dbo.sysalertas devuelve el valor decimal. 
 

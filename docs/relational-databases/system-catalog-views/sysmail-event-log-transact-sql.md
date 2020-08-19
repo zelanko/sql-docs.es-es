@@ -1,4 +1,5 @@
 ---
+description: sysmail_event_log (Transact-SQL)
 title: sysmail_event_log (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68ef84e8efb3606042afbcf8579cf285a2077ab7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f104ab706e269fb7e14c9783777384aee9db090
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419829"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85901044"
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila. En el caso de los mensajes de correo electrónico, se trata del usuario que envió el mensaje. En el caso de los mensajes generados por el programa externo del Correo electrónico de base de datos, se trata del contexto de usuario del programa.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para solucionar problemas de Correo electrónico de base de datos, busque en la vista de **sysmail_event_log** los eventos relacionados con errores de correo electrónico. Algunos mensajes, como los de error del programa externo del Correo electrónico de base de datos, no están asociados con mensajes de correo electrónico determinados. Para buscar errores relacionados con mensajes de correo electrónico específicos, busque el **mailitem_id** del mensaje de error en la vista de **sysmail_faileditems** y, a continuación, busque en el **sysmail_event_log** los mensajes relacionados con ese **mailitem_id**. Cuando se devuelve un error de **sp_send_dbmail**, el correo electrónico no se envía al sistema correo electrónico de base de datos y el error no se muestra en esta vista.  
   
  Si se producen errores en los intentos de entrega de cuentas individuales, el Correo electrónico de base de datos conservará los mensajes de error durante los reintentos hasta que la entrega del elemento de correo se realice correctamente o provoque un error. En caso de éxito final, todos los errores acumulados se registran como advertencias independientes, incluido el **ACCOUNT_ID**. Por tanto, puede que aparezcan advertencias aunque se haya enviado el mensaje. En caso de que se produzca un error de entrega, todas las advertencias anteriores se registran como un mensaje de error sin un **ACCOUNT_ID**, ya que se ha producido un error en todas las cuentas.  
@@ -50,7 +51,7 @@ ms.locfileid: "85901044"
  Debe ser miembro del rol fijo de servidor **sysadmin** o del rol de base de datos **DatabaseMailUserRole** para tener acceso a esta vista. Los miembros de **DatabaseMailUserRole** que no son miembros del rol **sysadmin** solo pueden ver los eventos de los mensajes de correo electrónico que envían.  
   
 ## <a name="see-also"></a>Consulte también  
- [sysmail_faileditems &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
+ [sysmail_faileditems &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   
  [Programa externo Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-external-program.md)  
   
   

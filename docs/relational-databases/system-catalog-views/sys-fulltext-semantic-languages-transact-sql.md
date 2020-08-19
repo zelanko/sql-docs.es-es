@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_semantic_languages (Transact-SQL)
 title: Sys. fulltext_semantic_languages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: aad472489192516d367185572d1c9ac67eb78154
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 62b8f1fc18fd5c1253451a6a35eb13fd5e2b2105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420099"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,10 +34,10 @@ ms.locfileid: "87248783"
   
  Esta vista de catálogo es similar a [Sys. fulltext_languages &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
     
-|Nombre de la columna|Tipo|Description|  
+|Nombre de la columna|Tipo|Descripción|  
 |-|-|-|   
 |lcid|int|Identificador de configuración regional (LCID) de Microsoft Windows para el idioma.|  
-|name|sysname|Es el valor del alias en [sys.syslenguajes &#40;&#41;de Transact-SQL](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) que corresponde al valor de **LCID**o la representación de cadena del LCID numérico.|  
+|name|sysname|Es el valor del alias en [sys.syslenguajes &#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) que corresponde al valor de **LCID**o la representación de cadena del LCID numérico.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, vea [Instalar y configurar la búsqueda semántica](../../relational-databases/search/install-and-configure-semantic-search.md).  

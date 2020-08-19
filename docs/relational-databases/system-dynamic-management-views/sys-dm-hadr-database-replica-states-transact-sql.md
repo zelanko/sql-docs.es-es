@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_database_replica_states (Transact-SQL)
 title: Sys. dm_hadr_database_replica_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2018
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbfd5f0fc29efd4d2f6a02d680c9a6df34c5392b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b78a47051a175c53ea4d0c34e80baeda0c72708
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419749"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +74,7 @@ ms.locfileid: "85663024"
 |**low_water_mark_for_ghosts**|**bigint**|Un número que aumenta regularmente para la base de datos que indica una marca de límite inferior utilizada por la limpieza de registros fantasma en la base de datos principal. Si este número no aumenta con el tiempo, implica que no puede producirse la limpieza de registros fantasma. Para decidir qué filas fantasma se han de limpiar, la réplica principal utiliza el valor mínimo de esta columna para esta base de datos en todas las réplicas de disponibilidad (incluida la réplica principal).|  
 |**secondary_lag_seconds**|**bigint**|El número de segundos que la réplica secundaria está detrás de la réplica principal durante la sincronización.<br /><br />**Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.|  
   
-##  <a name="understanding-the-lsn-column-values"></a><a name="LSNcolumns"></a>Descripción de los valores de columna LSN  
+##  <a name="understanding-the-lsn-column-values"></a><a name="LSNcolumns"></a> Descripción de los valores de columna LSN  
  Los valores de las columnas **end_of_log_lsn**, **last_hardened_lsn**, **last_received_lsn**, **last_sent_lsn**, **recovery_lsn**y **truncation_lsn** no son números de secuencia de registro (LSN) reales. En su lugar, cada uno de estos valores refleja un identificador de bloque de registro rellenado con ceros.  
   
  **end_of_log_lsn**, **last_hardened_lsn**y **recovery_lsn** son Flush LSN. Por ejemplo, **last_hardened_lsn** indica el inicio del bloque siguiente después de los bloques que ya están en el disco.  Por lo tanto, cualquier LSN < el valor de **last_hardened_lsn** está en el disco.  El LSN que se >= en este valor no se vacía.  
@@ -86,7 +87,7 @@ ms.locfileid: "85663024"
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="see-also"></a>Consulte también  
- [Always On grupos de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

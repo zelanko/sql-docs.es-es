@@ -1,4 +1,5 @@
 ---
+description: COLUMNS (Transact-SQL)
 title: COLUMNAS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,11 +20,12 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 940c3210f25430550c11e0ad836d536427d2936a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68cda5769a53979223a1e2fa26a370a55b8af9bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419449"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +61,7 @@ ms.locfileid: "86012035"
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna es el nombre del tipo de datos definido por el usuario. En caso contrario se devuelve NULL.|  
   
 ## <a name="remarks"></a>Observaciones  
- **ORDINAL_POSITION** columna del **INFORMATION_SCHEMA. **La vista de columnas no es compatible con el patrón de bits de las columnas devueltas por la función COLUMNS_UPDATED. Para obtener un patrón de bits que sea compatible con COLUMNS_UPDATED, debe hacer referencia a la propiedad **ColumnID** de la función del sistema COLUMNPROPERTY al consultar el **INFORMATION_SCHEMA. **Vista de columnas. Por ejemplo:  
+ **ORDINAL_POSITION** columna del **INFORMATION_SCHEMA. **La vista de columnas no es compatible con el patrón de bits de las columnas devueltas por la función COLUMNS_UPDATED. Para obtener un patrón de bits que sea compatible con COLUMNS_UPDATED, debe hacer referencia a la propiedad **ColumnID** de la función del sistema COLUMNPROPERTY al consultar el **INFORMATION_SCHEMA. ** Vista de columnas. Por ejemplo:  
   
 ```  
 USE AdventureWorks2012;  
@@ -74,9 +76,9 @@ GO
  [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Vistas de esquema de información &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sysde juegos de caracteres &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
- [Sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [Sys. Types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
  [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)  

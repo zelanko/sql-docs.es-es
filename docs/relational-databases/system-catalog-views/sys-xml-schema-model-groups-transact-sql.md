@@ -1,4 +1,5 @@
 ---
+description: sys.xml_schema_model_groups (Transact-SQL)
 title: sys.xml_schema_model_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9b6b267fe4adcee5346659ede42319bee8dbafd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 52ed63e272d03263ea6148f85a8b91ec73ec370e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419909"
 ---
 # <a name="sysxml_schema_model_groups-transact-sql"></a>sys.xml_schema_model_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

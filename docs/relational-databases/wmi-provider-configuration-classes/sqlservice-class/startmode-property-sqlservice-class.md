@@ -1,4 +1,5 @@
 ---
+description: Propiedad StartMode (clase SqlService)
 title: Propiedad StartMode (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c6aab858d98baa0404e4ef5f33adc16ece687d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 608214cf9d4eca2601c0f8bee7b82570ec936ea6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418761"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Propiedad StartMode (clase SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ object.StartMode [= value]
  Disabled  
  Valor = 4. El servicio no se puede iniciar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

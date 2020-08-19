@@ -1,4 +1,5 @@
 ---
+description: syscollector_collection_sets (Transact-SQL)
 title: syscollector_collection_sets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b65cbb9596ff25e334609e978fdf61a89be41db4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 902a8f7513bf30194ec40d7d27714e98f47b2cac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419889"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85896787"
 ## <a name="permissions"></a>Permisos  
  Requiere SELECT para dc_operator, dc_proxy.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El recopilador de datos API solamente permite cambiar o eliminar los conjuntos de recopilación creados por el usuario. Los conjuntos de recopilación que se proporcionan con el sistema no pueden modificarse ni eliminarse. No obstante, es posible habilitar o deshabilitar un conjunto de recopilación del sistema y cambiar su configuración.  
   
 ## <a name="see-also"></a>Consulte también  

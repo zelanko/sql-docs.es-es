@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_get_health_status (Transact-SQL)
 title: managed_backup. fn_get_health_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419559"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,12 +44,12 @@ ms.locfileid: "86053441"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a> Argumentos  
  [@begin_time]  
  El inicio del período de tiempo desde el que se calcula el recuento agregado de los errores.  El @begin_time parámetro es DateTime. El valor predeterminado es NULL. Si el valor es NULL, la función procesará los eventos notificados al menos 30 minutos antes de la hora actual.  
   
  [ @end_time]  
- El fin del período de tiempo desde el que se calcula el recuento agregado de los errores. El @end_time parámetro es de tipo DateTime y su valor predeterminado es NULL. Si el valor es NULL, la función procesará los eventos extendidos al menos hasta el momento actual.  
+ El fin del período de tiempo desde el que se calcula el recuento agregado de los errores. El @end_time  parámetro es de tipo DateTime y su valor predeterminado es NULL. Si el valor es NULL, la función procesará los eventos extendidos al menos hasta el momento actual.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
@@ -61,7 +63,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|int|Número de veces que el agente de copia de seguridad examina todas las bases de datos configuradas con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |number_of_retention_loops|int|El número de veces que las bases de datos se examinan para evaluar el período de retención establecido.|  
   
-## <a name="best-practices"></a>Prácticas recomendadas  
+## <a name="best-practices"></a>Procedimientos recomendados  
  Estos recuentos agregados se pueden utilizar para supervisar el estado del sistema. Por ejemplo, si la columna number_ of_retention_loops es 0 en 30 minutos, es posible que la administración de la retención esté tardando mucho o incluso que no funcione correctamente. Las columnas de errores que no son cero pueden indicar que hay problemas y los registros de Eventos extendidos se deben comprobar para conocerlos. Como alternativa, use el procedimiento almacenado **managed_backup. sp_get_backup_diagnostics** para obtener una lista de eventos extendidos para buscar los detalles del error.  
   
 ## <a name="security"></a>Seguridad  

@@ -1,4 +1,5 @@
 ---
+description: Selección avanzada de objetos (AccessToSQL)
 title: Selección avanzada de objetos (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 42042451cb0b2197dd54270d4eca1bb990eb233d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0b5dfe862f48b2669d0535066fe36e4a892c5dfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418591"
 ---
 # <a name="advanced-object-selection--accesstosql"></a>Selección avanzada de objetos (AccessToSQL)
 El cuadro de diálogo **sección de objeto avanzado** permite filtrar los objetos de base de datos mediante cadenas y subcadenas en el nombre del objeto y, a continuación, seleccionar o anular la selección de esos objetos. SSMA realiza operaciones de conversión y migración en objetos seleccionados.  

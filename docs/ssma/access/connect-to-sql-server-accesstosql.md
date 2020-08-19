@@ -1,4 +1,5 @@
 ---
+description: Conexión a SQL Server (AccessToSQL)
 title: Conexión a SQL Server (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e35c73855e88c05a5c98743371ba5de88a1f86ee
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 06a305d705e404a2045525e584faddf6b9530cb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418601"
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>Conexión a SQL Server (AccessToSQL)
 Utilice el cuadro de diálogo **conectar con SQL Server** para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que desea migrar. Para tener acceso al cuadro de diálogo **conectar con SQL Server** , en el menú **archivo** , haga clic en **conectar a SQL Server**.  

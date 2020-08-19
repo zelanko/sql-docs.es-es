@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_profile_sp (Transact-SQL)
 title: sysmail_help_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 372f2309176b9fcf9cbb36fbcaf89d710393bb44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419299"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id`Identificador de perfil para el que se va a devolver información. *profile_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @profile_id = ] profile_id` Identificador de perfil para el que se va a devolver información. *profile_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @profile_name = ] 'profile_name'`Nombre del perfil para el que se va a devolver información. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @profile_name = ] 'profile_name'` Nombre del perfil para el que se va a devolver información. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -100,6 +101,6 @@ profile_id  name                          description
   
 ## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

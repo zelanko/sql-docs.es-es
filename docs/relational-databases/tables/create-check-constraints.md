@@ -1,4 +1,5 @@
 ---
+description: Crear restricciones CHECK
 title: Creación de restricciones CHECK | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -17,12 +18,12 @@ ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3c631e4c733c87662ab1a582f1388913f0c2b3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 177caf959cd9f957525dd50a0b63a0dc2b304115
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419049"
 ---
 # <a name="create-check-constraints"></a>Crear restricciones CHECK
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "85753833"
   
 1.  En el **Explorador de objetos**, expanda la tabla a la que quiera agregar una restricción CHECK, haga clic con el botón derecho en **Restricciones** y haga clic en **Nueva restricción**.  
   
-2.  En el cuadro de diálogo **Comprobar restricciones**, haga clic en el campo **Expresión** y luego en los puntos suspensivos **(...)** .  
+2.  En el cuadro de diálogo **Comprobar restricciones**, haga clic en el campo **Expresión** y luego en los puntos suspensivos **(...)**.  
   
 3.  En el cuadro de diálogo **Expresión de restricción CHECK** , escriba expresiones SQL para la restricción CHECK. Por ejemplo, para limitar las entradas de la columna `SellEndDate` de la tabla `Product` a un valor que sea mayor o igual que la fecha de la columna `SellStartDate` o que sea un valor NULL, escriba:  
   
@@ -71,13 +72,13 @@ ms.locfileid: "85753833"
     > [!NOTE]  
     >  Asegúrese de que escribe los valores de restricción no numéricos entre comillas sencillas (').  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
 5.  En la categoría **Identidad** , puede cambiar el nombre de la restricción CHECK y agregar una descripción (propiedad extendida) para la restricción.  
   
 6.  En la categoría **Diseñador de tablas** , puede definir cuándo debe exigirse la restricción.  
   
-    |**Para**:|**Seleccione Sí en los campos siguientes:**|  
+    |**A:**|**Seleccione Sí en los campos siguientes:**|  
     |-------------|---------------------------------------------|  
     |Pruebe la restricción en los datos existentes antes de que se creara la restricción|**Comprobar los datos existentes al crear o habilitar**|  
     |Exigir la restricción siempre que se produzca una operación de replicación en esta tabla|**Exigir para replicación**|  

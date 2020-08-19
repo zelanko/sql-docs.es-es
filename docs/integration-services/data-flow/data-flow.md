@@ -1,4 +1,5 @@
 ---
+description: Data Flow
 title: Flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 757015f38213730973ec67c014f5b17d00fbce0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430967"
 ---
 # <a name="data-flow"></a>Data Flow
 
@@ -94,7 +95,7 @@ ms.locfileid: "86916841"
   
  Los siguientes orígenes tienen propiedades que se pueden actualizar a través de expresiones de propiedad:  
   
--   [Origen ADO NET](../../integration-services/data-flow/ado-net-source.md)  
+-   [Origen de ADO NET](../../integration-services/data-flow/ado-net-source.md)  
   
 -   [Origen XML](../../integration-services/data-flow/xml-source.md)  
   
@@ -122,9 +123,9 @@ ms.locfileid: "86916841"
   
 -   [Transformación Columna derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Transformación Agrupación aproximada](../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)  
+-   [Agrupación aproximada, transformación](../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)  
   
--   [Transformación Búsqueda aproximada](../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
+-   [Búsqueda aproximada, transformación](../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
   
 -   [Transformación Comando de OLE DB](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)  
   

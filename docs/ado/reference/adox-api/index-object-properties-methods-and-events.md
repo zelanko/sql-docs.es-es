@@ -1,4 +1,5 @@
 ---
+description: Propiedades, métodos y eventos del objeto Index
 title: Propiedades, métodos y eventos del objeto index | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b581a3c953d666d771ccdc80d06cdcc951cd60bd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 060c6bb1ec99ba2a8fa758d320cb57780601cf58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439937"
 ---
 # <a name="index-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Index
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -27,7 +28,7 @@ ms.locfileid: "82762736"
   
  [IndexNulls (propiedad)](../../../ado/reference/adox-api/indexnulls-property-adox.md)  
   
- [Propiedad Name](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name (propiedad)](../../../ado/reference/adox-api/name-property-adox.md)  
   
  [Propiedad PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)  
   

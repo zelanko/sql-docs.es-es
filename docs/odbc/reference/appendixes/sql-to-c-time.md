@@ -1,4 +1,5 @@
 ---
+description: 'SQL a C: Time'
 title: 'SQL a C: tiempo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ebd146abf650861099a40bf91b2641df768b343d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0516cc970238e9535c340c14282be1640ba78513
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429557"
 ---
 # <a name="sql-to-c-time"></a>SQL a C: Time
 El identificador para el tipo de datos SQL de tiempo ODBC es:  
@@ -30,8 +31,8 @@ El identificador para el tipo de datos SQL de tiempo ODBC es:
   
 |Identificador de tipo de C|Prueba|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > longitud de bytes de caracteres<br /><br /> *9* <= *BufferLength* <= longitud de bytes de caracteres<br /><br /> *BufferLength* < 9|data<br /><br /> Datos truncados [a]<br /><br /> No definido|Longitud de los datos en bytes<br /><br /> Longitud de los datos en bytes<br /><br /> No definido|N/D<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* longitud de caracteres de ><br /><br /> *9* <= *BufferLength* <= longitud de caracteres<br /><br /> *BufferLength* < 9|data<br /><br /> Datos truncados [a]<br /><br /> No definido|Longitud de los datos en caracteres<br /><br /> Longitud de los datos en caracteres<br /><br /> No definido|N/D<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_CHAR|*BufferLength* > longitud de bytes de caracteres<br /><br /> *9*  <=  *BufferLength* <= longitud de bytes de caracteres<br /><br /> *BufferLength* < 9|data<br /><br /> Datos truncados [a]<br /><br /> No definido|Longitud de los datos en bytes<br /><br /> Longitud de los datos en bytes<br /><br /> No definido|N/D<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* longitud de caracteres de ><br /><br /> *9*  <=  *BufferLength* <= longitud de caracteres<br /><br /> *BufferLength* < 9|data<br /><br /> Datos truncados [a]<br /><br /> No definido|Longitud de los datos en caracteres<br /><br /> Longitud de los datos en caracteres<br /><br /> No definido|N/D<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_BINARY|Longitud de bytes de los datos <= *BufferLength*<br /><br /> Longitud de bytes de los datos > *BufferLength*|data<br /><br /> No definido|Longitud de los datos en bytes<br /><br /> No definido|N/D<br /><br /> 22003|  
 |SQL_C_TYPE_TIME|Ninguno [b]|data|6 [d]|N/D|  
 |SQL_C_TYPE_TIMESTAMP|Ninguno [b]|Datos [c]|16 [d]|N/D|  

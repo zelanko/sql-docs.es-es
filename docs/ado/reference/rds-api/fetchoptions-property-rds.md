@@ -1,4 +1,5 @@
 ---
+description: Propiedad FetchOptions (RDS)
 title: Propiedad FetchOptions (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448dbb4d6c669f136c1d26b3730d16af2f0e8e17
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2d00dd737f6b775d9d46bfb6af96a5ce76aa3a8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439027"
 ---
 # <a name="fetchoptions-property-rds"></a>Propiedad FetchOptions (RDS)
 Indica el tipo de captura asincrónica.  
@@ -38,7 +39,7 @@ Indica el tipo de captura asincrónica.
 > [!NOTE]
 >  Cada archivo ejecutable del lado cliente que utiliza estas constantes debe proporcionar declaraciones para ellas. Puede cortar y pegar las declaraciones de constantes que desee del archivo Adcvbs. Inc, que se encuentra en la carpeta de instalación predeterminada de la biblioteca RDS.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En una aplicación Web, normalmente querrá usar **adcFetchAsync** (el valor predeterminado), ya que proporciona un mejor rendimiento. En una aplicación cliente compilada, normalmente querrá usar **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Se aplica a  

@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad de controlador (VC ++)
 title: Ejemplo de propiedad de controlador (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16e94fad7c5dfc85fcde7d835363e800ab5d3f46
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a570727ef9bdee2ac1411a1594dae518dd4fe36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438967"
 ---
 # <a name="handler-property-example-vc"></a>Ejemplo de la propiedad de controlador (VC ++)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82751976"
   
  En este ejemplo se muestra la propiedad de [controlador](../../../ado/reference/rds-api/handler-property-rds.md) de objetos [DataControl de RDS](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Consulte [Personalización de factoría](../../../ado/guide/remote-data-service/datafactory-customization.md) de datos para obtener más detalles).  
   
- Asuma las siguientes secciones en el archivo de parámetros, MSDFMAP. ini, que se encuentra en el servidor:  
+ Asuma las siguientes secciones del archivo de parámetros, Msdfmap.ini, que se encuentran en el servidor:  
   
 ```  
 [connect AuthorDataBase]  
@@ -37,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- El código tiene un aspecto similar al siguiente. El comando que se asigna a la propiedad [SQL](../../../ado/reference/rds-api/sql-property.md) coincidirá con el identificador ***AuthorById*** y recuperará una fila para el autor Michael O'Leary. Aunque la propiedad [Connect](../../../ado/reference/rds-api/connect-property-rds.md) del código especifica el origen de datos Northwind, el origen de datos se sobrescribirá en la sección de *conexión* de MSDFMAP. ini. La propiedad [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) del objeto **DataControl** se asigna a un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) desconectado únicamente como una comodidad de codificación.  
+ El código tiene un aspecto similar al siguiente. El comando que se asigna a la propiedad [SQL](../../../ado/reference/rds-api/sql-property.md) coincidirá con el identificador ***AuthorById*** y recuperará una fila para el autor Michael O'Leary. Aunque la propiedad [Connect](../../../ado/reference/rds-api/connect-property-rds.md) del código especifica el origen de datos Northwind, este origen de datos se sobrescribirá en la sección Msdfmap.ini *Connect* . La propiedad [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) del objeto **DataControl** se asigna a un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) desconectado únicamente como una comodidad de codificación.  
   
 ```  
 // BeginHandlerCpp.cpp  

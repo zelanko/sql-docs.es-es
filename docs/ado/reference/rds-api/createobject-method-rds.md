@@ -1,4 +1,5 @@
 ---
+description: CreateObject (método) (RDS)
 title: CreateObject (método) (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439207"
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea el proxy para el objeto comercial de destino y devuelve un puntero a él. El proxy empaqueta y calcula las referencias de los datos en el código auxiliar del lado del servidor para las comunicaciones con el objeto comercial para enviar solicitudes y datos a través de Internet. En el caso de los objetos de componente en proceso, no se utiliza ningún proxy, solo se proporciona un puntero al objeto.  
@@ -37,13 +38,13 @@ Crea el proxy para el objeto comercial de destino y devuelve un puntero a él. E
 |En proceso|Set Object = DataSpace. CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>Parámetros  
- *Objeto*  
+ *Object*  
  Variable de objeto que se evalúa como un objeto que es el tipo especificado en *ProgID*.  
   
  *DataSpace*  
  Variable de objeto que representa un objeto [RDS. Objeto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) que se usa para crear una instancia del nuevo objeto.  
   
- *Programa*  
+ *ProgID*  
  Valor de **cadena** que contiene el identificador de programación que especifica un objeto comercial de servidor que implementa las reglas de negocios de la aplicación.  
   
  *awebsrvr* o *ComputerName*  

@@ -1,4 +1,5 @@
 ---
+description: Propiedad FilterColumn (RDS)
 title: FilterColumn (propiedad, RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53b53bcadc90c8c27027f593014ffab204dc78fa
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1d86d772d14150b09992433648a24994f14fc9df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439007"
 ---
 # <a name="filtercolumn-property-rds"></a>Propiedad FilterColumn (RDS)
 Indica la columna en la que se van a evaluar los criterios de filtro.  
@@ -40,7 +41,7 @@ DataControl.FilterColumn = String
  *String*  
  Valor de **cadena** que especifica la columna en la que se van a evaluar los criterios de filtro. Los criterios de filtro se especifican en la propiedad [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las propiedades [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)y **FilterColumn** proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basados en criterios de búsqueda, mientras que el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método [RESET](../../../ado/reference/rds-api/reset-method-rds.md) ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros**actualizable.  
   
 ## <a name="applies-to"></a>Se aplica a  

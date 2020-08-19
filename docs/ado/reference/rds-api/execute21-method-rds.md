@@ -1,4 +1,5 @@
 ---
+description: Método Execute21 (RDS)
 title: Método Execute21 (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7f006d0a833b8c370e6d80045a873c4ca2b16b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 412401ba2b1d5a676b5f5172c59c6e4ffc5cce7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439057"
 ---
 # <a name="execute21-method-rds"></a>Método Execute21 (RDS)
 Ejecuta la solicitud y crea un conjunto de registros ADO para su uso en ADO 2,1.  
@@ -43,7 +44,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *Cadenas*  
  Comando del lenguaje de comandos compatible con el proveedor de OLE DB identificado en la cadena de conexión. En el caso de los proveedores basados en SQL, puede que contenga una [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción de comando, pero para los proveedores que no son de SQL (por ejemplo, MSDataShape), es posible que no sea una [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción de consulta.  
   
- Además, si se usa un controlador (y se recomienda encarecidamente que se use un controlador), el controlador puede modificar o reemplazar el valor especificado aquí. Por ejemplo, el controlador suele reemplazar *QueryString* por una cadena de consulta de su archivo. ini. De forma predeterminada, se utiliza el archivo MSDFMAP. ini.  
+ Además, si se usa un controlador (y se recomienda encarecidamente que se use un controlador), el controlador puede modificar o reemplazar el valor especificado aquí. Por ejemplo, el controlador suele reemplazar *QueryString* por una cadena de consulta de su archivo. ini. De forma predeterminada, se usa el archivo de Msdfmap.ini.  
   
  *lMarshalOptions*  
  Se usa para establecer las opciones de serialización en el conjunto de filas o el conjunto de registros que se va a devolver.  
@@ -69,8 +70,8 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Variante que contiene una matriz segura de definiciones de parámetros. Si se ha especificado la opción *GetInfo* en *lExecuteOptions*, este parámetro se utiliza para devolver las definiciones de parámetros obtenidas del proveedor de OLE DB. De lo contrario, este parámetro puede estar vacío.  
   
-## <a name="remarks"></a>Comentarios  
- El parámetro *HandlerString* puede ser null. Lo que sucede en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP. handler" indica que se debe usar el controlador proporcionado por Microsoft (MSDFMAP. dll). Una cadena de controlador de "MASDFMAP. handler, sample. ini" indica que se debe usar el controlador MSDFMAP. dll y que el argumento "sample. ini" se debe pasar al controlador. MSDFMAP. dll interpretará el argumento como una dirección para utilizar el archivo Sample. ini con el fin de comprobar las cadenas de conexión y de consulta.  
+## <a name="remarks"></a>Observaciones  
+ El parámetro *HandlerString* puede ser null. Lo que sucede en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP. handler" indica que se debe usar el controlador proporcionado por Microsoft (Msdfmap.dll). Una cadena de controlador de "MASDFMAP. handler, sample.ini" indica que se debe usar el controlador de Msdfmap.dll y que el argumento "sample.ini" se debe pasar al controlador. MSDFMAP.dll interpretará el argumento como una dirección para usar el sample.ini para comprobar las cadenas de conexión y de consulta.  
   
 > [!NOTE]
 >  El método **Execute21** es una versión del [método execute (RDS)](../../../ado/reference/rds-api/execute-method-rds.md). En el caso de que necesite usar el método **Execute** para comunicarse con ADO 2,1, se puede llamar al método **Execute21** en su lugar. Las capacidades del método **Execute** en ADO 2,5 y versiones posteriores son un superconjunto de las funciones proporcionadas para el mismo método en ADO 2,1.  

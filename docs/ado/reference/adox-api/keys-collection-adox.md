@@ -1,4 +1,5 @@
 ---
+description: Colección de claves (ADOX)
 title: Colección de claves (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a7bebc1c05ab195d3b23c5c0894d4fcce967625
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 05e36f05cd59cc099abf0b1fa1f96418ccea8bf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439817"
 ---
 # <a name="keys-collection-adox"></a>Colección de claves (ADOX)
 Contiene todos los objetos de [clave](../../../ado/reference/adox-api/key-object-adox.md) de una [tabla](../../../ado/reference/adox-api/table-object-adox.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El método [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) de una [colección Keys](../../../ado/reference/adox-api/keys-collection-adox.md) es único para ADOX. Puede:  
   
 -   Agregue una nueva clave a la colección con el método [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) .  

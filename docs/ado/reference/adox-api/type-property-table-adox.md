@@ -1,4 +1,5 @@
 ---
+description: Type (propiedad, tabla, ADOX)
 title: Type (propiedad, Table de ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73035f65699f1a8e44ca55703ce88b7bfdf2b5dc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 700be4586a1e7808113b6ff20bf5459af3cb1f81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439427"
 ---
 # <a name="type-property-table-adox"></a>Type (propiedad, tabla, ADOX)
 Indica el tipo de una tabla.  

@@ -1,4 +1,5 @@
 ---
+description: Tarea Copia de seguridad de la base de datos
 title: Tarea Copia de seguridad de la base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d10f1ceab3ddb56ae8edbd06b2226fad2646c586
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 291a9fd0e0138eeb7b304e673f404163217f9ae5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431077"
 ---
 # <a name="back-up-database-task"></a>Tarea Copia de seguridad de la base de datos
 
@@ -39,9 +40,9 @@ ms.locfileid: "86918888"
   
 |modelo de recuperación|Base de datos|Diferencial de base de datos|Registro de transacciones|Archivos o diferencial de archivos|  
 |--------------------|--------------|---------------------------|---------------------|-------------------------------|  
-|Simple|Obligatorio|Opcional|No compatible|No compatible|  
-|Completo|Obligatorio|Opcional|Obligatorio|Opcional|  
-|Registro masivo|Obligatorio|Opcional|Obligatorio|Opcional|  
+|Simple|Obligatorio|Opcionales|No compatible|No compatible|  
+|Completo|Obligatorio|Opcionales|Obligatorio|Opcionales|  
+|Registro masivo|Obligatorio|Opcionales|Obligatorio|Opcionales|  
   
  La tarea Copia de seguridad de la base de datos encapsula una instrucción BACKUP de Transact-SQL. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   

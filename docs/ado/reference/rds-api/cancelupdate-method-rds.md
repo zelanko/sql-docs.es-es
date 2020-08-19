@@ -1,4 +1,5 @@
 ---
+description: Método CancelUpdate (RDS)
 title: Método CancelUpdate (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05426b2d4fba81e70a8bae35db215bcd750d3169
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7e3f7180b812aab47f9388e25a64d9445e9b5c9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746346"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439237"
 ---
 # <a name="cancelupdate-method-rds"></a>Método CancelUpdate (RDS)
 Cancela los cambios realizados en la fila actual o nueva de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -37,7 +38,7 @@ DataControl.CancelUpdate
  *DataControl*  
  Variable de objeto que representa un objeto [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El servicio de cursor para OLE DB mantiene una copia de los valores originales y una memoria caché de cambios. Cuando se llama a **CancelUpdate**, la memoria caché de los cambios se restablece en Empty y los controles enlazados se actualizan con los datos originales.  
   
 ## <a name="applies-to"></a>Se aplica a  

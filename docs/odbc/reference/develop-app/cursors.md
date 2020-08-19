@@ -1,4 +1,5 @@
 ---
+description: Cursores (ODBC)
 title: Cursores (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b114352-3c63-4d33-9220-182ede90e4aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2457667e374587e5e91a4c758dfbe641a0b02f78
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 10dbd2517c29bcd02d1d39abe0b2caec1bf03312
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429407"
 ---
 # <a name="odbc-cursors"></a>Cursores ODBC
 Una aplicación captura datos con un *cursor*. Un cursor es diferente de un conjunto de resultados: un conjunto de resultados es el conjunto de filas que coincide con criterios de búsqueda determinados, mientras que un cursor es el software que devuelve esas filas a la aplicación. El cursor de nombre *,* tal y como se aplica a las bases de datos, probablemente se originó a partir del cursor parpadeante en un terminal de equipo. Del mismo modo que ese cursor indica la posición actual en la pantalla y dónde aparecerán las palabras escritas después, un cursor en un conjunto de resultados indica la posición actual en el conjunto de resultados y la fila que se devolverá a continuación.  

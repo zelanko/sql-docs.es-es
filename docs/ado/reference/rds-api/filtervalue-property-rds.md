@@ -1,4 +1,5 @@
 ---
+description: Propiedad FilterValue (RDS)
 title: Propiedad FilterValue (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17d4585a237b2dcd32df1508aeb85b291d4d9296
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b8e80ffc13f4c1bae1d668bb85317345288caa2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438987"
 ---
 # <a name="filtervalue-property-rds"></a>Propiedad FilterValue (RDS)
 Indica el valor con el que se van a filtrar los registros.  
@@ -40,7 +41,7 @@ DataControl.FilterValue = String
  *String*  
  Valor de **cadena** que representa un valor de datos con el que se van a filtrar los registros (por ejemplo, `'Programmer'` o `125` ).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las propiedades [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), **FilterValue**, [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)y [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basados en criterios de búsqueda, mientras que el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método [RESET](../../../ado/reference/rds-api/reset-method-rds.md) ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros**actualizable.  
   
  Los valores NULL producen un error de falta de coincidencia de tipos.  

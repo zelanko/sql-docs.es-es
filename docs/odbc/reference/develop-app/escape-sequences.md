@@ -1,4 +1,5 @@
 ---
+description: Secuencias de escape
 title: Secuencias de escape | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5d9589230183b198cb7d59cf9739dab75625441e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15c06fc08d78422502b8aea87c40ee2821a9620f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429307"
 ---
 # <a name="escape-sequences"></a>Secuencias de escape
 ODBC define secuencias de escape que contienen la gramática estándar para los literales de fecha, hora, marca de tiempo y intervalo de fecha y hora, llamadas a funciones escalares, **como** caracteres de escape de predicado, combinaciones externas y llamadas a procedimientos. Las aplicaciones interoperables deben usar estas secuencias siempre que sea posible.  

@@ -1,4 +1,5 @@
 ---
+description: Enlazar columnas
 title: Enlazar columnas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4407694-c8e1-4b0b-a39d-b007e6c3b54d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fca4cfb1455c91ca57f7b1769266e2040d6a3511
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f3f02ec6487b34a6ca2c973c3115c3940ca8fa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429437"
 ---
 # <a name="binding-columns"></a>Enlazar columnas
 Los datos capturados del origen de datos se devuelven a la aplicación en las variables asignadas por la aplicación para este fin. Antes de ello, la aplicación debe asociar, o *enlazar*, estas variables a las columnas del conjunto de resultados. conceptualmente, este proceso es el mismo que el enlace de variables de aplicación a parámetros de instrucción. Cuando la aplicación enlaza una variable a una columna de conjunto de resultados, describe la dirección de la variable, el tipo de datos, etc. del controlador. El controlador almacena esta información en la estructura que mantiene para esa instrucción y usa la información para devolver el valor de la columna cuando se captura la fila.  

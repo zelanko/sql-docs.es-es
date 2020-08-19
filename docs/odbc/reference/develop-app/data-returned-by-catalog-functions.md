@@ -1,4 +1,5 @@
 ---
+description: Datos devueltos por las funciones de catálogo
 title: Datos devueltos por las funciones de catálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0d9b63de04f79fd95c1b06d8e84d85c6f4fea02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c42319520696060cd52c14c46f968badee27e20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429367"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Datos devueltos por las funciones de catálogo
 Cada función de catálogo devuelve los datos como un conjunto de resultados. Este conjunto de resultados no es diferente de ningún otro conjunto de resultados. Normalmente se genera mediante una instrucción **Select** parametrizada predefinida que está codificada de forma rígida en el controlador o almacenada en un procedimiento en el origen de datos. Para obtener información sobre cómo recuperar datos de un conjunto de resultados, vea ¿ [se ha creado un conjunto de resultados?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

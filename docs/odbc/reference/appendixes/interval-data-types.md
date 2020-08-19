@@ -1,4 +1,5 @@
 ---
+description: Tipo de datos de intervalo
 title: Tipos de datos de intervalo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee4a6e845e0bc0830f514b2e768075dd75bcf6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b54996c2f2897e47e05088b1985d190acafaad3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429677"
 ---
 # <a name="interval-data-types"></a>Tipo de datos de intervalo
 Un intervalo se define como la diferencia entre dos fechas y horas. Los intervalos se expresan de una de estas dos maneras diferentes. Uno es un intervalo del *año* que expresa los intervalos en términos de años y un número entero de meses. El otro es un intervalo de *tiempo* que expresa los intervalos en términos de días, minutos y segundos. Estos dos tipos de intervalos son distintos y no se pueden mezclar, porque los meses pueden tener un número variable de días.  

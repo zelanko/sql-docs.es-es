@@ -1,4 +1,5 @@
 ---
+description: Ejemplo del método CreateRecordset (RDS)
 title: Método CreateRecordset (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53a391ccb25a32d628703543d95dc8e24668fcd5
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f9e993d547e6f28c9fc17e074d005af67f6d7a4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439157"
 ---
 # <a name="createrecordset-method-rds"></a>Ejemplo del método CreateRecordset (RDS)
 Crea un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)vacío y desconectado.  
@@ -67,26 +68,26 @@ object.CreateRecordset(ColumnInfos)
   
 |Length|Constante|Number|Sustitución|  
 |------------|--------------|------------|------------------|  
-|Corregido|**adTinyInt**|16||  
-|Corregido|**adSmallInt**|2||  
-|Corregido|**adInteger**|3||  
-|Corregido|**adBigInt**|20||  
-|Corregido|**adUnsignedTinyInt**|17||  
-|Corregido|**adUnsignedSmallInt**|18||  
-|Corregido|**adUnsignedInt**|19||  
-|Corregido|**adUnsignedBigInt**|21||  
-|Corregido|**adSingle**|4||  
-|Corregido|**adDouble**|5||  
-|Corregido|**adCurrency**|6||  
-|Corregido|**adDecimal**|14||  
-|Corregido|**adNumeric**|131||  
-|Corregido|**adBoolean**|11||  
-|Corregido|**adError**|10||  
-|Corregido|**adGuid**|72||  
-|Corregido|**adDate**|7||  
-|Corregido|**adDBDate**|133||  
-|Corregido|**adDBTime**|134||  
-|Corregido|**adDBTimestamp**|135|7|  
+|Fijo|**adTinyInt**|16||  
+|Fijo|**adSmallInt**|2||  
+|Fijo|**adInteger**|3||  
+|Fijo|**adBigInt**|20||  
+|Fijo|**adUnsignedTinyInt**|17||  
+|Fijo|**adUnsignedSmallInt**|18||  
+|Fijo|**adUnsignedInt**|19||  
+|Fijo|**adUnsignedBigInt**|21||  
+|Fijo|**adSingle**|4||  
+|Fijo|**adDouble**|5||  
+|Fijo|**adCurrency**|6||  
+|Fijo|**adDecimal**|14||  
+|Fijo|**adNumeric**|131||  
+|Fijo|**adBoolean**|11||  
+|Fijo|**adError**|10||  
+|Fijo|**adGuid**|72||  
+|Fijo|**adDate**|7||  
+|Fijo|**adDBDate**|133||  
+|Fijo|**adDBTime**|134||  
+|Fijo|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
 |Variable|**adChar**|129|200|  
 |Variable|**adVarChar**|200||  

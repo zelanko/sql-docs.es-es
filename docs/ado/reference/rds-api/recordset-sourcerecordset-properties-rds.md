@@ -1,4 +1,5 @@
 ---
+description: Propiedades Recordset y SourceRecordset (RDS)
 title: Propiedades Recordset y SourceRecordset (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f63630b0aa956f9d6ecbeb87304802a0c6ec4414
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d64488fa60b6cc6bcdd7c45124a7dcedb60d4c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438737"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Propiedades Recordset y SourceRecordset (RDS)
 Indica el objeto de **conjunto de registros** devuelto desde un objeto comercial personalizado.  
@@ -43,7 +44,7 @@ Recordset = DataControl.Recordset
  *DataRecordsets*  
  Variable de objeto que representa un objeto de **conjunto de registros** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede establecer la propiedad **SourceRecordset** en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) devuelto desde un objeto comercial personalizado.  
   
  Estas propiedades permiten que una aplicación controle el proceso de enlace por medio de un proceso personalizado. Reciben un conjunto de filas ajustado en un **conjunto de registros** para que pueda interactuar directamente con el conjunto de **registros**, realizando acciones como establecer propiedades o recorrer en iteración el conjunto de **registros**.  

@@ -1,4 +1,5 @@
 ---
+description: RuleEnum
 title: RuleEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c04bbd079de68891cf271ff2ea668696e29a4394
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 87460f060af7f3367147dd56f6bb599d260d09be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439547"
 ---
 # <a name="ruleenum"></a>RuleEnum
 Especifica la regla que se debe seguir cuando se elimina una [clave](../../../ado/reference/adox-api/key-object-adox.md) .  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Cambios en cascada.|  
 |**adRINone**|0|Predeterminada. No se realiza ninguna acción.|  

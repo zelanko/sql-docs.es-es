@@ -1,4 +1,5 @@
 ---
+description: Propiedad de controlador (RDS)
 title: Propiedad Handler (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e80c140e5abab80e7c33199cb9401fe9d2774161
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438957"
 ---
 # <a name="handler-property-rds"></a>Propiedad de controlador (RDS)
 Indica el nombre de un programa de personalización de servidor (controlador) que extiende la funcionalidad de [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)y cualquier parámetro utilizado por el *controlador*.  
@@ -42,12 +43,12 @@ DataControl.Handler = String
  *String*  
  Valor de **cadena** que contiene el nombre del controlador y cualquier parámetro, separados por comas (por ejemplo, `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta propiedad admite la [Personalización](../../../ado/guide/remote-data-service/datafactory-customization.md), una funcionalidad que requiere el establecimiento de la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) en **adUseClient**.  
   
  El nombre del controlador y sus parámetros, si los hay, se separan mediante comas (","). Se producirá un comportamiento imprevisible si un punto y coma (";") aparece en cualquier parte de la *cadena*. Puede escribir su propio controlador, siempre que admita la interfaz **IDataFactoryHandler** .  
   
- El nombre del controlador predeterminado es **MSDFMAP. **Y su parámetro predeterminado es un archivo de personalización denominado **MSDFMAP. INI**. Utilice esta propiedad para invocar los archivos de personalización alternativos creados por el administrador del servidor.  
+ El nombre del controlador predeterminado es **MSDFMAP. **Y su parámetro predeterminado es un archivo de personalización denominado **MSDFMAP.INI**. Utilice esta propiedad para invocar los archivos de personalización alternativos creados por el administrador del servidor.  
   
  La alternativa a establecer la propiedad del **controlador** es especificar un controlador y parámetros en la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) ; es decir, "**handler =**_handlerName, parámetro1, parámetro2,...;_".  
   

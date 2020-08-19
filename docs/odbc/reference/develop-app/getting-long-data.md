@@ -1,4 +1,5 @@
 ---
+description: Obtener datos de tipo Long
 title: Obtención de datos largos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da901c22eb26af063397b4af184179ebe5c75924
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c3a40bc3f4f65f747776d747d79868340de06f53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429287"
 ---
 # <a name="getting-long-data"></a>Obtener datos de tipo Long
 Los DBMS definen *datos largos* como cualquier carácter o dato binario a lo largo de un determinado tamaño, como 255 caracteres. Estos datos pueden ser lo suficientemente pequeños como para almacenarse en un solo búfer, como una descripción de varios miles de caracteres. Sin embargo, puede que sea demasiado largo para almacenar en memoria, como documentos de texto largos o mapas de bits. Dado que estos datos no se pueden almacenar en un solo búfer, se recuperan del controlador en partes con **SQLGetData** después de que se hayan capturado los demás datos de la fila.  

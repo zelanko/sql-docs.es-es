@@ -1,4 +1,5 @@
 ---
+description: Propiedades, métodos y eventos del objeto Procedure
 title: Propiedades, métodos y eventos del objeto procedure | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93ce9c808d5a34613a89b9861d2175f09459700b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f15407187d0d5482a33e51d4e4ce9a5b157c709
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439647"
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Procedure
 ## <a name="properties"></a>Propiedades  
@@ -27,7 +28,7 @@ ms.locfileid: "82763686"
   
  [Propiedad DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)  
   
- [Propiedad Name](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name (propiedad)](../../../ado/reference/adox-api/name-property-adox.md)  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  

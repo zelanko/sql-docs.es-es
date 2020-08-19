@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de método Refresh de procedimientos (VB)
 title: Ejemplo de método de actualización de procedimientos (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 162e6739a61b52922998a61c019225ef0f8d5216
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d9f2d7f3d8ceb8d6d62a65382ee7084059c29bf8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439587"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Ejemplo de método Refresh de procedimientos (VB)
 En el código siguiente se muestra cómo actualizar la colección [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). Esto es necesario antes de que se pueda tener acceso a los objetos de [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md) del **Catálogo** .  

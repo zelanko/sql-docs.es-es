@@ -1,4 +1,5 @@
 ---
+description: Execute (método) (RDS)
 title: Método execute (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4c44e48c46abab1cc15e3fbf90592414fad7c9c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439087"
 ---
 # <a name="execute-method-rds"></a>Execute (método) (RDS)
 Ejecuta la solicitud y crea un conjunto de registros ADO para su uso en ADO 2,5 y versiones posteriores.  
@@ -43,7 +44,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *Cadenas*  
  Comando del lenguaje de comandos compatible con el proveedor de OLE DB identificado en la cadena de conexión. En el caso de los proveedores basados en SQL, *QueryString* puede contener una instrucción de comandos de TRANSACT-SQL, pero para los proveedores que no son de SQL (por ejemplo, MSDataShape) puede que no sea una [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción de consulta.  
   
- Si se usa un controlador, el controlador puede modificar o reemplazar el valor especificado aquí. Por ejemplo, el controlador suele reemplazar *QueryString* por una cadena de consulta de su archivo. ini. De forma predeterminada, se utiliza el archivo MSDFMAP. ini.  
+ Si se usa un controlador, el controlador puede modificar o reemplazar el valor especificado aquí. Por ejemplo, el controlador suele reemplazar *QueryString* por una cadena de consulta de su archivo. ini. De forma predeterminada, se usa el archivo de Msdfmap.ini.  
   
  *lFetchOptions*  
  Indica el tipo de captura asincrónica.  
@@ -77,8 +78,8 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pInformation*  
  Un puntero a un error de información devuelto por Execute. Si es NULL, no se devuelve información de error.  
   
-## <a name="remarks"></a>Comentarios  
- El parámetro *HandlerString* puede ser null. Lo que sucede en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP. handler" indica que se debe usar el controlador proporcionado por Microsoft (MSDFMAP. dll). Una cadena de controlador de "MASDFMAP. handler, sample. ini" indica que se debe usar el controlador MSDFMAP. dll y que el argumento "sample. ini" se debe pasar al controlador. MSDFMAP. dll interpretará el argumento como una dirección para utilizar el archivo Sample. ini con el fin de comprobar las cadenas de conexión y de consulta.  
+## <a name="remarks"></a>Observaciones  
+ El parámetro *HandlerString* puede ser null. Lo que sucede en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP. handler" indica que se debe usar el controlador proporcionado por Microsoft (Msdfmap.dll). Una cadena de controlador de "MASDFMAP. handler, sample.ini" indica que se debe usar el controlador de Msdfmap.dll y que el argumento "sample.ini" se debe pasar al controlador. MSDFMAP.dll interpretará el argumento como una dirección para usar el sample.ini para comprobar las cadenas de conexión y de consulta.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

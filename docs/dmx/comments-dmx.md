@@ -1,4 +1,5 @@
 ---
+description: Comentarios (DMX)
 title: Comentarios (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 37e646df007684ee8e68f9d39119e42014415715
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 8069241656de868ae2165fa7348b549c8e3308e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431127"
 ---
 # <a name="comments-dmx"></a>Comentarios (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -30,11 +31,11 @@ ms.locfileid: "86969909"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los siguientes tipos de caracteres en comentarios:  
   
--   **(barras diagonales dobles).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar o en una línea independiente. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]evalúa todo desde las barras diagonales dobles hasta el final de la línea como parte del comentario. Para crear un comentario de varias líneas, use la barra diagonal doble al principio de cada línea de comentario. Para obtener más información sobre este carácter de comentario, vea [barra diagonal doble &#40;comment&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md).  
+-   **(barras diagonales dobles).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar o en una línea independiente. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] evalúa todo desde las barras diagonales dobles hasta el final de la línea como parte del comentario. Para crear un comentario de varias líneas, use la barra diagonal doble al principio de cada línea de comentario. Para obtener más información sobre este carácter de comentario, vea [barra diagonal doble &#40;comment&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md).  
   
 -   **--(guiones dobles).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar o en una línea independiente. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera como comentario todo lo que figura desde el guión doble hasta el final de la línea. Para crear un comentario de varias líneas, use el guión doble al principio de cada línea de comentario. Para obtener más información sobre este carácter de comentario, consulte [--&#40;comment&#41; &#40;DMX&#41; Summary](../dmx/comment-dmx-summary.md).  
   
--   **/\*... \* /(pares de caracteres de barra diagonal y asterisco).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar, en una línea independiente o en medio de código ejecutable. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]evalúa todo el elemento desde el par de comentario de apertura (/*) hasta el par \* de comentario de cierre (/) como parte del comentario. Para crear un Comentario de varias líneas, inicie el comentario con el par de caracteres de apertura de comentario (/ \* ) y finalice el comentario con el par de caracteres de cierre de comentario ( \* /). Ningún otro carácter de comentario debe aparecer en ninguna línea del comentario. Para obtener más información sobre este carácter de comentario, vea [barra diagonal de &#40;de comentario&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
+-   **/\* ... \* /(pares de caracteres de barra diagonal y asterisco).** Estos caracteres de comentario sirven para escribir un comentario en la misma línea que el código que se va a ejecutar, en una línea independiente o en medio de código ejecutable. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] evalúa todo el elemento desde el par de comentario de apertura (/*) hasta el par \* de comentario de cierre (/) como parte del comentario. Para crear un Comentario de varias líneas, inicie el comentario con el par de caracteres de apertura de comentario (/ \* ) y finalice el comentario con el par de caracteres de cierre de comentario ( \* /). Ningún otro carácter de comentario debe aparecer en ninguna línea del comentario. Para obtener más información sobre este carácter de comentario, vea [barra diagonal de &#40;de comentario&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   

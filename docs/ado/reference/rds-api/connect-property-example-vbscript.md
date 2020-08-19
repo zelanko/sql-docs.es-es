@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad Connect (VBScript)
 title: Ejemplo de la propiedad Connect (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cee201d56361d18ded5fbef1c2c36051c34ecdc8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f7b854f8d5b84883d28915af629c2af67036b718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439227"
 ---
 # <a name="connect-property-example-vbscript"></a>Ejemplo de la propiedad Connect (VBScript)
 > [!IMPORTANT]
@@ -39,7 +40,7 @@ ms.locfileid: "82746263"
   
  En el ejemplo siguiente se muestra cómo establecer la propiedad de **conexión** en tiempo de ejecución en el código de VBScript.  
   
- Para probar este ejemplo, corte y pegue el código entre las \< etiquetas Body> y \< /Body> de un documento HTML normal y asígnele el nombre **ConnectVBS. asp**. El script ASP identificará el servidor.  
+ Para probar este ejemplo, corte y pegue el código entre las \<Body> \</Body> etiquetas y de un documento HTML normal y asígnele el nombre **ConnectVBS. asp**. El script ASP identificará el servidor.  
   
 ```  
 <!-- BeginConnectVBS -->  

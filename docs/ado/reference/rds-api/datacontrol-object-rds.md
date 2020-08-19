@@ -1,4 +1,5 @@
 ---
+description: Objeto DataControl (RDS)
 title: Objeto DataControl (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bc9482c6626de36d9e45b2a2968b504b0793746
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6643fe176ef6281afa39845310812f5f6981d16b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439147"
 ---
 # <a name="datacontrol-object-rds"></a>Objeto DataControl (RDS)
 Enlaza un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de consulta de datos a uno o varios controles (por ejemplo, un cuadro de texto, un control de cuadrícula o un cuadro combinado) para mostrar los datos del **conjunto de registros** en una página web.  
@@ -40,20 +41,20 @@ Enlaza un [conjunto de registros](../../../ado/reference/ado-api/recordset-objec
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Comentarios  
- IDENTIFICADOR de clase del **objeto RDS. **El objeto DataControl es BD96C556-65A3-11D0-983A-00C04FC29E33.  
+## <a name="remarks"></a>Observaciones  
+ IDENTIFICADOR de clase del **objeto RDS. ** El objeto DataControl es BD96C556-65A3-11D0-983A-00C04FC29E33.  
   
 > [!NOTE]
->  Si recibe un error que hace que un [objeto RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) o **RDS. **El objeto DataControl no se carga, asegúrese de que está usando el identificador de clase correcto. Los identificadores de clase de estos objetos han cambiado respecto a la versión 1,0 y 1,1. Además, tenga en cuenta que incluso las columnas que aceptan valores NULL se deben establecer cuando se usa el objeto **DataControl de RDS** .  
+>  Si recibe un error que hace que un [objeto RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) o **RDS. ** El objeto DataControl no se carga, asegúrese de que está usando el identificador de clase correcto. Los identificadores de clase de estos objetos han cambiado respecto a la versión 1,0 y 1,1. Además, tenga en cuenta que incluso las columnas que aceptan valores NULL se deben establecer cuando se usa el objeto **DataControl de RDS** .  
   
  En un escenario básico, solo tiene que establecer las propiedades **SQL**, **Connect**y **Server** de **RDS. Objeto DataControl** , que llamará automáticamente al objeto comercial predeterminado, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md).  
   
  Todas las propiedades de **RDS. DataControl** son opcionales porque los objetos comerciales personalizados pueden reemplazar su funcionalidad.  
   
 > [!NOTE]
->  Si consulta varios resultados, solo se devuelve el primer [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) . Si se necesitan varios conjuntos de resultados, asigne cada uno a su propio **control de DataControl**. Un ejemplo de una consulta para varios resultados podría ser el siguiente:`"Select * from Authors, Select * from Topics"`  
+>  Si consulta varios resultados, solo se devuelve el primer [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) . Si se necesitan varios conjuntos de resultados, asigne cada uno a su propio **control de DataControl**. Un ejemplo de una consulta para varios resultados podría ser el siguiente: `"Select * from Authors, Select * from Topics"`  
   
- Agregar "DFMode = 20;" a la cadena de conexión cuando se utiliza **RDS. **El objeto DataControl puede mejorar el rendimiento del servidor cuando se actualizan datos. Con esta configuración, el objeto **RDSServer. DataFactory** en el servidor utiliza un modo con menos recursos. Sin embargo, las siguientes características no están disponibles en esta configuración:  
+ Agregar "DFMode = 20;" a la cadena de conexión cuando se utiliza **RDS. ** El objeto DataControl puede mejorar el rendimiento del servidor cuando se actualizan datos. Con esta configuración, el objeto **RDSServer. DataFactory** en el servidor utiliza un modo con menos recursos. Sin embargo, las siguientes características no están disponibles en esta configuración:  
   
 -   Uso de consultas con parámetros.  
   
@@ -89,7 +90,7 @@ Enlaza un [conjunto de registros](../../../ado/reference/ado-api/recordset-objec
   
 -   Agregue dos **RDS. Objetos DataControl** en la Página Web.  
   
--   Escriba dos consultas, una para cada propiedad **SQL** de los dos **RDS. Objetos DataControl** . Un **objeto RDS. **El objeto DataControl contendrá una consulta SQL que solicita información del cliente; el segundo contendrá una consulta que solicita una lista de productos que el cliente ha adquirido.  
+-   Escriba dos consultas, una para cada propiedad **SQL** de los dos **RDS. Objetos DataControl** . Un **objeto RDS. ** El objeto DataControl contendrá una consulta SQL que solicita información del cliente; el segundo contendrá una consulta que solicita una lista de productos que el cliente ha adquirido.  
   
 -   En las etiquetas de objeto de cada control enlazado, especifique el valor de DATAFLD para establecer los valores de los datos que desea mostrar en cada control visual.  
   
@@ -97,7 +98,7 @@ Enlaza un [conjunto de registros](../../../ado/reference/ado-api/recordset-objec
   
  Al definir **RDS. Objeto DataControl** en una página web, use valores de **alto** y **ancho** distintos de cero, como 1 (para evitar la inclusión de espacio adicional).  
   
- Los componentes de cliente del servicio de datos remotos ya están incluidos como parte de Internet Explorer 4,0; por lo tanto, no es necesario incluir un parámetro CODEBASE en el **objeto RDS. **Etiqueta de objeto DataControl.  
+ Los componentes de cliente del servicio de datos remotos ya están incluidos como parte de Internet Explorer 4,0; por lo tanto, no es necesario incluir un parámetro CODEBASE en el **objeto RDS. ** Etiqueta de objeto DataControl.  
   
  Con Internet Explorer 4,0 o posterior, puede enlazar a datos utilizando controles HTML y controles de® ActiveX solo si están marcados como controles de modelo de apartamento.  
   

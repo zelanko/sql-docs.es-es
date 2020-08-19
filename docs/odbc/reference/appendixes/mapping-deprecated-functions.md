@@ -1,4 +1,5 @@
 ---
+description: Asignación de funciones en desuso
 title: Asignación de funciones desusadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c990646c54fd0d0698482c5f8dc3f87df80fe93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429617"
 ---
 # <a name="mapping-deprecated-functions"></a>Asignación de funciones en desuso
 En esta sección se describe el modo en que el administrador de controladores ODBC *3. x* asigna las funciones desusadas para garantizar la compatibilidad con versiones anteriores de los controladores ODBC *3. x* que se utilizan con las aplicaciones ODBC *2. x* . El administrador de controladores realiza esta asignación independientemente de la versión de la aplicación. Dado que cada una de las funciones ODBC *2. x* de la lista siguiente está asignada a la función ODBC *3. x* correspondiente cuando se llama en un controlador ODBC *3.* x, el controlador ODBC *3.* x no tiene que implementar las funciones ODBC *2. x* .  

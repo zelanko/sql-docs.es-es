@@ -1,4 +1,5 @@
 ---
+description: Secuencias de escape de ODBC
 title: Secuencias de escape en ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d41b0c03ecbe6de63cba1a28a1f39f12a42dc86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62745b749870fa33151fc1a5f6bd3a1bfc344ad7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429317"
 ---
 # <a name="escape-sequences-in-odbc"></a>Secuencias de escape de ODBC
 Una serie de características de lenguaje, como las combinaciones externas y las llamadas a funciones escalares, las implementa normalmente DBMS. Sin embargo, las sintaxis de estas características tienden a ser específicas de DBMS, incluso cuando las sintaxis estándar están definidas por los distintos cuerpos de estándares. Por ello, ODBC define secuencias de escape que contienen sintaxis estándar para las siguientes características de lenguaje:  
@@ -46,9 +47,9 @@ Una serie de características de lenguaje, como las combinaciones externas y las
  Los controladores reconocen y analizan la secuencia de escape, que reemplazan las secuencias de escape por una gramática específica del DBMS. Para obtener más información sobre la sintaxis de secuencia de escape, vea [secuencias de escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) en el Apéndice C: gramática de SQL.  
   
 > [!NOTE]  
->  En ODBC 2. *x*, esta era la sintaxis estándar de la secuencia de escape: **--\*(proveedor (**_nombre-proveedor_**),**_extensión_ _product-name_**)** ** \*** producto (nombre-producto))--  
+>  En ODBC 2. *x*, esta era la sintaxis estándar de la secuencia de escape **:--( \* proveedor (**_nombre-proveedor_**), extensión producto (**_nombre-producto_**)**_extension_ ** \* )--**  
 >   
->  Además de esta sintaxis, se definió una sintaxis abreviada con la forma: **{**_Extension_**}**  
+>  Además de esta sintaxis, se definió una sintaxis abreviada con la forma:            **{**_Extension_**}**  
 >   
 >  En ODBC 3. *x*, la forma larga de la secuencia de escape está en desuso y la forma abreviada se usa exclusivamente.  
   

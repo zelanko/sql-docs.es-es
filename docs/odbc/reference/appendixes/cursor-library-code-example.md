@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de código de la biblioteca de cursores
 title: Ejemplo de código de la biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8301cf0b608874075c7bc8c66bba25d00f07668d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429687"
 ---
 # <a name="cursor-library-code-example"></a>Ejemplo de código de la biblioteca de cursores
 > [!IMPORTANT]  

@@ -1,4 +1,5 @@
 ---
+description: Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
 title: Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6716457b994721da54c1f42fe8057fda67f7e4be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3365f6540a95639f2f6d4c607bfdee094c550c1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431007"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
 
@@ -54,13 +55,13 @@ ms.locfileid: "86921735"
   
 -   Si selecciona ver **Todas las solicitudes**, el panel de solicitudes tiene dos columnas: **Tipo de perfil** e **Id. de solicitud**.  
   
--   Si selecciona ver uno de los cinco perfiles de columna, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columna** e **Id. de solicitud**.  
+-   Si selecciona ver uno de los cinco perfiles de columna, el panel de solicitud tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columna**e **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de claves candidatas, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **KeyColumns**, e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de claves candidatas, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas de clave**e **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de dependencia funcional, el panel de solicitudes tiene cinco columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas determinantes**, **Columna dependiente** e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de dependencia funcional, el panel de solicitudes tiene cinco columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas determinantes**, **Columna dependiente**e **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de inclusión de valores, el panel de solicitudes tiene seis columnas: **Tipo de perfil**, **Tabla o vista de subconjuntos**, **Tabla o vista de superconjuntos**, **Columnas de subconjuntos**, **Columnas de superconjuntos** e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de inclusión de valores, el panel de solicitudes tiene seis columnas: **Tipo de perfil**, **Tabla o vista de subconjuntos**, **Tabla o vista de superconjuntos**, **Columnas de subconjunto**, **Columnas de superconjunto**e **Id. de solicitud**.  
   
  En las secciones siguientes se describe cada una de esas columnas.  
   
@@ -110,7 +111,7 @@ ms.locfileid: "86921735"
  **Columnas determinantes**  
  Muestra las columnas seleccionadas para generar el perfil como columna o columnas determinantes. En el ejemplo en el que el código postal de Estados Unidos determina el estado, la columna determinante es la columna de código postal.  
   
- **Dependent column**  
+ **Columna dependiente**  
  Muestra las columnas seleccionadas para generar el perfil como columna dependiente. En el ejemplo en el que el código postal de Estados Unidos determina el estado, la columna dependiente es la columna de estado.  
   
 #### <a name="columns-specific-to-the-value-inclusion-profile"></a>Columnas específicas del perfil de inclusión de valores  
@@ -130,7 +131,7 @@ ms.locfileid: "86921735"
  El panel **Propiedades de la solicitud** aparece debajo del panel de solicitudes. Este panel muestra las opciones para el perfil que ha seleccionado en el panel de solicitudes.  
   
 > [!NOTE]  
->  Después de seleccionar un **Tipo de perfil**, debe seleccionar el campo **Id. de solicitud** para ver las propiedades de la solicitud del perfil en el panel **Propiedades de la solicitud** .  
+>   Después de seleccionar un **Tipo de perfil**, debe seleccionar el campo **Id. de solicitud** para ver las propiedades de la solicitud del perfil en el panel **Propiedades de la solicitud** .  
   
  Estas opciones varían según el perfil seleccionado. Para obtener información acerca de las opciones de tipos de perfiles individuales, vea los temas siguientes:  
   

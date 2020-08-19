@@ -1,4 +1,5 @@
 ---
+description: Data Mining Query Task
 title: Tarea Consulta de minería de datos| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e678774a8da38b8ff2e8c64adc7309828d6dffb6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431027"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
 
@@ -124,7 +125,7 @@ ms.locfileid: "86919841"
  **Generar nueva consulta**  
  Cree la consulta de minería de datos con una herramienta gráfica.  
   
- **Temas relacionados:** [Consulta de minería de datos](../../integration-services/control-flow/data-mining-query.md)  
+ **Temas relacionados:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>Opciones de la pestaña Asignación de parámetros  
  **Nombre de parámetro**  

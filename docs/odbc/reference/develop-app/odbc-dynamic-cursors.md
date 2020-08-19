@@ -1,4 +1,5 @@
 ---
+description: Cursores dinámicos de ODBC
 title: Cursores dinámicos de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f94b83ef1458cd9f8368d1bea3a39682bd80b1a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19ae15a211329e07fdab13a5b6ff40e210e97cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429197"
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursores dinámicos de ODBC
 Un cursor dinámico es simplemente eso: Dynamic. Puede detectar cualquier cambio realizado en la pertenencia, el orden y los valores del conjunto de resultados después de abrir el cursor. Por ejemplo, suponga que un cursor dinámico captura dos filas y después otra aplicación actualiza una de esas filas y elimina la otra. Si el cursor dinámico intenta volver a capturar esas filas, no encontrará la fila eliminada, pero devolverá los nuevos valores de la fila actualizada.  

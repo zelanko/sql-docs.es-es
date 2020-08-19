@@ -1,4 +1,5 @@
 ---
+description: Enlazar columnas para su uso con cursores de bloque
 title: Enlazar columnas para su uso con cursores de bloque | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc7e527658a7d6945921510de898c648075c41fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a58e6359bd7b0ad5d44f75a3d844ef2e9872f2a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429447"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Enlazar columnas para su uso con cursores de bloque
 Dado que los cursores de bloque devuelven varias filas, las aplicaciones que las usan deben enlazar una matriz de variables a cada columna en lugar de a una sola variable. Estas matrices se conocen colectivamente como *búferes de conjunto de filas*. A continuación se muestran los dos estilos de enlace:  

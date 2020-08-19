@@ -1,4 +1,5 @@
 ---
+description: Nuevas características
 title: Nuevas características | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b40803dac6c9f296043a8dcac50f9bc69036875a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2015d424e0c755352fa66f3ac67503b612b6982f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429237"
 ---
-# <a name="new-features"></a>Características nuevas
+# <a name="new-features"></a>Nuevas características
 La siguiente funcionalidad nueva se ha introducido en ODBC *3. x*. Una aplicación ODBC *3. x* que funcione con un controlador ODBC *2. x* no podrá usar esta funcionalidad. El administrador de controladores ODBC *3. x* no asigna estas características cuando se trabaja con un controlador ODBC *2. x* .  
   
 -   Funciones que toman un identificador de descriptor como argumento: **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**y **SQLCopyDesc**.  

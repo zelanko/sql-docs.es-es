@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad de controlador (VB)
 title: Ejemplo de propiedad de controlador (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 829059639c182fa607ccb9ffe62658705500692d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d00626b04c4107ffdbf15cd24b104b17602fc6e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438977"
 ---
 # <a name="handler-property-example-vb"></a>Ejemplo de la propiedad de controlador (VB)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82751989"
   
  En este ejemplo se muestra la propiedad de [controlador](../../../ado/reference/rds-api/handler-property-rds.md) de objetos [DataControl de RDS](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Consulte [Personalización de factoría](../../../ado/guide/remote-data-service/datafactory-customization.md) de datos para obtener más detalles).  
   
- Suponga que las siguientes secciones del archivo de parámetros, MSDFMAP. ini, se encuentran en el servidor:  
+ Supongamos que las siguientes secciones del archivo de parámetros, Msdfmap.ini, se encuentran en el servidor:  
   
 ```  
 [connect AuthorDataBase]  

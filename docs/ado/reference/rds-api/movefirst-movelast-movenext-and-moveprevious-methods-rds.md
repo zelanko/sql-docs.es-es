@@ -1,4 +1,5 @@
 ---
+description: MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS)
 title: Métodos MoveFirst, MoveLast, MoveNext y MovePrevious (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 096ad338f1ec9f039a6c63366984aee4d891c202
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6221a608bd247852ed16e1d82c1b8b5994b50fe8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438887"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS)
 Se desplaza al registro primero, último, siguiente o anterior de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) especificado.  
@@ -40,7 +41,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  Variable de objeto que representa un objeto [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede usar los métodos **Move** con el **objeto RDS. Objeto DataControl** para navegar por los registros de datos de los controles enlazados a datos en una página web. Por ejemplo, supongamos que se muestra un **conjunto de registros** en una cuadrícula enlazando a un **objeto RDS. Objeto DataControl** . Después, puede incluir los botones primero, último, siguiente y anterior en los que los usuarios pueden hacer clic para moverse al registro primero, último, siguiente o anterior del **conjunto de registros**mostrado. Para ello, debe llamar a los métodos **MoveFirst**, **MoveLast**, **MoveNext**y **MovePrevious** de **RDS. Objeto DataControl** en los procedimientos OnClick para los botones primero, último, siguiente y anterior, respectivamente. En el ejemplo de la [Libreta de direcciones](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) se muestra cómo hacerlo.  
   
 ## <a name="applies-to"></a>Se aplica a  

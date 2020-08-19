@@ -1,4 +1,5 @@
 ---
+description: Longitud del búfer de datos
 title: Longitud del búfer de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7288d143-f9e5-4f90-9b31-2549df79c109
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4a4e9a739201d74cfc6c4f7c18e64b91e0fabe4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4ad4f083d9f08c744dd6f832638a49b57c04e6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429377"
 ---
 # <a name="data-buffer-length"></a>Longitud del búfer de datos
 La aplicación pasa la longitud de bytes del búfer de datos al controlador en un argumento, denominado *BufferLength* o un nombre similar. Por ejemplo, en la siguiente llamada a **SQLBindCol**, la aplicación especifica la longitud del búfer *ValuePtr* (**sizeof (***ValuePtr***)**):  

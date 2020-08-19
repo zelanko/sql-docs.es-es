@@ -1,4 +1,5 @@
 ---
+description: Realizar una carga incremental de varias tablas
 title: Realizar una carga incremental de varias tablas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c52a54708b1842207582909cbfdc3bdfe831b303
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 80d1573e5ab4f0f598ef0b1af5ee415b785cdbdb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431157"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Realizar una carga incremental de varias tablas
 

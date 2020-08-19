@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad ReadyState (VBScript)
 title: Ejemplo de la propiedad ReadyState (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a3d39355a95b46170ab3f7a5b24cd43582ecac3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 46ebc9a3d7419912f4e0c7e43beb08d2db57c0af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438767"
 ---
 # <a name="readystate-property-example-vbscript"></a>Ejemplo de la propiedad ReadyState (VBScript)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82755512"
   
  En el ejemplo siguiente se muestra cómo leer la propiedad [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) de [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) en tiempo de ejecución en el código de VBScript. **ReadyState** es una propiedad de solo lectura.  
   
- Para probar este ejemplo, corte y pegue este código entre las \< etiquetas Body> y \< /Body> de un documento HTML normal y asígnele el nombre **RDSReadySt. asp**. Use **Buscar** para buscar el archivo adovbs. Inc y colóquelo en el directorio que piensa usar. El script ASP identificará el servidor.  
+ Para probar este ejemplo, corte y pegue este código entre las \<Body> \</Body> etiquetas y de un documento HTML normal y asígnele el nombre **RDSReadySt. asp**. Use **Buscar** para buscar el archivo adovbs. Inc y colóquelo en el directorio que piensa usar. El script ASP identificará el servidor.  
   
 ```  
 <!-- BeginReadyStateVBS -->  

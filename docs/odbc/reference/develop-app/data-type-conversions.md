@@ -1,4 +1,5 @@
 ---
+description: Conversiones de tipos de datos
 title: Conversiones de tipos de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cd888fe32692494e2b0ceadc1ed872dd96e244a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92c31cb12c7bb02cf8e108251ae5ebd6f12aed5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429347"
 ---
 # <a name="data-type-conversions"></a>Conversiones de tipos de datos
 Los datos se pueden convertir de un tipo a otro en cuatro veces: cuando los datos se transfieren de una variable de aplicación a otra (C a C), cuando los datos de una variable de aplicación se envían a un parámetro de instrucción (de C a SQL), cuando los datos de una columna de conjunto de resultados se devuelven en una variable de aplicación (SQL a C) y cuando se transfieren datos de una columna de origen de datos  

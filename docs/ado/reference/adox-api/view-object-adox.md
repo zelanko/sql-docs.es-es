@@ -1,4 +1,5 @@
 ---
+description: Objeto View (ADOX)
 title: Objeto de vista (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b468ccc3edc4cc5453b4f08371cd2b4b962f0c72
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3cc635db04358417948e709a4c47605fae17669b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439367"
 ---
 # <a name="view-object-adox"></a>Objeto View (ADOX)
 Representa un conjunto filtrado de registros o una tabla virtual. Cuando se usa junto con el objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de ADO, el objeto de **vista** se puede usar para agregar, eliminar o modificar vistas.  

@@ -1,4 +1,5 @@
 ---
+description: KeyTypeEnum
 title: KeyTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0160cde7efc41e0d946959e37ca34fdeabb17723
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9f8e1f16d9505de18751e80cc982f472d7ae0422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439797"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 Especifica el tipo de [clave](../../../ado/reference/adox-api/key-object-adox.md): principal, externa o única.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adKeyPrimary**|1|Predeterminada. La clave es una clave principal.|  
 |**adKeyForeign**|2|Se trata de una clave externa.|  

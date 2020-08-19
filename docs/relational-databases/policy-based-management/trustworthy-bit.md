@@ -1,4 +1,5 @@
 ---
+description: Bit de confianza
 title: Bit de confianza | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3198188a-2b59-4865-9560-10f760934b8e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c0fe0b7b8890b3ef9ee2671b4926c8be99cc679
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de262aed0eb2a731dac17dbb018883211eda11ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380281"
 ---
 # <a name="trustworthy-bit"></a>Bit de confianza
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

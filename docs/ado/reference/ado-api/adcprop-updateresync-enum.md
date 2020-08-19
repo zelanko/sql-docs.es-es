@@ -1,4 +1,5 @@
 ---
+description: ADCPROP_UPDATERESYNC_ENUM
 title: ADCPROP_UPDATERESYNC_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d27169aa9da35f84a1d91985f7f2d1a41035a100
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 81d1ff4bf67f103b613cb925a590b4d00e54482a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451597"
 ---
 # <a name="adcprop_updateresync_enum"></a>ADCPROP_UPDATERESYNC_ENUM
 Especifica si el método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) va seguido de una operación de método [Resync](../../../ado/reference/ado-api/resync-method.md) implícita y, en caso afirmativo, el ámbito de esa operación.  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adResyncAll**|15|Invoca **Resync** con el valor combinado de todos los demás miembros de ADCPROP_UPDATERESYNC_ENUM.|  
 |**adResyncAutoIncrement**|1|Predeterminada. Intenta recuperar el nuevo valor de identidad para las columnas que se incrementan o generan automáticamente en el origen de datos, como los campos Autonuméricos de Microsoft Jet o las columnas de identidad de Microsoft SQL Server.|  

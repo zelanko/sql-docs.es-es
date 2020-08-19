@@ -1,4 +1,5 @@
 ---
+description: ActiveConnection (propiedad, ADO)
 title: ActiveConnection (propiedad, ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 375f0a0b81f71294b67200f8137ee381a638b8ac
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 058f1e16c6bdd84978c1131c436764f584fd80c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451677"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection (propiedad, ADO)
 Indica a qué objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) pertenece actualmente el objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md), [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)o [registro](../../../ado/reference/ado-api/record-object-ado.md) especificado.  
@@ -30,10 +31,10 @@ Indica a qué objeto de [conexión](../../../ado/reference/ado-api/connection-ob
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor de **cadena** que contiene una definición para una conexión si la conexión está cerrada o una **variante** que contiene el objeto de **conexión** actual si la conexión está abierta. El valor predeterminado es una referencia de objeto null. Vea la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use la propiedad **ActiveConnection** para determinar el objeto de **conexión** en el que se ejecutará el objeto de **comando** especificado o se abrirá el **conjunto de registros** especificado.  
   
-## <a name="command"></a>Comando  
+## <a name="command"></a>Get-Help  
  En el caso de los objetos de **comando** , la propiedad **ActiveConnection** es de lectura y escritura.  
   
  Si intenta llamar al método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) en un objeto **Command** antes de establecer esta propiedad en un objeto de **conexión** abierto o en una cadena de conexión válida, se produce un error.  

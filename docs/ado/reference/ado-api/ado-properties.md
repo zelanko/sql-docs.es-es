@@ -1,4 +1,5 @@
 ---
+description: Propiedades de ADO
 title: Propiedades de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 72a14ac3114a3b27a7570bc5961b9bd6ffff51cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451367"
 ---
 # <a name="ado-properties"></a>Propiedades de ADO
 
@@ -85,7 +86,7 @@ ms.locfileid: "87242845"
 |[Source (registro de ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)|Indica la entidad representada por el objeto de **registro** .|  
 |[Source (conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Indica el origen de los datos de un objeto de **conjunto de registros**|  
 |[SQLState](../../../ado/reference/ado-api/sqlstate-property.md)|Indica el estado de SQL para un objeto de **error** específico.|  
-|[Estado](../../../ado/reference/ado-api/state-property-ado.md)|Indica para todos los objetos aplicables si el estado del objeto es abierto o cerrado. Indica para todos los objetos aplicables que ejecutan un método asincrónico, si el estado actual del objeto es conexión, ejecución o recuperación.|  
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|Indica para todos los objetos aplicables si el estado del objeto es abierto o cerrado. Indica para todos los objetos aplicables que ejecutan un método asincrónico, si el estado actual del objeto es conexión, ejecución o recuperación.|  
 |[Status (campo de ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)|Indica el estado de un objeto de **campo** .|  
 |[Status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Indica el estado del registro actual en relación con las actualizaciones por lotes u otras operaciones masivas.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Indica, en un objeto de **conjunto de registros** jerárquico, si la referencia a los registros secundarios subyacentes (es decir, el *capítulo*) cambia cuando cambia la posición de la fila primaria.|  
@@ -96,7 +97,7 @@ ms.locfileid: "87242845"
 |[Valor](../../../ado/reference/ado-api/value-property-ado.md)|Indica el valor asignado a un **campo**, un **parámetro**o un objeto de **propiedad** .|  
 |[Versión](../../../ado/reference/ado-api/version-property-ado.md)|Indica el número de versión de ADO.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Colecciones de ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

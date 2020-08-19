@@ -1,5 +1,6 @@
 ---
-title: '&gt;(Mayor que) (MDX) | Microsoft Docs'
+description: '&gt; (Mayor que) MDX'
+title: '&gt; (Mayor que) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bb4f04e623096857cce9dd27f0cddc77f6a59798
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54be7523c074b2242bd740ec0b1665eb8dfb81fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429947"
 ---
-# <a name="gt-greater-than-mdx"></a>&gt;(Mayor que) MDX
+# <a name="gt-greater-than-mdx"></a>&gt; (Mayor que) MDX
 
 
   Realiza una operación de comparación que determina si el valor de una expresión multidimensional (MDX) es mayor que el valor de otra expresión MDX.  

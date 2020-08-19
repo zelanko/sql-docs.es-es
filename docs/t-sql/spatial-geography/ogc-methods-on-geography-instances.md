@@ -1,4 +1,5 @@
 ---
+description: Métodos de OGC en instancias de Geography
 title: Métodos de OGC en instancias de Geography | Microsoft Docs
 ms.custom: ''
 ms.date: 06/27/2019
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5ef4fb2ed952a1c991e0fc7d8ab614d80838ad86
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68a3d52312124783fdda1813fb153ab3f6a84369
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459067"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>Métodos de OGC en instancias de Geography
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -88,7 +89,7 @@ ms.locfileid: "85705874"
   
 -   [STUnion](../../t-sql/spatial-geography/stunion-geography-data-type.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
  [Métodos de geografía estáticos extendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

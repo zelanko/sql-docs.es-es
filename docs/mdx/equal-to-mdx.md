@@ -1,4 +1,5 @@
 ---
+description: = (Igual a) (MDX)
 title: = (Igual a) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ec3cbcb928926d02dd6597116f8ce9af00bf8e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494938"
 ---
 # <a name="-equal-to-mdx"></a>= (Igual a) (MDX)
 

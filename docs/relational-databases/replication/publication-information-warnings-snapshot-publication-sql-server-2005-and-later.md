@@ -1,4 +1,5 @@
 ---
+description: Información de publicación, Advertencias (Publicación de instantáneas, SQL Server 2005 y posteriores)
 title: 'Advertencias (instantáneas: Monitor de replicación)'
 decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -14,12 +15,12 @@ ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e23c798722928a8374dae43002ba44ca0347c76a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a7930a4badc30f1e41f0dd5b9eb577ab19f0da95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423449"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Información de publicación, Advertencias (Publicación de instantáneas, SQL Server 2005 y posteriores)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85720922"
  Haga clic para descartar los cambios realizados en las advertencias y los umbrales.  
   
 > [!NOTE]  
->  Hacer clic en **Descartar cambios** no afecta a las alertas definidas en el cuadro de diálogo **Configurar alertas de replicación** .  
+>   Hacer clic en **Descartar cambios** no afecta a las alertas definidas en el cuadro de diálogo **Configurar alertas de replicación** .  
   
  **Save Changes**  
  Haga clic para guardar los cambios realizados en las advertencias y los umbrales.  

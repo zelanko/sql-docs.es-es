@@ -1,4 +1,5 @@
 ---
+description: sp_dropdistpublisher (Transact-SQL)
 title: sp_dropdistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfac0b293e4bf564ef334cd0dc1ef5c3d5395364
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f1473db94c3defdcdd525409046e72f6d3cd5459
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486109"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,15 +40,15 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el publicador que se va a quitar. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el publicador que se va a quitar. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @no_checks = ] no_checks`Especifica si **sp_dropdistpublisher** comprueba que el publicador ha desinstalado el servidor como distribuidor. *no_checks* es de **bit**y su valor predeterminado es **0**.  
+`[ @no_checks = ] no_checks` Especifica si **sp_dropdistpublisher** comprueba que el publicador ha desinstalado el servidor como distribuidor. *no_checks* es de **bit**y su valor predeterminado es **0**.  
   
  Si es **0**, la replicación comprueba que el publicador remoto ha desinstalado el servidor local como distribuidor. Si el publicador de distribución es local, la replicación comprueba que no quedan objetos de publicación o distribución en el servidor local.  
   
  Si es **1**, se quitan todos los objetos de replicación asociados al publicador de distribución, incluso si no se puede tener acceso a un publicador remoto. Después de hacerlo, el publicador remoto debe desinstalar la replicación mediante [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) con ** \@ ignore_distributor**  =  **1**.  
   
-`[ @ignore_distributor = ] ignore_distributor`Especifica si los objetos de distribución se dejan en el distribuidor cuando se quita el publicador. *ignore_distributor* es de **bit** y puede tener uno de estos valores:  
+`[ @ignore_distributor = ] ignore_distributor` Especifica si los objetos de distribución se dejan en el distribuidor cuando se quita el publicador. *ignore_distributor* es de **bit** y puede tener uno de estos valores:  
   
  **1** = los objetos de distribución que pertenecen al *publicador* permanecen en el distribuidor.  
   
@@ -56,7 +57,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_dropdistpublisher** se utiliza en todos los tipos de replicación.  
   
  Al quitar un publicador de Oracle, si no puede quitar el publicador **sp_dropdistpublisher** devuelve un error y se quitan los objetos de distribuidor para el publicador.  
@@ -68,10 +69,10 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_dropdistpublisher**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Deshabilitar la publicación y distribución](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_changedistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_helpdistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
+ [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Deshabilitar la publicación y la distribución)  
+ [sp_adddistpublisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_changedistpublisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

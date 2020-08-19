@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_service (Transact-SQL)
 title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 435d2e2a5b290e8307b322831a96a1e55847339b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 33610db3883facdc6dfb198cfe8947ef965baa82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486054"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @action = ] 'action'`Es la propiedad que se va a cambiar o restablecer. *Action* es de tipo **nvarchar (100) y** no tiene ningún valor predeterminado. Para obtener una lista de las propiedades de*c*, sus descripciones y los valores que se pueden establecer, vea la tabla bajo el argumento *Value* . Este argumento devuelve las propiedades siguientes: tipo de datos, valor actual, valor mínimo o máximo y estado de degradación, si procede.  
+`[ @action = ] 'action'` Es la propiedad que se va a cambiar o restablecer. *Action* es de tipo **nvarchar (100) y** no tiene ningún valor predeterminado. Para obtener una lista de las propiedades de*c*, sus descripciones y los valores que se pueden establecer, vea la tabla bajo el argumento *Value* . Este argumento devuelve las propiedades siguientes: tipo de datos, valor actual, valor mínimo o máximo y estado de degradación, si procede.  
   
-`[ @value = ] value`Es el valor de la propiedad especificada. el *valor* es **sql_variant**y su valor predeterminado es NULL. Si @value es null, **sp_fulltext_service** devuelve la configuración actual. En la siguiente tabla se muestran las propiedades de acción, sus descripciones y los valores que se pueden establecer.  
+`[ @value = ] value` Es el valor de la propiedad especificada. el *valor* es **sql_variant**y su valor predeterminado es NULL. Si @value es null, **sp_fulltext_service** devuelve la configuración actual. En la siguiente tabla se muestran las propiedades de acción, sus descripciones y los valores que se pueden establecer.  
   
 > [!NOTE]  
 >  Las siguientes acciones se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **clean_up**, **connect_timeout**, **data_timeout**y **resource_usage**. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que las usan actualmente.  

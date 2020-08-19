@@ -1,4 +1,5 @@
 ---
+description: Descripción del archivo de personalización
 title: Descripción del archivo de personalización | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451877"
 ---
 # <a name="understanding-the-customization-file"></a>Descripción del archivo de personalización
 Cada encabezado de sección del archivo de personalización consta de corchetes (**[]**) que contienen un tipo y un parámetro. Los cuatro tipos de sección se indican mediante cadenas literales **Connect**, **SQL**, **userList**o **logs**. El parámetro es la cadena literal, el valor predeterminado, un identificador especificado por el usuario o nada.  

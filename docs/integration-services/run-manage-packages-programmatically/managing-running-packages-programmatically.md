@@ -1,4 +1,5 @@
 ---
+description: Administrar los paquetes en ejecución mediante programación
 title: Administrar los paquetes en ejecución mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ccccb2982bf48949366b2dc37a334484062ec19
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7b3dcd6b589738234c2e9c3452ff4d989bdedb28
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495556"
 ---
 # <a name="managing-running-packages-programmatically"></a>Administrar los paquetes en ejecución mediante programación
 

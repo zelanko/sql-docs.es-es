@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de propiedades de nombre (VB) y atributos
 title: Ejemplo de propiedades de atributos y nombres (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6993ea70496673d3aae23e4a4b6c5982637a5f8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ed744b6cb39b37958de8dcd6cb4dd6dde8b2a9a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451227"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Ejemplo de propiedades de nombre (VB) y atributos
 En este ejemplo se muestra el valor de la propiedad [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) para los objetos [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Field](../../../ado/reference/ado-api/field-object.md)y [Property](../../../ado/reference/ado-api/property-object-ado.md) . Usa la propiedad [nombre](../../../ado/reference/ado-api/name-property-ado.md) para mostrar el nombre de cada **campo** y objeto de **propiedad** .  

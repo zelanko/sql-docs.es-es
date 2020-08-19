@@ -1,4 +1,5 @@
 ---
+description: Conectarse a un origen de datos PostgreSQL (Asistente para importación y exportación de SQL Server)
 title: Conectarse a un origen de datos PostgreSQL (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fdb7545f2dc8bf5d27b26e54bf76b0307aad235
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 023c791e27fba3c26ac3ccd9778f0beee44536b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495600"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos PostgreSQL (Asistente para importación y exportación de SQL Server)
 
@@ -54,7 +55,7 @@ Para conectarse a PostgreSQL con el controlador ODBC de PostgreSQL, ensamble una
 > Obtenga ayuda para ensamblar una cadena de conexión que funcione correctamente. O bien, en lugar de proporcionar una cadena de conexión, puede proporcionar un DSN (nombre de origen de datos) existente o crear uno nuevo. Para obtener más información acerca de estas opciones, consulte [Conectarse a un origen de datos ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Controlador**  
-Es el nombre del controlador ODBC, ya sea un **controlador ODBC de PostgreSQL (UNICODE)** o **Controlador ODBC de PostgreSQL (ANSI)** .
+Es el nombre del controlador ODBC, ya sea un **controlador ODBC de PostgreSQL (UNICODE)** o **Controlador ODBC de PostgreSQL (ANSI)**.
 
 **Server**  
 Nombre del servidor de PostgreSQL. 

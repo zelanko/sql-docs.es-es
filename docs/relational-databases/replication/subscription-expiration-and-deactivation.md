@@ -1,4 +1,5 @@
 ---
+description: Desactivación y expiración de las suscripciones
 title: Desactivación y expiración de las suscripciones| Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -21,12 +22,12 @@ ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 507c80dc80ca144028ad7ef928173a826b5d042a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64fb9d21457558d2d0f3373b926f426808b9105d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423409"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Desactivación y expiración de las suscripciones
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85729374"
  Para establecer períodos de retención, vea [Establecer el período de expiración para las suscripciones](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Establecer el período de retención de distribución para las publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) y [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
 ## <a name="transactional-replication"></a>Replicación transaccional  
- La replicación transaccional usa el período máximo de retención de distribución (el parámetro `@max_distretention` de [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) y el período de retención de la publicación (el parámetro `@retention` de [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
+ La replicación transaccional utiliza el período máximo de retención de distribución (el parámetro `@max_distretention` de [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) y el período de retención de la publicación (el parámetro `@retention` de [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
   
 -   Si una suscripción no se sincroniza dentro del período máximo de retención de distribución (el valor predeterminado es de 72 horas) y existen cambios en la base de datos de distribución que no se han entregado al suscriptor, el trabajo **Limpieza de la distribución** que se ejecuta en el distribuidor marcará la suscripción como desactivada. Debe reinicializarse la suscripción.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85729374"
      Si una suscripción de inserción expira, se quita completamente, pero esto no sucede con las suscripciones de extracción. Debe limpiar las suscripciones de extracción en el suscriptor. Para más información, consulte [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Replicación de mezcla  
- La replicación de mezcla usa el período de retención de la publicación (los parámetros `@retention` y `@retention_period_unit` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Cuando una suscripción expira, debe reinicializarse, porque se quitan los metadatos de la suscripción. Los suscripciones que no se reinicializan se quitan con el trabajo **Limpieza de suscripciones expiradas** que se ejecuta en el publicador. De forma predeterminada, este trabajo se ejecuta diariamente; quita todas las suscripciones de inserción que no se han sincronizado una vez transcurrido el doble de tiempo del período de retención de la publicación. Por ejemplo:  
+ La replicación de mezcla utiliza el período de retención de la publicación (los parámetros de `@retention` y `@retention_period_unit` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Cuando una suscripción expira, debe reinicializarse, porque se quitan los metadatos de la suscripción. Los suscripciones que no se reinicializan se quitan con el trabajo **Limpieza de suscripciones expiradas** que se ejecuta en el publicador. De forma predeterminada, este trabajo se ejecuta diariamente; quita todas las suscripciones de inserción que no se han sincronizado una vez transcurrido el doble de tiempo del período de retención de la publicación. Por ejemplo:  
   
 -   Su una publicación tiene un período de retención de 14 días, una suscripción puede expirar si no se ha sincronizado en 14 días.  
   

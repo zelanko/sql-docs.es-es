@@ -1,4 +1,5 @@
 ---
+description: Implementar un proyecto de SSIS con código C# en una aplicación .NET
 title: Implementar un proyecto de SSIS con código .NET (C#) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4928f4394169987d4e3d06b6ddc9f4a4a33837c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 70bca79279d8db0bad18e1ee7ce9e4648dfb3c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495486"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Implementar un proyecto de SSIS con código C# en una aplicación .NET
 
@@ -24,7 +25,7 @@ En este inicio rápido se muestra cómo escribir código C# para conectarse a un
 
 Para crear una aplicación de C#, puede usar Visual Studio, Visual Studio Code u otra herramienta de su elección.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Antes de empezar, asegúrese de tener instalado Visual Studio o Visual Studio Code. Descargue la edición gratuita de Visual Studio Community Edition o Visual Studio Code desde [Descargas de Visual Studio](https://www.visualstudio.com/downloads/).
 
@@ -58,7 +59,7 @@ Consulte [Métodos de autenticación para la implementación](ssis-quickstart-de
 ## <a name="create-a-new-visual-studio-project"></a>Crear un nuevo proyecto de Visual Studio
 
 1. En Visual Studio, elija **Archivo**, **Nuevo**, **Proyecto**. 
-2. En el cuadro de diálogo **Nuevo proyecto**, expanda **Visual C#** .
+2. En el cuadro de diálogo **Nuevo proyecto**, expanda **Visual C#**.
 3. Seleccione **Aplicación de consola** y escriba *deploy_ssis_project* como nombre del proyecto.
 4. Haga clic en **Aceptar** para crear y abrir el nuevo proyecto en Visual Studio.
 
@@ -128,7 +129,7 @@ namespace deploy_ssis_project
 
 ## <a name="run-the-code"></a>Ejecución del código
 
-1. Presione **F5** para ejecutar la aplicación.
+1. Para ejecutar la aplicación, presione **F5**.
 2. En SSMS, compruebe que se ha implementado el proyecto.
 
 ## <a name="next-steps"></a>Pasos siguientes

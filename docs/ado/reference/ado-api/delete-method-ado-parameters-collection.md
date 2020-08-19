@@ -1,4 +1,5 @@
 ---
+description: Método Delete (colección de parámetros de ADO)
 title: Método Delete (colección de parámetros de ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19fb69e51e04a2e15c60767981bc32e4dfe77141
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a76353f62fc2b30ea8e7eae16c97469027a98110
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444167"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Método Delete (colección de parámetros de ADO)
 Elimina un objeto de la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) .  
@@ -34,10 +35,10 @@ Parameters.Delete Index
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Índice*  
+ *Index*  
  Valor de **cadena** que contiene el nombre del objeto que se desea eliminar o la posición ordinal (índice) del objeto en la colección.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El uso del método **Delete** en una colección permite quitar uno de los objetos de la colección. Este método solo está disponible en la colección **Parameters** de un objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) . Debe usar la propiedad [Name](../../../ado/reference/ado-api/name-property-ado.md) del objeto [Parameter](../../../ado/reference/ado-api/parameter-object.md) o su índice de colección al llamar al método **Delete** : una variable de objeto no es un argumento válido.  
   
 ## <a name="applies-to"></a>Se aplica a  

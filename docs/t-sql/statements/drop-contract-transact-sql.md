@@ -1,4 +1,5 @@
 ---
+description: DROP CONTRACT (Transact-SQL)
 title: DROP CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 13a7fb5a90441ab9cf3bf287634e7433308151d6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 128a8d993345e5c78d537923e26463acbe734e2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416651"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ DROP CONTRACT contract_name
  *contract_name*  
  Nombre del contrato que se va a quitar. No se pueden especificar nombres de servidor, base de datos o esquema.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  No se puede quitar un contrato si hay servicios o prioridades de conversación que hacen referencia a él.  
   
  Al quitar un contrato, [!INCLUDE[ssSB](../../includes/sssb-md.md)] finaliza con un error las conversaciones existentes que lo utilizan.  
@@ -65,7 +66,7 @@ DROP CONTRACT
     [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [ALTER SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-transact-sql.md)   
  [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   

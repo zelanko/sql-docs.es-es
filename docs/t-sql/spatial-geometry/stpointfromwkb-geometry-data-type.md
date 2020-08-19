@@ -1,4 +1,5 @@
 ---
+description: STPointFromWKB (tipo de datos geometry)
 title: STPointFromWKB (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0536529d063dc8f6e26eb7f8e548d6a46f2f69b3
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c0cb0023b2c51392e881ec5b50038ad69c4bbea2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416871"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *WKB_point*  
- Es la representación WKB de la instancia de **geometryPoint** que se quiere devolver. *WKB_point* es una expresión **varbinary(max)** .  
+ Es la representación WKB de la instancia de **geometryPoint** que se quiere devolver. *WKB_point* es una expresión **varbinary(max)**.  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryPoint** que se quiere devolver.  
@@ -52,7 +53,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
  Tipo OGC: **Point**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  

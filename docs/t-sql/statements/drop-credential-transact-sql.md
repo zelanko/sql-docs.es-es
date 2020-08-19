@@ -1,4 +1,5 @@
 ---
+description: DROP CREDENTIAL (Transact-SQL)
 title: DROP CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/19/2015
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c86550e6854cbfcb547a8734f05e910e25df2b5a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1b28f91129bccf4c8005cd840d87f14f2a84b25e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416551"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ DROP CREDENTIAL credential_name
  *credential_name*  
  Se trata del nombre de la credencial que se va a quitar del servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para quitar el secreto asociado a la credencial sin quitar la credencial, use [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md).  
   
  Encontrará más información sobre las credenciales en la vista de catálogo **sys.credentials**.  
@@ -68,7 +69,7 @@ DROP CREDENTIAL Saddles;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)   

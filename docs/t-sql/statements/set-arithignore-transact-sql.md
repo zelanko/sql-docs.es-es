@@ -1,4 +1,5 @@
 ---
+description: SET ARITHIGNORE (Transact-SQL)
 title: SET ARITHIGNORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -23,12 +24,12 @@ ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e72754414674f0617956e6be2ac2711ca0f850
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7bbb9188a082f87bb05f17d5641e12b6f73c66e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415051"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,9 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Observaciones  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentarios
  La opción SET ARITHIGNORE solo controla si se devuelve un mensaje de error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve NULL en un cálculo en que se invoca un error de desbordamiento o de división por cero con independencia de esta opción. La opción SET ARITHABORT se puede utilizar para determinar si la consulta ha finalizado o no. Esta opción no afecta a los errores producidos al ejecutar las instrucciones INSERT, UPDATE y DELETE.  
   
  Si SET ARITHABORT o SET ARITHIGNORE es OFF y SET ANSI_WARNINGS es ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá un mensaje de error cuando haya errores de división por cero o desbordamiento.  

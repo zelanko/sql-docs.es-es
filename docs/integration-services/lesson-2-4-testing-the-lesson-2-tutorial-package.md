@@ -1,4 +1,5 @@
 ---
+description: 'Lección 2-4: Prueba del paquete del tutorial de la lección 2'
 title: 'Paso 4: Prueba del paquete del tutorial de la lección 2 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11d621289dbff6e6940df75e13f07af287c4e9ef
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d431f2c14b42d5dbaa1dfdc7d987560eab58d4c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413571"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Lección 2-4: Prueba del paquete del tutorial de la lección 2
 
@@ -50,7 +51,7 @@ Antes de probar el paquete, compruebe que los flujos de datos y de control del p
 ## <a name="go-to-next-lesson"></a>Ir a la lección siguiente  
 [Lección 3: Adición de registro con SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Ejecución de proyectos y paquetes](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)  
   
   

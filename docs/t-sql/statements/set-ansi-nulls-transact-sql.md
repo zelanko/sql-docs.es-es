@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULLS (Transact-SQL)
 title: SET ANSI_NULLS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/24/2020
@@ -25,12 +26,12 @@ ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
-ms.openlocfilehash: 5a00bccbb5de02e49579bf7ada5ef13e96e57ed9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 493c92c8e49a5b341306513f7db43f5e25b9a3c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416161"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,9 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Observaciones  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Observaciones
 Cuando ANSI_NULLS se establece en ON, una instrucción SELECT que usa WHERE *nombre_columna* = **NULL** devuelve cero filas aunque haya valores NULL en *nombre_columna*. Una instrucción SELECT que usa WHERE *column_name* <> **NULL** devuelve cero filas aunque haya valores que no sean NULL en *column_name*.  
   
 Cuando ANSI_NULLS se establece en OFF, los operadores de comparación Es igual a (=) y No es igual a (<>) no siguen el estándar ISO. Una instrucción SELECT que usa WHERE *column_name* = **NULL** devuelve las filas que tienen valores NULL en *column_name*. Una instrucción SELECT que usa WHERE *column_name* <> **NULL** devuelve las filas que tienen valores no NULL en la columna. Además, una instrucción SELECT que usa WHERE *column_name* <> *XYZ_value* devuelve todas las filas que no son *XYZ_value* y que no son NULL.  

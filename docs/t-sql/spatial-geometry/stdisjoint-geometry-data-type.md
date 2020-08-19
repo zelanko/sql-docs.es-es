@@ -1,4 +1,5 @@
 ---
+description: STDisjoint (tipo de datos geometry)
 title: STDisjoint (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 78d120ce4e43427fc54809bf91b54788fd482a36
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 43d6372bbe90146004e205d8ac3678196d76712e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416901"
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (tipo de datos geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86555022"
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Dos instancias de **geometry** no son contiguas si la intersección de sus conjuntos de puntos está vacía.  
   
  Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.  
@@ -63,7 +64,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STDisjoint(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

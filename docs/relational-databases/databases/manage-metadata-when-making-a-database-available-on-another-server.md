@@ -1,4 +1,5 @@
 ---
+description: Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor
 title: Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor
 ms.date: 06/03/2020
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412851"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85726446"
   
  Para obtener más información sobre esta característica, vea [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
-> **NOTA:** Las cuentas de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan credenciales. Para conocer el identificador de la credencial de una cuenta proxy, use la tabla del sistema [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
+> **NOTA:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan credenciales. Para conocer el identificador de la credencial de una cuenta proxy, use la tabla del sistema [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
   
   
 ##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
@@ -129,7 +130,7 @@ ms.locfileid: "85726446"
   
  Para habilitar el cifrado automático de la clave maestra de una instancia de servidor, se cifra una copia de esta clave mediante la clave maestra de servicio. Esta copia cifrada se almacena en la base de datos y en **maestra**. Por lo general, la copia almacenada en la base de datos **maestra** se actualiza automáticamente al cambiar la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta primero descifrar la clave maestra de base de datos con la clave maestra de servicio de la instancia. Si ese descifrado produce errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buscará en el almacén de credenciales las credenciales de clave maestra con el mismo GUID de familia que la base de datos para la que necesita la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará después descifrar la clave maestra de la base de datos con cada credencial coincidente hasta que el descifrado se realice correctamente o no queden más credenciales. Para abrir una clave maestra que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción OPEN MASTER KEY y una contraseña.  
   
- Cuando se copia, restaura o adjunta una base de datos a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia de la clave maestra de la base de datos cifrada por la clave maestra de servicio no se almacena en **maestra** en la instancia de servidor de destino. Se debe abrir la clave maestra de la base de datos en esta instancia. Para abrir la clave maestra, ejecute la instrucción siguiente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** . Se recomienda habilitar luego el descifrado automático de la clave maestra de la base de datos mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. La instrucción ALTER MASTER KEY proporciona a la instancia de servidor una copia de la clave maestra de la base de datos que se ha cifrado con la clave maestra de servicio. Para obtener más información, vea [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Cuando se copia, restaura o adjunta una base de datos a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia de la clave maestra de la base de datos cifrada por la clave maestra de servicio no se almacena en **maestra** en la instancia de servidor de destino. Se debe abrir la clave maestra de la base de datos en esta instancia. Para abrir la clave maestra, ejecute la instrucción siguiente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** . Se recomienda habilitar el descifrado automático de la clave maestra de la base de datos ejecutando la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. La instrucción ALTER MASTER KEY proporciona a la instancia de servidor una copia de la clave maestra de la base de datos que se ha cifrado con la clave maestra de servicio. Para obtener más información, vea [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Para obtener información sobre cómo habilitar el descifrado automático de la clave maestra de base de datos de una base de datos reflejada, vea [Establecer una base de datos reflejada cifrada](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -156,11 +157,11 @@ ms.locfileid: "85726446"
 ### <a name="windows-management-instrumentation-wmi-events"></a>Eventos de Instrumental de administración de Windows (WMI)  
  El proveedor WMI para eventos de servidor le permite utilizar el Instrumental de administración de Windows (WMI) para supervisar eventos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toda aplicación que dependa de eventos de servidor expuestos a través del proveedor WMI del que depende la base de datos se debe definir en el equipo de la instancia de servidor de destino. El proveedor de eventos WMI crea notificaciones de evento con un servicio de destino definido en **msdb**.  
   
-> **NOTA:** Para obtener más información, vea [Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
+> **NOTA:** Para más información, consulte [Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md).  
   
  **Para crear una alerta WMI mediante SQL Server Management Studio**  
   
--   [Crear una alerta de evento WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
+-   [Create a WMI Event Alert](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>Funcionamiento de las notificaciones de eventos para una base de datos reflejada  
  La entrega entre bases de datos de notificaciones de eventos que implica una base de datos reflejada es remota, por definición, porque la base de datos reflejada puede conmutar por error. [!INCLUDE[ssSB](../../includes/sssb-md.md)] proporciona compatibilidad especial para las bases de datos reflejadas, en forma de *rutas reflejadas*. En una ruta reflejada hay dos direcciones: una para la instancia de servidor principal y otra para la instancia del servidor reflejado.  
@@ -242,7 +243,7 @@ ms.locfileid: "85726446"
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Ver información de pasos de trabajo](../../ssms/agent/view-job-step-information.md)  
+-   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
@@ -287,7 +288,7 @@ ms.locfileid: "85726446"
 #### <a name="server-level-permissions-for-a-certificate-or-asymmetric-key"></a>Permisos de nivel de servidor para un certificado o clave asimétrica  
  Los permisos de nivel de servidor para un certificado o clave asimétrica no se pueden conceder directamente. En su lugar, los permisos de nivel de servidor se conceden a un inicio de sesión asignado que se crea exclusivamente para un certificado o clave asimétrica. Por lo tanto, cada certificado o clave asimétrica que requiere permisos de nivel de servidor, necesita su propio *inicio de sesión asignado a un certificado* o *inicio de sesión asignado a una clave asimétrica*. Para conceder permisos de nivel de servidor para un certificado o clave asimétrica, conceda los permisos a su inicio de sesión asignado.  
   
-> **NOTA:** Un inicio de sesión asignado solo se utiliza para la autorización de código firmado con el certificado o clave asimétrica correspondiente. Los inicios de sesión asignados no se pueden utilizar para la autenticación.  
+> **NOTA:** Un inicio de sesión asignado solo se usa para la autorización con código firmado con el certificado o la clave asimétrica correspondiente. Los inicios de sesión asignados no se pueden utilizar para la autenticación.  
   
  El inicio de sesión asignado y sus permisos residen en la base de datos **maestra**. Si un certificado o clave asimétrica reside en una base de datos que no sea **maestra**, se debe volver a crear en **maestra** y asignarlo a un inicio de sesión. Si la base de datos se mueve, copia o restaura en otra instancia del servidor, se deben volver a crear sus certificados o claves asimétricas en la base de datos **maestra** de la instancia del servidor de destino, asignarlos a un inicio de sesión y conceder a este los permisos necesarios de nivel de servidor.  
   

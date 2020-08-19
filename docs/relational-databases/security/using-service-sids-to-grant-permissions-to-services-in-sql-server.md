@@ -1,4 +1,5 @@
 ---
+description: Uso de SID de servicio para conceder permisos a servicios en SQL Server
 title: Uso de SID de servicio para conceder permisos a servicios
 ms.custom: seo-dt-2019
 author: randomnote1
@@ -7,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: aeb813feb46c5895352e4da3ea748a3e2f12c1e2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f366af08581accf5ef1f1c8fc00830f6cc592537
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403571"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Uso de SID de servicio para conceder permisos a servicios en SQL Server
 

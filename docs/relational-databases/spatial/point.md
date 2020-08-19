@@ -1,4 +1,5 @@
 ---
+description: Punto
 title: Punto | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2170d3a0f31fbeacc82e465743c1bc4c57427a09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b6f192756d89554b2592671b322434e3c1f7d81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403111"
 ---
 # <a name="point"></a>Punto
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +66,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('POINT(3 4 NULL NULL)');  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [MultiPoint](../../relational-databases/spatial/multipoint.md)   
  [STX &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STY &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   

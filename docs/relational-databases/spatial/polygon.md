@@ -1,4 +1,5 @@
 ---
+description: Polygon
 title: Polygon | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3522345ce61af05d3934bff0fb240f8b5100987a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61062aae61a7653ea226ee56ecca51f0d99bb11a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403181"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -155,7 +156,7 @@ SELECT @g.ToString()
   
 La instancia de geometry devuelta es `Point(1 3)`.  Si el objeto `Polygon` proporcionado es `POLYGON((1 3, 1 5, 1 3, 1 3))` , entonces `MakeValid()` devolverá `LINESTRING(1 3, 1 5)`.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [STArea &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

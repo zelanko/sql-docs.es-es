@@ -1,4 +1,5 @@
 ---
+description: Crear y ejecutar seguimientos mediante procedimientos almacenados de Transact-SQL
 title: Crear y ejecutar seguimientos mediante procedimientos almacenados de Transact-SQL
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae33b8b69f3c6da6e6ad86a554c5eb0bf7af9535
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eac3736784845b5dbae102bd91aa824b203a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402481"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>Crear y ejecutar seguimientos mediante procedimientos almacenados de Transact-SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85751030"
 |[Limitar el tamaño de la tabla y el archivo de seguimiento](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|Contiene información acerca de cómo limitar el tamaño de los archivos y las tablas donde se escriben los datos de seguimiento. Tenga en cuenta que solo el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] puede escribir información sobre el seguimiento en las tablas.|  
 |[Programar seguimientos](../../relational-databases/sql-trace/schedule-traces.md)|Contiene información acerca de cómo establecer la hora de inicio y de finalización de la traza.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   

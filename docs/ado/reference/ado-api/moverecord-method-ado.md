@@ -1,4 +1,5 @@
 ---
+description: Método MoveRecord (ADO)
 title: MoveRecord (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e5c63bbd29bef1d7b0b7d7650c32fcfe2245f7a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443157"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
 Mueve la entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md) a otra ubicación.  
@@ -40,7 +41,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *Destino*  
  Opcional. Valor de **cadena** que contiene una dirección URL que especifica la ubicación donde se va a desplace el *origen* .  
   
- *Nombre*  
+ *UserName*  
  Opcional. Valor de **cadena** que contiene el identificador de usuario que, si es necesario, autoriza el acceso al *destino*.  
   
  *Contraseña*  
@@ -49,11 +50,11 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *Opciones*  
  Opcional. Un valor de [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) cuyo valor predeterminado es **adMoveUnspecified**. Especifica el comportamiento de este método.  
   
- *Copystreamtostream*  
+ *Asincrónico*  
  Opcional. Valor **booleano** que, cuando **es true**, especifica que esta operación debe ser asincrónica.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un valor **String**. Normalmente, se devuelve el valor de *Destination* . Sin embargo, el valor exacto devuelto depende del proveedor.  
+ Valor de **cadena** . Normalmente, se devuelve el valor de *Destination* . Sin embargo, el valor exacto devuelto depende del proveedor.  
   
 ## <a name="remarks"></a>Observaciones  
  Los valores de *origen* y *destino* no deben ser idénticos; de lo contrario, se produce un error en tiempo de ejecución. Al menos los nombres de servidor, ruta de acceso y recurso deben ser diferentes.  

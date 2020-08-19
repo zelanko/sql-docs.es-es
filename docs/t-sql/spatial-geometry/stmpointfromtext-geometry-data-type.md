@@ -1,4 +1,5 @@
 ---
+description: STMPointFromText (tipo de datos geometry)
 title: STMPointFromText (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 79e5bd417c46aa3cd2bbf15809928952e31cc9f7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d9beb721578c9c041f2fdd38b4c4e3b1af58ab99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445024"
 ---
 # <a name="stmpointfromtext-geometry-data-type"></a>STMPointFromText (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
 
 ## <a name="arguments"></a>Argumentos
  *multipoint_tagged_text*  
- Es la representación WKT de la instancia de **geometryMultiPoint** que se quiere devolver. *multipoint_tagged_text* es una expresión **nvarchar(max)** .  
+ Es la representación WKT de la instancia de **geometryMultiPoint** que se quiere devolver. *multipoint_tagged_text* es una expresión **nvarchar(max)**.  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryMultiPoint** que se quiere devolver.  

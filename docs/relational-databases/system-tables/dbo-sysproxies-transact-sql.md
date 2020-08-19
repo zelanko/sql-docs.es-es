@@ -1,4 +1,5 @@
 ---
+description: dbo.sysproxies (Transact-SQL)
 title: dbo.sysproxies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4bcebbdb3926b6444f647f57b3a82c1f9dcb622
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40ffbc10351cf4ca0cccc54e810a358da9a3e9f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446627"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,12 +37,12 @@ ms.locfileid: "85890462"
 |**proxy_id**|**int**|Id. de la cuenta de proxy.|  
 |**name**|**sysname**|Nombre de la cuenta de proxy.|  
 |**credential_id**|**int**|Id. de la credencial que utiliza la cuenta de proxy.|  
-|**activó**|**tinyint**|Estado de la cuenta de proxy:<br /><br /> **0** = deshabilitado. **1** = habilitada.|  
+|**enabled**|**tinyint**|Estado de la cuenta de proxy:<br /><br /> **0** = deshabilitado. **1** = habilitada.|  
 |**description**|**nvarchar(512)**|Descripción proporcionada por el usuario cuando se creó la cuenta de proxy.|  
 |**user_sid**|**varbinary(85)**|*Security_identifier* de Microsoft Windows del usuario o grupo asociado a la credencial del proxy.|  
 |**credential_date_created**|**datetime**|Es la fecha y hora en que se creó la credencial.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden tener acceso a la tabla **sysproxies** .  
   
 ## <a name="see-also"></a>Consulte también  

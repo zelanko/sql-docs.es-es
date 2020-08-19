@@ -1,4 +1,5 @@
 ---
+description: sp_resyncmergesubscription (Transact-SQL)
 title: sp_resyncmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48dac5345df6d9e963f3601741aa93a68e2dfa3f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9210352380000b465c93f2b1d2121af1bd786f80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446813"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,30 +44,30 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador de la base de datos de publicación. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si se ejecuta el procedimiento almacenado en el publicador de la base de datos de publicación. Si el procedimiento almacenado se ejecuta en el suscriptor, se debe especificar un publicador.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication*es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos de suscripciones. *subscription_db* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripciones. *subscription_db* es de **tipo sysname y su**valor predeterminado es NULL. El valor NULL es válido si el procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones. Si el procedimiento almacenado se ejecuta en el publicador, se debe especificar un suscriptor.  
   
-`[ @resync_type = ] resync_type`Define cuándo debe comenzar la resincronización. *resync_type* es de **tipo int**y puede tener uno de los valores siguientes.  
+`[ @resync_type = ] resync_type` Define cuándo debe comenzar la resincronización. *resync_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|La sincronización comienza después de la instantánea inicial. Esta es la opción que consume más recursos, puesto que se vuelven a aplicar al suscriptor todos los cambios a partir de la instantánea inicial.|  
 |**1**|La sincronización comienza después de la última validación correcta. Todas las generaciones nuevas o incompletas originadas a partir de la última validación correcta se aplicarán de nuevo al suscriptor.|  
 |**2**|La sincronización se inicia a partir de la fecha dada en *resync_date_str*. Todas las generaciones nuevas o incompletas originadas después de la fecha se vuelven a aplicar al suscriptor.|  
   
-`[ @resync_date_str = ] resync_date_string`Define la fecha en la que debe comenzar la resincronización. *resync_date_string* es de tipo **nvarchar (30)** y su valor predeterminado es NULL. Este parámetro se usa cuando el *resync_type* es un valor de **2**. La fecha dada se convierte en su valor **DateTime** equivalente.  
+`[ @resync_date_str = ] resync_date_string` Define la fecha en la que debe comenzar la resincronización. *resync_date_string* es de tipo **nvarchar (30)** y su valor predeterminado es NULL. Este parámetro se usa cuando el *resync_type* es un valor de **2**. La fecha dada se convierte en su valor **DateTime** equivalente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_resyncmergesubscription** se utiliza en la replicación de mezcla.  
   
  Un valor de **0** para el parámetro *resync_type* , que vuelve a aplicar todos los cambios desde la instantánea inicial, puede consumir muchos recursos, pero posiblemente mucho menos que una reinicialización completa. Por ejemplo, si la instantánea inicial tuvo lugar hace un mes, este valor dará lugar a que se apliquen de nuevo los datos del pasado mes. Si la instantánea inicial contenía 1 GB de datos, pero la cantidad de cambios del mes pasado ocupaba 2 MB de datos cambiados, sería mucho más eficaz volver a aplicar los datos que aplicar de nuevo la instantánea de 1 GB completa.  

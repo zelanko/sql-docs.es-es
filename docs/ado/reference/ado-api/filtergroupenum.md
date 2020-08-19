@@ -1,4 +1,5 @@
 ---
+description: FilterGroupEnum
 title: FilterGroupEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7b6a8d449d27539100f467da1eea19ec42e0a72
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f8d3c510cfd9fa6c4a28f78005021465b9b0917b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443667"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Especifica el grupo de registros que se van a filtrar de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|Filtros para ver solo los registros afectados por la llamada de última [eliminación](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [resincronización](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .|  
 |**adFilterConflictingRecords**|5|Filtros para ver los registros que dieron error en la última actualización por lotes.|  

@@ -1,4 +1,5 @@
 ---
+description: PWDCOMPARE (Transact-SQL)
 title: PWDCOMPARE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad59b8d81641999da674ca73db696c2f0c3ce1ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c03a83ed2dbe499e9b65a07446c04f0f6466ce93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445629"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,10 +47,10 @@ PWDCOMPARE ( 'clear_text_password'
 
 ## <a name="arguments"></a>Argumentos
  **'** *clear_text_password* **'**  
- Es la contraseña sin cifrar. *clear_text_password* es **sysname** (**nvarchar(128)** ).  
+ Es la contraseña sin cifrar. *clear_text_password* es **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
- Es el valor hash de cifrado de una contraseña. *password_hash* es **varbinary(128)** .  
+ Es el valor hash de cifrado de una contraseña. *password_hash* es **varbinary(128)**.  
   
  *version*  
  Parámetro desusado que se puede establecer en 1 si *password_hash* representa un valor de un inicio de sesión anterior a [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] que se migró a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior, pero que nunca se convirtió al sistema de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. *version* es **int**.  
@@ -62,7 +63,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  Devuelve 1 si el valor hash de *clear_text_password* coincide con el parámetro *password_hash* y 0 si no coincide.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La función PWDCOMPARE no es una amenaza contra la seguridad de los valores hash de las contraseñas porque podría realizarse la misma prueba intentando iniciar sesión con la contraseña proporcionada como primer parámetro.  
   
  **PWDCOMPARE** no se puede usar con las contraseñas de usuarios de base de datos independiente. No hay una base de datos independiente equivalente.  
@@ -90,7 +91,7 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [PWDENCRYPT &#40;Transact-SQL&#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [Funciones de seguridad &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

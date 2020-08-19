@@ -1,4 +1,5 @@
 ---
+description: DATETIME2FROMPARTS (Transact-SQL)
 title: DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97c4158d8c425a252d3bb0c09743706422761af5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2183bdd6d636ec7b8a63cc6bc73896de3eb69981
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445808"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +69,7 @@ Expresión entera que especifica la precisión del valor **datetime2** que `DATE
 ## <a name="return-types"></a>Tipos de valores devueltos
 **datetime2(** *precision* **)**
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 `DATETIME2FROMPARTS` devuelve un valor **datetime2** totalmente inicializado. `DATETIME2FROMPARTS` producirá un error si al menos uno de los argumentos obligatorios tiene un valor no válido. `DATETIME2FROMPARTS` devuelve NULL si al menos uno de los argumentos obligatorios tiene un valor NULL. Pero si el argumento *precision* tiene un valor NULL, `DATETIME2FROMPARTS` producirá un error.
 
 El argumento *fractions* depende del argumento *precision*. Por ejemplo, para un valor *precision* de 7, cada fracción representa 100 nanosegundos; si *precision* es 3, cada fracción representa un milisegundo. Para un valor de *precision* de cero, el valor de *fractions* también debe ser cero; de lo contrario, `DATETIME2FROMPARTS` generará un error.

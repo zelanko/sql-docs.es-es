@@ -1,4 +1,5 @@
 ---
+description: Find (método) (ADO)
 title: Find (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acd6b92e6f22f5a345421e3070e530eb148ded5f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d4c633cd1296c9433fbb7dfc185146c8b65e686b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443657"
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
 Busca en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) la fila que cumple los criterios especificados. Opcionalmente, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento de la fila inicial. Si se cumplen los criterios, la posición de la fila actual se establece en el registro encontrado; de lo contrario, la posición se establece en el final (o en el inicio) del **conjunto de registros**.  
@@ -46,10 +47,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *Iniciar*  
  Opcional. Marcador de **variante** que funciona como la posición inicial de la búsqueda.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En los *criterios*solo se puede especificar un nombre de una sola columna. Este método no admite búsquedas en varias columnas.  
   
- El operador de comparación en *criterios* puede ser " **>** " (mayor que), " **\<** " (menor que), "=" (igual), ">=" (mayor o igual que), "<=" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de patrones).  
+ El operador de comparación de *criterios* puede ser " **>** " (mayor que), "* * \<**" (less than), "=" (equal), "> =" (mayor o igual que), "<=" (menor o igual que), "<>" (no igual) o "like" (coincidencia de patrones).  
   
  El valor de *criterios* puede ser una cadena, un número de punto flotante o una fecha. Los valores de cadena se delimitan entre comillas simples o "#" (signo de número) (por ejemplo, "State = ' WA '" o "State = #WA #"). Los valores de fecha se delimitan con marcas "#" (signo de número) (por ejemplo, "start_date > #7/22/97 #"). Estos valores pueden contener horas, minutos y segundos para indicar las marcas de tiempo, pero no deben contener milisegundos o se producirán errores.  
   

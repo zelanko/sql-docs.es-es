@@ -1,4 +1,5 @@
 ---
+description: CREATE MESSAGE TYPE (Transact-SQL)
 title: CREATE MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70cdaf07914a409e83c8fc291964d79ce706a808
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 4966690508bdc48b73471519595b3010443128b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444874"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +65,7 @@ CREATE MESSAGE TYPE message_type_name
  AUTHORIZATION *owner_name*  
  Establece el propietario del tipo de mensaje en el usuario o el rol de base de datos que se ha especificado. Cuando el usuario actual es **dbo** o **sa**, *owner_name* puede ser el nombre de cualquier usuario o rol válidos. En caso contrario, *owner_name* debe ser el nombre del usuario actual, el nombre de un usuario para el que el usuario actual tiene permiso IMPERSONATE o el nombre de un rol al que pertenece el usuario actual. Si se omite esta cláusula, el tipo de mensaje pertenece al usuario actual.  
   
- VALIDATION  
+ VALIDATION   
  Especifica cómo [!INCLUDE[ssSB](../../includes/sssb-md.md)] valida el cuerpo del mensaje para mensajes de este tipo. Si no se especifica esta cláusula, el valor predeterminado de la validación es NONE.  
   
  Ninguno  
@@ -73,7 +74,7 @@ CREATE MESSAGE TYPE message_type_name
  EMPTY  
  Especifica que el cuerpo del mensaje debe ser NULL.  
   
- WELL_FORMED_XML  
+ WELL_FORMED_XML   
  Especifica que el cuerpo del mensaje debe contener XML correcto.  
   
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  

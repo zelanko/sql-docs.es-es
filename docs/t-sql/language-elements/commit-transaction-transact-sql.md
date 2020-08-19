@@ -1,4 +1,5 @@
 ---
+description: COMMIT TRANSACTION (Transact-SQL)
 title: COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2016
@@ -29,12 +30,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c8ead92fb3a4f44bee96cdf12dc8bddc164fe310
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 46622a1249834fa4d768abebf8864ba1ebe5d80e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445576"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,17 +65,17 @@ COMMIT [ TRAN | TRANSACTION ]
 
 ## <a name="arguments"></a>Argumentos
  *transaction_name*  
- **SE APLICA A:** SQL Server y Azure SQL Database
+ **SE APLICA A:** SQL Server y Azure SQL Database
  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo omite. *transaction_name* especifica un nombre de transacción asignado por una instrucción BEGIN TRANSACTION anterior. *transaction_name* debe cumplir con las reglas para identificadores, pero no puede superar los 32 caracteres. *transaction_name* indica a los programadores a qué instrucción BEGIN TRANSACTION anidada está asociada la instrucción COMMIT TRANSACTION.  
   
  *\@tran_name_variable*  
- **SE APLICA A:** SQL Server y Azure SQL Database  
+ **SE APLICA A:** SQL Server y Azure SQL Database  
  
 Se trata del nombre de una variable definida por el usuario que contiene un nombre de transacción válido. La variable se debe declarar con un tipo de datos char, varchar, nchar o nvarchar. Si se pasan más de 32 caracteres a la variable, solo se usarán 32 caracteres; el resto de los caracteres se truncarán.  
   
  DELAYED_DURABILITY  
- **SE APLICA A:** SQL Server y Azure SQL Database   
+ **SE APLICA A:** SQL Server y Azure SQL Database   
 
  La opción que solicita esta transacción se confirma con la durabilidad diferida. Se omitirá la solicitud si la base de datos se ha modificado con `DELAYED_DURABILITY = DISABLED` o `DELAYED_DURABILITY = FORCED`. Para saber más, vea [Control de la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md).  
   
@@ -83,7 +84,7 @@ Se trata del nombre de una variable definida por el usuario que contiene un nomb
   
  Si la transacción que se ha confirmado era una transacción [!INCLUDE[tsql](../../includes/tsql-md.md)] distribuida, COMMIT TRANSACTION hace que MS DTC utilice el protocolo de confirmación en dos fases para confirmar los servidores involucrados en la transacción. Si una transacción local afecta a dos o más bases de datos de la misma instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)], la instancia utiliza una confirmación interna en dos fases para confirmar todas las bases de datos involucradas en la transacción.  
   
- Cuando se utiliza en transacciones anidadas, las confirmaciones de las transacciones anidadas no liberan recursos ni hacen permanentes sus modificaciones. Las modificaciones sobre los datos solo quedan permanentes y se liberan los recursos cuando se confirma la transacción más externa. Cada COMMIT TRANSACTION que se ejecute cuando @@TRANCOUNT sea mayor que 1 solo reduce @@TRANCOUNT en 1. Cuando @@TRANCOUNT llega a 0, se confirma la transacción externa completa. Como *ignora*transaction_name[!INCLUDE[ssDE](../../includes/ssde-md.md)], la ejecución de una instrucción COMMIT TRANSACTION que haga referencia al nombre de una transacción externa cuando haya transacciones internas pendientes solo reduce @@TRANCOUNT en 1.  
+ Cuando se utiliza en transacciones anidadas, las confirmaciones de las transacciones anidadas no liberan recursos ni hacen permanentes sus modificaciones. Las modificaciones sobre los datos solo quedan permanentes y se liberan los recursos cuando se confirma la transacción más externa. Cada COMMIT TRANSACTION que se ejecute cuando @@TRANCOUNT sea mayor que 1 solo reduce @@TRANCOUNT en 1. Cuando @@TRANCOUNT llega a 0, se confirma la transacción externa completa. Como [!INCLUDE[ssDE](../../includes/ssde-md.md)] ignora *transaction_name*, la ejecución de una instrucción COMMIT TRANSACTION que haga referencia al nombre de una transacción externa cuando haya transacciones internas pendientes solo reduce @@TRANCOUNT en 1.  
   
  La ejecución de COMMIT TRANSACTION cuando @@TRANCOUNT es 0 produce un error; no hay ninguna instrucción BEGIN TRANSACTION asociada.  
   
@@ -109,7 +110,7 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>B. Confirmar una transacción anidada  
-**SE APLICA A:** SQL Server y Azure SQL Database    
+**SE APLICA A:** SQL Server y Azure SQL Database    
 
 En el siguiente ejemplo se crea una tabla, se generan tres niveles de transacciones anidadas y después se confirma la transacción anidada. Aunque cada instrucción `COMMIT TRANSACTION` cuenta con un parámetro *transaction_name*, no existe ninguna relación entre las instrucciones `COMMIT TRANSACTION` y `BEGIN TRANSACTION`. Los parámetros *transaction_name* ayudan al programador a asegurarse de que escribe el número apropiado de confirmaciones para reducir `@@TRANCOUNT` hasta 0, confirmando así la transacción más externa. 
   

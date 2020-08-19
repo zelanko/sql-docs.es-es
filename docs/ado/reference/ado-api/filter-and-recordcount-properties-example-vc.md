@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de las propiedades Filter y RecordCount (VC + +)
 title: Ejemplo de las propiedades Filter y RecordCount (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d079a56268d903970f7e99d987b1315d1decec44
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443677"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Ejemplo de las propiedades Filter y RecordCount (VC + +)
 En este ejemplo se usa la propiedad [Filter](../../../ado/reference/ado-api/filter-property.md) para abrir un nuevo [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basándose en una condición especificada aplicada a un **conjunto de registros**existente. Usa la propiedad [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) para mostrar el número de registros de los dos **conjuntos de registros**. La función FilterField es necesaria para que este procedimiento se ejecute.  

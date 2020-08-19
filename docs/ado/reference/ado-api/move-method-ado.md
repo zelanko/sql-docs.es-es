@@ -1,4 +1,5 @@
 ---
+description: Move (método) (ADO)
 title: Move (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 527e8c4f2f4c7c18163346f76029be539d1581d2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b39078235bffe15db40cfb0f25e13f984d5c5cf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443247"
 ---
 # <a name="move-method-ado"></a>Move (método) (ADO)
 Mueve la posición del registro actual en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  

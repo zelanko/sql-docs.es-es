@@ -1,4 +1,5 @@
 ---
+description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d9be8cfb561ec2e5857c2bd5699b46a5418c9df
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446016"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -44,7 +45,7 @@ Define una fecha que se combina con una hora del día basada en un reloj de 24 h
 |Formato de literal de cadena predeterminado<br /><br /> (se usa para el cliente de nivel inferior)|AAAA-MM-DD hh:mm:ss[.fracciones de segundos]<br /><br /> Para más información, vea la sección "Compatibilidad con versiones anteriores de clientes de niveles inferiores" más adelante.|  
 |Intervalo de fechas|De 0001-01-01 a 31.12.99<br /><br /> Del 1 de enero del año 1 después de Cristo al 31 de diciembre de 9999|  
 |Intervalo de horas|De 00:00:00 a 23:59:59.9999999|  
-|Intervalo de ajuste de zona horaria|None|  
+|Intervalo de ajuste de zona horaria|Ninguno|  
 |Intervalos de elementos|AAAA es una cifra de cuatro dígitos comprendida entre 0001 y 9999 que representa un año.<br /><br /> MM es una cifra de dos dígitos comprendida entre 01 y 12 que representa un mes del año especificado.<br /><br /> DD es una cifra de dos dígitos comprendida entre 01 y 31 (dependiendo del mes) que representa un día del mes especificado.<br /><br /> hh es una cifra de dos dígitos comprendida entre 00 y 23 que representa la hora.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59 que representa los minutos.<br /><br /> ss es una cifra de dos dígitos comprendida entre 00 y 59 que representa los segundos.<br /><br /> n* es una cifra de cero a siete dígitos comprendida entre 0 y 9999999 que representa las fracciones de segundos. En informática, las fracciones de segundo se truncarán cuando n > 3.|  
 |Longitud en caracteres|19 posiciones como mínimo (AAAA-MM-DD hh:mm:ss) a 27 como máximo (AAAA-MM-DD hh:mm:ss .0000000)|  
 |Precisión, escala|De 0 a 7 dígitos, con una precisión de 100 ns. La precisión predeterminada es 7 dígitos.|  
@@ -104,7 +105,7 @@ SELECT @datetime2 AS '@datetime2', @date AS '@date';
 --2016-12-21 00:00:00.0000000 2016-12-21
 ```  
   
-Cuando la conversión es desde **time(n)** , se copia el componente de hora y el componente de fecha se establece en "1900-01-01". En el siguiente ejemplo se muestran los resultados de convertir un valor `time(7)` en un valor `datetime2`.  
+Cuando la conversión es desde **time(n)**, se copia el componente de hora y el componente de fecha se establece en "1900-01-01". En el siguiente ejemplo se muestran los resultados de convertir un valor `time(7)` en un valor `datetime2`.  
   
 ```sql
 DECLARE @time time(7) = '12:10:16.1234567';
@@ -132,7 +133,7 @@ SELECT @datetime2 AS '@datetime2', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.0000000 2016-12-01 12:32:00 
 ```  
   
-Cuando la conversión es desde **datetimeoffset(n)** , se copian los componentes de fecha y hora. Se trunca la zona horaria. En el siguiente ejemplo se muestran los resultados de convertir un valor `datetimeoffset(7)` en un valor `datetime2`.  
+Cuando la conversión es desde **datetimeoffset(n)**, se copian los componentes de fecha y hora. Se trunca la zona horaria. En el siguiente ejemplo se muestran los resultados de convertir un valor `datetimeoffset(7)` en un valor `datetime2`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(7) = '2016-10-23 12:45:37.1234567 +10:0';

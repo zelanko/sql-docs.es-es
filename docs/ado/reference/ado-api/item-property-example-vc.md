@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de la propiedad de elemento (VC ++)
 title: Ejemplo de la propiedad Item (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ef98ecdaf1346aa06a46de88f20ab27e376ab7d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 231c5d4858436dc1c026f53ce002561529841c35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443387"
 ---
 # <a name="item-property-example-vc"></a>Ejemplo de la propiedad de elemento (VC ++)
 En este ejemplo se muestra cómo la propiedad del [elemento](../../../ado/reference/ado-api/item-property-ado.md) obtiene acceso a los miembros de una colección. En el ejemplo se abre la tabla ***authors*** de la base de datos ***pubs*** con un comando con parámetros.  

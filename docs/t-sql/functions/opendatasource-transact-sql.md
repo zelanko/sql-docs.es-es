@@ -1,4 +1,5 @@
 ---
+description: OPENDATASOURCE (Transact-SQL)
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/26/2019
@@ -23,12 +24,12 @@ ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0efa5662c4ba7110f9e699baf6289ed9c2789fce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a10994ac46bc1070304823dd5ae698a5b94c017d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445657"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +69,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Catálogo|DBPROP_INIT_CATALOG|Nombre del catálogo inicial o predeterminado al conectarse al origen de datos.|  
 |Seguridad integrada|DBPROP_AUTH_INTEGRATED|SSPI, para especificar la autenticación de Windows|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 `OPENROWSET` siempre hereda la intercalación de la instancia, independientemente de la intercalación establecida para las columnas.
 
 `OPENDATASOURCE` se puede usar para tener acceso a datos remotos desde orígenes de datos de OLE DB solo cuando la opción de registro DisallowAdhocAccess está establecida explícitamente en 0 para el proveedor especificado y la opción de configuración avanzada Ad Hoc Distributed Queries está habilitada. Cuando no se establecen estas opciones, el comportamiento predeterminado no permite el acceso ad hoc.  

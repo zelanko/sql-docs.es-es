@@ -1,4 +1,5 @@
 ---
+description: Método GetChunk (ADO)
 title: GetChunk (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f41cd6a590c318f3268eb5292b2086685a36848
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38e1375f0439cbc17d19c3a416bbc51cea01239b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443597"
 ---
 # <a name="getchunk-method-ado"></a>Método GetChunk (ADO)
 Devuelve todo, o una parte, del contenido de un objeto de [campo](../../../ado/reference/ado-api/field-object.md) de datos binarios o de texto grande.  
@@ -37,10 +38,10 @@ variable = field.GetChunk(Size)
  Devuelve un **valor de tipo Variant**.  
   
 #### <a name="parameters"></a>Parámetros  
- *Size*  
+ *Tamaño*  
  Expresión **larga** que es igual al número de bytes o caracteres que se desea recuperar.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use el método **GetChunk** en un objeto de **campo** para recuperar parte o todos los datos binarios o de caracteres largos. En situaciones en las que la memoria del sistema es limitada, puede utilizar el método **GetChunk** para manipular valores largos en partes, en lugar de en su totalidad.  
   
  Los datos que devuelve una llamada a **GetChunk** se asignan a la *variable*. Si el *tamaño* es mayor que el resto de los datos, el método **GetChunk** devuelve solo los datos restantes sin la *variable* padding con espacios vacíos. Si el campo está vacío, el método **GetChunk** devuelve un valor null.  

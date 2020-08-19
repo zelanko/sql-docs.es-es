@@ -1,4 +1,5 @@
 ---
+description: sp_replqueuemonitor (Transact-SQL)
 title: sp_replqueuemonitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73b999f1f6ee2ba49209f5763be6bb42e777ef78
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b8b0f11e5b0f62c1e874dbeba947ea136f7ee274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446837"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,17 +42,17 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. El servidor debe estar configurado para publicación. Su valor es NULL para todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. El servidor debe estar configurado para publicación. Su valor es NULL para todos los publicadores.  
   
-`[ @publisherdb = ] 'publisher_db' ]`Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Su valor es NULL para todas las bases de datos de publicaciones.  
+`[ @publisherdb = ] 'publisher_db' ]` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Su valor es NULL para todas las bases de datos de publicaciones.  
   
-`[ @publication = ] 'publication' ]`Es el nombre de la publicación. *Publication*es de **tipo sysname y su**valor predeterminado es NULL. Su valor es NULL para todas las publicaciones.  
+`[ @publication = ] 'publication' ]` Es el nombre de la publicación. *Publication*es de **tipo sysname y su**valor predeterminado es NULL. Su valor es NULL para todas las publicaciones.  
   
-`[ @tranid = ] 'tranid' ]`Es el identificador de la transacción. *tranid*es de **tipo sysname y su**valor predeterminado es NULL. Su valor es NULL para todas las transacciones.  
+`[ @tranid = ] 'tranid' ]` Es el identificador de la transacción. *tranid*es de **tipo sysname y su**valor predeterminado es NULL. Su valor es NULL para todas las transacciones.  
   
-`[ @queuetype = ] 'queuetype' ]`Es el tipo de cola que almacena las transacciones. *queuetype* es de **tinyint** con un valor predeterminado de **0**y puede tener uno de estos valores.  
+`[ @queuetype = ] 'queuetype' ]` Es el tipo de cola que almacena las transacciones. *queuetype* es de **tinyint** con un valor predeterminado de **0**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Todos los tipos de colas|  
 |**1**|Message Queue Server|  
@@ -60,14 +61,14 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_replqueuemonitor** se utiliza en la replicación de instantáneas o en la replicación transaccional con suscripciones de actualización en cola. No muestra los mensajes de la cola que no contienen comandos SQL o que forman parte de un comando SQL múltiple.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_replqueuemonitor**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Suscripciones actualizables para la replicación transaccional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

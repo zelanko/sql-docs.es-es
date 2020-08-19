@@ -1,4 +1,5 @@
 ---
+description: Ejemplo del método Move (VC ++)
 title: Ejemplo del método move (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 400af9af904820e05da2de3a1a0aabd3f3458ca8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b37c4ef22e44f1b7686d7b0313b07531f85540a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443217"
 ---
 # <a name="move-method-example-vc"></a>Ejemplo del método Move (VC ++)
 En este ejemplo se usa el método [Move](../../../ado/reference/ado-api/move-method-ado.md) para colocar el puntero de registro en función de los datos proporcionados por el usuario.  

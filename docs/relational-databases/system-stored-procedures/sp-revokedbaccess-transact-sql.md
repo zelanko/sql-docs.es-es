@@ -1,4 +1,5 @@
 ---
+description: sp_revokedbaccess (Transact-SQL)
 title: sp_revokedbaccess (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cec7eb26b749328d5bbf0f95f74a0de3b0f30a07
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cd16821bcbac3c814a7b164fa16501bca7a8f523
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446801"
 ---
 # <a name="sp_revokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901349"
   Quita un usuario de base de datos de la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [Drop User](../../t-sql/statements/drop-user-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilice [Drop User](../../t-sql/statements/drop-user-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name_in_db = ] 'name'`Es el nombre del usuario de la base de datos que se va a quitar. *Name* es un **tipo sysname** sin ningún valor predeterminado. *nombre* puede ser el nombre de un inicio de sesión de servidor, un inicio de sesión de Windows o un grupo de Windows y debe existir en la base de datos actual. Si especifica un inicio de sesión de Windows o un grupo de Windows, debe especificar el nombre con el que se conoce en la base de datos.  
+`[ @name_in_db = ] 'name'` Es el nombre del usuario de la base de datos que se va a quitar. *Name* es un **tipo sysname** sin ningún valor predeterminado. *nombre* puede ser el nombre de un inicio de sesión de servidor, un inicio de sesión de Windows o un grupo de Windows y debe existir en la base de datos actual. Si especifica un inicio de sesión de Windows o un grupo de Windows, debe especificar el nombre con el que se conoce en la base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

@@ -1,4 +1,5 @@
 ---
+description: sp_refreshview (Transact-SQL)
 title: sp_refreshview (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbc12b5e9013e8cbb5fb223f473e68c2e1cab445
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11b605bd505a88215258afc39c24735d95e56ab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446924"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @viewname = ] 'viewname'`Es el nombre de la vista. *ViewName* es de tipo **nvarchar**y no tiene ningún valor predeterminado. *ViewName* puede ser un identificador de varias partes, pero solo puede hacer referencia a vistas en la base de datos actual.  
+`[ @viewname = ] 'viewname'` Es el nombre de la vista. *ViewName* es de tipo **nvarchar**y no tiene ningún valor predeterminado. *ViewName* puede ser un identificador de varias partes, pero solo puede hacer referencia a vistas en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si no se crea una vista con SCHEMABINDING, **sp_refreshview** se debe ejecutar cuando se realicen cambios en los objetos subyacentes de la vista que afecten a la definición de la vista. De lo contrario, la vista podría producir resultados inesperados en las consultas.  
   
 ## <a name="permissions"></a>Permisos  
@@ -75,9 +76,9 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
- [sp_refreshsqlmodule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
+ [sp_refreshsqlmodule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   
   

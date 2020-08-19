@@ -1,4 +1,5 @@
 ---
+description: Conversión no determinista de las cadenas de fecha literales en valores DATE
 title: Conversión no determinista de literales de fecha | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2018
@@ -12,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445873"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversión no determinista de las cadenas de fecha literales en valores DATE
 
@@ -81,7 +82,7 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 En Japón y China, se utiliza el DATEFORMAT **ymd**. Los elementos del formato están en una secuencia que va de la unidad mayor a la menor. Por lo tanto, este formato es útil cuando se quiere ordenar. Este formato se considera el _formato internacional_. Es internacional porque los cuatro dígitos del año son inequívocos y ningún país en la tierra usa el formato arcaico **ydm**.
 
-En otros países, como Alemania y Francia, el DATEFORMAT es **dmy**, lo que significa **“dd-mm-aaaa”** . El formato **dmy** no es adecuado para ordenar, pero es una secuencia razonable de la unidad más pequeña a la mayor.
+En otros países, como Alemania y Francia, el DATEFORMAT es **dmy**, lo que significa **“dd-mm-aaaa”**. El formato **dmy** no es adecuado para ordenar, pero es una secuencia razonable de la unidad más pequeña a la mayor.
 
 Los Estados Unidos y los Estados Federados de Micronesia son los únicos países que utilizan **mdy**, que no se puede ordenar. La secuencia mixta del formato coincide con un patrón para decir fechas en comunicación verbal.
 

@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_get_ddl_history (Transact-SQL)
 title: Sys. sp_cdc_get_ddl_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c72e4a325c8374c3d08ae00cc5af6898d5e206f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9835c61aeb1f11b57250465697187cfcc6501f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446662"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|Número de secuencia de registro (LSN) asociado con el cambio de DDL.|  
 |ddl_time|**datetime**|Hora asociada al cambio de DDL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las modificaciones de DDL en la tabla de origen que cambian la estructura de las columnas de la tabla de origen, como agregar o quitar una columna, o cambiar el tipo de datos de una columna existente, se mantienen en la tabla [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Se puede crear un informe de estos cambios usando este procedimiento almacenado. Las entradas en cdc.ddl_history se realizan cuando el proceso de captura lee la transacción de DDL en el registro.  
   
 ## <a name="permissions"></a>Permisos  

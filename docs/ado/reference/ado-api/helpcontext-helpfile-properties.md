@@ -1,4 +1,5 @@
 ---
+description: HelpContext, HelpFile propiedades
 title: Propiedades HelpContext y HelpFile | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13fb3f0b5bf55ac9acb525183eba6d8645f4de62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 628d3c0d01cc1b62304627fb310705b093976f8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443487"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext, HelpFile propiedades
 Indica el archivo de ayuda y el tema asociados a un objeto de [error](../../../ado/reference/ado-api/error-object.md) .  

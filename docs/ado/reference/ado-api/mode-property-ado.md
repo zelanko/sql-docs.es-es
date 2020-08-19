@@ -1,4 +1,5 @@
 ---
+description: Propiedad Mode (ADO)
 title: Mode (propiedad) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3487463bf4a13cc97cbc7cd031e18cef5dccb2a7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7fd002f54010a9bc8d5cf543fe1fd4521bc6d221
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443257"
 ---
 # <a name="mode-property-ado"></a>Propiedad Mode (ADO)
 Indica los permisos disponibles para modificar los datos de un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [registro](../../../ado/reference/ado-api/record-object-ado.md)o [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) .  

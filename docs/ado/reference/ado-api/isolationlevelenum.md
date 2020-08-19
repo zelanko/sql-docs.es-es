@@ -1,4 +1,5 @@
 ---
+description: IsolationLevelEnum
 title: IsolationLevelEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 864938729153a1cd3f8f31f2e4ba04b075d2f713
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c08da68e136d3e2cffbb492f021225a3b895a9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443417"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 Especifica el nivel de aislamiento de transacción para un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) .  
   
-|Constante|Valor|Descripción|  
+|Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|Indica que el proveedor está utilizando un nivel de aislamiento diferente al especificado, pero que no se puede determinar el nivel.|  
 |**adXactChaos**|16|Indica que no se pueden sobrescribir los cambios pendientes de transacciones más aisladas.|  

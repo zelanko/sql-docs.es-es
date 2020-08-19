@@ -1,4 +1,5 @@
 ---
+description: 'Funciones de intercalación: TERTIARY_WEIGHTS (Transact-SQL)'
 title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f202d45b9c815154f252c0c016fe4931dbef069e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1a6cf4546193b02050c0559765fe3fa4ad368e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445902"
 ---
 # <a name="collation-functions---tertiary_weights-transact-sql"></a>Funciones de intercalación: TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,9 +48,9 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de cadena de tipo **char**, **varchar** o **varchar(max)** definida en una intercalación SQL terciaria. Para obtener una lista de estas intercalaciones, vea la sección Notas.
   
 ## <a name="return-types"></a>Tipos de valores devueltos
-`TERTIARY_WEIGHTS` devuelve **varbinary** cuando *non_Unicode_character_string_expression* es **char** o **varchar**, y devuelve **varbinary(max)** cuando *non_Unicode_character_string_expression* tiene un tipo de datos **varchar(max)** .
+`TERTIARY_WEIGHTS` devuelve **varbinary** cuando *non_Unicode_character_string_expression* es **char** o **varchar**, y devuelve **varbinary(max)** cuando *non_Unicode_character_string_expression* tiene un tipo de datos **varchar(max)**.
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 `TERTIARY_WEIGHTS` devuelve NULL cuando una colección terciaria de SQL no define *non_Unicode_character_string_expression*. En esta tabla se muestran las intercalaciones terciarias de SQL:
   
 |Id. de orden|Intercalación de SQL|  
@@ -87,7 +88,7 @@ Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de c
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-Use `TERTIARY_WEIGHTS` para la definición de una columna calculada que se define en los valores de una columna **char**, **varchar** o **varchar(max)** . Definir un índice tanto en la columna calculada como en la columna **char**, **varchar** o **varchar(max)** puede mejorar el rendimiento cuando se especifica esa columna **char**, **varchar** o **varchar(max)** en la cláusula ORDER BY de una consulta.
+Use `TERTIARY_WEIGHTS` para la definición de una columna calculada que se define en los valores de una columna **char**, **varchar** o **varchar(max)**. Definir un índice tanto en la columna calculada como en la columna **char**, **varchar** o **varchar(max)** puede mejorar el rendimiento cuando se especifica esa columna **char**, **varchar** o **varchar(max)** en la cláusula ORDER BY de una consulta.
   
 ## <a name="examples"></a>Ejemplos  
 En este ejemplo se crea una columna calculada en una tabla que aplica la función `TERTIARY_WEIGHTS` a los valores de una columna `char`:

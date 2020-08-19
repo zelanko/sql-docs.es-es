@@ -1,4 +1,5 @@
 ---
+description: LAG (Transact-SQL)
 title: LAG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2017
@@ -19,12 +20,12 @@ ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0a331ba23c92f84615284dab9440d85a1c1f577
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7edaea7f6e1f2e491674454aeac9b90d5e00d29e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445773"
 ---
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ LAG (scalar_expression [,offset] [,default])
  *offset*  
  El número de filas hacia atrás de la fila actual de la que se va a obtener un valor. Si no se especifica, el valor predeterminado es 1. *offset* puede ser una columna, una subconsulta u otra expresión que se evalúa como un entero positivo o que se puede convertir implícitamente en **bigint**. *offset* no puede ser un valor negativo o una función analítica.  
   
- *valor predeterminado*  
+ *default*  
  Valor que se devuelve cuando *offset* está fuera del ámbito de la partición. Si no se especifica ningún valor predeterminado, se devuelve NULL. *default* puede ser una columna, una subconsulta u otra expresión, pero no puede ser una función analítica. *default* debe tener un tipo compatible con *scalar_expression*.  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
@@ -171,7 +172,7 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
+ [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 

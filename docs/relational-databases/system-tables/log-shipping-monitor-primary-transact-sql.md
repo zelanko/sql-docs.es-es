@@ -1,4 +1,5 @@
 ---
+description: log_shipping_monitor_primary (Transact-SQL)
 title: log_shipping_monitor_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f7b071535ced290b10c059f6b450895a71b0f7ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d74a594c4a8b9140f550fd02878cd4994779fe42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446590"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,18 +45,18 @@ ms.locfileid: "85890197"
 |**last_backup_date_utc**|**datetime**|Fecha y hora de la última operación de copia de seguridad del registro de transacciones en la base de datos principal, expresadas en UTC (hora universal coordinada).|  
 |**history_retention_period**|**int**|Cantidad de tiempo, en minutos, durante la que los registros de historial del trasvase de registros se mantienen en una base de datos principal determinada antes de ser eliminados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Además de almacenarse en el servidor de supervisión remoto, la información relacionada con el servidor principal se almacena en el servidor principal en su **log_shipping_monitor_primary** tabla.  
   
 ## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [sp_add_log_shipping_primary_database &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
- [sp_change_log_shipping_primary_database &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-change-log-shipping-primary-database-transact-sql.md)   
- [sp_delete_log_shipping_primary_database &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
+ [sp_add_log_shipping_primary_database &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
+ [sp_change_log_shipping_primary_database &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-change-log-shipping-primary-database-transact-sql.md)   
+ [sp_delete_log_shipping_primary_database &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
- [sp_help_log_shipping_monitor_primary &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)   
- [sp_delete_log_shipping_alert_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [sp_help_log_shipping_monitor_primary &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql.md)   
+ [sp_delete_log_shipping_alert_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)   
  [Tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

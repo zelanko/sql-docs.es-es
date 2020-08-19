@@ -1,4 +1,5 @@
 ---
+description: Modificar relaciones de claves externas.
 title: Modificación de relaciones de claves externas | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -17,12 +18,12 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0c35f9ed49e8b11faf515ab7d270d2737a22d97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cfad7e7107c5391280331846e9275ef10112adb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446407"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relaciones de claves externas.
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -81,7 +82,7 @@ ms.locfileid: "86007090"
      **Categoría General**  
      Se expande para mostrar **Comprobar datos existentes al crear o al habilitar de nuevo** y **Especificación de tablas y columnas**.  
   
-     **Check Existing Data on Creation or Re-Enabling**  
+     **Comprobar datos existentes al crear o al habilitar de nuevo**  
      Comprueba con la restricción todos los datos que había en la tabla antes de crear o habilitar de nuevo la restricción.  
   
      **Especificación de tablas y columnas (Categoría)**  
@@ -142,7 +143,7 @@ ms.locfileid: "86007090"
   
     -   **Establecer predeterminado** Establece el valor predeterminado definido para la columna si todas las columnas de clave externa de la tabla tienen valores predeterminados definidos.  
   
-4.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
+4.  En el menú **Archivo**, haga clic en ***Guardar**_nombre de tabla_.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para modificar una clave externa**  

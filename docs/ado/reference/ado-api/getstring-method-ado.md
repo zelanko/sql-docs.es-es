@@ -1,4 +1,5 @@
 ---
+description: GetString (método) (ADO)
 title: GetString (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 166bfad93d994a4b85bdb944a5d5505987182044
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ef3d32e1caae337ecb2a03bba6af8c7b4cd858de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443517"
 ---
 # <a name="getstring-method-ado"></a>GetString (método) (ADO)
 Devuelve el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) como una cadena.  
@@ -52,7 +53,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  *NullExpr*  
  Opcional. Expresión usada en lugar de un valor null, si se especifica; de lo contrario, es la cadena vacía.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los datos de fila, pero no los datos de esquema, se guardan en la cadena. Por lo tanto, no se puede volver a abrir un **conjunto de registros** mediante esta cadena.  
   
  Este método es equivalente al método **GetClipString** de RDO.  

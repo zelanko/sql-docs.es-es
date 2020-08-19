@@ -1,4 +1,5 @@
 ---
+description: DECLARE CURSOR (Transact-SQL)
 title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3544d4a9530be4ff90609593e8335c725a4f1a22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ecef1c20be4350646cb98fb96db8152074a97dda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445511"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,7 +78,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Evita que se efectúen actualizaciones a través de este cursor. No se puede hacer referencia al cursor en una cláusula `WHERE CURRENT OF` de una instrucción `UPDATE` o `DELETE`. Esta opción reemplaza la capacidad predeterminada de actualizar el cursor.  
   
- UPDATE [OF *column_name* [ **,** ...*n*]]  
+ UPDATE [OF *column_name* [**,**...*n*]]  
  Define las columnas actualizables en el cursor. Si se especifica OF <column_name> [, <… n>], solo las columnas enumeradas admiten modificaciones. Si se especifica `UPDATE` sin indicar una lista de columnas, se pueden actualizar todas las columnas.  
   
 *cursor_name*  
@@ -136,7 +137,7 @@ Especifica que las actualizaciones o las cancelaciones posicionadas realizadas a
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente el cursor a otro tipo si las cláusulas de la instrucción *select_statement* entran en conflicto con la funcionalidad del tipo de cursor solicitado. Para obtener más información, vea el tema relativo a las conversiones de cursor implícitas.  
   
-FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
+FOR UPDATE [OF *column_name* [**,**...*n*]]  
 Define las columnas actualizables en el cursor. Si se especifica `OF <column_name> [, <... n>]`, solo las columnas enumeradas admiten modificaciones. Si se especifica `UPDATE` sin una lista de columnas, se pueden actualizar todas las columnas, a menos que se haya especificado la opción de simultaneidad `READ_ONLY`.  
   
 ## <a name="remarks"></a>Observaciones  

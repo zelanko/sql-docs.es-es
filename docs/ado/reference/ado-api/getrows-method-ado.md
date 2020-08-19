@@ -1,4 +1,5 @@
 ---
+description: Método GetRows (ADO)
 title: GetRows (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e468e24506425d995320a8729272f87ac64943b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3a197cf085c4c1d741c19a55524313edbd4c5906
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443567"
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
 Recupera varios registros de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) en una matriz.  
@@ -43,10 +44,10 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Iniciar*  
  Opcional. Un valor de **cadena** o una **variante** que se evalúa como el marcador del registro del que debe comenzar la operación de **GetRows** . También puede usar un valor de [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
- *Fields*  
+ *Campos*  
  Opcional. **Variante** que representa un nombre de campo único o una posición ordinal, o una matriz de nombres de campo o números de posición ordinal. ADO solo devuelve los datos de estos campos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Utilice el método **GetRows** para copiar registros de un **conjunto de registros** en una matriz bidimensional. El primer subíndice identifica el campo y el segundo identifica el número de registro. La variable de *matriz* se dimensiona automáticamente con el tamaño correcto cuando el método **GetRows** devuelve los datos.  
   
  Si no especifica un valor para el argumento *Rows* , el método **GetRows** recupera automáticamente todos los registros del objeto de conjunto de **registros** . Si solicita más registros de los que están disponibles, **GetRows** solo devuelve el número de registros disponibles.  

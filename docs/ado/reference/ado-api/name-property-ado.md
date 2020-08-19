@@ -1,4 +1,5 @@
 ---
+description: Propiedad Name (ADO)
 title: Name (propiedad) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 368def89951e7d0eacca9b999b647abd949c3b10
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 60bf64f57c4373d814f2b207808aa2d7dbe7c497
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443137"
 ---
 # <a name="name-property-ado"></a>Propiedad Name (ADO)
 Indica el nombre de un objeto.  
@@ -48,7 +49,7 @@ Indica el nombre de un objeto.
         [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
     :::column-end:::
     :::column:::
-        [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)  
         [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
     :::column-end:::
 :::row-end:::

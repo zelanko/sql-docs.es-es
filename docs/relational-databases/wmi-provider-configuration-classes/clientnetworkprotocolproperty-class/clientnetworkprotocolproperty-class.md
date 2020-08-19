@@ -1,4 +1,5 @@
 ---
+description: Clase ClientNetworkProtocolProperty
 title: Clase ClientNetworkProtocolProperty
 ms.custom: ''
 ms.date: 03/04/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a1abedd3b0cbd11e94387694c5535bffc2fa7ff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2bf2dece4c745cadf1fc53c46bae9169010632f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446319"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>Clase ClientNetworkProtocolProperty
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85881045"
   
 -   Establecer marcas para la propiedad actual.  
   
-## <a name="see-also"></a>Consulte también  
- [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>Vea también  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

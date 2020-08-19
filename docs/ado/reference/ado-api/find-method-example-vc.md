@@ -1,4 +1,5 @@
 ---
+description: Ejemplo del método Find (VC ++)
 title: Ejemplo del método Find (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73ba054b583fb9930cc62d18ff9e8e28a20720e9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43037237ecba87b099c6e74b32f0a78c914a72f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443647"
 ---
 # <a name="find-method-example-vc"></a>Ejemplo del método Find (VC ++)
 En este ejemplo se usa el método [Find](../../../ado/reference/ado-api/find-method-ado.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para buscar y contar el número de títulos de negocio en la base de datos **pubs** . En el ejemplo se da por supuesto que el proveedor subyacente no es compatible con una funcionalidad similar.  

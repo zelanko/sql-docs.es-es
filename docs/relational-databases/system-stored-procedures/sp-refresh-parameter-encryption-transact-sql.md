@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_parameter_encryption (Transact-SQL)
 title: sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
@@ -19,11 +20,12 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1af6c8584c9190bd4611eed4875ec146b6f3656b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446921"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -45,9 +47,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Argumentos
 
-`[ @name = ] 'module_name'`Es el nombre del procedimiento almacenado, la función definida por el usuario, la vista, el desencadenador DML, el desencadenador DDL de nivel de base de datos o el desencadenador DDL de nivel de servidor. *MODULE_NAME* no puede ser un procedimiento almacenado de Common Language Runtime (CLR) o una función CLR. *MODULE_NAME* no se pueden enlazar a un esquema. *MODULE_NAME* es `nvarchar` y no tiene ningún valor predeterminado. *MODULE_NAME* puede ser un identificador de varias partes, pero solo puede hacer referencia a objetos de la base de datos actual.
+`[ @name = ] 'module_name'` Es el nombre del procedimiento almacenado, la función definida por el usuario, la vista, el desencadenador DML, el desencadenador DDL de nivel de base de datos o el desencadenador DDL de nivel de servidor. *MODULE_NAME* no puede ser un procedimiento almacenado de Common Language Runtime (CLR) o una función CLR. *MODULE_NAME* no se pueden enlazar a un esquema. *MODULE_NAME* es `nvarchar` y no tiene ningún valor predeterminado. *MODULE_NAME* puede ser un identificador de varias partes, pero solo puede hacer referencia a objetos de la base de datos actual.
 
-`[ @namespace = ] ' < class > '`Es la clase del módulo especificado. Cuando *MODULE_NAME* es un desencadenador DDL, `<class>` es necesario. `<class>` es `nvarchar(20)`. Las entradas válidas son `DATABASE_DDL_TRIGGER` y `SERVER_DDL_TRIGGER` .    
+`[ @namespace = ] ' < class > '` Es la clase del módulo especificado. Cuando *MODULE_NAME* es un desencadenador DDL, `<class>` es necesario. `<class>` es `nvarchar(20)`. Las entradas válidas son `DATABASE_DDL_TRIGGER` y `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Valores de código de retorno  
 
@@ -62,7 +64,7 @@ Los metadatos de cifrado de los parámetros de un módulo pueden quedarse obsole
 
 Cuando se modifican las propiedades de cifrado de una tabla, `sp_refresh_parameter_encryption` se debe ejecutar para cualquier módulo que haga referencia directa o indirectamente a la tabla. Se puede llamar a este procedimiento almacenado en los módulos en cualquier orden, sin necesidad de que el usuario actualice primero el módulo interno antes de pasar a sus llamadores.
 
-`sp_refresh_parameter_encryption`no afecta a ningún permiso, propiedad extendida u `SET` opciones asociadas al objeto. 
+`sp_refresh_parameter_encryption` no afecta a ningún permiso, propiedad extendida u `SET` opciones asociadas al objeto. 
 
 Para actualizar un desencadenador DDL de nivel de servidor, ejecute este procedimiento almacenado desde el contexto de cualquier base de datos.
 

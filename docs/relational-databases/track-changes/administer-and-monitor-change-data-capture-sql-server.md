@@ -1,4 +1,5 @@
 ---
+description: Administrar y supervisar la captura de datos modificados (SQL Server)
 title: Administrar y supervisar la captura de datos modificados
 ms.date: 01/02/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 327adcd406e4fa79591529265acc2d6b23b3a044
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dfc040c4157cfd44a27a0b05a3bef42a1591aa2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446397"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
 
@@ -181,7 +182,7 @@ El recopilador de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 Cuando se aplican Service Pack o actualizaciones acumulativas a una instancia, durante el reinicio, la instancia puede entrar en modo de actualización de script. En este modo, SQL Server puede ejecutar un paso para analizar y actualizar las tablas de CDC internas, lo cual puede dar lugar a que se vuelvan a crear objetos, como los índices de las tablas de captura. Según la cantidad de datos implicados, este paso puede ser lento o generar un uso elevado del registro de transacciones para las bases de datos CDC habilitadas.
 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)
 - [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)

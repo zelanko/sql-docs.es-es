@@ -1,4 +1,5 @@
 ---
+description: Método SetCurrentCertificate (clase SInstance)
 title: Método SetCurrentCertificate (SInstance)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7349fb87-b973-4160-a2be-cab73abf5b31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b28c8e5091aaaa0c0387e9cfdd8723dae5ddc908
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3640d05ceee5c6cbc540cf054e00f027620a5748
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446500"
 ---
 # <a name="setcurrentcertificate-method-sinstance-class"></a>Método SetCurrentCertificate (clase SInstance)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ object.SetCurrentCertificate(SHA)
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

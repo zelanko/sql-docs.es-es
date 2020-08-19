@@ -1,4 +1,5 @@
 ---
+description: Procedimientos almacenados del Agente SQL Server (Transact-SQL)
 title: Agente SQL Server procedimientos almacenados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c8de925-928b-460c-9455-779c4c37b966
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 92da9ffca157511b3046d3f4bb25ca66662b16e5
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 954d468134c49d3b86fc39de9177afc164328400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446689"
 ---
 # <a name="sql-server-agent-stored-procedures-transact-sql"></a>Procedimientos almacenados del Agente SQL Server (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -186,7 +187,7 @@ ms.locfileid: "86977685"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

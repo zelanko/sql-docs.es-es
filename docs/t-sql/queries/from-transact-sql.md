@@ -1,4 +1,5 @@
 ---
+description: Cláusula FROM más JOIN, APPLY, PIVOT (Transact-SQL)
 title: 'FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/01/2019
@@ -34,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4aa3383d88121c1b9fce53c48c24ebfd3ebb73ff
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 810a61f438f88420829bb9656b328b2d93c7ef7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445385"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM más JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -172,7 +173,9 @@ FROM { <table_source> [ ,...n ] }
     | REDISTRIBUTE  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
 \<table_source>  
  Especifica el origen de una tabla, una vista, una tabla variable o una tabla derivada, con o sin alias, para utilizarlo en la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se pueden utilizar hasta 256 orígenes de tabla en una instrucción, aunque el límite varía en función de la memoria disponible y de la complejidad del resto de las expresiones de la consulta. Las consultas individuales pueden no admitir un máximo de 256 orígenes de tabla.  
   

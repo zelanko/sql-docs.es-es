@@ -1,4 +1,5 @@
 ---
+description: Propiedad Filter
 title: Propiedad Filter | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443687"
 ---
 # <a name="filter-property"></a>Propiedad Filter
 Indica un filtro para los datos de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -35,7 +36,7 @@ Establece o devuelve un valor **Variant** , que puede contener uno de los siguie
   
 -   Un valor de [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) .  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 Utilice la propiedad **Filter** para filtrar de forma selectiva los registros de un objeto de **conjunto de registros** . El conjunto de **registros** filtrado se convierte en el cursor actual. Otras propiedades que devuelven valores basados en el **cursor** actual se ven afectadas, como la [propiedad AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), la [propiedad AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), la [propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)y la [propiedad PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Al establecer la propiedad **Filter** en un valor nuevo específico, se mueve el registro actual al primer registro que satisface el nuevo valor.
   
@@ -56,7 +57,7 @@ La cadena de criterios se compone de cláusulas con el formato *FieldName-Operat
 -   En su lugar, crearía este filtro como  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo: `LastName Like 'Smit*'`.  
+-   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo, `LastName Like 'Smit*'`.  
   
  Las constantes de filtro facilitan la resolución de conflictos de registros individuales durante el modo de actualización por lotes, ya que permiten ver, por ejemplo, solo los registros que se vieron afectados durante la última llamada al método del [método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
   
@@ -93,8 +94,8 @@ En la tabla siguiente se resumen los efectos de **adFilterPendingRecords** en di
 |Posibles|No claves|Clave única|Varias claves|
 |-|--------------|----------------|-------------------|
 |**No claves**|+|+|+|
-|**Clave única**|+|-|N/A|
-|**Varias claves**|+|N/A|+|
+|**Clave única**|+|-|N/D|
+|**Varias claves**|+|N/D|+|
 |||||
   
 ## <a name="applies-to"></a>Se aplica a

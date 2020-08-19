@@ -1,4 +1,5 @@
 ---
+description: El servicio de cursores de Microsoft para OLE DB
 title: El servicio de cursores de Microsoft para OLE DB | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3b36ebd9ce3af6769e87dbc4cf826713288b722
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f3646ec86f76fcba2f6b82759a4784de7d463279
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452747"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>El servicio de cursores de Microsoft para OLE DB
 Cuando se selecciona un cursor del lado cliente o se establece la propiedad **CursorLocation** en **adUseClient**, se invoca el servicio de cursores de Microsoft para OLE DB. También puede ver referencias al "motor de cursor de cliente", que básicamente es lo mismo en el contexto de ADO. Este servicio complementa las funciones de compatibilidad de cursores de los proveedores de datos. Como resultado, puede percibir funcionalidad relativamente uniforme de todos los proveedores de datos.  

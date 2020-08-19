@@ -1,4 +1,5 @@
 ---
+description: NonEmpty (MDX)
 title: No vacío (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b887988327908f128633349de52f39a17d1e0978
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483728"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -38,7 +39,7 @@ NONEMPTY(set_expression1 [,set_expression2])
  Esta función devuelve las tuplas del primer conjunto especificado que no están vacías cuando se evalúan todas las tuplas del segundo conjunto. La función **NonEmpty** tiene en cuenta los cálculos y conserva las tuplas duplicadas. Si no se proporciona un segundo conjunto, la expresión se evalúa en el contexto de las coordenadas actuales de los miembros de las jerarquías de atributo y las medidas del cubo.  
   
 > [!NOTE]  
->  Use esta función en lugar de la función de [&#41;de MDX &#40;da NonEmptyCrossjoin](../mdx/nonemptycrossjoin-mdx.md) en desuso.  
+>  Use esta función en lugar de la función de [&#41;de MDX &#40;da NonEmptyCrossjoin ](../mdx/nonemptycrossjoin-mdx.md) en desuso.  
   
 > [!IMPORTANT]  
 >  No vacías es una característica de las celdas a las que hacen referencia las tuplas y no de las propias tuplas.  
@@ -86,11 +87,11 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [Filtrar &#40;&#41;MDX](../mdx/filter-mdx.md)   
- [IsEmpty &#40;&#41;MDX](../mdx/isempty-mdx.md)   
+ [Filtrar &#40;&#41;MDX ](../mdx/filter-mdx.md)   
+ [IsEmpty &#40;&#41;MDX ](../mdx/isempty-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [NonEmptyCrossjoin &#40;&#41;MDX](../mdx/nonemptycrossjoin-mdx.md)  
+ [NonEmptyCrossjoin &#40;&#41;MDX ](../mdx/nonemptycrossjoin-mdx.md)  
   
   

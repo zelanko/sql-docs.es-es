@@ -1,4 +1,5 @@
 ---
+description: Secuencias y persistencia
 title: Flujos y persistencia | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 869c5ef7380c315b60d2cbf6ad11f0cf638a0d7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452777"
 ---
 # <a name="streams-and-persistence"></a>Secuencias y persistencia
 El método [Save](../../../ado/reference/ado-api/save-method.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) almacena o *conserva*un **conjunto de registros** en un archivo y el método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) restaura el **conjunto de registros** a partir de ese archivo.  
@@ -104,7 +105,7 @@ Set rs = nothing
   
  Una nueva propiedad en el [control](../../../ado/reference/rds-api/datacontrol-object-rds.md)de objetos de RDS, [URL](../../../ado/reference/rds-api/url-property-rds.md), apunta a la página. asp que genera el **conjunto de registros**. Esto significa que se puede obtener un objeto de **conjunto de registros** sin RDS mediante el objeto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) del servidor o el usuario que escribe un objeto comercial. Esto simplifica significativamente el modelo de programación de RDS.  
   
- Código del lado servidor, denominadohttps://server/directory/recordset.asp:  
+ Código del lado servidor, denominado https://server/directory/recordset.asp:  
   
 ```  
 <%  

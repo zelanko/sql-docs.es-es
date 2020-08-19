@@ -1,4 +1,5 @@
 ---
+description: 'Paso 3: Relleno del cuadro de lista de campos'
 title: 'Paso 3: rellenar el cuadro de lista campos | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ecedd516891e2f99a800da452573717f211ff60
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d3a7378cfdce29094f5ae4271b9fe7bff7516753
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452797"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>Paso 3: Relleno del cuadro de lista de campos
 Para rellenar el cuadro de lista campos, inserte el siguiente código en el controlador de eventos Click de `lstMain` :  

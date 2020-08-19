@@ -1,4 +1,5 @@
 ---
+description: ¿Qué es un Cursor?
 title: ¿Qué es un Cursor? | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2761a716981a5d22fd7f7347f7b757013cccc5d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a3fabe19ad59f7e1ee6b24f278c7a5edf1985db6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452547"
 ---
 # <a name="what-is-a-cursor"></a>¿Qué es un Cursor?
 Las operaciones de una base de datos relacional actúan en un conjunto completo de filas. El conjunto de filas que devuelve una instrucción SELECT está compuesto por todas las filas que satisfacen las condiciones de la cláusula WHERE de la instrucción. Este conjunto completo de filas que devuelve la instrucción se conoce como conjunto de resultados. Las aplicaciones, especialmente las que son interactivas y en línea, no funcionan siempre de forma eficaz con el conjunto de resultados completo como una unidad. Estas aplicaciones necesitan un mecanismo que trabaje con una fila o un pequeño bloque de filas cada vez. Los cursores son una extensión de los conjuntos de resultados que proporcionan dicho mecanismo.  

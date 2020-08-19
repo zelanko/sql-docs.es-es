@@ -1,4 +1,5 @@
 ---
+description: Trabajo con datos multidimensionales
 title: Trabajar con datos multidimensionales | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452397"
 ---
 # <a name="working-with-multidimensional-data"></a>Trabajo con datos multidimensionales
 Un conjunto de *celdas* es el resultado de una consulta en datos multidimensionales. Consta de una colección de ejes, normalmente no más de cuatro ejes y, normalmente, solo dos o tres. Un *eje* es una colección de miembros de una o más dimensiones, que se utiliza para buscar o filtrar valores específicos de un cubo.  
@@ -30,7 +31,7 @@ Un conjunto de *celdas* es el resultado de una consulta en datos multidimensiona
   
  Por ejemplo, un cubo tiene las seis dimensiones siguientes (tenga en cuenta que este esquema de cubo difiere ligeramente del ejemplo dado en [información general de esquemas y datos multidimensionales](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
   
--   Vendedor  
+-   SalesPerson  
   
 -   Geografía (jerarquía natural): continentes, países, Estados, etc.  
   

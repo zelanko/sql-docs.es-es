@@ -1,4 +1,5 @@
 ---
+description: Configuración de RDS en Windows 2000
 title: Configurar RDS en Windows 2000 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5bd4829382a3724b4999e3f87de29a561bd6a29
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db965e76f8d62bc90f0f6a5640e8ca4e7752bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452297"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configuración de RDS en Windows 2000
 Si tiene dificultades para que RDS funcione correctamente después de actualizar a Windows 2000, siga estos pasos para solucionar el problema:  
   
 1.  Para asegurarse de que el servicio de publicación de World Wide Web se está ejecutando en primer lugar, vaya a https://Server con Internet Explorer. Si no puede tener acceso al servidor Web de esta manera, abra un símbolo del sistema y escriba el siguiente comando: NET START W3SVC.  
   
-2.  En el menú Inicio, seleccione Ejecutar. Escriba MSDFMAP. ini y, a continuación, haga clic en Aceptar para abrir el archivo MSDFMAP. ini en el Bloc de notas. Active la sección [CONNECT DEFAULT] y, si el parámetro de acceso está establecido en NoAccess, cámbielo a READONLY.  
+2.  En el menú Inicio, seleccione Ejecutar. Escriba msdfmap.ini y, a continuación, haga clic en Aceptar para abrir el archivo de msdfmap.ini en el Bloc de notas. Active la sección [CONNECT DEFAULT] y, si el parámetro de acceso está establecido en NoAccess, cámbielo a READONLY.  
   
 3.  Con la utilidad regedit, vaya a "HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\DataFactory\HandlerInfo" y asegúrese de que **HandlerRequired** está establecido en 0 y el valor **predeterminado** es "" (cadena nula).  
   

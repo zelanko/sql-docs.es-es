@@ -1,4 +1,5 @@
 ---
+description: Funciones de API de nivel 1 (controlador ODBC para Oracle)
 title: Funciones de la API de nivel 1 (controlador ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37305ee75ebeb0686bafe039f1102cb3c6e18674
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c82ab0f481fbc60d0308895640371e84886e77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483548"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Funciones de API de nivel 1 (controlador ODBC para Oracle)
 > [!IMPORTANT]  
@@ -36,7 +37,7 @@ ms.locfileid: "81299955"
 |**SQLGetConnectOption**|Devuelve el valor actual de una opción de conexión. Esta función se admite parcialmente. El controlador admite todos los valores para el argumento *fOption* , pero no admite algunos valores *vParam* para el argumento *fOption* [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Para obtener más información, consulte [Opciones de conexión](../../odbc/microsoft/connect-options.md).|  
 |**SQLGetData**|Recupera el valor de un campo único en el registro actual del conjunto de resultados especificado.|  
 |**SQLGetFunctions**|Devuelve TRUE para todas las funciones admitidas. Implementado por el administrador de controladores.|  
-|**SQLGetInfo**|Devuelve información, como SQLHDBC, SQLUSMALLINT, SQLPOINTER, SQLSMALLINT y SQLSMALLINT \*, sobre el controlador ODBC para Oracle y el origen de datos asociado a un identificador de conexión, *hdbc*.|  
+|**SQLGetInfo**|Devuelve información, como SQLHDBC, SQLUSMALLINT, SQLPOINTER, SQLSMALLINT y SQLSMALLINT \* , sobre el controlador ODBC para Oracle y el origen de datos asociado a un identificador de conexión, *hdbc*.|  
 |**SQLGetStmtOption**|Devuelve el valor actual de una opción de instrucción. Para obtener más información, vea opciones de la [instrucción](../../odbc/microsoft/statement-options.md).|  
 |**SQLGetTypeInfo**|Devuelve información sobre los tipos de datos admitidos por un origen de datos. El controlador devuelve la información en un conjunto de resultados de SQL.|  
 |**SQLParamData**|Se usa junto con **SQLPutData** para especificar los datos de parámetro en el tiempo de ejecución de la instrucción.|  

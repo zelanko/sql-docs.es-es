@@ -1,4 +1,5 @@
 ---
+description: Descripción de los cursores y bloqueos
 title: Descripción de los cursores y bloqueos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13a175d9e98fec5795c2756e79f96304b2ab2cc6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cfe2d50af04309a439c276674581f07a26f9cb04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452677"
 ---
 # <a name="understanding-cursors-and-locks"></a>Descripción de los cursores y bloqueos
 Es importante comprender cómo funcionan los cursores para que pueda seleccionar el tipo de cursor mejor y más eficaz para los requisitos de acceso a datos de una aplicación. Una configuración de cursor menos que óptima puede hacer que las operaciones de acceso a datos sean lentas lentamente.  

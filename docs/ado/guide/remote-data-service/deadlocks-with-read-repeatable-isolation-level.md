@@ -1,4 +1,5 @@
 ---
+description: Interbloqueos con nivel de aislamiento de lectura repetible
 title: Interbloqueos con el nivel de aislamiento repetible de lectura | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31c90281860473d43e0a6bde4d1dd9e64e39bb3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 398fd636c7e7ebfce448d5b7ebfae7a62d7c1a2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452217"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Interbloqueos con nivel de aislamiento de lectura repetible
 Si un objeto comercial personalizado usa un nivel de aislamiento de lectura repetible para tener acceso a un SQL Server, y dos clientes que envían una consulta y actualizan simultáneamente el objeto comercial reciben un interbloqueo. El servicio de datos remoto está diseñado para permitir que uno de los procesos agote el tiempo de espera para liberar el interbloqueo, pero se producirá un error en la actualización para ese cliente.  

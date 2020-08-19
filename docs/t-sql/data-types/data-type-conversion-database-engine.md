@@ -1,4 +1,5 @@
 ---
+description: Conversión de tipos de datos (motor de base de datos)
 title: Conversión de tipos de datos (motor de base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -21,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 656f76bfb0b015742824b02e8d7f2f09c8bfe098
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368561"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversión de tipos de datos (motor de base de datos)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -120,7 +121,7 @@ En los temas siguientes se describen los comportamientos de conversión que pres
   
 En la tabla siguiente se describen las conversiones de tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].
   
-|Tipos de datos de SQL Server|Tipo de datos de Visual Basic|  
+|Tipos de datos de SQL Server|Tipo de datos en Visual Basic|  
 |--------------------------|----------------------------|  
 |**char**, **varchar**, **text**, **nvarchar**, **ntext**|**String**|  
 |**decimal**, **numeric**|**String**|  
@@ -129,28 +130,28 @@ En la tabla siguiente se describen las conversiones de tipos de datos de [!INCLU
 |**int**|**Long**|  
 |**smallint**|**Entero**|  
 |**tinyint**|**Byte**|  
-|**float**|**Doble**|  
-|**real**|**Único**|  
+|**float**|**Double**|  
+|**real**|**Single**|  
 |**money**, **smallmoney**|**Moneda**|  
-|**datetime**, **smalldatetime**|**Date**|  
+|**datetime**, **smalldatetime**|**Fecha**|  
 |Cualquiera establecido en NULL|**Variant** establecido en NULL|  
   
-Los valores únicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten a un valor único de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], con la excepción de los valores **binary**, **varbinary** e **image**. Estos valores se convierten a una matriz **Byte()** unidimensional en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Esta matriz tiene un intervalo de **Byte(** 0 to _length_1 **)** donde *length* es el número de bytes en los valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**binary**, **varbinary** o **image**.
+Los valores únicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten a un valor único de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], con la excepción de los valores **binary**, **varbinary** e **image**. Estos valores se convierten a una matriz **Byte()** unidimensional en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Esta matriz tiene un intervalo de **Byte(** 0 to _length_1 **)** donde *length* es el número de bytes en los valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** o **image**.
   
 A continuación se indican las conversiones de tipos de datos de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-|Tipo de datos de Visual Basic|Tipos de datos de SQL Server|  
+|Tipo de datos en Visual Basic|Tipos de datos de SQL Server|  
 |----------------------------|--------------------------|  
 |**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
 |**Moneda**|**money**|  
-|**Date**|**datetime**|  
+|**Fecha**|**datetime**|  
 |**String** con 4000 caracteres o menos|**varchar**/**nvarchar**|  
 |**String** con más de 4000 caracteres|**text**/**ntext**|  
 |Matriz **Byte()** unidimensional con 8000 bytes o menos|**varbinary**|  
 |Matriz **Byte()** unidimensional con más de 8000 bytes|**image**|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [Procedimientos almacenados de automatización OLE &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

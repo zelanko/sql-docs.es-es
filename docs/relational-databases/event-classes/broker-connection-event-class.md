@@ -1,4 +1,5 @@
 ---
+description: Broker:Connection, clase de eventos
 title: Clase de eventos Broker:Connection | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7d98a36e1ffe8e26016d54e0714247a4d8037af
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf0f3be43ee238a6eb0f13a0b07f8fe43882aafa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410642"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection, clase de eventos
 
@@ -50,7 +51,7 @@ ms.locfileid: "85763029"
 |**TextData**|**ntext**|Texto del mensaje de error relacionado con el evento. En el caso de los eventos que no informan de un error, este campo está vacío. El mensaje de error puede ser de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de Windows.|1|Sí|  
 |**TransactionID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

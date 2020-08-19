@@ -1,4 +1,5 @@
 ---
+description: Auto Stats [clase de eventos]
 title: Clase de eventos Auto Stats | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ba537e2dd0d188eb95e9194bb33c654c66dfcb9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9e20179799dbc61dae0a1e02247fe5eb0df2628
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410551"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats [clase de eventos]
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La clase de evento **Auto Stats** indica que se ha producido una actualización automática del índice y de las estadísticas de las columnas.  **Auto Stats** también se desencadena cuando se cargan las estadísticas para que las use el optimizador.
+   La clase de evento **Auto Stats** indica que se ha producido una actualización automática del índice y de las estadísticas de las columnas.  **Auto Stats** también se desencadena cuando se cargan las estadísticas para que las use el optimizador.
   
 ## <a name="auto-stats-event-class-data-columns"></a>Columnas de datos de la clase de evento Auto Stats  
   

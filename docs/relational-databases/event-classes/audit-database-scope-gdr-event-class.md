@@ -1,4 +1,5 @@
 ---
+description: Audit Database Scope GDR, clase de eventos
 title: Audit Database Scope GDR (clase de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 677f7f674b2363e2604d5968cfde131e7c905418
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86f75a042bb4cf6dbc8700cefe329ed5f66aa97a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410622"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR, clase de eventos
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,8 +52,8 @@ ms.locfileid: "85630192"
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**Success**|**int**|1 = correcto. 0 = error Por ejemplo, el valor 1 significa que se ha comprobado un permiso correctamente y el valor 0 indica que se ha producido un error en la comprobación.|23|Sí|  
-|**TargetLoginName**|**nvarchar**|Para acciones dirigidas a un inicio de sesión (por ejemplo, agregar un nuevo inicio de sesión), el nombre del inicio de sesión de destino.|42|Sí|  
-|**TargetLoginSid**|**image**|Para acciones dirigidas a un inicio de sesión (por ejemplo, agregar un nuevo inicio de sesión), el número de identificación de seguridad (SID) del inicio de sesión de destino.|43|Sí|  
+|**TargetLoginName**|**nvarchar**|Para acciones dirigidas a un inicio de sesión (por ejemplo, agregar un nuevo inicio de sesión), el nombre del inicio de sesión de destino.|42|Yes|  
+|**TargetLoginSid**|**image**|Para acciones dirigidas a un inicio de sesión (por ejemplo, agregar un nuevo inicio de sesión), el número de identificación de seguridad (SID) del inicio de sesión de destino.|43|Yes|  
 |**TargetUserName**|**nvarchar**|Para acciones dirigidas a un usuario de base de datos (por ejemplo, conceder permiso a un usuario), el nombre del usuario.|39|Sí|  
 |**TextData**|**ntext**|Texto SQL de la instrucción Grant/Revoke/Deny.|1|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  

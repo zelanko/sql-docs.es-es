@@ -1,4 +1,5 @@
 ---
+description: Audit Server Object GDR, clase de eventos
 title: Clase de eventos Audit Server Object GDR | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bde177d88d2d1050e288bb991a5b670160f8cd5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 47833cef67581909b0604633f6420a39686e307c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410632"
 ---
 # <a name="audit-server-object-gdr-event-class"></a>Audit Server Object GDR, clase de eventos
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La clase de eventos **Audit Server Object GDR** se produce cuando cualquier usuario de Microsoft SQL Server emite una instrucción GRANT, REVOKE o DENY para un permiso de objeto de servidor.  
+   La clase de eventos **Audit Server Object GDR** se produce cuando cualquier usuario de Microsoft SQL Server emite una instrucción GRANT, REVOKE o DENY para un permiso de objeto de servidor.  
   
 ## <a name="audit-server-object-gdr-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Server Object GDR  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85726259"
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**Success**|**int**|1 = correcto. 0 = error Por ejemplo, el valor 1 significa que se ha comprobado un permiso correctamente y el valor 0 indica que se ha producido un error en la comprobación.|23|Sí|  
-|**TargetLoginName**|**nvarchar**|Para acciones dirigidas a un inicio de sesión (por ejemplo, agregar un nuevo inicio de sesión), el nombre del inicio de sesión de destino.|42|Sí|  
+|**TargetLoginName**|**nvarchar**|Para acciones dirigidas a un inicio de sesión (por ejemplo, agregar un nuevo inicio de sesión), el nombre del inicio de sesión de destino.|42|Yes|  
 |**TargetLoginSid**|**image**|Para acciones dirigidas a un inicio de sesión (por ejemplo, agregar un nuevo inicio de sesión), el número de identificación de seguridad (SID) del inicio de sesión de destino.|43|Sí|  
 |**TextData**|**ntext**|Valor de texto que depende de la clase de eventos capturada en el seguimiento.|1|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  

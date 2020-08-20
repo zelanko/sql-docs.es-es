@@ -1,4 +1,5 @@
 ---
+description: Generación de informes (MySQLToSQL)
 title: Generación de informes (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f61387e6ca77ed93b7b23f335fc5b1f46c343ff2
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 641edbb3db15387543645fcab7a375b2985a01d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463433"
 ---
 # <a name="generating-reports-mysqltosql"></a>Generación de informes (MySQLToSQL)
 Los informes de ciertas actividades realizadas con comandos se generan en la consola de SSMA en el nivel de árbol de objetos.  
@@ -139,6 +140,6 @@ El comando **Refresh-from-Database** tiene el parámetro **Report-Errors-to** , 
   
 -   error: script  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Ejecutar la consola SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

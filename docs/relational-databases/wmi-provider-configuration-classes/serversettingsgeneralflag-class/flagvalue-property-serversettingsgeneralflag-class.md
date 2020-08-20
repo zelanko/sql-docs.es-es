@@ -1,4 +1,5 @@
 ---
+description: Propiedad FlagValue (clase ServerSettingsGeneralFlag)
 title: Propiedad FlagValue (ServerSettingsGeneralFlag)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98619c6531d77749e067d4a2f43a69707fcdc800
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9602d0c524b8c71be5969c7e1f95978c48d04090
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463580"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>Propiedad FlagValue (clase ServerSettingsGeneralFlag)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ object.FlagValue [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor booleano que especifica el valor de la marca.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

@@ -1,4 +1,5 @@
 ---
+description: Ejecución de la consola de SSMA (MySQLToSQL)
 title: Ejecución de la consola de SSMA (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8cf2ded8823c03c5f002087277604ac65985aabc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 59a0075dfcee23c5e005853b0befd4b3eb0f39c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463456"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Ejecución de la consola de SSMA (MySQLToSQL)
 Microsoft proporciona un conjunto sólido de comandos de archivo de script para ejecutar y controlar las actividades de SSMA.  
@@ -39,9 +40,9 @@ Los comandos del proyecto controlan la creación de proyectos, la apertura, el g
   
 **Script**  
   
-1.  `project-folder`indica la carpeta del proyecto que se va a crear.  
+1.  `project-folder` indica la carpeta del proyecto que se va a crear.  
   
-2.  `project-name`indica el nombre del proyecto. {string}  
+2.  `project-name` indica el nombre del proyecto. {string}  
   
 3.  `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. booleano  
   
@@ -73,9 +74,9 @@ proyecto abierto:
   
 **Script**  
   
-1.  `project-folder`indica la carpeta del proyecto que se va a crear. El comando genera un error si la carpeta especificada no existe.  {string}  
+1.  `project-folder` indica la carpeta del proyecto que se va a crear. El comando genera un error si la carpeta especificada no existe.  {string}  
   
-2.  `project-name`indica el nombre del proyecto. El comando genera un error si el proyecto especificado no existe.  {string}  
+2.  `project-name` indica el nombre del proyecto. El comando genera un error si el proyecto especificado no existe.  {string}  
   
 **Ejemplo de sintaxis:**  
   
@@ -244,25 +245,25 @@ generar informe de evaluación
   
 **Script**  
   
-1.  `assessment-report-folder:`Especifica la carpeta donde se almacena el informe de evaluación. (atributo opcional)  
+1.  `assessment-report-folder:` Especifica la carpeta donde se almacena el informe de evaluación. (atributo opcional)  
   
-2.  `object-name:`Especifica los objetos que se han tenido en cuenta para la generación de informes de evaluación (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
+2.  `object-name:` Especifica los objetos que se han tenido en cuenta para la generación de informes de evaluación (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
-3.  `object-type:`especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
+3.  `object-type:` especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
   
-4.  `assessment-report-overwrite:`Especifica si se va a sobrescribir la carpeta de informes de evaluación si ya existe.  
+4.  `assessment-report-overwrite:` Especifica si se va a sobrescribir la carpeta de informes de evaluación si ya existe.  
   
     **Valor predeterminado:** false. (atributo opcional)  
   
-5.  `write-summary-report-to:`Especifica la ruta de acceso donde se generará el informe de resumen.  
+5.  `write-summary-report-to:` Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **AssessmentReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **AssessmentReport &lt; n &gt; . ** Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
-    -   `report-errors`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
+    -   `report-errors` (= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
-    -   `verbose`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
+    -   `verbose` (= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
 **Ejemplo de sintaxis:**  
   
@@ -285,7 +286,7 @@ generar informe de evaluación
   
 />  
 ```  
-o  
+or  
   
 ```xml  
 <generate-assessment-report  
@@ -318,25 +319,25 @@ Convert-Schema
   
 **Script**  
   
-1.  `conversion-report-folder:`Especifica la carpeta donde se almacena el informe de evaluación. (atributo opcional)  
+1.  `conversion-report-folder:` Especifica la carpeta donde se almacena el informe de evaluación. (atributo opcional)  
   
-2.  `object-name:`Especifica los objetos que se tienen en cuenta para convertir el esquema (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
+2.  `object-name:` Especifica los objetos que se tienen en cuenta para convertir el esquema (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
-3.  `object-type:`especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
+3.  `object-type:` especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
   
-4.  `conversion-report-overwrite:`Especifica si se va a sobrescribir la carpeta de informes de evaluación si ya existe.  
+4.  `conversion-report-overwrite:` Especifica si se va a sobrescribir la carpeta de informes de evaluación si ya existe.  
   
     **Valor predeterminado:** false. (atributo opcional)  
   
-5.  `write-summary-report-to:`Especifica la ruta de acceso donde se generará el informe de resumen.  
+5.  `write-summary-report-to:` Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **SchemaConversionReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **SchemaConversionReport &lt; n &gt; . ** Se crea XML. (atributo opcional)  
   
     La creación de informes de resumen tiene dos subcategorías más:  
   
-    -   `report-errors`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
+    -   `report-errors` (= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
-    -   `verbose`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
+    -   `verbose` (= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
 **Ejemplo de sintaxis:**  
   
@@ -359,7 +360,7 @@ Convert-Schema
   
 />  
 ```  
-o  
+or  
   
 ```xml  
 <convert-schema  
@@ -382,19 +383,19 @@ migrar datos
   
 **Script**  
   
-1.  `object-name:`Especifica los objetos de origen que se han tenido en cuenta para migrar datos (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
+1.  `object-name:` Especifica los objetos de origen que se han tenido en cuenta para migrar datos (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
-2.  `object-type:`especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
+2.  `object-type:` especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
   
-3.  `write-summary-report-to:`Especifica la ruta de acceso donde se generará el informe de resumen.  
+3.  `write-summary-report-to:` Especifica la ruta de acceso donde se generará el informe de resumen.  
   
-    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **DataMigrationReport &lt; n &gt; . **Se crea XML. (atributo opcional)  
+    Si solo se menciona la ruta de acceso de la carpeta, archivo por nombre **DataMigrationReport &lt; n &gt; . ** Se crea XML. (atributo opcional)  
   
     La creación de informes tiene dos subcategorías más:  
   
-    -   `report-errors`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
+    -   `report-errors` (= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
-    -   `verbose`(= "true/false", con el valor predeterminado "false" (atributos opcionales))  
+    -   `verbose` (= "true/false", con el valor predeterminado "false" (atributos opcionales))  
   
 **Ejemplo de sintaxis:**  
   
@@ -419,7 +420,7 @@ migrar datos
   
 </migrate-data>  
 ```  
-o  
+or  
   
 ```xml  
 <migrate-data  
@@ -444,9 +445,9 @@ Asignación de esquema de la base de datos de origen al esquema de destino.
   
 **Script**  
   
-1.  `source-schema`especifica el esquema de origen que se va a migrar.  
+1.  `source-schema` especifica el esquema de origen que se va a migrar.  
   
-2.  `sql-server-schema`especifica el esquema de destino en el que se desea migrar.  
+2.  `sql-server-schema` especifica el esquema de destino en el que se desea migrar.  
   
 **Ejemplo de sintaxis:**  
   
@@ -476,11 +477,11 @@ sincronizar-destino
   
 **Script**  
   
-1.  `object-name:`Especifica los objetos que se tienen en cuenta para la sincronización con la base de datos de destino (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
+1.  `object-name:` Especifica los objetos que se tienen en cuenta para la sincronización con la base de datos de destino (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
-2.  `object-type:`especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
+2.  `object-type:` especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
   
-3.  `on-error:`Especifica si se deben especificar errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
+3.  `on-error:` Especifica si se deben especificar errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
   
     -   Informe-total como ADVERTENCIA  
   
@@ -488,7 +489,7 @@ sincronizar-destino
   
     -   error: script  
   
-4.  `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea el archivo por nombre **TargetSynchronizationReport.XML** .  
+4.  `report-errors-to:` Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea el archivo por nombre **TargetSynchronizationReport.XML** .  
   
 **Ejemplo de sintaxis:**  
   
@@ -539,11 +540,11 @@ actualizar desde la base de datos
   
 **Script**  
   
-1.  `object-name:`Especifica los objetos de origen que se tienen en cuenta para actualizar desde la base de datos de origen (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
+1.  `object-name:` Especifica los objetos de origen que se tienen en cuenta para actualizar desde la base de datos de origen (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
-2.  `object-type:`Especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
+2.  `object-type:` Especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
   
-3.  `on-error:`Especifica si se deben especificar errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
+3.  `on-error:` Especifica si se deben especificar errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
   
     -   Informe-total como ADVERTENCIA  
   
@@ -551,7 +552,7 @@ actualizar desde la base de datos
   
     -   error: script  
   
-4.  `report-errors-to:`Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea el archivo por nombre **SourceDBRefreshReport.XML** .  
+4.  `report-errors-to:` Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se especifica la ruta de acceso de la carpeta, se crea el archivo por nombre **SourceDBRefreshReport.XML** .  
   
 Requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
@@ -604,15 +605,15 @@ Se usa para guardar los scripts de los objetos en un archivo mencionado cuando m
   
 Requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
-1.  `object-name:`Especifica los objetos cuyos scripts se van a guardar. (Puede tener nombres de objeto individuales o un nombre de objeto de grupo)  
+1.  `object-name:` Especifica los objetos cuyos scripts se van a guardar. (Puede tener nombres de objeto individuales o un nombre de objeto de grupo)  
   
-2.  `object-type:`especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
+2.  `object-type:` especifica el tipo del objeto especificado en el atributo de nombre de objeto (si se especifica la categoría de objeto, el tipo de objeto será "categoría").  
   
-3.  `metabase:`Especifica si se trata de la metabase de origen o de destino.  
+3.  `metabase:` Especifica si se trata de la metabase de origen o de destino.  
   
-4.  `destination:`Especifica la ruta de acceso o la carpeta en la que se debe guardar el script, si no se proporciona el nombre de archivo con el formato (object_name valor de atributo). out  
+4.  `destination:` Especifica la ruta de acceso o la carpeta en la que se debe guardar el script, si no se proporciona el nombre de archivo con el formato (object_name valor de atributo). out  
   
-5.  `overwrite:`Si es true, se sobrescribe si existe el mismo nombre de archivo. Puede tener los valores (true/false).  
+5.  `overwrite:` Si es true, se sobrescribe si existe el mismo nombre de archivo. Puede tener los valores (true/false).  
   
 **Ejemplo de sintaxis:**  
   
@@ -631,7 +632,7 @@ Requiere uno o varios nodos de metabase como parámetro de línea de comandos.
   
 />  
 ```  
-o  
+or  
   
 ```xml  
 <save-as-script  
@@ -650,25 +651,25 @@ o
   
 Convert-SQL-Statement  
   
-1.  `context`especifica el nombre del esquema.  
+1.  `context` especifica el nombre del esquema.  
   
-2.  `destination`Especifica si la salida se debe almacenar en un archivo.  
+2.  `destination` Especifica si la salida se debe almacenar en un archivo.  
   
     Si no se especifica este atributo, se muestra la instrucción T-SQL convertida en la consola. (atributo opcional)  
   
-3.  `conversion-report-folder`Especifica la carpeta donde se almacena el informe de evaluación. (atributo opcional)  
+3.  `conversion-report-folder` Especifica la carpeta donde se almacena el informe de evaluación. (atributo opcional)  
   
-4.  `conversion-report-overwrite`Especifica si se va a sobrescribir la carpeta de informes de evaluación si ya existe.  
+4.  `conversion-report-overwrite` Especifica si se va a sobrescribir la carpeta de informes de evaluación si ya existe.  
   
     **Valor predeterminado:** false. (atributo opcional)  
   
-5.  `write-converted-sql-to`Especifica la ruta de acceso de la carpeta del archivo (o) donde se va a almacenar el T-SQL convertido. Cuando se especifica una ruta de acceso de carpeta junto con el `sql-files` atributo, cada archivo de código fuente tendrá un archivo T-SQL de destino correspondiente creado en la carpeta especificada. Cuando se especifica una ruta de acceso de carpeta junto con el `sql` atributo, el T-SQL convertido se escribe en un archivo denominado result. out en la carpeta especificada.  
+5.  `write-converted-sql-to` Especifica la ruta de acceso de la carpeta del archivo (o) donde se va a almacenar el T-SQL convertido. Cuando se especifica una ruta de acceso de carpeta junto con el `sql-files` atributo, cada archivo de código fuente tendrá un archivo T-SQL de destino correspondiente creado en la carpeta especificada. Cuando se especifica una ruta de acceso de carpeta junto con el `sql` atributo, el T-SQL convertido se escribe en un archivo denominado result. out en la carpeta especificada.  
   
-6.  `sql`especifica las instrucciones SQL de MySQL que se van a convertir; una o varias instrucciones se pueden separar con un ";"  
+6.  `sql` especifica las instrucciones SQL de MySQL que se van a convertir; una o varias instrucciones se pueden separar con un ";"  
   
-7.  `sql-files`Especifica la ruta de acceso de los archivos SQL que se deben convertir al código T-SQL.  
+7.  `sql-files` Especifica la ruta de acceso de los archivos SQL que se deben convertir al código T-SQL.  
   
-8.  `write-summary-report-to`Especifica la ruta de acceso donde se generará el informe de resumen. Si solo se menciona la ruta de acceso de la carpeta, se crea el archivo por nombre **ConvertSQLReport.XML** . (atributo opcional)  
+8.  `write-summary-report-to` Especifica la ruta de acceso donde se generará el informe de resumen. Si solo se menciona la ruta de acceso de la carpeta, se crea el archivo por nombre **ConvertSQLReport.XML** . (atributo opcional)  
   
     La creación de informes tiene 2 subcategorías más, es decir,...:  
   

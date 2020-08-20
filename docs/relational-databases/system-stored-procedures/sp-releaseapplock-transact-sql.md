@@ -1,4 +1,5 @@
 ---
+description: sp_releaseapplock (Transact-SQL)
 title: sp_releaseapplock (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c737f6c139a82735e4da1d764b4036bb93c8b2a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 39c78005aba5d601496df5b8af153acf1667581a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464054"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,12 +56,12 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  \>= 0 (correcto) o < 0 (error)  
   
-|Valor|Resultado|  
+|Value|Resultado|  
 |-----------|------------|  
 |0|El bloqueo se ha liberado correctamente.|  
 |-999|Indica un error de validación de parámetros u otro error de llamada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si una aplicación llama a sp_getapplock varias veces para el mismo recurso de bloqueo, es necesario llamar a sp_releaseapplock el mismo número de veces para liberar el bloqueo.  
   
  Los bloqueos se liberan si el servidor se cierra por cualquier razón.  
@@ -81,8 +82,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [APPLOCK_MODE &#40;&#41;de Transact-SQL](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40;&#41;de Transact-SQL](../../t-sql/functions/applock-test-transact-sql.md)   
+ [APPLOCK_MODE &#40;&#41;de Transact-SQL ](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;&#41;de Transact-SQL ](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Propiedades de columnas de tablas (SQL Server Management Studio)
 title: Propiedades de columnas de tablas (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -15,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397012"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463836"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propiedades de columnas de tablas (SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "87397012"
  Muestra información sobre una columna calculada. El valor que se muestra para la propiedad es el mismo que el de la propiedad secundaria **Fórmula** y muestra la fórmula de la columna calculada.  
   
 > [!NOTE]  
->  Para cambiar el valor que se muestra para la propiedad **Especificación de columna calculada** , debe expandirla y editar la propiedad secundaria **Fórmula** .  
+>  Para cambiar el valor que se muestra para la propiedad **Especificación de columna calculada**, debe expandirla y editar la propiedad secundaria **Fórmula**.  
   
 -   **Fórmula** Muestra la fórmula de la columna calculada. Para editar esta propiedad, escriba una nueva fórmula directamente.  
   
@@ -108,7 +109,7 @@ ms.locfileid: "87397012"
  Muestra información sobre si esta columna exige la unicidad de sus valores y cómo lo hace. El valor de esta propiedad indica si esta columna es o no una columna de identidad y si es o no igual al valor de la propiedad secundaria **Identidad**.  
   
 > [!NOTE]  
->  Para cambiar el valor que se muestra para la propiedad **Especificación de identidad** , debe expandirla y editar la propiedad secundaria **Identidad** .  
+>   Para cambiar el valor que se muestra para la propiedad **Especificación de identidad** , debe expandirla y editar la propiedad secundaria **Identidad** .  
   
 -   **Identidad** Indica si esta columna es o no una columna de identidad. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   

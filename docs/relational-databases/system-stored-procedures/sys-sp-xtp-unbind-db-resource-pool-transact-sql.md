@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 title: Sys. sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de629f6ae966f8ea64dffa01676811650ac38b43
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 4dda2f6da0ee65b7bfa927739ac945407f28cbc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463947"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ sys.sp_xtp_unbind_db_resource_pool 'database_name'
   
 #### <a name="parameters"></a>Parámetros  
   
-## <a name="messages"></a>Mensajes  
+## <a name="messages"></a>error de Hadoop  
  Si la base de datos se ha enlazado a un grupo de recursos de servidor con nombre, el procedimiento se realiza correctamente. Sin embargo, debe reiniciar la base de datos para que surta efecto la eliminación del enlace.  
  Si no hay enlaces para la base de datos especificada, `sp_xtp_unbind_db_resource_pool` se ejecuta correctamente, pero genera el mensaje informativo:  
   

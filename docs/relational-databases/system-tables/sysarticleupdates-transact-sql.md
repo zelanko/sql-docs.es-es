@@ -1,4 +1,5 @@
 ---
+description: sysarticleupdates (Transact-SQL)
 title: sysarticleupdates (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 929a2322b9f3299a3f191515eace7cfdef7bc4d3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1aed6a7d193dfc664e9e17473c0c9aa03c282f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463887"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

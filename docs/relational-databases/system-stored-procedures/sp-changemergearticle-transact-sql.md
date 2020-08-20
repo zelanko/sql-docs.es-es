@@ -1,4 +1,5 @@
 ---
+description: sp_changemergearticle (Transact-SQL)
 title: sp_changemergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/09/2015
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e5533d228030349992dc9b6aa56812ada87872f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469744"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,17 +43,17 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación en la que existe el artículo. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en la que existe el artículo. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'`Es el nombre del artículo que se va a cambiar. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo que se va a cambiar. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'`Es la propiedad que se va a cambiar para el artículo y la publicación especificados. *Property* es de tipo **nvarchar (30)** y puede ser uno de los valores enumerados en la tabla.  
+`[ @property = ] 'property'` Es la propiedad que se va a cambiar para el artículo y la publicación especificados. *Property* es de tipo **nvarchar (30)** y puede ser uno de los valores enumerados en la tabla.  
   
-`[ @value = ] 'value'`Es el nuevo valor de la propiedad especificada. *Value* es de tipo **nvarchar (1000)** y puede ser uno de los valores enumerados en la tabla.  
+`[ @value = ] 'value'` Es el nuevo valor de la propiedad especificada. *Value* es de tipo **nvarchar (1000)** y puede ser uno de los valores enumerados en la tabla.  
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
-|Propiedad.|Valores|Descripción|  
+|Propiedad|Valores|Descripción|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|Habilita el uso de un solucionador interactivo para el artículo.|  
 ||**false**|Deshabilita el uso de un solucionador interactivo para el artículo.|  
@@ -83,8 +84,8 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|El filtro para el artículo produce particiones no superpuestas que son exclusivas para cada suscripción.<br /><br /> Nota: Si especifica un valor de **3** para **partition_options**, solo puede haber una suscripción para cada partición de datos de ese artículo. Si se crea una segunda partición en la que el criterio de filtrado de la nueva suscripción se resuelve en la misma partición que la suscripción existente, se quitará la suscripción existente.|  
 |**pre_creation_command**|**Ninguna**|Si la tabla ya existe en el suscriptor, no se lleva a cabo ninguna acción.|  
 ||**delete**|Emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.|  
-||**omisiones**|Quita la tabla antes de volver a crearla.|  
-||**truncar**|Trunca la tabla de destino.|  
+||**drop**|Quita la tabla antes de volver a crearla.|  
+||**truncate**|Trunca la tabla de destino.|  
 |**processing_order**||**int** que indica el orden de procesamiento de los artículos en una publicación de combinación.|  
 |**pub_identity_range**||**BIGINT** que especifica el tamaño de intervalo asignado a un suscriptor con una suscripción de servidor si el artículo tiene el valor **identityrangemanagementoption** establecido en **auto** o **auto_identity_range** establecido en **true**. Este rango de identidad se reserva para que un suscriptor de republicación pueda realizar asignaciones a sus propios suscriptores. Solamente se aplica en un artículo de la tabla. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**published_in_tran_pub**|**true**|El artículo también está publicado en una publicación transaccional.|  
@@ -144,7 +145,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|La firma digital en un solucionador personalizado no se comprueba para determinar si proviene de una fuente confiable.|  
 |NULL (predeterminado)||Devuelve la lista de valores admitidos para la *propiedad*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
   
  **0** especifica que los cambios en el artículo de mezcla no hacen que la instantánea no sea válida. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
@@ -152,7 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Vea en la sección de Notas las propiedades que, si se cambian, requieren que se genere una instantánea nueva.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es de **bit**y su valor predeterminado es **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es de **bit**y su valor predeterminado es **0**.  
   
  **0** especifica que los cambios en el artículo de mezcla no harán que se reinicialice la suscripción. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
   
@@ -163,7 +164,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changemergearticle** se utiliza en la replicación de mezcla.  
   
  Dado que **sp_changemergearticle** se utiliza para cambiar las propiedades de los artículos que se especificaron inicialmente mediante [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para obtener información adicional sobre estas propiedades.  
@@ -236,12 +237,12 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_changemergearticle**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del artículo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [Cambiar las propiedades de la publicación y del artículo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [sp_addmergearticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
+ [sp_dropmergearticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

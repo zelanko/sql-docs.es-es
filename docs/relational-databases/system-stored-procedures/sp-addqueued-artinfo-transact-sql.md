@@ -1,4 +1,5 @@
 ---
+description: sp_addqueued_artinfo (Transact-SQL)
 title: sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de7f206aea8b536c86333698dd5a557e2f50b84b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22c1c38828ab6f1857d64136a402752b110a214e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716447"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469825"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,27 +50,27 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @artid = ] 'artid'`Es el nombre del identificador de artículo. *artid especificado* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @artid = ] 'artid'` Es el nombre del identificador de artículo. *artid especificado* es de **tipo int**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'`Es el nombre del artículo que se va a incluir en el script. *article* es de **tipo sysname**y no tiene ningún valor predeterminado  
+`[ @article = ] 'article'` Es el nombre del artículo que se va a incluir en el script. *article* es de **tipo sysname**y no tiene ningún valor predeterminado  
   
-`[ @publisher = ] 'publisher'`Es el nombre del servidor del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del servidor del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación que se va a incluir en el script. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a incluir en el script. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @dest_table = ] _'dest_table'`Es el nombre de la tabla de destino. *dest_table* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @dest_table = ] _'dest_table'` Es el nombre de la tabla de destino. *dest_table* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
  [** @owner =** ] **'**_propietario_**'**  
  Es el propietario de la suscripción. *Owner* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @cft_table = ] 'cft_table'`Nombre de la tabla de conflictos de actualización en cola de este artículo. *cft_table*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @cft_table = ] 'cft_table'` Nombre de la tabla de conflictos de actualización en cola de este artículo. *cft_table*es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  el Agente de distribución usa **sp_addqueued_artinfo** como parte de la inicialización de la suscripción. Los usuarios no suelen ejecutar este procedimiento almacenado, pero puede resultar útil si el usuario debe configurar manualmente una suscripción.  
   
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) en lugar de **sp_addqueued_artinfo**.  
@@ -78,9 +79,9 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addqueued_artinfo**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Suscripciones actualizables para la replicación transaccional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
- [MSsubscription_articles &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [sp_script_synctran_commands &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+ [MSsubscription_articles &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

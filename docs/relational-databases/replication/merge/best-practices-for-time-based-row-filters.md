@@ -1,4 +1,5 @@
 ---
+description: Prácticas recomendadas para filtros de fila basados en el tiempo
 title: Procedimientos recomendados para filtros de fila basados en el tiempo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 285b005393c29a81b90a749a89ebf83af8e9c271
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad3264079a3bf4c28a9e1420cf17ed1018510c3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470287"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Prácticas recomendadas para filtros de fila basados en el tiempo
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +59,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
  Este enfoque soluciona los inconvenientes del uso de **GETDATE()** u otro método basado en el tiempo, y evita el problema de tener que determinar cuándo se evalúan los filtros para las particiones. Considere el siguiente ejemplo de una tabla **Events** :  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
+|**Id. de evento**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|1|  
 |2|Cena|112|2006-10-10|0|  
@@ -82,7 +83,7 @@ GO
   
  La primera línea restablece la columna **Replicate** en **0**y la segunda línea establece la columna en **1** para los eventos que tienen lugar en los siete días siguientes. Si esta instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] se ejecuta el 7 de octubre de 2006, la tabla se actualiza a:  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
+|**Id. de evento**|**EventName**|**EventCoordID**|**EventDate**|**Replicar**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|0|  
 |2|Cena|112|2006-10-10|1|  

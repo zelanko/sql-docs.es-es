@@ -1,4 +1,5 @@
 ---
+description: Filtrar datos publicados para la replicación de mezcla
 title: Filtrar datos publicados para la replicación de mezcla | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fdfd7525ade2500ee144bb57c030350a532ded64
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b84aeb4deba329f9bd4cfb4a96e5a728ab21253
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470277"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Filtrar datos publicados para la replicación de mezcla
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

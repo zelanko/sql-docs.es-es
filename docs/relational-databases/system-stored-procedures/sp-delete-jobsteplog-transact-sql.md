@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobsteplog (Transact-SQL)
 title: sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1ae68a2c09ca79917288381db0a0f9c92d4e33c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4b50fb6987fe43e78ae205f620fffa06750172a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469653"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,21 +44,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] 'job_id'`Número de identificación del trabajo que contiene el registro de paso de trabajo que se va a quitar. *job_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @job_id = ] 'job_id'` Número de identificación del trabajo que contiene el registro de paso de trabajo que se va a quitar. *job_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'`Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > **Nota:** Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @step_id = ] step_id`El número de identificación del paso en el trabajo para el que se va a eliminar el registro de paso de trabajo. Si no se incluye, se eliminarán todos los registros de paso de trabajo del trabajo a menos que se especifiquen ** \@ older_than** o ** \@ larger_than** . *step_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @step_id = ] step_id` El número de identificación del paso en el trabajo para el que se va a eliminar el registro de paso de trabajo. Si no se incluye, se eliminarán todos los registros de paso de trabajo del trabajo a menos que se especifiquen ** \@ older_than** o ** \@ larger_than** . *step_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @step_name = ] 'step_name'`Nombre del paso del trabajo para el que se va a eliminar el registro de paso de trabajo. *step_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @step_name = ] 'step_name'` Nombre del paso del trabajo para el que se va a eliminar el registro de paso de trabajo. *step_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > **Nota:** Se puede especificar *step_id* o *step_name* , pero no se pueden especificar ambos.  
   
-`[ @older_than = ] 'date'`Fecha y hora del registro de paso de trabajo más antiguo que desea conservar. Todos los registros de paso de trabajo con fecha anterior a esta fecha y hora se quitarán. *Date* es de **tipo DateTime**y su valor predeterminado es NULL. Se pueden especificar tanto ** \@ older_than** como ** \@ larger_than** .  
+`[ @older_than = ] 'date'` Fecha y hora del registro de paso de trabajo más antiguo que desea conservar. Todos los registros de paso de trabajo con fecha anterior a esta fecha y hora se quitarán. *Date* es de **tipo DateTime**y su valor predeterminado es NULL. Se pueden especificar tanto ** \@ older_than** como ** \@ larger_than** .  
   
-`[ @larger_than = ] 'size_in_bytes'`El tamaño en bytes del registro de pasos de trabajo más grande que desea conservar. Todos los registros de paso de trabajo con un tamaño superior a este se quitan. Se pueden especificar tanto ** \@ larger_than** como ** \@ older_than** .  
+`[ @larger_than = ] 'size_in_bytes'` El tamaño en bytes del registro de pasos de trabajo más grande que desea conservar. Todos los registros de paso de trabajo con un tamaño superior a este se quitan. Se pueden especificar tanto ** \@ larger_than** como ** \@ older_than** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -124,8 +125,8 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [sp_help_jobsteplog &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Vea también  
+ [sp_help_jobsteplog &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
+ [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

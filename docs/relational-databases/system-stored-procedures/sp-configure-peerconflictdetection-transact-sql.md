@@ -1,4 +1,5 @@
 ---
+description: sp_configure_peerconflictdetection (Transact-SQL)
 title: sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fb182115af1ff2c3190939d63c209a7d98bed44
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b7ad54f6ff92d150ad862709b0fcc8412911c7fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85870874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469718"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action =] '*acción*'  
  Especifica si se habilita o deshabilita la detección de conflictos para una publicación. *Action* es de tipo **nvarchar (5)** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**enable**|Habilita la detección de conflictos para una publicación.|  
 |**disable**|Deshabilita la detección de conflictos para una publicación.|  
@@ -77,15 +78,15 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_configure_peerconflictdetection se utiliza en la replicación transaccional punto a punto. Para usar la detección de conflictos, todos los nodos deben ejecutar [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores, y la detección debe estar habilitada para todos los nodos.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de servidor sysadmin o al rol fijo de base de datos db_owner.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Detección de conflictos en la replicación punto a punto](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Replicación transaccional punto a punto](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

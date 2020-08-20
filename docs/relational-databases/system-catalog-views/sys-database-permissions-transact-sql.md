@@ -1,4 +1,5 @@
 ---
+description: sys.database_permissions (Transact-SQL)
 title: Sys. database_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
@@ -20,11 +21,12 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87b2f2e94e137f6a710c19b6f461e4c0cfe12d30
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dc503cec67334a95a7e5e06e19a3b6eb722e27f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469990"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -108,7 +110,7 @@ Son posibles los siguientes tipos de permisos.
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|Delete|DATABASE, OBJECT, SCHEMA|  
+|DL|SUPRIMIR|DATABASE, OBJECT, SCHEMA|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
 |EX|Ejecute|ASSEMBLY, DATABASE, OBJECT, SCHEMA, TYPE, XML SCHEMA COLLECTION|  
 |IM|IMPERSONATE|USER|  
@@ -166,8 +168,8 @@ JOIN sys.schemas AS s
     
   
 ## <a name="see-also"></a>Consulte también  
- [Proteger](../../relational-databases/security/securables.md)   
- [Jerarquía de permisos &#40;Motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Securables](../../relational-databases/security/securables.md)   
+ [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

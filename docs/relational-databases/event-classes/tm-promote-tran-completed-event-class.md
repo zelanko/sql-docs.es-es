@@ -1,4 +1,5 @@
 ---
+description: 'TM: Clase de eventos Promote Tran Completed'
 title: 'TM: Promote Tran Completed, clase de eventos | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,14 +13,14 @@ ms.assetid: 839beaed-b094-467a-9b97-8764e9451fc0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f93a7232f2537c9a37341315d095e472e0f4b0cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa1538e08e6c404b87055051e667199033006cf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470659"
 ---
-# <a name="tm-promote-tran-completed-event-class"></a>TM: Promote Tran Completed, clase de eventos
+# <a name="tm-promote-tran-completed-event-class"></a>TM: Clase de eventos Promote Tran Completed
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos TM: Promote Tran Completed indica que se ha completado una solicitud PROMOTE TRANSACTION. La solicitud se envía desde el cliente a través de la interfaz de administración de transacciones.  
   

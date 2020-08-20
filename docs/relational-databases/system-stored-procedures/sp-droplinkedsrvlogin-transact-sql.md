@@ -1,4 +1,5 @@
 ---
+description: sp_droplinkedsrvlogin (Transact-SQL)
 title: sp_droplinkedsrvlogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3f6df8ac0be9a6bfc8798697ec01e7e5a2c8e3d3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 934b936f6fdc301acde46af4160ee1edfc8374c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85859840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469568"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rmtsrvname = ] 'rmtsrvname'`Es el nombre de un servidor vinculado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que se aplica la asignación de inicio de sesión. *rmtsrvname* es de **tipo sysname**y no tiene ningún valor predeterminado. *rmtsrvname* ya debe existir.  
+`[ @rmtsrvname = ] 'rmtsrvname'` Es el nombre de un servidor vinculado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que se aplica la asignación de inicio de sesión. *rmtsrvname* es de **tipo sysname**y no tiene ningún valor predeterminado. *rmtsrvname* ya debe existir.  
   
-`[ @locallogin = ] 'locallogin'`Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión en el servidor local que tiene una asignación al servidor vinculado *rmtsrvname*. *locallogin* es de **tipo sysname**y no tiene ningún valor predeterminado. Ya debe existir una asignación para *locallogin* a *rmtsrvname* . Si es NULL, se elimina la asignación predeterminada creada por **sp_addlinkedserver**, que asigna todos los inicios de sesión del servidor local a los inicios de sesión en el servidor vinculado.  
+`[ @locallogin = ] 'locallogin'` Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión en el servidor local que tiene una asignación al servidor vinculado *rmtsrvname*. *locallogin* es de **tipo sysname**y no tiene ningún valor predeterminado. Ya debe existir una asignación para *locallogin* a *rmtsrvname* . Si es NULL, se elimina la asignación predeterminada creada por **sp_addlinkedserver**, que asigna todos los inicios de sesión del servidor local a los inicios de sesión en el servidor vinculado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -74,8 +75,8 @@ EXEC sp_droplinkedsrvlogin 'Accounts', NULL;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_addlinkedserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

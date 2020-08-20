@@ -1,4 +1,5 @@
 ---
+description: Archivos de registro de seguimiento predeterminados deshabilitados
 title: Archivos de registro de seguimiento predeterminados deshabilitados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c27761e6-75ed-4ee4-a236-0cbc42e500a1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2e8335f3fa61cc446db748a4913d6eaa22388659
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ef696fa684c7a473d06d94d10c1761cb41c8a2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470355"
 ---
 # <a name="default-trace-log-files-disabled"></a>Archivos de registro de seguimiento predeterminados deshabilitados
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: sp_droprolemember (Transact-SQL)
 title: sp_droprolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -18,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ffff6387f2129c2e3bdb2af726e6b87e665554e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1bbd0dfdeedb0954bb82f97dae6419a9a7f2d852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469571"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -32,7 +33,7 @@ ms.locfileid: "88180110"
   Quita una cuenta de seguridad de un rol de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]En su lugar, utilice [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, utilice [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,9 +54,9 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`Es el nombre del rol del que se va a quitar el miembro. *role* es de **tipo sysname**y no tiene ningún valor predeterminado. el *rol* debe existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre del rol del que se va a quitar el miembro. *role* es de **tipo sysname**y no tiene ningún valor predeterminado. el *rol* debe existir en la base de datos actual.  
   
-`[ @membername = ] 'security_account'`Es el nombre de la cuenta de seguridad que se va a quitar del rol. *security_account* es de **tipo sysname**y no tiene ningún valor predeterminado. *security_account* puede ser un usuario de base de datos, otro rol de base de datos, un inicio de sesión de Windows o un grupo de Windows. *security_account* debe existir en la base de datos actual.  
+`[ @membername = ] 'security_account'` Es el nombre de la cuenta de seguridad que se va a quitar del rol. *security_account* es de **tipo sysname**y no tiene ningún valor predeterminado. *security_account* puede ser un usuario de base de datos, otro rol de base de datos, un inicio de sesión de Windows o un grupo de Windows. *security_account* debe existir en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -86,10 +87,10 @@ EXEC sp_droprolemember 'Sales', 'JonB'
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
- [sp_dropsrvrolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpuser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_addrolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_droprole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpuser &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

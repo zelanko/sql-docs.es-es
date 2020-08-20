@@ -1,4 +1,5 @@
 ---
+description: Espacios de datos (Transact-SQL)
 title: Espacios de datos (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 01248e73c56ead5234e625105801f7e293518e54
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1ca8f547c24c09733d2313dd56a0e38e5da82ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470067"
 ---
 # <a name="data-spaces-transact-sql"></a>Espacios de datos (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

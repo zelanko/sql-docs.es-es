@@ -1,4 +1,5 @@
 ---
+description: sp_describe_parameter_encryption (Transact-SQL)
 title: sp_describe_parameter_encryption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
@@ -18,11 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccba808ada0276933608b9297b6c416c11cdb194
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3f4b5dd2d6c63688046eda4a8b752bc10b9c943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469587"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -64,7 +66,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Identificador de la fila del conjunto de resultados.|  
 |**database_id**|**int**|Identificador de base de datos.|  
 |**column_encryption_key_id**|**int**|Identificador de la clave de cifrado de la columna. Nota: este identificador denota una fila en la vista de catálogo [Sys. column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Reservado para uso futuro. Actualmente, siempre contiene 1.|  
+|**column_encryption_key_version**|**int**|Reservado para un uso futuro. Actualmente, siempre contiene 1.|  
 |**column_encryption_key_metadata_version**|**Binary(8**|Marca de tiempo que representa la hora de creación de la clave de cifrado de columna.|  
 |**column_encryption_key_encrypted_value**|**varbinary (4000)**|Valor cifrado de la clave de cifrado de columna.|  
 |**column_master_key_store_provider_name**|**sysname**|Nombre del proveedor del almacén de claves que contiene la clave maestra de columna, que se usó para generar el valor cifrado de la clave de cifrado de columna.|  
@@ -162,7 +164,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |--------------------------------------|------------------------------------------------------|  
 |1|1|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Desarrollo de aplicaciones con Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

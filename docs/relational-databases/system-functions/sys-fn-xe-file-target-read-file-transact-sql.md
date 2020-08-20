@@ -1,4 +1,5 @@
 ---
+description: sys.fn_xe_file_target_read_file (Transact-SQL)
 title: Sys. fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
@@ -22,12 +23,12 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9edd7d5181979beb5bbbc0e4069aac31d9b302bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469855"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85738567"
   Lee los archivos creados en el destino de archivo asincrónico de Eventos extendidos. Se devuelve un evento, en formato XML, por cada fila.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceptan los resultados de seguimiento generados en formato Xel y Xem. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Los eventos extendidos solo admiten resultados de seguimiento en formato XEL. Es recomendable que use SQL Server Management Studio para leer los resultados de seguimiento en formato XEL.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] aceptan los resultados de seguimiento generados en formato Xel y Xem. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Los eventos extendidos solo admiten resultados de seguimiento en formato XEL. Es recomendable que use SQL Server Management Studio para leer los resultados de seguimiento en formato XEL.    
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +55,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
  Ruta de acceso al archivo de metadatos correspondiente al archivo o archivos especificados por el argumento *path* . *mdpath* es **nvarchar (260)**. No tiene ningún valor predeterminado. A partir de SQL Server 2016, este parámetro se puede proporcionar como null.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]no requiere el parámetro *mdpath* . Sin embargo, se mantiene para la compatibilidad con versiones anteriores para los archivos de registro generados en versiones anteriores de SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no requiere el parámetro *mdpath* . Sin embargo, se mantiene para la compatibilidad con versiones anteriores para los archivos de registro generados en versiones anteriores de SQL Server.  
   
  *initial_file_name*  
  Primer archivo que se va a leer de *path*. *initial_file_name* es **nvarchar (260)**. No tiene ningún valor predeterminado. Si se especifica **null** como argumento, se leen todos los archivos encontrados en la *ruta de acceso* .  
@@ -78,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**Se aplica a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br />Fecha y hora (zona horaria UTC) del evento. No admite valores NULL.|  
 
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La lectura de grandes conjuntos de resultados ejecutando **Sys. fn_xe_file_target_read_file** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] puede producir un error. Use el modo **resultados a archivo** (**Ctrl + Mayús + F**) para exportar grandes conjuntos de resultados a un archivo y, en su lugar, leer el archivo con otra herramienta.  
   
 ## <a name="permissions"></a>Permisos  

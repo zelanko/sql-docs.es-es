@@ -1,4 +1,5 @@
 ---
+description: sp_delete_maintenance_plan (Transact-SQL)
 title: sp_delete_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d993720a85508751b734322454d2f2d98be469c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8ba3e8e3529ab47b7789bc19334f973ae0879deb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469690"
 ---
 # <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @plan_id = ] 'plan\_id'`Especifica el identificador del plan de mantenimiento que se va a eliminar. *plan_id* es de tipo **uniqueidentifier**y debe ser un ID. válido.  
+`[ @plan_id = ] 'plan\_id'` Especifica el identificador del plan de mantenimiento que se va a eliminar. *plan_id* es de tipo **uniqueidentifier**y debe ser un ID. válido.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -62,7 +63,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 EXECUTE sp_delete_maintenance_plan 'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Procedimientos almacenados del plan de mantenimiento de bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

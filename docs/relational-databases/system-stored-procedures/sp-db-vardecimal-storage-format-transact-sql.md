@@ -1,4 +1,5 @@
 ---
+description: sp_db_vardecimal_storage_format (Transact-SQL)
 title: sp_db_vardecimal_storage_format (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6122a9b2720331b8211a06db051492946f4209b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e0c834696f37dd61fcc5830d9e5ef40302e5b7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469697"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Si @vardecimal_storage_format no se proporciona el argumento, devuelve el nombre de la base de datos de columnas y el estado vardecimal.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_db_vardecimal_storage_format devuelve el estado vardecimal pero no lo puede cambiar.  
   
  sp_db_vardecimal_storage_format será incorrecto en las siguientes circunstancias:  
@@ -108,7 +109,7 @@ EXEC sp_tableoption 'Sales.SalesOrderDetail', 'vardecimal storage format', 1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Vea también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

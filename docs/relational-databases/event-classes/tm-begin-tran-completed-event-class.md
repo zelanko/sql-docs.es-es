@@ -1,4 +1,5 @@
 ---
+description: 'TM: Clase de eventos Begin Tran Completed'
 title: 'TM: Begin Tran Completed, clase de eventos | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,14 +13,14 @@ ms.assetid: 95ddd3c6-51ef-4ad1-afd0-3aed82c9f724
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3635af680084bd43be1997c7355afe550bc7f698
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e65ad484e5e90a55e06f7bf1d5936e10b7fa1694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470692"
 ---
-# <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed, clase de eventos
+# <a name="tm-begin-tran-completed-event-class"></a>TM: Clase de eventos Begin Tran Completed
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La clase de eventos TM: Begin Tran Completed indica que se ha completado una solicitud BEGIN TRANSACTION. La solicitud fue enviada desde el cliente mediante la interfaz de administración de transacciones.  
   

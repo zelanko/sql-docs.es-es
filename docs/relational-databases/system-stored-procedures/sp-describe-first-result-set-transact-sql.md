@@ -1,4 +1,5 @@
 ---
+description: sp_describe_first_result_set (Transact-SQL)
 title: sp_describe_first_result_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2018
@@ -18,12 +19,12 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 451884c5055ee0be3ceeb95f4fe3c9dddb388bc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469626"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,13 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ \@tsql = ] 'Transact-SQL_batch'`Una o más [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. *Transact-SQL_batch* puede ser **nvarchar (***n***)** o **nvarchar (Max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Una o más [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. *Transact-SQL_batch* puede ser **nvarchar (***n***)** o **nvarchar (Max)**.  
   
 `[ \@params = ] N'parameters'`\@params proporciona una cadena de declaración para los parámetros del [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que es similar a sp_executesql. Los parámetros pueden ser **nvarchar (n)** o **nvarchar (Max)**.  
   
  Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en el [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en la instrucción deben definirse en \@ params. Si la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o el lote de la instrucción no contiene parámetros, \@ no es necesario realizar ningún parámetro. NULL es el valor predeterminado para este parámetro.  
   
-`[ \@browse_information_mode = ] tinyint`Especifica si se devuelven columnas de clave adicionales e información de la tabla de origen. Si está establecido en 1, cada consulta se analiza como si incluyera una opción FOR BROWSE. Se devuelven las columnas de clave adicionales e información de la tabla de origen.  
+`[ \@browse_information_mode = ] tinyint` Especifica si se devuelven columnas de clave adicionales e información de la tabla de origen. Si está establecido en 1, cada consulta se analiza como si incluyera una opción FOR BROWSE. Se devuelven las columnas de clave adicionales e información de la tabla de origen.  
   
 -   Si se establece en 0, no se devuelve información.  
   
@@ -398,8 +399,8 @@ N'
   
  Resultado: un **valor int null** porque tanto DBO. T1. a como S1. T1. a tienen un tipo **int** y una nulabilidad diferente.  
   
-## <a name="see-also"></a>Consulte también  
- [sp_describe_undeclared_parameters &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [sp_describe_undeclared_parameters &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [Sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [Sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

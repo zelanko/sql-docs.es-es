@@ -1,4 +1,5 @@
 ---
+description: Crear instrucciones SQL para cursores
 title: Crear instrucciones SQL para cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32dea8c43c1ad1e10f245cd806edb783a3153dd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a67f2a7ed3d01ee3a98356efc4c15cf2865ee154
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470397"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Crear instrucciones SQL para cursores
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +67,7 @@ ms.locfileid: "86001444"
   
  Las instrucciones SQL que no se ajustan a las categorías anteriores pueden ejecutarse con cualquier valor de atributo de instrucción; funcionan igual de bien con un conjunto de resultados predeterminado que con un cursor de servidor.  
   
-## <a name="errors"></a>Errores  
+## <a name="errors"></a>Errors  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 y versiones posteriores, un intento de ejecución de una instrucción que da lugar a varios conjuntos de resultados genera SQL_SUCCESS_WITH INFO y el mensaje siguiente:  
   
 ```  
@@ -102,6 +104,6 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
  Las aplicaciones ODBC que reciben estos errores deben restablecer todos los atributos de instrucción de cursor a sus valores predeterminados antes de intentar ejecutar la instrucción.  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejecutar consultas &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Ejecutar consultas &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

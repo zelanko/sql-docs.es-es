@@ -1,4 +1,5 @@
 ---
+description: Revertir una base de datos a una instantánea de base de datos
 title: Revertir una base de datos a una instantánea de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1a9c34408dd1f7731579830802fd8ac62d1f0bae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d4551044d0db95cfa8abaf177d683626c666dcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471160"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Revertir una base de datos a una instantánea de base de datos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85759033"
   
      [Seguridad](#Security)  
   
--   **Para revertir una base de datos a una instantánea de base de datos, con:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para revertir una base de datos a una instantánea de base de datos, mediante:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -100,7 +101,7 @@ ms.locfileid: "85759033"
   
      Para realizar una operación de reversión es necesario disponer de permisos RESTORE DATABASE en la base de datos de origen. Para revertir la base de datos, use la siguiente instrucción Transact-SQL:  
   
-     RESTORE DATABASE *nombre_base_de_datos* FROM DATABASE_SNAPSHOT **=** _nombre_base_de_datos_de_instantánea_  
+     RESTORE DATABASE *nombre_base_de_datos* FROM DATABASE_SNAPSHOT **=**_nombre_base_de_datos_de_instantánea_  
   
      Donde *nombre_base_de_datos* es la base de datos de origen y *nombre_base_de_datos_de_instantánea* equivale al nombre de la instantánea a la que quiere revertir la base de datos. Tenga en cuenta que en esta instrucción debe especificar un nombre de instantánea y no un dispositivo de copia de seguridad.  
   

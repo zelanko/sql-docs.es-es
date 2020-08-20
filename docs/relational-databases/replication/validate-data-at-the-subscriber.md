@@ -1,4 +1,5 @@
 ---
+description: Validar datos replicados
 title: Validar datos replicados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58fdc4a2f811e93651da79b9732acbe6ecc00435
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c83a02c9c2b0c8c22a62f1765c839a1c15534405
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470197"
 ---
 # <a name="validate-replicated-data"></a>Validar datos replicados
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "87110556"
   
 La replicación transaccional y la replicación de mezcla le permiten validar que los datos del suscriptor coinciden con los del publicador. Es posible realizar la validación de determinadas suscripciones o de todas las suscripciones a una publicación. Especifique uno de los siguientes tipos de validación y el Agente de distribución o el Agente de mezcla validarán los datos la próxima vez que se ejecuten:  
   
--   **Solo recuento de filas.** Esta opción valida si la tabla del suscriptor tiene las mismas filas que la tabla del publicador pero no valida la coincidencia del contenido de las filas. La validación del recuento de filas proporciona una idea sobre validación que puede ponerle al corriente de problemas con los datos.   
+-   **Solo de número de filas.** Esta opción valida si la tabla del suscriptor tiene las mismas filas que la tabla del publicador pero no valida la coincidencia del contenido de las filas. La validación del recuento de filas proporciona una idea sobre validación que puede ponerle al corriente de problemas con los datos.   
 -   **Recuento de filas y suma de comprobación binaria**. Además de llevar a cabo un recuento de filas en el publicador y en el suscriptor, se calcula una suma de comprobación de todos los datos utilizando el algoritmo de suma de comprobación. Si el número de filas da un error, no se lleva a cabo la suma de comprobación.  
   
  Además de validar que los datos en el suscriptor y en el publicador coincidan, la replicación de mezcla ofrece la posibilidad de validar que los datos presenten las particiones correctas para cada suscriptor. Para más información, vea [VValidar la información de particiones para un suscriptor de mezcla](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  

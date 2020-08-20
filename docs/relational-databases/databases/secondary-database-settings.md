@@ -1,4 +1,5 @@
 ---
+description: Configuración de base de datos secundaria
 title: Configuración de base de datos secundaria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ce372206ab771679eb002e051dd78e1c6be60940
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471142"
 ---
 # <a name="secondary-database-settings"></a>Configuración de base de datos secundaria
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,10 +52,10 @@ ms.locfileid: "85759014"
  Si hace clic en el botón **Opciones de restauración** y, a continuación, decide que desea utilizar las carpetas predeterminadas, le recomendamos que cancele el cuadro de diálogo **Opciones de restauración** . Si ya ha especificado ubicaciones no predeterminadas y ahora desea utilizar las ubicaciones predeterminadas en su lugar, haga clic de nuevo en **Opciones de restauración** , desactive los cuadros de texto y haga clic en Aceptar.  
   
  **Sí, restaurar una copia de seguridad existente de la base de datos principal en la base de datos secundaria (y crear la base de datos secundaria si no existe)**  
- Hace que [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilice una copia de seguridad existente de la base de datos principal para inicializar la base de datos secundaria. Escriba la ubicación de dicha copia de seguridad en el cuadro **Archivo de copia de seguridad** . Si ha especificado un nombre de base de datos nuevo en el cuadro Base de datos secundaria, la base de datos se creará como parte de la operación de restauración.  
+ Hace que [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilice una copia de seguridad existente de la base de datos principal para inicializar la base de datos secundaria. Escriba la ubicación de dicha copia de seguridad en el cuadro **Archivo de copia de seguridad**. Si ha especificado un nombre de base de datos nuevo en el cuadro Base de datos secundaria, la base de datos se creará como parte de la operación de restauración.  
   
  **Archivo de copia de seguridad**  
- Escriba la ruta de acceso y el nombre de archivo de la copia de seguridad completa de la base de datos que quiere usar para inicializar la base de datos secundaria si elige la opción **Sí, restaurar una copia de seguridad existente de la base de datos principal en la base de datos secundaria (y crear la base de datos secundaria si no existe)** .  
+ Escriba la ruta de acceso y el nombre de archivo de la copia de seguridad completa de la base de datos que quiere usar para inicializar la base de datos secundaria si elige la opción **Sí, restaurar una copia de seguridad existente de la base de datos principal en la base de datos secundaria (y crear la base de datos secundaria si no existe)**.  
   
  **Opciones de restauración**  
  Vea la descripción de este botón realizada anteriormente en este mismo tema.  
@@ -75,7 +76,7 @@ ms.locfileid: "85759014"
  Muestra el nombre del trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado para copiar los archivos de copia de seguridad del registro de transacciones del servidor principal al servidor secundario. Cuando se crea este trabajo por primera vez, se puede cambiar el nombre escribiéndolo en el cuadro.  
   
  **Programación**  
- Muestra la programación actual del trabajo de copia del Agente SQL Server utilizada para copiar los archivos de copia de seguridad del registro de transacciones del servidor principal en el servidor secundario. Puede modificar esta programación haciendo clic en **Programar...** .  
+ Muestra la programación actual del trabajo de copia del Agente SQL Server utilizada para copiar los archivos de copia de seguridad del registro de transacciones del servidor principal en el servidor secundario. Puede modificar esta programación haciendo clic en **Programar...**.  
   
  **Programar...**  
  Modifique los parámetros del trabajo del Agente SQL Server que realiza las copias de seguridad del registro de transacciones del servidor principal en el servidor secundario.  
@@ -96,7 +97,7 @@ ms.locfileid: "85759014"
  Deje la base de datos secundaria en modo STANDBY. Este modo le permitirá realizar operaciones de solo lectura en la base de datos.  
   
 > [!IMPORTANT]  
->  Si cambia el modo de recuperación de una base de datos secundaria existente, por ejemplo de **Modo sin recuperación** a **Modo de espera**, el cambio únicamente surte efecto una vez restaurada la base de datos de copia de seguridad de registros siguiente en la base de datos.  
+>   Si cambia el modo de recuperación de una base de datos secundaria existente, por ejemplo de **Modo sin recuperación** a **Modo de espera**, el cambio únicamente surte efecto una vez restaurada la base de datos de copia de seguridad de registros siguiente en la base de datos.  
   
  **Retrasar la restauración de las copias de seguridad al menos**  
  Elija el retraso con el que se restaurarán las copias de seguridad del registro de transacciones (si existen) en la base de datos secundaria.  
@@ -108,7 +109,7 @@ ms.locfileid: "85759014"
  Muestra el nombre del trabajo del Agente SQL Server utilizado para restaurar las copias de seguridad del registro de transacciones en la base de datos secundaria. Cuando se crea este trabajo por primera vez, se puede cambiar el nombre escribiéndolo en el cuadro.  
   
  **Programación**  
- Muestra la programación actual del trabajo del Agente SQL Server utilizado para restaurar las copias de seguridad del registro de transacciones en la base de datos secundaria. Puede modificar esta opción haciendo clic en **Programar...** .  
+ Muestra la programación actual del trabajo del Agente SQL Server utilizado para restaurar las copias de seguridad del registro de transacciones en la base de datos secundaria. Puede modificar esta opción haciendo clic en **Programar...**.  
   
  **Programar...**  
  Modifique los parámetros asociados con el trabajo de restauración del Agente SQL Server.  

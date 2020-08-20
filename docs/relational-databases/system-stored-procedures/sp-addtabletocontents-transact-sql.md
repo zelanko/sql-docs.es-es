@@ -1,4 +1,5 @@
 ---
+description: sp_addtabletocontents (Transact-SQL)
 title: sp_addtabletocontents (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 928d601fe544432b669b84b8d8a819405bcfbc7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d0363795187e586a7a37481505240b74690aa425
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469774"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,16 +40,16 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'table_name'`Es el nombre de la tabla. *TABLE_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @table_name = ] 'table_name'` Es el nombre de la tabla. *TABLE_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @owner_name = ] 'owner_name'`Es el nombre del propietario de la tabla. *owner_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @owner_name = ] 'owner_name'` Es el nombre del propietario de la tabla. *owner_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @filter_clause = ] 'filter_clause'`Especifica una cláusula de filtro que controla qué filas de los datos recién cargados deben agregarse a las tablas de seguimiento de mezcla. *filter_clause* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. Si *filter_clause* es **null**, se agregan todas las filas de carga masiva.  
+`[ @filter_clause = ] 'filter_clause'` Especifica una cláusula de filtro que controla qué filas de los datos recién cargados deben agregarse a las tablas de seguimiento de mezcla. *filter_clause* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. Si *filter_clause* es **null**, se agregan todas las filas de carga masiva.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_addtabletocontents** solo se utiliza en la replicación de mezcla.  
   
  El **ROWGUIDCOL** hace referencia a las filas de la *TABLE_NAME* y las referencias se agregan a las tablas de seguimiento de mezcla. **sp_addtabletocontents** debe usarse después de la copia masiva de datos en una tabla que se publica mediante la replicación de mezcla. El procedimiento almacenado inicia el seguimiento de las filas copiadas y garantiza que las nuevas filas se incluirán en la siguiente sincronización.  
@@ -56,7 +57,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addtabletocontents**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Usar una instrucción (ODBC)
 title: Usar una instrucción (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,11 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49e653ff458ee816a00654e574b27fe2d9f327b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1d3a6cead69651eedec63d9c34e24674ec6dd6ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470451"
 ---
 # <a name="use-a-statement-odbc"></a>Usar una instrucción (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,11 +39,11 @@ ms.locfileid: "86009421"
   
 5.  Ejecute directamente una instrucción utilizando SQLExecDirect.  
   
-     \- o -  
+     \- O bien  
   
      Si se ha preparado la instrucción, ejecútela varias veces utilizando [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400).  
   
-     \- o -  
+     \- O bien  
   
      Llame a una función de catálogo, que devuelve los resultados.  
   
@@ -49,11 +51,11 @@ ms.locfileid: "86009421"
   
      Capture una fila cada vez del conjunto de resultados de una instrucción.  
   
-     \- o -  
+     \- O bien  
   
      Capture varias filas cada vez del conjunto de resultados mediante un cursor de bloque.  
   
-     \- o -  
+     \- O bien  
   
      Llame a [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) para determinar el número de filas afectado por una instrucción INSERT, UPDATE o DELETE.  
   

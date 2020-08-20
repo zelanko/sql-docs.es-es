@@ -1,4 +1,5 @@
 ---
+description: Constantes enumeradas en expresiones de propiedad
 title: Constantes enumeradas en expresiones de propiedad | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c233d75beabca847937f85977acfd0e2230dc7c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 692e2e19b86b5d47d207c32c3024365675603c07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477591"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas en expresiones de propiedad
 
@@ -37,7 +38,7 @@ ms.locfileid: "86922789"
   
  Las siguientes secciones proporcionan información sobre constantes enumeradas:  
   
- [Package](#Package)  
+ [Paquete](#Package)  
   
  [Enumeradores de bucle Foreach](#Foreach)  
   
@@ -335,7 +336,7 @@ ms.locfileid: "86922789"
 |Nombre descriptivo en ExistingData|Valor numérico|  
 |-----------------------------------|-------------------|  
 |Replace|0|  
-|Append|1|  
+|Anexar|1|  
   
 ### <a name="web-service-task"></a>Tarea Servicio web  
  Propiedad **OutputType**: se establece mediante el uso de valores de la enumeración **DTSOutputType**.  
@@ -423,7 +424,7 @@ ms.locfileid: "86922789"
 |Validación|0|  
 |XSLT|1|  
 |XPATH|2|  
-|Merge|3|  
+|Fusionar mediante combinación|3|  
 |Diferencias|4|  
 |Revisión|5|  
   
@@ -475,7 +476,7 @@ ms.locfileid: "86922789"
   
 |Nombre descriptivo en DTSXMLDiffAlgorithm|Valor numérico|  
 |------------------------------------------|-------------------|  
-|Automático|0|  
+|Auto|0|  
 |Fast (rápido)|1|  
 |Preciso|2|  
   
@@ -492,7 +493,7 @@ ms.locfileid: "86922789"
 |Nombre descriptivo en DatabaseSelection|Valor numérico|  
 |----------------------------------------|-------------------|  
 |None|0|  
-|All|1|  
+|Todo|1|  
 |Sistema|2|  
 |Usuario|3|  
 |Específico|4|  
@@ -502,7 +503,7 @@ ms.locfileid: "86922789"
 |Nombre descriptivo en TableSelection|Valor numérico|  
 |-------------------------------------|-------------------|  
 |None|0|  
-|All|1|  
+|Todo|1|  
 |Específico|2|  
   
  Propiedad **ObjectTypeSelection**: se establece mediante el uso de valores de la enumeración **ObjectType**.  
@@ -518,14 +519,14 @@ ms.locfileid: "86922789"
   
 |Nombre descriptivo en DestinationType|Valor numérico|  
 |--------------------------------------|-------------------|  
-|Automático|0|  
+|Auto|0|  
 |Manual|1|  
   
  Propiedad **ExistingBackupsAction**: se establece mediante el uso de valores de la enumeración **ActionForExistingBackups**.  
   
 |Nombre descriptivo en ActionForExistingBackups|Valor numérico|  
 |-----------------------------------------------|-------------------|  
-|Append|0|  
+|Anexar|0|  
 |Sobrescribir|1|  
   
  Propiedad **BackupAction**: se establece mediante el uso de valores de la enumeración **BackupTaskType**. Esta propiedad trabaja con la propiedad **BackupIsIncremental** para definir el tipo de copia de seguridad que realiza la tarea.  
@@ -570,7 +571,7 @@ ms.locfileid: "86922789"
 |---------------------------------------|-------------------|  
 |Columna|1|  
 |Índice|2|  
-|All|3|  
+|Todo|3|  
   
 ##  <a name="common-properties"></a><a name="CommonProperties"></a> Propiedades comunes  
  Los paquetes, tareas, y los contenedores de secuencias, de bucles Foreach y de bucles For pueden utilizar las siguientes enumeraciones para establecer las propiedades especificadas.  
@@ -579,7 +580,7 @@ ms.locfileid: "86922789"
   
 |Nombre descriptivo en DTSForcedExecResult|Valor numérico|  
 |------------------------------------------|-------------------|  
-|None|-1|  
+|Ninguno|-1|  
 |Correcto|0|  
 |Error|1|  
 |Completion|2|  
@@ -605,7 +606,7 @@ ms.locfileid: "86922789"
 ## <a name="related-tasks"></a>Related Tasks  
  [Agregar o cambiar una expresión de propiedad](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Contenedores de Integration Services](../../integration-services/control-flow/integration-services-containers.md)   

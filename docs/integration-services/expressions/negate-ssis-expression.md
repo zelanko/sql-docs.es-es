@@ -1,4 +1,5 @@
 ---
+description: '- (Negativo) (expresión de SSIS)'
 title: '- (Negar) (expresión de SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9322d5a25b8b65432e83ddeac03f486722a50b7c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 610b67eaf281c276134d5ea4c13bad1368aa1c80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86911901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477557"
 ---
 # <a name="--negate-ssis-expression"></a>- (Negativo) (expresión de SSIS)
 
@@ -49,7 +50,7 @@ ms.locfileid: "86911901"
 -@Counter + 50  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

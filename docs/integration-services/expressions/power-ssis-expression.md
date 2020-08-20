@@ -1,4 +1,5 @@
 ---
+description: POWER (expresión de SSIS)
 title: POWER (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80e14ad3da38f95c845ffdfd42590a23e8b36f99
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e09a9f03d0eea0ebaceb657a05635e64a46abe7a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477549"
 ---
 # <a name="power-ssis-expression"></a>POWER (expresión de SSIS)
 
@@ -43,7 +44,7 @@ POWER(numeric_expression,power)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los argumentos *numeric_expression* y *power* se convierten al tipo de datos DT_R8 antes de que se calcule la potencia. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Si el valor de *numeric_expression* da como resultado cero y el valor de *power* es negativo, el evaluador de expresiones devolverá un error y establecerá el resultado devuelto en NULL.  

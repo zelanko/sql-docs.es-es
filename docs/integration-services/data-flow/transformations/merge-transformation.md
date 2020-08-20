@@ -1,4 +1,5 @@
 ---
+description: Mezclar, transformación
 title: Transformación Mezclar | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a444abac97c69755e234e39a9c6e3ae623af8d89
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7d8ed9805a62095f732f3f4621d3c133793ac7bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477642"
 ---
 # <a name="merge-transformation"></a>Mezclar, transformación
 
@@ -81,7 +82,7 @@ ms.locfileid: "86919591"
 >  La transformación Mezclar requiere datos ordenados para sus entradas. Para obtener más información sobre este importante requisito, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).  
   
 ### <a name="options"></a>Opciones  
- **Nombre de la columna de salida**  
+ **Nombre de columna de salida**  
  Especifique el nombre de la columna de salida.  
   
  **Entrada de Mezclar 1**  
@@ -90,7 +91,7 @@ ms.locfileid: "86919591"
  **Entrada de Mezclar 2**  
  Seleccione la columna que desea mezclar como Entrada de Mezclar 2.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Transformación Combinación de mezcla](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Transformación Unión de todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   

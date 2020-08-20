@@ -1,4 +1,5 @@
 ---
+description: () (Paréntesis) (expresión de SSIS)
 title: () (Paréntesis) (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57ea5cbdea10a71049e17527b64dbf2c126a90be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 970ac5479d0d09276aae8eb095199abbbee910c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921117"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477555"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (Paréntesis) (expresión de SSIS)
 
@@ -54,7 +55,7 @@ ms.locfileid: "86921117"
   
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

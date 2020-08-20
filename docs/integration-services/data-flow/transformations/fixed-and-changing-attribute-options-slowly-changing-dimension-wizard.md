@@ -1,4 +1,5 @@
 ---
+description: Opciones de atributos fijos y variables (Asistente para dimensiones variables)
 title: Opciones de atributos fijos y variables (Asistente para dimensiones de variación lenta) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f0e3aadb76c9a75f2d0458e0c4163105c122d7a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 019af78f978d0df87d923cf838c53ea7442721ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477687"
 ---
 # <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>Opciones de atributos fijos y variables (Asistente para dimensiones variables)
 
@@ -35,7 +36,7 @@ ms.locfileid: "86919348"
  **Atributos variables**  
  En el caso de los atributos variables, indique si la tarea debe cambiar todos los registros no actualizados o expirados, además de los actuales, cuando se detecten cambios en un atributo variable. Los registros expirados son los que se han reemplazado por uno nuevo mediante un cambio en un atributo histórico (un cambio del Tipo 2). La selección de esta opción puede imponer requisitos adicionales de procesamiento en un objeto multidimensional generado en el almacenamiento de datos relacional.  
   
-## <a name="see-also"></a>Consulte también  
- [Configuración de salidas con el Asistente para dimensiones de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+## <a name="see-also"></a>Vea también  
+ [Configurar salidas mediante el Asistente para dimensión de variación lenta](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

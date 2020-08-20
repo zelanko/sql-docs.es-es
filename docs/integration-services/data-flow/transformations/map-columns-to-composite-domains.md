@@ -1,4 +1,5 @@
 ---
+description: Asignar columnas a dominios compuestos
 title: Asignar columnas a dominios compuestos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 311b7d3117d0c8675ed6399c9eeaf85247373295
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4508244cb9558cc63c9e1b2185c89c5a43d659cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477679"
 ---
 # <a name="map-columns-to-composite-domains"></a>Asignar columnas a dominios compuestos
 
@@ -56,7 +57,7 @@ ms.locfileid: "86919241"
   
 6.  Si fuera necesario, establezca propiedades en la pestaña **Avanzadas** . Para obtener más información acerca de las propiedades, vea [DQS Cleansing Transformation Editor Dialog Box](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Transformación Limpieza de DQS](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

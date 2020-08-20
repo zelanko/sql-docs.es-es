@@ -1,4 +1,5 @@
 ---
+description: Operadores (expresión de SSIS)
 title: Operadores (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cce2d53a48a55dad2f8d8120e8a7fd091b062ebe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f2c4ddb9dad3a1b6c922201906628ad3b6d25f94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477495"
 ---
 # <a name="operators-ssis-expression"></a>Operadores (expresión de SSIS)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86921131"
 |[&#42; &#40;Multiplicar&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/multiply-ssis-expression.md)|Multiplica dos expresiones numéricas.|  
 |[/ (Dividir) &#40;expresión de SSIS&#41;](../../integration-services/expressions/divide-ssis-expression.md)|Divide la primera expresión numérica por la segunda.|  
 |[% &#40;Módulo&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/modulo-ssis-expression.md)|Proporciona el resto entero después de dividir la primera expresión numérica por la segunda.|  
-|[&#124;&#124; &#40;OR lógico&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|Realiza una operación lógica OR.|  
+|[&#124;&#124; &#40;Operador OR lógico&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)|Realiza una operación lógica OR.|  
 |[&& &#40;AND lógico&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)|Realiza una operación lógica AND.|  
 |[\! &#40;NOT lógico&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/logical-not-ssis-expression.md)|Niega un operando booleano.|  
 |[&#124; &#40;OR inclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)|Lleva a cabo una operación OR bit a bit entre dos valores enteros.|  
@@ -59,7 +60,7 @@ ms.locfileid: "86921131"
   
  Para obtener información sobre la posición de cada operador en la jerarquía de precedencia, vea [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)   
  [Ejemplos de expresiones avanzadas de Integration Services](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  

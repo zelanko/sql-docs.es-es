@@ -1,4 +1,5 @@
 ---
+description: Editor de expresiones de propiedad
 title: Editor de expresiones de propiedad | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d21140c43c3d584f8e2dac988c0125efd49d8557
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3c12c260c4971763041bf41b5be7dafbdfd497c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477529"
 ---
 # <a name="property-expressions-editor"></a>Editor de expresiones de propiedad
 
@@ -44,7 +45,7 @@ ms.locfileid: "86919091"
  **Eliminar**  
  Seleccione una propiedad y, después, haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Página Expresiones](../../integration-services/expressions/expressions-page.md)   
  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variables del sistema](../../integration-services/system-variables.md)   

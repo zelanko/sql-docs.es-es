@@ -1,4 +1,5 @@
 ---
+description: '* (Multiplicar) (expresión de SSIS)'
 title: '* (Multiplicar) (expresión de SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8d322ff646d4908f968c068def3d2ca10d4c6a15
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3fa126c686122c49fef9fd73e2317506881403e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477567"
 ---
 # <a name="-multiply-ssis-expression"></a>* (Multiplicar) (expresión de SSIS)
 
@@ -42,7 +43,7 @@ numeric_expression1 * numeric_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si alguno de los operandos es NULL, el resultado será NULL.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
@@ -64,7 +65,7 @@ ListPrice * .10
 ListPrice - (ListPrice * @[Discount%])  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

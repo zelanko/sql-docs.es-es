@@ -1,4 +1,5 @@
 ---
+description: NULL (expresión de SSIS)
 title: NULL (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 574c846d2fb002fe317ddc8e3000aeabbb5cf082
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a915824a474cf90f7c9764f6bd5938457511a51d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477543"
 ---
 # <a name="null-ssis-expression"></a>NULL (expresión de SSIS)
 
@@ -41,7 +42,7 @@ NULL(typespec)
 ## <a name="result-types"></a>Tipos de resultado  
  Cualquier tipo de datos válido con valor NULL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  NULL devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Para solicitar un valor NULL para algunos tipos de datos es necesario utilizar parámetros. En la tabla siguiente se muestran estos tipos de datos y sus parámetros.  
@@ -64,7 +65,7 @@ NULL(DT_DATE)
 NULL(DT_BOOL)  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [ISNULL &#40;expresión de SSIS&#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
  [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

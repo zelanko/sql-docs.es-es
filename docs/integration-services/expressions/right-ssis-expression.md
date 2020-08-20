@@ -1,4 +1,5 @@
 ---
+description: RIGHT (expresión de SSIS)
 title: RIGHT (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46614c3875226936b9fa555351dcd6da2dcb26e5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbf49e07dd37e621ed5a733e8f1ad22e5d057b1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477437"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (expresión de SSIS)
 
@@ -75,7 +76,7 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [LEFT &#40;expresión de SSIS&#41;](../../integration-services/expressions/left-ssis-expression.md)   
  [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

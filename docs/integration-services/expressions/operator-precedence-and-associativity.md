@@ -1,4 +1,5 @@
 ---
+description: Precedencia y capacidad de asociación de operadores
 title: Precedencia y capacidad de asociación de operadores | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 801f0358ce5dd6b68e42aff37e7135ec813b3bc0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cda01c12856bff3e28b06c9cfddccb368e6a3e6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477514"
 ---
 # <a name="operator-precedence-and-associativity"></a>Precedencia y capacidad de asociación de operadores
 
@@ -29,13 +30,13 @@ ms.locfileid: "86901349"
   
  En la tabla siguiente se muestra la precedencia de operadores de mayor a menor. Los operadores del mismo nivel tienen la misma precedencia.  
   
-|Símbolo del operador|Tipo de operación|Capacidad de asociación|  
+|Símbolo del operador|Tipo de operación|asociatividad|  
 |---------------------|-----------------------|-------------------|  
-|( )|Expression|De izquierda a derecha|  
+|( )|Expresión|De izquierda a derecha|  
 |-, !, ~|Unario|De derecha a izquierda|  
 |conversiones de tipos|Unario|De derecha a izquierda|  
-|*, / ,%|Multiplicativa|De izquierda a derecha|  
-|+, -|Aditiva|De izquierda a derecha|  
+|*, / ,%|Multiplicativo|De izquierda a derecha|  
+|+, -|Aditivo|De izquierda a derecha|  
 |\<, >, \<=, >=|Relacional|De izquierda a derecha|  
 |==, !=|Igualdad|De izquierda a derecha|  
 |&|AND bit a bit|De izquierda a derecha|  
@@ -45,7 +46,7 @@ ms.locfileid: "86901349"
 |&#124;&#124;|O lógico|De izquierda a derecha|  
 |? :|Expresión condicional|De derecha a izquierda|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

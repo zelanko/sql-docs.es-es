@@ -1,4 +1,5 @@
 ---
+description: MONTH (expresión de SSIS)
 title: MONTH (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed9229a514045f303c651dd71a5ab8837a31632e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 24ab080c25e240ce62260ff708d8cfee137f462f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477577"
 ---
 # <a name="month-ssis-expression"></a>MONTH (expresión de SSIS)
 
@@ -41,7 +42,7 @@ MONTH(date)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  MONTH devuelve un resultado NULL si el valor del argumento es NULL.  
   
  Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -70,7 +71,7 @@ MONTH(ModifiedDate)
 MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [DATEADD &#40;expresión de SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF &#40;expresión de SSIS&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DATEPART &#40;expresión de SSIS&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   

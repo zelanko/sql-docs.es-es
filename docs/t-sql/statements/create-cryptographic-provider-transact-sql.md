@@ -1,4 +1,5 @@
 ---
+description: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 title: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 10d3716351aecc982ad060cd9795c029401a48a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b1a12f2c53409148854b806f1141bf46acad8a4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467273"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Es el nombre del proveedor de Administración extensible de claves.  
   
  *path_of_DLL*  
- Es la ruta de acceso del archivo .dll que implementa la interfaz de Administración extensible de claves de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se usa el **Conector de SQL Server para Microsoft Azure Key Vault**, la ubicación predeterminada es **'C:\Archivos de programa\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** .  
+ Es la ruta de acceso del archivo .dll que implementa la interfaz de Administración extensible de claves de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se usa el **Conector de SQL Server para Microsoft Azure Key Vault**, la ubicación predeterminada es **'C:\Archivos de programa\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
   
 ## <a name="remarks"></a>Observaciones  
  Todas las claves creadas por un proveedor harán referencia al proveedor por su GUID. El GUID se retiene para todas las versiones de la DLL.  

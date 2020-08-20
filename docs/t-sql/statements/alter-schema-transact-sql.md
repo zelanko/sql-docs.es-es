@@ -1,4 +1,5 @@
 ---
+description: ALTER SCHEMA (Transact-SQL)
 title: ALTER SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2020
@@ -22,12 +23,12 @@ ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47df9b8bb3d6beb5706bff8869d92b351e855f5b
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: f473f450b97d86b0b9435d833c3674dfe8c0a2f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467392"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,7 +105,7 @@ ALTER SCHEMA schema_name
 ### <a name="a-transferring-ownership-of-a-table"></a>A. Transferir la propiedad de una tabla  
  En el ejemplo siguiente se modifica el esquema `HumanResources` transfiriendo la tabla `Address` del esquema `Person` al esquema "HumanResources".  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER SCHEMA HumanResources TRANSFER Person.Address;  
@@ -114,11 +115,11 @@ GO
 ### <a name="b-transferring-ownership-of-a-type"></a>B. Transferir la propiedad de un tipo  
  El ejemplo siguiente crea un tipo en el esquema `Production` y, a continuación, transfiere el tipo al esquema `Person`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
-CREATE TYPE Production.TestType FROM [varchar](10) NOT NULL ;  
+CREATE TYPE Production.TestType FROM [VARCHAR](10) NOT NULL ;  
 GO  
   
 -- Check the type owner.  
@@ -145,10 +146,10 @@ GO
 ### <a name="c-transferring-ownership-of-a-table"></a>C. Transferir la propiedad de una tabla  
  En el siguiente ejemplo se crea una tabla `Region` en el esquema `dbo`, se crea un esquema `Sales` y, por último, se mueve la tabla `Region` desde el esquema `dbo` al esquema `Sales`.  
   
-```  
+```sql  
 CREATE TABLE dbo.Region   
-    (Region_id int NOT NULL,  
-    Region_Name char(5) NOT NULL)  
+    (Region_id INT NOT NULL,  
+    Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
   

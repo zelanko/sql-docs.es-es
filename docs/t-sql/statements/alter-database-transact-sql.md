@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2020
@@ -26,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c45877355d5cb47b8c9ba4ee86784c17d30a816
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467337"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -47,7 +48,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
 
 :::row:::
     :::column:::
-        **_\* SQL Server \*_** &nbsp;
+        **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
         [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
@@ -56,7 +57,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
         [Instancia administrada de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
@@ -296,7 +297,7 @@ GO
         [Instancia administrada de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
@@ -452,7 +453,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) Especifica e
 |500 GB|N/D|√|√|√ (D)|√|
 |750 GB|N/D|√|√|√|√|
 |1024 GB|N/D|√|√|√|√ (D)|
-|Desde 1024 GB hasta 4096 GB en incrementos de 256 GB*|N/D|N/A|N/A|N/D|√|
+|Desde 1024 GB hasta 4096 GB en incrementos de 256 GB*|N/A|N/A|N/D|N/D|√|
 
 \* P11 y P15 permiten un valor de MAXSIZE de hasta 4 TB, con 1024 GB como tamaño predeterminado. P11 y P15 pueden usar hasta 4 TB de almacenamiento incluido sin cargos adicionales. En el nivel Premium, un valor de MAXSIZE mayor de 1 TB está actualmente disponible en las regiones siguientes: Este de EE. UU. 2, Oeste de EE. UU., US Gov Virginia, Oeste de Europa, Centro de Alemania, Sudeste de Asia, Este de Japón, Este de Australia, Centro de Canadá y Este de Canadá. Para obtener más información sobre las limitaciones de recursos para el modelo de DTU, consulte [Límites de recursos de DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -747,7 +748,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
         **_\* Instancia administrada de <br />SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
@@ -1020,7 +1021,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [Instancia administrada de <br />SQL Database](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;

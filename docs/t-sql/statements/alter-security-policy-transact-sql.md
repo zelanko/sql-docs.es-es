@@ -1,4 +1,5 @@
 ---
+description: ALTER SECURITY POLICY (Transact-SQL)
 title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0696b96e83aac5ca66b43d38c11adceab702c10f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d8267b7583827dce34e46c8f3605912fe72ea72b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467297"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,7 @@ Indica que la directiva de seguridad no debe ejecutarse cuando un agente de repl
 table_schema_name.table_name  
 Es la tabla de destino del predicado de seguridad aplicado. Puede haber varias directivas de seguridad deshabilitadas que tengan como destino una sola tabla, pero no puede haber varias de ellas habilitadas al mismo tiempo.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Observaciones
 La instrucción ALTER SECURITY POLICY está en el ámbito de una transacción. Si se revierte la transacción, también se revierte la instrucción.  
   
 Al utilizar las funciones de predicado con tablas optimizadas para memoria, las directivas de seguridad deben incluir **SCHEMABINDING** y utilizar la sugerencia de compilación **WITH NATIVE_COMPILATION**. El argumento SCHEMABINDING no se puede intercambiar por la instrucción ALTER porque se aplica a todos los predicados. Para cambiar la vinculación del esquema, debe quitar y volver a crear la directiva de seguridad.  

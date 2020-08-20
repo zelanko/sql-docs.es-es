@@ -1,4 +1,5 @@
 ---
+description: ALTER PROCEDURE (Transact-SQL)
 title: ALTER PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -23,12 +24,12 @@ ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676696f50495ab042bbaf38bf9b6fd1ce374d3a7
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: dab3f3be63f0430a776fcaeb2d1c0d65f117f511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381269"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467428"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86381269"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
@@ -57,7 +58,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server CLR Stored Procedure  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
@@ -69,7 +70,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```sql  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -105,7 +106,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  VARYING  
  Especifica el conjunto de resultados admitido como parámetro de salida. Este parámetro se genera dinámicamente por medio del procedimiento almacenado y su contenido puede variar. Solo se aplica a los parámetros de cursor. Esta opción no es válida para los procedimientos CLR.  
   
- *valor predeterminado*  
+ *default*  
  Es un valor predeterminado para el parámetro.  
   
  OUT | OUTPUT  
@@ -148,7 +149,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
- Especifica el método de un ensamblado de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un procedimiento CLR almacenado al que se va a hacer referencia. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre calificado como espacio de nombres que utiliza un punto ( **.** ) para separar las partes del espacio de nombres, el nombre de la clase debe estar delimitado por corchetes ( **[]** ) o comillas ( **""** ). El método especificado debe ser un método estático de la clase.  
+ Especifica el método de un ensamblado de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un procedimiento CLR almacenado al que se va a hacer referencia. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre calificado como espacio de nombres que utiliza un punto (**.**) para separar las partes del espacio de nombres, el nombre de la clase debe estar delimitado por corchetes (**[]**) o comillas (**""**). El método especificado debe ser un método estático de la clase.  
   
  De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ejecutar código CLR. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de Common Language Runtime, pero estas referencias no se pueden ejecutar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar esta opción, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -172,8 +173,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se crea el procedimiento almacenado `uspVendorAllInfo`. Este procedimiento devuelve los nombres de todos los proveedores que proporciona [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], los productos que suministran, su solvencia y su disponibilidad. Después de crear este procedimiento, se modifica para devolver un conjunto de resultados diferente.  
   
-```  
-  
+```sql
 IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE Purchasing.uspVendorAllInfo;  
 GO  
@@ -190,17 +190,16 @@ AS
     INNER JOIN Production.Product p  
       ON pv.ProductID = p.ProductID   
     ORDER BY v.Name ASC;  
-GO  
-  
+GO    
 ```  
   
  En el ejemplo siguiente se modifica el procedimiento almacenado `uspVendorAllInfo`. Quita la cláusula EXECUTE AS CALLER y modifica el cuerpo del procedimiento para devolver solo los proveedores que proporcionan el producto especificado. Las funciones `LEFT` y `CASE` permiten personalizar la apariencia del conjunto de resultados.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER PROCEDURE Purchasing.uspVendorAllInfo  
-    @Product varchar(25)   
+    @Product VARCHAR(25)   
 AS  
     SET NOCOUNT ON;  
     SELECT LEFT(v.Name, 25) AS Vendor, LEFT(p.Name, 25) AS 'Product name',   
@@ -224,7 +223,6 @@ AS
     WHERE p.Name LIKE @Product  
     ORDER BY v.Name ASC;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

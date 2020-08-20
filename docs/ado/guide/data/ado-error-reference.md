@@ -1,4 +1,5 @@
 ---
+description: Errores de ADO
 title: Referencia de error de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ec9df42f3aee56d06883478e365fffcb71790d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453867"
 ---
 # <a name="ado-errors"></a>Errores de tiempo de ejecución de ADO
 La constante **ErrorValueEnum** describe los valores de error de ADO. Para obtener una lista completa de estas constantes enumeradas, incluidos los valores, vea el [Apéndice B: errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). En esta sección se examinan algunos de los errores más interesantes y se explican algunas situaciones específicas que pueden generarlos, o soluciones para solucionar el problema. Se enumeran la constante **ErrorValueEnum** y el número decimal positivo corto.
@@ -53,8 +54,8 @@ La constante **ErrorValueEnum** describe los valores de error de ADO. Para obten
 |**3714**|**adErrInvalidTransaction**|La coordinación de la transacción no es válida o no se ha iniciado.|
 |**3715**|**adErrNotExecuting**|No se puede realizar la operación mientras no se ejecuta.|
 |**3716**|**adErrUnsafeOperation**|La configuración de seguridad de este equipo prohíbe el acceso a un origen de datos en otro dominio.|
-|**3717**|**adWrnSecurityDialog**|Solo para uso interno. No use. (La entrada se incluyó por razones de integridad. Este error no debería aparecer en el código).|
-|**3718**|**adWrnSecurityDialogHeader**|Solo para uso interno. No use. (Entrada que se incluye en aras de la integridad. Este error no debería aparecer en el código).|
+|**3717**|**adWrnSecurityDialog**|Sólo para uso interno. No use. (La entrada se incluyó por razones de integridad. Este error no debería aparecer en el código).|
+|**3718**|**adWrnSecurityDialogHeader**|Sólo para uso interno. No use. (Entrada que se incluye en aras de la integridad. Este error no debería aparecer en el código).|
 |**3719**|**adErrIntegrityViolation**|El valor de los datos entra en conflicto con las restricciones de integridad del campo. Un nuevo valor para un **campo** produciría una clave duplicada. Un valor que constituye un lado de una relación entre dos registros podría no ser actualizable.|
 |**3720**|**adErrPermissionDenied**|Los permisos insuficientes evitan escribir en el campo. El usuario con el nombre en la cadena de conexión no tiene los permisos adecuados para escribir en un **campo**.|
 |**3721**|**adErrDataOverflow**|El valor de los datos es demasiado grande para representarlo en el tipo de datos del campo. Se asignó un valor numérico demasiado grande para el campo previsto. Por ejemplo, un valor entero largo se asignó a un campo entero corto.|

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_workload_groups (Transact-SQL)
 title: Sys. dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2020
@@ -20,12 +21,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1940c42143eb2a1b4112eb2dea789196938e18ed
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dfcbcaceeb4e60a88f1ba00fa7a116629945c7e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454887"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "87397151"
 |effective_max_dop|**int**|**Se aplica a: a**partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Grado máximo efectivo de paralelismo para el grupo de cargas de trabajo. No admite valores NULL.| 
 |total_cpu_usage_preemptive_ms|**bigint**|**Se aplica a: a**partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Tiempo total de CPU usado durante la programación de modo preferente para el grupo de cargas de trabajo, medido en MS. No admite valores NULL.<br /><br />Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente.| 
 |request_max_memory_grant_percent_numeric|**float**|**Se aplica a: a**partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Valor actual de la concesión máxima de memoria, en porcentaje, para una única solicitud. No admite valores NULL.| 
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="remarks"></a>Observaciones  
  Esta vista de administración dinámica muestra la configuración en memoria. Para ver los metadatos de configuración almacenados, utilice la vista de catálogo [Sys. resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  

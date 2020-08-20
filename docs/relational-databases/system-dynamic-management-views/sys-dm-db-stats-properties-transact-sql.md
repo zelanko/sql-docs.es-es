@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_stats_properties (Transact-SQL)
 title: Sys. dm_db_stats_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
@@ -20,12 +21,12 @@ ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7a88ef6865575d8e5c505cd563b463637dd8070
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 241fe5283d5d843bbfb84bec4809dbe5d2c5dc62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455073"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -59,7 +60,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |modification_counter|**bigint**|Número total de modificaciones para la columna de estadísticas iniciales (la columna en la que se ha generado el histograma) desde la última vez que se actualizaron las estadísticas.<br /><br /> Tablas con optimización para memoria: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] el inicio y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] esta columna contiene el número total de modificaciones de la tabla desde la última vez que se actualizaron las estadísticas o se reinició la base de datos.|  
 |persisted_sample_percent|**float**|Porcentaje de ejemplo persistente empleado en las actualizaciones de estadísticas en las que no se especifica explícitamente un porcentaje de muestreo. Si el valor es cero, significa que no hay establecido ningún porcentaje de ejemplo persistente para esta estadística.<br /><br /> **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
-## <a name="remarks"></a>Comentarios para <a name="Remarks"></a>  
+## <a name="remarks"></a><a name="Remarks"></a> Comentarios  
  **Sys. dm_db_stats_properties** devuelve un conjunto de filas vacío en cualquiera de las siguientes condiciones:  
   
 -   **object_id** o **stats_id** es NULL.    
@@ -106,7 +107,7 @@ WHERE modification_counter > 1000;
   
 ## <a name="see-also"></a>Consulte también  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [Sys. stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Funciones y vistas de administración dinámica relacionadas con objetos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  

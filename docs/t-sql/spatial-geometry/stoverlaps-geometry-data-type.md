@@ -1,4 +1,5 @@
 ---
+description: STOverlaps (tipo de datos geometry)
 title: STOverlaps (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1dc18a4aaabb04cb0fc200b1158ff865203caf72
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d92e984fb803cc8b15c58f4b137df2dd51e83f9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454281"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Devuelve 1 si una instancia de **geometry** se superpone con otra instancia de *
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Dos instancias de **geometry** se superponen si la región que representa su intersección tiene la misma dimensión que tienen las instancias y la región no es igual a ninguna instancia.  
   
  `STOverlaps()` siempre devuelve 0 si los puntos de intersección de las instancias de **geometry** no son de la misma dimensión.  
@@ -65,7 +66,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STOverlaps(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

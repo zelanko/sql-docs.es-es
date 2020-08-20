@@ -1,4 +1,5 @@
 ---
+description: Audit Statement Permission [clase de eventos]
 title: Clase de eventos Audit Statement Permission | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f9a9b57817e65ded5bb75ce64a9a1bac5355f3e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f89ac7c706bf27b140af76718a0cb82e152800bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456041"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission [clase de eventos]
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La clase de eventos **Audit Statement Permission** se produce cuando se usa un permiso de instrucción (como CREATE TABLE).  
+   La clase de eventos **Audit Statement Permission** se produce cuando se usa un permiso de instrucción (como CREATE TABLE).  
   
  Es posible que en una versión futura de **se quite la clase de eventos** Audit Statement Permission [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se recomienda utilizar la clase de eventos **Audit Schema Object Management** en su lugar.  
   

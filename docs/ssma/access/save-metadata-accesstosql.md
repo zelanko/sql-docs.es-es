@@ -1,4 +1,5 @@
 ---
+description: Guardar metadatos (AccessToSQL)
 title: Guardar metadatos (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7f0f9b22d571e4ac89fcd0db464a1e79ae91a28b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 49114b457535d46785571e16c3b27889b6bf2365
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454250"
 ---
 # <a name="save-metadata-accesstosql"></a>Guardar metadatos (AccessToSQL)
 El cuadro de diálogo **guardar metadatos** le solicita que cargue los metadatos en el proyecto de SSMA antes de guardarlo. Esto le permite tener un archivo de proyecto completo que puede usar sin conexión y enviar a otras personas, como personal de soporte técnico.  

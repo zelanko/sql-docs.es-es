@@ -1,4 +1,5 @@
 ---
+description: Usar ADO con lenguajes de Scripting
 title: Usar ADO con lenguajes de scripting | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71057caed6d28a2923e1c3735e10d20fccc9217d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6decee7fddc4748a7d0931ab671f66b11161cc9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453997"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar ADO con lenguajes de Scripting
 En un entorno de scripting, ADO permite exponer datos por medio de scripting del lado servidor. En este escenario, ADO, el proveedor de OLE DB subyacente que utiliza y cualquier otro componente necesario para hacer referencia a un almacén de datos determinado se instalan en un servidor que ejecuta Internet Information Services (IIS). Con Active Server páginas (ASP), ADO es un componente al que se hace referencia en un script que puede generar HTML, por ejemplo. Este contenido HTML se puede pasar a través de HTTP a un explorador Web del cliente. Mediante el uso de scripting, la página web puede enviar acciones de vuelta al script del lado servidor, lo que le permite actualizar, recorrer o ver datos específicos.  
@@ -27,26 +28,26 @@ En un entorno de scripting, ADO permite exponer datos por medio de scripting del
   
 |Object|¿Seguro para scripting?|  
 |------------|-------------------------|  
-|Conexión ADO|Yes|  
+|Conexión ADO|Sí|  
 |Comando de ADO|No|  
 |Parámetro de ADO|No|  
-|Conjunto de registros ADO|Yes|  
-|Registro de ADO|Yes|  
-|Secuencia de ADO|Yes|  
+|Conjunto de registros ADO|Sí|  
+|Registro de ADO|Sí|  
+|Secuencia de ADO|Sí|  
 |Error de ADO.|No|  
 |Catálogo de ADOX|No|  
 |CellSet (CellSet)|No|  
-|RDS (control)|Yes|  
-|Espacio de los de RDS|Yes|  
+|RDS (control)|Sí|  
+|Espacio de los de RDS|Sí|  
 |DataFactory de RDS|No|  
   
  En la tabla siguiente se enumeran los proveedores incluidos con Windows DAC/MDAC y se indica si son seguros para el scripting.  
   
 |Proveedor|¿Seguro para scripting?|  
 |--------------|-------------------------|  
-|Forma|Yes|  
-|Persist|Yes|  
-|Remote|Yes|  
+|Forma|Sí|  
+|Persist|Sí|  
+|Remote|Sí|  
 |Proveedor de OLE DB para SQL Server (SQLOLEDB)|No|  
 |Proveedor de OLE DB para ODBC (MSDASQL)|No|  
   
@@ -65,7 +66,7 @@ En un entorno de scripting, ADO permite exponer datos por medio de scripting del
   
 -   [Programación ADO con JScript](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Microsoft Objetos de datos ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Usar ADO con Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Usar ADO con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

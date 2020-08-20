@@ -1,4 +1,5 @@
 ---
+description: Proveedor de Microsoft OLE DB para el servicio Microsoft Active Directory
 title: Proveedor de Microsoft OLE DB para el servicio Microsoft Active Directory | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a2513d8440adedaa0faecae2b544c9ea99bef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454127"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor de Microsoft OLE DB para el servicio Microsoft Active Directory
 El proveedor de interfaces de servicio Active Directory (ADSI) permite a ADO conectarse a servicios de directorio heterogéneos a través de ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio Microsoft Windows NT 4,0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio de Novell. ADSI se basa en un modelo de proveedor, de modo que si hay un nuevo proveedor que concede acceso a otro directorio, la aplicación ADO podrá tener acceso a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
@@ -59,7 +60,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |*Raíces*|Indica el objeto **ADsPath** desde el que se va a iniciar la búsqueda (es decir, la raíz de la búsqueda).|  
 |*Filter*|Indica el filtro de búsqueda en el formato RFC 1960.|  
@@ -120,20 +121,20 @@ objectClass='user' AND objectCategory='Person'"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
-|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Yes|  
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Yes|  
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|  
+|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|  
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|  
-|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Yes|  
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Yes|  
-|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|  
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|  
-|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|Yes|  
-|[Admite](../../../ado/reference/ado-api/supports-method.md)|Yes|  
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|  
+|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sí|  
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sí|  
+|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|  
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|  
+|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|Sí|  
+|[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|  
 |[Actualizar](../../../ado/reference/ado-api/update-method.md)|No|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  
   

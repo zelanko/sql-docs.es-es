@@ -1,4 +1,5 @@
 ---
+description: Proveedor de persistencia de Microsoft OLE DB (proveedor de servicios ADO)
 title: Proveedor de persistencia de Microsoft OLE DB (proveedor de servicios ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc8c8f099e703433f57e9d8ff463e229213503be
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454117"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Introducción al proveedor de persistencia de Microsoft OLE DB
 El proveedor de persistencia de Microsoft OLE DB permite guardar un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) en un archivo y, posteriormente, restaurar ese objeto de **conjunto de registros** desde el archivo. Se conserva la información de esquema, los datos y los cambios pendientes.
@@ -41,7 +42,7 @@ El proveedor de persistencia de Microsoft OLE DB permite guardar un objeto de [c
 |E_BADSTREAM|El archivo abierto no tiene un formato válido (es decir, el formato no es ADTG ni XML).|
 |E_CANTPERSISTROWSET|El objeto de **conjunto de registros** guardado tiene características que impiden que se almacene.|
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
  El proveedor de persistencia de Microsoft OLE DB no expone propiedades dinámicas.
 
  Actualmente, solo se pueden guardar los objetos de **conjunto de registros** jerárquicos con parámetros.

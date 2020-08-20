@@ -1,4 +1,5 @@
 ---
+description: Broker (categoría de eventos)
 title: Categoría de eventos Broker | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -14,18 +15,18 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924959b2c5c5b9782a1e73e404644299ba5bd5d8
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ab93bbb94022f25206154e94531754315ef21c34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456031"
 ---
 # <a name="broker-event-category"></a>Broker (categoría de eventos)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-La categoría de eventos **Broker** contiene eventos generales de Service Broker.  
+ La categoría de eventos **Broker** contiene eventos generales de Service Broker.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -44,7 +45,7 @@ La categoría de eventos **Broker** contiene eventos generales de Service Broker
   
  También se proporcionan dos eventos de auditoría de seguridad para Service Broker. Para obtener más información sobre estos eventos, vea [Clase de eventos Audit Broker Login](../../relational-databases/event-classes/audit-broker-login-event-class.md) y [Audit Broker Conversation (clase de eventos)](../../relational-databases/event-classes/audit-broker-conversation-event-class.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Auditoría de seguridad (categoría de eventos)](https://docs.microsoft.com/analysis-services/trace-events/security-audit-event-category)  
   
   

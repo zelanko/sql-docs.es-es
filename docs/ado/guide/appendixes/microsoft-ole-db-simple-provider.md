@@ -1,4 +1,5 @@
 ---
+description: Introducción al proveedor simple de Microsoft OLE DB
 title: Proveedor simple de Microsoft OLE DB | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e36648fe42024502316d65e3cf27412b907ffc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454027"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Introducción al proveedor simple de Microsoft OLE DB
 El proveedor simple de Microsoft OLE DB (OSP) permite a ADO acceder a los datos para los que se ha escrito un proveedor mediante el [Kit de herramientas de proveedor simple OLE DB (OSP)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Los proveedores simples están diseñados para tener acceso a orígenes de datos que solo requieren una compatibilidad con OLE DB fundamental, como matrices en memoria o documentos XML.
@@ -50,9 +51,9 @@ MSDAOSP
 |**Data Source** (Origen de datos)|Especifica el nombre de un servidor.|
 
 ## <a name="xml-document-example"></a>Ejemplo de documento XML
- La OLE DB proveedor simple (OSP) en MDAC 2,7 o posterior y los componentes de Windows Data Access (DAC de Windows) se ha mejorado para admitir la apertura de **conjuntos de registros** de ADO jerárquicos en archivos XML arbitrarios. Estos archivos XML pueden contener el esquema de persistencia XML de ADO, pero no es necesario. Esto se ha implementado mediante la conexión de OSP al **MSXML2. dll**; por lo tanto, se requiere **MSXML2. dll** o posterior.
+ La OLE DB proveedor simple (OSP) en MDAC 2,7 o posterior y los componentes de Windows Data Access (DAC de Windows) se ha mejorado para admitir la apertura de **conjuntos de registros** de ADO jerárquicos en archivos XML arbitrarios. Estos archivos XML pueden contener el esquema de persistencia XML de ADO, pero no es necesario. Esto se ha implementado mediante la conexión de la OSP al **MSXML2.DLL**; por lo tanto, se requiere **MSXML2.DLL** o posterior.
 
- El archivo **portfolio. XML** que se usa en el ejemplo siguiente contiene el siguiente árbol:
+ El archivo **portfolio.xml** utilizado en el ejemplo siguiente contiene el siguiente árbol:
 
 ```console
 Portfolio

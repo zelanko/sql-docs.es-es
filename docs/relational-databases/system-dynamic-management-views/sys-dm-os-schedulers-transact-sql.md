@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_schedulers (Transact-SQL)
 title: Sys. dm_os_schedulers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ee5f6aca36766edd915b4b1b53c54a83c6b5a63
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2d89c460dd3e69e3fe0020463be750e9528de951
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454934"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,15 +62,15 @@ ms.locfileid: "86012042"
 |memory_object_address|**varbinary(8**|Dirección de memoria del objeto de memoria del programador. No acepta valores NULL.|  
 |task_memory_object_address|**varbinary(8**|Dirección de memoria del objeto de memoria de la tarea. No admite valores NULL. Para obtener más información, vea [Sys. dm_os_memory_objects &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expone el cuanto del programador que utiliza SQLOS.|  
-| total_cpu_usage_ms |**bigint**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores <br><br> CPU total consumida por este programador tal y como lo indican los trabajadores no preferentes. No admite valores NULL.|
-|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Indica que la limitación se basa en el [objetivo de nivel de servicio](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective); siempre será 0 para las versiones que no sean de Azure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Acepta valores NULL.|
-|total_scheduler_delay_ms|**bigint**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores <br><br> El tiempo entre un trabajador que está desactivando y otro que está cambiando. Puede deberse a que los trabajadores preferentemente retrasan la programación del siguiente trabajo no preferente o debido a los subprocesos de programación del sistema operativo de otros procesos. No admite valores NULL.|
-|ideal_workers_limit|**int**|**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores <br><br> El número de trabajadores que idealmente deberían estar en el programador. Si los trabajadores actuales superan el límite debido a la carga de tareas desequilibrada, una vez que estén inactivas, se recortarán. No admite valores NULL.|
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+| total_cpu_usage_ms |**bigint**|**Válido para** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores. <br><br> CPU total consumida por este programador tal y como lo indican los trabajadores no preferentes. No admite valores NULL.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Indica que la limitación se basa en el [objetivo de nivel de servicio](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective); siempre será 0 para las versiones que no sean de Azure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Acepta valores NULL.|
+|total_scheduler_delay_ms|**bigint**|**Válido para** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores. <br><br> El tiempo entre un trabajador que está desactivando y otro que está cambiando. Puede deberse a que los trabajadores preferentemente retrasan la programación del siguiente trabajo no preferente o debido a los subprocesos de programación del sistema operativo de otros procesos. No admite valores NULL.|
+|ideal_workers_limit|**int**|**Válido para** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores. <br><br> El número de trabajadores que idealmente deberían estar en el programador. Si los trabajadores actuales superan el límite debido a la carga de tareas desequilibrada, una vez que estén inactivas, se recortarán. No admite valores NULL.|
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="examples"></a>Ejemplos  
   
@@ -136,7 +138,7 @@ active_workers_count work_queue_count
   
 -   El programador `255` que representa la conexión DAC incluye `3` trabajadores asociados. Estos trabajadores se asignan en el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no cambian. Se utilizan únicamente para procesar consultas DAC. Las dos tareas de este programador representan un administrador de conexiones y un trabajador inactivo.  
   
--   `active_workers_count`representa todos los trabajadores que tienen tareas asociadas y que se ejecutan en modo no preferente. Algunas tareas, como las escuchas de red, se ejecutan con programas preferentes.  
+-   `active_workers_count` representa todos los trabajadores que tienen tareas asociadas y que se ejecutan en modo no preferente. Algunas tareas, como las escuchas de red, se ejecutan con programas preferentes.  
   
 -   Los programadores ocultos no procesan solicitudes habituales de usuario. El programador DAC es la excepción. Este programador dispone de un subproceso para ejecutar solicitudes.  
   

@@ -1,4 +1,5 @@
 ---
+description: MSreplmonthresholdmetrics (Transact-SQL)
 title: MSreplmonthresholdmetrics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad67ea6744256e3bcc041c736fbe6fe516773b11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c58ed139f1ff0b35b190593c14ca360e065061f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454618"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

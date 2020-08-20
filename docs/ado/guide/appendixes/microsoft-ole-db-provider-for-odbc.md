@@ -1,4 +1,5 @@
 ---
+description: Introducción al proveedor de Microsoft OLE DB para ODBC
 title: Proveedor de OLE DB de Microsoft para ODBC | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ce793d1b7f62a565a19fa8efe8d11292ae5642f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761633"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454067"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Introducción al proveedor de Microsoft OLE DB para ODBC
 Para un programador de ADO o RDS, un mundo ideal sería aquél en el que cada origen de datos expone una interfaz OLE DB, de modo que ADO podría llamar directamente al origen de datos. Aunque cada vez más proveedores de bases de datos implementan interfaces OLE DB, algunos orígenes de datos todavía no se exponen de esta manera. Sin embargo, se puede tener acceso a la mayoría de los sistemas DBMS en uso hoy a través de ODBC.
@@ -92,7 +93,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>Propiedades de conexión específicas del proveedor
  El proveedor de OLE DB para ODBC agrega varias propiedades a la colección [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) del objeto **Connection** . En la tabla siguiente se enumeran estas propiedades con el nombre de propiedad OLE DB correspondiente entre paréntesis.
 
-|Nombre de la propiedad|Descripción|
+|Nombre de propiedad|Descripción|
 |-------------------|-----------------|
 |Procedimientos accesibles (KAGPROP_ACCESSIBLEPROCEDURES)|Indica si el usuario tiene acceso a los procedimientos almacenados.|
 |Tablas accesibles (KAGPROP_ACCESSIBLETABLES)|Indica si el usuario tiene permiso para ejecutar instrucciones SELECT en las tablas de base de datos.|
@@ -119,7 +120,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>Propiedades de los conjuntos de registros y comandos específicos del proveedor
  El proveedor de OLE DB para ODBC agrega varias propiedades a la colección **Properties** del **conjunto de registros** y los objetos de **comando** . En la tabla siguiente se enumeran estas propiedades con el nombre de propiedad OLE DB correspondiente entre paréntesis.
 
-|Nombre de la propiedad|Descripción|
+|Nombre de propiedad|Descripción|
 |-------------------|-----------------|
 |Actualizaciones/eliminaciones/inserciones basadas en consultas (KAGPROP_QUERYBASEDUPDATES)|Indica si las actualizaciones, eliminaciones e inserciones se pueden realizar mediante consultas SQL.|
 |Tipo de simultaneidad de ODBC (KAGPROP_CONCURRENCY)|Indica el método utilizado para reducir los posibles problemas causados por dos usuarios que intentan obtener acceso a los mismos datos del origen de datos simultáneamente.|
@@ -200,26 +201,26 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 |Método|ForwardOnly|Dinámica|Keyset|estática|
 |------------|-----------------|-------------|------------|------------|
-|[AgregarNuevo](../../../ado/reference/ado-api/addnew-method-ado.md)|Sí|Sí|Sí|Yes|
-|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|Sí|Sí|Yes|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sí|Sí|Sí|Yes|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sí|Sí|Sí|Yes|
-|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Sí|Yes|
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Sí|Sí|Sí|Yes|
-|[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sí|Sí|Sí|Yes|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|Sí|Sí|Yes|
-|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sí|Sí|Sí|Yes|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|Sí|Sí|Yes|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sí|Sí|Yes|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|Sí|Sí|Yes|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sí|Sí|Yes|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sí|Sí|Sí|Yes|
-|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|Sí|Sí|Yes|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|Sí|Sí|Yes|
-|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|No|No|Sí|Yes|
-|[Admite](../../../ado/reference/ado-api/supports-method.md)|Sí|Sí|Sí|Yes|
-|[Actualizar](../../../ado/reference/ado-api/update-method.md)|Sí|Sí|Sí|Yes|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sí|Sí|Sí|Yes|
+|[AgregarNuevo](../../../ado/reference/ado-api/addnew-method-ado.md)|Sí|Sí|Sí|Sí|
+|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|Sí|Sí|Sí|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sí|Sí|Sí|Sí|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sí|Sí|Sí|Sí|
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Sí|Sí|
+|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|Sí|Sí|Sí|
+|[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|Sí|Sí|Sí|
+|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sí|Sí|Sí|Sí|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|Sí|Sí|Sí|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sí|Sí|Sí|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|Sí|Sí|Sí|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sí|Sí|Sí|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sí|Sí|Sí|Sí|
+|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|Sí|Sí|Sí|
+|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|No|No|Sí|Sí|
+|[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|Sí|Sí|Sí|
+|[Actualizar](../../../ado/reference/ado-api/update-method.md)|Sí|Sí|Sí|Sí|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sí|Sí|Sí|Sí|
 
  * No se admite para las bases de datos de Microsoft Access.
 

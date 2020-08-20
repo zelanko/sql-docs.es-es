@@ -1,4 +1,5 @@
 ---
+description: Introducción al proveedor de Microsoft OLE DB para el servicio de indización de Microsoft
 title: Proveedor de Microsoft OLE DB para el servicio de indización de Microsoft | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd6e4c3a60cd0c052fec7b474154684ef6c03127
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454087"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Introducción al proveedor de Microsoft OLE DB para el servicio de indización de Microsoft
 El proveedor de Microsoft OLE DB para el servicio de indización de Microsoft proporciona acceso de solo lectura mediante programación al sistema de archivos y a los datos Web indexados por el servicio de indización de Microsoft. Las aplicaciones ADO pueden emitir consultas SQL para recuperar contenido e información de propiedades de archivo.
@@ -96,20 +97,20 @@ MSIDXS
 |Método|¿Disponible?|
 |------------|----------------|
 |[AgregarNuevo](../../../ado/reference/ado-api/addnew-method-ado.md)|No|
-|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Yes|
+|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
-|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Yes|
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Yes|
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|
+|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|
-|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Yes|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Yes|
-|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|
-|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|Yes|
-|[Admite](../../../ado/reference/ado-api/supports-method.md)|Yes|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|
+|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sí|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sí|
+|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|
+|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|Sí|
+|[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|
 |[Actualizar](../../../ado/reference/ado-api/update-method.md)|No|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|
 

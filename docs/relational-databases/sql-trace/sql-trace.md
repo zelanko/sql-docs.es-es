@@ -1,4 +1,5 @@
 ---
+description: Seguimiento de SQL
 title: Seguimiento de SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455337"
 ---
 # <a name="sql-trace"></a>Seguimiento de SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -130,17 +131,17 @@ Seguimiento de SQL utiliza columnas de datos en la salida del seguimiento para d
 |**SqlHandle**|63|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a **sys.dm_exec_sql_text()** para recuperar el texto SQL asociado.|  
 |**StartTime**|14|Hora a la que se inició el evento, si está disponible.|  
 |**State**|30|Código de estado de error.|  
-|**Success**|23|Indica si el evento se realizó correctamente. Los valores son:<br /><br /> **1** = Correcto<br /><br /> **0** = Error<br /><br /> Por ejemplo, el valor **1** significa que se ha comprobado un permiso correctamente y el valor **0** significa que se ha producido un error en la comprobación.|  
+|**Success**|23|Indica si el evento se realizó correctamente. Estos valores incluyen:<br /><br /> **1** = Correcto<br /><br /> **0** = Error<br /><br /> Por ejemplo, el valor **1** significa que se ha comprobado un permiso correctamente y el valor **0** significa que se ha producido un error en la comprobación.|  
 |**TargetLoginName**|42|Para acciones que se dirigen a un inicio de sesión, el nombre del inicio de sesión de destino; por ejemplo, agregar un nuevo inicio de sesión.|  
 |**TargetLoginSid**|43|Para acciones que se dirigen a un inicio de sesión, el SID del inicio de sesión de destino; por ejemplo, agregar un nuevo inicio de sesión.|  
 |**TargetUserName**|39|Para acciones que se dirigen a un usuario de base de datos, el nombre del usuario; por ejemplo, conceder permiso a un usuario.|  
 |**TextData**|1|Valor de texto que depende de la clase de evento que se captura en el seguimiento. Sin embargo, si realiza un seguimiento de una consulta con parámetros, no se mostrarán en la columna **TextData** las variables con los valores de datos.|  
-|**Identificador de transacción**|4|Identificador de la transacción asignado por el sistema.|  
+|**Transaction ID**|4|Identificador de la transacción asignado por el sistema.|  
 |**Tipo**|57|Valor entero que depende de la clase de evento capturado en el seguimiento.|  
 |**Writes**|17|Número de operaciones de escritura en el disco físico que realiza el servidor en nombre del evento.|  
 |**XactSequence**|50|Token que describe la transacción actual.|  
   
- \* Estas columnas de datos se rellenan de forma predeterminada para todos los eventos.  
+ * Estas columnas de datos se rellenan de forma predeterminada para todos los eventos.  
   
  \*\*Para más información sobre la columna de datos **ObjectType**, vea [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).  
   

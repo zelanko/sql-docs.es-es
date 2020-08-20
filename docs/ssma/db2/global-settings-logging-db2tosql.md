@@ -1,4 +1,5 @@
 ---
+description: Configuración global (registro) (DB2ToSQL)
 title: Configuración global (registro) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 020eebfe3d6ae509516eaedd8a891b0ee481bc83
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 632d71f69f164ea221f9d11604e6fb07528fd583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454220"
 ---
 # <a name="global-settings-logging-db2tosql"></a>Configuración global (registro) (DB2ToSQL)
 Utilice el cuadro de diálogo **configuración global** para especificar la configuración de registro para SSMA. Normalmente, esta configuración solo se puede cambiar cuando se trabaja con soporte técnico del producto.  
@@ -46,9 +47,9 @@ Para cada opción en **nivel de mensajes**, configure uno de los siguientes nive
 |-|-|  
 |**Error irrecuperable**|Escriba solo mensajes de error irrecuperables en el registro.|  
 |**Error**|Escriba mensajes de error y de error grave en el registro.|  
-|**Advertencia**|Escriba mensajes de advertencia, error y error grave en el registro.|  
+|**Warning (ADVERTENCIA)**|Escriba mensajes de advertencia, error y error grave en el registro.|  
 |**Información**|Escriba mensajes informativos, de advertencia, de error y de error grave en el registro.|  
-|**Depurar**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
+|**Depuración**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
   
 **Ruta de acceso al archivo de registro**  
 La ruta de acceso del archivo y el nombre de los archivos de registro de SSMA. Para especificar otro nombre, haga clic en la ruta de acceso actual y, a continuación, haga clic en el botón Examinar (**...**).  

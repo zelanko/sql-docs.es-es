@@ -1,4 +1,5 @@
 ---
+description: sysmail_sentitems (Transact-SQL)
 title: sysmail_sentitems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 382be73e4047c1d75b5ab95d1b3959cb05af68c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 968dc27761440c7fb74b7be330d843d9cbf35459
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455127"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85901179"
 |**destinatarios**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
 |**copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje.|  
 |**blind_copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje pero cuyos nombres no aparecen en el encabezado del mensaje.|  
-|**Asunto**|**nvarchar (510)**|Línea de asunto del mensaje.|  
+|**subject**|**nvarchar (510)**|Línea de asunto del mensaje.|  
 |**body**|**ntext**|el cuerpo del mensaje.|  
 |**body_format**|**VARCHAR (20)**|El formato del cuerpo del mensaje. Los valores posibles son **Text** y **html**.|  
 |**importance**|**VARCHAR (6)**|Parámetro de **importancia** del mensaje.|  
@@ -61,7 +62,7 @@ ms.locfileid: "85901179"
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Al solucionar problemas del Correo electrónico de base de datos, puede que esta vista le ayude a identificar la naturaleza del problema, pues en ella se muestran los atributos de los mensajes enviados correctamente. El Correo electrónico de base de datos marca los mensajes como enviados cuando se envían correctamente a un servidor de correo SMTP. Normalmente, los mensajes de correo electrónico se reciben en pocos minutos, pero puede que se retrasen a causa de problemas con el servidor SMTP. El Correo electrónico de base de datos marca los mensajes como enviados cuando los acepta el servidor de correo SMTP. Los mensajes de correo electrónico con errores en el servidor de correo SMTP, como una dirección de correo electrónico de destinatario no válida, no se devuelven al Correo electrónico de base de datos. Estos mensajes se registran como enviados aunque no se hayan entregado. Este tipo de error se debe solucionar en el servidor SMTP. Asimismo, puede que el servidor de correo SMTP envíe a la dirección de respuesta de una cuenta del Correo electrónico de base de datos una notificación en la que se indica que no se puede entregar el mensaje.  
   
 ## <a name="permissions"></a>Permisos  

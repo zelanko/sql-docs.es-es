@@ -1,4 +1,5 @@
 ---
+description: Trabajar con proyectos de SSMA (DB2ToSQL)
 title: Trabajar con proyectos de SSMA (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d3835e8988a04082d0f4666e0564029de3f767a9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2454ec9d594977a89ddf867645bc7e2d8fe26e57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454157"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Trabajar con proyectos de SSMA (DB2ToSQL)
 Para migrar bases de datos DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , primero debe crear un proyecto SSMA. El proyecto es un archivo que contiene la siguiente información:  
@@ -23,7 +24,7 @@ Para migrar bases de datos DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversi
   
 -   Metadatos sobre la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que recibirá los objetos y los datos migrados.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]información de conexión.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información de conexión.  
   
 -   Configuración del proyecto.  
   
@@ -71,7 +72,7 @@ Para migrar datos de bases de datos de DB2 a [!INCLUDE[ssNoVersion](../../includ
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

@@ -1,4 +1,5 @@
 ---
+description: Suscriptores de Oracle
 title: Suscriptores de Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40942d92f30790f896888bd71cf4523a14d1cc48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3e7b6abc6b235950fef107a870e53d827dee6f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455608"
 ---
 # <a name="oracle-subscribers"></a>Suscriptores de Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85883043"
   
 1.  Instale y configure el software de red de cliente de Oracle y el proveedor OLE DB de Oracle en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , a fin de que el distribuidor pueda realizar conexiones al suscriptor de Oracle. Debe utilizarse la versión más reciente del software de red de cliente de Oracle. Oracle recomienda que los usuarios instalen las versiones más recientes del software de cliente. Por tanto, la versión del software de cliente suele ser más reciente que la del software de base de datos. La manera más sencilla de instalar el software es utilizar Oracle Universal Installer, que se encuentra en el disco de cliente de Oracle. En Oracle Universal Installer proporcione la siguiente información:  
   
-    |Information|Descripción|  
+    |Información|Descripción|  
     |-----------------|-----------------|  
     |Oracle Home (Directorio de inicio de Oracle)|Es la ruta de acceso al directorio de instalación del software de Oracle. Acepte el valor predeterminado (C:\oracle\ora90 o similar) o escriba otra ruta de acceso. Para obtener más información sobre el directorio de inicio de Oracle, vea la sección "Consideraciones sobre el directorio de inicio de Oracle" más adelante en este tema.|  
     |Oracle home name (Nombre del directorio de inicio de Oracle)|Un alias para la ruta de acceso del directorio de inicio de Oracle.|  
@@ -86,7 +87,7 @@ ms.locfileid: "85883043"
   
     -   Asegúrese de que las cadenas vacías no se insertan como valores de columna en la tabla publicada.  
   
-    -   Use el parámetro **-SkipErrors** para el Agente de distribución si es aceptable recibir una notificación de errores en el registro de historial del Agente de distribución y continuar el procesamiento. Especifique el código de error 1400 de Oracle ( **-SkipErrors1400**).  
+    -   Use el parámetro **-SkipErrors** para el Agente de distribución si es aceptable recibir una notificación de errores en el registro de historial del Agente de distribución y continuar el procesamiento. Especifique el código de error 1400 de Oracle (**-SkipErrors1400**).  
   
     -   Modifique el script de la tabla generada, quitando el atributo NOT NULL de cualquier columna de caracteres a la que puedan haberse asociado cadenas vacías y suministre el script modificado como script personalizado para el artículo mediante el parámetro @creation_script de [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
@@ -143,7 +144,7 @@ ms.locfileid: "85883043"
 |**ntext**|CLOB|  
 |**xml**|NCLOB|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md)  
   

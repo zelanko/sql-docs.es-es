@@ -1,4 +1,5 @@
 ---
+description: 'Creación de instancias de eventos de ADO: ADO y WFC'
 title: 'Creación de instancias de eventos de ADO: ADO y WFC | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86c48e9cb3d34eb4ac499ff5f58df77367faeec0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761361"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453837"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Creación de instancias de eventos de ADO: ADO y WFC
 ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de ADO y presenta una interfaz de programación de aplicaciones simplificada. En general, ADO/WFC intercepta eventos de ADO, consolida los parámetros de evento en una única clase de eventos y, a continuación, llama al controlador de eventos.  
@@ -60,7 +61,7 @@ ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de
   
 7.  Cuando haya terminado el procesamiento, quite el controlador de la lista de controladores de eventos ADO/WFC. Use el método con un **nombre como renameon**_eventName_(*controlador*).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO: índice de sintaxis de WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Parámetros de evento](../../../ado/guide/data/event-parameters.md)   

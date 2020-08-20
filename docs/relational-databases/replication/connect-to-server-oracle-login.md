@@ -1,4 +1,5 @@
 ---
+description: Conectar al servidor (Oracle), Inicio de sesión
 title: Conexión al servidor (Oracle), Inicio de sesión | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86ed91a1-a07c-46f2-a913-67317ef2255e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 22e029a225d46d24730bb16c9ef55a13f676c81e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b585e2a17e577aab7ade2c5906bdcd184a12e8dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455600"
 ---
 # <a name="connect-to-server-oracle-login"></a>Conectar al servidor (Oracle), Inicio de sesión
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85773946"
  **Inicio de sesión** y **Contraseña**  
  Si selecciona **Autenticación estándar de Oracle** para la opción **Autenticación** , especifique el nombre de inicio de sesión y la contraseña; deben coincidir con los especificados para el esquema de usuario administrativo de replicación.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Glosario de términos de publicaciones de Oracle](../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)  
   
   

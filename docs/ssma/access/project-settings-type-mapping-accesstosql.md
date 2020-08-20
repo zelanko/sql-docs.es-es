@@ -1,4 +1,5 @@
 ---
+description: Configuración del proyecto (asignación de tipo) (AccessToSQL)
 title: Configuración del proyecto (asignación de tipo) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2b25cb2dbe5b92e0ece7ef28a842a2585ea9961d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 48054f25a5c7156a6d9d25d4770d19437d9dbadf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454308"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configuración del proyecto (asignación de tipo) (AccessToSQL)
 La configuración del proyecto de asignación de tipos permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos de base de datos individuales. Para obtener más información, vea [asignar tipos de datos de origen y de destino](mapping-source-and-target-data-types-accesstosql.md).  
@@ -63,7 +64,7 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 **Add (Agregar)**  
 Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
-**Editar**  
+**Edición**  
 Haga clic para editar un tipo de datos en la lista asignación.  
   
 **Remove**  

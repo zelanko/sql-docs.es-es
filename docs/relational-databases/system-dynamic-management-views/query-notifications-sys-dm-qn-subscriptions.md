@@ -1,4 +1,5 @@
 ---
+description: 'Notificaciones de consulta: sys. dm_qn_subscriptions'
 title: Sys. dm_qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c83d70ad2bb534d9d17104316aecd40a4b21fe05
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455122"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notificaciones de consulta: sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,12 +43,12 @@ ms.locfileid: "85894690"
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Activado|Tipo|  
+|De|En|Por|Tipo|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Varios a uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Varios a uno|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El código de estado 0 indica un estado indefinido.  
   
  Los siguientes códigos de estado indican que una suscripción se desencadenó debido a un cambio:  

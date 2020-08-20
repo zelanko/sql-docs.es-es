@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobs (Transact-SQL)
 title: Trabajos de dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00bab120cd8d0e931f0aba77ce7aee694126339c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454758"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85890490"
 |**job_id**|**uniqueidentifier**|Id. único del trabajo.|  
 |**originating_server_id**|**int**|Id. del servidor del que proviene el trabajo.|  
 |**name**|**sysname**|Nombre del trabajo.|  
-|**activó**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
+|**enabled**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
 |**description**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
 |**category_id**|**int**|Id. de la categoría del trabajo.|  

@@ -1,4 +1,5 @@
 ---
+description: Mediante el SDK de Microsoft para Java
 title: Uso del SDK de Microsoft para Java | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453977"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Mediante el SDK de Microsoft para Java
 
@@ -27,7 +28,7 @@ ms.locfileid: "82761563"
 
 Microsoft SDK para Java es el kit para desarrolladores del entorno de Microsoft Internet Explorer. Se proporcionan herramientas, información y ejemplos para ayudarle a desarrollar programas y applets de Java basados en JDK 1,1 y la máquina virtual de Microsoft Win32 (VM de Microsoft). Microsoft SDK para Java no está asociado a Microsoft Visual J++. Para descargar este SDK, haga clic aquí.  
   
- La utilidad JActiveX. exe genera clases a partir de una biblioteca de tipos, pero solo se puede invocar en la línea de comandos. Esta característica no está integrada en el entorno de desarrollo de Visual J++. A diferencia de las clases generadas por el Asistente para la biblioteca de tipos de Java, puede ir a los contenedores de clase creados por el SDK. Esto resulta útil para depurar el modo en que el código utiliza las clases contenedoras de ADO.  
+ La utilidad Jactivex.exe genera clases a partir de una biblioteca de tipos, pero solo se puede invocar en la línea de comandos. Esta característica no está integrada en el entorno de desarrollo de Visual J++. A diferencia de las clases generadas por el Asistente para la biblioteca de tipos de Java, puede ir a los contenedores de clase creados por el SDK. Esto resulta útil para depurar el modo en que el código utiliza las clases contenedoras de ADO.  
   
  Este mecanismo lee la biblioteca de tipos ADO y genera clases de las que se pueden crear instancias en la aplicación. Genera esas clases en la siguiente ubicación: \\<directorio de Windows \> \Java\trustlib\msado15.  
   
@@ -49,5 +50,5 @@ Microsoft SDK para Java es el kit para desarrolladores del entorno de Microsoft 
   
 3.  Para usar estos archivos, abra el proyecto en Visual J++. En el menú **proyecto** , elija **Agregar al proyecto**. Seleccione **archivos**y agregue todos los. Archivos de JAVA generados en el directorio trustlib\msado15 para el proyecto.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Contenedores de clase Java de ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

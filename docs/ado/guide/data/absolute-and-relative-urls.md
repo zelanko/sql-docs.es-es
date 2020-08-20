@@ -1,4 +1,5 @@
 ---
+description: Direcciones URL absolutas y relativas
 title: Direcciones URL absolutas y relativas | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453917"
 ---
 # <a name="absolute-and-relative-urls"></a>Direcciones URL absolutas y relativas
 Una dirección URL especifica la ubicación de un destino almacenado en un equipo local o en red. El destino puede ser un archivo, un directorio, una página HTML, una imagen, un programa, etc.  
@@ -32,7 +33,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
   
  Normalmente, una dirección URL relativa solo consta de la *ruta de acceso*y, opcionalmente, del *recurso*, pero no de ningún *esquema* o *servidor*. En las tablas siguientes se definen las partes individuales del formato de dirección URL completo.  
   
- *regímenes*  
+ *scheme*  
  Especifica cómo se debe tener acceso al *recurso* .  
   
  *servidor*  
@@ -64,7 +65,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
   
  Se puede especificar una dirección URL relativa en el parámetro *CommandText* o *source* . La dirección URL relativa no representa realmente un comando, como un comando SQL. simplemente especifica los parámetros. El contexto de la conexión activa debe ser una dirección URL absoluta y el parámetro *Option* debe establecerse en **adCmdTableDirect**.  
   
- Por ejemplo, en el ejemplo de código siguiente se muestra cómo abrir un **conjunto de registros** en el archivo Readme25. txt del directorio WinNT/system32:  
+ Por ejemplo, en el ejemplo de código siguiente se muestra cómo abrir un **conjunto de registros** en el archivo Readme25.txt del directorio WinNT/system32:  
   
 ```  
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

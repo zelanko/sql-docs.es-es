@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromWKB (tipo de datos geometry)
 title: STGeomCollFromWKB (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 746c6f3564af7084b86babe54be88c6f25947260
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f780e521ba80822eac4de95e91b8495521e07f60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454327"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *WKB_geometrycollection*  
- Es la representación WKB de la instancia de **geometrycollection** que se quiere devolver. *WKB_geometrycollection* es una expresión **varbinary(max)** .  
+ Es la representación WKB de la instancia de **geometrycollection** que se quiere devolver. *WKB_geometrycollection* es una expresión **varbinary(max)**.  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometry** que se quiere devolver.  
@@ -50,7 +51,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El tipo OGC de la instancia de **geometry** devuelta por `STGeomCollFromWKB()` se establece en **GeomCollection**, **MultiPolygon**, **MultiLineString** o **MultiPoint**, en función de la entrada WKB correspondiente.  
   
  Este método produce una excepción FormatException si la entrada no tiene el formato correcto.  

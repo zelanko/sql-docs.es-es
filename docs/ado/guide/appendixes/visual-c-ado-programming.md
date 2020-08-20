@@ -1,4 +1,5 @@
 ---
+description: Programación ADO en Visual C++
 title: Programación de Visual C++ ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453957"
 ---
 # <a name="visual-c-ado-programming"></a>Programación ADO en Visual C++
 La referencia de la API de ADO describe la funcionalidad de la interfaz de programación de aplicaciones (API) de ADO con una sintaxis similar a la de Microsoft Visual Basic. Aunque el público previsto es todos los usuarios, los programadores de ADO emplean diversos lenguajes, como Visual Basic, Visual C++ (con y sin la Directiva de **#import** ) y Visual J++ (con el paquete de clases ADO/WFC).  
@@ -35,7 +36,7 @@ La referencia de la API de ADO describe la funcionalidad de la interfaz de progr
  En las secciones siguientes se resumen los detalles de los programadores de C y C++ mediante ADO y la directiva **#import** . Se centra en los tipos de datos específicos de COM (**Variant**, **BSTR**y **SAFEARRAY**) y el control de errores (_com_error).  
   
 ## <a name="using-the-import-compiler-directive"></a>Usar la Directiva de compilador #import  
- La Directiva del compilador de **#import** Visual C++ simplifica el trabajo con los métodos y las propiedades de ADO. La Directiva toma el nombre de un archivo que contiene una biblioteca de tipos, como ADO. dll (Msado15. dll), y genera archivos de encabezado que contienen declaraciones TypeDef, punteros inteligentes para interfaces y constantes enumeradas. Cada interfaz está encapsulada o ajustada en una clase.  
+ La Directiva del compilador de **#import** Visual C++ simplifica el trabajo con los métodos y las propiedades de ADO. La Directiva toma el nombre de un archivo que contiene una biblioteca de tipos, como ADO. dll (Msado15.dll), y genera archivos de encabezado que contienen declaraciones TypeDef, punteros inteligentes para interfaces y constantes enumeradas. Cada interfaz está encapsulada o ajustada en una clase.  
   
  Para cada operación dentro de una clase (es decir, una llamada de método o propiedad), hay una declaración para llamar a la operación directamente (es decir, la forma "sin formato" de la operación) y una declaración para llamar a la operación sin procesar y producir un error COM si la operación no se puede ejecutar correctamente. Si la operación es una propiedad, normalmente hay una directiva de compilador que crea una sintaxis alternativa para la operación que tiene una sintaxis como Visual Basic.  
   
@@ -116,7 +117,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  Las excepciones a esta regla son los tipos de datos específicos de COM: **Variant**, **BSTR**y **SAFEARRAY**.  
   
-### <a name="variant"></a>Variante  
+### <a name="variant"></a>Variant  
  Una **variante** es un tipo de datos estructurados que contiene un miembro de valor y un miembro de tipo de datos. Una **variante** puede contener una amplia gama de otros tipos de datos, entre los que se incluyen otro tipo variante, BSTR, booleano, IDispatch o IUnknown, moneda, fecha, etc. COM también proporciona métodos que facilitan la conversión de un tipo de datos a otro.  
   
  La clase **_variant_t** encapsula y administra el tipo de datos **Variant** .  

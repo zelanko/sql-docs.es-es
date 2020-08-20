@@ -1,4 +1,5 @@
 ---
+description: Metadatos de parámetros con valores de tabla para instrucciones preparadas
 title: Metadatos de TVP para instrucciones preparadas
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,11 +14,12 @@ ms.assetid: fd2fc705-2e98-4011-9822-c7e6cca4a535
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5e50f025aa2524a3b6fee1a92ca2fecbca214bc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c93614fa84a1758586deb72382dde042d40dd827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455891"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>Metadatos de parámetros con valores de tabla para instrucciones preparadas
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

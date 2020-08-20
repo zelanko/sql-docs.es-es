@@ -1,4 +1,5 @@
 ---
+description: Introducción al proveedor de Microsoft OLE DB para SQL Server
 title: Proveedor de OLE DB de Microsoft para SQL Server | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1b66cf9d8e2e284dba2eea888ddc1eda061dabb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a39166406be321d01ab6d0dc2acd2488d7b64da5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454047"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Introducción al proveedor de Microsoft OLE DB para SQL Server
 El proveedor de OLE DB de Microsoft para SQL Server, SQLOLEDB, permite a ADO tener acceso a Microsoft SQL Server.
@@ -357,5 +358,5 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
  Para obtener detalles de implementación específicos e información funcional sobre el proveedor de OLE DB de Microsoft SQL Server, vea el [proveedor de SQL Server](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
  [Propiedad ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Provider (propiedad](../../../ado/reference/ado-api/provider-property-ado.md) , ADO) [RECORDSET (objeto) (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

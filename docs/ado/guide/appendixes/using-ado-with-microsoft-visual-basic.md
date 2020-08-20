@@ -1,4 +1,5 @@
 ---
+description: Usar ADO con Microsoft Visual Basic y Visual Basic para Aplicaciones
 title: Usar ADO con Microsoft Visual Basic | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e86bc925313a24a390dffc8f4e2d9e91e4db1c61
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b4e8304204a6eaebf6b64d5cb9ad44e5fa1602da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454017"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Usar ADO con Microsoft Visual Basic y Visual Basic para Aplicaciones
 La configuración de un proyecto de ADO y la escritura de código ADO es similar si se utiliza Visual Basic o Visual Basic para Aplicaciones. En este tema se trata el uso de ADO con Visual Basic y Visual Basic para Aplicaciones y se indica cualquier diferencia.
@@ -114,5 +115,5 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
 ## <a name="visual-basic-examples"></a>Ejemplos de Visual Basic
  En la documentación de ADO se incluyen muchos ejemplos de Visual Basic. Para obtener más información, vea [ejemplos de código ADO en Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
  [Microsoft objetos de datos ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [usar ado con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [usar ado con lenguajes de scripting](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

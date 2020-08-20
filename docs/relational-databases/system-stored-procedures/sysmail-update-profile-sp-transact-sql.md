@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_profile_sp (Transact-SQL)
 title: sysmail_update_profile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c795b604538a26fc7602ea245bd4d1d8c9c52d33
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78a123514e990499f191cbc6742870647adebc5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454763"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,16 +41,16 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id`Identificador de perfil que se va a actualizar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar al menos una de *profile_id* o *profile_name* . Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
+`[ @profile_id = ] profile_id` Identificador de perfil que se va a actualizar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar al menos una de *profile_id* o *profile_name* . Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
   
-`[ @profile_name = ] 'profile_name'`Nombre del perfil que se va a actualizar o nombre nuevo del perfil. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar al menos una de *profile_id* o *profile_name* . Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
+`[ @profile_name = ] 'profile_name'` Nombre del perfil que se va a actualizar o nombre nuevo del perfil. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar al menos una de *profile_id* o *profile_name* . Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
   
-`[ @description = ] 'description'`Nueva descripción del perfil. la *Descripción* es de tipo **nvarchar (256)** y su valor predeterminado es NULL.  
+`[ @description = ] 'description'` Nueva descripción del perfil. la *Descripción* es de tipo **nvarchar (256)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se especifican los dos (el Id. de perfil y el nombre de perfil), el procedimiento cambia el nombre del perfil por el nombre proporcionado y actualiza su descripción. Si solo se proporciona uno de estos argumentos, el procedimiento actualiza la descripción del perfil.  
   
  El procedimiento almacenado **sysmail_update_profile_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
@@ -83,6 +84,6 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
  [Correo electrónico de base de datos objetos de configuración](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Creación de una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

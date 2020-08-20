@@ -1,4 +1,5 @@
 ---
+description: Broker:Corrupted Message, clase de eventos
 title: Clase de eventos Broker:Corrupted Message | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e0683676a34393b787e1a2ee57069fb8939dbf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d54abb31cfe2f7541edb459f1d55356c7ae643db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456027"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message, clase de eventos
 
@@ -53,7 +54,7 @@ ms.locfileid: "85679249"
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**State**|**int**|Indica la ubicación en el código fuente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  
 |**TextData**|**ntext**|Descripción del daño detectado.|1|Sí|  
-|**Identificador de transacción**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
+|**Transaction ID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
  La columna **TextData** de este evento contiene texto que describe el problema con el mensaje.  
   

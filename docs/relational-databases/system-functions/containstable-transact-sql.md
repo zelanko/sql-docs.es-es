@@ -1,4 +1,5 @@
 ---
+description: CONTAINSTABLE (Transact-SQL)
 title: CONTAINSTABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2015
@@ -33,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454804"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -132,9 +133,9 @@ CONTAINSTABLE
   
  Si se almacenan juntos documentos de idiomas diferentes como objetos binarios grandes (BLOB) en una sola columna, el identificador de configuración regional (LCID) de un documento determinado determina qué idioma se usa para indizar su contenido. Al consultar este tipo de columna, especificar *LANGUAGE**language_term* puede aumentar la probabilidad de encontrar una coincidencia acertada.  
   
- Cuando se especifica como una cadena, *language_term* corresponde al valor de la columna **alias** en la vista de compatibilidad de los [lenguajes desys.sys](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  La cadena debe estar delimitada con comillas sencillas, como en '*language_term*'. Cuando se especifica como un entero, *language_term* es el LCID real que identifica el idioma. Cuando se especifica como un valor hexadecimal, *language_term* es 0x seguido del valor hexadecimal del LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda.  
+ Cuando se especifica como una cadena, *language_term* corresponde al valor de la columna **alias** en la vista de compatibilidad de los [ lenguajes desys.sys](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  La cadena debe estar delimitada con comillas sencillas, como en '*language_term*'. Cuando se especifica como un entero, *language_term* es el LCID real que identifica el idioma. Cuando se especifica como un valor hexadecimal, *language_term* es 0x seguido del valor hexadecimal del LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda.  
   
- Si el valor está en formato de juego de caracteres de doble byte (DBCS), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirá a Unicode.  
+ Si el valor está en formato DBCS (juego de caracteres de doble byte), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirá a Unicode.  
   
  Si el idioma especificado no es válido o no hay recursos instalados que se correspondan con dicho idioma, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error. Para usar recursos de idioma neutro, especifique 0x0 como *language_term*.  
   
@@ -144,7 +145,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  Especifica el texto que se va a buscar en *column_name* y las condiciones para obtener coincidencias. Para obtener información acerca de las condiciones de búsqueda, vea [Contains &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los predicados y las funciones de texto completo operan en una única tabla, que se obtiene del predicado FROM. Para buscar en varias tablas, utilice una tabla combinada en la cláusula FROM a fin de buscar en un conjunto de resultados que sea el producto de dos o más tablas.  
   
  La tabla devuelta tiene una columna denominada **key** que contiene valores de clave de texto completo. Cada tabla indizada de texto completo tiene una columna cuyos valores se garantiza que son únicos y los valores devueltos en la columna de **clave** son los valores de clave de texto completo de las filas que coinciden con los criterios de selección especificados en la condición de búsqueda Contains. La propiedad **TableFulltextKeyColumn** , obtenida a partir de la función OBJECTPROPERTYEX, proporciona la identidad de esta columna de clave única. Para obtener el identificador de la columna asociada a la clave de texto completo del índice de texto completo, utilice **Sys. fulltext_indexes**. Para obtener más información, vea [Sys. fulltext_indexes &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
@@ -284,7 +285,7 @@ GO
  [Limitar los resultados de la búsqueda con rango](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [Crear consultas de búsqueda de texto completo &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [CONTIENE &#40;&#41;de Transact-SQL](../../t-sql/queries/contains-transact-sql.md)   
+ [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  

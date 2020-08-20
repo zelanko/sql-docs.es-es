@@ -1,4 +1,5 @@
 ---
+description: 'Vistas de catálogo del testigo de creación de reflejo de la base de datos: sys. database_mirroring_witnesses'
 title: Sys. database_mirroring_witnesses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 303fe8085ae4d103ede7715dcbb46e456db8f01f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c27dc5a6caacf7a1cde44a54fe6383fc36ea516
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455310"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Vistas de catálogo del testigo de creación de reflejo de la base de datos: sys. database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85752941"
 |**principal_server_name**|**sysname**|Nombre del servidor asociado cuya copia de la base de datos es actualmente la base de datos principal.|  
 |**mirror_server_name**|**sysname**|Nombre del servidor asociado cuya copia de la base de datos es actualmente la base de datos reflejada.|  
 |**safety_level**|**tinyint**|Configuración de la seguridad de las transacciones para realizar actualizaciones en la base de datos reflejada:<br /><br /> 0 = Estado desconocido<br /><br /> 1 = Desactivada (asincrónica)<br /><br /> 2 = Completa (sincrónica)<br /><br /> Cuando se utiliza un testigo para la conmutación automática por error, se requiere la seguridad de transacciones completa, que es el valor predeterminado.|  
-|**safety_level_desc**|**nvarchar(60)**|Descripción de la garantía de seguridad de las actualizaciones de la base de datos reflejada:<br /><br /> UNKNOWN<br /><br /> Apagado<br /><br /> FULL|  
+|**safety_level_desc**|**nvarchar(60)**|Descripción de la garantía de seguridad de las actualizaciones de la base de datos reflejada:<br /><br /> DESCONOCIDO<br /><br /> Apagado<br /><br /> FULL|  
 |**safety_sequence_number**|**int**|Actualiza el número de secuencia de los cambios en **safety_level**.|  
 |**role_sequence_number**|**int**|Número de secuencia de actualización de los cambios en los roles principal/reflejado desempeñados por los asociados de creación de reflejo.|  
 |**mirroring_guid**|**uniqueidentifier**|Identificador de la asociación de creación de reflejo.|  
@@ -57,7 +58,7 @@ ms.locfileid: "85752941"
 ## <a name="see-also"></a>Consulte también  
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Sys. database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [Sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
+ [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

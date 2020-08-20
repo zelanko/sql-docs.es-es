@@ -1,4 +1,5 @@
 ---
+description: STBuffer (tipo de datos geometry)
 title: STBuffer (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b461b711ba7e91e4c29a362523b3ebb4a1228004
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c916977259dc82638117b800e5fc6c2d306edf04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454287"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,13 +48,13 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  `STBuffer()` calcula un búfer como [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) mediante la especificación de *tolerance* = distance \* .001 y *relative* = **false**.  
   
  Cuando *distance* > 0, se devuelve una instancia de **Polygon** o **MultiPolygon**.  
   
 > [!NOTE]  
->  Puesto que la distancia es un tipo **float**, un valor muy pequeño puede resultar igual a cero en los cálculos.  Cuando ocurre esto, se devuelve una copia de la instancia de **geometry** que llama.  Vea [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
+>  Puesto que distance es de tipo **float**, un valor muy pequeño puede resultar igual a cero en los cálculos.  Cuando ocurre esto, se devuelve una copia de la instancia de **geometry** que llama.  Vea [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
   
  Cuando *distance* = 0, se devuelve una copia de la instancia de **geometry** que llama.  
   
@@ -164,7 +165,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
   
  Las primeras dos instrucciones **SELECT** devuelven una instancia de `MultiPolygon` porque el parámetro *distance* es menor o igual a la mitad de la distancia entre los dos puntos (1 1) y (1 4). La tercera instrucción **SELECT** devuelve una instancia de `Polygon` porque las instancias almacenadas en búfer de los dos puntos (1 1) y (1 4) se superponen.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [BufferWithTolerance &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

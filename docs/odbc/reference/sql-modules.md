@@ -1,4 +1,5 @@
 ---
+description: Módulos SQL
 title: Módulos de SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 351d1c6a34413b385bd76dfebb009b34c4c0f150
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 39739ed5469b791cd0faf3df3946bebeb5d21761
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499648"
 ---
 # <a name="sql-modules"></a>Módulos SQL
 La segunda técnica para enviar instrucciones SQL al DBMS se realiza a través de módulos. En Resumen, un módulo consta de un grupo de procedimientos, al que se llama desde el lenguaje de programación del host. Cada procedimiento contiene una única instrucción SQL y los datos se pasan a y desde el procedimiento a través de los parámetros.  

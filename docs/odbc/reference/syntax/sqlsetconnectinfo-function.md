@@ -1,4 +1,5 @@
 ---
+description: Función SQLSetConnectInfo
 title: Función SQLSetConnectInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b575e0d09f87ad21e1190b8081b6604349a98263
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ee3480678d228e26b16cc99e7df8955d45ade9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499550"
 ---
 # <a name="sqlsetconnectinfo-function"></a>Función SQLSetConnectInfo
 **Conformidad**  
@@ -50,7 +51,7 @@ SQLRETURN  SQLSetConnectInfo(
  *NameLength1*  
  Entradas Longitud de **ServerName* en caracteres.  
   
- *Nombre*  
+ *UserName*  
  Entradas Identificador de usuario.  
   
  *NameLength2*  
@@ -62,7 +63,7 @@ SQLRETURN  SQLSetConnectInfo(
  *NameLength3*  
  Entradas Longitud de **autenticación* en caracteres.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -77,7 +78,7 @@ SQLRETURN  SQLSetConnectInfo(
   
  Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

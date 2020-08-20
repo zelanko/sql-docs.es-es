@@ -1,4 +1,5 @@
 ---
+description: Espacio en disco del registro de transacciones para operaciones de índice
 title: Espacio en disco del registro de transacciones para operaciones de índice | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8a88bbccbe0fd1a57455343858f463afe072ed99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84c81b849ced12ffaf799c84511ff67649664775
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499343"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Espacio en disco del registro de transacciones para operaciones de índice
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

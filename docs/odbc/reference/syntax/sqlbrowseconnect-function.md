@@ -1,4 +1,5 @@
 ---
+description: Función SQLBrowseConnect
 title: Función SQLBrowseConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 607b0d764a694098a23111e9d7f4ce9755ea982d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 712dbb366e25098c7956ffbb9c8733a437339297
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499638"
 ---
 # <a name="sqlbrowseconnect-function"></a>Función SQLBrowseConnect
 **Conformidad**  
@@ -66,9 +67,9 @@ SQLRETURN SQLBrowseConnect(
  Entradas Longitud, en caracteres, del búfer **outconnectionstring* .  
   
  *StringLength2Ptr*  
- Genere El número total de caracteres (excluyendo la terminación nula) disponible para devolver \*en *outconnectionstring*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, la cadena de conexión de \* *outconnectionstring* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
+ Genere El número total de caracteres (excluyendo la terminación nula) disponible para devolver en \* *outconnectionstring*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, la cadena de conexión de \* *outconnectionstring* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -85,7 +86,7 @@ SQLRETURN SQLBrowseConnect(
 |08004|El servidor rechazó la conexión|El origen de datos rechazó el establecimiento de la conexión por motivos definidos por la implementación.|  
 |08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos al que el controlador estaba intentando conectar antes de que la función finalizara el procesamiento.|  
 |28000|Especificación de autorización no válida|El identificador de usuario o la cadena de autorización, o ambos, según se especifica en la cadena de conexión de la solicitud de exploración (*inconnectionstring*), infringiendo las restricciones definidas por el origen de datos.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|(DM) el administrador de controladores no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.<br /><br /> El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|Una operación asincrónica se canceló mediante una llamada a la [función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md). A continuación, se llamó de nuevo a la función original en *ConnectionHandle*.<br /><br /> Se canceló una operación llamando a **SQLCancelHandle** en *ConnectionHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.|  
@@ -112,13 +113,13 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Argumento inconnectionstring  
  Una cadena de conexión de solicitud de examen tiene la siguiente sintaxis:  
   
- *Connection-String* :: = *atributo*[`;`] &#124; *attribute* `;` *cadena de conexión de*atributo;<br>
- *Attribute* :: = *Attribute-keyword*`=`*Attribute-Value* &#124; `DRIVER=`[`{`]*atributo-valor*[`}`]<br>
- *Attribute-keyword* :: = `DSN` &#124; `UID` &#124; `PWD` de la *palabra clave-Attribute-Defined del controlador* &#124;<br>
+ *Connection-String* :: = *atributo*[ `;` ] &#124; *attribute* `;` *cadena de conexión de*atributo;<br>
+ *Attribute* :: = *Attribute-keyword* `=` *Attribute-Value* &#124; `DRIVER=` [ `{` ]*atributo-valor*[ `}` ]<br>
+ *Attribute-keyword* :: = `DSN` &#124; `UID` &#124; de la `PWD` *palabra clave-Attribute-Defined del controlador* &#124;<br>
  *Attribute-Value* :: = *cadena de caracteres*<br>
  *driver-Defined-Attribute-keyword* :: = *Identifier*<br>
   
- donde *la cadena de caracteres* tiene cero o más caracteres; el *identificador* tiene uno o más caracteres; *Attribute-keyword* no distingue mayúsculas de minúsculas; *Attribute-Value* puede distinguir mayúsculas de minúsculas; y el valor de la palabra clave **DSN** no se compone únicamente de espacios en blanco. Debido a la gramática de la cadena de conexión y al archivo de inicialización, las palabras clave y los valores de atributo que contienen los caracteres **[]{}(),;? = \*! @** debe evitarse. Debido a la gramática de la información del sistema, las palabras clave y los nombres de los orígenes de\\datos no pueden contener el carácter de barra diagonal inversa (). Para un ODBC 2. controlador *x* , se requieren llaves alrededor del valor de atributo para la palabra clave driver.  
+ donde *la cadena de caracteres* tiene cero o más caracteres; el *identificador* tiene uno o más caracteres; *Attribute-keyword* no distingue mayúsculas de minúsculas; *Attribute-Value* puede distinguir mayúsculas de minúsculas; y el valor de la palabra clave **DSN** no se compone únicamente de espacios en blanco. Debido a la gramática de la cadena de conexión y al archivo de inicialización, las palabras clave y los valores de atributo que contienen los caracteres **[] {} (),;? \* =! @** debe evitarse. Debido a la gramática de la información del sistema, las palabras clave y los nombres de los orígenes de datos no pueden contener el carácter de barra diagonal inversa ( \\ ). Para un ODBC 2. controlador *x* , se requieren llaves alrededor del valor de atributo para la palabra clave driver.  
   
  Si alguna palabra clave se repite en la cadena de conexión de la solicitud de exploración, el controlador usa el valor asociado a la primera aparición de la palabra clave. Si las palabras clave **DSN** y **driver** están incluidas en la misma cadena de conexión de solicitud de examen, el administrador de controladores y el controlador usan la palabra clave la que aparece en primer lugar.  
   
@@ -127,17 +128,17 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Outconnectionstring (argumento)  
  La cadena de conexión de resultados de examen es una lista de atributos de conexión. Un atributo de conexión consta de una palabra clave de atributo y un valor de atributo correspondiente. La cadena de conexión del resultado de la exploración tiene la siguiente sintaxis:  
   
- *Connection-String* :: = *atributo*[`;`] &#124; *attribute* `;` *cadena de conexión de* atributo<br>
- *Attribute::* = [`*`]*Attribute-palabra clave*`=`Attribute *-Value*<br>
+ *Connection-String* :: = *atributo*[ `;` ] &#124; *attribute* `;` *cadena de conexión de* atributo<br>
+ *Attribute::* = [ `*` ] Attribute *-palabra clave*Attribute `=` *-Value*<br>
  *Attribute-keyword* :: = *ODBC-Attribute-palabra clave* &#124; *driver-Attribute-keyword*<br>
- *ODBC-Attribute-keyword* = {`UID` &#124; `PWD`} [`:`*identificador adaptado*] *controlador-atributo-atributo-palabra clave* :: = *identificador*[`:`*localizador-identificador*] *atributo-valor* :: = `{` *atributo-valor-lista* `}` &#124; `?` (las llaves son literales; son devueltas por el controlador).<br>
- *Attribute-Value-List* :: = *cadena de caracteres* [`:`*cadena de caracteres localizados*] &#124; *cadena de caracteres* [`:`cadena*de caracteres localizados*] `,` *atributo-valor-lista*<br>
+ *ODBC-Attribute-keyword* = { `UID` &#124; `PWD` } [ `:` *identificador adaptado*] *controlador-atributo-atributo-palabra clave* :: = *identificador*[ `:` *localizador-identificador*] *atributo-valor* :: = `{` *atributo-valor-lista* `}` &#124; `?` (las llaves son literales; son devueltas por el controlador).<br>
+ *Attribute-Value-List* :: = *cadena de caracteres* [ `:` *cadena de caracteres localizados*] &#124; *cadena de caracteres* [cadena `:` *de caracteres localizados*] `,` *atributo-valor-lista*<br>
   
- donde cadena *de* caracteres y *cadena de caracteres localizados* tienen cero o más caracteres; el *identificador* y *el identificador localizado* tienen uno o más caracteres; *Attribute-keyword* no distingue mayúsculas de minúsculas; y *Attribute-Value* pueden distinguir entre mayúsculas y minúsculas. Debido a la gramática de la cadena de conexión y al archivo de inicialización, las palabras clave, los identificadores localizados y los valores de atributo que contienen los caracteres **[]{}(),;? = \*! @** debe evitarse. Debido a la gramática de la información del sistema, las palabras clave y los nombres de los orígenes de\\datos no pueden contener el carácter de barra diagonal inversa ().  
+ donde cadena *de* caracteres y *cadena de caracteres localizados* tienen cero o más caracteres; el *identificador* y *el identificador localizado* tienen uno o más caracteres; *Attribute-keyword* no distingue mayúsculas de minúsculas; y *Attribute-Value* pueden distinguir entre mayúsculas y minúsculas. Debido a la gramática de la cadena de conexión y al archivo de inicialización, las palabras clave, los identificadores localizados y los valores de atributo que contienen los caracteres **[] {} (),;? \* =! @** debe evitarse. Debido a la gramática de la información del sistema, las palabras clave y los nombres de los orígenes de datos no pueden contener el carácter de barra diagonal inversa ( \\ ).  
   
  La sintaxis de la cadena de conexión de resultados de examen se usa según las siguientes reglas semánticas:  
   
--   Si un asterisco (\*) precede a una *palabra clave de atributo*, el *atributo* es opcional y se puede omitir en la siguiente llamada a **SQLBrowseConnect**.  
+-   Si un asterisco ( \* ) precede a una *palabra clave de atributo*, el *atributo* es opcional y se puede omitir en la siguiente llamada a **SQLBrowseConnect**.  
   
 -   Las palabras clave de atributo **UID** y **pwd** tienen el mismo significado que el definido en **SQLDriverConnect**.  
   
@@ -145,7 +146,7 @@ SQLRETURN SQLBrowseConnect(
   
 -   Las palabras clave de *atributo ODBC* y *driver-Attribute-Keywords* incluyen una versión localizada o descriptiva de la palabra clave. Esto podría ser utilizado por las aplicaciones como una etiqueta en un cuadro de diálogo. Sin embargo, se debe usar **UID**, **pwd**o el *identificador* solo al pasar una cadena de solicitud de examen al controlador.  
   
--   {*Attribute-Value-List*} es una enumeración de los valores reales válidos para la *palabra clave de atributo*correspondiente. Tenga en cuenta que las llaves{}() no indican una lista de opciones; los devuelve el controlador. Por ejemplo, podría ser una lista de nombres de servidor o una lista de nombres de base de datos.  
+-   {*Attribute-Value-List*} es una enumeración de los valores reales válidos para la *palabra clave de atributo*correspondiente. Tenga en cuenta que las llaves ( {} ) no indican una lista de opciones; las devuelve el controlador. Por ejemplo, podría ser una lista de nombres de servidor o una lista de nombres de base de datos.  
   
 -   Si el *valor del atributo* es un signo de interrogación (?), un solo valor corresponde a la *palabra clave de atributo*. Por ejemplo, UID = JohnS; PWD = sésamo.  
   
@@ -184,7 +185,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="code-example"></a>Ejemplo de código  
   
 > [!NOTE]  
->  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de `Trusted_Connection=yes` Windows, debe especificar en lugar de la información de ID. de usuario y contraseña en la cadena de conexión.  
+>  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar `Trusted_Connection=yes` en lugar de la información de ID. de usuario y contraseña en la cadena de conexión.  
   
  En el ejemplo siguiente, una aplicación llama a **SQLBrowseConnect** varias veces. Cada vez que **SQLBrowseConnect** devuelve SQL_NEED_DATA, pasa información sobre los datos que necesita en \* *outconnectionstring*. La aplicación pasa *outconnectionstring* a su rutina **GetUserInput** (no se muestra). **GetUserInput** analiza la información, crea y muestra un cuadro de diálogo y devuelve la información especificada por el usuario en \* *inconnectionstring*. La aplicación pasa la información del usuario al controlador en la siguiente llamada a **SQLBrowseConnect**. Una vez que la aplicación ha proporcionado toda la información necesaria para que el controlador se conecte al origen de datos, **SQLBrowseConnect** devuelve SQL_SUCCESS y la aplicación continúa.  
   
@@ -202,7 +203,7 @@ SQLRETURN SQLBrowseConnect(
 "HOST:Server={red,blue,green};UID:ID=?;PWD:Password=?"  
 ```  
   
- La aplicación pasa esta cadena a su rutina **GetUserInput** , que crea un cuadro de diálogo que pide al usuario que seleccione el servidor rojo, azul o verde y que escriba un identificador de usuario y una contraseña. La rutina pasa la siguiente información especificada por el usuario de \*nuevo en *inconnectionstring*, que la aplicación pasa a **SQLBrowseConnect**:  
+ La aplicación pasa esta cadena a su rutina **GetUserInput** , que crea un cuadro de diálogo que pide al usuario que seleccione el servidor rojo, azul o verde y que escriba un identificador de usuario y una contraseña. La rutina pasa la siguiente información especificada por el usuario de nuevo en \* *inconnectionstring*, que la aplicación pasa a **SQLBrowseConnect**:  
   
 ```  
 "HOST=red;UID=Smith;PWD=Sesame"  
@@ -287,12 +288,12 @@ int main() {
 |Para información acerca de|Vea|  
 |---------------------------|---------|  
 |Asignación de un identificador de conexión|[Función SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|Conectar a un origen de datos|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
+|Conectarse a un origen de datos|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
 |Desconectar de un origen de datos|[Función SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
 |Conectar con un origen de datos mediante una cadena de conexión o un cuadro de diálogo|[Función SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Devolver descripciones y atributos de controladores|[Función SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |Liberar un identificador de conexión|[Función SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

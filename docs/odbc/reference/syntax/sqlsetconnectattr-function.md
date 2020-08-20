@@ -1,4 +1,5 @@
 ---
+description: Función SQLSetConnectAttr
 title: SQLSetConnectAttr, función | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8424462ddde4f99196e26d633fddfa5bb2ed6ee9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a96652069e485e59ba9eab1be6f6cdf4f286c889
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499578"
 ---
 # <a name="sqlsetconnectattr-function"></a>Función SQLSetConnectAttr
 **Conformidad**  
@@ -51,7 +52,7 @@ SQLRETURN SQLSetConnectAttr(
  *ConnectionHandle*  
  [Entrada] Identificador de conexión.  
   
- *Atribui*  
+ *Atributo*  
  Entradas Atributo que se va a establecer, mostrado en "Comentarios".  
   
  *ValuePtr*  
@@ -72,7 +73,7 @@ SQLRETURN SQLSetConnectAttr(
   
 -   Si *ValuePtr* contiene un valor de longitud fija, *StringLength* es SQL_IS_INTEGER o SQL_IS_UINTEGER, según corresponda.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -90,15 +91,15 @@ SQLRETURN SQLSetConnectAttr(
 |24000|Estado de cursor no válido|Se SQL_ATTR_CURRENT_CATALOG el argumento de *atributo* y hay un conjunto de resultados pendiente.|  
 |25000|Operación no válida en una transacción local|Una conexión estaba en una transacción local al intentar darse de alta en una conexión de transacciones distribuidas (DTC) estableciendo el atributo de conexión SQL_ATTR_ENLIST_IN_DTC.<br /><br /> Una conexión ya está dada de alta en un DTC.<br /><br /> Se ha dado de alta una conexión en una conexión de transacción distribuida y se ha iniciado una transacción local estableciendo SQL_ATTR_AUTOCOMMIT en SQL_AUTOCOMMIT_OFF.|  
 |3D000|Nombre de catálogo no válido|Se SQL_CURRENT_CATALOG el argumento de *atributo* y el nombre de catálogo especificado no era válido.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
-|HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *ConnectionHandle*. Se llamó a la función **SQLSetConnectAttr** y antes de completar la ejecución, se llamó a la [función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) en *ConnectionHandle*y, a continuación, se llamó de nuevo a la función **SQLSetConnectAttr** en *ConnectionHandle*.<br /><br /> O bien, se llamó a la función **SQLSetConnectAttr** y antes de completar la ejecución, se llamó a **SQLCancelHandle** en *ConnectionHandle* desde un subproceso diferente en una aplicación multiproceso.|  
+|HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *ConnectionHandle*. Se llamó a la función **SQLSetConnectAttr** y antes de completar la ejecución, se llamó a la [función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) en *ConnectionHandle*y, a continuación, se llamó de nuevo a la función **SQLSetConnectAttr** en *ConnectionHandle*.<br /><br /> O bien, se llamó a la función  **SQLSetConnectAttr** y antes de completar la ejecución, se llamó a **SQLCancelHandle** en *ConnectionHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY009|Uso no válido de puntero nulo|El argumento de *atributo* identificó un atributo de conexión que requería un valor de cadena y el argumento *ValuePtr* era un puntero nulo.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para un *StatementHandle* asociado a *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a **SQLSetConnectAttr** .<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para uno de los identificadores de instrucciones asociados a *ConnectionHandle* y se devolvieron SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para un *StatementHandle* asociado con *ConnectionHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> Se llamó a (DM) **SQLBrowseConnect** para *ConnectionHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de que **SQLBrowseConnect** devolviera SQL_SUCCESS_WITH_INFO o SQL_SUCCESS.|  
 |HY011|El atributo no se puede establecer ahora|Se SQL_ATTR_TXN_ISOLATION el argumento de *atributo* y se abrió una transacción.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY024|Valor de atributo no válido|Dado el valor de *atributo* especificado, se especificó un valor no válido en *ValuePtr*. (El administrador de controladores devuelve este SQLSTATE solo para los atributos de conexión y de instrucción que aceptan un conjunto discreto de valores, como SQL_ATTR_ACCESS_MODE o SQL_ATTR_ASYNC_ENABLE. Para todos los demás atributos de conexión y de instrucción, el controlador debe comprobar el valor especificado en *ValuePtr*).<br /><br /> El argumento de *atributo* era SQL_ATTR_TRACEFILE o SQL_ATTR_TRANSLATE_LIB y *ValuePtr* era una cadena vacía.|  
-|HY090|Longitud de búfer o cadena no válida|*(DM) \*ValuePtr* es una cadena de caracteres y el argumento *StringLength* era menor que 0 pero no se SQL_NTS.|  
+|HY090|Longitud de búfer o cadena no válida|*(DM) \* ValuePtr* es una cadena de caracteres y el argumento *StringLength* era menor que 0 pero no se SQL_NTS.|  
 |HY092|Identificador de opción/atributo no válido|(DM) el valor especificado para el *atributo* argument no era válido para la versión de ODBC admitida por el controlador.<br /><br /> (DM) el valor especificado para el *atributo* argument era un atributo de solo lectura.|  
 |HY114|El controlador no admite la ejecución de funciones asincrónicas en el nivel de conexión|(DM) una aplicación intentó habilitar la ejecución de función asincrónica con SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE para un controlador que no admite operaciones de conexión asincrónicas.|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -142,10 +143,10 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_CURRENT_CATALOG|[1]|  
 |SQL_ATTR_DBC_INFO_TOKEN|Después|  
 |SQL_ATTR_ENLIST_IN_DTC|Después|  
-|SQL_ATTR_LOGIN_TIMEOUT|Antes del|  
+|SQL_ATTR_LOGIN_TIMEOUT|Antes|  
 |SQL_ATTR_METADATA_ID|Es posible usar el|  
-|SQL_ATTR_ODBC_CURSORS|Antes del|  
-|SQL_ATTR_PACKET_SIZE|Antes del|  
+|SQL_ATTR_ODBC_CURSORS|Antes|  
+|SQL_ATTR_PACKET_SIZE|Antes|  
 |SQL_ATTR_QUIET_MODE|Es posible usar el|  
 |SQL_ATTR_TRACE|Es posible usar el|  
 |SQL_ATTR_TRACEFILE|Es posible usar el|  
@@ -157,17 +158,17 @@ SQLRETURN SQLSetConnectAttr(
   
  [2] SQL_ATTR_ASYNC_ENABLE debe establecerse antes de que haya una instrucción activa.  
   
- [3] SQL_ATTR_TXN_ISOLATION solo se puede establecer si no hay transacciones abiertas en la conexión. Algunos atributos de conexión admiten la sustitución de un valor similar si el origen de datos no admite el \*valor especificado en *ValuePtr*. En tales casos, el controlador devuelve SQL_SUCCESS_WITH_INFO y SQLSTATE 01S02 (valor de opción cambiado). Por ejemplo, si el *atributo* es SQL_ATTR_PACKET_SIZE \*y *ValuePtr* supera el tamaño de paquete máximo, el controlador sustituye el tamaño máximo. Para determinar el valor sustituido, una aplicación llama a **SQLGetConnectAttr**.  
+ [3] SQL_ATTR_TXN_ISOLATION solo se puede establecer si no hay transacciones abiertas en la conexión. Algunos atributos de conexión admiten la sustitución de un valor similar si el origen de datos no admite el valor especificado en \* *ValuePtr*. En tales casos, el controlador devuelve SQL_SUCCESS_WITH_INFO y SQLSTATE 01S02 (valor de opción cambiado). Por ejemplo, si el *atributo* es SQL_ATTR_PACKET_SIZE y \* *ValuePtr* supera el tamaño de paquete máximo, el controlador sustituye el tamaño máximo. Para determinar el valor sustituido, una aplicación llama a **SQLGetConnectAttr**.  
   
  [4] si se establece SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE antes de que se abra una conexión, el administrador de controladores establecerá el atributo del controlador cuando se cargue el controlador durante una llamada a **SQLBrowseConnect**, **SQLConnect**o **SQLDriverConnect**. Antes de realizar una llamada a **SQLBrowseConnect**, **SQLConnect**o **SQLDriverConnect**, el administrador de controladores no sabe a qué controlador debe conectarse y no sabe si el controlador admite operaciones de conexión asincrónicas. Por lo tanto, el administrador de controladores siempre devuelve SQL_SUCCESS. Sin embargo, en caso de que el controlador no admita operaciones de conexión asincrónicas, se producirá un error en la llamada a **SQLBrowseConnect**, **SQLConnect**o **SQLDriverConnect** .  
   
  [5] cuando SQL_ATTR_AUTOCOMMIT está establecido en FALSE, las aplicaciones deben llamar a SQLEndTran (SQL_ROLLBACK) si alguna API devuelve SQL_ERROR para garantizar la coherencia transaccional.  
   
- El formato de la información establecida en \*el búfer de *ValuePtr* depende del *atributo*especificado. **SQLSetConnectAttr** aceptará información de atributos en uno de dos formatos diferentes: una cadena de caracteres terminada en null o un valor entero. El formato de cada se indica en la descripción del atributo. Las cadenas de caracteres a las que apunta el argumento *ValuePtr* de **SQLSetConnectAttr** tienen una longitud de *StringLength* bytes.  
+ El formato de la información establecida en el búfer de \* *ValuePtr* depende del *atributo*especificado. **SQLSetConnectAttr** aceptará información de atributos en uno de dos formatos diferentes: una cadena de caracteres terminada en null o un valor entero. El formato de cada se indica en la descripción del atributo. Las cadenas de caracteres a las que apunta el argumento *ValuePtr* de **SQLSetConnectAttr** tienen una longitud de *StringLength* bytes.  
   
  El argumento *StringLength* se omite si el atributo define la longitud, como es el caso de todos los atributos introducidos en ODBC 2 *. x* o anterior.  
   
-|*Atribui*|Contenido de *ValuePtr*|  
+|*Atributo*|Contenido de *ValuePtr*|  
 |-----------------|-------------------------|  
 |SQL_ATTR_ACCESS_MODE (ODBC 1,0)|Valor de SQLUINTEGER que incluya. El controlador o el origen de datos utiliza SQL_MODE_READ_ONLY como un indicador de que no es necesario que la conexión admita instrucciones SQL que hagan que se produzcan actualizaciones. Este modo se puede usar para optimizar las estrategias de bloqueo, la administración de transacciones u otras áreas según sea necesario para el controlador o el origen de datos. No es necesario que el controlador impida que se envíen estas instrucciones al origen de datos. El comportamiento del controlador y el origen de datos cuando se le pide que procese instrucciones SQL que no son de solo lectura durante una conexión de solo lectura está definido por la implementación. SQL_MODE_READ_WRITE es el valor predeterminado.|  
 |SQL_ATTR_ASYNC_DBC_EVENT (ODBC 3,8)|Un valor de SQLPOINTER que es un identificador de evento.<br /><br /> La notificación de la finalización de las funciones asincrónicas se habilita llamando a **SQLSetConnectAttr** con el atributo SQL_ATTR_ASYNC_STMT_EVENT y especificando el identificador del evento. **Nota:**  El método de notificación no es compatible con la biblioteca de cursores. Una aplicación recibirá un mensaje de error si intenta habilitar la biblioteca de cursores mediante SQLSetConnectAttr, cuando se habilite el método de notificación.|  
@@ -179,8 +180,8 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_AUTOCOMMIT (ODBC 1,0)|Un valor SQLUINTEGER que incluya que especifica si se debe usar el modo de confirmación automática o manual:<br /><br /> SQL_AUTOCOMMIT_OFF = el controlador usa el modo de confirmación manual y la aplicación debe confirmar o revertir las transacciones explícitamente con **SQLEndTran**.<br /><br /> SQL_AUTOCOMMIT_ON = el controlador utiliza el modo de confirmación automática. Cada instrucción se confirma inmediatamente después de ejecutarse. Este es el valor predeterminado. Cualquier transacción abierta en la conexión se confirma cuando se establece SQL_ATTR_AUTOCOMMIT en SQL_AUTOCOMMIT_ON para cambiar del modo de confirmación manual al modo de confirmación automática.<br /><br /> Para obtener más información, vea [modo de confirmación](../../../odbc/reference/develop-app/commit-mode.md). **Importante:**  Algunos orígenes de datos eliminan los planes de acceso y cierran los cursores de todas las instrucciones de una conexión cada vez que se confirma una instrucción; el modo de confirmación automática puede hacer que esto suceda después de ejecutar cada instrucción que no es de consulta o cuando se cierra el cursor para una consulta. Para obtener más información, vea los tipos de información SQL_CURSOR_COMMIT_BEHAVIOR y SQL_CURSOR_ROLLBACK_BEHAVIOR en [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) y el [efecto de las transacciones en cursores y instrucciones preparadas](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md). <br /><br /> Cuando un lote se ejecuta en modo de confirmación automática, son posibles dos cosas. Todo el lote se puede tratar como una unidad autovalidable, o cada instrucción de un lote se trata como una unidad confirmable. Algunos orígenes de datos pueden admitir ambos comportamientos y pueden proporcionar una forma de elegir uno u otro. Está definido por el controlador si un lote se trata como una unidad confirmable o si cada instrucción individual dentro del lote es confirmable.|  
 |SQL_ATTR_CONNECTION_DEAD<br /><br /> (ODBC 3,5)|Un valor SQLUINTEGER que incluya de solo lectura que indica el estado de la conexión. Si SQL_CD_TRUE, se ha perdido la conexión. Si SQL_CD_FALSE, la conexión sigue activa.|  
 |SQL_ATTR_CONNECTION_TIMEOUT (ODBC 3,0)|Un valor SQLUINTEGER que incluya que corresponde al número de segundos que se debe esperar para que se complete cualquier solicitud de la conexión antes de volver a la aplicación. El controlador debe devolver SQLSTATE HYT00 (tiempo de espera expirado) siempre que sea posible agotar el tiempo de espera en una situación no asociada a la ejecución de la consulta o al inicio de sesión.<br /><br /> Si *ValuePtr* es igual a 0 (el valor predeterminado), no hay tiempo de espera.|  
-|SQL_ATTR_CURRENT_CATALOG (ODBC 2,0)|Cadena de caracteres que contiene el nombre del catálogo que va a usar el origen de datos. Por ejemplo, en SQL Server, el catálogo es una base de datos, por lo que el controlador envía una instrucción **use** _Database_ al origen de datos, donde *Database* es \*la base de datos especificada en *ValuePtr*. Para un controlador de un solo nivel, el catálogo podría ser un directorio, por lo que el controlador cambia su directorio actual al directorio especificado en **ValuePtr*.|  
-|SQL_ATTR_DBC_INFO_TOKEN (ODBC 3,8|Un valor de SQLPOINTER que se usa para volver a establecer el token de información de conexión en el identificador DBC cuando el parámetro de [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)(\**pRating*) no es igual a 100.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN es solo de conjunto. No es posible usar **SQLGetConnectAttr** o **SQLGetConnectOption** para recuperar este valor. **SQLSetConnectAttr** del administrador de controladores no aceptará SQL_ATTR_DBC_INFO_TOKEN, ya que una aplicación no debe establecer este atributo.<br /><br /> Si un controlador devuelve SQL_ERROR después de establecer SQL_ATTR_DBC_INFO_TOKEN, se liberará la conexión obtenida del grupo. El administrador de controladores intentará obtener otra conexión del grupo. Vea [desarrollar el reconocimiento del grupo de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md) para obtener más información.|  
+|SQL_ATTR_CURRENT_CATALOG (ODBC 2,0)|Cadena de caracteres que contiene el nombre del catálogo que va a usar el origen de datos. Por ejemplo, en SQL Server, el catálogo es una base de datos, por lo que el controlador envía una instrucción **use** _Database_ al origen de datos, donde *Database* es la base de datos especificada en \* *ValuePtr*. Para un controlador de un solo nivel, el catálogo podría ser un directorio, por lo que el controlador cambia su directorio actual al directorio especificado en **ValuePtr*.|  
+|SQL_ATTR_DBC_INFO_TOKEN (ODBC 3,8|Un valor de SQLPOINTER que se usa para volver a establecer el token de información de conexión en el identificador DBC cuando el parámetro de [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)( \* *pRating*) no es igual a 100.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN es solo de conjunto. No es posible usar **SQLGetConnectAttr** o **SQLGetConnectOption** para recuperar este valor. **SQLSetConnectAttr** del administrador de controladores no aceptará SQL_ATTR_DBC_INFO_TOKEN, ya que una aplicación no debe establecer este atributo.<br /><br /> Si un controlador devuelve SQL_ERROR después de establecer SQL_ATTR_DBC_INFO_TOKEN, se liberará la conexión obtenida del grupo. El administrador de controladores intentará obtener otra conexión del grupo. Vea [desarrollar el reconocimiento del grupo de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md) para obtener más información.|  
 |SQL_ATTR_ENLIST_IN_DTC (ODBC 3,0)|Valor SQLPOINTER que especifica si se debe usar el controlador ODBC en las transacciones distribuidas coordinadas por los servicios de componentes de Microsoft.<br /><br /> Pase un objeto de transacción OLE de DTC que especifique la transacción que se va a exportar a SQL Server, o SQL_DTC_DONE para finalizar la Asociación de DTC de la conexión.<br /><br /> El cliente llama al método OLE ITransactionDispenser:: BeginTransaction de Microsoft Coordinador de transacciones distribuidas (MS DTC) para iniciar una transacción de MS DTC y crear un objeto de transacción de MS DTC que representa la transacción. A continuación, la aplicación llama a SQLSetConnectAttr con la opción SQL_ATTR_ENLIST_IN_DTC para asociar el objeto de transacción a la conexión ODBC. Toda la actividad de base de datos relacionada se realizará bajo la protección de la transacción MS DTC. La aplicación llama a SQLSetConnectAttr con SQL_DTC_DONE para finalizar la asociación DTC de la conexión. Para obtener más información, consulte la documentación de MS DTC.|  
 |SQL_ATTR_LOGIN_TIMEOUT (ODBC 1,0)|Un valor SQLUINTEGER que incluya que corresponde al número de segundos que se debe esperar para que se complete una solicitud de inicio de sesión antes de volver a la aplicación. El valor predeterminado es dependiente del controlador. Si *ValuePtr* es 0, el tiempo de espera está deshabilitado y un intento de conexión esperará indefinidamente.<br /><br /> Si el tiempo de espera especificado supera el tiempo de espera de inicio de sesión máximo en el origen de datos, el controlador sustituye ese valor y devuelve SQLSTATE 01S02 (valor de opción cambiado).|  
 |SQL_ATTR_METADATA_ID (ODBC 3,0)|Un valor SQLUINTEGER que incluya que determina cómo se tratan los argumentos de cadena de las funciones de catálogo.<br /><br /> Si SQL_TRUE, el argumento de cadena de las funciones de catálogo se tratan como identificadores. El caso no es significativo. En el caso de las cadenas no delimitadas, el controlador quita los espacios finales y la cadena se dobla a mayúsculas. En el caso de las cadenas delimitadas, el controlador quita los espacios iniciales o finales y toma literalmente lo que haya entre los delimitadores. Si uno de estos argumentos se establece en un puntero nulo, la función devuelve SQL_ERROR y SQLSTATE HY009 (uso no válido de puntero nulo).<br /><br /> Si SQL_FALSE, los argumentos de cadena de las funciones de catálogo no se tratan como identificadores. El caso es significativo. Pueden contener un modelo de búsqueda de cadenas o no, dependiendo del argumento.<br /><br /> El valor predeterminado es SQL_FALSE.<br /><br /> El argumento *TableType* de **SQLTables**, que toma una lista de valores, no se ve afectado por este atributo.<br /><br /> También se puede establecer SQL_ATTR_METADATA_ID en el nivel de instrucción. (Es el único atributo de conexión que también es un atributo de instrucción).<br /><br /> Para obtener más información, vea [argumentos en funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).|  
@@ -205,6 +206,6 @@ SQLRETURN SQLSetConnectAttr(
 |Asignación de un identificador|[Función SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Devolver el valor de un atributo de conexión|[Función SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

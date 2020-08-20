@@ -1,4 +1,5 @@
 ---
+description: Subclave de traductores de ODBC
 title: Subclave de traductores ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 617416adfcddfbf041c48acbf83cb9589e34ae27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46308518f1f806cea21bbb824312d5269f8b61e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499718"
 ---
 # <a name="odbc-translators-subkey"></a>Subclave de traductores de ODBC
 Los valores de la subclave traductores ODBC enumeran los traductores instalados. El formato de estos valores se muestra en la tabla siguiente.  

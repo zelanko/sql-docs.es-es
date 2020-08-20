@@ -1,4 +1,5 @@
 ---
+description: Modificar un índice
 title: Modificación de un índice | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -15,12 +16,12 @@ ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9c8334573b66b5c227a5033a63b5aedf06909c78
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15a7386c08d2b9147858cab3fde212cf285902cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68316959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499369"
 ---
 # <a name="modify-an-index"></a>Modificar un índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,6 +80,6 @@ En el ejemplo siguiente se usa ALTER INDEX para establecer varias opciones del �
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md)   
- [Cambiar el nombre de los índices](../../relational-databases/indexes/rename-indexes.md)  
+ [Cambiar el nombre a los índices](../../relational-databases/indexes/rename-indexes.md)  
   
   

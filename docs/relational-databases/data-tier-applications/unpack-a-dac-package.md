@@ -1,4 +1,5 @@
 ---
+description: Desempaquetar un paquete de DAC
 title: Desempaquetar un paquete DAC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3cecfc696bda97e046acd80eb3e285e8da2a04de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dee530c223890a51ab255d319db9a7772e0ce686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499928"
 ---
 # <a name="unpack-a-dac-package"></a>Desempaquetar un paquete de DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85781649"
   
 1.  **Antes de empezar:**  [Seguridad](#Security)  
   
-2.  **Para desempaquetar un paquete DAC con:**  [cuadro de diálogo Desempaquetar aplicación de capa de datos](#UnpackDACDial), [Examinar el contenido de un paquete DAC](#ExamDACPack)  
+2.  **Para desempaquetar una DAC, mediante:**  [Cuadro de diálogo Desempaquetar aplicación de capa de datos](#UnpackDACDial), [Examinar el contenido de un paquete DAC](#ExamDACPack)  
 
 ##  <a name="security"></a><a name="Security"></a> Seguridad  
  Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estas DAC contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema. Antes de usar una DAC de un origen desconocido o que no es de confianza, impleméntela en una instancia de prueba aislada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], desempaquete la DAC y examine el código, como los procedimientos almacenados o el código definido por el usuario.  

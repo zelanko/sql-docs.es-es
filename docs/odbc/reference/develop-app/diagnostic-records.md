@@ -1,4 +1,5 @@
 ---
+description: Registros de diagnóstico
 title: Registros de diagnóstico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b564f2837bc76e04011170e191d00c08d10c119d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b407ef1f8664191a16f54942f42f4088824517c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499926"
 ---
 # <a name="diagnostic-records"></a>Registros de diagnóstico
 Asociados con cada entorno, conexión, instrucción y identificador de descriptor son *registros de diagnóstico*. Estos registros contienen información de diagnóstico sobre la última función denominada que usó un identificador determinado. Los registros solo se sustituyen cuando se llama a otra función con ese identificador. No hay ningún límite en el número de registros de diagnóstico que se pueden almacenar en un momento dado.  

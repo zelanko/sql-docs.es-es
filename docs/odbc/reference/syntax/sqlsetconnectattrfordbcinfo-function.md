@@ -1,4 +1,5 @@
 ---
+description: Función SQLSetConnectAttrForDbcInfo
 title: Función SQLSetConnectAttrForDbcInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f43a0fc6cd02fe566579a543667f9a4c4c1a108
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7380ba8682deb7424c363b28d42ecf3980755daf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499565"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>Función SQLSetConnectAttrForDbcInfo
 **Conformidad**  
@@ -41,7 +42,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  *hDbcInfoToken*  
  Entradas Identificador de token.  
   
- *Atribui*  
+ *Atributo*  
  Entradas Atributo que se va a establecer. La lista de atributos válidos es específica del controlador y la misma que para [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
  *ValuePtr*  
@@ -62,7 +63,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
 -   Si *ValuePtr* contiene un valor de longitud fija, *StringLength* es SQL_IS_INTEGER o SQL_IS_UINTEGER, según corresponda.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -77,7 +78,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
  Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

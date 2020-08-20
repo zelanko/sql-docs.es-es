@@ -1,4 +1,5 @@
 ---
+description: Función SQLRowCount
 title: Función SQLRowCount | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cbca03e7c3e381b803196a1bf7bb227ebeea03b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 666351fcd4758170baaf62fbd80cd45a554ab92a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499598"
 ---
 # <a name="sqlrowcount-function"></a>Función SQLRowCount
 **Conformidad**  
@@ -52,12 +53,12 @@ SQLRETURN SQLRowCount(
   
  Cuando se llama a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, **SQLSetPos o SQLMoreResults** , el campo de SQL_DIAG_ROW_COUNT de la estructura de datos de diagnóstico se establece en el recuento de filas y el recuento de filas se almacena en caché de forma dependiente de la implementación. **SQLRowCount** devuelve el valor de recuento de filas almacenadas en caché. El valor de recuento de filas almacenadas en caché es válido hasta que el identificador de instrucción se vuelve a establecer en el estado preparado o asignado, la instrucción se vuelve a ejecutar o se llama a **SQLCloseCursor** . Tenga en cuenta que si se llamó a una función desde que se estableció el campo SQL_DIAG_ROW_COUNT, el valor devuelto por **SQLRowCount** podría ser diferente del valor del campo SQL_DIAG_ROW_COUNT porque el campo SQL_DIAG_ROW_COUNT se restablece en 0 mediante cualquier llamada de función.  
   
- Para otras instrucciones y funciones, el controlador puede definir el valor devuelto \*en *RowCountPtr*. Por ejemplo, algunos orígenes de datos pueden devolver el número de filas devueltas por una instrucción **Select** o una función de catálogo antes de capturar las filas.  
+ Para otras instrucciones y funciones, el controlador puede definir el valor devuelto en \* *RowCountPtr*. Por ejemplo, algunos orígenes de datos pueden devolver el número de filas devueltas por una instrucción **Select** o una función de catálogo antes de capturar las filas.  
   
 > [!NOTE]  
 >  Muchos orígenes de datos no pueden devolver el número de filas de un conjunto de resultados antes de capturarlas; para obtener la máxima interoperabilidad, las aplicaciones no deben basarse en este comportamiento.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -66,7 +67,7 @@ SQLRETURN SQLRowCount(
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLRowCount** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a la función antes de llamar a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle*.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
@@ -84,6 +85,6 @@ SQLRETURN SQLRowCount(
 |Ejecutar una instrucción SQL|[Función SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Ejecutar una instrucción SQL preparada|[Función SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

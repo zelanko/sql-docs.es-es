@@ -1,4 +1,5 @@
 ---
+description: Función SQLSetCursorName
 title: Función SQLSetCursorName | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6a3bcd07a39401d49be04d141e50c671179efb16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a7deee4ecb37225260f011d4944e992f16d94e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499494"
 ---
 # <a name="sqlsetcursorname-function"></a>Función SQLSetCursorName
 **Conformidad**  
@@ -53,7 +54,7 @@ SQLRETURN SQLSetCursorName(
  *NameLength*  
  Entradas Longitud en caracteres de **CursorName*.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -66,7 +67,7 @@ SQLRETURN SQLSetCursorName(
 |24000|Estado de cursor no válido|La instrucción correspondiente a *StatementHandle* ya estaba en un estado ejecutado o situado en el cursor.|  
 |34000|Nombre de cursor no válido|El nombre de cursor especificado en **CursorName* no era válido porque superó la longitud máxima tal como la define el controlador o comenzó con "SQLCUR" o "SQL_CUR".|  
 |3C000|Nombre de cursor duplicado|El nombre de cursor especificado en **CursorName* ya existe.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY009|Uso no válido de puntero nulo|(DM) el argumento *CursorName* era un puntero nulo.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función aynchronous todavía se estaba ejecutando cuando se llamó a la función **SQLSetCursorName** .<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
@@ -139,6 +140,6 @@ if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {
 |Devolver un nombre de cursor|[Función SQLGetCursorName](../../../odbc/reference/syntax/sqlgetcursorname-function.md)|  
 |Establecer opciones de desplazamiento del cursor|[Función SQLSetScrollOptions](../../../odbc/reference/syntax/sqlsetscrolloptions-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

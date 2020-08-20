@@ -1,4 +1,5 @@
 ---
+description: Función SQLRemoveDriverManager
 title: Función SQLRemoveDriverManager | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c94765dfe76bc5a1ef188328a6fe27e96671efb1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: db880d031e803d5778c2af9b2bea08b6ed590e3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499628"
 ---
 # <a name="sqlremovedrivermanager-function"></a>Función SQLRemoveDriverManager
 **Conformidad**  
@@ -45,7 +46,7 @@ BOOL SQLRemoveDriverManager(
  *pdwUsageCount*  
  Genere El recuento de uso del administrador de controladores después de llamar a esta función.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  La función devuelve TRUE si es correcto, FALSE si se produce un error. Si no existe ninguna entrada en la información del sistema cuando se llama a esta función, la función devuelve FALSE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -56,7 +57,7 @@ BOOL SQLRemoveDriverManager(
 |ODBC_ERROR_GENERAL_ERR|Error general del instalador|Se produjo un error en el que no había ningún error específico del instalador.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|No se encontró el componente en el registro|El instalador no pudo quitar la información del administrador de controladores porque no existía en el registro o no se encontró en el registro.|  
 |ODBC_ERROR_USAGE_UPDATE_FAILED|No se pudo aumentar o reducir el recuento de uso de componentes|El instalador no pudo reducir el recuento de uso del administrador de controladores.|  
-|ODBC_ERROR_OUT_OF_MEM|Memoria agotada|El instalador no pudo realizar la función debido a una falta de memoria.|  
+|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a una falta de memoria.|  
   
 ## <a name="comments"></a>Comentarios  
  **SQLRemoveDriverManager** complementa la función **SQLInstallDriverManager** y actualiza el recuento de uso de componentes en la información del sistema. Solo se debe llamar a esta función desde una aplicación de instalación.  

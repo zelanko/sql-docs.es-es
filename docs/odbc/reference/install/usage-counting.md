@@ -1,4 +1,5 @@
 ---
+description: Recuento de uso
 title: Recuento de uso | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d516a591bfde47522c0ccfe08bd2bd706218e07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e8c02aae51c47b13970a1824e3c0c9c417eb5f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499698"
 ---
 # <a name="usage-counting"></a>Recuento de uso
 > [!NOTE]  
@@ -63,7 +64,7 @@ ms.locfileid: "81296025"
 |----------|---------------|----------|  
 |*Ruta de acceso completa*|REG_DWORD|*count*|  
   
- Por ejemplo, supongamos que un controlador de Informix usa los archivos Infrmx32. dll y Infrmx32. HLP, y Supongamos que este controlador se ha instalado dos veces. Los valores de la subclave SharedDlls para el controlador de Informix serían los siguientes:  
+ Por ejemplo, supongamos que un controlador de Informix usa los archivos Infrmx32.dll y Infrmx32. HLP, y Supongamos que este controlador se ha instalado dos veces. Los valores de la subclave SharedDlls para el controlador de Informix serían los siguientes:  
   
 ```  
 C:\WINDOWS\SYSTEM32\INFRMX32.DLL : REG_DWORD : 0x2  

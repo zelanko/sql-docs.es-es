@@ -1,4 +1,5 @@
 ---
+description: Resumen de la API de parámetros con valores de tabla de ODBC
 title: Resumen de la API de parámetros con valores de tabla de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,11 +15,12 @@ ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0611b325783cfcf630814669ebfff9428d10682b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d1201bef5cc9681ef0b0622c71efb98dfee22bf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499103"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Resumen de la API de parámetros con valores de tabla de ODBC
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

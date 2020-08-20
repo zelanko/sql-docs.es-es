@@ -1,4 +1,5 @@
 ---
+description: Subclave ODBC
 title: Subclave ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96e9a5f4c3cdac5097686528d3c089d9ec5826f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ec27b40e196f5277307b9a299dd865a1604dc0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499730"
 ---
 # <a name="odbc-subkey"></a>Subclave ODBC
 Los valores de la subclave ODBC especifican las opciones de seguimiento de ODBC. Estas opciones se establecen a través de la pestaña seguimiento del cuadro de diálogo Administrador de orígenes de datos ODBC que se muestra en **SQLManageDataSources**. La propia subclave de ODBC es opcional. El formato de estos valores es como se muestra en la tabla siguiente.  

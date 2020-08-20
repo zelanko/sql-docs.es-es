@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de diagnóstico de controlador basados en archivos
 title: Ejemplo de diagnóstico de controladores basados en archivos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f09e4f4758b6276836b08f02b24fb31dd1fadc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8986ebaa8c4ecf0ac18f4e043eb731df35054884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499865"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>Ejemplo de diagnóstico de controlador basados en archivos
 Un controlador basado en archivos actúa como un controlador ODBC y como un origen de datos. Por lo tanto, puede generar errores y advertencias como un componente de una conexión ODBC y como un origen de datos. Dado que también es el componente que interactúa con el administrador de controladores, da formato y devuelve los argumentos de **SQLGetDiagRec**.  

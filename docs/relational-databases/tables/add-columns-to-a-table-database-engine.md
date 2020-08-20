@@ -1,4 +1,5 @@
 ---
+description: Agregar columnas a una tabla (motor de base de datos)
 title: Agregar columnas a una tabla (motor de base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
@@ -15,12 +16,12 @@ ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0212f7615feb36b9c9f14d0a07e28445fac5597
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473083"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Agregar columnas a una tabla (motor de base de datos)
 
@@ -52,12 +53,12 @@ Requiere el permiso ALTER en la tabla.
    Este valor es obligatorio, por lo que, si no elige ninguno, se le asignará un valor predeterminado.
 
    > [!NOTE]
-   > Puede cambiar el valor predeterminado en el cuadro de diálogo **Opciones** situado bajo **Herramientas para bases de datos**.
+   >  Puede cambiar el valor predeterminado en el cuadro de diálogo **Opciones** situado bajo **Herramientas para bases de datos**.
 
 5. Continúe definiendo las propiedades de la columna en la pestaña **Propiedades de columna** .
 
     > [!NOTE]
-    > Los valores predeterminados de las propiedades de la columna se agregan cuando crea una columna nueva, pero se pueden cambiar en la pestaña **Propiedades de columna** .
+    >  Los valores predeterminados de las propiedades de la columna se agregan cuando crea una columna nueva, pero se pueden cambiar en la pestaña **Propiedades de columna** .
 
 6. Cuando haya terminado de agregar columnas, en el menú **Archivo**, seleccione **Guardar** _nombre de tabla_.
   

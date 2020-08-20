@@ -1,4 +1,5 @@
 ---
+description: sp_spaceused (Transact-SQL)
 title: sp_spaceused (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473817"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,11 +53,11 @@ Para [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] y [!INCLUDE[sspdw-md](../.
 Si no se especifica *objName* , se devuelven resultados para toda la base de datos.  
 *objName* es de tipo **nvarchar (776)** y su valor predeterminado es NULL.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]y [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] solo admiten objetos de base de datos y tabla.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] y [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] solo admiten objetos de base de datos y tabla.
   
-`[ @updateusage = ] 'updateusage'`Indica que se debe ejecutar DBCC UPDATEUSAGE para actualizar la información de uso del espacio. Cuando no se especifica *objName* , la instrucción se ejecuta en toda la base de datos; de lo contrario, la instrucción se ejecuta en *objName*. Los valores pueden ser **true** o **false**. *UPDATEUSAGE* es de tipo **VARCHAR (5)** y su valor predeterminado es **false**.  
+`[ @updateusage = ] 'updateusage'` Indica que se debe ejecutar DBCC UPDATEUSAGE para actualizar la información de uso del espacio. Cuando no se especifica *objName* , la instrucción se ejecuta en toda la base de datos; de lo contrario, la instrucción se ejecuta en *objName*. Los valores pueden ser **true** o **false**. *UPDATEUSAGE* es de tipo **VARCHAR (5)** y su valor predeterminado es **false**.  
   
-`[ @mode = ] 'mode'`Indica el ámbito de los resultados. En una tabla o base de datos extendida, el parámetro *mode* permite incluir o excluir la parte remota del objeto. Para obtener más información, vea [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+`[ @mode = ] 'mode'` Indica el ámbito de los resultados. En una tabla o base de datos extendida, el parámetro *mode* permite incluir o excluir la parte remota del objeto. Para obtener más información, vea [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  El argumento *mode* puede tener los valores siguientes:  
   
@@ -68,7 +69,7 @@ Si no se especifica *objName* , se devuelven resultados para toda la base de dat
   
  el *modo* es **VARCHAR (11)** y su valor predeterminado es **N'ALL '**.  
   
-`[ @oneresultset = ] oneresultset`Indica si se va a devolver un único conjunto de resultados. El argumento *oneresultset* puede tener los siguientes valores:  
+`[ @oneresultset = ] oneresultset` Indica si se va a devolver un único conjunto de resultados. El argumento *oneresultset* puede tener los siguientes valores:  
   
 |Value|Descripción|  
 |-----------|-----------------|  

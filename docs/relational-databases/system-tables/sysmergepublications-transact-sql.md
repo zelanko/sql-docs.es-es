@@ -1,4 +1,5 @@
 ---
+description: sysmergepublications (Transact-SQL)
 title: sysmergepublications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8443d522edc8eeddeea51c775d2d29e6286e84cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 51a23c71b99ff57cb9dda76dd65cfc25fcf4a097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473218"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,14 +39,14 @@ ms.locfileid: "85881387"
 |**políticas**|**int**|El período de retención para todo el conjunto de publicaciones, donde la unidad se indica mediante el valor de la columna **retention_period_unit** .|  
 |**publication_type**|**tinyint**|Indica si la publicación se filtra:<br /><br /> **0** = no filtrado.<br /><br /> **1** = filtrado.|  
 |**pubid**|**uniqueidentifier**|Número de identificación único para esta publicación. Se genera cuando se agrega la publicación.|  
-|**designmasterid**|**uniqueidentifier**|Reservado para uso futuro.|  
-|**parentId**|**uniqueidentifier**|Indica la publicación primaria a partir de la cual se creó la publicación del mismo nivel o subconjunto actual (utilizado en las topologías jerárquicas de publicación).|  
+|**designmasterid**|**uniqueidentifier**|Reservado para un uso futuro.|  
+|**parentid**|**uniqueidentifier**|Indica la publicación primaria a partir de la cual se creó la publicación del mismo nivel o subconjunto actual (utilizado en las topologías jerárquicas de publicación).|  
 |**sync_mode**|**tinyint**|Modo de sincronización de esta publicación:<br /><br /> **0** = nativo.<br /><br /> **1** = carácter.|  
 |**allow_push**|**int**|Indica si la publicación admite suscripciones de inserción.<br /><br /> **0** = no se permiten suscripciones de extracción.<br /><br /> **1** = se permiten suscripciones de extracción.|  
 |**allow_pull**|**int**|Indica si la publicación admite suscripciones extracción.<br /><br /> **0** = no se permiten suscripciones de extracción.<br /><br /> **1** = se permiten suscripciones de extracción.|  
 |**allow_anonymous**|**int**|Indica si la publicación admite suscripciones anónimas.<br /><br /> **0** = no se permiten suscripciones anónimas.<br /><br /> **1** = se permiten suscripciones anónimas.|  
 |**centralized_conflicts**|**int**|Indica si los registros de conflictos se almacenan en el publicador:<br /><br /> **0** = los registros de conflictos no se almacenan en el publicador.<br /><br /> **1** = los registros de conflictos se almacenan en el publicador.|  
-|**status**|**tinyint**|Reservado para uso futuro.|  
+|**status**|**tinyint**|Reservado para un uso futuro.|  
 |**snapshot_ready**|**tinyint**|Indica el estado de la instantánea de la publicación:<br /><br /> **0** = la instantánea no está lista para su uso.<br /><br /> **1** = la instantánea está lista para su uso.<br /><br /> **2** = se debe crear una nueva instantánea para esta publicación.|  
 |**enabled_for_internet**|**bit**|Indica si los archivos de sincronización de la publicación se exponen en Internet a través de FTP u otros servicios.<br /><br /> **0** = se puede tener acceso a los archivos de sincronización desde Internet.<br /><br /> **1** = no se puede tener acceso a los archivos de sincronización desde Internet.|  
 |**dynamic_filters**|**bit**|Indica si la publicación se filtra utilizando un filtro de fila con parámetros.<br /><br /> **0** = la publicación no está filtrada por filas.<br /><br /> **1** = la publicación está filtrada por filas.|  
@@ -86,11 +87,11 @@ ms.locfileid: "85881387"
 |**generation_leveling_threshold**|**int**|Especifica el número de cambios contenidos en una generación. Una generación es una colección de cambios que se entregan a un publicador o a un suscriptor.|  
 |**automatic_reinitialization_policy**|**bit**|Indica si se cargan los cambios desde el suscriptor antes de que se produzca una reinicialización automática.<br /><br /> **1** = los cambios se cargan desde el suscriptor antes de que se produzca una reinicialización automática.<br /><br /> **0** = los cambios no se cargan antes de una reinicialización automática.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
  [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

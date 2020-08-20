@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_start_collection_set (Transact-SQL)
 title: sp_syscollector_start_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56fa6b114d58512f9cdec9c3da2575539af0d03b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 949b62ea945a287e710b416f27de7f5fbfd2abca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473637"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,14 +44,14 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collection_set_id = ] collection_set_id`Es el identificador local único para el conjunto de recopilación. *collection_set_id* es de **tipo int** y su valor predeterminado es NULL. *collection_set_id* debe tener un valor si *el nombre* es NULL.  
+`[ @collection_set_id = ] collection_set_id` Es el identificador local único para el conjunto de recopilación. *collection_set_id* es de **tipo int** y su valor predeterminado es NULL. *collection_set_id* debe tener un valor si *el nombre* es NULL.  
   
-`[ @name = ] 'name'`Es el nombre del conjunto de recopilación. *Name* es de **tipo sysname y su** valor predeterminado es NULL. *el nombre* debe tener un valor si *collection_set_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre del conjunto de recopilación. *Name* es de **tipo sysname y su** valor predeterminado es NULL. *el nombre* debe tener un valor si *collection_set_id* es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_syscollector_create_collection_set se debe ejecutar en el contexto de la base de datos del sistema msdb y el Agente SQL Server debe estar habilitado.  
   
  Este procedimiento producirá un error cuando se ejecute con un conjunto de recopilación que no tenga una programación. Si el conjunto de recopilación no tiene una programación (porque su modo de recopilación está establecido en sin almacenamiento en caché, por ejemplo), use el [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) procedimiento almacenado para iniciar el conjunto de recopilación.  

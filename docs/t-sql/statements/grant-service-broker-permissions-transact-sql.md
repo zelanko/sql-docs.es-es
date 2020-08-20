@@ -1,4 +1,5 @@
 ---
+description: GRANT (permisos de Service Broker de Transact-SQL)
 title: GRANT (permisos de Service Broker de Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 72cc7e6fa6d87afe2fcce8ea6c695117d140af79
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 350787ea11245db4bbd720c9bbbcc97403c90231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472215"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (permisos de Service Broker de Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,19 +58,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Especifica un permiso que se puede conceder para un elemento protegible de Service Broker.  Se muestra a continuación.  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  Especifica el contrato para el que se concede el permiso. Es preciso usar el calificador de ámbito "::".  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Especifica el tipo de mensaje para el que se concede el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Especifica el enlace de servicio remoto para el que se concede el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Especifica la ruta para la que se concede el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
- SERVICE **::** _nombre_del_servicio_  
+ SERVICE **::**_nombre_del_servicio_  
  Especifica el servicio para el que se concede el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  

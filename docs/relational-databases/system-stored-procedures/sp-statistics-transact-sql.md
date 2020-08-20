@@ -1,4 +1,5 @@
 ---
+description: sp_statistics (Transact-SQL)
 title: sp_statistics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34d4b7763fd35b2012a90240a4d27fa27018f828
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: bd5a7fa747241cfbfa767219894ba937a63ce7c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473732"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,19 +47,19 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_name = ] 'table_name'`Especifica la tabla que se utiliza para devolver información del catálogo. *TABLE_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
+`[ @table_name = ] 'table_name'` Especifica la tabla que se utiliza para devolver información del catálogo. *TABLE_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ @table_owner = ] 'owner'`Es el nombre del propietario de la tabla que se utiliza para devolver información del catálogo. *table_owner* es de **tipo sysname y su**valor predeterminado es NULL. No se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
+`[ @table_owner = ] 'owner'` Es el nombre del propietario de la tabla que se utiliza para devolver información del catálogo. *table_owner* es de **tipo sysname y su**valor predeterminado es NULL. No se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual es propietario de una tabla en la que se especifica el nombre, se devuelven los índices de esa tabla. Si no se especifica *Owner* y el usuario actual no posee una tabla con el *nombre*especificado, este procedimiento busca una tabla con el *nombre* especificado que pertenezca al propietario de la base de datos. Si existe una, se devuelven los índices de esa tabla.  
   
-`[ @table_qualifier = ] 'qualifier'`Es el nombre del calificador de tabla. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @table_qualifier = ] 'qualifier'` Es el nombre del calificador de tabla. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
-`[ @index_name = ] 'index_name'`Es el nombre del índice. *index_name* es de **tipo sysname y su**valor predeterminado es%. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ @index_name = ] 'index_name'` Es el nombre del índice. *index_name* es de **tipo sysname y su**valor predeterminado es%. Se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ @is_unique = ] 'is_unique'`Indica si solo se devolverán índices únicos (si **Y**). *is_unique* es **Char (1)** y su valor predeterminado es **N**.  
+`[ @is_unique = ] 'is_unique'` Indica si solo se devolverán índices únicos (si **Y**). *is_unique* es **Char (1)** y su valor predeterminado es **N**.  
   
-`[ @accuracy = ] 'accuracy'`Es el nivel de cardinalidad y la precisión de la página de las estadísticas. la *precisión* es **Char (1)** y su valor predeterminado es **Q**. Especifique **E** para asegurarse de que las estadísticas se actualicen de modo que la cardinalidad y las páginas sean precisas.  
+`[ @accuracy = ] 'accuracy'` Es el nivel de cardinalidad y la precisión de la página de las estadísticas. la *precisión* es **Char (1)** y su valor predeterminado es **Q**. Especifique **E** para asegurarse de que las estadísticas se actualicen de modo que la cardinalidad y las páginas sean precisas.  
   
  El valor **E** (SQL_ENSURE) pide al controlador que recupere las estadísticas de forma incondicional.  
   
@@ -97,7 +98,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
-## <a name="example-sssdwfull-and-sspdw"></a>Ejemplo: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>Ejemplo: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el siguiente ejemplo se devuelve información acerca de la `DimEmployee` tabla.  
   
 ```sql  

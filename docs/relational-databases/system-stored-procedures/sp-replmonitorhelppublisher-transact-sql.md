@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelppublisher (Transact-SQL)
 title: sp_replmonitorhelppublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3edb7c7b7e2db67132b943bb0d37e04516c8981
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a2a37168d22bd931faa6f8033c847620b9606b11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473878"
 ---
 # <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +39,9 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador cuyo estado se está supervisando. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. Si el valor es NULL, se devuelve información para todos los publicadores que utilizan el distribuidor.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador cuyo estado se está supervisando. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. Si el valor es NULL, se devuelve información para todos los publicadores que utilizan el distribuidor.  
   
-`[ @refreshpolicy = ] refreshpolicy`Solo para uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Solo para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -55,7 +56,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_replmonitorhelppublisher** se usa con todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  

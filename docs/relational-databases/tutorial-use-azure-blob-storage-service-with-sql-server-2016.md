@@ -1,4 +1,5 @@
 ---
+description: 'Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016'
 title: 'Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016'
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020
@@ -14,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: baf78116ef5d200246a0da7f4f8ce5c8686d2426
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472960"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Usar el servicio Azure Blob Storage con SQL Server 2016
 
@@ -30,7 +31,7 @@ La compatibilidad de integración de SQL Server para el servicio Microsoft Azure
 
 En este tutorial se incluyen varias secciones en las que aprenderá a trabajar con archivos de datos de SQL Server en el servicio Microsoft Azure Blob Storage. Cada sección se centra en una tarea específica, y se deben completar por orden. En primer lugar, aprenderá a crear un nuevo contenedor en Blob Storage con una directiva de acceso almacenada y una firma de acceso compartido. Después, aprenderá a crear una credencial de SQL Server para integrar SQL Server con Azure Blob Storage. Luego, realizará una copia de seguridad de una base de datos en Blob Storage y la restaurará en una máquina virtual de Azure. Después usará la copia de seguridad del registro de transacciones de instantáneas de archivos de SQL Server 2016 para restaurar a un momento dado y a una nueva base de datos. Por último, en el tutorial se muestra el uso de funciones y procedimientos almacenados del sistema de metadatos para ayudarle a comprender y trabajar con copias de seguridad de instantáneas de archivos.
   
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Para completar este tutorial, debe estar familiarizado con los conceptos de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y con la sintaxis de T-SQL. Para usar este tutorial, necesita una cuenta de Azure Storage, SQL Server Management Studio (SSMS), acceso a una instancia de SQL Server local, acceso a una máquina virtual de Azure (VM) que ejecute SQL Server 2016 y una base de datos AdventureWorks2016. Además, la cuenta que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **db_backupoperator** con permisos **Modificar cualquier credencial**. 
 
@@ -42,7 +43,7 @@ Para completar este tutorial, debe estar familiarizado con los conceptos de copi
 - Descargue las [bases de datos de ejemplo de AdventureWorks2016](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Asigne la cuenta de usuario al rol [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) y conceda permisos [Modificar cualquier credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
 
-## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1\. Crear una directiva de acceso almacenada y un almacenamiento de acceso compartido
+## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1. Crear una directiva de acceso almacenada y un almacenamiento de acceso compartido
 
 En esta sección, usará un script de [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) para crear una firma de acceso compartido en un contenedor de blobs de Azure mediante una directiva de acceso almacenada.  
   
@@ -130,7 +131,7 @@ Para crear una directiva en el contenedor y generar una clave de firma de acceso
 3.  Cuando finalice el script, la instrucción CREATE CREDENTIAL estará en el Portapapeles para poder usarla en la siguiente sección.  
 
 
-## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2\. Crear una credencial de SQL Server con una firma de acceso compartido
+## <a name="2---create-a-sql-server-credential-using-a-shared-access-signature"></a>2. Crear una credencial de SQL Server con una firma de acceso compartido
 
 En esta sección, creará una credencial para almacenar la información de seguridad que SQL Server usará para escribir y leer desde el contenedor de Azure que ha creado en el paso anterior.  
   
@@ -175,7 +176,7 @@ Para crear una credencial de SQL Server, siga estos pasos:
   
 7.  Repita los pasos 5 y 6 para cualquier instancia de SQL Server adicional que quiere que tenga acceso al contenedor de Azure.  
 
-## <a name="3---database-backup-to-url"></a>3\. Realizar una copia de seguridad de base de datos en la dirección URL
+## <a name="3---database-backup-to-url"></a>3. Realizar una copia de seguridad de base de datos en la dirección URL
 
 En esta sección, hará una copia la base de datos AdventureWorks2016 en su instancia de SQL Server 2016 local en el contenedor de Azure que creó en la [sección 1](#1---create-stored-access-policy-and-shared-access-storage).
   
@@ -207,7 +208,7 @@ Para realizar una copia de seguridad de una base de datos en Blob Storage, siga 
    ![Conexión a la cuenta de Azure Storage](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/connect-to-azure-storage.png)
 
 
-## <a name="4----restore-database-to-virtual-machine-from-url"></a>4\. Restaurar la base de datos a la máquina virtual desde la dirección URL
+## <a name="4----restore-database-to-virtual-machine-from-url"></a>4. Restaurar la base de datos a la máquina virtual desde la dirección URL
 
 En esta sección, restaurará la base de datos AdventureWorks2016 en la instancia de SQL Server 2016 de la máquina virtual de Azure.
   
@@ -244,7 +245,7 @@ Para restaurar la base de datos de AdventureWorks2016 desde Azure Blob Storage e
   
    ![Archivos de datos dentro del contenedor en Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-## <a name="5---backup-database-using-file-snapshot-backup"></a>5\. Realizar una copia de seguridad de la base de datos mediante la copia de seguridad de instantáneas de archivos
+## <a name="5---backup-database-using-file-snapshot-backup"></a>5. Realizar una copia de seguridad de la base de datos mediante la copia de seguridad de instantáneas de archivos
 
 En esta sección, realizará una copia de seguridad de la base de datos AdventureWorks2016 en la máquina virtual de Azure mediante la copia de seguridad de instantáneas de archivos para realizar una copia de seguridad casi inmediata mediante instantáneas de Azure. Para obtener más información sobre las copias de seguridad de instantáneas de archivos, consulte [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
   
@@ -284,7 +285,7 @@ Para realizar una copia de seguridad de la base de datos AdventureWorks2016 medi
   
     ![Copia de seguridad de instantáneas en Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
-## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6\. Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos
+## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6. Generar el registro de actividades y copias de seguridad mediante la copia de seguridad de instantáneas de archivos
 
 En esta sección, va a generar actividad en la base de datos AdventureWorks2016 y, periódicamente, va a crear copias de seguridad del registro de transacciones mediante copias de seguridad de instantáneas de archivos. Para obtener más información sobre las copias de seguridad de instantáneas de archivos, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -350,7 +351,7 @@ Para generar actividad en la base de datos AdventureWorks2016 y crear periódica
   
     ![Varias instantáneas en el contenedor de Azure](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
-## <a name="7---restore-a-database-to-a-point-in-time"></a>7\. Restaurar una base de datos a un momento dado
+## <a name="7---restore-a-database-to-a-point-in-time"></a>7. Restaurar una base de datos a un momento dado
 
 En esta sección, restaurará la base de datos AdventureWorks2016 a un momento dado entre dos de las copias de seguridad del registro de transacciones.  
   
@@ -389,7 +390,7 @@ Para restaurar una base de datos a un momento dado a partir de conjuntos de copi
   
     ![18-thousand-rows.JPG](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/18-thousand-rows.png)
 
-## <a name="8----restore-as-new-database-from-log-backup"></a>8\. Restaurar como una base de datos nueva desde una copia de seguridad de registros
+## <a name="8----restore-as-new-database-from-log-backup"></a>8. Restaurar como una base de datos nueva desde una copia de seguridad de registros
 
 En esta sección, restaurará la base de datos AdventureWorks2016 como una base de datos nueva desde una copia de seguridad del registro de transacciones de instantáneas de archivos.  
   
@@ -423,7 +424,7 @@ Para restaurar una base de datos a una base de datos nueva desde una copia de se
   
     ![Contenedor de Azure que muestra los archivos de datos y de registro para la nueva base de datos](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
-## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9\. Administrar conjuntos de copia de seguridad y copias de seguridad de instantáneas de archivos
+## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9. Administrar conjuntos de copia de seguridad y copias de seguridad de instantáneas de archivos
 
 En esta lección, eliminará un conjunto de copia de seguridad mediante el procedimiento almacenado del sistema [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md). Este procedimiento almacenado del sistema elimina el archivo de copia de seguridad y el archivo de instantánea de cada archivo de base de datos asociado a este conjunto de copia de seguridad.  
   
@@ -481,7 +482,7 @@ Para eliminar el grupo de recursos, ejecute el siguiente código de PowerShell:
 ## <a name="see-also"></a>Consulte también
 
 [Archivos de datos de SQL Server en Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Copias de seguridad de instantáneas de archivo para archivos de base de datos en Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [Copia de seguridad en URL de SQL Server](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Creación de un contenedor](https://msdn.microsoft.com/library/azure/dd179468.aspx)  

@@ -1,4 +1,5 @@
 ---
+description: sp_stop_job (Transact-SQL)
 title: sp_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2314cec4cbb66893eb77ed6c8b025355c319de71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473693"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'`Nombre del trabajo que se va a detener. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo que se va a detener. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @job_id = ] job_id`Número de identificación del trabajo que se va a detener. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` Número de identificación del trabajo que se va a detener. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @originating_server = ] 'master_server'`Nombre del servidor maestro. Si se especifica, se detienen todos los trabajos multiservidor. *master_server* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Especifique este parámetro solo cuando llame a **sp_stop_job** en un servidor de destino.  
+`[ @originating_server = ] 'master_server'` Nombre del servidor maestro. Si se especifica, se detienen todos los trabajos multiservidor. *master_server* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Especifique este parámetro solo cuando llame a **sp_stop_job** en un servidor de destino.  
   
 > [!NOTE]  
 >  Solo se puede especificar uno de los tres primeros parámetros.  
   
-`[ @server_name = ] 'target_server'`Nombre del servidor de destino específico en el que se va a detener un trabajo multiservidor. *target_server* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Especifique este parámetro solo cuando llame a **sp_stop_job** en un servidor maestro para un trabajo multiservidor.  
+`[ @server_name = ] 'target_server'` Nombre del servidor de destino específico en el que se va a detener un trabajo multiservidor. *target_server* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Especifique este parámetro solo cuando llame a **sp_stop_job** en un servidor maestro para un trabajo multiservidor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -92,10 +93,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_delete_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_start_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_update_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_delete_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_start_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [sp_update_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

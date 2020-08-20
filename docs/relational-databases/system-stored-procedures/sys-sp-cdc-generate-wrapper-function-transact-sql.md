@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 title: Sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68dbfaed63677a7d64c489646592fe35745ff3b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7f54e99cd49c487dba0f008661da8a01d4efb837
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473446"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,12 +68,12 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Tipo de columna|Descripción|  
+|Nombre de la columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar (145)**|Nombre de la función generada.|  
 |**create_script**|**nvarchar(max)**|Es el script que crea la función de contenedor de la instancia de captura.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El script que crea la función para contener la consulta de todos los cambios para una instancia de captura siempre se genera. Si la instancia de captura admite consultas de cambios de red, el script para generar un contenedor para esta consulta también se genera.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,4 +1,5 @@
 ---
+description: 'Lección 3-3: Prueba del paquete del tutorial de la lección 3'
 title: 'Paso 3: Prueba del paquete del tutorial de la lección 3 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/04/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b8a159e1f1e70fefed181f6f47715201731b63dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 25536606b345093c0723c9b547713d9223dadbb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472016"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>Lección 3-3: Prueba del paquete del tutorial de la lección 3
 

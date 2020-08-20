@@ -1,4 +1,5 @@
 ---
+description: + Positivo MDX
 title: + Positivo (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7b97ebb64b5287249c39797629ff32a221380858
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcd57bee9596c51d279ec15b15804023e789f8d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471697"
 ---
 # <a name="-positive-mdx"></a>+ (Positivo) (MDX)
 

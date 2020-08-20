@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_log_sp (Transact-SQL)
 title: sysmail_delete_log_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae70fc03530ac80596ead5fe6e2e1927e323c5c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473383"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +42,14 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @logged_before = ] 'logged_before'`Elimina las entradas hasta la fecha y hora especificadas por el argumento *logged_before* . *logged_before* es de **tipo DateTime** y su valor predeterminado es NULL. NULL indica todas las fechas.  
+`[ @logged_before = ] 'logged_before'` Elimina las entradas hasta la fecha y hora especificadas por el argumento *logged_before* . *logged_before* es de **tipo DateTime** y su valor predeterminado es NULL. NULL indica todas las fechas.  
   
-`[ @event_type = ] 'event_type'`Elimina las entradas de registro del tipo especificado como *event_type*. *event_type* es de tipo **VARCHAR (15)** y no tiene ningún valor predeterminado. Las entradas válidas son **Success**, **Warning**, **error**e **informativo**. NULL indica todos los tipos de evento.  
+`[ @event_type = ] 'event_type'` Elimina las entradas de registro del tipo especificado como *event_type*. *event_type* es de tipo **VARCHAR (15)** y no tiene ningún valor predeterminado. Las entradas válidas son **Success**, **Warning**, **error**e **informativo**. NULL indica todos los tipos de evento.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use el **sysmail_delete_log_sp** procedimiento almacenado para eliminar de forma permanente las entradas del registro de correo electrónico de base de datos. Un argumento opcional permite eliminar solo los registros antiguos indicando la fecha y la hora. Se eliminarán los eventos anteriores a ese argumento. Un argumento opcional permite eliminar solo los eventos de un tipo determinado, especificado como el argumento **event_type** .  
   
  Al eliminar entradas del registro del Correo electrónico de base de datos no se eliminan las entradas de mensajes de correo electrónico de las tablas del Correo electrónico de base de datos. Utilice [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) para eliminar el correo electrónico de las tablas de correo electrónico de base de datos.  
@@ -85,8 +86,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sysmail_event_log &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_delete_mailitems_sp &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
+ [sysmail_event_log &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_delete_mailitems_sp &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
  [Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

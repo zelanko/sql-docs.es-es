@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 title: Sys. sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d011be97c90f156b8cd26cfb8fcc85963b75161
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: e189cd4e7a5ec9f488cce78ee6cc159c8700a463
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473412"
 ---
 # <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +39,12 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @new_collection_value= *valor*  
+ @new_collection_value = *valor*  
  Determina si la recopilación de estadísticas del nivel de procedimiento está activada (1) o desactivada (0).  
   
- @new_collection_valuese establece en cero cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o se inicia la base de datos.  
+ @new_collection_value se establece en cero cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o se inicia la base de datos.  
   
- @old_collection_value= *valor*  
+ @old_collection_value = *valor*  
  Devuelve el estado actual.  
   
 ## <a name="return-code"></a>Código de retorno  
@@ -53,7 +54,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  Requiere la pertenencia al rol fijo de sysadmin.  
   
 ## <a name="code-samples"></a>Ejemplos de código  
- Para establecer @new_collection_value y consultar el valor de@new_collection_value:  
+ Para establecer @new_collection_value y consultar el valor de @new_collection_value:  
   
 ```  
 exec [sys].[sp_xtp_control_proc_exec_stats] @new_collection_value = 1  

@@ -1,4 +1,5 @@
 ---
+description: STMLineFromText (tipo de datos geometry)
 title: STMLineFromText (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 70a1b678578612265491803b748db95ba9e3ac96
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 25aaadff2928c1ed0e20aac626305621c98e9159
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472443"
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *texto_etiquetado_de_cadena_de_varias_líneas*  
- Es la representación WKT de la instancia de **geometryMultiLineString** que se quiere devolver. *texto_etiquetado_de_cadena_de_varias_líneas* es una expresión **nvarchar(max)** .  
+ Es la representación WKT de la instancia de **geometryMultiLineString** que se quiere devolver. *texto_etiquetado_de_cadena_de_varias_líneas* es una expresión **nvarchar(max)**.  
   
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryMultiLineString** que se quiere devolver.  

@@ -1,4 +1,5 @@
 ---
+description: MSmerge_history (Transact-SQL)
 title: MSmerge_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a67943dd52f12fac1d7afa3d25e58ccaa85d79f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce23db06fa76ff5ff3b5fe71fe9a11d87be36b75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473210"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,12 +34,12 @@ ms.locfileid: "85889791"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|El Id. del trabajo del Agente de mezcla.|  
 |**agent_id**|**int**|El Id. del Agente de mezcla.|  
-|**comentarios**|**nvarchar(255)**|El texto del mensaje.|  
+|**comentarios**|**nvarchar(255)**|Texto del mensaje.|  
 |**error_id**|**int**|IDENTIFICADOR de un error en la tabla del sistema [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) .|  
 |**timestamp**|**timestamp**|La columna de marca de tiempo de esta tabla.|  
 |**updatable_row**|**bit**|Se establece en **1** si se puede sobrescribir la fila de historial.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

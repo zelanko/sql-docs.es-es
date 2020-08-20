@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_profileaccount_sp (Transact-SQL)
 title: sysmail_update_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: af6578c98acfdd9fe5dea664ecea4cf21aa74f85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473357"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id`IDENTIFICADOR del perfil que se va a actualizar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar el *profile_id* o el *profile_name* .  
+`[ @profile_id = ] profile_id` IDENTIFICADOR del perfil que se va a actualizar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar el *profile_id* o el *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Nombre del perfil que se va a actualizar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar el *profile_id* o el *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Nombre del perfil que se va a actualizar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar el *profile_id* o el *profile_name* .  
   
-`[ @account_id = ] account_id`IDENTIFICADOR de la cuenta que se va a actualizar. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar el *ACCOUNT_ID* o el *account_name* .  
+`[ @account_id = ] account_id` IDENTIFICADOR de la cuenta que se va a actualizar. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar el *ACCOUNT_ID* o el *account_name* .  
   
-`[ @account_name = ] 'account_name'`Nombre de la cuenta que se va a actualizar. *account_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar el *ACCOUNT_ID* o el *account_name* .  
+`[ @account_name = ] 'account_name'` Nombre de la cuenta que se va a actualizar. *account_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar el *ACCOUNT_ID* o el *account_name* .  
   
-`[ @sequence_number = ] sequence_number`El nuevo número de secuencia de la cuenta. *sequence_number* es de **tipo int**y no tiene ningún valor predeterminado. El número de secuencia determina el orden en que las cuentas se utilizan en el perfil.  
+`[ @sequence_number = ] sequence_number` El nuevo número de secuencia de la cuenta. *sequence_number* es de **tipo int**y no tiene ningún valor predeterminado. El número de secuencia determina el orden en que las cuentas se utilizan en el perfil.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -84,6 +85,6 @@ EXECUTE msdb.dbo.sysmail_update_profileaccount_sp
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
  [Creación de una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Correo electrónico de base de datos objetos de configuración](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

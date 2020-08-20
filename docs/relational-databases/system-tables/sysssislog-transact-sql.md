@@ -1,4 +1,5 @@
 ---
+description: sysssislog (Transact-SQL)
 title: sysssislog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 264f6495c12a350983af22c1bef325278238a514
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aef51cb3297cd83b68fa42c71dcd993fb418830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473113"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85889260"
   Contiene una fila por cada entrada de registro generada por los paquetes o sus tareas y contenedores en tiempo de ejecución. Esta tabla se crea en la base de datos msdb al instalar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si configura el registro para registrar en otra base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se crea una tabla sysssislog con este formato en la base de datos especificada.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]escribe entradas de registro en esta tabla **solo** cuando los paquetes usan el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de registro.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] escribe entradas de registro en esta tabla **solo** cuando los paquetes usan el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de registro.  
   
   
 |Nombre de la columna|Tipo de datos|Descripción|  
@@ -45,7 +46,7 @@ ms.locfileid: "85889260"
 |starttime|**datetime**|La hora a la que comenzó la ejecución del paquete.|  
 |endtime|**datetime**|Hora en que se completó el paquete.<br /><br /> Esta característica no está implementada. El valor de la columna endtime siempre es igual que el de la columna starttime.|  
 |datacode|**int**|Valor entero opcional que normalmente indica el resultado de ejecutar el contenedor o la tarea.|  
-|databytes|**imagen**|Matriz de bytes opcional que contiene información adicional.|  
+|databytes|**image**|Matriz de bytes opcional que contiene información adicional.|  
 |message|**nvarchar**|Descripción del evento e información asociada a dicho evento.|  
   
 ## <a name="see-also"></a>Consulte también  

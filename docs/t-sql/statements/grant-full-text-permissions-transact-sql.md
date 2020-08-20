@@ -1,4 +1,5 @@
 ---
+description: GRANT (permisos de texto completo de Transact-SQL)
 title: GRANT (permisos de texto completo de Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/17/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa4de06e0e860fd88d682a582110d6b46527414d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e466840015f0b5d82a8e6430434239db6655ee81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472243"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT (permisos de texto completo de Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,10 +56,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Es el nombre de un permiso. Las asignaciones válidas de permisos a elementos protegibles se describen en la sección "Comentarios", más adelante en este tema.  
   
- ON FULLTEXT CATALOG **::** _nombre_catálogo_de_texto_completo_  
+ ON FULLTEXT CATALOG **::**_nombre_catálogo_de_texto_completo_  
  Especifica el catálogo de texto completo para el que se concede el permiso. El calificador de ámbito **::** es obligatorio.  
   
- ON FULLTEXT STOPLIST **::** _nombre_de_la_lista_de_palabras_irrelevantes_de_texto_completo_  
+ ON FULLTEXT STOPLIST **::**_nombre_de_la_lista_de_palabras_irrelevantes_de_texto_completo_  
  Especifica la lista de palabras irrelevantes de texto completo en la que se concede el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  

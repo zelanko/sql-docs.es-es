@@ -1,4 +1,5 @@
 ---
+description: ToString (tipo de datos geography)
 title: ToString (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1bec7db7fd26068276ff481619c57c99948a73c1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 491c548960fde425b8f2c021d69dce94b95a7b21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472591"
 ---
 # <a name="tostring-geography-data-type"></a>ToString (tipo de datos geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86555787"
   
  Tipo de valor devuelto de CLR: **SqlString**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este método devuelve la cadena "Null" cuando se le llama con instancias NULL. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], el conjunto de resultados posibles en el servidor se ha ampliado a las instancias de **FullGlobe**. Este método devolverá el mismo valor que `AsTextZM()`.  
   
  Este método no es preciso.  
@@ -58,7 +59,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [AsTextZM &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   

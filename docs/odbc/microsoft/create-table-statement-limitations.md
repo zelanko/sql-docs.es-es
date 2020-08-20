@@ -1,4 +1,5 @@
 ---
+description: Crear tabla instrucción limitaciones
 title: Limitaciones de la instrucción CREATE TABLE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a83acb061cf8192dff1c6adede349f49a0b0bbdb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a903484663eed886f87d983aa027e4cf5b568408
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471627"
 ---
 # <a name="create-table-statement-limitations"></a>Crear tabla instrucción limitaciones
 Cuando se utiliza Microsoft Access, Microsoft Excel o Paradoxdriver, y no se especifica la longitud de una columna de texto o binaria (o se especifica como 0), la longitud de la columna se establecerá en 255.  

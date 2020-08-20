@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 title: Sys. sp_xtp_checkpoint_force_garbage_collection (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df25b33677d4494d32bd60bb55b5c60791bcad30
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9073ebd53ea3b2bb87719b92132e2e4e1e38caf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473427"
 ---
 # <a name="syssp_xtp_checkpoint_force_garbage_collection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

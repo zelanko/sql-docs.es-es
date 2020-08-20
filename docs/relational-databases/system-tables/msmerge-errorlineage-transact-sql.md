@@ -1,4 +1,5 @@
 ---
+description: MSmerge_errorlineage (Transact-SQL)
 title: MSmerge_errorlineage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6502c32f47668cbd2ce78ec91296ce61767a95f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf6dca4ed2e67382b9736d0883657bbe46961007
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473233"
 ---
 # <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85889799"
 |**rowguid**|**uniqueidentifier**|Identificador de fila.|  
 |**DMX**|**varbinary (501)**|Almacena un historial de los suscriptores y publicadores que han efectuado actualizaciones en alguna fila. Se utiliza para detectar y solucionar situaciones de conflicto.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

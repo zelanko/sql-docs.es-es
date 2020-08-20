@@ -1,4 +1,5 @@
 ---
+description: 'Lección 3-2: Ejecutar el Asistente para instalar paquetes'
 title: 'Paso 2: Ejecutar el Asistente para instalar paquetes | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea753e6d74ae5073936cbb98bc0eed716f224dd7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f30bc07edc2d6d513eb9078e1758caf99a2822cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472067"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Lección 3-2: Ejecutar el Asistente para instalar paquetes
 
@@ -50,7 +51,7 @@ En una lección anterior, modificó los paquetes del tutorial para utilizar conf
   
 9. En la página Seleccionar la carpeta de instalación, haga clic en **Examinar**.  
   
-10. En el cuadro de diálogo **Buscar carpeta** , expanda **Mi PC** y, después, haga clic en **Disco local (C:)** .  
+10. En el cuadro de diálogo **Buscar carpeta**, expanda **Mi PC** y, a continuación, haga clic en **Disco local (C:)**.  
   
 11. Haga clic en **Crear nueva carpeta** y reemplace el nombre predeterminado de la nueva carpeta, **Nueva carpeta**, por **DeploymentTutorialInstall**.  
   
@@ -103,7 +104,7 @@ En una lección anterior, modificó los paquetes del tutorial para utilizar conf
     > Se crea un archivo de registro temporal para utilizarlo en la validación de paquetes. Este archivo no se usa cuando se ejecuta el paquete.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 3: Probar los paquetes implementados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[Paso 3: Prueba de los paquetes implementados](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a>Consulte también  
 [Servicio Integration Services &#40;servicio SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

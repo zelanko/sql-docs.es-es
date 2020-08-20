@@ -1,4 +1,5 @@
 ---
+description: sysreplicationalerts (Transact-SQL)
 title: sysreplicationalerts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d46b3d8fa816a1c980c1486b233232c46c90df65
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f364d00a57c5b31020689ed3a002300e073d429d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473117"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

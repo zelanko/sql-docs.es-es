@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 title: Sys. sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f451e3d6083a32db87c7e453413cf6b318e739f
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0963985b2f6f83d9be8c19be35fd16b0451dda8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473425"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -43,17 +44,17 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @new_collection_value= *valor*  
+ @new_collection_value = *valor*  
  Determina si la recopilación de estadísticas del nivel de procedimiento está activada (1) o desactivada (0).  
   
- @new_collection_valuese establece en cero cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia.  
+ @new_collection_value se establece en cero cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia.  
   
- @database_id= = *database_id*, @xtp_object_id = *procedure_id*  
+ @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
  El identificador de la base de datos y el identificador de objeto para el procedimiento almacenado compilado de forma nativa. Si la recopilación de estadísticas está habilitada para la instancia ([Sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), se recopilan las estadísticas de un procedimiento almacenado compilado de forma nativa. Al desactivar la recopilación de estadísticas en la instancia, no se desactiva la recopilación de estadísticas para procedimientos almacenados compilados de forma nativa individuales.  
   
- Use [Sys. databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [Sys. Procedures &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)o OBJECT_ID &#40;de [Transact-SQL](../../t-sql/functions/object-id-transact-sql.md) para obtener los identificadores de una base de datos y un procedimiento almacenado.  
+ Use [Sys. databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [Sys. Procedures &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)o OBJECT_ID &#40;de [Transact-SQL ](../../t-sql/functions/object-id-transact-sql.md) para obtener los identificadores de una base de datos y un procedimiento almacenado.  
   
- @old_collection_value= *valor*  
+ @old_collection_value = *valor*  
  Devuelve el estado actual.  
   
 ## <a name="return-code"></a>Código de retorno  

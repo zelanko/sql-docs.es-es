@@ -1,4 +1,5 @@
 ---
+description: Modelo de Cursor compatibles (el controlador ODBC de Visual FoxPro)
 title: Modelo de cursor compatible (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 789d55a894e66c87fc5773856375757947835b35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471537"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modelo de Cursor compatibles (el controlador ODBC de Visual FoxPro)
 El controlador ODBC de Visual FoxPro es compatible con los cursores de *bloque* (*conjunto de filas*) y *estáticos* . Los cursores estáticos son compatibles con cualquier controlador que se ajuste al cumplimiento de ODBC de nivel 1. El controlador no es compatible con los cursores dinámicos, controlados por conjunto de claves o mixtos (Keyset y dinámicos).  

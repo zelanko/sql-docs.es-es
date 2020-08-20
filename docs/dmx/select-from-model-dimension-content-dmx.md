@@ -1,4 +1,5 @@
 ---
+description: Seleccione del &lt; modelo &gt; . DIMENSION_CONTENT (DMX)
 title: Seleccione del &lt; modelo &gt; . DIMENSION_CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d16b8b01251be6703350a1a64bb9cdd2bdc5cadb
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e3d7bbfcce023ce994f71a5897a1cbf4b0095419
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472039"
 ---
 # <a name="select-from-ltmodelgtdimension_content-dmx"></a>Seleccione del &lt; modelo &gt; . DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

@@ -1,4 +1,5 @@
 ---
+description: sysmergesubscriptions (Transact-SQL)
 title: sysmergesubscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ed8e5b745c98bf6559ab0513e79205e8f9de458
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ffb85633adfe9b8aceb05a5188e67e951d6be190
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881343"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473179"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "85881343"
 |subscriber_number|**int**|Exclusivamente para uso interno.|  
 |last_makegeneration_datetime|**datetime**|Última **fecha y hora** que el proceso makegeneration ejecutó para el publicador. Para obtener más información, consulte el parámetro-MakeGenerationInterval en [replication agente de mezcla](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_account_sp (Transact-SQL)
 title: sysmail_add_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3b97b134e424cb46b98b09001a86f66bb5e8c4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 810e0f32b5a77fa60e2c32c4b9b7259d60fc51d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473380"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,36 +52,36 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @account_name = ] 'account_name'`Nombre de la cuenta que se va a agregar. *account_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @account_name = ] 'account_name'` Nombre de la cuenta que se va a agregar. *account_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @email_address = ] 'email_address'`Dirección de correo electrónico de la que se va a enviar el mensaje. Esta dirección debe ser una dirección de correo electrónico de Internet. *EMAIL_ADDRESS* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado. Por ejemplo, una cuenta para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el agente puede enviar correo electrónico desde la dirección **SqlAgent \@ Adventure-Works.com**.  
+`[ @email_address = ] 'email_address'` Dirección de correo electrónico de la que se va a enviar el mensaje. Esta dirección debe ser una dirección de correo electrónico de Internet. *EMAIL_ADDRESS* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado. Por ejemplo, una cuenta para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el agente puede enviar correo electrónico desde la dirección **SqlAgent \@ Adventure-Works.com**.  
   
-`[ @display_name = ] 'display_name'`Nombre para mostrar que se va a usar en los mensajes de correo electrónico de esta cuenta. *display_name* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Por ejemplo, una cuenta del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente puede mostrar el nombre **Agente SQL Server Automated Mailer** en los mensajes de correo electrónico.  
+`[ @display_name = ] 'display_name'` Nombre para mostrar que se va a usar en los mensajes de correo electrónico de esta cuenta. *display_name* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Por ejemplo, una cuenta del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente puede mostrar el nombre **Agente SQL Server Automated Mailer** en los mensajes de correo electrónico.  
   
-`[ @replyto_address = ] 'replyto_address'`La dirección a la que se envían las respuestas a los mensajes de esta cuenta. *replyto_address* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Por ejemplo, las respuestas a una cuenta del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente pueden dirigirse al administrador de la base de datos, **danw \@ Adventure-Works.com**.  
+`[ @replyto_address = ] 'replyto_address'` La dirección a la que se envían las respuestas a los mensajes de esta cuenta. *replyto_address* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Por ejemplo, las respuestas a una cuenta del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente pueden dirigirse al administrador de la base de datos, **danw \@ Adventure-Works.com**.  
   
-`[ @description = ] 'description'`Es una descripción de la cuenta. la *Descripción* es de tipo **nvarchar (256)** y su valor predeterminado es NULL.  
+`[ @description = ] 'description'` Es una descripción de la cuenta. la *Descripción* es de tipo **nvarchar (256)** y su valor predeterminado es NULL.  
   
-`[ @mailserver_name = ] 'server_name'`El nombre o la dirección IP del servidor de correo SMTP que se va a usar para esta cuenta. El equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser capaz de resolver la *SERVER_NAME* en una dirección IP. *SERVER_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @mailserver_name = ] 'server_name'` El nombre o la dirección IP del servidor de correo SMTP que se va a usar para esta cuenta. El equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser capaz de resolver la *SERVER_NAME* en una dirección IP. *SERVER_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @mailserver_type = ] 'server_type'`El tipo de servidor de correo electrónico. *server_type* es de **tipo sysname y su**valor predeterminado es **"SMTP"**.  
+`[ @mailserver_type = ] 'server_type'` El tipo de servidor de correo electrónico. *server_type* es de **tipo sysname y su**valor predeterminado es **"SMTP"**.  
   
-`[ @port = ] port_number`El número de puerto del servidor de correo electrónico. *port_number* es de **tipo int**y su valor predeterminado es 25.  
+`[ @port = ] port_number` El número de puerto del servidor de correo electrónico. *port_number* es de **tipo int**y su valor predeterminado es 25.  
   
-`[ @username = ] 'username'`El nombre de usuario que se utilizará para iniciar sesión en el servidor de correo electrónico. *username* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Cuando este parámetro es NULL, el Correo electrónico de base de datos no utiliza la autenticación para esta cuenta. Si el servidor de correo no requiere autenticación, utilice NULL para el nombre de usuario.  
+`[ @username = ] 'username'` El nombre de usuario que se utilizará para iniciar sesión en el servidor de correo electrónico. *username* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Cuando este parámetro es NULL, el Correo electrónico de base de datos no utiliza la autenticación para esta cuenta. Si el servidor de correo no requiere autenticación, utilice NULL para el nombre de usuario.  
   
-`[ @password = ] 'password'`Contraseña que se va a usar para iniciar sesión en el servidor de correo electrónico. *password* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. No es necesario proporcionar una contraseña, a menos que se especifique un nombre de usuario.  
+`[ @password = ] 'password'` Contraseña que se va a usar para iniciar sesión en el servidor de correo electrónico. *password* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. No es necesario proporcionar una contraseña, a menos que se especifique un nombre de usuario.  
   
-`[ @use_default_credentials = ] use_default_credentials`Especifica si se debe enviar el correo al servidor SMTP con las credenciales de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** es de bit y su valor predeterminado es 0. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cuando este parámetro es 0, Correo electrónico de base de datos envía los parámetros de ** \@ nombre de usuario** y ** \@ contraseña** si están presentes; de lo contrario, envía correo sin parámetros de ** \@ nombre de usuario** y ** \@ contraseña** .  
+`[ @use_default_credentials = ] use_default_credentials` Especifica si se debe enviar el correo al servidor SMTP con las credenciales de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** es de bit y su valor predeterminado es 0. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cuando este parámetro es 0, Correo electrónico de base de datos envía los parámetros de ** \@ nombre de usuario** y ** \@ contraseña** si están presentes; de lo contrario, envía correo sin parámetros de ** \@ nombre de usuario** y ** \@ contraseña** .  
   
-`[ @enable_ssl = ] enable_ssl`Especifica si Correo electrónico de base de datos cifra la comunicación mediante Capa de sockets seguros. **Enable_ssl** es de bit y su valor predeterminado es 0.  
+`[ @enable_ssl = ] enable_ssl` Especifica si Correo electrónico de base de datos cifra la comunicación mediante Capa de sockets seguros. **Enable_ssl** es de bit y su valor predeterminado es 0.  
   
-`[ @account_id = ] account_id OUTPUT`Devuelve el identificador de cuenta para la nueva cuenta. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @account_id = ] account_id OUTPUT` Devuelve el identificador de cuenta para la nueva cuenta. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Correo electrónico de base de datos proporciona parámetros independientes para ** \@ EMAIL_ADDRESS**, ** \@ display_name**y ** \@ replyto_address**. El ** \@ EMAIL_ADDRESS** parámetro es la dirección desde la que se envía el mensaje. El parámetro ** \@ display_name** es el nombre que se muestra en el campo **de:** del mensaje de correo electrónico. El ** \@ replyto_address** parámetro es la dirección a la que se enviarán las respuestas al mensaje de correo electrónico. Por ejemplo, una cuenta utilizada para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede enviar mensajes de correo electrónico desde una dirección de correo que solo se utiliza para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los mensajes procedentes de esa dirección deberían mostrar un nombre descriptivo, de manera que los destinatarios puedan determinar fácilmente que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envió el mensaje. Si un destinatario responde al mensaje, la respuesta debería dirigirse al administrador de base de datos en lugar de a la dirección utilizada por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este escenario, la cuenta utiliza **SqlAgent@Adventure-Works.com** como dirección de correo electrónico. El nombre para mostrar está establecido en **Agente SQL Server Automated Mailer**. La cuenta usa **danw@Adventure-Works.com** como dirección de respuesta, por lo que las respuestas a los mensajes enviados desde esta cuenta van al administrador de bases de datos en lugar de a la dirección de correo electrónico del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. Al proporcionar valores independientes para estos tres parámetros, el Correo electrónico de base de datos le permite configurar los mensajes en función de sus necesidades.  
   
  El parámetro ** \@ mailserver_type** admite el valor **' SMTP '**.  
@@ -107,6 +108,6 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
 ## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
  [Creación de una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_showpendingchanges (Transact-SQL)
 title: sp_showpendingchanges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f6d22fb18989022676eb06751d583383a14d783
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 324f3d5b8b1e70d41e276fd0b0f909b27a937e81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473776"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @destination_server = ] 'destination_server'`Es el nombre del servidor donde se aplican los cambios replicados. *destination_server* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @destination_server = ] 'destination_server'` Es el nombre del servidor donde se aplican los cambios replicados. *destination_server* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica la *publicación* , los resultados solo se limitan a la publicación especificada.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica la *publicación* , los resultados solo se limitan a la publicación especificada.  
   
-`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *article* , los resultados solo se limitan al artículo especificado.  
+`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *article* , los resultados solo se limitan al artículo especificado.  
   
-`[ @show_rows = ] 'show_rows'`Especifica si el conjunto de resultados contiene información más específica sobre los cambios pendientes, con un valor predeterminado de **0**. Si se especifica el valor **1** , el conjunto de resultados contiene las columnas is_delete y ROWGUID.  
+`[ @show_rows = ] 'show_rows'` Especifica si el conjunto de resultados contiene información más específica sobre los cambios pendientes, con un valor predeterminado de **0**. Si se especifica el valor **1** , el conjunto de resultados contiene las columnas is_delete y ROWGUID.  
   
 ## <a name="result-set"></a>Tipo de cursor  
   
@@ -68,7 +69,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_showpendingchanges se utiliza en la replicación de mezcla.  
   
  sp_showpendingchanges se utiliza durante la solución de problemas de la replicación de mezcla.  

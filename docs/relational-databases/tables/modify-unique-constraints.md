@@ -1,4 +1,5 @@
 ---
+description: Modificar restricciones UNIQUE
 title: Modificación de restricciones UNIQUE | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2016
@@ -16,12 +17,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca363d76f8c2bc624ad0e8889d10f2dd4883685e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5df4a0e197a55262afb57382ad1145194b66d3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473054"
 ---
 # <a name="modify-unique-constraints"></a>Modificar restricciones UNIQUE
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -59,14 +60,14 @@ ms.locfileid: "86007108"
   
 4.  Complete una de las acciones descritas en la tabla siguiente:  
   
-    |A|Siga estos pasos|  
+    |En|Siga estos pasos|  
     |--------|------------------------|  
-    |Cambiar las columnas a las que está asociada la restricción|1) En la cuadrícula situada debajo de **(General)** , haga clic en **Columnas** y después en los puntos suspensivos **(...)** situados a la derecha de la propiedad.<br /><br /> 2) En el cuadro de diálogo **Columnas de índice** , especifique la nueva columna o criterio de ordenación (o ambos) del índice.|  
+    |Cambiar las columnas a las que está asociada la restricción|1) En la cuadrícula situada debajo de **(General)**, haga clic en **Columnas** y después en los puntos suspensivos **(...)** situados a la derecha de la propiedad.<br /><br /> 2) En el cuadro de diálogo **Columnas de índice** , especifique la nueva columna o criterio de ordenación (o ambos) del índice.|  
     |Cambiar el nombre de la restricción|En la cuadrícula situada debajo de **Identidad**, escriba un nuevo nombre en el cuadro **Nombre** . Asegúrese de que el nuevo nombre no esté duplicado en la lista **Clave principal o única, o índice seleccionado** .|  
     |Establecer la opción de índice clúster|En la cuadrícula situada debajo de **Diseñador de tablas**, seleccione **Crear como CLUSTERED** y, en el menú desplegable, elija Sí para crear un índice agrupado o No para crear un índice no agrupado. Solo puede existir un índice clúster por tabla. Si ya existe un índice clúster en esta tabla, deberá desactivar esta configuración en el índice original.|  
     |Definir un factor de relleno|En la cuadrícula situada debajo de **Diseñador de tablas**, expanda la categoría **Especificación de relleno** y escriba un entero de 0 a 100 en el cuadro **Factor de relleno** .|  
   
-5.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
+5.  En el menú **Archivo**, haga clic en ***Guardar**_nombre de tabla_.  
   
 ##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **Para modificar una restricción UNIQUE**  
   

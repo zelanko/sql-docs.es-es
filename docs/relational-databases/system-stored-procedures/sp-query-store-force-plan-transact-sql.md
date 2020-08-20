@@ -22,17 +22,18 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3aa708d4af93449e2efe3d26cb9b92496c497942
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91ecfae192c0af671961120e4cd2efbf6cac36b0
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493069"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646265"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
-  Permite forzar un plan determinado para una consulta determinada.  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+Permite forzar un plan determinado para una consulta determinada.  
   
  Cuando se fuerza un plan para una consulta determinada, cada vez que encuentra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la consulta, intenta forzar el plan en el optimizador de consultas. Si se produce un error al forzar el plan, se desencadena un evento extendido y se indica al optimizador de consultas que se optimice de la manera normal.  
   
@@ -75,7 +76,7 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_force_plan 3, 3;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sp_query_store_remove_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_remove_query &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   

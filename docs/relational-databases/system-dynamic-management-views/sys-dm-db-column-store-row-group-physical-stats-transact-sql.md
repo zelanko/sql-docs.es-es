@@ -21,16 +21,17 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cabadc5cd42afa7a001d27f55e22c138bb6f9002
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dc6a94205c7432f6fee305d58a27ec1eb0e0c33
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447704"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646145"
 ---
 # <a name="sysdm_db_column_store_row_group_physical_stats-transact-sql"></a>Sys. dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Proporciona información de nivel de filas actual sobre todos los índices de almacén de columnas en la base de datos actual.  
 
@@ -39,7 +40,7 @@ Esto extiende la vista de catálogo [Sys. column_store_row_groups &#40;&#41;de T
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|IDENTIFICADOR de la tabla subyacente.|  
-|**index_id**|**int**|IDENTIFICADOR de este índice de almacén de columnas en *object_id* tabla.|  
+|**id_de_índice**|**int**|IDENTIFICADOR de este índice de almacén de columnas en *object_id* tabla.|  
 |**partition_number**|**int**|IDENTIFICADOR de la partición de tabla que contiene *row_group_id*. Puede utilizar partition_number para unir esta DMV a sys.partitions.|  
 |**row_group_id**|**int**|IDENTIFICADOR de este grupo de filas. En el caso de las tablas con particiones, el valor es único dentro de la partición.<br /><br /> -1 para una cola en memoria.|  
 |**delta_store_hobt_id**|**bigint**|Hobt_id para un grupo de filas en el almacén Delta.<br /><br /> Es NULL si el grupo de filas no está en el almacén Delta.<br /><br /> NULL para la cola de una tabla en memoria.|  
@@ -58,7 +59,7 @@ Esto extiende la vista de catálogo [Sys. column_store_row_groups &#40;&#41;de T
 |**closed_time**|datetime2|Hora de reloj en la que se cerró este filas.<br /><br /> NULL: para un índice de almacén de columnas en una tabla en memoria.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="results"></a>Resultados  
+## <a name="results"></a>Results  
  Devuelve una fila por cada filas en la base de datos actual.  
   
 ## <a name="permissions"></a>Permisos  
@@ -86,7 +87,7 @@ JOIN sys.dm_db_column_store_row_group_physical_stats AS CSRowGroups
 ORDER BY object_name(i.object_id), i.name, row_group_id;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)      
  [Diseño de los índices de almacén de columnas](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)         

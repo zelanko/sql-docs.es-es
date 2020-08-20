@@ -14,15 +14,16 @@ ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71b3ec2b02858555a58f2b89f4c2059b697c6f4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42e7afbc0975c4f740eff21caaf86f783ac05f98
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447695"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646260"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>Sys. dm_db_column_store_row_group_operational_stats (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Devuelve la actividad actual de e/s de nivel de fila, el bloqueo y el método de acceso para filas comprimidos en un índice de almacén de columnas. Use **Sys. dm_db_column_store_row_group_operational_stats** para realizar un seguimiento de la cantidad de tiempo que una consulta de usuario debe esperar para leer o escribir en un filas o una partición de un índice de almacén de columnas comprimidos e identificar filass que están con una actividad de e/s significativa o zonas activas.  
   
@@ -32,7 +33,7 @@ ms.locfileid: "88447695"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|IDENTIFICADOR de la tabla con el índice de almacén de columnas.|  
-|**index_id**|**int**|Identificador del índice de almacén de columnas.|  
+|**id_de_índice**|**int**|Identificador del índice de almacén de columnas.|  
 |**partition_number**|**int**|Número de partición en base 1 en el índice o montón.|  
 |**row_group_id**|**int**|IDENTIFICADOR del filas en el índice de almacén de columnas. Es único en una partición.|  
 |**scan_count**|**int**|Número de recorridos a través de filas desde el último reinicio de SQL.|  
@@ -55,13 +56,13 @@ ms.locfileid: "88447695"
   
  Para obtener más información, vea [funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con índices &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [Sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [Sys. dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
+ [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
  [Sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

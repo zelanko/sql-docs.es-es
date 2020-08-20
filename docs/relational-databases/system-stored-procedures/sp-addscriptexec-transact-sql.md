@@ -1,4 +1,5 @@
 ---
+description: sp_addscriptexec (Transact-SQL)
 title: sp_addscriptexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7907f085cedfeb6a5dfc8be70c9a7eff67dc37b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a133709a8fbaaabd58a9ad00d7298bf34317b0cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486368"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,17 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @scriptfile = ] 'scriptfile'`Es la ruta de acceso completa al archivo de script de SQL. *scriptfile* es de tipo **nvarchar (4000)** y no tiene ningún valor predeterminado.  
+`[ @scriptfile = ] 'scriptfile'` Es la ruta de acceso completa al archivo de script de SQL. *scriptfile* es de tipo **nvarchar (4000)** y no tiene ningún valor predeterminado.  
   
-`[ @skiperror = ] 'skiperror'`Indica si el Agente de distribución o Agente de mezcla debe detenerse cuando se produce un error durante el procesamiento del script. *SkipError* es de **bit**y su valor predeterminado es 0.  
+`[ @skiperror = ] 'skiperror'` Indica si el Agente de distribución o Agente de mezcla debe detenerse cuando se produce un error durante el procesamiento del script. *SkipError* es de **bit**y su valor predeterminado es 0.  
   
  **0** = el agente se detendrá.  
   
  **1** = el agente continúa el script y omite el error.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe usar el *publicador* al publicar desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
@@ -77,7 +78,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addscriptexec**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Ejecutar scripts durante la sincronización &#40;la programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Sincronizar datos](../../relational-databases/replication/synchronize-data.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

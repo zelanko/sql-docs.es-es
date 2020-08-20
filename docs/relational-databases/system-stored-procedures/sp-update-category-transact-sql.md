@@ -1,4 +1,5 @@
 ---
+description: sp_update_category (Transact-SQL)
 title: sp_update_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4eaf2fe7fd4b1ee613bec30dbf6967eaeab8b51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485601"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,22 +43,22 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'`Clase de la categoría que se va a actualizar. la *clase*es **VARCHAR (8)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
+`[ @class = ] 'class'` Clase de la categoría que se va a actualizar. la *clase*es **VARCHAR (8)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**ONALERT**|Actualiza una categoría de alerta.|  
 |**TRABAJO**|Actualiza una categoría de trabajo.|  
 |**OPERATOR**|Actualiza una categoría de operador.|  
   
-`[ @name = ] 'old_name'`Nombre actual de la categoría. *old_name*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @name = ] 'old_name'` Nombre actual de la categoría. *old_name*es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @new_name = ] 'new_name'`El nuevo nombre de la categoría. *new_name*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @new_name = ] 'new_name'` El nuevo nombre de la categoría. *new_name*es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_update_category** se debe ejecutar desde la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
@@ -77,10 +78,10 @@ EXEC dbo.sp_update_category
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [sp_add_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_delete_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
- [sp_help_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [sp_add_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_help_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

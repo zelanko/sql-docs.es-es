@@ -1,4 +1,5 @@
 ---
+description: core.sp_update_data_source (Transact-SQL)
 title: Core. sp_update_data_source (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b25dfb47c49bd53a4544649d8e10e4c092d04de
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 19644668bc9daf054aeb8907be5ca8ff29a7bb84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486398"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +68,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cada vez que un paquete de carga inicia la carga de datos en el almacén de administración de datos, el componente en tiempo de ejecución del recopilador de datos llama a core.sp_update_data_source. La tabla core.source_info_internal se actualiza si se produjo alguno de los cambios siguientes desde la última actualización:  
   
 -   Se agregó un nuevo conjunto de recopilación.  
@@ -92,9 +93,9 @@ EXEC core.sp_update_data_source
 @source_id = @source_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [almacén de administración de datos](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [Almacén de administración de datos](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

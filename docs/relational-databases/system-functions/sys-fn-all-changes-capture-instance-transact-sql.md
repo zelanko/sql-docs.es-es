@@ -1,4 +1,5 @@
 ---
+description: Sys. fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
 title: Sys. fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e091db783b29a767a5f1f762dbbc037a878ce8a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486348"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>Sys. fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +84,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
-|Nombre de columna|Tipo de columna|Descripción|  
+|Nombre de la columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|LSN de confirmación de la transacción que se asocia al cambio. Todos los cambios que se confirman en la misma transacción comparten el mismo LSN de confirmación.|  
 |__CDC_SEQVAL|**binary(10)**|Valor de secuencia que se usa para ordenar los cambios de fila en una transacción.|  
@@ -91,7 +92,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|Código de operación que indica qué operación hay que aplicar a la fila en el entorno de destino. Variará en función del valor del argumento *row_filter_option* proporcionado en la llamada:<br /><br /> *row_filter_option* = ' All '<br /><br /> 'D' - operación de eliminación<br /><br /> 'I' - operación de inserción<br /><br /> 'UN' - valores nuevos de la operación de actualización<br /><br /> *row_filter_option* = ' All Update Old '<br /><br /> 'D' - operación de eliminación<br /><br /> 'I' - operación de inserción<br /><br /> 'UN' - valores nuevos de la operación de actualización<br /><br /> 'UO' - valores anteriores de la operación de actualización|  
 |\<columns from @update_flag_list>|**bit**|Un indicador de bits se denomina anexando _uflag al nombre de la columna. La marca siempre se establece en NULL cuando \_ _CDC_OPERATION es ' d ', ' I ', de ' uo '. Cuando \_ _CDC_OPERATION es ' un ', se establece en 1 si la actualización generó un cambio en la columna correspondiente. De lo contrario, es 0.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La fn_all_changes_<capture_instance función> actúa como contenedor de la función de consulta CDC. fn_cdc_get_all_changes_<capture_instance>. El procedimiento almacenado sys.sp_cdc_generate_wrapper se utiliza para generar el script que crea el contenedor.  
   
  Las funciones contenedoras no se crean automáticamente. Para crear funciones contenedoras hay que seguir dos pasos:  
@@ -110,7 +111,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  La plantilla de configuración de captura de datos modificados ' Create CDC wrapper TVF for Schema ' muestra cómo usar el sp_cdc_generate_wrapper_function procedimiento almacenado para obtener scripts de creación para todas las funciones de contenedor para las funciones de consulta definidas de un esquema. A continuación, la plantilla crea esos scripts. Para obtener más información acerca de las plantillas, vea [Explorador de plantillas](../../ssms/template/template-explorer.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   

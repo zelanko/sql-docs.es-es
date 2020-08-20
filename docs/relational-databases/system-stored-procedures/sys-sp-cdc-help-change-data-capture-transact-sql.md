@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_help_change_data_capture (Transact-SQL)
 title: Sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7935bc8e0472b90d22a93190f5af81c8e5910e67
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7b0fa1b0e6219ebfef9f281eec8e8503e22f0b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485558"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -82,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Lista de las columnas de índice utilizada para identificar de forma exclusiva las filas en la tabla de origen.|  
 |captured_column_list|**nvarchar(max)**|Lista de las columnas de origen capturadas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando *source_schema* y *source_name* valor predeterminado en null, o se establecen explícitamente en null, este procedimiento almacenado devuelve información de todas las instancias de captura de base de datos a las que el autor de la llamada tiene acceso Select. Cuando *source_schema* y *SOURCE_NAME* no son NULL, solo se devuelve información sobre la tabla habilitada con nombre específica.  
   
 ## <a name="permissions"></a>Permisos  

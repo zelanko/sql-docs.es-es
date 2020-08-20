@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpsubscription (Transact-SQL)
 title: sp_replmonitorhelpsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9597e7a3512307367568ee14800fcbf69a3045f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760031"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485696"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,24 +45,24 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador cuyo estado se está supervisando. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. Si es **null**, se devuelve información para todos los publicadores que utilizan el distribuidor.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador cuyo estado se está supervisando. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. Si es **null**, se devuelve información para todos los publicadores que utilizan el distribuidor.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos publicada. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, se devuelve información sobre todas las bases de datos publicadas en el publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos publicada. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, se devuelve información sobre todas las bases de datos publicadas en el publicador.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación que se está supervisando. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se está supervisando. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @publication_type = ] publication_type`Si el tipo de publicación. *publication_type* es de **tipo int**y puede tener uno de estos valores.  
+`[ @publication_type = ] publication_type` Si el tipo de publicación. *publication_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional.|  
 |**1**|Publicación de instantáneas.|  
 |**2**|Publicación de combinación.|  
 |NULL (predeterminado)|La replicación intenta determinar el tipo de publicación.|  
   
-`[ @mode = ] mode`Es el modo de filtrado que se va a utilizar al devolver información de supervisión de suscripciones. *mode* es de **tipo int**y puede tener uno de estos valores.  
+`[ @mode = ] mode` Es el modo de filtrado que se va a utilizar al devolver información de supervisión de suscripciones. *mode* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Devuelve todas las suscripciones.|  
 |**1**|Solo devuelve las suscripciones con errores.|  
@@ -72,11 +73,11 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Solo devuelve las suscripciones que se están sincronizando en ese momento.|  
 |**7**|Solo devuelve las suscripciones que no se están sincronizando en ese momento.|  
   
-`[ @topnum = ] topnum`Restringe el conjunto de resultados solo al número especificado de suscripciones en la parte superior de los datos devueltos. *topnum* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @topnum = ] topnum` Restringe el conjunto de resultados solo al número especificado de suscripciones en la parte superior de los datos devueltos. *topnum* es de **tipo int**y no tiene ningún valor predeterminado.  
   
-`[ @exclude_anonymous = ] exclude_anonymous`Es si se excluyen las suscripciones de extracción anónimas del conjunto de resultados. *exclude_anonymous* es de **bit**y su valor predeterminado es **0**; un valor de **1** significa que se excluyen las suscripciones anónimas y un valor de **0** significa que se incluyen.  
+`[ @exclude_anonymous = ] exclude_anonymous` Es si se excluyen las suscripciones de extracción anónimas del conjunto de resultados. *exclude_anonymous* es de **bit**y su valor predeterminado es **0**; un valor de **1** significa que se excluyen las suscripciones anónimas y un valor de **0** significa que se incluyen.  
   
-`[ @refreshpolicy = ] refreshpolicy`Solo para uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Solo para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -116,7 +117,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_replmonitorhelpsubscription** se usa con todos los tipos de replicación.  
   
  **sp_replmonitorhelpsubscription** ordena el conjunto de resultados en función de la gravedad del estado de la suscripción, que viene determinado por el valor de *monitorranking*. Por ejemplo, las filas de todas las suscripciones con un estado de error se colocan por encima de las filas de suscripciones con un estado de advertencia.  

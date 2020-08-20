@@ -1,4 +1,5 @@
 ---
+description: sp_registercustomresolver (Transact-SQL)
 title: sp_registercustomresolver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e16fe7352b03e803af57ca1ef4b744597b57a18f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92c601a4cf105c1c1b8ff1403d457a5a21d0f356
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485818"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,30 +42,30 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @article_resolver = ] 'article_resolver'`Especifica el nombre descriptivo de la lógica de negocios personalizada que se va a registrar. *article_resolver* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado.  
+`[ @article_resolver = ] 'article_resolver'` Especifica el nombre descriptivo de la lógica de negocios personalizada que se va a registrar. *article_resolver* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado.  
   
-`[ @resolver_clsid = ] 'resolver_clsid'`Especifica el valor CLSID del objeto COM que se va a registrar. La lógica de negocios personalizada *resolver_clsid* es **nvarchar (50)** y su valor predeterminado es NULL. Este parámetro debe estar establecido en un valor CLSID válido o en NULL cuando se registre un ensamblado de controlador de lógica de negocios.  
+`[ @resolver_clsid = ] 'resolver_clsid'` Especifica el valor CLSID del objeto COM que se va a registrar. La lógica de negocios personalizada *resolver_clsid* es **nvarchar (50)** y su valor predeterminado es NULL. Este parámetro debe estar establecido en un valor CLSID válido o en NULL cuando se registre un ensamblado de controlador de lógica de negocios.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'`Especifica el tipo de lógica de negocios personalizada que se va a registrar. *is_dotnet_assembly* es de tipo **nvarchar (50)** y su valor predeterminado es false. **true** indica que la lógica de negocios personalizada que se va a registrar es un ensamblado de controlador de lógica de negocios; **false** indica que se trata de un componente com.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` Especifica el tipo de lógica de negocios personalizada que se va a registrar. *is_dotnet_assembly* es de tipo **nvarchar (50)** y su valor predeterminado es false. **true** indica que la lógica de negocios personalizada que se va a registrar es un ensamblado de controlador de lógica de negocios; **false** indica que se trata de un componente com.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'`Es el nombre del ensamblado que implementa el controlador de lógica de negocios. *dotnet_assembly_name* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Debe especificar la ruta de acceso completa al ensamblado si no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica el Agente de mezcla o en la caché de ensamblados global (GAC).  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` Es el nombre del ensamblado que implementa el controlador de lógica de negocios. *dotnet_assembly_name* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Debe especificar la ruta de acceso completa al ensamblado si no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica el Agente de mezcla o en la caché de ensamblados global (GAC).  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'`Es el nombre de la clase que invalida <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar el controlador de lógica de negocios. El nombre debe especificarse con el formato **espaciodenombres. nombreDeClase**. *dotnet_class_name* es de tipo **nvarchar (255)** y su valor predeterminado es NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` Es el nombre de la clase que invalida <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar el controlador de lógica de negocios. El nombre debe especificarse con el formato **espaciodenombres. nombreDeClase**. *dotnet_class_name* es de tipo **nvarchar (255)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_registercustomresolver** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_registercustomresolver**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Implementar un controlador de lógica de negocios para un artículo de mezcla](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
+ [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  (Implementar un controlador de lógica de negocios para un artículo de mezcla)  
  [Implementar un solucionador de conflictos personalizado para un artículo de mezcla](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [sp_lookupcustomresolver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_lookupcustomresolver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

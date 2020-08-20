@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_config_schedule (Transact-SQL)
 title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/20/2020
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 23f1f96ff6d41412e8606e67aacfdc42d9afabc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486310"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,7 +48,7 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a> Argumentos  
  @database_name  
  Nombre de la base de datos para habilitar la copia de seguridad administrada en una base de datos específica. Si es NULL o *, esta copia de seguridad administrada se aplica a todas las bases de datos del servidor.  
   
@@ -66,7 +68,7 @@ EXEC managed_backup.sp_backup_config_schedule
  La duración del período de tiempo de copia de seguridad. Tenga en cuenta que no hay ninguna garantía de que las copias de seguridad se completen durante el período de tiempo definido por @backup_begin_time y @backup_duration . Las operaciones de copia de seguridad que se inician en este período de tiempo pero superan la duración de la ventana no se cancelarán.  
   
  @log_backup_freq  
- Esto determina la frecuencia de las copias de seguridad del registro de transacciones. Estas copias de seguridad se producen a intervalos regulares, en lugar de a la programación especificada para las copias de seguridad de base de datos. @log_backup_freqpuede ser en minutos u horas y `0:00` es válido, lo que indica que no hay copias de seguridad de registros. Deshabilitar las copias de seguridad de registros solo sería adecuado para las bases de datos con un modelo de recuperación simple.  
+ Esto determina la frecuencia de las copias de seguridad del registro de transacciones. Estas copias de seguridad se producen a intervalos regulares, en lugar de a la programación especificada para las copias de seguridad de base de datos. @log_backup_freq puede ser en minutos u horas y `0:00` es válido, lo que indica que no hay copias de seguridad de registros. Deshabilitar las copias de seguridad de registros solo sería adecuado para las bases de datos con un modelo de recuperación simple.  
   
 > [!NOTE]  
 >  Si el modelo de recuperación cambia de simple a completo, debe volver a configurar la log_backup_freq de `0:00` en un valor distinto de cero.  
@@ -79,7 +81,7 @@ EXEC managed_backup.sp_backup_config_schedule
 ### <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol de base de datos **db_backupoperator** , con permisos **ALTER any Credential** y permisos **Execute** en **sp_delete_backuphistory** procedimiento almacenado.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [managed_backup. sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
  [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_reinitmergepullsubscription (Transact-SQL)
 title: sp_reinitmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5efb256d77a676cc394fb2731127deb17037a205
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d65bd7f5e6967bac665892de55566cf4d151144f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485793"
 ---
 # <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,18 +41,18 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es ALL.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es ALL.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es ALL.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es ALL.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es ALL.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es ALL.  
   
-`[ @upload_first = ] 'upload_first'`Indica si se cargan los cambios en el suscriptor antes de que se reinicialice la suscripción. *upload_first* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si **es true**, los cambios se cargan antes de que se reinicialice la suscripción. Si **es false**, los cambios no se cargan.  
+`[ @upload_first = ] 'upload_first'` Indica si se cargan los cambios en el suscriptor antes de que se reinicialice la suscripción. *upload_first* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si **es true**, los cambios se cargan antes de que se reinicialice la suscripción. Si **es false**, los cambios no se cargan.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_reinitmergepullsubscription** se utiliza en la replicación de mezcla.  
   
  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  

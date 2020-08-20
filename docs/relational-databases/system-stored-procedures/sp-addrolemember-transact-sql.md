@@ -1,4 +1,5 @@
 ---
+description: sp_addrolemember (Transact-SQL)
 title: sp_addrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/30/2019
@@ -18,12 +19,12 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f00b2446595835cb4ff556c34d58a3dd04b448a8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 59193e08c71a7827e347be5b06bbe4cc81ffa826
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486373"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "88180115"
   Agrega un usuario de base de datos, un rol de base de datos, un inicio de sesión de Windows o un grupo de Windows a un rol de base de datos en la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]En su lugar, utilice [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, utilice [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -116,11 +117,11 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addsrvrolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_grantdbaccess &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_addsrvrolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [sp_droprolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_grantdbaccess &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md)  
   

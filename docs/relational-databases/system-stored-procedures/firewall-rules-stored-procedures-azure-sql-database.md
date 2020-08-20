@@ -1,4 +1,5 @@
 ---
+description: Procedimientos almacenados de reglas de Firewall (Azure SQL Database)
 title: Procedimientos almacenados para las reglas del firewall
 titleSuffix: Azure SQL Database
 ms.date: 07/28/2016
@@ -17,17 +18,17 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: bace837ef11fc106632b84fe01ed5c8bc1448ffa
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: 06909fec18be239f1f416c074fa444a14705f0ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544358"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486362"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>Procedimientos almacenados de reglas de Firewall (Azure SQL Database)
 [!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
-  Esta sección contiene los siguientes procedimientos almacenados que establecen o eliminan reglas de firewall. [!INCLUDE[tsql_md](../../includes/tsql-md.md)]las reglas de Firewall se pueden usar con [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Para obtener más información, consulte [configuración de reglas de Firewall de Azure SQL Database: Introducción](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
+  Esta sección contiene los siguientes procedimientos almacenados que establecen o eliminan reglas de firewall. [!INCLUDE[tsql_md](../../includes/tsql-md.md)] las reglas de Firewall se pueden usar con [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Para obtener más información, consulte [configuración de reglas de Firewall de Azure SQL Database: Introducción](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
 
 :::row:::
     :::column:::

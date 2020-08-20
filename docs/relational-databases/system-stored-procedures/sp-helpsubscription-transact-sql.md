@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription (Transact-SQL)
 title: sp_helpsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b1bd6fc81b1af824ded4b193fe34455035edbd56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485924"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,21 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de este servidor.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de este servidor.  
   
-`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de las publicaciones y los suscriptores seleccionados. Si es **All**, solo se devuelve una entrada para la suscripción completa en una publicación.  
+`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de las publicaciones y los suscriptores seleccionados. Si es **All**, solo se devuelve una entrada para la suscripción completa en una publicación.  
   
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor en el que se va a obtener información de suscripción. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de las publicaciones y los artículos seleccionados.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor en el que se va a obtener información de suscripción. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de las publicaciones y los artículos seleccionados.  
   
-`[ @destination_db = ] 'destination_db'`Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su**valor predeterminado es **%** .  
+`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su**valor predeterminado es **%** .  
   
-`[ @found = ] 'found'OUTPUT`Es una marca que indica que se devuelven filas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de 23456.  
+`[ @found = ] 'found'OUTPUT` Es una marca que indica que se devuelven filas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de 23456.  
   
  **1** indica que se ha encontrado la publicación.  
   
  **0** indica que no se encuentra la publicación.  
   
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname**y su valor predeterminado es el nombre del servidor actual.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname**y su valor predeterminado es el nombre del servidor actual.  
   
 > [!NOTE]  
 >  no se debe especificar el *publicador* , excepto cuando se trata de un publicador de Oracle.  
@@ -69,14 +70,14 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**artículo**|**sysname**|Nombre del artículo.|  
 |**base de datos de destino**|**sysname**|Nombre de la base de datos de destino a la que se envían los datos duplicados.|  
-|**Estado de la suscripción**|**tinyint**|Estado de la suscripción:<br /><br /> **0** = inactivo<br /><br /> **1** = suscrito<br /><br /> **2** = activo|  
+|**estado de la suscripción**|**tinyint**|Estado de la suscripción:<br /><br /> **0** = inactivo<br /><br /> **1** = suscrito<br /><br /> **2** = activo|  
 |**synchronization type**|**tinyint**|Tipo de sincronización de suscripción:<br /><br /> **1** = automática<br /><br /> **2** = ninguno|  
 |**tipo de suscripción**|**int**|Tipo de suscripción:<br /><br /> **0** = inserciones<br /><br /> **1** = extracción<br /><br /> **2** = anónimo|  
-|**full subscription**|**bit**|Indica si la suscripción es a todos los artículos de la publicación:<br /><br /> **0** = no<br /><br /> **1** = sí|  
+|**full subscription**|**bit**|Indica si la suscripción es a todos los artículos de la publicación:<br /><br /> **0** = No<br /><br /> **1** = Sí|  
 |**nombre de la suscripción**|**nvarchar(255)**|Nombre de la suscripción.|  
 |**modo de actualización**|**int**|**0** = solo lectura<br /><br /> **1** = suscripción de actualización inmediata|  
 |**distribution job id**|**binario (16)**|Id. de trabajo del agente de distribución.|  
-|**loopback_detection**|**bit**|La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **0** = devuelve.<br /><br /> **1** = no devuelve.<br /><br /> Se utilizan con replicación transaccional bidireccional. Para obtener más información, consulte la [replicación transaccional bidireccional](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|**loopback_detection**|**bit**|La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **0** = devuelve.<br /><br /> **1** = no devuelve.<br /><br /> Se utilizan con replicación transaccional bidireccional. Para más información, consulte [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |**offload_enabled**|**bit**|Especifica si se ha establecido que la descarga de un agente de duplicación se lleve a cabo en el suscriptor.<br /><br /> Si es **0**, el agente se ejecuta en el publicador.<br /><br /> Si es **1**, el agente se ejecuta en el suscriptor.|  
 |**offload_server**|**sysname**|Nombre del servidor habilitado para la activación remota de agentes. Si es NULL, se usa el offload_server actual que aparece en [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) tabla.|  
 |**dts_package_name**|**sysname**|Especifica el nombre del paquete de Servicios de transformación de datos (DTS).|  
@@ -97,16 +98,16 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpsubscription** se utiliza en la replicación de instantáneas y transaccional.  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los permisos de ejecución corresponden al rol **public** . Los usuarios solo reciben información de las suscripciones que hayan creado. Se devuelve información sobre todas las suscripciones a los miembros del rol fijo de servidor **sysadmin** en el publicador o los miembros del rol fijo de base de datos **db_owner** en la base de datos de publicación.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_addsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

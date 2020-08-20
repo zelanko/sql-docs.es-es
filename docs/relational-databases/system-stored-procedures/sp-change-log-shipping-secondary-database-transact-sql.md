@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_secondary_database (Transact-SQL)
 title: sp_change_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 086e914f9d05ada8985cdd8f017ef4a47003d1ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5fc10c705564c88fe157860d00a61fa5ea682cc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486288"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,11 +52,11 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @restore_delay = ] 'restore_delay'`Cantidad de tiempo, en minutos, que el servidor secundario espera antes de restaurar un archivo de copia de seguridad determinado. *restore_delay* es de **tipo int** y no puede ser null. El valor predeterminado es 0.  
+`[ @restore_delay = ] 'restore_delay'` Cantidad de tiempo, en minutos, que el servidor secundario espera antes de restaurar un archivo de copia de seguridad determinado. *restore_delay* es de **tipo int** y no puede ser null. El valor predeterminado es 0.  
   
-`[ @restore_all = ] 'restore_all'`Si se establece en 1, el servidor secundario restaura todas las copias de seguridad del registro de transacciones disponibles cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haber restaurado un archivo. *restore_all* es de **bit** y no puede ser null.  
+`[ @restore_all = ] 'restore_all'` Si se establece en 1, el servidor secundario restaura todas las copias de seguridad del registro de transacciones disponibles cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haber restaurado un archivo. *restore_all* es de **bit** y no puede ser null.  
   
-`[ @restore_mode = ] 'restore_mode'`Modo de restauración para la base de datos secundaria.  
+`[ @restore_mode = ] 'restore_mode'` Modo de restauración para la base de datos secundaria.  
   
  0 = Restaurar registro con NORECOVERY.  
   
@@ -63,21 +64,21 @@ sp_change_log_shipping_secondary_database
   
  *restore* es de **bit** y no puede ser null.  
   
-`[ @disconnect_users = ] 'disconnect_users'`Si se establece en 1, los usuarios se desconectarán de la base de datos secundaria cuando se realice una operación de restauración. Valor predeterminado = 0. *disconnect_users* es de **bit** y no puede ser null.  
+`[ @disconnect_users = ] 'disconnect_users'` Si se establece en 1, los usuarios se desconectarán de la base de datos secundaria cuando se realice una operación de restauración. Valor predeterminado = 0. *disconnect_users* es de **bit** y no puede ser null.  
   
-`[ @block_size = ] 'block_size'`Tamaño, en bytes, que se utiliza como tamaño de bloque para el dispositivo de copia de seguridad. *BLOCK_SIZE* es de **tipo int** y su valor predeterminado es-1.  
+`[ @block_size = ] 'block_size'` Tamaño, en bytes, que se utiliza como tamaño de bloque para el dispositivo de copia de seguridad. *BLOCK_SIZE* es de **tipo int** y su valor predeterminado es-1.  
   
-`[ @buffer_count = ] 'buffer_count'`Número total de búferes utilizados por la operación de copia de seguridad o restauración. *buffer_count* es de **tipo int** y su valor predeterminado es-1.  
+`[ @buffer_count = ] 'buffer_count'` Número total de búferes utilizados por la operación de copia de seguridad o restauración. *buffer_count* es de **tipo int** y su valor predeterminado es-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`Tamaño, en bytes, de la solicitud de entrada o salida máxima que emite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el dispositivo de copia de seguridad. *max_transfersize* es de **tipo int** y puede ser null.  
+`[ @max_transfer_size = ] 'max_transfer_size'` Tamaño, en bytes, de la solicitud de entrada o salida máxima que emite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el dispositivo de copia de seguridad. *max_transfersize* es de **tipo int** y puede ser null.  
   
-`[ @restore_threshold = ] 'restore_threshold'`Número de minutos que pueden transcurrir entre las operaciones de restauración antes de que se genere una alerta. *restore_threshold* es de **tipo int** y no puede ser null.  
+`[ @restore_threshold = ] 'restore_threshold'` Número de minutos que pueden transcurrir entre las operaciones de restauración antes de que se genere una alerta. *restore_threshold* es de **tipo int** y no puede ser null.  
   
-`[ @threshold_alert = ] 'threshold_alert'`Es la alerta que se generará cuando se supere el umbral de restauración. *threshold_alert* es de **tipo int**y su valor predeterminado es 14420.  
+`[ @threshold_alert = ] 'threshold_alert'` Es la alerta que se generará cuando se supere el umbral de restauración. *threshold_alert* es de **tipo int**y su valor predeterminado es 14420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Especifica si se generará una alerta cuando se supere *restore_threshold*. 1 = habilitadas; 0 = deshabilitadas. *threshold_alert_enabled* es de **bit** y no puede ser null.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica si se generará una alerta cuando se supere *restore_threshold*. 1 = habilitadas; 0 = deshabilitadas. *threshold_alert_enabled* es de **bit** y no puede ser null.  
   
-`[ @history_retention_period = ] 'history_retention_period'`Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es de **tipo int**. Si no se especifica ninguno, se usará un valor de 1440.  
+`[ @history_retention_period = ] 'history_retention_period'` Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es de **tipo int**. Si no se especifica ninguno, se usará un valor de 1440.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

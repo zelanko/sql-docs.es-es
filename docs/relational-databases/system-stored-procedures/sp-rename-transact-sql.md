@@ -1,4 +1,5 @@
 ---
+description: sp_rename (Transact-SQL)
 title: sp_rename (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2018
@@ -21,12 +22,12 @@ ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1d9daa3350d252b6ef11c1dda88fc1383964e08
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c3705d08778a50cb603ed3fed5c0d609e3e5fb42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485808"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objtype =] '*object_type*'  
  Es el tipo de objeto cuyo nombre se va a cambiar. *object_type* es de tipo **VARCHAR (13)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |COLUMN|Una columna cuyo nombre se va a cambiar.|  
 |DATABASE|Una base de datos definida por el usuario. Este tipo de objeto es necesario cuando se cambia el nombre de una base de datos|  
@@ -73,7 +74,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Solo se puede cambiar el nombre de un objeto o tipo de datos de la base de datos actual. No se pueden cambiar los nombres de la mayoría de los tipos de datos y objetos del sistema.  
   
  sp_rename cambia automáticamente el nombre del índice asociado cuando se cambia el nombre de una restricción PRIMARY KEY o UNIQUE. Si un índice cuyo nombre se ha cambiado está enlazado a una restricción PRIMARY KEY, sp_rename también cambia automáticamente el nombre de esta restricción.  
@@ -207,6 +208,6 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

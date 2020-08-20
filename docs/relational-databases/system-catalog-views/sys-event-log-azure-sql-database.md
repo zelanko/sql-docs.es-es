@@ -1,4 +1,5 @@
 ---
+description: sys.event_log (Azure SQL Database)
 title: Sys. event_log (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -20,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3db96c34d6a6ca8f6f08fc76fac73a4c4d79a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486408"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -52,7 +53,7 @@ ms.locfileid: "85784931"
 |**description**|**nvarchar(max)**|Descripción detallada del evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**additional_data**|**XML**|*Nota: este valor siempre es NULL para Azure SQL Database V12. Vea la sección [ejemplos](#Deadlock) para obtener más sobre cómo recuperar eventos de interbloqueo para V12.*<br /><br /> En el caso de eventos de **interbloqueo** , esta columna contiene el grafo de interbloqueo. Esta columna es NULL para otros tipos de eventos. |  
   
-##  <a name="event-types"></a><a name="EventTypes"></a>Tipos de evento
+##  <a name="event-types"></a><a name="EventTypes"></a> Tipos de evento
 
  Los eventos registrados en cada fila de esta vista se identifican mediante una categoría (**event_category**), un tipo de evento (**event_type**) y un subtipo (**event_subtype**). En la tabla siguiente se muestra una lista de los tipos de eventos que se recopilan en esta vista:  
   
@@ -88,7 +89,7 @@ ms.locfileid: "85784931"
 
  Los usuarios con permiso para tener acceso a la base de datos **maestra** tienen acceso de solo lectura a esta vista.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ### <a name="event-aggregation"></a>Agregación de eventos
 
@@ -148,7 +149,7 @@ WHERE event_type = 'deadlock'
     AND database_name = 'Database1';  
 ```
 
-<a name="Deadlock"></a>La siguiente consulta devuelve todos los eventos de interbloqueo para la base de datos Database1 (se aplica solo a Azure SQL Database V12).  
+<a name="Deadlock"></a> La siguiente consulta devuelve todos los eventos de interbloqueo para la base de datos Database1 (se aplica solo a Azure SQL Database V12).  
 
 ```sql
 WITH CTE AS (  
@@ -228,7 +229,7 @@ WITH CTE AS (
 SELECT * FROM CTE2;  
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
  [Eventos extendidos en Base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

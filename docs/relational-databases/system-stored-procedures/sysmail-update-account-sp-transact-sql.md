@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_account_sp (Transact-SQL)
 title: sysmail_update_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4d50c251d2486b53611c2f2fccfc7e8c2bfa352d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe446ee69a7bf3f7ac6600b2cb521f4f9d89ffa1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485533"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,38 +53,38 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @account_id = ] account_id`IDENTIFICADOR de la cuenta que se va a actualizar. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar al menos una de *ACCOUNT_ID* o *account_name* . Si se especifican los dos, el procedimiento cambia el nombre de la cuenta.  
+`[ @account_id = ] account_id` IDENTIFICADOR de la cuenta que se va a actualizar. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar al menos una de *ACCOUNT_ID* o *account_name* . Si se especifican los dos, el procedimiento cambia el nombre de la cuenta.  
   
-`[ @account_name = ] 'account_name'`Nombre de la cuenta que se va a actualizar. *account_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar al menos una de *ACCOUNT_ID* o *account_name* . Si se especifican los dos, el procedimiento cambia el nombre de la cuenta.  
+`[ @account_name = ] 'account_name'` Nombre de la cuenta que se va a actualizar. *account_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar al menos una de *ACCOUNT_ID* o *account_name* . Si se especifican los dos, el procedimiento cambia el nombre de la cuenta.  
   
-`[ @email_address = ] 'email_address'`La nueva dirección de correo electrónico de la que se va a enviar el mensaje. Esta dirección debe ser una dirección de correo electrónico de Internet. El nombre de servidor de la dirección es el servidor que Database Mail utiliza para enviar correo de esta cuenta. *EMAIL_ADDRESS* es de tipo **nvarchar (128)** y su valor predeterminado es NULL.  
+`[ @email_address = ] 'email_address'` La nueva dirección de correo electrónico de la que se va a enviar el mensaje. Esta dirección debe ser una dirección de correo electrónico de Internet. El nombre de servidor de la dirección es el servidor que Database Mail utiliza para enviar correo de esta cuenta. *EMAIL_ADDRESS* es de tipo **nvarchar (128)** y su valor predeterminado es NULL.  
   
-`[ @display_name = ] 'display_name'`Nuevo nombre para mostrar que se va a usar en los mensajes de correo electrónico de esta cuenta. *display_name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
+`[ @display_name = ] 'display_name'` Nuevo nombre para mostrar que se va a usar en los mensajes de correo electrónico de esta cuenta. *display_name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
   
-`[ @replyto_address = ] 'replyto_address'`La nueva dirección que se va a usar en el encabezado responder a de los mensajes de correo electrónico de esta cuenta. *replyto_address* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
+`[ @replyto_address = ] 'replyto_address'` La nueva dirección que se va a usar en el encabezado responder a de los mensajes de correo electrónico de esta cuenta. *replyto_address* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
   
-`[ @description = ] 'description'`La nueva descripción de la cuenta. la *Descripción* es de tipo **nvarchar (256)** y su valor predeterminado es NULL.  
+`[ @description = ] 'description'` La nueva descripción de la cuenta. la *Descripción* es de tipo **nvarchar (256)** y su valor predeterminado es NULL.  
   
-`[ @mailserver_name = ] 'server_name'`El nuevo nombre del servidor de correo SMTP que se va a usar para esta cuenta. El equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser capaz de resolver la *SERVER_NAME* en una dirección IP. *SERVER_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @mailserver_name = ] 'server_name'` El nuevo nombre del servidor de correo SMTP que se va a usar para esta cuenta. El equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser capaz de resolver la *SERVER_NAME* en una dirección IP. *SERVER_NAME* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @mailserver_type = ] 'server_type'`El nuevo tipo del servidor de correo. *server_type* es de **tipo sysname**y no tiene ningún valor predeterminado. Solo se admite un valor de **' SMTP '** .  
+`[ @mailserver_type = ] 'server_type'` El nuevo tipo del servidor de correo. *server_type* es de **tipo sysname**y no tiene ningún valor predeterminado. Solo se admite un valor de **' SMTP '** .  
   
-`[ @port = ] port_number`El nuevo número de puerto del servidor de correo. *port_number* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @port = ] port_number` El nuevo número de puerto del servidor de correo. *port_number* es de **tipo int**y no tiene ningún valor predeterminado.  
   
-`[ @timeout = ] 'timeout'`Parámetro timeout para SmtpClient. Send de un único mensaje de correo electrónico. El *tiempo de espera* es de **tipo int** en segundos y no tiene ningún valor predeterminado.  
+`[ @timeout = ] 'timeout'` Parámetro timeout para SmtpClient. Send de un único mensaje de correo electrónico. El *tiempo de espera* es de **tipo int** en segundos y no tiene ningún valor predeterminado.  
   
-`[ @username = ] 'username'`El nuevo nombre de usuario que se utilizará para iniciar sesión en el servidor de correo. *El nombre de usuario* es **sysname**y no tiene ningún valor predeterminado.  
+`[ @username = ] 'username'` El nuevo nombre de usuario que se utilizará para iniciar sesión en el servidor de correo. *El nombre de usuario* es **sysname**y no tiene ningún valor predeterminado.  
   
-`[ @password = ] 'password'`Nueva contraseña que se va a usar para iniciar sesión en el servidor de correo. *password* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @password = ] 'password'` Nueva contraseña que se va a usar para iniciar sesión en el servidor de correo. *password* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @use_default_credentials = ] use_default_credentials`Especifica si se debe enviar el correo al servidor SMTP con las credenciales del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servicio. **use_default_credentials** es de bits y no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cuando este parámetro es 0, Correo electrónico de base de datos usa el ** \@ nombre de usuario** y la ** \@ contraseña** para la autenticación en el servidor SMTP. Si el ** \@ nombre de usuario** y la ** \@ contraseña** son NULL, se usará la autenticación anónima. Consulte con el administrador de SMTP antes de especificar este parámetro.  
+`[ @use_default_credentials = ] use_default_credentials` Especifica si se debe enviar el correo al servidor SMTP con las credenciales del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servicio. **use_default_credentials** es de bits y no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cuando este parámetro es 0, Correo electrónico de base de datos usa el ** \@ nombre de usuario** y la ** \@ contraseña** para la autenticación en el servidor SMTP. Si el ** \@ nombre de usuario** y la ** \@ contraseña** son NULL, se usará la autenticación anónima. Consulte con el administrador de SMTP antes de especificar este parámetro.  
   
-`[ @enable_ssl = ] enable_ssl`Especifica si Correo electrónico de base de datos cifra la comunicación mediante la seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL). Utilice esta opción si se requiere TLS en el servidor SMTP. **enable_ssl** es de bits y no tiene ningún valor predeterminado.  
+`[ @enable_ssl = ] enable_ssl` Especifica si Correo electrónico de base de datos cifra la comunicación mediante la seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL). Utilice esta opción si se requiere TLS en el servidor SMTP. **enable_ssl** es de bits y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se especifican el nombre y el Id. de cuenta, el procedimiento almacenado cambia el nombre de la cuenta además de actualizar su información. Cambiar el nombre de la cuenta puede ser útil para corregir errores en el nombre.  
   
  El procedimiento almacenado **sysmail_update_account_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
@@ -137,6 +138,6 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
 ## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
  [Creación de una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

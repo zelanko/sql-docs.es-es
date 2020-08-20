@@ -1,4 +1,5 @@
 ---
+description: sp_publication_validation (Transact-SQL)
 title: sp_publication_validation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db8a79e723d76cdf54377618cc94cb6a4b5431d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 02409799b4fe597eb784ffe9d94d645c92cddcd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485858"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,27 +42,27 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @rowcount_only = ] 'rowcount_only'`Indica si se devuelve solo el recuento de filas de la tabla. *rowcount_only* es **smallint** y puede tener uno de los valores siguientes.  
+`[ @rowcount_only = ] 'rowcount_only'` Indica si se devuelve solo el recuento de filas de la tabla. *rowcount_only* es **smallint** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Realiza una suma de comprobación compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: cuando un artículo se filtra horizontalmente, se realiza una operación de recuento de filas en lugar de una operación de suma de comprobación.|  
 |**1** (predeterminado)|Realiza solamente un recuento de filas.|  
 |**2**|Realiza un recuento de filas y una suma de comprobación binaria.<br /><br /> Nota: para los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptores de la versión 7,0, solo se realiza una validación del recuento de filas.|  
   
-`[ @full_or_fast = ] 'full_or_fast'`Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint** y puede tener uno de los valores siguientes.  
+`[ @full_or_fast = ] 'full_or_fast'` Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Realiza un recuento completo mediante COUNT(*).|  
 |**1**|Realiza un recuento rápido de **sysindexes. Rows**. El recuento de filas en [sys.sysíndices](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) es mucho más rápido que contar las filas de la tabla real. Sin embargo, dado que [sys.sysíndices](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) se actualizan de forma diferida, es posible que el recuento de filas no sea preciso.|  
 |**2** (predeterminado)|Realiza un recuento rápido condicional intentando primero el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y se usa el procedimiento almacenado para obtener el valor, siempre se usa un recuento completo (*).|  
   
-`[ @shutdown_agent = ] 'shutdown_agent'`Indica si el Agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit**y su valor predeterminado es **0**. Si es **0**, el agente de replicación no se cierra. Si es **1**, el agente de replicación se cierra después de validar el último artículo.  
+`[ @shutdown_agent = ] 'shutdown_agent'` Indica si el Agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit**y su valor predeterminado es **0**. Si es **0**, el agente de replicación no se cierra. Si es **1**, el agente de replicación se cierra después de validar el último artículo.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe usar el *publicador* al solicitar la validación en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
@@ -69,7 +70,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_publication_validation** se utiliza en la replicación transaccional.  
   
  se puede llamar a **sp_publication_validation** en cualquier momento después de activar los artículos asociados a la publicación. Se puede ejecutar el procedimiento una vez de forma manual, o bien como parte de un trabajo programado de forma regular que valide los datos.  
@@ -81,8 +82,8 @@ sp_publication_validation [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte también  
  [Validar datos en el suscriptor](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_article_validation &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
- [sp_table_validation &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_article_validation &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
+ [sp_table_validation &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

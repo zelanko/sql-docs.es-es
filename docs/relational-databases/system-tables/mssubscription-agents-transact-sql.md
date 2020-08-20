@@ -1,4 +1,5 @@
 ---
+description: MSsubscription_agents (Transact-SQL)
 title: MSsubscription_agents (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b70a0b6356a4b9a862c2a89178068ef6ec2c4af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f28a46ccebb0f01aaeed07fe2c27776aec0534dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485495"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85889357"
 |**queue_id**|**sysname**|IDENTIFICADOR de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cola de mensajes en el publicador. *queue_id* está establecido en **SQL** para la actualización en cola basada en SQL.|  
 |**update_mode**|**tinyint**|El tipo de actualización:<br /><br /> **0** = solo lectura.<br /><br /> **1** = actualización inmediata.<br /><br /> **2** = actualización en cola mediante Message Queue Server.<br /><br /> **3** = actualización inmediata con actualización en cola como conmutación por error mediante Message Queue Server.<br /><br /> **4** = actualización en cola mediante la cola de SQL Server.<br /><br /> **5** = actualización inmediata con conmutación por error de actualización en cola mediante SQL Server cola.|  
 |**failover_mode**|**bit**|Si se selecciona un tipo de actualización por conmutación por error, se elige este tipo de conmutación por error:<br /><br /> **0** = se utiliza la actualización inmediata. No se habilita la conmutación por error.<br /><br /> **1** = se está utilizando la actualización en cola. Se habilita la conmutación por error. La cola que se utiliza para la conmutación por error se especifica en el valor *update_mode* .|  
-|**identificador**|**int**|Id. del proceso de sistema para la conexión que utiliza el Agente de distribución actualmente en ejecución o recientemente ejecutado.|  
+|**spid**|**int**|Id. del proceso de sistema para la conexión que utiliza el Agente de distribución actualmente en ejecución o recientemente ejecutado.|  
 |**login_time**|**datetime**|La fecha y la hora de la conexión del Agente de distribución actualmente en ejecución o recientemente ejecutado.|  
 |**allow_subscription_copy**|**bit**|Especifica si se permite o no la capacidad de copiar de la base de datos de suscripciones.|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -52,6 +53,6 @@ ms.locfileid: "85889357"
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helppullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)  
+ [sp_helppullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)  
   
   

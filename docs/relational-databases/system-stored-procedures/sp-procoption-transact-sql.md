@@ -1,4 +1,5 @@
 ---
+description: sp_procoption (Transact-SQL)
 title: sp_procoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a7a4942e3109ec244cb7a16f4ef6a513b1cdcff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 161f819ba4d9cea76b6cf904b28236f6e6f9fefc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485860"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ProcName = ] 'procedure'`Es el nombre del procedimiento para el que se va a establecer una opción. *procedure* es **nvarchar (776)** y no tiene ningún valor predeterminado.  
+`[ @ProcName = ] 'procedure'` Es el nombre del procedimiento para el que se va a establecer una opción. *procedure* es **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
-`[ @OptionName = ] 'option'`Es el nombre de la opción que se va a establecer. El único valor de la *opción* es **Startup**.  
+`[ @OptionName = ] 'option'` Es el nombre de la opción que se va a establecer. El único valor de la *opción* es **Startup**.  
   
-`[ @OptionValue = ] 'value'`Indica si se debe establecer la opción en (**true** u **on**) o en OFF (**false** u **OFF**). el *valor* es **VARCHAR (12)** y no tiene ningún valor predeterminado.  
+`[ @OptionValue = ] 'value'` Indica si se debe establecer la opción en (**true** u **on**) o en OFF (**false** u **OFF**). el *valor* es **VARCHAR (12)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o número de error (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los procedimientos de inicio deben estar en la base de datos **maestra** y no pueden contener parámetros de entrada ni de salida. La ejecución de los procedimientos almacenados comienza cuando se recuperan todas las bases de datos y se registra el mensaje "Se completó la recuperación" en el inicio.  
   
 ## <a name="permissions"></a>Permisos  

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbee07cd02ca423a633133546130615bcb1d60c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99a17425f74b1ae2f5db7c4a6002e27ca7780f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485634"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @policy_id = ] policy_id`Es el identificador de la Directiva para la que desea eliminar el historial de ejecución. *policy_id* es de **tipo int**y es obligatorio. Puede ser NULL.  
+`[ @policy_id = ] policy_id` Es el identificador de la Directiva para la que desea eliminar el historial de ejecución. *policy_id* es de **tipo int**y es obligatorio. Puede ser NULL.  
   
-`[ @oldest_date = ] 'oldest_date'`Es la fecha más antigua para la que desea mantener el historial de ejecución de directivas. Se eliminan todos los historiales de ejecución anteriores a esta fecha. *oldest_date* es **DateTime**y es obligatorio. Puede ser NULL.  
+`[ @oldest_date = ] 'oldest_date'` Es la fecha más antigua para la que desea mantener el historial de ejecución de directivas. Se eliminan todos los historiales de ejecución anteriores a esta fecha. *oldest_date* es **DateTime**y es obligatorio. Puede ser NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Debe ejecutar sp_syspolicy_delete_policy_execution_history en el contexto de la base de datos del sistema msdb.  
   
  Para obtener los valores de *policy_id*y para ver las fechas del historial de ejecución, puede usar la siguiente consulta:  
@@ -85,9 +86,9 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_execution_history @policy_id = 7
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_set_config_history_retention &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
- [sp_syspolicy_purge_history &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
+ [sp_syspolicy_set_config_history_retention &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
+ [sp_syspolicy_purge_history &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_helprotect (Transact-SQL)
 title: sp_helprotect (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f170c15cdc75c8832adae7fae4147829b3b4bb9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eab1ad6fa3e71f4ef5c39ca06b081ed6b3889d29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485912"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,13 +48,13 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'object_statement'`Es el nombre del objeto en la base de datos actual, o una instrucción, que tiene los permisos para notificar. *object_statement* es de tipo **nvarchar (776)** y su valor predeterminado es null, que devuelve todos los permisos de objeto y de instrucción. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario _Owner_**.** _objeto_.  
+`[ @name = ] 'object_statement'` Es el nombre del objeto en la base de datos actual, o una instrucción, que tiene los permisos para notificar. *object_statement* es de tipo **nvarchar (776)** y su valor predeterminado es null, que devuelve todos los permisos de objeto y de instrucción. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario _Owner_**.** _objeto_.  
   
  Si *object_statement* es una instrucción, puede ser una instrucción CREATE.  
   
-`[ @username = ] 'security_account'`Es el nombre de la entidad de seguridad para la que se devuelven los permisos. *security_account* es de **tipo sysname y su**valor predeterminado es null, que devuelve todas las entidades de seguridad en la base de datos actual. *security_account* debe existir en la base de datos actual.  
+`[ @username = ] 'security_account'` Es el nombre de la entidad de seguridad para la que se devuelven los permisos. *security_account* es de **tipo sysname y su**valor predeterminado es null, que devuelve todas las entidades de seguridad en la base de datos actual. *security_account* debe existir en la base de datos actual.  
   
-`[ @grantorname = ] 'grantor'`Es el nombre de la entidad de seguridad que concedió permisos. el *otorgante* es de **tipo sysname y su**valor predeterminado es null, que devuelve toda la información de los permisos concedidos por cualquier entidad de seguridad en la base de datos.  
+`[ @grantorname = ] 'grantor'` Es el nombre de la entidad de seguridad que concedió permisos. el *otorgante* es de **tipo sysname y su**valor predeterminado es null, que devuelve toda la información de los permisos concedidos por cualquier entidad de seguridad en la base de datos.  
   
 `[ @permissionarea = ] 'type'`Es una cadena de caracteres que indica si se van a mostrar los permisos de objeto **(cadena de**caracteres **o**), los permisos de instrucción (cadena de caracteres) o ambos (**so**). *Type* es de tipo **VARCHAR (10)** y su valor predeterminado es **os**. el *tipo* puede ser cualquier combinación **de o** y **s**, con o sin comas o espacios entre **o** y **s**.  
   
@@ -65,14 +66,14 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Propietario**|**sysname**|Nombre del propietario del objeto.|  
-|**Objeto**|**sysname**|Nombre del objeto.|  
+|**Object**|**sysname**|Nombre del objeto.|  
 |**Receptores**|**sysname**|Nombre de la entidad de seguridad en la que se conceden los permisos.|  
-|**Otorgante**|**sysname**|Nombre de la entidad de seguridad que ha concedido los permisos al receptor de permisos especificado.|  
+|**Otorgante de permisos**|**sysname**|Nombre de la entidad de seguridad que ha concedido los permisos al receptor de permisos especificado.|  
 |**ProtectType**|**nvarchar(10**|Nombre del tipo de protección:<br /><br /> GRANT REVOKE|  
 |**Acción**|**nvarchar(60)**|Nombre del permiso. Las instrucciones válidas de permisos dependen del tipo de objeto.|  
 |**Columna**|**sysname**|Tipo de permiso:<br /><br /> All = Permiso sobre todas las columnas actuales del objeto.<br /><br /> New = Permiso sobre las nuevas columnas del objeto que se pueden cambiar (mediante la instrucción ALTER) posteriormente.<br /><br /> All+New = Combinación de Todas y Nuevas.<br /><br /> Devuelve un punto si el tipo de permiso no se aplica a las columnas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Todos los parámetros del siguiente procedimiento son opcionales. Si se ejecuta sin parámetros, `sp_helprotect` presenta todos los permisos que se han concedido o denegado en la base de datos actual.  
   
  Si se especifican algunos parámetros, pero no todos, se tienen que utilizar parámetros con nombre para identificar el parámetro concreto o `NULL` como marcador de posición. Por ejemplo, para presentar todos los permisos del propietario de la base de datos del otorgante de permisos (`dbo`), ejecute:  
@@ -133,7 +134,7 @@ EXEC sp_helprotect @name = 'CREATE TABLE';
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Denegar &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+ [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

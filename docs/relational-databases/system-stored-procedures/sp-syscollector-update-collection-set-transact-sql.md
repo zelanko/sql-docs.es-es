@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collection_set (Transact-SQL)
 title: sp_syscollector_update_collection_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ed9fe58317d1dbe1cb3de59b11f556bc96b1d9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 00285e7f1e170a671cd38149098e485c90f710db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485708"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,15 +56,15 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @collection_set_id = ] collection_set_id`Es el identificador local único para el conjunto de recopilación. *collection_set_id* es de **tipo int** y debe tener un valor si *el nombre* es NULL.  
+`[ @collection_set_id = ] collection_set_id` Es el identificador local único para el conjunto de recopilación. *collection_set_id* es de **tipo int** y debe tener un valor si *el nombre* es NULL.  
   
-`[ @name = ] 'name'`Es el nombre del conjunto de recopilación. *Name* es de **tipo sysname** y debe tener un valor si *collection_set_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre del conjunto de recopilación. *Name* es de **tipo sysname** y debe tener un valor si *collection_set_id* es NULL.  
   
-`[ @new_name = ] 'new_name'`Es el nuevo nombre del conjunto de recopilación. *new_name* es de **tipo sysname**y, si se utiliza, no puede ser una cadena vacía. *new_name* debe ser único. Para obtener una lista de los nombres de conjuntos de recopilación actuales, consulte la vista del sistema syscollector_collection_sets.  
+`[ @new_name = ] 'new_name'` Es el nuevo nombre del conjunto de recopilación. *new_name* es de **tipo sysname**y, si se utiliza, no puede ser una cadena vacía. *new_name* debe ser único. Para obtener una lista de los nombres de conjuntos de recopilación actuales, consulte la vista del sistema syscollector_collection_sets.  
   
-`[ @target = ] 'target'`Reservado para uso futuro.  
+`[ @target = ] 'target'` Reservado para uso futuro.  
   
-`[ @collection_mode = ] collection_mode`Es el tipo de recopilación de datos que se va a usar. *collection_mode* es **smallint** y puede tener uno de los valores siguientes:  
+`[ @collection_mode = ] collection_mode` Es el tipo de recopilación de datos que se va a usar. *collection_mode* es **smallint** y puede tener uno de los valores siguientes:  
   
  0 - Modo de almacenamiento en caché. La recopilación y la carga de datos están en programaciones independientes. Especifique el modo de almacenamiento en caché para la recopilación continua.  
   
@@ -71,21 +72,21 @@ sp_syscollector_update_collection_set
   
  Si se cambia del modo sin almacenamiento en caché al modo de almacenamiento en caché (0), también se debe especificar *schedule_uid* o *schedule_name*.  
   
-`[ @days_until_expiration = ] days_until_expiration`Es el número de días que los datos recopilados se guardan en el almacén de administración de datos. *days_until_expiration* es **smallint**. *days_until_expiration* debe ser 0 o un entero positivo.  
+`[ @days_until_expiration = ] days_until_expiration` Es el número de días que los datos recopilados se guardan en el almacén de administración de datos. *days_until_expiration* es **smallint**. *days_until_expiration* debe ser 0 o un entero positivo.  
   
-`[ @proxy_id = ] proxy_id`Es el identificador único de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de proxy del agente. *proxy_id* es de **tipo int**.  
+`[ @proxy_id = ] proxy_id` Es el identificador único de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de proxy del agente. *proxy_id* es de **tipo int**.  
   
-`[ @proxy_name = ] 'proxy_name'`Es el nombre del proxy. *proxy_name* es **sysname** y admite valores NULL.  
+`[ @proxy_name = ] 'proxy_name'` Es el nombre del proxy. *proxy_name* es **sysname** y admite valores NULL.  
   
-`[ @schedule_uid = ] 'schedule_uid'`Es el GUID que apunta a una programación. *schedule_uid* es de tipo **uniqueidentifier**.  
+`[ @schedule_uid = ] 'schedule_uid'` Es el GUID que apunta a una programación. *schedule_uid* es de tipo **uniqueidentifier**.  
   
  Para obtener *schedule_uid*, consulte la tabla del sistema sysschedules.  
   
  Cuando *collection_mode* se establece en 0, se deben especificar *schedule_uid* o *schedule_name* . Cuando *collection_mode* está establecido en 1, *schedule_uid* o *schedule_name* se omite si se especifica.  
   
-`[ @schedule_name = ] 'schedule_name'`Es el nombre de la programación. *schedule_name* es **sysname** y admite valores NULL. Si se especifica, *schedule_uid* debe ser null. Para obtener *schedule_name*, consulte la tabla del sistema sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` Es el nombre de la programación. *schedule_name* es **sysname** y admite valores NULL. Si se especifica, *schedule_uid* debe ser null. Para obtener *schedule_name*, consulte la tabla del sistema sysschedules.  
   
-`[ @logging_level = ] logging_level`Es el nivel de registro. *logging_level* es **smallint** con uno de los siguientes valores:  
+`[ @logging_level = ] logging_level` Es el nivel de registro. *logging_level* es **smallint** con uno de los siguientes valores:  
   
  0: registrar la información de ejecución y [!INCLUDE[ssIS](../../includes/ssis-md.md)] los eventos que realizan el seguimiento:  
   
@@ -107,12 +108,12 @@ sp_syscollector_update_collection_set
   
  El valor predeterminado para *logging_level* es 1.  
   
-`[ @description = ] 'description'`Es la descripción del conjunto de recopilación. la *Descripción* es **nvarchar (4000)**.  
+`[ @description = ] 'description'` Es la descripción del conjunto de recopilación. la *Descripción* es **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_syscollector_update_collection_set se debe ejecutar en el contexto de la base de datos del sistema msdb.  
   
  *Collection_set_id* o *Name* deben tener un valor, ambos no pueden ser null. Para obtener estos valores, consulte la vista del sistema syscollector_collection_sets.  
@@ -181,7 +182,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
- [syscollector_collection_sets &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [Programaciones dedbo.sys&#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [syscollector_collection_sets &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
+ [ Programaciones dedbo.sys&#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

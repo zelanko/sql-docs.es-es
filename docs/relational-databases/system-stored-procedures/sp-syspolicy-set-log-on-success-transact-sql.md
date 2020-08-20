@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_set_log_on_success (Transact-SQL)
 title: sp_syspolicy_set_log_on_success (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4534c8178d20462377dcacced00e9f6cc9bbc029
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cb17728ab1ac9c063f2198ec707254bf6b2f8eed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485614"
 ---
 # <a name="sp_syspolicy_set_log_on_success-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @value = ] value`Determina si se registran las evaluaciones correctas de la Directiva. el *valor* es **SQLVARIANT**y puede tener uno de los valores siguientes:  
+`[ @value = ] value` Determina si se registran las evaluaciones correctas de la Directiva. el *valor* es **SQLVARIANT**y puede tener uno de los valores siguientes:  
   
 -   0 o 'false' = las evaluaciones correctas de la directiva no se registran.  
   
@@ -49,7 +50,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Debe ejecutar sp_syspolicy_set_log_on_success en el contexto de la base de datos del sistema msdb.  
   
  Cuando *valor* se establece en 0 o en ' false ', solo se registran las evaluaciones de directivas con errores.  
@@ -68,8 +69,8 @@ EXEC msdb.dbo.sp_syspolicy_set_log_on_success @value = 1;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_configure &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
+ [sp_syspolicy_configure &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
   

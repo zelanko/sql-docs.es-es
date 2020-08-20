@@ -1,4 +1,5 @@
 ---
+description: Cambiar el nombre de un grupo de atributos (Master Data Services)
 title: Cambiar el nombre de un grupo de atributos
 ms.custom: ''
 ms.date: 03/15/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bb4fd11dca83f752e778b55117d098e3e070d441
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d7fab1a8f16c51d52e32c0147a85ab6ef08cd821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461951"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Cambiar el nombre de un grupo de atributos (Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: Asignación de funciones de reemplazo para mantener la compatibilidad de aplicaciones
 title: Asignación de funciones de reemplazo para la compatibilidad de aplicaciones-ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b18669fe9b6edbd39859166e382ad18d1b04a99a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7cba29b0dda2b0d4533444fd3fa8b83eaaeae7a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461417"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Asignación de funciones de reemplazo para mantener la compatibilidad de aplicaciones
 Una aplicación ODBC *3. x* que trabaje con el administrador de controladores ODBC *3. x* funcionará con un controlador ODBC *2. x* siempre y cuando no se utilicen nuevas características. Sin embargo, tanto la funcionalidad duplicada como los cambios de comportamiento afectan a la manera en que funciona la aplicación ODBC *3. x* en un controlador ODBC *2. x* . Cuando se trabaja con un controlador ODBC *2. x* , el administrador de controladores asigna las siguientes funciones de ODBC *3. x* , que han reemplazado una o varias funciones ODBC *2. x* , a las funciones ODBC *2. x* correspondientes.  

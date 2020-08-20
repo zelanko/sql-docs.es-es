@@ -1,4 +1,5 @@
 ---
+description: Administrar una base de conocimiento
 title: Administrar una base de conocimiento
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5676a182615dfa7ddf23dcda1841a6530467a8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462090"
 ---
 # <a name="manage-a-knowledge-base"></a>Administrar una base de conocimiento
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882755"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para abrir una base de conocimiento, debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN.  
   
-##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a>Administrar una base de conocimiento  
+##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a> Administrar una base de conocimiento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,7 +71,7 @@ ms.locfileid: "85882755"
   
         8.  **Fecha de creación**: la fecha en la que se creó.  
   
-##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a>Seguimiento: después de administrar una base de conocimiento  
+##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a> Seguimiento: después de administrar una base de conocimiento  
  Después de administrar una base de conocimiento, el paso siguiente dependerá de la acción que haya realizado en ella:  
   
 -   Si abrió la base de conocimiento, continuará en la actividad que seleccionó.  

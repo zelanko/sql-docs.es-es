@@ -1,4 +1,5 @@
 ---
+description: Función SQLSetDriverConnectInfo
 title: Función SQLSetDriverConnectInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10336475e39598161126c13771ad822de0d5f7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21538fa93328790ad8173e5193ba377b0744d964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461257"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>Función SQLSetDriverConnectInfo
 **Conformidad**  
@@ -46,7 +47,7 @@ SQLRETURN SQLSetDriverConnectInfo(
  *StringLength1*  
  Entradas Longitud de **inconnectionstring*, en caracteres si la cadena es Unicode, o bytes si la cadena es ANSI o DBCS.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -61,7 +62,7 @@ SQLRETURN SQLSetDriverConnectInfo(
   
  Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

@@ -1,4 +1,5 @@
 ---
+description: 'Lección 1-7: Adición y configuración del destino de OLE DB'
 title: 'Paso 7: Adición y configuración del destino de OLE DB | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c72ac0393733511f63844ae50b20a40e4c12ea4a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ebfca5c6b25f16bb4f86ca692b09bbc5d0beaaa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462071"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Lección 1-7: Adición y configuración del destino de OLE DB
 
@@ -41,7 +42,7 @@ En esta tarea, se agrega y configura un destino de OLE DB para usar el administr
   
 6.  En el cuadro de diálogo **Editor de destino de OLE DB**, asegúrese de que **localhost.AdventureWorksDW2012** está seleccionado en el cuadro **Administrador de conexiones OLE DB**.  
   
-7.  En el cuadro **Nombre de la tabla o la vista**, escriba o seleccione **[dbo].[FactCurrencyRate]** .  
+7.  En el cuadro **Nombre de la tabla o la vista**, escriba o seleccione **[dbo].[FactCurrencyRate]**.  
   
 8.  Haga clic en el botón **Nuevo** para crear una tabla.  Cambie el nombre de la tabla en el script de **Sample OLE DB Destination** a **NewFactCurrencyRate**.  Seleccione **Aceptar**.  
   
@@ -60,7 +61,7 @@ En esta tarea, se agrega y configura un destino de OLE DB para usar el administr
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente
 [Paso 8: Anotación y formato del paquete de la lección 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Destino de OLE DB](../integration-services/data-flow/ole-db-destination.md)  
   
   

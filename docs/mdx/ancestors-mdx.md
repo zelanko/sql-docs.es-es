@@ -1,4 +1,5 @@
 ---
+description: Ancestors (MDX)
 title: Antecesores (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92f15f20c872fbe63db09a55356b5d1e35ff0d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461687"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  Función que devuelve el conjunto de todos los antecesores de un miembro especificado en un nivel especificado o a una distancia especificada del miembro. Con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], el conjunto devuelto siempre estará compuesto por un solo miembro [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] : no admite varios elementos primarios para un solo miembro.  
+  Función que devuelve el conjunto de todos los antecesores de un miembro especificado en un nivel especificado o a una distancia especificada del miembro. Con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , el conjunto devuelto siempre estará compuesto por un solo miembro: no [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite varios elementos primarios para un solo miembro.  
   
 ## <a name="syntax"></a>Sintaxis  
   

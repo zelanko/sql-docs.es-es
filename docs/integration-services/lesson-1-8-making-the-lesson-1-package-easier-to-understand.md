@@ -1,4 +1,5 @@
 ---
+description: 'Lección 1-8: Anotación y formato del paquete de la lección 1'
 title: 'Paso 8: Anotación y formato del paquete de la lección 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/29/2020
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93a1ea1dd8fac01bb07aa2f2f8ffd4d363f57ffe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 08e5668fcdc3fe41e54965b01db9325c861fa98f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917334"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462044"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Lección 1-8: Anotación y formato del paquete de la lección 1 
 

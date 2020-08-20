@@ -1,4 +1,5 @@
 ---
+description: Actualización posicionada y las instrucciones Delete
 title: Instrucciones Update y DELETE posicionadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e5316bee7057b30eace326b3ca82b30b75741fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd100ac674aedf8dfd652c3d48e0f2dea1226019
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461397"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Actualización posicionada y las instrucciones Delete
 Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de resultados con una instrucción UPDATE o DELETE posicionada. Algunos orígenes de datos admiten las instrucciones Update y DELETE posicionadas, pero no todas ellas. Para determinar si un origen de datos admite instrucciones Update y DELETE posicionadas, una aplicación llama a **SQLGetInfo** con el SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (dependiendo del tipo de cursor). Tenga en cuenta que la biblioteca de cursores ODBC simula las instrucciones Update y DELETE posicionadas.  
@@ -41,7 +42,7 @@ Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de r
   
  **Establecer** *el identificador de columna* **=** {*expresión* &#124; **null**}  
   
- [**,** *identificador de columna* **=** {*expresión* &#124; **null**}]...  
+ [**,** *identificador* **=** de columna {*expresión* &#124; **null**}] ...  
   
  **WHERE CURRENT of** *cursor-Name*  
   

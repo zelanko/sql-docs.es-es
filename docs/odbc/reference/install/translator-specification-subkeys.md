@@ -1,4 +1,5 @@
 ---
+description: Subclaves de la especificación del traductor
 title: Subclaves de especificación de traductor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ad21943c5313edcb09aba88d45ea21132aa9757f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c02317c8abe12dbc693cdf7b715b6de84e5bc631
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461297"
 ---
 # <a name="translator-specification-subkeys"></a>Subclaves de la especificación del traductor
 Cada Traductor enumerado en la subclave traductores ODBC tiene una subclave propia. Esta subclave tiene el mismo nombre que el valor correspondiente en la subclave traductores ODBC. Los valores de esta subclave muestran las rutas de acceso completas de los archivos dll de configuración de traductor y traductor y el recuento de uso. Los formatos de los valores son los que se muestran en la tabla siguiente.  
   
 |Nombre|Tipo de datos|data|  
 |----------|---------------|----------|  
-|Traductor|REG_SZ|*Translator-DLL-ruta de acceso*|  
+|Translator|REG_SZ|*Translator-DLL-ruta de acceso*|  
 |Configurar|REG_SZ|*Setup-DLL-path*|  
 |UsageCount|REG_DWORD|*count*|  
   
@@ -35,7 +36,7 @@ Cada Traductor enumerado en la subclave traductores ODBC tiene una subclave prop
   
  Las aplicaciones no deben establecer el recuento de uso. ODBC mantendrá este recuento.  
   
- Por ejemplo, supongamos que el traductor de páginas de códigos de Microsoft tiene un archivo DLL de traducción denominado Mscpxl32. dll, que las funciones de configuración del traductor están en el mismo archivo DLL y que el traductor se ha instalado tres veces. Los valores de la subclave traductor de página de códigos de Microsoft podrían ser los siguientes:  
+ Por ejemplo, supongamos que el traductor de páginas de códigos de Microsoft tiene un archivo DLL de traducción denominado Mscpxl32.dll, que las funciones de configuración del traductor están en el mismo archivo DLL y que el traductor se ha instalado tres veces. Los valores de la subclave traductor de página de códigos de Microsoft podrían ser los siguientes:  
   
 ```  
 Translator : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL  

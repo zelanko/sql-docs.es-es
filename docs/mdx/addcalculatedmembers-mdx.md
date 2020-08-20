@@ -1,4 +1,5 @@
 ---
+description: AddCalculatedMembers (MDX)
 title: AddCalculatedMembers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81e048ef534d12f282315562713e40d08512b121
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461707"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 
@@ -50,7 +51,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- En el ejemplo siguiente se `Measures.[Unit Price]` devuelve el miembro, además de todos los miembros calculados de la dimensión **Measures** , del cubo **Adventure Works** .  
+ En el ejemplo siguiente se devuelve el `Measures.[Unit Price]` miembro, además de todos los miembros calculados de la dimensión **Measures** , del cubo **Adventure Works** .  
   
 ```  
 SELECT  

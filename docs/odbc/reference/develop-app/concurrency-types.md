@@ -1,4 +1,5 @@
 ---
+description: Tipos de simultaneidad
 title: Tipos de simultaneidad | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 642301d09c5aa189276db534e58aca0c5e00e3ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d55740b71d4e9a7d3b8d22400da0c5b3d94e73d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461547"
 ---
 # <a name="concurrency-types"></a>Tipos de simultaneidad
 Para solucionar el problema de la simultaneidad reducida en cursores de, ODBC expone cuatro tipos diferentes de simultaneidad de cursores:  

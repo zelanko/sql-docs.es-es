@@ -1,4 +1,5 @@
 ---
+description: Separar y adjuntar bases de datos de DQS
 title: Separar y adjuntar bases de datos de DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fdd977cf886512c7d8ef19bfa5580ec689acb91b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6d59c5c92b41176cfb6a664bdf1617c164d23d30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462140"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Separar y adjuntar bases de datos de DQS
 
@@ -43,7 +44,7 @@ ms.locfileid: "85882817"
   
 -   Debe disponer del rol dqs_administrator en la base de datos DQS_MAIN para terminar las actividades o detener los procesos en ejecución en DQS.  
   
-##  <a name="detach-dqs-databases"></a><a name="Detach"></a>Desasociar bases de datos de DQS  
+##  <a name="detach-dqs-databases"></a><a name="Detach"></a> Desasociar bases de datos de DQS  
  Cuando se separa una base de datos de DQS mediante SQL Server Management Studio, los archivos separados permanecen en el equipo, y se pueden volver a adjuntar a la misma instancia de SQL Server o mover a otro servidor y adjuntarlos allí. Generalmente, los archivos de base de datos de DQS están disponibles en la ubicación siguiente en el equipo de Data Quality Services: C:\Archivos de programa\Microsoft SQL Server\MSSQL13.*<nombre_instancia>* \MSSQL\DATA.  
   
 1.  Inicie Microsoft SQL Server Management Studio y conéctese a la instancia adecuada de SQL Server.  
@@ -58,7 +59,7 @@ ms.locfileid: "85882817"
   
  También puede separar bases de datos de DQS mediante instrucciones Transact-SQL; para ello, utilice el procedimiento almacenado sp_detach_db. Para obtener más información sobre cómo separar bases de datos mediante instrucciones Transact-SQL, vea [Using Transact-SQL](../relational-databases/databases/detach-a-database.md#TsqlProcedure) en [Detach a Database](../relational-databases/databases/detach-a-database.md).  
   
-##  <a name="attach-dqs-databases"></a><a name="Attach"></a>Adjuntar bases de datos de DQS  
+##  <a name="attach-dqs-databases"></a><a name="Attach"></a> Adjuntar bases de datos de DQS  
  Utilice las instrucciones siguientes para adjuntar una base de datos de DQS a la misma instancia de SQL Server (de la que se separó) o a una instancia de SQL Server diferente donde se ha instalado [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] .  
   
 1.  Inicie Microsoft SQL Server Management Studio y conéctese a la instancia adecuada de SQL Server.  
@@ -85,14 +86,13 @@ ms.locfileid: "85882817"
   
 9. En la ventana del editor de consultas, copie las instrucciones SQL siguientes:  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
-    RECONFIGURE WITH OVERRIDE  
-    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
-    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
+    RECONFIGURE WITH OVERRIDE;  
+    ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER;  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##];  
+    ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##];  
     ```  
   
 10. Presione F5 para ejecutar las instrucciones. Vea el panel Resultados para comprobar que las instrucciones se han ejecutado correctamente. Aparecerá el mensaje siguiente: `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  

@@ -1,4 +1,5 @@
 ---
+description: Recuperar parámetros de salida mediante SQLGetData
 title: Recuperación de parámetros de salida mediante SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c96a3f9fc81d081ce16fe8e75746aafe8962fd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a31cb6baa015e2a90977d0112e770ce66fa8e62f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461387"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Recuperar parámetros de salida mediante SQLGetData
 Antes de ODBC 3,8, una aplicación solo podía recuperar los parámetros de salida de una consulta con un búfer de salida enlazado. Sin embargo, es difícil asignar un búfer muy grande cuando el tamaño del valor del parámetro es muy grande (por ejemplo, una imagen grande). ODBC 3,8 presenta una nueva manera de recuperar los parámetros de salida en partes. Una aplicación ahora puede llamar a **SQLGetData** con un búfer pequeño varias veces para recuperar un valor de parámetro grande. Esto es similar a la recuperación de datos de columnas grandes.  
@@ -37,7 +38,7 @@ Antes de ODBC 3,8, una aplicación solo podía recuperar los parámetros de sali
   
 3.  Llame a **SQLParamData** para obtener el parámetro que está disponible para la recuperación. **SQLParamData** devolverá SQL_PARAM_DATA_AVAILABLE con el token del primer parámetro disponible, que se establece en **SQLBindParameter** (paso 1). El token se devuelve en el búfer al que apunta *ValuePtrPtr* .  
   
-4.  Llame a **SQLGetData** con el argumento *col*_or\_*Param_Num* establecido en el ordinal del parámetro para recuperar los datos del primer parámetro disponible. Si **SQLGetData** devuelve SQL_SUCCESS_WITH_INFO y SQLSTATE 01004 (datos truncados) y el tipo es de longitud variable tanto en el cliente como en el servidor, hay más datos que recuperar del primer parámetro disponible. Puede seguir llamando a **SQLGetData** hasta que devuelva SQL_SUCCESS o SQL_SUCCESS_WITH_INFO con un **SQLSTATE**diferente.  
+4.  Llame a **SQLGetData** con el argumento *col*_or \_ *Param_Num* establecido en el ordinal del parámetro para recuperar los datos del primer parámetro disponible. Si **SQLGetData** devuelve SQL_SUCCESS_WITH_INFO y SQLSTATE 01004 (datos truncados) y el tipo es de longitud variable tanto en el cliente como en el servidor, hay más datos que recuperar del primer parámetro disponible. Puede seguir llamando a **SQLGetData** hasta que devuelva SQL_SUCCESS o SQL_SUCCESS_WITH_INFO con un **SQLSTATE**diferente.  
   
 5.  Repita los pasos 3 y 4 para recuperar el parámetro actual.  
   
@@ -75,13 +76,13 @@ Antes de ODBC 3,8, una aplicación solo podía recuperar los parámetros de sali
   
  Después de que **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** devuelvan SQL_PARAM_DATA_AVAILABLE, se producirá un error de secuencia de función si una aplicación llama a una función que no está en la lista siguiente:  
   
--   **SQLAllocHandle** / **SQLAllocHandleStd**  
+-   **SQLAllocHandle**  /  **SQLAllocHandleStd**  
   
--   **SQLDataSources** / **SQLDrivers**  
+-   **SQLDataSources**  /  **SQLDrivers**  
   
--   **SQLGetInfo** / **SQLGetFunctions**  
+-   **SQLGetInfo**  /  **SQLGetFunctions**  
   
--   **SQLGetConnectAttr** / **SQLGetEnvAttr**SQLGetEnvAttr / **SQLGetDescField**SQLGetDescField / **SQLGetDescRec**  
+-   **SQLGetConnectAttr**  /  **SQLGetEnvAttr**  /  **SQLGetDescField**  /  **SQLGetDescRec**  
   
 -   **SQLNumParams**  
   
@@ -93,7 +94,7 @@ Antes de ODBC 3,8, una aplicación solo podía recuperar los parámetros de sali
   
 -   **SQLMoreResults**  
   
--   **SQLGetDiagField** / **SQLGetDiagRec**  
+-   **SQLGetDiagField**  /  **SQLGetDiagRec**  
   
 -   **SQLCancel**  
   
@@ -268,5 +269,5 @@ BOOL displaySimilarPicture(BYTE* image, ULONG lengthOfImage, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Parámetros de la instrucción](../../../odbc/reference/develop-app/statement-parameters.md)

@@ -1,4 +1,5 @@
 ---
+description: Mensajes de diagnóstico
 title: Mensajes de diagnóstico | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be63e9d78960e40ac5e9ee016d2cfd868d99a922
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d788a8bb23b7b63ae65a6fcf8c119110b5e6557
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461517"
 ---
 # <a name="diagnostic-messages"></a>Mensajes de diagnóstico
 Se devuelve un mensaje de diagnóstico con cada SQLSTATE. A menudo se devuelve el mismo SQLSTATE con varios mensajes diferentes. Por ejemplo, se devuelve SQLSTATE 42000 (error de sintaxis o infracción de acceso) para la mayoría de los errores en la sintaxis SQL. Sin embargo, es probable que cada error de sintaxis esté descrito por un mensaje diferente.  

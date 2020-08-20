@@ -1,4 +1,5 @@
 ---
+description: Archivos de script de ejemplo de la consola (OracleToSQL)
 title: Trabajar con los archivos de script de la consola de ejemplo (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b5be39914c13b647f9a3f4b70a6371b9c5b40749
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f7b9fa46fcd5b24b5427c4ba7a359ac37565f724
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463187"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Archivos de script de ejemplo de la consola (OracleToSQL)
 Se han proporcionado algunos archivos de ejemplo junto con el producto para la referencia de usuario y el uso. En esta sección se describe la manera de personalizar fácilmente estos scripts para ajustarse a las necesidades del usuario final.  
@@ -80,9 +81,9 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     Asignación de esquema de la base de datos de origen al esquema de destino.  
   
-    **Attribute**  
+    **Atributo**  
   
-    -   `source-schema:`Especifica la base de datos de origen que requiere que se convierta.  
+    -   `source-schema:` Especifica la base de datos de origen que requiere que se convierta.  
   
     -   `sql-server-schema`: Especifica la base de datos de destino que se va a migrar a  
   
@@ -94,9 +95,9 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     -   Si el usuario tiene que evaluar varios objetos o bases de datos, puede especificar varios `metabase-object` nodos, tal como se muestra en el `convert-schema` ejemplo 4 del comando del archivo de script de la consola de ejemplo.  
   
-    **Attribute**  
+    **Atributo**  
   
-    `object-name`: Especifique el nombre de objeto o base de datos de origen que requiere la conversión. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el`object-name`  
+    `object-name`: Especifique el nombre de objeto o base de datos de origen que requiere la conversión. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el `object-name`  
   
     **Nombre de comando**  
   
@@ -106,9 +107,9 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     -   Si el usuario tiene que evaluar varios objetos o bases de datos, puede especificar varios `metabase-object` nodos, tal como se muestra en el `synchronize-target` ejemplo 3 del comando del archivo de script de la consola de ejemplo.  
   
-    **Attribute**  
+    **Atributo**  
   
-    `object-name:`Especifique el nombre de objeto o base de datos de SQL Server que requiere que se cree. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el`object-name`  
+    `object-name:` Especifique el nombre de objeto o base de datos de SQL Server que requiere que se cree. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el `object-name`  
   
     **Nombre de comando**  
   
@@ -118,9 +119,9 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     -   Si el usuario tiene que evaluar varios objetos o bases de datos, puede especificar varios `metabase-object` nodos, tal como se muestra en el `migrate-data` ejemplo 2 del comando del archivo de script de la consola de ejemplo.  
   
-    **Attribute**  
+    **Atributo**  
   
-    `object-name:`Especifica el nombre de la base de datos o de las tablas de origen que requiere la migración. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el`object-name`  
+    `object-name:` Especifica el nombre de la base de datos o de las tablas de origen que requiere la migración. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el `object-name`  
   
 ## <a name="see-also"></a>Consulte también  
 [Crear archivos de valores de variable &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  

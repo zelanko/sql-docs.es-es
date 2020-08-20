@@ -1,4 +1,5 @@
 ---
+description: Referencia de la interfaz de usuario (MySQLToSQL)
 title: Referencia de la interfaz de usuario (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2f1b7a495f9962c35f805eec7518c25c50709b68
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 76eb6b52b988fc0a4c0f62e4c295b36beeab0078
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463305"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referencia de la interfaz de usuario (MySQLToSQL)
 En esta sección se incluyen los temas de ayuda de SQL Server Migration Assistant (SSMA) para MySQL.  

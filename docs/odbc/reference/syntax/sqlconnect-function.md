@@ -1,4 +1,5 @@
 ---
+description: Función SQLConnect
 title: Función SQLConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab0a31845efeb484c554a9c9cf1afeaeab1a8bea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 714bc6f69a72609ee266effff71f1898d62ec7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461207"
 ---
 # <a name="sqlconnect-function"></a>Función SQLConnect
 **Conformidad**  
@@ -57,7 +58,7 @@ SQLRETURN SQLConnect(
  *NameLength1*  
  Entradas Longitud de **ServerName* en caracteres.  
   
- *Nombre*  
+ *UserName*  
  Entradas Identificador de usuario.  
   
  *NameLength2*  
@@ -69,7 +70,7 @@ SQLRETURN SQLConnect(
  *NameLength3*  
  Entradas Longitud de **autenticación* en caracteres.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -84,7 +85,7 @@ SQLRETURN SQLConnect(
 |08004|El servidor rechazó la conexión|El origen de datos rechazó el establecimiento de la conexión por motivos definidos por la implementación.|  
 |08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos al que el controlador estaba intentando conectar antes de que la función finalizara el procesamiento.|  
 |28000|Especificación de autorización no válida|El valor especificado para el *nombre de usuario* del argumento o el valor especificado para la *autenticación* de argumento infringió las restricciones definidas por el origen de datos.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|(DM) el administrador de controladores no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *ConnectionHandle*. Se llamó a la función **SQLConnect** y antes de completar la ejecución, se llamó a la [función SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) en *ConnectionHandle*y, a continuación, se llamó de nuevo a la función **SQLConnect** en el *ConnectionHandle*.<br /><br /> O bien, se llamó a la función **SQLConnect** y antes de completar la ejecución, se llamó a **SQLCancelHandle** en *ConnectionHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *ConnectionHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.|  
@@ -100,7 +101,7 @@ SQLRETURN SQLConnect(
 |IM005|Error de SQLAllocHandle del controlador en SQL_HANDLE_DBC|(DM) durante **SQLConnect**, el administrador de controladores llamó a la función **SQLAllocHandle** del controlador con un *HandleType* de SQL_HANDLE_DBC y el controlador devolvió un error.|  
 |IM006|Error de SQLSetConnectAttr del controlador|Durante **SQLConnect**, el administrador de controladores llamó a la función **SQLSetConnectAttr** del controlador y el controlador devolvió un error. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |IM009|No se puede conectar a la DLL de traducción|El controlador no pudo conectarse a la DLL de traducción que se especificó para el origen de datos.|  
-|IM010|El nombre del origen de datos es demasiado largo|(DM) * \*ServerName* tenía más de SQL_MAX_DSN_LENGTH caracteres.|  
+|IM010|El nombre del origen de datos es demasiado largo|(DM) * \* ServerName* tenía más de SQL_MAX_DSN_LENGTH caracteres.|  
 |IM014|El DSN especificado contiene una incoherencia de arquitectura entre el controlador y la aplicación|(DM) 32: la aplicación de bits usa un DSN que se conecta a un controlador de 64 bits; o viceversa.|  
 |IM015|Error de SQLConnect del controlador en SQL_HANDLE_DBC_INFO_HANDLE|Si un controlador devuelve SQL_ERROR, el administrador de controladores devolverá SQL_ERROR a la aplicación y se producirá un error en la conexión.<br /><br /> Para obtener más información acerca de SQL_HANDLE_DBC_INFO_TOKEN, vea [desarrollar el reconocimiento del grupo de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|El sondeo está deshabilitado en el modo de notificación asincrónico|Cada vez que se usa el modelo de notificación, el sondeo se deshabilita.|  
@@ -141,7 +142,7 @@ SQLRETURN SQLConnect(
   
  Si un controlador admite **SQLConnect**, la sección de la palabra clave driver de la información del sistema para el controlador debe contener la palabra clave **ConnectFunctions** con el primer carácter establecido en "Y".  
   
-### <a name="connection-pooling"></a>Agrupar conexiones  
+### <a name="connection-pooling"></a>Agrupación de conexiones  
  La agrupación de conexiones permite a una aplicación volver a usar una conexión que ya se ha creado. Cuando la agrupación de conexiones está habilitada y se llama a **SQLConnect** , el administrador de controladores intenta establecer la conexión con una conexión que forma parte de un grupo de conexiones en un entorno que se ha designado para la agrupación de conexiones. Este entorno es un entorno compartido que usan todas las aplicaciones que usan las conexiones en el grupo.  
   
  La agrupación de conexiones está habilitada antes de que se asigne el entorno mediante una llamada a **SQLSetEnvAttr** para establecer SQL_ATTR_CONNECTION_POOLING en SQL_CP_ONE_PER_DRIVER (que especifica un máximo de un grupo por controlador) o SQL_CP_ONE_PER_HENV (que especifica un máximo de un grupo por entorno). En este caso, se llama a **SQLSetEnvAttr** con *EnvironmentHandle* establecido en null, lo que convierte el atributo en un atributo de nivel de proceso. Si SQL_ATTR_CONNECTION_POOLING está establecido en SQL_CP_OFF, la agrupación de conexiones está deshabilitada.  
@@ -256,6 +257,6 @@ int main() {
 |Devolver el valor de un atributo de conexión|[Función SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Establecer un atributo de conexión|[Función SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

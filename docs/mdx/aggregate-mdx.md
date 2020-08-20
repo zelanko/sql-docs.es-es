@@ -1,4 +1,5 @@
 ---
+description: Aggregate (MDX)
 title: Agregado (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1e3f00ffbf662422f162d493a585d3972518431
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461706"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -42,7 +43,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Operador de agregación|Resultado|  
 |--------------------------|------------|  
 |Sum|Devuelve la suma de valores del conjunto.|  
-|Count|Devuelve el recuento de valores del conjunto.|  
+|Recuento|Devuelve el recuento de valores del conjunto.|  
 |Max|Devuelve el valor máximo del conjunto.|  
 |Min|Devuelve el valor mínimo del conjunto.|  
 |Funciones de agregación de suma parcial|Devuelve el cálculo de comportamiento de suma parcial del conjunto después de proyectar la forma al eje de tiempo.|  
@@ -55,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Assignments|Las asignaciones se agregan de acuerdo con la función de agregación de medida. Si la función de agregación de medida es un recuento distintivo, se suma la asignación.|  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve la suma `Measures.[Order Quantity]` del miembro, agregada durante los primeros ocho meses del año 2003 que se encuentran en la `Date` dimensión, del cubo **Adventure Works** .  
+ En el ejemplo siguiente se devuelve la suma del `Measures.[Order Quantity]` miembro, agregada durante los primeros ocho meses del año 2003 que se encuentran en la `Date` dimensión, del cubo **Adventure Works** .  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -122,15 +123,15 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [&#40;&#41;MDX de PeriodsToDate](../mdx/periodstodate-mdx.md)   
- [Secundarios &#40;&#41;MDX](../mdx/children-mdx.md)   
- [Jerarquía &#40;&#41;MDX](../mdx/hierarchize-mdx.md)   
+ [&#40;&#41;MDX de PeriodsToDate ](../mdx/periodstodate-mdx.md)   
+ [Secundarios &#40;&#41;MDX ](../mdx/children-mdx.md)   
+ [Jerarquía &#40;&#41;MDX ](../mdx/hierarchize-mdx.md)   
  [Count &#40;establecer&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filtrar &#40;&#41;MDX](../mdx/filter-mdx.md)   
- [&#41;AddCalculatedMembers &#40;MDX](../mdx/addcalculatedmembers-mdx.md)   
- [&#41;DrilldownLevel &#40;MDX](../mdx/drilldownlevel-mdx.md)   
- [Propiedades &#40;&#41;MDX](../mdx/properties-mdx.md)   
- [&#41;PrevMember &#40;MDX](../mdx/prevmember-mdx.md)   
+ [Filtrar &#40;&#41;MDX ](../mdx/filter-mdx.md)   
+ [&#41;AddCalculatedMembers &#40;MDX ](../mdx/addcalculatedmembers-mdx.md)   
+ [&#41;DrilldownLevel &#40;MDX ](../mdx/drilldownlevel-mdx.md)   
+ [Propiedades &#40;&#41;MDX ](../mdx/properties-mdx.md)   
+ [&#41;PrevMember &#40;MDX ](../mdx/prevmember-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

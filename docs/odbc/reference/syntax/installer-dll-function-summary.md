@@ -1,4 +1,5 @@
 ---
+description: Resumen de funciones DLL de instalador
 title: Resumen de la función DLL del instalador | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ddaf20334a84833433961a49e17724d354945c5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3666808659abb29a1f5a1eb1e8be62e8cf0507f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461237"
 ---
 # <a name="installer-dll-function-summary"></a>Resumen de funciones DLL de instalador
 En la tabla siguiente se describen las funciones de la DLL del instalador. Para obtener más información sobre la sintaxis y la semántica de cada función, vea referencia de la [API de dll del instalador](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
   
-|Tarea|Nombre de función|Propósito|  
+|Tarea|Nombre de función|Fin|  
 |----------|-------------------|-------------|  
 |Instalar ODBC|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|Carga el archivo DLL de instalación específico del controlador.|  
 ||[SQLGetInstalledDrivers](../../../odbc/reference/syntax/sqlgetinstalleddrivers-function.md)|Devuelve una lista de los controladores instalados.|  
@@ -37,14 +38,14 @@ En la tabla siguiente se describen las funciones de la DLL del instalador. Para 
 ||[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|Quita el traductor de la información del sistema.|  
 |Configuración de orígenes de datos|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|Llama al archivo DLL de instalación específico del controlador.|  
 ||[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|Muestra un cuadro de diálogo para agregar un origen de datos.|  
-||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|Recupera el modo de configuración que indica dónde se encuentra la entrada ODBC. ini que enumera los valores DSN en la información del sistema.|  
+||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|Recupera el modo de configuración que indica dónde se encuentra la entrada Odbc.ini que enumera los valores DSN en la información del sistema.|  
 ||[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|Escribe un valor en la información del sistema.|  
 ||[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|Muestra un cuadro de diálogo para seleccionar un traductor.|  
 ||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|Muestra un cuadro de diálogo para configurar los orígenes de datos y los controladores.|  
 ||[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|Lee información de los DSN de archivo.|  
 ||[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|Quita el origen de datos predeterminado.|  
 ||[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|Quita un origen de datos.|  
-||[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|Establece el modo de configuración que indica dónde se encuentra la entrada ODBC. ini que enumera los valores DSN en la información del sistema.|  
+||[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|Establece el modo de configuración que indica dónde se encuentra la entrada Odbc.ini que enumera los valores de DSN en la información del sistema.|  
 ||[SQLValidDSN](../../../odbc/reference/syntax/sqlvaliddsn-function.md)|Comprueba la longitud y la validez del nombre del origen de datos.|  
 ||[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|Agrega un origen de datos.|  
 ||[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|Escribe información en los DSN de archivo.|  

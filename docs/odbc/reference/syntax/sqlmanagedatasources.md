@@ -1,4 +1,5 @@
 ---
+description: SQLManageDataSources
 title: SQLManageDataSources | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b572a861af3479e1543be9fda9598cc7e25d36c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81f4616cb04d5d17cca687843d28efa1027ff65f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460978"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformidad**  
@@ -45,11 +46,11 @@ BOOL SQLManageDataSources(
  *identificador*  
  Entradas Identificador de la ventana primaria.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  **SQLManageDataSources** devuelve false si *hWnd* no es un identificador de ventana válido. De lo contrario, devuelve TRUE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLManageDataSources** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLManageDataSources** devuelve false, se puede obtener un valor de * \* pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
@@ -93,7 +94,7 @@ BOOL SQLManageDataSources(
   
  Un DSN del sistema se registra en la entrada HKEY_LOCAL_MACHINE en la información del sistema en lugar de en la entrada HKEY_CURRENT_USER. No está vinculado a un usuario que inicia sesión con su nombre de usuario y contraseña particulares, pero lo puede usar cualquier usuario de ese equipo o un servicio automatizado de todo el sistema. Sin embargo, el DSN del sistema está vinculado a un equipo. No admite la capacidad de usar DSN remotos entre máquinas. Los DSN del sistema se registran como se indica a continuación en la información del sistema:  
   
- HKEY_LOCAL_MACHINE SOFTWARE ODBC ODBC. ini  
+ Odbc.ini DE HKEY_LOCAL_MACHINE DE SOFTWARE ODBC  
   
 ## <a name="file-dsns"></a>DSN de archivo  
  Un origen de datos de archivo no tiene un nombre de origen de datos, como un origen de datos de la máquina, y no está registrado en ningún usuario o equipo. La información de conexión para ese origen de datos se encuentra en un archivo. DSN que se puede copiar en cualquier equipo. Un origen de datos de archivo puede ser compartible, en cuyo caso el archivo. DSN reside en una red y se puede usar simultáneamente por varios usuarios en la red siempre que el usuario tenga instalado el controlador adecuado. Un origen de datos de archivo también puede ser no compartible, en cuyo caso solo se puede usar en un único equipo.  

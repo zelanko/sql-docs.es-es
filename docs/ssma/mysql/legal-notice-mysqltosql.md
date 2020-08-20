@@ -1,4 +1,5 @@
 ---
+description: Aviso legal (MySQLToSql)
 title: Aviso legal (MySQLToSql) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: aaf9660b77e943e2350c2dc32c73f013ae68dde8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 30ead9bd1d01b26d6453672940a55dd09ad36577
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463373"
 ---
 # <a name="legal-notice-mysqltosql"></a>Aviso legal (MySQLToSql)
 Tanto esta documentación como las aplicaciones de ejemplo que contiene, se proporcionan únicamente con fines informativos y sin ninguna garantía, ya sea expresa o implícita. La información que se proporciona en esta documentación, incluidas las direcciones URL y otras referencias a sitios web de Internet, está sujeta a modificaciones sin previo aviso. El usuario asume todos los riesgos derivados del uso de esta documentación.  

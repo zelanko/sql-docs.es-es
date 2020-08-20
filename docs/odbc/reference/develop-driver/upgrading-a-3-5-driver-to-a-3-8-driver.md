@@ -1,4 +1,5 @@
 ---
+description: Actualizar un controlador de 3,5 a un controlador 3.8
 title: Actualización de un controlador 3,5 a un controlador 3,8 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcd01d050e806b733d75c54058945d367a33d6a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac140c92b4042df1b4754d3a56237a6aa4b3afaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294436"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461337"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Actualizar un controlador de 3,5 a un controlador 3.8
 En este tema se proporcionan directrices y consideraciones para actualizar un controlador ODBC 3,5 a un controlador ODBC 3,8.  
@@ -39,7 +40,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ##### <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipos de datos específicos del controlador, tipos de descriptores, tipos de información, tipos de diagnóstico y atributos  
  Al desarrollar un nuevo controlador, debe utilizar el intervalo específico del controlador para tipos de datos, tipos de descriptores, tipos de información, tipos de diagnóstico y atributos. Los intervalos específicos del controlador y sus valores de tipo base se describen en [tipos de datos específicos del controlador, tipos de descriptores, tipos de información, tipos de diagnóstico y atributos](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
-##### <a name="connection-pooling"></a>Agrupar conexiones  
+##### <a name="connection-pooling"></a>Agrupación de conexiones  
  Para una mejor administración de la agrupación de conexiones, ODBC 3,8 presenta el atributo de conexión SQL_ATTR_RESET_CONNECTION en **SQLSetConnectAttr**. SQL_RESET_CONNECTION_YES es el único valor válido para este atributo. SQL_ATTR_RESET_CONNECTION se establecerán justo antes de que el administrador de controladores Coloque una conexión en el grupo de conexiones, lo que permite al controlador restablecer los valores predeterminados de los demás atributos de conexión.  
   
  Para evitar la comunicación innecesaria con el servidor, un controlador puede diferir el atributo de conexión restablecido hasta la siguiente comunicación con el servidor remoto, después de que la conexión se vuelva a usar desde el grupo.  
@@ -72,7 +73,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ##### <a name="asynchronous-execution-notification-method"></a>Ejecución asincrónica (método de notificación)  
  ODBC 3,8 admite el método de notificación para las operaciones asincrónicas, disponible a partir de Windows 8. Para obtener más información, vea [ejecución asincrónica (método de notificación)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Controladores ODBC proporcionados por Microsoft](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [Novedades de ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

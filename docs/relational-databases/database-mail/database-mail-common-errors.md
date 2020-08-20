@@ -1,4 +1,5 @@
 ---
+description: Errores comunes del Correo electrónico de base de datos
 title: Errores comunes del Correo electrónico de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 04/22/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4693990f7dc2a32f1d1a4c1462d35af9830de530
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 442e95c2e579fa67cb54b801fe6ebbdcd4098ae3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461093"
 ---
 # <a name="common-errors-with-database-mail"></a>Errores comunes del Correo electrónico de base de datos 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -1,4 +1,5 @@
 ---
+description: Función SQLGetDescField
 title: Función SQLGetDescField | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89972d7f36b436868cc8e243b03827f095b90492
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 31618ca5283ae6875cb4243cc88e643452cef4d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461071"
 ---
 # <a name="sqlgetdescfield-function"></a>Función SQLGetDescField
 **Conformidad**  
@@ -64,22 +65,22 @@ SQLRETURN SQLGetDescField(
  Si *ValuePtr* es null, *StringLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de caracteres) disponible para devolver en el búfer señalado por *ValuePtr*.  
   
  *BufferLength*  
- Entradas Si *FieldIdentifier* es un campo definido por ODBC y *ValuePtr* apunta a una cadena de caracteres o a un búfer binario, este argumento debe ser \*la longitud de *ValuePtr*. Si *FieldIdentifier* es un campo definido por ODBC y \* *ValuePtr* es un entero, se omite *BufferLength* . Si el valor de * \*ValuePtr* es de un tipo de datos Unicode (al llamar a **SQLGetDescFieldW**), el argumento *BufferLength* debe ser un número par.  
+ Entradas Si *FieldIdentifier* es un campo definido por ODBC y *ValuePtr* apunta a una cadena de caracteres o a un búfer binario, este argumento debe ser la longitud de \* *ValuePtr*. Si *FieldIdentifier* es un campo definido por ODBC y \* *ValuePtr* es un entero, se omite *BufferLength* . Si el valor de * \* ValuePtr* es de un tipo de datos Unicode (al llamar a **SQLGetDescFieldW**), el argumento *BufferLength* debe ser un número par.  
   
  Si *FieldIdentifier* es un campo definido por el controlador, la aplicación indica la naturaleza del campo en el administrador de controladores estableciendo el argumento *BufferLength* . *BufferLength* puede tener los siguientes valores:  
   
--   Si * \*ValuePtr* es un puntero a una cadena de caracteres, *BufferLength* es la longitud de la cadena o SQL_NTS.  
+-   Si * \* ValuePtr* es un puntero a una cadena de caracteres, *BufferLength* es la longitud de la cadena o SQL_NTS.  
   
--   Si * \*ValuePtr* es un puntero a un búfer binario, la aplicación coloca el resultado de la macro SQL_LEN_BINARY_ATTR (*length*) en *BufferLength*. Esto coloca un valor negativo en *BufferLength*.  
+-   Si * \* ValuePtr* es un puntero a un búfer binario, la aplicación coloca el resultado de la macro SQL_LEN_BINARY_ATTR (*length*) en *BufferLength*. Esto coloca un valor negativo en *BufferLength*.  
   
--   Si * \*ValuePtr* es un puntero a un valor distinto de una cadena de caracteres o una cadena binaria, *BufferLength* debe tener el valor SQL_IS_POINTER.  
+-   Si * \* ValuePtr* es un puntero a un valor distinto de una cadena de caracteres o una cadena binaria, *BufferLength* debe tener el valor SQL_IS_POINTER.  
   
--   Si * \*ValuePtr* contiene un tipo de datos de longitud fija, *BufferLength* es SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, según corresponda.  
+-   Si * \* ValuePtr* contiene un tipo de datos de longitud fija, *BufferLength* es SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT o SQL_IS_USMALLINT, según corresponda.  
   
  *StringLengthPtr*  
  Genere Puntero al búfer en el que se va a devolver el número total de bytes (sin incluir el número de bytes necesario para el carácter de terminación null) disponible para devolver en **ValuePtr*.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA o SQL_INVALID_HANDLE.  
   
  SQL_NO_DATA se devuelve si *RecNumber* es mayor que el número actual de registros de descriptor.  
@@ -95,13 +96,13 @@ SQLRETURN SQLGetDescField(
 |01004|Datos de cadena, truncados a la derecha|El búfer \* *ValuePtr* no era lo suficientemente grande como para devolver el campo de descriptor completo, por lo que el campo se truncó. La longitud del campo descriptor untruncado se devuelve en **StringLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07009|Índice de descriptor no válido|(DM) el argumento *RecNumber* era igual a 0, se SQL_UB_OFF el atributo de instrucción SQL_ATTR_USE_BOOKMARK y el argumento *DescriptorHandle* era un identificador IRD. (Este error se puede devolver para un descriptor asignado explícitamente solo si el descriptor está asociado a un identificador de instrucción.)<br /><br /> El argumento *FieldIdentifier* era un campo registro, el argumento *RecNumber* era 0 y el argumento *DescriptorHandle* era un identificador IPD.<br /><br /> El argumento *RecNumber* era menor que 0.|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY007|La instrucción asociada no está preparada|*DescriptorHandle* se asoció con un *StatementHandle* como IRD y el identificador de instrucción asociado no se ha preparado ni ejecutado.|  
 |HY010|Error de secuencia de función|(DM) *DescriptorHandle* se asoció con un *StatementHandle* para el que se llamó a una función que se ejecuta de forma asincrónica (no a este) y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) *DescriptorHandle* se asoció con un *StatementHandle* para el que se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** y se devolvía SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *DescriptorHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLGetDescField** .|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY021|Información de descriptor incoherente|Los campos SQL_DESC_TYPE y SQL_DESC_DATETIME_INTERVAL_CODE no forman un tipo SQL de ODBC válido, un tipo SQL específico del controlador válido (para IPD) o un tipo C de ODBC válido (para APD o ARDs).|  
-|HY090|Longitud de búfer o cadena no válida|(DM) * \*ValuePtr* era una cadena de caracteres y *BufferLength* era menor que cero.|  
+|HY090|Longitud de búfer o cadena no válida|(DM) * \* ValuePtr* era una cadena de caracteres y *BufferLength* era menor que cero.|  
 |HY091|Identificador de campo descriptor no válido|*FieldIdentifier* no era un campo definido por ODBC y no era un valor definido por la implementación.<br /><br /> *FieldIdentifier* no está definido para *DescriptorHandle*.|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El período de tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  

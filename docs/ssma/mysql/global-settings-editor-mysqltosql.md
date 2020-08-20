@@ -1,4 +1,5 @@
 ---
+description: Configuración global (editor) (MySQLToSQL)
 title: Configuración global (editor) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1af73ccecb341bf852f7b7188e4c49e83b1b0254
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 36d25008aa4a76bd1326c7c61ec537a6047b01e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463410"
 ---
 # <a name="global-settings-editor-mysqltosql"></a>Configuración global (editor) (MySQLToSQL)
 Use la página editor del cuadro de diálogo **configuración global** para especificar la configuración de las ventanas del editor de código.  

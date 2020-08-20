@@ -1,4 +1,5 @@
 ---
+description: Función SQLDataSources
 title: Función SQLDataSources | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b56a6c25e54897e67beaf39d3b7797ac45391d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcf57779916b7a9d3189a5ce37b8603e5da5cb74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461187"
 ---
 # <a name="sqldatasources-function"></a>Función SQLDataSources
 **Conformidad**  
@@ -68,7 +69,7 @@ SQLRETURN SQLDataSources(
  Entradas Longitud del búfer **ServerName* , en caracteres; no es necesario que sea mayor que SQL_MAX_DSN_LENGTH más el carácter de terminación null.  
   
  *NameLength1Ptr*  
- Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación de NULL) \*disponible para devolver en *ServerName*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength1*, el nombre del origen de datos \*en *ServerName* se trunca a *BufferLength1* menos la longitud de un carácter de terminación null.  
+ Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación de NULL) disponible para devolver en \* *ServerName*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength1*, el nombre del origen de datos en \* *ServerName* se trunca a *BufferLength1* menos la longitud de un carácter de terminación null.  
   
  *Descripción*  
  Genere Puntero a un búfer en el que se va a devolver la descripción del controlador asociado al origen de datos. Por ejemplo, dBASE o SQL Server.  
@@ -79,9 +80,9 @@ SQLRETURN SQLDataSources(
  Entradas Longitud en caracteres del búfer **Description* .  
   
  *NameLength2Ptr*  
- Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible \*para devolver en la *Descripción*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength2*, la descripción del controlador en \*la *Descripción* se trunca a *BufferLength2* menos la longitud de un carácter de terminación null.  
+ Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en la \* *Descripción*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength2*, la descripción del controlador en la \* *Descripción* se trunca a *BufferLength2* menos la longitud de un carácter de terminación null.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -90,8 +91,8 @@ SQLRETURN SQLDataSources(
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje de información específico del administrador de controladores (DM). (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01004|Datos de cadena, truncados a la derecha|(DM) buffer \* *ServerName* no era lo suficientemente grande como para devolver el nombre del origen de datos completo. Por lo tanto, el nombre se truncó. La longitud del nombre del origen de datos completo se devuelve \*en *NameLength1Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) la \* *Descripción* del búfer no era lo suficientemente grande como para devolver la descripción completa del controlador. Por lo tanto, la descripción se truncó. La longitud de la descripción del origen de datos no truncado se devuelve en **NameLength2Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|(DM) se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|01004|Datos de cadena, truncados a la derecha|(DM) buffer \* *ServerName* no era lo suficientemente grande como para devolver el nombre del origen de datos completo. Por lo tanto, el nombre se truncó. La longitud del nombre del origen de datos completo se devuelve en \* *NameLength1Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) la \* *Descripción* del búfer no era lo suficientemente grande como para devolver la descripción completa del controlador. Por lo tanto, la descripción se truncó. La longitud de la descripción del origen de datos no truncado se devuelve en **NameLength2Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|HY000|Error general|(DM) se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|(DM) el administrador de controladores no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
@@ -113,10 +114,10 @@ SQLRETURN SQLDataSources(
 |Para información acerca de|Vea|  
 |---------------------------|---------|  
 |Detección y enumeración de los valores necesarios para conectarse a un origen de datos|[Función SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
-|Conectar a un origen de datos|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
+|Conectarse a un origen de datos|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
 |Conectar con un origen de datos mediante una cadena de conexión o un cuadro de diálogo|[Función SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Devolver descripciones y atributos de controladores|[Función SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

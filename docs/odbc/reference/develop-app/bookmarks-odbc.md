@@ -1,4 +1,5 @@
 ---
+description: Marcadores (ODBC)
 title: Marcadores (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8273c82b918024417e613ea44a2d26bafaf7d76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f162fc317f2651549a1a2e80af03c9942dc64bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461617"
 ---
 # <a name="bookmarks-odbc"></a>Marcadores (ODBC)
 Un marcador es un valor utilizado para identificar una fila de datos. El significado del valor de marcador solamente lo conocen el controlador u origen de datos. Por ejemplo, podría ser tan simple como un número de fila o tan complejo como una dirección de disco. Los marcadores de ODBC son un poco diferentes de los marcadores en los libros reales. En un libro real, el lector coloca un marcador en una página específica y, a continuación, busca ese marcador para volver a la página. En ODBC, la aplicación solicita un marcador para una fila determinada, lo almacena y lo pasa de vuelta al cursor para volver a la fila. Por lo tanto, los marcadores de ODBC son similares a un lector que escribe un número de página, lo recuerda y, a continuación, vuelve a buscar la página.  

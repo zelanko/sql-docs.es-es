@@ -1,4 +1,5 @@
 ---
+description: Conceptos de Data Quality Services
 title: Conceptos de Data Quality Services
 ms.date: 01/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fe7f6c957bb1781528c0bad06de41063c41ca3cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 15fc90d3437ff4cf9f24a482201ba64ce38560d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462219"
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
 
@@ -46,7 +47,7 @@ ms.locfileid: "85887949"
 ##  <a name="data-quality-project-concepts"></a><a name="Projects"></a> Conceptos de proyectos de calidad de los datos  
  El administrador de datos realiza las operaciones de calidad de los datos (limpiar y buscar coincidencias) mediante un proyecto de calidad de datos en la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
- **Data Cleansing**  
+ **Limpieza de datos**  
   
  La limpieza de datos en DQS se realiza en función del conocimiento en una base de conocimiento de DQS. La limpieza de datos de DQS es un proceso de dos pasos:  
   

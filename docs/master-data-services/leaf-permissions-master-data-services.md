@@ -1,4 +1,5 @@
 ---
+description: Permisos de hoja (Master Data Services)
 title: Permisos de hoja
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a50723727690307492d3d16cb3671e762dec401f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461774"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permisos de hoja (Master Data Services)
 
@@ -40,8 +41,8 @@ ms.locfileid: "85813303"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros hoja y atributos.|  
-|**Creación**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
-|**Update**|El usuario puede actualizar miembros hoja y atributos.|  
+|**Crear**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
+|**Actualizar**|El usuario puede actualizar miembros hoja y atributos.|  
 |**Eliminar**|El usuario puede eliminar miembros hoja.|  
 |**Deny**|Denegar todo el acceso a los miembros hoja.|  
   
@@ -53,8 +54,8 @@ ms.locfileid: "85813303"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer atributos.|  
-|**Creación**|El usuario puede asignar valores al crear miembros.|  
-|**Update**|El usuario puede actualizar atributos.|  
+|**Crear**|El usuario puede asignar valores al crear miembros.|  
+|**Actualizar**|El usuario puede actualizar atributos.|  
 |**Eliminar**|Ningún efecto.|  
 |**Deny**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
   
@@ -63,8 +64,8 @@ ms.locfileid: "85813303"
   
 |Nombre|Código|Subcategory (actualizar)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5}Bicicletas de montaña|  
-|Mountain-100|BK-M201|{5}Bicicletas de montaña|  
+|Mountain-100|BK-M101|{5} Bicicletas de montaña|  
+|Mountain-100|BK-M201|{5} Bicicletas de montaña|  
   
  En el **Explorador**, puede actualizar cualquier valor de atributo en la columna Subcategory. Si no dispone del permiso para un atributo, este no se mostrará.  
   

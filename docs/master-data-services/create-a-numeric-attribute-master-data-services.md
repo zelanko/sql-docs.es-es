@@ -1,4 +1,5 @@
 ---
+description: Crear un atributo numérico (Master Data Services)
 title: Crear un atributo numérico
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 71a959c2eec351ee80a0a52ae228dd51347d1be9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9b22726ec69e1e06ab51ae0f367f3038089e8b25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461877"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Crear un atributo numérico (Master Data Services)
 
@@ -44,8 +45,8 @@ ms.locfileid: "85813076"
 |Columna|Descripción|  
 |------------|-----------------|  
 |Estado|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
-|Nombre|El nombre del atributo.|  
-|Nombre para mostrar|Nombre para mostrar del atributo.|  
+|Nombre|Nombre del atributo.|  
+|Display Name (Nombre para mostrar)|Nombre para mostrar del atributo.|  
 |Descripción|Descripción del atributo.|  
 |Ancho de píxel de la pantalla|Ancho del atributo.|  
 |Tipo y propiedades|Tipo e información sobre el tipo de datos del atributo.|  

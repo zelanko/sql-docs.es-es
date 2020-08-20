@@ -1,4 +1,5 @@
 ---
+description: Generar automáticamente valores para el atributo Code (Master Data Services)
 title: Generar automáticamente valores para el atributo Code
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab9a9fbaac8875be535354a5f6f9122eb5089a0c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a2028a0cc9911308bfe8462be4b826e53e328103
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461968"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>Generar automáticamente valores para el atributo Code (Master Data Services)
 

@@ -1,4 +1,5 @@
 ---
+description: Crear un perfil de correo electrónico de base de datos
 title: Creación de un perfil de correo electrónico de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 466fa0d08af2fa91aefa4d206037080a5aa8f0b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3ee012fe4bcd7fa1cd98c51f537035fc6148938
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461157"
 ---
 # <a name="create-a-database-mail-profile"></a>Crear un perfil de correo electrónico de base de datos
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Para crear perfiles públicos y privados de Correo electrónico de base de datos, use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para más información sobre los perfiles de correo electrónico, consulte [Perfil de Correo electrónico de base de datos](database-mail-configuration-objects.md).
+   Para crear perfiles públicos y privados de Correo electrónico de base de datos, use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para más información sobre los perfiles de correo electrónico, consulte [Perfil de Correo electrónico de base de datos](database-mail-configuration-objects.md).
   
--   **Antes de comenzar:** [Requisitos previos](#Prerequisites), [Seguridad](#Security)  
+-   **Antes de empezar:** [Requisitos previos](#Prerequisites), , [Seguridad](#Security)  
   
 -   **Para crear un perfil privado de Correo electrónico de base de datos mediante:**  [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   

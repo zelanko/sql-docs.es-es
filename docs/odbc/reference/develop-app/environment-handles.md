@@ -1,4 +1,5 @@
 ---
+description: Identificadores de entorno
 title: Identificadores de entorno | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b504995e99dfad032598485e370b4d5a6681ae81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1aa22a89288f4dd5a8400484078f57b60fc135fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461507"
 ---
 # <a name="environment-handles"></a>Identificadores de entorno
 Un *entorno* es un contexto global en el que se obtiene acceso a los datos; asociados a un entorno es cualquier información global por naturaleza, como:  

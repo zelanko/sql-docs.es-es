@@ -1,4 +1,5 @@
 ---
+description: Función SQLGetDiagRec
 title: SQLGetDiagRec (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39069526e254903509ddfef00b7bd4844f3d9e10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f141891292fb80d53ba06e03329b66cbc8b826e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461018"
 ---
 # <a name="sqlgetdiagrec-function"></a>Función SQLGetDiagRec
 **Conformidad**  
@@ -85,9 +86,9 @@ SQLRETURN SQLGetDiagRec(
  Entradas Longitud del búfer **MessageText* en caracteres. No hay una longitud máxima del texto del mensaje de diagnóstico.  
   
  *TextLengthPtr*  
- Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el número de caracteres necesarios para el carácter de terminación null) disponible para devolver en * \*MessageText*. Si el número de caracteres disponibles para devolver es mayor que *BufferLength*, el texto del mensaje de diagnóstico en * \*MessageText* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
+ Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el número de caracteres necesarios para el carácter de terminación null) disponible para devolver en * \* MessageText*. Si el número de caracteres disponibles para devolver es mayor que *BufferLength*, el texto del mensaje de diagnóstico en * \* MessageText* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -95,7 +96,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_SUCCESS: la función devolvió correctamente la información de diagnóstico.  
   
--   SQL_SUCCESS_WITH_INFO: el \*búfer de *MessageText* era demasiado pequeño para contener el mensaje de diagnóstico solicitado. No se generó ningún registro de diagnóstico. Para determinar que se ha producido un truncamiento, la aplicación debe comparar *BufferLength* con el número real de bytes disponible, que se escribe en **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO: el \* búfer de *MessageText* era demasiado pequeño para contener el mensaje de diagnóstico solicitado. No se generó ningún registro de diagnóstico. Para determinar que se ha producido un truncamiento, la aplicación debe comparar *BufferLength* con el número real de bytes disponible, que se escribe en **StringLengthPtr*.  
   
 -   SQL_INVALID_HANDLE: el identificador indicado por *HandleType* y el *identificador* no era un identificador válido.  
   
@@ -135,7 +136,7 @@ SQLRETURN SQLGetDiagRec(
 |---------------------------|---------|  
 |Obtención de un campo de un registro de diagnóstico o un campo del encabezado de diagnóstico|[Función SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Programa de ejemplo de ODBC](../../../odbc/reference/sample-odbc-program.md)

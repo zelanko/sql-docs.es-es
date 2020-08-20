@@ -1,4 +1,5 @@
 ---
+description: Función SQLGetData
 title: SQLGetData, función | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac11505b8e47dae8df53af27c64a7ee6372b3f28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a659e1bb5ad7765dbfcbcb01dbc16744de7cfc20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285511"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461083"
 ---
 # <a name="sqlgetdata-function"></a>Función SQLGetData
 **Conformidad**  
@@ -70,7 +71,7 @@ SQLRETURN SQLGetData(
  *BufferLength*  
  Entradas Longitud del búfer **TargetValuePtr* en bytes.  
   
- El controlador usa *BufferLength* para evitar escribir más allá del final del \*búfer *TargetValuePtr* al devolver datos de longitud variable, como datos de caracteres o binarios. Tenga en cuenta que el controlador cuenta el carácter de terminación null al devolver los \*datos de caracteres a *TargetValuePtr*. *Por lo tanto, *TargetValuePtr* debe contener espacio para el carácter de terminación null o el controlador truncará los datos.  
+ El controlador usa *BufferLength* para evitar escribir más allá del final del \* búfer *TargetValuePtr* al devolver datos de longitud variable, como datos de caracteres o binarios. Tenga en cuenta que el controlador cuenta el carácter de terminación null al devolver los datos de caracteres a \* *TargetValuePtr*. *Por lo tanto, *TargetValuePtr* debe contener espacio para el carácter de terminación null o el controlador truncará los datos.  
   
  Cuando el controlador devuelve datos de longitud fija, como un entero o una estructura de fecha, el controlador omite *BufferLength* y asume que el búfer es lo suficientemente grande como para contener los datos. Por lo tanto, es importante que la aplicación asigne un búfer suficientemente grande para los datos de longitud fija o que el controlador escriba más allá del final del búfer.  
   
@@ -89,7 +90,7 @@ SQLRETURN SQLGetData(
   
  Para obtener más información, vea [usar valores de indicador/longitud](../../../odbc/reference/develop-app/using-length-and-indicator-values.md) y "Comentarios" en este tema.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -189,11 +190,11 @@ SQLRETURN SQLGetData(
   
      **SQLGetData** nunca trunca los datos convertidos en tipos de datos de longitud fija; siempre supone que la longitud de **TargetValuePtr* es el tamaño del tipo de datos.  
   
-6.  Coloca los datos convertidos (y posiblemente truncados) \*en *TargetValuePtr*. Tenga en cuenta que **SQLGetData** no puede devolver datos fuera de línea.  
+6.  Coloca los datos convertidos (y posiblemente truncados) en \* *TargetValuePtr*. Tenga en cuenta que **SQLGetData** no puede devolver datos fuera de línea.  
   
 7.  Coloca la longitud de los datos en \* *StrLen_or_IndPtr*. Si *StrLen_or_IndPtr* era un puntero nulo, **SQLGetData** no devuelve la longitud.  
   
-    -   En el caso de los datos de caracteres o binarios, es la longitud de los datos después de la conversión y antes del truncamiento debido a *BufferLength*. Si el controlador no puede determinar la longitud de los datos después de la conversión, como en ocasiones es el caso con datos largos, devuelve SQL_SUCCESS_WITH_INFO y establece la longitud en SQL_NO_TOTAL. (La última llamada a **SQLGetData** siempre debe devolver la longitud de los datos, no cero ni SQL_NO_TOTAL). Si los datos se truncaron debido al atributo de instrucción SQL_ATTR_MAX_LENGTH, el valor de este atributo, en contraposición a la longitud real, se \*coloca en *StrLen_or_IndPtr*. Esto se debe a que este atributo está diseñado para truncar los datos en el servidor antes de la conversión, por lo que el controlador no tiene forma de averiguar cuál es la longitud real. Cuando se llama a **SQLGetData** varias veces consecutivamente para la misma columna, se trata de la longitud de los datos disponibles al inicio de la llamada actual. es decir, la longitud disminuye con cada llamada subsiguiente.  
+    -   En el caso de los datos de caracteres o binarios, es la longitud de los datos después de la conversión y antes del truncamiento debido a *BufferLength*. Si el controlador no puede determinar la longitud de los datos después de la conversión, como en ocasiones es el caso con datos largos, devuelve SQL_SUCCESS_WITH_INFO y establece la longitud en SQL_NO_TOTAL. (La última llamada a **SQLGetData** siempre debe devolver la longitud de los datos, no cero ni SQL_NO_TOTAL). Si los datos se truncaron debido al atributo de instrucción SQL_ATTR_MAX_LENGTH, el valor de este atributo, en contraposición a la longitud real, se coloca en \* *StrLen_or_IndPtr*. Esto se debe a que este atributo está diseñado para truncar los datos en el servidor antes de la conversión, por lo que el controlador no tiene forma de averiguar cuál es la longitud real. Cuando se llama a **SQLGetData** varias veces consecutivamente para la misma columna, se trata de la longitud de los datos disponibles al inicio de la llamada actual. es decir, la longitud disminuye con cada llamada subsiguiente.  
   
     -   Para el resto de tipos de datos, es la longitud de los datos después de la conversión. es decir, es el tamaño del tipo al que se han convertido los datos.  
   
@@ -270,7 +271,7 @@ if (retcode == SQL_SUCCESS) {
 |Enviar datos de parámetros en tiempo de ejecución|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |Colocar el cursor, actualizar los datos del conjunto de filas o actualizar o eliminar los datos del conjunto de filas|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Recuperar parámetros de salida mediante SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

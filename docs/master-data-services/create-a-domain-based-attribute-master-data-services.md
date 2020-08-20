@@ -1,4 +1,5 @@
 ---
+description: Crear un atributo basado en dominio (Master Data Services)
 title: Crear un atributo basado en dominio
 ms.custom: ''
 ms.date: 07/25/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7446ea090bb0776b2a55e7be10e9c35bc566c8b1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: daea6bffcefaab4866a27418d48eb2963482a5e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461873"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Crear un atributo basado en dominio (Master Data Services)
 
@@ -44,8 +45,8 @@ ms.locfileid: "85813131"
 |Columna|Descripción|
 |------------|-----------------|
 |Estado|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|
-|Nombre|El nombre del atributo.|
-|Nombre para mostrar|Nombre para mostrar del atributo.|
+|Nombre|Nombre del atributo.|
+|Display Name (Nombre para mostrar)|Nombre para mostrar del atributo.|
 |Descripción|Descripción del atributo.|
 |Ancho de píxel de la pantalla|Ancho del atributo.|
 |Tipo y propiedades|Tipo e información sobre el tipo de datos del atributo.|

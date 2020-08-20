@@ -1,4 +1,5 @@
 ---
+description: 'Lección 1: Creación de un proyecto y un paquete básico con SSIS'
 title: 'Lección 1: Creación de un proyecto y un paquete básico con SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aeeac3c8033bfde5a528dd791e7b23b4f9973e1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428295430a2abb50738742db088b9573a7bf35a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461999"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lección 1: Creación de un proyecto y un paquete básico con SSIS
 
@@ -27,7 +28,7 @@ En esta lección, se crea un paquete ETL sencillo que extrae datos de un único 
   
 Antes de crear un paquete, debe entender el formato que se usa en los datos de origen y de destino. Después, estará listo para definir las transformaciones necesarias para asignar los datos de origen al destino.  
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Este tutorial se basa en Microsoft SQL Server Data Tools, un conjunto de paquetes de ejemplo y una base de datos de ejemplo.
 
@@ -88,7 +89,7 @@ El análisis de los formatos de datos de origen y de destino indica que se neces
 ## <a name="lesson-tasks"></a>Tareas de la lección  
 Esta lección contiene las siguientes tareas:  
   
--   [Paso 1: Creación de un proyecto de Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Paso 1: Crear un nuevo proyecto de Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
 -   [Paso 2: Incorporación y configuración de un administrador de conexiones de archivos planos](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   

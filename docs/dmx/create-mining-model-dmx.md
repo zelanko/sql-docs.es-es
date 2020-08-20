@@ -1,4 +1,5 @@
 ---
+description: CREATE MINING MODEL (DMX)
 title: CREAR MODELO DE MINERÍA DE DATOS (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 440256a7349d7c77581c4369e901ce0da9c3212f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462053"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -102,7 +103,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Marcas de modelado &#40;Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- Puede agregar una cláusula a la instrucción para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de la siguiente \<Column relationship> cláusula.  
+ Puede agregar una cláusula a la instrucción para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite el uso de la siguiente \<Column relationship> cláusula.  
   
  **RELACIONADO CON**  
  Este formulario indica una jerarquía de valores. El destino de una columna RELATED TO puede ser una columna de clave de una tabla anidada, una columna de valores discretos en la fila de caso u otra columna con una cláusula RELATED TO, que indica una jerarquía de más niveles.  

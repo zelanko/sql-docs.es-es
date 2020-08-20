@@ -1,4 +1,5 @@
 ---
+description: Ancestor (MDX)
 title: Antecesor (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 385206d4a94362831e0949bafe5a11c1ce48d7bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e08a0f281a9e48c3416bb00f6ee47322d554d9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461667"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 
@@ -45,7 +46,7 @@ Ancestor(Member_Expression, Distance)
  Con la función **ancestor** , se proporciona la función con una expresión de miembro MDX y, a continuación, se proporciona una expresión MDX de un nivel que sea un antecesor del miembro o una expresión numérica que represente el número de niveles por encima de ese miembro. Con esta información, la función **ancestor** devuelve el miembro antecesor en ese nivel.  
   
 > [!NOTE]  
->  Para devolver un conjunto que contenga el miembro antecesor, en lugar de solo el miembro antecesor, use los [antecesores &#40;función&#41;MDX](../mdx/ancestors-mdx.md) .  
+>  Para devolver un conjunto que contenga el miembro antecesor, en lugar de solo el miembro antecesor, use los [antecesores &#40;función&#41;MDX ](../mdx/ancestors-mdx.md) .  
   
  Si se especifica una expresión de nivel, la función **ancestor** devuelve el antecesor del miembro especificado en el nivel especificado. Si el miembro especificado no se encuentra dentro de la misma jerarquía que el nivel especificado, la función devuelve un error.  
   

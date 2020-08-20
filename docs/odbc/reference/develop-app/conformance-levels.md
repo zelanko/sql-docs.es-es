@@ -1,4 +1,5 @@
 ---
+description: Niveles de compatibilidad
 title: Niveles de cumplimiento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c986cb6ce407a44798869c722b9b62dc8b1052d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aa164a0814f063af8d6e0ed8adafc3f2307916fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461537"
 ---
 # <a name="conformance-levels"></a>Niveles de compatibilidad
 Los controladores ODBC proporcionan a la aplicación acceso a diversos orígenes de datos. Cada controlador permite a la aplicación determinar en tiempo de ejecución Qué capacidades de ODBC y qué gramática de SQL admite el controlador y cada origen de datos. Esto no es un requisito de las aplicaciones diseñadas para trabajar con un único controlador o un conjunto pequeño de controladores conocidos, ya que estas aplicaciones se pueden escribir simplemente en las capacidades de ese controlador o controladores. Para ayudar a las aplicaciones a detectar capacidades de controlador y de origen de datos, hay disponibles dos áreas de conformidad: la interfaz ODBC y la gramática de SQL.  

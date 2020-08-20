@@ -1,4 +1,5 @@
 ---
+description: Permisos de modelo (Master Data Services)
 title: Permisos de modelo
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 36e2b4cacd6636b2580aff1d8c27ea5a3a444906
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e195c4f2db244fa5cf647c19c0713f24840c3441
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461762"
 ---
 # <a name="model-permissions-master-data-services"></a>Permisos de modelo (Master Data Services)
 
@@ -32,8 +33,8 @@ ms.locfileid: "85813256"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
-|**Creación**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
-|**Update**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
+|**Crear**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
+|**Actualizar**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
 |**Eliminar**|El usuario puede eliminar miembros|  
 |**Deny**|El usuario puede denegar todo el acceso al modelo.|  
 |**Administrador**|Permisos de administrador en el modelo. El permiso de administrador solo está disponible en el nivel de modelo.|  

@@ -1,4 +1,5 @@
 ---
+description: Función SQLDriverToDataSource
 title: Función SQLDriverToDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89e7db7e4b20a35e047dca94cb72d8a6888fb670
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da885e3be81a7a7de04a58bbb92725317477e80e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461146"
 ---
 # <a name="sqldrivertodatasource-function"></a>Función SQLDriverToDataSource
 **SQLDriverToDataSource** admite traducciones para controladores ODBC. Las aplicaciones habilitadas para ODBC no llaman a esta función; las aplicaciones solicitan la traducción a través de **SQLSetConnectAttr**. El controlador asociado con el *ConnectionHandle* especificado en **SQLSetConnectAttr** llama al archivo dll especificado para realizar traducciones de todos los datos que fluyen desde el controlador hasta el origen de datos. Se puede especificar un archivo DLL de traducción predeterminado en el archivo de inicialización de ODBC.  
@@ -86,7 +87,7 @@ BOOL SQLDriverToDataSource(
  *pcbErrorMsg*  
  Genere Puntero al número total de bytes (sin incluir el byte de terminación nula) disponible para devolver en *szErrorMsg*. Si es mayor o igual que *cbErrorMsg*, los datos de *szErrorMsg* se truncan en *cbErrorMsgMax* menos el carácter de terminación null. El argumento *pcbErrorMsg* puede ser un puntero nulo.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  TRUE si la conversión se realizó correctamente, FALSE si se produjo un error en la traducción.  
   
 ## <a name="comments"></a>Comentarios  

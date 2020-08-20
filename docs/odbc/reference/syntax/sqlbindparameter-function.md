@@ -1,4 +1,5 @@
 ---
+description: Función SQLBindParameter
 title: SQLBindParameter (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 02f50862bcfb0295c7f098afc6856c91e0249f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6866f7c35dbf38f25cf854368053ffd46c74baa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461227"
 ---
 # <a name="sqlbindparameter-function"></a>Función SQLBindParameter
 
@@ -91,7 +92,7 @@ SQLRETURN SQLBindParameter(
  *StrLen_or_IndPtr*  
  [Entrada diferida] Un puntero a un búfer para la longitud del parámetro. Para obtener más información, vea "*StrLen_or_IndPtr* argumento" en "Comentarios".  
   
-## <a name="returns"></a>Devuelve
+## <a name="returns"></a>Devoluciones
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
@@ -136,13 +137,13 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_PARAM_INPUT. El parámetro marca un parámetro en una instrucción SQL que no llama a un procedimiento, como una instrucción **Insert** , o marca un parámetro de entrada en un procedimiento. Por ejemplo, los parámetros de **Insert en valores de empleados (?,?,?)** son parámetros de entrada, mientras que los parámetros de **{call AddEmp (?,?,?)}** pueden ser, pero no necesariamente, parámetros de entrada.  
   
-     Cuando se ejecuta la instrucción, el controlador envía datos para el parámetro al origen de datos; el \*búfer *ParameterValuePtr* debe contener un valor de entrada válido o el búfer **StrLen_or_IndPtr* debe contener SQL_NULL_DATA, SQL_DATA_AT_EXEC o el resultado de la macro SQL_LEN_DATA_AT_EXEC.  
+     Cuando se ejecuta la instrucción, el controlador envía datos para el parámetro al origen de datos; el \* búfer *ParameterValuePtr* debe contener un valor de entrada válido o el búfer **StrLen_or_IndPtr* debe contener SQL_NULL_DATA, SQL_DATA_AT_EXEC o el resultado de la macro SQL_LEN_DATA_AT_EXEC.  
   
      Si una aplicación no puede determinar el tipo de un parámetro en una llamada a procedimiento, establece *InputOutputType* en SQL_PARAM_INPUT; Si el origen de datos devuelve un valor para el parámetro, el controlador lo descarta.  
   
 -   SQL_PARAM_INPUT_OUTPUT. El parámetro marca un parámetro de entrada/salida en un procedimiento. Por ejemplo, el parámetro de **{Call GetEmpDept (?)}** es un parámetro de entrada y salida que acepta el nombre de un empleado y devuelve el nombre del Departamento del empleado.  
   
-     Cuando se ejecuta la instrucción, el controlador envía datos para el parámetro al origen de datos; el \*búfer de *ParameterValuePtr* debe contener un valor de entrada válido o \*el búfer de *StrLen_or_IndPtr* debe contener SQL_NULL_DATA, SQL_DATA_AT_EXEC o el resultado de la macro de SQL_LEN_DATA_AT_EXEC. Una vez ejecutada la instrucción, el controlador devuelve datos para el parámetro a la aplicación; Si el origen de datos no devuelve un valor para un parámetro de entrada/salida, el controlador establece el búfer **StrLen_or_IndPtr* en SQL_NULL_DATA.  
+     Cuando se ejecuta la instrucción, el controlador envía datos para el parámetro al origen de datos; el \* búfer de *ParameterValuePtr* debe contener un valor de entrada válido o el \* búfer de *StrLen_or_IndPtr* debe contener SQL_NULL_DATA, SQL_DATA_AT_EXEC o el resultado de la macro de SQL_LEN_DATA_AT_EXEC. Una vez ejecutada la instrucción, el controlador devuelve datos para el parámetro a la aplicación; Si el origen de datos no devuelve un valor para un parámetro de entrada/salida, el controlador establece el búfer **StrLen_or_IndPtr* en SQL_NULL_DATA.  
   
     > [!NOTE]  
     >  Cuando una aplicación ODBC 1,0 llama a **SQLSetParam** en un controlador ODBC 2,0, el administrador de controladores lo convierte en una llamada a **SQLBindParameter** en la que el argumento *InputOutputType* se establece en SQL_PARAM_INPUT_OUTPUT.  
@@ -216,23 +217,23 @@ SQLRETURN SQLBindParameter(
   
 ## <a name="parametervalueptr-argument"></a>Argumento ParameterValuePtr
 
- El argumento *ParameterValuePtr* apunta a un búfer que, cuando se llama a **SQLExecute** o **SQLExecDirect** , contiene los datos reales del parámetro. Los datos deben estar en el formato especificado por el argumento *ValueType* . Este argumento establece el campo de SQL_DESC_DATA_PTR de APD. Una aplicación puede establecer el argumento *ParameterValuePtr* en un puntero nulo, siempre que * \*StrLen_or_IndPtr* sea SQL_NULL_DATA o SQL_DATA_AT_EXEC. (Esto solo se aplica a los parámetros de entrada o de entrada y salida).  
+ El argumento *ParameterValuePtr* apunta a un búfer que, cuando se llama a **SQLExecute** o **SQLExecDirect** , contiene los datos reales del parámetro. Los datos deben estar en el formato especificado por el argumento *ValueType* . Este argumento establece el campo de SQL_DESC_DATA_PTR de APD. Una aplicación puede establecer el argumento *ParameterValuePtr* en un puntero nulo, siempre que * \* StrLen_or_IndPtr* sea SQL_NULL_DATA o SQL_DATA_AT_EXEC. (Esto solo se aplica a los parámetros de entrada o de entrada y salida).  
   
  Si \* *StrLen_or_IndPtr* es el resultado de la macro de SQL_LEN_DATA_AT_EXEC (*longitud*) o SQL_DATA_AT_EXEC, *ParameterValuePtr* es un valor de puntero definido por la aplicación que está asociado al parámetro. Se devuelve a la aplicación a través de **SQLParamData**. Por ejemplo, *ParameterValuePtr* puede ser un token distinto de cero, como un número de parámetro, un puntero a datos o un puntero a una estructura que la aplicación usó para enlazar parámetros de entrada. Sin embargo, tenga en cuenta que si el parámetro es un parámetro de entrada/salida, *ParameterValuePtr* debe ser un puntero a un búfer en el que se almacenará el valor de salida. Si el valor del atributo de instrucción SQL_ATTR_PARAMSET_SIZE es mayor que 1, la aplicación puede usar el valor al que apunta el atributo de instrucción SQL_ATTR_PARAMS_PROCESSED_PTR junto con el argumento *ParameterValuePtr* . Por ejemplo, *ParameterValuePtr* podría apuntar a una matriz de valores y la aplicación podría usar el valor al que apunta SQL_ATTR_PARAMS_PROCESSED_PTR para recuperar el valor correcto de la matriz. Para obtener más información, vea "pasar valores de parámetro" más adelante en esta sección.  
   
- Si el argumento *InputOutputType* es SQL_PARAM_INPUT_OUTPUT o SQL_PARAM_OUTPUT, *ParameterValuePtr* apunta a un búfer en el que el controlador devuelve el valor de salida. Si el procedimiento devuelve uno o más conjuntos de resultados, \*no se garantiza que el búfer *ParameterValuePtr* se establezca hasta que se hayan procesado todos los conjuntos de resultados o filas. Si el búfer no se establece hasta que se complete el procesamiento, los parámetros de salida y los valores devueltos no estarán disponibles hasta que **SQLMoreResults** devuelva SQL_NO_DATA. Llamar a **SQLCloseCursor** o **SQLFreeStmt** con una opción de SQL_CLOSE hará que se descarten estos valores.  
+ Si el argumento *InputOutputType* es SQL_PARAM_INPUT_OUTPUT o SQL_PARAM_OUTPUT, *ParameterValuePtr* apunta a un búfer en el que el controlador devuelve el valor de salida. Si el procedimiento devuelve uno o más conjuntos de resultados, \* no se garantiza que el búfer *ParameterValuePtr* se establezca hasta que se hayan procesado todos los conjuntos de resultados o filas. Si el búfer no se establece hasta que se complete el procesamiento, los parámetros de salida y los valores devueltos no estarán disponibles hasta que **SQLMoreResults** devuelva SQL_NO_DATA. Llamar a **SQLCloseCursor** o **SQLFreeStmt** con una opción de SQL_CLOSE hará que se descarten estos valores.  
   
  Si el valor del atributo de instrucción SQL_ATTR_PARAMSET_SIZE es mayor que 1, *ParameterValuePtr* apunta a una matriz. Una única instrucción SQL procesa la matriz completa de valores de entrada para un parámetro de entrada o de entrada/salida y devuelve una matriz de valores de salida para un parámetro de entrada/salida o de salida.  
   
 ## <a name="bufferlength-argument"></a>Argumento BufferLength
 
- En el caso de los datos de caracteres *BufferLength* y binarios de C, el \*argumento BufferLength especifica la longitud del búfer *ParameterValuePtr* (si es un elemento único) o la longitud \*de un elemento en la matriz *ParameterValuePtr* (si el valor del atributo de instrucción SQL_ATTR_PARAMSET_SIZE es mayor que 1). Este argumento establece el campo de registro de SQL_DESC_OCTET_LENGTH de APD. Si la aplicación especifica varios valores, *BufferLength* se usa para determinar la ubicación de los valores de la matriz **ParameterValuePtr* , tanto en la entrada como en la salida. Para los parámetros de entrada/salida y de salida, se usa para determinar si se truncarán los datos de C binarios y de caracteres en la salida:  
+ En el caso de los datos de caracteres y binarios de C, el argumento *BufferLength* especifica la longitud del \* búfer *ParameterValuePtr* (si es un elemento único) o la longitud de un elemento en la \* matriz *ParameterValuePtr* (si el valor del atributo de instrucción SQL_ATTR_PARAMSET_SIZE es mayor que 1). Este argumento establece el campo de registro de SQL_DESC_OCTET_LENGTH de APD. Si la aplicación especifica varios valores, *BufferLength* se usa para determinar la ubicación de los valores de la matriz **ParameterValuePtr* , tanto en la entrada como en la salida. Para los parámetros de entrada/salida y de salida, se usa para determinar si se truncarán los datos de C binarios y de caracteres en la salida:  
   
 -   En el caso de los datos de caracteres C, si el número de bytes disponibles para devolver es mayor o igual que *BufferLength*, los datos de \* *ParameterValuePtr* se truncan a *BufferLength* menos la longitud de un carácter de terminación NULL y el controlador termina en NULL.  
   
 -   En el caso de los datos binarios de C, si el número de bytes disponibles para devolver es mayor que *BufferLength*, los datos de \* *ParameterValuePtr* se truncan en *BufferLength* bytes.  
   
- Para todos los demás tipos de datos de C, se omite el argumento *BufferLength* . La longitud \*del búfer *ParameterValuePtr* (si es un elemento único) o la longitud de un elemento en la \*matriz *ParameterValuePtr* (si la aplicación llama a **SQLSetStmtAttr** con un argumento de *atributo* de SQL_ATTR_PARAMSET_SIZE para especificar varios valores para cada parámetro) se supone que es la longitud del tipo de datos C.  
+ Para todos los demás tipos de datos de C, se omite el argumento *BufferLength* . La longitud del búfer \* *ParameterValuePtr* (si es un elemento único) o la longitud de un elemento en la \* matriz *ParameterValuePtr* (si la aplicación llama a **SQLSetStmtAttr** con un argumento de *atributo* de SQL_ATTR_PARAMSET_SIZE para especificar varios valores para cada parámetro) se supone que es la longitud del tipo de datos C.  
   
  En el caso de los parámetros de entrada y salida transmitidos por secuencias, el argumento *BufferLength* se omite porque la longitud del búfer se especifica en **SQLGetData**.  
   
@@ -252,7 +253,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_NULL_DATA. El valor del parámetro es NULL.  
   
--   SQL_DEFAULT_PARAM. Un procedimiento es usar el valor predeterminado de un parámetro, en lugar de un valor recuperado de la aplicación. Este valor solo es válido en un procedimiento llamado en la sintaxis canónica de ODBC y, a continuación, solo si el argumento *InputOutputType* es SQL_PARAM_INPUT, SQL_PARAM_INPUT_OUTPUT o SQL_PARAM_INPUT_OUTPUT_STREAM. Cuando \* *StrLen_or_IndPtr* se SQL_DEFAULT_PARAM, los argumentos *ValueType*, *ParameterType*, *ColumnSize* *,* *BufferLength*y *ParameterValuePtr* se omiten para los parámetros de entrada y solo se usan para definir el valor del parámetro de salida para los parámetros de entrada y salida.  
+-   SQL_DEFAULT_PARAM. Un procedimiento es usar el valor predeterminado de un parámetro, en lugar de un valor recuperado de la aplicación. Este valor solo es válido en un procedimiento llamado en la sintaxis canónica de ODBC y, a continuación, solo si el argumento *InputOutputType* es SQL_PARAM_INPUT, SQL_PARAM_INPUT_OUTPUT o SQL_PARAM_INPUT_OUTPUT_STREAM. Cuando \* *StrLen_or_IndPtr* se SQL_DEFAULT_PARAM, los argumentos *ValueType*, *ParameterType*, *ColumnSize*, *BufferLength*y *ParameterValuePtr* se omiten para los parámetros de entrada y solo se usan para definir el valor del parámetro de salida para los parámetros de entrada y salida. *ColumnSize*  
   
 -   Resultado de la macro de SQL_LEN_DATA_AT_EXEC (*longitud*). Los datos para el parámetro se enviarán con **SQLPutData**. Si el argumento *ParameterType* es SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo de datos Long, específico del origen de datos, y el controlador devuelve "Y" para el tipo de información SQL_NEED_LONG_DATA_LEN en **SQLGetInfo**, *length* es el número de bytes de datos que se van a enviar para el parámetro; de lo contrario, la *longitud* debe ser un valor no negativo y se omite. Para obtener más información, vea "pasar valores de parámetro", más adelante en esta sección.  
   
@@ -271,15 +272,15 @@ SQLRETURN SQLBindParameter(
   
 ## <a name="passing-parameter-values"></a>Pasar valores de parámetro
 
- Una aplicación puede pasar el valor de un parámetro en el \*búfer de *ParameterValuePtr* o con una o más llamadas a **SQLPutData**. Los parámetros cuyos datos se pasan con **SQLPutData** se conocen como parámetros de *datos en ejecución* . Normalmente se usan para enviar datos de SQL_LONGVARBINARY y SQL_LONGVARCHAR parámetros, y se pueden combinar con otros parámetros.  
+ Una aplicación puede pasar el valor de un parámetro en el búfer de \* *ParameterValuePtr* o con una o más llamadas a **SQLPutData**. Los parámetros cuyos datos se pasan con **SQLPutData** se conocen como parámetros de *datos en ejecución* . Normalmente se usan para enviar datos de SQL_LONGVARBINARY y SQL_LONGVARCHAR parámetros, y se pueden combinar con otros parámetros.  
   
  Para pasar valores de parámetro, una aplicación realiza la siguiente secuencia de pasos:  
   
 1.  Llama a **SQLBindParameter** para cada parámetro para enlazar los búferes del valor del parámetro (argumento*ParameterValuePtr* ) y la longitud/indicador (argumento*StrLen_or_IndPtr* ). En el caso de los parámetros de datos en ejecución, *ParameterValuePtr* es un valor de puntero definido por la aplicación, como un número de parámetro o un puntero a datos. El valor se devolverá más adelante y se puede usar para identificar el parámetro.  
   
-2.  Coloca valores para los parámetros de entrada y de entrada/ \*salida en los búferes *ParameterValuePtr* y **StrLen_or_IndPtr* :  
+2.  Coloca valores para los parámetros de entrada y de entrada/salida en los \* búferes *ParameterValuePtr* y **StrLen_or_IndPtr* :  
   
-    -   En el caso de los parámetros normales, la aplicación coloca el \*valor del parámetro en el búfer de *ParameterValuePtr* y la longitud de ese valor en el búfer **StrLen_or_IndPtr* . Para obtener más información, vea [establecer valores de parámetro](../../../odbc/reference/develop-app/setting-parameter-values.md).  
+    -   En el caso de los parámetros normales, la aplicación coloca el valor del parámetro en el búfer de \* *ParameterValuePtr* y la longitud de ese valor en el búfer **StrLen_or_IndPtr* . Para obtener más información, vea [establecer valores de parámetro](../../../odbc/reference/develop-app/setting-parameter-values.md).  
   
     -   En el caso de los parámetros de datos en ejecución, la aplicación coloca el resultado de la macro SQL_LEN_DATA_AT_EXEC (*longitud*) (cuando se llama a un controlador ODBC 2,0) en el búfer **StrLen_or_IndPtr* .  
   
@@ -294,7 +295,7 @@ SQLRETURN SQLBindParameter(
     > [!NOTE]  
     >  Aunque los parámetros de datos en ejecución se parecen a las columnas de datos en ejecución, el valor devuelto por **SQLParamData** es diferente para cada uno. Los parámetros de datos en ejecución son parámetros de una instrucción SQL para los que se enviarán datos con **SQLPutData** cuando se ejecute la instrucción con **SQLExecDirect** o **SQLExecute**. Se enlazan con **SQLBindParameter**. El valor devuelto por **SQLParamData** es un valor de puntero que se pasa a **SQLBindParameter** en el argumento *ParameterValuePtr* . Las columnas de datos en ejecución son columnas de un conjunto de filas para el que se enviarán datos con **SQLPutData** cuando una fila se actualice o se agregue con **SQLBulkOperations** o se actualice con **SQLSetPos**. Están enlazadas con **SQLBindCol**. El valor devuelto por **SQLParamData** es la dirección de la fila en el búfer **TargetValuePtr* (establecido por una llamada a **SQLBindCol**) que se está procesando.  
   
-5.  Llama a **SQLPutData** una o más veces para enviar datos para el parámetro. Se necesita más de una llamada si el valor de los datos es mayor \*que el búfer de *ParameterValuePtr* especificado en **SQLPutData**; solo se permiten varias llamadas a **SQLPutData** para el mismo parámetro cuando se envían datos de caracteres c a una columna con un tipo de datos de caracteres, binarios o de orígenes de datos, o cuando se envían datos binarios de c a una columna con un tipo de datos de caracteres, binarios o de orígenes de datos.  
+5.  Llama a **SQLPutData** una o más veces para enviar datos para el parámetro. Se necesita más de una llamada si el valor de los datos es mayor que el \* búfer de *ParameterValuePtr* especificado en **SQLPutData**; solo se permiten varias llamadas a **SQLPutData** para el mismo parámetro cuando se envían datos de caracteres c a una columna con un tipo de datos de carácter, binario o de origen de datos o cuando se envían datos binarios de c a una columna con un tipo de datos de carácter, Binari  
   
 6.  Llama de nuevo a **SQLParamData** para indicar que se han enviado todos los datos para el parámetro.  
   
@@ -302,7 +303,7 @@ SQLRETURN SQLBindParameter(
   
     -   Si no hay más parámetros de datos en ejecución, el proceso se completa. Si la instrucción se ejecutó correctamente, **SQLParamData** devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO; Si se produce un error en la ejecución, devuelve SQL_ERROR. En este punto, **SQLParamData** puede devolver cualquier SQLSTATE que pueda ser devuelto por la función que se usa para ejecutar la instrucción (**SQLExecDirect** o **SQLExecute**).  
   
-         Los valores de salida de los parámetros de entrada/salida o de salida \*están disponibles en los búferes *ParameterValuePtr* y **StrLen_or_IndPtr* después de que la aplicación recupere todos los conjuntos de resultados generados por la instrucción.  
+         Los valores de salida de los parámetros de entrada/salida o de salida están disponibles en los \* búferes *ParameterValuePtr* y **StrLen_or_IndPtr* después de que la aplicación recupere todos los conjuntos de resultados generados por la instrucción.  
   
  Al llamar a **SQLExecute** o **SQLExecDirect** , la instrucción se coloca en un estado SQL_NEED_DATA. En este punto, la aplicación solo puede llamar a **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **SQLParamData**o **SQLPutData** con la instrucción o el *identificador de conexión* asociado a la instrucción. Si llama a cualquier otra función con la instrucción o la conexión asociada a la instrucción, la función devuelve SQLSTATE HY010 (error de secuencia de función). La instrucción deja el estado SQL_NEED_DATA cuando **SQLParamData** o **SQLPutData** devuelve un error, **SQLParamData** devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO o se cancela la instrucción.  
   
@@ -495,7 +496,7 @@ SQLRETURN SQLBindParameter(
   
 |Llamada por la aplicación ODBC 1,0|Llame a ODBC 3. controlador *x*|  
 |----------------------------------|-------------------------------|  
-|SQLSetParam (StatementHandle, ParameterNumber, ValueType, ParameterType, LengthPrecision, ParameterScale, ParameterValuePtr, StrLen_or_IndPtr);|SQLBindParameter (StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, *columnas*, *ColumnSize*, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr);|  
+|SQLSetParam (StatementHandle, ParameterNumber, ValueType, ParameterType, LengthPrecision, ParameterScale, ParameterValuePtr, StrLen_or_IndPtr);|SQLBindParameter (StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType,      *columnas*,      *ColumnSize*, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr);|  
   
 ## <a name="code-example"></a>Ejemplo de código  
  En el ejemplo siguiente, una aplicación prepara una instrucción SQL para insertar datos en la tabla ORDERs. Para cada parámetro de la instrucción, la aplicación llama a **SQLBindParameter** para especificar el tipo de datos C de ODBC y el tipo de datos SQL del parámetro, y para enlazar un búfer a cada parámetro. Para cada fila de datos, la aplicación asigna valores de datos a cada parámetro y llama a **SQLExecute** para ejecutar la instrucción.  
@@ -609,7 +610,7 @@ int main() {
 |Especificar varios valores de parámetro|[Función SQLParamOptions](../../../odbc/reference/syntax/sqlparamoptions-function.md)|  
 |Enviar datos de parámetros en tiempo de ejecución|[Función SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   

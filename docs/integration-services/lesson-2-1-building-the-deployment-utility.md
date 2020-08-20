@@ -1,4 +1,5 @@
 ---
+description: 'Lección 2-1: Generar la utilidad de implementación'
 title: 'Paso 1: Generar la utilidad de implementación | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 47d98801dd722f1727a7cdf3a982bf63cbd9974e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bf91bcb1f0f9db399980c7650ae9b7491c47c78a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461975"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lección 2-1: Generar la utilidad de implementación
 
@@ -65,7 +66,7 @@ Antes de generar la utilidad de implementación, debe modificar las propiedades 
 5.  En el menú **Archivo** , haga clic en **Salir**. Si se le pregunta si quiere guardar los cambios en los elementos de Deployment Tutorial, haga clic en **Sí**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 2: Comprobar el paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+[Paso 2: Comprobación del paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="see-also"></a>Consulte también  
 [Crear una utilidad de implementación](../integration-services/packages/create-a-deployment-utility.md)  

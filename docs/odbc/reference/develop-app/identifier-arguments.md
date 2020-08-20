@@ -1,4 +1,5 @@
 ---
+description: Argumentos de identificador
 title: Argumentos de identificador | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6831eab30daebe37baecebe3ed7053537d7de8f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24efb295c9c27dbfc5edc2b1d7a46d6ca166e2c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461457"
 ---
 # <a name="identifier-arguments"></a>Argumentos de identificador
 Si una cadena de un argumento de identificador está entre comillas, el controlador quita los espacios en blanco iniciales y finales y trata literalmente la cadena entre comillas. Si la cadena no está entre comillas, el controlador quita los espacios en blanco finales y dobla la cadena a mayúsculas. Si se establece un argumento de identificador en un puntero nulo, se devuelve SQL_ERROR y SQLSTATE HY009 (uso no válido de puntero nulo), a menos que el argumento sea un nombre de catálogo y no se admitan catálogos.  

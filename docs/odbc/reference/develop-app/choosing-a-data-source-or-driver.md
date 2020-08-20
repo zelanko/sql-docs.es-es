@@ -1,4 +1,5 @@
 ---
+description: Elegir datos de un origen o el controlador
 title: Elegir un origen de datos o un controlador | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b10aafad95463f56ec0f5a029eac59a02cff003b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 215e249fe354396239118394d4e792ced67bc82d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461607"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Elegir datos de un origen o el controlador
 El origen de datos o el controlador que utiliza una aplicación a veces está codificado de forma rígida en la aplicación. Por ejemplo, una aplicación personalizada escrita por un departamento de MIS para transferir datos de un origen de datos a otro contiene los nombres de esos orígenes de datos; la aplicación simplemente no funcionaría con ningún otro origen de datos. Otro ejemplo es una aplicación vertical, como una usada para la entrada de pedidos. Este tipo de aplicación siempre usa el mismo origen de datos, que tiene un esquema predefinido conocido por la aplicación.  

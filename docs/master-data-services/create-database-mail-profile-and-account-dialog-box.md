@@ -1,4 +1,5 @@
 ---
+description: Cuadro de diálogo Crear un perfil y una cuenta de Correo electrónico de base datos
 title: Cuadro de diálogo Crear un perfil y una cuenta de Correo electrónico de base datos
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b1bc67db4ebfe6d72b466562e7075fb93489ba29
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: d6c9b1c9b455b7e192c5c4c4ec921b8b9cdebcba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461811"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Cuadro de diálogo Crear un perfil y una cuenta de Correo electrónico de base datos
 

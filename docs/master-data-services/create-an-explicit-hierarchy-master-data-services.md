@@ -1,4 +1,5 @@
 ---
+description: Crear una jerarquía explícita (Master Data Services)
 title: Crear una jerarquía explícita
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 13eab8e856ecb690cf0aa9badb77c8c91fc790ce
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8512e53686d747fedb8ac5158a388e48b38469e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461817"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Crear una jerarquía explícita (Master Data Services)
 

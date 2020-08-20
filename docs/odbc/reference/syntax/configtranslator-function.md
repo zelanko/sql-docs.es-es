@@ -1,4 +1,5 @@
 ---
+description: Función ConfigTranslator
 title: Función ConfigTranslator | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fb2f26f87854d74a217885010014633963472787
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b99628b801199c7e2d7fd033e1b0728f1538932
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461277"
 ---
 # <a name="configtranslator-function"></a>Función ConfigTranslator
 **Conformidad**  
@@ -49,11 +50,11 @@ BOOL ConfigTranslator(
  *pvOption*  
  Genere Una opción de traducción de 32 bits.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **ConfigTranslator** devuelve false, se envía un valor de * \*pfErrorCode* asociado al búfer de error del instalador mediante una llamada a **SQLPostInstallerError** y se puede obtener llamando a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **ConfigTranslator** devuelve false, se envía un valor de * \* pfErrorCode* asociado al búfer de error del instalador mediante una llamada a **SQLPostInstallerError** y se puede obtener llamando a **SQLInstallerError**. En la tabla siguiente se enumeran los valores de * \* pfErrorCode* que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  

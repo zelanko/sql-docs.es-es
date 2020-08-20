@@ -1,4 +1,5 @@
 ---
+description: Traslado de una base de datos mediante Separar y Adjuntar (Transact-SQL)
 title: Traslado de una base de datos mediante Separar y Adjuntar (Transact-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e26ca45fb3851926959795675e1dd38a7f3f3a14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5696940a7b2eb5d633d6077217ff30b259876e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726407"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461073"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Traslado de una base de datos mediante Separar y Adjuntar (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,7 +80,7 @@ ms.locfileid: "85726407"
   
      En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], una base de datos recién adjuntada no es inmediatamente visible en el Explorador de objetos. Para ver la base de datos, en el Explorador de objetos, haga clic en **Ver** y, a continuación, en **Actualizar**. Cuando se expande el nodo **Bases de datos** en el Explorador de objetos, la base de datos recién adjuntada aparecerá en la lista de bases de datos.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Función SQLCopyDesc
 title: Función SQLCopyDesc | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef1fa5b319e8d72d5b70e6f2010e493eec6f844a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ede6d52614c1c35cdc28f6d85e8b3be61235b4ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461197"
 ---
 # <a name="sqlcopydesc-function"></a>Función SQLCopyDesc
 **Conformidad**  
@@ -50,7 +51,7 @@ SQLRETURN SQLCopyDesc(
  *TargetDescHandle*  
  Entradas Identificador del descriptor de destino. El argumento *TargetDescHandle* puede ser un identificador de un descriptor de aplicación o un IPD. *TargetDescHandle* no se puede establecer en un identificador de IRD o **SQLCopyDesc** devolverá SQLSTATE HY016 (no se puede modificar un descriptor de fila de implementación).  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -64,14 +65,14 @@ SQLRETURN SQLCopyDesc(
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY007|La instrucción asociada no está preparada|*SourceDescHandle* se asoció con un IRD y el identificador de instrucción asociado no estaba en el estado preparado o ejecutado.|  
 |HY010|Error de secuencia de función|(DM) el identificador de descriptor de *SourceDescHandle* o *TargetDescHandle* estaba asociado a un *StatementHandle* para el que se llamó a una función que se ejecuta de forma asincrónica (no a este) y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) el identificador de descriptor de *SourceDescHandle* o *TargetDescHandle* se asoció con un *StatementHandle* para el que se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** , y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *SourceDescHandle* o *TargetDescHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLCopyDesc** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para uno de los identificadores de instrucciones asociados a *SourceDescHandle* o *TargetDescHandle* y se devolvieron SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
 |HY016|No se puede modificar un descriptor de fila de implementación|*TargetDescHandle* se asoció con IRD.|  
 |HY021|Información de descriptor incoherente|La información del descriptor comprobada durante una comprobación de coherencia no era coherente. Para obtener más información, vea "comprobaciones de coherencia" en **SQLSetDescField**.|  
-|HY092|Identificador de opción/atributo no válido|La llamada a **SQLCopyDesc** solicitó una llamada a **SQLSetDescField**, pero * \*ValuePtr* no era válido para el argumento *FieldIdentifier* en *TargetDescHandle*.|  
+|HY092|Identificador de opción/atributo no válido|La llamada a **SQLCopyDesc** solicitó una llamada a **SQLSetDescField**, pero * \* ValuePtr* no era válido para el argumento *FieldIdentifier* en *TargetDescHandle*.|  
 |HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El período de tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|El controlador no admite esta función|(DM) el controlador asociado a *SourceDescHandle* o *TargetDescHandle* no admite la función.|  
@@ -195,6 +196,6 @@ while (SQL_SUCCEEDED(rc)) {
 |Establecer un solo campo de descriptor|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
 |Establecer varios campos de descriptor|[Función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: Configuración global (cuadros de diálogo) (OracleToSQL)
 title: Configuración global (cuadros de diálogo) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 715bc5d1a407380d47c05313954adab5cdf53dc6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0a0b888c594a46543f3cdec8e9c70bf9b511ed91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463197"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Configuración global (cuadros de diálogo) (OracleToSQL)
 Use la página cuadros de diálogo del cuadro de diálogo **configuración global** para especificar la configuración predeterminada de la acción del usuario y de la advertencia para SSMA.  

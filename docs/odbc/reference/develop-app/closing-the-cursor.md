@@ -1,4 +1,5 @@
 ---
+description: Cierre el Cursor
 title: Cerrar el cursor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 723e40e6d83eed84ed93ee1eeab3535622ad5f04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd9465f0fc076a4f41dd8bf4cb3463ce5a47de84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461577"
 ---
 # <a name="closing-the-cursor"></a>Cierre el Cursor
 Cuando una aplicación ha terminado de usar un cursor, llama a **SQLCloseCursor** para cerrar el cursor. Por ejemplo:  

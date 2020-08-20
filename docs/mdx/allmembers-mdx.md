@@ -1,4 +1,5 @@
 ---
+description: AllMembers (MDX)
 title: AllMembers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba70d4ad8b301cbd8af2fd76ce058f2dab2e4a4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461677"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
 
@@ -48,7 +49,7 @@ Level_Expression.AllMembers
 >  La función **AllMembers** es semánticamente similar a la función [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) .  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelven todos`Date].[Calendar Year]` los miembros de la jerarquía de atributo [en el eje de columna; esto incluye los miembros calculados `[Product].[Model Name]` y el conjunto de todos los elementos secundarios de la jerarquía de atributo en el eje de filas del cubo **Adventure Works** .  
+ En el ejemplo siguiente se devuelven todos los miembros de la `Date].[Calendar Year]` jerarquía de atributo [en el eje de columna; esto incluye los miembros calculados y el conjunto de todos los elementos secundarios de la `[Product].[Model Name]` jerarquía de atributo en el eje de filas del cubo **Adventure Works** .  
   
 ```  
 SELECT  
@@ -69,8 +70,8 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [&#41;AddCalculatedMembers &#40;MDX](../mdx/addcalculatedmembers-mdx.md)   
- [Secundarios &#40;&#41;MDX](../mdx/children-mdx.md)   
+ [&#41;AddCalculatedMembers &#40;MDX ](../mdx/addcalculatedmembers-mdx.md)   
+ [Secundarios &#40;&#41;MDX ](../mdx/children-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

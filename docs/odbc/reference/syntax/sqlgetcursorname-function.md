@@ -1,4 +1,5 @@
 ---
+description: Función SQLGetCursorName
 title: Función SQLGetCursorName | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2020
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 413b1a6982a5411d9af204a54536c4778b5593b9
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 454a6630afb565381b8dfc457c5c34a1194ccf63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779067"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461107"
 ---
 # <a name="sqlgetcursorname-function"></a>Función SQLGetCursorName
 **Conformidad**  
@@ -98,6 +99,6 @@ SQLRETURN SQLGetCursorName(
 |Preparar una instrucción para su ejecución|[Función SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
 |Establecer un nombre de cursor|[Función SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

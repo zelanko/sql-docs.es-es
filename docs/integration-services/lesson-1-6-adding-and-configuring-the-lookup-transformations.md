@@ -1,4 +1,5 @@
 ---
+description: 'Lección 1-6: Adición y configuración de las transformaciones de búsqueda'
 title: 'Paso 6: Adición y configuración de las transformaciones de búsqueda | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/19/2019
@@ -9,12 +10,12 @@ ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: chugugrace
 ms.author: chugu
 ms.reviewer: ''
-ms.openlocfilehash: f3c7a1f28e32a426b32edc397725a1495e562bdd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ab6f98a868dc504cf13fa770cd0d5ad5ceb1788
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462055"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lección 1-6: Adición y configuración de las transformaciones de búsqueda
 
@@ -96,7 +97,7 @@ En ambos casos, en la transformación de búsqueda se usa el administrador de co
   
     1.  En el cuadro de diálogo **Administrador de conexiones OLEDB**, asegúrese de que se muestra **localhost.AdventureWorksDW2012**.  
   
-    2.  En el cuadro **Usar una tabla o vista**, escriba o seleccione **[dbo].[DimDate]** .  
+    2.  En el cuadro **Usar una tabla o vista**, escriba o seleccione **[dbo].[DimDate]**.  
   
 8.  En la página **Columnas** , realice las selecciones siguientes:  
   

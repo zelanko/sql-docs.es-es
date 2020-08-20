@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_log_shipping_monitor (Transact-SQL)
 title: sp_refresh_log_shipping_monitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93abffe797a4507c9d3329f864e09753ca1f1da0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6125ac4a916ff9d19777644a9db5fd853c045290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464080"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @agent_id = ] 'agent_id'`El identificador principal de la copia de seguridad o el ID. secundario de la copia o restauración. *agent_id* es de tipo **uniqueidentifier** y no puede ser null.  
+`[ @agent_id = ] 'agent_id'` El identificador principal de la copia de seguridad o el ID. secundario de la copia o restauración. *agent_id* es de tipo **uniqueidentifier** y no puede ser null.  
   
-`[ @agent_type = ] 'agent_type'`El tipo de trabajo de trasvase de registros.  
+`[ @agent_type = ] 'agent_type'` El tipo de trabajo de trasvase de registros.  
   
  0 = Copia de seguridad.  
   
@@ -55,9 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* es **tinyint** y no puede ser null.  
   
-`[ @database = ] 'database'`La base de datos principal o secundaria utilizada por el registro de agentes de copia de seguridad o restauración.  
+`[ @database = ] 'database'` La base de datos principal o secundaria utilizada por el registro de agentes de copia de seguridad o restauración.  
   
-`[ @mode ] n`Especifica si se deben actualizar los datos del monitor o limpiarlos. El tipo de datos de *m* es tinyint y los valores admitidos son:  
+`[ @mode ] n` Especifica si se deben actualizar los datos del monitor o limpiarlos. El tipo de datos de *m* es tinyint y los valores admitidos son:  
   
  1 = actualizar (valor predeterminado)  
   
@@ -69,7 +70,7 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_refresh_log_shipping_monitor** actualiza las tablas **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail**y **log_shipping_monitor_error_detail** con cualquier información de sesión que todavía no se haya transferido. De esta manera, puede sincronizar el servidor de supervisión con el servidor primario o secundario si el monitor lleva un tiempo sin estar sincronizado. Además, puede eliminar la información del monitor en el servidor de supervisión, si así lo precisa.  
   
  **sp_refresh_log_shipping_monitor** se debe ejecutar desde la base de datos **maestra** en el servidor principal o secundario.  

@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergesubscription (Transact-SQL)
 title: sp_helpmergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c1c2ff23ecde51f13270fca3f674c58412858f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6892f15293c66e36afe7108047a7e81539559fc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464248"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,25 +44,25 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** . La publicación debe existir y debe cumplir las normas de los identificadores. Si es NULL o **%** , se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** . La publicación debe existir y debe cumplir las normas de los identificadores. Si es NULL o **%** , se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
   
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** . Si es NULL o %, se devuelve información acerca de todas las suscripciones a la publicación dada.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** . Si es NULL o %, se devuelve información acerca de todas las suscripciones a la publicación dada.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos de suscripciones. *subscriber_db*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todas las bases de datos de suscripciones.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripciones. *subscriber_db*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todas las bases de datos de suscripciones.  
   
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. El publicador debe ser un servidor válido. *Publisher*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. El publicador debe ser un servidor válido. *Publisher*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todos los publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todas las bases de datos del publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todas las bases de datos del publicador.  
   
-`[ @subscription_type = ] 'subscription_type'`Es el tipo de suscripción. *subscription_type*es **nvarchar (15)** y puede tener uno de estos valores.  
+`[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type*es **nvarchar (15)** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |de **extracción** (valor predeterminado)|Suscripción de inserción.|  
 |**obtener**|Suscripción de extracción|  
 |**ambos**|Una suscripción de inserción y de extracción|  
   
-`[ @found = ] 'found'OUTPUT`Es una marca que indica que se devuelven filas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de NULL. **1** indica que se ha encontrado la publicación. **0** indica que no se encuentra la publicación.  
+`[ @found = ] 'found'OUTPUT` Es una marca que indica que se devuelven filas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de NULL. **1** indica que se ha encontrado la publicación. **0** indica que no se encuentra la publicación.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -92,7 +93,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpmergesubscription** se utiliza en la replicación de mezcla para devolver la información de suscripción almacenada en el publicador o en el suscriptor de republicación.  
   
  En el caso de las suscripciones anónimas, el valor de *subscription_type*es siempre **1** (extracción). Sin embargo, debe ejecutar [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) en el suscriptor para obtener información sobre las suscripciones anónimas.  
@@ -101,9 +102,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  Solo los miembros del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** o la lista de acceso a la publicación para la publicación a la que pertenece la suscripción pueden ejecutar **sp_helpmergesubscription**.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_addmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_addmergesubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

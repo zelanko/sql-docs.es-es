@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergefilter (Transact-SQL)
 title: sp_dropmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2de7b17ff172c5945c7bfb83cae6a8a11325e6d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5eb42c423d562ad251dc55ce015fdd111fa7d6fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464348"
 ---
 # <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,19 +40,19 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @filtername = ] 'filtername'`Es el nombre del filtro que se va a quitar. *filtername* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @filtername = ] 'filtername'` Es el nombre del filtro que se va a quitar. *filtername* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Habilita o deshabilita la posibilidad de invalidar una instantánea. *force_invalidate_snapshot* es un **bit**, con un valor predeterminado de **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Habilita o deshabilita la posibilidad de invalidar una instantánea. *force_invalidate_snapshot* es un **bit**, con un valor predeterminado de **0**.  
   
  **0** especifica que los cambios en el artículo de mezcla no hacen que la instantánea no sea válida.  
   
  **1** significa que los cambios en el artículo de mezcla pueden hacer que la instantánea no sea válida. En ese caso, el valor **1** concede permiso para que se produzca la nueva instantánea.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Habilita o deshabilita la capacidad de marcar una suscripción como no válida. *force_reinit_subscription* es un **bit**, con un valor predeterminado de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Habilita o deshabilita la capacidad de marcar una suscripción como no válida. *force_reinit_subscription* es un **bit**, con un valor predeterminado de **0**.  
   
  **0** especifica que los cambios en el filtro de artículo de mezcla no hacen que las suscripciones no sean válidas.  
   
@@ -60,17 +61,17 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_dropmergefilter** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_dropmergefilter**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Cambiar las propiedades de la publicación y del artículo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [sp_addmergefilter &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

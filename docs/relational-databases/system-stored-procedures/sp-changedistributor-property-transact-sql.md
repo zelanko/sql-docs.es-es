@@ -1,4 +1,5 @@
 ---
+description: sp_changedistributor_property (Transact-SQL)
 title: sp_changedistributor_property (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 441fe87551fd06ba786b4b36589bea00d7d399b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 284f669f81f0954c0a9676d5f7a4ab8a213eba58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464443"
 ---
 # <a name="sp_changedistributor_property-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,19 +39,19 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @property = ] 'property'`Es la propiedad de un distribuidor determinado. *Property* es de **tipo sysname**y puede tener uno de estos valores.  
+`[ @property = ] 'property'` Es la propiedad de un distribuidor determinado. *Property* es de **tipo sysname**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Número máximo de minutos que un agente puede ejecutarse sin registrar un mensaje de progreso.|  
 |NULL (predeterminado)|Se imprimen todos los valores de *propiedad* disponibles.|  
   
-`[ @value = ] 'value'`Es el valor de la propiedad del distribuidor especificado. *Value* es de tipo **VARCHAR (255)** y su valor predeterminado es NULL.  
+`[ @value = ] 'value'` Es el valor de la propiedad del distribuidor especificado. *Value* es de tipo **VARCHAR (255)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changedistributor_property** se utiliza en todos los tipos de replicación.  
   
 ## <a name="example"></a>Ejemplo  
@@ -59,11 +60,11 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_changedistributor_property**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_dropdistributor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
- [sp_helpdistributor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_adddistributor &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_dropdistributor &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

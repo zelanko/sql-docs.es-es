@@ -1,4 +1,5 @@
 ---
+description: sp_dropuser (Transact-SQL)
 title: sp_dropuser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4270edfcdacf94d354c0079e48c10a201a3e5a6b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7456ae7c2350f8d7c7e5aa145b44b2267f22f4fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464307"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85881757"
   Quita un usuario de base de datos de la base de datos actual. **sp_dropuser** proporciona compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [Drop User](../../t-sql/statements/drop-user-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilice [Drop User](../../t-sql/statements/drop-user-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name_in_db = ] 'user'`Es el nombre del usuario que se va a quitar. el *usuario* es un **sysname**y no tiene ningún valor predeterminado. el *usuario* debe existir en la base de datos actual. Cuando especifique un inicio de sesión de Windows, utilice el nombre por el que se conoce ese inicio de sesión en la base de datos.  
+`[ @name_in_db = ] 'user'` Es el nombre del usuario que se va a quitar. el *usuario* es un **sysname**y no tiene ningún valor predeterminado. el *usuario* debe existir en la base de datos actual. Cuando especifique un inicio de sesión de Windows, utilice el nombre por el que se conoce ese inicio de sesión en la base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -71,9 +72,9 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_grantdbaccess &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_grantdbaccess &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
- [sp_revokedbaccess &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
+ [sp_revokedbaccess &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

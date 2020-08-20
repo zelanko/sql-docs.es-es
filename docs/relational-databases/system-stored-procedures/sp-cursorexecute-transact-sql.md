@@ -1,4 +1,5 @@
 ---
+description: sp_cursorexecute (Transact-SQL)
 title: sp_cursorexecute (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 800e70591e4ebb508bd5edd6426d43bdc3a16987
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5e712c8fd485a91c3dfcc7b65c5f7c0fb76b15b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464403"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,12 +80,12 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Valor del código de retorno  
  *RowCount* puede devolver los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |-1|Número de filas desconocido.|  
 |-n|Un rellenado asincrónico está en vigor.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Parámetros ccopt y scrollopt  
  *scrollopt* y *ccopt* son útiles cuando se retienen los planes almacenados en caché para la caché del servidor, lo que significa que se debe volver a compilar el identificador preparado que identifica la instrucción. Los valores de los parámetros *scrollopt* y *ccopt* deben coincidir con los valores enviados en la solicitud original a sp_cursorprepare.  
@@ -98,8 +99,8 @@ sp_cursorexecute prepared_handle, cursor
  La marca de entrada RPC RETURN_METADATA puede establecerse en 1 para solicitar que se devuelvan los metadatos de la lista de selección del cursor en el flujo de TDS.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_cursoropen &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobsteplog (Transact-SQL)
 title: sp_help_jobsteplog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ef843202631d632b2a3712554cf67c9eca0878e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c3659e9f82da6d735bb8d5c53d6a182d4fa14d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464264"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] 'job_id'`Número de identificación del trabajo para el que se va a devolver información del registro de pasos de trabajo. *job_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @job_id = ] 'job_id'` Número de identificación del trabajo para el que se va a devolver información del registro de pasos de trabajo. *job_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'`Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @step_id = ] step_id`El número de identificación del paso en el trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @step_id = ] step_id` El número de identificación del paso en el trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @step_name = ] 'step_name'`Nombre del paso del trabajo. *step_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @step_name = ] 'step_name'` Nombre del paso del trabajo. *step_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -70,7 +71,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|Tamaño del registro de pasos de trabajo, en megabytes (MB).|  
 |**inicia**|**nvarchar(max)**|Salida del registro de pasos de trabajo.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_help_jobsteplog** está en la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
@@ -114,11 +115,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_add_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_delete_jobsteplog &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
- [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [sp_add_jobstep &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_delete_jobsteplog &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
+ [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

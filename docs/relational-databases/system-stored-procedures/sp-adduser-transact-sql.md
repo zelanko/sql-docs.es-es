@@ -1,4 +1,5 @@
 ---
+description: sp_adduser (Transact-SQL)
 title: sp_adduser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5c917889a4ed435e59e7d165841234b80390dc7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 05aa08ee4d2b518b804db93d5a2408f690b56bbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464607"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85875415"
   Agrega un nuevo usuario a la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]En su lugar, use [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, use [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,11 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'`Es el nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el inicio de sesión de Windows. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. *login* debe ser un inicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sesión de o inicio de sesión de Windows existente.  
+`[ @loginame = ] 'login'` Es el nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el inicio de sesión de Windows. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. *login* debe ser un inicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sesión de o inicio de sesión de Windows existente.  
   
-`[ @name_in_db = ] 'user'`Es el nombre del nuevo usuario de la base de datos. *User* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *User* , el nombre del nuevo usuario de la base de datos tiene como valor predeterminado el nombre de *Inicio de sesión* . Al especificar *User* , se asigna al nuevo usuario un nombre en la base de datos diferente del nombre de inicio de sesión de nivel de servidor.  
+`[ @name_in_db = ] 'user'` Es el nombre del nuevo usuario de la base de datos. *User* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *User* , el nombre del nuevo usuario de la base de datos tiene como valor predeterminado el nombre de *Inicio de sesión* . Al especificar *User* , se asigna al nuevo usuario un nombre en la base de datos diferente del nombre de inicio de sesión de nivel de servidor.  
   
-`[ @grpname = ] 'role'`Es el rol de base de datos del que el nuevo usuario se convierte en miembro. *role* es de **tipo sysname y su**valor predeterminado es NULL. *role* debe ser un rol de base de datos válido en la base de datos actual.  
+`[ @grpname = ] 'role'` Es el rol de base de datos del que el nuevo usuario se convierte en miembro. *role* es de **tipo sysname y su**valor predeterminado es NULL. *role* debe ser un rol de base de datos válido en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -101,12 +102,12 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sp_addrole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_grantlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_grantdbaccess &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [sp_grantlogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

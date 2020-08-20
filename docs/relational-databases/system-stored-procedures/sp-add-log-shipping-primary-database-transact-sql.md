@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_primary_database (Transact-SQL)
 title: sp_add_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 188a7d3b98021255074ccaf6b954b4c9b2100fd0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464673"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,41 +56,41 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'`Es el nombre de la base de datos principal de trasvase de registros. *Database* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
+`[ @database = ] 'database'` Es el nombre de la base de datos principal de trasvase de registros. *Database* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
   
-`[ @backup_directory = ] 'backup_directory'`Es la ruta de acceso a la carpeta de copia de seguridad del servidor principal. *backup_directory* es de tipo **nvarchar (500)**, no tiene ningún valor predeterminado y no puede ser null.  
+`[ @backup_directory = ] 'backup_directory'` Es la ruta de acceso a la carpeta de copia de seguridad del servidor principal. *backup_directory* es de tipo **nvarchar (500)**, no tiene ningún valor predeterminado y no puede ser null.  
   
-`[ @backup_share = ] 'backup_share'`Es la ruta de acceso de red al directorio de copia de seguridad del servidor principal. *backup_share* es de tipo **nvarchar (500)**, no tiene ningún valor predeterminado y no puede ser null.  
+`[ @backup_share = ] 'backup_share'` Es la ruta de acceso de red al directorio de copia de seguridad del servidor principal. *backup_share* es de tipo **nvarchar (500)**, no tiene ningún valor predeterminado y no puede ser null.  
   
-`[ @backup_job_name = ] 'backup_job_name'`Es el nombre del trabajo de Agente SQL Server en el servidor principal que copia la copia de seguridad en la carpeta de copia de seguridad. *backup_job_name* es de **tipo sysname** y no puede ser null.  
+`[ @backup_job_name = ] 'backup_job_name'` Es el nombre del trabajo de Agente SQL Server en el servidor principal que copia la copia de seguridad en la carpeta de copia de seguridad. *backup_job_name* es de **tipo sysname** y no puede ser null.  
   
-`[ @backup_retention_period = ] backup_retention_period`Es el período de tiempo, en minutos, que se conservará el archivo de copia de seguridad de registros en el directorio de copia de seguridad del servidor principal. *backup_retention_period* es de **tipo int**, no tiene ningún valor predeterminado y no puede ser null.  
+`[ @backup_retention_period = ] backup_retention_period` Es el período de tiempo, en minutos, que se conservará el archivo de copia de seguridad de registros en el directorio de copia de seguridad del servidor principal. *backup_retention_period* es de **tipo int**, no tiene ningún valor predeterminado y no puede ser null.  
   
-`[ @monitor_server = ] 'monitor_server'`Es el nombre del servidor de supervisión. *Monitor_server* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
+`[ @monitor_server = ] 'monitor_server'` Es el nombre del servidor de supervisión. *Monitor_server* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
   
-`[ @monitor_server_security_mode = ] monitor_server_security_mode`El modo de seguridad usado para conectarse al servidor de supervisión.  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` El modo de seguridad usado para conectarse al servidor de supervisión.  
   
  1 = Autenticación de Windows.  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *monitor_server_security_mode* es de **bit** y no puede ser null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Es el nombre de usuario de la cuenta usada para obtener acceso al servidor de supervisión.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Es el nombre de usuario de la cuenta usada para obtener acceso al servidor de supervisión.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Es la contraseña de la cuenta utilizada para obtener acceso al servidor de supervisión.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Es la contraseña de la cuenta utilizada para obtener acceso al servidor de supervisión.  
   
-`[ @backup_threshold = ] backup_threshold`Es el período de tiempo, en minutos, después de la última copia de seguridad antes de que se produzca un error de *threshold_alert* . *backup_threshold* es de **tipo int**y su valor predeterminado es de 60 minutos.  
+`[ @backup_threshold = ] backup_threshold` Es el período de tiempo, en minutos, después de la última copia de seguridad antes de que se produzca un error de *threshold_alert* . *backup_threshold* es de **tipo int**y su valor predeterminado es de 60 minutos.  
   
-`[ @threshold_alert = ] threshold_alert`Es la alerta que se generará cuando se supere el umbral de copia de seguridad. *threshold_alert* es de **tipo int**y su valor predeterminado es 14.420.  
+`[ @threshold_alert = ] threshold_alert` Es la alerta que se generará cuando se supere el umbral de copia de seguridad. *threshold_alert* es de **tipo int**y su valor predeterminado es 14.420.  
   
-`[ @threshold_alert_enabled = ] threshold_alert_enabled`Especifica si se generará una alerta cuando se supere *backup_threshold* . El valor cero (0), valor predeterminado, significa que la alerta está deshabilitada y no se generará. *threshold_alert_enabled* es **bit**.  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled` Especifica si se generará una alerta cuando se supere *backup_threshold* . El valor cero (0), valor predeterminado, significa que la alerta está deshabilitada y no se generará. *threshold_alert_enabled* es **bit**.  
   
-`[ @history_retention_period = ] history_retention_period`Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
+`[ @history_retention_period = ] history_retention_period` Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT`El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID. de trabajo del agente asociado al trabajo de copia de seguridad en el servidor principal. *backup_job_id* es de tipo **uniqueidentifier** y no puede ser null.  
+`[ @backup_job_id = ] backup_job_id OUTPUT` El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID. de trabajo del agente asociado al trabajo de copia de seguridad en el servidor principal. *backup_job_id* es de tipo **uniqueidentifier** y no puede ser null.  
   
-`[ @primary_id = ] primary_id OUTPUT`IDENTIFICADOR de la base de datos principal para la configuración del trasvase de registros. *primary_id* es de tipo **uniqueidentifier** y no puede ser null.  
+`[ @primary_id = ] primary_id OUTPUT` IDENTIFICADOR de la base de datos principal para la configuración del trasvase de registros. *primary_id* es de tipo **uniqueidentifier** y no puede ser null.  
   
-`[ @backup_compression = ] backup_compression_option`Especifica si la configuración del trasvase de registros utiliza [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parámetro solo se admite en [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o una versión posterior).  
+`[ @backup_compression = ] backup_compression_option` Especifica si la configuración del trasvase de registros utiliza [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parámetro solo se admite en [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o una versión posterior).  
   
  0 = Deshabilitada. No se comprimen nunca las copias de seguridad de registros.  
   

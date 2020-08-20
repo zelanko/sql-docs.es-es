@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_keymappings (Transact-SQL)
 title: sp_fulltext_keymappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 000c71e284f77b5024cd45727803af55fa8d8b06
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 59445fdd9d4d7588291b2fac0073b962155cde04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464385"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -64,7 +65,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |DocId|**bigint**|Una columna de identificador de documento interno (DocId) que se corresponde con el valor de clave.|  
 |Clave|*|Valor de clave de texto completo de la tabla especificada.<br /><br /> Si no hay ninguna clave de texto completo en la tabla de asignación, se devuelve un conjunto de filas vacío.|  
   
- <sup>*</sup>El tipo de datos para Key es el mismo que el tipo de datos de la columna de clave de texto completo de la tabla base.  
+ <sup>*</sup> El tipo de datos para Key es el mismo que el tipo de datos de la columna de clave de texto completo de la tabla base.  
   
 ## <a name="permissions"></a>Permisos  
  Esta función es pública y no requiere permisos especiales.  

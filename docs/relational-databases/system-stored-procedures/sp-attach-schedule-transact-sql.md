@@ -1,4 +1,5 @@
 ---
+description: sp_attach_schedule (Transact-SQL)
 title: sp_attach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc01db6ae019694cbff4082c394fd8c736b9a5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8108bdad26c02b02ae2e88b1780fada126e2c797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464495"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,21 +43,21 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`Número de identificación del trabajo al que se agrega la programación. *job_id*es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` Número de identificación del trabajo al que se agrega la programación. *job_id*es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'`Nombre del trabajo al que se agrega la programación. *job_name*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo al que se agrega la programación. *job_name*es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @schedule_id = ] schedule_id`El número de identificación de la programación que se va a establecer para el trabajo. *schedule_id*es de **tipo int**y su valor predeterminado es NULL.  
+`[ @schedule_id = ] schedule_id` El número de identificación de la programación que se va a establecer para el trabajo. *schedule_id*es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @schedule_name = ] 'schedule_name'`Nombre de la programación que se va a establecer para el trabajo. *schedule_name*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @schedule_name = ] 'schedule_name'` Nombre de la programación que se va a establecer para el trabajo. *schedule_name*es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La programación y el trabajo deben tener el mismo propietario.  
   
  Se puede configurar una programación para más de un trabajo. Se puede ejecutar un trabajo en más de una programación.  
@@ -106,9 +107,9 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+## <a name="see-also"></a>Vea también  
+ [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

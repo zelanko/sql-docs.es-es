@@ -1,4 +1,5 @@
 ---
+description: sp_changedynamicsnapshot_job (Transact-SQL)
 title: sp_changedynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e506e2846de3d106cfc6e4eccd7519d428da4f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 73406c2860dbff4dfb5f6488a2195a9f00be4bc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464456"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,15 +52,15 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Es el nombre del trabajo de instantánea que se va a cambiar. *dynamic_snapshot_jobname*es de **tipo sysname y su**valor predeterminado es N '% '. Si se especifica *dynamic_snapshot_jobid* , debe usar el valor predeterminado de *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Es el nombre del trabajo de instantánea que se va a cambiar. *dynamic_snapshot_jobname*es de **tipo sysname y su**valor predeterminado es N '% '. Si se especifica *dynamic_snapshot_jobid* , debe usar el valor predeterminado de *dynamic_snapshot_jobname*.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Es el identificador del trabajo de instantánea que se va a cambiar. *dynamic_snapshot_jobid* es de tipo **uniqueidentifier**y su valor predeterminado es NULL. Si se especifica *dynamic_snapshot_jobname*, debe usar el valor predeterminado de *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Es el identificador del trabajo de instantánea que se va a cambiar. *dynamic_snapshot_jobid* es de tipo **uniqueidentifier**y su valor predeterminado es NULL. Si se especifica *dynamic_snapshot_jobname*, debe usar el valor predeterminado de *dynamic_snapshot_jobid*.  
   
-`[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el agente. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
+`[ @frequency_type = ] frequency_type` Es la frecuencia con la que se programa el agente. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
@@ -71,9 +72,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|Periódica|  
 |NULL (predeterminado)||  
   
-`[ @frequency_interval = ] frequency_interval`Los días en los que se ejecuta el agente. *frequency_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
+`[ @frequency_interval = ] frequency_interval` Los días en los que se ejecuta el agente. *frequency_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -87,9 +88,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
-`[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  
+`[ @frequency_subday = ] frequency_subday` Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Second|  
@@ -97,11 +98,11 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Hora|  
 |NULL (predeterminado)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha en la que se ejecuta el Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha en la que se ejecuta el Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Second|  
@@ -110,19 +111,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|Último|  
 |NULL (predeterminado)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @active_start_date = ] active_start_date`Es la fecha en la que se programa el Agente de mezcla por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_start_date = ] active_start_date` Es la fecha en la que se programa el Agente de mezcla por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @active_end_date = ] active_end_date`Es la fecha en la que el Agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_end_date = ] active_end_date` Es la fecha en la que el Agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`Es la hora del día a la que se programa el Agente de mezcla por primera vez, con el formato HHMMSS. *active_start_time_of_day* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día a la que se programa el Agente de mezcla por primera vez, con el formato HHMMSS. *active_start_time_of_day* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`Es la hora del día en que el Agente de mezcla deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día en que el Agente de mezcla deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @job_login = ] 'job_login'`Es la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows con la que se ejecuta la agente de instantáneas cuando se genera la instantánea para una suscripción mediante un filtro de fila con parámetros. *job_login* es de tipo **nvarchar (257)** y su valor predeterminado es NULL.  
+`[ @job_login = ] 'job_login'` Es la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows con la que se ejecuta la agente de instantáneas cuando se genera la instantánea para una suscripción mediante un filtro de fila con parámetros. *job_login* es de tipo **nvarchar (257)** y su valor predeterminado es NULL.  
   
-`[ @job_password = ] 'job_password'`Es la contraseña de la cuenta de Windows con la que se ejecuta el Agente de instantáneas al generar la instantánea para una suscripción mediante un filtro de fila con parámetros. *job_password* es de tipo **nvarchar (257)** y su valor predeterminado es NULL.  
+`[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows con la que se ejecuta el Agente de instantáneas al generar la instantánea para una suscripción mediante un filtro de fila con parámetros. *job_password* es de tipo **nvarchar (257)** y su valor predeterminado es NULL.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
@@ -130,7 +131,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changedynamicsnapshot_job** se utiliza en la replicación de mezcla para publicaciones con filtros de fila con parámetros.  
   
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
@@ -138,8 +139,8 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_changedynamicsnapshot_job**.  
   
-## <a name="see-also"></a>Consulte también  
- [Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+## <a name="see-also"></a>Vea también  
+ [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  
  [Instantáneas para publicaciones de combinación con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

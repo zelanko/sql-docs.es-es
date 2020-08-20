@@ -1,4 +1,5 @@
 ---
+description: sp_can_tlog_be_applied (Transact-SQL)
 title: sp_can_tlog_be_applied (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2369c2db6003229ee54f9d7ef04784a470493faf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e4596cfab5bb7a272e29b2d2749e38c9f38ddaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464484"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @backup_file_name = ] 'backup_file_name'`Es el nombre de un archivo de copia de seguridad. *backup_file_name* es **nvarchar (128)**.  
+`[ @backup_file_name = ] 'backup_file_name'` Es el nombre de un archivo de copia de seguridad. *backup_file_name* es **nvarchar (128)**.  
   
-`[ @database_name = ] 'database_name'`Es el nombre de la base de datos. *database_name* es **sysname**.  
+`[ @database_name = ] 'database_name'` Es el nombre de la base de datos. *database_name* es **sysname**.  
   
-`[ @result = ] _result_ OUTPUT`Indica si el registro de transacciones se puede aplicar a la base de datos. el *resultado* es **bit**.  
+`[ @result = ] _result_ OUTPUT` Indica si el registro de transacciones se puede aplicar a la base de datos. el *resultado* es **bit**.  
   
  1 = El registro se puede aplicar.  
   
@@ -72,7 +73,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Adventu
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

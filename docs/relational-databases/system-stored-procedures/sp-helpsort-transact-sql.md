@@ -1,4 +1,5 @@
 ---
+description: sp_helpsort (Transact-SQL)
 title: sp_helpsort (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2da3e78c5fde49a3d83c3813f70c5d56a1915908
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22a34a8285a2043159e1bf56191381c6ac933bc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464178"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ sp_helpsort
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve la intercalación predeterminada del servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se instala una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una intercalación especificada para ser compatible con una instalación anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_helpsort** devuelve resultados en blanco. En casos como éste, se puede determinar la intercalación consultando el objeto SERVERPROPERTY; por ejemplo: `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Permisos  
@@ -68,7 +69,7 @@ sp_helpsort;
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  

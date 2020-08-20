@@ -1,4 +1,5 @@
 ---
+description: sp_OAGetErrorInfo (Transact-SQL)
 title: sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d190bf442b7c6e629058f6679291ff75ca64e5ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7336be191ea34fcf36b8221b2a1698ae179fa980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464115"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**HelpFile**|**nvarchar (NN)**|Archivo de ayuda del origen.|  
 |**HelpID**|**int**|Id. del contexto de Ayuda del archivo de origen correspondiente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cada llamada a un procedimiento almacenado de OLE Automation (excepto **sp_OAGetErrorInfo**) restablece la información de error; por tanto, **sp_OAGetErrorInfo** solo obtiene la información de error de la llamada más reciente a un procedimiento almacenado de OLE Automation. Tenga en cuenta que, dado que **sp_OAGetErrorInfo** no restablece la información de error, se puede llamar varias veces para obtener la misma información de error.  
   
  La tabla siguiente muestra los errores de OLE Automation y sus causas comunes.  
@@ -95,7 +96,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  Para obtener más información sobre el procesamiento de códigos de retorno HRESULT, vea [códigos de retorno e información de error de automatización OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol fijo de servidor **sysadmin** o al permiso Execute directamente en este procedimiento almacenado. `Ole Automation Procedures`la configuración debe estar **habilitada** para usar cualquier procedimiento del sistema relacionado con la automatización OLE.  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o al permiso Execute directamente en este procedimiento almacenado. `Ole Automation Procedures` la configuración debe estar **habilitada** para usar cualquier procedimiento del sistema relacionado con la automatización OLE.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente muestra la información de errores de OLE Automation.  

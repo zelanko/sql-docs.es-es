@@ -1,4 +1,5 @@
 ---
+description: sp_mergedummyupdate (Transact-SQL)
 title: sp_mergedummyupdate (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5502b64da269639d99fe54d4930f7f3b7b145d73
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dbacf385842d226c733c5c1baec9859f26e140d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464140"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,14 +38,14 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @source_object = ] 'source_object'`Es el nombre del objeto de origen. *source_object*es de tipo **nvarchar (386)** y no tiene ningún valor predeterminado.  
+`[ @source_object = ] 'source_object'` Es el nombre del objeto de origen. *source_object*es de tipo **nvarchar (386)** y no tiene ningún valor predeterminado.  
   
-`[ @rowguid = ] 'rowguid'`Es el identificador de fila. *ROWGUID* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
+`[ @rowguid = ] 'rowguid'` Es el identificador de fila. *ROWGUID* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_mergedummyupdate** se utiliza en la replicación de mezcla.  
   
  **sp_mergedummyupdate** resulta útil si escribe su propia alternativa al Visor de conflictos de replicación (Wzcnflct.exe).  

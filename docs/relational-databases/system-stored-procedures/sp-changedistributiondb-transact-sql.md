@@ -1,4 +1,5 @@
 ---
+description: sp_changedistributiondb (Transact-SQL)
 title: sp_changedistributiondb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9bd4367a4af33195ffdb3e233980f46205ca39a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb52176989ef6e90eb132da21abcd299444aec8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464474"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,23 +40,23 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'`Es el nombre de la base de datos de distribución. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @database = ] 'database'` Es el nombre de la base de datos de distribución. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'`Es la propiedad que se va a cambiar para la base de datos dada. *Property* es de **tipo sysname**y puede tener uno de estos valores.  
+`[ @property = ] 'property'` Es la propiedad que se va a cambiar para la base de datos dada. *Property* es de **tipo sysname**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**history_retention**|Período de retención de la tabla de historial.|  
 |**max_distretention**|Período máximo de retención de la distribución.|  
 |**min_distretention**|Período mínimo de retención de la distribución.|  
 |NULL (predeterminado)|Se imprimen todos los valores de *propiedad* disponibles.|  
   
-`[ @value = ] 'value'`Es el nuevo valor de la propiedad especificada. el *valor* es **nvarchar (255)** y su valor predeterminado es NULL.  
+`[ @value = ] 'value'` Es el nuevo valor de la propiedad especificada. el *valor* es **nvarchar (255)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changedistributiondb** se utiliza en todos los tipos de replicación.  
   
 ## <a name="example"></a>Ejemplo  
@@ -64,11 +65,11 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_changedistributiondb**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [sp_helpdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

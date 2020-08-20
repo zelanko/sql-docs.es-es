@@ -1,4 +1,5 @@
 ---
+description: sp_addumpdevice (Transact-SQL)
 title: sp_addumpdevice (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 840214a807ff37eedcc024125fc4902587afa05c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 91343fe93ad66b4e89e1e0190f5a46be23142f6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464687"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Agrega un dispositivo de copia de seguridad a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -47,16 +48,16 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @devtype = ] 'device_type'`Es el tipo de dispositivo de copia de seguridad. *device_type* es de tipo **VARCHAR (20)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
+`[ @devtype = ] 'device_type'` Es el tipo de dispositivo de copia de seguridad. *device_type* es de tipo **VARCHAR (20)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**discos**|Archivo de disco duro que se utiliza como dispositivo de copia de seguridad.|  
 |**cinta**|Todos los dispositivos de cinta admitidos por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Nota: La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
   
-`[ @logicalname = ] 'logical_name'`Es el nombre lógico del dispositivo de copia de seguridad que se usa en las instrucciones BACKUP y RESTOre. *logical_name* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
+`[ @logicalname = ] 'logical_name'` Es el nombre lógico del dispositivo de copia de seguridad que se usa en las instrucciones BACKUP y RESTOre. *logical_name* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
   
-`[ @physicalname = ] 'physical_name'`Es el nombre físico del dispositivo de copia de seguridad. Los nombres físicos tienen que cumplir las reglas de nombres de archivo del sistema operativo o las convenciones de nomenclatura universal para los dispositivos de red, y deben incluir la ruta de acceso completa. *physical_name* es de tipo **nvarchar (260)**, no tiene ningún valor predeterminado y no puede ser null.  
+`[ @physicalname = ] 'physical_name'` Es el nombre físico del dispositivo de copia de seguridad. Los nombres físicos tienen que cumplir las reglas de nombres de archivo del sistema operativo o las convenciones de nomenclatura universal para los dispositivos de red, y deben incluir la ruta de acceso completa. *physical_name* es de tipo **nvarchar (260)**, no tiene ningún valor predeterminado y no puede ser null.  
   
  Cuando cree un dispositivo de copia de seguridad en una ubicación de red remota, asegúrese de que el nombre con el que se haya iniciado el [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenga permiso de escritura en el equipo remoto.  
   
@@ -65,9 +66,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  Este procedimiento escribe en el catálogo el nombre físico especificado. El procedimiento no intenta tener acceso al dispositivo ni crearlo.  
   
-`[ @cntrltype = ] 'controller_type'`Obsoleto. Si se especifica, este parámetro se omite. Solo se admite para mantener la compatibilidad con versiones anteriores. Los nuevos usos de **sp_addumpdevice** deben omitir este parámetro.  
+`[ @cntrltype = ] 'controller_type'` Obsoleto. Si se especifica, este parámetro se omite. Solo se admite para mantener la compatibilidad con versiones anteriores. Los nuevos usos de **sp_addumpdevice** deben omitir este parámetro.  
   
-`[ @devstatus = ] 'device_status'`Obsoleto. Si se especifica, este parámetro se omite. Solo se admite para mantener la compatibilidad con versiones anteriores. Los nuevos usos de **sp_addumpdevice** deben omitir este parámetro.  
+`[ @devstatus = ] 'device_status'` Obsoleto. Si se especifica, este parámetro se omite. Solo se admite para mantener la compatibilidad con versiones anteriores. Los nuevos usos de **sp_addumpdevice** deben omitir este parámetro.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

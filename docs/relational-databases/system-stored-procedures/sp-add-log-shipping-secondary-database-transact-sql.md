@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_secondary_database (Transact-SQL)
 title: sp_add_log_shipping_secondary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de65ab447394d17c6400f77c58986e111839e9b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 384884e2b2b076b20cb9c679c3494a7c292f77a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464675"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,17 +54,17 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @secondary_database = ] 'secondary_database'`Es el nombre de la base de datos secundaria. *secondary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @secondary_database = ] 'secondary_database'` Es el nombre de la base de datos secundaria. *secondary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @primary_server = ] 'primary_server'`Nombre de la instancia principal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración del trasvase de registros. *primary_server* es de **tipo sysname** y no puede ser null.  
+`[ @primary_server = ] 'primary_server'` Nombre de la instancia principal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración del trasvase de registros. *primary_server* es de **tipo sysname** y no puede ser null.  
   
-`[ @primary_database = ] 'primary_database'`Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @restore_delay = ] 'restore_delay'`Cantidad de tiempo, en minutos, que el servidor secundario espera antes de restaurar un archivo de copia de seguridad determinado. *restore_delay* es de **tipo int** y no puede ser null. El valor predeterminado es 0.  
+`[ @restore_delay = ] 'restore_delay'` Cantidad de tiempo, en minutos, que el servidor secundario espera antes de restaurar un archivo de copia de seguridad determinado. *restore_delay* es de **tipo int** y no puede ser null. El valor predeterminado es 0.  
   
-`[ @restore_all = ] 'restore_all'`Si se establece en 1, el servidor secundario restaura todas las copias de seguridad del registro de transacciones disponibles cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haberse restaurado un archivo. *restore_all* es de **bit** y no puede ser null.  
+`[ @restore_all = ] 'restore_all'` Si se establece en 1, el servidor secundario restaura todas las copias de seguridad del registro de transacciones disponibles cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haberse restaurado un archivo. *restore_all* es de **bit** y no puede ser null.  
   
-`[ @restore_mode = ] 'restore_mode'`Modo de restauración para la base de datos secundaria.  
+`[ @restore_mode = ] 'restore_mode'` Modo de restauración para la base de datos secundaria.  
   
  0 = restore log with NORECOVERY.  
   
@@ -71,21 +72,21 @@ sp_add_log_shipping_secondary_database
   
  *restore* es de **bit** y no puede ser null.  
   
-`[ @disconnect_users = ] 'disconnect_users'`Si se establece en 1, los usuarios se desconectarán de la base de datos secundaria cuando se realice una operación de restauración. Valor predeterminado = 0. *desconectar* usuarios es **bit** y no puede ser null.  
+`[ @disconnect_users = ] 'disconnect_users'` Si se establece en 1, los usuarios se desconectarán de la base de datos secundaria cuando se realice una operación de restauración. Valor predeterminado = 0. *desconectar* usuarios es **bit** y no puede ser null.  
   
-`[ @block_size = ] 'block_size'`Tamaño, en bytes, que se utiliza como tamaño de bloque para el dispositivo de copia de seguridad. *BLOCK_SIZE* es de **tipo int** y su valor predeterminado es-1.  
+`[ @block_size = ] 'block_size'` Tamaño, en bytes, que se utiliza como tamaño de bloque para el dispositivo de copia de seguridad. *BLOCK_SIZE* es de **tipo int** y su valor predeterminado es-1.  
   
-`[ @buffer_count = ] 'buffer_count'`Número total de búferes utilizados por la operación de copia de seguridad o restauración. *buffer_count* es de **tipo int** y su valor predeterminado es-1.  
+`[ @buffer_count = ] 'buffer_count'` Número total de búferes utilizados por la operación de copia de seguridad o restauración. *buffer_count* es de **tipo int** y su valor predeterminado es-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`Tamaño, en bytes, de la solicitud de entrada o salida máxima que emite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el dispositivo de copia de seguridad. *max_transfersize* es de **tipo int** y puede ser null.  
+`[ @max_transfer_size = ] 'max_transfer_size'` Tamaño, en bytes, de la solicitud de entrada o salida máxima que emite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el dispositivo de copia de seguridad. *max_transfersize* es de **tipo int** y puede ser null.  
   
-`[ @restore_threshold = ] 'restore_threshold'`Número de minutos que pueden transcurrir entre las operaciones de restauración antes de que se genere una alerta. *restore_threshold* es de **tipo int** y no puede ser null.  
+`[ @restore_threshold = ] 'restore_threshold'` Número de minutos que pueden transcurrir entre las operaciones de restauración antes de que se genere una alerta. *restore_threshold* es de **tipo int** y no puede ser null.  
   
-`[ @threshold_alert = ] 'threshold_alert'`Es la alerta que se generará cuando se supere el umbral de copia de seguridad. *threshold_alert* es de **tipo int**y su valor predeterminado es 14.420.  
+`[ @threshold_alert = ] 'threshold_alert'` Es la alerta que se generará cuando se supere el umbral de copia de seguridad. *threshold_alert* es de **tipo int**y su valor predeterminado es 14.420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Especifica si se genera una alerta cuando se supera *backup_threshold* . El valor uno (1), predeterminado, significa que se generará la alerta. *threshold_alert_enabled* es **bit**.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica si se genera una alerta cuando se supera *backup_threshold* . El valor uno (1), predeterminado, significa que se generará la alerta. *threshold_alert_enabled* es **bit**.  
   
-`[ @history_retention_period = ] 'history_retention_period'`Es el período de tiempo en minutos en el que se conserva el historial. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ningún valor, se utiliza 14420.  
+`[ @history_retention_period = ] 'history_retention_period'` Es el período de tiempo en minutos en el que se conserva el historial. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ningún valor, se utiliza 14420.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

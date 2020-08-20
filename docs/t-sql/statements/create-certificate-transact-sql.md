@@ -1,4 +1,5 @@
 ---
+description: CREATE CERTIFICATE (Transact-SQL)
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/06/2020
@@ -27,12 +28,12 @@ ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4f4a1209a68dc011aafdc43f631766a35c5a243
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 4ae27e25e16022aa1ec497188bee7fde68a9bca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458830"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa-pdw](../../includes/applies-to-version/sql-asdb-asa-pdw.md)]
@@ -166,7 +167,7 @@ CREATE CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Hace que el certificado esté disponible para el iniciador de una conversación de diálogo de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. El valor predeterminado es ON.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un certificado es un elemento protegible de nivel de base de datos que sigue el estándar X.509 y admite los campos V1 de X.509. `CREATE CERTIFICATE` puede cargar un certificado desde un archivo, una constante binaria o un ensamblado. Esta instrucción también puede generar un par de claves y crear un certificado con firma personal.  
   
  La clave privada debe ser \<= 2500 bytes en formato cifrado. Las claves privadas generadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una longitud de 1024 bits hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y tienen 2048 bits a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Las claves privadas importadas de un origen externo presentan una longitud mínima de 384 bits y una máxima de 4.096 bits. La longitud de una clave privada importada debe ser un entero múltiplo de 64 bits. Los certificados que se usan para TDE tienen un límite de tamaño de clave privada de 3456 bits.  
@@ -254,7 +255,7 @@ CREATE CERTIFICATE Shipping04
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   

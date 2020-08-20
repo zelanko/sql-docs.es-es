@@ -1,4 +1,5 @@
 ---
+description: ALTER ROLE (Transact-SQL)
 title: ALTER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2018
@@ -22,12 +23,12 @@ ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b00464aaa9651f353a3c525cdf43badf72b88c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cc9f49a8a21ef4582f6f951a9301f33fe66002aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458904"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,9 @@ ALTER ROLE role_name
 [;]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Argumentos
  *role_name*  
  **SE APLICA A:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de 2008), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
@@ -137,7 +140,7 @@ ALTER ROLE Sales ADD MEMBER Barry;
 ALTER ROLE Sales DROP MEMBER Barry;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   

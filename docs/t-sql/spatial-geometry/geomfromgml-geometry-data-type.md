@@ -1,4 +1,5 @@
 ---
+description: GeomFromGml (tipo de datos geometry)
 title: GeomFromGml (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8b94beba8827be73f864059e6b657d59e0d12e8b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5526d9e8fb788e06b1ed61b3e20236963319b844
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458970"
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ GeomFromGml ( GML_input, SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,4 +1,5 @@
 ---
+description: STCrosses (tipo de datos geometry)
 title: STCrosses (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ec1a8795b6f54a9c4380ab42ddc2bfc341775556
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b7294db9b86f9a356fa7834b89642ec0b1653866
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458946"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (tipo de datos geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Devuelve 1 si una instancia de **geometry** cruza otra instancia de **geometry**
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Dos instancias de **geometry** se cruzan si se cumplen las dos condiciones siguientes:  
   
 -   La intersección de las dos instancias de **geometry** da como resultado una geometría cuyas dimensiones son menores que la dimensión máxima de las instancias de **geometry** de origen.  
@@ -67,7 +68,7 @@ SET @h = geometry::STGeomFromText('LINESTRING(0 0, 2 2)', 0);
 SELECT @g.STCrosses(@h);  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

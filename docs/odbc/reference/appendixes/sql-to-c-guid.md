@@ -1,4 +1,5 @@
 ---
+description: 'SQL a C: GUID'
 title: 'SQL a C: GUID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f0f247bc4cb411d535050d7c78e0ea42cc144b0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a0285850372d78bbe0a24c8707e14e4f5672fb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456506"
 ---
 # <a name="sql-to-c-guid"></a>SQL a C: GUID
 El identificador para el tipo de datos SQL de ODBC de GUID es:  
@@ -34,7 +35,7 @@ El identificador para el tipo de datos SQL de ODBC de GUID es:
 ||*BufferLength* < 37|No definido|No definido|22003|  
 |SQL_C_WCHAR|*BufferLength* longitud de caracteres de >|data|36|N/D|  
 ||*BufferLength* < 37|No definido|No definido|22003|  
-|SQL_C_BINARY|Longitud de bytes \< = de *BufferLength* de datos|data|Longitud de los datos en bytes|N/D|  
+|SQL_C_BINARY|Longitud de bytes de \< =  *BufferLength* de datos|data|Longitud de los datos en bytes|N/D|  
 ||Longitud de bytes de los datos > *BufferLength*|No definido|No definido|22003|  
 |SQL_C_GUID|Ninguno [a]|data|16 [b]|N/D|  
   

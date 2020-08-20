@@ -1,4 +1,5 @@
 ---
+description: + (Concatenar) (expresión de SSIS)
 title: + (Concatenar) (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fdb6ca97e324411ca32e30eda330240fe68a564
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ea4ea990ab0bfc07c7861c0e79f90bca124de22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457254"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (Concatenar) (expresión de SSIS)
 
@@ -71,7 +72,7 @@ FirstName + ' ' + LastName
 @ZIPCcode + "-" + @[ZipCode+4]  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Especificar un intervalo de datos modificados
 title: Especificar un intervalo de datos modificados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad9785a9cddc36d368a01ec507fe0c7b3909794b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7f82a0fe161a12f4a7d20b24218bd0347cdf6187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457655"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar un intervalo de datos modificados
 
@@ -111,7 +112,7 @@ ms.locfileid: "86921295"
   
  **Tema siguiente:** [Determinar si los datos modificados están preparados](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Tarea Ejecutar SQL](../../integration-services/control-flow/execute-sql-task.md)   

@@ -1,4 +1,5 @@
 ---
+description: 'Lección 2: Creación y administración de los datos de una tabla jerárquica'
 title: 'Lección 2: Creación y administración de los datos de una tabla jerárquica | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a774ce3918388e8df23de43a01b8b0930f9336d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460239"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lección 2: Creación y administración de los datos de una tabla jerárquica
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 En la lección 1, ha modificado una tabla existente para usar el tipo de datos **hierarchyid** y ha rellenado la columna **hierarchyid** con la representación de los datos existentes. En esta lección, se iniciará con una nueva tabla e insertará los datos utilizando los métodos jerárquicos. A continuación, se consultarán y manipularán los datos utilizando los métodos jerárquicos. 
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -292,7 +293,7 @@ Ahora que está totalmente rellena la tabla HumanResources.EmployeeOrg, esta tar
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Reorganizar una jerarquía es una tarea de mantenimiento común. En esta tarea, usaremos una instrucción UPDATE con el método [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) para mover primero una única fila a una nueva ubicación en la jerarquía. A continuación, moveremos un subárbol completo a una nueva ubicación.  
   
-El método `GetReparentedValue` tiene dos argumentos. El primer argumento describe la parte de la jerarquía que se va a modificar. Por ejemplo, si una jerarquía es **/1/4/2/3/** y quiere cambiar la sección **/1/4/** , la jerarquía se vuelve **/2/1/2/3/** , dejando los dos últimos nodos (**2/3/** ) sin modificar. Debe proporcionar los nodos que cambian ( **/1/4/** ) como el primer argumento. El segundo argumento proporciona el nuevo nivel de jerarquía; en nuestro ejemplo, **/2/1/** . No es necesario que los dos argumentos tengan el mismo número de niveles.  
+El método `GetReparentedValue` tiene dos argumentos. El primer argumento describe la parte de la jerarquía que se va a modificar. Por ejemplo, si una jerarquía es **/1/4/2/3/** y quiere cambiar la sección **/1/4/** , la jerarquía se vuelve **/2/1/2/3/**, dejando los dos últimos nodos (**2/3/**) sin modificar. Debe proporcionar los nodos que cambian (**/1/4/**) como el primer argumento. El segundo argumento proporciona el nuevo nivel de jerarquía; en nuestro ejemplo, **/2/1/**. No es necesario que los dos argumentos tengan el mismo número de niveles.  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>Desplazamiento de una fila a una ubicación nueva en la jerarquía  
   
@@ -322,7 +323,7 @@ El método `GetReparentedValue` tiene dos argumentos. El primer argumento descri
     GO  
     ```  
   
-    Wanida está ahora en el nodo **/3/1/** .  
+    Wanida está ahora en el nodo **/3/1/**.  
   
 ### <a name="reorganize-a-section-of-a-hierarchy"></a>Reorganización de una sección de una jerarquía  
   
@@ -333,7 +334,7 @@ El método `GetReparentedValue` tiene dos argumentos. El primer argumento descri
     GO  
     ```  
   
-2.  Ahora Kevin notifica a Wanida, quien notifica a Jill, quien, a su vez, notifica a David. Eso quiere decir que Kevin está en el nivel **/3/1/1/** . Para mover todos los subordinados de Jill a un nuevo administrador, vamos a actualizar a un nuevo valor todos los nodos que tienen **/3/** como **OrgNode** . Ejecute el código siguiente para actualizar a Wanida de manera que dependa de Sariya, pero dejando que Kevin dependa de Wanida:  
+2.  Ahora Kevin notifica a Wanida, quien notifica a Jill, quien, a su vez, notifica a David. Eso quiere decir que Kevin está en el nivel **/3/1/1/**. Para mover todos los subordinados de Jill a un nuevo administrador, vamos a actualizar a un nuevo valor todos los nodos que tienen **/3/** como **OrgNode** . Ejecute el código siguiente para actualizar a Wanida de manera que dependa de Sariya, pero dejando que Kevin dependa de Wanida:  
   
     ```sql  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

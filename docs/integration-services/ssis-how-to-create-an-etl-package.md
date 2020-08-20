@@ -1,4 +1,5 @@
 ---
+description: 'Tutorial de SSIS: Crear un paquete ETL sencillo'
 title: 'Tutorial de SSIS: Crear un paquete ETL sencillo | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/20/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0365939d33b1ef6e0a4c179cdedddb4c3981763
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f83cb45dc060bc2877cf316e4d19baa073a9e6e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457065"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Tutorial de SSIS: Crear un paquete ETL sencillo
 
@@ -41,7 +42,7 @@ Al instalar los datos de ejemplo usados en el tutorial, también se instalan las
 ## <a name="what-you-learn"></a>Lo que aprenderá  
 La mejor forma de familiarizarse con las nuevas herramientas, los controles y las características disponibles en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es usándolas. En este tutorial se indican los pasos necesarios en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] para crear un paquete ETL sencillo que incluye bucles, configuraciones, lógica de flujo de errores y registro.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Este tutorial está concebido para los usuarios familiarizados con las operaciones básicas de una base de datos, pero que no conocen con detalle las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
 Para ejecutar este tutorial, debe tener instalados los componentes siguientes:  

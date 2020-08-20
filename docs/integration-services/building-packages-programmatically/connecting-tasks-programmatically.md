@@ -1,4 +1,5 @@
 ---
+description: Conectar tareas mediante programación
 title: Conectar tareas mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d543534b58eb630cfe9a4dd8e7e4822c521faca4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8fbe6beb6556db9e5dfddc6f63e6922a34ae6fe5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457791"
 ---
 # <a name="connecting-tasks-programmatically"></a>Conectar tareas mediante programación
 
@@ -101,7 +102,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Agregar la tarea de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
   

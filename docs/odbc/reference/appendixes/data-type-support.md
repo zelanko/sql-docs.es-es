@@ -1,4 +1,5 @@
 ---
+description: Compatibilidad con tipos de datos
 title: Compatibilidad con tipos de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3abfe85ee32fb9ff4a8499c9949c0685563fec70
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ab0fd163713a7f6657d8ce446336f5c35a3dd00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456642"
 ---
 # <a name="data-type-support"></a>Compatibilidad con tipos de datos
 Los controladores ODBC deben admitir al menos una de SQL_CHAR y SQL_VARCHAR. La compatibilidad con otros tipos de datos viene determinada por el nivel de cumplimiento de SQL-92 del controlador o del origen de datos. Una aplicación debe llamar a **SQLGetTypeInfo** para determinar los tipos de datos admitidos por el controlador.  

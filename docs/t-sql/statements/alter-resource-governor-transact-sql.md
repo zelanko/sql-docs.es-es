@@ -1,4 +1,5 @@
 ---
+description: ALTER RESOURCE GOVERNOR (Transact-SQL)
 title: ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2bec2a5008b65ea5e20b8e6b784d9fe3ecda64c2
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 3591f9209b3af602474a9844b5b5daa230895f1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381139"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458879"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +102,7 @@ ALTER RESOURCE GOVERNOR
   
  Establece la cantidad máxima de operaciones de E/S en cola por volumen de disco. Estas operaciones de E/S pueden ser lecturas o escrituras de cualquier tamaño.  El valor máximo de MAX_OUTSTANDING_IO_PER_VOLUME es 100. No es un porcentaje. Este valor está diseñado para optimizar la gobernanza de recursos de E/S según las características de E/S de un volumen de disco. Se recomienda experimentar con distintos valores y plantearse el uso de una herramienta de calibración como IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) o SQLIO (en desuso) para identificar el valor máximo del subsistema de almacenamiento. Este valor proporciona una comprobación de seguridad de nivel de sistema que permite a SQL Server cumplir el mínimo de IOPS para los grupos de recursos aunque otros grupos tengan el valor de MAX_IOPS_PER_VOLUME establecido en ilimitado. Para obtener más información sobre MAX_IOPS_PER_VOLUME, vea [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVENOR RECONFIGURE y ALTER RESOURCE GOVERNOR RESET STATISTICS no se pueden usar en una transacción de usuario.  
   
  El parámetro RECONFIGURE forma parte de la sintaxis de Resource Governor y no debe confundirse con [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), que es una instrucción DDL independiente.  
@@ -189,7 +190,7 @@ ALTER RESOURCE GOVERNOR
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

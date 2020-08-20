@@ -1,4 +1,5 @@
 ---
+description: (Módulo) (expresión de SSIS)
 title: (Módulo) (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4065651c097d4cf9d2671ac486f294d7884b43a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 14ea6b261c63b06d5e6b3fbeb77822c0d3c6836f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457215"
 ---
 # <a name="modulo-ssis-expression"></a>(Módulo) (expresión de SSIS)
 
@@ -46,7 +47,7 @@ dividend % divisor
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La evaluación de ambas expresiones debe devolver tipos de datos enteros, con o sin signo.  
   
  Si alguno de los operandos es NULL, el resultado será NULL.  
@@ -78,7 +79,7 @@ SalesQuota % 12
 @Value % 2 == 0? "even":"odd"  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

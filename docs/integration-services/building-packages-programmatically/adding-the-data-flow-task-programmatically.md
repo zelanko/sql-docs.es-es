@@ -1,4 +1,5 @@
 ---
+description: Agregar la tarea de flujo de datos mediante programación
 title: Agregar la tarea Flujo de datos mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 287af36105a58ccca5bbd99b2bd6e302387421a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 992766acbc277706711d488ebe164575c4913a88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457827"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>Agregar la tarea de flujo de datos mediante programación
 

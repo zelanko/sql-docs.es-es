@@ -1,4 +1,5 @@
 ---
+description: Componentes del flujo de CDC
 title: Componentes del flujo de CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0dc246a311a8c5488d78067adb6772bd0b399988
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65836425e0f6cfa1533dfe28db8f8df483c74465
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457446"
 ---
 # <a name="cdc-flow-components"></a>Componentes del flujo de CDC
 
@@ -32,11 +33,11 @@ ms.locfileid: "86915532"
   
  **Componentes de flujo de control CDC**:  
   
- [Tarea Control CDC](../../integration-services/control-flow/cdc-control-task.md)  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
  **Componentes de flujo de datos CDC**:  
   
- [Origen de CDC](../../integration-services/data-flow/cdc-source.md)  
+ [origen de CDC](../../integration-services/data-flow/cdc-source.md)  
   
  [Divisor CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
@@ -101,7 +102,7 @@ Aparecerá un mensaje después de instalar los componentes. Haga clic en **Sí**
   
  Para obtener más información acerca del origen de CDC, vea:  
   
- [Origen de CDC](../../integration-services/data-flow/cdc-source.md)  
+ [origen de CDC](../../integration-services/data-flow/cdc-source.md)  
   
  [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
@@ -194,7 +195,7 @@ Aparecerá un mensaje después de instalar los componentes. Haga clic en **Sí**
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Origen de CDC](../../integration-services/data-flow/cdc-source.md)  
+-   [origen de CDC](../../integration-services/data-flow/cdc-source.md)  
   
 -   [Divisor CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
@@ -218,7 +219,7 @@ Aparecerá un mensaje después de instalar los componentes. Haga clic en **Sí**
   
 -   Vídeo sobre [CDC para bases de datos de Oracle con SQL Server Integration Services 2012 (vídeo de SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)en technet.microsoft.com.  
   
-## <a name="see-also"></a>Consulte también  
- [Tarea Control CDC](../../integration-services/control-flow/cdc-control-task.md)  
+## <a name="see-also"></a>Vea también  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Cargar y ejecutar un paquete local mediante programación
 title: Cargar y ejecutar un paquete local mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 90910f6ac7f5deb30b7f9c1b3f901d27f97ea51e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7b8138be9f9f643bae9f66611492e4ed7f703382
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457072"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Cargar y ejecutar un paquete local mediante programación
 
@@ -227,7 +228,7 @@ namespace RunFromClientAppWithEventsCS
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Descripción de las diferencias entre la ejecución local y remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Cargar y ejecutar un paquete remoto mediante programación](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [Cargar la salida de un paquete local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

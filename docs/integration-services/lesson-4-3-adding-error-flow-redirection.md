@@ -1,4 +1,5 @@
 ---
+description: 'Lección 4-3: Adición de redireccionamiento de flujo de errores'
 title: 'Paso 3: Adición de redireccionamiento de flujo de errores | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 852a614576780e27512e5fb234fd0905ef41a9ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457141"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lección 4-3: Adición de redireccionamiento de flujo de errores
 
@@ -51,7 +52,7 @@ De forma predeterminada, las dos columnas adicionales en una salida de errores d
   
 8.  En la página **Entradas y salidas**, expanda **Salida 0**, haga clic en **Columnas de salida** y después en **Agregar columna**.  
   
-9. En la propiedad **Nombre**, escriba *ErrorDescription* y establezca la propiedad **DataType** en **Cadena Unicode [DT_WSTR]** .  
+9. En la propiedad **Nombre**, escriba *ErrorDescription* y establezca la propiedad **DataType** en **Cadena Unicode [DT_WSTR]**.  
   
 10. En la página **Script**, compruebe que la propiedad **LocaleID** se haya establecido en **Inglés (Estados Unidos)** .
   

@@ -1,4 +1,5 @@
 ---
+description: Generar paquetes mediante programación
 title: Compilar paquetes mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18b1405699a93380447535a9f0f5f7ab7f94113a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c6b35aa78b98a681ae7312db2bd9a7b1fb18f482
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457811"
 ---
 # <a name="building-packages-programmatically"></a>Generar paquetes mediante programación
 
@@ -73,7 +74,7 @@ ms.locfileid: "86905615"
  [Conectar componentes de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
  Describe cómo conectar dos componentes de flujo de datos.  
   
- [Seleccionar columnas de entrada mediante programación](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [Seleccionar mediante programación las columnas de entrada](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
  Describe cómo seleccionar las columnas de entrada entre las proporcionadas a un componente por componentes de nivel superior en el flujo de datos.  
   
  [Guardar un paquete mediante programación](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
@@ -99,7 +100,7 @@ ms.locfileid: "86905615"
   
 -   Entrada de blog, [Generar perfiles de rendimiento de las extensiones personalizadas](https://go.microsoft.com/fwlink/?LinkId=238831), en blogs.msdn.com.  
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Importar y exportar datos con el Asistente para importación y exportación de SQL Server
 title: Importar y exportar datos con el Asistente para importación y exportación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40ea51fdaaadc7d6a3d9505e2f972c9f26a78471
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdb761ce5ea9b0a64b21880ef2945c0ff85876ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86909661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457202"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importar y exportar datos con el Asistente para importación y exportación de SQL Server
 
@@ -64,9 +65,9 @@ Para obtener información sobre cómo conectarse a un destino de uso frecuente, 
 -   [Conectarse a archivos planos (archivos de texto)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Conectarse a Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Conectarse a Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
--   [Conectarse a Azure Blob Storage](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
--   [Conectarse con ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
--   [Conectarse a PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
+-   [Conexión con Azure Blob Storage](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
+-   [Conexión con ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
+-   [Conexión con PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [Conectarse a MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 
@@ -96,7 +97,7 @@ Al final del asistente, si tiene instalado [!INCLUDE[ssNoVersion](../../includes
 
 Para obtener más información sobre SSIS, vea [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md).
 
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>A continuación  
  Inicie el asistente. Para obtener más información, vea [Start the SQL Server Import and Export Wizard](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)(Iniciar el Asistente para importación y exportación de SQL Server).  
 
 ## <a name="see-also"></a>Consulte también

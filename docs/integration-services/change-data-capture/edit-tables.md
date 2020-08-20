@@ -1,4 +1,5 @@
 ---
+description: Editar tablas
 title: Editar tablas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b048936c1312bf9c82c9d14586af3df44422a521
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7d691afbf3f32b249674627b4aa1430075910c68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457726"
 ---
 # <a name="edit-tables"></a>Editar tablas
 
@@ -47,8 +48,8 @@ ms.locfileid: "86921671"
  **Remove**  
  Seleccione una tabla de la lista y haga clic en **Quitar** para quitar la tabla de la instancia CDC.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [Seleccione las columnas y tablas de Oracle ](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+ [Seleccionar tablas y columnas de Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
   

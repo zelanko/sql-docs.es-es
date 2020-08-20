@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT INDEX (Transact-SQL)
 title: CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b385e3c69156bf7be9d806fa73ece30b2433f3a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 134f2c83a7564ab8132d5078650aaac030a13a11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458785"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ CREATE FULLTEXT INDEX ON table_name
 Es el nombre de la tabla o vista indizada que contiene la columna o columnas incluidas en el índice de texto completo.  
   
 *column_name*       
-Es el nombre de la columna incluida en el índice de texto completo. Solo se pueden indizar para búsquedas de texto completo las columnas de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** y **varbinary(max)** . Para especificar varias columnas, repita la cláusula *column_name* del modo siguiente:  
+Es el nombre de la columna incluida en el índice de texto completo. Solo se pueden indizar para búsquedas de texto completo las columnas de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** y **varbinary(max)**. Para especificar varias columnas, repita la cláusula *column_name* del modo siguiente:  
   
 CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
@@ -155,7 +156,7 @@ Especifica que no se asocie al índice de texto completo ninguna lista de propie
 *property_list_name*       
 Especifica el nombre de la lista de propiedades de búsqueda que se va a asociar al índice de texto completo.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Para más información sobre índices de texto completo, vea [Crear y administrar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
 En las columnas **xml**, puede crear un índice de texto completo que indique el contenido de los elementos XML, pero omita el marcado XML. Los valores de los atributos se incluyen en el índice de texto completo a menos que sean valores numéricos. Las etiquetas de elemento se usan como límites de token. Se admiten fragmentos y documentos con formato XML o HTML correcto que contengan varios idiomas. Para obtener más información, vea [Usar la búsqueda de texto completo con columnas XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
@@ -246,7 +247,7 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Crear y administrar índices de texto completo](../../relational-databases/search/create-and-manage-full-text-indexes.md)       
 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)       
 [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)       

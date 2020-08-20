@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION SCHEME (Transact-SQL)
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b13706909d12d4fb27e981008aeca9e0b3e8ac2a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: dd662f06ceff6ac917e8c56b830f7dd1241084fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458817"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,12 +65,12 @@ AS PARTITION partition_function_name
  Es el nombre de la función de partición que utiliza el esquema de partición. Las particiones creadas por la función de partición se asignan a los grupos de archivos especificados en el esquema de partición. *partition_function_name* ya debe existir en la base de datos. Una única partición no puede contener grupos de archivos FILESTREAM y no FILESTREAM a la vez.  
   
  ALL  
- Especifica que todas las particiones se asignan al grupo de archivos suministrado en *file_group_name* o al grupo de archivos principal si se especifica **[** PRIMARY **]** . Si se especifica ALL, solo se puede especificar un valor de *file_group_name*.  
+ Especifica que todas las particiones se asignan al grupo de archivos suministrado en *file_group_name* o al grupo de archivos principal si se especifica **[** PRIMARY **]**. Si se especifica ALL, solo se puede especificar un valor de *file_group_name*.  
   
  *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  Especifica los nombres de los grupos de archivos que almacenarán las particiones especificadas por *partition_function_name*. *file_group_name* ya debe existir en la base de datos.  
   
- Si se especifica **[** PRIMARY **]** , la partición se almacena en el grupo de archivos principal. Si se especifica ALL, solo se puede especificar un valor de *file_group_name*. A partir de la partición 1, las particiones se asignan a los grupos de archivos en el orden en que éstos aparecen en [ **,** _...n_]. Se puede especificar el mismo valor de *file_group_name* más de una vez en [ **,** _...n_]. Si *n* no es suficiente para contener el número de particiones especificadas en *partition_function_name*, CREATE PARTITION SCHEME generará un error.  
+ Si se especifica **[** PRIMARY **]**, la partición se almacena en el grupo de archivos principal. Si se especifica ALL, solo se puede especificar un valor de *file_group_name*. A partir de la partición 1, las particiones se asignan a los grupos de archivos en el orden en que éstos aparecen en [ **,** _...n_]. Se puede especificar el mismo valor de *file_group_name* más de una vez en [ **,** _...n_]. Si *n* no es suficiente para contener el número de particiones especificadas en *partition_function_name*, CREATE PARTITION SCHEME generará un error.  
   
  Si *partition_function_name* genera menos particiones que grupos de archivos, el primer grupo de archivos sin asignar se marca como NEXT USED y se muestra un mensaje informativo donde se indica el grupo de archivos NEXT USED. Si se especifica ALL, solo *file_group_name* mantiene su propiedad NEXT USED para este *partition_function_name*. El grupo de archivos NEXT USED recibirá una partición adicional si se crea una en una instrucción ALTER PARTITION FUNCTION. Si desea crear más grupos de archivos sin asignar para almacenar las nuevas particiones, utilice ALTER PARTITION SCHEME.  
   
@@ -172,7 +173,7 @@ AS PARTITION myRangePF1
 ALL TO ( [PRIMARY] );  
 ```
    
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
  [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   

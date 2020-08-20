@@ -1,4 +1,5 @@
 ---
+description: Asignar permisos de objeto de modelo (Master Data Services)
 title: Asigne permisos de objeto de modelo
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b80148d-2318-415c-9479-28c240e48bcd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b134629e732934d44f219edc9be368234911a5d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9b79a9428df0dc528190281070ea33b3a2c21b25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456753"
 ---
 # <a name="assign-model-object-permissions-master-data-services"></a>Asignar permisos de objeto de modelo (Master Data Services)
 

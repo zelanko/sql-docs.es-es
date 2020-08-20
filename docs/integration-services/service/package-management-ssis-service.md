@@ -1,4 +1,5 @@
 ---
+description: Administración de paquetes (servicio SSIS)
 title: Administración de paquetes (servicio SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -27,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d7121efa290a8cea45804467243e11dbfd98f275
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e47dccc9d34c2aaa40de70332244b0c0f8f2662
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457077"
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
 

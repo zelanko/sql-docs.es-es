@@ -1,4 +1,5 @@
 ---
+description: ALTER MATERIALIZED VIEW (Transact-SQL)
 title: ALTER MATERIALIZED VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c9c9ae639a3dce3e697eded9f55af3485118506c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bc7f7f07656f2dc187de013fcb56eada5a997b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458875"
 ---
 # <a name="alter-materialized-view-transact-sql"></a>ALTER MATERIALIZED VIEW (Transact-SQL)  
 
@@ -57,7 +58,7 @@ ALTER MATERIALIZED VIEW [ schema_name . ] view_name
 Reanuda la vista materializada.
 
 *DISABLE*   
-Suspende el mantenimiento en la vista materializada mientras se mantienen los metadatos y los permisos.  Todas las consultas de la vista materializada en un estado deshabilitado se resuelven en las tablas subyacentes.
+Suspende el mantenimiento en la vista materializada mientras se mantienen los metadatos y los permisos.Todas las consultas de la vista materializada en un estado deshabilitado se resuelven en las tablas subyacentes.
   
 ## <a name="permissions"></a>Permisos
 
@@ -77,7 +78,7 @@ Este ejemplo reanuda la vista materializada compilándola de nuevo.
 ALTER MATERIALIZED VIEW My_Indexed_View REBUILD;  
 ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Optimización del rendimiento con vista materializada](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   

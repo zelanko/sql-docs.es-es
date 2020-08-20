@@ -1,4 +1,5 @@
 ---
+description: '&amp; (AND bit a bit) (Expresión de SSIS)'
 title: '&amp; (AND bit a bit) (expresión de SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0efbf3b36ad21e7800533069e4fafefaa0b77900
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4cb70565c38518c76a614e32a3aad55c939e4a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457308"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (AND bit a bit) (Expresión de SSIS)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Lleva a cabo una operación AND bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si ambos bits son 1, el bit de resultado correspondiente se establece en 1. De lo contrario, se establece en 0.  
+  Lleva a cabo una operación AND bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si ambos bits son 1, el bit del resultado correspondiente se establece en 1. De lo contrario, el bit del resultado correspondiente se establece en 0.  
   
  Ambas condiciones deben ser de tipo entero con signo o de tipo entero sin signo.  
   
@@ -45,7 +46,7 @@ integer_expression1 & integer_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si alguna de las condiciones es NULL, el resultado de la expresión será NULL.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
@@ -97,7 +98,7 @@ ReorderPoint & SafetyStockLevel
   
  00000001  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [&& &#40;AND lógico&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/logical-and-ssis-expression.md)   
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  

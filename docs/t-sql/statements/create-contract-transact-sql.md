@@ -1,4 +1,5 @@
 ---
+description: CREATE CONTRACT (Transact-SQL)
 title: CREATE CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6fef1834b3e5b6afeda1df4c67e3403a6dd6d79
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 6f4b7360fa3429a621e364c27776c4f6a8f0a946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458754"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ CREATE CONTRACT contract_name
  [DEFAULT]  
  Indica que este contrato admite mensajes del tipo predeterminado. De forma predeterminada, todas las bases de datos contienen un tipo de mensaje denominado DEFAULT. Este tipo de mensaje usa una validación de NONE. En el contexto de esta cláusula, DEFAULT no es una palabra clave y debe delimitarse como un identificador. Microsoft SQL Server también proporciona un contrato DEFAULT que especifica el tipo de mensaje DEFAULT.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El orden de los tipos de mensaje del contrato no es significativo. Después de que el destino haya recibido el primer mensaje, [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite a cualquier lado de la conversación enviar los mensajes permitidos para ese lado de la conversación en cualquier momento. Por ejemplo, si el iniciador de la conversación puede enviar el tipo de mensaje **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite al iniciador enviar cualquier número de mensajes **SubmitExpense** durante la conversación.  
   
  Los tipos de mensaje y direcciones de un contrato no se pueden cambiar. Para cambiar AUTHORIZATION para un contrato, utilice la instrucción ALTER AUTHORIZATION.  
@@ -124,7 +125,7 @@ CREATE CONTRACT
     ) ;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [DROP CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

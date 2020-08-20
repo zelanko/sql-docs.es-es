@@ -1,4 +1,5 @@
 ---
+description: Enumerar los paquetes disponibles mediante programación
 title: Enumerar los paquetes disponibles mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e30dcb8043d18d82e742666c8c36043f86c5a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c07dc512de0c5d12fa06e49ba185db9c9ec25c4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457060"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerar los paquetes disponibles mediante programación
 
@@ -43,7 +44,7 @@ ms.locfileid: "86920136"
 |Almacén de paquetes SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [Volver arriba](#top)    
+ [Volver al principio](#top)    
     
 ##  <a name="enumerating-available-packages"></a><a name="listing"></a> Enumerar los paquetes disponibles    
  Para obtener una lista de los paquetes guardados mediante programación, llame a uno de los métodos siguientes:    
@@ -159,7 +160,7 @@ namespace EnumeratePackagesSSIS_CS
 }    
 ```    
     
- [Volver arriba](#top)    
+ [Volver al principio](#top)    
     
 ###  <a name="example-sql-server"></a><a name="listing_sql"></a> Ejemplo (SQL Server)    
  Utilice el método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> para enumerar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacenados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -240,9 +241,9 @@ namespace EnumeratePackagesSql_CS
 }    
 ```    
     
- [Volver arriba](#top)    
+ [Volver al principio](#top)    
    
-## <a name="see-also"></a>Consulte también    
+## <a name="see-also"></a>Vea también    
  [Administración de paquetes &#40;servicio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)    
     
   

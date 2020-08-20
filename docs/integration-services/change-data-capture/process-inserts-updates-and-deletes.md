@@ -1,4 +1,5 @@
 ---
+description: Procesar inserciones, actualizaciones y eliminaciones
 title: Procesar inserciones, actualizaciones y eliminaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 940e3e9d4ab622ee9913eee4a0c62356542ed8d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f4fddbdaa770c79008d4c4c1cd481a0c6c6eeb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457679"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Procesar inserciones, actualizaciones y eliminaciones
 
@@ -33,7 +34,7 @@ ms.locfileid: "86921751"
  En la consulta de ejemplo que recupera los datos modificados, la función **cdc.fn_cdc_get_net_changes__<capture_instance>** solo devuelve la columna de metadatos denominada **__$operation**. Esta columna de metadatos contiene un valor ordinal que indica la operación que ha causado el cambio.  
   
 > [!NOTE]  
->  Para obtener más información sobre la consulta que usa llamadas a la función **cdc.fn_cdc_get_net_changes_ <capture_instance>** , vea [Crear la función para recuperar los datos modificados](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
+>  Para obtener más información sobre la consulta que usa llamadas a la función **cdc.fn_cdc_get_net_changes_ <capture_instance>**, vea [Crear la función para recuperar los datos modificados](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
   
  Hacer coincidir un valor ordinal con su operación correspondiente no es tan fácil como utilizar una tecla de acceso para la operación. Por ejemplo, 'D' puede representar fácilmente una operación de eliminación e 'I' una operación de inserción. La consulta de ejemplo que se creó en el tema, [Crear la función para recuperar los datos modificados](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)realiza esta conversión de un valor ordinal a un valor de cadena descriptivo que se devuelve en una nueva columna. El segmento de código siguiente muestra esta conversión:  
   
@@ -73,8 +74,8 @@ select
   
  **Tema siguiente:** [Aplicar los cambios al destino](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [División de un conjunto de datos con la transformación División condicional](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Dividir un conjunto de datos usando la transformación División condicional](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

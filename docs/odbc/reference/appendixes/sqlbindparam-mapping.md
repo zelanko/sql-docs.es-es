@@ -1,4 +1,5 @@
 ---
+description: Asignación de SQLBindParam
 title: Asignación de SQLBindParam | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1df595722297c91dc75398470912188e109e278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f998fd30716e479cb4dd0650af53c5a24483f2f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456466"
 ---
 # <a name="sqlbindparam-mapping"></a>Asignación de SQLBindParam
 **SQLBindParam** no se puede llamar realmente en desuso porque nunca estaba en ODBC. sin embargo, sigue representando la funcionalidad duplicada: el administrador de controladores debe exportarla porque ISO y las aplicaciones compatibles con el grupo abierto la usarán. Dado que **SQLBindParameter** contiene toda la funcionalidad **de SQLBindParam**, **SQLBindParam** se asignará en **SQLBindParameter** (cuando el controlador subyacente sea un controlador ODBC *3. x* ). No es necesario que un controlador ODBC *3. x* implemente **SQLBindParam**.  

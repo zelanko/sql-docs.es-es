@@ -1,4 +1,5 @@
 ---
+description: CREATE SCHEMA (Transact-SQL)
 title: CREATE SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/01/2016
@@ -24,12 +25,12 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f06c3e2b95fa571b26404a69653471738d7648ee
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: eef5bd9a0cd3c1a42797c9ca334f9efc4745f824
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458807"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -146,7 +147,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ### <a name="a-creating-a-schema-and-granting-permissions"></a>A. Crear un esquema y conceder permisos  
  En el ejemplo siguiente se crea el esquema `Sprockets`, que es propiedad de `Annik` y contiene la tabla `NineProngs`. La instrucción concede el permiso `SELECT` a `Mandar` y deniega el permiso `SELECT` a `Prasanna`. Tenga en cuenta que `Sprockets` y `NineProngs` se crean en una sola instrucción.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE SCHEMA Sprockets AUTHORIZATION Annik  
@@ -161,13 +162,13 @@ GO
 ### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Crear un esquema y una tabla en el esquema  
  En el siguiente ejemplo se crea un esquema `Sales` y, luego, una tabla `Sales.Region` en ese esquema.  
   
-```  
+```sql  
 CREATE SCHEMA Sales;  
 GO
   
 CREATE TABLE Sales.Region   
-(Region_id int NOT NULL,  
-Region_Name char(5) NOT NULL)  
+(Region_id INT NOT NULL,  
+Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
 ```  
@@ -175,7 +176,7 @@ GO
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. Establecer el propietario de un esquema  
  En el siguiente ejemplo se crea un esquema `Production`, propiedad de `Mary`.  
   
-```  
+```sql  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  
 GO  
 ```  

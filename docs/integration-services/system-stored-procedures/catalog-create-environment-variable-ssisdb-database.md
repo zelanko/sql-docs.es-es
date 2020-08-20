@@ -1,4 +1,5 @@
 ---
+description: catalog.create_environment_variable (base de datos de SSISDB)
 title: catalog.create_environment_variable (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3875650317c76b0b54608272eef0c56a7e11987d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 367f16f137bdb09de610ce8b0b8a2ab125ce25ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456977"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (base de datos de SSISDB)
 
@@ -46,10 +47,10 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
  El nombre del entorno. *environment_name* es **nvarchar(128)** .  
   
  [@variable_name =] *variable_name*  
- Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)** .  
+ Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)**.  
   
  [@data_type =] *data_type*  
- Tipo de datos de la variable. Los tipos de datos de las variables de entorno admitidos incluyen **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** y **UInt64**. Los tipos de datos de las variables de entorno no admitidos incluyen **Char**, **DBNull**, **Object** y **Sbyte**. El tipo de datos del parámetro *data_type* es **nvarchar(128)** .  
+ Tipo de datos de la variable. Los tipos de datos de las variables de entorno admitidos incluyen **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** y **UInt64**. Los tipos de datos de las variables de entorno no admitidos incluyen **Char**, **DBNull**, **Object** y **Sbyte**. El tipo de datos del parámetro *data_type* es **nvarchar(128)**.  
   
  [@sensitive =] *sensitive*  
  Indica si la variable contiene un valor confidencial o no. Use un valor de `1` para indicar que el valor de la variable de entorno es confidencial o un valor de `0` para indicar que no lo es. Un valor confidencial se cifra cuando se almacena. Un valor que no es confidencial se almacena en texto no cifrado.*Sensitive* es de tipo **bit**.  
@@ -58,7 +59,7 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
  Valor de la variable de entorno. El parámetro *value* es de tipo **sql_variant**.  
   
  [@description =] *description*  
- Descripción de la variable de entorno. El parámetro *value* es de tipo **nvarchar(1024)** .  
+ Descripción de la variable de entorno. El parámetro *value* es de tipo **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  
@@ -84,7 +85,7 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
   
 -   El usuario no tiene los permisos adecuados.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Se puede usar una variable de entorno para asignar eficazmente un valor a un parámetro de proyecto o parámetro de paquete para su uso en la ejecución de un paquete. Las variables de entorno permiten organizar los valores de parámetro. Los nombres de variable deben ser únicos dentro de un entorno.  
   
  El procedimiento almacenado valida el tipo de datos de la variable para garantizar que es compatible con el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -99,11 +100,11 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
 |**Boolean**|**bit**|  
 |**Byte**|**binary**, **varbinary**|  
 |**DateTime**|**datetime**, **datetime2**, **datetimeoffset**, **smalldatetime**|  
-|**Doble**|Valor numérico exacto: **decimal**, **numeric**; valor numérico aproximado: **float**, **real**|  
+|**Double**|Valor numérico exacto: **decimal**, **numeric**; valor numérico aproximado: **float**, **real**|  
 |**Int16**|**smallint**|  
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
-|**Único**|Valor numérico exacto: **decimal**, **numeric**; valor numérico aproximado: **float**, **real**|  
+|**Single**|Valor numérico exacto: **decimal**, **numeric**; valor numérico aproximado: **float**, **real**|  
 |**String**|**varchar**, **nvarchar**, **char**|  
 |**UInt32**|**int** (**int** es la asignación disponible más próxima a **Uint32**).|  
 |**UInt64**|**bigint** (**int** es la asignación disponible más próxima a **Uint64**).|  

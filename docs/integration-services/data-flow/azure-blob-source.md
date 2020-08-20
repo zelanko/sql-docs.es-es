@@ -1,4 +1,5 @@
 ---
+description: Origen de blobs de Azure
 title: Origen de blob de Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 253f08e1d9a06c5aaba41c9612c2f537a2e109d2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce39fed32923ae46bd499c32d5b58660db5dcd8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457487"
 ---
 # <a name="azure-blob-source"></a>Origen de blobs de Azure
 
@@ -31,7 +32,7 @@ ms.locfileid: "86922791"
   
  **Origen de blob de Azure** es un componente de [Feature Pack de SQL Server Integration Services (SSIS) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
-1.  En el campo **Azure storage connection manager** (Administrador de conexiones de almacenamiento de Azure), especifique un administrador de conexiones de almacenamiento de Azure existente o cree uno nuevo que haga referencia a una cuenta de almacenamiento de Azure.  
+1.  En el campo **Azure storage connection manager** (Administrador de conexiones de Azure Storage), especifique un administrador de conexiones de Azure Storage existente o cree uno nuevo que haga referencia a una cuenta de Azure Storage.  
   
 2.  En el campo **Nombre de contenedor de blobs** , especifique el nombre del contenedor de blobs que contiene los archivos de origen.  
   

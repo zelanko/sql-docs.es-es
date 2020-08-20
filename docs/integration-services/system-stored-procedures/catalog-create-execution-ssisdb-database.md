@@ -1,4 +1,5 @@
 ---
+description: catalog.create_execution (base de datos de SSISDB)
 title: catalog.create_execution (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 168491deaef52217dc47349718869e3b652d2099
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0170a6b6a3733b54c24be1f06e91a6a60135faf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456947"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (base de datos de SSISDB)
 
@@ -49,7 +50,7 @@ catalog.create_execution [ @folder_name = ] folder_name
  Nombre del proyecto que contiene el paquete que se va a ejecutar. *project_name* es **nvarchar(128)** .  
   
  [@package_name =] *package_name*  
- El nombre del paquete que se va a ejecutar. El parámetro *package_name* es de tipo **nvarchar(260)** .  
+ El nombre del paquete que se va a ejecutar. El parámetro *package_name* es de tipo **nvarchar(260)**.  
   
  [@reference_id =] *reference_id*  
  Un identificador único para una referencia de entorno. Este parámetro es opcional. *reference_id* es **bigint**.  
@@ -73,7 +74,7 @@ Este parámetro es opcional. Si no se especifica, su valor se establece en 1. El
  Devuelve el identificador único de una instancia de ejecución. El parámetro *execution_id* es de tipo **bigint**.  
 
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Una ejecución se utiliza para especificar los valores de parámetro que va a usar un paquete durante una instancia única de ejecución del paquete.  
   
  Si una referencia de entorno se especifica con el parámetro *reference_id*, el procedimiento almacenado rellena los parámetros de paquete y proyecto con los valores literales o los valores a los que se hace referencia de las variables de entorno correspondientes. Si se especifica la referencia de entorno, los valores de parámetro predeterminados se utilizan durante la ejecución del paquete. Para determinar exactamente qué valores se usan para una instancia determinada de ejecución, utilice el valor del parámetro de salida *execution_id* de este de procedimiento almacenado y consulte la vista [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  

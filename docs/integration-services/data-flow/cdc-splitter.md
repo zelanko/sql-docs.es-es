@@ -1,4 +1,5 @@
 ---
+description: Divisor CDC
 title: Divisor CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2015303f77a3ae7ba4f77758432f51bd84f0b811
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457422"
 ---
 # <a name="cdc-splitter"></a>Divisor CDC
 

@@ -1,4 +1,5 @@
 ---
+description: Crear InfoCube para los datos de transacción
 title: Crear InfoCube para los datos de transacción | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc7e124f0220a5d7dcd1a146479a82801f83a3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18d7f3f10a2d7179d31e08e5a8e255df7295ca67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457403"
 ---
 # <a name="create-infocube-for-transaction-data"></a>Crear InfoCube para los datos de transacción
 
@@ -84,7 +85,7 @@ ms.locfileid: "86923581"
  **IObject - Quitar**  
  Permite quitar la asociación entre el InfoObject y la columna de flujo de datos de la fila actual. Para quitar esta asociación, haga clic en **Quitar**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Ayuda F1 de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

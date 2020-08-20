@@ -1,4 +1,5 @@
 ---
+description: CREATE REMOTE SERVICE BINDING (Transact-SQL)
 title: CREATE REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -37,12 +38,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 881e474fb34edbb438d626a23dbaa507f86fb2b6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b38d2349b2eb1982350caab9da79c6781b10d99f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458727"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -116,7 +117,7 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser, ANONYMOUS=ON ;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
  [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: Novedades de Integration Services en SQL Server 2016
 title: Novedades de Integration Services en SQL Server 2016 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a715409dddf2c2de19624f2f5f0b770e0202c9b8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456877"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novedades de Integration Services en SQL Server 2016
 
@@ -53,7 +54,7 @@ Estas nuevas funcionalidades requieren SQL Server Data Tools (SSDT) versión 17.
   
         -   [Compatibilidad con Always Encrypted en el catálogo de SSIS](#encrypted)  
   
-    -   Depuración más fácil  
+    -   Mejor depuración  
   
         -   [Nuevo rol de base de datos ssis_logreader en el catálogo de SSIS](#LogReader)  
   
@@ -135,9 +136,9 @@ Estas nuevas funcionalidades requieren SQL Server Data Tools (SSDT) versión 17.
   
         -   [Componentes de publicación de fuente de distribución de datos forma parte ahora de SSIS](#ComplexFeedinbox)  
   
-        -   [Compatibilidad con Azure Blob Storage en el Asistente para importación y exportación de SQL Server](#AzureBlob)  
+        -   [Compatibilidad con Azure Blog Storage en el Asistente para importación y exportación de SQL Server](#AzureBlob)  
   
-        -   [Diseñador y servicio de captura de datos modificados para Oracle para Microsoft SQL Server 2016 publicado](#CDCOracle)  
+        -   [Change Data Capture Designer y Service para Oracle para Microsoft SQL Server 2016 publicado](#CDCOracle)  
   
         -   [Componentes de CDC actualizados para SQL Server 2016](#cdc2016)  
   
@@ -189,9 +190,9 @@ La característica Implementación incremental de paquetes le permite implementa
   
 -   [SSIS con Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [Transformación de búsqueda con Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
+-   [Transformación Búsqueda con Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
-### <a name="better-debugging"></a>Depuración más fácil
+### <a name="better-debugging"></a>Mejor depuración
 
 ####  <a name="new-ssis_logreader-database-level-role-in-the-ssis-catalog"></a><a name="LogReader"></a> Nuevo rol de base de datos ssis_logreader en el catálogo de SSIS  
  En versiones anteriores del catálogo de SSIS, solo los usuarios con el rol **ssis_admin** pueden tener acceso a las vistas que contienen la salida del registro. Ahora hay un nuevo rol de base de datos **ssis_logreader** que puede usar para conceder permisos de acceso a las vistas que contienen la salida de registro a usuarios que no sean administradores.  
@@ -225,7 +226,7 @@ La característica Implementación incremental de paquetes le permite implementa
   
  El método GetIdentificationStringByLineageID ha cambiado a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Para obtener más información, vea [Nombres de columna para errores del flujo de datos](#ErrorColumn).  
   
- Para obtener más información sobre este cambio y la mejora de la columna de error, vea la siguiente entrada de blog actualizada. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) [Mejoras de la columna de error para el flujo de datos SSIS (actualizada para CTP3.3)]](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
+ Para obtener más información sobre este cambio y la mejora de la columna de error, vea la siguiente entrada de blog actualizada. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) (Mejoras de la columna de error para el flujo de datos SSIS (actualizada para CTP3.3))](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  (En RC0, este método se ha movido a la nueva interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Para obtener más información, vea [Nueva interfaz IDTSComponentMetaData130 de la API](#CMD130)).  

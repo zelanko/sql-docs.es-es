@@ -1,4 +1,5 @@
 ---
+description: origen de CDC
 title: Origen CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 397936fb2bd6314c83460b233a59ef6e72e113d7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 86e5bfae7baa757b2655e63470be427ea46bebed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457448"
 ---
 # <a name="cdc-source"></a>origen de CDC
 
@@ -162,7 +163,7 @@ use <cdc-enabled-database-name>
   
 -   **Neto**: devuelve una sola fila de cambios por cada fila de origen modificada en el intervalo de procesamiento de CDC actual. Si una fila de origen se actualizó varias veces, se genera el cambio combinado (por ejemplo, se genera insertar+actualizar como una actualización única y se genera actualizar+eliminar como una eliminación única). Al trabajar en el modo de procesamiento de cambios Neto, es posible dividir los cambios en salidas de eliminar, insertar y actualizar y controlarlos todos en paralelo, ya que la fila de origen única aparece en más de un resultado.  
   
--   **Neto con máscara de actualización**: Este modo es similar al modo neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indican las columnas modificadas en la fila de cambio actual.  
+-   **Neto con máscara de actualización**: este modo es similar al modo neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indican las columnas modificadas en la fila de cambio actual.  
   
 -   **Neto con combinación**: este modo es similar al modo Neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
   

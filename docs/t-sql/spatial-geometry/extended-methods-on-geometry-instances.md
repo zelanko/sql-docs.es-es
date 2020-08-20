@@ -1,4 +1,5 @@
 ---
+description: Métodos extendidos en instancias de geometry
 title: Métodos extendidos en instancias de geometry | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3904de5f819db856ceaa7a3bf8b8e62882f5d92c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3f649a84cc33cf134174edde1d6669fc8148517
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85700332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459000"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>Métodos extendidos en instancias de geometry
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "85700332"
   
 -   [Z &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [Métodos de geometría estáticos ampliados](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

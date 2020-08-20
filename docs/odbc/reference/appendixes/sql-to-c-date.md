@@ -1,4 +1,5 @@
 ---
+description: 'SQL a C: Date'
 title: 'SQL a C: fecha | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe9656c0c02c0ff5a10029525da3d38280530cc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5bab301c7a4bc55289006df1c9df5498629f317
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456521"
 ---
 # <a name="sql-to-c-date"></a>SQL a C: Date
 El identificador para el tipo de datos SQL de ODBC de fecha es:  
@@ -42,4 +43,4 @@ El identificador para el tipo de datos SQL de ODBC de fecha es:
   
  [c] es el tamaño del tipo de datos de C correspondiente.  
   
- Cuando se convierten datos de SQL de fecha en datos de caracteres C, la cadena resultante tiene el formato "*AAAA*-*mm*-*DD*". Este formato no se ve afectado por la configuración del país de Windows®.
+ Cuando se convierten datos de SQL de fecha en datos de caracteres C, la cadena resultante tiene el formato "*AAAA* - *mm* - *DD*". Este formato no se ve afectado por la configuración del país de Windows®.

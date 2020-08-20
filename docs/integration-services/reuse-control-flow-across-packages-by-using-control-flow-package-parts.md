@@ -1,4 +1,5 @@
 ---
+description: Reutilización del flujo de control en paquetes mediante el uso de elementos del paquete de flujo de control
 title: Reutilización del flujo de control en paquetes mediante el uso de elementos del paquete de flujo de control | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c86782a4ccd7ad03096ccd2723ff2867a779de16
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 878bc37ccb800b4dd1636464b58d3ce44c92e232
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457112"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Reutilización del flujo de control en paquetes mediante el uso de elementos del paquete de flujo de control
 

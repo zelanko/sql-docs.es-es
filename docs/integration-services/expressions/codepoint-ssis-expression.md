@@ -1,4 +1,5 @@
 ---
+description: CODEPOINT (expresión de SSIS)
 title: CODEPOINT (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e856482cd7ef4094b6383d6365efe88d83c84bb0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a7309665f36705de4e3acb7cce70e012e295b07f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457257"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (expresión de SSIS)
 
@@ -41,7 +42,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_UI2  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  *character_expression* necesita tener el tipo de datos DT_WSTR.  
   
  CODEPOINT devuelve un resultado NULL si *character_expression* es NULL o una cadena vacía.  

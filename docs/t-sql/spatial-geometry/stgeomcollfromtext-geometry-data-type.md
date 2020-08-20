@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromText (tipo de datos geometry)
 title: STGeomCollFromText (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0fd31568d26945bf27e73850f6dccfbd45df1701
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8e9333f71bb601629b13b025fb0fdb9f81af58d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458981"
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *geometrycollection_tagged_text*  
- Es la representación WKT de la instancia de **geometry** que se quiere devolver. *geometry_tagged_text* es una expresión **nvarchar(max)** .  
+ Es la representación WKT de la instancia de **geometry** que se quiere devolver. *geometry_tagged_text* es una expresión **nvarchar(max)**.  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometry** que se quiere devolver.  
@@ -50,7 +51,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El tipo OGC de la instancia de **geometry** devuelta por `STGeomCollFromText()` se establece en la entrada WKT correspondiente.  
   
  Este método producirá una excepción si la entrada no es válida.  

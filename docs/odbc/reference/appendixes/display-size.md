@@ -1,4 +1,5 @@
 ---
+description: Tamaño de presentación
 title: Tamaño de presentación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 578bf0cbdf2dd1dbd06dd4a248f4efa5eb839916
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 747c2076c528df8c312c9b3ed45e45a165299d59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456590"
 ---
 # <a name="display-size"></a>Tamaño de presentación
 El tamaño de presentación de una columna es el número máximo de caracteres necesarios para mostrar los datos en forma de carácter. En la tabla siguiente se define el tamaño de presentación de cada tipo de datos SQL de ODBC.  

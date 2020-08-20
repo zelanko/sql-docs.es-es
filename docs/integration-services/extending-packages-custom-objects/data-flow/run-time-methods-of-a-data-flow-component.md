@@ -1,4 +1,5 @@
 ---
+description: Métodos en tiempo de ejecución de un componente de flujo de datos
 title: Métodos en tiempo de ejecución de un componente de flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71ddcaf7b0d77e43babf283358d4267e3f310232
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 619e1bb5c71b0085e635c7dba29c5d9e2e6ad57e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86903491"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457194"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Métodos en tiempo de ejecución de un componente de flujo de datos
 
@@ -60,7 +61,7 @@ ms.locfileid: "86903491"
 ### <a name="primeoutput-method"></a>Método PrimeOutput  
  Se llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.PrimeOutput%2A> cuando un componente tiene por lo menos una salida, adjuntada a un componente de nivel inferior a través de un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>, y la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> de la salida es cero. Se llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.PrimeOutput%2A> para los componentes de origen y para las transformaciones con salidas asincrónicas. A diferencia del método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> que se describe a continuación, cada componente que lo requiere llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> una sola vez.  
   
-### <a name="processinput-method"></a>Método ProcessInput  
+### <a name="processinput-method"></a>Método ProcessInput   
  Un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.ProcessInput%2A> llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> para los componentes que tienen al menos una salida adjuntada a un componente de nivel superior. Se llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.ProcessInput%2A> para los componentes de destino y para las transformaciones con salidas sincrónicas. Se llama a <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> varias veces hasta que no hay más filas de componentes de nivel superior que procesar.  
   
 ## <a name="working-with-inputs-and-outputs"></a>Trabajar con entradas y salidas  
@@ -212,7 +213,7 @@ End Sub
   
  Para obtener más información sobre el desarrollo de componentes que reciben filas en los búferes de entrada, vea [Desarrollar un componente de destino personalizado](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) y [Desarrollar un componente de transformación personalizado con salidas sincrónicas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos en tiempo de diseño de un componente de flujo de datos](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   

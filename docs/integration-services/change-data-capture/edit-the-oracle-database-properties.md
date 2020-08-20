@@ -1,4 +1,5 @@
 ---
+description: Editar las propiedades de la base de datos de Oracle
 title: Editar las propiedades de la base de datos de Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 071d8dd634af79bcb041cbf7336fa4cc20555dc5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b1d5eb987c5dfd62a67bbe6b536b4c2258463741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457736"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Editar las propiedades de la base de datos de Oracle
 
@@ -46,7 +47,7 @@ ms.locfileid: "86921661"
   
  Puede ver las propiedades de la base de datos de Oracle en el visor. Cuando se usa el visor, la información es de solo lectura. El visor también incluye una lista de las columnas capturadas de la tabla. Para obtener información acerca de cómo obtener acceso al visor, vea [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Cómo administrar un servicio CDC desde la Consola del diseñador CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Conectarse a una base de datos de origen de Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
  [Conectar con Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  

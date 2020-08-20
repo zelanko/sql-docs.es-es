@@ -1,4 +1,5 @@
 ---
+description: Seleccionar tablas de Oracle para capturar cambios
 title: Seleccionar tablas de Oracle para capturar cambios | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a8e210af11fbb79a63fb5406bda2ac434c21c81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5417245afb872fac5ffc144c0d7a8b946e677e8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457648"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Seleccionar tablas de Oracle para capturar cambios
 
@@ -29,7 +30,7 @@ ms.locfileid: "86923884"
  De forma predeterminada, no se incluye ninguna tabla en la lista de tablas de este cuadro de diálogo. Puede activar la casilla situada en la parte superior de la columna de casilla para seleccionar todas las tablas o buscar determinadas tablas.  
   
  **Para buscar tablas específicas**  
- Escriba los criterios de búsqueda como se indica aquí y, después, haga clic en **Buscar**:  
+ Escriba los criterios de búsqueda de la manera siguiente y, a continuación, haga clic en **Buscar**:  
   
 -   **Esquema**: seleccione un esquema de base de datos de la lista. En la lista solo se incluirán las tablas que tengan dicho esquema.  
   
@@ -50,6 +51,6 @@ ms.locfileid: "86923884"
   
 ## <a name="see-also"></a>Consulte también  
  [Cómo crear la instancia de base de datos de cambios de SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Seleccione las columnas y tablas de Oracle ](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+ [Seleccionar tablas y columnas de Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: STUnion (tipo de datos geometry)
 title: STUnion (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ad2ad92952a3848982c9cf8873f70217db654ee8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 857428b0dee48336ae41f22e79c82a02f2f7b241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458929"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (tipo de datos geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Devuelve un objeto que representa la unión de una instancia de **geometry** con
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**. El resultado puede contener segmentos de arco circulares solo si las instancias de entrada contienen segmentos de arco circulares.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -74,7 +75,7 @@ SELECT @g.STUnion(@h).ToString();
   
  `STUnion()` devuelve un resultado que contiene un segmento de arco circular porque la instancia que invocó `STUnion()` contiene un segmento de arco circular.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

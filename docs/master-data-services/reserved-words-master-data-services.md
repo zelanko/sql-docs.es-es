@@ -1,4 +1,5 @@
 ---
+description: Palabras reservadas (Master Data Services)
 title: Palabras reservadas
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 78dcf9320312f93dd08495f21bf0f6cc1b71516b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456721"
 ---
 # <a name="reserved-words-master-data-services"></a>Palabras reservadas (Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85811470"
 > [!NOTE]  
 >  También debe limitar el uso de caracteres especiales (símbolos, guiones, etc.).  
   
--   [Modelos](../master-data-services/reserved-words-master-data-services.md#models)  
+-   [Models](../master-data-services/reserved-words-master-data-services.md#models)  
   
 -   [Entidades](../master-data-services/reserved-words-master-data-services.md#entities)  
   
@@ -39,16 +40,16 @@ ms.locfileid: "85811470"
   
 -   [Miembros](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a><a name="models"></a>Modelos  
+##  <a name="models"></a><a name="models"></a> Modelos  
  Si crea un modelo con el nombre establecido en **Name** o **Code**, no seleccione **Crear entidad con el mismo nombre que el modelo** porque **Name** o **Code** no se puede usar para el nombre de una entidad.  
   
-##  <a name="entities"></a><a name="entities"></a>Jurídica  
+##  <a name="entities"></a><a name="entities"></a> Jurídica  
  Para los nombres de entidad, no puede usar **Name** o **Code**.  
   
-##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>Jerarquías explícitas  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a> Jerarquías explícitas  
  Para los nombres de jerarquía explícita, no puede utilizar **Name** o **Code**.  
   
-##  <a name="attributes"></a><a name="attributes"></a>Sus  
+##  <a name="attributes"></a><a name="attributes"></a> Sus  
   
 -   **ID**  
   
@@ -58,7 +59,7 @@ ms.locfileid: "85811470"
   
 -   **LastChgUserName**  
   
--   **Name**  
+-   **Nombre**  
   
 -   **EnterDTM**  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85811470"
   
 -   **Version_ID**  
   
-##  <a name="members"></a><a name="members"></a>Registrados  
+##  <a name="members"></a><a name="members"></a> Registrados  
  Para los miembros, no puede usar **MDMMemberStatus**, **MDMUnused**o **ROOT** para el valor de atributo **Code** .  
   
 ## <a name="see-also"></a>Consulte también  

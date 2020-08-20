@@ -1,4 +1,5 @@
 ---
+description: Aprobación o rechazo de un conjunto de cambios (Master Data Services)
 title: Aprobación o rechazo de un conjunto de cambios
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c0d7e090350fdaae094c8365d28a4e058bdfa62e
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 42b3b6ae849313a00111ceda1fb19eda334c0278
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456824"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>Aprobación o rechazo de un conjunto de cambios (Master Data Services)
 

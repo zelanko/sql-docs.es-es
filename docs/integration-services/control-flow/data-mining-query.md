@@ -1,4 +1,5 @@
 ---
+description: Consulta de minería de datos
 title: Consulta de minería de datos| Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 44448f8f73ee303ff3d9484f887e40362fb1fb53
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0ac57f5f3e064df60c0fc885765fcbc445be9e22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457561"
 ---
 # <a name="data-mining-query"></a>Consulta de minería de datos
 
@@ -66,7 +67,7 @@ ms.locfileid: "86919831"
  **Criterios o argumento**  
  Especifique una condición o una expresión de usuario que se aplica a la columna. Las columnas pueden arrastrarse desde las tablas que contienen el modelo de minería de datos y las columnas de entrada a la celda.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Herramientas de consulta de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-statements.md)  
   

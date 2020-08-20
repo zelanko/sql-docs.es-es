@@ -1,4 +1,5 @@
 ---
+description: Implementar una base de datos mediante una DAC
 title: Implementar una base de datos mediante una DAC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 4e122c2dbed9a0a1ff5ff4d9653e62f1ab6e5100
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456692"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implementar una base de datos mediante una DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,4 +1,5 @@
 ---
+description: backupfile (Transact-SQL)
 title: backupfile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5c304cfafc04d9f7c0ec77dc5faedc75ada79df
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4a4caafa49aca29e1093ffb6304b292bcd5c7735
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492826"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "85890697"
 |**is_readonly**|**bit**|1 = El archivo es de solo lectura.|  
 |**is_present**|**bit**|1 = El archivo está incluido en el conjunto de copia de seguridad.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  RESTOre VERIFYONLY de *backup_device* con LOADHISTORY rellena las columnas de la tabla **backupmediaset** con los valores adecuados del encabezado de conjunto de medios.  
   
  Para reducir el número de filas de esta tabla y de otras tablas de historial y copia de seguridad, ejecute el [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimiento almacenado.  

@@ -1,4 +1,5 @@
 ---
+description: sp_describe_cursor (Transact-SQL)
 title: sp_describe_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e8b245778ea29c162cc023f707c717dfc5a01a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 97f7d5b17fdd06199b11bfa82c6795407e28127f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493307"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +79,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |cursor_name|**sysname**|Nombre del cursor desde una instrucción DECLARE CURSOR. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el cursor se creó estableciendo una variable de cursor como un cursor, cursor_name devuelve el nombre de la variable de cursor. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna de salida devuelve un nombre generado por el sistema.|  
 |cursor_scope|**tinyint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**int**|Los mismos valores que se indican en la función del sistema CURSOR_STATUS:<br /><br /> 1 = El cursor al que hace referencia el nombre del cursor o ?la variable está abierto. Si se trata de un cursor que no distingue, estático o de conjunto de claves, el conjunto de resultados tiene una fila, como mínimo. Si el cursor es dinámico, el conjunto de resultados tiene cero o más filas.<br /><br /> 0 = El cursor al que hace referencia el nombre del cursor o la variable está abierto pero no tiene filas. Los cursores dinámicos nunca devuelven este valor.<br /><br /> -1 = El cursor al que hace referencia el nombre del cursor o la variable está cerrado.<br /><br /> -2 = Se aplica solo a variables de cursor. No hay ningún cursor asignado a la variable. Posiblemente, un parámetro OUTPUT asignó un cursor a la variable pero el procedimiento almacenado cerró el cursor antes de devolver resultados.<br /><br /> -3 = No existe un cursor o variable de cursor con el nombre especificado, o la variable del cursor no tiene todavía un cursor asignado.|  
-|modelo|**tinyint**|1 = Sin distinción (o estático) <br /><br /> 2 = conjunto de claves<br /><br /> 3 = dinámica<br /><br /> 4 = Avance rápido|  
+|model|**tinyint**|1 = Sin distinción (o estático) <br /><br /> 2 = conjunto de claves<br /><br /> 3 = dinámica<br /><br /> 4 = Avance rápido|  
 |simultaneidad|**tinyint**|1 = solo lectura<br /><br /> 2 = Bloqueos de desplazamiento<br /><br /> 3 = Optimista|  
 |scrollable|**tinyint**|0 = Solo avance<br /><br /> 1 = Desplazable|  
 |open_status|**tinyint**|0 = Cerrado<br /><br /> 1 = Abierto|  
@@ -89,7 +90,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |last_operation|**tinyint**|Última operación realizada en el cursor:<br /><br /> 0 = No se realizó ninguna operación en el cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERCIÓN<br /><br /> 4 = UPDATE<br /><br /> 5 = ELIMINAR<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Valor único del cursor dentro del ámbito del servidor.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  sp_describe_cursor describe los atributos globales de un cursor de servidor, como la posibilidad de desplazarlo y actualizarlo. Utilice sp_describe_cursor_columns para obtener una descripción de los atributos del conjunto de resultados devuelto por el cursor. Utilice sp_describe_cursor_tables para obtener un informe de las tablas base a las que hace referencia el cursor. Para obtener un informe de los cursores de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)] visibles en la conexión, use sp_cursor_list.  
   
  Una instrucción DECLARE CURSOR puede solicitar un tipo de cursor no compatible con la instrucción SELECT de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de DECLARE CURSOR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente el cursor a un tipo compatible con la instrucción SELECT. Si se especifica TYPE_WARNING en la instrucción DECLARE CURSOR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía a la aplicación un mensaje informativo que indica que se ha completado una conversión. a continuación, se puede llamar a sp_describe_cursor para determinar el tipo de cursor que se ha implementado.  
@@ -136,12 +137,12 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Cursores](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40;&#41;de Transact-SQL](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;&#41;de Transact-SQL ](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [sp_cursor_list &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [sp_describe_cursor_columns &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
- [sp_describe_cursor_tables &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
+ [sp_cursor_list &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor_columns &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [sp_describe_cursor_tables &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Función SQLDescribeParam
 title: Función SQLDescribeParam | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c55668bb565bd383d170e7bf331630bf8b6adef1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e6209f4e3145e55dfd94a9ff1375013ae5c7a85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491318"
 ---
 # <a name="sqldescribeparam-function"></a>Función SQLDescribeParam
 **Conformidad**  
@@ -178,6 +179,6 @@ free(LenOrIndArray);
 |Ejecutar una instrucción SQL preparada|[Función SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Preparar una instrucción para su ejecución|[Función SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

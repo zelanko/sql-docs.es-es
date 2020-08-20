@@ -1,4 +1,5 @@
 ---
+description: sp_unsetapprole (Transact-SQL)
 title: sp_unsetapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c4033d3-1a34-4dfb-835d-e3293d1a442d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18fe415653a912bda012e786b0a65e5f5b30dd3c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03535e2aa88b0387f0d475531576034135ad142b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492912"
 ---
 # <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ sp_unsetapprole @cookie
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) y 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Después de activar un rol de aplicación mediante **sp_setapprole**, el rol permanece activo hasta que el usuario se desconecta del servidor o ejecuta **sp_unsetapprole**.  
   
  Para obtener información general sobre los roles de aplicación, consulte [roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md).  
@@ -77,11 +78,11 @@ SELECT USER_NAME();
 GO   
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [sp_setapprole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [sp_setapprole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREAR rol de aplicación &#40;&#41;de Transact-SQL](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)  
   
   

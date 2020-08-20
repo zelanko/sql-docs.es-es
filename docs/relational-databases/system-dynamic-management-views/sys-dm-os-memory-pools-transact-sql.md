@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_memory_pools (Transact-SQL)
 title: Sys. dm_os_memory_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb04eeb53a04e79c504b2d90dced3df08c23c385
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5108e097ae54800a6a41c99d52af0ca4a92ce5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493666"
 ---
 # <a name="sysdm_os_memory_pools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +45,12 @@ ms.locfileid: "86012056"
 |**max_free_entries_count**|**bigint**|Nombre máximo de entradas libres que puede tener un grupo. No admite valores NULL.|  
 |**free_entries_count**|**bigint**|Número de entradas libres en el grupo actualmente. No admite valores NULL.|  
 |**removed_in_all_rounds_count**|**bigint**|Número de entradas quitadas del grupo desde que se inició la sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No admite valores NULL.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="remarks"></a>Observaciones  
  Los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a veces utilizan un marco de grupos comunes para almacenar en caché tipos de datos homogéneos, sin estado. El marco de grupos es más sencillo que el marco de la caché. Todas las entradas en los grupos se consideran iguales. Internamente, los grupos son distribuidores de memoria y se pueden utilizar en lugares donde se utilizan distribuidores de memoria.  

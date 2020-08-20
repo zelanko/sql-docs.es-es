@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_disable_table (Transact-SQL)
 title: Sys. sp_cdc_disable_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d8f258662f9dddb4f1a0ecdb1c375666fc18cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1dcc5dffd4c9a718227c85ce8f421b8cb45bbd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492852"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,15 +47,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @source_schema = ] 'source\_schema'`Es el nombre del esquema en el que se encuentra la tabla de origen. *source_schema* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
+`[ @source_schema = ] 'source\_schema'` Es el nombre del esquema en el que se encuentra la tabla de origen. *source_schema* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
   
  *source_schema* debe existir en la base de datos actual.  
   
-`[ @source_name = ] 'source\_name'`Es el nombre de la tabla de origen desde la que se va a deshabilitar la captura de datos modificados. *source_name* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
+`[ @source_name = ] 'source\_name'` Es el nombre de la tabla de origen desde la que se va a deshabilitar la captura de datos modificados. *source_name* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
   
  *source_name* debe existir en la base de datos actual.  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'`Es el nombre de la instancia de captura que se va a deshabilitar para la tabla de origen especificada. *capture_instance* es de **tipo sysname** y no puede ser null.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` Es el nombre de la instancia de captura que se va a deshabilitar para la tabla de origen especificada. *capture_instance* es de **tipo sysname** y no puede ser null.  
   
  Cuando se especifica ' All ', se deshabilitan todas las instancias de captura definidas para *source_name* .  
   

@@ -1,4 +1,5 @@
 ---
+description: Solución de problemas (AccessToSQL)
 title: Solución de problemas (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d86b8f573e8539971dae9d9386d4b255977f5d3d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2798fb492dc7cc91649e6790d133037d4f476882
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492528"
 ---
 # <a name="troubleshooting-accesstosql"></a>Solución de problemas (AccessToSQL)
 No es raro que se ejecute en problemas de migración que ejecutan los comandos o scripts de la consola.  

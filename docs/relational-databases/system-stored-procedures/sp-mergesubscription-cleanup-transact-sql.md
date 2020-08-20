@@ -1,4 +1,5 @@
 ---
+description: sp_mergesubscription_cleanup (Transact-SQL)
 title: sp_mergesubscription_cleanup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: feb13050f5b508298ec45d5fde4ffde9aa510c9d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 00646091e10c1979484d2fe0c3174427841e9bbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493182"
 ---
 # <a name="sp_mergesubscription_cleanup-transact-sql"></a>sp_mergesubscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85891589"
   Quita los metadatos, como los desencadenadores y las entradas, en **sysmergesubscriptions** y **sysmergearticles** después de quitar la suscripción de extracción de mezcla especificada en el publicador. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
   
 > [!NOTE]  
->  En una suscripción de extracción, los metadatos se quitan cuando se ejecuta [sp_dropmergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) .  
+>  En una suscripción de extracción, los metadatos se quitan cuando se ejecuta [sp_dropmergepullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,16 +43,16 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_mergesubscription_cleanup** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
@@ -59,8 +60,8 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
   
 ## <a name="see-also"></a>Consulte también  
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_expired_subscription_cleanup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
- [sp_subscription_cleanup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+ [sp_expired_subscription_cleanup &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   
+ [sp_subscription_cleanup &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_procedure_stats (Transact-SQL)
 title: Sys. dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -20,11 +21,12 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60b42cfd1fe3e8c57849b4a8501667c7f6ee96d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 116196bf58c37c63fe64ce9566dd21d3191c022b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493795"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86000261"
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, se filtran todas las filas que contienen datos que no pertenecen al inquilino conectado.  
   
 > [!NOTE]
-> Los resultados de **Sys. dm_exec_procedure_stats** pueden variar en cada ejecución, ya que los datos solo reflejan las consultas finalizadas y no las que todavía están en curso.
+> Los resultados de **Sys. dm_exec_procedure_stats**  pueden variar en cada ejecución, ya que los datos solo reflejan las consultas finalizadas y no las que todavía están en curso.
 > Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_exec_procedure_stats**. 
 
   
@@ -73,7 +75,7 @@ ms.locfileid: "86000261"
 |**last_spills**|**bigint**|Número de páginas desbordadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|El número mínimo de páginas que este procedimiento almacenado ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Número máximo de páginas que este procedimiento almacenado ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br />**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br />**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|Número total de lecturas del servidor de páginas realizadas por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
 |**last_page_server_reads**|**bigint**|Número de lecturas del servidor de páginas realizadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
 |**min_page_server_reads**|**bigint**|Número mínimo de lecturas del servidor de páginas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
@@ -84,7 +86,7 @@ ms.locfileid: "86000261"
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
    
 ## <a name="remarks"></a>Observaciones  
  Las estadísticas en la vista se actualizan cuando una ejecución del procedimiento almacenado se completa.  
@@ -101,7 +103,7 @@ FROM sys.dm_exec_procedure_stats AS d
 ORDER BY [total_worker_time] DESC;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
 [Sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
 [Sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    

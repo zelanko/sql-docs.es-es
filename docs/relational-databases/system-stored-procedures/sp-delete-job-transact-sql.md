@@ -1,4 +1,5 @@
 ---
+description: sp_delete_job (Transact-SQL)
 title: sp_delete_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8e4abbb2620931f8d58ced30ae4658a9c0d15bb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f11bf53f9663893c2d678e7a7af904b70b4fc1cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493352"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`Es el número de identificación del trabajo que se va a eliminar. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` Es el número de identificación del trabajo que se va a eliminar. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'`Es el nombre del trabajo que se va a eliminar. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Es el nombre del trabajo que se va a eliminar. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name*; no se pueden especificar ambos.  
   
-`[ @originating_server = ] 'server'`Para uso interno.  
+`[ @originating_server = ] 'server'` Para uso interno.  
   
-`[ @delete_history = ] delete_history`Especifica si se debe eliminar el historial del trabajo. *delete_history* es de **bit**y su valor predeterminado es **1**. Cuando *delete_history* es **1**, se elimina el historial de trabajos del trabajo. Cuando *delete_history* es **0**, no se elimina el historial de trabajos.  
+`[ @delete_history = ] delete_history` Especifica si se debe eliminar el historial del trabajo. *delete_history* es de **bit**y su valor predeterminado es **1**. Cuando *delete_history* es **1**, se elimina el historial de trabajos del trabajo. Cuando *delete_history* es **0**, no se elimina el historial de trabajos.  
   
  Tenga en cuenta que cuando se elimina un trabajo y no se elimina el historial, la información histórica del trabajo no se mostrará en el historial de trabajos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interfaz gráfica de usuario del agente, pero la información seguirá residiendo en la tabla **sysjobhistory** de la base de datos **msdb** .  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`Especifica si se deben eliminar las programaciones adjuntas a este trabajo si no están adjuntas a ningún otro trabajo. *delete_unused_schedule* es de **bit**y su valor predeterminado es **1**. Cuando *delete_unused_schedule* es **1**, se eliminan las programaciones adjuntas a este trabajo si ningún otro trabajo hace referencia a la programación. Cuando *delete_unused_schedule* es **0**, no se eliminan las programaciones.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Especifica si se deben eliminar las programaciones adjuntas a este trabajo si no están adjuntas a ningún otro trabajo. *delete_unused_schedule* es de **bit**y su valor predeterminado es **1**. Cuando *delete_unused_schedule* es **1**, se eliminan las programaciones adjuntas a este trabajo si ningún otro trabajo hace referencia a la programación. Cuando *delete_unused_schedule* es **0**, no se eliminan las programaciones.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -98,9 +99,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_add_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [sp_help_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

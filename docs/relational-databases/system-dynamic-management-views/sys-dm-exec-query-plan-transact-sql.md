@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_plan (Transact-SQL)
 title: Sys. dm_exec_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b57d657f0f6b1113db6b36bfa7c559110f77e84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3b4c9264d769b535bcbc3e2f9e38e92d010f2f56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493732"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
 |**cifra**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
 |**query_plan**|**xml**|Contiene la representación del plan de presentación de tiempo de compilación del plan de ejecución de consultas especificado con *plan_handle*. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En las siguientes condiciones, no se devuelve ningún plan de presentación en la columna **query_plan** de la tabla devuelta para **sys.dm_exec_query_plan**:  
   
 -   Si el plan de consulta especificado mediante *plan_handle* se ha expulsado de la caché del plan, la columna **query_plan** de la tabla devuelta es NULL. Por ejemplo, esta condición puede producirse si hay un retraso entre el momento en que se captura el identificador del plan y el momento en que se utiliza con **sys.dm_exec_query_plan**.  
@@ -79,7 +80,7 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
   
 > [!NOTE] 
 > Debido a una limitación en el número de niveles anidados permitidos en el tipo de datos **XML** , **Sys. dm_exec_query_plan** no puede devolver planes de consulta que cumplan o superen los 128 niveles de elementos anidados. En las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condición impedía la devolución del plan de consulta y generaba el error 6335. En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y versiones posteriores, la columna **QUERY_PLAN** devuelve NULL.   
-> Puede usar la función de administración dinámica [Sys. dm_exec_text_query_plan &#40;&#41;de Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) para devolver la salida del plan de consulta en formato de texto.  
+> Puede usar la función de administración dinámica [Sys. dm_exec_text_query_plan &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) para devolver la salida del plan de consulta en formato de texto.  
   
 ## <a name="permissions"></a>Permisos  
  Para ejecutar **Sys. dm_exec_query_plan**, un usuario debe ser miembro del rol fijo de servidor **sysadmin** o tener el `VIEW SERVER STATE` permiso en el servidor.  
@@ -162,12 +163,12 @@ ORDER BY total_worker_time/execution_count DESC;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [Sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sp_who &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sp_who &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
  [Sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   

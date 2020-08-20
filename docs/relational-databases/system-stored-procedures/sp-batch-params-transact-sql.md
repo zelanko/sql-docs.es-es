@@ -1,4 +1,5 @@
 ---
+description: sp_batch_params (Transact-SQL)
 title: sp_batch_params (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 135937bbdac930d3ee90259c7e5b0f4faaab098f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceb162fa058f1dd46eea196929586b8e31f4152c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493487"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tsqlbatch = ] 'tsqlbatch'`Es una cadena Unicode que contiene una [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote para el que la información de parámetros se desea. *tsqlbatch* es de tipo **nvarchar (Max)** o implícitamente convertible a **nvarchar (Max)**.  
+`[ @tsqlbatch = ] 'tsqlbatch'` Es una cadena Unicode que contiene una [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote para el que la información de parámetros se desea. *tsqlbatch* es de tipo **nvarchar (Max)** o implícitamente convertible a **nvarchar (Max)**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -52,12 +53,12 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**COLUMN_TYPE**|**smallint**|Este campo devuelve uno de los siguientes valores:<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> Esta columna siempre es 0.|  
 |**DATA_TYPE**|**smallint**|Tipo de datos del parámetro (código entero para un tipo de datos ODBC). Si no se puede asignar este tipo de datos a un tipo de ISO, el valor es NULL. El nombre del tipo de datos nativo se devuelve en la columna **TYPE_NAME** . Este valor siempre es NULL.|  
 |**TYPE_NAME**|**sysname**|Representación de cadena del tipo de datos como lo presenta el DBMS subyacente. Este valor es NULL.|  
-|**PRECISIÓN**|**int**|Número de dígitos significativos. El valor devuelto para la columna **Precision** está en base 10.|  
+|**PRECISION**|**int**|Número de dígitos significativos. El valor devuelto para la columna **Precision** está en base 10.|  
 |**LENGTH**|**int**|Tamaño de transferencia de los datos. Este valor es NULL.|  
 |**ESCALA**|**smallint**|Número de dígitos a la derecha del separador decimal. Este valor es NULL.|  
-|**FIJO**|**smallint**|Es la base de tipos numéricos. Este valor es NULL.|  
+|**RADIX**|**smallint**|Es la base de tipos numéricos. Este valor es NULL.|  
 |**ACEPTA valores NULL**|**smallint**|Especifica la nulabilidad:<br /><br /> 1 = Tipo de datos de parámetro que se puede crear con valores NULL.<br /><br /> 0 = No se permiten valores NULL.<br /><br /> Este valor es NULL.|  
-|**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tal como aparece en el campo TYPE del descriptor. Esta columna es igual que la columna **data_type** , excepto los tipos de datos **DateTime** e **Interval** ISO. Esta columna siempre devuelve un valor. Este valor es NULL.|  
+|**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tal como aparece en el campo TYPE del descriptor. Esta columna es igual que la columna **DATA_TYPE**, salvo por los tipos de datos **datetime** e **interval** de ISO. Esta columna siempre devuelve un valor. Este valor es NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|El subcódigo de **intervalo** **DateTime** o ISO si el valor de **SQL_DATA_TYPE** es SQL_DATETIME o SQL_INTERVAL. Para tipos de datos distintos de **datetime** e **interval** de ISO, esta columna es NULL. Este valor es NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longitud máxima en bytes de un parámetro de tipo de datos de **caracteres** o **binarios** . Para todos los demás tipos de datos, esta columna devuelve NULL. Este valor siempre es NULL.|  
 |**ORDINAL_POSITION**|**int**|Posición ordinal del parámetro en el lote. Si el nombre del parámetro se repite varias veces, esta columna contiene el ordinal de la primera vez que aparece. El primer parámetro tiene el ordinal 1. Esta columna siempre devuelve un valor.|  
@@ -77,7 +78,7 @@ SET @SQLString =
 EXECUTE sp_batch_params @SQLString;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Ejecutar procedimientos almacenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Temas de procedimientos de ejecución de procedimientos almacenados &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
  [Ejecutar procedimientos almacenados &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  

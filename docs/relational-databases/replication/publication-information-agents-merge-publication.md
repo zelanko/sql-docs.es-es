@@ -1,4 +1,5 @@
 ---
+description: Información de la Publicación, Agentes (Publicación de combinación)
 title: Información de la publicación, Agentes (Publicación de combinación) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2aa581588367a96036c62704c47f6ac6924fef5c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce84b55a553b26e6fe9141601987f1e743584699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493906"
 ---
 # <a name="publication-information-agents-merge-publication"></a>Información de la Publicación, Agentes (Publicación de combinación)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  La pestaña **Agentes** muestra información de resumen del Agente de instantáneas para la publicación seleccionada.  
+   La pestaña **Agentes** muestra información de resumen del Agente de instantáneas para la publicación seleccionada.  
   
 ## <a name="options"></a>Opciones  
  Para obtener información más detallada y las tareas relacionadas con el Agente de instantáneas, haga clic con el botón secundario en la fila del agente y, a continuación, haga clic en una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
@@ -45,7 +46,7 @@ ms.locfileid: "85721000"
   
 -   No está en ejecución  
   
--   Completed  
+-   Completado  
   
  **Agent**  
  Agente de instantáneas. Es el único agente asociado a una publicación de combinación. El Agente de mezcla se asocia a las suscripciones a esta publicación. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
@@ -59,7 +60,7 @@ ms.locfileid: "85721000"
  **Última acción**  
  La última acción realizada durante la ejecución más reciente del agente.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication.md)  
  [Visualización de información y realización de tareas mediante el Monitor de replicación](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).

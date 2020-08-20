@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_primary_database (Transact-SQL)
 title: sp_help_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5606c29eb4592f15eff641d969f6fcd28c89fa90
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b3dea602c3464fb4fee36281a2430f2fef39b7ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493211"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'`Es el nombre de la base de datos principal de trasvase de registros. *Database* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
+`[ @database = ] 'database'` Es el nombre de la base de datos principal de trasvase de registros. *Database* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
   
-`[ @primary_id = ] 'primary_id'`IDENTIFICADOR de la base de datos principal para la configuración del trasvase de registros. *primary_id* es de tipo **uniqueidentifier** y no puede ser null.  
+`[ @primary_id = ] 'primary_id'` IDENTIFICADOR de la base de datos principal para la configuración del trasvase de registros. *primary_id* es de tipo **uniqueidentifier** y no puede ser null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |**primary_id**|Id. de la base de datos principal para la configuración del trasvase de registros.|  
 |**primary_database**|Nombre de la base de datos principal en la configuración del trasvase de registros.|  
@@ -69,7 +70,7 @@ sp_help_log_shipping_primary_database
 |**last_backup_date_utc**|Fecha y hora de la última operación de copia de seguridad del registro de transacciones en la base de datos principal, expresadas en UTC (hora universal coordinada).|  
 |**history_retention_period**|Cantidad de tiempo, en minutos, durante la que los registros de historial del trasvase de registros se mantienen en una base de datos principal determinada antes de ser eliminados.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_help_log_shipping_primary_database** se debe ejecutar desde la base de datos **maestra** del servidor principal.  
   
 ## <a name="permissions"></a>Permisos  

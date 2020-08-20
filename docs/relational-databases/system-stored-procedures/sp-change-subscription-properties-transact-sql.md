@@ -1,4 +1,5 @@
 ---
+description: sp_change_subscription_properties (Transact-SQL)
 title: sp_change_subscription_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 35943489c707d5a1b84313bb7ef6eca9113e36ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: da197fc6b4cc8b253b3597981a6973e9b77891bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493438"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,28 +43,28 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'`Es la propiedad que se va a cambiar. *Property* es de **tipo sysname**.  
+`[ @property = ] 'property'` Es la propiedad que se va a cambiar. *Property* es de **tipo sysname**.  
   
-`[ @value = ] 'value'`Es el nuevo valor de la propiedad. el *valor* es **nvarchar (1000)** y no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` Es el nuevo valor de la propiedad. el *valor* es **nvarchar (1000)** y no tiene ningún valor predeterminado.  
   
-`[ @publication_type = ] publication_type`Especifica el tipo de replicación de la publicación. *publication_type* es de **tipo int**y puede tener uno de estos valores.  
+`[ @publication_type = ] publication_type` Especifica el tipo de replicación de la publicación. *publication_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Tipo de publicación|  
+|Value|Tipo de publicación|  
 |-----------|----------------------|  
 |**0**|Transaccional|  
-|**1**|Depurador de|  
+|**1**|Instantánea|  
 |**2**|Merge|  
 |NULL (predeterminado)|La replicación determina el tipo de publicación. Puesto que el procedimiento almacenado debe examinar varias tablas, esta opción es más lenta que cuando se suministra el tipo de publicación exacto.|  
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
-|Propiedad|Valor|Descripción|  
+|Propiedad|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Especifica la ubicación de la carpeta alternativa de la instantánea. Si el valor es NULL, los archivos de instantáneas se toman de la ubicación predeterminada que se especifica en el publicador.|  
 |**distrib_job_login**||Inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente.|  
@@ -102,7 +103,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_change_subscription_properties** se utiliza en todos los tipos de replicación.  
   
  **sp_change_subscription_properties** se utiliza para las suscripciones de extracción.  
@@ -114,10 +115,10 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>Consulte también  
  [View and Modify Pull Subscription Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)  (Ver y modificar las propiedades de una suscripción de extracción)  
- [sp_addmergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_addmergepullsubscription_agent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_addpullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_addpullsubscription_agent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_addpullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_addpullsubscription_agent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

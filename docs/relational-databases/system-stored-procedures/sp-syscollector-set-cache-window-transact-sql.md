@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_set_cache_window (Transact-SQL)
 title: sp_syscollector_set_cache_window (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab32a3bad6b394932ccf5e48200b7da40ee5d32f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25c6c07ebb04f983de4e60b2798e8bcff8c35adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493018"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window =] *cache_window*  
  Es el número de veces que se va a reintentar una carga de datos al almacén de administración de datos en caso de error sin perder datos. *cache_window* es de **tipo int** y su valor predeterminado es 1. *cache_window* puede tener uno de los valores siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |-1|Almacenar en memoria caché todos los datos de carga provenientes de los errores de carga anteriores.|  
 |0|No almacenar en memoria caché ningún dato proveniente de un error de carga.|  

@@ -1,4 +1,5 @@
 ---
+description: sp_bindrule (Transact-SQL)
 title: sp_bindrule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -18,12 +19,12 @@ ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2d068c18f692009f29ee7e8d6450c4f013c6906
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c06a99b6c4e5f248df477e147f45b10c7f566f04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493512"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85716126"
   Enlaza una regla a una columna o a un tipo de datos de alias.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]En su lugar, use[restricciones UNIQUE y restricciones check](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . Las restricciones CHECK se crean mediante la palabra clave CHECK de las instrucciones [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] En su lugar, use[restricciones UNIQUE y restricciones check](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . Las restricciones CHECK se crean mediante la palabra clave CHECK de las instrucciones [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rulename = ] 'rule'`Es el nombre de una regla creada con la instrucción CREATE RULE. *Rule* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado.  
+`[ @rulename = ] 'rule'` Es el nombre de una regla creada con la instrucción CREATE RULE. *Rule* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
-`[ @objname = ] 'object_name'`Es la tabla y la columna, o el tipo de datos del alias al que se va a enlazar la regla. Una regla no se puede enlazar a una columna **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, de tipo definido por el usuario CLR o **timestamp**. Una regla no se puede enlazar a una columna calculada.  
+`[ @objname = ] 'object_name'` Es la tabla y la columna, o el tipo de datos del alias al que se va a enlazar la regla. Una regla no se puede enlazar a una columna **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, de tipo definido por el usuario CLR o **timestamp**. Una regla no se puede enlazar a una columna calculada.  
   
  *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado. Si *object_name* es un nombre de una parte, se resuelve como un tipo de datos de alias. Si es un nombre de dos o tres partes, se resuelve primero como una tabla y una columna, y si esta resolución genera un error, se resuelve como un tipo de datos de alias. De forma predeterminada, las columnas existentes del tipo de datos de alias heredan la *regla* , a menos que se haya enlazado una regla directamente a la columna.  
   
@@ -57,7 +58,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  Las reglas creadas a partir de expresiones que utilizan tipos de datos de alias pueden enlazarse a columnas o tipos de datos de alias, pero no se compilan cuando se hace referencia a ellos. Evite el uso de reglas creadas a partir de tipos de datos de alias.  
   
-`[ @futureonly = ] 'futureonly_flag'`Solo se usa cuando se enlaza una regla a un tipo de datos de alias. *future_only_flag* es de tipo **VARCHAR (15)** y su valor predeterminado es NULL. Este parámetro cuando se establece en **futureonly** evita que las columnas existentes de un tipo de datos de alias hereden la nueva regla. Si *futureonly_flag* es null, la nueva regla se enlaza a todas las columnas del tipo de datos de alias que actualmente no tienen ninguna regla o que usan la regla existente del tipo de datos del alias.  
+`[ @futureonly = ] 'futureonly_flag'` Solo se usa cuando se enlaza una regla a un tipo de datos de alias. *future_only_flag* es de tipo **VARCHAR (15)** y su valor predeterminado es NULL. Este parámetro cuando se establece en **futureonly** evita que las columnas existentes de un tipo de datos de alias hereden la nueva regla. Si *futureonly_flag* es null, la nueva regla se enlaza a todas las columnas del tipo de datos de alias que actualmente no tienen ninguna regla o que usan la regla existente del tipo de datos del alias.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -119,10 +120,10 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [sp_unbindrule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [sp_unbindrule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

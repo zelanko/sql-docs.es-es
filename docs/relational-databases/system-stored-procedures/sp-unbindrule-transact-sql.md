@@ -1,4 +1,5 @@
 ---
+description: sp_unbindrule (Transact-SQL)
 title: sp_unbindrule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3988bd0d9197b675c41115ba2b384b10cb35e851
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc4f3d41644ae3aaaebbccac4d39257e950af194
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492970"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85892583"
   Deshace el enlace de una regla de una columna o de un tipo de datos del alias en la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]Se recomienda crear las definiciones predeterminadas mediante la palabra clave DEFAULT en las instrucciones [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Se recomienda crear las definiciones predeterminadas mediante la palabra clave DEFAULT en las instrucciones [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,12 +44,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'object_name'`Es el nombre de la tabla y columna, o el tipo de datos del alias del que se va a desenlazar la regla. *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta resolver los identificadores de dos partes en nombres de columna en primer lugar, y después en tipos de datos de alias. Cuando se deshace el enlace de una regla de un tipo de datos de alias, también se deshace el enlace de las columnas de ese tipo de datos que tengan la misma regla. Las columnas de ese tipo de datos con reglas directamente enlazadas a ellas no se ven afectadas.  
+`[ @objname = ] 'object_name'` Es el nombre de la tabla y columna, o el tipo de datos del alias del que se va a desenlazar la regla. *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta resolver los identificadores de dos partes en nombres de columna en primer lugar, y después en tipos de datos de alias. Cuando se deshace el enlace de una regla de un tipo de datos de alias, también se deshace el enlace de las columnas de ese tipo de datos que tengan la misma regla. Las columnas de ese tipo de datos con reglas directamente enlazadas a ellas no se ven afectadas.  
   
 > [!NOTE]  
 >  *object_name* pueden contener corchetes **[]** como caracteres de identificador delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'`Solo se usa cuando se desenlaza una regla de un tipo de datos de alias. *futureonly_flag* es de tipo **VARCHAR (15)** y su valor predeterminado es NULL. Cuando *futureonly_flag* es **futureonly**, las columnas existentes de ese tipo de datos no pierden la regla especificada.  
+`[ @futureonly = ] 'futureonly_flag'` Solo se usa cuando se desenlaza una regla de un tipo de datos de alias. *futureonly_flag* es de tipo **VARCHAR (15)** y su valor predeterminado es NULL. Cuando *futureonly_flag* es **futureonly**, las columnas existentes de ese tipo de datos no pierden la regla especificada.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -102,12 +103,12 @@ GO
 EXEC sp_unbindrule '[t.4].c1';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [sp_bindrule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [sp_bindrule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

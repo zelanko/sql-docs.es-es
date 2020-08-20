@@ -1,4 +1,5 @@
 ---
+description: Errores y advertencias (categoría de eventos del motor de base de datos)
 title: Errores y advertencias (categoría de eventos)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,16 +15,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d31361a5512a93620d6ae2fbab34ff918a0837ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8243110252460d8838897139903f306937caf57f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491121"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errores y advertencias (categoría de eventos del motor de base de datos)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La categoría de eventos **Errores y advertencias** contiene eventos generales de errores y advertencias.  
+   La categoría de eventos **Errors and Warnings** contiene eventos generales de errores y advertencias.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -31,7 +32,7 @@ ms.locfileid: "85716934"
 |-----------|-----------------|  
 |[Attention (clase de eventos)](../../relational-databases/event-classes/attention-event-class.md)|Indica que se ha producido un evento **Attention** .|  
 |[Background Job Error (clase de eventos)](../../relational-databases/event-classes/background-job-error-event-class.md)|Indica que un trabajo en segundo plano ha terminado de forma anómala.|  
-|[Bitmap Warning (clase de eventos)](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Indica que el filtrado de mapas de bits se ha deshabilitado en una consulta.|  
+|[Bitmap Warning, clase de eventos](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Indica que el filtrado de mapas de bits se ha deshabilitado en una consulta.|  
 |[Blocked Process Report (clase de eventos)](../../relational-databases/event-classes/blocked-process-report-event-class.md)|Indica que una tarea ha estado bloqueada durante más tiempo del especificado.|  
 |[CPU Threshold Exceeded (clase de eventos)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|Indica que el regulador de recursos detecta una consulta que supera el umbral de la CPU especificado.|  
 |[ErrorLog (clase de eventos)](../../relational-databases/event-classes/errorlog-event-class.md)|Indica que se han registrado eventos de error en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

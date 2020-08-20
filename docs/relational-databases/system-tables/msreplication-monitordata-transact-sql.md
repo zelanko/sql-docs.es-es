@@ -1,4 +1,5 @@
 ---
+description: MSreplication_monitordata (Transact-SQL)
 title: MSreplication_monitordata (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49dd84629222b170740a99f95e33b114d9707044
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 544a21ee17d30eff7d249c7597b2b579a894194e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492750"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "85889452"
 |**average_runspeedPerf**|**int**|El tiempo promedio de sincronización de la publicación de combinación|  
 |**mergePerformance**|**int**|Rendimiento de la última sincronización con respecto a todas las sincronizaciones de la suscripción. Se basa en la tasa de entrega de la última sincronización dividida entre la media de todas las tasas de entrega anteriores.|  
 |**mergelatestsessionrunduration**|**int**|La duración de la ejecución más reciente del Agente de mezcla.|  
-|**mergelatestsessionrunspeed**|**Float (53)**|La velocidad de entrega de la ejecución más reciente del Agente de mezcla.|  
+|**mergelatestsessionrunspeed**|**float(53)**|La velocidad de entrega de la ejecución más reciente del Agente de mezcla.|  
 |**mergelatestsessionconnectiontype**|**int**|La conexión utilizada para la sesión más reciente del Agente de mezcla; puede ser uno de los siguientes valores:<br /><br /> **1** = red de área local (LAN)<br /><br /> **2** = conexión de red de acceso telefónico|  
 |**retention_period_unit**|**tinyint**|Define la unidad utilizada al definir la retención; puede ser uno de estos valores:<br /><br /> **1** = semana<br /><br /> **2** = mes<br /><br /> **3** = año|  
   
@@ -68,11 +69,11 @@ ms.locfileid: "85889452"
  [Supervisar la replicación mediante programación](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_replmonitorhelpsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)   
- [sp_replmonitorhelppublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)   
- [sp_replmonitorhelppublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)   
- [sp_replmonitorhelpmergesession &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)   
- [sp_replmonitorhelppublicationthresholds &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)   
- [sp_replmonitorhelpmergesessiondetail &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)  
+ [sp_replmonitorhelpsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)   
+ [sp_replmonitorhelppublication &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)   
+ [sp_replmonitorhelppublisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)   
+ [sp_replmonitorhelpmergesession &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)   
+ [sp_replmonitorhelppublicationthresholds &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)   
+ [sp_replmonitorhelpmergesessiondetail &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)  
   
   

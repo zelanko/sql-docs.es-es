@@ -1,4 +1,5 @@
 ---
+description: Eliminación de componentes de SSMA para Oracle (OracleToSQL)
 title: Quitar SSMA para los componentes de Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 4fbac66cfd7cf549a6321534901ca8a33900f986
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 263d04b401146ce2975a810b084e4957f1daf718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492416"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Eliminación de componentes de SSMA para Oracle (OracleToSQL)
 Cuando haya terminado de migrar las bases de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es posible que desee desinstalar los componentes de SSMA. Puede desinstalar los componentes de cliente en cualquier momento. Sin embargo, no debe desinstalar el paquete de extensiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a menos que las bases de datos migradas dejen de usar funciones en el esquema de **ssma_oracle** de la base de datos **sysdb** .  
@@ -56,7 +57,7 @@ Si está seguro de que las bases de datos migradas no usan objetos en el esquema
   
 Después de la desinstalación, puede confirmar que los objetos del esquema **sysdb. ssma_oracle** y, posiblemente, toda la base de datos de **sysdb** , se han quitado mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Sin embargo, si utiliza otros productos de SSMA, también usarán la base de datos **sysdb** . Si la base de datos existe y está seguro de que ninguna otra base de datos hace referencia a objetos de esta base de datos, puede separar la base de datos.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Instalación de SSMA para el cliente de Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Instalación de componentes de SSMA en SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   

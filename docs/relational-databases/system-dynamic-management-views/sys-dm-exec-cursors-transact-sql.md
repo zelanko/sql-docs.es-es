@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_cursors (Transact-SQL)
 title: Sys. dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2482e9af7451463c03bb5deb2e63c7261ec5361
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4243bd6395095a586ceffab1c4b00f8cf99a220b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493723"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,21 +72,21 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En la tabla siguiente se proporciona información acerca de la interfaz de la declaración del cursor y se incluyen los valores posibles para la columna de propiedades.  
   
-|Propiedad.|Descripción|  
+|Propiedad|Descripción|  
 |--------------|-----------------|  
 |API|El cursor se declaró mediante una de las API de acceso a datos (ODBC, OLEDB).|  
 |TSQL|El cursor se declaró mediante la sintaxis Transact-SQL DECLARE CURSOR.|  
   
  En la tabla siguiente se proporciona información acerca del tipo de cursor y se incluyen los valores posibles para la columna de propiedades.  
   
-|Tipo|Description|  
+|Tipo|Descripción|  
 |----------|-----------------|  
 |Keyset|El cursor se ha declarado como de conjunto de claves.|  
 |Dinámica|El cursor se ha declarado como dinámico.|  
-|Depurador de|El cursor se ha declarado como instantánea o estático.|  
+|Instantánea|El cursor se ha declarado como instantánea o estático.|  
 |Fast_Forward|El cursor se ha declarado como de avance rápido.|  
   
  En la tabla siguiente se proporciona información acerca de la simultaneidad de cursor y se incluyen los valores posibles para la columna de propiedades.  
@@ -116,7 +117,7 @@ WHERE DATEDIFF(hh, c.creation_time, GETDATE()) > 36;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  

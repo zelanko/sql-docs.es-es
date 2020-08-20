@@ -1,4 +1,5 @@
 ---
+description: Configuración global (cuadros de diálogo) (SybaseToSQL)
 title: Configuración global (cuadros de diálogo) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4dc7bf9bf6b8f2e20fb8254a3a27ca2e293a0174
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5f9ddd2c746acc7b10f893e6ac167e030c9cf689
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492211"
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>Configuración global (cuadros de diálogo) (SybaseToSQL)
 Use la página cuadros de diálogo del cuadro de diálogo **configuración global** para especificar la configuración predeterminada de la acción del usuario y de la advertencia para SSMA.  

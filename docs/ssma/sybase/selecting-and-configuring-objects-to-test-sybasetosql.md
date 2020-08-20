@@ -1,4 +1,5 @@
 ---
+description: Selección y configuración de objetos de prueba (SybaseToSQL)
 title: Seleccionar y configurar los objetos que se van a probar (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 31cc868cfe2d6fa7cc87e3fc6f89c868c43d17c3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c6bcddffdbb524e10a0686e6e9a82f4abcd30db8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492149"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Selección y configuración de objetos de prueba (SybaseToSQL)
 En este paso se seleccionan los objetos que se van a probar y se configuran los valores para comparar los procedimientos y los parámetros de salida de las funciones, así como los valores devueltos de las funciones.  
@@ -35,7 +36,7 @@ Establezca las reglas de comparación para los parámetros de salida y los valor
 ### <a name="use-during-comparisons"></a>Usar durante las comparaciones  
 Habilita el uso del parámetro seleccionado en la comparación de resultados de pruebas.  
   
--   Si elige **true**, SSMA comparará el valor de salida de este parámetro después de ejecutar el procedimiento en Sybase con el valor correspondiente en[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   Si elige **true**, SSMA comparará el valor de salida de este parámetro después de ejecutar el procedimiento en Sybase con el valor correspondiente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Si elige**false**, el parámetro se excluirá de la comprobación de los resultados.  
   

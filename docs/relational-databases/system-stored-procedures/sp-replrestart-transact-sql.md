@@ -1,4 +1,5 @@
 ---
+description: sp_replrestart (Transact-SQL)
 title: sp_replrestart (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51ef0fa1c24cd8bfb8ee6eaeab06c856601faee7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aebe6c9dd60c697cd986dfc1412430821230130d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493112"
 ---
 # <a name="sp_replrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +43,7 @@ sp_replrestart
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_replrestart** se utiliza cuando el valor de número de secuencia de registro (LSN) más alto del distribuidor no coincide con el valor de LSN más alto del publicador.  
   
 ## <a name="permissions"></a>Permisos  

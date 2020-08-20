@@ -1,4 +1,5 @@
 ---
+description: Agente de registro del LOG
 title: Agente de registro del LOG | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,16 +16,16 @@ ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0a2cadea4f97dbfdec98b57c901605d49b29de0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3225f7f90521357d0db312ea8cbd1c3272267337
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493953"
 ---
 # <a name="log-reader-agent"></a>Agente de registro del LOG
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  El cuadro de diálogo **Agente de registro del LOG** muestra información detallada del Agente de registro del LOG, incluido el estado, el historial, los mensajes informativos y los mensajes de error.  
+   El cuadro de diálogo **Agente de registro del LOG** muestra información detallada del Agente de registro del LOG, incluido el estado, el historial, los mensajes informativos y los mensajes de error.  
   
 ## <a name="options"></a>Opciones  
  Seleccione las sesiones del Agente de registro del LOG que se van a ver en el menú **Ver** y, a continuación, seleccione una sesión específica en la cuadrícula con la etiqueta **Sesiones del Agente de registro del LOG**. En la cuadrícula con la etiqueta **Acciones en la sesión seleccionada**se muestra información detallada de la sesión. Si la sesión seleccionada finalizó con un error, también se muestra el área de texto con la etiqueta **Detalles del error o mensaje de la sesión seleccionada** .  
@@ -64,7 +65,7 @@ ms.locfileid: "85727239"
  **Detalles del error o mensaje de la sesión seleccionada**  
  Solo se muestra si la sesión seleccionada presenta un valor de **Error** en la columna **Estado** . El área de texto muestra la información detallada del error y el comando que se intentaba ejecutar en el momento de producirse el error. También incluye vínculos a la información adicional relativa al error.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Ver información y realizar tareas para los agentes asociados a una publicación &#40;Monitor de replicación&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)  (Supervisar la replicación)  

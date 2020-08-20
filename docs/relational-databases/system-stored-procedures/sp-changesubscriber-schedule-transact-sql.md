@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscriber_schedule (Transact-SQL)
 title: sp_changesubscriber_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e800a1ac9d77926ac24f9106aa673178d3c6b179
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aec8b147b1e70be0c9bd5b1081e0462c1da66bae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493406"
 ---
 # <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,31 +49,31 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. el *suscriptor* es de **tipo sysname**. El nombre del suscriptor tiene que ser único en la base de datos, no puede existir previamente y no puede ser NULL.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. el *suscriptor* es de **tipo sysname**. El nombre del suscriptor tiene que ser único en la base de datos, no puede existir previamente y no puede ser NULL.  
   
-`[ @agent_type = ] type`Es el tipo de agente. el *tipo* es **smallint**y su valor predeterminado es **0**. **0** indica un agente de distribución. **1** indica un agente de mezcla.  
+`[ @agent_type = ] type` Es el tipo de agente. el *tipo* es **smallint**y su valor predeterminado es **0**. **0** indica un agente de distribución. **1** indica un agente de mezcla.  
   
-`[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa la tarea de distribución. *frequency_type* es de **tipo int**y su valor predeterminado es **64**. Hay 10 columnas de programación.  
+`[ @frequency_type = ] frequency_type` Es la frecuencia con la que se programa la tarea de distribución. *frequency_type* es de **tipo int**y su valor predeterminado es **64**. Hay 10 columnas de programación.  
   
-`[ @frequency_interval = ] frequency_interval`Es el valor que se aplica a la frecuencia establecida por *frequency_type*. *frequency_interval* es de **tipo int**y su valor predeterminado es **1**.  
+`[ @frequency_interval = ] frequency_interval` Es el valor que se aplica a la frecuencia establecida por *frequency_type*. *frequency_interval* es de **tipo int**y su valor predeterminado es **1**.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha de la tarea de distribución. *frequency_relative_interval* es de **tipo int**y su valor predeterminado es **1**.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha de la tarea de distribución. *frequency_relative_interval* es de **tipo int**y su valor predeterminado es **1**.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @frequency_subday = ] frequency_subday`Es la frecuencia, en minutos, con la que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y su valor predeterminado es **4**.  
+`[ @frequency_subday = ] frequency_subday` Es la frecuencia, en minutos, con la que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y su valor predeterminado es **4**.  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es **5**.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`Es la hora del día en la que la tarea de distribución se programa por primera vez. *active_start_time_of_day* es de **tipo int**y su valor predeterminado es **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día en la que la tarea de distribución se programa por primera vez. *active_start_time_of_day* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`Es la hora del día a la que la tarea de distribución deja de estar programada. *active_end_time_of_day* es de **tipo int**y su valor predeterminado es **235959**, lo que significa 11:59:59 P.M. en un reloj de 24 horas.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día a la que la tarea de distribución deja de estar programada. *active_end_time_of_day* es de **tipo int**y su valor predeterminado es **235959**, lo que significa 11:59:59 P.M. en un reloj de 24 horas.  
   
-`[ @active_start_date = ] active_start_date`Es la fecha en la que la tarea de distribución se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int**y su valor predeterminado es **0**.  
+`[ @active_start_date = ] active_start_date` Es la fecha en la que la tarea de distribución se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @active_end_date = ] active_end_date`Es la fecha en la que la tarea de distribución deja de estar programada, con el formato AAAAMMDD. *active_end_date* es de **tipo int**, con un valor predeterminado de **99991231**, que significa el 31 de diciembre de 9999.  
+`[ @active_end_date = ] active_end_date` Es la fecha en la que la tarea de distribución deja de estar programada, con el formato AAAAMMDD. *active_end_date* es de **tipo int**, con un valor predeterminado de **99991231**, que significa el 31 de diciembre de 9999.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe usar el *publicador* al cambiar las propiedades de un artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
@@ -80,14 +81,14 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changesubscriber_schedule** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_changesubscriber_schedule**.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_addsubscriber_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
+ [sp_addsubscriber_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

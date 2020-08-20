@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_population_ranges (Transact-SQL)
 title: Sys. dm_fts_population_ranges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
@@ -20,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b023dcfbf413162c6118ec7f590c1e2326a7813
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 546eb1cd48acaf57c5b930ffb35bb4d88bcfd42e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493727"
 ---
 # <a name="sysdm_fts_population_ranges-transact-sql"></a>sys.dm_fts_population_ranges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,18 +45,18 @@ ms.locfileid: "85738649"
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
  
 ## <a name="physical-joins"></a>Combinaciones físicas  
  ![Combinaciones significativas de esta vista de administración dinámica](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-population-ranges-1.gif "Combinaciones significativas de esta vista de administración dinámica")  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|Varios a uno|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
   [Funciones y vistas de administración dinámica de la búsqueda de texto completo y la búsqueda semántica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

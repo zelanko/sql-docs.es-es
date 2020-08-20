@@ -1,4 +1,5 @@
 ---
+description: Configuración de la migración de datos (SybaseToSQL)
 title: Configuración de migración de datos (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b86114566be6b560aa571f15af1e3dfac3e59501
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7df7afd3e58c93d2d9a4e30ef87039cdca9b5dc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492339"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Configuración de la migración de datos (SybaseToSQL)
   
@@ -52,6 +53,6 @@ Hay dos botones presentes:
   
 -   **Cancelar:** Haga clic en **Cancelar** para restaurar la configuración presente antes de que se realizaran los cambios.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Migración de datos de Oracle a SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

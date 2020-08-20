@@ -1,4 +1,5 @@
 ---
+description: Carga de objetos de base de datos convertidos en SQL Server (SybaseToSQL)
 title: Carga de objetos de base de datos convertidos en SQL Server (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6eccefe78840973f0275bd8453872a675e2d9ae
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8cf1c6af1a526efe771ccbd3b0f02f35670a1130
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492185"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Carga de objetos de base de datos convertidos en SQL Server (SybaseToSQL)
 Después de haber convertido los objetos de base de datos de Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, puede cargar los objetos de base de datos resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Puede hacer que SSMA cree los objetos, o bien puede crear un script de los objetos y ejecutar los scripts usted mismo. Además, SSMA le permite actualizar los metadatos de destino con el contenido real de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.  
@@ -44,7 +45,7 @@ Para usar SSMA para crear [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
 3.  Una vez que haya seleccionado los objetos que desea procesar en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos o SQL Azure, haga clic con el botón secundario en **bases**de datos y, a continuación, haga clic en **sincronizar con base**de datos.  
   
-    También puede sincronizar objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta primaria y, a continuación, haga clic en **sincronizar con base de datos**.  
+    También puede sincronizar objetos individuales o categorías de objetos; para ello, haga clic con el botón secundario en el objeto o en su carpeta primaria y, a continuación, haga clic en  **sincronizar con base de datos**.  
   
     Después, SSMA mostrará el cuadro de diálogo **sincronizar con base de datos** , donde podrá ver dos grupos de elementos. En el lado izquierdo, SSMA muestra los objetos de base de datos seleccionados representados en un árbol. En el lado derecho, puede ver un árbol que representa los mismos objetos en los metadatos de SSMA. Para expandir el árbol, haga clic en el botón de la derecha o la izquierda ' + '. La dirección de la sincronización se muestra en la columna Acción situada entre los dos árboles.  
   

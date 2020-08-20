@@ -1,4 +1,5 @@
 ---
+description: Configuración del cifrado de columna mediante Always Encrypted con PowerShell
 title: Configuración del cifrado de columna mediante Always Encrypted con PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -11,12 +12,12 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d89ff5d6ef855cce31e4cbde02f5a45a2131d2e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 623986a7ff2adaa7b2769090c2d94a8e9ebf2e83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493825"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Configuración del cifrado de columna mediante Always Encrypted con PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ En este artículo se proporcionan los pasos necesarios para establecer la config
 ::: moniker-end
 Para más información sobre la compatibilidad de Always Encrypted con el módulo SqlServer de PowerShell, consulte [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Para establecer la configuración de cifrado de destino, debe asegurarse de que:
 - Hay una clave de cifrado de columna configurada en la base de datos (si está cifrando o volviendo a cifrar una columna). Para obtener más información, vea [Configuración de claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).
@@ -65,7 +66,7 @@ Tarea  |Artículo  |Accede a claves de texto no cifrado o a almacén de claves  
 ---|---|---|---
 Paso 1. Inicie un entorno de PowerShell e importe el módulo SqlServer. | [Importar el módulo SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | No | No
 Paso 2. Conecte con el servidor y la base de datos. | [Conexión a una base de datos](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | No | Sí
-Paso 3. Autentíquese en Azure si la clave maestra de columna (que protege la clave de cifrado de columna que se va a rotar) se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sí | No
+Paso 3. Autentíquese en Azure si la clave maestra de columna (que protege la clave de cifrado de columna que se va a rotar) se almacena en el Almacén de claves de Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sí | No
 Paso 4. Construya una matriz de objetos SqlColumnEncryptionSettings, una para cada columna de base de datos que quiera cifrar, volver a cifrar o descifrar. SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Especifica el esquema de cifrado de destino de una columna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No
 Paso 5. Establezca la configuración de cifrado que quiera, especificada en la matriz de objetos SqlColumnMasterKeySettings que creó en el paso anterior. Una columna se cifrará, se volverá a cifrar o se descifrará en función de la configuración de destino especificada y la configuración de cifrado actual de la columna.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Nota:** Este paso puede llevar mucho tiempo. Las aplicaciones no podrán tener acceso a las tablas durante toda la operación o parte de esta, dependiendo del enfoque (en línea o sin conexión) que seleccione. | Sí | Sí
 

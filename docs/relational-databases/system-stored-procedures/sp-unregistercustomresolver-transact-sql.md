@@ -1,4 +1,5 @@
 ---
+description: sp_unregistercustomresolver (Transact-SQL)
 title: sp_unregistercustomresolver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 935796cb328807eb4413991eeac97a95bd9b9384
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1d5957d830b322be2b4c32030a514988583522f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492921"
 ---
 # <a name="sp_unregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +38,12 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @article_resolver = ] 'article_resolver'`Especifica el nombre de la lógica de negocios personalizada que se va a eliminar del registro. *article_resolver* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado. Si la lógica de negocios que se va a quitar es un componente COM, este parámetro es el nombre descriptivo del componente. Si la lógica de negocios es un ensamblado de .NET Framework, este parámetro es el nombre del ensamblado.  
+`[ @article_resolver = ] 'article_resolver'` Especifica el nombre de la lógica de negocios personalizada que se va a eliminar del registro. *article_resolver* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado. Si la lógica de negocios que se va a quitar es un componente COM, este parámetro es el nombre descriptivo del componente. Si la lógica de negocios es un ensamblado de .NET Framework, este parámetro es el nombre del ensamblado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_unregistercustomresolver** se utiliza en la replicación de mezcla.  
   
  Utilice [sp_enumcustomresolvers](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) en cualquier servidor de la topología de replicación para devolver la lista de módulos de lógica de negocios personalizados registrados o los solucionadores com disponibles para la topología.  
@@ -50,9 +51,9 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_unregistercustomresolver**.  
   
-## <a name="see-also"></a>Consulte también  
- [sp_lookupcustomresolver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
- [sp_registercustomresolver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [sp_lookupcustomresolver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
+ [sp_registercustomresolver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

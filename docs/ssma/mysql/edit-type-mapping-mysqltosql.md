@@ -1,4 +1,5 @@
 ---
+description: Editar asignación de tipo (MySQLToSQL)
 title: Editar la asignación de tipos (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 20c0eda313a16ac1f896a1382b8d7ad3546144f1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7dc968e4e9bd2d33c4a15de625f5abd12a3696a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492458"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Editar asignación de tipo (MySQLToSQL)
 El cuadro de diálogo **Editar asignación de tipos** permite especificar cómo se asignan los tipos entre los objetos de base de datos de origen y de destino.  

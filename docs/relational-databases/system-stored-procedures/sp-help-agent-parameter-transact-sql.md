@@ -1,4 +1,5 @@
 ---
+description: sp_help_agent_parameter (Transact-SQL)
 title: sp_help_agent_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 638706d8d49088d381fbefe54610b11486100226
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cfb61e7c3bbfcbb3bd1c93bff3d650912f7ebd01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493253"
 ---
 # <a name="sp_help_agent_parameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id`Es el identificador del perfil de la [MSagent_parameters &#40;tabla de&#41;de Transact-SQL](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . *profile_id* es de **tipo int**y su valor predeterminado es **-1**, que devuelve todos los parámetros.  
+`[ @profile_id = ] profile_id` Es el identificador del perfil de la [MSagent_parameters &#40;tabla de&#41;de Transact-SQL ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . *profile_id* es de **tipo int**y su valor predeterminado es **-1**, que devuelve todos los parámetros.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -50,16 +51,16 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_help_agent_parameter** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** pueden ejecutar **sp_help_agent_parameter**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Trabajar con perfiles de agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [sp_add_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [sp_add_agent_parameter &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

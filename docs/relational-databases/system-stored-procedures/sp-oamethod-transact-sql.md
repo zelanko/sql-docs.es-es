@@ -1,4 +1,5 @@
 ---
+description: sp_OAMethod (Transact-SQL)
 title: sp_OAMethod (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9dced2e79df59117a0ae17e0cee2a1429ebd1d0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98e487f2393aba0c33f91fba6a41dd096cb61368
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493124"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   El método devuelve una matriz como parámetro de salida.  
   
-`[ _@parametername = ] parameter[ OUTPUT ]`Es un parámetro de método. Si se especifica, el *parámetro* debe ser un valor del tipo de datos adecuado.  
+`[ _@parametername = ] parameter[ OUTPUT ]` Es un parámetro de método. Si se especifica, el *parámetro* debe ser un valor del tipo de datos adecuado.  
   
  Para obtener el valor devuelto de un parámetro de salida, el *parámetro* debe ser una variable local del tipo de datos adecuado y se debe especificar **Output** . Si se especifica un parámetro constante, o si no se especifica **Output** , se omite cualquier valor devuelto de un parámetro de salida.  
   
@@ -101,11 +102,11 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  También puede usar **sp_OAMethod** para obtener un valor de propiedad.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol fijo de servidor **sysadmin** o al permiso Execute directamente en este procedimiento almacenado. `Ole Automation Procedures`la configuración debe estar **habilitada** para usar cualquier procedimiento del sistema relacionado con la automatización OLE.  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o al permiso Execute directamente en este procedimiento almacenado. `Ole Automation Procedures` la configuración debe estar **habilitada** para usar cualquier procedimiento del sistema relacionado con la automatización OLE.  
   
 ## <a name="examples"></a>Ejemplos  
   

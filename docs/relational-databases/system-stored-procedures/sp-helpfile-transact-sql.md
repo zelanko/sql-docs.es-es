@@ -1,4 +1,5 @@
 ---
+description: sp_helpfile (Transact-SQL)
 title: sp_helpfile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86fdfa8fe60e16cbfa9bfd0364953ec1df84a20f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9974e4e83247b7af96937bb9cbb304d617a49934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881560"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493247"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @filename = ] 'name'`Es el nombre lógico de cualquier archivo de la base de datos actual. *Name* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *Name* , se devuelven los atributos de todos los archivos de la base de datos actual.  
+`[ @filename = ] 'name'` Es el nombre lógico de cualquier archivo de la base de datos actual. *Name* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *Name* , se devuelven los atributos de todos los archivos de la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -51,7 +52,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**name**|**sysname**|Nombre de archivo lógico.|  
 |**ID**|**smallint**|Identificador numérico del archivo. No se devuelve si *name* se especifica name *.*|  
 |**filename**|**NCHAR (260)**|Nombre de archivo físico.|  
-|**filegroup**|**sysname**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es un archivo de registro. Nunca forma parte de un grupo de archivos.|  
+|**prima**|**sysname**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es un archivo de registro. Nunca forma parte de un grupo de archivos.|  
 |**size**|**nvarchar(15**|Tamaño del archivo en kilobytes.|  
 |**tamañomáximo**|**nvarchar(15**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
 |**crezca**|**nvarchar(15**|Incremento de crecimiento del archivo. Indica la cantidad de espacio que se agrega al archivo cada vez que se necesita espacio nuevo.<br /><br /> 0 = El archivo tiene un tamaño fijo y no aumenta.|  
@@ -71,11 +72,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_helpfilegroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
- [Sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_helpfilegroup &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [Sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Sys. grupos de archivos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Archivos y grupos de archivos de base de datos](../../relational-databases/databases/database-files-and-filegroups.md)  
   

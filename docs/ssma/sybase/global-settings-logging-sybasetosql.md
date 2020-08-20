@@ -1,4 +1,5 @@
 ---
+description: Configuración global (registro) (SybaseToSQL)
 title: Configuración global (registro) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 10a0b901a8e3681e4d74eccbe31e74119ad1ad6e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: bc71ae0d44048d656bfba1a81ba19b9cb0ee0269
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492285"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>Configuración global (registro) (SybaseToSQL)
 Utilice el cuadro de diálogo **configuración global** para especificar la configuración de registro para SSMA. Normalmente, esta configuración solo se puede cambiar cuando se trabaja con soporte técnico del producto.  
@@ -45,9 +46,9 @@ Para cada opción en **nivel de mensajes**, configure uno de los siguientes nive
 |-|-|  
 |**Error irrecuperable**|Escriba solo mensajes de error irrecuperables en el registro.|  
 |**Error**|Escriba mensajes de error y de error grave en el registro.|  
-|**Advertencia**|Escriba mensajes de advertencia, error y error grave en el registro.|  
+|**Warning (ADVERTENCIA)**|Escriba mensajes de advertencia, error y error grave en el registro.|  
 |**Información**|Escriba mensajes informativos, de advertencia, de error y de error grave en el registro.|  
-|**Depurar**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
+|**Depuración**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
   
 **Ruta del archivo de registro**  
 La ruta de acceso del archivo y el nombre de los archivos de registro de SSMA. Para especificar otro nombre, haga clic en la ruta de acceso actual y, a continuación, haga clic en el botón Examinar (**...**).  

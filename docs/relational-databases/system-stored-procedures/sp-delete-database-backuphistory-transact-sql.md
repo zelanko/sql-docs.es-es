@@ -1,4 +1,5 @@
 ---
+description: sp_delete_database_backuphistory (Transact-SQL)
 title: sp_delete_database_backuphistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a820a9a1da8a3938835f02a68d481b5f88790d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493332"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database_name = ] database_name`Especifica el nombre de la base de datos implicada en las operaciones de copia de seguridad y restauración. *database_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @database_name = ] database_name` Especifica el nombre de la base de datos implicada en las operaciones de copia de seguridad y restauración. *database_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -81,8 +82,8 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
   
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [sp_delete_backuphistory &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [sp_delete_backuphistory &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [Historial de copias de seguridad e información de encabezados &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

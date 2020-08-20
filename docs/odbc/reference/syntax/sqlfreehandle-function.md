@@ -1,4 +1,5 @@
 ---
+description: Función SQLFreeHandle
 title: Función SQLFreeHandle | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b136dec98a19676aa67c78615d8fe931f62aafa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e90be541b73e0a5fefb7a082bad27f29c3a6d2a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491276"
 ---
 # <a name="sqlfreehandle-function"></a>Función SQLFreeHandle
 **Conformidad**  
@@ -67,7 +68,7 @@ SQLRETURN SQLFreeHandle(
  *Handle*  
  Entradas Identificador que se va a liberar.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_ERROR o SQL_INVALID_HANDLE.  
   
  Si **SQLFreeHandle** devuelve SQL_ERROR, el identificador sigue siendo válido.  
@@ -77,7 +78,7 @@ SQLRETURN SQLFreeHandle(
   
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|(DM) el argumento *HandleType* se SQL_HANDLE_ENV y al menos una conexión se encontraba en un estado asignado o conectado. Se debe llamar a **SQLDisconnect** y **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_DBC para cada conexión antes de llamar a **SQLFreeHandle** con un *HandleType* de SQL_HANDLE_ENV.<br /><br /> (DM) el argumento *HandleType* se SQL_HANDLE_DBC y se llamó a la función antes de llamar a **SQLDisconnect** para la conexión.<br /><br /> (DM) el argumento *HandleType* se SQL_HANDLE_DBC. Se llamó a una función que se ejecuta de forma asincrónica con el *identificador* y la función todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) el argumento *HandleType* se SQL_HANDLE_STMT. Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** con el identificador de instrucción y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) el argumento *HandleType* se SQL_HANDLE_STMT. Se llamó a una función que se ejecuta de forma asincrónica en el identificador de instrucción o en el identificador de conexión asociado y la función todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) el argumento *HandleType* se SQL_HANDLE_DESC. Se llamó a una función que se ejecuta de forma asincrónica en el identificador de conexión asociado; y la función todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) no se liberaron todos los identificadores subsidiarios y otros recursos antes de que se llamara a **SQLFreeHandle** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para uno de los identificadores de instrucciones asociados al *identificador* y *HandleType* se estableció en SQL_HANDLE_STMT o SQL_HANDLE_DESC devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
 |HY013|Error de administración de memoria|El argumento *HandleType* se SQL_HANDLE_STMT o SQL_HANDLE_DESC y no se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
@@ -181,7 +182,7 @@ int main() {
 |Cancelar el procesamiento de instrucciones|[SQLCance función)](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Establecer un nombre de cursor|[Función SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Programa de ejemplo de ODBC](../../../odbc/reference/sample-odbc-program.md)

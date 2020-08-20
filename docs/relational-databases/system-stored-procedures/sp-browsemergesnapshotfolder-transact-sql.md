@@ -1,4 +1,5 @@
 ---
+description: sp_browsemergesnapshotfolder (Transact-SQL)
 title: sp_browsemergesnapshotfolder (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e03232e394adcb6c6ee8fcf208754cf72ca9e951
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f6f78e04052c204eda42ccda97227f0c5c2e0e7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493462"
 ---
 # <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -48,7 +49,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar (2000)**|Ruta de acceso completa del directorio de instantáneas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_browsemergesnapshotfolder** se utiliza en la replicación de mezcla.  
   
  Si la publicación está configurada para generar archivos de instantáneas en el directorio de trabajo y en la carpeta de instantáneas del publicador, el conjunto de resultados contendrá dos filas: la primera fila contendrá la carpeta de instantáneas de la publicación y la segunda fila contendrá el directorio de trabajo del publicador.  

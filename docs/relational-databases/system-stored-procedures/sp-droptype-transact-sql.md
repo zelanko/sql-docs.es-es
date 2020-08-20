@@ -1,4 +1,5 @@
 ---
+description: sp_droptype (Transact-SQL)
 title: sp_droptype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6417edeacfd9462e5619e2844d4a162976d038b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a20b3522e7e477af826e17d7fb654e3cd99220a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493277"
 ---
 # <a name="sp_droptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @typename = ] 'type'`Es el nombre de un tipo de datos de alias que posee. *Type* es de tipo **sysname**y no tiene ningún valor predeterminado.  
+`[ @typename = ] 'type'` Es el nombre de un tipo de datos de alias que posee. *Type* es de tipo **sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-type"></a>Tipo de código de retorno  
  0 (correcto) o 1 (error)  
@@ -70,8 +71,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addtype &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_addtype &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplicationdboption (Transact-SQL)
 title: sp_helpreplicationdboption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a09f31e6dca74e00248cb13801d9c5acec11bb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493158"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,17 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'`Es el nombre de la base de datos. *dbname* es de **tipo sysname y su**valor predeterminado es **%** . Si **%** es, el conjunto de resultados contiene todas las bases de datos del publicador; de lo contrario, solo se devuelve información sobre la base de datos especificada. No se devuelve ninguna información para las bases de datos en que el usuario no tiene los permisos correspondientes según se describe a continuación.  
+`[ @dbname = ] 'dbname'` Es el nombre de la base de datos. *dbname* es de **tipo sysname y su**valor predeterminado es **%** . Si **%** es, el conjunto de resultados contiene todas las bases de datos del publicador; de lo contrario, solo se devuelve información sobre la base de datos especificada. No se devuelve ninguna información para las bases de datos en que el usuario no tiene los permisos correspondientes según se describe a continuación.  
   
-`[ @type = ] 'type'`Restringe el conjunto de resultados para que contenga solo las bases de datos en las que se ha habilitado el valor de *tipo* de opción de replicación especificado. *Type* es de tipo **sysname**y puede tener uno de los valores siguientes.  
+`[ @type = ] 'type'` Restringe el conjunto de resultados para que contenga solo las bases de datos en las que se ha habilitado el valor de *tipo* de opción de replicación especificado. *Type* es de tipo **sysname**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**publicar**|La replicación transaccional está permitida.|  
 |**merge publish**|La replicación de mezcla está permitida.|  
 |**replicación permitida** (valor predeterminado)|La replicación transaccional o de mezcla están permitidas.|  
   
-`[ @reserved = ] reserved`Especifica si se devuelve información sobre las publicaciones y suscripciones existentes. *Reserved* es de **bit**y su valor predeterminado es 0. Si es **1**, el conjunto de resultados incluye información sobre si la base de datos especificada tiene publicaciones o suscripciones existentes.  
+`[ @reserved = ] reserved` Especifica si se devuelve información sobre las publicaciones y suscripciones existentes. *Reserved* es de **bit**y su valor predeterminado es 0. Si es **1**, el conjunto de resultados incluye información sobre si la base de datos especificada tiene publicaciones o suscripciones existentes.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -67,14 +68,14 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpreplicationdboption** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
  Los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_helpreplicationdboption** para cualquier base de datos. Los miembros del rol fijo de base de datos **db_owner** pueden ejecutar **sp_helpreplicationdboption** para esa base de datos.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_replicationdboption &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

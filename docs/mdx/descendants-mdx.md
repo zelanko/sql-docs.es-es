@@ -1,4 +1,5 @@
 ---
+description: Descendants (MDX)
 title: Descendientes (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b883d1ce73a7259b285748e5a66f283a7d830424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491444"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 
@@ -61,7 +62,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  Si se especifica una expresión de conjunto, la función **Descendants** se resuelve individualmente para cada miembro del conjunto y se vuelve a crear el conjunto. En otras palabras, la sintaxis que se usa para la función **Descendants** es funcionalmente equivalente a la función [Generate](../mdx/generate-mdx.md) de MDX.  
   
- Si no se especifica ningún nivel o distancia, el valor predeterminado para el nivel utilizado por la función se determina mediante una [Level](../mdx/level-mdx.md) llamada a la función \<level (<miembro>>. Nivel) para el miembro especificado (si se especifica un miembro) o mediante una llamada a la función **LEVEL** para cada miembro del conjunto especificado (si se especifica un conjunto). Si no se especifican una expresión de nivel, una distancia o marcas, la función tiene el mismo efecto que el uso de la sintaxis siguiente:  
+ Si no se especifica ningún nivel o distancia, el valor predeterminado para el nivel utilizado por la función se determina mediante una llamada a la función [LEVEL](../mdx/level-mdx.md) (<\<Member>>. Nivel) para el miembro especificado (si se especifica un miembro) o mediante una llamada a la función **LEVEL** para cada miembro del conjunto especificado (si se especifica un conjunto). Si no se especifican una expresión de nivel, una distancia o marcas, la función tiene el mismo efecto que el uso de la sintaxis siguiente:  
   
  `Descendants`  
   
@@ -123,7 +124,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- En el ejemplo siguiente se devuelve el promedio diario `Measures.[Gross Profit Margin]` de la medida, calculado a lo largo de los días de cada mes del año fiscal 2003, del cubo **Adventure Works** . La función **Descendants** devuelve un conjunto de días determinado a partir del miembro actual de `[Date].[Fiscal]` la jerarquía.  
+ En el ejemplo siguiente se devuelve el promedio diario de la `Measures.[Gross Profit Margin]` medida, calculado a lo largo de los días de cada mes del año fiscal 2003, del cubo **Adventure Works** . La función **Descendants** devuelve un conjunto de días determinado a partir del miembro actual de la `[Date].[Fiscal]` jerarquía.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  

@@ -1,4 +1,5 @@
 ---
+description: sp_delete_category (Transact-SQL)
 title: sp_delete_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6962e4bb4387cad22e16d62176ced10ad8e82205
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1d3441ae51bd674f41cce42fe17393bbcb6983df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493343"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'`Clase de la categoría. la *clase* es **VARCHAR (8)**, no tiene ningún valor predeterminado y debe tener uno de estos valores.  
+`[ @class = ] 'class'` Clase de la categoría. la *clase* es **VARCHAR (8)**, no tiene ningún valor predeterminado y debe tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**TRABAJO**|Elimina una categoría de trabajo.|  
 |**ONALERT**|Elimina una categoría de alerta.|  
 |**OPERATOR**|Elimina una categoría de operador.|  
   
-`[ @name = ] 'name'`Nombre de la categoría que se va a quitar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'` Nombre de la categoría que se va a quitar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -77,10 +78,10 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
- [sp_help_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
- [sp_update_category &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_help_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
+ [sp_update_category &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

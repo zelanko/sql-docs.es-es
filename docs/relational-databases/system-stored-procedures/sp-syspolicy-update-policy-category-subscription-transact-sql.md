@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 title: sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fde97529258f8f413a50db1933a95c1842f20c1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493004"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`Es el identificador de la suscripción de categoría de directiva que desea actualizar. *policy_category_subscription_id* es de **tipo int**y es obligatorio.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Es el identificador de la suscripción de categoría de directiva que desea actualizar. *policy_category_subscription_id* es de **tipo int**y es obligatorio.  
   
-`[ @target_type = ] 'target_type'`Es el tipo de destino de la suscripción de categoría. *target_type* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @target_type = ] 'target_type'` Es el tipo de destino de la suscripción de categoría. *target_type* es de **tipo sysname y su**valor predeterminado es NULL.  
   
  Si especifica *target_type*, el valor se debe establecer en ' Database '.  
   
-`[ @target_object = ] 'target_object'`Es el nombre de la base de datos que se suscribirá a la categoría de directiva. *target_object* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @target_object = ] 'target_object'` Es el nombre de la base de datos que se suscribirá a la categoría de directiva. *target_object* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @policy_category = ] 'policy_category'`Es el nombre de la categoría de directiva a la que desea que se suscriba la base de datos. *policy_category* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @policy_category = ] 'policy_category'` Es el nombre de la categoría de directiva a la que desea que se suscriba la base de datos. *policy_category* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Debe ejecutar sp_syspolicy_update_policy_category_subscription en el contexto de la base de datos del sistema msdb.  
   
  Para obtener valores para *policy_category_subscription_id* y para *policy_category*, puede usar la siguiente consulta:  
@@ -87,7 +88,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_add_policy_category_subscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
- [sp_syspolicy_delete_policy_category_subscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
+ [sp_syspolicy_add_policy_category_subscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
+ [sp_syspolicy_delete_policy_category_subscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
   
   

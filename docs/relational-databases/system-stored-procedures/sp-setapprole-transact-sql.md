@@ -1,4 +1,5 @@
 ---
+description: sp_setapprole (Transact-SQL)
 title: sp_setapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba0a1d118ce62912e082b0553f000018e5d8233e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e8680d0f122d2b89c199172866a40dd55981a00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493087"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -45,24 +46,24 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Argumentos
 
-`[ @rolename = ] 'role'`Es el nombre del rol de aplicación definido en la base de datos actual. *role* es de **tipo sysname**y no tiene ningún valor predeterminado. el *rol* debe existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre del rol de aplicación definido en la base de datos actual. *role* es de **tipo sysname**y no tiene ningún valor predeterminado. el *rol* debe existir en la base de datos actual.  
   
-`[ @password = ] { encrypt N'password' }`Es la contraseña requerida para activar el rol de aplicación. *password* es de **tipo sysname**y no tiene ningún valor predeterminado. la *contraseña* se puede ofuscar mediante la función **Encrypt** de ODBC. Cuando se usa la función **Encrypt** , la contraseña se debe convertir en una cadena Unicode colocando **N** delante de la primera comilla.  
+`[ @password = ] { encrypt N'password' }` Es la contraseña requerida para activar el rol de aplicación. *password* es de **tipo sysname**y no tiene ningún valor predeterminado. la *contraseña* se puede ofuscar mediante la función **Encrypt** de ODBC. Cuando se usa la función **Encrypt** , la contraseña se debe convertir en una cadena Unicode colocando **N** delante de la primera comilla.  
   
  No se admite la opción Encrypt en las conexiones que usan **SqlClient**.  
   
 > [!IMPORTANT]  
 > La función **Encrypt** de ODBC no proporciona cifrado. No debe confiar a esta función la protección de las contraseñas que se transmiten en una red. Si esta información se va a transmitir a través de una red, use TLS o IPSec.
   
- **@encrypt= ' none '**  
+ **@encrypt = ' none '**  
  Especifica que no se utiliza ofuscación. La contraseña se pasa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como texto simple. Este es el valor predeterminado.  
   
  **@encrypt= ' ODBC '**  
  Especifica que ODBC ofuscará la contraseña mediante la función **Encrypt** de ODBC antes de enviar la contraseña a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Solo se puede especificar cuando se utiliza un cliente ODBC o el Proveedor OLE DB para SQL Server.  
   
-`[ @fCreateCookie = ] true | false`Especifica si se va a crear una cookie. **true** se convierte implícitamente a 1. **false** se convierte implícitamente a 0.  
+`[ @fCreateCookie = ] true | false` Especifica si se va a crear una cookie. **true** se convierte implícitamente a 1. **false** se convierte implícitamente a 0.  
   
-`[ @cookie = ] @cookie OUTPUT`Especifica un parámetro de salida que contendrá la cookie. La cookie solo se genera si el valor de ** \@ fCreateCookie** es **true**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` Especifica un parámetro de salida que contendrá la cookie. La cookie solo se genera si el valor de ** \@ fCreateCookie** es **true**. **varbinary(8000)**  
   
 > [!NOTE]  
 > El parámetro **OUTPUT** de la cookie para **sp_setapprole** está documentado actualmente como **varbinary(8000)** , que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(50)** . Las aplicaciones deben seguir reservando **varbinary (8000)** para que la aplicación siga funcionando correctamente si el tamaño de retorno de la cookie aumenta en una versión futura.
@@ -71,7 +72,7 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (correcto) y 1 (error)  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
  Después de activar un rol de aplicación mediante **sp_setapprole**, el rol permanece activo hasta que el usuario se desconecta del servidor o ejecuta **sp_unsetapprole**. **sp_setapprole** solo se pueden ejecutar mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones directas. **sp_setapprole** no se pueden ejecutar dentro de otro procedimiento almacenado o dentro de una transacción definida por el usuario.  
   

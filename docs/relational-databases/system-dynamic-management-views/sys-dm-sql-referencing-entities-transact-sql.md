@@ -1,4 +1,5 @@
 ---
+description: sys.dm_sql_referencing_entities (Transact-SQL)
 title: Sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 03848d99d6af31e1ceb04e10f97af26fac58011f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493591"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,15 +61,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- `schema_name.referenced_entity_name`Es el nombre de la entidad a la que se hace referencia.  
+ `schema_name.referenced_entity_name` Es el nombre de la entidad a la que se hace referencia.  
   
  `schema_name` se requiere excepto cuando la clase a la que se hace referencia es PARTITION_FUNCTION.  
   
- `schema_name.referenced_entity_name`es de tipo **nvarchar (**-bajo).  
+ `schema_name.referenced_entity_name` es de tipo **nvarchar (**-bajo).  
   
- `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`Es la clase de la entidad a la que se hace referencia. Solo se puede especificar una clase por instrucción.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` Es la clase de la entidad a la que se hace referencia. Solo se puede especificar una clase por instrucción.  
   
- `<referenced_class>`es de tipo **nvarchar**(60).  
+ `<referenced_class>` es de tipo **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
@@ -116,7 +117,7 @@ sys.dm_sql_referencing_entities (
 |Colección de esquemas XML|No|Sí|  
 |Función de partición|No|Sí|  
   
- \*Se realiza un seguimiento de una tabla como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, un tipo definido por el usuario o una colección de esquemas XML en la definición de una columna calculada, una restricción check o una restricción default.  
+ \* Se realiza un seguimiento de una tabla como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, un tipo definido por el usuario o una colección de esquemas XML en la definición de una columna calculada, una restricción check o una restricción default.  
   
  ** No se realiza el seguimiento de los procedimientos almacenados numerados con un valor entero mayor que 1 como la entidad que hace referencia ni como la entidad a la que se hace referencia.  
   

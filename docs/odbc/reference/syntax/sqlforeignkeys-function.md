@@ -1,4 +1,5 @@
 ---
+description: Función SQLForeignKeys
 title: Función SQLForeignKeys | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5f2769fb378a5ee989fb6a0351537edb3de03469
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 802153837d53c6886b44511fbdffe6efa6b83281
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491308"
 ---
 # <a name="sqlforeignkeys-function"></a>Función SQLForeignKeys
 **Conformidad**  
@@ -111,7 +112,7 @@ SQLRETURN SQLForeignKeys(
  *NameLength6*  
  Entradas Longitud de **FKTableName*, en caracteres.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -124,7 +125,7 @@ SQLRETURN SQLForeignKeys(
 |24000|Estado de cursor no válido|Un cursor estaba abierto en el *StatementHandle*y se ha llamado a **SQLFetch** o **SQLFetchScroll** . Este error lo devuelve el administrador de controladores si **SQLFetch** o **sqlfetchscroll** no ha devuelto SQL_NO_DATA y lo devuelve el controlador si **SQLFetch** o **sqlfetchscroll** ha devuelto SQL_NO_DATA.<br /><br /> Un cursor estaba abierto en el *StatementHandle*, pero no se ha llamado a **SQLFetch** o **SQLFetchScroll** .|  
 |40001|Error de serialización|La transacción se revirtió debido a un interbloqueo de recursos con otra transacción.|  
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*y, a continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY009|Uso no válido de puntero nulo|(DM) los argumentos *PKTableName* y *FKTableName* eran punteros nulos.<br /><br /> El atributo de instrucción SQL_ATTR_METADATA_ID se estableció en SQL_TRUE, el argumento *FKCatalogName* o *PKCatalogName* era un puntero nulo y el SQL_CATALOG_NAME *InfoType* devuelve que se admiten los nombres de catálogo.<br /><br /> (DM) el atributo de instrucción SQL_ATTR_METADATA_ID se estableció en SQL_TRUE y el argumento *FKSchemaName*, *PKSchemaName*, *FKTableName*o *PKTableName* era un puntero nulo.|  
@@ -148,7 +149,7 @@ SQLRETURN SQLForeignKeys(
   
  Si \* *FKTableName* contiene un nombre de tabla, **SQLForeignKeys** devuelve un conjunto de resultados que contiene todas las claves externas de la tabla especificada que apuntan a las claves principales de otras tablas y a las claves principales de las otras tablas a las que hacen referencia. La lista de claves externas de la tabla especificada no contiene claves externas que hagan referencia a restricciones únicas de otras tablas.  
   
- \* *PKTableName* y \* *FKTableName* contienen nombres de tabla, **SQLForeignKeys** devuelve las claves externas de la tabla especificada en \* *FKTableName* que hacen referencia a la clave principal de la tabla especificada en **PKTableName*. Debe ser una clave como máximo.  
+ Si \* *PKTableName* y \* *FKTableName* contienen nombres de tabla, **SQLForeignKeys** devuelve las claves externas de la tabla especificada en \* *FKTableName* que hacen referencia a la clave principal de la tabla especificada en **PKTableName*. Debe ser una clave como máximo.  
   
 > [!NOTE]  
 >  Para obtener más información sobre el uso general, los argumentos y los datos devueltos de las funciones de catálogo de ODBC, vea [funciones de catálogo](../../../odbc/reference/develop-app/catalog-functions.md).  
@@ -329,6 +330,6 @@ SQLFreeStmt(hstmt, SQL_DROP);
 |Devolver las columnas de una clave principal|[Función SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
 |Devolver estadísticas y índices de tabla|[Función SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

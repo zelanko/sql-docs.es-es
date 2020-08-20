@@ -1,4 +1,5 @@
 ---
+description: sp_OAGetProperty (Transact-SQL)
 title: sp_OAGetProperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ca2b73fc6498d6cdf1d0addd11225d2ce2c0cb81
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6fb1683c5c873bf561c012e00907cbe90e1c1fbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493174"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -91,11 +92,11 @@ sp_OAGetProperty objecttoken , propertyname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  También puede usar **sp_OAMethod** para obtener un valor de propiedad.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol fijo de servidor **sysadmin** o al permiso Execute directamente en este procedimiento almacenado. `Ole Automation Procedures`la configuración debe estar **habilitada** para usar cualquier procedimiento del sistema relacionado con la automatización OLE.  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o al permiso Execute directamente en este procedimiento almacenado. `Ole Automation Procedures` la configuración debe estar **habilitada** para usar cualquier procedimiento del sistema relacionado con la automatización OLE.  
   
 ## <a name="examples"></a>Ejemplos  
   

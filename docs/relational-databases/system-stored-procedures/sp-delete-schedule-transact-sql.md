@@ -1,4 +1,5 @@
 ---
+description: sp_delete_schedule (Transact-SQL)
 title: sp_delete_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe6f851ffb3ab15781d5a2ffbbcaca3bf15829f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0746a5039d27cb03edd379b5dee9b69525125156
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493312"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] schedule_id`El número de identificación de la programación que se va a eliminar. *schedule_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @schedule_id = ] schedule_id` El número de identificación de la programación que se va a eliminar. *schedule_id* es de **tipo int**y su valor predeterminado es NULL.  
   
 > **Nota:** Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   
-`[ @schedule_name = ] 'schedule_name'`Nombre de la programación que se va a eliminar. *schedule_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @schedule_name = ] 'schedule_name'` Nombre de la programación que se va a eliminar. *schedule_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > **Nota:** Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   
-`[ @force_delete = ] force_delete`Especifica si el procedimiento debe generar un error si la programación está adjunta a un trabajo. *Force_delete* es de bit y su valor predeterminado es **0**. Cuando *force_delete* es **0**, el procedimiento almacenado genera un error si la programación está adjunta a un trabajo. Cuando *force_delete* es **1**, la programación se elimina independientemente de si la programación está adjunta a un trabajo.  
+`[ @force_delete = ] force_delete` Especifica si el procedimiento debe generar un error si la programación está adjunta a un trabajo. *Force_delete* es de bit y su valor predeterminado es **0**. Cuando *force_delete* es **0**, el procedimiento almacenado genera un error si la programación está adjunta a un trabajo. Cuando *force_delete* es **1**, la programación se elimina independientemente de si la programación está adjunta a un trabajo.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

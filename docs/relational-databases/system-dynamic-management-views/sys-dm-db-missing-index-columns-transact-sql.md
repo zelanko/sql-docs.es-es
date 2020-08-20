@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_missing_index_columns (Transact-SQL)
 title: Sys. dm_db_missing_index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23574f5bf194ca0d3bdc6b301cdb17b7be933ecd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3f09e272586753e4b47666290c8635f9276980ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493740"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |**column_name**|**sysname**|Nombre de la columna de la tabla.|  
 |**column_usage**|**VARCHAR (20)**|Forma en que la consulta utiliza la columna. Los valores posibles y sus descripciones son:<br /><br /> IGUALDAD: la columna contribuye a un predicado que expresa igualdad, con el formato: <br />                        *tabla. columna*  =  *constant_value*<br /><br /> Desigualdad: la columna contribuye a un predicado que expresa desigualdad, por ejemplo, un predicado con el formato: *TABLE. Column*  >  *constant_value*. Cualquier operador de comparación distinto de "=" expresa desigualdad.<br /><br /> INCLUDE: la columna no se utiliza para evaluar un predicado, pero se usa por otro motivo, por ejemplo, para cubrir una consulta.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La información que devuelve **sys.dm_db_missing_index_columns** se actualiza cuando el optimizador de consultas optimiza una consulta, pero no se almacena. La información sobre índices que faltan solo se conserva hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar copias de seguridad de forma periódica de la información de índices que faltan si desean conservarla después de reciclar el servidor.  
   
 ## <a name="transaction-consistency"></a>Coherencia de las transacciones  
@@ -84,7 +85,7 @@ ORDER BY mig.index_group_handle, mig.index_handle, column_id;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Sys. dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [Sys. dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
  [Sys. dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_system_components (Transact-SQL)
 title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0686017e612b5d9d7d2c1f932321a965b7f1448a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493213"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,19 +46,19 @@ sp_help_fulltext_system_components
  'all'  
  Devuelve información para todos los componentes de texto completo.  
   
-`[ @component_type = ] component_type`Especifica el tipo de componente. *component_type* puede ser una de las siguientes:  
+`[ @component_type = ] component_type` Especifica el tipo de componente. *component_type* puede ser una de las siguientes:  
   
 -   **separador**  
   
 -   **filter**  
   
--   **protocol handler**  
+-   **controlador de protocolo**  
   
 -   **FullPath**  
   
  Si se especifica una ruta de acceso completa, también se debe especificar *param* con la ruta de acceso completa del archivo DLL del componente; de lo contrario, se devuelve un mensaje de error.  
   
-`[ @param = ] param`Dependiendo del tipo de componente, es uno de los siguientes: un identificador de configuración regional (LCID), la extensión de archivo con el prefijo ".", el nombre de componente completo del controlador de protocolo o la ruta de acceso completa al archivo DLL del componente.  
+`[ @param = ] param` Dependiendo del tipo de componente, es uno de los siguientes: un identificador de configuración regional (LCID), la extensión de archivo con el prefijo ".", el nombre de componente completo del controlador de protocolo o la ruta de acceso completa al archivo DLL del componente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -84,7 +85,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol **Public** ; sin embargo, los usuarios solo pueden ver información sobre los catálogos de texto completo para los que tienen permiso VIEW DEFINITION. Solo los miembros del rol fijo de servidor **serveradmin** pueden ver los valores de la columna **fullpath** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este método es de particular importancia cuando se prepara una actualización. Ejecute el procedimiento almacenado en una base de datos determinada y utilice la salida para determinar si un catálogo concreto se verá afectado por la actualización.  
   
 ## <a name="examples"></a>Ejemplos  

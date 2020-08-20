@@ -1,4 +1,5 @@
 ---
+description: Configuración de opciones de proyecto (OracleToSQL)
 title: Establecer opciones de proyecto (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: e104c2ed456567074b796d68d5a82769ac67e5ac
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 89460a8efb6278d8e4aaa4def6310d6dec687429
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492371"
 ---
 # <a name="setting-project-options-oracletosql"></a>Configuración de opciones de proyecto (OracleToSQL)
 Puede establecer opciones de nivel de proyecto para cada proyecto de SSMA. Estas opciones especifican la conversión de objetos, la carga de objetos, la interfaz de usuario y la configuración de migración de datos. Antes de convertir objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -39,13 +40,13 @@ SSMA tiene cinco conjuntos de opciones de configuración del proyecto:
   
 También tiene cuatro modos para configurar estas opciones:  
   
--   Valor predeterminado  
+-   Default  
   
 -   Optimistic  
   
 -   Completo  
   
--   Personalizada  
+-   Personalizado  
   
 El modo predeterminado es el recomendado para la mayoría de los usuarios. El modo optimista mantiene más la sintaxis de Oracle actual y es más fácil de leer. Sin embargo, mantener la sintaxis actual podría no ser preciso. Si la sintaxis de Oracle se debe convertir en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sintaxis equivalente, el modo completo realiza la conversión más completa, pero es posible que el código resultante sea más difícil de leer. En el modo personalizado, se establecen las opciones.  
   
@@ -92,7 +93,7 @@ También puede personalizar la configuración del proyecto actual. Esta configur
   
 3.  Haga clic en **Aceptar** para guardar la configuración.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
 El siguiente paso de la migración depende de las necesidades del proyecto:  
   
 -   Para personalizar la asignación de los tipos de datos de origen y de destino, vea [asignar tipos de datos de Oracle y SQL Server &#40;&#41;OracleToSQL ](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  

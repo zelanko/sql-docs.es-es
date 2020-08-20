@@ -1,4 +1,5 @@
 ---
+description: syspolicy_system_health_state (Transact-SQL)
 title: syspolicy_system_health_state (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00815106-9fe4-481d-a9e1-a256101887f4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 500688f04715513bd0fe3849b095296e59bab747
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66a99f117b9c6d8de7a92d328da812869a594f73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493783"
 ---
 # <a name="syspolicy_system_health_state-transact-sql"></a>syspolicy_system_health_state (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85900558"
 |target_query_expression|**nvarchar(max)**|Expresión que define el destino con el que se evalúa la directiva.|  
 |resultado|**bit**|Estado de mantenimiento de este destino con respecto a la directiva:<br /><br /> 0 = Error<br /><br /> 1 = Correcto|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La vista syspolicy_system_health_state muestra el estado más reciente de la expresión de consulta de destino para cada directiva activa (habilitada). El Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y la página Detalles del Explorador de objetos agregan el estado de la directiva de mantenimiento en esta vista para mostrar el estado crítico.  
   
 ## <a name="permissions"></a>Permisos  

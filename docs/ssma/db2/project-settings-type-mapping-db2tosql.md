@@ -1,4 +1,5 @@
 ---
+description: Configuración del proyecto (asignación de tipo) (DB2ToSQL)
 title: Configuración del proyecto (asignación de tipo) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f56ae792c632928f05a8733b27074779352a37db
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fc7abeb4eec6d25e183db5ffcf1923185016b913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492550"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Configuración del proyecto (asignación de tipo) (DB2ToSQL)
 La página asignación de tipos del cuadro de diálogo **configuración del proyecto** contiene opciones que personalizan el modo en que SSMA convierte los tipos de datos de DB2 en tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de.  
@@ -41,7 +42,7 @@ Vea las tablas de la sección siguiente para obtener las asignaciones de tipos p
 **Add (Agregar)**  
 Haga clic para agregar un tipo de datos a la lista de asignaciones.  
   
-**Editar**  
+**Edición**  
 Haga clic en esta opción para modificar el tipo de datos seleccionado en la lista asignación.  
   
 **Remove**  
@@ -105,9 +106,9 @@ La tabla siguiente contiene la asignación de tipo de datos predeterminada para 
 |VARCHAR2|ntext|  
 |XmlType|Xml|  
   
-<sup>\*</sup>Solo se aplica a la asignación de tipo de valor devuelto.  
+<sup>\*</sup> Solo se aplica a la asignación de tipo de valor devuelto.  
   
-<sup>\*\*</sup>Solo se aplica a la asignación de tipos de argumento.  
+<sup>\*\*</sup> Solo se aplica a la asignación de tipos de argumento.  
   
 ### <a name="default-column-type-mapping"></a>Asignación de tipo de columna predeterminada  
 La tabla siguiente contiene la asignación de tipos predeterminada para las columnas.  
@@ -264,6 +265,6 @@ La tabla siguiente contiene la asignación de tipos predeterminada para las vari
 |VARCHAR2 [8001... \* ]|varcha (Max)|  
 |XmlType|Xml|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Referencia de la interfaz de usuario &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

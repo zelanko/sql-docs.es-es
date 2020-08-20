@@ -1,4 +1,5 @@
 ---
+description: Usar expresiones de conjunto
 title: Usar expresiones de conjuntos | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491389"
 ---
 # <a name="using-set-expressions"></a>Usar expresiones de conjunto
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893502"
   
  La expresión completa de un conjunto consta de cero o más tuplas especificadas explícitamente entre corchetes:  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
+ {[{ *Tuple_expression*  |  *Member_expression* } [, { *Tuple_expression*  |  *Member_expression* }]...]}  
   
  Las expresiones de miembro especificadas en expresiones de conjunto se convierten en expresiones de tupla de un miembro.  
   
@@ -60,6 +61,6 @@ ms.locfileid: "68893502"
  Para obtener ejemplos de funciones que devuelven conjuntos, vea [trabajar con miembros, tuplas y conjuntos &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Consulte también  
- [Expresiones &#40;&#41;MDX](../mdx/expressions-mdx.md)  
+ [Expresiones &#40;&#41;MDX ](../mdx/expressions-mdx.md)  
   
   

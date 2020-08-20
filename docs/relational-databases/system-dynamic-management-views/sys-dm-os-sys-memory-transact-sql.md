@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_sys_memory (Transact-SQL)
 title: Sys. dm_os_sys_memory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e79399d5483b84d893a2b4d3943dfd51aec7de6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 78f02c014874bdce9cf6d1f6e2c27ad0b3fad24d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493673"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "87396770"
 |**system_high_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria alta del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria alta. Para obtener más información, vea [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) en MSDN Library.|  
 |**system_low_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria baja del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria baja. Para obtener más información, vea [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) en MSDN Library.|  
 |**system_memory_state_desc**|**nvarchar(256)**|Descripción del estado de la memoria. Vea la tabla siguiente.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 |Condición|Value|  
 |---------------|-----------|  

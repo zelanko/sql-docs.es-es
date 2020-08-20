@@ -1,4 +1,5 @@
 ---
+description: sp_dropapprole (Transact-SQL)
 title: sp_dropapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 86aa6e39cd8086b906f3bf2c8c0dc9e80bc33034
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e02da3e5507b1376dba5ac170922a2bb9230054
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493328"
 ---
 # <a name="sp_dropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85860021"
   Quita un rol de aplicación de la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [Drop Application role](../../t-sql/statements/drop-application-role-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilice [Drop Application role](../../t-sql/statements/drop-application-role-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`Es el rol de aplicación que se va a quitar. *role* es un **sysname**y no tiene ningún valor predeterminado. el *rol* debe existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el rol de aplicación que se va a quitar. *role* es un **sysname**y no tiene ningún valor predeterminado. el *rol* debe existir en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -62,12 +63,12 @@ sp_dropapprole [@rolename = ] 'role'
 EXEC sp_dropapprole 'SalesApp';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addapprole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
- [QUITAR rol de aplicación &#40;&#41;de Transact-SQL](../../t-sql/statements/drop-application-role-transact-sql.md)   
- [sp_changeobjectowner &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
- [sp_setapprole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [sp_addapprole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [QUITAR rol de aplicación &#40;&#41;de Transact-SQL ](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [sp_changeobjectowner &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
+ [sp_setapprole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_wait_stats (Azure SQL Database)
 title: Sys. dm_db_wait_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8932754b69fab7086f0eb6a98d979e93669daff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493785"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85677580"
 |max_wait_time_ms|**bigint**|Tiempo de espera máximo de este tipo de espera.|  
 |signal_wait_time_ms|**bigint**|Diferencia entre el momento en que se indicó el subproceso en espera y el momento en que empezó a ejecutarse.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 -   Esta vista de administración dinámica solo muestra datos para la base de datos actual.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "85677580"
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
   
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Tipos de esperas  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> Tipos de esperas  
  Esperas de recursos  
  Las esperas de recursos tienen lugar cuando un trabajador solicita acceso a un recurso que no está disponible porque otro trabajador lo está utilizando o aún no está disponible. Algunos ejemplos de esperas de recursos son los bloqueos, bloqueos temporales y esperas de red y E/S de disco. Las esperas de bloqueos y bloqueos temporales son esperas en objetos de sincronización.  
   

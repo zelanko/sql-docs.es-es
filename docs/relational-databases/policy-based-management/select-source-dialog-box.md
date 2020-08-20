@@ -1,4 +1,5 @@
 ---
+description: Seleccionar origen (cuadro de diálogo)
 title: Seleccionar origen (cuadro de diálogo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: d664c2e5-dd0c-4da8-b27d-aa4ee4fc0ffd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ebbe01dcc03ef670ac41ca0842f702c8e637cb37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ea25aebc5368295f13105ecc58d18e86bfc6071
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493984"
 ---
 # <a name="select-source-dialog-box"></a>Seleccionar origen (cuadro de diálogo)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,11 +28,11 @@ ms.locfileid: "85760461"
   
  **Para abrir este cuadro de diálogo**  
   
--   En Servidores registrados, haga clic con el botón derecho en **Grupos de servidores locales** , en cualquier servidor de **Grupos de servidores locales**o en cualquier servidor de **Servidores de administración central**y seleccione **Evaluar directivas**. En la página **Selección de directiva** del cuadro de diálogo **Evaluar directivas** , haga clic en el botón Examinar ( **...** ).  
+-   En Servidores registrados, haga clic con el botón derecho en **Grupos de servidores locales** , en cualquier servidor de **Grupos de servidores locales**o en cualquier servidor de **Servidores de administración central**y seleccione **Evaluar directivas**. En la página **Selección de directiva** del cuadro de diálogo **Evaluar directivas** , haga clic en el botón Examinar (**...**).  
   
--   En el Explorador de objetos, expanda **Administración**, expanda **Administración de directivas**, haga clic con el botón derecho en **Directivas**y, después, seleccione **Importar directiva**. En el cuadro de diálogo **Importar** , haga clic en el botón Examinar ( **...** ).  
+-   En el Explorador de objetos, expanda **Administración**, expanda **Administración de directivas**, haga clic con el botón derecho en **Directivas**y, después, seleccione **Importar directiva**. En el cuadro de diálogo **Importar** , haga clic en el botón Examinar (**...**).  
   
--   En el Explorador de objetos, haga clic con el botón derecho en un servidor, una base de datos o un objeto de base de datos, seleccione **Directivas**y, después, seleccione **Evaluar**. En la página **Selección de directiva** del cuadro de diálogo **Evaluar directivas** , haga clic en el botón Examinar ( **...** ).  
+-   En el Explorador de objetos, haga clic con el botón derecho en un servidor, una base de datos o un objeto de base de datos, seleccione **Directivas**y, después, seleccione **Evaluar**. En la página **Selección de directiva** del cuadro de diálogo **Evaluar directivas** , haga clic en el botón Examinar (**...**).  
   
 ## <a name="options"></a>Opciones  
  **Archivos**  

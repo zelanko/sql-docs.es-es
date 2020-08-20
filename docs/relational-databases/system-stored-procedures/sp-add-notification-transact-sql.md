@@ -1,4 +1,5 @@
 ---
+description: sp_add_notification (Transact-SQL)
 title: sp_add_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7492c9cd086d63a00909fc64bde87c39aaf2c096
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c009cd32cf3fdd92fbb638a00d5f1f4a024a1b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493548"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @alert_name = ] 'alert'`La alerta de esta notificación. la *alerta* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @alert_name = ] 'alert'` La alerta de esta notificación. la *alerta* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @operator_name = ] 'operator'`Operador al que se va a notificar cuando se produzca la alerta. *Operator* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @operator_name = ] 'operator'` Operador al que se va a notificar cuando se produzca la alerta. *Operator* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @notification_method = ] notification_method`Método por el que se notifica al operador. *notification_method* es de **tinyint**y no tiene ningún valor predeterminado. *notification_method* puede ser uno o varios de estos valores combinados con un operador lógico **or** .  
+`[ @notification_method = ] notification_method` Método por el que se notifica al operador. *notification_method* es de **tinyint**y no tiene ningún valor predeterminado. *notification_method* puede ser uno o varios de estos valores combinados con un operador lógico **or** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
@@ -86,11 +87,11 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_delete_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
- [sp_update_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
- [sp_add_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_delete_notification &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+ [sp_update_notification &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   
+ [sp_add_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Información de publicador, Agentes
 title: Información de publicador, Agentes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,16 +14,16 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1430ec2b8ea281beeece3edbb6ef8be1dac75fef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97c971a25a10c232f3ae9301caa45bb6b2123acb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493911"
 ---
 # <a name="publisher-information-agents"></a>Información de publicador, Agentes
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  La pestaña **Agentes** muestra información sobre los agentes y trabajos de mantenimiento asociados con el publicador:  
+   La pestaña **Agentes** muestra información sobre los agentes y los trabajos de mantenimiento asociados con el publicador:  
   
 -   Agente de instantáneas, que se muestra en todas las publicaciones.  
   
@@ -196,7 +197,7 @@ ms.locfileid: "85728281"
  **Última acción**  
  La última acción realizada durante la ejecución más reciente del trabajo.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Visualización de información y realización de tareas mediante el Monitor de replicación](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Supervisar la replicación](../../relational-databases/replication/monitor/monitoring-replication.md)  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_cluster (Transact-SQL)
 title: Sys. dm_hadr_cluster (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6195682217af76a27342c3592e69cccc74655210
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8c375635168e5ea19e08358c8ea305f5c188ce7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493678"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85734484"
   
 ## <a name="see-also"></a>Consulte también  
  [Always On vistas y funciones de administración dinámica de grupos de disponibilidad &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Always On vistas de catálogo de grupos de disponibilidad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Vistas de catálogo de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)  
   

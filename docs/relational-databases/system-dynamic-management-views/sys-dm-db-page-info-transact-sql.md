@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_page_info (Transact-SQL)
 title: Sys. dm_db_page_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
@@ -20,21 +21,21 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0802f3013af11814586634f890bb8ddddeadeec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60df2ed8bf279bf7da8193282768124815aa6ab3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68841598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493699"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
-Devuelve información sobre una página de una base de datos.  La función devuelve una fila que contiene la información de encabezado de la página, incluidos `object_id`, `index_id`y `partition_id`.  Esta función reemplaza la necesidad de usar `DBCC PAGE` en la mayoría de los casos.
+Devuelve información sobre una página de una base de datos.  La función devuelve una fila que contiene la información de encabezado de la página, incluidos `object_id` , `index_id` y `partition_id` .  Esta función reemplaza la necesidad de usar `DBCC PAGE` en la mayoría de los casos.
 
 > [!NOTE]
-> `sys.dm_db_page_info`Actualmente solo se admite en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.
+> `sys.dm_db_page_info` Actualmente solo se admite en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.
 
 
 ## <a name="syntax"></a>Sintaxis   
@@ -114,14 +115,14 @@ Determina el nivel de detalle de la salida de la función. ' LIMITED ' devolver�
 ||||
 
 ## <a name="remarks"></a>Observaciones
-La `sys.dm_db_page_info` función de administración dinámica devuelve información de `page_id`página `file_id`como `index_id`, `object_id` ,, etc. que se encuentra en un encabezado de página. Esta información es útil para la solución de problemas y la depuración de diversos problemas de rendimiento (contención de bloqueos y bloqueos temporales) y daños.
+La `sys.dm_db_page_info` función de administración dinámica devuelve información de página como `page_id` , `file_id` , `index_id` , `object_id` etc. que se encuentra en un encabezado de página. Esta información es útil para la solución de problemas y la depuración de diversos problemas de rendimiento (contención de bloqueos y bloqueos temporales) y daños.
 
-`sys.dm_db_page_info`se puede usar en lugar de la `DBCC PAGE` instrucción en muchos casos, pero solo devuelve la información del encabezado de página, no el cuerpo de la página. `DBCC PAGE`seguirá siendo necesario para los casos de uso en los que se requiera todo el contenido de la página.
+`sys.dm_db_page_info` se puede usar en lugar de la `DBCC PAGE` instrucción en muchos casos, pero solo devuelve la información del encabezado de página, no el cuerpo de la página. `DBCC PAGE` seguirá siendo necesario para los casos de uso en los que se requiera todo el contenido de la página.
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>Usar junto con otras DMV
-Uno de los casos de uso más `sys.dm_db_page_info` importantes de es combinarlo con otras DMV que exponen información de página.  Para facilitar este caso de uso, se ha agregado `page_resource` una nueva columna denominada que expone la información de la página en un formato hexadecimal de 8 bytes. Esta columna se ha agregado a `sys.dm_exec_requests` y `sys.sysprocesses` y se agregará a otras DMV en el futuro según sea necesario.
+Uno de los casos de uso más importantes de `sys.dm_db_page_info` es combinarlo con otras DMV que exponen información de página.  Para facilitar este caso de uso, se ha agregado una nueva columna denominada `page_resource` que expone la información de la página en un formato hexadecimal de 8 bytes. Esta columna se ha agregado a `sys.dm_exec_requests` y `sys.sysprocesses` y se agregará a otras DMV en el futuro según sea necesario.
 
-Una nueva función, `sys.fn_PageResCracker`, toma `page_resource` como entrada y genera una sola fila que contiene `database_id`, `file_id` y. `page_id`  Esta función se puede utilizar después para facilitar combinaciones entre `sys.dm_exec_requests` o `sys.sysprocesses` y. `sys.dm_db_page_info`
+Una nueva función, `sys.fn_PageResCracker` , toma `page_resource` como entrada y genera una sola fila que contiene `database_id` , `file_id` y `page_id` .  Esta función se puede utilizar después para facilitar combinaciones entre `sys.dm_exec_requests` o `sys.sysprocesses` y `sys.dm_db_page_info` .
 
 ## <a name="permissions"></a>Permisos  
 Requiere el `VIEW DATABASE STATE` permiso en la base de datos.  
@@ -129,7 +130,7 @@ Requiere el `VIEW DATABASE STATE` permiso en la base de datos.
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-displaying-all-the-properties-of-a-page"></a>A. Mostrar todas las propiedades de una página
-La siguiente consulta devuelve una fila con toda la información de la página para `database_id`una `file_id`combinación `page_id` determinada,, con el modo predeterminado (' Limited ')
+La siguiente consulta devuelve una fila con toda la información de la página para `database_id` una `file_id` combinación determinada,, con el `page_id` modo predeterminado (' Limited ')
 
 ```sql
 SELECT *  
@@ -138,7 +139,7 @@ FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 
 ### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>B. Usar sys. dm_db_page_info con otras DMV 
 
-La siguiente consulta devuelve una fila por `wait_resource` exposición `sys.dm_exec_requests` cuando la fila contiene un valor distinto de NULL.`page_resource`
+La siguiente consulta devuelve una fila por `wait_resource` exposición `sys.dm_exec_requests` cuando la fila contiene un valor distinto de NULL. `page_resource`
 
 ```sql
 SELECT page_info.* 
@@ -147,10 +148,10 @@ CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r
 CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS page_info
 ```
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 

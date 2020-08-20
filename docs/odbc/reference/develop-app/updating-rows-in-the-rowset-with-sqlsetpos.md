@@ -1,4 +1,5 @@
 ---
+description: Actualizar las filas del conjunto de filas con SQLSetPos
 title: Actualizar filas del conjunto de filas con SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4851d4ba741379fc188b2b88c895a378ef3bb80d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1b1b50007a03ee1973d92acafbe8f2be1022f52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471220"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Actualizar las filas del conjunto de filas con SQLSetPos
 La operación de actualización de **SQLSetPos** hace que el origen de datos actualice una o varias filas seleccionadas de una tabla, utilizando los datos de los búferes de la aplicación para cada columna enlazada (a menos que el valor del búfer de longitud/indicador esté SQL_COLUMN_IGNORE). Las columnas que no están enlazadas no se actualizarán.  

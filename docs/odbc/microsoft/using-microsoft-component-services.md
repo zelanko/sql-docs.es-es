@@ -1,4 +1,5 @@
 ---
+description: Uso de servicios de componentes de Microsoft
 title: Usar servicios de componentes de Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 06450562-d8f3-4987-b7bd-4a70223ff937
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fb5763058fa198cbad7464434e31942ef8d6cd7d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8214b706394c9fe8e2b8a6fd2491156292475fa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471347"
 ---
 # <a name="using-microsoft-component-services"></a>Uso de servicios de componentes de Microsoft
 > [!IMPORTANT]  

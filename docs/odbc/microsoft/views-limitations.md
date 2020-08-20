@@ -1,4 +1,5 @@
 ---
+description: Limitaciones de vistas
 title: Limitaciones de vistas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1be24fce-0653-43a0-9cda-3496694c3ace
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cccd7208980b20711b25e25d15e7b7a028536a0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cdeba56e596a3ef5d85b9f9280d47d01c1107a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471277"
 ---
 # <a name="views-limitations"></a>Limitaciones de vistas
 No es compatible con los controladores de dBASE, Microsoft Excel, Paradox o Text.

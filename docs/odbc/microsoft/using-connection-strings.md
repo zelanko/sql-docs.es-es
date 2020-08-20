@@ -1,4 +1,5 @@
 ---
+description: Utilizar cadenas de conexión
 title: Usar cadenas de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57634960-47e9-49bf-95c1-6e3702ac8166
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9083414503606720a40d372ed883a140953dc415
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ae8c3b1eda098a506d273f0d7baafec40985813
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471357"
 ---
 # <a name="using-connection-strings"></a>Utilizar cadenas de conexión
 Puede utilizar una cadena de conexión para conectarse a un origen de datos de Visual FoxPro.  

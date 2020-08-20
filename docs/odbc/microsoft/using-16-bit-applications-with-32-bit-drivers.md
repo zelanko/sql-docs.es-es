@@ -1,4 +1,5 @@
 ---
+description: Uso de las aplicaciones de 16 bits con controladores de 32 bits
 title: Usar aplicaciones de 16 bits con controladores de 32 bits | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c919ed8c3f3791720d67ebdcbf5cfbdbea2a0455
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c54dc53e5a8e6d3322bfa74ec6904cebca434b8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471392"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Uso de las aplicaciones de 16 bits con controladores de 32 bits
 > [!IMPORTANT]  
@@ -41,25 +42,25 @@ ms.locfileid: "81307636"
   
  ![Cómo una aplicación de 16&#45;bits llama a un archivo DLL de instalación del controlador de 32&#45;bits](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
- En Windows en Windows (thunk de 16 bits a 32 bits), una DLL de thunk adicional denominada Ds32gt. dll convierte los valores de argumento de 16 bits que se pasan a través de un archivo DLL de instalación de 32 bits de nuevo a 16 bits.  
+ En Windows en Windows (thunk de 16 bits a 32 bits), un archivo DLL de thunk adicional denominado Ds32gt.dll convierte los valores de argumento de 16 bits pasados a través de un archivo DLL de instalación de 32 bits de nuevo a 16 bits.  
   
 ## <a name="components"></a>Componentes  
  El componente ODBC del SDK de MDAC 2,8 SP1 incluye los siguientes archivos para ejecutar aplicaciones de 16 bits con controladores de 32 bits. Estos componentes se encuentran en el directorio \Redist  
   
 |Nombre de archivo|Descripción|  
 |---------------|-----------------|  
-|Odbc16gt. dll|DLL de conversión genérica ODBC de 16 bits|  
-|Odbc32gt. dll|DLL de conversión genérica ODBC de 32 bits|  
-|Odbccp32. dll|DLL del instalador de 32 bits|  
-|Odbcad32. exe|Programa de administrador de 32 bits|  
+|Odbc16gt.dll|DLL de conversión genérica ODBC de 16 bits|  
+|Odbc32gt.dll|DLL de conversión genérica ODBC de 32 bits|  
+|Odbccp32.dll|DLL del instalador de 32 bits|  
+|Odbcad32.exe|Programa de administrador de 32 bits|  
 |Odbcinst. hlp|Archivo de ayuda del instalador|  
-|Ds16gt. dll|DLL de conversión genérica de instalación del controlador de 16 bits|  
-|Ctl3d32. dll|Biblioteca de estilos de ventanas tridimensionales de 32 bits|  
+|Ds16gt.dll|DLL de conversión genérica de instalación del controlador de 16 bits|  
+|Ctl3d32.dll|Biblioteca de estilos de ventanas tridimensionales de 32 bits|  
   
  Además, los siguientes archivos junto con el administrador de controladores ODBC 2,10 de 16 bits, que no forman parte de ODBC 3,51, son necesarios para y deben instalarse con la aplicación de 16 bits.  
   
 |Nombre de archivo|Descripción|  
 |---------------|-----------------|  
-|ODBC. dll|Administrador de controladores de 16 bits|  
-|Odbcinst. dll|DLL del instalador de 16 bits|  
-|Odbcadm. exe|Programa de administrador de ODBC de 16 bits|
+|Odbc.dll|Administrador de controladores de 16 bits|  
+|Odbcinst.dll|DLL del instalador de 16 bits|  
+|Odbcadm.exe|Programa de administrador de ODBC de 16 bits|

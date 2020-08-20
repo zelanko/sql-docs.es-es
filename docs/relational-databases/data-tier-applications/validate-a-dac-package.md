@@ -1,4 +1,5 @@
 ---
+description: Validar un paquete de DAC
 title: Validar un paquete de DAC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 62ea7a75bc9ed691f282aa0d886f64d006deb94b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 717d81dd0f6f7f55af78ec4264b4f3b9fb329583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471465"
 ---
 # <a name="validate-a-dac-package"></a>Validar un paquete de DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85781639"
   
 1.  **Antes de empezar:**  [Requisitos previos](#Prerequisites)  
   
-2.  **Para actualizar una DAC mediante:**  [Ver el contenido de una DAC](#ViewDACContents), [Ver los cambios de la base de datos](#ViewDBChanges), [Ver las acciones de actualización](#ViewUpgradeActions), [Comparar las DAC](#CompareDACs)  
+2.  **Para actualizar una DAC, mediante:**  [Ver el contenido de una DAC](#ViewDACContents), [Ver los cambios de la base de datos](#ViewDBChanges), [Ver las acciones de actualización](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
 
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estas DAC contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema. Antes de usar una DAC de un origen desconocido o que no sea de confianza, impleméntela en una instancia de prueba aislada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], ejecute [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos y examine también el código en la base de datos, como los procedimientos almacenados u otro código definido por el usuario.  

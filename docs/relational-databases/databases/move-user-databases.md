@@ -1,4 +1,5 @@
 ---
+description: Mover bases de datos de usuario
 title: Movimiento de bases de datos de usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ad9a4e92-13fb-457d-996a-66ffc2d55b79
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae4bcbf6a8fe10fb07d644c697c8d3ac04631555
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0892e0a2a6db25e6a82f56177544572b8a5af388
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471265"
 ---
 # <a name="move-user-databases"></a>Mover bases de datos de usuario
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

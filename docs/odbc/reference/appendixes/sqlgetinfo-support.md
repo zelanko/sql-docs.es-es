@@ -1,4 +1,5 @@
 ---
+description: Compatibilidad con SQLGetInfo
 title: Compatibilidad con SQLGetInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a21c035a14814f51d4344894ef253b2cc844f4c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cff18a23c7d8c4526fc86904d75375ed5aaaf5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471236"
 ---
 # <a name="sqlgetinfo-support"></a>Compatibilidad con SQLGetInfo
 Cuando se trata de un ODBC 2. la aplicación *x* llama a **SQLGetInfo** a un controlador ODBC 3 *. x* , se deben admitir los argumentos *InfoType* de la tabla siguiente.  
   
-|*InfoType*|Devuelve|  
+|*InfoType*|Devoluciones|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2,0) **Nota:** este tipo de información no está en desuso; las máscaras de la columna a la derecha están desusadas.|Máscara de SQLINTEGER donde que enumera las cláusulas de la instrucción **ALTER TABLE** que admite el origen de datos.<br /><br /> Las siguientes máscaras de código se usan para determinar qué cláusulas se admiten:<br /><br /> SQL_AT_DROP_COLUMN = se admite la posibilidad de quitar columnas. El hecho de que esto resulte en cascada o restringir el comportamiento está definido por el controlador. (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = se admite la posibilidad de agregar varias columnas en una sola instrucción ALTER TABLE. Este bit no se combina con otros bits de SQL_AT_ADD_COLUMN_XXX o bits de SQL_AT_CONSTRAINT_XXX. (ODBC 2,0)|  
+|SQL_ALTER_TABLE (ODBC 2,0) **Nota:**  este tipo de información no está en desuso; las máscaras de la columna a la derecha están desusadas.|Máscara de SQLINTEGER donde que enumera las cláusulas de la instrucción **ALTER TABLE** que admite el origen de datos.<br /><br /> Las siguientes máscaras de código se usan para determinar qué cláusulas se admiten:<br /><br /> SQL_AT_DROP_COLUMN = se admite la posibilidad de quitar columnas. El hecho de que esto resulte en cascada o restringir el comportamiento está definido por el controlador. (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = se admite la posibilidad de agregar varias columnas en una sola instrucción ALTER TABLE. Este bit no se combina con otros bits de SQL_AT_ADD_COLUMN_XXX o bits de SQL_AT_CONSTRAINT_XXX. (ODBC 2,0)|  
 |SQL_FETCH_DIRECTION (ODBC 1,0)<br /><br /> El tipo de información se incorporó en ODBC 1,0; cada máscara de máscara tiene la etiqueta de la versión en la que se presentó.|Una máscara de SQLINTEGER donde que enumera las opciones de dirección de captura admitidas.<br /><br /> Las siguientes máscaras de código se usan junto con la marca para determinar qué opciones se admiten:<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1,0) SQL_FD_FETCH_FIRST (ODBC 1,0) SQL_FD_FETCH_LAST (ODBC 1,0) SQL_FD_FETCH_PRIOR (ODBC 1,0) SQL_FD_FETCH_ABSOLUTE (ODBC 1,0) SQL_FD_FETCH_RELATIVE (ODBC 1,0) SQL_FD_FETCH_BOOKMARK (ODBC 2,0)|  
 |SQL_LOCK_TYPES (ODBC 2,0)|Una máscara de SQLINTEGER donde que enumera los tipos de bloqueo admitidos para el argumento de *rebaño* en **SQLSetPos**.<br /><br /> Las siguientes máscaras de código se usan junto con la marca para determinar qué tipos de bloqueo se admiten:<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
 |SQL_ODBC_API_CONFORMANCE (ODBC 1,0)|Un valor SQLSMALLINT que indica el nivel de conformidad con ODBC.<br /><br /> SQL_OAC_NONE = ninguno<br /><br /> SQL_OAC_LEVEL1 = nivel 1 admitido<br /><br /> SQL_OAC_LEVEL2 = nivel 2 compatible|  

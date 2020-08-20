@@ -1,4 +1,5 @@
 ---
+description: Uso de las aplicaciones de 32 bits con controladores de 32 bits
 title: Usar aplicaciones de 32 bits con controladores de 32 bits | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31512f9339b9d46225bb4f1198cb617a48509acb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69005071c83047471e76f38160265bc35cdccd4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471369"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Uso de las aplicaciones de 32 bits con controladores de 32 bits
 Puede ejecutar aplicaciones de 32 bits con controladores de 32 bits. Las aplicaciones de 32 bits y los controladores de 32 bits usan la API de® Win32.  
@@ -39,8 +40,8 @@ Puede ejecutar aplicaciones de 32 bits con controladores de 32 bits. Las aplicac
   
 |Nombre de archivo|Descripción|  
 |---------------|-----------------|  
-|Odbc32. dll|Administrador de controladores de 32 bits|  
-|Odbccp32. dll|DLL del instalador de 32 bits|  
-|Odbcad32. exe|Programa de administrador de ODBC de 32 bits|  
+|Odbc32.dll|Administrador de controladores de 32 bits|  
+|Odbccp32.dll|DLL del instalador de 32 bits|  
+|Odbcad32.exe|Programa de administrador de ODBC de 32 bits|  
 |Odbcinst. hlp|Archivo de ayuda del instalador|  
-|Msvcrt40. dll|Biblioteca en tiempo de ejecución de C|
+|Msvcrt40.dll|Biblioteca en tiempo de ejecución de C|

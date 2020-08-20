@@ -1,4 +1,5 @@
 ---
+description: Configuración del cifrado de columnas en contexto con Transact-SQL
 title: Configuración del cifrado de columnas en contexto con Transact-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1dba061f6b8bc30e8f9f0e64e45f16493f62db1
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490478"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Configuración del cifrado de columnas en contexto con Transact-SQL
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -140,7 +141,7 @@ GO
 - [Creación y uso de índices en columnas mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-create-use-indexes.md)
 - [Desarrollo de aplicaciones mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-client-development.md)
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 - [Configuración del cifrado de columna en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md)
 - [Uso de Always Encrypted con enclaves seguros para las columnas cifradas existentes](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)

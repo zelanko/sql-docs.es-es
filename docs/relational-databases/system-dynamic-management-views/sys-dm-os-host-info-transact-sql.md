@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_os_host_info (Transact-SQL)
 title: Sys. dm_os_host_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
@@ -19,12 +20,12 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a504416014d9e3a0cb25972ab624fc720a26bef3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb99e12c75a3f10ca88dc7668d194840f360be2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489828"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>Sys. dm_os_host_info (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -40,7 +41,7 @@ Devuelve una fila que muestra información de versión del sistema operativo.
 |**host_sku**|**int**|Identificador de referencia de almacén (SKU) de Windows. Para obtener una lista de identificadores y descripciones de SKU, consulte [función GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Acepta valores NULL. <br> Para Linux, devuelve NULL. |  
 |**os_language_version**|**int**|Identificador de configuración regional (LCID) del sistema operativo Windows. Para obtener una lista de valores y descripciones de LCID, consulte ID. de [configuración regional asignados por Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). No puede ser null.|  
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 Esta vista es similar a [Sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), agregando columnas para diferenciar Windows y Linux.
   
 ## <a name="security"></a>Seguridad  
@@ -74,7 +75,7 @@ A continuación se muestra un conjunto de resultados de ejemplo en Linux:
  |Linux |Ubuntu |16.04  |   |NULL   |3082 |  
 
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Sys. dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_windows_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md)  
  

@@ -1,4 +1,5 @@
 ---
+description: sp_helplanguage (Transact-SQL)
 title: sp_helplanguage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72f2e867c8139045b107cbb99871742c26440ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489345"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @language = ] 'language'`Es el nombre del idioma alternativo para el que se va a mostrar información. *Language* es de **tipo sysname y su**valor predeterminado es NULL. Si se especifica *Language* , se devuelve información sobre el idioma especificado. Si no se especifica Language, se devuelve información acerca de todos los lenguajes de la vista de compatibilidad de **lenguajessys.sys** .  
+`[ @language = ] 'language'` Es el nombre del idioma alternativo para el que se va a mostrar información. *Language* es de **tipo sysname y su**valor predeterminado es NULL. Si se especifica *Language* , se devuelve información sobre el idioma especificado. Si no se especifica Language, se devuelve información acerca de todos los lenguajes de la vista de compatibilidad de ** lenguajessys.sys** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -58,7 +59,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**alias**|**sysname**|Nombre alternativo del idioma.|  
 |**months**|**nvarchar (372)**|Nombres de los meses.|  
 |**shortmonths**|**nvarchar (132)**|Abreviaturas de los nombres de los meses.|  
-|**durante**|**nvarchar (217)**|Nombres de los días.|  
+|**days**|**nvarchar (217)**|Nombres de los días.|  
 |**lcid**|**int**|Id. de configuración regional de Windows para el idioma.|  
 |**msglangid**|**smallint**|Identificador del grupo de mensajes del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
@@ -82,7 +83,7 @@ sp_helplanguage;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [ESTABLECER lenguaje &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

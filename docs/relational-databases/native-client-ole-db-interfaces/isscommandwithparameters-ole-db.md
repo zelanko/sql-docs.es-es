@@ -1,4 +1,5 @@
 ---
+description: ISSCommandWithParameters (proveedor de OLE DB de Native Client)
 title: ISSCommandWithParameters (proveedor de OLE DB de Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 3419b7f3-36a3-4863-816e-e641e4e90496
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de38a824824e35faac5ee40e691569f2abaae685
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 896926a74bff62ccc84c3a80ad0169dd97858524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490782"
 ---
 # <a name="isscommandwithparameters-native-client-ole-db-provider"></a>ISSCommandWithParameters (proveedor de OLE DB de Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87246919"
   
 ## <a name="see-also"></a>Consulte también  
  [Interfaces &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
- [Usar tipos de datos XML](../../relational-databases/native-client/features/using-xml-data-types.md)   
+ [Utilizar tipos de datos XML](../../relational-databases/native-client/features/using-xml-data-types.md)   
  [Usar tipos definidos por el usuario](../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Sys. pdw_nodes_indexes (Transact-SQL)
 title: Sys. pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f3d749eb32c8e7369c10e904f9e13991aa85be20
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: f6c518d53122015af3e86350b0037e1b88604543
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490274"
 ---
 # <a name="syspdw_nodes_indexes-transact-sql"></a>Sys. pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86197365"
 |object_id|**int**|identificador del objeto al que pertenece este índice.||  
 |name|**sysname**|Nombre del índice. Name es único solo dentro del objeto. NULL = Montón||  
 |index_id|**int**|identificador del índice. index_id es exclusivo solo dentro del objeto.<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster<br /><br /> > 1 = Índice no clúster||  
-|tipo|**tinyint**|Tipo de índice:<br /><br /> 0 = Montón<br /><br /> 1 = Clúster<br /><br /> 2 = No clúster<br /><br /> 5 = índice de almacén de columnas optimizado para memoria xVelocity en clúster|  
+|type|**tinyint**|Tipo de índice:<br /><br /> 0 = Montón<br /><br /> 1 = Clúster<br /><br /> 2 = No clúster<br /><br /> 5 = índice de almacén de columnas optimizado para memoria xVelocity en clúster|  
 |type_desc|**nvarchar(60)**|Descripción del tipo de índice:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> ALMACÉN DE COLUMNAS AGRUPADO||  
 |is_unique|**bit**|0 = El índice no es exclusivo.|Siempre es 0.|  
 |data_space_id|**int**|identificador del espacio de datos para este índice. El espacio de datos es un grupo de archivos o un esquema de partición.<br /><br /> 0 = object_id es una función con valores de tabla.||  

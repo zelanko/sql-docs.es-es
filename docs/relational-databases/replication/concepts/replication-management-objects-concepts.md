@@ -1,4 +1,5 @@
 ---
+description: Replication Management Objects Concepts
 title: Conceptos de los Replication Management Objects (RMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2017
@@ -21,12 +22,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a2e6f065c29956873d48ada5e7add52a0528784
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95b4db25e874d4afe51ea47d5def4b316990c056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490659"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "86915843"
  Los temas de esta sección muestran cómo supervisar mediante programación una topología de replicación.  
   
 ## <a name="introduction-to-rmo-programming"></a>Introducción a la programación de RMO  
- RMO está diseñado para programar todos los aspectos de la replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El espacio de nombres de RMO es <xref:Microsoft.SqlServer.Replication> y lo implementa Microsoft.SqlServer.Rmo.dll, que es un ensamblado de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. El ensamblado Microsoft.SqlServer.Replication.dll, que también pertenece al espacio de nombres <xref:Microsoft.SqlServer.Replication>, implementa una interfaz de código administrado para programar varios agentes de replicación (Agente de instantáneas, Agente de distribución y Agente de mezcla). Se puede tener acceso a sus clases desde RMO para sincronizar las suscripciones. Las clases en el espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>, que implementa el ensamblado Microsoft.SqlServer.Replication.BusinessLogicSupport.dll, se utilizan para crear una lógica empresarial personalizada para la replicación de mezcla. Este ensamblado es independiente de RMO.  
+ RMO está diseñado para programar todos los aspectos de la replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El espacio de nombres de RMO es <xref:Microsoft.SqlServer.Replication> y lo implementa Microsoft.SqlServer.Rmo.dll, que es un ensamblado de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework.  El ensamblado Microsoft.SqlServer.Replication.dll, que también pertenece al espacio de nombres <xref:Microsoft.SqlServer.Replication>, implementa una interfaz de código administrado para programar varios agentes de replicación (Agente de instantáneas, Agente de distribución y Agente de mezcla). Se puede tener acceso a sus clases desde RMO para sincronizar las suscripciones. Las clases en el espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>, que implementa el ensamblado Microsoft.SqlServer.Replication.BusinessLogicSupport.dll, se utilizan para crear una lógica empresarial personalizada para la replicación de mezcla. Este ensamblado es independiente de RMO.  
   
 ## <a name="deploying-applications-based-on-rmo"></a>Implementar aplicaciones basadas en RMO  
  RMO depende de los componentes de replicación y de conectividad de cliente que están incluidos con todas las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] excepto SQL Server Compact. Para implementar una aplicación basada en RMO, debe instalar una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que incluya componentes de replicación y de conectividad de cliente en el equipo en el que se vaya a ejecutar la aplicación.  
@@ -68,7 +69,7 @@ ms.locfileid: "86915843"
   
 2.  En el menú **Archivo**, haga clic en **Nuevo proyecto**. Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
-3.  En el cuadro de diálogo **Tipos de proyecto**, seleccione **Proyectos de Visual C#** . En el panel **Plantillas**, seleccione **Aplicación para Windows**.  
+3.  En el cuadro de diálogo **Tipos de proyecto**, seleccione **Proyectos de Visual C#**. En el panel **Plantillas**, seleccione **Aplicación para Windows**.  
   
 4.  (Opcional) en **Nombre**, escriba el nombre de la nueva aplicación.  
   

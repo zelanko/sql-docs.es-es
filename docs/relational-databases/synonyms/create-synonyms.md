@@ -1,4 +1,5 @@
 ---
+description: Crear sinónimos
 title: Creación de sinónimos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44e814efc2cc1d48698dda9d4b413a494f53ef3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28709eaba9bf8afb2f2c26749db4bb52c80fd64e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490397"
 ---
 # <a name="create-synonyms"></a>Crear sinónimos
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85787240"
   
 1.  En el **Explorador de objetos**, expanda la base de datos donde desea crear la nueva vista.  
   
-2.  Haga clic con el botón derecho en la carpeta **Sinónimos** y después haga clic en **Nuevo sinónimo...** .  
+2.  Haga clic con el botón derecho en la carpeta **Sinónimos** y después haga clic en **Nuevo sinónimo...**.  
   
 3.  En el cuadro de diálogo **Agregar sinónimo** , escriba la siguiente información.  
 

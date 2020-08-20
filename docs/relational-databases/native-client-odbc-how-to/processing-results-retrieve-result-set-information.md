@@ -1,4 +1,5 @@
 ---
+description: 'Procesar resultados: recuperar información del conjunto de resultados'
 title: Recuperar información del conjunto de resultados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -14,11 +15,12 @@ ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f00fe6310c339d7ec24736c5f659d3b7b7d84ce8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 072747868ddd3358c0cc074e16ba64ff4afe980d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490873"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>Procesar resultados: recuperar información del conjunto de resultados
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

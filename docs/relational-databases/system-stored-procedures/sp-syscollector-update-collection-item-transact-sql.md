@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collection_item (Transact-SQL)
 title: sp_syscollector_update_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: efbdc613c641482df6b4dfe88a7f132124276578
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf31cc498e140070b97f76593a8ce675ebd804ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489116"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ sp_syscollector_update_collection_item
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el conjunto de recopilación se establece en modo sin almacenamiento en caché, se omite el cambio de la frecuencia porque este modo hace que la recopilación de datos y la carga se produzcan en la programación especificada para el conjunto de recopilación. Para ver el estado del conjunto de recopilación, ejecute la consulta siguiente. Reemplace `<collection_item_id>` con el identificador del elemento de recopilación que se va a actualizar.  
   
 ```  
@@ -137,10 +138,10 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [sp_syscollector_create_collection_item &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_addmergepartition (Transact-SQL)
 title: sp_addmergepartition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a4f4743efbd0ee3b7a57cb4fab02c98a2680a870
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1bf10e593c23b4f31f418df45e9ad0fe03dbdcdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489650"
 ---
 # <a name="sp_addmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,16 +40,16 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es la publicación de combinación en la que se crea la partición. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado. Si se especifica *SUSER_SNAME* , el valor de *hostname* debe ser null.  
+`[ @publication = ] 'publication'` Es la publicación de combinación en la que se crea la partición. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado. Si se especifica *SUSER_SNAME* , el valor de *hostname* debe ser null.  
   
-`[ @suser_sname = ] 'suser_sname'`Es el valor utilizado al crear la partición para una suscripción que se filtra por el valor de la función [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) en el suscriptor. *SUSER_SNAME* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @suser_sname = ] 'suser_sname'` Es el valor utilizado al crear la partición para una suscripción que se filtra por el valor de la función [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) en el suscriptor. *SUSER_SNAME* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @host_name = ] 'host_name'`Es el valor utilizado al crear la partición para una suscripción que se filtra por el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) en el suscriptor. *host_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @host_name = ] 'host_name'` Es el valor utilizado al crear la partición para una suscripción que se filtra por el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) en el suscriptor. *host_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_addmergepartition** se utiliza en la replicación de mezcla.  
   
 ## <a name="example"></a>Ejemplo  
@@ -57,7 +58,7 @@ sp_addmergepartition [ @publication = ] 'publication'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addmergepartition**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Crear una instantánea para una publicación de combinación con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
  [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   

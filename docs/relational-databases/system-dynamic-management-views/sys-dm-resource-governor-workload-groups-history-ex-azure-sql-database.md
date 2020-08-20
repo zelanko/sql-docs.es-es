@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 title: Sys. dm_resource_governor_workload_groups_history_ex (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: 0b112762df3ca05411594b1e1c03a04817c094d9
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: eee98e604fad74b58db9acd5e1f5b20a0189f216
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489773"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -100,7 +101,7 @@ WHERE name LIKE 'User%'
 ORDER BY snapshot_time DESC;
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Gobierno de velocidad de registro de traducción](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
 - [Límites de recursos de DTU de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)

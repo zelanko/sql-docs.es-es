@@ -1,4 +1,5 @@
 ---
+description: MSlogreader_history (Transact-SQL)
 title: MSlogreader_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c4d3b61eb3031060674c248be4effd03766f1f7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c792ab21d4fb59df13f0cc86a2d81558b2c506a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488785"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85889926"
 |**start_time**|**datetime**|Hora a la que comienza la ejecución del trabajo.|  
 |**time**|**datetime**|Hora a la que se registra el mensaje.|  
 |**duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
-|**comentarios**|**nvarchar(255)**|El texto del mensaje.|  
+|**comentarios**|**nvarchar(255)**|Texto del mensaje.|  
 |**xact_seqno**|**varbinary(16)**|Número de secuencia de la última transacción procesada.|  
 |**delivery_time**|**int**|La hora en que se entrega la primera transacción.|  
 |**delivered_transactions**|**int**|Número total de transacciones entregadas en la sesión.|  

@@ -1,4 +1,5 @@
 ---
+description: Procedimientos almacenados de consultas distribuidas (Transact-SQL)
 title: Procedimientos almacenados de consultas distribuidas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 788140d9936b0e90f7f6e0ad5ea2f5aa6f04e239
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 7766180a9b93a8e6fd4af5eaf0855a8de182a063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489791"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>Procedimientos almacenados de consultas distribuidas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,11 +59,11 @@ ms.locfileid: "86977578"
 
         [sp_tables_ex](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)
 
-        [sp_testlinkedserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)
+        [sp_testlinkedserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-testlinkedserver-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

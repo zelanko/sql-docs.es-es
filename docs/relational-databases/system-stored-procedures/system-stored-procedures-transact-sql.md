@@ -1,4 +1,5 @@
 ---
+description: Procedimientos almacenados del sistema (Transact-SQL)
 title: Procedimientos almacenados del sistema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
@@ -22,12 +23,12 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 480b45d5b241b2c19b081d7a50f0d46c6e2ea6fd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e0308664a32b75e51b3f7a92a72d8fe5295b22ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489014"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procedimientos almacenados del sistema (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87246504"
 |[Procedimientos almacenados de cursor](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|Se utilizan para implementar la funcionalidad de variable de cursor.|  
 |[Procedimientos almacenados del recopilador de datos](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|Se utiliza para trabajar con el recopilador de datos y los componentes siguientes: conjuntos de recopilación, elementos de recopilación y tipos de recopilación.|  
 |[Procedimientos almacenados del motor de base de datos](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|Se utilizan para el mantenimiento general de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
-|[Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Se utilizan para realizar operaciones de correo electrónico desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Se utilizan para realizar operaciones de correo electrónico desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Procedimientos almacenados de planes de mantenimiento de bases de datos](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Se utilizan para configurar las tareas de mantenimiento fundamentales necesarias para administrar el rendimiento de las bases de datos.|  
 |[Procedimientos almacenados de consultas distribuidas (Transact-SQL)](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Se utilizan para implementar y administrar consultas distribuidas.|  
 |[Procedimientos almacenados de FileStream y FileTable &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Se usa para configurar y administrar las características FILESTREAM y FileTable.|  
@@ -744,10 +745,10 @@ Los siguientes procedimientos almacenados no están documentados:
 
 ## <a name="see-also"></a>Consulte también  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [Procedimientos almacenados &#40;Motor de base de datos&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
+ [Procedimientos almacenados &#40;motor de base de datos&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [Ejecutar procedimientos almacenados &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [Ejecutar procedimientos almacenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Ejecutar procedimientos almacenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

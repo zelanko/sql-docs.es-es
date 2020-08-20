@@ -1,4 +1,5 @@
 ---
+description: Modificar restricciones CHECK
 title: Modificación de restricciones CHECK | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -16,12 +17,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea5ecb64640df674d0f55d7347c1e8cb2d78d3ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488581"
 ---
 # <a name="modify-check-constraints"></a>Modificar restricciones CHECK
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,13 +54,13 @@ ms.locfileid: "85786063"
   
 1.  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla que contiene la restricción CHECK y seleccione **Diseñar**.  
   
-2.  En el menú **Diseñador de tablas**, haga clic en **Restricciones CHECK...** .  
+2.  En el menú **Diseñador de tablas**, haga clic en **Restricciones CHECK...**.  
   
 3.  En el cuadro de diálogo **Restricciones CHECK** , en **Restricción CHECK seleccionada**, seleccione la restricción que desee modificar.  
   
 4.  Complete una de las acciones descritas en la tabla siguiente:  
   
-    |A|Siga estos pasos|  
+    |En|Siga estos pasos|  
     |--------|------------------------|  
     |Modificar la expresión de restricción|Escriba la nueva expresión en el campo **Expresión** .|  
     |Cambiar el nombre de la restricción|Escriba un nuevo nombre en el campo **Nombre** .|  
@@ -72,7 +73,7 @@ ms.locfileid: "85786063"
   
 5.  Haga clic en **Cerrar**.  
   
-6.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
+6.  En el menú **Archivo**, haga clic en ***Guardar**_nombre de tabla_.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para modificar una restricción CHECK**  

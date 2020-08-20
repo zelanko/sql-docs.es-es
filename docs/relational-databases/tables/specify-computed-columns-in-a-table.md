@@ -1,4 +1,5 @@
 ---
+description: Especificar columnas calculadas en una tabla
 title: Especificar columnas calculadas en una tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 546490349b2d80135c873ff0917ab571f3cae830
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee1d32ce60064d6ab42b04a9aeddec4a6252d479
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488615"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Especificar columnas calculadas en una tabla
 
@@ -59,7 +60,7 @@ Requiere el permiso ALTER en la tabla.
 
 1. En el **Explorador de objetos**, expanda la tabla para la que desea agregar la nueva columna calculada. Haga clic con el botón derecho en **Columnas** y seleccione **Nueva columna**.
 2. Escriba el nombre de columna y acepte el tipo de datos predeterminado (**nchar**(10)). El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el tipo de datos de la columna calculada aplicando las reglas de prioridad de tipo de datos a las expresiones especificadas en la fórmula. Por ejemplo, si la fórmula hace referencia a una columna de tipo **money** y una columna de tipo **int**, la columna calculada será de tipo **money** porque ese tipo de datos tiene mayor prioridad. Para obtener más información, vea [Prioridad de tipo de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).
-3. En la pestaña **Propiedades de columna** , expanda la propiedad **Especificación de columna calculada** .
+3. En la pestaña **Propiedades de columna**, expanda la propiedad **Especificación de columna calculada**.
 4. En la propiedad secundaria **(Fórmula)** , escriba la expresión de esta columna en la celda de la cuadrícula situada a la derecha. Por ejemplo, en una columna `SalesTotal` , la fórmula que escribe puede ser `SubTotal+TaxAmt+Freight`, que suma el valor de estas columnas para cada fila de la tabla.
 
    > [!IMPORTANT]
@@ -67,7 +68,7 @@ Requiere el permiso ALTER en la tabla.
 
 5. Indique si los datos se van a conservar; para ello, elija **Sí** o **No** en el menú desplegable de la propiedad secundaria **Es persistente** .
 
-6. En el menú **Archivo**, haga clic en **Guardar** _nombre de tabla_.
+6. En el menú **Archivo**, haga clic en ***Guardar** _nombre de tabla_.
 
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Para agregar una definición de columna calculada a una columna existente
 

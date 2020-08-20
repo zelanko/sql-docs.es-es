@@ -1,4 +1,5 @@
 ---
+description: sp_post_msx_operation (Transact-SQL)
 title: sp_post_msx_operation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36759d2c90e29c0a019d8bd294a0c7e621c8d468
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da3d1e8bd762f31a7592d90957c3a8680c29dbfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489213"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @operation = ] 'operation'`Tipo de operación de la operación expuesta. la *operación*es **VARCHAR (64)** y no tiene ningún valor predeterminado. Las operaciones válidas dependen de *object_type*.  
+`[ @operation = ] 'operation'` Tipo de operación de la operación expuesta. la *operación*es **VARCHAR (64)** y no tiene ningún valor predeterminado. Las operaciones válidas dependen de *object_type*.  
   
 |Tipo de objeto|Operación|  
 |-----------------|---------------|  
@@ -53,15 +54,15 @@ sp_post_msx_operation
 |**SERVIDOR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**PLANEA**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
   
-`[ @object_type = ] 'object'`Tipo de objeto para el que se va a exponer una operación. Los tipos válidos son **Job**, **Server**y **Schedule**. el *objeto* es **VARCHAR (64)** y su valor predeterminado es **Job**.  
+`[ @object_type = ] 'object'` Tipo de objeto para el que se va a exponer una operación. Los tipos válidos son **Job**, **Server**y **Schedule**. el *objeto* es **VARCHAR (64)** y su valor predeterminado es **Job**.  
   
-`[ @job_id = ] job_id`Número de identificación del trabajo al que se aplica la operación. *job_id* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado. **0x00** indica todos los trabajos. Si el *objeto* es **Server**, *job_id*no es necesario.  
+`[ @job_id = ] job_id` Número de identificación del trabajo al que se aplica la operación. *job_id* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado. **0x00** indica todos los trabajos. Si el *objeto* es **Server**, *job_id*no es necesario.  
   
-`[ @specific_target_server = ] 'target_server'`Nombre del servidor de destino para el que se aplica la operación especificada. Si se especifica *job_id* , pero no se especifica *target_server* , las operaciones se exponen para todos los servidores de trabajo del trabajo. *target_server* es de tipo **nvarchar (30)** y su valor predeterminado es NULL.  
+`[ @specific_target_server = ] 'target_server'` Nombre del servidor de destino para el que se aplica la operación especificada. Si se especifica *job_id* , pero no se especifica *target_server* , las operaciones se exponen para todos los servidores de trabajo del trabajo. *target_server* es de tipo **nvarchar (30)** y su valor predeterminado es NULL.  
   
-`[ @value = ] value`El intervalo de sondeo, en segundos. *value* es de tipo **int**y su valor predeterminado es NULL. Especifique este parámetro solo si la *operación* es **set-Poll**.  
+`[ @value = ] value` El intervalo de sondeo, en segundos. *value* es de tipo **int**y su valor predeterminado es NULL. Especifique este parámetro solo si la *operación* es **set-Poll**.  
   
-`[ @schedule_uid = ] schedule_uid`Identificador único de la programación a la que se aplica la operación. *schedule_uid* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
+`[ @schedule_uid = ] schedule_uid` Identificador único de la programación a la que se aplica la operación. *schedule_uid* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -82,15 +83,15 @@ sp_post_msx_operation
  Para ejecutar este procedimiento almacenado, se debe conceder a los usuarios el rol fijo de servidor **sysadmin** .  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_add_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_delete_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
- [sp_delete_targetserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
- [sp_resync_targetserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
- [sp_start_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_stop_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
- [sp_update_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_add_jobserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_delete_jobserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_delete_targetserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql.md)   
+ [sp_resync_targetserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
+ [sp_start_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
+ [sp_stop_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
+ [sp_update_job &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

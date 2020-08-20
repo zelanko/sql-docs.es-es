@@ -1,4 +1,5 @@
 ---
+description: core.sp_purge_data (Transact-SQL)
 title: Core. sp_purge_data (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b7432238a3bedc85f6f9d971299fa7de2705df8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2ab402b1641e72225bf579d5b0aa5a21b345637
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489800"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +64,7 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este procedimiento selecciona las filas de la vista core.snapshots que pueden quitarse de acuerdo con el período de retención. Todas las filas que se pueden quitar se eliminan de la tabla core.snapshots_internal. La eliminación de las filas precedentes desencadenará una acción de eliminación en cascada en todas las tablas del almacén de administración de datos. Esto se consigue al usar la cláusula ON DELETE CASCADE, que se define para todas las tablas que contienen datos recopilados.  
   
  Cada instantánea y sus datos asociados se eliminan dentro de una transacción explícita y, a continuación, se confirma la operación. Por lo tanto, si se detiene manualmente la operación de purga o se supera el valor especificado para @duration , solo se conservan los datos no confirmados. Estos datos se pueden quitar la próxima vez que se ejecute el trabajo.  
@@ -107,7 +108,7 @@ EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = 
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

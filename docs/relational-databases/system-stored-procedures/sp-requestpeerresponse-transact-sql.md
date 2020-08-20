@@ -1,4 +1,5 @@
 ---
+description: sp_requestpeerresponse (Transact-SQL)
 title: sp_requestpeerresponse (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2114460ca878b45bb0b850c066e1fd9356504a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489211"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,16 +40,16 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación en una topología punto a punto para la que se está comprobando el estado. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en una topología punto a punto para la que se está comprobando el estado. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @description = ] 'description'`Información definida por el usuario que se puede utilizar para identificar solicitudes de estado individuales. la *Descripción* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL.  
+`[ @description = ] 'description'` Información definida por el usuario que se puede utilizar para identificar solicitudes de estado individuales. la *Descripción* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL.  
   
-`[ @request_id = ] request_id`Devuelve el identificador de la nueva solicitud. *request_id* es de **tipo int** y es un parámetro de salida. Este valor se puede usar al ejecutar [sp_helppeerresponses &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) para ver todas las respuestas a una solicitud de estado.  
+`[ @request_id = ] request_id` Devuelve el identificador de la nueva solicitud. *request_id* es de **tipo int** y es un parámetro de salida. Este valor se puede usar al ejecutar [sp_helppeerresponses &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) para ver todas las respuestas a una solicitud de estado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_requestpeerresponse** se usa en la replicación transaccional punto a punto.  
   
  **sp_requestpeerresponse** se utiliza para asegurarse de que todos los demás nodos han recibido todos los comandos antes de restaurar una base de datos Publicada en una topología punto a punto. Se utiliza también al replicar cambios del lenguaje de definición de datos (DDL) realizados mientras un nodo estaba sin conexión para calcular cuándo llegan estos cambios a los otros nodos.  
@@ -59,7 +60,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_requestpeerresponse**.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_deletepeerrequesthistory &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   

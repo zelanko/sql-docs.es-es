@@ -1,4 +1,5 @@
 ---
+description: sp_helplogins (Transact-SQL)
 title: sp_helplogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f88a0248d6e3afbfb3b654bd56de01cecfc7f872
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68a90477996c9782722e1a9c0b50f82fd5cf408e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489348"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @LoginNamePattern = ] 'login'`Es un nombre de inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. el *Inicio de sesión* debe existir si se especifica. Si no se especifica *login* , se devuelve información acerca de todos los inicios de sesión.  
+`[ @LoginNamePattern = ] 'login'` Es un nombre de inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. el *Inicio de sesión* debe existir si se especifica. Si no se especifica *login* , se devuelve información acerca de todos los inicios de sesión.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -62,10 +63,10 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nombre de inicio de sesión.|  
 |**Nombrebd**|**sysname**|Base de datos predeterminada que **LoginName** usa al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Nombre**|**sysname**|Cuenta de usuario a la que **LoginName** está asignada en **dbname**y los roles de los que **LoginName** es miembro en **dbname**.|  
+|**UserName**|**sysname**|Cuenta de usuario a la que **LoginName** está asignada en **dbname**y los roles de los que **LoginName** es miembro en **dbname**.|  
 |**UserOrAlias**|**Char (8)**|MemberOf = **username** es un rol.<br /><br /> User = **username** es una cuenta de usuario.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Antes de quitar un inicio de sesión, utilice **sp_helplogins** para identificar las cuentas de usuario que se asignan al inicio de sesión.  
   
 ## <a name="permissions"></a>Permisos  
@@ -101,8 +102,8 @@ John        pubs     John       User
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_helpdb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helpuser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpdb &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helpuser &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de espacio en disco del índice
 title: Ejemplo de espacio en disco del índice | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d12125849b83fb6701b18bd3d7c46b9d9b9828a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668286"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490980"
 ---
 # <a name="index-disk-space-example"></a>Ejemplo de espacio en disco del índice
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -110,10 +111,10 @@ ms.locfileid: "85668286"
   
 |Operación de índice|Requisitos de espacio en disco para las ubicaciones de las siguientes estructuras|  
 |---------------------|---------------------------------------------------------------------------|  
-|Operación de índice sin conexión con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1018 MB<br /><br /> \- Tabla e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> \- Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
-|Operación de índice sin conexión con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 816 MB<br /><br /> \- Tabla e índices existentes: 363 MB*<br /><br /> \- Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
-|Operación de índice en línea con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1058 MB<br /><br /> \- Tabla e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb** (incluye índice de asignación): 242 MB*<br /><br /> \- Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
-|Operación de índice en línea con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 856 MB<br /><br /> \- Tabla e índices existentes: 363 MB*<br /><br /> \- Índice de asignación temporal: 40 MB\*<br /><br /> \- Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice sin conexión con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1018 MB<br /><br /> - Tabla e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice sin conexión con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 816 MB<br /><br /> - Tabla e índices existentes: 363 MB*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice en línea con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1058 MB<br /><br /> - Tabla e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb** (incluye índice de asignación): 242 MB*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice en línea con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 856 MB<br /><br /> - Tabla e índices existentes: 363 MB*<br /><br /> - Índice de asignación temporal: 40 MB\*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
   
  *La asignación de este espacio se cancela cuando se confirma la operación de índice.  
   

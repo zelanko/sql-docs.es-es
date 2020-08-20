@@ -1,4 +1,5 @@
 ---
+description: sp_addrole (Transact-SQL)
 title: sp_addrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f364de4eb2760c5beeae17360fb84ffd52fd7181
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 245e617a9756e276bc06907a6f1592ec5383e69e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489581"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`Es el nombre del nuevo rol de base de datos. *role* es un **sysname**y no tiene ningún valor predeterminado. *role* debe ser un identificador (ID.) válido y no debe existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre del nuevo rol de base de datos. *role* es un **sysname**y no tiene ningún valor predeterminado. *role* debe ser un identificador (ID.) válido y no debe existir en la base de datos actual.  
   
-`[ @ownername = ] 'owner'`Es el propietario del nuevo rol de base de datos. *Owner* es un **tipo sysname**y su valor predeterminado es el usuario que se está ejecutando actualmente. *Owner* debe ser un usuario de base de datos o un rol de base de datos en la base de datos actual.  
+`[ @ownername = ] 'owner'` Es el propietario del nuevo rol de base de datos. *Owner* es un **tipo sysname**y su valor predeterminado es el usuario que se está ejecutando actualmente. *Owner* debe ser un usuario de base de datos o un rol de base de datos en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -52,7 +53,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ## <a name="remarks"></a>Observaciones  
  Los nombres de los roles de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden contener de 1 a 128 caracteres, incluidos letras, símbolos y números. Los nombres de los roles de base de datos no pueden: contener un carácter de barra diagonal inversa ( \\ ), ser null o una cadena vacía (**' '**).  
   
- Después de agregar un rol de base de datos, use [sp_addrolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) para agregar entidades de seguridad al rol. Cuando se utilizan las instrucciones GRANT, DENY o REVOKE para aplicar permisos al rol de base de datos, los miembros de este rol heredan estos permisos como si se aplicaran directamente a sus cuentas.  
+ Después de agregar un rol de base de datos, use [sp_addrolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) para agregar entidades de seguridad al rol. Cuando se utilizan las instrucciones GRANT, DENY o REVOKE para aplicar permisos al rol de base de datos, los miembros de este rol heredan estos permisos como si se aplicaran directamente a sus cuentas.  
   
 > [!NOTE]  
 >  No se pueden crear roles de servidor nuevos. Los roles solo pueden crearse en las bases de datos.  
@@ -69,7 +70,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  

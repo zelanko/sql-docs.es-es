@@ -1,4 +1,5 @@
 ---
+description: sp_cursoropen (Transact-SQL)
 title: sp_cursoropen (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eedb738c9bd1a940f2875d182077edd3b939870b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1faec2f41d2396102b4ee675f2dac40be4b9b216
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489512"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  Opción de desplazamiento. *scrollopt* es un parámetro opcional que requiere uno de los siguientes valores de entrada **int** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +75,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Opción de control de simultaneidad. *ccopt* es un parámetro opcional que requiere uno de los siguientes valores de entrada **int** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (conocido anteriormente como LOCKCC)|  
@@ -147,7 +148,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Si el procedimiento de sp_cursoropen se ejecuta correctamente, se envían los parámetros devueltos por RPC y un conjunto de resultados con información de formato de columna TDS (0XA0 & mensajes 0xa1). Si no puede ejecutarse se envían uno o varios mensajes de error TDS. En cualquier caso, no se devolverá ningún dato de fila y el número de mensajes *terminados* será cero. Si usa una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a la 7.0, se devuelven 0xa0, 0xa1 (estándar de las instrucciones SELECT) junto con las flujos de token 0xa5 y 0xa4. Si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, se devuelve 0x81 (estándar para las instrucciones SELECT) junto con las flujos de token 0xa5 y 0xa4.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="stmt-parameter"></a>Parámetro stmt  
  Si *stmt* especifica la ejecución de un procedimiento almacenado, los parámetros de entrada pueden definirse como constantes como parte de la cadena de *stmt* o especificarse como argumentos de *boundparam* . Las variables declaradas se pueden pasar como parámetros enlazados de esta manera.  
@@ -211,7 +212,7 @@ sp_cursoropen cursor OUTPUT, stmt
  Los parámetros subsiguientes se utilizan para pasar los valores que se van a sustituir por el nombre de la *variable local* en la instrucción.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_cursorfetch &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursorfetch &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

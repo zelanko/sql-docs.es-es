@@ -1,4 +1,5 @@
 ---
+description: sp_describe_undeclared_parameters (Transact-SQL)
 title: sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/24/2018
@@ -18,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: b93ecf05c0a4b48417240db1b9bf22e1104149a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489458"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -45,7 +46,7 @@ sp_describe_undeclared_parameters
 > Para usar este procedimiento almacenado en Azure Synapse Analytics (anteriormente SQL DW), el nivel de compatibilidad de una base de datos debe ser superior a 10. 
 
 ## <a name="arguments"></a>Argumentos  
-`[ \@tsql = ] 'Transact-SQL\_batch'`Una o más [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. *Transact-SQL_batch* puede ser **nvarchar (**_n_**)** o **nvarchar (Max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Una o más [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. *Transact-SQL_batch* puede ser **nvarchar (**_n_**)** o **nvarchar (Max)**.  
   
 `[ \@params = ] N'parameters'`\@params proporciona una cadena de declaración para los parámetros del [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, de forma similar a como funciona sp_executesql. *Los parámetros* pueden ser **nvarchar (**_n_**)** o **nvarchar (Max)**.  
   
@@ -87,7 +88,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Para uso interno.|  
 |**suggested_tds_length**|**int NOT NULL**|Para uso interno.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_describe_undeclared_parameters** siempre devuelve el estado de retorno de cero.  
   
  El uso más común es cuando se proporciona a una aplicación una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que podría contener parámetros y debe procesarlos de alguna manera. Un ejemplo es una interfaz de usuario (como ODBCTest o RowsetViewer) donde el usuario proporciona una consulta con la sintaxis de parámetros de ODBC. La aplicación debe detectar el número de parámetros dinámicamente y pedir confirmación al usuario para cada uno.  
@@ -277,6 +278,6 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_describe_first_result_set &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [Sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [Sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

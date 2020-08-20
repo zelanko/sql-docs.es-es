@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_mailitems_sp (Transact-SQL)
 title: sysmail_delete_mailitems_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 052e97d1d744656c223e000adca7028fd11b7e0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ebfd972849ff27ca0f0b6b73117a786c146e610b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489009"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ \@sent_before = ] 'sent_before'`Elimina los mensajes de correo electrónico hasta la fecha y la hora proporcionadas como *sent_before* argumento. *sent_before* es de **tipo DateTime** y su valor predeterminado es NULL. NULL indica todas las fechas.  
+`[ \@sent_before = ] 'sent_before'` Elimina los mensajes de correo electrónico hasta la fecha y la hora proporcionadas como *sent_before* argumento. *sent_before* es de **tipo DateTime** y su valor predeterminado es NULL. NULL indica todas las fechas.  
   
-`[ \@sent_status = ] 'sent_status'`Elimina los mensajes de correo electrónico del tipo especificado por *sent_status*. *sent_status* es de tipo **VARCHAR (8)** y no tiene ningún valor predeterminado. Las entradas válidas se **envían**, no se **envían**, se **reintentan**y **se produce un error**. NULL indica todos los estados.  
+`[ \@sent_status = ] 'sent_status'` Elimina los mensajes de correo electrónico del tipo especificado por *sent_status*. *sent_status* es de tipo **VARCHAR (8)** y no tiene ningún valor predeterminado. Las entradas válidas se **envían**, no se **envían**, se **reintentan**y **se produce un error**. NULL indica todos los estados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Correo electrónico de base de datos mensajes y sus datos adjuntos se almacenan en la base de datos **msdb** . Los mensajes deben eliminarse periódicamente para evitar que **msdb** crezca más de lo esperado y cumplir con el programa de retención de documentos de las organizaciones. Utilice el **sysmail_delete_mailitems_sp** procedimiento almacenado para eliminar de forma permanente los mensajes de correo electrónico de las tablas de correo electrónico de base de datos. Un argumento opcional permite eliminar solo los mensajes de correo electrónico antiguos indicando la fecha y la hora. Se eliminarán los mensajes de correo electrónico anteriores al valor de ese argumento. Otro argumento opcional permite eliminar solo los mensajes de correo electrónico de un tipo determinado, especificado como el argumento **sent_status** . Debe proporcionar un argumento para ** \@ sent_before** o ** \@ sent_status**. Para eliminar todos los mensajes, utilice ** \@ sent_before = getDate ()**.  
   
  Si se eliminan mensajes de correo electrónico, se eliminarán también los archivos adjuntos relacionados con los mismos. Al eliminar el correo electrónico, no se eliminan las entradas correspondientes en **sysmail_event_log**. Use [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) para eliminar elementos del registro.  
@@ -86,9 +87,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sysmail_allitems &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [sysmail_allitems &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

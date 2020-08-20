@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_principalprofile_sp (Transact-SQL)
 title: sysmail_help_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 8325480c2869f9b3e35caab51935eba36d888afb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488969"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @principal_id = ] principal_id`Es el identificador del usuario o el rol de la base de datos **msdb** de la asociación que se va a mostrar. *principal_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar *principal_id* o *principal_name* .  
+`[ @principal_id = ] principal_id` Es el identificador del usuario o el rol de la base de datos **msdb** de la asociación que se va a mostrar. *principal_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar *principal_id* o *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'`Es el nombre del usuario o el rol de la base de datos **msdb** de la asociación que se va a mostrar. *principal_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar *principal_id* o *principal_name* .  
+`[ @principal_name = ] 'principal_name'` Es el nombre del usuario o el rol de la base de datos **msdb** de la asociación que se va a mostrar. *principal_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar *principal_id* o *principal_name* .  
   
-`[ @profile_id = ] profile_id`Es el identificador del perfil para la asociación que se va a mostrar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` Es el identificador del perfil para la asociación que se va a mostrar. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar *profile_id* o *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Es el nombre del perfil para la asociación que se va a mostrar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar *profile_id* o *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Es el nombre del perfil para la asociación que se va a mostrar. *profile_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar *profile_id* o *profile_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -108,6 +109,6 @@ principal_id principal_name     profile_id  profile_name                   is_de
   
 ## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Correo electrónico de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

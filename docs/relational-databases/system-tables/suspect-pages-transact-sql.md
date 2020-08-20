@@ -1,4 +1,5 @@
 ---
+description: suspect_pages (Transact-SQL)
 title: suspect_pages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa13a24d933157aaa1dc546a2e55c1dc0d1ef7ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c2532301ee2459f66281be8cf1b782574768e283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488666"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

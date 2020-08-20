@@ -1,4 +1,5 @@
 ---
+description: Marcadores de fila (proveedor de OLE DB de Native Client)
 title: Marcadores de fila (proveedor de OLE DB de Native Client) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -16,12 +17,12 @@ ms.assetid: 7d9076f2-bf9c-452e-b816-70371a0c1644
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aadb20c4b1a146096c9fe10ed1a4f2be22563e95
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 516f6dc19d1bee5abf16af98dc0318b46408a549
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490685"
 ---
 # <a name="bookmarks-in-sql-server-native-client"></a>Marcadores en SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: 'Lección 1: Conversión de una tabla en una estructura jerárquica'
 title: 'Lección 1: Conversión de una tabla en una estructura jerárquica | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/22/2018
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 18a7ad2ca8c66f2960fae9a051d0d2546adb02f5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1a4d64425d6d02fbc57bde9f84159c4f09f4929
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488591"
 ---
-# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lección 1: Convertir una tabla en una estructura jerárquica
+# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lección 1: Conversión de una tabla en una estructura jerárquica
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Los clientes que tienen tablas que utilizan autocombinaciones para expresar las relaciones jerárquicas pueden convertir sus tablas en una estructura jerárquica usando esta lección como guía. Es relativamente fácil migrar de esta representación a una que use **hierarchyid**. Después de la migración, los usuarios tendrán una representación jerárquica compacta y fácil de entender, que se puede indizar de varias maneras para conseguir consultas eficaces.  
   
 En esta lección se examina una tabla existente, se crea una nueva tabla que contiene una columna **hierarchyid** , se rellena la tabla con los datos de la tabla de origen y, a continuación, se muestran tres estrategias de indización. En esta lección se incluyen los temas siguientes:  
  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -94,7 +95,7 @@ Observe que la cláusula **ORDER BY** hace que la lista de salida muestre juntos
 
 
 ## <a name="populate-a-table-with-existing-hierarchical-data"></a>Relleno de una tabla con los datos jerárquicos existentes
-Esta tarea crea una nueva tabla y la rellena con los datos de la tabla **EmployeeDemo** . Esta tarea consta de los pasos siguientes:  
+ Esta tarea crea una nueva tabla y la rellena con los datos de la tabla **EmployeeDemo**. Esta tarea consta de los pasos siguientes:  
   
 -   Cree una nueva tabla que contenga una columna **hierarchyid** . Esta columna podría reemplazar a las columnas **EmployeeID** y **ManagerID** existentes. Sin embargo, usted conservará esas columnas. La razón de ello es porque alguna de las aplicaciones existentes podría hacer referencia a esas columnas, y también para ayudarle a entender los datos una vez realizada la transferencia. La definición de tabla especifica que **OrgNode** es la clave principal, que requiere que la columna contenga valores únicos. El índice agrupado sobre la columna **OrgNode** almacenará la fecha en secuencia **OrgNode** .    
 -   Cree una tabla temporal que se utilizará para averiguar cuántos empleados notifican directamente a cada gerente. 

@@ -1,4 +1,5 @@
 ---
+description: sp_helpsrvrolemember (Transact-SQL)
 title: sp_helpsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 559a88809e903c56221088e811b1b04875f3849a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be34b5879a21824e5e0b92fbe3187fce039d6ffa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489254"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srvrolename = ] 'role'`Es el nombre de un rol fijo de servidor. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *role*, el conjunto de resultados incluye información sobre todos los roles fijos de servidor.  
+`[ @srvrolename = ] 'role'` Es el nombre de un rol fijo de servidor. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *role*, el conjunto de resultados incluye información sobre todos los roles fijos de servidor.  
   
  *role* puede ser cualquiera de los siguientes valores.  
   
@@ -65,7 +66,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |MemberName|**sysname**|Nombre de un miembro de ServerRole|  
 |MemberSID|**varbinary(85)**|Identificador de seguridad de MemberName|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para presentar los miembros de un rol de base de datos, utilice sp_helprolemember.  
   
  Todos los inicios de sesión son miembros de Public. sp_helpsrvrolemember no reconoce el rol Public porque, internamente, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa Public como role.  
@@ -85,8 +86,8 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_helprole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_helprole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Funciones de seguridad &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

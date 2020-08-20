@@ -1,4 +1,5 @@
 ---
+description: sp_helpqreader_agent (Transact-SQL)
 title: sp_helpqreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e969e33c42348aabcd46f1c51d56c1329669820
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c638e7895d95518f59627643deb0b0070a19fa70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729198"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489299"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @frompublisher = ] frompublisher`Especifica si se llama al procedimiento almacenado en el publicador o en el distribuidor. *frompublisher* es de bit y su valor predeterminado es 0. **1** significa que se llama al procedimiento almacenado desde el publicador y **0** significa que se llama al procedimiento almacenado desde el distribuidor.  
+`[ @frompublisher = ] frompublisher` Especifica si se llama al procedimiento almacenado en el publicador o en el distribuidor. *frompublisher* es de bit y su valor predeterminado es 0. **1** significa que se llama al procedimiento almacenado desde el publicador y **0** significa que se llama al procedimiento almacenado desde el distribuidor.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -52,7 +53,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpqreader_agent** se utiliza en la replicación transaccional.  
   
 ## <a name="permissions"></a>Permisos  

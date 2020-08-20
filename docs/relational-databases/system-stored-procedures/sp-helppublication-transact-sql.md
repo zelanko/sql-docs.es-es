@@ -1,4 +1,5 @@
 ---
+description: sp_helppublication (Transact-SQL)
 title: sp_helppublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/18/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd5452439cc3467cc840ac11dd9ce3cf880a4ce8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489313"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación que se va a ver. *Publication* es de tipo sysname y su valor predeterminado es **%** , que devuelve información acerca de todas las publicaciones.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a ver. *Publication* es de tipo sysname y su valor predeterminado es **%** , que devuelve información acerca de todas las publicaciones.  
   
-`[ @found = ] 'found' OUTPUT`Es una marca que indica que se devuelven filas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de **23456**. **1** indica que se ha encontrado la publicación. **0** indica que no se encuentra la publicación.  
+`[ @found = ] 'found' OUTPUT` Es una marca que indica que se devuelven filas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de **23456**. **1** indica que se ha encontrado la publicación. **0** indica que no se encuentra la publicación.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de tipo sysname y su valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de tipo sysname y su valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe especificar el *publicador* al solicitar información de publicación de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
@@ -104,7 +105,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El procedimiento sp_helppublication se utiliza en la replicación de instantáneas y transaccional.  
   
  sp_helppublication devolverá información sobre todas las publicaciones que son propiedad del usuario que ejecuta este procedimiento.  
@@ -119,9 +120,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [sp_addpublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_addpublication &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_changepublication &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
+ [sp_droppublication &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

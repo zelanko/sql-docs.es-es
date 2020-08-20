@@ -1,4 +1,5 @@
 ---
+description: Búsqueda semántica (SQL Server)
 title: Búsqueda semántica (SQL Server) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 4ef517636a0bc1f727f2dc6a59093af773007cc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8da5b57c26ad2b99ab11b058b9d3362ff48569e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490578"
 ---
 # <a name="semantic-search-sql-server"></a>Búsqueda semántica (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-La búsqueda semántica estadística proporciona una visión general amplia de los documentos no estructurados almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la extracción e indización de *frases clave*estadísticamente pertinentes. Después, usa las frases clave para identificar e indizar *documentos que son similares o están relacionados*.  
+La búsqueda semántica estadística proporciona una visión general amplia de los documentos no estructurados almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la extracción e indización de *frases clave* estadísticamente pertinentes. Después, usa las frases clave para identificar e indizar *documentos que son similares o están relacionados*.  
   
 ##  <a name="what-can-you-do-with-semantic-search"></a><a name="whatcanido"></a> ¿Qué puede hacer con la búsqueda semántica?  
  La búsqueda semántica se basa en la características de búsqueda de texto completo existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero habilita nuevos escenarios que van más allá de las búsquedas sintácticas de palabras clave. Mientras que la búsqueda de texto completo permite consultar las *palabras* de un documento, la búsqueda semántica permite consultar el *significado* del documento. Las soluciones que ahora son posibles incluyen la extracción automática de etiquetas, la detección de contenido relacionado y la navegación jerárquica en contenido similar. Por ejemplo, puede consultar el índice de frases clave para compilar la taxonomía de una organización o un corpus de documentos. O bien, puede consultar el índice de similitud de documentos para identificar currículos que coincidan con la descripción de un trabajo.  

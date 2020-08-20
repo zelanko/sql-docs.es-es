@@ -1,4 +1,5 @@
 ---
+description: Propiedades de columna (página General)
 title: Propiedades de columna (página General) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48c1c009106bb4beb956b049e7acab43b187d082
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5f70e0d563760cf0e511b673ea7f838f6aabdde4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488687"
 ---
 # <a name="column-properties-general-page"></a>Propiedades de columna (página General)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "87395127"
   
 ## <a name="options"></a>Opciones  
  **Nombre**  
- Nombre de la columna.  
+ El nombre de la columna.  
   
  **Tipo de datos**  
  Tipo de datos que puede contener la columna. Si el tipo de datos es un tipo definido por el usuario, se muestra este tipo. Si el tipo de datos no es un tipo definido por el usuario, se muestra el tipo de datos del sistema. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  

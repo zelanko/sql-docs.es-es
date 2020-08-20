@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplfailovermode (Transact-SQL)
 title: sp_helpreplfailovermode (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 846057680d9f97d5fc1e1bb2683a720a63f71585
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5503291dc5011366ab6fe3b4a2d60b0a1310ba79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489297"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +42,17 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador que participa en la actualización de este suscriptor. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado. El publicador debe estar configurado para publicación.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador que participa en la actualización de este suscriptor. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado. El publicador debe estar configurado para publicación.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación que participa en la actualización de este suscriptor. *Publication*es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que participa en la actualización de este suscriptor. *Publication*es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT`Devuelve el valor entero del modo de conmutación por error y es un parámetro de **salida** . *failover_mode_id* es de **tinyint** con un valor predeterminado de **0**. Devuelve **0** para la actualización inmediata y **1** para la actualización en cola.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Devuelve el valor entero del modo de conmutación por error y es un parámetro de **salida** . *failover_mode_id* es de **tinyint** con un valor predeterminado de **0**. Devuelve **0** para la actualización inmediata y **1** para la actualización en cola.  
   
-`[ @failover_mode = ] 'failover_mode' OUTPUT`Devuelve el modo en el que se realizan las modificaciones de datos en el suscriptor. *failover_mode* es de tipo **nvarchar (10)** y su valor predeterminado es NULL. Es un parámetro de **salida** .  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` Devuelve el modo en el que se realizan las modificaciones de datos en el suscriptor. *failover_mode* es de tipo **nvarchar (10)** y su valor predeterminado es NULL. Es un parámetro de **salida** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**inmediato**|Actualización inmediata: las actualizaciones del suscriptor se propagan inmediatamente al publicador utilizando un protocolo de confirmación en dos fases (2PC).|  
 |**en cola**|Actualización en cola: las actualizaciones realizadas en el suscriptor se almacenan en una cola.|  
@@ -59,13 +60,13 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpreplfailovermode** se utiliza en la replicación de instantáneas o transaccional para la que se habilitan las suscripciones para la actualización inmediata con la actualización en cola como conmutación por error, en caso de error.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_helpreplfailovermode**.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_setreplfailovermode &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

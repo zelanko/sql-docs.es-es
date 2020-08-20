@@ -1,4 +1,5 @@
 ---
+description: Definir y modificar un filtro de fila estático
 title: Definición y modificación de un filtro de fila estático | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e677e0a28741efa9e9e680a02accc65400cc62ff
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f88007fbb409004bc01d7b909dfa520cb7b8a051
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86906367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490653"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definir y modificar un filtro de fila estático
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

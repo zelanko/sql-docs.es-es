@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobstep (Transact-SQL)
 title: sp_delete_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77557dee97475ef713c88c969de98a241d955eea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7fc21ae11a1ade4780b99a86d03b7c9948c05663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489434"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`El número de identificación del trabajo del que se quitará el paso. *job_id*es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` El número de identificación del trabajo del que se quitará el paso. *job_id*es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'`Nombre del trabajo del que se quitará el paso. *job_name*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo del que se quitará el paso. *job_name*es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > **Nota:** Se debe especificar *job_id* o *job_name* ; no se pueden especificar ambos.  
   
-`[ @step_id = ] step_id`Número de identificación del paso que se va a quitar. *step_id*es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @step_id = ] step_id` Número de identificación del paso que se va a quitar. *step_id*es de **tipo int**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -92,9 +93,9 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Ver o modificar trabajos](../../ssms/agent/view-or-modify-jobs.md)   
- [sp_add_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_update_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_add_jobstep &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_update_jobstep &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

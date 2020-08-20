@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_pdw_request_steps (Transact-SQL)
 title: Sys. dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -12,12 +13,12 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e9dd970cebd1f25b953e7a5fe21c8ea8c60bde
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4144e068354d43e2e8a5f9ea5bd6af7ad40a0e6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489768"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>Sys. dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,11 +38,11 @@ ms.locfileid: "86196223"
 |end_time|**datetime**|Hora a la que se completó la ejecución de este paso, se canceló o dio error.|Menor o igual que la hora actual y mayor o igual que start_time. Se establece en NULL para los pasos que se encuentran actualmente en ejecución o en cola.|  
 |total_elapsed_time|**int**|Cantidad total de tiempo que se ha estado ejecutando el paso de la consulta, en milisegundos.|Entre 0 y la diferencia entre end_time y start_time. 0 para los pasos en cola.<br /><br /> Si total_elapsed_time supera el valor máximo de un entero, total_elapsed_time seguirá siendo el valor máximo. Esta condición generará la advertencia "se ha superado el valor máximo".<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
 |row_count|**bigint**|Número total de filas cambiadas o devueltas por esta solicitud.|Número de filas afectadas por el paso.  Mayor o igual que cero para los pasos de la operación de datos.  -1 para los pasos que no operan en los datos.|  
-|.|**nvarchar(4000)**|Contiene el texto completo del comando de este paso.|Cualquier cadena de solicitud válida para un paso. NULL cuando la operación es del tipo MetaDataCreateOperation. Se trunca si hay más de 4000 caracteres.|  
+|command|**nvarchar(4000)**|Contiene el texto completo del comando de este paso.|Cualquier cadena de solicitud válida para un paso. NULL cuando la operación es del tipo MetaDataCreateOperation. Se trunca si hay más de 4000 caracteres.|  
   
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección valores máximos de la vista del sistema en los valores mínimo y máximo de [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

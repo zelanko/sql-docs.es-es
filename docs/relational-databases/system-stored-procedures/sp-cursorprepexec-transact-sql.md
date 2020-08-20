@@ -1,4 +1,5 @@
 ---
+description: sp_cursorprepexec (Transact-SQL)
 title: sp_cursorprepexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e82a82df5f532df05ad0f04a14c95b24850484bd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1a6cbd32485e006ead529f4d8b1afeca3e0e7af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489398"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  Use una cadena **ntext** como valor de entrada cuando *stmt* tiene parámetros y el valor de PARAMETERIZED_STMT *scrollopt* es on.  
   
- *statement*  
+ *instrucción*  
  Define el conjunto de resultados del cursor. El parámetro de *instrucción* es obligatorio y llama a para un valor de entrada **ntext**, **nchar**o **nvarchar** .  
   
 > [!NOTE]  
@@ -62,14 +63,14 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *options*  
  Parámetro opcional que devuelve una descripción de las columnas del conjunto de resultados del cursor. * las opciones requieren el siguiente valor de entrada **int** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Opción de desplazamiento. *scrollopt* es un parámetro opcional que requiere uno de los siguientes valores de entrada **int** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -86,12 +87,12 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- Debido a la posibilidad de que la opción solicitada no sea adecuada para el cursor definido por * \< stmt>*, este parámetro actúa como entrada y salida. En casos como este, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un tipo adecuado y modifica este valor.  
+ Debido a la posibilidad de que la opción solicitada no sea adecuada para el cursor definido por *\<stmt>* , este parámetro actúa como entrada y salida. En casos como este, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un tipo adecuado y modifica este valor.  
   
  *ccopt*  
  Opción de control de simultaneidad. *ccopt* es un parámetro opcional que requiere uno de los siguientes valores de entrada **int** .  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (conocido anteriormente como LOCKCC)|  
@@ -120,8 +121,8 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  Si params devuelve un valor NULL, la instrucción no tiene parámetros.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_cursoropen &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorexecute &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursorprepare &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
- [sp_cursorfetch &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorexecute &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursorprepare &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursorprepare-transact-sql.md)   
+ [sp_cursorfetch &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

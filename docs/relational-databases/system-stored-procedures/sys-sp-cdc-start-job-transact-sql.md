@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_start_job (Transact-SQL)
 title: Sys. sp_cdc_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a87fca28491075c9a75945b7a452c02b270d95b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1d96a7ab3bbddfa134b4e8cba80e6d8aeddeb1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489104"
 ---
 # <a name="syssp_cdc_start_job-transact-sql"></a>sys.sp_cdc_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ [ @job_type = ] 'job_type' ]`Tipo de trabajo que se va a agregar. *job_type* es de tipo **nvarchar (20)** y su valor predeterminado es **Capture**. Las entradas válidas son **Capture** y **Cleanup**.  
+`[ [ @job_type = ] 'job_type' ]` Tipo de trabajo que se va a agregar. *job_type* es de tipo **nvarchar (20)** y su valor predeterminado es **Capture**. Las entradas válidas son **Capture** y **Cleanup**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

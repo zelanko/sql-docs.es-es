@@ -1,4 +1,5 @@
 ---
+description: sp_columns (Transact-SQL)
 title: sp_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2016
@@ -18,12 +19,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ac9e5647193899335af494ac87f8ecdafe6390d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5dec6803d57bbb67286dc7b9ceb1b573644c2863
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489558"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,17 +46,17 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ \@table_name = ] object`Es el nombre del objeto que se utiliza para devolver información del catálogo. el *objeto* puede ser una tabla, una vista u otro objeto que tenga columnas como funciones con valores de tabla. el *objeto* es de tipo **nvarchar (384)** y no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ \@table_name = ] object` Es el nombre del objeto que se utiliza para devolver información del catálogo. el *objeto* puede ser una tabla, una vista u otro objeto que tenga columnas como funciones con valores de tabla. el *objeto* es de tipo **nvarchar (384)** y no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ \@table_owner = ] owner`Es el propietario del objeto que se utiliza para devolver información del catálogo. *Owner* es **nvarchar (384)** y su valor predeterminado es NULL. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas de visibilidad de objeto predeterminadas del DBMS subyacente.  
+`[ \@table_owner = ] owner` Es el propietario del objeto que se utiliza para devolver información del catálogo. *Owner* es **nvarchar (384)** y su valor predeterminado es NULL. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas de visibilidad de objeto predeterminadas del DBMS subyacente.  
   
  Si el usuario actual posee un objeto con el nombre especificado, se devuelven las columnas de ese objeto. Si no se especifica *Owner* y el usuario actual no posee un objeto con el *objeto*especificado, **sp_columns** busca un objeto con el *objeto* especificado que pertenezca al propietario de la base de datos. Si existe uno, se devuelven las columnas de ese objeto.  
   
-`[ \@table_qualifier = ] qualifier`Es el nombre del calificador de objeto. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para objetos (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre de servidor del entorno de base de datos del objeto.  
+`[ \@table_qualifier = ] qualifier` Es el nombre del calificador de objeto. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para objetos (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre de servidor del entorno de base de datos del objeto.  
   
-`[ \@column_name = ] column`Es una sola columna y se utiliza cuando solo se desea una columna de información del catálogo. la *columna* es de tipo **nvarchar (384)** y su valor predeterminado es NULL. Si no se especifica *Column* , se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la *columna* representa el nombre de la columna tal y como aparece en la tabla **syscolumns** . Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL-92 (caracteres comodín % y _).  
+`[ \@column_name = ] column` Es una sola columna y se utiliza cuando solo se desea una columna de información del catálogo. la *columna* es de tipo **nvarchar (384)** y su valor predeterminado es NULL. Si no se especifica *Column* , se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la *columna* representa el nombre de la columna tal y como aparece en la tabla **syscolumns** . Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL-92 (caracteres comodín % y _).  
   
-`[ \@ODBCVer = ] ODBCVer`Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int**y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para conocer las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación de **SQLColumns** de ODBC.  
+`[ \@ODBCVer = ] ODBCVer` Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int**y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para conocer las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación de **SQLColumns** de ODBC.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -113,8 +114,8 @@ EXEC sp_columns @table_name = N'DimEmployee',
    @table_owner = N'dbo';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [sp_tables &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [sp_tables &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [Procedimientos almacenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

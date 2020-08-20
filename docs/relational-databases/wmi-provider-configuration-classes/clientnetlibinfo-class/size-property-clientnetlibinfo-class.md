@@ -1,4 +1,5 @@
 ---
+description: Propiedad Size (clase ClientNetLibInfo)
 title: Propiedad Size (ClientNetLibInfo)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a00019f4d78bc9a6762720b4afcbd506d6fb5498
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e4f68470d13431221e52c2932b5a4e84aa3ea53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488502"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Propiedad Size (clase ClientNetLibInfo)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.Size [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor uint32 que especifica el tamaño de la biblioteca de red del cliente en KB.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
- [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

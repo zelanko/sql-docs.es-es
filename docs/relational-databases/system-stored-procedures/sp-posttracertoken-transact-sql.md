@@ -1,4 +1,5 @@
 ---
+description: sp_posttracertoken (Transact-SQL)
 title: sp_posttracertoken (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1354645781d4d6207311349689fb8431e3cb7912
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74e1bcab6a1db0f8c92b82475689f24b53d72316
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489151"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación para la que se está midiendo la latencia. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación para la que se está midiendo la latencia. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @tracer_token_id = ] _tracer_token_id OUTPUT`Es el identificador del testigo de seguimiento insertado. *tracer_token_id* es de **tipo int** y su valor predeterminado es null, y es un parámetro de salida. Este valor se puede usar para ejecutar [sp_helptracertokenhistory &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) o [sp_deletetracertokenhistory &#40;Transact-SQL](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)&#41;sin ejecutar primero sp_helptracertokens &#40;[de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
+`[ @tracer_token_id = ] _tracer_token_id OUTPUT` Es el identificador del testigo de seguimiento insertado. *tracer_token_id* es de **tipo int** y su valor predeterminado es null, y es un parámetro de salida. Este valor se puede usar para ejecutar [sp_helptracertokenhistory &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) o [sp_deletetracertokenhistory &#40;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)&#41;sin ejecutar primero sp_helptracertokens &#40;[de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname, su**valor predeterminado es NULL y no se debe especificar para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname, su**valor predeterminado es NULL y no se debe especificar para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_posttracertoken** se utiliza en la replicación transaccional.  
   
 ## <a name="example"></a>Ejemplo  

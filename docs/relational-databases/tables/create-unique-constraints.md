@@ -1,4 +1,5 @@
 ---
+description: Crear restricciones UNIQUE
 title: Creación de restricciones UNIQUE | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2020
@@ -17,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef372c63ec954a0be878d013f4198ee6f5656a53
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: aa8ab586235c33d6620bbce15676f226a85779d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488629"
 ---
 # <a name="create-unique-constraints"></a>Crear restricciones UNIQUE
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "86002154"
   
 4.  En la cuadrícula situada debajo de **General**, haga clic en **Tipo** y elija **Clave UNIQUE** en el cuadro de lista desplegable situado a la derecha de la propiedad.  
   
-5.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
+5.  En el menú **Archivo**, haga clic en ***Guardar**_nombre de tabla_.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   

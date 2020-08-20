@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepullsubscription (Transact-SQL)
 title: sp_helpmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db4ae46a9436ceb960a32764a95467116ce537e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489339"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argumento  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** . Si la *publicación* es **%** , se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** . Si la *publicación* es **%** , se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
   
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher*es de **tipo sysname y su**valor predeterminado es **%** .  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher*es de **tipo sysname y su**valor predeterminado es **%** .  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db*es de **tipo sysname y su**valor predeterminado es **%** .  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es de **tipo sysname y su**valor predeterminado es **%** .  
   
-`[ @subscription_type = ] 'subscription_type'`Indica si se van a mostrar las suscripciones de extracción. *subscription_type*es de tipo **nvarchar (10)** y su valor predeterminado es **' pull '**. Los valores válidos son **' Inserte '**, **' pull '** o **' both '**.  
+`[ @subscription_type = ] 'subscription_type'` Indica si se van a mostrar las suscripciones de extracción. *subscription_type*es de tipo **nvarchar (10)** y su valor predeterminado es **' pull '**. Los valores válidos son **' Inserte '**, **' pull '** o **' both '**.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -101,16 +102,16 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpmergepullsubscription** se utiliza en la replicación de mezcla. En el conjunto de resultados, la fecha devuelta en **LAST_UPDATED** tiene el formato *AAAAMMDD hh: mm: SS. FFF*.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** y del rol fijo de base de datos **db_owner** pueden ejecutar **sp_helpmergepullsubscription**.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_addmergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: dbo.sysschedules (Transact-SQL)
 title: Programaciones de dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 397fecaadad721529671a69daaf1c704e28268ea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488898"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85890397"
 |**originating_server_id**|**int**|Id. del servidor maestro del que procede la programación de trabajo.|  
 |**name**|**sysname (nvarchar (128))**|Nombre de la programación de trabajo definido por el usuario. Este nombre debe ser único en un trabajo.|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* del usuario o grupo que posee la programación del trabajo.|  
-|**activó**|**int**|Estado de la programación de trabajo:<br /><br /> **0** = no habilitado.<br /><br /> **1** = habilitada.<br /><br /> Si la programación no está habilitada, no se ejecutarán trabajos en la programación.|  
+|**enabled**|**int**|Estado de la programación de trabajo:<br /><br /> **0** = no habilitado.<br /><br /> **1** = habilitada.<br /><br /> Si la programación no está habilitada, no se ejecutarán trabajos en la programación.|  
 |**freq_type**|**int**|Frecuencia con la que un trabajo se ejecuta para esta programación.<br /><br /> **1** = solo una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, con respecto a **freq_interval**<br /><br /> **64** = se ejecuta cuando se inicia el servicio Agente SQL Server<br /><br /> **128** = se ejecuta cuando el equipo está inactivo|  
 |**freq_interval**|**int**|Días en que se ejecuta el trabajo. Depende del valor de **freq_type**. El valor predeterminado es **0**, que indica que **freq_interval** no se usa. Vea la tabla siguiente para ver los valores posibles y sus efectos.|  
 |**freq_subday_type**|**int**|Unidades para el **freq_subday_interval**. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> <br /><br /> **1** : en el momento especificado<br /><br /> **2** : segundos<br /><br /> **4** : minutos<br /><br /> **8** : horas|  
@@ -64,7 +65,7 @@ ms.locfileid: "85890397"
 |**64** (se inicia cuando se inicia Agente SQL Server servicio)|**freq_interval** no se usa (**0**)|  
 |**128** (se ejecuta cuando el equipo está inactivo)|**freq_interval** no se usa (**0**)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [dbo.sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

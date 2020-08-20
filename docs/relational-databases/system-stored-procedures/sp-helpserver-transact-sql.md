@@ -1,4 +1,5 @@
 ---
+description: sp_helpserver (Transact-SQL)
 title: sp_helpserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe5e3bd8d7d5ce0046a908f16ae860bc68386054
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1870b2e58871eacde9a65fa42bf75285b2630311
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489282"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server = ] 'server'`Es el servidor sobre el que se envía información. Cuando no se especifica el *servidor* , informa de todos los servidores de **master.sys. Servers**. *Server* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @server = ] 'server'` Es el servidor sobre el que se envía información. Cuando no se especifica el *servidor* , informa de todos los servidores de **master.sys. Servers**. *Server* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @optname = ] 'option'`Es la opción que describe el servidor. *Option* es de tipo **VARCHAR (** 35 **)**, su valor predeterminado es NULL y debe ser uno de estos valores.  
+`[ @optname = ] 'option'` Es la opción que describe el servidor. *Option* es de tipo **VARCHAR (** 35 **)**, su valor predeterminado es NULL y debe ser uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**compatible con la intercalación**|Afecta a la ejecución de consultas distribuidas sobre servidores vinculados. Si esta opción se establece en TRUE,|  
 |**acceso a datos**|Habilita y deshabilita un servidor vinculado para el acceso a consultas distribuidas.|  
@@ -59,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usar intercalación remota**|Usa la intercalación de una columna remota en lugar de la del servidor local.|  
   
-`[ @show_topology = ] 'show_topology'`Es la relación del servidor especificado con otros servidores. *show_topology* es de tipo **VARCHAR (** 1 **)** y su valor predeterminado es NULL. Si *show_topology* no es igual a **t** o es null, **sp_helpserver** devuelve las columnas enumeradas en la sección conjuntos de resultados. Si *show_topology* es igual a **t**, además de las columnas enumeradas en los conjuntos de resultados, **sp_helpserver** también devuelve información de **TopX** y **Topy** .  
+`[ @show_topology = ] 'show_topology'` Es la relación del servidor especificado con otros servidores. *show_topology* es de tipo **VARCHAR (** 1 **)** y su valor predeterminado es NULL. Si *show_topology* no es igual a **t** o es null, **sp_helpserver** devuelve las columnas enumeradas en la sección conjuntos de resultados. Si *show_topology* es igual a **t**, además de las columnas enumeradas en los conjuntos de resultados, **sp_helpserver** también devuelve información de **TopX** y **Topy** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error).  
@@ -76,7 +77,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Valor del tiempo de espera para conectar a un servidor vinculado.|  
 |**query_timeout**|**int**|Valor del tiempo de espera para consultas sobre un servidor vinculado.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Un servidor puede tener varios estados.  
   
 ## <a name="permissions"></a>Permisos  
@@ -103,17 +104,17 @@ EXEC sp_helpserver 'SEATTLE2';
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_adddistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_addserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_addsubscriber &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
- [sp_changesubscriber &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_dropsubscriber &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpdistributor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [sp_helpremotelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [sp_serveroption &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sp_adddistpublisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_addserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addsubscriber &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
+ [sp_changesubscriber &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
+ [sp_dropsubscriber &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpremotelogin &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sp_serveroption &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

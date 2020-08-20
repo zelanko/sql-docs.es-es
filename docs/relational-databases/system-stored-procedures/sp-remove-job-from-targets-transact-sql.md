@@ -1,4 +1,5 @@
 ---
+description: sp_remove_job_from_targets (Transact-SQL)
 title: sp_remove_job_from_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de4d2686066e10f1eb9f80862241d1d1a47cf6b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d40f7d8812fe83648871bedbb3538202f5c519a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489164"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`Número de identificación del trabajo del que se van a quitar los servidores de destino o grupos de servidores de destino especificados. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` Número de identificación del trabajo del que se van a quitar los servidores de destino o grupos de servidores de destino especificados. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'`Nombre del trabajo del que se van a quitar los servidores de destino o grupos de servidores de destino especificados. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo del que se van a quitar los servidores de destino o grupos de servidores de destino especificados. Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @target_server_groups = ] 'target_server_groups'`Lista separada por comas de los grupos de servidores de destino que se van a quitar del trabajo especificado. *target_server_groups* es de tipo **nvarchar (1024)** y su valor predeterminado es NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Lista separada por comas de los grupos de servidores de destino que se van a quitar del trabajo especificado. *target_server_groups* es de tipo **nvarchar (1024)** y su valor predeterminado es NULL.  
   
-`[ @target_servers = ] 'target_servers'`Lista separada por comas de los servidores de destino que se van a quitar del trabajo especificado. *target_servers* es de tipo **nvarchar (1024)** y su valor predeterminado es NULL.  
+`[ @target_servers = ] 'target_servers'` Lista separada por comas de los servidores de destino que se van a quitar del trabajo especificado. *target_servers* es de tipo **nvarchar (1024)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -71,8 +72,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_apply_job_to_targets &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_jobserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: MSrepl_backup_lsns (Transact-SQL)
 title: MSrepl_backup_lsns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c1870e9fba39995f7f8634076c658d8ef044999
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba87bd4bf59f96289b536d53e74d747ff0066408
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480792"
 ---
 # <a name="msrepl_backup_lsns-transact-sql"></a>MSrepl_backup_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

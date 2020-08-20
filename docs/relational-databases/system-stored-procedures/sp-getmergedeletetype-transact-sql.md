@@ -1,4 +1,5 @@
 ---
+description: sp_getmergedeletetype (Transact-SQL)
 title: sp_getmergedeletetype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 406eb51a43b350a5e6f0f2d4723baab40a62ce5e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e430a763a5922a38c23fda241fd207edc3c91fa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481278"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,19 +38,19 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @source_object = ] 'source_object'`Es el nombre del objeto de origen. *source_object* es de tipo **nvarchar (386)** y no tiene ningún valor predeterminado.  
+`[ @source_object = ] 'source_object'` Es el nombre del objeto de origen. *source_object* es de tipo **nvarchar (386)** y no tiene ningún valor predeterminado.  
   
-`[ @rowguid = ] 'rowguid'`Es el identificador de fila del tipo de eliminación. *ROWGUID* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
+`[ @rowguid = ] 'rowguid'` Es el identificador de fila del tipo de eliminación. *ROWGUID* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
   
-`[ @delete_type = ] delete_type OUTPUT`Es el código que indica el tipo de eliminación. *delete_type* es de **tipo int**y no tiene ningún valor predeterminado. *delete_type* también es un parámetro de salida y puede tener uno de estos valores.  
+`[ @delete_type = ] delete_type OUTPUT` Es el código que indica el tipo de eliminación. *delete_type* es de **tipo int**y no tiene ningún valor predeterminado. *delete_type* también es un parámetro de salida y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Eliminación por parte del usuario|  
 |**5**|Eliminación parcial|  
 |**6**|Eliminación por parte del sistema|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_getmergedeletetype** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

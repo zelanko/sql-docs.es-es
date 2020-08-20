@@ -1,4 +1,5 @@
 ---
+description: sp_unregister_custom_scripting (Transact-SQL)
 title: sp_unregister_custom_scripting (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9cd0ff590213b5dd687235328696d4956b0bb224
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0247061b99b53cb53e12fa4e5e3a1284430287e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480946"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,29 +40,29 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @type = ] 'type'`Es el tipo de procedimiento almacenado personalizado o el script que se va a quitar. *Type* es de tipo **VARCHAR (16)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
+`[ @type = ] 'type'` Es el tipo de procedimiento almacenado personalizado o el script que se va a quitar. *Type* es de tipo **VARCHAR (16)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**introducir**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción INSERT.|  
+|**insert**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción INSERT.|  
 |**update**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción UPDATE.|  
 |**delete**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción DELETE.|  
 |**custom_script**|El procedimiento almacenado personalizado registrado o el script se ejecuta al final del desencadenador de lenguaje de definición de datos (DDL).|  
   
-`[ @publication = ] 'publication'`Nombre de la publicación para la que se va a quitar el procedimiento almacenado personalizado o el script. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publication = ] 'publication'` Nombre de la publicación para la que se va a quitar el procedimiento almacenado personalizado o el script. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @article = ] 'article'`Nombre del artículo para el que se va a quitar el procedimiento almacenado personalizado o el script. *article* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @article = ] 'article'` Nombre del artículo para el que se va a quitar el procedimiento almacenado personalizado o el script. *article* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_unregister_custom_scripting** se utiliza en la replicación de instantáneas y transaccional.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** o el rol fijo de base de datos **db_ddladmin** pueden ejecutar **sp_unregister_custom_scripting**.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_register_custom_scripting &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
+ [sp_register_custom_scripting &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_validatemergepublication (Transact-SQL)
 title: sp_validatemergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d2082ee586087458244ecd268b069804e4efc3ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f5120e6976291f9d064346891334b2d23b15aec8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481001"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ sp_validatemergepublication [@publication=] 'publication'
  [** \@ publicación =**] **'***publicación***'**  
  Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @level = ] level`Es el tipo de validación que se va a realizar. *LEVEL* es de **tinyint**y no tiene ningún valor predeterminado. Puede ser uno de estos valores.  
+`[ @level = ] level` Es el tipo de validación que se va a realizar. *LEVEL* es de **tinyint**y no tiene ningún valor predeterminado. Puede ser uno de estos valores.  
   
 |Valor de nivel|Descripción|  
 |-----------------|-----------------|  
@@ -52,7 +53,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_validatemergepublication** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
@@ -61,6 +62,6 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Validar datos replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_validatemergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
+ [sp_validatemergesubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

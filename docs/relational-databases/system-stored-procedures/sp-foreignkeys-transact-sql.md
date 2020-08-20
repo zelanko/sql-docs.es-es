@@ -1,4 +1,5 @@
 ---
+description: sp_foreignkeys (Transact-SQL)
 title: sp_foreignkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f7d3fe93965bcfcb516e79452b6725940c1e68c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481296"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,19 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_server = ] 'table_server'`Es el nombre del servidor vinculado del que se va a devolver información de la tabla. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @table_server = ] 'table_server'` Es el nombre del servidor vinculado del que se va a devolver información de la tabla. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @pktab_name = ] 'pktab_name'`Es el nombre de la tabla con una clave principal. *pktab_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @pktab_name = ] 'pktab_name'` Es el nombre de la tabla con una clave principal. *pktab_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @pktab_schema = ] 'pktab_schema'`Es el nombre del esquema con una clave principal. *pktab_schema*es de **tipo sysname y su**valor predeterminado es NULL. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contiene el nombre del propietario.  
+`[ @pktab_schema = ] 'pktab_schema'` Es el nombre del esquema con una clave principal. *pktab_schema*es de **tipo sysname y su**valor predeterminado es NULL. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contiene el nombre del propietario.  
   
-`[ @pktab_catalog = ] 'pktab_catalog'`Es el nombre del catálogo con una clave principal. *pktab_catalog*es de **tipo sysname y su**valor predeterminado es NULL. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contiene el nombre de la base de datos.  
+`[ @pktab_catalog = ] 'pktab_catalog'` Es el nombre del catálogo con una clave principal. *pktab_catalog*es de **tipo sysname y su**valor predeterminado es NULL. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], contiene el nombre de la base de datos.  
   
-`[ @fktab_name = ] 'fktab_name'`Es el nombre de la tabla con una clave externa. *fktab_name*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @fktab_name = ] 'fktab_name'` Es el nombre de la tabla con una clave externa. *fktab_name*es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @fktab_schema = ] 'fktab_schema'`Es el nombre del esquema con una clave externa. *fktab_schema*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @fktab_schema = ] 'fktab_schema'` Es el nombre del esquema con una clave externa. *fktab_schema*es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @fktab_catalog = ] 'fktab_catalog'`Es el nombre del catálogo con una clave externa. *fktab_catalog*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @fktab_catalog = ] 'fktab_catalog'` Es el nombre del catálogo con una clave externa. *fktab_catalog*es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -84,7 +85,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  En el conjunto de resultados, las columnas FK_NAME y PK_NAME siempre devuelven NULL.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_foreignkeys** consulta el conjunto de filas FOREIGN_KEYS de la interfaz **IDBSchemaRowset** del proveedor OLE DB que corresponde a *table_server*. Los parámetros *TABLE_NAME*, *TABLE_SCHEMA*, *TABLE_CATALOG*y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
   
 ## <a name="permissions"></a>Permisos  
@@ -100,13 +101,13 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_catalogs &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_column_privileges &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
- [sp_indexes &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_primarykeys &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_tables_ex &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_catalogs &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_column_privileges &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
+ [sp_indexes &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_primarykeys &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

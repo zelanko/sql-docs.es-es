@@ -1,4 +1,5 @@
 ---
+description: sp_help_operator (Transact-SQL)
 title: sp_help_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8ce38772655172a9c5e22d3dfdba9cb7fd8f4b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d86d691c33fdfc09ce60d3ef7059c823527f9494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891723"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481217"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @operator_name = ] 'operator_name'`Nombre del operador. *operator_name* es de **tipo sysname**. Si no se especifica *operator_name* , se devuelve información acerca de todos los operadores.  
+`[ @operator_name = ] 'operator_name'` Nombre del operador. *operator_name* es de **tipo sysname**. Si no se especifica *operator_name* , se devuelve información acerca de todos los operadores.  
   
-`[ @operator_id = ] operator_id`Número de identificación del operador para el que se solicita información. *operator_id*es de **tipo int**y su valor predeterminado es NULL.  
+`[ @operator_id = ] operator_id` Número de identificación del operador para el que se solicita información. *operator_id*es de **tipo int**y su valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *operator_id* o *operator_name* , pero no se pueden especificar ambos.  
@@ -58,7 +59,7 @@ sp_help_operator
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Número de identificación del operador.|  
 |**name**|**sysname**|Nombre del operador.|  
-|**activó**|**tinyint**|El operador está disponible para recibir notificaciones:<br /><br /> **1** = sí<br /><br /> **0** = no|  
+|**enabled**|**tinyint**|El operador está disponible para recibir notificaciones:<br /><br /> **1** = Sí<br /><br /> **0** = No|  
 |**email_address**|**nvarchar(100**|Dirección de correo electrónico del operador.|  
 |**last_email_date**|**int**|Fecha de la última notificación al operador mediante correo electrónico.|  
 |**last_email_time**|**int**|Hora de la última notificación al operador mediante correo electrónico.|  
@@ -77,7 +78,7 @@ sp_help_operator
 |**last_netsend_time**|**int**|Hora de la última notificación al operador mediante un mensaje emergente de red.|  
 |**category_name**|**sysname**|Nombre de la categoría de operadores a la que pertenece este operador.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_help_operator** se debe ejecutar desde la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
@@ -103,10 +104,10 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sp_add_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_update_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+## <a name="see-also"></a>Consulte también  
+ [sp_add_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_update_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

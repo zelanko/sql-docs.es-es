@@ -1,4 +1,5 @@
 ---
+description: Evaluación de los esquemas de DB2 para la conversión (DB2ToSQL)
 title: Evaluación de los esquemas de DB2 para la conversión (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b889b896a70fa43ee3909ff251a3d91125e878b8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7516b8abce9e5a3d147796ec0acb101a92fc18f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480534"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Evaluación de los esquemas de DB2 para la conversión (DB2ToSQL)
 Antes de cargar objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe determinar la complejidad de la migración y el tiempo que tardará la migración. SSMA puede crear un informe de evaluación que muestre el porcentaje de objetos que se convertirán correctamente. SSMA también le permite ver los problemas específicos que causan errores de conversión.  

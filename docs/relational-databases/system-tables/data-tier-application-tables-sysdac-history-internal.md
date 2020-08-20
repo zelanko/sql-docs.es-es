@@ -1,4 +1,5 @@
 ---
+description: 'Tablas de aplicación de capa de datos: sysdac_history_internal'
 title: sysdac_history_internal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480866"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tablas de aplicación de capa de datos: sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87123026"
 |**dac_object_type_name**|**VARCHAR (8)**|Nombre del tipo de objeto afectado por la acción:<br /><br /> **dacpac** = instancia de DAC<br /><br /> **Inicio**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Código que identifica el estado actual de la acción:<br /><br /> **0** = pendiente<br /><br /> **1** = correcto<br /><br /> **2** = error|  
 |**action_status_name**|**VARCHAR (11)**|Estado actual de la acción:<br /><br /> **pendientes**<br /><br /> **realizado**<br /><br /> **puedan**|  
-|**Requerido**|**bit**|Lo utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] al revertir una operación DAC.|  
+|**Obligatorio**|**bit**|Lo utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] al revertir una operación DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nombre del objeto antes de que se confirme la transacción que contiene la acción. Solo se utiliza para las bases de datos e inicios de sesión.|  
 |**dac_object_name_posttran**|**sysname**|Nombre del objeto después de que se confirme la transacción que contiene la acción. Solo se utiliza para las bases de datos e inicios de sesión.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] que implementa una acción en una base de datos o inicio de sesión.|  
@@ -81,6 +82,6 @@ WHERE instance_id NOT IN
 ## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
- [sysdac_instances_internal &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
+ [sysdac_instances_internal &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

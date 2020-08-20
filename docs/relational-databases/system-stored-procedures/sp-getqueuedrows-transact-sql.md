@@ -1,4 +1,5 @@
 ---
+description: sp_getqueuedrows (Transact-SQL)
 title: sp_getqueuedrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57e4551743a535c78e33b4682f8ea19132bc75a9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6948964a224d0dfe1d36324971608e649ec45d4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481276"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tablename = ] 'tablename'`Es el nombre de la tabla. *TableName* es de **tipo sysname**y no tiene ningún valor predeterminado. La tabla debe formar parte de una suscripción en cola.  
+`[ @tablename = ] 'tablename'` Es el nombre de la tabla. *TableName* es de **tipo sysname**y no tiene ningún valor predeterminado. La tabla debe formar parte de una suscripción en cola.  
   
-`[ @owner = ] 'owner'`Es el propietario de la suscripción. *Owner* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @owner = ] 'owner'` Es el propietario de la suscripción. *Owner* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @tranid = ] 'transaction_id'`Permite filtrar el resultado por el identificador de la transacción. *transaction_id* es de tipo **nvarchar (70)** y su valor predeterminado es NULL. Si se especifica, se muestra el Id. de la transacción asociado con el comando en cola. Si es NULL, se muestran todos los comandos de la cola.  
+`[ @tranid = ] 'transaction_id'` Permite filtrar el resultado por el identificador de la transacción. *transaction_id* es de tipo **nvarchar (70)** y su valor predeterminado es NULL. Si se especifica, se muestra el Id. de la transacción asociado con el comando en cola. Si es NULL, se muestran todos los comandos de la cola.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -58,7 +59,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |**table column1...n**||El valor de cada columna de la tabla especificada en *TableName*.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Esta columna se utiliza para realizar un seguimiento de los cambios de datos replicados y para llevar a cabo la detección de conflictos en el publicador. Esta columna se agrega a la tabla automáticamente.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_getqueuedrows** se utiliza en los suscriptores que participan en la actualización en cola.  
   
  **sp_getqueuedrows** encuentra filas de una tabla determinada en una base de datos de suscripciones que han participado en una actualización en cola, pero el agente de lectura de cola no las ha resuelto actualmente.  
@@ -67,7 +68,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
  **sp_getqueuedrows** requiere permisos SELECT en la tabla especificada en *TableName*.  
   
 ## <a name="see-also"></a>Consulte también  
- [Suscripciones actualizables para la replicación transaccional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Detección y resolución de conflictos de actualización en cola](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

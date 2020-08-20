@@ -1,4 +1,5 @@
 ---
+description: sp_cursor (Transact-SQL)
 title: sp_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75a3d3f6c38b6d63ad8127966cba118f4c3455dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481386"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ sp_cursor  cursor, optype, rownum, table
 |Value|Nombre|Descripción|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Se usa para actualizar una o varias filas en el búfer de captura.  Se vuelve a tener acceso a las filas especificadas en *ROWNUM* y se actualizan.|  
-|0x0002|Delete|Se usa para eliminar una o varias filas en el búfer de captura. Se vuelve a tener acceso a las filas especificadas en *ROWNUM* y se eliminan.|  
+|0x0002|SUPRIMIR|Se usa para eliminar una o varias filas en el búfer de captura. Se vuelve a tener acceso a las filas especificadas en *ROWNUM* y se eliminan.|  
 |0X0004|INSERT|Inserta datos sin generar una instrucción **Insert** de SQL.|  
 |0X0008|REFRESH|Se usa para rellenar el búfer a partir de las tablas subyacentes y se puede usar para actualizar la fila si una actualización o eliminación no puede realizarse debido a un control de simultaneidad optimista o después de una operación UPDATE.|  
 |0X10|LOCK|Hace que se adquiera un SQL Server U-Lock en la página que contiene la fila especificada. Este bloqueo es compatible con los bloqueos S. No es compatible con los bloqueos X ni U. Se puede usar para implementar el bloqueo a corto plazo.|  
@@ -98,7 +99,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Valores de código de retorno  
  Cuando se usa una RPC, una operación de eliminación o actualización posicionada con un número de búfer 0 devolverá un mensaje de finalización con un *recuento de filas* de 0 (error) o 1 (correcto) para cada fila del búfer de captura.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="optype-parameter"></a>Parámetro optype  
  Con la excepción de las combinaciones de SETPOSITION con UPDATE, DELETE, REFRESH o LOCK; o ABSOLUTE con UPDATE o DELETE, los valores de *optype* son mutuamente excluyentes.  
@@ -174,8 +175,8 @@ sp_cursor  cursor, optype, rownum, table
 >  Es posible enviar un parámetro como un parámetro con nombre, es decir "`@VALUES`". En este caso no se pueden usar otros parámetros con nombre.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_cursoropen &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 'Tablas de aplicación de capa de datos: sysdac_instances_internal'
 title: sysdac_instances_internal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98b33a43eeb52ca99c50235e5c3865c79cd92125
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5677f92a5a7cb4a74b72bb45d058ad4c198442fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480831"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Tablas de aplicación de capa de datos: sysdac_instances_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85890562"
 |date_created|**datetime**|Fecha y hora en que se creó la instancia de DAC.|  
 |created_by|**sysname**|Inicio de sesión que creó la instancia de DAC.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El acceso de solo lectura a esta vista está disponible para todos los usuarios con permisos para conectarse a la base de datos maestra.  
   
 ## <a name="permissions"></a>Permisos  

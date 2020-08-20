@@ -1,4 +1,5 @@
 ---
+description: MSsubscriber_info (Transact-SQL)
 title: MSsubscriber_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5ca22f41-6020-4f72-8110-e69baf3447cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 454b3504db5c159135d257229bb24581a254cd77
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5b807bcb3595a20bcce849b6526e9729c960d5bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480752"
 ---
 # <a name="mssubscriber_info-transact-sql"></a>MSsubscriber_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: cdc.change_tables (Transact-SQL)
 title: CDC. change_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5cada1c85156a1f6e3c0822813fb79825a7d1c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6938dffda791dc77e8e304e25e705189b82e2ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890637"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480873"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85890637"
 |**create_date**|**datetime**|Fecha de habilitación de la tabla de origen.|  
 |**partition_switch**|**bit**|Indica si el comando **Switch Partition** de **ALTER TABLE** se puede ejecutar en una tabla habilitada para la captura de datos modificados. = 0 true indica que el cambio de particiones está bloqueado. Las tablas sin particiones siempre devuelven 1.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

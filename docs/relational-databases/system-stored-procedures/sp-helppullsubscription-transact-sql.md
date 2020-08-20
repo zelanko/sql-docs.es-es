@@ -1,4 +1,5 @@
 ---
+description: sp_helppullsubscription (Transact-SQL)
 title: sp_helppullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b12ffb31836bfde3cb29cf240dbfc5d9da66eac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 163cd14235fd5364f42c8e9a722341c96a03290f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481169"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del servidor remoto. *Publisher* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información para todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del servidor remoto. *Publisher* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información para todos los publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve todas las bases de datos del publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve todas las bases de datos del publicador.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve todas las publicaciones. Si este parámetro es igual a ALL, solo se devuelven las suscripciones de extracción con independent_agent = **0** .  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve todas las publicaciones. Si este parámetro es igual a ALL, solo se devuelven las suscripciones de extracción con independent_agent = **0** .  
   
-`[ @show_push = ] 'show_push'`Indica si se devolverán todas las suscripciones de extracción. *show_push*es de tipo **nvarchar (5)** y su valor predeterminado es false, que no devuelve las suscripciones de extracción.  
+`[ @show_push = ] 'show_push'` Indica si se devolverán todas las suscripciones de extracción. *show_push*es de tipo **nvarchar (5)** y su valor predeterminado es false, que no devuelve las suscripciones de extracción.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -96,15 +97,15 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helppullsubscription** se utiliza en la replicación de instantáneas y transaccional.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_helppullsubscription** .  
   
-## <a name="see-also"></a>Consulte también  
- [sp_addpullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [sp_addpullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_droppullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

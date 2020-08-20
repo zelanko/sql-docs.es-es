@@ -1,4 +1,5 @@
 ---
+description: sp_validname (Transact-SQL)
 title: sp_validname (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86b1c7ec67a19e18dcc5daa6d14e55acc9b34c64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b448493ada2d6ec5d1073f194053463b463807b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480971"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,9 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`Es el nombre de los [identificadores](../../relational-databases/databases/database-identifiers.md) cuya validez se va a comprobar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. *el nombre* no puede ser null, no puede ser una cadena vacía y no puede contener un carácter cero binario.  
+`[ @name = ] 'name'` Es el nombre de los [identificadores](../../relational-databases/databases/database-identifiers.md) cuya validez se va a comprobar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. *el nombre* no puede ser null, no puede ser una cadena vacía y no puede contener un carácter cero binario.  
   
-`[ @raise_error = ] raise_error`Especifica si se va a producir un error. *raise_error* es de **bit**y su valor predeterminado es 1. Esto significa que aparecerán errores. 0 hace que no aparezca ningún mensaje de error.  
+`[ @raise_error = ] raise_error` Especifica si se va a producir un error. *raise_error* es de **bit**y su valor predeterminado es 1. Esto significa que aparecerán errores. 0 hace que no aparezca ningún mensaje de error.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -51,8 +52,8 @@ sp_validname [@name =] 'name'
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
-## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [nchar y nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   

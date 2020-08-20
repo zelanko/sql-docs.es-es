@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_policy (Transact-SQL)
 title: sp_syspolicy_rename_policy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e157090ba5fb9b6c3c9da7fb88d0aa0612d2f727
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481031"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +42,16 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`Es el nombre de la Directiva a la que desea cambiar el nombre. *Name* es de **tipo sysname**y se debe especificar si *policy_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre de la Directiva a la que desea cambiar el nombre. *Name* es de **tipo sysname**y se debe especificar si *policy_id* es NULL.  
   
-`[ @policy_id = ] policy_id`Es el identificador de la Directiva cuyo nombre se desea cambiar. *policy_id* es de **tipo int**y se debe especificar si *Name* es NULL.  
+`[ @policy_id = ] policy_id` Es el identificador de la Directiva cuyo nombre se desea cambiar. *policy_id* es de **tipo int**y se debe especificar si *Name* es NULL.  
   
-`[ @new_name = ] 'new_name'`Es el nuevo nombre de la Directiva. *new_name* es **sysname**y es obligatorio. No puede ser NULL ni una cadena vacía.  
+`[ @new_name = ] 'new_name'` Es el nuevo nombre de la Directiva. *new_name* es **sysname**y es obligatorio. No puede ser NULL ni una cadena vacía.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Debe ejecutar sp_syspolicy_rename_policy en el contexto de la base de datos del sistema msdb.  
   
  Debe especificar un valor para *nombre* o *policy_id*. Ambos no pueden ser NULL. Para obtener estos valores, consulte la vista del sistema msdb.dbo.syspolicy_policies.  

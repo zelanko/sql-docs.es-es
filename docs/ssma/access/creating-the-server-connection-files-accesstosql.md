@@ -1,4 +1,5 @@
 ---
+description: Crear los archivos de conexión del servidor (AccessToSQL)
 title: Crear los archivos de conexión del servidor (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b74cf86e6a68653a2047aebefc7ca86ab6868475
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 207aa406df3f426658afa569d434ea71db5eba1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480511"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Crear los archivos de conexión del servidor (AccessToSQL)
 La información del servidor se puede especificar en la sección servidores del archivo de script. La información del servidor también se puede especificar en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión de servidor es `-c <serverconnectionfile>` . Si el mismo identificador de servidor está presente en los archivos de conexión del servidor y del script, se considerará la definición del servidor en el archivo de script.  

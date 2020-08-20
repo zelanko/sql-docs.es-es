@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setevent (Transact-SQL)
 title: sp_trace_setevent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480968"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @traceid = ] trace_id`Es el ID. del seguimiento que se va a modificar. *trace_id* es de **tipo int**y no tiene ningún valor predeterminado. El usuario emplea este valor *trace_id* para identificar, modificar y controlar el seguimiento.  
+`[ @traceid = ] trace_id` Es el ID. del seguimiento que se va a modificar. *trace_id* es de **tipo int**y no tiene ningún valor predeterminado. El usuario emplea este valor *trace_id* para identificar, modificar y controlar el seguimiento.  
   
-`[ @eventid = ] event_id`Es el identificador del evento que se va a activar. *event_id* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @eventid = ] event_id` Es el identificador del evento que se va a activar. *event_id* es de **tipo int**y no tiene ningún valor predeterminado.  
   
  Esta tabla muestra una lista de los eventos que pueden agregarse o quitarse de un seguimiento.  
   
@@ -236,7 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Guía de plan incorrecta|Indica que SQL Server no pudo generar un plan de ejecución para una consulta o lote que contenía una guía de plan. SQL Server intentó generar un plan de ejecución para esta consulta o lote sin aplicar la guía de plan. Una guía de plan no válida puede ser la causa de este problema. Puede utilizar la función del sistema sys.fn_validate_plan_guide para validar la guía de plan.|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id`Es el identificador de la columna que se va a agregar para el evento. *column_id* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @columnid = ] column_id` Es el identificador de la columna que se va a agregar para el evento. *column_id* es de **tipo int**y no tiene ningún valor predeterminado.  
   
  En la tabla siguiente se muestra una lista de las columnas que pueden agregarse para un evento.  
   
@@ -254,7 +255,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|  
 |11|**LoginName**|Nombre de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del cliente.|  
 |12|**SPID**|Identificador de proceso del servidor que asigna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al proceso relacionado con el cliente.|  
-|13|**Duración**|Cantidad de tiempo transcurrido (en microsegundos) que tarda el evento. Esta columna de datos no se llena con el evento Hash Warning.|  
+|13|**Duration**|Cantidad de tiempo transcurrido (en microsegundos) que tarda el evento. Esta columna de datos no se llena con el evento Hash Warning.|  
 |14|**StartTime**|Hora a la que se inició el evento, si está disponible.|  
 |15|**EndTime**|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como **SQL:BatchStarting** o **SP:Starting**. Tampoco se rellena mediante el evento de **ADVERTENCIA hash** .|  
 |16|**Reads**|Número de lecturas lógicas de disco que realiza el servidor en nombre del evento. Esta columna no se rellena con el evento **Lock: released** .|  
@@ -271,7 +272,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |27|**EventClass**|Tipo de clase de evento que se está registrando.|  
 |28|**ObjectType**|Tipo de objeto, por ejemplo: tabla, función o procedimiento almacenado.|  
 |29|**NestLevel**|Nivel de anidamiento en el que se ejecuta este procedimiento almacenado. Vea [@ @NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
-|30|**Estado**|Estado del servidor, si se produce un error.|  
+|30|**State**|Estado del servidor, si se produce un error.|  
 |31|**Error**|Número de error.|  
 |32|**Modo**|Modo de bloqueo del bloqueo adquirido. Esta columna no se rellena con el evento **Lock: released** .|  
 |33|**Handle**|Identificador del objeto al que se hace referencia en el evento.|  
@@ -302,7 +303,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |58|**OwnerID**|Tipo de objeto propietario de un bloqueo. Solo para eventos de bloqueo.|  
 |59|**ParentName**|Nombre del esquema en el que se encuentra el objeto.|  
 |60|**IsSystem**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> **1** = sistema<br /><br /> **0** = usuario.|  
-|61|**Posición**|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|  
+|61|**Offset**|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|  
 |62|**SourceDatabaseID**|Id. de la base de datos en la que se encuentra el origen del objeto.|  
 |63|**SqlHandle**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor se puede pasar a **Sys. dm_exec_sql_text ()** para recuperar el texto SQL asociado.|  
 |64|**SessionLoginName**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con **inicioDeSesión1** y ejecuta una instrucción como **inicioDeSesión2**, **SessionLoginName** muestra **inicioDeSesión1**y **LoginName** muestra **inicioDeSesión2**. En esta columna de datos se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|  
@@ -338,7 +339,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|Memoria insuficiente. Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
 |16|La función no es válida para este seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_trace_setevent** realiza muchas de las acciones ejecutadas previamente por procedimientos almacenados extendidos disponibles en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use **sp_trace_setevent** en lugar de lo siguiente:  
   
 -   **xp_trace_addnewqueue**  
@@ -358,8 +359,8 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [Sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sp_trace_generateevent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [Referencia de las clase de eventos de SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md)  
   

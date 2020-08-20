@@ -1,4 +1,5 @@
 ---
+description: sp_scriptdynamicupdproc (Transact-SQL)
 title: sp_scriptdynamicupdproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 381e2b7ad6c8b463cb410b6d40a6cd6c6b3addec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481134"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +38,12 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @artid = ] artid`Es el identificador del artículo. *artid especificado* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @artid = ] artid` Es el identificador del artículo. *artid especificado* es de **tipo int**y no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve un conjunto de resultados que consta de una única columna **nvarchar (4000)** . El conjunto de resultados forma la instrucción CREATE PROCEDURE completa que se utiliza para crear el procedimiento almacenado personalizado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_scriptdynamicupdproc** se utiliza en la replicación transaccional. La lógica de scripting predeterminada de MCALL incluye todas las columnas de la instrucción UPDATE y utiliza un mapa de bits para determinar las columnas modificadas. En el supuesto de que una columna no haya cambiado, ésta se restablece a su propio valor, lo que no suele generar ningún problema. Si la columna estuviera indizada, tendría lugar un procesamiento adicional. El enfoque dinámico incluye únicamente las columnas modificadas, lo cual optimiza la cadena UPDATE. No obstante, se incurrirá en un procesamiento adicional en tiempo de ejecución a fin de generar la instrucción UPDATE dinámica. Se recomienda probar los enfoques dinámico y estático y elegir la mejor solución.  
   
 ## <a name="permissions"></a>Permisos  

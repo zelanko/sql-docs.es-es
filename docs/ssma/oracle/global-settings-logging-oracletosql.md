@@ -1,4 +1,5 @@
 ---
+description: Configuración global (registro) (OracleToSQL)
 title: Configuración global (registro) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ebb39ea8b86ac20e49d49387b981969a9366dd9e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fbc74e9129c642ea1b6655deb4e01ee04d92d0ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480517"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Configuración global (registro) (OracleToSQL)
 Utilice el cuadro de diálogo **configuración global** para especificar la configuración de registro para SSMA. Normalmente, esta configuración solo se puede cambiar cuando se trabaja con soporte técnico del producto.  
@@ -47,9 +48,9 @@ Para cada opción en **nivel de mensajes**, configure uno de los siguientes nive
 |-|-|  
 |**Error irrecuperable**|Escriba solo mensajes de error irrecuperables en el registro.|  
 |**Error**|Escriba mensajes de error y de error grave en el registro.|  
-|**Advertencia**|Escriba mensajes de advertencia, error y error grave en el registro.|  
+|**Warning (ADVERTENCIA)**|Escriba mensajes de advertencia, error y error grave en el registro.|  
 |**Información**|Escriba mensajes informativos, de advertencia, de error y de error grave en el registro.|  
-|**Depurar**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
+|**Depuración**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
   
 **Ruta de acceso al archivo de registro**  
 La ruta de acceso del archivo y el nombre de los archivos de registro de SSMA. Para especificar otro nombre, haga clic en la ruta de acceso actual y, a continuación, haga clic en el botón Examinar (**...**).  

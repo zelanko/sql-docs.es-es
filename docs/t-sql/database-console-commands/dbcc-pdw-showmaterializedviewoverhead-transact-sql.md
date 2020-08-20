@@ -1,4 +1,5 @@
 ---
+description: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
 title: DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 07/03/2019
@@ -12,12 +13,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5c3dd051156178572a03eeff23052e2c103d9555
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2a849fdf387361bdf217e1b40a81aa8c600931d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479862"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
@@ -42,11 +43,11 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 Es el nombre de la vista materializada.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-Para mantener las vistas materializadas actualizadas con cambios en los datos de las tablas base, el motor de almacenamiento de datos agrega filas de seguimiento a cada vista afectada para reflejar los cambios. La selección a partir de una vista materializada incluye el análisis del índice de almacén de columnas agrupado de la vista y la aplicación de cualquier cambio incremental.  Las filas de seguimiento (TOTAL_ROWS-BASE_VIEW_ROWS) no se eliminarán hasta que los usuarios vuelvan a generar la vista materializada.  
+Para mantener las vistas materializadas actualizadas con cambios en los datos de las tablas base, el motor de almacenamiento de datos agrega filas de seguimiento a cada vista afectada para reflejar los cambios. La selección a partir de una vista materializada incluye el análisis del índice de almacén de columnas agrupado de la vista y la aplicación de cualquier cambio incremental.Las filas de seguimiento (TOTAL_ROWS-BASE_VIEW_ROWS) no se eliminarán hasta que los usuarios vuelvan a generar la vista materializada.  
 
-El valor overhead_ratio se calcula como TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS).  Si es alto, el rendimiento de SELECT se degradará.  Los usuarios pueden volver a generar la vista materializada para reducir su proporción de sobrecarga.
+El valor overhead_ratio se calcula como TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS).  Si es alto, el rendimiento de SELECT se degradará.Los usuarios pueden volver a generar la vista materializada para reducir su proporción de sobrecarga.
 
 ## <a name="permissions"></a>Permisos  
   
@@ -139,13 +140,13 @@ ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
 go
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
 ```
-Output
+Resultados
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
 |--------|--------|--------|--------|  
 |587149137|2|2 |1,00000000000000000 |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Optimización del rendimiento con vista materializada](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   

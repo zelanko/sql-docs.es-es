@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelppublication (Transact-SQL)
 title: sp_replmonitorhelppublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6468bcb1c97b6f995afadfe422e11dec98463620
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ab914a76ba3aa4a5205631727242d3983cef68d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481140"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,22 +42,22 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador cuyo estado se está supervisando. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. Si **es null**, se devolverá información para todos los publicadores que usen el distribuidor.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador cuyo estado se está supervisando. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. Si **es null**, se devolverá información para todos los publicadores que usen el distribuidor.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos publicada. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, se devuelve información sobre todas las bases de datos publicadas en el publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos publicada. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, se devuelve información sobre todas las bases de datos publicadas en el publicador.  
   
-`[ @publication = ] 'publication'`Es el nombre de la publicación que se está supervisando. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se está supervisando. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @publication_type = ] publication_type`Si el tipo de publicación. *publication_type* es de **tipo int**y puede tener uno de estos valores.  
+`[ @publication_type = ] publication_type` Si el tipo de publicación. *publication_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional.|  
 |**1**|Publicación de instantáneas.|  
 |**2**|Publicación de combinación.|  
 |NULL (predeterminado)|La replicación intenta determinar el tipo de publicación.|  
   
-`[ @refreshpolicy = ] refreshpolicy`Solo para uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Solo para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -89,7 +90,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_replmonitorhelppublication** se usa con todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  

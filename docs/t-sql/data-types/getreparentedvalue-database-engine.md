@@ -1,4 +1,5 @@
 ---
+description: GetReparentedValue (motor de base de datos)
 title: GetReparentedValue (motor de base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a1b6700c10a73a2b3f0ab59dbad7f0a5d2c435c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b0381cc90ff6a69c8d8cd91d9ce141e8a13707c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479898"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (motor de base de datos)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ _newRoot_
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Se usa para modificar el árbol, de forma que los nodos se mueven de _oldRoot_ a _newRoot_. GetReparentedValue se usa para mover un nodo de la jerarquía a una nueva ubicación de la jerarquía. El tipo de datos **hierarchyid** representa la estructura jerárquica, pero no la exige. Los usuarios deben asegurarse de que el identificador hierarchyid se estructura de forma apropiada para la nueva ubicación. Un índice único en el tipo de datos **hierarchyid** puede ayudar a evitar las entradas duplicadas. Para obtener un ejemplo de cómo mover un subárbol completo, vea [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,4 +1,5 @@
 ---
+description: sp_notify_operator (Transact-SQL)
 title: sp_notify_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07f18ad85f759340d43825ce8c6a95c11696d2f0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6a1c623ec7172a7cab48c49491619184d618ebf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481121"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,26 +48,26 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_name = ] 'profilename'`Nombre del perfil de Correo electrónico de base de datos que se va a utilizar para enviar el mensaje. *ProfileName* es **nvarchar (128)**. Si no se especifica *ProfileName* , se utiliza el perfil de correo electrónico de base de datos predeterminado.  
+`[ @profile_name = ] 'profilename'` Nombre del perfil de Correo electrónico de base de datos que se va a utilizar para enviar el mensaje. *ProfileName* es **nvarchar (128)**. Si no se especifica *ProfileName* , se utiliza el perfil de correo electrónico de base de datos predeterminado.  
   
-`[ @id = ] id`Identificador del operador al que se va a enviar el mensaje. *ID* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar uno de los *identificadores* o *nombres* .  
+`[ @id = ] id` Identificador del operador al que se va a enviar el mensaje. *ID* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar uno de los *identificadores* o *nombres* .  
   
-`[ @name = ] 'name'`Nombre del operador al que se va a enviar el mensaje. *Name* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Se debe especificar uno de los *identificadores* o *nombres* .  
+`[ @name = ] 'name'` Nombre del operador al que se va a enviar el mensaje. *Name* es de tipo **nvarchar (128)** y su valor predeterminado es NULL. Se debe especificar uno de los *identificadores* o *nombres* .  
   
 > **Nota:** Debe definirse una dirección de correo electrónico para el operador antes de que pueda recibir mensajes.  
   
-`[ @subject = ] 'subject'`Asunto del mensaje de correo electrónico. el *asunto* es **nvarchar (256)** y no tiene ningún valor predeterminado.  
+`[ @subject = ] 'subject'` Asunto del mensaje de correo electrónico. el *asunto* es **nvarchar (256)** y no tiene ningún valor predeterminado.  
   
-`[ @body = ] 'message'`El cuerpo del mensaje de correo electrónico. *Message* es de tipo **nvarchar (Max)** y no tiene ningún valor predeterminado.  
+`[ @body = ] 'message'` El cuerpo del mensaje de correo electrónico. *Message* es de tipo **nvarchar (Max)** y no tiene ningún valor predeterminado.  
   
-`[ @file_attachments = ] 'attachment'`Nombre de un archivo que se va a adjuntar al mensaje de correo electrónico. *Attachment* es **nvarchar (512)** y no tiene ningún valor predeterminado.  
+`[ @file_attachments = ] 'attachment'` Nombre de un archivo que se va a adjuntar al mensaje de correo electrónico. *Attachment* es **nvarchar (512)** y no tiene ningún valor predeterminado.  
   
-`[ @mail_database = ] 'mail_host_database'`Especifica el nombre de la base de datos host de correo. *mail_host_database* es **nvarchar (128)**. Si no se especifica ningún *mail_host_database* , se utiliza de forma predeterminada la base de datos **msdb** .  
+`[ @mail_database = ] 'mail_host_database'` Especifica el nombre de la base de datos host de correo. *mail_host_database* es **nvarchar (128)**. Si no se especifica ningún *mail_host_database* , se utiliza de forma predeterminada la base de datos **msdb** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Envía el mensaje especificado a la dirección de correo electrónico del operador especificado. Si el operador no tiene configurada una dirección de correo electrónico, generará un error.  
   
  El Correo electrónico de base de datos y la base de datos host de correo deben configurarse antes de que se pueda enviar una notificación al operador.  
@@ -97,10 +98,10 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+## <a name="see-also"></a>Consulte también  
+ [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_delete_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   

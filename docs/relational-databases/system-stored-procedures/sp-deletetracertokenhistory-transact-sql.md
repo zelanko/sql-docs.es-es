@@ -1,4 +1,5 @@
 ---
+description: sp_deletetracertokenhistory (Transact-SQL)
 title: sp_deletetracertokenhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26a9c4a3001d2a5b4f5709311e23c0023307ce92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4912611e79e4d6d3431cce7facb04af06a206211
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481358"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Quita los registros del token de seguimiento de la [MStracer_tokens &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) y MStracer_history &#40;las tablas del sistema [transact-SQL&#41;](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación o en el distribuidor de la base de datos de distribución.
+Quita los registros del token de seguimiento de la [MStracer_tokens &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) y MStracer_history &#40;las tablas del sistema [transact-SQL&#41;](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación o en el distribuidor de la base de datos de distribución.
 
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,7 +68,7 @@ Es el nombre de la base de datos de publicación. El tipo de datos es **sysname*
 
 **0** (correcto) o **1** (error)
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 **sp_deletetracertokenhistory** se utiliza en la replicación transaccional.  
 
@@ -75,7 +76,7 @@ Se produce un error si especifica los dos parámetros *tracer_id* y *cutoff_date
 
 Si no ejecuta **sp_deletetracertokenhistory** para eliminar los metadatos del token de seguimiento, la información se eliminará cuando se produzca la limpieza de historial programado con regularidad.
 
-Los identificadores de los testigos de seguimiento se pueden determinar mediante la ejecución de [sp_helptracertokens &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) o mediante la consulta del MStracer_tokens &#40;tabla del sistema [de transact-SQL&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
+Los identificadores de los testigos de seguimiento se pueden determinar mediante la ejecución de [sp_helptracertokens &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) o mediante la consulta del MStracer_tokens &#40;tabla del sistema [de transact-SQL&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
 
 ## <a name="permissions"></a>Permisos
 
@@ -90,4 +91,4 @@ Solo el personal siguiente tiene la autoridad para ejecutar **sp_deletetracertok
 
 [Medir la latencia y validar las conexiones de la replicación transaccional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 
-[sp_helptracertokenhistory &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)
+[sp_helptracertokenhistory &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)

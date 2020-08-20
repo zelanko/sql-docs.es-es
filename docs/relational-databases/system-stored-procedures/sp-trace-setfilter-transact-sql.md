@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setfilter (Transact-SQL)
 title: sp_trace_setfilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf2b3eb0d8d71ce85ac7a5de4fddcd5a34ae97a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480993"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Aplica un filtro a un seguimiento. **sp_trace_setfilter** solo se puede ejecutar en seguimientos existentes que estén detenidos (el*Estado* es **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Devuelve un error si este procedimiento almacenado se ejecuta en un seguimiento que no existe o cuyo *Estado* no es **0**.  
+  Aplica un filtro a un seguimiento. **sp_trace_setfilter** solo se puede ejecutar en seguimientos existentes que estén detenidos (el*Estado* es **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Devuelve un error si este procedimiento almacenado se ejecuta en un seguimiento que no existe o cuyo *Estado* no es **0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use eventos extendidos en su lugar.  
@@ -46,15 +47,15 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @traceid = ] trace_id`Es el identificador del seguimiento en el que se establece el filtro. *trace_id* es de **tipo int**y no tiene ningún valor predeterminado. El usuario emplea este valor *trace_id* para identificar, modificar y controlar el seguimiento.  
+`[ @traceid = ] trace_id` Es el identificador del seguimiento en el que se establece el filtro. *trace_id* es de **tipo int**y no tiene ningún valor predeterminado. El usuario emplea este valor *trace_id* para identificar, modificar y controlar el seguimiento.  
   
-`[ @columnid = ] column_id`Es el ID. de la columna en la que se aplica el filtro. *column_id* es de **tipo int**y no tiene ningún valor predeterminado. Si *column_id* es null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] borra todos los filtros del seguimiento especificado.  
+`[ @columnid = ] column_id` Es el ID. de la columna en la que se aplica el filtro. *column_id* es de **tipo int**y no tiene ningún valor predeterminado. Si *column_id* es null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] borra todos los filtros del seguimiento especificado.  
   
-`[ @logical_operator = ] logical_operator`Especifica si se aplican los operadores y (**0**) o o (**1**). *logical_operator* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @logical_operator = ] logical_operator` Especifica si se aplican los operadores y (**0**) o o (**1**). *logical_operator* es de **tipo int**y no tiene ningún valor predeterminado.  
   
-`[ @comparison_operator = ] comparison_operator`Especifica el tipo de comparación que se va a realizar. *comparison_operator* es de **tipo int**y no tiene ningún valor predeterminado. Esta tabla contiene los operadores de comparación y sus valores representativos.  
+`[ @comparison_operator = ] comparison_operator` Especifica el tipo de comparación que se va a realizar. *comparison_operator* es de **tipo int**y no tiene ningún valor predeterminado. Esta tabla contiene los operadores de comparación y sus valores representativos.  
   
-|Valor|Operadores de comparación|  
+|Value|Operadores de comparación|  
 |-----------|-------------------------|  
 |**0**|= (Es igual a)|  
 |**1**|<>  (no igual)|  
@@ -65,7 +66,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|No es como|  
   
-`[ @value = ] value`Especifica el valor en el que se va a filtrar. El tipo de datos del *valor* debe coincidir con el tipo de datos de la columna que se va a filtrar. Por ejemplo, si el filtro se establece en una columna de identificador de objeto que es un tipo de datos **int** , el *valor* debe ser **int**. Si el *valor* es **nvarchar** o **varbinary**, puede tener una longitud máxima de 8000.  
+`[ @value = ] value` Especifica el valor en el que se va a filtrar. El tipo de datos del *valor* debe coincidir con el tipo de datos de la columna que se va a filtrar. Por ejemplo, si el filtro se establece en una columna de identificador de objeto que es un tipo de datos **int** , el *valor* debe ser **int**. Si el *valor* es **nvarchar** o **varbinary**, puede tener una longitud máxima de 8000.  
   
  Cuando el operador de comparación es LIKE o NOT LIKE, el operador lógico puede incluir "%" u otro filtro adecuado para la operación LIKE.  
   
@@ -78,7 +79,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Valores de código de retorno  
  En la tabla siguiente se describen los valores del código que los usuarios pueden obtener después de completar el procedimiento almacenado.  
   
-|Código de retorno|Descripción|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |0|Ningún error.|  
 |1|Error desconocido.|  
@@ -91,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|Memoria insuficiente. Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
 |16|La función no es válida para este seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_trace_setfilter** es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimiento almacenado que realiza muchas de las acciones ejecutadas previamente por procedimientos almacenados extendidos disponibles en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilice **sp_trace_setfilter** en lugar de los **xp_trace_set \* filtrar** procedimientos almacenados extendidos para crear, aplicar, quitar o manipular filtros en seguimientos. Para obtener más información, vea [filtrar un seguimiento](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Todos los filtros de una columna determinada deben estar habilitados juntos en una ejecución de **sp_trace_setfilter**. Por ejemplo, si un usuario se propone aplicar dos filtros en la columna del nombre de la aplicación y uno en la columna del nombre del usuario, el usuario deberá especificar los filtros en el nombre de la aplicación en secuencia. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá un error si el usuario intenta especificar un filtro de nombre de aplicación en una llamada a un procedimiento almacenado, seguido de un filtro de nombre de usuario y, luego, otro filtro de nombre de aplicación.  
@@ -112,7 +113,7 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [Sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Long (tipo de datos geography)
 title: Long (tipo de datos geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -17,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7c3a5096426aa6fbfa69da1eacab3d0cd80f72ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 774ea7421e7616976bcedc1c848620accf8c07d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467505"
 ---
 # <a name="long-geography-data-type"></a>Long (tipo de datos geography)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Propiedad de longitud de la instancia de **geography**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```syntaxsql
 .Long  
 ```  
 
@@ -41,7 +42,7 @@ ms.locfileid: "86556180"
 ## <a name="return-value"></a>Valor devuelto  
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Observaciones  
  En el modelo OpenGIS, Long se define solo en instancias de **geography** que constan de un solo punto. Esta propiedad devuelve NULL si las instancias de **geography** contienen más de un punto. Esta propiedad es precisa y de solo lectura.  

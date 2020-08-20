@@ -1,4 +1,5 @@
 ---
+description: Métodos extendidos en instancias de geography
 title: Métodos extendidos en instancias de geography | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3688e530362dd313c9e5f5b4623cce1c64d5caae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e9fe842234ae0cf2ec704bbdeee0eab81dfd835
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467513"
 ---
 # <a name="extended-methods-on-geography-instances"></a>Métodos extendidos en instancias de geography
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "85731207"
   
 -   [NumRing](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   
--   [Reduce](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
+-   [Reducción](../../t-sql/spatial-geography/reduce-geography-data-type.md)  
   
 -   [ReorientObject](../../t-sql/spatial-geography/reorientobject-geography-data-type.md)  
   
@@ -86,7 +87,7 @@ ms.locfileid: "85731207"
   
 -   [Z](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
  [Métodos de geografía estáticos extendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

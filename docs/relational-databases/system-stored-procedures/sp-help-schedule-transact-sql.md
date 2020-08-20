@@ -1,4 +1,5 @@
 ---
+description: sp_help_schedule (Transact-SQL)
 title: sp_help_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f0539e4281d58744b18a4f9ca522c52952032c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 516314123b6555f7e079471b88384e586bdc5cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474209"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] id`Identificador de la programación que se va a mostrar. *schedule_name* es de **tipo int**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
+`[ @schedule_id = ] id` Identificador de la programación que se va a mostrar. *schedule_name* es de **tipo int**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'`Nombre de la programación que se va a mostrar. *schedule_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Nombre de la programación que se va a mostrar. *schedule_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]`Especifica si se van a mostrar solo las programaciones a las que está asociado un trabajo. *attached_schedules_only* es de **bit**y su valor predeterminado es **0**. Cuando *attached_schedules_only* es **0**, se muestran todas las programaciones. Cuando *attached_schedules_only* es **1**, el conjunto de resultados solo contiene las programaciones adjuntas a un trabajo.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Especifica si se van a mostrar solo las programaciones a las que está asociado un trabajo. *attached_schedules_only* es de **bit**y su valor predeterminado es **0**. Cuando *attached_schedules_only* es **0**, se muestran todas las programaciones. Cuando *attached_schedules_only* es **1**, el conjunto de resultados solo contiene las programaciones adjuntas a un trabajo.  
   
-`[ @include_description = ] include_description`Especifica si se incluyen descripciones en el conjunto de resultados. *include_description* es de **bit**y su valor predeterminado es **0**. Cuando *include_description* es **0**, la columna de *schedule_description* del conjunto de resultados contiene un marcador de posición. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
+`[ @include_description = ] include_description` Especifica si se incluyen descripciones en el conjunto de resultados. *include_description* es de **bit**y su valor predeterminado es **0**. Cuando *include_description* es **0**, la columna de *schedule_description* del conjunto de resultados contiene un marcador de posición. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -62,7 +63,7 @@ sp_help_schedule
 |**schedule_id**|**int**|Número de identificador de la programación.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador de la programación.|  
 |**schedule_name**|**sysname**|Nombre de la programación.|  
-|**activó**|**int**|Indica si la programación está habilitada (**1**) o no (**0**).|  
+|**enabled**|**int**|Indica si la programación está habilitada (**1**) o no (**0**).|  
 |**freq_type**|**int**|Valor que indica cuándo se va a ejecutar el trabajo.<br /><br /> **1** = una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, con respecto al **freq_interval**<br /><br /> **64** = ejecutar cuando se inicia el servicio SQLServerAgent.|  
 |**freq_interval**|**int**|Días en que se ejecuta el trabajo. El valor depende del valor de **freq_type**. Para obtener más información, vea [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Unidades para **freq_subday_interval**. Para obtener más información, vea [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -77,7 +78,7 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|Descripción de la programación en inglés (si se solicita).|  
 |**job_count**|**int**|Devuelve el número de trabajos que hacen referencia a esta programación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando no se proporcionan parámetros, **sp_help_schedule** muestra información de todas las programaciones de la instancia.  
   
 ## <a name="permissions"></a>Permisos  
@@ -118,10 +119,10 @@ EXEC dbo.sp_help_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+## <a name="see-also"></a>Vea también  
+ [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

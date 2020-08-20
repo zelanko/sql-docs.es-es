@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergearticlecolumn (Transact-SQL)
 title: sp_helpmergearticlecolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7dc556d25cdac393c13df81af4eee54664ff0acb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f85830c11ca64f3540995411a2cfe1dac6044544
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474047"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'`Es el nombre de una tabla o vista que es el artículo en el que se va a recuperar información. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre de una tabla o vista que es el artículo en el que se va a recuperar información. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -53,7 +54,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpmergearticlecolumn** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

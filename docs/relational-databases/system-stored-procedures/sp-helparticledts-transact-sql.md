@@ -1,4 +1,5 @@
 ---
+description: sp_helparticledts (Transact-SQL)
 title: sp_helparticledts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfacdd363e66401bc9cfbf494f6cb64ab12446fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6340460ff9bc1c8d0454d7ad0e4f05637df772bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474157"
 ---
 # <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,9 +38,9 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'`Es el nombre de un artículo de la publicación. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre de un artículo de la publicación. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -54,7 +55,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helparticledts** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
  Existen convenciones de nomenclatura, necesarias para los agentes de replicación, que se deben seguir cuando se da nombre a las tareas de un programa de Servicios de transformación de datos (DTS) de replicación. En las tareas personalizadas, como una tarea Ejecutar SQL, el nombre es una cadena concatenada que consta del nombre del artículo, un prefijo y una parte opcional. Al escribir el código, si no está seguro de cómo deben ser los nombres de tarea, el conjunto de resultados proporciona los nombres de tarea que se deben utilizar.  

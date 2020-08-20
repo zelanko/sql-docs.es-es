@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepullsubscription (Transact-SQL)
 title: sp_dropmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84fbed9341d01c8fe7d1c2d4e57df16aa027711a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dab181e38d9c072f5e25dc8db490a7538bbe615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474264"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,18 +41,18 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro es obligatorio. Especifique un **valor para quitar las** suscripciones a todas las publicaciones  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro es obligatorio. Especifique un **valor para quitar las** suscripciones a todas las publicaciones  
   
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher*es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro es obligatorio.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *Publisher*es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro es obligatorio.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db*es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro es obligatorio.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro es obligatorio.  
   
-`[ @reserved = ] 'reserved'`Está reservado para uso futuro. *Reserved* es de **bit**y su valor predeterminado es **0**.  
+`[ @reserved = ] 'reserved'` Está reservado para uso futuro. *Reserved* es de **bit**y su valor predeterminado es **0**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_dropmergepullsubscription** se utiliza en la replicación de mezcla.  
   
  **sp_dropmergepullsubscription** quita el agente de mezcla de esta suscripción de extracción de mezcla, aunque el agente de mezcla no se crea en **sp_addmergepullsubscription**.  
@@ -64,9 +65,9 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Consulte también  
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addmergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)  
+ [sp_addmergepullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)  
   
   

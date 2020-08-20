@@ -1,4 +1,5 @@
 ---
+description: sp_detach_db (Transact-SQL)
 title: sp_detach_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee5261834a0eeb11b4f7f6a21ab5110c0d42fd48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66f3e4543e3090d3a2bb0fee7179abaf2e017503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474307"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'database_name'`Es el nombre de la base de datos que se va a desasociar. *database_name* es un valor **sysname y su** valor predeterminado es NULL.  
+`[ @dbname = ] 'database_name'` Es el nombre de la base de datos que se va a desasociar. *database_name* es un valor **sysname y su** valor predeterminado es NULL.  
   
-`[ @skipchecks = ] 'skipchecks'`Especifica si se debe omitir o ejecutar UPDATE STATISTIC. *skipchecks* es un valor de tipo **nvarchar (10)** y su valor predeterminado es NULL. Para omitir UPDATE STATISTICs, especifique **true**. Para ejecutar explícitamente UPDATE STATISTICs, especifique **false**.  
+`[ @skipchecks = ] 'skipchecks'` Especifica si se debe omitir o ejecutar UPDATE STATISTIC. *skipchecks* es un valor de tipo **nvarchar (10)** y su valor predeterminado es NULL. Para omitir UPDATE STATISTICs, especifique **true**. Para ejecutar explícitamente UPDATE STATISTICs, especifique **false**.  
   
  De forma predeterminada, UPDATE STATISTICS se ejecuta para actualizar información acerca de los datos de las tablas e índices. Ejecutar UPATE STATISTICS es útil para las bases de datos que se trasladan a medios de solo lectura.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Especifica que el archivo de índice de texto completo asociado a la base de datos que se está desasociando no se quitará durante la operación de separación de la base de datos. *KeepFulltextIndexFile* es un valor de tipo **nvarchar (10)** y su valor predeterminado es **true**. Si *KeepFulltextIndexFile* es **false**, se quitan todos los archivos de índice de texto completo asociados a la base de datos y los metadatos del índice de texto completo, a menos que la base de datos sea de solo lectura. Si es NULL o **true**, se conservan los metadatos relacionados con el texto completo.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Especifica que el archivo de índice de texto completo asociado a la base de datos que se está desasociando no se quitará durante la operación de separación de la base de datos. *KeepFulltextIndexFile* es un valor de tipo **nvarchar (10)** y su valor predeterminado es **true**. Si *KeepFulltextIndexFile* es **false**, se quitan todos los archivos de índice de texto completo asociados a la base de datos y los metadatos del índice de texto completo, a menos que la base de datos sea de solo lectura. Si es NULL o **true**, se conservan los metadatos relacionados con el texto completo.  
   
 > [!IMPORTANT]
 >  El parámetro ** \@ keepfulltextindexfile** se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No use este parámetro en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que lo usen actualmente.  

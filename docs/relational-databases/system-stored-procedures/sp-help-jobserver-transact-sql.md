@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobserver (Transact-SQL)
 title: sp_help_jobserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93511eedfe434419270cccf6c5b4c3c685a8eeef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f0093529c27d8dae022e005f92eeaf4f84e99b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474185"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,14 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`Número de identificación del trabajo del que se va a devolver información. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` Número de identificación del trabajo del que se va a devolver información. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'`Nombre del trabajo del que se va a devolver información. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo del que se va a devolver información. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @show_last_run_details = ] show_last_run_details`Indica si la información de ejecución de la última ejecución forma parte del conjunto de resultados. *show_last_run_details* es de **tinyint**y su valor predeterminado es **0**. **0** no incluye información de última ejecución y **1** sí.  
+`[ @show_last_run_details = ] show_last_run_details` Indica si la información de ejecución de la última ejecución forma parte del conjunto de resultados. *show_last_run_details* es de **tinyint**y su valor predeterminado es **0**. **0** no incluye información de última ejecución y **1** sí.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -99,9 +100,9 @@ EXEC dbo.sp_help_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [sp_add_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
- [sp_delete_jobserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [sp_add_jobserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
+ [sp_delete_jobserver &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_droprole (Transact-SQL)
 title: sp_droprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a3d30a00c08dd90cf98e565eff46cfa58928c72
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a909a672680428cd5cca761945a0443ae5a1630c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474284"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`Es el nombre del rol de base de datos que se va a quitar de la base de datos actual. *role* es un **sysname**y no tiene ningún valor predeterminado. el *rol* ya debe existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre del rol de base de datos que se va a quitar de la base de datos actual. *role* es un **sysname**y no tiene ningún valor predeterminado. el *rol* ya debe existir en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -71,10 +72,10 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [sp_addrole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
- [ALTER AUTHORIZAtion &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sp_dropapprole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sp_dropapprole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

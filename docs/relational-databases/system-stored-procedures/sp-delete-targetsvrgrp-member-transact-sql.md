@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetsvrgrp_member (Transact-SQL)
 title: sp_delete_targetsvrgrp_member (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51846fabc42e99ab82bd3a9d6312ba6316c9c651
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2b5bfbe079f5004f7d0da8b42093068ebb57ea74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474325"
 ---
 # <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @group_name = ] 'group_name'`Nombre del grupo. *group_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @group_name = ] 'group_name'` Nombre del grupo. *group_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @server_name = ] 'server_name'`Nombre del servidor que se va a quitar del grupo especificado. *SERVER_NAME* es de tipo **nvarchar (30)** y no tiene ningún valor predeterminado.  
+`[ @server_name = ] 'server_name'` Nombre del servidor que se va a quitar del grupo especificado. *SERVER_NAME* es de tipo **nvarchar (30)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -66,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_add_targetsvrgrp_member &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
+ [sp_add_targetsvrgrp_member &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-targetsvrgrp-member-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

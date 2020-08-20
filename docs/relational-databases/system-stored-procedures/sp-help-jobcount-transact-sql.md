@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobcount (Transact-SQL)
 title: sp_help_jobcount (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a697489367d085714fd9ab1ab5c6245ca04b9ee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86d4c7ebeac06589e7f80f0a01adb0b996a1d3bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474200"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @schedule_id = ] schedule_id`Identificador de la programación que se va a mostrar. *schedule_id* es de **tipo int**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
+`[ @schedule_id = ] schedule_id` Identificador de la programación que se va a mostrar. *schedule_id* es de **tipo int**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'`Nombre de la programación que se va a mostrar. *schedule_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Nombre de la programación que se va a mostrar. *schedule_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Se puede especificar *schedule_id* o *schedule_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -55,7 +56,7 @@ sp_help_jobcount
 |-----------------|---------------|-----------------|  
 |**JobCount**|**int**|Número de trabajos para la programación especificada.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este procedimiento muestra el número de trabajos adjuntos a la programación especificada.  
   
 ## <a name="permissions"></a>Permisos  
@@ -83,11 +84,11 @@ EXEC sp_help_jobcount
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+## <a name="see-also"></a>Vea también  
+ [Agente SQL Server procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

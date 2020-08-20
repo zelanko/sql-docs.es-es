@@ -1,4 +1,5 @@
 ---
+description: sp_helpconstraint (Transact-SQL)
 title: sp_helpconstraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4da545089c2fba177c25c6ea00b49efa6464426c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d743730b70559d928f4fd46db67e9602168c139
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474117"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'table'`Es la tabla sobre la que se devuelve información de restricciones. La tabla especificada debe encontrarse en la base de datos actual. *TABLE* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado.  
+`[ @objname = ] 'table'` Es la tabla sobre la que se devuelve información de restricciones. La tabla especificada debe encontrarse en la base de datos actual. *TABLE* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
-`[ @nomsg = ] 'no_message'`Es un parámetro opcional que imprime el nombre de la tabla. *no_message* es de tipo **VARCHAR (5)** y su valor predeterminado es **MSG**. **nomsg** suprime la impresión.  
+`[ @nomsg = ] 'no_message'` Es un parámetro opcional que imprime el nombre de la tabla. *no_message* es de tipo **VARCHAR (5)** y su valor predeterminado es **MSG**. **nomsg** suprime la impresión.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -51,7 +52,7 @@ sp_helpconstraint [ @objname = ] 'table'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_helpconstraint** muestra una columna indizada descendente si participó en las claves principales. El nombre de la columna indizada en orden descendente irá seguido de un signo menos (-) en el conjunto de resultados. La columna predeterminada, indizada en orden ascendente, aparecerá solo por su nombre.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Al ejecutar **sp_help**_tabla_ , se muestra toda la información sobre la tabla especificada. Para ver solo la información de restricción, use **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Permisos  
@@ -67,7 +68,7 @@ EXEC sp_helpconstraint 'Production.Product';
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: sp_helpdb (Transact-SQL)
 title: sp_helpdb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fda6aba2ce361e814a0196db6138b38f13ce359
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c94db417a7257d38f5b607854beeeb5663c30ea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474140"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'name'`Es el nombre de la base de datos para la que se envía información. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. Si no se especifica *Name* , **sp_helpdb** informes en todas las bases de datos de la vista de catálogo **Sys. Databases** .  
+`[ @dbname = ] 'name'` Es el nombre de la base de datos para la que se envía información. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. Si no se especifica *Name* , **sp_helpdb** informes en todas las bases de datos de la vista de catálogo **Sys. Databases** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -63,13 +64,13 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**nchar(128)**|Nombre de archivo lógico.|  
 |**ID**|**smallint**|Identificador de archivo.|  
 |**filename**|**NCHAR (260)**|Nombre del archivo en el sistema operativo (nombre de archivo físico).|  
-|**filegroup**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
+|**prima**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
 |**size**|**nvarchar (18)**|Tamaño del archivo, en megabytes.|  
 |**tamañomáximo**|**nvarchar (18)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
 |**crezca**|**nvarchar (18)**|Incremento de crecimiento del archivo. Indica la cantidad de espacio que se agrega al archivo cada vez que se necesita espacio nuevo.|  
 |**uso**|**VARCHAR (9)**|Uso del archivo. En el caso de un archivo de datos, el valor es **' solo datos '** y, para el archivo de registro, el valor es **' solo registro '**.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La columna **status** del conjunto de resultados informa de las opciones que se han establecido en on en la base de datos. La columna de **Estado** no muestra todas las opciones de base de datos. Para ver una lista completa de los valores actuales de las opciones de base de datos, use la vista de catálogo **Sys. Databases** .  
   
 ## <a name="permissions"></a>Permisos  
@@ -95,12 +96,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [Sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [Sys. grupos de archivos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [Sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

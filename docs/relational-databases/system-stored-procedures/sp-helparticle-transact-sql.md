@@ -1,4 +1,5 @@
 ---
+description: sp_helparticle (Transact-SQL)
 title: sp_helparticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca400eb6fc015acff452ca4ae6a7658a05145f8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474169"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,18 +42,18 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'`Es el nombre de un artículo de la publicación. *article* es de **tipo sysname y su**valor predeterminado es **%** . Si no se proporciona el *artículo* , se devuelve información sobre todos los artículos de la publicación especificada.  
+`[ @article = ] 'article'` Es el nombre de un artículo de la publicación. *article* es de **tipo sysname y su**valor predeterminado es **%** . Si no se proporciona el *artículo* , se devuelve información sobre todos los artículos de la publicación especificada.  
   
-`[ @returnfilter = ] returnfilter`Especifica si se debe devolver la cláusula de filtro. *returnfilter* es de **bit**y su valor predeterminado es **1**, que devuelve la cláusula de filtro.  
+`[ @returnfilter = ] returnfilter` Especifica si se debe devolver la cláusula de filtro. *returnfilter* es de **bit**y su valor predeterminado es **1**, que devuelve la cláusula de filtro.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  no se debe especificar el *publicador* al solicitar información sobre un artículo publicado por un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
-`[ @found = ] found OUTPUT`Solo para uso interno.  
+`[ @found = ] found OUTPUT` Solo para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -92,7 +93,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helparticle** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
 ## <a name="permissions"></a>Permisos  
@@ -103,10 +104,10 @@ sp_helparticle [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del artículo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [sp_addarticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_changearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_droparticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_addarticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articlecolumn &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_changearticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_droparticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_monitor (Transact-SQL)
 title: sp_help_log_shipping_monitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b687131739188c811347aa032c0eb941124eb665
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa34a789b4993b8eaf14123b2f9a4bffb477ed39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474234"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ sp_help_log_shipping_monitor
 |**restore_threshold**|**int**|Número de minutos permitido entre las operaciones de restauración antes de que se genere una alerta. **restore_threshold** no puede ser null.|  
 |**is_restore_alert_enabled**|**bit**|Especifica si se genera una alerta cuando se supera **restore_threshold** . El valor de uno (**1**), el valor predeterminado, significa que se genera la alerta.<br /><br /> NULL = La información no está disponible o no es relevante.<br /><br /> Para establecer el umbral de restauración, use [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md).|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_help_log_shipping_monitor** se debe ejecutar desde la base de datos **maestra** del servidor de supervisión.  
   
 ## <a name="permissions"></a>Permisos  

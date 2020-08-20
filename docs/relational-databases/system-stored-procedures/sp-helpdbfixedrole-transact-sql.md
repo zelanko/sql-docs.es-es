@@ -1,4 +1,5 @@
 ---
+description: sp_helpdbfixedrole (Transact-SQL)
 title: sp_helpdbfixedrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b029430388e1f58a725e5eb15795fa47380eda7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f7d2518a14ba15a7cd91ea4c9a41d6710d9572e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474091"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`Es el nombre de un rol fijo de base de datos. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si se especifica *role* , solo se devuelve información sobre ese rol; de lo contrario, se devolverá una lista y una descripción de todos los roles fijos de base de datos.  
+`[ @rolename = ] 'role'` Es el nombre de un rol fijo de base de datos. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si se especifica *role* , solo se devuelve información sobre ese rol; de lo contrario, se devolverá una lista y una descripción de todos los roles fijos de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -51,7 +52,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|Nombre del rol fijo de base de datos.|  
 |**Descripción**|**nvarchar (70)**|Descripción de **DbFixedRole.**|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los roles fijos de base de datos, como se muestra en la siguiente tabla, se definen de nivel de base de datos y tienen permisos para realizar actividades administrativas específicas en la base de datos. No es posible agregar o quitar roles fijos de base de datos. No es posible cambiar los permisos concedidos a un rol fijo de base de datos.  
   
 |Rol fijo de base de datos|Descripción|  
@@ -89,11 +90,11 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_dbfixedrolepermission &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
- [sp_droprolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helprole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [sp_addrolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_dbfixedrolepermission &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
+ [sp_droprolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helprole &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

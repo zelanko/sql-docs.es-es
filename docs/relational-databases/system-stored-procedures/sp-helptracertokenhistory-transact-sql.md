@@ -1,4 +1,5 @@
 ---
+description: sp_helptracertokenhistory (Transact-SQL)
 title: sp_helptracertokenhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9242f547d8f44e09341183a30a49afef4d2c4f52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6db181cfddbbde9730fba0ac9b0ddfc7264d433
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474045"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,16 +41,16 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación en la que se insertó el testigo de seguimiento. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en la que se insertó el testigo de seguimiento. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @tracer_id = ] tracer_id`Es el identificador del testigo de seguimiento en el [MStracer_tokens &#40;tabla de&#41;de Transact-SQL](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) para la que se devuelve información del historial. *tracer_id* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @tracer_id = ] tracer_id` Es el identificador del testigo de seguimiento en el [MStracer_tokens &#40;tabla de&#41;de Transact-SQL ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) para la que se devuelve información del historial. *tracer_id* es de **tipo int**y no tiene ningún valor predeterminado.  
   
-`[ @publisher = ] 'publisher'`Nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]
 >  Este parámetro solo debe especificarse para los publicadores que no sean de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @publisher_db = ] 'publisher_db'`Nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Si el procedimiento almacenado se ejecuta en el publicador, se omite este parámetro.  
+`[ @publisher_db = ] 'publisher_db'` Nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Si el procedimiento almacenado se ejecuta en el publicador, se omite este parámetro.  
   
 ## <a name="result-set"></a>Tipo de cursor  
   
@@ -64,10 +65,10 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helptracertokenhistory** se utiliza en la replicación transaccional.  
   
- Ejecute [sp_helptracertokens &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) para obtener una lista de testigos de seguimiento para la publicación.  
+ Ejecute [sp_helptracertokens &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) para obtener una lista de testigos de seguimiento para la publicación.  
   
  Un valor NULL en el conjunto de resultados significa que no es posible calcular las estadísticas de latencia. Esto es debido a que no se ha recibido el token de seguimiento en el distribuidor o en uno de los suscriptores.  
   
@@ -79,6 +80,6 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte también  
  [Medir la latencia y validar las conexiones para la replicación transaccional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

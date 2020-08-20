@@ -1,4 +1,5 @@
 ---
+description: sp_dropmessage (Transact-SQL)
 title: sp_dropmessage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8c9ac233cdc71d8886224182c2c3b91cd871450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c95708903063b4fade98e3d45e29e184e93efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474249"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @msgnum = ] message_number`Es el número de mensaje que se va a quitar. *message_number* debe ser un mensaje definido por el usuario con un número de mensaje superior a 50000. *message_number* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @msgnum = ] message_number` Es el número de mensaje que se va a quitar. *message_number* debe ser un mensaje definido por el usuario con un número de mensaje superior a 50000. *message_number* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @lang = ] 'language'`Es el idioma del mensaje que se va a quitar. Si se especifica **All** , se quitan todas las versiones de idioma de *message_number* . *Language* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @lang = ] 'language'` Es el idioma del mensaje que se va a quitar. Si se especifica **All** , se quitan todas las versiones de idioma de *message_number* . *Language* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -53,7 +54,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia a los roles fijos de servidor **sysadmin** y **ServerAdmin** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  A menos que se especifique **All** para *Language*, todas las versiones localizadas de un mensaje deben quitarse antes de que se pueda quitar la versión en Inglés de Estados Unidos del mensaje.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -133,7 +134,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
- [sp_altermessage &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
+ [sp_altermessage &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

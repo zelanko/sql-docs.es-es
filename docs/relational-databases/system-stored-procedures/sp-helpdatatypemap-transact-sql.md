@@ -1,4 +1,5 @@
 ---
+description: sp_helpdatatypemap (Transact-SQL)
 title: sp_helpdatatypemap (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61229514cb837a40537b6a363d2ebba81a5cef5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 266098010f7da11f431c3bb334761209c7049cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474124"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,35 +44,35 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @source_dbms = ] 'source_dbms'`Es el nombre del DBMS desde el que se asignan los tipos de datos. *source_dbms* es de **tipo sysname**y puede tener uno de los valores siguientes.  
+`[ @source_dbms = ] 'source_dbms'` Es el nombre del DBMS desde el que se asignan los tipos de datos. *source_dbms* es de **tipo sysname**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|El origen es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El origen es una base de datos de Oracle.|  
   
-`[ @source_version = ] 'source_version'`Es la versión del producto del DBMS de origen. *source_version*es de tipo **VARCHAR (10)** y, si no se especifica, se devuelven las asignaciones de tipos de datos para todas las versiones del DBMS de origen. Permite filtrar el conjunto de resultados por la versión de origen del DBMS.  
+`[ @source_version = ] 'source_version'` Es la versión del producto del DBMS de origen. *source_version*es de tipo **VARCHAR (10)** y, si no se especifica, se devuelven las asignaciones de tipos de datos para todas las versiones del DBMS de origen. Permite filtrar el conjunto de resultados por la versión de origen del DBMS.  
   
-`[ @source_type = ] 'source_type'`Es el tipo de datos que aparece en el DBMS de origen. *source_type* es de **tipo sysname**y, si no se especifica, se devuelven las asignaciones de todos los tipos de datos del DBMS de origen. Permite filtrar el conjunto de resultados por tipo de datos en el DBMS de origen.  
+`[ @source_type = ] 'source_type'` Es el tipo de datos que aparece en el DBMS de origen. *source_type* es de **tipo sysname**y, si no se especifica, se devuelven las asignaciones de todos los tipos de datos del DBMS de origen. Permite filtrar el conjunto de resultados por tipo de datos en el DBMS de origen.  
   
-`[ @destination_dbms = ] 'destination_dbms'`Es el nombre del DBMS de destino. *destination_dbms* es de **tipo sysname**y puede tener uno de los valores siguientes.  
+`[ @destination_dbms = ] 'destination_dbms'` Es el nombre del DBMS de destino. *destination_dbms* es de **tipo sysname**y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|El destino es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El destino es una base de datos de Oracle.|  
 |**DB2**|El destino es una base de datos IBM DB2.|  
 |**SYBASE**|El destino es una base de datos Sybase.|  
   
-`[ @destination_version = ] 'destination_version'`Es la versión del producto del DBMS de destino. *destination_version*es de tipo **VARCHAR (10)** y, si no se especifica, se devuelven las asignaciones de todas las versiones del DBMS de destino. Permite filtrar el conjunto de resultados por la versión de destino del DBMS.  
+`[ @destination_version = ] 'destination_version'` Es la versión del producto del DBMS de destino. *destination_version*es de tipo **VARCHAR (10)** y, si no se especifica, se devuelven las asignaciones de todas las versiones del DBMS de destino. Permite filtrar el conjunto de resultados por la versión de destino del DBMS.  
   
-`[ @destination_type = ] 'destination_type'`Es el tipo de datos que aparece en el DBMS de destino. *destination_type*es de **tipo sysname**y, si no se especifica, se devuelven las asignaciones de todos los tipos de datos del DBMS de destino. Permite filtrar el conjunto de resultados por tipo de datos en el DBMS de destino.  
+`[ @destination_type = ] 'destination_type'` Es el tipo de datos que aparece en el DBMS de destino. *destination_type*es de **tipo sysname**y, si no se especifica, se devuelven las asignaciones de todos los tipos de datos del DBMS de destino. Permite filtrar el conjunto de resultados por tipo de datos en el DBMS de destino.  
   
-`[ @defaults_only = ] defaults_only`Es si solo se devuelven las asignaciones de tipos de datos predeterminados. *defaults_only* es de **bit**y su valor predeterminado es **0**. **1** significa que solo se devuelven las asignaciones de tipos de datos predeterminados. **0** significa que se devuelven las asignaciones predeterminadas y de tipos de datos definidos por el usuario.  
+`[ @defaults_only = ] defaults_only` Es si solo se devuelven las asignaciones de tipos de datos predeterminados. *defaults_only* es de **bit**y su valor predeterminado es **0**. **1** significa que solo se devuelven las asignaciones de tipos de datos predeterminados. **0** significa que se devuelven las asignaciones predeterminadas y de tipos de datos definidos por el usuario.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de columna|Descripción|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |**mapping_id**|Identifica una asignación de tipos de datos.|  
 |**source_dbms**|El nombre y el número de versión del DBMS de origen.|  
@@ -83,7 +84,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpdatatypemap** define las asignaciones de tipos de datos tanto de los publicadores que no son de SQL Server como de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Cuando no se admite la combinación especificada de DBMS de origen y de destino, **sp_helpdatatypemap** devuelve un conjunto de resultados vacío.  
@@ -91,8 +92,8 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** en el distribuidor o los miembros del rol fijo de base de datos **db_owner** en la base de datos de distribución pueden ejecutar **sp_helpdatatypemap**.  
   
-## <a name="see-also"></a>Consulte también  
- [sp_getdefaultdatatypemapping &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+## <a name="see-also"></a>Vea también  
+ [sp_getdefaultdatatypemapping &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

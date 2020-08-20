@@ -1,4 +1,5 @@
 ---
+description: sp_expired_subscription_cleanup (Transact-SQL)
 title: sp_expired_subscription_cleanup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 279334fee40c24cbc0423eca58cd5386dbdb4bdc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f01368f50ce4a7a6116f58bfedee187648a8302d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474271"
 ---
 # <a name="sp_expired_subscription_cleanup-transact-sql"></a>sp_expired_subscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +38,12 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre de un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publication* es de **tipo sysname y su**valor predeterminado es NULL. No debe especificar este parámetro para un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @publisher = ] 'publisher'` Es el nombre de un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publication* es de **tipo sysname y su**valor predeterminado es NULL. No debe especificar este parámetro para un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_expired_subscription_cleanup** se utiliza en todos los tipos de replicación.  
   
  el trabajo de limpieza de suscripciones expiradas ejecuta **sp_expired_subscription_cleanup** para detectar y quitar las suscripciones expiradas de las bases de datos de publicación cada 24 horas. Si alguna de las suscripciones ha expirado, es decir, no está sincronizada con el publicador durante el período de retención, se declara la publicación como expirada y se limpian los seguimientos de la suscripción en el publicador. Para más información, consulte [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
@@ -50,9 +51,9 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_expired_subscription_cleanup**.  
   
-## <a name="see-also"></a>Consulte también  
- [sp_mergesubscription_cleanup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
- [sp_subscription_cleanup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [sp_mergesubscription_cleanup &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)   
+ [sp_subscription_cleanup &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

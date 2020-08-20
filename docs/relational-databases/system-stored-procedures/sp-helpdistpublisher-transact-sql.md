@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistpublisher (Transact-SQL)
 title: sp_helpdistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ada6e3bd06cdc915f8d34b18434994e9cc662a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb9bfd2bebe5220d992b92251c79df957f3d7077
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749333"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474093"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el publicador cuyas propiedades se devuelven. *Publisher* es de **tipo sysname y su**valor predeterminado es **%** .  
+`[ @publisher = ] 'publisher'` Es el publicador cuyas propiedades se devuelven. *Publisher* es de **tipo sysname y su**valor predeterminado es **%** .  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -51,7 +52,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**security_mode**|**int**|Modo de seguridad empleado por los agentes de replicación para conectar al publicador para suscripciones de actualización en cola, o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
 |**Inicio**|**sysname**|Nombre de inicio de sesión empleado por los agentes de replicación para conectar al publicador para suscripciones de actualización en cola, o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**nvarchar (524)**|Contraseña devuelta (en forma de cifrado sencillo). La contraseña es NULL para los usuarios que no sean **sysadmin**.|  
-|**active**|**bit**|Indica si un publicador remoto utiliza el servidor local como distribuidor:<br /><br /> **0** = no<br /><br /> **1** = sí|  
+|**active**|**bit**|Indica si un publicador remoto utiliza el servidor local como distribuidor:<br /><br /> **0** = No<br /><br /> **1** = Sí|  
 |**working_directory**|**nvarchar(255)**|Nombre del directorio de trabajo.|  
 |**trusted**|**bit**|Si se necesita la contraseña cuando un publicador se conecta con el distribuidor. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, siempre debe devolver **0**, lo que significa que se necesita la contraseña.|  
 |**thirdparty_flag**|**bit**|Indica si la publicación está habilitada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o por una aplicación de terceros:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle o el publicador de puerta de enlace de Oracle.<br /><br /> **1** = el publicador se ha integrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante una aplicación de otro fabricante.|  
@@ -62,7 +63,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpdistpublisher** se utiliza en todos los tipos de replicación.  
   
  **sp_helpdistpublisher** no mostrará el inicio de sesión o la contraseña del publicador en el conjunto de resultados para inicios de sesión que no sean de**sysadmin** .  
@@ -72,8 +73,8 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_changedistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
+ [sp_adddistpublisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_changedistpublisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_helpsrvrole (Transact-SQL)
 title: sp_helpsrvrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9319cc35d3059bc1efafa3c4640b164c39d8bbfa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9686de531821bc5b143caac7f756f9cae5af8ac0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474035"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @srvrolename = ] 'role'`Es el nombre del rol fijo de servidor. *role* es de **tipo sysname y su**valor predeterminado es NULL. *role* puede ser uno de los valores siguientes.  
+`[ @srvrolename = ] 'role'` Es el nombre del rol fijo de servidor. *role* es de **tipo sysname y su**valor predeterminado es NULL. *role* puede ser uno de los valores siguientes.  
   
 |Rol fijo de servidor|Descripción|  
 |-----------------------|-----------------|  
@@ -62,7 +63,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |ServerRole|**sysname**|Nombre del rol de servidor|  
 |Descripción|**sysname**|Descripción de ServerRole|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los roles fijos de servidor están definidos en el nivel de servidor y tienen permisos para ejecutar actividades administrativas específicas en el servidor. Los roles fijos de servidor no se pueden agregar, quitar ni cambiar.  
   
  Para agregar o quitar miembros de roles de servidor, vea [ALTER Server ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
@@ -100,9 +101,9 @@ sp_helpsrvrole 'diskadmin' ;
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md)   
- [sp_addsrvrolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_dropsrvrolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpsrvrolemember &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
+ [sp_addsrvrolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpsrvrolemember &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

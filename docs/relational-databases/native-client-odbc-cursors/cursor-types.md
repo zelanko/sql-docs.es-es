@@ -1,4 +1,5 @@
 ---
+description: Tipos de cursor
 title: Tipos de cursor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 3a916cc7-f352-42cb-8b83-f78e06cef991
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 030a793b949c0e3b94cbee2b35a24bde46dfee2f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a7459f8a312cbfbb960d6cfdf87e64d5b8015429
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460808"
 ---
 # <a name="cursor-types"></a>Tipos de cursor
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,6 +40,6 @@ ms.locfileid: "86000631"
 -   Los cursores dinámicos son los opuestos a los cursores estáticos. Reflejan todas las modificaciones realizadas en las filas de su conjunto de resultados. Los valores de datos, el orden y la pertenencia de las filas del conjunto de resultados pueden cambiar con cada captura.  
   
 ## <a name="see-also"></a>Consulte también  
- [Usar cursores &#40;&#41;ODBC](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Usar cursores &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

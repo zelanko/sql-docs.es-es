@@ -1,4 +1,5 @@
 ---
+description: sys.database_connection_stats (Azure SQL Database)
 title: sys.database_connection_stats
 titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
@@ -20,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 047e6d6f9f6e7c0405eab27655ee9e2d97e1236b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55bfc4c575cae194b45e6aa7dbd01fbe38562a82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460674"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
@@ -44,7 +45,7 @@ ms.locfileid: "85787136"
 |**terminated_connection_count**|**int**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexiones terminadas.|  
 |**throttled_connection_count**|**int**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número máximo de conexiones aceleradas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ### <a name="event-aggregation"></a>Agregación de eventos
 
@@ -101,6 +102,6 @@ WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';
 
 ## <a name="see-also"></a>Consulte también
 
- [Solución de problemas de conexión de Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
+ [Solución de problemas de conexión comunes relacionados con Azure SQL Database](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Transiciones de estado
 title: Transiciones de estado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a480b7ff8953ef94f0efc4886a09731730a61b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 947be49fc0a77f94c1641bb7c735db3276b49f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476367"
 ---
 # <a name="state-transitions"></a>Transiciones de estado
 ODBC define *Estados* discretos para cada entorno, cada conexión y cada instrucción. Por ejemplo, el entorno tiene tres Estados posibles: sin asignar (en el que no se asigna ningún entorno), asignado (en el que se asigna un entorno pero no se asignan conexiones) y conexión (en la que se asignan un entorno y una o varias conexiones). Las conexiones tienen siete Estados posibles: las instrucciones tienen 13 Estados posibles.  

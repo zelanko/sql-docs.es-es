@@ -1,4 +1,5 @@
 ---
+description: Crear un destino ODBC con el componente de script
 title: Crear un destino ODBC con el componente de script | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c1b434486cb27d5a001e0b185ed6c637e1ca45d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dd25e6cf4816b0ff39ed1129a1d98f9de5603d2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477325"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Crear un destino ODBC con el componente de script
 
@@ -41,7 +42,7 @@ ms.locfileid: "86916330"
   
 -   **OdbcCommand** espera parámetros posicionales. Los signos de interrogación (?) en el texto del comando indican las posiciones de los parámetros. (En cambio, **SqlCommand** espera parámetros con nombre).  
   
- En este ejemplo se usa la tabla **Person.Address** en la base de datos de ejemplo **AdventureWorks**. En el ejemplo se pasan las columnas primera y cuarta, las columnas **int _AddressID_** y **nvarchar(30) _City_** , de esta tabla a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino en el tema [Desarrollar tipos específicos de los componentes de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ En este ejemplo se usa la tabla **Person.Address** en la base de datos de ejemplo **AdventureWorks**. En el ejemplo se pasan las columnas primera y cuarta, las columnas **int _AddressID_** y **nvarchar(30) _City_**, de esta tabla a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino en el tema [Desarrollar tipos específicos de los componentes de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   
@@ -169,7 +170,7 @@ ms.locfileid: "86916330"
     }  
     ```  
   
-## <a name="see-also"></a>Consulte también  
- [Crear un destino con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
+## <a name="see-also"></a>Vea también  
+ [Creating a Destination with the Script Component (Crear un destino con el componente de script)](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

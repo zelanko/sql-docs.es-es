@@ -1,4 +1,5 @@
 ---
+description: Crear base de datos (Asistente para importación y exportación de SQL Server)
 title: Crear base de datos (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f3616da1034fa0c590a4544691e22ffd054eaa10
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477297"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Crear base de datos (Asistente para importación y exportación de SQL Server)
 
@@ -90,6 +91,6 @@ Para obtener información detallada sobre estos requisitos, vea [Identificadores
 ### <a name="more-info"></a>Más información
 Para obtener más información sobre las opciones de tamaño de archivo que aparecen en esta página, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
 
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>A continuación  
  Después de proporcionar un nombre para la base de datos que creará el asistente y de hacer clic en **Aceptar**, el cuadro de diálogo **Crear base de datos** mostrará la página **Seleccionar un destino** . Para más información, vea [Elegir un destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
 

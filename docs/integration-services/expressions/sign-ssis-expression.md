@@ -1,4 +1,5 @@
 ---
+description: SIGN (expresión de SSIS)
 title: SIGN (expresión de SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 593c17254c06e22e26e4e131fd74c5dacd1a5621
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 88a0009b7d846adb0f12f8712c70b95109877ef1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477368"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (expresión de SSIS)
 
@@ -42,7 +43,7 @@ SIGN(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  SIGN devuelve un resultado NULL si el valor del argumento es NULL.  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  

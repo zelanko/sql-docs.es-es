@@ -1,4 +1,5 @@
 ---
+description: Cursores desplazables
 title: Cursores desplazables | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2762ffc7fa179fc6a68f92c23f92ca12803f5ab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c347dcb130a2f1f899f2e1b83ae28289ff0a923
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476487"
 ---
 # <a name="scrollable-cursors"></a>Cursores desplazables
 En modernas aplicaciones basadas en pantalla, el usuario se desplaza hacia atrás y hacia delante por los datos. Para estas aplicaciones, el hecho de volver a una fila capturada previamente es un problema. Una posibilidad es cerrar y volver a abrir el cursor y, a continuación, capturar filas hasta que el cursor alcance la fila requerida. Otra posibilidad es leer el conjunto de resultados, almacenarlo en caché localmente e implementar el desplazamiento en la aplicación. Ambas posibilidades funcionan bien solo con conjuntos de resultados pequeños y la segunda posibilidad es difícil de implementar. Una solución mejor es usar un *cursor desplazable,* que puede moverse hacia atrás y hacia delante en el conjunto de resultados.  

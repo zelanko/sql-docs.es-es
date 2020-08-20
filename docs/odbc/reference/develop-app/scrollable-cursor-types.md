@@ -1,4 +1,5 @@
 ---
+description: Tipos de Cursor desplazable
 title: Tipos de cursor desplazables | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 63f29269ea209875a2e775cf8d523302fcb9a976
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c27ccd54bfe0ba099d78c002fce4c901e4bf8c1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476517"
 ---
 # <a name="scrollable-cursor-types"></a>Tipos de Cursor desplazable
 Los cuatro tipos de cursores desplazables son estáticos, dinámicos, controlados por conjunto de claves y mixtos. Los cursores estáticos detectan pocos cambios o ningún cambio, pero son relativamente baratas de implementar. Los cursores dinámicos detectan todos los cambios pero son caros de implementar. Los cursores mixtos y controlados por conjunto de claves se encuentran entre y detectan la mayoría de los cambios, pero con menos gastos que los cursores dinámicos.  

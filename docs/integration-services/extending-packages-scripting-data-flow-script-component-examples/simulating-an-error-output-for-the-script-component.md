@@ -1,4 +1,5 @@
 ---
+description: Simular una salida de error para el componente de script
 title: Simular una salida de error para el componente de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db88defad5962fb6a71b6705d7055abfb93c52c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3e81c953fa5c4b1f98c2badd87942ca436f72105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477299"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simular una salida de error para el componente de script
 

@@ -1,4 +1,5 @@
 ---
+description: Cursores de bloque
 title: Cursores de bloque | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa35888ef93da9648fe6422bdc35ebf9da3a0525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dece0e3ecfc5ef4f3116361a202cfa2d10863ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476827"
 ---
 # <a name="block-cursors"></a>Cursores de bloque
 Muchas aplicaciones invierten una cantidad considerable de tiempo en la incorporación de datos a través de la red. Parte de este tiempo se dedica a la realización real de los datos a través de la red y parte del mismo se dedica a la sobrecarga de la red, como la llamada realizada por el controlador para solicitar una fila de datos. Esta última vez se puede reducir si la aplicación hace un uso eficaz de los *cursores* de *bloque,* o *FAT,* que pueden devolver más de una fila a la vez.  

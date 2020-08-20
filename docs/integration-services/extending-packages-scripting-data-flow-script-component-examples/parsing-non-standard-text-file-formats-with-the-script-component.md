@@ -1,4 +1,5 @@
 ---
+description: Analizar formatos de archivo de texto no estándar con el componente de script
 title: Analizar formatos de archivo de texto no estándar con el componente de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fba18c5524c0d46438bc36d4856c02b7c5af7b83
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ac791960040a0bceb46e129b2f48a8410e953258
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477301"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analizar formatos de archivo de texto no estándar con el componente de script
 
@@ -29,7 +30,7 @@ ms.locfileid: "86919230"
 
   Cuando los datos de origen están organizados en un formato no estándar, puede resultar más cómodo consolidar toda la lógica de análisis en un único script que encadenar varias transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para lograr el mismo resultado.  
   
- [Ejemplo 1: Analizar registros delimitados por fila](#example1)  
+ [Ejemplo 1: Análisis de los registros delimitados por filas](#example1)  
   
  [Ejemplo 2: Dividir registros primarios y secundarios](#example2)  
   
@@ -100,11 +101,11 @@ ms.locfileid: "86919230"
   
 12. En la página **Entradas y salidas** del **Editor de transformación Script**, seleccione Salida 0 y establezca **SynchronousInputID** en Ninguno. Cree 5 columnas de salida, todas del tipo cadena [DT_STR] con una longitud de 32:  
   
-    -   Nombre  
+    -   FirstName  
   
-    -   Apellidos  
+    -   LastName  
   
-    -   Título  
+    -   Title  
   
     -   City  
   
@@ -191,7 +192,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Ejemplo 2: Dividir registros primarios y secundarios  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Ejemplo 2: División de los registros primarios y secundarios  
  Este ejemplo muestra cómo tomar un archivo de texto, en el que una fila de separación precede a una fila de registro primario a la que siguen un número indefinido de filas de registro secundario, y cómo analizarlo en tablas de destino primarias y secundarias correctamente normalizadas mediante el componente de script. Este sencillo ejemplo se puede adaptar fácilmente a archivos de origen que utilizan más de una fila o columna para cada registro primario y secundario, siempre que exista una forma de identificar el principio y el final de cada registro.  
   
 > [!CAUTION]  

@@ -1,4 +1,5 @@
 ---
+description: Ejecutar un paquete SSIS con SQL Server Management Studio (SSMS)
 title: Ejecutar un paquete SSIS con SSMS | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e89ca342011010eebb330eb20319a2bf9a8d9ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d884f38d93d7e79094fd1e2074e92e37050ddfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477278"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Ejecutar un paquete SSIS con SQL Server Management Studio (SSMS)
 
@@ -24,7 +25,7 @@ En esta guía de inicio rápido se muestra cómo usar SQL Server Management Stud
 
 SQL Server Management Studio es un entorno integrado para administrar cualquier infraestructura de SQL, desde SQL Server a SQL Database. Para obtener más información acerca de SSMS, consulte [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Antes de comenzar, asegúrese de que tiene instalada la última versión de SQL Server Management Studio (SSMS). Para descargar SSMS, consulte [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) [Descargar SQL Server Management Studio (SSMS)].
 
@@ -75,7 +76,7 @@ Use SQL Server Management Studio para establecer una conexión con el catálogo 
 
 2. Haga clic con el botón derecho y seleccione **Ejecutar**. Se abrirá el cuadro de diálogo **Ejecutar paquete**.
 
-3.  Configure la ejecución del paquete mediante las opciones de las pestañas **Parámetros**, **Administradores de conexión** y **Opciones avanzadas** del cuadro de diálogo Ejecutar paquete.
+3.  Configure la ejecución del paquete mediante las opciones de las pestañas **Parámetros**, **Administradores de conexión**y **Avanzadas** del cuadro de diálogo Ejecutar paquete .
 
 4.  Haga clic en Aceptar para ejecutar el paquete.
 

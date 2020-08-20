@@ -1,4 +1,5 @@
 ---
+description: Secuencia de registros de estado
 title: Secuencia de registros de estado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bb26731a85d1d6313658fe9c24a32167b351d2d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2cb519cab987a1abd924f1b779a7f07c3201475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304176"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476457"
 ---
 # <a name="sequence-of-status-records"></a>Secuencia de registros de estado
 Si se devuelven dos o más registros de estado, el administrador de controladores y el controlador los clasifican según las reglas siguientes. El registro con el rango más alto es el primer registro. El origen de un registro (Administrador de controladores, controlador, puerta de enlace, etc.) no se tiene en cuenta al clasificar registros.  

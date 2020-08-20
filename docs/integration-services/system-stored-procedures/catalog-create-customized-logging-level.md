@@ -1,4 +1,5 @@
 ---
+description: catalog.create_customized_logging_level
 title: catalog.create_customized_logging_level | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a3bff065a7a89a1e0708fc5a1d782979652cbd3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aaf0fb0ccdd285944e5fceaba561bd626317121
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477152"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
 
@@ -39,12 +40,12 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  Nombre del nuevo nivel de registro personalizado.  
   
- *level_name* es **nvarchar(128)** .  
+ *level_name* es **nvarchar(128)**.  
   
  [ @level_description = ] *level_description*  
  Descripción del nuevo nivel de registro personalizado.  
   
- El parámetro *level_description* es de tipo **nvarchar(max)** .  
+ El parámetro *level_description* es de tipo **nvarchar(max)**.  
   
  [ @profile_value =] *profile_value*  
  Estadísticas que quiere que registre el nuevo nivel de registro personalizado.  

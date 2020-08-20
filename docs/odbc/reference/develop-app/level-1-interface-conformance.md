@@ -1,4 +1,5 @@
 ---
+description: Cumplimiento de la interfaz de nivel 1
 title: Conformidad con la interfaz de nivel 1 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 29f59cf06eac1ce0f6589ad9c7cba8491e8383b5
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e92b68c9e8864e79c495c9405f905fa5a4f37acf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476577"
 ---
 # <a name="level-1-interface-conformance"></a>Cumplimiento de la interfaz de nivel 1
 El nivel de conformidad de la interfaz de nivel 1 incluye la funcionalidad del nivel de conformidad de la interfaz básica más características adicionales, como transacciones, que suelen estar disponibles en un DBMS relacional de OLTP. Un controlador compatible con la interfaz de nivel 1 permite que la aplicación realice lo siguiente, además de las características del nivel de conformidad de la interfaz principal:  
   
-|Número de característica|Description|  
+|Número de característica|Descripción|  
 |-|-|  
 |101|Especifique el esquema de las tablas y vistas de base de datos (con nombres de dos partes). (Para obtener más información, vea la característica de nomenclatura de tres partes 201 en el cumplimiento de la [interfaz de nivel 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md)).|  
 |102|Invocar la ejecución asincrónica verdadera de funciones ODBC, donde las funciones ODBC aplicables son todas sincrónicas o asincrónicas en una conexión determinada.|  

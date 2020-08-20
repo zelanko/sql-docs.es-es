@@ -1,4 +1,5 @@
 ---
+description: Campos de Descriptor de configuración
 title: Estableciendo los campos de descriptor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04f9520e2ef462df481bb104e389aeb57b5dd457
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6625db69709098f3a3db1a1d40f9ab583eee4030
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476437"
 ---
 # <a name="setting-descriptor-fields"></a>Campos de Descriptor de configuración
 Para modificar los campos de un descriptor, una aplicación puede llamar a **SQLSetDescField**. Algunos campos son de solo lectura y no se pueden establecer. (Consulte la descripción de la función [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) ).  

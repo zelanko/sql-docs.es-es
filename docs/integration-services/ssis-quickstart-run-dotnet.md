@@ -1,4 +1,5 @@
 ---
+description: Ejecutar un paquete SSIS con código C# en una aplicación .NET
 title: Ejecutar un proyecto de SSIS con código .NET (C#) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbc0cfc7a5ef22487a22ade0f65cbf76ac78645c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 03be806b29fa46c04b38bab822c848f96a0c516d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477222"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Ejecutar un paquete SSIS con código C# en una aplicación .NET
 
@@ -24,7 +25,7 @@ En este inicio rápido se muestra cómo escribir código C# para conectarse a un
 
 Para crear una aplicación de C#, puede usar Visual Studio, Visual Studio Code u otra herramienta de su elección.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Antes de empezar, asegúrese de tener instalado Visual Studio o Visual Studio Code. Descargue la edición gratuita de Visual Studio Community Edition o Visual Studio Code desde [Descargas de Visual Studio](https://www.visualstudio.com/downloads/).
 
@@ -44,7 +45,7 @@ Para ejecutar el paquete en Azure SQL Database, debe obtener la información de 
 ## <a name="create-a-new-visual-studio-project"></a>Crear un nuevo proyecto de Visual Studio
 
 1. En Visual Studio, elija **Archivo**, **Nuevo**, **Proyecto**. 
-2. En el cuadro de diálogo **Nuevo proyecto**, expanda **Visual C#** .
+2. En el cuadro de diálogo **Nuevo proyecto**, expanda **Visual C#**.
 3. Seleccione **Aplicación de consola** y escriba *run_ssis_project* como nombre del proyecto.
 4. Haga clic en **Aceptar** para crear y abrir el nuevo proyecto en Visual Studio.
 
@@ -114,7 +115,7 @@ namespace run_ssis_package
 
 ## <a name="run-the-code"></a>Ejecución del código
 
-1. Presione **F5** para ejecutar la aplicación.
+1. Para ejecutar la aplicación, presione **F5**.
 2. Compruebe que el paquete se ejecutó según lo previsto y, a continuación, cierre la ventana de la aplicación.
 
 ## <a name="next-steps"></a>Pasos siguientes

@@ -1,4 +1,5 @@
 ---
+description: Establecer valores de parámetro
 title: Establecer valores de parámetro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 923fd57f4308fb72aca2f829ccb9d7b884c12546
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af2992ea66601ec0ae4804e327863e6abb285d73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476427"
 ---
 # <a name="setting-parameter-values"></a>Establecer valores de parámetro
 Para establecer el valor de un parámetro, la aplicación simplemente establece el valor de la variable enlazada al parámetro. No es importante cuando se establece este valor, siempre y cuando se establezca antes de que se ejecute la instrucción. La aplicación puede establecer el valor antes o después de enlazar la variable, y puede cambiar el valor tantas veces como desee. Cuando se ejecuta la instrucción, el controlador simplemente recupera el valor actual de la variable. Esto es especialmente útil cuando una instrucción preparada se ejecuta más de una vez. la aplicación establece nuevos valores para algunas o todas las variables cada vez que se ejecuta la instrucción. Para obtener un ejemplo de esto, vea [ejecución preparada](../../../odbc/reference/develop-app/prepared-execution-odbc.md), anteriormente en esta sección.  
@@ -34,7 +35,7 @@ Para establecer el valor de un parámetro, la aplicación simplemente establece 
   
  En la tabla siguiente se muestran los valores de la variable enlazada y el búfer de longitud/indicador que establece la aplicación para una variedad de valores de parámetro.  
   
-|Parámetro<br /><br /> value|Parámetro<br /><br /> Server<br /><br /> tipo de datos|Variable (C)<br /><br /> tipo de datos|Valor de <br /><br /> enlazadas<br /><br /> Variable|Valor de <br /><br /> longitud/indicador<br /><br /> búfer [d]|  
+|Parámetro<br /><br /> value|Parámetro<br /><br /> Server<br /><br /> tipo de datos|Variable (C)<br /><br /> tipo de datos|Valor de <br /><br /> enlazadas<br /><br /> variable|Valor de <br /><br /> longitud/indicador<br /><br /> búfer [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
 |"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS o 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  

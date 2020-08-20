@@ -1,4 +1,5 @@
 ---
+description: destino de archivo sin formato
 title: Destino de archivo sin formato | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93b992e9931c2e62f359beeca98d7d53e46a95eb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cf51661228dcb9b6dd5e42ff900b3770b540898
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495794"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
 
@@ -61,7 +62,7 @@ ms.locfileid: "86916052"
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|Append|Anexa datos a un archivo existente. Los metadatos de los datos anexados deben coincidir con el formato del archivo.|  
+|Anexar|Anexa datos a un archivo existente. Los metadatos de los datos anexados deben coincidir con el formato del archivo.|  
 |Crear siempre|Crea siempre un nuevo archivo.|  
 |Crear una vez|Crea un nuevo archivo. Si existe el archivo, el componente genera un error.|  
 |Truncar y anexar|Trunca un archivo existente y luego escribe los datos en el archivo. Los metadatos de los datos anexados deben coincidir con el formato del archivo.|  

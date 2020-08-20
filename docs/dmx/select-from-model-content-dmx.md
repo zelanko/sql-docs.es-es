@@ -1,4 +1,5 @@
 ---
+description: Seleccione del &lt; modelo &gt; . CONTENIDO (DMX)
 title: Seleccione del &lt; modelo &gt; . CONTENIDO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496298"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Seleccione del &lt; modelo &gt; . CONTENIDO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -46,7 +47,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
- **Select from** _\<model>_ **. **La instrucción de contenido devuelve contenido específico de cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar una **selección de \<model> . **Instrucción de contenido para devolver valores en la columna NODE_RULE del modelo.  
+ **Select from** _\<model>_ **. **La instrucción de contenido devuelve contenido específico de cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar una **selección de \<model> . ** Instrucción de contenido para devolver valores en la columna NODE_RULE del modelo.  
   
  En la tabla siguiente se enumeran las columnas que están incluidas en el contenido del modelo de minería de datos.  
   

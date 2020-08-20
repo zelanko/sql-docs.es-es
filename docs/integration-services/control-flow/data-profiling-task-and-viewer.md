@@ -1,4 +1,5 @@
 ---
+description: Visor y tarea de generación de perfiles de datos
 title: Visor y tarea de generación de perfiles de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06817d0c3af0c4f5446b52ad352b35845f9e122
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ad5a2f88c170477095627a5f6da33b089424dcc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495998"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Visor y tarea de generación de perfiles de datos
 
@@ -59,12 +60,12 @@ ms.locfileid: "86919820"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services y generación de perfiles de datos  
  En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el proceso de generación de perfiles de datos consta de los pasos siguientes:  
   
- **Paso 1: Preparación de la tarea de generación de perfiles de datos**  
+ **Paso 1: Preparar la tarea de generación de perfiles de datos**  
  La tarea de generación de perfiles de datos es una tarea que se utiliza para configurar los perfiles que se desean calcular. A continuación, se ejecuta el paquete que contiene la tarea de generación de perfiles de datos para calcular los perfiles. La tarea guarda el perfil generado en formato XML en un archivo o en una variable de paquete.  
   
- **Para obtener más información:** [Configuración de la tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
+ **Para obtener más información:** [Configuración de la Tarea de generación de perfiles de datos](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
   
- **Paso 2: Revisión de los perfiles calculados por la tarea de generación de perfiles de datos**  
+ **Paso 2: Revisar los perfiles calculados por la tarea de generación de perfiles de datos**  
  Para ver los perfiles de datos calculados por la tarea de generación de perfiles de datos, se envía la salida a un archivo y, a continuación, se utiliza el Visor de perfil de datos. Este visor es una utilidad independiente que muestra el perfil generado tanto en formato resumen como en formato detallado, y que también permite la obtención de detalles.  
   
  **Para obtener más información:** [Visor de perfil de datos](../../integration-services/control-flow/data-profile-viewer.md)  

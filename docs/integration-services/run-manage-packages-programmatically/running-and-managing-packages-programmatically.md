@@ -1,4 +1,5 @@
 ---
+description: Ejecutar y administrar paquetes mediante programación
 title: Ejecutar y administrar paquetes mediante programación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d1b837a2271a74cb577ebd318a815eeb632dd66
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbee736c5f74a2fa4258e6271e5ddce98a7fc626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495538"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Ejecutar y administrar paquetes mediante programación
 
@@ -48,7 +49,7 @@ ms.locfileid: "86913292"
  [Cargar y ejecutar un paquete local mediante programación](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)  
  Describe cómo ejecutar un paquete existente desde una aplicación cliente en el equipo local.  
   
- [Cargar y ejecutar un paquete remoto mediante programación](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
+ [Cargar y ejecutar mediante programación un paquete remoto](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
  Describe cómo ejecutar un paquete existente desde una aplicación cliente y asegurarse de que el paquete se ejecuta en el servidor.  
   
  [Cargar la salida de un paquete local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
@@ -77,7 +78,7 @@ ms.locfileid: "86913292"
  [Ampliar paquetes con objetos personalizados](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Explica cómo crear tareas personalizadas de programa, componentes de flujo de datos y otros objetos de paquete para su uso en varios paquetes.  
   
- [Compilar paquetes mediante programación](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [Generar paquetes mediante programación](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Explica cómo crear, configurar y guardar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante programación.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -1,4 +1,5 @@
 ---
+description: SEND (Transact-SQL)
 title: SEND (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56352f68927d82e1c7df0110168a6a4aff14d0c7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bed4098228eb381f4785da87bf8d7fc2c2c4095b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496538"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +60,7 @@ MESSAGE TYPE *message_type_name*
 Especifica el tipo de mensaje enviado. Este tipo de mensaje se debe incluir en los contratos de servicio que utilizan estas conversaciones. Estos contratos deben permitir que el tipo de mensaje se envíe desde este lado de la conversación. Por ejemplo, es posible que los servicios de destino de las conversaciones solo envíen mensajes especificados en el contrato como SENT BY TARGET o SENT BY ANY. Si se omite esta cláusula, el mensaje es de tipo DEFAULT.  
   
 *message_body_expression*  
-Proporciona una expresión que representa el cuerpo del mensaje. *message_body_expression* es opcional, pero si *message_body_expression* está presente, la expresión debe ser de un tipo que se pueda convertir a **varbinary(max)** . La expresión no puede ser NULL. Si se omite esta cláusula, el cuerpo del mensaje está vacío.  
+Proporciona una expresión que representa el cuerpo del mensaje. *message_body_expression* es opcional, pero si *message_body_expression* está presente, la expresión debe ser de un tipo que se pueda convertir a **varbinary(max)**. La expresión no puede ser NULL. Si se omite esta cláusula, el cuerpo del mensaje está vacío.  
   
 ## <a name="remarks"></a>Observaciones  
   
@@ -98,7 +99,7 @@ SEND no tiene validez en una función definida por el usuario.
 Para enviar un mensaje, el usuario actual debe tener el permiso RECEIVE en la cola de cada servicio que envía el mensaje.  
   
 ## <a name="examples"></a>Ejemplos  
-En el siguiente ejemplo se inicia un diálogo y se envía un mensaje XML en el diálogo. Para enviar el mensaje, el ejemplo convierte el objeto xml a **varbinary(max)** .  
+En el siguiente ejemplo se inicia un diálogo y se envía un mensaje XML en el diálogo. Para enviar el mensaje, el ejemplo convierte el objeto xml a **varbinary(max)**.  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -146,7 +147,7 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
     (@OrderMsg) ;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
 [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
 [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md)   

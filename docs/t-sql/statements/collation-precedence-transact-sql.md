@@ -1,4 +1,5 @@
 ---
+description: Prioridad de intercalación
 title: Prioridad de intercalación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -26,12 +27,12 @@ ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09d9ff8e9944faa4d5dcbd9f24f2ab5a359962e2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b078af3631380a6de3306fd71a93f1c7e695f64c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497009"
 ---
 # <a name="collation-precedence"></a>Prioridad de intercalación
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,15 +72,15 @@ La etiqueta de intercalación del resultado final de una expresión compleja que
   
 -   La combinación de dos expresiones Implicit que tienen intercalaciones distintas genera el resultado No-collation:  
   
-     Implicit X + Implicit Y = No-collation  
+     Implicit X + Implicit Y = No-collation   
   
 -   La combinación de una expresión con la etiqueta No-collation y una expresión con cualquier etiqueta excepto Explicit (vea la regla siguiente), genera un resultado con la etiqueta No-collation:  
   
-     No-collation + cualquier etiqueta = No-collation  
+     No-collation + cualquier etiqueta = No-collation   
   
 -   La combinación de una expresión con la etiqueta No-collation y una expresión con intercalación Explicit genera una expresión con una etiqueta Explicit:  
   
-     No-collation + Explicit X = Explicit  
+     No-collation + Explicit X = Explicit   
   
 En la tabla siguiente se resumen las reglas.  
   

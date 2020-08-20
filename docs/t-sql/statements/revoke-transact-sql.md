@@ -1,4 +1,5 @@
 ---
+description: REVOKE (Transact-SQL)
 title: REVOKE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -29,12 +30,12 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80d1eeb52c557fc1966a70e62dcfb37b9759369d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cb01b06486996a43eba3401644c34663eb05b800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496585"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -178,16 +179,16 @@ El uso de AS en esta instrucción no implica la capacidad de suplantar a otro us
 |Catálogo de texto completo|[REVOKE &#40;permisos de texto completo de Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |Lista de palabras irrelevantes de texto completo|[REVOKE &#40;permisos de texto completo de Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |Función|[REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Inicio de sesión|[REVOKE &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
+|Iniciar sesión|[REVOKE &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
 |Tipo de mensaje|[REVOKE &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Object|[REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Cola|[REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Enlace de servicio remoto|[REVOKE &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|Role|[REVOKE &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Enrutar|[REVOKE &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Rol|[REVOKE &#40;permisos de entidad de seguridad de base de datos de Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|Ruta|[REVOKE &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Schema|[REVOKE &#40;permisos de esquema de Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
 |Lista de propiedades de búsqueda|[REVOKE &#40;permisos de la lista de propiedades de búsqueda de Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
-|Server|[REVOKE Server Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) [REVOKE (permisos de servidor de Transact-SQL)]|  
+|Servidor|[REVOKE Server Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md) [REVOKE (permisos de servidor de Transact-SQL)]|  
 |Servicio|[REVOKE &#40;permisos de Service Broker de Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Procedimiento almacenado|[REVOKE &#40;permisos de objeto de Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Clave simétrica|[REVOKE &#40;permisos de clave simétrica de Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  

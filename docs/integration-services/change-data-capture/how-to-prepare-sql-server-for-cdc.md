@@ -1,4 +1,5 @@
 ---
+description: Cómo preparar SQL Server para CDC
 title: Cómo preparar SQL Server para CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34e6284b25d8aaf119ed7077e9304fefd590a9f4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6f445a638f07ff6f524fc624f63cbc9bd6b29750
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496208"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>Cómo preparar SQL Server para CDC
 
@@ -42,7 +43,7 @@ ms.locfileid: "86916565"
   
  **Nota**: Puede hacer clic en **Ver script** para ver una versión de solo lectura del script de configuración. Un administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede copiar este script en la consola de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para editarlo y ejecutarlo, si es necesario.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Preparar SQL Server para CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

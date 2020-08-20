@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_objects (Transact-SQL)
 title: Sys. dm_xe_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f4e4a404c2bc2ac49ad9916cef668e1eb1656ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498318"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,8 +44,8 @@ ms.locfileid: "85898580"
 
  |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(60)**|Nombre del objeto. el nombre es único dentro de un paquete para un tipo de objeto específico. No admite valores NULL.|  
-|object_type|**nvarchar(60)**|Tipo del objeto. object_type es uno de los siguientes:<br /><br /> event<br /><br /> action<br /><br /> Destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> tipo<br /><br /> No admite valores NULL.|  
+|name|**nvarchar(60)**|El nombre del objeto. el nombre es único dentro de un paquete para un tipo de objeto específico. No admite valores NULL.|  
+|object_type|**nvarchar(60)**|Tipo del objeto. object_type es uno de los siguientes:<br /><br /> event<br /><br /> action<br /><br /> Destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> No admite valores NULL.|  
 |package_guid|**uniqueidentifier**|GUID del paquete que expone esta acción. Hay una relación de varios a uno con sys.dm_xe_packages.package_id. No admite valores NULL.|  
 |description|**nvarchar(256)**|Descripción de la acción. la descripción la establece el autor del paquete. No admite valores NULL.|  
 |capabilities|**int**|Mapa de bits que describe las capacidades del objeto. Acepta valores NULL.|  
@@ -62,7 +63,7 @@ ms.locfileid: "85898580"
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|Varios a uno|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

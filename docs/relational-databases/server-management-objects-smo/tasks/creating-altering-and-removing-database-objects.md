@@ -1,4 +1,5 @@
 ---
+description: Crear, modificar y quitar objetos de base de datos
 title: Trabajar con objetos de bases de datos
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 624de23d309aac6f453054c2bf7a7a10b4a478ec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: adafdf0fe54fd6d942560450f79a8aea0c51beeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498551"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>Crear, modificar y quitar objetos de base de datos
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

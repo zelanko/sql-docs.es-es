@@ -1,4 +1,5 @@
 ---
+description: Conexión a un origen de datos de archivo plano (Asistente para importación y exportación de SQL Server)
 title: Conexión a un origen de datos de archivo plano (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 661f4a95e7904fbec1147d0fd6a372b64a09d76e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495658"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conexión a un origen de datos de archivo plano (Asistente para importación y exportación de SQL Server)
 
@@ -32,12 +33,12 @@ Si tiene que importar un archivo de texto en SQL Server y no necesita todas las 
  
  Hay cuatro páginas de opciones para los orígenes de datos de archivos planos. Son muchas páginas. Sin embargo, no tendrá que dedicar mucho tiempo a cada página. A continuación se indican las tareas que debe tener en cuenta.
  
-Página|Recomendación  |Tipo  
+Page|Recomendación  |Tipo  
 ----|---------|---------
 **General**|Asegúrese de actualizar las opciones de la sección **Formato**.|Recomendado    
 **Columnas**|Asegúrese de comprobar los delimitadores de columna y fila (para un archivo delimitado) o marcar las columnas (para un archivo de ancho fijo).|Recomendado
-**Avanzadas**|Si lo desea, compruebe los tipos de datos y otras propiedades asignadas a las columnas de forma predeterminada.|Opcional
-**Versión preliminar**|Si lo desea, puede obtener una vista previa de una muestra de los datos con la configuración que especificó.|Opcional
+**Avanzadas**|Si lo desea, compruebe los tipos de datos y otras propiedades asignadas a las columnas de forma predeterminada.|Opcionales
+**Versión preliminar**|Si lo desea, puede obtener una vista previa de una muestra de los datos con la configuración que especificó.|Opcionales
 
 ## <a name="general-page-source"></a>Página General (origen)
  En la página **General**, busque y seleccione el archivo, y compruebe la configuración en la sección **Formato**.
@@ -79,7 +80,7 @@ Página|Recomendación  |Tipo
  **Delimitador de filas de encabezados**  
  Seleccione uno de los delimitadores de filas de encabezados de la lista o escriba el texto delimitador.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|La fila de encabezado está delimitada por un retorno de carro.|  
@@ -106,7 +107,7 @@ Página|Recomendación  |Tipo
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  
@@ -120,7 +121,7 @@ Página|Recomendación  |Tipo
  **Delimitador de columna**  
  Selecciónelo de la lista de delimitadores de columna disponibles o escriba el texto delimitador.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las columnas se delimitan mediante un retorno de carro.|  
@@ -178,7 +179,7 @@ En la página **Columnas**, compruebe la lista de columnas y los delimitadores q
  **Delimitador de filas**  
  Selecciónelo de la lista de delimitadores de filas disponibles o escriba el texto delimitador.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**{CR}**|Las filas se delimitan mediante un retorno de carro.|  

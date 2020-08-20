@@ -1,4 +1,5 @@
 ---
+description: cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 title: CDC. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9e801649cceee2aacdda530fa47c53db500bad6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 731effd8310521308f9097323d10fcc57bcb9921
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498230"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +89,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de servidor sysadmin o al rol fijo de base de datos db_owner. Para el resto de usuarios, requiere el permiso SELECT en todas las columnas capturadas en la tabla de origen y, si se ha definido un rol de acceso para la instancia de captura, la pertenencia a ese rol de base de datos. Cuando el autor de la llamada no tiene permiso para ver los datos de origen, la función devuelve el error 208 (Nombre de objeto no válido).  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si el intervalo del LSN especificado no se encuentra dentro de la escala temporal del seguimiento de cambios de la instancia de captura, la función devuelve el error 208 (Nombre de objeto no válido).
 
  Las modificaciones en el identificador único de una fila harán que fn_cdc_get_net_changes muestren en su lugar el comando de actualización inicial con un comando DELETE y, a continuación, INSERT.  Este comportamiento es necesario para realizar el seguimiento de la clave antes y después del cambio.

@@ -1,4 +1,5 @@
 ---
+description: CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -19,12 +20,12 @@ ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 948b2b1e9ee9a8827322cf05fcb2f812d925de93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c774b419283ea0d4799ef89c8628095424f169bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498217"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 |0|La columna especificada no está en la lista de *change_columns* .|  
 |1|La columna especificada está en la lista de *change_columns* .|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK no realiza ninguna comprobación para validar el valor *column_id* o si el parámetro *change_columns* se obtuvo de la tabla de la que se obtuvo el *column_id* .  
   
 ## <a name="examples"></a>Ejemplos  
@@ -71,7 +72,7 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Funciones de Change Tracking &#40;&#41;de Transact-SQL](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [Funciones de seguimiento de cambios &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   

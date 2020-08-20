@@ -1,4 +1,5 @@
 ---
+description: Propiedades personalizadas de ADO NET
 title: Propiedades personalizadas de ADO NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f05fbdb725e2304e7f30dce7a6801bb8300e4c9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a44bc28763df210a16a7376408ff342b91ac6d9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923232"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495956"
 ---
 # <a name="ado-net-custom-properties"></a>Propiedades personalizadas de ADO NET
 
@@ -52,7 +53,7 @@ ms.locfileid: "86923232"
   
  Para más información, consulte [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

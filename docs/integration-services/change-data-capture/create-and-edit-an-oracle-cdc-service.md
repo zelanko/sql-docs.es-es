@@ -1,4 +1,5 @@
 ---
+description: Crear y editar un servicio CDC de Oracle
 title: Crear y editar una instancia de Oracle CDC Service | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18aa250838107e9b28fc5a1a2ad7646e5dccf072
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bcccb89d1af55f990388b389087c16c003d12c39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496282"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Crear y editar un servicio CDC de Oracle
 
@@ -65,9 +66,9 @@ ms.locfileid: "86916231"
  **Autenticación**  
  Seleccione uno de los siguientes:  
   
--   **Autenticación de Windows**: si selecciona esta opción, el servicio CDC de Oracle se conecta a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino con la identidad de la cuenta de servicio. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un equipo diferente, se debe usar la autenticación de Windows con cuentas de dominio.  
+-   **Autenticación de Windows**: si selecciona esta opción, el servicio CDC de Oracle conectará con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino con la identidad de la cuenta de servicio. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un equipo diferente, se debe usar la autenticación de Windows con cuentas de dominio.  
   
--   **Autenticación de SQL Server**: si selecciona esta opción, debe escribir los valores de **Nombre de usuario** y **Contraseña** del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que quiere usar. El servicio CDC de Oracle usa estas credenciales para conectar con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
+-   **Autenticación de SQL Server**: si selecciona esta opción, debe escribir el **Nombre de usuario** y la **Contraseña** para el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea usar. El servicio CDC de Oracle usa estas credenciales para conectar con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
   
  El inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado por el servicio CDC de Oracle solo necesita ser miembro del rol fijo de servidor public; no se necesita ningún otro privilegio. Una vez agregadas nuevas instancias CDC de Oracle, ese inicio de sesión recibirá acceso **db_owner** a las bases de datos CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociadas.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "86916231"
   
  También se debe usar la misma contraseña maestra cuando otras instancias del mismo servicio estén configuradas en otros nodos de un clúster en una configuración de alta disponibilidad. Si pierde o modifica la contraseña maestra, será necesario volver a especificar todas las contraseñas de minería de registros almacenadas en bases de datos de la instancia CDC de Oracle desde la Consola del diseñador CDC.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Cómo crear y editar un servicio CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

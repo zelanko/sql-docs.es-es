@@ -1,4 +1,5 @@
 ---
+description: Conectarse a un origen de datos MySQL (Asistente para importación y exportación de SQL Server)
 title: Conectarse a un origen de datos MySQL (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a0cc86dfd923b3a17981b970dfb9aedbb888a0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e8af657b56bdd2cba6babe2869b21647bf807d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495613"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos MySQL (Asistente para importación y exportación de SQL Server)
 
@@ -37,7 +38,7 @@ Después de seleccionar el **proveedor de datos de .NET Framework para MySQL** e
 
 |Información requerida|Proveedor de datos de .NET Framework para la propiedad MySQL|
 |---|---|
-|Nombre de servidor|**Server**|
+|Nombre del servidor|**Server**|
 |Nombre de la base de datos|**Base de datos**|
 |Información de autenticación (inicio de sesión)|**Id. de usuario** y **contraseña**|
 |||

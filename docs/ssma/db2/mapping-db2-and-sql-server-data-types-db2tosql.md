@@ -1,4 +1,5 @@
 ---
+description: Asignación de tipos de datos de DB2 y SQL Server (DB2ToSQL)
 title: Asignación de tipos de datos de DB2 y SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497798"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Asignación de tipos de datos de DB2 y SQL Server (DB2ToSQL)
 Los tipos de base de datos DB2 son distintos de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de base de datos Al convertir objetos de base de datos DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, debe especificar cómo se asignan los tipos de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en las secciones siguientes.  
@@ -74,7 +75,7 @@ En el procedimiento siguiente se muestra cómo asignar tipos de datos en el nive
   
     4.  En **tipo de destino**, seleccione el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos de destino.  
   
-        Algunos tipos requieren una longitud de tipo de datos de destino. Si es necesario, escriba la nueva longitud de los datos en el cuadro **reemplazar con** y, a continuación,[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        Algunos tipos requieren una longitud de tipo de datos de destino. Si es necesario, escriba la nueva longitud de los datos en el cuadro **reemplazar con** y, a continuación, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Para quitar una asignación de tipo de datos personalizada, haga lo siguiente:  
   
@@ -84,9 +85,9 @@ En el procedimiento siguiente se muestra cómo asignar tipos de datos en el nive
   
         No se pueden quitar las asignaciones heredadas. Sin embargo, las asignaciones heredadas se reemplazan por asignaciones personalizadas en un objeto o categoría de objeto específicos.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
 El siguiente paso del proceso de migración es el [Informe de evaluación &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md) o la [conversión de esquemas DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Si crea un informe de evaluación, los objetos DB2 se convierten automáticamente durante la evaluación.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Migrar bases de datos DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Modos DE SQL (MySQLToSQL)
 title: Modos SQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4bc4b59984cc9e2e1f7a6c358f24e3fc0d2e86be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d0631b35d2631e04cfad5c509d6084ba0a30aaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497722"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modos DE SQL (MySQLToSQL)
 SSMA para MySQL puede funcionar en diferentes modos SQL y puede aplicar estos modos de manera diferente para los distintos clientes.  
@@ -27,7 +28,7 @@ Los modos definen la sintaxis SQL que debe admitir MySQL y el tipo de comprobaci
   
 -   Cuadrícula de modos SQL en bases de datos categoría, base de datos, categoría de tabla, categoría de instrucciones, categoría de vistas, tabla, vista, funciones, procedimientos, UDF y nivel de objeto de evento contiene las columnas siguientes: **nombre del modo SQL**, **modos SQL heredados**y **modos efectivos SQL**.  
   
--   La cuadrícula modos SQL en el procedimiento almacenado, la función almacenada y el nivel de desencadenador contiene las columnas siguientes: **nombre del modo SQL**, **modos SQL originales**y **modos efectivos SQL**.  
+-   La cuadrícula modos SQL en el procedimiento almacenado, la función almacenada y el nivel de desencadenador contiene las columnas siguientes: **nombre del modo SQL**,  **modos SQL originales**y **modos efectivos SQL**.  
   
 > [!NOTE]  
 > Los modos de grupo se mostrarán en negrita, en la columna "nombre del modo SQL".  

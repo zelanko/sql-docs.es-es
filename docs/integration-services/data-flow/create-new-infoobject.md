@@ -1,4 +1,5 @@
 ---
+description: Crear nuevo InfoObject
 title: Crear nuevo InfoObject | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a67dd66c18fc5700ee964a2e321bd50fef09092
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cb9336b7999373b1f6af5bb5327a35f77fdbe7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86900541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495891"
 ---
 # <a name="create-new-infoobject"></a>Crear nuevo InfoObject
 
@@ -75,7 +76,7 @@ ms.locfileid: "86900541"
  Permite indicar que el InfoObject contiene datos maestros en forma de atributos, texto o jerarquías.  
   
 > [!NOTE]  
->  Seleccione esta opción si el InfoObject representa datos dimensionales y ha seleccionado la opción **Característica** .  
+>   Seleccione esta opción si el InfoObject representa datos dimensionales y ha seleccionado la opción **Característica** .  
   
  **Permitir caracteres en minúscula**  
  Permite aceptar caracteres en minúsculas en los datos del InfoObject.  

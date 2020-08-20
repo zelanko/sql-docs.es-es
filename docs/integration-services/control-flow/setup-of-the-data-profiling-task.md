@@ -1,4 +1,5 @@
 ---
+description: Configuración de la Tarea de generación de perfiles de datos
 title: Configuración de la tarea de generación de perfiles de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3b3f51db976994dad9e29ea8f7187f0106da53ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a9630dd97fc2588ac8ba3dfcf9935d4fe3f77932
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496009"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuración de la Tarea de generación de perfiles de datos
 

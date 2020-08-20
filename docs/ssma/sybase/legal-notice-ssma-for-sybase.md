@@ -1,4 +1,5 @@
 ---
+description: Aviso legal (SSMA para Sybase)
 title: Aviso legal (SSMA para Sybase) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6d768560eed48d70bf8d0d9ef7339fed9a231844
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c98c029db0ec72991d45b433fa8654fe4a5ae116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497681"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>Aviso legal (SSMA para Sybase)
 Tanto esta documentación como las aplicaciones de ejemplo que contiene, se proporcionan únicamente con fines informativos y sin ninguna garantía, ya sea expresa o implícita. La información que se proporciona en esta documentación, incluidas las direcciones URL y otras referencias a sitios web de Internet, está sujeta a modificaciones sin previo aviso. El usuario asume todos los riesgos derivados del uso de esta documentación.  

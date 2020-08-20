@@ -1,4 +1,5 @@
 ---
+description: Crear una transformación asincrónica con el componente de script
 title: Crear una transformación asincrónica con el componente de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 980300f1deee55be9d8c7977bf813108bcfd1e80
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 05d28638ebb8981c0ccce4e6bb38ab7179565d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495625"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Crear una transformación asincrónica con el componente de script
 

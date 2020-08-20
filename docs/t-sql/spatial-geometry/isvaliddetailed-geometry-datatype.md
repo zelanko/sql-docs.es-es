@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed (tipo de datos geometry)
 title: IsValidDetailed (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a1aa6995864aa4407c0c7c71611ddf9da65acfc7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f57155c8724d8cb27aaf06eaf491e11298ad61c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497049"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (tipo de datos geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +65,7 @@ Devuelve un mensaje que puede ayudar a identificar problemas con un objeto espac
 |24416|No es válido porque en la curva {0}, el borde que comienza en el punto {1} es una línea o un arco degenerado con extremos opuestos.|  
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo de un objeto espacial no válido se muestra cómo se comportan los métodos **IsValidDetailed()** .  
+ En el siguiente ejemplo de un objeto espacial no válido se muestra cómo se comportan los métodos **IsValidDetailed()**.  
   
 ```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  

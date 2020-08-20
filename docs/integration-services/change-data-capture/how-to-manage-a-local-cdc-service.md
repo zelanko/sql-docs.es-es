@@ -1,4 +1,5 @@
 ---
+description: Cómo administrar un servicio CDC local
 title: Cómo administrar CDC Service local | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 488ff9dc4cbe33881e7c7c9bf80d4a5d347507d7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1d103c224088d2dfa22fe1d8dcb36306177aac54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496194"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Cómo administrar un servicio CDC local
 
@@ -42,7 +43,7 @@ ms.locfileid: "86916567"
   
 4.  Puede realizar las tareas siguientes al trabajar con un servicio CDC.  
   
-    -   **Eliminar el servicio**  
+    -   **Eliminación del servicio**  
   
          En el panel **Acciones** del lado derecho de la Consola de configuración del servicio CDC, haga clic en **Eliminar** para eliminar el servicio.  
   
@@ -61,6 +62,6 @@ ms.locfileid: "86916567"
          También puede hacer clic con el botón derecho en el servicio CDC cuyas propiedades quiera editar y seleccionar **Propiedades**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar un servicio CDC de Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Manage an Oracle CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

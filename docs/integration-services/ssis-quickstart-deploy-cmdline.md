@@ -1,4 +1,5 @@
 ---
+description: Implementar un proyecto de SSIS desde el símbolo del sistema con ISDeploymentWizard.exe
 title: Implementar un proyecto de SSIS desde el símbolo del sistema | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 949a073a9e31afd0e203dc4c9f3b497c2551504b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495492"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implementar un proyecto de SSIS desde el símbolo del sistema con ISDeploymentWizard.exe
 
@@ -24,7 +25,7 @@ En este inicio rápido se muestra cómo implementar un proyecto de SSIS desde el
 
 Para obtener más información sobre el asistente para la implementación de Integration Services, consulte [Integration Services Deployment Wizard (Asistente para la implementación de Integration Services)](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 La validación que de describe en este artículo para la implementación en Azure SQL Database requiere SQL Server Data Tools (SSDT), versión 17.4 o posterior. Para obtener la versión más reciente de SSDT, consulte [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 

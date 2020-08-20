@@ -1,4 +1,5 @@
 ---
+description: DROP SCHEMA (Transact-SQL)
 title: DROP SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -22,12 +23,12 @@ ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bd04321eba4f590a20e61be24fb3756ad92277d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f70e5b4c355414a284aaf6db1d64c7ed182cd35a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496841"
 ---
 # <a name="drop-schema-transact-sql"></a>DROP SCHEMA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "86481891"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP SCHEMA  [ IF EXISTS ] schema_name  
@@ -74,9 +75,9 @@ DROP SCHEMA schema_name
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo comienza con una única instrucción `CREATE SCHEMA`. La instrucción crea el esquema `Sprockets` que es propiedad de `Krishna` y la tabla `Sprockets.NineProngs`, concede el permiso `SELECT` a `Anibal` y deniega el permiso `SELECT` a `Hung-Fu`.  
   
-```  
+```sql  
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
-    CREATE TABLE NineProngs (source int, cost int, partnumber int)  
+    CREATE TABLE NineProngs (source INT, cost INT, partnumber INT)  
     GRANT SELECT TO Anibal   
     DENY SELECT TO [Hung-Fu];  
 GO  
@@ -84,7 +85,7 @@ GO
   
  Para quitar el esquema, siga las siguientes instrucciones. Tenga en cuenta que debe quitar primero la tabla contenida en el esquema.  
   
-```  
+```sql  
 DROP TABLE Sprockets.NineProngs;  
 DROP SCHEMA Sprockets;  
 GO  

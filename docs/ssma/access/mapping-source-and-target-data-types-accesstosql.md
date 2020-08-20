@@ -1,4 +1,5 @@
 ---
+description: Asignación de tipos de datos de origen y de destino (AccessToSQL)
 title: Asignar tipos de datos de origen y de destino (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497853"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Asignación de tipos de datos de origen y de destino (AccessToSQL)
 Los tipos de base de datos de Access se diferencian de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos Al convertir objetos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de Access en objetos de, debe especificar cómo se asignan los tipos de datos de a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en los procedimientos siguientes.  
@@ -87,9 +88,9 @@ En el procedimiento siguiente se muestra cómo asignar tipos de datos en el nive
   
     2.  Haga clic en **Quitar**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
 El siguiente paso del proceso de migración es [convertir los objetos de base de datos de Access en objetos de SQL Server](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

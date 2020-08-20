@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_object_columns (Transact-SQL)
 title: Sys. dm_xe_object_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 005455742f1fbb782e663672c0cc104bd1cb28f9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c8d615d2c2de89262c0c760c56431e77b6e06086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498308"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,13 +37,13 @@ ms.locfileid: "85898600"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(256)**|Nombre de la columna. Name es único en el objeto. No admite valores NULL.|  
+|name|**nvarchar(256)**|El nombre de la columna. Name es único en el objeto. No admite valores NULL.|  
 |column_id|**int**|Identificador de la columna. column_id es único dentro del objeto cuando se usa con column_type. No admite valores NULL.|  
 |object_name|**nvarchar(256)**|Nombre del objeto al que pertenece esta columna. Hay una relación de varios a uno con sys. dm_xe_objects. ID. No acepta valores NULL.|  
 |object_package_guid|**uniqueidentifier**|GUID del paquete que contiene el objeto. No admite valores NULL.|  
 |type_name|**nvarchar(256)**|Nombre del tipo de esta columna. No admite valores NULL.|  
 |type_package_guid|**uniqueidentifier**|GUID del paquete que contiene el tipo de datos de la columna. No admite valores NULL.|  
-|column_type|**nvarchar(60)**|Indica cómo se utiliza esta columna. No admite valores NULL. column_type puede ser una de las siguientes:<br /><br /> readonly. La columna contiene un valor estático que no se puede cambiar.<br /><br /> data. La columna contiene datos en tiempo de ejecución expuestos por el objeto.<br /><br /> customizable. La columna contiene un valor que puede cambiarse.<br /><br /> Nota: al cambiar este valor se puede modificar el comportamiento del objeto.|  
+|column_type|**nvarchar(60)**|Indica cómo se utiliza esta columna. No admite valores NULL. column_type puede ser una de las siguientes:<br /><br /> readonly. La columna contiene un valor estático que no se puede cambiar.<br /><br /> del modelo. La columna contiene datos en tiempo de ejecución expuestos por el objeto.<br /><br /> customizable. La columna contiene un valor que puede cambiarse.<br /><br /> Nota: al cambiar este valor se puede modificar el comportamiento del objeto.|  
 |column_value|**nvarchar(256)**|Muestra los valores estáticos asociados con la columna de objetos. Acepta valores NULL.|  
 |capabilities|**int**|Un mapa de bits que describe las capacidades de la columna. Acepta valores NULL.|  
 |capabilities_desc|**nvarchar(256)**|Una descripción de las capacidades de esta columna de objetos. Este valor puede ser uno de los siguientes:<br /><br /> Mandatory. Se debe establecer el valor al enlazar el objeto primario a una sesión de eventos.<br /><br /> Acepta valores NULL.|  

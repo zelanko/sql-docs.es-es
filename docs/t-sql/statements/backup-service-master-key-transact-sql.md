@@ -1,4 +1,5 @@
 ---
+description: BACKUP SERVICE MASTER KEY (Transact-SQL)
 title: BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd00cd524f0d8b1ea0f22e339e29cea1474bccdd
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: ab250d113fd9baf0be65dce5c9b305c40c6ebc40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497001"
 ---
 # <a name="backup-service-master-key-transact-sql"></a>BACKUP SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
  Requiere el permiso CONTROL SERVER en el servidor.  
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se realiza una copia de seguridad de la clave maestra de servicio en un archivo.  
+ En el siguiente ejemplo se realiza una copia de seguridad de la clave maestra de servicio en un archivo.   
   
 ```  
 BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' ENCRYPTION BY PASSWORD = '3dH85Hhk003GHk2597gheij4';  

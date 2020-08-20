@@ -1,4 +1,5 @@
 ---
+description: CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 title: CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -19,12 +20,12 @@ ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23e91a60672e400d658403533433a97694407a39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af42a0f719e490ce32c6f81ee92722a540f1271a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498153"
 ---
 # <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
 ## <a name="return-type"></a>Tipo de valor devuelto  
  **bigint**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use esta función para validar el valor del parámetro *last_sync_version* de CHANGETABLE. Si *last_sync_version* es menor que el valor indicado por esta función, es posible que los resultados que se devuelven de una llamada posterior a CHANGETABLE no sean válidos.  
   
  CHANGE_TRACKING_MIN_VALID_VERSION utiliza la información siguiente para determinar el valor devuelto:  
@@ -87,7 +88,7 @@ ELSE
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Funciones de Change Tracking &#40;&#41;de Transact-SQL](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [Funciones de seguimiento de cambios &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
   

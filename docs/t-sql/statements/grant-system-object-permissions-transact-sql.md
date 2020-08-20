@@ -1,4 +1,5 @@
 ---
+description: GRANT (permisos de objeto de sistema de Transact-SQL)
 title: GRANT (permisos de objeto de sistema de Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 329ff28afd0aa96ba7fde0058c4cdfb179d61db3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496718"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT (permisos de objeto de sistema de Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  Los permisos de objetos del sistema se mantendrán durante las actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Puede ver los objetos del sistema en la vista de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Puede ver los permisos de objetos del sistema en la vista de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) de la base de datos maestra.  
+ Puede ver los objetos del sistema en la vista de catálogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Puede ver los permisos de objetos del sistema en la vista de catálogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) de la base de datos maestra .  
   
  La siguiente consulta muestra información acerca de los permisos de objetos del sistema:  
   
@@ -78,7 +79,7 @@ GO
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. Conceder el permiso SELECT para una vista  
- En este ejemplo se concede el permiso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del inicio de sesión de `Sylvester1` para seleccionar una vista que presente todos los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el ejemplo concede el permiso adicional necesario para ver los metadatos para los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son propiedad del usuario.  
+ En este ejemplo se concede el permiso `Sylvester1` del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seleccionar una vista que presente todos los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el ejemplo concede el permiso adicional necesario para ver los metadatos para los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son propiedad del usuario.  
   
 ```  
 USE AdventureWorks2012;  

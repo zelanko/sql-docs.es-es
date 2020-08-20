@@ -1,4 +1,5 @@
 ---
+description: CLOSE SYMMETRIC KEY (Transact-SQL)
 title: CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f14d291cf70bcefb13404805aa717f2087695ce6
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: b279b48adb0a72060d9e7700c57f25782eb83587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496932"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *Key_name*  
  Es el nombre de la clave simétrica que se va a cerrar.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las claves simétricas abiertas están enlazadas a la sesión, no al contexto de seguridad. Una clave abierta seguirá disponible hasta que se cierre explícitamente o hasta que finalice la sesión. CLOSE ALL SYMMETRIC KEYS cerrará las claves maestras de la base de datos que estaban abiertas en la sesión actual utilizando la instrucción [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md).  Puede consultar la información sobre las claves abiertas en la vista de catálogo [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  

@@ -1,4 +1,5 @@
 ---
+description: Captura de datos modificados (SSIS)
 title: Change Data Capture (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: caa4c63f44fb1b1a9fd13b0a557cc76dfeec408b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 33752c48b4fbaa49885423c608f8cd05ab383f1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496300"
 ---
 # <a name="change-data-capture-ssis"></a>Captura de datos modificados (SSIS)
 
@@ -44,7 +45,7 @@ ms.locfileid: "86924019"
   
  Tal como se muestra en el diagrama anterior, la creación de un paquete que realiza una carga incremental de datos modificados conlleva los pasos siguientes:  
   
- **Paso 1: Diseñar el flujo de control**  
+ **Paso 1: diseñar el flujo de control**  
  Debe definir las tareas siguientes en el flujo de control del paquete:  
   
 -   Calcule los valores **datetime** inicial y final para el intervalo de cambios en los datos de origen que desea recuperar.  
@@ -65,14 +66,14 @@ ms.locfileid: "86924019"
   
      **Para obtener más información:** [Preparar para consultar datos modificados](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
- **Paso 2: Configurar la consulta para los datos modificados**  
+ **Paso 2: configurar la consulta para los datos modificados**  
  Cree la función con valores de tabla que consultará los datos.  
   
  Utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para desarrollar y guardar la consulta.  
   
  **Para obtener más información:** [Recuperar y describir datos modificados](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)  
   
- **Paso 3: Diseñar el flujo de datos**  
+ **Paso 3: diseñar el flujo de datos**  
  Debe definir las tareas siguientes en el flujo de datos del paquete:  
   
 -   Recupere los datos modificados de las tablas de cambios.  

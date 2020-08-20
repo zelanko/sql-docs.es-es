@@ -1,4 +1,5 @@
 ---
+description: HTTP, administrador de conexiones
 title: Administrador de conexiones HTTP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ef8b2df4b24f50f600683a5c6e9bb815208970cc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cd88a7f40787ecc33d99fe0c749c477f23b526a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496163"
 ---
 # <a name="http-connection-manager"></a>HTTP, administrador de conexiones
 
@@ -105,7 +106,7 @@ ms.locfileid: "86918554"
  **Utilizar proxy**  
  Especifique si desea que el Administrador de conexiones HTTP se conecte a través de un servidor proxy.  
   
- **Dirección URL de proxy**  
+ **Dirección URL del proxy**  
  Escriba la dirección URL para el servidor de proxy.  
   
  **No usar servidor proxy en el equipo local**  

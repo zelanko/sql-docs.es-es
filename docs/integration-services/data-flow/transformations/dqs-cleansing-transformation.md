@@ -1,4 +1,5 @@
 ---
+description: Transformación Limpieza de DQS
 title: Transformación Limpieza de DQS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d02041dfedd882502a0440909b52fab86337b22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495713"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformación Limpieza de DQS
 
@@ -51,7 +52,7 @@ ms.locfileid: "86919385"
   
 -   [Importar valores de un proyecto de limpieza en un dominio](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
--   [Aplicación de reglas de calidad de los datos al origen de datos](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
+-   [Aplicar reglas de calidad de los datos al origen de datos](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
@@ -141,7 +142,7 @@ ms.locfileid: "86919385"
  **Confidence**  
  Indica si se debe incluir el nivel de confianza para los datos corregidos. El nivel de confianza indica el grado de certeza de DQS para la corrección o sugerencia. Para más información sobre los niveles de confianza, vea [Limpieza de datos](../../../data-quality-services/data-cleansing.md).  
   
- **Reason**  
+ **Motivo**  
  Indica si se debe incluir el motivo de la corrección de los datos.  
   
  **Datos anexados**  

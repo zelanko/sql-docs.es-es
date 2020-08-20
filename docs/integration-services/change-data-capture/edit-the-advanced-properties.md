@@ -1,4 +1,5 @@
 ---
+description: Editar las propiedades avanzadas
 title: Editar las propiedades avanzadas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 124682b94fd3512141c267ed43b93b45c1eb77a3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7946dcea0153c57b685c0f773d312080a9147569
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496247"
 ---
 # <a name="edit-the-advanced-properties"></a>Editar las propiedades avanzadas
 
@@ -37,7 +38,7 @@ ms.locfileid: "86921668"
   
  Para obtener una descripción de las propiedades que puede especificar, vea la tabla de opciones disponibles en [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Destino de SAP BW
 title: Destino de SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79523f9e589ff24c909442024430317dd531c2e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1b1398c6884fd154d4f142f10a6d14844a3e7875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495802"
 ---
 # <a name="sap-bw-destination"></a>Destino de SAP BW
 
@@ -45,9 +46,9 @@ ms.locfileid: "86917862"
   
 1.  Crear un nuevo sistema de origen:  
   
-    1.  Seleccione el tipo **"Terceros/BAPI de almacenamiento provisional"** .  
+    1.  Seleccione el tipo **"Terceros/BAPI de almacenamiento provisional"**.  
   
-    2.  Para **Tipo de comunicación con sistema de destino**, seleccione **No Unicode (valores inactivos de MDMP)** .  
+    2.  Para **Tipo de comunicación con sistema de destino**, seleccione **No Unicode (valores inactivos de MDMP)**.  
   
     3.  Asignar un identificador de programa adecuado  
   
@@ -98,27 +99,27 @@ ms.locfileid: "86917862"
   
 -   [Editor de destino de SAP BW &#40;página Salida de error&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Editor de destino de SAP BW &#40;página Avanzadas&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Editor de destino de SAP BW &#40;página Opciones avanzadas&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
  Mientras configura el destino de SAP BW, también puede usar varios cuadros de diálogo para buscar o crear objetos de SAP Netweaver BW. Para obtener más información sobre estos cuadros de diálogo, haga clic en uno de los temas siguientes:  
   
 -   [Buscar InfoPackage](../../integration-services/data-flow/look-up-infopackage.md)  
   
--   [Crear InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
+-   [Crear nuevo InfoObject](../../integration-services/data-flow/create-new-infoobject.md)  
   
--   [Crear InfoCube para datos de transacción](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
+-   [Crear InfoCube para los datos de transacción](../../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
 -   [Buscar InfoObject](../../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [Crear InfoSource](../../integration-services/data-flow/create-infosource.md)  
   
--   [Crear InfoSource para datos de transacción](../../integration-services/data-flow/create-infosource-for-transaction-data.md)  
+-   [Crear Infosource para datos de transacción](../../integration-services/data-flow/create-infosource-for-transaction-data.md)  
   
 -   [Crear InfoSource para datos maestros](../../integration-services/data-flow/create-infosource-for-master-data.md)  
   
 -   [Crear InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Componentes de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

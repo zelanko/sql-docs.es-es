@@ -1,4 +1,5 @@
 ---
+description: ODBC Destination Custom Properties
 title: Propiedades personalizadas de los destinos ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: efd46a4579553a1662713112a0fb6659a11b85da
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae44b6ea06ea2ae00e8cfd52ad924f61a0b79895
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495792"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
 
@@ -28,7 +29,7 @@ ms.locfileid: "86915905"
 |-------------------|---------------|-----------------|  
 |Conexión|Conexión ODBC|Conexión ODBC para acceder a la base de datos de destino.|  
 |BatchSize|Entero|Tamaño de lote para la carga masiva. Es el número de filas cargadas como un lote. Esto solo es válido si se admite el enlace de parámetro de modo de fila. Si el enlace parámetro de modo de fila no se admite, el tamaño de lote es 1.|  
-|BindCharColumnAs|Integer (enumeración)|Esta propiedad determina cómo el destino ODBC enlaza las columnas con tipos string de varios bytes como SQL_CHAR, SQL_VARCHAR o SQL_LONGVARCHAR.<br /><br /> Los valores posibles son Unicode (0), que enlaza las columnas como SQL_C_WCHAR, y ANSI (1), que enlaza las columnas como SQL_C_CHAR). El valor predeterminado es Unicode (0).<br /><br /> Unicode es la mejor opción para la mayoría de los proveedores ODBC 3.x y los proveedores ODBC 2.x que permiten el enlace de parámetros CHAR como cadenas anchas. Cuando selecciona Unicode y ExposeCharColumnsAsUnicode es True, el usuario no necesita especificar la página de códigos que usa la base de datos de origen.<br /><br /> **Nota:** esta propiedad no está disponible en el **Editor de destino ODBC**, pero se puede establecer con el **Editor avanzado**.|  
+|BindCharColumnAs|Integer (enumeración)|Esta propiedad determina cómo el destino ODBC enlaza las columnas con tipos string de varios bytes como SQL_CHAR, SQL_VARCHAR o SQL_LONGVARCHAR.<br /><br /> Los valores posibles son Unicode (0), que enlaza las columnas como SQL_C_WCHAR, y ANSI (1), que enlaza las columnas como SQL_C_CHAR). El valor predeterminado es Unicode (0).<br /><br /> Unicode es la mejor opción para la mayoría de los proveedores ODBC 3.x y los proveedores ODBC 2.x que permiten el enlace de parámetros CHAR como cadenas anchas. Cuando selecciona Unicode y ExposeCharColumnsAsUnicode es True, el usuario no necesita especificar la página de códigos que usa la base de datos de origen.<br /><br /> **Nota:** Esta propiedad no está disponible en el **Editor de destino ODBC**, pero se puede definir con el **Editor avanzado**.|  
 |BindNumericAs|Integer (enumeración)|Esta propiedad determina el modo en que el destino ODBC enlaza columnas con datos numéricos con los tipos de datos SQL_TYPE_NUMERIC y SQL_TYPE_DECIMAL.<br /><br /> Los valores posibles son Char (0), que enlaza las columnas como SQL_C_CHAR y Numeric (1), que enlaza las columnas como SQL_C_NUMERIC. El valor predeterminado es Char (0).<br /><br /> **Nota**: esta propiedad no está disponible en el **Editor de destino ODBC**, pero se puede establecer con el **Editor avanzado**.|  
 |DefaultCodePage|Entero|Página de códigos que se usará para las columnas de cadena.<br /><br /> **Nota**: esta propiedad no está disponible en el **Editor de destino ODBC**, pero se puede establecer con el **Editor avanzado**.|  
 |InsertMethod|Integer (enumeración)|Método usado para insertar los datos. Los valores posibles son fila por fila (0) y lote (1). El valor predeterminado es lote (1).<br /><br /> Para obtener más información sobre estas opciones, vea “Opciones de carga” en [Destino de ODBC](../../integration-services/data-flow/odbc-destination.md).|  

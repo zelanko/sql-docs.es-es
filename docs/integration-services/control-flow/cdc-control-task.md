@@ -1,4 +1,5 @@
 ---
+description: Tarea Control CDC
 title: Tarea Control CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e5097ad2987dfbcc3301b35666ba6245a7559b63
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496064"
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
 
@@ -74,7 +75,7 @@ ms.locfileid: "86923110"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Propiedades personalizadas de la tarea Control CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
+-   [Propiedades personalizadas de la tarea de control CDC](../../integration-services/control-flow/cdc-control-task-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Definir una variable de estado](../../integration-services/data-flow/define-a-state-variable.md)  
@@ -148,7 +149,7 @@ ms.locfileid: "86923110"
  Esto solo está disponible si se ha seleccionado **Persistencia de estado automática** y es un parámetro obligatorio.  
   
  **Tabla que se va a usar para almacenar el estado**  
- Escriba el nombre de la tabla de estado que se va a usar para almacenar el estado de CDC. La tabla especificada debe tener dos columnas denominadas **nombre** y **estado** y ambas columnas deben ser del tipo de datos **varchar (256)** .  
+ Escriba el nombre de la tabla de estado que se va a usar para almacenar el estado de CDC. La tabla especificada debe tener dos columnas denominadas **nombre** y **estado** y ambas columnas deben ser del tipo de datos **varchar (256)**.  
   
  Opcionalmente, puede seleccionar **Nueva** para obtener un script SQL que cree una nueva tabla de estado con las columnas necesarias. Cuando se selecciona **Persistencia de estado automática** , el desarrollador debe crear una tabla de estado según los requisitos descritos anteriormente.  
   

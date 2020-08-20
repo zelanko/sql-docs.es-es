@@ -1,4 +1,5 @@
 ---
+description: Transformación Exportar columna
 title: Transformación Exportar columna | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 450d7856924f5a7f8292ce65b1184aeb657ff40e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9d7741de0a6a1d0195344613330bffd3f0c0c62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919376"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495747"
 ---
 # <a name="export-column-transformation"></a>Transformación Exportar columna
 
@@ -38,7 +39,7 @@ ms.locfileid: "86919376"
 ## <a name="append-and-truncate-options"></a>Opciones de anexar y truncar  
  En la tabla siguiente se describe cómo afectan a los resultados las opciones para anexar y truncar.  
   
-|Append|Truncate|El archivo existe|Results|  
+|Anexar|Truncate|El archivo existe|Results|  
 |------------|--------------|-----------------|-------------|  
 |False|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
 |True|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  

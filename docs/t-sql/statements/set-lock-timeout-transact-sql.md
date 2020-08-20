@@ -1,4 +1,5 @@
 ---
+description: SET LOCK_TIMEOUT (Transact-SQL)
 title: SET LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/11/2017
@@ -25,12 +26,12 @@ ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e48ac56759f41fef0d8778b7e663582759a57ed3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b3f7af205f8f75f82df45895151b00647d093376
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496488"
 ---
 # <a name="set-lock_timeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ SET LOCK_TIMEOUT timeout_period
   
  Cuando se espera un bloqueo durante más tiempo que el indicado, se devuelve un error. El valor 0 significa no esperar y devolver un mensaje en cuanto se encuentre un bloqueo.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Al principio de una conexión, este valor es -1. Después de cambiarlo, el nuevo valor permanece en vigor para el resto de la conexión.  
   
  La opción SET LOCK_TIMEOUT se establece en tiempo de ejecución, no en tiempo de análisis.  

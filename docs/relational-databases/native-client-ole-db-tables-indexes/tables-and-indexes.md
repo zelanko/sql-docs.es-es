@@ -1,4 +1,5 @@
 ---
+description: Tablas e índices en SQL Server Native Client
 title: Tablas e índices (proveedor de OLE DB de Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cceffac463294bce24b3573aca6ecdeae2ce599
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: feab37d4ccb809b91850e382dfa1c7cbcd476543
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499028"
 ---
 # <a name="tables-and-indexes-in-sql-server-native-client"></a>Tablas e índices en SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "87332314"
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|Escriba:  VT_BSTR<br /><br /> L/E: escritura<br /><br /> Valor predeterminado: NULL<br /><br /> Descripción: esta propiedad solo se usa en **ITableDefinition**. La cadena especificada en esta propiedad se usa al crear una instrucción [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).<br /><br /> .|  
+|SSPROP_COL_COLLATIONNAME|Tipo: VT_BSTR<br /><br /> L/E: escritura<br /><br /> Valor predeterminado: NULL<br /><br /> Descripción: esta propiedad solo se usa en **ITableDefinition**. La cadena especificada en esta propiedad se usa al crear una instrucción [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).<br /><br /> .|  
   
 ## <a name="in-this-section"></a>En esta sección  
   

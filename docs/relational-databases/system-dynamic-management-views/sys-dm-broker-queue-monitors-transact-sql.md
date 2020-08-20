@@ -1,4 +1,5 @@
 ---
+description: sys.dm_broker_queue_monitors (Transact-SQL)
 title: Sys. dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1df4b4387d79cc6e8b2dc59b7a5a00f61a6d07f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8290b399d91bb196c818ba61fc7b685fcc23b383
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498376"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +75,7 @@ ON ( t2.object_id = t4.queue_id  AND t4.database_id = DB_ID() )
 INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   

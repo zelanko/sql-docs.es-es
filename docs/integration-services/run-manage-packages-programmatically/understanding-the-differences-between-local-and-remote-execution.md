@@ -1,4 +1,5 @@
 ---
+description: Descripción de las diferencias entre la ejecución local y remota
 title: Descripción de las diferencias entre la ejecución local y remota | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c30d054c5a0c0e9a51d1799e919ba235c6a928fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7e9ed7d79855fdef0dfc64d37367ee7b8bc919ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495534"
 ---
 # <a name="understanding-the-differences-between-local-and-remote-execution"></a>Descripción de las diferencias entre la ejecución local y remota
 
@@ -36,7 +37,7 @@ ms.locfileid: "86913281"
   
 -   [Cargar y ejecutar un paquete local mediante programación](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)  
   
--   [Cargar y ejecutar un paquete remoto mediante programación](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
+-   [Cargar y ejecutar mediante programación un paquete remoto](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
   
  Para obtener más información sobre cómo ejecutar un paquete y cargar su salida en un programa personalizado, vea:  
   

@@ -1,4 +1,5 @@
 ---
+description: Determinar si los datos modificados están preparados
 title: Determinar si los datos modificados están preparados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c396f85d05203a9a2c01825adb94bd0cd2ae910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95a2a3a5ec29f8b467cbd637e13be3aced203f41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496255"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar si los datos modificados están preparados
 
@@ -90,7 +91,7 @@ ms.locfileid: "86921714"
   
  En la tabla siguiente, la primera columna muestra los valores devueltos desde la tarea Ejecutar SQL por la consulta de ejemplo de Transact-SQL. La segunda columna muestra cómo responden los otros componentes a estos valores.  
   
-|Valor devuelto|Significado|Response|  
+|Valor devuelto|Significado|Respuesta|  
 |------------------|-------------|--------------|  
 |0|Indica que los datos modificados no están listos.<br /><br /> No hay ningún registro de captura de datos modificados posterior al punto final del intervalo seleccionado.|La ejecución continúa con el componente que implementa un retraso. A continuación, el control vuelve al contenedor de bucles For, que sigue comprobando la tarea Ejecutar SQL mientras el valor devuelto sea 0.|  
 |1|Podría indicar que no se han capturado los datos modificados para el intervalo completo, o que se ha eliminado. Esto se trata como una condición de error.<br /><br /> No hay ningún registro de captura de datos modificados anterior al punto inicial del intervalo seleccionado.|La ejecución continúa con el componente opcional que registra el error.|  
@@ -201,7 +202,7 @@ ms.locfileid: "86921714"
         ```  
   
         > [!NOTE]  
-        >  El método **Thread.Sleep** espera un argumento especificado en milisegundos.  
+        >   El método **Thread.Sleep** espera un argumento especificado en milisegundos.  
   
 7.  Deje la línea de código predeterminada que devuelve **DtsExecResult.Success** de la ejecución del script.  
   
@@ -338,6 +339,6 @@ ms.locfileid: "86921714"
 ## <a name="next-step"></a>siguiente paso  
  Después de determinar que los datos modificados están listos, el paso siguiente consiste en preparar la consulta de los mismos.  
   
- **Tema siguiente:** [Preparar para consultar datos modificados](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **Siguiente tema:** [Preparar para consultar datos modificados](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   

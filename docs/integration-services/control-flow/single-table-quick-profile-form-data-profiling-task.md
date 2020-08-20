@@ -1,4 +1,5 @@
 ---
+description: Formulario de perfil rápido de tabla única (tarea de generación de perfiles de datos)
 title: Formulario de perfil rápido de tabla única (tarea de generación de perfiles de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9da9e33020b89074eb42751eaba89d22e251ef69
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b974db6df0f18a8063201f9e83ec905b87267301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495967"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Formulario de perfil rápido de tabla única (tarea de generación de perfiles de datos)
 
@@ -53,7 +54,7 @@ ms.locfileid: "86920992"
 |**para un máximo de N columnas como determinante**|Seleccione el número máximo de columnas para probar en posibles combinaciones como las columnas determinantes. El valor predeterminado es 1. El valor máximo es 1000. Al seleccionar 2, por ejemplo, se prueban combinaciones en las que las columnas determinantes de otra columna (dependiente) son las combinaciones de dos columnas o de columnas únicas.|  
   
 > [!NOTE]  
->  El tipo Perfil de inclusión de valores no está disponible en el **Formulario de perfil rápido de tabla única**.  
+>   El tipo de perfil de inclusión de valores no está disponible en el **Formulario de perfil rápido de tabla única**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

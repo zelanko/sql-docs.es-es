@@ -1,4 +1,5 @@
 ---
+description: Cargar datos mediante el destino de ODBC
 title: Cargar datos mediante el destino de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: abbe91428fdf30d5b598063831f400b69c18f859
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fbcb0fa1f7618a7cf6d2a78b18d9193e09f81f02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495853"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Cargar datos mediante el destino de ODBC
 
@@ -38,7 +39,7 @@ ms.locfileid: "86904885"
   
 6.  Seleccione el método de acceso de datos.  
   
-    -   **Nombre de tabla - lote**: seleccione esta opción para configurar el destino ODBC para trabajar en modo de lote. Al seleccionar esta opción, puede establecer el **Tamaño de lote**.  
+    -   **Nombre de tabla: lote**: seleccione esta opción para configurar el destino ODBC para trabajar en modo por lotes. Al seleccionar esta opción, puede establecer el **Tamaño de lote**.  
   
     -   **Nombre de tabla - fila a fila**: seleccione esta opción para configurar el destino ODBC para que cada una de las filas se inserte en la tabla de destino una por una. Al seleccionar esta opción, los datos se cargan en la tabla una fila cada vez.  
   

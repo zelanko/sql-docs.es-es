@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_locks (Transact-SQL)
 title: Sys. dm_tran_locks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -20,11 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3e453de669cc69373b8e3fc1fc76a1056721bec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bce5288ed4861cb1b090c851179739ea12d9ee71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000252"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498414"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,11 +59,11 @@ ms.locfileid: "86000252"
 |**request_owner_guid**|**uniqueidentifier**|GUID del propietario específico de esta solicitud. Este valor solo se utiliza en una transacción distribuida cuando el valor corresponde al GUID del servicio MS DTC para esa transacción.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Este valor representa el Id. del espacio de bloqueo del solicitante. El Id. del espacio de bloqueo determina si dos solicitantes son compatibles entre sí y si pueden tener bloqueos en modos que, de otra forma, entrarían en conflicto entre sí.|  
 |**lock_owner_address**|**varbinary(8**|Dirección de memoria de la estructura de datos interna utilizada para realizar el seguimiento de esta solicitud. Esta columna puede combinarse con la columna **resource_address** de **sys.dm_os_waiting_tasks**.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
  
 ## <a name="remarks"></a>Observaciones  
  Un estado de solicitud Granted indica que se ha concedido el bloqueo sobre un recurso al solicitante. Una solicitud en espera indica que la solicitud aún no se ha concedido. La columna **request_status** devuelve los siguientes tipos de solicitud en espera:  
@@ -88,7 +90,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
  Las transacciones distribuidas que no están asociadas a un valor de identificador de sesión son transacciones huérfanas y tienen asignado el valor de identificador de sesión -2. Para obtener más información, consulte [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
 
-## <a name="locks"></a><a name="locks"></a>Pestillo
+## <a name="locks"></a><a name="locks"></a> Pestillo
 Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , como filas leídas o modificadas durante una transacción, para evitar que varias transacciones utilicen simultáneamente los recursos. Por ejemplo, si una transacción mantiene un bloqueo exclusivo (X) en una fila de una tabla, ninguna otra transacción podrá modificar esa fila hasta que se libere el bloqueo. La reducción de bloqueos aumenta la simultaneidad, lo que puede mejorar el rendimiento. 
 
 ## <a name="resource-details"></a>Detalles del recurso  
@@ -97,7 +99,7 @@ Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnov
 |Tipo de recurso|Descripción del recurso|Resource_associated_entity_id|  
 |-------------------|--------------------------|--------------------------------------|  
 |DATABASE|Representa una base de datos.|No aplicable|  
-|ARCHIVO|Representa un archivo de la base de datos. Este archivo puede ser un archivo de datos o de registro.|No aplicable|  
+|FILE|Representa un archivo de la base de datos. Este archivo puede ser un archivo de datos o de registro.|No aplicable|  
 |OBJECT|Representa un objeto de la base de datos. Este objeto puede ser una tabla de datos, una vista, un procedimiento almacenado, un procedimiento almacenado extendido o cualquier objeto que tenga un Id. de objeto.|Id. de objeto|  
 |PAGE|Representa una página de un archivo de datos.|Identificador de HoBt. Este valor corresponde a **sys.partitions.hobt_id**. El identificador de HoBt no está siempre disponible para recursos PAGE, ya que es información adicional que puede proporcionar el autor de la llamada y no todos los autores de llamadas pueden proporcionar esta información.|  
 |KEY|Representa una fila en un índice.|Identificador de HoBt. Este valor corresponde a **sys.partitions.hobt_id**.|  
@@ -196,10 +198,10 @@ Se mantienen bloqueos en recursos de [!INCLUDE[ssNoVersion](../../includes/ssnov
   
  La tabla siguiente proporciona el formato de la columna **resource_description** para cada tipo de recurso.  
   
-|Recurso|Formato|Descripción|  
+|Resource|Formato|Descripción|  
 |--------------|------------|-----------------|  
 |DATABASE|No aplicable|El Id. de base de datos ya está disponible en la columna **resource_database_id**.|  
-|ARCHIVO|<file_id>|Id. del archivo representado por este recurso.|  
+|FILE|<file_id>|Id. del archivo representado por este recurso.|  
 |OBJECT|<object_id>|Id. del objeto representado por este recurso. Este objeto puede ser cualquier objeto mostrado en **sys.objects**, no solo una tabla.|  
 |PAGE|<file_id>:<page_in_file>|Representa el Id. de página y de archivo de la página representada por este recurso.|  
 |KEY|<hash_value>|Representa un hash de las columnas de clave de la fila representada por este recurso.|  
@@ -383,7 +385,7 @@ SELECT STasks.session_id, SThreads.os_thread_id
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Sys. dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
 [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [Funciones y vistas de administración dinámica relacionadas con transacciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      

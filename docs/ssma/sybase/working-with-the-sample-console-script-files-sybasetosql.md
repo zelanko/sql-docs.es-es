@@ -1,4 +1,5 @@
 ---
+description: Archivos de script de ejemplo de la consola (SybaseToSQL)
 title: Trabajar con los archivos de script de la consola de ejemplo (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7db44b317ee91044748519b93c7cdc175c96a94d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 072073fae690812ed2a51cb74073eea95552392a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497612"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Archivos de script de ejemplo de la consola (SybaseToSQL)
 Se han proporcionado algunos archivos de ejemplo junto con el producto para la referencia de usuario y el uso. En esta sección se describe la manera de personalizar fácilmente estos scripts para ajustarse a las necesidades del usuario final.  
@@ -79,9 +80,9 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     Asignación de esquema de la base de datos de origen al esquema de destino.  
   
-    **Attribute**  
+    **Atributo**  
   
-    -   `source-schema:`Especifica la base de datos de origen que requiere que se convierta.  
+    -   `source-schema:` Especifica la base de datos de origen que requiere que se convierta.  
   
     -   `sql-server-schema`: Especifica la base de datos de destino que se va a migrar a  
   
@@ -93,9 +94,9 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     -   Si el usuario tiene que evaluar varios objetos o bases de datos, puede especificar varios `metabase-object` nodos, tal como se muestra en el `convert-schema` ejemplo 4 del comando del archivo de script de la consola de ejemplo.  
   
-    **Attribute**  
+    **Atributo**  
   
-    `object-name`: Especifique el nombre de objeto o base de datos de origen que requiere la conversión. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el`object-name`  
+    `object-name`: Especifique el nombre de objeto o base de datos de origen que requiere la conversión. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el `object-name`  
   
     **Nombre de comando**  
   
@@ -105,9 +106,9 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     -   Si el usuario tiene que evaluar varios objetos o bases de datos, puede especificar varios `metabase-object` nodos, tal como se muestra en el `synchronize-target` ejemplo 3 del comando del archivo de script de la consola de ejemplo.  
   
-    **Attribute**  
+    **Atributo**  
   
-    `object-name:`Especifique el nombre de objeto o base de datos de SQL Server que requiere que se cree. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el`object-name`  
+    `object-name:` Especifique el nombre de objeto o base de datos de SQL Server que requiere que se cree. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el `object-name`  
   
     **Nombre de comando**  
   
@@ -117,9 +118,9 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     -   Si el usuario tiene que evaluar varios objetos o bases de datos, puede especificar varios `metabase-object` nodos, tal como se muestra en el `migrate-data` ejemplo 2 del comando del archivo de script de la consola de ejemplo.  
   
-    **Attribute**  
+    **Atributo**  
   
-    `object-name:`Especifica el nombre de la base de datos o de las tablas de origen que requiere la migración. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el`object-name`  
+    `object-name:` Especifica el nombre de la base de datos o de las tablas de origen que requiere la migración. Asegúrese de que `object-type` se cambia el correspondiente según el tipo de objeto que se especifica en el `object-name`  
   
 ## <a name="see-also"></a>Consulte también  
 [Crear archivos de valores de variable &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  

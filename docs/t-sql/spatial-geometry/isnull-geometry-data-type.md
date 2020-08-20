@@ -1,4 +1,5 @@
 ---
+description: IsNull (tipo de datos geometry)
 title: IsNull (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7cb1cccba4c880fd2e92d707e51c8c4e324fba9c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 02e8775089f6e8112452ff2a0ff780bc9a848f31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497061"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

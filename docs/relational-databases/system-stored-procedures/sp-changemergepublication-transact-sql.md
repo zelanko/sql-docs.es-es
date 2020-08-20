@@ -1,4 +1,5 @@
 ---
+description: sp_changemergepublication (Transact-SQL)
 title: sp_changemergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba7a6785952152632a9435269bc7b4a9b236ad38
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46fef8eff54b4a27957191e2456df90ff77f72c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474500"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'`Propiedad que se va a cambiar para la publicación especificada. *Property* es de **tipo sysname**y puede tener uno de los valores enumerados en la tabla siguiente.  
+`[ @property = ] 'property'` Propiedad que se va a cambiar para la publicación especificada. *Property* es de **tipo sysname**y puede tener uno de los valores enumerados en la tabla siguiente.  
   
-`[ @value = ] 'value'`Nuevo valor de la propiedad especificada. el *valor* es **nvarchar (255)** y puede ser uno de los valores enumerados en la tabla siguiente.  
+`[ @value = ] 'value'` Nuevo valor de la propiedad especificada. el *valor* es **nvarchar (255)** y puede ser uno de los valores enumerados en la tabla siguiente.  
   
  Esta tabla describe las propiedades de la publicación que se pueden cambiar, así como las restricciones de los valores de esas propiedades.  
   
-|Propiedad.|Valor|Descripción|  
+|Propiedad|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Se admiten las suscripciones anónimas.|  
 ||**false**|No se admiten las suscripciones anónimas.|  
@@ -120,7 +121,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**web_synchronization_url**||Valor predeterminado de la URL de Internet utilizada para la sincronización web.|  
 |NULL (predeterminado)||Devuelve la lista de valores admitidos para la *propiedad*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Confirma que la acción realizada por este procedimiento almacenado podría invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado podría invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
   
  **0** especifica que el cambio de la publicación no invalidará la instantánea. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
@@ -128,7 +129,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Vea en la sección de Observaciones las propiedades que, si se cambian, requieren que se genere una nueva instantánea.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
   
  **0** especifica que, al cambiar la publicación, no es necesario reinicializar las suscripciones. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
   
@@ -139,7 +140,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changemergepublication** se utiliza en la replicación de mezcla.  
   
  Si se cambian las propiedades siguientes, se requiere que se genere una nueva instantánea. Debe especificar el valor **1** para el parámetro *force_invalidate_snapshot* .  
@@ -188,10 +189,10 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Cambiar las propiedades de la publicación y del artículo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_dropmergepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [sp_addmergepublication &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_dropmergepublication &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

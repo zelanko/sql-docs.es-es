@@ -1,4 +1,5 @@
 ---
+description: Función SQLSpecialColumns
 title: Función SQLSpecialColumns | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 826630e1d344322268a2f2638310b3a1e182de6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca29bf8bbef30296ad1aef17bda6890b23da8fb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476071"
 ---
 # <a name="sqlspecialcolumns-function"></a>Función SQLSpecialColumns
 **Conformidad**  
@@ -65,7 +66,7 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_ROWVER: devuelve la columna o columnas de la tabla especificada, si existen, que el origen de datos actualiza automáticamente cuando una transacción actualiza cualquier valor de la fila (como en SQLBase ROWID o Sybase TIMESTAMP).  
   
- *Nombrecatálogo*  
+ *CatalogName*  
  Entradas Nombre del catálogo de la tabla. Si un controlador admite catálogos para algunas tablas, pero no para otros, como cuando el controlador recupera datos de distintos DBMS, una cadena vacía ("") denota las tablas que no tienen catálogos. *Nombrecatálogo* no puede contener un patrón de búsqueda de cadenas.  
   
  Si el atributo de instrucción SQL_ATTR_METADATA_ID está establecido en SQL_TRUE, *nombrecatálogo* se trata como un identificador y su caso no es significativo. Si se SQL_FALSE, *nombrecatálogo* es un argumento normal; se trata literalmente y su caso es significativo. Para obtener más información, vea [argumentos en funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -105,7 +106,7 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_NULLABLE: se devuelven columnas especiales aunque puedan tener valores NULL.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -118,7 +119,7 @@ SQLRETURN SQLSpecialColumns(
 |24000|Estado de cursor no válido|Un cursor estaba abierto en el *StatementHandle*y se ha llamado a **SQLFetch** o **SQLFetchScroll** . Este error lo devuelve el administrador de controladores si **SQLFetch** o **sqlfetchscroll** no ha devuelto SQL_NO_DATA y lo devuelve el controlador si **SQLFetch** o **sqlfetchscroll** ha devuelto SQL_NO_DATA.<br /><br /> Un cursor estaba abierto en el *StatementHandle*, pero no se ha llamado a **SQLFetch** o **SQLFetchScroll** .|  
 |40001|Error de serialización|La transacción se revirtió debido a un interbloqueo de recursos con otra transacción.|  
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*. A continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY009|Uso no válido de puntero nulo|El argumento *TableName* era un puntero nulo.<br /><br /> El atributo de instrucción SQL_ATTR_METADATA_ID se estableció en SQL_TRUE, el argumento *nombrecatálogo* era un puntero nulo y el SQL_CATALOG_NAME *InfoType* devuelve los nombres de catálogo que se admiten.<br /><br /> (DM) el atributo de instrucción SQL_ATTR_METADATA_ID se estableció en SQL_TRUE y el argumento *SchemaName* era un puntero nulo.|  
@@ -171,7 +172,7 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_SIZE (ODBC 1,0)|5|Entero|Tamaño de la columna en el origen de datos. Para obtener más información sobre el tamaño de las columnas, vea [tamaño de columna, dígitos decimales, longitud de octetos de transferencia y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |BUFFER_LENGTH (ODBC 1,0)|6|Entero|La longitud en bytes de los datos transferidos en una operación **SQLGetData** o **SQLFetch** si se especifica SQL_C_DEFAULT. En el caso de los datos numéricos, este tamaño puede ser diferente del tamaño de los datos almacenados en el origen de datos. Este valor es el mismo que el de la columna COLUMN_SIZE para los datos binarios o de caracteres. Para obtener más información, vea [tamaño de columna, dígitos decimales, longitud de octetos de transferencia y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1,0)|7|Smallint|Dígitos decimales de la columna en el origen de datos. Se devuelve NULL para los tipos de datos en los que los dígitos decimales no son aplicables. Para obtener más información acerca de los dígitos decimales, vea [tamaño de columna, dígitos decimales, longitud de octetos de transferencia y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|PSEUDO_COLUMN (ODBC 2,0)|8|Smallint|Indica si la columna es una pseudo columna, como el ROWID de Oracle:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Nota:** para obtener la máxima interoperabilidad, las pseudo columnas no deben ir entre comillas con el carácter de comilla de identificador devuelto por **SQLGetInfo**.|  
+|PSEUDO_COLUMN (ODBC 2,0)|8|Smallint|Indica si la columna es una pseudo columna, como el ROWID de Oracle:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Nota:**  para obtener la máxima interoperabilidad, las pseudo columnas no deben ir entre comillas con el carácter de comilla de identificador devuelto por **SQLGetInfo**.|  
   
  Una vez que la aplicación recupera los valores de SQL_BEST_ROWID, la aplicación puede utilizar estos valores para reseleccionar esa fila dentro del ámbito definido. Se garantiza que la instrucción **Select** devuelve una fila o ninguna fila.  
   
@@ -197,6 +198,6 @@ SQLRETURN SQLSpecialColumns(
 |Obtener un bloque de datos o desplazarse por un conjunto de resultados|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |Devolver las columnas de una clave principal|[Función SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

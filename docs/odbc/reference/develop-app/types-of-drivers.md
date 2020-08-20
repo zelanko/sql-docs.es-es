@@ -1,4 +1,5 @@
 ---
+description: Tipos de controladores
 title: Tipos de controladores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de6d8e1473f127d28c69969e0fc298afd69d3023
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ae3ab2b0172e97a221b446107ccbf4b6ae4eb7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476299"
 ---
 # <a name="types-of-drivers"></a>Tipos de controladores
 Los controladores ODBC se pueden clasificar de la siguiente manera:  

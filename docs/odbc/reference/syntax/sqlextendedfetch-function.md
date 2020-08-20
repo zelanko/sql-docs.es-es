@@ -1,4 +1,5 @@
 ---
+description: Función SQLExtendedFetch
 title: Función SQLExtendedFetch | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dc832e5a20b1d3c0a1ad63b3e2a070563de2b46d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac19d017baf4a3f0e873be64cd2eb812ca1b05e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476115"
 ---
 # <a name="sqlextendedfetch-function"></a>Función SQLExtendedFetch
 **Conformidad**  
@@ -69,7 +70,7 @@ SQLRETURN SQLExtendedFetch(
   
  Las aplicaciones deben proporcionar un puntero válido en el argumento *RowStatusArray* ; en caso contrario, el comportamiento de **SQLExtendedFetch** y el comportamiento de las llamadas a **SQLBulkOperations** o **SQLSetPos** después de que un cursor se haya colocado por **SQLExtendedFetch** no están definidos.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -92,7 +93,7 @@ SQLRETURN SQLExtendedFetch(
 |22015|Desbordamiento de campo de intervalo|La asignación de un tipo numérico exacto o de intervalo SQL a un tipo de intervalo C provoca una pérdida de dígitos significativos en el campo inicial.<br /><br /> Al capturar datos en un tipo de intervalo C, no había ninguna representación del valor del tipo SQL en el tipo de intervalo C.<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |22018|Valor de carácter no válido para la especificación de conversión|El tipo C era un tipo de datos numérico exacto o aproximado, un valor de fecha y hora o un intervalo. el tipo SQL de la columna era un tipo de datos de caracteres. y el valor de la columna no era un literal válido del tipo C enlazado.<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |24000|Estado de cursor no válido|El *StatementHandle* estaba en un estado ejecutado, pero no hay ningún conjunto de resultados asociado a *StatementHandle*.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLError** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLError** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*y, a continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLExtendedFetch** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) el *StatementHandle* especificado no se encontraba en un estado ejecutado. Se llamó a la función sin llamar primero a **SQLExecDirect**, **SQLExecute**o a una función de catálogo.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> Se llamó a **SQLExtendedFetch** (DM) para *StatementHandle* después de llamar a **SQLFetch** o **SQLFetchScroll** y antes de llamar a **SQLFreeStmt** con la opción SQL_CLOSE.<br /><br /> Se llamó a **SQLBulkOperations** (DM) para una instrucción antes de llamar a **SQLFetch**, **SQLFetchScroll**o **SQLExtendedFetch** y, a continuación, se llamó a **SQLExtendedFetch** antes de llamar a **SQLFreeStmt** con la opción SQL_CLOSE.|  
@@ -109,7 +110,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="comments"></a>Comentarios  
  El comportamiento de **SQLExtendedFetch** es idéntico al de **SQLFetchScroll**, con las siguientes excepciones:  
   
--   **SQLExtendedFetch** y **SQLFetchScroll** usan métodos diferentes para devolver el número de filas recuperadas. **SQLExtendedFetch** devuelve el número de filas recuperadas en * \*RowCountPtr*; **SQLFetchScroll** devuelve el número de filas que se capturan directamente en el búfer al que apunta SQL_ATTR_ROWS_FETCHED_PTR. Para obtener más información, vea el argumento *RowCountPtr* .  
+-   **SQLExtendedFetch** y **SQLFetchScroll** usan métodos diferentes para devolver el número de filas recuperadas. **SQLExtendedFetch** devuelve el número de filas recuperadas en * \* RowCountPtr*; **SQLFetchScroll** devuelve el número de filas que se capturan directamente en el búfer al que apunta SQL_ATTR_ROWS_FETCHED_PTR. Para obtener más información, vea el argumento *RowCountPtr* .  
   
 -   **SQLExtendedFetch** y **SQLFetchScroll** devuelven el estado de cada fila en diferentes matrices. Para obtener más información, vea el argumento *RowStatusArray* .  
   
@@ -141,6 +142,6 @@ SQLRETURN SQLExtendedFetch(
 |Colocar el cursor, actualizar los datos del conjunto de filas o actualizar o eliminar los datos del conjunto de resultados|[Función SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: sys.sysservers (Transact-SQL)
 title: Servidores de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fa61b7122849a1c3d380a39beb4da947d52d35f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ea79d90f7ccb75243246cc64713c746e05c8996c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475141"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,9 +47,9 @@ ms.locfileid: "85893973"
 |**ubicación**|**nvarchar(4000)**|Valor de ubicación OLE DB.|  
 |**providerstring**|**nvarchar(4000)**|Valor de cadena de proveedor OLE DB.|  
 |**schemadate**|**datetime**|Fecha en que se actualizó la fila por última vez.|  
-|**topologyx**|**int**|No se usa.|  
-|**topologyy**|**int**|No se usa.|  
-|**Catálogo**|**sysname**|Catálogo utilizado al establecer una conexión con un proveedor OLE DB.|  
+|**topologyx**|**int**|No se utiliza.|  
+|**topologyy**|**int**|No se utiliza.|  
+|**catalog**|**sysname**|Catálogo utilizado al establecer una conexión con un proveedor OLE DB.|  
 |**srvcollation**|**sysname**|La intercalación del servidor.|  
 |**ConnectTimeout**|**int**|Configuración de tiempo de espera para la conexión del servidor.|  
 |**QueryTimeout**|**int**|Configuración del tiempo de espera para consultas sobre un servidor.|  

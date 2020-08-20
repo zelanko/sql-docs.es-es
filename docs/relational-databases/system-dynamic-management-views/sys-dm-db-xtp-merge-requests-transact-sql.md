@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_xtp_merge_requests (Transact-SQL)
 title: Sys. dm_db_xtp_merge_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f489b01655f3b6836c1360bc0e473747e62ca59e
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: c8a03ef677c5c5ac3402f80c0b90eb32577fa8f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475033"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 
@@ -43,6 +44,6 @@ Realiza el seguimiento de las solicitudes de combinación de bases de datos. Es 
 
 Requiere el permiso VIEW DATABASE STATE en la base de datos actual.
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Consulte también
 
 [Vistas de administración dinámica de tablas con optimización para memoria (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)

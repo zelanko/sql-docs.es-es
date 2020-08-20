@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobschedule (Transact-SQL)
 title: sp_delete_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a74d7235b1faa80c1fe65f80717c39e7944f343
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ee25a531baeaf96b4090f0cb0f165e6cd4c8d203
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474423"
 ---
 # <a name="sp_delete_jobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85864272"
  **sp_delete_jobschedule** solo se proporciona por compatibilidad con versiones anteriores.  
   
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Ahora, las programaciones de trabajos se pueden administrar independientemente de los trabajos. Para quitar una programación de un trabajo, use **sp_detach_schedule**. Para eliminar una programación, use **sp_delete_schedule**.  
   
 > **Nota: sp_delete_jobschedule** no admite programaciones que se adjuntan a varios trabajos. Si un script existente llama **sp_delete_jobschedule** para quitar una programación que está asociada a más de un trabajo, el procedimiento devuelve un error.  
@@ -51,12 +52,12 @@ ms.locfileid: "85864272"
  Los miembros del rol **sysadmin** pueden eliminar cualquier programación de trabajo. Los usuarios que no son miembros del rol **sysadmin** solo pueden eliminar las programaciones de trabajos que les pertenecen.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
  [Ver o modificar trabajos](../../ssms/agent/view-or-modify-jobs.md)   
- [sp_add_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_help_jobschedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)   
- [sp_update_jobschedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-jobschedule-transact-sql.md)   
+ [sp_add_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_help_jobschedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)   
+ [sp_update_jobschedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-jobschedule-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

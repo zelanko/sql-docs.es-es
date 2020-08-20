@@ -1,4 +1,5 @@
 ---
+description: Identificadores de instrucciones
 title: Identificadores de instrucciones | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1be90fe10d10a0b087d1c9724fed249805eb4dba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a93bdd42acccdca0563edc4104734d04522e7879
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476347"
 ---
 # <a name="statement-handles"></a>Identificadores de instrucciones
 Una *instrucción* se considera más fácil como una instrucción SQL, como **SELECT \* from Employee**. Sin embargo, una instrucción es algo más que una instrucción SQL, que consta de toda la información asociada a esa instrucción SQL, como los conjuntos de resultados creados por la instrucción y los parámetros utilizados en la ejecución de la instrucción. Una instrucción no necesita incluso una instrucción SQL definida por la aplicación. Por ejemplo, cuando se ejecuta una función de catálogo como **SQLTables** en una instrucción, se ejecuta una instrucción SQL predefinida que devuelve una lista de nombres de tabla.  

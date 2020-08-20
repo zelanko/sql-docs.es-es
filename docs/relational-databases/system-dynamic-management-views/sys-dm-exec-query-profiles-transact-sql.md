@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_profiles (Transact-SQL)
 title: Sys. dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2019
@@ -20,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 4cbb0c5bb226842aeb9767fd4ac9c3a8122dc790
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474987"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -79,18 +80,18 @@ Los contadores devueltos son por operador y por subproceso. Los resultados son d
   
  Los contadores relacionados con e/s indicados por esta DMV son más granulares que los indicados por `SET STATISTICS IO` de las dos maneras siguientes:  
   
--   `SET STATISTICS IO`agrupa los contadores para todas las operaciones de e/s en una tabla determinada. Con esta DMV obtendrá contadores independientes para cada nodo del plan de consulta que realiza la e/s a la tabla.  
+-   `SET STATISTICS IO` agrupa los contadores para todas las operaciones de e/s en una tabla determinada. Con esta DMV obtendrá contadores independientes para cada nodo del plan de consulta que realiza la e/s a la tabla.  
   
 -   Si se realizaran búsquedas en paralelo, esta DMV informa sobre los contadores para cada uno de los subprocesos paralelos que se ejecutan en la búsqueda.
  
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, la *infraestructura de generación de perfiles de estadísticas de ejecución de consultas estándar* existe en paralelo con una *infraestructura ligera de generación de perfiles de estadísticas de ejecución de consultas*. `SET STATISTICS XML ON`y `SET STATISTICS PROFILE ON` usan siempre la *infraestructura de generación de perfiles de estadísticas de ejecución de consultas estándar*. Para `sys.dm_exec_query_profiles` que se rellene, una de las infraestructuras de generación de perfiles de consulta debe estar habilitada. Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).    
+A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, la *infraestructura de generación de perfiles de estadísticas de ejecución de consultas estándar* existe en paralelo con una *infraestructura ligera de generación de perfiles de estadísticas de ejecución de consultas*. `SET STATISTICS XML ON` y `SET STATISTICS PROFILE ON` usan siempre la *infraestructura de generación de perfiles de estadísticas de ejecución de consultas estándar*. Para `sys.dm_exec_query_profiles` que se rellene, una de las infraestructuras de generación de perfiles de consulta debe estar habilitada. Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > La consulta en investigación tiene que iniciarse **después** de que se haya habilitado la infraestructura de generación de perfiles de consulta, lo que lo habilitará después de iniciar la consulta no producirá resultados en `sys.dm_exec_query_profiles` . Para obtener más información sobre cómo habilitar las infraestructuras de generación de perfiles de consulta, consulte la [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Permisos  
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y Azure SQL instancia administrada, requiere `VIEW DATABASE STATE` el permiso y la pertenencia al rol de la `db_owner` base de datos.   
-En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
    
 ## <a name="examples"></a>Ejemplos  
  Paso 1: inicie sesión en una sesión en la que vaya a ejecutar la consulta que va a analizar `sys.dm_exec_query_profiles` . Para configurar la consulta para el uso de la generación de perfiles `SET STATISTICS PROFILE ON` . Ejecute la consulta en esta misma sesión.  

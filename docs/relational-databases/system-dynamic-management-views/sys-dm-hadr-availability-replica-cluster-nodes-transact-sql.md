@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
 title: Sys. dm_hadr_availability_replica_cluster_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: dbd7e416-badd-4332-a45c-438aa0145a99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af53caea682e698954af86b64349dd7b2b9e814c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7c4af3e4558741e0a138eabd169ed92253f1d4cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474870"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_nodes-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,6 +48,6 @@ ms.locfileid: "85648552"
   
 ## <a name="see-also"></a>Consulte también  
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Información general de los grupos de disponibilidad de Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

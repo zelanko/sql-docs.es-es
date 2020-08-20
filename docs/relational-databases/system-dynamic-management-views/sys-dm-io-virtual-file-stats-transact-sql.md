@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_virtual_file_stats (Transact-SQL)
 title: Sys. dm_io_virtual_file_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -20,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2110eea5c008f06f7bdd6637dda7222ad5f50d2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 71cdc5b88a525e88e79ccebd0b61f20d2c391c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474882"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -78,7 +79,7 @@ Id. del archivo. *file_id* es de tipo int y no tiene ningún valor predeterminad
 |**database_name**|**sysname**|nombre de base de datos.</br></br>Por SQL Data Warehouse, es el nombre de la base de datos almacenada en el nodo que se identifica mediante pdw_node_id. Cada nodo tiene una base de datos Tempdb con 13 archivos. Cada nodo también tiene una base de datos por distribución, y cada base de datos de distribución tiene 5 archivos. Por ejemplo, si cada nodo contiene 4 distribuciones, los resultados muestran 20 archivos de base de datos de distribución por pdw_node_id. 
 |**database_id**|**smallint**|Identificador de la base de datos.|  
 |**file_id**|**smallint**|IDENTIFICADOR del archivo.|  
-|**sample_ms**|**bigint**|Número de milisegundos transcurridos desde que se inició el equipo. Esta columna se puede utilizar para comparar diferentes resultados de esta función.</br></br>El tipo de datos es **int** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|Número de milisegundos transcurridos desde que se inició el equipo. Esta columna se puede utilizar para comparar diferentes resultados de esta función.</br></br>El tipo de datos es **int** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Número de operaciones de lectura realizadas en el archivo.|  
 |**num_of_bytes_read**|**bigint**|Número total de bytes leídos en el archivo.|  
 |**io_stall_read_ms**|**bigint**|Tiempo total, en milisegundos, que los usuarios han esperado para que se realicen las lecturas en el archivo.|  

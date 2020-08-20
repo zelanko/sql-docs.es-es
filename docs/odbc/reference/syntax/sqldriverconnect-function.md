@@ -1,4 +1,5 @@
 ---
+description: Función SQLDriverConnect
 title: SQLDriverConnect (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 88ec70d68b46beca97fd6b0d758e21aab5d4f4b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476148"
 ---
 # <a name="sqldriverconnect-function"></a>Función SQLDriverConnect
 **Conformidad**  
@@ -82,7 +83,7 @@ SQLRETURN SQLDriverConnect(
  Entradas Longitud del búfer de **outconnectionstring* , en caracteres.  
   
  *StringLength2Ptr*  
- Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible \*para devolver en *outconnectionstring*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, la cadena de conexión completada \*en *outconnectionstring* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
+ Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en \* *outconnectionstring*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, la cadena de conexión completada en \* *outconnectionstring* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
   
  *DriverCompletion*  
  Entradas Marca que indica si el administrador de controladores o el controlador debe solicitar más información de conexión:  
@@ -91,7 +92,7 @@ SQLRETURN SQLDriverConnect(
   
  (Para obtener más información, vea "Comentarios").  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -103,14 +104,14 @@ SQLRETURN SQLDriverConnect(
 |01004|Datos de cadena, truncados a la derecha|El búfer \* *outconnectionstring* no era lo suficientemente grande como para devolver la cadena de conexión completa, por lo que se truncó la cadena de conexión. La longitud de la cadena de conexión sin truncar se devuelve en **StringLength2Ptr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S00|Atributo de cadena de conexión no válido|Se especificó una palabra clave de atributo no válido en la cadena de conexión (*inconnectionstring*), pero el controlador se pudo conectar al origen de datos de todos modos. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S02|Valor de opción cambiado|El controlador no admitía el valor especificado al que apunta el argumento *ValuePtr* en **SQLSetConnectAttr** y sustituyó un valor similar. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S08|Error al guardar el DSN de archivo|La cadena de * \*inconnectionstring* contiene una palabra clave **FILEDSN** , pero no se guardó el archivo. DSN. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01S09|Palabra clave no válida|(DM) la cadena de * \*inconnectionstring* contenía una palabra clave **SaveFile** pero no un **controlador** o una palabra clave **FILEDSN** . (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S08|Error al guardar el DSN de archivo|La cadena de * \* inconnectionstring* contiene una palabra clave **FILEDSN** , pero no se guardó el archivo. DSN. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S09|Palabra clave no válida|(DM) la cadena de * \* inconnectionstring* contenía una palabra clave **SaveFile** pero no un **controlador** o una palabra clave **FILEDSN** . (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |08001|El cliente no puede establecer la conexión|El controlador no pudo establecer una conexión con el origen de datos.|  
 |08002|Nombre de conexión en uso|(DM) el *ConnectionHandle* especificado ya se ha utilizado para establecer una conexión con un origen de datos y la conexión todavía estaba abierta.|  
 |08004|El servidor rechazó la conexión|El origen de datos rechazó el establecimiento de la conexión por motivos definidos por la implementación.|  
 |08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos al que el controlador estaba intentando conectar antes de que la función **SQLDriverConnect** completara el procesamiento.|  
 |28000|Especificación de autorización no válida|El identificador de usuario o la cadena de autorización, o ambos, según se especifica en la cadena de conexión (*inconnectionstring*), infringió las restricciones definidas por el origen de datos.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer szMessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* szMessageText* describe el error y su causa.|  
 |HY000|Error general: DSN de archivo no válido|(DM) la cadena en **Inconnectionstring* contenía una palabra clave FILEDSN, pero no se encontró el nombre del archivo. DSN.|  
 |HY000|Error general: no se puede crear el búfer de archivos|(DM) la cadena en **Inconnectionstring* contenía una palabra clave FILEDSN, pero el archivo. DSN era ilegible.|  
 |HY001|Error de asignación de memoria|El administrador de controladores no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función **SQLDriverConnect** .<br /><br /> El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
@@ -134,7 +135,7 @@ SQLRETURN SQLDriverConnect(
 |IM009|No se puede cargar la DLL de traducción|El controlador no pudo cargar la DLL de traducción que se especificó para el origen de datos o para la conexión.|  
 |IM010|El nombre del origen de datos es demasiado largo|(DM) el valor de atributo de la palabra clave DSN era más largo que SQL_MAX_DSN_LENGTH caracteres.|  
 |IM011|El nombre del controlador es demasiado largo|(DM) el valor de atributo para la palabra clave **driver** tenía más de 255 caracteres.|  
-|IM012|Error de sintaxis de palabra clave DRIVER|(DM) el par palabra clave-valor de la palabra clave **driver** contenía un error de sintaxis.<br /><br /> (DM) la cadena de * \*inconnectionstring* contiene una palabra clave **FILEDSN** , pero el archivo. DSN no contenía una palabra clave de **controlador** o una palabra clave de **DSN** .|  
+|IM012|Error de sintaxis de palabra clave DRIVER|(DM) el par palabra clave-valor de la palabra clave **driver** contenía un error de sintaxis.<br /><br /> (DM) la cadena de * \* inconnectionstring* contiene una palabra clave **FILEDSN** , pero el archivo. DSN no contenía una palabra clave de **controlador** o una palabra clave de **DSN** .|  
 |IM014|El DSN especificado contiene una incoherencia de arquitectura entre el controlador y la aplicación|(DM) 32: la aplicación de bits usa un DSN que se conecta a un controlador de 64 bits; o viceversa.|  
 |IM015|Error de SQLDriverConnect del controlador en SQL_HANDLE_DBC_INFO_HANDLE|Si un controlador devuelve SQL_ERROR, el administrador de controladores devolverá SQL_ERROR a la aplicación y se producirá un error en la conexión.<br /><br /> Para obtener más información acerca de SQL_HANDLE_DBC_INFO_TOKEN, vea [desarrollar el reconocimiento del grupo de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|El sondeo está deshabilitado en el modo de notificación asincrónico|Cada vez que se usa el modelo de notificación, el sondeo se deshabilita.|  
@@ -146,7 +147,7 @@ SQLRETURN SQLDriverConnect(
   
  *Connection-String* :: = *Empty-String*[;] &#124; *atributo*[;] &#124; *atributo*; *cadena de conexión*  
   
- *Empty-String* :: =*Attribute* :: = Attribute *-Keyword*=*atributo-value* &#124; driver = [{]*Attribute-Value*[}]  
+ *Empty-String* :: =*Attribute* :: = Attribute *-Keyword* = *atributo-value* &#124; driver = [{]*Attribute-Value*[}]  
   
  *Attribute-keyword* :: = DSN &#124; UID &#124; pwd &#124; *Defined-Attribute-keyword*  
   
@@ -156,11 +157,11 @@ SQLRETURN SQLDriverConnect(
   
  donde *la cadena de caracteres* tiene cero o más caracteres; el *identificador* tiene uno o más caracteres; *Attribute-keyword* no distingue mayúsculas de minúsculas; *Attribute-Value* puede distinguir mayúsculas de minúsculas; y el valor de la palabra clave **DSN** no se compone únicamente de espacios en blanco.  
   
- Debido a la gramática de la cadena de conexión y al archivo de inicialización, las palabras clave y los valores de atributo que contienen los caracteres **[]{}(),;? se \*debe evitar =! @** no incluido entre llaves. El valor de la palabra clave **DSN** no puede constar solo de espacios en blanco y no debe contener espacios en blanco iniciales. Debido a la gramática de la información del sistema, las palabras clave y los nombres de los orígenes de\\datos no pueden contener el carácter de barra diagonal inversa ().  
+ Debido a la gramática de la cadena de conexión y al archivo de inicialización, las palabras clave y los valores de atributo que contienen los caracteres **[] {} (),;? \* se debe evitar =! @** no incluido entre llaves. El valor de la palabra clave **DSN** no puede constar solo de espacios en blanco y no debe contener espacios en blanco iniciales. Debido a la gramática de la información del sistema, las palabras clave y los nombres de los orígenes de datos no pueden contener el carácter de barra diagonal inversa ( \\ ).  
   
  Las aplicaciones no tienen que agregar llaves alrededor del valor del atributo después de la palabra clave **driver** , a menos que el atributo contenga un punto y coma (;), en cuyo caso las llaves son necesarias. Si el valor de atributo que el controlador recibe incluye llaves, el controlador no debe quitarlos, pero deben formar parte de la cadena de conexión devuelta.  
   
- Un valor de cadena de conexión o DSN entre llaves ({}) que contiene cualquiera de los caracteres **[{}] (),;? = \*! @** se pasa intacto al controlador. Sin embargo, cuando se usan estos caracteres en una palabra clave, el administrador de controladores devuelve un error al trabajar con DSN de archivo, pero pasa la cadena de conexión al controlador para las cadenas de conexión normales. Evite el uso de llaves incrustadas en un valor de palabra clave.  
+ Un valor de cadena de conexión o DSN entre llaves ( {} ) que contiene cualquiera de los caracteres **[] {} (),;? \* =! @** se pasa intacto al controlador. Sin embargo, cuando se usan estos caracteres en una palabra clave, el administrador de controladores devuelve un error al trabajar con DSN de archivo, pero pasa la cadena de conexión al controlador para las cadenas de conexión normales. Evite el uso de llaves incrustadas en un valor de palabra clave.  
   
  La cadena de conexión puede incluir cualquier número de palabras clave definidas por el controlador. Dado que la palabra clave **driver** no utiliza información de la información del sistema, el controlador debe definir palabras clave suficientes para que un controlador pueda conectarse a un origen de datos solo mediante la información de la cadena de conexión. (Para obtener más información, vea "instrucciones del controlador", más adelante en esta sección). El controlador define qué palabras clave son necesarias para conectarse al origen de datos.  
   
@@ -226,7 +227,7 @@ SQLRETURN SQLDriverConnect(
   
     -   En la nueva cadena de conexión, se elimina la palabra clave **FILEDSN** .  
   
-4.  Carga el controlador examinando la entrada del registro HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBCINST. INI\\<nombre\>del controlador \Driver \<donde el nombre del controlador> se especifica mediante la palabra clave **driver** .  
+4.  Carga el controlador examinando la entrada del registro HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI\\<nombre del controlador \> \Driver, donde \<Driver Name> se especifica mediante la palabra clave **driver** .  
   
 5.  Pasa el controlador a la nueva cadena de conexión.  
   
@@ -258,11 +259,11 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_PROMPT: el controlador muestra un cuadro de diálogo con los valores de la cadena de conexión y la información del sistema (si los hay) como valores iniciales. Cuando el usuario sale del cuadro de diálogo, el controlador se conecta al origen de datos. También crea una cadena de conexión a partir del valor de la palabra clave **DSN** o **driver** en \* *inconnectionstring* y la información devuelta por el cuadro de diálogo. Coloca esta cadena de conexión en el búfer **outconnectionstring* .  
   
--   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: Si la cadena de conexión contiene suficiente información y esa información es correcta, el controlador se conecta al origen de datos y \*copia *inconnectionstring* en \* *outconnectionstring*. Si falta alguna información o es incorrecta, el controlador realiza las mismas acciones que cuando se SQL_DRIVER_PROMPT *DriverCompletion* , excepto que si *DriverCompletion* es SQL_DRIVER_COMPLETE_REQUIRED, el controlador deshabilita los controles para cualquier información no necesaria para conectarse al origen de datos.  
+-   SQL_DRIVER_COMPLETE o SQL_DRIVER_COMPLETE_REQUIRED: Si la cadena de conexión contiene suficiente información y esa información es correcta, el controlador se conecta al origen de datos y copia \* *inconnectionstring* en \* *outconnectionstring*. Si falta alguna información o es incorrecta, el controlador realiza las mismas acciones que cuando se SQL_DRIVER_PROMPT *DriverCompletion* , excepto que si *DriverCompletion* es SQL_DRIVER_COMPLETE_REQUIRED, el controlador deshabilita los controles para cualquier información no necesaria para conectarse al origen de datos.  
   
--   SQL_DRIVER_NOPROMPT: Si la cadena de conexión contiene suficiente información, el controlador se conecta al origen de datos \*y copia *inconnectionstring* en \* *outconnectionstring*. De lo contrario, el controlador devuelve SQL_ERROR para **SQLDriverConnect**.  
+-   SQL_DRIVER_NOPROMPT: Si la cadena de conexión contiene suficiente información, el controlador se conecta al origen de datos y copia \* *inconnectionstring* en \* *outconnectionstring*. De lo contrario, el controlador devuelve SQL_ERROR para **SQLDriverConnect**.  
   
- Si la conexión se realiza correctamente con el origen de datos, \*el controlador también establece *StringLength2Ptr* en la longitud de la cadena de conexión de salida que está disponible para devolver en **outconnectionstring*.  
+ Si la conexión se realiza correctamente con el origen de datos, el controlador también establece \* *StringLength2Ptr* en la longitud de la cadena de conexión de salida que está disponible para devolver en **outconnectionstring*.  
   
  Si el usuario cancela un cuadro de diálogo que presenta el administrador de controladores o el controlador, **SQLDriverConnect** devuelve SQL_NO_DATA.  
   
@@ -360,12 +361,12 @@ int main() {
 |---------------------------|---------|  
 |Asignación de un identificador|[Función SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Detección y enumeración de los valores necesarios para conectarse a un origen de datos|[Función SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
-|Conectar a un origen de datos|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
+|Conectarse a un origen de datos|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
 |Desconectar de un origen de datos|[Función SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
 |Devolver descripciones y atributos de controladores|[Función SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |Liberar un identificador|[Función SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Establecer un atributo de conexión|[Función SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

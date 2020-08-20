@@ -1,4 +1,5 @@
 ---
+description: Audit Database Object Management [clase de eventos]
 title: Audit Database Object Management (clase de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a09428b2554e240e0caef03077ff357c02bb48ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7222928fabac19df648cea9d059d6657e8bd3c9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475999"
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management [clase de eventos]
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La clase de eventos **Audit Database Object Management** se genera al ejecutar una instrucción CREATE, ALTER o DROP en objetos de base de datos tales como esquemas.  
+   La clase de eventos **Audit Database Object Management** se genera al ejecutar una instrucción CREATE, ALTER o DROP en objetos de base de datos tales como esquemas.  
   
 > [!NOTE]  
 >  Las acciones relacionadas con la clave pública no se auditan.  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_persisted_sku_features (Transact-SQL)
 title: Sys. dm_db_persisted_sku_features (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c41fcc673152f0cb253c0a5f10721beb40cf7628
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f99385bb016ca640955d7d3c6077521d1a7cabf7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475079"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85894576"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si no se usa ninguna característica que pueda estar restringida por una edición específica en la base de datos, la vista no devuelve ninguna fila.  
   
  Sys. dm_db_persisted_sku_features puede enumerar las siguientes características de cambio de base de datos como restringidas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ediciones específicas:  

@@ -1,4 +1,5 @@
 ---
+description: SHORTEST_PATH (Transact-SQL)
 title: Ruta de acceso más corta (gráfico SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/01/2020
@@ -18,11 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475851"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -86,7 +88,7 @@ Para proyectar los atributos del último nodo de trazado recorrido, se puede usa
 
 **Último nodo**: el último nodo hace referencia al nodo que aparece en último lugar en la ruta de acceso recorrida, independientemente de la dirección de la flecha en el predicado de coincidencia. Por ejemplo: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Aquí el último nodo de la ruta de acceso será el último nodo P visitado. 
 
-Mientras que el último nodo es el último nodo de la ruta de acceso del gráfico de salida para este patrón:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Mientras que el último nodo es el último nodo de la ruta de acceso del gráfico de salida para este patrón: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Esta función devuelve la suma de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
@@ -101,10 +103,10 @@ Esta función devuelve el número de valores no NULL del atributo node/Edge dese
 ### <a name="avg"></a>MEDIA
 Devuelve el promedio de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
-### <a name="min"></a>MÍN
+### <a name="min"></a>MIN
 Devuelve el valor mínimo de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
-### <a name="max"></a>MÁX
+### <a name="max"></a>MAX
 Devuelve el valor máximo de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
 ## <a name="remarks"></a>Observaciones  

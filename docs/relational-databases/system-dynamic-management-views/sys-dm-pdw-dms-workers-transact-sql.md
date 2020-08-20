@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_pdw_dms_workers (Transact-SQL)
 title: Sys. dm_pdw_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 43b471634efc60a2beb4abd982b04437bdebb2af
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 886b96bebe2d7535694dc724d7ad236ae1c2b5f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474788"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>Sys. dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86197116"
 |dms_step_index|**int**|Paso del plan DMS en el que se ejecuta este trabajador.<br /><br /> request_id, step_index y dms_step_index forman la clave de esta vista.||  
 |pdw_node_id|**int**|Nodo en el que se está ejecutando el trabajo.|Vea node_id en [Sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Distribución en la que se ejecuta el trabajador, si existe.|Vea distribution_id en [Sys. pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|tipo|**nvarchar(32)**|Tipo de subproceso de trabajo de DMS que esta entrada representa.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' ESCRITOR '|  
+|type|**nvarchar(32)**|Tipo de subproceso de trabajo de DMS que esta entrada representa.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' ESCRITOR '|  
 |status|**nvarchar(32)**|Estado del trabajo de DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Rendimiento de lectura o escritura en el último segundo.|Mayor o igual que 0. ES NULL si la consulta se canceló o produjo un error antes de que se pudiera ejecutar el trabajo.|  
 |bytes_processed|**bigint**|Número total de bytes procesados por este trabajador.|Mayor o igual que 0. ES NULL si la consulta se canceló o produjo un error antes de que se pudiera ejecutar el trabajo.|  

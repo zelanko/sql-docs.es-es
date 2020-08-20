@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_pdw_dms_external_work (Transact-SQL)
 title: Sys. dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,17 +13,17 @@ ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f87d950f4fe876e6b04e1df1f529d22126058113
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 8633a363aa6ba486be4113bdf4826f2dc2e1a579
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474807"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>Sys. dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]vista del sistema que contiene información sobre todos los pasos del servicio de movimiento de datos (DMS) para operaciones externas.  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] vista del sistema que contiene información sobre todos los pasos del servicio de movimiento de datos (DMS) para operaciones externas.  
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
@@ -30,7 +31,7 @@ ms.locfileid: "86197126"
 |step_index|**int**|Paso de consulta que invoca a este trabajo de DMS.<br /><br /> request_id, step_index y dms_step_index forman la clave de esta vista.|Igual que step_index en [Sys. dm_pdw_request_steps &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Paso actual del plan DMS.<br /><br /> request_id, step_index y dms_step_index forman la clave de esta vista.|Igual que dms___step_index en [Sys. dm_pdw_dms_workers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Nodo que ejecuta el trabajo de DMS.|Igual que node_id en [Sys. dm_pdw_nodes &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|tipo|**nvarchar(60)**|Tipo de operación externa que se está ejecutando en este nodo.<br /><br /> La división de archivos es una operación en un archivo de Hadoop externo que se ha dividido en varios supuestos más pequeños.|' DIVISIÓN DE ARCHIVOS '|  
+|type|**nvarchar(60)**|Tipo de operación externa que se está ejecutando en este nodo.<br /><br /> La división de archivos es una operación en un archivo de Hadoop externo que se ha dividido en varios supuestos más pequeños.|' DIVISIÓN DE ARCHIVOS '|  
 |work_id|**int**|IDENTIFICADOR de división del archivo.|Mayor o igual que 0.<br /><br /> Único por nodo de proceso.|  
 |input_name|**nvarchar(60)**|Nombre de cadena de la entrada que se lee.|Para un archivo de Hadoop, este es el nombre de archivo de Hadoop.|  
 |read_location|**bigint**|Desplazamiento de la ubicación de lectura.||  

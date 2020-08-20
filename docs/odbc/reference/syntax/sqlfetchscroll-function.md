@@ -1,4 +1,5 @@
 ---
+description: Función SQLFetchScroll
 title: Función SQLFetchScroll | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6c65ef71f5c2cb9202ab788cac5e00357674f4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3c725e11c889765c18c2ff14625b6bde4705051
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476090"
 ---
 # <a name="sqlfetchscroll-function"></a>Función SQLFetchScroll
 **Conformidad**  
@@ -76,7 +77,7 @@ SQLRETURN SQLFetchScroll(
   
  Número de la fila que se va a capturar. La interpretación de este argumento depende del valor del argumento *FetchOrientation* . Para obtener más información, vea "colocar el cursor" en la sección "Comentarios".  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -104,7 +105,7 @@ SQLRETURN SQLFetchScroll(
 |24000|Estado de cursor no válido|El *StatementHandle* estaba en un estado ejecutado pero no se asoció ningún conjunto de resultados con el *StatementHandle*.|  
 |40001|Error de serialización|La transacción en la que se ejecutó la captura ha finalizado para evitar el interbloqueo.|  
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*. A continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLFetchScroll** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) el *StatementHandle* especificado no se encontraba en un estado ejecutado. Se llamó a la función sin llamar primero a **SQLExecDirect**, **SQLExecute** o a una función de catálogo.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> Se llamó a **SQLFetch** (DM) para *StatementHandle* después de llamar a **SQLExtendedFetch** y antes de que se llamara a **SQLFreeStmt** con la opción SQL_CLOSE.|  
@@ -148,7 +149,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="cursor-positioning-rules"></a>Reglas de posición del cursor  
  En las secciones siguientes se describen las reglas exactas para cada valor de FetchOrientation. Estas reglas usan la notación siguiente.  
   
-|Notation|Significado|  
+|Notación|Significado|  
 |--------------|-------------|  
 |*Antes del inicio*|El cursor de bloque se coloca antes del inicio del conjunto de resultados. Si la primera fila del conjunto de filas nuevo es anterior al inicio del conjunto de resultados, **SQLFetchScroll** devuelve SQL_NO_DATA.|  
 |*Después del final*|El cursor de bloque se coloca después del final del conjunto de resultados. Si la primera fila del conjunto de filas nuevo es posterior al final del conjunto de resultados, **SQLFetchScroll** devuelve SQL_NO_DATA.|  
@@ -164,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |Condición|Primera fila del conjunto de filas nuevo|  
 |---------------|-----------------------------|  
 |*Antes del inicio*|1|  
-|*CurrRowsetStart + RowsetSize*[1] * \<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] * \< = LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Después del final*|  
 |*Después del final*|*Después del final*|  
   
@@ -182,7 +183,7 @@ SQLRETURN SQLFetchScroll(
 |*Después de end y LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*Después de end y LastResultRow >= RowsetSize* <sup>[2]</sup>|*LastResultRow-RowsetSize + 1* <sup>[2]</sup>|  
   
- [1] **SQLFetchScroll** devuelve SQLSTATE 01S06 (intento de captura antes de que el conjunto de resultados devolviera el primer conjunto de filas) y SQL_SUCCESS_WITH_INFO.  
+ [1]   **SQLFetchScroll** devuelve SQLSTATE 01S06 (intento de captura antes de que el conjunto de resultados devolviera el primer conjunto de filas) y SQL_SUCCESS_WITH_INFO.  
   
  [2] si se ha cambiado el tamaño del conjunto de filas desde la llamada anterior para capturar filas, este es el nuevo tamaño del conjunto de filas.  
   
@@ -196,13 +197,13 @@ SQLRETURN SQLFetchScroll(
 |*CurrRowsetStart = 1 y FetchOffset < 0*|*Antes del inicio*|  
 |*CurrRowsetStart > 1 y CurrRowsetStart + FetchOffset < 1 y &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Antes del inicio*|  
 |*CurrRowsetStart > 1 y CurrRowsetStart + FetchOffset < 1 y &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
-|*1 <= CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
+|*1 <= CurrRowsetStart + FetchOffset \< = LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Después del final*|  
 |*Después de end y FetchOffset >= 0*|*Después del final*|  
   
- [1] ***SQLFetchScroll*** devuelve el mismo conjunto de filas que si se llamara con FetchOrientation establecido en SQL_FETCH_ABSOLUTE. Para obtener más información, vea la sección "SQL_FETCH_ABSOLUTE".  
+ [1]   ***SQLFetchScroll*** devuelve el mismo conjunto de filas que si se llamara con FetchOrientation establecido en SQL_FETCH_ABSOLUTE. Para obtener más información, vea la sección "SQL_FETCH_ABSOLUTE".  
   
- [2] **SQLFetchScroll** devuelve SQLSTATE 01S06 (intento de captura antes de que el conjunto de resultados devolviera el primer conjunto de filas) y SQL_SUCCESS_WITH_INFO.  
+ [2]   **SQLFetchScroll** devuelve SQLSTATE 01S06 (intento de captura antes de que el conjunto de resultados devolviera el primer conjunto de filas) y SQL_SUCCESS_WITH_INFO.  
   
  [3] si se ha cambiado el tamaño del conjunto de filas desde la llamada anterior para capturar filas, este es el nuevo tamaño del conjunto de filas.  
   
@@ -215,10 +216,10 @@ SQLRETURN SQLFetchScroll(
 |*FetchOffset < 0 y &#124; FetchOffset &#124; > LASTRESULTROW y &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Antes del inicio*|  
 |*FetchOffset < 0 y &#124; FetchOffset &#124; > LASTRESULTROW y &#124; FetchOffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Antes del inicio*|  
-|*1 <= FetchOffset \<= LastResultRow*|*FetchOffset*|  
+|*1 <= FetchOffset \< = LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Después del final*|  
   
- [1] **SQLFetchScroll** devuelve SQLSTATE 01S06 (intento de captura antes de que el conjunto de resultados devolviera el primer conjunto de filas) y SQL_SUCCESS_WITH_INFO.  
+ [1]   **SQLFetchScroll** devuelve SQLSTATE 01S06 (intento de captura antes de que el conjunto de resultados devolviera el primer conjunto de filas) y SQL_SUCCESS_WITH_INFO.  
   
  [2] si se ha cambiado el tamaño del conjunto de filas desde la llamada anterior para capturar filas, este es el nuevo tamaño del conjunto de filas.  
   
@@ -247,7 +248,7 @@ SQLRETURN SQLFetchScroll(
 |Condición|Primera fila del conjunto de filas nuevo|  
 |---------------|-----------------------------|  
 |*BookmarkRow + FetchOffset < 1*|*Antes del inicio*|  
-|*1 <= BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
+|*1 <= BookmarkRow + FetchOffset \< = LastResultRow*|*BookmarkRow + FetchOffset*|  
 |*BookmarkRow + FetchOffset > LastResultRow*|*Después del final*|  
   
  Para obtener información sobre los marcadores, vea [marcadores (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -277,7 +278,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
  Por ejemplo, supongamos que el conjunto de filas actual incluye las filas 21 a 30, el tamaño del conjunto de filas es 10, el cursor quita las filas eliminadas del conjunto de resultados y el cursor detecta las filas agregadas al conjunto de resultados. En la tabla siguiente se muestran las filas que devuelve **SQLFetchScroll** en varias situaciones.  
   
-|Cambio|Tipo de captura|FetchOffset|Nuevo conjunto de filas [1]|  
+|Change|Tipo de captura|FetchOffset|Nuevo conjunto de filas [1]|  
 |------------|----------------|-----------------|---------------------|  
 |Eliminar fila 21|NEXT|0|de 31 a 40|  
 |Eliminar fila 31|NEXT|0|de 32 a 41|  
@@ -364,6 +365,6 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 |Colocar el cursor, actualizar los datos del conjunto de filas o actualizar o eliminar los datos del conjunto de resultados|[Función SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

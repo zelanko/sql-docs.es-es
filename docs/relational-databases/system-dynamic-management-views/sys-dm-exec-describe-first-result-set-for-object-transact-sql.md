@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 title: Sys. dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0c08c6e0d41781783cf7aaffd1f26d6e7b4e417
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f85ed4083c03184efe3a642b4c9578ee53955e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475006"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ sys.dm_exec_describe_first_result_set_for_object
  @object_idDe un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado o un [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador. @object_id es de tipo **int**.  
   
  *\@include_browse_information*  
- @include_browse_informationes de tipo **bit**. Si está establecido en 1, cada consulta se analiza como si tuviera una opción FOR BROWSE en la consulta. Devuelve las columnas de clave adicionales e información de la tabla de origen.  
+ @include_browse_information es de tipo **bit**. Si está establecido en 1, cada consulta se analiza como si tuviera una opción FOR BROWSE en la consulta. Devuelve las columnas de clave adicionales e información de la tabla de origen.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
  Estos metadatos comunes se devuelven como un conjunto de resultados con una única fila por cada columna de los metadatos de los resultados. Cada fila describe el tipo y la nulabilidad de la columna en el formato descrito en la siguiente sección. Si la primera instrucción no existe en cada una de las rutas de acceso de control, se devuelve un conjunto de resultados con cero filas.  
@@ -96,7 +97,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|Contiene un entero que representa el error que se va a devolver. Se asigna a error_type_desc. Vea la lista bajo las notas.|  
 |**error_type_desc**|**nvarchar(60)**|Contiene una cadena corta en mayúsculas que representa el error que se va a devolver. Se asigna a error_type. Vea la lista bajo las notas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta función utiliza el mismo algoritmo que **sp_describe_first_result_set**. Para obtener más información, vea [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  En la tabla siguiente se muestran los tipos de error y su descripción.  
@@ -152,8 +153,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_describe_first_result_set &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [Sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
   
   

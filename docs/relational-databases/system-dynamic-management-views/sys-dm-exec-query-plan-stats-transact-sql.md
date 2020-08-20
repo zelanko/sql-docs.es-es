@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_exec_query_plan_stats (Transact-SQL)
 title: Sys. dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -17,12 +18,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c76005fefffdbce76309762b1d2a1cd81d83537
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474980"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>Sys. dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -61,12 +62,12 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
 |**cifra**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
 |**query_plan**|**xml**|Contiene la última representación de SHOWPLAN en tiempo de ejecución conocida del plan de ejecución de consulta real que se especifica con *plan_handle*. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.| 
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 Esta función del sistema está disponible a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4.
 
 Se trata de una característica opcional que requiere que la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esté habilitada. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, para realizar esta acción en el nivel de base de datos, vea la opción LAST_QUERY_PLAN_STATS en [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
-Esta función del sistema funciona en la infraestructura de generación de perfiles de estadísticas de ejecución de consultas **ligeras** . Para obtener más información, consulte la [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).  
+Esta función del sistema funciona en la infraestructura de generación de perfiles de estadísticas de ejecución de consultas **ligeras** . Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
 La salida del plan de presentación por sys. dm_exec_query_plan_stats contiene la siguiente información:
 -  Toda la información de tiempo de compilación que se encuentra en el plan almacenado en caché

@@ -1,4 +1,5 @@
 ---
+description: fn_syscollector_get_execution_details (Transact-SQL)
 title: fn_syscollector_get_execution_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2442148dbb8f9db45f5b80ba8b2a4fdd90ef5c29
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 615dd195f9553242b92b8830462036ab6384b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474679"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ fn_syscollector_get_execution_details ( log_id )
 |starttime|**datetime**|Hora en que el paquete empezó a ejecutarse.|  
 |endtime|**datetime**|Hora en que la ejecución del paquete se completó.|  
 |datacode|**int**|Valor entero que identifica el evento asociado a la entrada de registro. El valor "0" indica que el evento no ha generado ningún identificador.|  
-|databytes|**imagen**|Matriz de bytes que identifica un valor devuelto.|  
+|databytes|**image**|Matriz de bytes que identifica un valor devuelto.|  
 |message|**nvarchar**|Descripción del evento e información asociada a dicho evento.|  
   
 ## <a name="permissions"></a>Permisos  

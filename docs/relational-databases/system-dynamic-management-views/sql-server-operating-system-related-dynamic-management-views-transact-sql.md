@@ -1,4 +1,5 @@
 ---
+description: Vistas de administración dinámica relacionadas con el sistema operativo de SQL Server (Transact-SQL)
 title: SQL Server vistas de administración dinámica relacionadas con el sistema operativo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/17/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ca96f4134e58a129ed14129431f5d8caceae31d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2b95dc736e02dd274723686429907fbccf4fea2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475064"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica relacionadas con el sistema operativo de SQL Server (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

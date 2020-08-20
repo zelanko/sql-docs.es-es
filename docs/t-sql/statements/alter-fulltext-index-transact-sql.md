@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT INDEX (Transact-SQL)
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa8594033c004bed2f37204d9de96a75bcfb83f3
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0f8b215f3e90822fe285b93274b7d93a7e1ee8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479147"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -76,7 +77,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  La deshabilitación de un índice de texto completo permite desactivar el seguimiento de cambios y mantener el índice de texto completo, que puede reactivar en cualquier momento con ENABLE. Cuando se deshabilita el índice de texto completo, los metadatos del índice de texto completo permanecen en las tablas del sistema. Si CHANGE_TRACKING está habilitado (actualización automática o manual) cuando se deshabilita el índice de texto completo, el estado del índice se inmoviliza, los rastreos en curso se detienen y no se mantiene un seguimiento de los nuevos cambios en los datos de la tabla ni se propagan los cambios al índice.  
   
- SET CHANGE_TRACKING {MANUAL | AUTO | OFF}  
+ SET CHANGE_TRACKING {MANUAL | AUTO | OFF}   
  Especifica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propagará al índice de texto completo los cambios (actualizaciones, eliminaciones o inserciones) efectuados en las columnas de la tabla que cubre el índice de texto completo. Los cambios realizados en los datos con WRITETEXT y UPDATETEXT no se reflejan en el índice de texto completo y no se recopilan con el seguimiento de cambios.  
   
 > [!NOTE]  
@@ -92,7 +93,7 @@ ALTER FULLTEXT INDEX ON table_name
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mantendrá una lista de cambios en los datos indizados.  
   
  ADD | DROP *column_name*  
- Especifica las columnas que se agregarán o eliminarán de un índice de texto completo. La columna o columnas deben ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**, o **varbinary(max)** .  
+ Especifica las columnas que se agregarán o eliminarán de un índice de texto completo. La columna o columnas deben ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**, o **varbinary(max)**.  
   
  Utilice la cláusula DROP solamente en columnas que se hayan habilitado previamente para la indización de texto completo.  
   
@@ -129,7 +130,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Crea los índices adicionales de similitud de documentos y frases clave que forman parte de la indización semántica estadística. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,** _...n_]  
+ [ **,**_...n_]  
  Indica que se pueden especificar varias columnas para las cláusulas ADD, ALTER o DROP. Si se especifican varias columnas, sepárelas con comas.  
   
  WITH NO POPULATION  
@@ -159,7 +160,7 @@ ALTER FULLTEXT INDEX ON table_name
  UPDATE  
  Especifica el procesamiento de todas las inserciones, actualizaciones o eliminaciones desde la última vez que se actualizó el índice de seguimiento de cambios. Debe estar habilitado el rellenado de seguimiento de cambios en la tabla, pero el índice de actualización en segundo plano o el seguimiento automático de cambios no se deben activar.  
   
- {STOP | PAUSE | RESUME } POPULATION  
+ {STOP | PAUSE | RESUME } POPULATION   
  Detiene o pausa cualquier operación de rellenado en curso; o bien detiene o reanuda cualquier operación de rellenado en pausa.  
   
  STOP POPULATION no detiene el seguimiento automático de cambios ni el índice de actualización en segundo plano. Para detener el seguimiento de cambios, utilice SET CHANGE_TRACKING OFF.  
@@ -349,7 +350,7 @@ ALTER FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   

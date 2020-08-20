@@ -1,4 +1,5 @@
 ---
+description: Editor avanzado
 title: Editor avanzado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e8c23226d43bd9d10d56b84ae0b4edccc40151d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 343ebe85334869f97b374e5386c05b47fbc8b48e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478082"
 ---
 # <a name="advanced-editor"></a>Editor avanzado
 
@@ -30,7 +31,7 @@ ms.locfileid: "86923206"
 
   Use el cuadro de diálogo **Editor avanzado** para configurar las propiedades del objeto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] seleccionado.  
   
- El **Editor avanzado** está disponible para la mayor parte de los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que tienen propiedades que pueden configurarse. Es el único editor disponible para aquellos objetos que no muestran una interfaz de usuario personalizada.  
+ El **Editor avanzado** está disponible para la mayor parte de los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que tienen propiedades que pueden configurarse. Es el único editor disponible para aquellos objetos que no muestran una interfaz de usuario personalizada.   
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tienen propiedades que se pueden establecer en el nivel de componente, en el nivel de entrada y salida, y en el nivel de columna de entrada y salida. El **Editor avanzado** enumera todas las propiedades comunes y personalizadas del objeto seleccionado y las muestra, según corresponda, en un máximo de cuatro de las cinco pestañas siguientes:  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86923206"
   
 -   [Transformaciones de Integration Services](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de errores y mensajes de Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

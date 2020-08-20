@@ -1,4 +1,5 @@
 ---
+description: HDFS File Destination
 title: Destino de archivo HDFS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2019
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4ab4b9ae139d50beb707d751b14da32224bade67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfac02ca6db43d77f9157449df7319a6b67418e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477854"
 ---
 # <a name="hdfs-file-destination"></a>HDFS File Destination
 
@@ -36,7 +37,7 @@ ms.locfileid: "86920883"
 |Campo|Descripción|
 |-----------|-----------------|
 |**Hadoop Connection (Conexión de Hadoop)**|Especifique un administrador de conexiones de Hadoop existente o cree uno nuevo. Este administrador de conexiones indica dónde se hospedan los archivos HDFS.|
-|**Ruta del archivo**|Especifique el nombre del archivo HDFS.|
+|**Ruta de acceso del archivo**|Especifique el nombre del archivo HDFS.|
 |**Formato de archivo**|Especifique el formato del archivo HDFS. Las opciones disponibles son Text, Avro y ORC.|
 |**Carácter delimitador de columna**|Si selecciona el formato Text, especifique el carácter delimitador de columna.|
 |**Nombres de columna de la primera fila de datos**|Si selecciona el formato Text, indique si la primera fila del archivo contiene nombres de columnas.|
@@ -71,6 +72,6 @@ Se han probado las siguientes compilaciones de Java.
 
 ::: moniker-end
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [Administrador de conexiones de Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)  
 [Origen de archivo HDFS](../../integration-services/data-flow/hdfs-file-source.md)

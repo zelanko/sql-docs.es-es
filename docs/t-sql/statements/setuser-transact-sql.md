@@ -1,4 +1,5 @@
 ---
+description: SETUSER (Transact-SQL)
 title: SETUSER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78e081b5f684751e23efab27acac38e5413f9845
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e542bb0ef16017744c7f5f61d7358ec66149e1e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478677"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
  WITH NORESET  
  Especifica que las instrucciones SETUSER siguientes (que no especifican *username*) no deben restablecer la identidad del usuario como administrador del sistema o propietario de la base de datos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los miembros del rol fijo de servidor **sysadmin** o el propietario de una base de datos pueden usar la identidad de otro usuario con el fin de probar los permisos de ese usuario. No basta con pertenecer al rol fijo de base de datos db_owner.  
   
  Solo se debe utilizar SETUSER con usuarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SETUSER no se admite con usuarios de Windows. Cuando se ha utilizado SETUSER para asumir la identidad de otro usuario, los objetos que crea el usuario que realiza la suplantación serán propiedad del usuario suplantado. Por ejemplo, si el propietario de la base de datos adopta la identidad de la usuaria **Margaret** y crea una tabla llamada **orders**, la propietaria de la tabla **orders** será **Margaret**, en lugar del administrador del sistema.  

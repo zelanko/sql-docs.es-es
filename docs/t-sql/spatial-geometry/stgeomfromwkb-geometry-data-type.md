@@ -1,4 +1,5 @@
 ---
+description: STGeomFromWKB (tipo de datos geometry)
 title: STGeomFromWKB (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 898b3a613f96de95074547f66962df22033827f8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: dbd382664925059128b21a5a1dce048d7703fc2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479388"
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (tipo de datos geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
 
 ## <a name="arguments"></a>Argumentos
  *WKB_geometry*  
- Es la representación WKB de la instancia de **geometry** que se quiere devolver. *WKB_geometry* es una expresión **varbinary(max)** .  
+ Es la representación WKB de la instancia de **geometry** que se quiere devolver. *WKB_geometry* es una expresión **varbinary(max)**.  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometry** que se quiere devolver.  
@@ -50,7 +51,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El tipo OGC de la instancia de **geometry** devuelto por `STGeomFromText()` se establece en la entrada WKB correspondiente.  
   
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  

@@ -1,4 +1,5 @@
 ---
+description: SET QUOTED_IDENTIFIER (Transact-SQL)
 title: SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2019
@@ -25,12 +26,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8933c07f0cfcc70131738ba2936b4262fb7ae249
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f216887909893d91384fa91479820588dfdae1a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478755"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -53,6 +54,8 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 
 SET QUOTED_IDENTIFIER ON
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>Observaciones
 Cuando `SET QUOTED_IDENTIFIER` es ON (valor predeterminado), los identificadores pueden delimitarse con comillas dobles (" ") y los literales deben delimitarse con comillas simples (' '). Todas las cadenas delimitadas por comillas dobles se interpretan como identificadores de objetos. Por ello, los identificadores entrecomillados no tienen que seguir las reglas para identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pueden ser palabras clave reservadas e incluir caracteres que normalmente no se admiten en los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. No se pueden utilizar comillas dobles para delimitar expresiones de cadenas literales; para delimitar las cadenas literales se deberán utilizar comillas simples. Si una comilla simple (') forma parte de la cadena literal, se puede representar mediante dos comillas simples ("). `SET QUOTED_IDENTIFIER` debe ser ON cuando se usen palabras clave reservadas como nombres de objetos de la base de datos.

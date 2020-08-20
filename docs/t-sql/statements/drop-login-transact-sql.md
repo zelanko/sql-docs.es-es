@@ -1,4 +1,5 @@
 ---
+description: DROP LOGIN (Transact-SQL)
 title: DROP LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -22,12 +23,12 @@ ms.assetid: acb5c3dc-7aa2-49f6-9330-573227ba9b1a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df4d622a85d1da13b3a47d7358f142c161795094
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c841d8ec30915cd1494624c34eba77f893e4d901
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478949"
 ---
 # <a name="drop-login-transact-sql"></a>DROP LOGIN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ DROP LOGIN login_name
  *login_name*  
  Especifica el nombre del inicio de sesión que se va a quitar.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un inicio de sesión no puede quitarse mientras esté activo. No se puede quitar un inicio de sesión que sea propietario de un elemento protegible, un objeto de servidor o un trabajo del Agente SQL Server.  
   
  Puede quitar un inicio de sesión al que están asignados usuarios de la base de datos; no obstante, esto creará usuarios huérfanos. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md).  

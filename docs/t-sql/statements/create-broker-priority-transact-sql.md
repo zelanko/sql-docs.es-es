@@ -1,4 +1,5 @@
 ---
+description: CREATE BROKER PRIORITY (Transact-SQL)
 title: CREATE BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c753f9dc977f94064161ee340ebced685dd9f6c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478988"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ FOR CONVERSATION
 
 ## <a name="arguments"></a>Argumentos
  *ConversationPriorityName*  
- Especifica el nombre para esta prioridad de conversación. El nombre debe ser único en la base de datos actual y debe cumplir las reglas de los [!INCLUDE[ssDE](../../includes/ssde-md.md)]identificadores[ de ](../../relational-databases/databases/database-identifiers.md).  
+ Especifica el nombre para esta prioridad de conversación. El nombre debe ser único en la base de datos actual y debe cumplir las reglas de los  [identificadores](../../relational-databases/databases/database-identifiers.md) de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  SET  
  Especifica los criterios para determinar si la prioridad de conversación se aplica a una conversación. Si se especifica, SET debe contener al menos un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL. Si no se especifica SET, se establecen los valores predeterminados para los tres criterios.  
@@ -95,7 +96,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Especifica el nombre de un servicio que se va a usar como criterio para determinar si la prioridad de conversación se aplica a un extremo de una conversación.  
   
- *RemoteServiceName* es un literal de tipo **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con la cadena *RemoteServiceName*. En la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. El servicio de destino puede estar en la instancia actual de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en una instancia remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* es un literal de tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con la cadena *RemoteServiceName*. En la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. El servicio de destino puede estar en la instancia actual de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en una instancia remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  "*RemoteServiceName*"  
  Especifica que la prioridad de conversación se puede aplicar a lo siguiente:  
@@ -112,7 +113,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Especifica la prioridad que se asigna a cualquier extremo de conversación que utilice los contratos y servicios que se han especificado en la prioridad de conversación. *PriorityValue* debe ser un literal entero comprendido entre 1 (prioridad más baja) y 10 (prioridad más alta). El valor predeterminado es 5.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] asigna los niveles de prioridad a los extremos de conversación. Los niveles de prioridad controlan la prioridad de las operaciones asociadas al extremo. Cada conversación tiene dos extremos:  
   
 -   El extremo iniciador de conversación asocia un lado de la conversación con el servicio iniciador y con la cola del iniciador. El extremo iniciador de la conversación se crea cuando se ejecuta la instrucción BEGIN DIALOG. Las operaciones que realiza el extremo iniciador de conversación son:  
@@ -285,7 +286,7 @@ CREATE BROKER PRIORITY BronzePriority
          PRIORITY_LEVEL = 2);  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: LOGINPROPERTY (Transact-SQL)
 title: LOGINPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -32,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 20b67d4b1913cd896d3c4473b0c0f161b833154f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c3014a8d57602dc80b7faeec26dbc85d43f91c44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479624"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +79,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**PasswordLastSetTime**|Devuelve la fecha en la que se estableció la contraseña actual.|  
 |**PasswordHashAlgorithm**|Devuelve el algoritmo de hash utilizado para la contraseña.|  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  El tipo de datos depende del valor solicitado.  
   
  **IsLocked**, **IsExpired** e **IsMustChange** son de tipo **int**.  
@@ -113,7 +114,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL si el inicio de sesión no es un inicio de sesión de SQL Server válido.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función integrada devuelve información sobre la configuración de la directiva de contraseñas de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los nombres de las propiedades no distinguen mayúsculas de minúsculas, por lo que nombres de propiedades como **BadPasswordCount** y **badpasswordcount** son equivalentes. Los valores de las propiedades **PasswordHash, PasswordHashAlgorithm** y **PasswordLastSetTime** están disponibles en todas las configuraciones compatibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero las demás propiedades solo están disponibles cuando se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] y tanto CHECK_POLICY como CHECK_EXPIRATION están habilitadas. Para obtener más información, vea [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## <a name="permissions"></a>Permisos  

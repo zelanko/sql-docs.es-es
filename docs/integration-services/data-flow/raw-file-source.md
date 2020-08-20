@@ -1,4 +1,5 @@
 ---
+description: archivo sin formato, origen
 title: Origen de archivo sin formato | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd61425f63f4124951c8c0c90c6c599292602c23
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b19fb7a9ab60f5f89a12ab3311c39f0611d233f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916048"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477877"
 ---
 # <a name="raw-file-source"></a>archivo sin formato, origen
 
@@ -63,7 +64,7 @@ ms.locfileid: "86916048"
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo.   
 ## <a name="raw-file-source-editor-columns-page"></a>Editor de origen de archivos sin formato (página Columnas)
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo.   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   

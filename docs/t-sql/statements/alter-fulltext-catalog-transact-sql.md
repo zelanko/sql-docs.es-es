@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT CATALOG (Transact-SQL)
 title: ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7fd19ebcedda06703058d96313ab477d660393d5
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 4f7bba432c31146e9bec8bdfc54ea3bee63e9bc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479137"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
  Tenga en cuenta que, en función de la cantidad de datos indizados, una combinación maestra puede llevar cierto tiempo. La combinación maestra de una cantidad grande de datos puede crear una transacción de larga duración, con lo que se retrasa el truncamiento del registro de transacciones durante el punto de comprobación. En este caso, el registro de transacciones podría crecer significativamente bajo el modelo de recuperación completa. Como práctica recomendada, asegúrese de que su registro de transacciones contenga el espacio suficiente para una transacción de larga duración antes de reorganizar un índice de texto completo grande en una base de datos que use el modelo de recuperación completa. Para obtener más información, vea [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
- AS DEFAULT  
+ AS DEFAULT   
  Especifica que este catálogo es el predeterminado. Cuando se crean índices de texto completo sin especificar catálogos, se utiliza el catálogo predeterminado. Si hay un catálogo de texto completo predeterminado, al establecer este catálogo como AS DEFAULT, se invalidará el catálogo predeterminado existente.  
   
 ## <a name="permissions"></a>Permisos  
@@ -95,7 +96,7 @@ GO
 --Returned 0, which means the catalog is not accent sensitive.  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   

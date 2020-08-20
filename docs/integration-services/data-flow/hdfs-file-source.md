@@ -1,4 +1,5 @@
 ---
+description: Origen de archivo HDFS
 title: Origen de archivo HDFS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3be6be9e43d6e9e643ea76c4d4a08cd5b370b343
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b015d1d62e42b5b453c273d899c387a222c3fe2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477816"
 ---
 # <a name="hdfs-file-source"></a>Origen de archivo HDFS
 
@@ -36,14 +37,14 @@ ms.locfileid: "86920288"
 |Campo|Descripción|  
 |-----------|-----------------|  
 |**Hadoop Connection (Conexión de Hadoop)**|Especifique un administrador de conexiones de Hadoop existente o cree uno nuevo. Este administrador de conexiones indica dónde se hospedan los archivos HDFS.|  
-|**Ruta del archivo**|Especifique el nombre del archivo HDFS.|  
+|**Ruta de acceso del archivo**|Especifique el nombre del archivo HDFS.|  
 |**Formato de archivo**|Especifique el formato del archivo HDFS. Las opciones disponibles son Text y Avro. (No se admiten los orígenes ORC).|  
 |**Carácter delimitador de columna**|Si selecciona el formato Text, especifique el carácter delimitador de columna.|  
 |**Nombres de columna de la primera fila de datos**|Si selecciona el formato Text, indique si la primera fila del archivo contiene nombres de columnas.|  
   
  Después de configurar estas opciones, seleccione la pestaña **Columna** para asignar columnas de origen a columnas de destino del flujo de datos.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Administrador de conexiones de Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [Destino de archivo HDFS](../../integration-services/data-flow/hdfs-file-destination.md)  
   

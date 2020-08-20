@@ -1,4 +1,5 @@
 ---
+description: ALTER USER (Transact-SQL)
 title: ALTER USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/10/2020
@@ -25,12 +26,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5626b98f81bcca2a21902cf0d38f44a256fa73e0
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: ca728137fc4fb76ae4109233b43732a3befbfca6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478998"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -53,7 +54,7 @@ Cambia el nombre de un usuario de base de datos o cambia su esquema predetermina
         [Instancia administrada de <br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
@@ -228,7 +229,7 @@ GO
         [Instancia administrada de <br />SQL Database](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
-        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)

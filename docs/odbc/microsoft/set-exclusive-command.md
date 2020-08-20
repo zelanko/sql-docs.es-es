@@ -1,4 +1,5 @@
 ---
+description: Comando exclusivo de Set
 title: ESTABLECER comando exclusivo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d140c4be3ab850547ac82f9b954e7313b008dbf0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413c9188decc9011c2816b692b1fb4b6112ec45b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466357"
 ---
 # <a name="set-exclusive-command"></a>Comando exclusivo de Set
 Especifica si los archivos de tabla se abren para uso exclusivo o compartido en una red.  
@@ -39,5 +40,5 @@ SET EXCLUSIVE ON | OFF
 ## <a name="remarks"></a>Observaciones  
  Al cambiar la configuración de SET EXCLUSIVe no se cambia el estado de las tablas abiertas previamente. Por ejemplo, si se abre una tabla con SET EXCLUSIVe SET ON y SET EXCLUSIVe se cambia posteriormente a OFF, la tabla conserva su estado de uso exclusivo.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Cuadro de diálogo de configuración de Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

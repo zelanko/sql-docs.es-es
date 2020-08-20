@@ -1,4 +1,5 @@
 ---
+description: Llamadas a funciones escalares
 title: Llamadas a funciones escalares | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 349599a51b2996f419e6c8656a71bc9e30146542
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6d0f77adaf6284bceac126b3539121cbdb174ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465593"
 ---
 # <a name="scalar-function-calls"></a>Llamadas a funciones escalares
 Las funciones escalares devuelven un valor para cada fila. Por ejemplo, la función escalar de valor absoluto toma una columna numérica como argumento y devuelve el valor absoluto de cada valor de la columna. La secuencia de escape para llamar a una función escalar es  

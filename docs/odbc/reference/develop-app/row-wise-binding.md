@@ -1,4 +1,5 @@
 ---
+description: El enlace
 title: Enlace de modo de fila | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30d2426a8fb2a2bd0f0cb89c2de5bc326b67dfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465625"
 ---
 # <a name="row-wise-binding"></a>El enlace
 Cuando se usa el enlace de modo de fila, una aplicación define una estructura que contiene uno o dos, o en algunos casos tres, elementos para cada columna para la que se van a devolver los datos. El primer elemento contiene el valor de los datos y el segundo elemento contiene el búfer de longitud/indicador. Los indicadores y los valores de longitud se pueden almacenar en búferes independientes estableciendo los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si se hace esto, la estructura contiene un tercer elemento. A continuación, la aplicación asigna una matriz de estas estructuras, que contiene tantos elementos como filas hay en el conjunto de filas.  

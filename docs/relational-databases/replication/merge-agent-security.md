@@ -1,4 +1,5 @@
 ---
+description: Seguridad del Agente de mezcla
 title: Seguridad del Agente de mezcla | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 894c9d7cddb6473cc063863a3f39d7c48f7be00f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d571e5b41937947e0c6d03e5d1a84fe0dc88e8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465277"
 ---
 # <a name="merge-agent-security"></a>Seguridad del Agente de mezcla
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  El cuadro de diálogo **Seguridad del Agente de mezcla** permite especificar la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente de mezcla. El Agente de mezcla se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. La cuenta de Windows se denomina también *cuenta de proceso*porque el proceso del agente se ejecuta con dicha cuenta. Las opciones adicionales disponibles en el cuadro de diálogo dependen de cómo se tenga acceso al mismo:  
+   El cuadro de diálogo **Seguridad del Agente de mezcla** permite especificar la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente de mezcla. El Agente de mezcla se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. La cuenta de Windows se denomina también *cuenta de proceso*porque el proceso del agente se ejecuta con dicha cuenta. Las opciones adicionales disponibles en el cuadro de diálogo dependen de cómo se tenga acceso al mismo:  
   
 -   Si se tiene acceso al cuadro de diálogo desde el Asistente para nueva suscripción, también permite especificar el contexto para el que el Agente de mezcla realiza las conexiones con el suscriptor (para suscripciones de inserción) o con el publicador y el distribuidor (para las suscripciones de extracción). La conexión puede realizarse con la cuenta Windows o en el contexto de una cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que especifique.  
   
--   Si se tiene acceso al cuadro de diálogo desde el cuadro de diálogo **Propiedades de suscripción** , se debe especificar el contexto en que el Agente de mezcla realiza las conexiones haciendo clic en el botón de propiedades ( **...** ) de la fila **Conexión de suscriptor** o **Conexión de publicador** de dicho cuadro de diálogo. Para más información sobre cómo acceder al cuadro de diálogo **Propiedades de suscripción**, vea [Ver y modificar las propiedades de una suscripción de inserción](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) y [Ver y modificar las propiedades de una suscripción de extracción](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+-   Si se tiene acceso al cuadro de diálogo desde el cuadro de diálogo **Propiedades de suscripción** , se debe especificar el contexto en que el Agente de mezcla realiza las conexiones haciendo clic en el botón de propiedades (**...**) de la fila **Conexión de suscriptor** o **Conexión de publicador** de dicho cuadro de diálogo. Para más información sobre cómo acceder al cuadro de diálogo **Propiedades de suscripción**, vea [Ver y modificar las propiedades de una suscripción de inserción](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) y [Ver y modificar las propiedades de una suscripción de extracción](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  Todas las cuentas deben ser válidas y se debe especificar la contraseña correcta para cada cuenta. Las cuentas y las contraseñas se validan cuando se ejecuta el agente.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "85775289"
   
  La cuenta de Windows o la cuenta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usada para la conexión con el suscriptor debe ser como mínimo miembro del rol fijo de base de datos **db_owner** en la base de datos de suscripciones.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Administrar inicios de sesión y contraseñas en la replicación](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Modelo de seguridad del Agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  

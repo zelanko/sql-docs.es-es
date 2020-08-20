@@ -1,4 +1,5 @@
 ---
+description: sys.fn_trace_gettable (Transact-SQL)
 title: Sys. fn_trace_gettable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d1bc18704b4f2b239fe590184d58289d66b35fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85ffb20fb0ead23c8027ab9b4ba45f906fe8c097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464754"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ fn_trace_gettable ( 'filename' , number_files )
  *number_files*  
  Especifica el número de archivos de sustitución que se van a leer. Este número incluye el archivo inicial especificado en *filename*. *number_files* es de **tipo int**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si se especifica *number_files* como **valor predeterminado**, **fn_trace_gettable** Lee todos los archivos de sustitución incremental hasta que llega al final del seguimiento. **fn_trace_gettable** devuelve una tabla con todas las columnas válidas para el seguimiento especificado. Para obtener más información, vea [sp_trace_setevent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  Tenga en cuenta que la función fn_trace_gettable no cargará los archivos de sustitución incremental (cuando esta opción se especifica mediante el argumento *number_files* ), donde el nombre del archivo de seguimiento original termina con un carácter de subrayado y un valor numérico. (Esto no se aplica al carácter de subrayado y al número que se anexan automáticamente cuando se revierte un archivo). Como solución alternativa, puede cambiar el nombre de los archivos de seguimiento para quitar los guiones bajos en el nombre de archivo original. Por ejemplo, si el archivo original se denomina **Trace_Oct_5. TRC** y el archivo de sustitución incremental se denomina **Trace_Oct_5_1. TRC**, puede cambiar el nombre de los archivos a **TraceOct5. TRC** y **TraceOct5_1. TRC**.  
@@ -84,9 +85,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_trace_generateevent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_generateevent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
   

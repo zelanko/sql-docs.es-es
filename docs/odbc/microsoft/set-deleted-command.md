@@ -1,4 +1,5 @@
 ---
+description: Comando de eliminaciones de Set
 title: ESTABLECER comando eliminado | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3302dc7eecca7135dab9dff5afa376169be0f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60e00af582e0440957c8a4e743624e00f0ba3e58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466377"
 ---
 # <a name="set-deleted-command"></a>Comando de eliminaciones de Set
 Especifica si se procesan los registros marcados para su eliminación y si están disponibles para su uso en otros comandos.  
@@ -42,5 +43,5 @@ SET DELETED ON | OFF
 > [!IMPORTANT]  
 >  SET DELETEd se omite si el ámbito predeterminado del comando es el registro actual o si se incluye un ámbito de un único registro. INDEX siempre omite SET DELETEd y indexa todos los registros de la tabla.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [ELIMINAR, comando SQL](../../odbc/microsoft/delete-sql-command.md)

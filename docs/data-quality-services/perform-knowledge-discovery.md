@@ -1,4 +1,5 @@
 ---
+description: Realizar la detección de conocimiento
 title: Realizar la detección de conocimiento
 ms.date: 06/04/2013
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9f1d6865a4c432694201c9b5a666fff3fd46d117
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65bde5805bbe3e768b56094d165b385d01f68439
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466824"
 ---
 # <a name="perform-knowledge-discovery"></a>Realizar la detección de conocimiento
 
@@ -39,7 +40,7 @@ ms.locfileid: "85883405"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para crear una base de conocimiento, debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN.  
   
-##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a>Primer paso: iniciar la detección de conocimiento  
+##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a> Primer paso: iniciar la detección de conocimiento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -202,7 +203,7 @@ ms.locfileid: "85883405"
   
     -   Haga clic en **Atrás** para volver a la página **Detectar** . Para realizar la actividad Administración de dominios, después de hacer clic en **Cerrar**, tendría que hacer clic en **Detección de conocimiento** en la pantalla **Abrir base de conocimiento** , continuar en la pantalla **Administración de la base de conocimiento: administrar términos del dominio** , hacer clic en **Finalizar**y, por último, hacer clic en **Sí** para publicar la base de conocimiento o en **No** para guardar el trabajo en la base de conocimiento y salir.  
   
-##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a>Seguimiento: después de realizar la detección de conocimiento  
+##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a> Seguimiento: después de realizar la detección de conocimiento  
  Una vez agregado el conocimiento a la base de conocimiento durante el proceso de detección de conocimiento asistido por PC, puede utilizar la base de conocimiento para un proyecto de limpieza de forma inmediata, o puede realizar antes la administración de dominios. Para más información sobre la limpieza de datos o la administración de dominios, vea [Limpieza de datos](../data-quality-services/data-cleansing.md) o [Administrar un dominio](../data-quality-services/managing-a-domain.md).  
   
 ##  <a name="the-meaning-of-correct-error-and-invalid-values"></a><a name="Meaning"></a> El significado de los valores Correcto, Error y No válido  
@@ -218,7 +219,7 @@ ms.locfileid: "85883405"
   
  Cuando se realiza la limpieza de datos interactiva en la página **Administrar y ver resultados** de la actividad **Limpieza** , tanto los valores no válidos como los erróneos se incluyen en la pestaña **No válido** de la página **Administrar y ver resultados** .  
   
-##  <a name="how-to-display-the-appropriate-values"></a><a name="Display"></a>Cómo mostrar los valores adecuados  
+##  <a name="how-to-display-the-appropriate-values"></a><a name="Display"></a> Cómo mostrar los valores adecuados  
  Puede modificar la presentación de la manera siguiente:  
   
 -   **Filtre** los resultados que desea en la tabla, en función de su estado, seleccionando este en la lista desplegable **Filtro** .  

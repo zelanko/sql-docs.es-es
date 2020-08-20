@@ -1,4 +1,5 @@
 ---
+description: Bases de conocimiento y dominios de DQS
 title: Bases de conocimiento y dominios de DQS
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e27c84f54901bb66e2d934af661c3aac20aea384
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362508"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466831"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de conocimiento y dominios de DQS
 
@@ -69,7 +70,7 @@ ms.locfileid: "87362508"
   
  Puede, no obstante, controlar el uso de mayúsculas y minúsculas en los valores que exporta en los resultados de la limpieza. Para ello, establezca la propiedad de dominio **Dar formato a la salida para** (vea [Establecer las propiedades de dominio](../data-quality-services/set-domain-properties.md)) y active la casilla **Estandarizar salida** al exportar los resultados de la limpieza (vea [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="domain-management"></a><a name="Domains"></a>Administración de dominios  
+##  <a name="domain-management"></a><a name="Domains"></a> Administración de dominios  
  La administración de dominios permite al administrador de datos cambiar y aumentar de forma interactiva los metadatos generados por la actividad de detección de conocimiento asistido por PC. Cada cambio que realice es para un dominio de la base de conocimiento. En la actividad de administración de dominios, puede hacer lo siguiente:  
   
 -   Crear un nuevo dominio. El nuevo dominio se puede vincular a un dominio existente o copiarlo a partir de este.  
@@ -138,7 +139,7 @@ ms.locfileid: "87362508"
   
  Se puede realizar la búsqueda de coincidencias en los dominios únicos que componen el dominio compuesto, pero no en el dominio compuesto en sí.  
   
-##  <a name="data-matching"></a><a name="Matching"></a>Coincidencia de datos  
+##  <a name="data-matching"></a><a name="Matching"></a> Coincidencia de datos  
  Además de realizar cambios manuales en una base de conocimiento mediante la administración de dominios, puede agregar conocimiento coincidente a una base de conocimiento. Al objeto de preparar a DQS para el proceso de eliminación de datos duplicados, debe crear una directiva de búsqueda de coincidencias que vaya a usar DQS para calcular la probabilidad de encontrar coincidencias. La directiva incluye una o varias reglas de búsqueda de coincidencias que crea el administrador de datos para identificar cómo DQS debe comparar filas de datos. El administrador de datos determina qué campos de datos en la fila se deben comparar y el peso que debe tener cada campo en la comparación. El administrador de datos también determinará cuán alta será la probabilidad para que se identifique como coincidencia. DQS agrega las reglas de búsqueda de coincidencias a la base de conocimiento para su uso en el desarrollo de la actividad de búsqueda de coincidencias en el proyecto de calidad de datos.  
   
  Para obtener más información acerca de la base de conocimiento y la búsqueda de coincidencias, vea [Coincidencia de datos](../data-quality-services/data-matching.md).  

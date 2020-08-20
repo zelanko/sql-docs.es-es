@@ -1,4 +1,5 @@
 ---
+description: Teniendo en cuenta las características de base de datos que se utilizan
 title: Consideraciones de uso de las características de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9d966781def1c3eab6a9568eab07ab591326171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2abaed3806514a161c5c506d8bad89b4d3b75153
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465897"
 ---
 # <a name="considering-database-features-to-use"></a>Teniendo en cuenta las características de base de datos que se utilizan
 Una vez conocido el nivel básico de interoperabilidad, se deben tener en cuenta las características de base de datos utilizadas por la aplicación. Por ejemplo, ¿qué instrucciones SQL ejecutará la aplicación? ¿Usará la aplicación cursores desplazables? Realizadas? Procedimientos? ¿Datos largos? Para obtener ideas sobre las características que pueden no admitir todos los DBMS, vea las descripciones de las funciones [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)y [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) , y el [Apéndice C: gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Las características requeridas por una aplicación podrían eliminar algunos DBMS de la lista de DBMS de destino. También podrían mostrar que la aplicación puede dirigirse fácilmente a muchos DBMS.  

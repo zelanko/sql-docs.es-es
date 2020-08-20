@@ -1,4 +1,5 @@
 ---
+description: Habilitar la búsqueda semántica en tablas y columnas
 title: Habilitar la búsqueda semántica en tablas y columnas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 49691cea038a121ac27bdea729e3646e3375889f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c891b2089225de1560a8371440524846b7a96163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465024"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar la búsqueda semántica en tablas y columnas
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -256,7 +257,7 @@ GO
   
  Los siguientes idiomas se admiten para la indización semántica. En esta lista se representa la salida de la vista de catálogo [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md), ordenada por LCID.  
   
-|Idioma|LCID|  
+|Lenguaje|LCID|  
 |--------------|----------|  
 |Alemán|1031|  
 |Inglés (EE. UU.)|3082|  
@@ -274,7 +275,7 @@ GO
   
  Si el tipo de documento que desea indizar no está en la lista de tipos compatibles, puede tener que buscar, descargar, e instalar filtros adicionales. Para obtener más información, consulte [ver o cambiar los filtros registrados y separadores de palabras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> Recomendado: considere la posibilidad de crear un grupo de archivos independiente para los índices de texto completo y semánticos  
+##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> Procedimiento recomendado: Creación de un grupo de archivos independiente para los índices de texto completo y semánticos  
  Plantéese crear un grupo de archivos independiente para los índices de texto completo y semántico si la asignación de espacio en disco es un problema. Los índices semánticos se crean en el mismo grupo de archivos que el índice de texto completo. Un índice semántico totalmente rellenado puede contener una gran cantidad de datos.  
  
 ##  <a name="issue-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a> Problema: la búsqueda en una columna específica no devuelve resultados  

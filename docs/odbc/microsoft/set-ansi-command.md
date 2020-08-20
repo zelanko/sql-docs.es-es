@@ -1,4 +1,5 @@
 ---
+description: Comando de ANSI SET
 title: ESTABLECER comando ANSI | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97269642b4147b966fdd71003f5f81ebe7905282
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a9f9c576199905c23994af4dc6b031114f4ad72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466407"
 ---
 # <a name="set-ansi-command"></a>Comando de ANSI SET
 Determina cómo se realizan las comparaciones entre cadenas de longitudes diferentes con el operador = en los comandos SQL de Visual FoxPro.  
@@ -56,6 +57,6 @@ SET ANSI ON | OFF
 ## <a name="string-order"></a>Orden de cadena  
  En los comandos SQL, el orden de izquierda a derecha de las dos cadenas en una comparación es irrelevantswitching una cadena de un lado del operador = o = = a la otra no afecta al resultado de la comparación.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Comando SELECT-SQL](../../odbc/microsoft/select-sql-command.md)   
  [Comando exacto de conjunto](../../odbc/microsoft/set-exact-command.md)

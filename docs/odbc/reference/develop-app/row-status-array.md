@@ -1,4 +1,5 @@
 ---
+description: Matriz de Estados de fila
 title: Matriz de estado de fila | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 60dead23fe0051c05698e094f37ddad96b2b337d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8067aaf8724a6634d165d53743cbd0ef2015f6bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465638"
 ---
 # <a name="row-status-array"></a>Matriz de Estados de fila
 Además de los datos, **SQLFetch** y **SQLFetchScroll** pueden devolver una matriz que proporciona el estado de cada fila del conjunto de filas. Esta matriz se especifica mediante el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR. La aplicación asigna esta matriz y debe tener tantos elementos como especifique el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE. Los valores de la matriz se establecen mediante **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**y **SQLSetPos.** Los valores describen el estado de la fila y si el estado ha cambiado desde que se capturó por última vez.  

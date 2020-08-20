@@ -1,4 +1,5 @@
 ---
+description: Configurar y administrar archivos de sinónimos para búsquedas de texto completo
 title: Configuración y administración de archivos de diccionario de sinónimos para la búsqueda de texto completo
 ms.date: 07/01/2020
 ms.prod: sql
@@ -14,16 +15,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d713b4eb49a527f2cbbbf871cce9d01d4449443d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465077"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-Las consultas de búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden buscar sinónimos de los términos especificados por el usuario usando un *diccionario de sinónimos* de búsqueda de texto completo. Cada diccionario de sinónimos define un conjunto de sinónimos para un idioma concreto. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Las consultas de búsqueda de texto completo de  pueden buscar sinónimos de los términos especificados por el usuario usando un *diccionario de sinónimos* de búsqueda de texto completo. Cada diccionario de sinónimos define un conjunto de sinónimos para un idioma concreto. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos.
 
 La comprobación de coincidencia con el diccionario de sinónimos tiene lugar para todas las consultas [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) y [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) , y para las consultas [CONTAINS](../../t-sql/queries/contains-transact-sql.md) y [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) que especifican la cláusula `FORMSOF THESAURUS`.
   
@@ -224,7 +225,7 @@ Puede configurar el diccionario de sinónimos de un idioma determinado editando 
   
 -   Un diccionario de sinónimos no debe contener ninguna entrada duplicada entre las entradas `<sub>` de los conjuntos de expansión y los elementos `<pat>` de los conjuntos de reemplazo.  
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   

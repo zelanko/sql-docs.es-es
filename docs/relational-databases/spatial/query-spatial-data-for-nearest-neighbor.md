@@ -1,4 +1,5 @@
 ---
+description: Consultar datos espaciales para el vecino más próximo
 title: Consulta de datos espaciales para el vecino más próximo | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97e87d6590e9a8a79575e51d0a35f5e882ea21a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e53b816b25c991e7dafb891a0006b256979cb298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464952"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Consultar datos espaciales para el vecino más próximo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +72,7 @@ SELECT TOP ( number )
 7.  Todas las filas para las que `STDistance` devuelve **NULL** se deben filtrar.  
   
 > [!WARNING]  
->  Los métodos que toman los tipos de datos **geography** o **geometry** como argumentos devolverán **NULL** si los SRID no son los mismos para los tipos.  
+>   Los métodos que toman los tipos de datos **geography** o **geometry** como argumentos devolverán **NULL** si los SRID no son los mismos para los tipos.  
   
  Se recomienda utilizar las nuevas teselaciones de índice espacial para los índices empleados en las consultas de vecino más cercano. Para obtener más información sobre las teselaciones de índice espacial, vea [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
@@ -102,7 +103,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  A la consulta le falta una cláusula **WHERE** que usa `STDistance()` en un formato especificado en la sección de sintaxis, por lo que la consulta no puede usar un índice espacial.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

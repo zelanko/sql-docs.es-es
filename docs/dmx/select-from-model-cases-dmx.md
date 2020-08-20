@@ -1,4 +1,5 @@
 ---
+description: Seleccione del &lt; modelo &gt; . CASOS (DMX)
 title: Seleccione del &lt; modelo &gt; . CASOS (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fa1da730fc370995b22927604f9550c865877f4
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466534"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Seleccione del &lt; modelo &gt; . CASOS (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

@@ -1,4 +1,5 @@
 ---
+description: Tamaño del conjunto de filas
 title: Tamaño del conjunto de filas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 11b95768934f96e1587b3c570b2510f3c2849239
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d915d6e11fc7678312eab60c3316815cfabab38e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304246"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465613"
 ---
 # <a name="rowset-size"></a>Tamaño del conjunto de filas
 El tamaño del conjunto de filas que se va a usar depende de la aplicación. Normalmente, las aplicaciones basadas en pantalla siguen una de estas dos estrategias. La primera consiste en establecer el tamaño del conjunto de filas en el número de filas que se muestran en la pantalla. Si el usuario cambia el tamaño de la pantalla, la aplicación cambia el tamaño del conjunto de filas en consecuencia. La segunda consiste en establecer el tamaño del conjunto de filas en un número mayor, como 100, lo que reduce el número de llamadas al origen de datos. La aplicación se desplaza localmente en el conjunto de filas siempre que sea posible y captura nuevas filas solo cuando se desplaza fuera del conjunto de filas.  

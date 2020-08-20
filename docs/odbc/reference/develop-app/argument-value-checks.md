@@ -1,4 +1,5 @@
 ---
+description: Comprobaciones de valores de argumento
 title: Comprobaciones de valores de argumento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6c6e4de16c4a1a80be893acbc7a1993b375f2fee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dac29eea6c9a2b5f178aa233520674ea466cf48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465957"
 ---
 # <a name="argument-value-checks"></a>Comprobaciones de valores de argumento
 El administrador de controladores comprueba los siguientes tipos de argumentos. A menos que se indique lo contrario, el administrador de controladores devuelve SQL_ERROR para los errores en los valores de argumento.  

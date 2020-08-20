@@ -1,4 +1,5 @@
 ---
+description: Utilizar relaciones de valor en un dominio compuesto
 title: Utilizar relaciones de valor en un dominio compuesto
 ms.date: 11/22/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e9876e5a232174c387fb46cf4f3b2012f1435dc2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67d6d4743fc373afd0ac008a72c7d97751b8ac29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466603"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Utilizar relaciones de valor en un dominio compuesto
 
@@ -34,7 +35,7 @@ ms.locfileid: "85883305"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para ver las relaciones de valor de un dominio compuesto.  
   
-##  <a name="view-value-relations"></a><a name="Use"></a>Ver relaciones de valor  
+##  <a name="view-value-relations"></a><a name="Use"></a> Ver relaciones de valor  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85883305"
   
 6.  No se puede cambiar ninguno de los valores de la tabla. Si ha realizado otras operaciones, haga clic en **Finalizar** para completar la actividad de administración de dominios. En caso contrario, haga clic en **Cancelar**.  
   
-##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a>Seguimiento: después de ver las relaciones de valor  
+##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a> Seguimiento: después de ver las relaciones de valor  
  Una vez vistas las relaciones de valor, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
   

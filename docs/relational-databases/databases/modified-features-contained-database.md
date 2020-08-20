@@ -1,4 +1,5 @@
 ---
+description: Características modificadas (base de datos contenida)
 title: Características modificadas (base de datos independiente) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ac376cdb7fd57506470b03facdc16b415098b7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465417"
 ---
 # <a name="modified-features-contained-database"></a>Características modificadas (base de datos contenida)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "85726403"
 ## <a name="user-options"></a>Opciones de usuario  
  Al habilitar bases de datos independientes, la opción [user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) se debe establecer en 0 para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md)   
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)  
   

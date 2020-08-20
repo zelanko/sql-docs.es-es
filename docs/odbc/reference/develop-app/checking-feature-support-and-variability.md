@@ -1,4 +1,5 @@
 ---
+description: Comprobación de compatibilidad con las características y la variabilidad
 title: Comprobando la compatibilidad de las características y la variabilidad | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff45f220-9b8b-4c44-82f8-a8e9913fffea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 47f16160c05d1c410e3889f0bb857befe88df5b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60fb6b39d7b2326a925aea40303ce52165cca8a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465917"
 ---
 # <a name="checking-feature-support-and-variability"></a>Comprobación de compatibilidad con las características y la variabilidad
 Para comprobar la compatibilidad y la variabilidad de las características, las aplicaciones generalmente llaman a **SQLGetInfo**, **SQLGetFunctions**y **SQLGetTypeInfo**. Un buen punto de partida son los niveles de cumplimiento de la gramática de SQL y la API del controlador. Estos describen los niveles amplios de compatibilidad con las características. A continuación, la aplicación puede llamar a **SQLGetInfo** con otras opciones para determinar la compatibilidad o la variabilidad de las características que necesita, **SQLGetFunctions** para determinar si se admiten las funciones que necesita más allá del nivel de conformidad devuelto y **SQLGetTypeInfo** para determinar qué tipos de datos de SQL se admiten.  

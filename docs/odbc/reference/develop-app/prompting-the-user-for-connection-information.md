@@ -1,4 +1,5 @@
 ---
+description: Preguntar al usuario información de conexión
 title: Solicitando al usuario información de conexión | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b0f120a1076f14f5e67d506e52a446e0a3d4713
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f52e0d120fb150fe58b850107847d7ef5df20e7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282088"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465717"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Preguntar al usuario información de conexión
 Si la aplicación usa **SQLConnect** y necesita preguntar al usuario sobre la información de conexión, como un nombre de usuario y una contraseña, debe hacerlo. Aunque esto permite que la aplicación controle su "aspecto y funcionamiento", puede obligar a la aplicación a contener código específico del controlador. Esto sucede cuando la aplicación necesita solicitar al usuario información de conexión específica del controlador. Esto supone una situación imposible para las aplicaciones genéricas, que están diseñadas para funcionar con todos los controladores, incluidos los controladores que no existen cuando se escribe la aplicación.  

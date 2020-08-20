@@ -1,4 +1,5 @@
 ---
+description: Servicios de datos de referencia en DQS
 title: Servicios de datos de referencia en DQS
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ecae6543a0a83084bbabb141339464d56b36c753
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e382be5f109efff9a0a08eb434017334fe54d2c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466758"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servicios de datos de referencia en DQS
 
@@ -32,7 +33,7 @@ ms.locfileid: "85883357"
   
 -   Admite el uso de datos de referencia de Azure Marketplace, así como directamente de proveedores de datos de referencia de terceros.  
   
-##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>Uso de datos de referencia de Azure Marketplace  
+##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a> Uso de datos de referencia de Azure Marketplace  
  DQS admite el uso de datos de referencia de Azure Marketplace para permitir a los proveedores de contenido proporcionar servicios de datos de referencia a través de Marketplace. Marketplace es un servicio de Microsoft que proporciona un único canal de catálogo de soluciones y entrega de datos de alta calidad y aplicaciones como servicio basado en nube. Para obtener más información acerca de Marketplace, consulte [más información sobre Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) ( https://azuremarketplace.microsoft.com/about) .
   
  La perfecta integración entre Marketplace y DQS simplifica los pasos asociados con la detección, búsqueda y adquisición de información para los proyectos de calidad de datos desde DQS. Los datos se utilizan desde DQS, y los usuarios de DQS pueden conseguir datos de alta calidad aunando las características de DQS, Marketplace y los proveedores de servicios de datos de referencia de una manera innovadora.  

@@ -1,4 +1,5 @@
 ---
+description: Conformidad de interfaz de núcleo
 title: Conformidad con la interfaz principal | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 886ded1cd79b35488c0d47df3dbd8055dc6a8016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ca38e2b616c39839cfe813dad984f7eba3796a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465847"
 ---
 # <a name="core-interface-conformance"></a>Conformidad de interfaz de núcleo
 Todos los controladores ODBC deben presentar al menos el cumplimiento de la interfaz de nivel básico. Dado que las características del nivel básico son las que requieren la mayoría de las aplicaciones interoperables genéricas, el controlador puede trabajar con estas aplicaciones. Las características del nivel básico también se corresponden con las características definidas en la especificación de la CLI ISO y con las características no opciones definidas en la especificación de la CLI Open Group. Un controlador ODBC compatible con la interfaz de nivel básico permite que la aplicación realice todas las acciones siguientes:  

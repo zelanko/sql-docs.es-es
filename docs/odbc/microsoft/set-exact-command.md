@@ -1,4 +1,5 @@
 ---
+description: Comando exacto de conjunto
 title: ESTABLECER comando exacto | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e754fff35b6b948ac63d19361067b2d65a07fdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bae23ef0677061f92d0466564619e85d4ae1630
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466367"
 ---
 # <a name="set-exact-command"></a>Comando exacto de conjunto
 Especifica las reglas para comparar dos cadenas de longitudes diferentes.  
@@ -52,18 +53,18 @@ SET EXACT ON | OFF
   
 |De comparación|= EXACTO DESACTIVADO|= EXACT EN|= = EXACTO activado o desactivado|  
 |----------------|------------------|-----------------|--------------------------|  
-|"ABC" = "ABC"|Coincidencia|Coincidencia|Coincidencia|  
+|"ABC" = "ABC"|Coincidir con|Coincidir con|Coincidir con|  
 |"AB" = "ABC"|Ninguna coincidencia|Ninguna coincidencia|Ninguna coincidencia|  
-|"ABC" = "AB"|Coincidencia|Ninguna coincidencia|Ninguna coincidencia|  
+|"ABC" = "AB"|Coincidir con|Ninguna coincidencia|Ninguna coincidencia|  
 |"ABC" = "ab_"|Ninguna coincidencia|Ninguna coincidencia|Ninguna coincidencia|  
-|"AB" = "ab_"|Ninguna coincidencia|Coincidencia|Ninguna coincidencia|  
-|"ab_" = "AB"|Coincidencia|Coincidencia|Ninguna coincidencia|  
+|"AB" = "ab_"|Ninguna coincidencia|Coincidir con|Ninguna coincidencia|  
+|"ab_" = "AB"|Coincidir con|Coincidir con|Ninguna coincidencia|  
 |"" = "AB"|Ninguna coincidencia|Ninguna coincidencia|Ninguna coincidencia|  
-|"AB" = ""|Coincidencia|Ninguna coincidencia|Ninguna coincidencia|  
-|"__" = ""|Coincidencia|Coincidencia|Ninguna coincidencia|  
-|"" = "___"|Ninguna coincidencia|Coincidencia|Ninguna coincidencia|  
-|TRIM ("___") = ""|Coincidencia|Coincidencia|Coincidencia|  
-|"" = TRIM ("___")|Coincidencia|Coincidencia|Coincidencia|  
+|"AB" = ""|Coincidir con|Ninguna coincidencia|Ninguna coincidencia|  
+|"__" = ""|Coincidir con|Coincidir con|Ninguna coincidencia|  
+|"" = "___"|Ninguna coincidencia|Coincidir con|Ninguna coincidencia|  
+|TRIM ("___") = ""|Coincidir con|Coincidir con|Coincidir con|  
+|"" = TRIM ("___")|Coincidir con|Coincidir con|Coincidir con|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Comando de ANSI SET](../../odbc/microsoft/set-ansi-command.md)

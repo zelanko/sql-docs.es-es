@@ -1,4 +1,5 @@
 ---
+description: CREAR las limitaciones de la instrucción de índice
 title: Limitaciones de la instrucción CREATE INDEX | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 053287d5087b377429221c31dd4e6b20f24248e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db2b346afa13e7f7f37151d6d4fa8efdca9fa230
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466457"
 ---
 # <a name="create-index-statement-limitations"></a>CREAR las limitaciones de la instrucción de índice
 La instrucción CREATE INDEX no es compatible con los controladores de texto o de Microsoft Excel.  
@@ -27,7 +28,7 @@ La instrucción CREATE INDEX no es compatible con los controladores de texto o d
   
  El controlador dBASE no puede crear un índice en una columna lógica.  
   
- Cuando se usa el controlador dBASE, se puede mejorar el tiempo de respuesta de archivos grandes creando un índice. MDX (o. NDX) en la columna (campo) especificada en las cláusulas WHERE de una instrucción SELECT. Los índices. MDX existentes se aplicarán automáticamente para =, >, \<, >=, =< y entre los operadores en una cláusula WHERE y los predicados like, así como en los predicados de combinación.  
+ Cuando se usa el controlador dBASE, se puede mejorar el tiempo de respuesta de archivos grandes creando un índice. MDX (o. NDX) en la columna (campo) especificada en las cláusulas WHERE de una instrucción SELECT. Los índices. MDX existentes se aplicarán automáticamente para =, >, \<, > =, =< y entre los operadores en una cláusula WHERE, y como los predicados, así como en los predicados de combinación.  
   
  Cuando se utiliza el controlador dBASE, el índice creado por una instrucción CREATE UNIQUE INDEX es realmente no único y los valores duplicados se pueden insertar en la columna indizada. Solo se puede Agregar al índice un registro de un conjunto con valores de clave idénticos.  
   

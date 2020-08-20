@@ -1,4 +1,5 @@
 ---
+description: Escribir instrucciones Transact-SQL internacionales
 title: Escribir instrucciones Transact-SQL internacionales | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2019
@@ -18,12 +19,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72b2d6056d3a48d21804d02677867a9757f4f671
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465543"
 ---
 # <a name="write-international-transact-sql-statements"></a>Escribir instrucciones Transact-SQL internacionales
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "86003931"
 
     Esto evita problemas de conversión de página de códigos. Para otras consideraciones, consulte [Diferencias de almacenamiento entre UTF-8 y UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], reemplace todos los usos de los tipos de datos **char**, **varchar** y **varchar(max)** por **nchar**, **nvarchar** y **nvarchar(max)** . Si usa una intercalación habilitada para [caracteres complementarios (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), los datos se codifican con UTF-16. El uso de una intercalación que no sea de SC da como resultado la codificación de los datos mediante UCS-2. Esto evita problemas de conversión de página de códigos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], reemplace todos los usos de los tipos de datos **char**, **varchar** y **varchar(max)** por **nchar**, **nvarchar** y **nvarchar(max)**. Si usa una intercalación habilitada para [caracteres complementarios (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), los datos se codifican con UTF-16. El uso de una intercalación que no sea de SC da como resultado la codificación de los datos mediante UCS-2. Esto evita problemas de conversión de página de códigos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
 
     > [!IMPORTANT]
-    > El tipo de datos **text** está en desuso y no debe usarse en nuevos trabajos de desarrollo. Planee la conversión de datos de tipo **text** a **varchar (max)** .
+    > El tipo de datos **text** está en desuso y no debe usarse en nuevos trabajos de desarrollo. Planee la conversión de datos de tipo **text** a **varchar (max)**.
   
 -   Cuando realice comparaciones y operaciones con los meses y días de la semana, utilice las partes numéricas de la fecha en lugar de cadenas de nombres. Las distintas configuraciones de idioma devuelven nombres diferentes para los meses y los días de la semana. Por ejemplo, `DATENAME(MONTH,GETDATE())` devuelve `May` cuando el idioma está establecido en inglés de EE. UU., devuelve `Mai` cuando el idioma está establecido en alemán y `mai` cuando el idioma está establecido en francés. En su lugar, utilice una función como [DATEPART](../../t-sql/functions/datepart-transact-sql.md) que utiliza el número del mes en lugar del nombre. Utilice los nombres DATEPART cuando genere conjuntos de resultados que se van a mostrar al usuario ya que, generalmente, los nombres de fecha resultan más significativos que una representación numérica. No codifique, sin embargo, ninguna lógica que dependa de que los nombres mostrados estén en un idioma determinado.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "86003931"
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)     
 [DATEPART &#40;Transact-SQL&#41;](../../t-sql/functions/datepart-transact-sql.md)        
 [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)      

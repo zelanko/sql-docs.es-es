@@ -1,4 +1,5 @@
 ---
+description: Crear instrucciones SQL Interoperable
 title: Construir instrucciones SQL interoperables | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1eccdef63b7d06a456a07f5f1a9ccad987d2de29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: acdb0f360242c4c9953804cb768214b0a78251dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465887"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Crear instrucciones SQL Interoperable
 Como se mencionó en las secciones anteriores, las aplicaciones interoperables deben usar la gramática de SQL de ODBC. Sin embargo, además de utilizar esta gramática, las aplicaciones interoperables pueden enfrentarse a una serie de problemas adicionales. Por ejemplo, ¿qué hace una aplicación si quiere usar una característica, como combinaciones externas, que no es compatible con todos los orígenes de datos?  

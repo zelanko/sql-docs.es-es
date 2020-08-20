@@ -1,4 +1,5 @@
 ---
+description: Marcas de modelado (DMX)
 title: Marcas de modelado (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7e05d629f46f1c94bbe9305510daf37c09a39c9b
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 52b28158c59e12886f8058883c65654b23ece9e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466551"
 ---
 # <a name="modeling-flags-dmx"></a>Marcas de modelado (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -51,7 +52,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  Para obtener más información sobre cómo trabajar con columnas del modelo de minería de datos, vea [columnas del modelo de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="see-also"></a>Consulte también  
- [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Referencia de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   

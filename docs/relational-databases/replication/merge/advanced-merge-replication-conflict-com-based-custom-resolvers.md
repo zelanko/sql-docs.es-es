@@ -1,4 +1,5 @@
 ---
+description: 'Conflictos de replicación de mezcla avanzada: solucionadores personalizados basados en COM'
 title: Solucionadores personalizados basados en COM | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93093d342a7a7a7a45d625a089a0cdd2753db66c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 569669c45eb973993e932263ea8c87b7f3b4c0a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465253"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>Conflictos de replicación de mezcla avanzada: solucionadores personalizados basados en COM
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,6 +44,6 @@ ms.locfileid: "85896342"
   
 ## <a name="see-also"></a>Consulte también  
  [Detección y resolución de conflictos de replicación de mezcla avanzada](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Solucionadores basados en Microsoft COM](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)  
+ [Microsoft COM-Based Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

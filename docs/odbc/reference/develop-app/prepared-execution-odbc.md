@@ -1,4 +1,5 @@
 ---
+description: Ejecución preparada ODBC
 title: Ejecución preparada ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 147ca85b21296575ff55afbe66ab286cc4824fae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6141af2cde7106419ab1eb68f86d5817f055aab2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465747"
 ---
 # <a name="prepared-execution-odbc"></a>Ejecución preparada ODBC
 La ejecución preparada es una manera eficaz de ejecutar una instrucción más de una vez. La instrucción se compila primero o está *preparada* en un plan de acceso. Después, el plan de acceso se ejecuta una o más veces más adelante. Para obtener más información sobre los planes de acceso, vea [procesar una instrucción SQL](../../../odbc/reference/processing-a-sql-statement.md).  

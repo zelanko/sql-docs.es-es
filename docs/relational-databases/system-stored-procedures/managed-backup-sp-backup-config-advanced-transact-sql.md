@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_config_advanced (Transact-SQL)
 title: managed_backup. sp_backup_config_advanced (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 786028df8e421580b5a994175223d21a20d44f41
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: d092851d710de96e9c1b06d2866183a7dfac01bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464697"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,7 +46,7 @@ EXEC managed_backup.sp_backup_config_advanced
     ,[@local_cache_path = ] 'NOT AVAILABLE'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a> Argumentos  
  @database_name  
  Nombre de la base de datos para habilitar la copia de seguridad administrada en una base de datos específica. Si es NULL o *, esta copia de seguridad administrada se aplica a todas las bases de datos del servidor.  
   
@@ -95,7 +97,7 @@ Go
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [managed_backup. sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   

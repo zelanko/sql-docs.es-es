@@ -1,4 +1,5 @@
 ---
+description: Datos de caracteres y cadenas de c
 title: Datos de caracteres y cadenas de C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7bb25022d4e0c0559f2a8f77b89a4ba26aeba33a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e412976cb297af9a9e38bbc6991647eeab48483b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465927"
 ---
 # <a name="character-data-and-c-strings"></a>Datos de caracteres y cadenas de c
 Los parámetros de entrada que hacen referencia a los datos de caracteres de longitud variable (como los nombres de columna, los parámetros dinámicos y los valores de atributo de cadena) tienen un parámetro de longitud asociado. Si la aplicación termina cadenas con el carácter nulo, como es habitual en C, proporciona como argumento la longitud en bytes de la cadena (sin incluir el terminador null) o SQL_NTS (cadena terminada en null). Un argumento de longitud no negativa especifica la longitud real de la cadena asociada. El argumento de longitud puede ser 0 para especificar una cadena de longitud cero, que es distinta de un valor NULL. El valor negativo SQL_NTS indica al controlador que determine la longitud de la cadena buscando el carácter de terminación de NULL.  

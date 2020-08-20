@@ -1,4 +1,5 @@
 ---
+description: Ejecutar un proyecto de coincidencia
 title: Ejecutar un proyecto de coincidencia
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0a8a71349a5948c4ac162b82bd92d3b022446cb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f1d75abc4a4e7f5221c500c211e915fa51bd49b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466708"
 ---
 # <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
 
@@ -75,7 +76,7 @@ ms.locfileid: "85883331"
     > [!NOTE]  
     >  Haga clic en **Cerrar** para guardar la fase del proyecto de búsqueda de coincidencias y volver a la página de inicio de DQS. La próxima vez que abra este proyecto, se iniciará en la misma fase. Haga clic en **Cancelar** para finalizar la actividad de búsqueda de coincidencias, perder los cambios realizados y volver a la página de inicio de DQS.  
   
-##  <a name="matching-stage"></a><a name="MatchingStage"></a>Fase de coincidencia  
+##  <a name="matching-stage"></a><a name="MatchingStage"></a> Fase de coincidencia  
  En esta fase, realizará un proceso de búsqueda de coincidencias asistido por PC que mostrará el número de coincidencias existentes en los datos de origen basándose en las reglas de coincidencia. Este proceso generará una tabla con los resultados de búsqueda de coincidencias que mostrará los clústeres que DQS ha identificado, cada uno de los registros del clúster con su identificador de registro y su puntuación de coincidencia, y el registro inicial del clúster. El registro inicial del clúster se selecciona aleatoriamente. Para determinar el registro que permanece, seleccione la regla de permanencia en la página **Exportar** cuando ejecute el proyecto de búsqueda de coincidencias. Cada fila adicional de un clúster se considera una coincidencia; su puntuación de coincidencia (comparada con la del registro inicial) se muestra en la tabla de resultados. El número de clúster es el mismo que el identificador de registro del registro inicial del clúster.  
   
  En los resultados de búsqueda de coincidencias, podrá filtrar los datos que desee y rechazar las coincidencias que estime oportuno. Podrá mostrar datos de generación de perfiles para el proceso de búsqueda de coincidencias en su conjunto, detalles sobre las reglas de coincidencia aplicadas, y estadísticas globales de los resultados de búsqueda de coincidencias. El proceso de búsqueda de coincidencias puede identificar clústeres superpuestos y no superpuestos y, si se ejecuta varias veces, se puede ejecutar con los datos copiados del origen y reindizados, o con los datos anteriores.  
@@ -104,7 +105,7 @@ ms.locfileid: "85883331"
   
 12. Haga clic en **Siguiente** para continuar con la fase de permanencia y exportación.  
   
-##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a>Fase de permanencia y exportación  
+##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a> Fase de permanencia y exportación  
  En el proceso de permanencia, Data Quality Services determina el registro que permanece para cada clúster; este registro reemplazará a los registros que coinciden con él en el clúster. A continuación, exporta los resultados de búsqueda de coincidencias y/o permanencia a una tabla de la base de datos de SQL Server, a un archivo .csv o a un archivo de Excel.  
   
  La permanencia es opcional. Puede exportar los resultados sin ejecutar la permanencia, en cuyo caso DQS utilizará el registro dinámico que designó en el análisis de coincidencia. Si dos o más registros de un clúster cumplen la regla de permanencia, el proceso de permanencia seleccionará como el registro que permanece aquel cuyo identificador de registro sea más bajo. Puede exportar los registros que permanecen a varios archivos o tablas usando reglas de permanencia diferentes.  
@@ -169,7 +170,7 @@ ms.locfileid: "85883331"
 ##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a> Seguimiento: después de ejecutar un proyecto de búsqueda de coincidencias  
  Después de ejecutar un proyecto de búsqueda de coincidencias, puede cambiar la directiva de coincidencia en la base de conocimiento y crear y ejecutar otro proyecto de búsqueda de coincidencias basado en la directiva de coincidencia actualizada. Para más información, consulte [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a>Pestañas generador de perfiles y resultados  
+##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a> Pestañas generador de perfiles y resultados  
  Las pestañas Generador de perfiles y Resultados contienen las estadísticas del proceso de búsqueda de coincidencias.  
   
 ### <a name="profiler-tab"></a>Pestaña Generador de perfiles  

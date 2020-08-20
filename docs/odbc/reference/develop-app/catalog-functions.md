@@ -1,4 +1,5 @@
 ---
+description: Funciones de catálogo
 title: Funciones de catálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb28ec6f4ea299dae8737fc707fd53e4d102442d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b75e6a40252f06f6b9e2105bd557fd35ded9243f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465947"
 ---
 # <a name="catalog-functions"></a>Funciones de catálogo
 Todas las bases de datos tienen una estructura que describe cómo se almacenarán los datos en la base de datos. Por ejemplo, una base de datos simple de pedidos de ventas podría tener la estructura que se muestra en la ilustración siguiente, en la que las columnas de ID. se utilizan para vincular las tablas.  

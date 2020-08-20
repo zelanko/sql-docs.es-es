@@ -1,4 +1,5 @@
 ---
+description: Funciones de catálogo de ODBC
 title: Funciones de catálogo en ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6731018b99f2f3043e48ee7c174a08cb9ef71fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b7a34a29e55f6705ccc98e5644096ac6ea7bfd67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465977"
 ---
 # <a name="catalog-functions-in-odbc"></a>Funciones de catálogo de ODBC
 ODBC contiene las siguientes funciones de catálogo:  

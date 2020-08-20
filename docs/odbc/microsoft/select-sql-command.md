@@ -1,4 +1,5 @@
 ---
+description: Seleccione - comando SQL
 title: Comando SELECT-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466427"
 ---
 # <a name="select---sql-command"></a>Seleccione - comando SQL
 Recupera datos de una o más tablas.  
@@ -113,7 +114,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   Si incluye dos tablas en una consulta y no especifica una condición de combinación, cada registro de la primera tabla se combina con cada registro de la segunda tabla, siempre y cuando se cumplan las condiciones del filtro. Este tipo de consulta puede generar resultados largos.  
   
--   Tenga cuidado al combinar tablas con campos vacíos porque Visual FoxPro coincide con campos vacíos. Por ejemplo, si se une a en CUSTOMER. ZIP y factura. ZIP y si el cliente contiene 100 códigos postales vacíos y la factura contiene 400 códigos postales vacíos, el resultado de la consulta contiene 40.000 registros adicionales resultantes de los campos vacíos. Utilice la función **Empty ()** para eliminar los registros vacíos del resultado de la consulta.  
+-   Tenga cuidado al combinar tablas con campos vacíos porque Visual FoxPro coincide con campos vacíos. Por ejemplo, si se une en CUSTOMER.ZIP y INVOICE.ZIP y si el cliente contiene 100 códigos postales vacíos y la factura contiene 400 códigos postales vacíos, el resultado de la consulta contiene 40.000 registros adicionales resultantes de los campos vacíos. Utilice la función **Empty ()** para eliminar los registros vacíos del resultado de la consulta.  
   
 -   Debe utilizar el operador AND para conectar varias condiciones de combinación. Cada condición de combinación tiene el formato siguiente:  
   
@@ -280,7 +281,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>Notas del controlador  
  Cuando la aplicación envía la instrucción SQL de ODBC SELECT al origen de datos, el controlador ODBC de Visual FoxPro convierte el comando en el comando SELECT de Visual FoxPro sin traducción a menos que el comando contenga una secuencia de escape ODBC. Los elementos incluidos en una secuencia de escape de ODBC se convierten a la sintaxis de Visual FoxPro. Para obtener más información sobre el uso de secuencias de escape de ODBC, vea [funciones de fecha y hora](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) y en la *Referencia del programador de Microsoft ODBC*, vea [secuencias de escape en ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [ESTABLECER ANSI](../../odbc/microsoft/set-ansi-command.md)   

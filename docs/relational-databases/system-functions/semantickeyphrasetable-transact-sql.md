@@ -1,4 +1,5 @@
 ---
+description: semantickeyphrasetable (Transact-SQL)
 title: semantickeyphrasetable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8026760d93132e3a18b51145bc1802e416bc0934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464825"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ SEMANTICKEYPHRASETABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a> Argumentos  
  **table**  
  Nombre de una tabla con indización de texto completo y semántica habilitada.  
   
@@ -91,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>Ejemplos  
   
-###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>Ejemplo 1: buscar las frases clave principales de un documento específico  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> Ejemplo 1: buscar las frases clave principales de un documento específico  
  En el ejemplo siguiente se recuperan las 10 frases clave principales del documento especificado por la variable @DocumentId en la columna Document de la tabla Production.Document de la base de datos de ejemplo AdventureWorks. La variable @DocumentId representa un valor de la columna de clave del índice de texto completo. La función **SEMANTICKEYPHRASETABLE** recupera estos resultados eficazmente mediante una búsqueda de índice en vez de un recorrido de tabla. En este ejemplo se supone que la columna está configurada para texto completo y para indización semántica.  
   
 ```sql  
@@ -106,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>Ejemplo 2: buscar los documentos principales que contienen una frase clave específica  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a> Ejemplo 2: buscar los documentos principales que contienen una frase clave específica  
  En el ejemplo siguiente se recuperan los 25 primeros documentos que contengan la palabra clave "Bracket" de la columna Document de la tabla Production.Document de la base de datos de ejemplo AdventureWorks. En este ejemplo se supone que la columna está configurada para texto completo y para indización semántica.  
   
 ```sql  

@@ -1,4 +1,5 @@
 ---
+description: sys.allocation_units (Transact-SQL)
 title: Sys. allocation_units (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58ae604f06e97e07560d55bc8eea103b27002aaa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3d3cfeafa6ef955ba02962b75135a6bd40ac51f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464857"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85652853"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|Id. de la unidad de asignación. Es único en una base de datos.|  
-|tipo|**tinyint**|Tipo de unidad de asignación:<br /><br /> 0 = Quitado<br /><br /> 1 = Datos de fila (todos los tipos de datos, excepto datos LOB)<br /><br /> 2 = datos de objetos grandes (LOB) (**Text**, **ntext**, **Image**, **XML**, tipos de valores grandes y tipos definidos por el usuario CLR)<br /><br /> 3 = Datos de desbordamiento de fila|  
+|type|**tinyint**|Tipo de unidad de asignación:<br /><br /> 0 = Quitado<br /><br /> 1 = Datos de fila (todos los tipos de datos, excepto datos LOB)<br /><br /> 2 = datos de objetos grandes (LOB) (**Text**, **ntext**, **Image**, **XML**, tipos de valores grandes y tipos definidos por el usuario CLR)<br /><br /> 3 = Datos de desbordamiento de fila|  
 |type_desc|**nvarchar(60)**|Descripción del tipo de unidad de asignación:<br /><br /> **REDUCIDO**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|Id. del contenedor de almacenamiento asociado con la unidad de asignación.<br /><br /> Si type = 1 ó 3, container_id = sys.partitions.hobt_id.<br /><br /> Si type = 2, entonces container_id = sys.partitions.partition_id.<br /><br /> 0 = Unidad de asignación marcada para eliminación diferida|  
 |data_space_id|**int**|Id. del grupo de archivos donde reside la unidad de asignación.|  
@@ -51,7 +52,7 @@ ms.locfileid: "85652853"
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

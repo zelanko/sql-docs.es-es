@@ -1,4 +1,5 @@
 ---
+description: Ejemplo de diagnóstico de las puertas de enlace
 title: Ejemplo de diagnóstico de puertas de enlace | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b18fd78be7be2eb79316339cbdf3d315deb194fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17e32f0ccdc1b2fbbebb1969083e216ed3371688
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305576"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465787"
 ---
 # <a name="gateways-diagnostic-example"></a>Ejemplo de diagnóstico de las puertas de enlace
 En una arquitectura de puerta de enlace, un controlador envía las solicitudes a una puerta de enlace compatible con ODBC. La puerta de enlace envía las solicitudes a un DBMS. Dado que es el componente que interactúa con el administrador de controladores, el controlador da formato y devuelve argumentos para **SQLGetDiagRec**.  

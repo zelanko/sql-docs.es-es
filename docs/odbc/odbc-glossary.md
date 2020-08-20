@@ -1,4 +1,5 @@
 ---
+description: Glosario de ODBC
 title: Glosario de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac454a8c57fe6e2f12724440dc37c3a1953e4c85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57b08d48944ee288b4eba849917828b6fe1d4396
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466257"
 ---
 # <a name="odbc-glossary"></a>Glosario de ODBC
-## <a name="a"></a>Un  
+## <a name="a"></a>A  
  **Plan de acceso**  
  Un plan generado por el motor de base de datos para ejecutar una instrucción SQL. Equivalente al código ejecutable compilado a partir de un lenguaje de tercera generación como C.  
   
@@ -75,10 +76,10 @@ ms.locfileid: "81302906"
  Ocho bits o un octeto. *Vea también* octeto.  
   
 ## <a name="c"></a>C  
- **Tipo de datos C**  
+ **C, tipo de datos**  
  El tipo de datos de una variable en un programa de C, en este caso la aplicación.  
   
- **Catálogo**  
+ **catalog**  
  Conjunto de tablas del sistema en una base de datos que describen la forma de la base de datos. También se conoce como Diccionario de *datos*o *esquema* .  
   
  **función de catálogo**  
@@ -90,7 +91,7 @@ ms.locfileid: "81302906"
  **cliente/servidor**  
  Una estrategia de acceso a bases de datos en la que uno o más clientes tienen acceso a los datos a través de un servidor. Normalmente, los clientes implementan la interfaz de usuario mientras el servidor controla el acceso a la base de datos.  
   
- **artículo**  
+ **column**  
  Contenedor para un único elemento de información de una fila. También conocido como *campo*.  
   
  **promete**  
@@ -364,7 +365,7 @@ ms.locfileid: "81302906"
  **consulta**  
  Instrucción SQL. A veces se usa para referirse a una instrucción **Select** .  
   
- **identificador entre comillas**  
+ **quoted identifier**  
  Identificador que se incluye entre comillas de identificador para que pueda contener caracteres especiales o palabras clave coincidentes (también conocido en SQL-92 como identificador delimitado).  
   
 ## <a name="r"></a>R  
@@ -453,7 +454,7 @@ ms.locfileid: "81302906"
  **transición de estado**  
  Movimiento de un elemento de un estado a otro. ODBC define transiciones de estado rigurosas para entornos, conexiones e instrucciones.  
   
- **privacidad**  
+ **instrucción**  
  Contenedor para toda la información relacionada con una instrucción SQL. Las instrucciones no se deben confundir con las instrucciones SQL.  
   
  **identificador de instrucción**  
@@ -475,7 +476,7 @@ ms.locfileid: "81302906"
  **procesadores**  
  Conversión de direcciones de 16 bits a direcciones de 32 bits, o viceversa, cuando las aplicaciones de 16 bits se utilizan con controladores ODBC de 32 bits.  
   
- **transacción**  
+ **transaction**  
  Unidad atómica de trabajo. El trabajo de una transacción debe completarse como un todo; si se produce un error en cualquier parte de la transacción, no se puede realizar la transacción.  
   
  **aislamiento de transacción**  

@@ -1,4 +1,5 @@
 ---
+description: Llamadas a procedimientos
 title: Llamadas a procedimientos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9c52e72512c8b81c6872461207f235ea2731ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed5da9bbe94bf1f508e1b94c17e81c7b0169f6e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465737"
 ---
 # <a name="procedure-calls"></a>Llamadas a procedimientos
 Un *procedimiento* es un objeto ejecutable almacenado en el origen de datos. Normalmente, se trata de una o varias instrucciones SQL compiladas. La secuencia de escape para llamar a un procedimiento es  

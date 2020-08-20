@@ -1,4 +1,5 @@
 ---
+description: sys.http_endpoints (Transact-SQL)
 title: Sys. http_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 527cc2d7596a1bdd894ba71c1e3b1139150efc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b964a9974c8884618b1412827c5a53ad1c481d5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464815"
 ---
 # <a name="syshttp_endpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

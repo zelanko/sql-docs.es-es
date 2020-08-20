@@ -1,4 +1,5 @@
 ---
+description: Buscar propiedades de documento con listas de propiedades de búsqueda
 title: Búsqueda de propiedades de documento con listas de propiedades de búsqueda
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: daead13f4a3069966d1ede9aa677c47c8a784099
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4938844b0014745dd50060b0e1da43b4e574a20e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464975"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "87934316"
   
 2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos en la que desea crear la lista de propiedades de búsqueda.  
   
-3.  Expanda **Almacenamiento**y haga clic con el botón derecho en **Listas de propiedades de búsqueda**.  
+3.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario del mouse en **Listas de propiedades de búsqueda**.  
   
 4.  Seleccione **Nueva lista de propiedades de búsqueda**.  
   
@@ -154,7 +155,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Para asociar una lista de propiedades de búsqueda a un índice de texto completo con Management Studio**  
   
- Especifique un valor para **Lista de propiedades de búsqueda** en la página **General** del cuadro de diálogo **Propiedades del índice de texto completo** .  
+ Especifique un valor para **Lista de propiedades de búsqueda** en la página **General** del cuadro de diálogo **Propiedades del índice de texto completo**.  
   
 ##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> Consultar propiedades de búsqueda con CONTAINS  
  La sintaxis básica de [CONTAINS](../../t-sql/queries/contains-transact-sql.md) para una consulta de texto completo referente a propiedades es la siguiente:  
@@ -195,7 +196,7 @@ GO
   
 5.  Haga clic con el botón derecho en la lista de propiedades y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Editor de lista de propiedades de búsqueda** , utilice la cuadrícula de Propiedades para agregar o quitar propiedades de búsqueda:  
+6.  En el cuadro de diálogo **Editor de lista de propiedades de búsqueda**, utilice la cuadrícula de Propiedades para agregar o quitar propiedades de búsqueda:  
   
     1.  Para quitar una propiedad de documento, haga clic en el encabezado de fila a la izquierda de la propiedad y presione SUPR.  
   
@@ -218,13 +219,13 @@ GO
   
 2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos.  
   
-3.  Expanda **Almacenamiento**y, a continuación, expanda el nodo **Listas de propiedades de búsqueda** .  
+3.  Expanda **Almacenamiento** y, a continuación, expanda el nodo **Listas de propiedades de búsqueda**.  
   
 4.  Haga clic con el botón derecho en la lista de propiedades que quiera eliminar y haga clic en **Eliminar**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

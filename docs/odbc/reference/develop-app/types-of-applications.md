@@ -1,4 +1,5 @@
 ---
+description: Tipos de aplicaciones
 title: Tipos de aplicaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f14326c9cec1eb89e431154c91b680e4688fcdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54056a6111924fb584ac35a65d6f74e8dab1ba6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465555"
 ---
 # <a name="types-of-applications"></a>Tipos de aplicaciones
 Las aplicaciones ODBC se pueden clasificar de la siguiente manera:  
@@ -41,7 +42,7 @@ Las aplicaciones ODBC se pueden clasificar de la siguiente manera:
 -   **ODBC 2 puro.**  
      **la aplicación Unicode _x_ ** es un ODBC 2 puro. *x* aplicación recompilada que es compatible con Unicode y usa el tipo de datos SQL_WCHAR.  
   
--   **Aplicación ODBC pura de grupo abierto e ISO**-**con** una aplicación de 32 bits que:  
+-   **Grupo abierto puro e ISO** - **aplicación ODBC compatible** Una aplicación de 32 bits que:  
   
     -   Llama a las funciones definidas en los estándares Open Group o ISO CLI. (Estas funciones pueden incluir funciones 3,0 desusadas).  
   

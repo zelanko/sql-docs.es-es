@@ -1,4 +1,5 @@
 ---
+description: 'Definición de datos de MDX: CREATE ACTION'
 title: CREATE ACTION (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7132c28e93dbc11eee1c5a4e4d53126f280fa74a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494908"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definición de datos de MDX: CREATE ACTION
 
@@ -75,14 +76,14 @@ FOR
  Es posible que las aplicaciones cliente creen y ejecuten acciones que no son seguras; también es posible que las aplicaciones cliente utilicen funciones no seguras. Para evitar estas situaciones, utilice la propiedad **Opciones de seguridad** . Para obtener más información, vea el tema sobre la propiedad de opciones de seguridad.  
   
 > [!NOTE]  
->  Esta instrucción se incluye por compatibilidad con versiones anteriores. No se admiten las acciones nuevas en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], como las acciones de obtención de detalles o de informe.  
+>  Esta instrucción se incluye por compatibilidad con versiones anteriores. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]No se admiten las acciones nuevas en, como las acciones de obtención de detalles o de informe.  
   
 ## <a name="action-types"></a>Tipos de acción  
- En la tabla siguiente se describen los distintos tipos de acciones [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]disponibles en.  
+ En la tabla siguiente se describen los distintos tipos de acciones disponibles en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 |Tipo de acción|Descripción|  
 |-----------------|-----------------|  
-|**URL**|La cadena de acción que se devuelve es una dirección URL que debe abrirse mediante un explorador de Internet.<br /><br /> Nota: Si esta acción no se inicia con `https://` o `https://`, la acción no estará disponible en el explorador a menos que **SafetyOptions** se establezca en **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|La cadena de acción que se devuelve es una dirección URL que debe abrirse mediante un explorador de Internet.<br /><br /> Nota: Si esta acción no se inicia con `https://` o `https://` , la acción no estará disponible en el explorador a menos que **SafetyOptions** se establezca en **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|La cadena de acción que se devuelve es un script HTML. La cadena debe guardarse en un archivo y ese archivo debe representarse mediante un explorador de Internet. En este caso, un script completo debe ejecutarse como parte del HTML generado.|  
 |**PRIVACIDAD**|La cadena de acción devuelta es una instrucción que debe ejecutarse estableciendo el método **ICommand:: setText** de un objeto de comando en la cadena y llamando al método **ICommand:: Execute**. Si el comando no ha funcionado, se muestra un error.|  
 |**AUTHORS1**|La cadena de acción devuelta es una instrucción MDX que debe ejecutarse estableciendo el método **ICommand:: setText** de un objeto Command en la cadena y llamando al método **ICommand:: Execute** . El identificador de interfaz (IID) solicitado debe ser **IDataset**. El comando tiene éxito si se ha creado un conjunto de datos. La aplicación cliente debe permitir al usuario explorar el conjunto de datos devuelto.|  

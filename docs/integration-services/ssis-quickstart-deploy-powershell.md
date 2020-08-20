@@ -1,4 +1,5 @@
 ---
+description: Implementar un proyecto de SSIS con PowerShell
 title: Implementar un proyecto de SSIS con PowerShell | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2d9a8e6cc8d071ee6f4c4d7557a437d7806f3d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fba08ada042e526f4f6321f328d67a55dd149b2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921953"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495498"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Implementar un proyecto de SSIS con PowerShell
 
@@ -22,7 +23,7 @@ ms.locfileid: "86921953"
 
 En este inicio rápido se muestra cómo usar un script de PowerShell para conectarse a un servidor de bases de datos e implementar un proyecto de SSIS en el catálogo de SSIS.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Un servidor de Azure SQL Database escucha en el puerto 1433. Si está intentando conectarse a un servidor de Azure SQL Database desde un firewall corporativo, este puerto debe estar abierto en el firewall corporativo para poder conectarse correctamente.
 

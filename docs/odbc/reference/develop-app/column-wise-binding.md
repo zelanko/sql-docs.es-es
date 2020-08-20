@@ -1,4 +1,5 @@
 ---
+description: El enlace
 title: Enlace de modo de columna | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9c2793695dce4487a58ee138a0a620f3bc05550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494685"
 ---
 # <a name="column-wise-binding"></a>El enlace
 Cuando se usa el enlace de modo de columna, una aplicación enlaza uno o dos, o en algunos casos tres, matrices a cada columna para la que se van a devolver los datos. La primera matriz contiene los valores de datos y la segunda contiene búferes de longitud/indicador. Los indicadores y los valores de longitud se pueden almacenar en búferes independientes estableciendo los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si se hace esto, se enlaza una tercera matriz. Cada matriz contiene tantos elementos como filas hay en el conjunto de filas.  

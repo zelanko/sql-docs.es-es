@@ -1,4 +1,5 @@
 ---
+description: SQL dinámico
 title: SQL dinámico | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: de711543748a91015a9aa0d4cb8aadb011744306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494586"
 ---
 # <a name="dynamic-sql"></a>SQL dinámico
 Aunque SQL estático funciona bien en muchos casos, hay una clase de aplicaciones en las que el acceso a los datos no se puede determinar de antemano. Por ejemplo, supongamos que una hoja de cálculo permite al usuario escribir una consulta, que la hoja de cálculo envía a la DBMS para recuperar los datos. Obviamente, el programador no puede conocer el contenido de esta consulta cuando se escribe el programa de hojas de cálculo.  

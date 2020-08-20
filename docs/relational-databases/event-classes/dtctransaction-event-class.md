@@ -1,4 +1,5 @@
 ---
+description: DTCTransaction [clase de eventos]
 title: Clase de eventos DTCTransaction | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c66dc8844aa47748fe5f4beb3a15e8b26f120c90
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d000b8ae419c6c360d6d8b5a6ce498266e7a540c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494357"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction [clase de eventos]
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Use la clase de eventos **DTCTransaction** para supervisar el estado de las transacciones del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] coordinadas por medio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC (Coordinador de transacciones distribuidas). Entre estas transacciones se incluyen las que implican dos o más bases de datos en la misma instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)], así como las transacciones distribuidas que implican dos o más instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+   Use la clase de eventos **DTCTransaction** para supervisar el estado de las transacciones del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] coordinadas mediante Coordinador de transacciones distribuidas (DTC) de [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Entre estas transacciones se incluyen las que implican dos o más bases de datos en la misma instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)], así como las transacciones distribuidas que implican dos o más instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="dtctransaction-event-class-data-columns"></a>Columnas de datos de la clase de eventos DTCTransaction  
   

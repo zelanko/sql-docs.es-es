@@ -1,4 +1,5 @@
 ---
+description: Códigos de retorno de ODBC
 title: Códigos de retorno ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15e434025ed1201ca61371c2fb88e70143e131a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79a06ad170f747c3841c42eadef0288af6fef39a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494641"
 ---
 # <a name="return-codes-odbc"></a>Códigos de retorno de ODBC
 Cada función de ODBC devuelve un código, conocido como *código de retorno,* que indica el éxito o error general de la función. La lógica del programa se suele basar en códigos de retorno.  
@@ -44,7 +45,7 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
  En la tabla siguiente se definen los códigos de retorno.  
   
-|Código de retorno|Descripción|  
+|Código devuelto|Descripción|  
 |-----------------|-----------------|  
 |SQL_SUCCESS|La función se completó correctamente. La aplicación llama a **SQLGetDiagField** para recuperar información adicional del registro de encabezado.|  
 |SQL_SUCCESS_WITH_INFO|La función se completó correctamente, posiblemente con un error no irrecuperable (ADVERTENCIA). La aplicación llama a **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información adicional.|  

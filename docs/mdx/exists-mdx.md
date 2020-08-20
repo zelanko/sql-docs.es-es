@@ -1,4 +1,5 @@
 ---
+description: Exists (MDX)
 title: Exists (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e025449634106003ea6e5d624f0d4a621ef3b93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893612"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494918"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
   Devuelve el conjunto de tuplas del primer conjunto especificado que existe con una o más tuplas del segundo conjunto especificado. Esta función realiza manualmente lo que Autoexist realiza automáticamente. Para obtener más información acerca de autoexists, consulte [conceptos clave en MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
- Si se proporciona \<el nombre de grupo de medida opcional>, la función devuelve tuplas que existen con una o más tuplas del segundo conjunto y las tuplas que tienen asociadas filas en la tabla de hechos del grupo de medida especificado.  
+ Si \<Measure Group Name> se proporciona el opcional, la función devuelve tuplas que existen con una o más tuplas del segundo conjunto y las tuplas que tienen asociadas filas en la tabla de hechos del grupo de medida especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -95,8 +96,8 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>Consulte también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40;&#41;MDX](../mdx/nonemptycrossjoin-mdx.md)   
+ [NonEmptyCrossjoin &#40;&#41;MDX ](../mdx/nonemptycrossjoin-mdx.md)   
  [&#41;MDX no vacío &#40;](../mdx/nonempty-mdx.md)   
- [IsEmpty &#40;&#41;MDX](../mdx/isempty-mdx.md)  
+ [IsEmpty &#40;&#41;MDX ](../mdx/isempty-mdx.md)  
   
   

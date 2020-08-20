@@ -1,4 +1,5 @@
 ---
+description: Usar expresiones de miembro
 title: Usar expresiones de miembro | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e833d8d579841a3fc15aad89612a1d25b71fd0f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494837"
 ---
 # <a name="using-member-expressions"></a>Usar expresiones de miembro
 
@@ -62,6 +63,6 @@ Dimension_Name
 >  Para obtener más información sobre los nombres de miembro y las claves de miembro, vea [trabajar con miembros, tuplas y conjuntos &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Consulte también  
- [Expresiones &#40;&#41;MDX](../mdx/expressions-mdx.md)  
+ [Expresiones &#40;&#41;MDX ](../mdx/expressions-mdx.md)  
   
   

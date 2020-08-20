@@ -1,4 +1,5 @@
 ---
+description: Búferes
 title: Búferes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c49e83e12463665f86f8cc15dc595e6ba2c506f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1c82927c122197249b02a2d327364e68bd851a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494785"
 ---
 # <a name="buffers"></a>Búferes
 Un búfer es cualquier parte de la memoria de la aplicación que se usa para pasar datos entre la aplicación y el controlador. Por ejemplo, los búferes de aplicación pueden asociarse a columnas del conjunto de resultados, o *enlazarse a ellas,* con **SQLBindCol**. A medida que se capturan todas las filas, se devuelven los datos de cada columna de estos búferes. Los *búferes de entrada* se utilizan para pasar datos de la aplicación al controlador; los *búferes de salida* se usan para devolver datos del controlador a la aplicación.  

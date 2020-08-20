@@ -1,4 +1,5 @@
 ---
+description: 'Definición de datos de MDX: CREATE KPI'
 title: CREATE KPI (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1840ebe0dec014a2b768a8571249b103de6552d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494858"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Definición de datos de MDX: CREATE KPI
 
@@ -58,10 +59,10 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|Expresión MDX válida que devuelve un miembro de la dimensión Time. CURRENT_TIME_MEMBER establece el punto de referencia para todas las funciones relativas a tiempo.|  
 |PARENT_KPI|Cadena que especifica el nombre del KPI primario.|  
 |CAPTION|Cadena que la aplicación cliente utiliza como título para el KPI.|  
-|DISPLAY_FOLDER|Cadena que especifica la ruta de acceso a la carpeta donde la aplicación cliente mostrará el KPI. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]por, la barra diagonal\\inversa () es el separador de nivel. Para proporcionar varias carpetas para mostrar a un miembro definido, utilice un punto y coma (;) para separar las carpetas|  
+|DISPLAY_FOLDER|Cadena que especifica la ruta de acceso a la carpeta donde la aplicación cliente mostrará el KPI. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barra diagonal inversa ( \\ ) es el separador de nivel. Para proporcionar varias carpetas para mostrar a un miembro definido, utilice un punto y coma (;) para separar las carpetas|  
 |ASSOCIATED_MEASURE_GROUP|Cadena que especifica el nombre del grupo de medida al que deberían remitirse todos los cálculos MDX.|  
   
- Los valores para las propiedades GOAL, STATUS y TREND son expresiones MDX que se deberían evaluar entre -1 y 1. Sin embargo, es la aplicación cliente la que define el intervalo de valores real para estas propiedades. Cuando se usan las herramientas y clientes proporcionados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] por para examinar los KPI, los valores menores que-1 se tratan como-1 y los valores mayores que 1 se tratan como 1.  
+ Los valores para las propiedades GOAL, STATUS y TREND son expresiones MDX que se deberían evaluar entre -1 y 1. Sin embargo, es la aplicación cliente la que define el intervalo de valores real para estas propiedades. Cuando se usan las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para examinar los KPI, los valores menores que-1 se tratan como-1 y los valores mayores que 1 se tratan como 1.  
   
  STATUS_GRAPHIC y TREND_GRAPHIC son valores de cadena que utiliza la aplicación cliente para identificar el conjunto de imágenes que se ha de mostrar. Estas cadenas definen también el comportamiento de la función de visualización. Este comportamiento incluye el número de estados que se pueden mostrar (normalmente, éste es un número impar) y qué imágenes se han de utilizar para cada uno de esos estados.  
   
@@ -76,7 +77,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 > [!NOTE]  
 >  Para algunos gráficos, como la medida invertida o la flecha de estado invertida, se invierte el intervalo. Es decir, -1 es bueno y 1 es malo.  
   
- En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el nombre del gráfico de KPI determina si el gráfico tiene tres o cinco estados. En la tabla siguiente se muestra el uso, el nombre y el número [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] de Estados que se asocian con sus gráficos de KPI.  
+ En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el nombre del gráfico de KPI determina si el gráfico tiene tres o cinco estados. En la tabla siguiente se muestra el uso, el nombre y el número de Estados que se [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] asocian con sus gráficos de KPI.  
   
 |Uso de gráfico|Nombre del gráfico de KPI.|Número de estados|  
 |--------------------|-------------------------|----------------------|  

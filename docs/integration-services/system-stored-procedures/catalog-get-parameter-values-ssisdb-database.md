@@ -1,4 +1,5 @@
 ---
+description: catalog.get_parameter_values (base de datos de SSISDB)
 title: catalog.get_parameter_values (base de datos de SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 947b8607c54e3cb2022b32be0f68bab0dc53ffee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495436"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (base de datos de SSISDB)
 
@@ -44,7 +45,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  Nombre del proyecto donde los parámetros residen. *project_name* es **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Nombre del paquete. Especifique el nombre del paquete para recuperar todos los parámetros de proyecto y los parámetros de un paquete concreto. El parámetro *package_name* es de tipo **nvarchar(260)** .  
+ Nombre del paquete. Especifique el nombre del paquete para recuperar todos los parámetros de proyecto y los parámetros de un paquete concreto. El parámetro *package_name* es de tipo **nvarchar(260)**.  
   
  [ @reference_id = ] *reference_id*  
  Identificador único de una referencia de entorno. Este parámetro es opcional. *reference_id* es **bigint**.  

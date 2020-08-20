@@ -1,4 +1,5 @@
 ---
+description: CursorExecute [clase de eventos]
 title: CursorExecute (clase de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65834775bd190e5d8638d5eba33b38c7d01b2997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494448"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute [clase de eventos]
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La clase de evento **CursorExecute** describe eventos de ejecución de cursor que se producen en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de ejecución de cursor se producen cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea y rellena un cursor a partir del plan de ejecución creado por un evento de preparación de cursor.  
+   La clase de eventos **CursorExecute** describe eventos de ejecución de cursor que se producen en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de ejecución de cursor se producen cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea y rellena un cursor a partir del plan de ejecución creado por un evento de preparación de cursor.  
   
  Incluya la clase de evento **CursorExecute** en los seguimientos que registran el rendimiento de los cursores. Cuando la clase de evento **CursorExecute** se incluye en el seguimiento, la cantidad de sobrecarga que se produce depende de la frecuencia con la que se utilicen los cursores en la base de datos durante el seguimiento. Si el uso de los cursores es extenso, el seguimiento puede obstaculizar el rendimiento de manera significativa.  
   

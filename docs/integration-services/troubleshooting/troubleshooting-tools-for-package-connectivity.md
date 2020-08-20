@@ -1,4 +1,5 @@
 ---
+description: Herramientas para solucionar problemas de conectividad entre paquetes
 title: Herramientas para solucionar problemas de conectividad entre paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6be13d4e6ef84b22a50368e3818af6231a7a04e2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93297c11c2fbca50fdf8fb1f25d319343963d2b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495138"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Herramientas para solucionar problemas de conectividad entre paquetes
 

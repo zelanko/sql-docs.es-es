@@ -1,4 +1,5 @@
 ---
+description: Recuperar los valores de campos de Descriptor
 title: Recuperando los valores de los campos de descriptor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c05b180f-c2b0-437b-8d1c-ce7f4da93287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 43467d19f3f2e576efa0402c4ba513e23da59390
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a2118efe58b076287dd75192de679bdb74299435
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494653"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>Recuperar los valores de campos de Descriptor
 Una aplicación puede llamar a **SQLGetDescField** para obtener un único campo de un registro del descriptor. **SQLGetDescField** proporciona a la aplicación acceso a todos los campos de descriptor definidos en ODBC y también a los campos definidos por el controlador.  

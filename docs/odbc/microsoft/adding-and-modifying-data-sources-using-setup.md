@@ -1,4 +1,5 @@
 ---
+description: Agregar y modificar orígenes de datos mediante el programa de instalación
 title: Agregar y modificar orígenes de datos mediante el programa de instalación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae76abc902e4687e5d9891871d7d5d60598b3abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8592c01897e691cdb6702c4efdfca6054655a793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494745"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Agregar y modificar orígenes de datos mediante el programa de instalación
 > [!IMPORTANT]  
@@ -57,7 +58,7 @@ ms.locfileid: "81281415"
   
 1.  Haga clic en opciones para obtener más especificaciones sobre la instalación del controlador ODBC para Oracle:  
   
-    -   **Traducción** : haga clic en seleccionar para elegir un traductor de datos cargado. El valor predeterminado \<es sin traductor>.  
+    -   **Traducción** : haga clic en seleccionar para elegir un traductor de datos cargado. De manera predeterminada, es \<No Translator>.  
   
     -   **Rendimiento** : la casilla incluir comentarios en las funciones de catálogo especifica si el controlador devuelve columnas de comentarios para el conjunto de resultados [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) . El controlador ODBC para Oracle proporciona un acceso más rápido cuando no se establece este valor.  
   

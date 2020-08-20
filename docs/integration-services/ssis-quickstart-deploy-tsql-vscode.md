@@ -1,4 +1,5 @@
 ---
+description: Implementar un proyecto de SSIS desde Visual Studio Code con Transact-SQL
 title: Implementar un proyecto de SSIS con Transact-SQL (VSCode) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af19358906b70cad15103913eebf45507f449410
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dec289a898c25900afb7f5dd30ec2aa2fe9e34f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495430"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Implementar un proyecto de SSIS desde Visual Studio Code con Transact-SQL
 
@@ -24,10 +25,10 @@ En esta guía de inicio rápido se muestra cómo usar Visual Studio Code para co
 
 Visual Studio Code es un editor de código para Windows, macOS y Linux que admite extensiones, incluida la extensión `mssql` para conectarse a Microsoft SQL Server, Azure SQL Database o Azure SQL Data Warehouse. Para obtener más información sobre VSCode, consulte [Visual Studio Code](https://code.visualstudio.com/).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Antes de empezar, asegúrese de haber instalado la versión más reciente de Visual Studio Code y cargado la extensión `mssql`. Para descargar estas herramientas, consulte las páginas siguientes:
--   [Descarga de Visual Studio Code](https://code.visualstudio.com/Download)
+-   [Descargar Visual Studio Code](https://code.visualstudio.com/Download)
 -   [Extensión mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="supported-platforms"></a>Plataformas compatibles
@@ -70,7 +71,7 @@ Use Visual Studio Code para establecer una conexión con el catálogo de SSIS.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nombre del servidor** | Nombre completo del servidor |  |
    | **Nombre de la base de datos** | **SSISDB** | Nombre de la base de datos a la que se va a conectar. |
-   | **Autenticación** | Inicio de sesión SQL | |
+   | **Autenticación** | Inicio de sesión de SQL | |
    | **Nombre de usuario** | La cuenta de administrador del servidor | Esta es la cuenta que especificó cuando creó el servidor. |
    | **Contraseña (Inicio de sesión de SQL)** | La contraseña de la cuenta de administrador del servidor | Esta es la contraseña que especificó cuando creó el servidor. |
    | **¿Desea guardar la contraseña?** | Sí o no | Si no quiere escribir la contraseña cada vez, seleccione Sí. |

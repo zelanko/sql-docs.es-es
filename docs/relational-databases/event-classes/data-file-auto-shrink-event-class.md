@@ -1,4 +1,5 @@
 ---
+description: Data File Auto Shrink, clase de eventos
 title: Clase de eventos Data File Auto Shrink | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: ea02b01e-9f87-47ca-9117-afadc382fb45
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a70af7f66197bb4c9ee2df82fbf95c99a3fe31cf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c4c533b2a75b072c3b715db73fda76f32c198bf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494384"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink, clase de eventos
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La clase de eventos **Data File Auto Shrink** indica que el archivo de datos se ha reducido. Este evento no se desencadena si el archivo de datos se reduce debido a una instrucción ALTER DATABASE explícita. Incluya la clase de eventos **Data File Auto Shrink** en seguimientos que supervisen los cambios de tamaño del archivo de datos.  
+   La clase de eventos **Data File Auto Shrink** indica que el archivo de datos se ha reducido. Este evento no se desencadena si el archivo de datos se reduce debido a una instrucción ALTER DATABASE explícita. Incluya la clase de eventos **Data File Auto Shrink** en seguimientos que supervisen los cambios de tamaño del archivo de datos.  
   
  Cuando se incluye la clase de eventos **Data File Auto Shrink** en un seguimiento, la cantidad de sobrecarga es baja a menos que se reduzca el archivo de datos con frecuencia.  
   

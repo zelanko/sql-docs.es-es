@@ -1,4 +1,5 @@
 ---
+description: Referencia de errores y eventos (replicación)
 title: Referencia de errores y eventos (replicación) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 273caba1a25efbfd30bb856f6ebaf157b9bf5a03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10d2073949de158c0773876adef0ba06d6e587eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482435"
 ---
 # <a name="errors-and-events-reference-replication"></a>Referencia de errores y eventos (replicación)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "85652986"
 |MSSQL_ENG021642. Consulte [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Los publicadores heterogéneos requieren un servidor vinculado. Ya existe uno con el nombre '%1!s!'. Quítelo o elija otro nombre de publicador.|  
 |MSSQL_ENG021663. Consulte [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|No se encuentra ninguna clave principal válida para la tabla de origen [%s].[%s].|  
 |MSSQL_ENG021684. Consulte [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).|Los permisos asociados con el inicio de sesión de administrador del publicador de Oracle '%s' no son suficientes.|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' debe ser un inicio de sesión válido en Windows con el formato: 'MACHINE\Login' o 'DOMAIN\Login'. Vea la documentación de '%s'.|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|"%s" debe ser un inicio de sesión de Windows válido en el formato: "MACHINE\Login" o "DOMAIN\Login". Vea la documentación de '%s'.|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|Debe agregar el trabajo de agente '%s' a través de '%s' antes de continuar. Vea la documentación de '%s'.|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|El proceso no pudo ejecutar '%1' en '%2'.|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|El proceso de mezcla no pudo cambiar el historial de generación en '%1'. Para solucionar el problema, reinicie la sincronización con registro de historial detallado y especifique un archivo de salida para escribir en él.|  

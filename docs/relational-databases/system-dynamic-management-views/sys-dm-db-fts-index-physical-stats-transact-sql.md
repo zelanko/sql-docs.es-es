@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_fts_index_physical_stats (Transact-SQL)
 title: Sys. dm_db_fts_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -20,12 +21,12 @@ ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e09a87b00ea2308cbf21d3d8f57670e2c0c996bf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8271216178643e06c8f84b798b967d90598b5076
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663189"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482054"
 ---
 # <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85663189"
   
 ||||  
 |-|-|-|  
-|**Nombre de la columna**|**Type**|**Descripción**|  
+|**Nombre de la columna**|**Tipo**|**Descripción**|  
 |**object_id**|int|Identificador de objeto de la tabla que contiene el índice.|  
 |**fulltext_index_page_count**|**bigint**|Tamaño lógico de la extracción en número de páginas de índice.|  
 |**keyphrase_index_page_count**|**bigint**|Tamaño lógico de la extracción en número de páginas de índice.|  
@@ -53,7 +54,7 @@ ms.locfileid: "85663189"
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra cómo consultar el tamaño lógico de cada índice semántico o de texto completo en todas las tablas que tienen un índice semántico o de texto completo asociado:  

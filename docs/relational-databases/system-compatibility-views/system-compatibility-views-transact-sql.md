@@ -1,4 +1,5 @@
 ---
+description: Vistas de compatibilidad del sistema (Transact-SQL)
 title: Vistas de compatibilidad del sistema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9eb123194e6ea69a6260f9eed4f02a07a9e819ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3eb92654dfb25a0e66d2e071040e487e6a404366
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482060"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Vistas de compatibilidad del sistema (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,22 +40,22 @@ ms.locfileid: "85652203"
   
  Para evitar estos problemas, se recomienda utilizar las nuevas vistas de catálogo, que pueden procesar ese mayor número de identificadores de usuario y de tipo. La tabla siguiente indica las columnas que pueden presentar este desbordamiento.  
   
-|Nombre de columna|Vista de compatibilidad|Vista de SQL Server 2005|  
+|Nombre de la columna|Vista de compatibilidad|Vista de SQL Server 2005|  
 |-----------------|------------------------|--------------------------|  
 |**xusertype**|**syscolumns**|**sys.columns**|  
 |**usertype**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
-|**uid**|**sysobjects**|**sys.objects**|  
-|**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**UID**|**sysobjects**|**sys.objects**|  
+|**UID**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**otorgante**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**uid**|**systypes**|**sys.types**|  
-|**uid**|**sysusers**|**sys.database_principals**|  
+|**UID**|**systypes**|**sys.types**|  
+|**UID**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
 |**gid**|**sysusers**|**sys.database_principals**|  
-|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  Cuando se hace referencia en una base de datos de usuario, las tablas del sistema que se anunciaron como desusadas en SQL Server 2000 (por ejemplo, **syslanguages** o **syscacheobjects**), ahora se enlazan a la vista de compatibilidad con versiones preliminares en el esquema **Sys** . Dado que las tablas del sistema de SQL Server 2000 están en desuso en múltiples versiones, no se considera que este cambio sea una novedad.  
   

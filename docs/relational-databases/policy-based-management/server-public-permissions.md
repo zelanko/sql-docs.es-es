@@ -1,4 +1,5 @@
 ---
+description: Permisos públicos de servidor
 title: Permisos públicos de servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ffdcfcecf88bfaa12a9d1defee2fc40ef3900c0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4abf2fd4068f19befd2896a27b9b214fee95dec0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482568"
 ---
 # <a name="server-public-permissions"></a>Permisos públicos de servidor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

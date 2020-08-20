@@ -1,4 +1,5 @@
 ---
+description: Agregar tablas a una instancia CDC
 title: Agregar tablas a una instancia CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca9d1f6fbc9c238dae9682552cb02153d8a89fbb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e025963ad981e05696af4676155efe642ee49893
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484881"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Agregar tablas a una instancia CDC
 
@@ -29,7 +30,7 @@ ms.locfileid: "86914921"
  De forma predeterminada, no se incluye ninguna tabla en la lista de tablas de este cuadro de diálogo. Puede activar la casilla **(Seleccionar todo)** o buscar tablas específicas.  
   
  **Para buscar tablas específicas**  
- Escriba los criterios de búsqueda como se indica aquí y, después, haga clic en **Buscar**:  
+ Escriba los criterios de búsqueda de la manera siguiente y, a continuación, haga clic en **Buscar**:  
   
 -   **Esquema**: seleccione un esquema de base de datos de la lista. En la lista solo se incluirán las tablas que tengan dicho esquema.  
   
@@ -54,6 +55,6 @@ ms.locfileid: "86914921"
 ## <a name="see-also"></a>Consulte también  
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [Seleccionar tablas de Oracle para capturar cambios ](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
+ [Seleccionar tablas de Oracle para capturar cambios](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
   

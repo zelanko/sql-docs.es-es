@@ -1,4 +1,5 @@
 ---
+description: 'Vistas de catálogo de mensajes (para errores): sys.messages'
 title: Sys. Messages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f54b68f7775910a7e25b858bd7579e751a75b98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 572e29d83a63b97484f6c59a139375d4a18d3384
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482198"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Vistas de catálogo de mensajes (para errores): sys.messages
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,6 +51,6 @@ ms.locfileid: "85897137"
  [Mensajes &#40;los errores&#41; vistas de catálogo &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/8ac78c53-7b97-41b3-9cbd-5f97c179f1f2)   
  [Programación de cuadros de mensajes de excepción](https://msdn.microsoft.com/library/0b1ba514-6959-4e69-bfd2-3cf3c1ac4b9c)   
  [Mensajes de error](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [Eventos y errores de Motor de base de datos](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
+ [Eventos y errores del motor de base de datos](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
   
   

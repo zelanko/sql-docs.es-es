@@ -1,4 +1,5 @@
 ---
+description: sys.sysoledbusers (Transact-SQL)
 title: sys.sysoledbusers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 932669feea7f267ae7120ec2c9e60eab07d23bad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 01a2683f063280800606ebd42ba9ce65a286ab82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482118"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

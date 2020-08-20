@@ -1,4 +1,5 @@
 ---
+description: sysarticles (Transact-SQL)
 title: sysarticles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 055e2c7999b2dddf7bb0561e912652ad9046b53e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 174d8adeaced4a98639e8474184ba3e1359f79cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485426"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,8 +59,8 @@ ms.locfileid: "85889292"
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_addarticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_changearticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)  
   
   

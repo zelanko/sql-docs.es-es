@@ -1,4 +1,5 @@
 ---
+description: Desarrollar componentes de flujo de datos con varias entradas
 title: Desarrollar componentes de flujo de datos con varias entradas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fee34f2e35920f8a470c549afec71c5bf4963913
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e73d9b4a6f23473e0dcb7600507dc29fd795679a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484314"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Desarrollar componentes de flujo de datos con varias entradas
 

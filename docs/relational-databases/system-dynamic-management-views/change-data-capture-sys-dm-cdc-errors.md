@@ -1,4 +1,5 @@
 ---
+description: 'Captura de datos modificados: sys. dm_cdc_errors'
 title: Sys. dm_cdc_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2322ed6f6f8a732a6bffd0f75946764c52e04265
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b34623ac9b7732faff5b1f29e6a154dddf79dd78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482057"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>Captura de datos modificados: sys. dm_cdc_errors
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85894749"
 |**begin_lsn**|**nvarchar (23)**|Valor LSN inicial de la transacción que se estaba procesando en el momento de producirse el error.<br /><br /> 0 = el error no se produjo durante una sesión de recorrido del registro.|  
 |**sequence_value**|**nvarchar (23)**|Valor LSN de las filas que se estaban procesando en el momento de producirse el error.<br /><br /> 0 = el error no se produjo durante una sesión de recorrido del registro.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **Sys. dm_cdc_errors** contiene información de error para las sesiones anteriores de 32.  
   
 ## <a name="permissions"></a>Permisos  

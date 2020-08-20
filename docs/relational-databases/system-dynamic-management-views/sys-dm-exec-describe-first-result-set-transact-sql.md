@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_describe_first_result_set (Transact-SQL)
 title: Sys. dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9597d1852cb16c4f212989d42b1b614f0e5e8fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a67fd4b8c528626af8f53ba187b0e13fa326d1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481999"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -101,7 +102,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type**|**int**|Contiene un entero que representa el error que se va a devolver. Se asigna a error_type_desc. Vea la lista bajo las notas.|  
 |**error_type_desc**|**nvarchar(60)**|Contiene una cadena corta en mayúsculas que representa el error que se va a devolver. Se asigna a error_type. Vea la lista bajo las notas.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta función utiliza el mismo algoritmo que **sp_describe_first_result_set**. Para obtener más información, vea [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  En la tabla siguiente se muestran los tipos de error y su descripción.  
@@ -126,7 +127,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  Requiere permiso para ejecutar el \@ argumento TSQL.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos adicionales del tema [sp_describe_first_result_set &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) se pueden adaptar para usar **Sys. dm_exec_describe_first_result_set**.  
+ Los ejemplos adicionales del tema [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) se pueden adaptar para usar **Sys. dm_exec_describe_first_result_set**.  
   
 ### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. Devolver información acerca de una sola instrucción de Transact-SQL  
  El código siguiente devuelve información acerca de los resultados de una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -170,8 +171,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_describe_first_result_set &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sp_describe_undeclared_parameters &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sp_describe_undeclared_parameters &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [Sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

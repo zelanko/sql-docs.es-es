@@ -1,4 +1,5 @@
 ---
+description: Configuración y administración de separadores de palabras y lematizadores para la búsqueda (SQL Server)
 title: Configuración y administración de separadores de palabras y lematizadores para la búsqueda
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,20 +22,20 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8ae5dbc9652ed690edc6964db38cc8e0d5536625
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482313"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Configuración y administración de separadores de palabras y lematizadores para la búsqueda (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Los separadores de palabras y lematizadores realizan un análisis lingüístico de todos los datos indizados de texto completo. El análisis lingüístico realiza las siguientes dos cosas:
 
--   **Buscar los límites de palabras (separación de palabras)** . El *separador de palabras* identifica las palabras individuales determinando los límites de palabras en función de las reglas léxicas de ese idioma. Cada palabra (también conocida como *token*) se inserta en el índice de texto completo usando una representación comprimida para reducir su tamaño.
+-   **Buscar los límites de palabras (separación de palabras)**. El *separador de palabras* identifica las palabras individuales determinando los límites de palabras en función de las reglas léxicas de ese idioma. Cada palabra (también conocida como *token*) se inserta en el índice de texto completo usando una representación comprimida para reducir su tamaño.
 
--   **Conjugar verbos (lematización)** . El *lematizador* genera las formas de inflexión de una palabra determinada en función de las reglas de ese idioma (por ejemplo, "corriendo", "corrió" y "corredor" son varias formas de la palabra "carrera").
+-   **Conjugar verbos (lematización)**. El *lematizador* genera las formas de inflexión de una palabra determinada en función de las reglas de ese idioma (por ejemplo, "corriendo", "corrió" y "corredor" son varias formas de la palabra "carrera").
 
 ## <a name="word-breakers-and-stemmers-are-language-specific"></a>Los separadores de palabras y los lematizadores son específicos del idioma
 
@@ -135,7 +136,7 @@ Para más información y opciones adicionales, vea [sys.fulltext_index_columns &
  
 Esto es relevante si se importó un catálogo de texto completo cuando una base de datos se actualizó a la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un o varios idiomas que Usen los índices de texto completo del catálogo de texto completo podrían estar asociados ahora a nuevos separadores de palabras. Para obtener más información, vea [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
  
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

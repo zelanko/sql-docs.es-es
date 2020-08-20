@@ -1,4 +1,5 @@
 ---
+description: Desarrollar un componente de transformación personalizado con salidas asincrónicas
 title: Desarrollar un componente de transformación personalizado con salidas asincrónicas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: beacd62bb72ab59dfd5572edf2eea007d0c08b73
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 08c3a38c4e4d8297489daa8343af5f6ad74411a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484356"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Desarrollar un componente de transformación personalizado con salidas asincrónicas
 
@@ -322,7 +323,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Desarrollar un componente de transformación personalizado con salidas sincrónicas](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
  [Understanding Synchronous and Asynchronous Transformations](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)  (Descripción de las transformaciones sincrónicas y asincrónicas)  
  [Crear una transformación asincrónica con el componente de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  

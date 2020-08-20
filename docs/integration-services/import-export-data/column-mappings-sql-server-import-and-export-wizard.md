@@ -1,4 +1,5 @@
 ---
+description: Asignaciones de columnas (Asistente para importación y exportación de SQL Server)
 title: Asignaciones de columnas (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 144476d52d8577d59691a42b12a276f5cfc080b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9b74aaec705f3de493f105218adedffb173090ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484145"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Asignaciones de columnas (Asistente para importación y exportación de SQL Server)
 
@@ -111,12 +112,12 @@ La lista **Asignaciones** tiene las columnas siguientes:
  -   **Escala**  
     Especifique la escala de datos numéricos en la columna de destino, que hace referencia al número de posiciones decimales, si corresponde.  
   
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>A continuación  
  Después de revisar y configurar las columnas de destino para recibir los datos copiados de las columnas de origen y hacer clic en **Aceptar**, el cuadro de diálogo **Asignaciones de columnas** le devolverá a la página **Seleccionar tablas y vistas de origen** o a la página **Configurar el destino del archivo plano**. Para más información, vea [Seleccionar tablas y vistas de origen](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) o [Configurar el destino del archivo plano](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
   
  Si especifica una asignación que puede que no se realice correctamente en la lista **Asignaciones** , el cuadro de diálogo **Asignaciones de columnas** le lleva a la página **Revisar asignación de tipos de datos** . En esta página, revise las advertencias, especifique las opciones de conversión y también especifique cómo controlar los errores. Para más información, vea [Revisar asignación de tipos de datos](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Consulte también
+ ## <a name="see-also"></a>Vea también
 [Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)  
 [Comenzar con este sencillo ejemplo del Asistente para importar y exportar](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 

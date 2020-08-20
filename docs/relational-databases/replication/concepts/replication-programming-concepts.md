@@ -1,4 +1,5 @@
 ---
+description: Conceptos de la programación de replicación
 title: Conceptos de la programación de replicación | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 23834f3e4a9486713799e9f8542f2cbc66198f5a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d60799ecba1825fea985d1a45bed85d3203736b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482461"
 ---
 # <a name="replication-programming-concepts"></a>Conceptos de la programación de replicación
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]

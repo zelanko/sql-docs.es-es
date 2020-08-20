@@ -1,4 +1,5 @@
 ---
+description: Usar expresiones de propiedad en paquetes
 title: Usar expresiones de propiedad en paquetes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c02dfe0e479873b50399a2dfcdbe8ae20a984f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8d0df4ebde316b640314f37788ccc39475fd8686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484383"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
 
@@ -96,7 +97,7 @@ ms.locfileid: "86922303"
  Las expresiones de propiedad se cargan una vez que se han cargado las configuraciones de paquete. Por ejemplo, las variables se actualizan primero con sus configuraciones, y luego se evalúan y cargan las expresiones de propiedad que utilizan las variables. Esto significa que las expresiones de propiedad siempre utilizan los valores de variables establecidas con configuraciones.  
   
 > [!NOTE]  
->  No se puede usar la opción **Set** de la utilidad **dtexec** para rellenar una expresión de propiedad.  
+>   No puede usar la opción **Set** de la utilidad **dtexec** para rellenar una expresión de propiedad.  
   
  La tabla siguiente resume cuándo se evalúan y cargan las expresiones de propiedad de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   

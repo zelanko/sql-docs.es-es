@@ -1,4 +1,5 @@
 ---
+description: Cuadro de diálogo Detalles de conversión de columna (Asistente para importación y exportación de SQL Server)
 title: Cuadro de diálogo Detalles de conversión de columna (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 742e3aef907a5537ef6ac158fd3219251bc7762e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18e512c1834a74be5c45ce81fd859eaebb375be5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484158"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Cuadro de diálogo Detalles de conversión de columna (Asistente para importación y exportación de SQL Server)
 
@@ -39,8 +40,8 @@ En este ejemplo, puede ver lo siguiente.
   
  ![Página de conversión de columnas del Asistente para importar y exportar](../../integration-services/import-export-data/media/column-conversion.png "Página de conversión de columnas del Asistente para importar y exportar") 
   
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>A continuación  
  Después de revisar los detalles de la conversión de columna y de hacer clic en **Aceptar**, el cuadro de diálogo **Detalles de conversión de columna** le volverá a dirigir a la página **Revisar asignación de tipos de datos** . Para más información, vea [Revisar asignación de tipos de datos](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 [Asignación de tipos de datos en el Asistente para importación y exportación de SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

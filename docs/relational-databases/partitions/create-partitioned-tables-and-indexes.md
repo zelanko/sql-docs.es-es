@@ -1,4 +1,5 @@
 ---
+description: Crear tablas e índices con particiones
 title: Creación de tablas e índices con particiones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147a5490d2940caebc9184e8049e7c430959b081
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a22807e98d887504cb1700e7bc3497984b699059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482540"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Crear tablas e índices con particiones
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -111,13 +112,13 @@ ms.locfileid: "85787545"
   
 #### <a name="to-create-a-partitioned-table"></a>Para crear una tabla con particiones  
   
-1.  Haga clic con el botón derecho en la tabla donde quiere crear las particiones, seleccione **Almacenamiento** y, después, haga clic en **Crear partición...** .  
+1.  Haga clic con el botón derecho en la tabla donde quiere crear las particiones, seleccione **Almacenamiento** y, después, haga clic en **Crear partición...**.  
   
 2.  En el **Asistente para la creación de particiones**, en la página **Asistente para la creación de particiones** , haga clic en **Siguiente**.  
   
 3.  En la página **Seleccionar una columna de particionamiento** , en la cuadrícula de **Columnas de particionamiento disponibles** , seleccione la columna en la que desea crear particiones de la tabla. En la cuadrícula **Columnas de particionamiento disponibles** solo se mostrarán las columnas con tipos de datos que se pueden utilizar para crear particiones de los datos. Si selecciona una columna calculada como columna de partición, la columna se debe designar como una columna PERSISTED.  
   
-     Las opciones de que dispone para la columna de partición y el intervalo de valores vienen determinados, principalmente, por el grado en que los datos se pueden agrupar de un modo lógico. Por ejemplo, puede decidir dividir los datos en agrupaciones lógicas por meses o trimestres del año. Las consultas que planea realizar en los datos determinarán si esta agrupación lógica es adecuada para administrar las particiones de la tabla. Todos los tipos de datos son válidos para su uso como columnas de partición, excepto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , tipos de datos de alias o tipos de datos definidos por el usuario CLR.  
+     Las opciones de que dispone para la columna de partición y el intervalo de valores vienen determinados, principalmente, por el grado en que los datos se pueden agrupar de un modo lógico. Por ejemplo, puede decidir dividir los datos en agrupaciones lógicas por meses o trimestres del año. Las consultas que planea realizar en los datos determinarán si esta agrupación lógica es adecuada para administrar las particiones de la tabla. Todos los tipos de datos son válidos para su uso como columnas de partición, excepto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, tipos de datos de alias o tipos de datos definidos por el usuario CLR.  
   
      En esta página están disponibles las opciones siguientes:  
   
@@ -258,7 +259,7 @@ ms.locfileid: "85787545"
   
      Cuando termine, haga clic en **Cerrar**.  
   
- El Asistente para la creación de particiones crea la función y el esquema de partición y aplica las particiones a la tabla especificada. Para comprobar las particiones de tabla, en el Explorador de objetos, haga clic con el botón derecho en la tabla y seleccione **Propiedades**. Haga clic en la página **Almacenamiento** . La página muestra información como el nombre de la función y el esquema de partición y el número de particiones.  
+ El Asistente para la creación de particiones crea la función y el esquema de partición y aplica las particiones a la tabla especificada. Para comprobar las particiones de tabla, en el Explorador de objetos, haga clic con el botón derecho en la tabla y seleccione **Propiedades**. Haga clic en la página **Almacenamiento**. La página muestra información como el nombre de la función y el esquema de partición y el número de particiones.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   

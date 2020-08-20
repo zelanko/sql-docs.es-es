@@ -1,4 +1,5 @@
 ---
+description: Conjuntos de filas de esquema-conjunto de filas LINKEDSERVERS en SQL Server Native Client
 title: Conjunto de filas LINKEDSERVERS (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0889b7a7dd7dd3c8f3afc1d61ee95acfcfb9fd5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 38644be1cbb9c9df785926534ef8b224cd539277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482592"
 ---
 # <a name="schema-rowsets---linkedservers-rowset-in-sql-server-native-client"></a>Conjuntos de filas de esquema-conjunto de filas LINKEDSERVERS en SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "87247154"
   
  El conjunto de filas **LINKEDSERVERS** contiene las siguientes columnas.  
   
-|Nombre de la columna|Indicador de tipo|Description|  
+|Nombre de la columna|Indicador de tipo|Descripción|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nombre de un servidor vinculado.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricante u otro nombre que identifica el tipo de almacén de datos representado por el nombre del servidor vinculado.|  

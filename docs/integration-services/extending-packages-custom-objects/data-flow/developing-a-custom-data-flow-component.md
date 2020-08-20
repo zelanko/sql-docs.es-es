@@ -1,4 +1,5 @@
 ---
+description: Desarrollar un componente de flujo de datos personalizado
 title: Desarrollar un componente de flujo de datos personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d29e650bb3dc812b4b64f3bb0c336d094adf1e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e47c1f8efed8920a32eac7625ab15deb6e9c167b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484236"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Desarrollar un componente de flujo de datos personalizado
 

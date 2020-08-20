@@ -1,4 +1,5 @@
 ---
+description: sys.column_master_keys (Transact-SQL)
 title: Sys. column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -25,11 +26,12 @@ ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e28fae709bc81a10c6ad23228d12532172841488
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8a0192fd9a323e750a2fd8f635da93f4c4f549ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482151"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]

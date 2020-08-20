@@ -1,4 +1,5 @@
 ---
+description: Editor de destino de SAP BW (página Administrador de conexiones)
 title: Editor de destino de SAP BW (página Administrador de conexiones) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2df00ea414e24b1863fcae16832b5f3bbb1f5b79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd18ea2d13b643899b5492b0151984b275b8c80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484584"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Editor de destino de SAP BW (página Administrador de conexiones)
 
@@ -105,7 +106,7 @@ ms.locfileid: "86913615"
   
 -   InfoPackage  
   
- **Creación**  
+ **Crear**  
  Cree el tipo seleccionado de objeto SAP Netweaver BW.  
   
 |Tipo de objeto|Resultado|  

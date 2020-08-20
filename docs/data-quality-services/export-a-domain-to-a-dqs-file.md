@@ -1,4 +1,5 @@
 ---
+description: Exportar un dominio a un archivo .dqs
 title: Exportar un dominio a un archivo .dqs
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f9e672685a2135fd494da4adb8a1844a25243f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3e37309a430b92e12493c178eeaf7a117a41552
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484893"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exportar un dominio a un archivo .dqs
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895349"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para poder exportar un dominio a un archivo de datos .dqs.  
   
-##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>Exportar un dominio a un archivo. DQS  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a> Exportar un dominio a un archivo. DQS  
  La exportación se puede realizar desde cualquier página de administración de dominios. El comando de exportación está disponible tanto en forma de control de la interfaz de usuario como en forma de comando del menú contextual del panel de la lista de dominios.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -51,9 +52,9 @@ ms.locfileid: "85895349"
   
 5.  En el cuadro de diálogo **Exportar a un archivo de datos**, desplácese a la carpeta en la que quiere guardar el archivo, asígnele un nombre o conserve el predeterminado, mantenga seleccionada la opción **Archivos de datos DQS (\*.dqs)** en la lista **Guardar como tipo** y, luego, haga clic en **Guardar**.  
   
-6.  En el cuadro de diálogo **Exportar dominio** , compruebe que la línea de estado de este indica que se ha completado la exportación. Haga clic en **Aceptar**.  
+6.  En el cuadro de diálogo **Exportar dominio** , compruebe que la línea de estado de este indica que se ha completado la exportación. Haga clic en **OK**.  
   
-##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>Seguimiento: después de exportar un dominio a un archivo. DQS  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a> Seguimiento: después de exportar un dominio a un archivo. DQS  
  Una vez exportado un dominio a un archivo .dqs, puede importarlo en otra base de conocimiento.  
   
   

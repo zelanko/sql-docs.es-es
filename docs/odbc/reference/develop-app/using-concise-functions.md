@@ -1,4 +1,5 @@
 ---
+description: Uso de funciones concisas
 title: Usar funciones concisas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 63313e3dfaec8dbcd91f3bb084bbaab46da40c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0dcd16c1380c95921d5e4bb58831e2dd939ecf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482801"
 ---
 # <a name="using-concise-functions"></a>Uso de funciones concisas
 Algunas funciones ODBC obtienen acceso implícito a los descriptores. Los escritores de aplicaciones pueden encontrarlos más cómodos que llamar a **SQLSetDescField** o **SQLGetDescField**. Estas funciones se denominan funciones *concisas* porque realizan una serie de funciones, incluida la configuración u obtención de campos de descriptor. Algunas funciones concisas permiten a una aplicación establecer o recuperar varios campos descriptores relacionados en una única llamada de función.  

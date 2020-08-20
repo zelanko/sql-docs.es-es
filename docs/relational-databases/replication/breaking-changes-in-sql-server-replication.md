@@ -1,4 +1,5 @@
 ---
+description: Últimos cambios en la replicación de SQL Server
 title: Últimos cambios en la replicación de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cc4feef3b7860dff9fa231cdb5e674443c0ee801
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ace6d2d6812fe319ef61fcebfeb88333fd74a950
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482453"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Últimos cambios en la replicación de SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85790771"
 ## <a name="breaking-changes-made-in-sssql15"></a>Cambios substanciales realizados en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admite la replicación a o desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con versiones anteriores de replicación](../../relational-databases/replication/replication-backward-compatibility.md)  
   
   

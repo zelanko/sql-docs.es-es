@@ -1,4 +1,5 @@
 ---
+description: Crear y administrar catálogos de texto completo
 title: Creación y administración de catálogos de texto completo | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b391b06d12908023375fbbf40005d1d04af60a5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d876cbff20f80261bbd7737d72f0117acb8f3ac6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482320"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Crear y administrar catálogos de texto completo
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ GO
 ### <a name="create-a-full-text-catalog-with-management-studio"></a>Crear un catálogo de texto completo con Management Studio
 1.  En el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos en la que quiere crear el catálogo de texto completo.  
   
-2.  Expanda **Almacenamiento**y, después, haga clic con el botón derecho en **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario en **Catálogos de texto completo**.  
   
 3.  Seleccione **Nuevo catálogo de texto completo**.  
   
@@ -84,11 +85,11 @@ Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
 
 1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos que contiene el catálogo de texto completo que quiere volver a generar.  
   
-2.  Expanda **Almacenamiento**y, a continuación, expanda **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, expanda **Catálogos de texto completo**.  
   
 3.  Haga clic con el botón derecho en el nombre del catálogo de texto completo que quiere volver a generar y seleccione **Volver a generar**.  
   
-4.  Ante la pregunta **¿Quiere eliminar el catálogo de texto completo y volver a generarlo?** , haga clic en **Aceptar**.  
+4.  Ante la pregunta **¿Quiere eliminar el catálogo de texto completo y volver a generarlo?**, haga clic en **Aceptar**.  
   
 5.  En el cuadro de diálogo **Volver a generar el catálogo de texto completo** , haga clic en **Cerrar**.  
    
@@ -96,11 +97,11 @@ Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
 
 1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y, después, expanda la base de datos que contiene los catálogos de texto completo que quiere volver a generar.  
   
-2.  Expanda **Almacenamiento**y, después, haga clic con el botón derecho en **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario en **Catálogos de texto completo**.  
   
 3.  Seleccione **Volver a generar todo**.  
   
-4.  Ante la pregunta **¿Quiere eliminar todos los catálogos de texto completo y volver a generarlos?** , haga clic en **Aceptar**.  
+4.  Ante la pregunta **¿Quiere eliminar todos los catálogos de texto completo y volver a generarlos?**, haga clic en **Aceptar**.  
   
 5.  En el cuadro de diálogo **Volver a generar todos los catálogos de texto completo** , haga clic en **Cerrar**.  
   
@@ -113,7 +114,7 @@ Ejecute la instrucción de Transact-SQL [DROP FULLTEXT CATALOG](
 
 1.  En SSMS, en el Explorador de objetos, expanda el servidor, expanda **Bases de datos**y expanda la base de datos que contiene el catálogo de texto completo que quiere quitar.  
   
-2.  Expanda **Almacenamiento**y, a continuación, **Catálogos de texto completo**.  
+2.  Expanda **Almacenamiento** y, a continuación, **Catálogos de texto completo**.  
   
 3.  Haga clic con el botón derecho en el catálogo de texto completo que quiere quitar y seleccione **Eliminar**.  
   

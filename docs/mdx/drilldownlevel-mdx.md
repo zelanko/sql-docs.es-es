@@ -1,4 +1,5 @@
 ---
+description: DrilldownLevel (MDX)
 title: DrilldownLevel (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdbc6ef265d51484160ab57a87e5672362326cc
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: bc939e8aa055a2a36216a6c94fd032e561cbabf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484008"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -52,7 +53,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Si no se especifica una expresión de nivel ni un valor de índice, la función crea un conjunto en orden jerárquico mediante la recuperación de los elementos secundarios de solo aquellos miembros que se encuentran en el nivel más bajo de la primera dimensión a la que se hace referencia en el conjunto especificado.  
   
- La consulta de la propiedad XMLA MdpropMdxDrillFunctions permite comprobar el nivel de compatibilidad que el servidor proporciona para las funciones de perforación. para más información, consulte [las propiedades XMLA compatibles &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ La consulta de la propiedad XMLA MdpropMdxDrillFunctions permite comprobar el nivel de compatibilidad que el servidor proporciona para las funciones de perforación. para más información, consulte [las propiedades XMLA compatibles &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Ejemplos  
  Puede probar los ejemplos siguientes en la ventana de consulta MDX de SSMS, utilizando el cubo de Adventure Works.  

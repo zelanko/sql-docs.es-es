@@ -1,4 +1,5 @@
 ---
+description: Creación de conjuntos de filas de parámetros con valores de tabla en SQL Server Native Client
 title: Creación de conjuntos de filas de parámetros con valores de tabla (proveedor de OLE DB de Native Client)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7847c9119e1f67963414a0e22dd9241466b1e1c
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 0bf030073ce8b8a22fe605ef54ea521253aa3337
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482581"
 ---
 # <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>Creación de conjuntos de filas de parámetros con valores de tabla en SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

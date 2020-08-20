@@ -1,4 +1,5 @@
 ---
+description: sys.database_role_members (Transact-SQL)
 title: Sys. database_role_members (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
@@ -20,11 +21,12 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9669462c83252af8c4526ddda0f155cdcb6b8a92
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 443df263f534d6f15648caacb5a810a0c15e555a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482158"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

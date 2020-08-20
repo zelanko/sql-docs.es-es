@@ -1,4 +1,5 @@
 ---
+description: sys.sysprocesses (Transact-SQL)
 title: Procesos de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f195a452ffde16d7de821841367e259a686578f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89e9bf9ab596e24148851f68ffa30515079fb51f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482087"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85899771"
 |last_batch|**datetime**|Hora a la que un proceso de cliente ejecutó por última vez una llamada a un procedimiento almacenado remoto o una instrucción EXECUTE.|  
 |ecid|**smallint**|Identificador de contexto de ejecución usado para identificar de forma única los subprocesos que operan en nombre de un único proceso.|  
 |open_tran|**smallint**|Número de transacciones abiertas para el proceso.|  
-|status|**NCHAR (30)**|Estado del identificador de proceso. Los valores posibles son:<br /><br /> **inactivo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> en **ejecución** = la sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = la sesión está ejecutando una tarea en segundo plano, como la detección de interbloqueos.<br /><br /> **Rollback** = la sesión tiene una reversión de la transacción en curso.<br /><br /> **Pending** = la sesión está esperando a que un subproceso de trabajo esté disponible.<br /><br /> **Runnable** = la tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **SpinLoop** = la tarea de la sesión está esperando a que se libere una Spinlock.<br /><br /> **suspendido** = la sesión está esperando a que se complete un evento, como e/s.|  
+|status|**NCHAR (30)**|Estado del identificador de proceso. Los valores posibles son:<br /><br /> **inactivo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> en **ejecución** = la sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **background** = la sesión está ejecutando una tarea en segundo plano, como la detección de interbloqueos.<br /><br /> **Rollback** = la sesión tiene una reversión de la transacción en curso.<br /><br /> **Pending** = la sesión está esperando a que un subproceso de trabajo esté disponible.<br /><br /> **Runnable** = la tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **SpinLoop** = la tarea de la sesión está esperando a que se libere una Spinlock.<br /><br /> **suspendido** = la sesión está esperando a que se complete un evento, como e/s.|  
 |sid|**binario (86)**|Identificador único global (GUID) del usuario.|  
 |hostname|**nchar(128)**|Nombre de la estación de trabajo.|  
 |program_name|**nchar(128)**|Nombre del programa de aplicación.|  
@@ -71,7 +72,7 @@ ms.locfileid: "85899771"
 |request_id|**int**|IDENTIFICADOR de la solicitud. Se utiliza para identificar solicitudes que se ejecutan en una sesión específica.|
 |page_resource |**Binary(8** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `waitresource` columna contiene una página. |  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si un usuario tiene el permiso VIEW SERVER STATE en el servidor, verá todas las sesiones en ejecución de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de lo contrario, el usuario solo verá la sesión actual.  
   
 ## <a name="see-also"></a>Consulte también  

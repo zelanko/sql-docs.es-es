@@ -1,4 +1,5 @@
 ---
+description: Desarrollar un componente de origen personalizado
 title: Desarrollar un componente de origen personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea134d0ec6ca3a7868e21577d033a53b6a8e4f11
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba5222b35e6e55329e746f316a0503c27092441a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484358"
 ---
 # <a name="developing-a-custom-source-component"></a>Desarrollar un componente de origen personalizado
 
@@ -173,7 +174,7 @@ End Sub
   
  El <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A> de la columna determina los valores que se establecen para otras propiedades. En la tabla siguiente se muestran los requisitos de las propiedades dependientes para cada <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100.DataType%2A>. En los tipos de datos no enumerados, sus propiedades dependientes se establecen en cero.  
   
-|DataType|Length|Escala|Precision|CodePage|  
+|DataType|Length|Escala|Precisión|CodePage|  
 |--------------|------------|-----------|---------------|--------------|  
 |DT_DECIMAL|0|Mayor que 0 y menor o igual que 28.|0|0|  
 |DT_CY|0|0|0|0|  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_plan_attributes (Transact-SQL)
 title: Sys. dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c41c4bf06082e36df1ea48165520afbc4a3210
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898891"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481988"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ En la tabla anterior, el **atributo** puede tener los valores siguientes:
 |dbid|**int**|Es el Id. de la base de datos que contiene la entidad a la que el plan hace referencia.<br /><br /> Con los planes "ad hoc" o preparados, es el Id. de la base de datos desde la que se ejecuta el lote.|  
 |dbid_execute|**int**|Para los objetos del sistema almacenados en la base de datos de **recursos** , el identificador de base de datos desde el que se ejecuta el plan almacenado en caché. En todos los demás casos es 0.|  
 |user_id|**int**|Un valor de -2 indica que el lote enviado no depende de la resolución implícita de nombres y puede compartirse entre distintos usuarios. Este es el método preferido. Cualquier otro valor representa el Id. del usuario que envía la consulta en la base de datos.| 
-|language_id|**smallint**|Es el Id. del idioma de la conexión que creó el objeto de caché. Para obtener más información, vea [lenguajes desys.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|language_id|**smallint**|Es el Id. del idioma de la conexión que creó el objeto de caché. Para obtener más información, vea [ lenguajes desys.sys&#40;&#41;de Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Formato de fecha de la conexión que creó el objeto de caché. Para más información, vea [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Valor de la fecha. Para más información, vea [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Bits de estado interno que son parte de la clave de búsqueda de caché.|  
@@ -81,9 +82,9 @@ En la tabla anterior, el **atributo** puede tener los valores siguientes:
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="set-options"></a>Opciones de Set  
  Las copias del mismo plan compilado solo pueden diferir en el valor de la columna **set_options** . Esto indica que las diferentes conexiones usan conjuntos distintos de opciones SET para la misma consulta. El uso de conjuntos de opciones distintos no suele ser aconsejable porque puede ocasionar compilaciones adicionales, una menor reutilización de los planes y la inflación de la caché de los planes debido a que hay varias copias de los planes en la caché.  
@@ -91,7 +92,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 ### <a name="evaluating-set-options"></a>Evaluar las opciones de Set  
  Para traducir el valor devuelto en **set_options** a las opciones con las que se compiló el plan, reste los valores del valor **set_options** , empezando por el mayor valor posible, hasta que llegue a 0. Cada valor que reste se corresponde con una opción que se usó en el plan de consulta. Por ejemplo, si el valor de **set_options** es 251, las opciones con las que se compiló el plan son ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), paralelo plan (2) y ANSI_PADDING (1).  
   
-|Opción|Valor|  
+|Opción|Value|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -111,7 +112,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 |DATEFORMAT|32 768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indica que la opción de base de datos PARAMETERIZATION se estableció en FORCED cuando se compiló el plan.|131 072|  
-|ROWCOUNT|**Se aplica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Para[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262 144|  
+|ROWCOUNT|**Se aplica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262 144|  
   
 ## <a name="cursors"></a>Cursores  
  Los cursores inactivos se almacenan en caché en un plan compilado para que los usuarios que usan simultáneamente los cursores puedan volver a utilizar la memoria usada para almacenar el cursor. Por ejemplo, suponga que un lote declara y usa un cursor sin cancelar su asignación. Si hay dos usuarios ejecutando el mismo lote, habrá dos cursores activos. Una vez cancelada la asignación de los cursores (posiblemente en lotes diferentes), la memoria usada para almacenar el cursor se almacena en caché y no se libera. La lista de cursores inactivos se conserva en el plan compilado. La siguiente vez que un usuario ejecute el lote, la memoria del cursor almacenado en caché se volverá a usar y se inicializará de forma apropiada como un cursor activo.  
@@ -119,7 +120,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 ### <a name="evaluating-cursor-options"></a>Evaluar las opciones de los cursores  
  Para traducir el valor devuelto en **required_cursor_options** y **acceptable_cursor_options** a las opciones con las que se compiló el plan, reste los valores del valor de la columna, empezando por el mayor valor posible, hasta que llegue a 0. Cada valor que reste se corresponde con una opción de cursor que se usó en el plan de consulta.  
   
-|Opción|Valor|  
+|Opción|Value|  
 |------------|-----------|  
 |None|0|  
 |INSENSITIVE|1|  
@@ -169,7 +170,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

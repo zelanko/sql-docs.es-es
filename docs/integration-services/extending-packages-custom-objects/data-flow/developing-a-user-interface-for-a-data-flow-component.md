@@ -1,4 +1,5 @@
 ---
+description: Desarrollar una interfaz de usuario para un componente de flujo de datos
 title: Desarrollar una interfaz de usuario para un componente de flujo de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da478b08a23550735c5a93d192a39fe741c91a5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 047cbf40a98c2d513c23865dc2b45e00b1fa17b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484225"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desarrollar una interfaz de usuario para un componente de flujo de datos
 
@@ -43,7 +44,7 @@ ms.locfileid: "86916216"
   
  La propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> es una cadena delimitada por comas que identifica el nombre completo del tipo. En la lista siguiente se muestran en orden los elementos que identifican el tipo:  
   
--   Nombre del tipo  
+-   Nombre de tipo  
   
 -   Nombre del ensamblado  
   

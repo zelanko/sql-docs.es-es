@@ -1,4 +1,5 @@
 ---
+description: Vistas de catálogo de secuencia de archivo y FileTable (Transact-SQL)
 title: Vistas de catálogo de FileStream y FileTable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9ff0596667be0822e2e65717ebfd757f001f821
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c50e3042b82540e17ec6be721d84ba9cfe469c87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482248"
 ---
 # <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Vistas de catálogo de secuencia de archivo y FileTable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

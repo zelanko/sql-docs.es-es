@@ -1,4 +1,5 @@
 ---
+description: Configurar el destino del archivo plano (Asistente para importación y exportación de SQL Server)
 title: Configurar el destino del archivo plano (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 413464d787e3f2fac1ae16d497dcaabb55b90ab8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3ccc72824732f1c76dde974916c83cc9a6c434a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484203"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar el destino del archivo plano (Asistente para importación y exportación de SQL Server)
 
@@ -82,6 +83,6 @@ Si quiere, puede hacer clic en **Vista previa** para obtener una vista previa de
   
 Después de obtener una vista previa de los datos, es posible que quiera cambiar las opciones que seleccionó en páginas anteriores del asistente. Para realizar estas modificaciones, vuelva a la página **Configurar el destino del archivo plano** y después haga clic en **Atrás** para volver a las páginas anteriores en las que puede cambiar sus selecciones.  
 
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>A continuación  
  Después de especificar las opciones de formato del archivo plano de destino, la página siguiente es **Guardar y ejecutar paquete**. En esta página, especifique si quiere ejecutar la operación inmediatamente. Según la configuración, es posible que también pueda guardar su configuración como un paquete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para personalizarlo y volver a usarlo más adelante. Para más información, vea [Guardar y ejecutar paquete](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).  
 

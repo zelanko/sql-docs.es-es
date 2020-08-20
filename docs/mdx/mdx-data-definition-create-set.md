@@ -1,4 +1,5 @@
 ---
+description: 'Definición de datos de MDX: CREATE SET'
 title: CREATE SET (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f8d522f7832a280aa8b280bbe912640b566974a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483892"
 ---
 # <a name="mdx-data-definition---create-set"></a>Definición de datos de MDX: CREATE SET
 
@@ -92,12 +93,12 @@ SELECT [Core Products] ON 0
  Especifica que el conjunto no está visible para los usuarios que consultan el cubo.  
   
 ## <a name="standard-properties"></a>Propiedades estándar  
- Cada conjunto tiene una serie de propiedades predeterminadas. Cuando una aplicación cliente se conecta a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], se admiten las propiedades predeterminadas o están disponibles para admitirse, como elige el administrador.  
+ Cada conjunto tiene una serie de propiedades predeterminadas. Cuando una aplicación cliente se conecta a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , se admiten las propiedades predeterminadas o están disponibles para admitirse, como elige el administrador.  
   
 |Identificador de la propiedad|Significado|  
 |-------------------------|-------------|  
 |CAPTION|Cadena que utiliza la aplicación cliente como título para el conjunto.|  
-|DISPLAY_FOLDER|Cadena que identifica la ruta de la carpeta que usa la aplicación cliente para mostrar el conjunto. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]por, la barra diagonal\\inversa () es el separador de nivel. Si va a asignar varias carpetas para mostrar a un conjunto definido, utilice un punto y coma (;) para separar las carpetas.|  
+|DISPLAY_FOLDER|Cadena que identifica la ruta de la carpeta que usa la aplicación cliente para mostrar el conjunto. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barra diagonal inversa ( \\ ) es el separador de nivel. Si va a asignar varias carpetas para mostrar a un conjunto definido, utilice un punto y coma (;) para separar las carpetas.|  
   
 ## <a name="see-also"></a>Consulte también  
  [DROP SET, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   

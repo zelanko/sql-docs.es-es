@@ -1,4 +1,5 @@
 ---
+description: Especificación de las propiedades de replicación de mezcla
 title: Especificación de las propiedades de replicación de mezcla | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2018
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f4bedac84834f0b8cf4dda7ad22a097e82508983
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d842733a3b1356803ad0ca979c058f2afc2043a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482466"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificación de las propiedades de replicación de mezcla
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

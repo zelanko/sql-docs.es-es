@@ -1,4 +1,5 @@
 ---
+description: Crear funciones de agregado definidas por el usuario
 title: Creación de funciones de agregado definidas por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c278b746-6323-4b32-b460-239915acc067
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d66db5586f5f80f8f0e8954d041befbcd4c5eba4
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6a27c30c836b314260f8a7b5c238a8ce0a88e178
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485339"
 ---
 # <a name="create-user-defined-aggregates"></a>Crear funciones de agregado definidas por el usuario
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "86053641"
   
 -   [CREATE AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-aggregate-transact-sql.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Audit Login Change Password [clase de eventos]
 title: Audit Login Change Password (clase de eventos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 956f2eea9863f171db203925bfea0243574a0e75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b7d66cfe2b631237847dd3baa8adb368009a4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482695"
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password [clase de eventos]
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]

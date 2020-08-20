@@ -1,4 +1,5 @@
 ---
+description: Ver la lista de paquetes en el servidor de Integration Services
 title: Ver la lista de paquetes en el servidor de Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 91cba98cf9937c89a41f5860d7bfe537250daffc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 713e71e078eb505b5ac4dd7086b8d2104451ff89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484904"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>Ver la lista de paquetes en el servidor de Integration Services
 

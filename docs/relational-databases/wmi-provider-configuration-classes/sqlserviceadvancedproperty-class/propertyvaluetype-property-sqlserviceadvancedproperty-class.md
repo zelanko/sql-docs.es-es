@@ -1,4 +1,5 @@
 ---
+description: Propiedad PropertyValueType (clase SqlServiceAdvancedProperty)
 title: Propiedad PropertyValueType (SqlServiceAdvancedProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1b1dcc6-6d44-4ad2-8c2e-4fd48c2c8086
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22a1933170fcf12243305eccec63fe5f2b4c3262
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 23226ed2719a548645df4aebdf44834420871f82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485072"
 ---
 # <a name="propertyvaluetype-property-sqlserviceadvancedproperty-class"></a>Propiedad PropertyValueType (clase SqlServiceAdvancedProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ object.PropertyValueType [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **UInt32** que representa el tipo de datos de la propiedad.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

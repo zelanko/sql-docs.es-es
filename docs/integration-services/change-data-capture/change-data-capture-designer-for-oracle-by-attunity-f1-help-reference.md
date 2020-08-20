@@ -1,4 +1,5 @@
 ---
+description: Diseñador de captura de datos modificados para Oracle de Attunity (Referencia de la Ayuda de F1)
 title: Diseñador de captura de datos modificados para Oracle de Attunity (Referencia de la Ayuda de F1) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e9140f7e805842a1a85705965558a5111af803b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9ee897f941602065b9a345676ff3cc14f89b619a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484754"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Diseñador de captura de datos modificados para Oracle de Attunity (Referencia de la Ayuda de F1)
 
@@ -36,21 +37,21 @@ ms.locfileid: "86920349"
   
 -   [Usar el Asistente para nueva instancia](../../integration-services/change-data-capture/use-the-new-instance-wizard.md) (o vaya directamente a una de las tareas siguientes)  
   
-    -   [Crear la base de datos de cambio SQL Server ](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
+    -   [Crear la base de datos de cambios de SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
   
-    -   [Conectarse a una base de datos de origen de Oracle ](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
+    -   [Conectar con una base de datos de origen de Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
   
     -   [Conectar con Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
-    -   [Seleccione las columnas y tablas de Oracle ](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+    -   [Seleccionar tablas y columnas de Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
-    -   [Seleccionar tablas de Oracle para capturar cambios ](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
+    -   [Seleccionar tablas de Oracle para capturar cambios](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
-    -   [Realice los cambios en las tablas seleccionadas para capturar cambios ](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+    -   [Realizar cambios en las tablas seleccionadas para capturar cambios](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
-    -   [Generar y ejecutar el Script de registro complementario ](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
+    -   [Generar y ejecutar el script de registro complementario](../../integration-services/change-data-capture/generate-and-run-the-supplemental-logging-script.md)  
   
-    -   [Generar tablas reflejadas e instancias de captura CDC ](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
+    -   [Generar tablas reflejadas e instancias de captura CDC](../../integration-services/change-data-capture/generate-mirror-tables-and-cdc-capture-instances.md)  
   
     -   [Finalizar](../../integration-services/change-data-capture/finish.md)  
   
@@ -64,7 +65,7 @@ ms.locfileid: "86920349"
   
     -   [Editar las propiedades de tabla](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
-    -   [Revisar y generar Scripts de registro complementario](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
+    -   [Revisar y generar scripts de registro complementario](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   
     -   [Editar las propiedades avanzadas](../../integration-services/change-data-capture/edit-the-advanced-properties.md)  
   

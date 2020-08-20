@@ -1,4 +1,5 @@
 ---
+description: Método StartService (clase SqlService)
 title: Método StartService (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a6b3048ae439cdca6727f1547c2aa956bca325f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5add2aebb0a2a148b803fadbab454d2d72c2bf3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485084"
 ---
 # <a name="startservice-method-sqlservice-class"></a>Método StartService (clase SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ object.StartService()
  Correcto. Se aceptó la solicitud.  
   
  1  
- No admitido. No se admite la solicitud.  
+ No compatible. No se admite la solicitud.  
   
  2  
  Acceso denegado. El usuario no tenía el permiso de acceso adecuado.  
@@ -117,7 +118,7 @@ object.StartService()
  24  
  Servicio ya pausado. El servicio se encuentra en pausa actualmente en el sistema.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

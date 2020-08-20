@@ -1,4 +1,5 @@
 ---
+description: '! (Not lógico) (expresión de SSIS)'
 title: '! (Not lógico) (expresión de SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb3d9bc9fb9ff483e86f1ddd4a451f440bac2824
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1643daac9dab5b1027a0df8fec56ccd190e5980a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484408"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Not lógico) (expresión de SSIS)
 
@@ -50,9 +51,9 @@ ms.locfileid: "86914498"
   
 |Expresión booleana original|Después de aplicar ! como operator|  
 |---------------------------------|------------------------------------|  
-|TRUE|FALSE|  
+|true|FALSE|  
 |NULL|NULL|  
-|FALSE|TRUE|  
+|false|true|  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
  En este ejemplo se devuelve FALSE si el valor de la columna **Color** es "red".  

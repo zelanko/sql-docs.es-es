@@ -1,4 +1,5 @@
 ---
+description: DistinctCount (MDX)
 title: DistinctCount (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a5364b32aeb69019f7438b2c6d0e8f5ab716e39f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 286debd54299942ad6f885d918390e2ece53fc0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484048"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (MDX)
 
@@ -32,7 +33,7 @@ DistinctCount(Set_Expression)
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
 ## <a name="remarks"></a>Observaciones  
- La función **DistinctCount** es equivalente a `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`.  
+ La función **DistinctCount** es equivalente a `Count(Distinct(Set_Expression), EXCLUDEEMPTY)` .  
   
 ## <a name="examples"></a>Ejemplos  
  La consulta siguiente muestra el modo de usar la función DistinctCount:  

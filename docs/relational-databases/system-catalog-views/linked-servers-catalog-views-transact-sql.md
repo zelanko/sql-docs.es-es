@@ -1,4 +1,5 @@
 ---
+description: Vistas de catálogo de servidores vinculados (Transact-SQL)
 title: Vistas de catálogo de servidores vinculados (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b1799683e03447aedd50be4e5475db58c437f05
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 371a9d8f5862a231c9ff9a06ecaa134740727db1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482189"
 ---
 # <a name="linked-servers-catalog-views-transact-sql"></a>Vistas de catálogo de servidores vinculados (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Instrucción Create Table de SQL (Asistente para importación y exportación de SQL Server)
 title: Instrucción Create Table de SQL (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b877689bbccb0ea4ab206e403b54d15ce189fb79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7854a8121c16d263da900ffc3f8475a4fe4dddff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484147"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Instrucción Create Table de SQL (Asistente para importación y exportación de SQL Server)
 
@@ -55,7 +56,7 @@ Para más información sobre la instrucción CREATE TABLE y la sintaxis, vea [CR
 
 Para obtener más información sobre la sintaxis, vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Para más información sobre FILESTREAM, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-## <a name="whats-next"></a>¿Qué sigue?  
+## <a name="whats-next"></a>A continuación  
  Después de revisar y personalizar el comando CREATE TABLE y de hacer clic en **Aceptar**, el cuadro de diálogo **Instrucción Create Table de SQL** le volverá a dirigir al cuadro de diálogo **Asignaciones de columnas** . Para más información, vea [Asignaciones de columnas](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Consulte también

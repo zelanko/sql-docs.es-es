@@ -1,4 +1,5 @@
 ---
+description: Transformación Agregado
 title: Transformación Agregado| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e1e643fdbf50bee27763395430c24cabd9e47816
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 69db57924486ea2cf1e02c76f78a2ed75a559fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484496"
 ---
 # <a name="aggregate-transformation"></a>Transformación Agregado
 
@@ -33,7 +34,7 @@ ms.locfileid: "86912329"
 
   La transformación Agregado aplica funciones de agregado, como Average, a los valores de columnas y copia los resultados en la salida de transformación. Además de las funciones de agregado, la transformación proporciona la cláusula GROUP BY, que se puede usar para especificar los grupos en los que se debe realizar el agregado.  
   
-## <a name="operations"></a>Operaciones  
+## <a name="operations"></a>Operations  
  La transformación Agregado admite las siguientes operaciones.  
   
 |Operación|Descripción|  
@@ -41,7 +42,7 @@ ms.locfileid: "86912329"
 |Agrupar por|Divide los conjuntos de datos en grupos. Se pueden usar columnas de cualquier tipo de datos para la agrupación. Para más información, vea [GROUP BY &#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md).|  
 |Sum|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para más información, vea [SUM &#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md).|  
 |Average|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para más información, vea [AVG &#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md).|  
-|Count|Devuelve el número de elementos de un grupo. Para más información, vea [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
+|Recuento|Devuelve el número de elementos de un grupo. Para más información, vea [COUNT &#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md).|  
 |COUNT DISTINCT|Devuelve el número de valores únicos distintos de NULL de un grupo.|  
 |Mínima|Devuelve el valor mínimo en un grupo. Para más información, vea [MIN &#40;Transact-SQL&#41;](../../../t-sql/functions/min-transact-sql.md). En comparación con la función MIN de Transact-SQL, esta operación se puede usar únicamente con tipos de datos numéricos, de fecha y hora.|  
 |Máxima|Devuelve el valor máximo en un grupo. Para más información, vea [MAX &#40;Transact-SQL&#41;](../../../t-sql/functions/max-transact-sql.md). En comparación con la función MAX de Transact-SQL, esta operación se puede usar únicamente con tipos de datos numéricos, de fecha y hora.|  
@@ -124,14 +125,14 @@ ms.locfileid: "86912329"
   
  Para obtener más información sobre cómo establecer valores de propiedades, haga clic en uno de los temas siguientes:  
   
--   [Incorporación de valores en un conjunto de datos con la transformación Agregado](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+-   [Agregar valores en un conjunto de datos mediante la transformación Agregado](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 -   [Establecer las propiedades de un componente de flujo de datos](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Incorporación de valores en un conjunto de datos con la transformación Agregado](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Agregar valores en un conjunto de datos mediante la transformación Agregado](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de transformación Agregado (pestaña Agregaciones)
   Use la pestaña **Agregaciones** del cuadro de diálogo **Editor de transformación Agregado** para especificar las columnas que desea agregar y las propiedades de agregación. Puede aplicar diversas agregaciones. Esta transformación no genera una salida de errores.  
@@ -178,9 +179,9 @@ ms.locfileid: "86912329"
   
 |Operación|Descripción|  
 |---------------|-----------------|  
-|**GROUP BY**|Divide los conjuntos de datos en grupos. Podrán agruparse columnas con cualquier tipo de datos. Para obtener más información, vea GROUP BY.|  
+|**GroupBy**|Divide los conjuntos de datos en grupos. Podrán agruparse columnas con cualquier tipo de datos. Para obtener más información, vea GROUP BY.|  
 |**Sum**|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para obtener más información, vea SUM.|  
-|**Promedio**|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para obtener más información, vea AVG.|  
+|**Average**|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para obtener más información, vea AVG.|  
 |**Recuento**|Devuelve el número de elementos de un grupo. Para obtener más información, vea COUNT.|  
 |**CountDistinct**|Devuelve el número de valores únicos distintos de NULL de un grupo. Para obtener más información, vea COUNT y Distinct.|  
 |**Mínimo**|Devuelve el valor mínimo en un grupo. Está restringido a los tipos de datos numéricos.|  
@@ -238,7 +239,7 @@ ms.locfileid: "86912329"
  Opcionalmente, puede especificar el número exacto de valores DISTINCT que podrá escribir la agregación. Si se especifica tanto **Escala Count Distinct** como **Claves Count Distinct** , prevalece la opción **Claves Count Distinct** .  
   
  **Factor de ampliación automática**  
- Utilice un valor comprendido entre 1 y 100 para especificar el porcentaje en el que se puede ampliar la memoria durante la agregación. De forma predeterminada, el valor de esta opción es **25%** .  
+ Utilice un valor comprendido entre 1 y 100 para especificar el porcentaje en el que se puede ampliar la memoria durante la agregación. De forma predeterminada, el valor de esta opción es **25%**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   

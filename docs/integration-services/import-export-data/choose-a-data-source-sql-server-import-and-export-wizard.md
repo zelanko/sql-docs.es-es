@@ -1,4 +1,5 @@
 ---
+description: Elegir un origen de datos (Asistente para importación y exportación de SQL Server)
 title: Elegir un origen de datos (Asistente para importación y exportación de SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 49e339520d7b60a1035081f8840aed8fe17b7279
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa0d5c4164af7f6cc6e0c62987a7fab3d5ed3405
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484156"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Elegir un origen de datos (Asistente para importación y exportación de SQL Server)
 
@@ -64,14 +65,14 @@ Para conectarse a un origen de datos de uso frecuente, consulte una de las pági
 -   [Conectarse a archivos planos (archivos de texto)](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Conectarse a Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Conectarse a Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
--   [Conectarse con ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
--   [Conectarse a Azure Blob Storage](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
--   [Conectarse a PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
+-   [Conexión con ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
+-   [Conexión con Azure Blob Storage](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
+-   [Conexión con PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [Conectarse a MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 
 Para obtener más información sobre cómo conectarse a un origen de datos que no aparezca en esta lista, consulte [The Connection Strings Reference (Referencia de cadenas de conexión)](https://www.connectionstrings.com/). Este sitio de terceros contiene cadenas de conexión de ejemplo y más información acerca de los proveedores de datos y la conexión que estos necesitan.
 
-## <a name="whats-next"></a>¿Qué sigue?
+## <a name="whats-next"></a>A continuación
  Después de proporcionar información sobre el origen de datos y la manera de conectarse a él, la página siguiente es **Elegir un destino**. En esta página, debe proporcionar información sobre el destino de datos y la manera de conectarse a él. Para más información, vea [Elegir un destino](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).
 
 ## <a name="see-also"></a>Consulte también

@@ -1,4 +1,5 @@
 ---
+description: Crear un componente de flujo de datos personalizado
 title: Crear un componente de flujo de datos personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f7acd3f9c218a068f5af09da21ec21b1fcf6e065
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 30052448f3b6c39d032d9bb4338639e23ff8b189
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921261"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484278"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>Crear un componente de flujo de datos personalizado
 
@@ -50,7 +51,7 @@ ms.locfileid: "86921261"
   
 |Característica|Ensamblado para referencia|Espacio de nombres a importar|  
 |-------------|---------------------------|-------------------------|  
-|flujo de datos|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
+|Flujo de datos|Microsoft.SqlServer.PipelineHost|<xref:Microsoft.SqlServer.Dts.Pipeline>|  
 |Contenedor de flujo de datos|Microsoft.SqlServer.DTSPipelineWrap|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>|  
 |Tiempo de ejecución|Microsoft.SQLServer.ManagedDTS|<xref:Microsoft.SqlServer.Dts.Runtime>|  
 |Contenedor en tiempo de ejecución|Microsoft.SqlServer.DTSRuntimeWrap|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper>|  

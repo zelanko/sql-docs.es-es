@@ -1,4 +1,5 @@
 ---
+description: Propiedad PropertyType (clase ClientNetworkProtocolProperty)
 title: Propiedad PropertyType (ClientNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43351d9a43f53726042b19b624665eb30e6837e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f05a8c7802389cdc89eef44e59e6bb2a263479cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485199"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>Propiedad PropertyType (clase ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.PropertyType [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **UInt32** que especifica el tipo de propiedad.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
- [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

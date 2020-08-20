@@ -1,4 +1,5 @@
 ---
+description: Columnas del conjunto de resultados de enlace
 title: Enlazar columnas del conjunto de resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 558ceb79d42d82477b70a028395de82cc023c170
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6a228de81deb5cdfdaa62ee7940185b14bcaef8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499948"
 ---
 # <a name="binding-result-set-columns"></a>Columnas del conjunto de resultados de enlace
 Las aplicaciones pueden enlazar tantas o tan pocas columnas del conjunto de resultados como elijan, incluido el enlace de ninguna columna. Cuando se captura una fila de datos, el controlador devuelve los datos de las columnas enlazadas a la aplicación. El hecho de que la aplicación enlace todas las columnas del conjunto de resultados depende de la aplicación. Por ejemplo, las aplicaciones que generan informes suelen tener un formato fijo. dichas aplicaciones crean un conjunto de resultados que contiene todas las columnas utilizadas en el informe y, a continuación, enlazan y recuperan los datos de todas estas columnas. Las aplicaciones que muestran pantallas llenas de datos a veces permiten al usuario decidir qué columnas se deben mostrar. estas aplicaciones crean un conjunto de resultados que contiene todas las columnas que el usuario podría querer, pero enlazan y recuperan los datos solo de las columnas elegidas por el usuario.  

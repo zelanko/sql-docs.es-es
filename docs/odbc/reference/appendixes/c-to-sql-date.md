@@ -1,4 +1,5 @@
 ---
+description: 'C a SQL: Date'
 title: 'C a SQL: fecha | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa3df8aaee03472076b3241cb9bb60e2a307e28b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9d8bed4b16ee1c63134cdb9e1ae0b8303b0deb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500008"
 ---
 # <a name="c-to-sql-date"></a>C a SQL: Date
 El identificador para el tipo de datos C de ODBC de fecha es:  
@@ -39,6 +40,6 @@ El identificador para el tipo de datos C de ODBC de fecha es:
   
  Para obtener información sobre qué valores son válidos en una estructura de SQL_C_TYPE_DATE, vea [tipos de datos de C](../../../odbc/reference/appendixes/c-data-types.md), anteriormente en este apéndice.  
   
- Cuando los datos de la fecha C se convierten en datos SQL de caracteres, los datos de caracteres resultantes se escriben en el formato "*AAAA*-*mm*-*DD*".  
+ Cuando los datos de la fecha C se convierten en datos SQL de caracteres, los datos de caracteres resultantes se escriben en el formato "*AAAA* - *mm* - *DD*".  
   
  El controlador omite el valor de longitud/indicador al convertir los datos del tipo de datos de fecha C y da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos de fecha C. El valor de longitud/indicador se pasa en el argumento *StrLen_or_Ind* de **SQLPutData** y en el búfer especificado con el argumento *StrLen_or_IndPtr* en **SQLBindParameter**. El búfer de datos se especifica con el argumento *DataPtr* en **SQLPutData** y el argumento *ParameterValuePtr* en **SQLBindParameter**.

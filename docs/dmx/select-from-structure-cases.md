@@ -1,4 +1,5 @@
 ---
+description: Seleccione de la &lt; estructura &gt; . VECES
 title: Seleccione de la &lt; estructura &gt; . CASOS | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500931"
 ---
 # <a name="select-from-ltstructuregtcases"></a>Seleccione de la &lt; estructura &gt; . VECES
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -46,7 +47,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
  Una expresión puede incluir identificadores de columna, funciones definidas por el usuario y funciones VBA.  
   
- *estructuras*  
+ *structure*  
  Nombre de la estructura.  
   
  *expresión de condición*  

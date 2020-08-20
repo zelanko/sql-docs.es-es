@@ -1,4 +1,5 @@
 ---
+description: Enlazar parámetros ODBC
 title: Parámetros de enlace ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e314bb9e3a1a979976a450e2a45a286ec54dfe7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9893d6611ad2bfc7107df1cd2d4ffe72dbf32fad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499965"
 ---
 # <a name="binding-parameters-odbc"></a>Enlazar parámetros ODBC
 Cada parámetro de una instrucción SQL debe estar asociado, o *enlazado,* a una variable de la aplicación antes de que se ejecute la instrucción. Cuando la aplicación enlaza una variable a un parámetro, describe ese tipo de datos de dirección variable y C, entre otros, en el controlador. También se describe el parámetro, el tipo de datos SQL, la precisión, etc. El controlador almacena esta información en la estructura que mantiene para esa instrucción y usa la información para recuperar el valor de la variable cuando se ejecuta la instrucción.  

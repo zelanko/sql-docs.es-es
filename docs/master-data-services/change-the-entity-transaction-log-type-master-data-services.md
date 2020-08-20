@@ -1,4 +1,5 @@
 ---
+description: Cambio del tipo de registro de transacciones de entidad (Master Data Services)
 title: Cambio del tipo de registro de transacciones de entidad
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af42a3c638155ab07b77a2c21fff95ba87cc265b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 693311dcf687c4df6c138f7b881923c05f59da77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500746"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>Cambio del tipo de registro de transacciones de entidad (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85811855"
 |Tipo de registro de transacciones|Descripción|  
 |--------------------------|-----------------|  
 |Atributo|Los registros de cambio de la entidad se guardan a nivel de atributo.<br /><br /> El registro de transacciones se guarda, como para [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
-|Miembro|Los registros de cambio de la entidad se guardan a nivel de fila.<br /><br /> Cualquier cambio de atributo desencadena una nueva revisión de la fila.<br /><br /> Al usar el tipo de registro de transacciones de fila, la entidad se almacena como una dimensión de variación lenta de tipo 4. Se admiten la vista de suscripción tipo 2 y la vista de suscripción tipo 4 (historial). Para obtener más información, consulte [Formatos de vista de suscripciones &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)<br /><br /> Proporciona mayor rendimiento.|  
+|Member|Los registros de cambio de la entidad se guardan a nivel de fila.<br /><br /> Cualquier cambio de atributo desencadena una nueva revisión de la fila.<br /><br /> Al usar el tipo de registro de transacciones de fila, la entidad se almacena como una dimensión de variación lenta de tipo 4. Se admiten la vista de suscripción tipo 2 y la vista de suscripción tipo 4 (historial). Para obtener más información, consulte [Formatos de vista de suscripciones &#40;Master Data Services&#41;](../master-data-services/subscription-view-formats-master-data-services.md)<br /><br /> Proporciona mayor rendimiento.|  
 |None|No se guardan registros de cambios.<br /><br /> Ofrece el rendimiento máximo.|  
   
 ## <a name="prerequisites"></a>Requisitos previos  

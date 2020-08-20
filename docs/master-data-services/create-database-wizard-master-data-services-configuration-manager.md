@@ -1,4 +1,5 @@
 ---
+description: Asistente Crear base de datos (Administrador de configuración de Master Data Services)
 title: Asistente Crear base de datos
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5379610bd7ca41f2648654eb3e3eaf27bf7dbae9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b5a2b1480db92f1cd3741aa4f3429755eeffce6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500664"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>Asistente Crear base de datos (Administrador de configuración de Master Data Services)
 
@@ -34,9 +35,9 @@ ms.locfileid: "85813042"
 |**Tipo de autenticación**|Seleccione el tipo de autenticación a utilizar en la conexión a la instancia de SQL Server especificada. Las credenciales que utilice para conectarse deben formar parte del rol de servidor **sysadmin** para la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada. Para obtener más información sobre el rol sysadmin , vea [Roles de nivel de servidor](../relational-databases/security/authentication-access/server-level-roles.md).<br /><br /> Entre los tipos de autenticación se incluyen:<br /><br /> **Usuario actual: seguridad integrada**: utiliza la autenticación integrada de Windows para conectarse con las credenciales de la cuenta de usuario de Windows actual. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] utiliza las credenciales de Windows del usuario que inició sesión en el equipo y abrió la aplicación. No puede especificar unas credenciales de Windows diferentes en la aplicación. Si desea conectarse con credenciales diferentes de Windows, debe iniciar sesión en el equipo como ese usuario y, a continuación, abrir [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].<br /><br /> **Cuenta de SQL Server**: utiliza una cuenta de SQL Server para la conexión. Al seleccionar esta opción, se habilitan los campos **Nombre de usuario** y **Contraseña** y es preciso que especifique las credenciales para una cuenta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada.|  
 |**Nombre de usuario**|Especifique el nombre de la cuenta de usuario que se utilizará para conectar a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada. La cuenta debe formar parte del rol **sysadmin** en la instancia especificada [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .<br /><br /> Cuando el **tipo de autenticación** es **usuario actual: seguridad integrada**, el cuadro **nombre de usuario** es de solo lectura y muestra el nombre de la cuenta de usuario de Windows que ha iniciado sesión en el equipo.<br /><br /> Cuando el **Tipo de autenticación** es **Cuenta de SQL Server**, se habilitará el cuadro **Nombre de usuario** y deberá especificar las credenciales para una cuenta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la instancia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada.|  
 |**Contraseña**|Especifique la contraseña asociada a la cuenta de usuario:<br /><br /> Cuando el **tipo de autenticación** es el **usuario actual: seguridad integrada**, el cuadro **contraseña** es de solo lectura y las credenciales de la cuenta de usuario de Windows especificada se usan para conectarse.<br /><br /> Cuando el **Tipo de autenticación** sea **Cuenta de SQL Server**, se habilitará el cuadro **Contraseña** y deberá especificar la contraseña asociada a la cuenta de usuario especificada.|  
-|**Probar la conexión**|Compruebe que la cuenta de usuario especificada pueda conectar a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y que la cuenta tenga permiso para crear una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para esa instancia. Si no hace clic en **Probar conexión**, se probará la conexión cuando haga clic en **Siguiente**.|  
+|**Probar conexión**|Compruebe que la cuenta de usuario especificada pueda conectar a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y que la cuenta tenga permiso para crear una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para esa instancia. Si no hace clic en **Probar conexión**, se probará la conexión cuando haga clic en **Siguiente**.|  
   
-## <a name="database"></a>Capa  
+## <a name="database"></a>Base de datos  
  Especifique un nombre y las opciones de intercalación para la base de datos nueva. Las intercalaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporcionan propiedades de distinción entre mayúsculas y minúsculas, acentos y reglas de ordenación para los datos. Las intercalaciones que se utilizan con tipos de datos de caracteres como char y varchar dictan la página de códigos y los caracteres correspondientes que se pueden representar para ese tipo de datos. Para obtener más información sobre la intercalación de base de datos, consulte [Compatibilidad con la intercalación y Unicode](../relational-databases/collations/collation-and-unicode-support.md).  
   
 |Nombre del control|Descripción|  

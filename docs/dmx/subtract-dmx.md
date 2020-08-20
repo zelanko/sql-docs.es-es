@@ -1,4 +1,5 @@
 ---
+description: '- Restar DMX'
 title: '- Restar (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf313e45daa7daa07a58a09ce68bb9b2de56245f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: a7a89271417972f4df94a15544f770b9702bed45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500840"
 ---
 # <a name="--subtract-dmx"></a>- (Restar) (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

@@ -1,4 +1,5 @@
 ---
+description: '&lt;consulta de datos de origen&gt;'
 title: '&lt;consulta de datos de origen &gt; | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fedb3472755a8147e10aef046c7a7fc435b356cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500795"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;consulta de datos de origen&gt;
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86970297"
  [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  Esta instrucción consulta datos externos a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usando un origen de datos existente.  
   
- [&#41;DE FORMA &#40;DMX](../dmx/source-data-query-shape.md)  
+ [&#41;DE FORMA &#40;DMX ](../dmx/source-data-query-shape.md)  
  Esta instrucción consulta varios orígenes de datos para crear una tabla anidada. Mediante el uso de **Shape**, puede combinar datos de varios orígenes en una sola tabla jerárquica. Esto le permite aprovechar la capacidad de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de anidar tablas incrustando una tabla dentro de otra tabla.  
   
  Para especificar los datos de origen, también puede usar las siguientes opciones:  

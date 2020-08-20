@@ -1,4 +1,5 @@
 ---
+description: Funciones de la API de ODBC compatibles
 title: Funciones de la API de ODBC compatibles | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec6ceaf57d8fe3c5325f85a9644cf4c8016663e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61dca7de4a9a532789a2b448fad812ae3daf76ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500098"
 ---
 # <a name="supported-odbc-api-functions"></a>Funciones de la API de ODBC compatibles
 El propósito de la redistribución es informar a la aplicación de qué características están disponibles en el controlador. Los controladores de base de datos de Microsoft ODBC Desktop admiten todas las funciones principales y de nivel 1.  

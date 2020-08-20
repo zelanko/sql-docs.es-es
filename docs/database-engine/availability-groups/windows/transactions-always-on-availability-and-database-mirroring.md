@@ -1,4 +1,5 @@
 ---
+description: Transacciones - Grupos de disponibilidad y creación de reflejo de la base de datos
 title: 'Transacciones: grupos de disponibilidad y creación de reflejo de la base de datos'
 descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring.
 ms.custom: seo-lt-2019
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 87a2d5dc4e4c7109db09217e975c1a8c8c9b9434
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500945"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transacciones - Grupos de disponibilidad y creación de reflejo de la base de datos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -91,6 +92,6 @@ SQL Server 2016 ofrece la posibilidad de usar transacciones distribuidas en las 
 >  No se puede usar la creación de reflejo de la base de datos con DTC ni usar los grupos de disponibilidad con DTC de formas no aprobadas en este artículo.  Esto no implica que los aspectos del producto no relacionados con DTC sean incompatibles; no obstante, no se admiten los problemas derivados del uso incorrecto de las transacciones distribuidas.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Grupos de disponibilidad Always On: interoperabilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

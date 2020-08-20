@@ -1,4 +1,5 @@
 ---
+description: Open (método) (conjunto de registros ADO)
 title: Open (método) (conjunto de registros ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d8a4514e677b2b50effdadd2eac24c9f195a1f07
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762183"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512261"
 ---
 # <a name="open-method-ado-recordset"></a>Open (método) (conjunto de registros ADO)
 Abre un cursor en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -60,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  Al usar el método **Open** en un objeto de **conjunto de registros** , se abre un cursor que representa los registros de una tabla base, los resultados de una consulta o un **conjunto de registros**previamente guardado.  
   
- Use el argumento *source* opcional para especificar un origen de datos mediante uno de los siguientes: una variable de objeto de **comando** , una instrucción SQL, un procedimiento almacenado, un nombre de tabla, una dirección URL o un nombre de ruta de acceso de archivo completo. Si el *origen* es un nombre de ruta de acceso de archivo, puede ser una ruta de acceso completa ("c:\dir\file.RST"), una ruta de acceso relativa (".. \file.RST ") o una dirección URL (" <https://files/file.rst> ").  
+ Use el argumento *source* opcional para especificar un origen de datos mediante uno de los siguientes: una variable de objeto de **comando** , una instrucción SQL, un procedimiento almacenado, un nombre de tabla, una dirección URL o un nombre de ruta de acceso de archivo completo. Si el *origen* es un nombre de ruta de acceso de archivo, puede ser una ruta de acceso completa ("c:\dir\file.RST"), una ruta de acceso relativa (".. \file.RST ") o una dirección URL ( `https://files/file.rst` ).  
   
  No es recomendable usar el argumento *source* del método **Open** para realizar una consulta de acción que no devuelva registros porque no hay ninguna manera fácil de determinar si la llamada se realizó correctamente. Se cerrará el **conjunto de registros** devuelto por esta consulta. Para realizar una consulta que no devuelva registros, como una instrucción INSERT de SQL, llame al método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) de un objeto **Command** o al método [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) de un objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) en su lugar.  
   
@@ -104,7 +105,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Ejemplo de los métodos Open y Close (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Ejemplo de los métodos Open y Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Ejemplo de los métodos Open y Close (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

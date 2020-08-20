@@ -1,4 +1,5 @@
 ---
+description: Utiliza el controlador ODBC de Visual FoxPro con la aplicación de Visual Basic
 title: Usar el controlador ODBC de VFP FoxPro con la aplicación Visual Basic | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 871c392166fa2f5726e6f9e8651bf758dc144a00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07ec83ccab43890bccbf5e12582628fdb98d29c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500058"
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Utiliza el controlador ODBC de Visual FoxPro con la aplicación de Visual Basic
 Su aplicación Microsoft® Visual Basic® puede comunicarse con los datos de Visual FoxPro mediante la creación de un control de datos que se conecta a un origen de datos de Visual FoxPro.  

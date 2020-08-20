@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 45dc1cfc39b1287078e29c139b157a3e23ee3922
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4adbc9ea8015b500b4555b8e2e2d97d363b098b1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420049"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646060"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>Sys. pdw_nodes_column_store_segments (Transact-SQL)
 
@@ -81,11 +81,14 @@ ORDER BY    table_nm
 ,           sm.name ;
 ```
 
+>[!TIP]
+> Para mejorar el rendimiento de SYNAPSE SQL, considere la posibilidad de usar **Sys. pdw_permanent_table_mappings** en lugar de **Sys. pdw_table_mappings** en las tablas de usuario permanentes. Vea **[Sys. pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** para obtener más información.
+
 ## <a name="permissions"></a>Permisos
 
 Requiere el permiso **VIEW SERVER STATE**.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
 [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  

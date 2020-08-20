@@ -1,4 +1,5 @@
 ---
+description: Archivo Schema.ini (controlador de archivo de texto)
 title: Schema.ini archivo (controlador de archivo de texto) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed041e43a211f58a34b4e2476d9e0b62ff5d162b
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 8b4bbebfa6eb184bf81cba4a9faf5e3200f428de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500228"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Archivo Schema.ini (controlador de archivo de texto)
 Cuando se utiliza el controlador de texto, el formato del archivo de texto se determina mediante un archivo de información de esquema. El archivo de información de esquema siempre se denomina Schema.ini y siempre se mantiene en el mismo directorio que el origen de datos de texto. El archivo de información de esquema proporciona información sobre el formato general del archivo, el nombre de la columna y la información del tipo de datos, y otras características de datos. Siempre se necesita un archivo Schema.ini para tener acceso a los datos de longitud fija. Debe utilizar un archivo de Schema.ini cuando la tabla de texto contenga datos de fecha y hora, moneda o decimales, o en cualquier momento en el que desee tener más control sobre el control de los datos de la tabla.  
@@ -55,7 +56,7 @@ Cuando se utiliza el controlador de texto, el formato del archivo de texto se de
 |----------------------|------------------|---------------------------------|  
 |**Delimitado por tabulaciones**|Los campos del archivo están delimitados por tabulaciones.|Formato = TabDelimited|  
 |**Separado por CSV**|Los campos del archivo se delimitan mediante comas (valores separados por comas).|Formato = CSVDelimited|  
-|**Delimitado personalizado**|Los campos del archivo están delimitados por cualquier carácter que elija para escribir en el cuadro de diálogo. Se permiten todas las comillas dobles ("), incluidas las en blanco.|Formato = delimitado (*carácter personalizado*)<br /><br /> O bien<br /><br /> Sin ningún delimitador especificado:<br /><br /> Formato = delimitado ()|  
+|**Delimitado personalizado**|Los campos del archivo están delimitados por cualquier carácter que elija para escribir en el cuadro de diálogo. Se permiten todas las comillas dobles ("), incluidas las en blanco.|Formato = delimitado (*carácter personalizado*)<br /><br /> o bien<br /><br /> Sin ningún delimitador especificado:<br /><br /> Formato = delimitado ()|  
 |**Longitud fija**|Los campos del archivo tienen una longitud fija.|Format = FixedLength|  
   
 ## <a name="specifying-the-fields"></a>Especificar los campos  
@@ -93,7 +94,7 @@ Col2=CustomerName Text Width 30
 n=ColumnName type [Width] [#]  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  En la tabla siguiente se describe cada una de las partes de la entrada de **col**_n_ .  
   
 |Parámetro|Descripción|  

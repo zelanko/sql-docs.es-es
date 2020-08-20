@@ -1,4 +1,5 @@
 ---
+description: Cuadro de diálogo Crear aplicación web (Administrador de configuración de Master Data Services)
 title: Cuadro de diálogo Crear aplicación web
 ms.custom: seo-lt-2019
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 246ac0977d84e1e011553937d1edd5ce39b53205
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0f32becd4f98ec714102bbe38f7b15049b730508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812023"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500670"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Cuadro de diálogo Crear aplicación web (Administrador de configuración de Master Data Services)
 
@@ -37,7 +38,7 @@ ms.locfileid: "85812023"
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
-|**Name**|Escriba un nombre descriptivo único para un nuevo grupo de aplicaciones o bien utilice el nombre predeterminado. La aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] se agrega a este grupo de aplicaciones.<br /><br /> Los grupos de aplicaciones proporcionan límites que evitan que las aplicaciones en un grupo de aplicaciones afecten a las aplicaciones en otro grupo de aplicaciones.|  
+|**Nombre**|Escriba un nombre descriptivo único para un nuevo grupo de aplicaciones o bien utilice el nombre predeterminado. La aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] se agrega a este grupo de aplicaciones.<br /><br /> Los grupos de aplicaciones proporcionan límites que evitan que las aplicaciones en un grupo de aplicaciones afecten a las aplicaciones en otro grupo de aplicaciones.|  
 |**Nombre de usuario**|Especifique un dominio y nombre de usuario en Active Directory. Esta cuenta es la identidad del grupo de aplicaciones donde se ejecuta la aplicación web. Esta cuenta debe ser la misma que se especificó como cuenta de servicio cuando se creó la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> Esta cuenta se agrega al rol de base de datos mds_exec de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para el acceso a la base de datos. Para obtener más información, vea [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md). También se agrega a un grupo de Windows de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, al que se le concede permiso al directorio de compilación temporal, **MDSTempDir**, en el sistema de archivos. Para obtener más información, vea [Permisos de carpetas y archivos&#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |**Contraseña**|Escriba la contraseña de la cuenta de usuario especificada.|  
 |**Confirmar contraseña**|Vuelva a escribir la contraseña de la cuenta de usuario especificada. Los campos **Contraseña** y **Confirmar contraseña** deben contener la misma contraseña.|  

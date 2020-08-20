@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 54d79e59ac779efdb1a347531b7f536a074e9686
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d2d59cad60855c670f7c7e2b189ad3c97a3027b9
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424447"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564043"
 ---
 # <a name="unicode-function-arguments"></a>Argumentos de función de Unicode
 El administrador de controladores ODBC 3,5 (o posterior) es compatible con las versiones ANSI y Unicode de todas las funciones que aceptan punteros a cadenas de caracteres o SQLPOINTER en sus argumentos. Las funciones Unicode se implementan como funciones (con un sufijo de *W*), no como macros. Las funciones ANSI (a las que se puede llamar con o sin un sufijo de) son idénticas a las funciones actuales de la *API de ODBC*.  
@@ -37,7 +37,7 @@ El administrador de controladores ODBC 3,5 (o posterior) es compatible con las v
 |**SQLColAttribute**|**SQLGetInfo**|  
 |**SQLColAttributes**|**SQLGetStmtAttr**|  
 |**SQLColumnPrivileges**|**SQLGetTypeInfo**|  
-|**SQLColumns**|**SQLNativeSQL**|  
+|**SQLColumns**|**SQLNativeSql**|  
 |**SQLConnect**|**SQLPrepare**|  
 |**SQLDataSources**|**SQLPrimaryKeys**|  
 |**SQLDescribeCol**|**SQLProcedureColumns**|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec9e95ccbc326d3d2f64d224cf11f3d059bb8f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 801602c78193f9fc3fa9cdab40b98c3dc3dd42e0
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717088"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512321"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conexión a SQL Server cuando los administradores del sistema están bloqueados 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ Puede iniciar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 Cuando inicie la instancia en modo de usuario único, primero detenga el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De lo contrario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría conectarse primero y tomar la única conexión disponible al servidor, con lo que usted no podría iniciar sesión.
 
-También es posible que una aplicación cliente desconocida tomara la única conexión disponible antes de que usted pudiera iniciar sesión. Para evitar que esto suceda, puede usar la opción `-m` seguida de un nombre de aplicación para limitar las conexiones a una única conexión de la aplicación especificada. Por ejemplo, si se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con `-m"sqlcmd"` se limitan las conexiones a una única conexión que se identifica a sí misma como el programa cliente **sqlcmd**. Para conectarse mediante el editor de consultas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use `-m"Microsoft SQL Server Management Studio - Query"`.  
+También es posible que una aplicación cliente desconocida tomara la única conexión disponible antes de que usted pudiera iniciar sesión. Para evitar que esto suceda, puede usar la opción `-m` seguida de un nombre de aplicación para limitar las conexiones a una única conexión de la aplicación especificada. Por ejemplo, si se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con `-mSQLCMD` se limitan las conexiones a una única conexión que se identifica a sí misma como el programa cliente **sqlcmd**. Para conectarse mediante el editor de consultas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use `-m"Microsoft SQL Server Management Studio - Query"`.  
 
 
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ En la tabla siguiente se resumen las distintas formas de iniciar la instancia en
 | Opción | Descripción | Cuándo se usa |
 |:---|:---|:---|
 |`-m` | Limita las conexiones a una única conexión | Si no hay ningún otro usuario intentando conectarse a la instancia o si no está seguro del nombre de aplicación que va a usar para conectarse a la instancia. |
-|`-m"sqlcmd"`| Limita las conexiones a una única conexión que se debe identificar a sí misma como el programa cliente **sqlcmd**| Si planea conectarse a la instancia con **sqlcmd** y quiere evitar que otras aplicaciones tomen la única conexión disponible. |
+|`-mSQLCMD`| Limita las conexiones a una única conexión que se debe identificar a sí misma como el programa cliente **sqlcmd**| Si planea conectarse a la instancia con **sqlcmd** y quiere evitar que otras aplicaciones tomen la única conexión disponible. |
 |`-m"Microsoft SQL Server Management Studio - Query"`| Limita las conexiones a una única conexión que debe identificarse a sí misma como la aplicación **Microsoft SQL Server Management Studio - Consulta**.| Si planea conectarse a la instancia mediante el editor de consultas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y quiere evitar que otras aplicaciones tomen la única conexión disponible. |
 |`-f`| Limita las conexiones a una única conexión e inicia la instancia en configuración mínima | Si alguna otra configuración está evitando que inicie. |
 | &nbsp; | &nbsp; | &nbsp; |

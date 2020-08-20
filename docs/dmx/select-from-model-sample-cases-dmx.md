@@ -1,4 +1,5 @@
 ---
+description: Seleccione del &lt; modelo &gt; . SAMPLE_CASES (DMX)
 title: Seleccione del &lt; modelo &gt; . SAMPLE_CASES (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: af927d9c998d245c31511c29450eafac31e1d54b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500895"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>Seleccione del &lt; modelo &gt; . SAMPLE_CASES (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

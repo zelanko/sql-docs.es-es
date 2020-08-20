@@ -1,4 +1,5 @@
 ---
+description: 'Crear un flujo de trabajo personalizado: Ejemplo'
 title: Ejemplo de flujo de trabajo personalizado
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,21 +11,21 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 404fab4ed966fd8b29bc4160e7a7d721dd6397e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4c04e5da6a1e6ddb09f27613888c872ca7e94df6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500637"
 ---
 # <a name="create-a-custom-workflow---example"></a>Crear un flujo de trabajo personalizado: Ejemplo
 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], cuando crea una biblioteca de clases de flujo de trabajo personalizado, crea una clase que implementa la interfaz Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender. Esta interfaz incluye un método, [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) , al que llama SQL Server servicio de integración de flujos de trabajo de MDS cuando se inicia un flujo de trabajo. El método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) contiene dos parámetros: *workflowType* contiene el texto que escribió en el cuadro de texto **tipo de flujo de trabajo** en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , y el *elemento* DataItem contiene metadatos y datos de elementos para el elemento que desencadenó la regla de negocio del flujo de trabajo.  
+  En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], cuando crea una biblioteca de clases de flujo de trabajo personalizado, crea una clase que implementa la interfaz Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender. Esta interfaz incluye un método, [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) , al que llama SQL Server servicio de integración de flujos de trabajo de MDS cuando se inicia un flujo de trabajo. El método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  contiene dos parámetros: *workflowType* contiene el texto que escribió en el cuadro de texto **tipo de flujo de trabajo** en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , y el *elemento* DataItem contiene metadatos y datos de elementos para el elemento que desencadenó la regla de negocio del flujo de trabajo.  
   
 ## <a name="custom-workflow-example"></a>Ejemplo de flujo de trabajo personalizado  
- En el ejemplo de código siguiente se muestra cómo implementar el método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) para extraer el nombre, el código y los atributos de LastChgUserName de los datos XML para el elemento que desencadenó la regla de negocio del flujo de trabajo y cómo llamar a un procedimiento almacenado para insertarlos en otra base de datos. Para ver un ejemplo del código XML de datos de elementos y una explicación de las etiquetas que este contiene, vea [Descripción del código XML de flujo de trabajo personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md).  
+ En el ejemplo de código siguiente se muestra cómo implementar el método [Microsoft. MasterDataServices. WorkflowTypeExtender. IWorkflowTypeExtender. StartWorkflow *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  para extraer el nombre, el código y los atributos de LastChgUserName de los datos XML para el elemento que desencadenó la regla de negocio del flujo de trabajo y cómo llamar a un procedimiento almacenado para insertarlos en otra base de datos. Para ver un ejemplo del código XML de datos de elementos y una explicación de las etiquetas que este contiene, vea [Descripción del código XML de flujo de trabajo personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md).  
   
 ```csharp  
 using System;  

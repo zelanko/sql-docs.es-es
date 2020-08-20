@@ -1,4 +1,5 @@
 ---
+description: VisualTotals (MDX)
 title: VisualTotals (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c1e85f4384c322938f5e7937c32bcd116acdda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500428"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 
@@ -40,7 +41,7 @@ VisualTotals(Set_Expression[,Pattern])
 > [!NOTE]  
 >  Aplicar la función **VisualTotals** a los miembros de dimensión que no están relacionados con una medida o están bajo la granularidad del grupo de medida hará que los valores se reemplacen con NULL.  
   
- *Pattern*, que es opcional, especifica el formato de la etiqueta de totales. *Pattern* requiere un asterisco (*) como carácter de sustitución para el miembro primario y el resto del texto de la cadena aparece en el resultado concatenado con el nombre primario. Para mostrar un asterisco literal, use dos asteriscos (\*\*).  
+ *Pattern*, que es opcional, especifica el formato de la etiqueta de totales. *Pattern* requiere un asterisco (*) como carácter de sustitución para el miembro primario y el resto del texto de la cadena aparece en el resultado concatenado con el nombre primario. Para mostrar un asterisco literal, use dos asteriscos ( \* \* ).  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve el total visual del tercer trimestre del año 2001, de acuerdo con el único descendiente especificado (el mes de julio).  

@@ -1,4 +1,5 @@
 ---
+description: Configuración del proyecto (GUI) (AccessToSQL)
 title: Configuración del proyecto (GUI) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e0f611ac-7b67-4245-8d1c-804c1c44c935
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 53495af2e2fc0e97ac91f42cf3cc282cfc0f4f2f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 06cbbe7bbfd71483f2ac778b717758b91a4d8e2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937574"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488221"
 ---
 # <a name="project-settings-gui-accesstosql"></a>Configuración del proyecto (GUI) (AccessToSQL)
 La configuración del proyecto de GUI le permite configurar el modo en que los datos aparecen en la pestaña **datos** y si se incluyen informes de datos con informes de evaluación.  

@@ -1,4 +1,5 @@
 ---
+description: Exportación de un inventario de acceso (AccessToSQL)
 title: Exportación de un inventario de acceso (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7d7a87d45807c749477da7a7158f3a63fc56ec4b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488338"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportación de un inventario de acceso (AccessToSQL)
 Si tiene varias bases de datos de Access y no está seguro de cuáles se van a migrar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede exportar un inventario de todas las bases de datos de Access de un proyecto. Después, puede revisar y consultar los metadatos de inventario para determinar qué bases de datos y objetos de las bases de datos se van a migrar. Este inventario le permite encontrar rápidamente respuestas a preguntas, como las siguientes:  
@@ -90,7 +91,7 @@ Para obtener más información sobre la creación de proyectos, vea [crear y adm
   
     Puede usar los botones **seleccionar todo** y **Borrar todo** de la parte superior de la lista para seleccionar o borrar todas las bases de datos. También puede mantener presionada la tecla CTRL para seleccionar varias filas o mantener presionada la tecla Mayús para seleccionar un intervalo de filas.  
   
-7.  Haga clic en **Next**.  
+7.  Haga clic en **Siguiente**.  
   
 8.  En la página comprobar, haga clic en **Finalizar**.  
   
@@ -226,6 +227,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 Si no conoce el nombre de la columna, puede escribir una consulta para que devuelva todas las columnas. Para ello, quite la cláusula WHERE de la consulta anterior.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Preparar las bases de datos de Access para la migración](preparing-access-databases-for-migration-accesstosql.md)  
   

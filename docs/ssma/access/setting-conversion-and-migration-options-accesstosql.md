@@ -1,4 +1,5 @@
 ---
+description: Configuración de las opciones de conversión y migración (AccessToSQL)
 title: Configuración de las opciones de conversión y migración (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e074f603586afa0322d62872c49abb52fe47f047
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d5113a5c007105a0fab7700d92a16672fa9ab84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488245"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Configuración de las opciones de conversión y migración (AccessToSQL)
 Para cada proyecto de SSMA, puede establecer opciones de nivel de proyecto. Estas opciones especifican cómo se convierten los objetos, cómo se migran los datos y cómo se asignan los tipos de datos de origen a los tipos de datos de destino. Antes de convertir objetos a o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure o migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, compruebe que las opciones de configuración son adecuadas para el proyecto.  
@@ -75,7 +76,7 @@ También puede personalizar la configuración del proyecto actual. Esta configur
   
 3.  Haga clic en **Aceptar** para guardar la configuración.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
 El siguiente paso de la migración depende de las necesidades del proyecto:  
   
 -   Para personalizar la asignación de los tipos de datos de origen y de destino, vea [asignar tipos de datos de origen y de destino](mapping-source-and-target-data-types-accesstosql.md) .  

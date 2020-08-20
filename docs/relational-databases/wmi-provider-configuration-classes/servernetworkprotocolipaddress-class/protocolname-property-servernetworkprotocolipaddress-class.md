@@ -1,4 +1,5 @@
 ---
+description: Propiedad ProtocolName (clase ServerNetworkProtocolIPAddress)
 title: Propiedad ProtocolName (ServerNetworkProtocolIPAddress)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 993a955cd4ba30ceaf5c9b73d07eba343b534282
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e773e974bd5b0b1bfb89442c4fe4592003b44139
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488410"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>Propiedad ProtocolName (clase ServerNetworkProtocolIPAddress)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el nombre del protocolo de red del servidor.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

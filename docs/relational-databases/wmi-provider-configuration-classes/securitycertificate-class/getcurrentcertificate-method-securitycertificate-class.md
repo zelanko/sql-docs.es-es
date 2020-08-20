@@ -1,4 +1,5 @@
 ---
+description: Método GetCurrentCertificate (clase SecurityCertificate)
 title: Método GetCurrentCertificate (SecurityCertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f849a8ea6734a6e65aa0ea62b9569e4297bf3613
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f245bbd7e0e7c43c1401e604ed0b69896de65ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488488"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>Método GetCurrentCertificate (clase SecurityCertificate)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ object.GetCurrentCertificate(SHA , SQLInstance)
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

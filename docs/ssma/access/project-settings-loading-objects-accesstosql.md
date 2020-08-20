@@ -1,4 +1,5 @@
 ---
+description: Configuración del proyecto (cargar objetos) (AccessToSQL)
 title: Configuración del proyecto (cargar objetos) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8786ecd3affd1b67bb0e036bf01317942b6ec05b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f03b7457d79c573806ffbda2b601f56d0f942a54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488206"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Configuración del proyecto (cargar objetos) (AccessToSQL)
 La configuración del proyecto cargando objetos permite configurar el modo en que los objetos de base de datos de Access se sincronizan con los objetos de base de datos de SQL Server.  

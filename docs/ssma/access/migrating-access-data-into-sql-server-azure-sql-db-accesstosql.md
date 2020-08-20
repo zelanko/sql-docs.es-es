@@ -1,4 +1,5 @@
 ---
+description: Migración de datos de Access en SQL Server-Azure SQL Database (AccessToSQL)
 title: Migración de datos de Access en SQL Server-Azure SQL Database (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: db881613edca3a6108f1d1f8164182465febff11
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c44f7af6972c316322d4a81b7de9fa13b77205a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488318"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>Migración de datos de Access en SQL Server-Azure SQL Database (AccessToSQL)
 Después de haber creado correctamente los objetos de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos en, puede migrar los datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
@@ -53,7 +54,7 @@ También puede migrar datos fuera de SSMA mediante la [!INCLUDE[ssNoVersion](../
 ## <a name="next-step"></a>siguiente paso  
 Si tiene acceso a las aplicaciones de base de datos que desea seguir usando después de la migración, vincule las tablas de base de datos de Access a las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas o SQL Azure. Para obtener más información, consulte [vincular aplicaciones de Access a SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Configuración de las opciones de conversión y migración](setting-conversion-and-migration-options-accesstosql.md)  
   

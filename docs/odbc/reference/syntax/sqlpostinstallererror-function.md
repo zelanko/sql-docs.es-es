@@ -1,4 +1,5 @@
 ---
+description: Función SQLPostInstallerError
 title: Función SQLPostInstallerError | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cdceff5c4e175ba9f135c6e5e4405933b1a86b7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a041069de4c8b86946f7088d6a46462468cc3656
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487214"
 ---
 # <a name="sqlpostinstallererror-function"></a>Función SQLPostInstallerError
 **Conformidad**  
@@ -49,7 +50,7 @@ RETCODE SQLPostInstallerError(
  *szErrorMsg*  
  Entradas Texto del mensaje de error.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS o SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnóstico  

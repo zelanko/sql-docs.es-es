@@ -1,4 +1,5 @@
 ---
+description: Probar aplicaciones interoperables
 title: Prueba de aplicaciones interoperables | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1d43c7aad2501591c497475f6c250ac33712aa7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feebbe5914e9da1e414f5c77a1a69bc0a6e0e7b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487528"
 ---
 # <a name="testing-interoperable-applications"></a>Probar aplicaciones interoperables
 Probar las aplicaciones interoperables es el mejor proceso de negocio y, en el peor de los tiempos, no es posible porque los nuevos controladores aparecen continuamente en el mercado. Sin embargo, es posible un grado razonable de pruebas. Las aplicaciones con una interoperabilidad limitada o baja solo deben probarse con los controladores que se garantiza que admitan. Sin embargo, se deben probar por completo en estos controladores.  

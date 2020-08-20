@@ -1,4 +1,5 @@
 ---
+description: Aplicación cliente de calidad de datos
 title: Aplicación cliente de calidad de datos
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 88deed9104d231b666a1ab3e6dfd72da94ad1465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9442b966c7a7b5679e685fe330b52807c46af35f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487824"
 ---
 # <a name="data-quality-client-application"></a>Aplicación cliente de calidad de datos
 
@@ -38,7 +39,7 @@ ms.locfileid: "85899119"
 |Descripción del contenido|Tema|  
 |-------------------------|-----------|  
 |Describe cómo usar la base de conocimiento y dominios de DQS.|[Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Describe cómo limpiar datos en DQS.|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
+|Describe cómo limpiar datos en DQS.|[Limpieza de datos](../data-quality-services/data-cleansing.md)|  
 |Describe cómo buscar coincidencias en DQS.|[Coincidencia de datos](../data-quality-services/data-matching.md)|  
 |Describe cómo administrar DQS.|[dqs, administración](../data-quality-services/dqs-administration.md)|  
   

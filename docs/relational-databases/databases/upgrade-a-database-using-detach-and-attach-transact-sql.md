@@ -1,4 +1,5 @@
 ---
+description: Actualización de una base de datos mediante Separar y Adjuntar (Transact-SQL)
 title: Actualización de una base de datos mediante Separar y Adjuntar (Transact-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cbaa67dbde197e1e59df92380945a0d969180add
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3bb3afe218c4087e09b8227bbcbf8c60798a3b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487116"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Actualización de una base de datos mediante Separar y Adjuntar (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

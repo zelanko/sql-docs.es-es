@@ -1,4 +1,5 @@
 ---
+description: Servicio Integration Services (servicio SSIS)
 title: Servicio Integration Services (servicio SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e3ec1d9e9721ff050ea9196322c3e8a81aba7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 08fd5b99d4ffe74bb409db65093a3148dc5f786b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487727"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servicio Integration Services (servicio SSIS)
 
@@ -149,7 +150,7 @@ ms.locfileid: "86922047"
   
 1.  Ejecute Dcomcnfg.exe. Dcomcnfg.exe proporciona una interfaz de usuario para modificar algunos valores de configuración del Registro.  
   
-2.  En el diálogo **Servicios de componentes**, expanda el nodo Servicios de componente > Equipos > Mi PC > Configuración DCOM.  
+2.  En el cuadro de diálogo **Servicios de componente**, expanda el nodo Servicios de componente > Equipos > Mi PC > Configuración DCOM.  
   
 3.  Haga clic con el botón derecho en **Microsoft SQL Server Integration Services 13.0**y, después, haga clic en **Propiedades**.  
   
@@ -165,7 +166,7 @@ ms.locfileid: "86922047"
 
 ### <a name="event-logged-when-permissions-are-missing"></a>Evento que se registra cuando faltan los permisos
 
-Si la cuenta de servicio del Agente SQL Server no tiene el DCOM de Integration Services **[Permisos de inicio y activación]** , se agrega el evento siguiente a los registros de eventos del sistema cuando el Agente SQL Server ejecuta los trabajos del paquete SSIS:
+Si la cuenta de servicio del Agente SQL Server no tiene el DCOM de Integration Services **[Permisos de inicio y activación]**, se agrega el evento siguiente a los registros de eventos del sistema cuando el Agente SQL Server ejecuta los trabajos del paquete SSIS:
 
 ```
 Log Name: System
@@ -329,11 +330,11 @@ Cuando se instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)],
   
 #### <a name="to-configure-rights-for-remote-users-on-windows-server-2003-or-windows-xp"></a>Para configurar derechos para usuarios remotos en Windows Server 2003 o Windows XP  
   
-1.  Si el usuario no es miembro del grupo de administradores local, agregue el usuario al grupo de usuarios de COM distribuido. Puede hacerlo en el complemento Administración de equipos de MMC, en el menú **Herramientas administrativas** .  
+1.  Si el usuario no es miembro del grupo de administradores local, agregue el usuario al grupo de usuarios de COM distribuido. Puede hacerlo en el complemento Administración de equipos de MMC, en el menú **Herramientas administrativas**.  
   
 2.  Abra el Panel de control, haga doble clic en **Herramientas administrativas** y en **Servicios de componente** para iniciar el complemento Servicios de componentes de MMC.  
   
-3.  Expanda el nodo **Servicios de componente** en el panel izquierdo de la consola. Expanda los nodos **Equipos** y **Mi PC**y, a continuación, haga clic en el nodo **Configuración DCOM** .  
+3.  Expanda el nodo **Servicios de componente** en el panel izquierdo de la consola. Expanda los nodos **Equipos** y **Mi PC** y, a continuación, haga clic en el nodo **Configuración DCOM**.  
   
 4.  Seleccione el nodo **Configuración DCOM** y, a continuación, seleccione SQL Server Integration Services 11.0 en la lista de aplicaciones que pueden configurarse.  
   

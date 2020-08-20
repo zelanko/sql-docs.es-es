@@ -1,4 +1,5 @@
 ---
+description: Función SQLPoolConnect
 title: Función SQLPoolConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5045fe47683529f858b01e69f6af696e2821ca4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30e2ce61baf861551e51773aea7ce6dcaf020cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487224"
 ---
 # <a name="sqlpoolconnect-function"></a>Función SQLPoolConnect
 **Conformidad**  
@@ -54,9 +55,9 @@ SQLRETURN  SQLPoolConnect(
  Entradas Longitud del búfer **wszOutConnectString* , en caracteres.  
   
  *cchConnectStringLen*  
- Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible \*para devolver en *wszOutConnectString*. Si el número de caracteres disponibles para devolver es mayor o igual que *cchConnectStringBuffer*, la cadena de conexión completada \*en *wszOutConnectString* se trunca a *cchConnectStringBuffer* menos la longitud de un carácter de terminación null.  
+ Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en \* *wszOutConnectString*. Si el número de caracteres disponibles para devolver es mayor o igual que *cchConnectStringBuffer*, la cadena de conexión completada en \* *WszOutConnectString* se trunca a *cchConnectStringBuffer* menos la longitud de un carácter de terminación null.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -77,7 +78,7 @@ SQLRETURN  SQLPoolConnect(
   
  Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

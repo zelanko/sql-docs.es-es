@@ -1,4 +1,5 @@
 ---
+description: Niveles de aislamiento de transacción (ODBC)
 title: Niveles de aislamiento de transacción (ODBC) | Microsoft Docs
 ms.custom: seo-dt-2019
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 622b4cd7f0db259b5ecfd5be63b27df64be965e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aa4f5b0269760b648e0a499ea550901e7db6e74f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487478"
 ---
 # <a name="transaction-isolation-levels-odbc"></a>Niveles de aislamiento de transacción (ODBC)
 Los *niveles de aislamiento de transacción* son una medida de la medida en que el aislamiento de la transacción se realiza correctamente. En concreto, los niveles de aislamiento de transacción se definen por la presencia o ausencia de los siguientes fenómenos:  
@@ -56,6 +57,6 @@ Los *niveles de aislamiento de transacción* son una medida de la medida en que 
 |Lectura no confirmada|Las transacciones no están aisladas entre sí. Si el DBMS admite otros niveles de aislamiento de transacción, omite cualquier mecanismo que use para implementar esos niveles. Para que no afecten negativamente a otras transacciones, las transacciones que se ejecutan en el nivel de lectura sin confirmar suelen ser de solo lectura.|  
 |Lectura confirmada|La transacción espera hasta que se desbloquean las filas de escritura bloqueadas por otras transacciones. Esto evita que lea los datos "sucios".<br /><br /> La transacción contiene un bloqueo de lectura (si solo lee la fila) o el bloqueo de escritura (si actualiza o elimina la fila) en la fila actual para evitar que otras transacciones la actualicen o eliminen. La transacción libera los bloqueos de lectura cuando se desplaza fuera de la fila actual. Mantiene bloqueos de escritura hasta que se confirma o se revierte.|  
 |Lectura repetible|La transacción espera hasta que se desbloquean las filas de escritura bloqueadas por otras transacciones. Esto evita que lea los datos "sucios".<br /><br /> La transacción mantiene bloqueos de lectura en todas las filas que devuelve a la aplicación y escribe bloqueos en todas las filas que inserta, actualiza o elimina. Por ejemplo, si la transacción incluye la instrucción SQL **SELECT \* FROM Orders**, la transacción de lectura bloquea las filas a medida que la aplicación las recopila. Si la transacción incluye la instrucción SQL **Delete de los pedidos en los que status = ' Closed '**, la transacción bloquea las filas cuando se eliminan.<br /><br /> Dado que otras transacciones no pueden actualizar o eliminar estas filas, la transacción actual evita las lecturas no repetibles. La transacción libera sus bloqueos cuando se confirma o se revierte.|  
-|Serializable|La transacción espera hasta que se desbloquean las filas de escritura bloqueadas por otras transacciones. Esto evita que lea los datos "sucios".<br /><br /> La transacción contiene un bloqueo de lectura (si solo Lee filas) o el bloqueo de escritura (si puede actualizar o eliminar filas) en el intervalo de filas al que afecta. Por ejemplo, si la transacción incluye la instrucción SQL **SELECT \* FROM Orders**, el intervalo es toda la tabla Orders; la transacción de lectura bloquea la tabla y no permite que se inserten nuevas filas en ella. Si la transacción incluye la instrucción SQL **Delete de los pedidos en los que status = ' Closed '**, el intervalo es todas las filas con el estado ' Closed '; la transacción de escritura bloquea todas las filas de la tabla Orders con el estado "CLOSED" y no permite que las filas se inserten o actualicen de modo que la fila resultante tenga el estado "CLOSED".<br /><br /> Dado que otras transacciones no pueden actualizar o eliminar las filas del intervalo, la transacción actual evita las lecturas no repetibles. Dado que otras transacciones no pueden insertar filas en el intervalo, la transacción actual evita los fantasmas. La transacción libera su bloqueo cuando se confirma o se revierte.|  
+|Serializable|La transacción espera hasta que se desbloquean las filas de escritura bloqueadas por otras transacciones. Esto evita que lea los datos "sucios".<br /><br /> La transacción contiene un bloqueo de lectura (si solo Lee filas) o el bloqueo de escritura (si puede actualizar o eliminar filas) en el intervalo de filas al que afecta. Por ejemplo, si la transacción incluye la instrucción SQL **SELECT \* FROM Orders**, el intervalo es la tabla de pedidos completa; la transacción de lectura bloquea la tabla y no permite que se inserten nuevas filas en ella. Si la transacción incluye la instrucción SQL **Delete de los pedidos en los que status = ' Closed '**, el intervalo es todas las filas con el estado ' Closed '; la transacción de escritura bloquea todas las filas de la tabla Orders con el estado "CLOSED" y no permite que las filas se inserten o actualicen de modo que la fila resultante tenga el estado "CLOSED".<br /><br /> Dado que otras transacciones no pueden actualizar o eliminar las filas del intervalo, la transacción actual evita las lecturas no repetibles. Dado que otras transacciones no pueden insertar filas en el intervalo, la transacción actual evita los fantasmas. La transacción libera su bloqueo cuando se confirma o se revierte.|  
   
  Es importante tener en cuenta que el nivel de aislamiento de transacción no afecta a la capacidad de una transacción para ver sus propios cambios; las transacciones siempre pueden ver los cambios que realicen. Por ejemplo, una transacción puede constar de dos instrucciones **Update** , la primera de las cuales eleva el pago de todos los empleados en un 10 por ciento y la segunda de las cuales establece el pago de los empleados a lo largo de una cantidad máxima. Esto se realiza correctamente como una sola transacción, ya que la segunda instrucción **Update** puede ver los resultados de la primera.

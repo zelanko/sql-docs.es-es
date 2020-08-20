@@ -1,4 +1,5 @@
 ---
+description: Crear dominio vinculado
 title: Crear dominio vinculado
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 68c8fe492dfe05945b670b137b0d2f427d82d486
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487884"
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
 
@@ -45,7 +46,7 @@ ms.locfileid: "85887967"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio vinculado.  
   
-##  <a name="create-a-linked-domain"></a><a name="Create"></a>Crear un dominio vinculado  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a> Crear un dominio vinculado  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -64,7 +65,7 @@ ms.locfileid: "85887967"
   
 7.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a>Asignar dos campos a dominios vinculados  
+##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Asignar dos campos a dominios vinculados  
   
 1.  Abra una base de conocimiento en la actividad de detección de conocimiento, y asígnela a la base de datos y la tabla o la vista.  
   
@@ -74,10 +75,10 @@ ms.locfileid: "85887967"
   
 4.  En el cuadro de diálogo Crear dominio, escriba un nombre de dominio y una descripción; a continuación, haga clic en Aceptar.  
   
-##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a>Seguimiento: después de crear un dominio vinculado  
+##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a> Seguimiento: después de crear un dominio vinculado  
  Una vez creado el dominio vinculado, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a>Comportamiento de un dominio vinculado  
+##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a> Comportamiento de un dominio vinculado  
  Puede cambiar la configuración de un dominio vinculado de la manera siguiente:  
   
 -   Puede cambiar el nombre y la descripción de un dominio vinculado.  

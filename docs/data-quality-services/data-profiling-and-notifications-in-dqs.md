@@ -1,4 +1,5 @@
 ---
+description: Generación de perfiles de datos y notificaciones de DQS
 title: Generación de perfiles de datos y notificaciones de DQS
 ms.date: 04/01/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: af0464a307d77531c5d11624dc86a836ddf77711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4857ba951d86551e95f81075d77bc1d0d9be928a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487837"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Generación de perfiles de datos y notificaciones de DQS
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882546"
   
  La generación de perfiles le permite utilizar Data Quality Services no solo para la detección de conocimiento, la limpieza y la búsqueda de coincidencias, sino también como herramienta de análisis. Puede crear una base de conocimiento para el análisis, y ejecutar la detección de conocimiento utilizando dicha base de conocimiento para determinar, a partir de las estadísticas de la generación de perfiles, si esta satisface sus necesidades de detección, limpieza y búsqueda de coincidencias.  
   
-##  <a name="how-profiling-works"></a><a name="How"></a>Cómo funciona la generación de perfiles  
+##  <a name="how-profiling-works"></a><a name="How"></a> Cómo funciona la generación de perfiles  
  La generación de perfiles no mide la calidad de la base de conocimiento. Mide la calidad de los datos de origen. La generación de perfiles proporciona estadísticas que indican el efecto de la operación específica que está realizando en la administración del conocimiento o en un proyecto de calidad de datos en los datos de origen. La generación de perfiles siempre está en el contexto de la actividad específica que se está realizando. Puede hacer clic en la pestaña generación de perfiles de una pantalla para mostrar los datos de generación de perfiles sin mantener la fase de la actividad que está realizando. La tabla de generación de perfiles se rellena en tiempo real a medida que se realiza el proceso, lo que le permite evaluar las tareas de calidad de los datos a medida que las está haciendo. Puede determinar si los datos de origen tienen mejor calidad después de la limpieza o la eliminación de datos duplicados, y en qué grado.  
   
  Todos los números de generación de perfiles hacen referencia al número de apariciones de un valor y, en muchos casos, hacen referencia al porcentaje del total, con la excepción de las métricas de unicidad. Las métricas de unicidad hacen referencia al número absoluto de valores, independientemente del número de repeticiones de estos.  
@@ -74,7 +75,7 @@ ms.locfileid: "85882546"
   
 -   [Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md)  
   
-##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>Generación de perfiles de datos en la supervisión de actividades  
+##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a> Generación de perfiles de datos en la supervisión de actividades  
  La información de generación de perfiles para las actividades detección de conocimiento, Directiva de coincidencia, coincidencia y limpieza está disponible no solo en las páginas de actividades de Data Quality Client, sino que también está disponible en supervisión de actividades. La supervisión de la actividad le proporciona información general sobre las actividades actuales y las anteriores. Además de las propiedades y los procesos de cálculo relacionados con las actividades, también puede ver la información sobre la generación de perfiles generada para cada actividad en una ubicación. Seleccione una actividad en la tabla de actividades para mostrar los resultados de la generación de perfiles en una tabla que aparecerá debajo. También puede exportar los resultados de la generación de perfiles. Para obtener más información, consulte [DQS Administration](../data-quality-services/dqs-administration.md).  
   
 ##  <a name="notifications"></a><a name="Notifications"></a> Notificaciones  

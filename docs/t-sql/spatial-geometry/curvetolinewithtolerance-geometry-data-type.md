@@ -1,4 +1,5 @@
 ---
+description: CurveToLineWithTolerance (tipo de datos Geometry)
 title: CurveToLineWithTolerance (tipo de datos geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 99133135d568030646813026af0c6543a05218de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4a717b5b83be8d381a91ff1ab1055d24ae8c59ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488228"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (tipo de datos Geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ Devuelve una aproximación poligonal de una instancia de **geometry** que contie
 ## <a name="exceptions"></a>Excepciones  
  Al establecer la tolerancia <= 0 se produce una excepción `ArgumentOutOfRange`.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este método puede especificar una cantidad de tolerancia a errores para el resultado **LineString** que se obtiene.  
   
  En la siguiente tabla se muestra el tipo de instancia que `CurveToLineWithTolerance()` devuelve para varios tipos.  
@@ -117,7 +118,7 @@ Devuelve una aproximación poligonal de una instancia de **geometry** que contie
  SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.1, 0).ToString();
  ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [CurveToLineWithTolerance &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
  [STCurveToLine &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   

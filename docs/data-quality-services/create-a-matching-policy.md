@@ -1,4 +1,5 @@
 ---
+description: Crear una directiva de coincidencia
 title: Crear una directiva de coincidencia
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c18d8d44bb595e4bfaad66296331d8dab403535e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a899d2117cf3999e93fc95628b6cccea1bbbde1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487929"
 ---
 # <a name="create-a-matching-policy"></a>Crear una directiva de coincidencia
 
@@ -38,7 +39,7 @@ ms.locfileid: "85881961"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear una directiva de coincidencia.  
   
-##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a>Cómo establecer parámetros de regla de coincidencia  
+##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a> Cómo establecer parámetros de regla de coincidencia  
  La creación de una regla de coincidencia es un proceso iterativo en el que se especifican los factores utilizados para determinar si un registro coincide con otro. Puede especificar condiciones para cualquier dominio de una tabla. Cuando DQS realiza el proceso de búsqueda de coincidencias con dos registros, comparará los valores de los campos asignados a los dominios que están incluidos en la regla de coincidencia. DQS analiza los valores de cada campo de la regla y, a continuación, utiliza los factores especificados en la regla para cada dominio con objeto de calcular una puntuación de coincidencia final. Si la puntuación de coincidencia para los dos registros comparados es mayor que la puntuación de coincidencia mínima, los dos campos se consideran coincidencias.  
   
  En una regla de coincidencia se especifican los factores siguientes:  
@@ -57,7 +58,7 @@ ms.locfileid: "85881961"
   
  La generación de perfiles proporciona nuevas perspectivas sobre la integridad y la unicidad. Considere que la integridad y la unicidad forman un tándem. Utilice los datos de integridad y unicidad para determinar qué ponderación debe tener un campo en el proceso de búsqueda de coincidencias. Si hay un nivel alto de unicidad en un campo, utilizar ese campo en una directiva de coincidencia puede reducir los resultados de búsqueda de coincidencias, por lo que puede establecer la ponderación de ese campo en un valor relativamente pequeño. Si tiene un bajo nivel de unicidad en una columna, pero la integridad es baja, es posible que no desee incluir un dominio para esa columna. Si el nivel de unicidad es bajo, pero el nivel de integridad es alto, puede que desee incluir el dominio. Algunas columnas, como sexo, pueden tener un nivel bajo de unicidad intrínseco. Para obtener más información, consulte [Pestañas Generador de perfiles y Resultados](#Tabs).  
   
-##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a>Primer paso: iniciar una directiva de coincidencia  
+##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a> Primer paso: iniciar una directiva de coincidencia  
  La actividad de directiva de coincidencia se realiza en el área de administración de la base de conocimiento de la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -91,7 +92,7 @@ ms.locfileid: "85881961"
     > [!NOTE]  
     >  Haga clic en **Cerrar** para guardar la fase del proyecto de búsqueda de coincidencias y volver a la página de inicio de DQS. La próxima vez que abra este proyecto, se iniciará en la misma fase. Haga clic en **Cancelar** para finalizar la actividad de búsqueda de coincidencias, perder los cambios realizados y volver a la página de inicio de DQS.  
   
-##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a>Fase de directiva de coincidencia  
+##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a> Fase de directiva de coincidencia  
  Las reglas de coincidencia se crean y se prueban por separado en la página Directiva de coincidencia. Cuando se prueba una regla de coincidencia en la página **Directiva de coincidencia** , se ve una tabla de resultados de búsqueda de coincidencias que muestra los clústeres que DQS ha identificado para la regla seleccionada. La tabla muestra cada registro del clúster con los valores de los dominios de asignación y la puntuación de coincidencia, junto con el registro dinámico inicial para el clúster. También es posible mostrar datos de generación de perfiles para el proceso de búsqueda de coincidencias en conjunto, las condiciones de cada regla de coincidencia y las estadísticas de los resultados para cada regla de coincidencia por separado. Puede utilizar como filtro los datos de la regla maestra que desee.  
   
  Para obtener más información sobre cómo funcionan las reglas de coincidencia, vea [Cómo establecer parámetros para las reglas de coincidencia](#MatchingRules).  
@@ -147,7 +148,7 @@ ms.locfileid: "85881961"
   
 18. Haga clic en **Siguiente** para pasar a la fase de resultados de búsqueda de coincidencias.  
   
-##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a>Fase resultados de búsqueda de coincidencias  
+##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a> Fase resultados de búsqueda de coincidencias  
  En la página **Resultados de búsqueda de coincidencias** puede probar todas las reglas de coincidencia juntas. Antes de hacerlo, puede especificar si desea que la ejecución de prueba de la regla identifique clústeres superpuestos o no superpuestos. Si ejecuta las reglas varias veces, puede hacerlo volviendo a cargar los datos desde el origen o con los datos anteriores.  
   
  Cuando se prueban las reglas de coincidencia en la página **Resultados de búsqueda de coincidencias** , se ve una tabla de resultados de coincidencia que muestra los clústeres que DQS ha identificado para todas las reglas. La tabla muestra cada registro del clúster con los valores de los dominios de asignación y la puntuación de coincidencia, junto con el registro dinámico inicial para el clúster. También puede mostrar los datos de generación de perfiles para todas las reglas de coincidencia, las condiciones de cada regla de coincidencia y las estadísticas sobre los resultados de todas las reglas de coincidencia.  
@@ -191,7 +192,7 @@ ms.locfileid: "85881961"
 ##  <a name="follow-up-after-creating-a-matching-policy"></a><a name="FollowUp"></a> Seguimiento: después de crear una directiva de coincidencia  
  Después de crear una directiva de coincidencia, puede ejecutar un proyecto de búsqueda de coincidencias basándose en la base de conocimiento que contiene la directiva de coincidencia. Para obtener más información, consulte [Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md).  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a>Pestañas generador de perfiles y resultados  
+##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a> Pestañas generador de perfiles y resultados  
  Las pestañas Generador de perfiles y Resultados contienen estadísticas para las páginas Directiva de coincidencia y Resultados de búsqueda de coincidencias.  
   
 ###  <a name="profiler-tab"></a><a name="Profiler"></a> Pestaña Generador de perfiles  
@@ -223,7 +224,7 @@ ms.locfileid: "85881961"
   
 -   **Integridad**: la integridad de cada campo de origen que se ha asignado para el ejercicio de búsqueda de coincidencias  
   
-###  <a name="matching-policy-notifications"></a><a name="Notifications"></a>Notificaciones de directiva de coincidencia  
+###  <a name="matching-policy-notifications"></a><a name="Notifications"></a> Notificaciones de directiva de coincidencia  
  En la actividad de directiva de coincidencia, se producen notificaciones cuando se dan las condiciones siguientes:  
   
 -   El campo está vacío en todos los registros; se recomienda eliminarlo de la asignación.  

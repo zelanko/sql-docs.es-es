@@ -1,4 +1,5 @@
 ---
+description: Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos
 title: Vistas de catálogo
 titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
 ms.date: 10/29/2019
@@ -12,12 +13,12 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 258c08acbccc80a90a03b70f5f586960aa763f02
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 8682f7d5549389ff98d20862ce86f6d177b3116e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486520"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos
 
@@ -25,7 +26,7 @@ ms.locfileid: "86197294"
 
  En este tema se enumeran las [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de catálogo y.  
   
-## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de catálogo  
+## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de catálogo  
  Las siguientes vistas de catálogo se aplican tanto a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] como a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] :  
   
  [Sys. pdw_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
@@ -60,7 +61,7 @@ ms.locfileid: "86197294"
   
  [Sys. pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Vistas de catálogo
+## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Vistas de catálogo
 
  Las siguientes vistas de catálogo solo se aplican a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] :
 
@@ -68,7 +69,7 @@ ms.locfileid: "86197294"
 
  [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) 
 
- [Sys. pdw_materialized_view_mappings &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) (versión preliminar)
+ [Sys. pdw_materialized_view_mappings &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) (versión preliminar)
 
  [Sys. workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)
   
@@ -77,7 +78,7 @@ ms.locfileid: "86197294"
  [Sys. workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) 
 
 
-## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Vistas de catálogo
+## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Vistas de catálogo
 
  Las siguientes vistas de catálogo solo se aplican a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] :
 

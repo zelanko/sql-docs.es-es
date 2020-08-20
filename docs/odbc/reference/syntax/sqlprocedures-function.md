@@ -1,4 +1,5 @@
 ---
+description: Función SQLProcedures
 title: Función SQLProcedures | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4c8b8a9f22f6005d1af811e56485299bad3a425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c4e44a708f96883891d44d629fdd3c945eb283a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487151"
 ---
 # <a name="sqlprocedures-function"></a>Función SQLProcedures
 **Conformidad**  
@@ -51,7 +52,7 @@ SQLRETURN SQLProcedures(
  *StatementHandle*  
  Entradas Identificador de instrucción.  
   
- *Nombrecatálogo*  
+ *CatalogName*  
  Entradas Catálogo de procedimientos. Si un controlador admite catálogos para algunas tablas, pero no para otros, como cuando el controlador recupera datos de distintos DBMS, una cadena vacía ("") denota las tablas que no tienen catálogos. *Nombrecatálogo* no puede contener un patrón de búsqueda de cadenas.  
   
  Si el atributo de instrucción SQL_ATTR_METADATA_ID está establecido en SQL_TRUE, *nombrecatálogo* se trata como un identificador y su caso no es significativo. Si se SQL_FALSE, *nombrecatálogo* es un argumento normal; se trata literalmente y su caso es significativo. Para obtener más información, vea [argumentos en funciones de catálogo](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -75,7 +76,7 @@ SQLRETURN SQLProcedures(
  *NameLength3*  
  Entradas Longitud en caracteres de **NombreProc*.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -88,7 +89,7 @@ SQLRETURN SQLProcedures(
 |24000|Estado de cursor no válido|Un cursor estaba abierto en el *StatementHandle*y se ha llamado a **SQLFetch** o **SQLFetchScroll** . Este error lo devuelve el administrador de controladores si **SQLFetch** o **sqlfetchscroll** no ha devuelto SQL_NO_DATA y lo devuelve el controlador si **SQLFetch** o **sqlfetchscroll** ha devuelto SQL_NO_DATA.<br /><br /> Un cursor estaba abierto en el *StatementHandle*, pero no se ha llamado a **SQLFetch** o **SQLFetchScroll** .|  
 |40001|Error de serialización|La transacción se revirtió debido a un interbloqueo de recursos con otra transacción.|  
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*. A continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY009|Uso no válido de puntero nulo|El atributo de instrucción SQL_ATTR_METADATA_ID se estableció en SQL_TRUE, el argumento *nombrecatálogo* era un puntero nulo y el SQL_CATALOG_NAME *InfoType* devuelve los nombres de catálogo que se admiten.<br /><br /> (DM) el atributo de instrucción SQL_ATTR_METADATA_ID se estableció en SQL_TRUE y el argumento *SchemaName* o *NombreProc* era un puntero nulo.|  
@@ -130,9 +131,9 @@ SQLRETURN SQLProcedures(
 |PROCEDURE_CAT (ODBC 2,0)|1|Varchar|Identificador del catálogo de procedimientos; ES NULL si no es aplicable al origen de datos. Si un controlador admite catálogos para algunos procedimientos, pero no para otros, como cuando el controlador recupera datos de distintos DBMS, devuelve una cadena vacía ("") para los procedimientos que no tienen catálogos.|  
 |PROCEDURE_SCHEM (ODBC 2,0)|2|Varchar|Identificador del esquema de procedimientos; ES NULL si no es aplicable al origen de datos. Si un controlador admite esquemas para algunos procedimientos, pero no para otros, como cuando el controlador recupera datos de distintos DBMS, devuelve una cadena vacía ("") para los procedimientos que no tienen esquemas.|  
 |PROCEDURE_NAME (ODBC 2,0)|3|VARCHAR NOT NULL|Identificador de procedimiento.|  
-|NUM_INPUT_PARAMS (ODBC 2,0)|4|N/D|Reservado para uso futuro. Las aplicaciones no deben basarse en los datos devueltos en estas columnas de resultados.|  
-|NUM_OUTPUT_PARAMS (ODBC 2,0)|5|N/D|Reservado para uso futuro. Las aplicaciones no deben basarse en los datos devueltos en estas columnas de resultados.|  
-|NUM_RESULT_SETS (ODBC 2,0)|6|N/D|Reservado para uso futuro. Las aplicaciones no deben basarse en los datos devueltos en estas columnas de resultados.|  
+|NUM_INPUT_PARAMS (ODBC 2,0)|4|N/D|Reservado para un uso futuro. Las aplicaciones no deben basarse en los datos devueltos en estas columnas de resultados.|  
+|NUM_OUTPUT_PARAMS (ODBC 2,0)|5|N/D|Reservado para un uso futuro. Las aplicaciones no deben basarse en los datos devueltos en estas columnas de resultados.|  
+|NUM_RESULT_SETS (ODBC 2,0)|6|N/D|Reservado para un uso futuro. Las aplicaciones no deben basarse en los datos devueltos en estas columnas de resultados.|  
 |COMENTARIOS (ODBC 2,0)|7|Varchar|Descripción del procedimiento.|  
 |PROCEDURE_TYPE (ODBC 2,0)|8|Smallint|Define el tipo de procedimiento:<br /><br /> SQL_PT_UNKNOWN: no se puede determinar si el procedimiento devuelve un valor.<br /><br /> SQL_PT_PROCEDURE: el objeto devuelto es un procedimiento; es decir, no tiene un valor devuelto.<br /><br /> SQL_PT_FUNCTION: el objeto devuelto es una función; es decir, tiene un valor devuelto.|  
   
@@ -153,6 +154,6 @@ SQLRETURN SQLProcedures(
 |Devolver los parámetros y las columnas del conjunto de resultados de un procedimiento|[Función SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|  
 |Sintaxis para invocar procedimientos almacenados|[Ejecutar instrucciones](../../../odbc/reference/develop-app/executing-statements-odbc.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: Función SQLPrepare
 title: SQLPrepare (función) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9aedd665df2a943627207902d592d597c503c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3b5d68aae8033b0710ee052b001c7942eb1f7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487191"
 ---
 # <a name="sqlprepare-function"></a>Función SQLPrepare
 **Conformidad**  
@@ -53,7 +54,7 @@ SQLRETURN SQLPrepare(
  *TextLength*  
  Entradas Longitud de **StatementText* en caracteres.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -80,7 +81,7 @@ SQLRETURN SQLPrepare(
 |42S12|No se encontró el índice|\**StatementText* contenía una instrucción **Drop index** y el nombre de índice especificado no existía.|  
 |42S21|La columna ya existe|\**StatementText* contenía una instrucción **ALTER TABLE** y la columna especificada en la cláusula **Add** no es única o identifica una columna existente en la tabla base.|  
 |42S22|Columna no encontrada|\**StatementText* contenía una instrucción **Create index** y uno o varios de los nombres de columna especificados en la lista de columnas no existían.<br /><br /> \**StatementText* contenía una instrucción **Grant** o **REVOKE** y no existía un nombre de columna especificado.<br /><br /> \**StatementText* contenía una instrucción **Select**, **Delete**, **Insert**o **Update** , y no existía un nombre de columna especificado.<br /><br /> \**StatementText* contenía una instrucción **CREATE TABLE** y una columna especificada en una restricción (que hace referencia a una tabla distinta de la que se está creando) no existía.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*y, a continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY009|Uso no válido de puntero nulo|(DM) *StatementText* era un puntero nulo.|  
@@ -129,6 +130,6 @@ SQLRETURN SQLPrepare(
 |Devolver el número de filas afectadas por una instrucción|[Función SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md)|  
 |Establecer un nombre de cursor|[Función SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

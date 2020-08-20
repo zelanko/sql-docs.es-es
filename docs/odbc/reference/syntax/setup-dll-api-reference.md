@@ -1,4 +1,5 @@
 ---
+description: Referencia de API de DLL de instalación
 title: Referencia de API de DLL de configuración | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25cff50b73868b5b3015dfc1a00c560c344a6d36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5cb3e20a1c25d206a1dd27367bbe4a128af0818f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487338"
 ---
 # <a name="setup-dll-api-reference"></a>Referencia de API de DLL de instalación
 En esta sección se describe la sintaxis de la API de DLL de instalación del controlador, que consta de dos funciones (**ConfigDriver** y **ConfigDSN**). **ConfigDriver** y **ConfigDSN** pueden estar en el archivo DLL del controlador o en un archivo dll de instalación independiente.  

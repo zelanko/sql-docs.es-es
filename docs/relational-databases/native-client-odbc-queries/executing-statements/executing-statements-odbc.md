@@ -1,4 +1,5 @@
 ---
+description: Ejecutar instrucciones (ODBC)
 title: Ejecutar instrucciones (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,11 +17,12 @@ ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2680d1d65e051abfdcb22e239d9c97a9fc535745
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 45ac4b91f5aab26d1086bcc8e3b31c11821f75da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486849"
 ---
 # <a name="executing-statements-odbc"></a>Ejecutar instrucciones (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,6 +50,6 @@ ms.locfileid: "86001389"
 -   [Efectos de las opciones ISO](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejecutar consultas &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Ejecutar consultas &#40;&#41;ODBC ](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

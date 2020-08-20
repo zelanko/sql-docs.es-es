@@ -1,4 +1,5 @@
 ---
+description: Gramática de SQL de ODBC compatibles adicionales
 title: Gramática de SQL ODBC compatible adicional | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3081f287a1d580c2e3bced671cbfc40b15780241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487568"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Gramática de SQL de ODBC compatibles adicionales
 Los controladores ODBC admiten por completo la gramática mínima de ODBC 2,5 y las siguientes cláusulas en la gramática básica y extendida de ODBC 2,5. Se puede mostrar información adicional mediante el salto a la [instrucción ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [los nombres de correlación y los](../../odbc/microsoft/correlation-names.md)temas de [invocación de procedimiento](../../odbc/microsoft/procedure-invocation.md) .  

@@ -1,4 +1,5 @@
 ---
+description: dqs, administración
 title: dqs, administración
 ms.date: 10/01/2012
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ad4fb8f24ca51741c21fead975a1c745f661b87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1874867b02aea521e44ff6ee0af4d8cfdfb57298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487796"
 ---
 # <a name="dqs-administration"></a>dqs, administración
 
@@ -42,7 +43,7 @@ ms.locfileid: "85888101"
   
 -   Configure el registro según el nivel de gravedad de los eventos.  
   
-##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a>Actividades de administración mediante el uso de Data Quality Client  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a> Actividades de administración mediante el uso de Data Quality Client  
  Estas actividades se realizan mediante la característica de **Administración** en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ### <a name="activity-monitoring"></a>Supervisión de actividades  
@@ -60,7 +61,7 @@ ms.locfileid: "85888101"
 > [!NOTE]  
 >  La pantalla de **Configuración** solo está disponible para los usuarios que tengan el rol dqs_administrator en la base de datos de DQS_MAIN.  
   
-##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Actividades de administración fuera de Data Quality Client  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a> Actividades de administración fuera de Data Quality Client  
  Estas actividades se realizan fuera de Data Quality Client:  
   
 -   **Copia de seguridad y restauración de bases de datos de DQS**: las copias de seguridad y restauración de bases de datos de DQS son iguales que para cualquier base de datos de SQL Server salvando algunas diferencias propias de DQS.  
@@ -82,7 +83,7 @@ ms.locfileid: "85888101"
 |Describe cómo realizar copias de seguridad y restaurar bases de datos de DQS.|[Realizar copias de seguridad de bases de datos de DQS y restaurarlas](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Describe cómo adjuntar y separar bases de datos de DQS.|[Separar y adjuntar bases de datos de DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Data Services de referencia en DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Administrar archivos de registro de DQS](../data-quality-services/manage-dqs-log-files.md)   
  [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  

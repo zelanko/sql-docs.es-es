@@ -1,4 +1,5 @@
 ---
+description: Función SQLRateConnection
 title: Función SQLRateConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d29033460a7f89fc4a8b1c371a4d32bdf94a2a05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc6b217e8d9e06c4ab011d15cfe016dfefc91d76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487126"
 ---
 # <a name="sqlrateconnection-function"></a>Función SQLRateConnection
 **Conformidad**  
@@ -54,7 +55,7 @@ SQLRETURN  SQLRateConnection(
  *pRating*  
  Genere clasificación de reutilización de *hCandidateConnection*para *hRequest*. Esta clasificación estará entre 0 y 100 (inclusive).  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -63,7 +64,7 @@ SQLRETURN  SQLRateConnection(
 ## <a name="remarks"></a>Observaciones  
  **SQLRateConnection** genera una puntuación entre 0 y 100 (inclusive) que indica el grado de coincidencia de una conexión existente con la solicitud.  
   
-|Puntuación|Significado (cuando se devuelve SQL_SUCCESS)|  
+|Score|Significado (cuando se devuelve SQL_SUCCESS)|  
 |-----------|-----------------------------------------------|  
 |0|*hCandidateConnection* no se debe reutilizar para *hRequest*.|  
 |Cualquier valor entre 1 y 98 (inclusivo)|Cuanto mayor sea la puntuación, más cerca de *hCandidateConnection* coincidirá con *hRequest*.|  
@@ -83,7 +84,7 @@ SQLRETURN  SQLRateConnection(
   
  Incluya sqlspi. h para el desarrollo del controlador ODBC.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Desarrollar un controlador ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Agrupación de conexiones compatible con controladores](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

@@ -1,4 +1,5 @@
 ---
+description: Cree una regla de dominio
 title: Cree una regla de dominio
 ms.date: 11/08/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e77d3966476bba662f864cb2f81dbbfa983d4740
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487939"
 ---
 # <a name="create-a-domain-rule"></a>Cree una regla de dominio
 
@@ -72,7 +73,7 @@ ms.locfileid: "85900452"
   
 16. Continúe con el procedimiento de prueba descrito a continuación.  
   
-##  <a name="test-domain-rules"></a><a name="Test"></a>Probar reglas de dominio  
+##  <a name="test-domain-rules"></a><a name="Test"></a> Probar reglas de dominio  
   
 1.  Seleccione una regla y haga clic en el icono **Ejecutar la regla de dominio seleccionada en los datos de prueba** .  
   
@@ -88,7 +89,7 @@ ms.locfileid: "85900452"
   
 7.  Continúe con el procedimiento de aplicación descrito a continuación.  
   
-##  <a name="apply-domain-rules"></a><a name="Apply"></a>Aplicar reglas de dominio  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a> Aplicar reglas de dominio  
   
 1.  Haga clic en **Aplicar todas las reglas** para aplicar las reglas a los valores del dominio. Al hacer clic en **Aplicar todas las reglas**, aparecerá un cuadro emergente que indicará cuántos valores en determinados estados se verán afectados por la regla. Haga clic en **Sí** si desea aplicar la regla, o en **No** en caso contrario. Si hace clic en **Sí**, haga clic en **Aceptar** para cerrar el cuadro emergente de resultados.  
   
@@ -99,10 +100,10 @@ ms.locfileid: "85900452"
   
 3.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a>Seguimiento: después de crear una regla de dominio  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> Seguimiento: después de crear una regla de dominio  
  Una vez creada una regla de dominio, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="domain-rule-conditions"></a><a name="Conditions"></a>Condiciones de reglas de dominio  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a> Condiciones de reglas de dominio  
  En la tabla siguiente se describen las condiciones que se pueden aplicar en la regla de dominio, y proporciona ejemplos que muestran cómo se pueden aplicar las condiciones.  
   
  Cuando se aplica una regla de dominio y un valor de dominio no la cumple, este valor se designa como no válido. Un valor designado como No válido se cambiará a Correcto si se elimina la regla que le llevó a ese estado, o se modifica dicha regla para que el valor la cumpla. Si ha designado un valor como No válido manualmente (en la pestaña Valores del dominio de la actividad Administración de dominios), y se elimina, desactiva o modifica una regla que el valor no cumple, el valor seguirá designándose como No válido, de acuerdo con la designación manual.  

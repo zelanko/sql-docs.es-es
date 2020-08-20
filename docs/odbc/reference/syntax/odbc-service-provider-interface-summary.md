@@ -1,4 +1,5 @@
 ---
+description: Resumen de la interfaz del proveedor de servicios de ODBC
 title: Resumen de la interfaz del proveedor de servicios ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2f7e459cc7b89106bf1b7ebcd49c699d43da9f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 00d15d33fba1e697eebbe6a640c4f8a4d8eadea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487348"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>Resumen de la interfaz del proveedor de servicios de ODBC
 En la tabla siguiente se describen las funciones de la interfaz del proveedor de servicios ODBC. Para obtener más información sobre la sintaxis y la semántica de cada función, vea referencia de la [interfaz del proveedor de servicios ODBC (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md).  
   
-|Nombre de función|Propósito|  
+|Nombre de función|Fin|  
 |-------------------|-------------|  
 |[SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Igual que [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), pero establece el atributo en el token de información de conexión en lugar de en el identificador de conexión.|  
 |[SQLSetDriverConnectInfo](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Establece la cadena de conexión en el token de información de conexión para la llamada [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) de una aplicación.|  

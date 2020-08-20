@@ -1,4 +1,5 @@
 ---
+description: Crear un proyecto de calidad de datos
 title: Crear un proyecto de calidad de datos
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 33e719fb9db8f51df9b79569df778429e3051984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62dd18cb55aa57b95ab325b3e48d1ec618bd75c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487983"
 ---
 # <a name="create-a-data-quality-project"></a>Crear un proyecto de calidad de datos
 
@@ -37,7 +38,7 @@ ms.locfileid: "85900463"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para crear un proyecto de calidad de datos.  
   
-##  <a name="create-a-data-quality-project"></a><a name="Create"></a>Crear un proyecto de calidad de datos  
+##  <a name="create-a-data-quality-project"></a><a name="Create"></a> Crear un proyecto de calidad de datos  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85900463"
   
 4.  Haga clic en **Crear** para crear un proyecto de calidad de datos.  
   
-##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a>Seguimiento: después de crear un proyecto de calidad de datos  
+##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a> Seguimiento: después de crear un proyecto de calidad de datos  
  Una vez creado el proyecto de calidad de datos, aparecerá un asistente que podrá utilizar para realizar la actividad seleccionada: limpieza o búsqueda de coincidencias. Para más información sobre las actividades de limpieza y de búsqueda de coincidencias, vea [Limpieza de datos](../data-quality-services/data-cleansing.md) y [Coincidencia de datos](../data-quality-services/data-matching.md).  
   
   

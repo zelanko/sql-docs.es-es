@@ -1,4 +1,5 @@
 ---
+description: DLL de traza
 title: DLL de seguimiento | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e1f9dc57415ad9865ca1b2ad02487b62a93f18f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1791b72b5f7e836fba05275f87bd57948a273775
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81298075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487508"
 ---
 # <a name="trace-dll"></a>DLL de traza
 El archivo DLL que realiza el seguimiento es uno de los componentes principales de ODBC. El archivo DLL de seguimiento se proporciona actualmente como un archivo DLL de ejemplo en el componente ODBC del Windows SDK y anteriormente se incluía el SDK de Microsoft Data Access Components (MDAC). Por lo tanto, están disponibles la entrada del registro, la interfaz y el código de ejemplo para el archivo DLL de seguimiento. Este archivo DLL se puede reemplazar por un archivo DLL de seguimiento generado por un usuario ODBC o un proveedor de terceros. Un archivo DLL de seguimiento personalizado debe tener un nombre distinto al del archivo DLL de seguimiento de ejemplo original. Los archivos dll de seguimiento deben estar instalados en el directorio del sistema o no se cargarán. El administrador de controladores no pasará las cadenas de conexión al archivo DLL de seguimiento.  

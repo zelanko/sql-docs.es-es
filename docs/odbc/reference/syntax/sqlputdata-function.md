@@ -1,4 +1,5 @@
 ---
+description: Función SQLPutData
 title: Función SQLPutData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c4e704d96924942812904ea63d0e3d4fce8748e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8adda30141a99c1a575d8cc66511f1606e77dcf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487138"
 ---
 # <a name="sqlputdata-function"></a>Función SQLPutData
 **Conformidad**  
@@ -59,9 +60,9 @@ SQLRETURN SQLPutData(
   
 -   El tipo de datos C es SQL_C_DEFAULT y el tipo de datos C predeterminado para el tipo de datos SQL especificado es SQL_C_CHAR o SQL_C_BINARY.  
   
- En el caso de todos los demás tipos de datos de C, si *StrLen_or_Ind* no es SQL_NULL_DATA o SQL_DEFAULT_PARAM, el controlador supone \*que el tamaño del búfer *DataPtr* es el tamaño del tipo de datos de C especificado con *ValueType* o *TargetType* y envía el valor de datos completo. Para obtener más información, vea [convertir datos de C a tipos de datos SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) en el Apéndice D: tipos de datos.  
+ En el caso de todos los demás tipos de datos de C, si *StrLen_or_Ind* no es SQL_NULL_DATA o SQL_DEFAULT_PARAM, el controlador supone que el tamaño del \* *búfer DataPtr* es el tamaño del tipo de datos de C especificado con *ValueType* o *TargetType* y envía el valor de datos completo. Para obtener más información, vea [convertir datos de C a tipos de datos SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) en el Apéndice D: tipos de datos.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -81,7 +82,7 @@ SQLRETURN SQLPutData(
 |22012|División por cero|Una expresión aritmética calculada para un parámetro de entrada/salida o de salida dio como resultado una división por cero.|  
 |22015|Desbordamiento de campo de intervalo|Los datos enviados para un tipo de datos numérico exacto o de intervalo o un parámetro a un tipo de datos SQL de intervalo producen una pérdida de dígitos significativos.<br /><br /> Los datos se enviaron para una columna de intervalo o un parámetro con más de un campo, se convirtió a un tipo de datos numérico y no tenían representación en el tipo de datos numérico.<br /><br /> Los datos enviados para los datos de columna o parámetro se asignaron a un tipo SQL de intervalo y no había ninguna representación del valor del tipo C en el tipo SQL de intervalo.<br /><br /> Los datos enviados para un parámetro o una columna de intervalo C exacto o de intervalo para un tipo C de intervalo producen una pérdida de dígitos significativos.<br /><br /> Los datos enviados para los datos de columna o parámetro se asignaron a una estructura de intervalo C y no había ninguna representación de los datos en la estructura de datos de intervalo.|  
 |22018|Valor de carácter no válido para la especificación de conversión|El tipo C era un tipo de datos numérico exacto o aproximado, un valor de fecha y hora o un intervalo. el tipo SQL de la columna era un tipo de datos de caracteres. y el valor de la columna o del parámetro no era un literal válido del tipo C enlazado.<br /><br /> El tipo SQL era un tipo numérico exacto o aproximado, un valor de fecha y hora o un tipo de datos de intervalo; se SQL_C_CHAR el tipo C; y el valor de la columna o del parámetro no era un literal válido del tipo SQL enlazado.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*. A continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY009|Uso no válido de puntero nulo|(DM) el argumento *DataPtr* era un puntero nulo y el argumento *StrLen_or_Ind* no era 0, SQL_DEFAULT_PARAM o SQL_NULL_DATA.|  
@@ -103,7 +104,7 @@ SQLRETURN SQLPutData(
   
  Cuando una aplicación llama a **SQLParamData** para determinar qué datos debe enviar, el controlador devuelve un indicador que la aplicación puede usar para determinar qué datos de parámetro se van a enviar o dónde se pueden encontrar los datos de la columna. También devuelve SQL_NEED_DATA, que es un indicador de la aplicación que debe llamar a **SQLPutData** para enviar los datos. En el argumento *DataPtr* de **SQLPutData**, la aplicación pasa un puntero al búfer que contiene los datos reales del parámetro o de la columna.  
   
- Cuando el controlador devuelve SQL_SUCCESS para **SQLPutData**, la aplicación llama a **SQLParamData** de nuevo. **SQLParamData** devuelve SQL_NEED_DATA si es necesario enviar más datos, en cuyo caso la aplicación llama de nuevo a **SQLPutData** . Devuelve SQL_SUCCESS si se han enviado todos los datos de datos en ejecución. A continuación, la aplicación llama a **SQLParamData** de nuevo. Si el controlador devuelve SQL_NEED_DATA y otro indicador en * \*ValuePtrPtr*, requiere datos para otro parámetro o columna y se llama de nuevo a **SQLPutData** . Si el controlador devuelve SQL_SUCCESS, se envían todos los datos de datos en ejecución y se puede ejecutar la instrucción SQL, o bien se puede procesar la llamada a **SQLBulkOperations** o **SQLSetPos** .  
+ Cuando el controlador devuelve SQL_SUCCESS para **SQLPutData**, la aplicación llama a **SQLParamData** de nuevo. **SQLParamData** devuelve SQL_NEED_DATA si es necesario enviar más datos, en cuyo caso la aplicación llama de nuevo a **SQLPutData** . Devuelve SQL_SUCCESS si se han enviado todos los datos de datos en ejecución. A continuación, la aplicación llama a **SQLParamData** de nuevo. Si el controlador devuelve SQL_NEED_DATA y otro indicador en * \* ValuePtrPtr*, requiere datos para otro parámetro o columna y se llama de nuevo a **SQLPutData** . Si el controlador devuelve SQL_SUCCESS, se envían todos los datos de datos en ejecución y se puede ejecutar la instrucción SQL, o bien se puede procesar la llamada a **SQLBulkOperations** o **SQLSetPos** .  
   
  Para obtener más información sobre cómo se pasan los datos de parámetros de datos en ejecución en el tiempo de ejecución de la instrucción, vea "pasar valores de parámetro" en [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) y [enviar datos largos](../../../odbc/reference/develop-app/sending-long-data.md). Para obtener más información sobre cómo se actualizan o agregan los datos de las columnas de datos en ejecución, vea la sección "usar SQLSetPos" en [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md), "realizar actualizaciones masivas mediante marcadores" en [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)y [Long Data y SQLSetPos y SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
@@ -283,6 +284,6 @@ int main() {
 |Ejecutar una instrucción SQL preparada|[Función SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Devolver el siguiente parámetro para el que se van a enviar datos|[Función SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

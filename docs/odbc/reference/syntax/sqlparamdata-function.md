@@ -1,4 +1,5 @@
 ---
+description: Función SQLParamData
 title: Función SQLParamData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ed149e125e3231d670c6ddbd4569ff5ccee5c15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d44b3bd5017e5ef5cebb40c9bbbaccdde7368bbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487258"
 ---
 # <a name="sqlparamdata-function"></a>Función SQLParamData
 **Conformidad**  
@@ -49,7 +50,7 @@ SQLRETURN SQLParamData(
  *ValuePtrPtr*  
  Genere Puntero a un búfer en el que se va a devolver la dirección del búfer *ParameterValuePtr* especificado en **SQLBindParameter** (para los datos de parámetros) o la dirección del búfer *TargetValuePtr* especificado en **SQLBindCol** (para los datos de columna), como se incluye en el campo registro del descriptor de SQL_DESC_DATA_PTR.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, SQL_INVALID_HANDLE o SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -63,7 +64,7 @@ SQLRETURN SQLParamData(
 |22026|Datos de cadena, desigualdad de longitud|El tipo de información SQL_NEED_LONG_DATA_LEN en **SQLGetInfo** era "y" y se enviaron menos datos para un parámetro Long (el tipo de datos era SQL_LONGVARCHAR, SQL_LONGVARBINARY o un tipo de datos específico del origen de datos largo) que se especificó con el argumento *StrLen_or_IndPtr* en **SQLBindParameter**.<br /><br /> El tipo de información SQL_NEED_LONG_DATA_LEN en **SQLGetInfo** era "y" y se enviaron menos datos para una columna larga (el tipo de datos era SQL_LONGVARCHAR, SQL_LONGVARBINARY o un tipo de datos específico del origen de datos) que se especificó en el búfer de longitud correspondiente a una columna de una fila de datos que se agregó o actualizó con **SQLBulkOperations** o se actualizó con **SQLSetPos**.|  
 |40001|Error de serialización|La transacción se revirtió debido a un interbloqueo de recursos con otra transacción.|  
 |40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*; a continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
 |HY010|Error de secuencia de función|(DM) la llamada de función anterior no era una llamada a **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**o **SQLSetPos** donde el código de retorno se SQL_NEED_DATA, o la llamada de función anterior era una llamada a **SQLPutData**.<br /><br /> La llamada de función anterior era una llamada a **SQLParamData**.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLParamData** .<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvieron SQL_NEED_DATA. Se llamó a **SQLCancel** antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
@@ -79,9 +80,9 @@ SQLRETURN SQLParamData(
 ## <a name="comments"></a>Comentarios  
  Se puede llamar a **SQLParamData** para proporcionar datos de datos en ejecución para dos usos: datos de parámetro que se usarán en una llamada a **SQLExecute** o **SQLExecDirect**, o datos de columna que se usarán cuando se actualice o agregue una fila mediante una llamada a **SQLBulkOperations** o se actualice mediante una llamada a **SQLSetPos**. En tiempo de ejecución, **SQLParamData** devuelve a la aplicación un indicador de los datos que requiere el controlador.  
   
- Cuando una aplicación llama a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos**, el controlador devuelve SQL_NEED_DATA si necesita datos de datos en ejecución. Después, una aplicación llama a **SQLParamData** para determinar qué datos se van a enviar. Si el controlador requiere datos de parámetros, el controlador devuelve en * \** el búfer de salida ValuePtrPtr el valor que la aplicación coloca en el búfer del conjunto de filas. La aplicación puede utilizar este valor para determinar qué datos de parámetro solicita el controlador. Si el controlador requiere datos de columna, el controlador devuelve en * \** el búfer de ValuePtrPtr la dirección a la que la columna estaba enlazada originalmente, como se indica a continuación:  
+ Cuando una aplicación llama a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos**, el controlador devuelve SQL_NEED_DATA si necesita datos de datos en ejecución. Después, una aplicación llama a **SQLParamData** para determinar qué datos se van a enviar. Si el controlador requiere datos de parámetros, el controlador devuelve en el búfer de salida * \* ValuePtrPtr* el valor que la aplicación coloca en el búfer del conjunto de filas. La aplicación puede utilizar este valor para determinar qué datos de parámetro solicita el controlador. Si el controlador requiere datos de columna, el controlador devuelve en el búfer de * \* ValuePtrPtr* la dirección a la que la columna estaba enlazada originalmente, como se indica a continuación:  
   
- *Bound Address* + *Desplazamiento de enlace* de dirección enlazado + ((*número de fila* -1) x *tamaño de elemento*)  
+ *Dirección*  +  enlazada *Desplazamiento de enlace* + ((*número de fila* -1) x tamaño de *elemento*)  
   
  donde las variables se definen como se indica en la tabla siguiente.  
   
@@ -89,12 +90,12 @@ SQLRETURN SQLParamData(
 |--------------|-----------------|  
 |*Dirección enlazada*|Dirección especificada con el argumento *TargetValuePtr* en **SQLBindCol**.|  
 |*Desplazamiento de enlace*|El valor almacenado en la dirección especificada con el atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR.|  
-|*Row Number*|Número basado en 1 de la fila del conjunto de filas. En el caso de las capturas de una sola fila, que son el valor predeterminado, es 1.|  
+|*Número de fila*|Número basado en 1 de la fila del conjunto de filas. En el caso de las capturas de una sola fila, que son el valor predeterminado, es 1.|  
 |*Tamaño del elemento*|El valor del atributo de la instrucción SQL_ATTR_ROW_BIND_TYPE para los búferes de datos y longitud/indicador.|  
   
  También devuelve SQL_NEED_DATA, que es un indicador de la aplicación que debe llamar a **SQLPutData** para enviar los datos.  
   
- La aplicación llama a **SQLPutData** tantas veces como sea necesario para enviar los datos de datos en ejecución para la columna o el parámetro. Una vez que se han enviado todos los datos para la columna o el parámetro, la aplicación llama a **SQLParamData** de nuevo. Si **SQLParamData** devuelve de nuevo SQL_NEED_DATA, se deben enviar los datos para otro parámetro o columna. Por lo tanto, la aplicación llama de nuevo a **SQLPutData**. Si se han enviado todos los datos de datos en ejecución para todos los parámetros o columnas, **SQLParamData** devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, el valor de * \*ValuePtrPtr* es indefinido y la instrucción SQL se puede ejecutar o se puede procesar la llamada **SQLBulkOperations** o **SQLSetPos** .  
+ La aplicación llama a **SQLPutData** tantas veces como sea necesario para enviar los datos de datos en ejecución para la columna o el parámetro. Una vez que se han enviado todos los datos para la columna o el parámetro, la aplicación llama a **SQLParamData** de nuevo. Si **SQLParamData** devuelve de nuevo SQL_NEED_DATA, se deben enviar los datos para otro parámetro o columna. Por lo tanto, la aplicación llama de nuevo a **SQLPutData**. Si se han enviado todos los datos de datos en ejecución para todos los parámetros o columnas, **SQLParamData** devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, el valor de * \* ValuePtrPtr* es INdefinido y la instrucción SQL se puede ejecutar o se puede procesar la llamada **SQLBulkOperations** o **SQLSetPos** .  
   
  Si **SQLParamData** proporciona datos de parámetros para una instrucción UPDATE o DELETE buscada que no afecta a ninguna fila del origen de datos, la llamada a **SQLParamData** devuelve SQL_NO_DATA.  
   
@@ -116,7 +117,7 @@ SQLRETURN SQLParamData(
 |Ejecutar una instrucción SQL preparada|[Función SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Enviar datos de parámetros en tiempo de ejecución|[Función SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Recuperar parámetros de salida mediante SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)

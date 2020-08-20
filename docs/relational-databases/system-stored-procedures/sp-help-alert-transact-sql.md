@@ -1,4 +1,5 @@
 ---
+description: sp_help_alert (Transact-SQL)
 title: sp_help_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cca6c1730343a038b24e17d6aaa0156cb99c13b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce66505585fa7e7ed49919c5cb54b94ffd205500
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469350"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @alert_name = ] 'alert_name'`El nombre de la alerta. *alert_name* es **nvarchar (128)**. Si no se especifica *alert_name* , se devuelve información sobre todas las alertas.  
+`[ @alert_name = ] 'alert_name'` El nombre de la alerta. *alert_name* es **nvarchar (128)**. Si no se especifica *alert_name* , se devuelve información sobre todas las alertas.  
   
-`[ @order_by = ] 'order_by'`El criterio de ordenación que se va a usar para generar los resultados. *order_by*es de **tipo sysname y su**valor predeterminado es N '*Name*'.  
+`[ @order_by = ] 'order_by'` El criterio de ordenación que se va a usar para generar los resultados. *order_by*es de **tipo sysname y su**valor predeterminado es N '*Name*'.  
   
-`[ @alert_id = ] alert_id`El número de identificación de la alerta de la que se va a notificar información. *alert_id*es de **tipo int**y su valor predeterminado es NULL.  
+`[ @alert_id = ] alert_id` El número de identificación de la alerta de la que se va a notificar información. *alert_id*es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @category_name = ] 'category'`La categoría de la alerta. *Category* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @category_name = ] 'category'` La categoría de la alerta. *Category* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @legacy_format = ] legacy_format`Indica si se va a generar un conjunto de resultados heredado. *legacy_format* es de **bit**y su valor predeterminado es **0**. Cuando *legacy_format* es **1**, **sp_help_alert** devuelve el conjunto de resultados devuelto por **sp_help_alert** en Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` Indica si se va a generar un conjunto de resultados heredado. *legacy_format* es de **bit**y su valor predeterminado es **0**. Cuando *legacy_format* es **1**, **sp_help_alert** devuelve el conjunto de resultados devuelto por **sp_help_alert** en Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -68,7 +69,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número del mensaje de error que define la alerta. (Normalmente se corresponde con un número de error en la tabla **sysmessages** ). Si se usa la gravedad para definir la alerta, **message_id** es **0** o null.|  
 |**severity**|**int**|Nivel de gravedad (de **9** a **25**, **110**, **120**, **130**o **140**) que define la alerta.|  
-|**activó**|**tinyint**|Estado de si la alerta está habilitada (**1**) o no (**0**). Las alertas no habilitadas no se envían.|  
+|**enabled**|**tinyint**|Estado de si la alerta está habilitada (**1**) o no (**0**). Las alertas no habilitadas no se envían.|  
 |**delay_between_responses**|**int**|Intervalo de espera, en segundos, entre las respuestas a la alerta.|  
 |**last_occurrence_date**|**int**|Fecha de la última vez que se produjo la alerta.|  
 |**last_occurrence_time**|**int**|Hora de la última vez que se produjo la alerta.|  
@@ -102,7 +103,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número del mensaje de error que define la alerta. (Normalmente se corresponde con un número de error en la tabla **sysmessages** ). Si se usa la gravedad para definir la alerta, **message_id** es **0** o null.|  
 |**severity**|**int**|Nivel de gravedad (de **9** a **25**, **110**, **120**, **130**o 1**40**) que define la alerta.|  
-|**activó**|**tinyint**|Estado de si la alerta está habilitada (**1**) o no (**0**). Las alertas no habilitadas no se envían.|  
+|**enabled**|**tinyint**|Estado de si la alerta está habilitada (**1**) o no (**0**). Las alertas no habilitadas no se envían.|  
 |**delay_between_responses**|**int**|Intervalo de espera, en segundos, entre las respuestas a la alerta.|  
 |**last_occurrence_date**|**int**|Fecha de la última vez que se produjo la alerta.|  
 |**last_occurrence_time**|**int**|Hora de la última vez que se produjo la alerta.|  
@@ -120,10 +121,10 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|Distinto de cero si la alerta se notifica a uno o varios operadores. El valor es uno de los siguientes (unidos con OR):<br /><br /> **1**= tiene una notificación por correo electrónico<br /><br /> **2**= tiene notificación por buscapersonas<br /><br /> **4**= tiene una notificación de **net send** .|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Si el **tipo** es **2**, esta columna muestra la definición de la condición de rendimiento. Si el **tipo** es **3**, esta columna muestra la consulta para el evento WMI. De lo contrario, la columna es NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Siempre será '**[sin clasificar]**' para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Siempre será '**[sin clasificar]**' para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
 |**type**|**int**|Tipo de alerta:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de rendimiento<br /><br /> **3** = alerta de evento WMI|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_help_alert** se debe ejecutar desde la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
@@ -143,8 +144,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_add_alert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_update_alert &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [sp_update_alert &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

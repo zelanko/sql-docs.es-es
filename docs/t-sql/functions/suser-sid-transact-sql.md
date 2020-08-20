@@ -1,4 +1,5 @@
 ---
+description: SUSER_SID (Transact-SQL)
 title: SUSER_SID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 338df319b792f0ceb7e7494bd3bd2201e86dae19
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 40c6b6dcb0d424c8b92f1534423bf0acf667da78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467782"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,12 +50,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 
 ## <a name="arguments"></a>Argumentos
  **'** *login* **'**  
-**Válido para **[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Nombre de inicio de sesión del usuario. *login* es **sysname**. *login*, que es opcional, puede ser un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un usuario o un grupo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Si no se especifica *login*, se devuelve información sobre el contexto de seguridad actual. Si el parámetro contiene la palabra NULL, se devolverá NULL.  
   
  *Param2*  
-**Válido para **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
  Especifica si se valida el nombre de inicio de sesión. *Param2* es de tipo **int** y es opcional. Cuando *Param2* es 0, no se valida el nombre de inicio de sesión. Cuando *Param2* no se especifica como 0, se comprueba el nombre de inicio de sesión de Windows para ver si coincide exactamente con el nombre de inicio de sesión almacenado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -70,7 +71,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
-## <a name="sssdsfull-remarks"></a>Comentarios para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Comentarios  
  SUSER_SID siempre devuelve el SID de inicio de sesión para el contexto de seguridad actual. Use [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) para obtener el SID de otro inicio de sesión.
   
  La instrucción SUSER_SID no admite la ejecución con un contexto de seguridad suplantado a través de EXECUTE AS.  
@@ -87,7 +88,7 @@ SELECT SUSER_SID();
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>B. Utilizar SUSER_SID con un inicio de sesión específico  
  En el ejemplo siguiente se devuelve el número de identificación de seguridad del inicio de sesión `sa` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-**Válido para **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -97,7 +98,7 @@ GO
 ### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. Usar SUSER_SID con un nombre de usuario de Windows  
  En el ejemplo siguiente se devuelve el número de identificación de seguridad del usuario de Windows `London\Workstation1`.  
   
-**Válido para **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -125,7 +126,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Comparar el nombre de inicio de sesión de Windows con el nombre de inicio de sesión almacenado en SQL Server  
  En el ejemplo siguiente se muestra cómo se usa *Param2* para obtener el SID de Windows y se utiliza ese SID como entrada para la función `SUSER_SNAME`. En el ejemplo se proporciona el inicio de sesión en el formato en que se almacena en Windows (`TestComputer\User`) y se devuelve en el formato en que se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`.  
   
-**Válido para **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
+**Válido para** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  

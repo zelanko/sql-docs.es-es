@@ -1,4 +1,5 @@
 ---
+description: TRY_PARSE (Transact-SQL)
 title: TRY_PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 184cebde63a58c399f5719c3d07c0846a3163f9a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: f8df055fa3d40a8d31d25ad9917d86a86363335c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467750"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -50,7 +51,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  Literal que representa el tipo de datos solicitado para el resultado.  
   
- *referencia cultural*  
+ *culture*  
  Cadena opcional que identifica la referencia cultural en la que se da formato a *string_value*.  
   
  Si no se proporciona el argumento *culture*, se usará el idioma de la sesión actual. Este idioma se establece implícitamente o explícitamente mediante la instrucción SET LANGUAGE. *culture* acepta cualquier referencia cultural compatible con .NET Framework; no se limita a los idiomas admitidos explícitamente por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el argumento *culture* no es válido, PARSE desencadena un error.  

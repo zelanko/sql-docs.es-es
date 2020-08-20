@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_catalog (Transact-SQL)
 title: sp_fulltext_catalog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 892b0e24bb76625b5d245a7314d368c0e0dc0cf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469555"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85771080"
   Crea y quita un catálogo de texto completo, e inicia y detiene la acción de indización de un catálogo. Se pueden crear varios catálogos de texto completo en cada base de datos.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER fulltext](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)CATALOG y [Drop FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER fulltext](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)CATALOG y [Drop FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,14 +46,14 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ftcat = ] 'fulltext_catalog_name'`Es el nombre del catálogo de texto completo. Los nombres de catálogo deben ser únicos en cada base de datos. *fulltext_catalog_name* es de **tipo sysname**.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Es el nombre del catálogo de texto completo. Los nombres de catálogo deben ser únicos en cada base de datos. *fulltext_catalog_name* es de **tipo sysname**.  
   
-`[ @action = ] 'action'`Es la acción que se va a realizar. *Action* es de tipo **VARCHAR (20)** y puede tener uno de estos valores.  
+`[ @action = ] 'action'` Es la acción que se va a realizar. *Action* es de tipo **VARCHAR (20)** y puede tener uno de estos valores.  
   
 > [!NOTE]  
 >  Los catálogos de texto completo se pueden crear, quitar o modificar como precise. No obstante, evite realizar cambios de esquema en varios catálogos al mismo tiempo. Estas acciones se pueden realizar mediante el **sp_fulltext_table** procedimiento almacenado, que es el método recomendado.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**Creación**|Crea un nuevo catálogo de texto completo vacío en el sistema de archivos y agrega una fila asociada en **sysfulltextcatalogs** con los valores *fulltext_catalog_name* y *root_directory*, si existen,. *fulltext_catalog_name* debe ser único en la base de datos.|  
 |**Omisiones**|Quita *fulltext_catalog_name* quitando del sistema de archivos y eliminando la fila asociada en **sysfulltextcatalogs**. Esta acción genera un error si el catálogo contiene índices de una o más tablas. **sp_fulltext_table** se debe ejecutar '*TABLE_NAME*', ' Drop ' para quitar las tablas del catálogo.<br /><br /> Se muestra un error si el catálogo no existe.|  
@@ -61,7 +62,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**Detención**|Detiene un rellenado del índice para *fulltext_catalog_name*. Se muestra un error si el catálogo no existe. No se muestra ninguna advertencia si el rellenado ya se ha detenido.|  
 |**Recompilación**|Vuelve a generar *fulltext_catalog_name*. Cuando vuelve a generarse un catálogo, el catálogo existente se elimina y se crea uno nuevo en su lugar. Todas las tablas que tienen referencias de índices de texto completo se asocian al catálogo nuevo. La regeneración restablece los metadatos de texto completo de las tablas del sistema de la base de datos.<br /><br /> Si el seguimiento de cambios está establecido en OFF, la regeneración no hace que se vuelva a rellenar el catálogo de texto completo recién creado. En este caso, para volver a rellenar, ejecute **sp_fulltext_catalog** con la acción **start_full** o **start_incremental** .|  
   
-`[ @path = ] 'root_directory'`Es el directorio raíz (no la ruta de acceso física completa) de una acción de **creación** . *root_directory* es de tipo **nvarchar (100)** y su valor predeterminado es null, lo que indica el uso de la ubicación predeterminada especificada en el programa de instalación. Este es el subdirectorio FTDATA del directorio MSSQL; por ejemplo, C:\Archivos de Programa\microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. El directorio raíz especificado debe existir, residir en una unidad en el mismo equipo y constar de más datos que solo la letra de unidad, y no puede ser una ruta de acceso relativa. No se admiten las unidades de red, discos extraíbles, disquetes y rutas de acceso UNC. Los catálogos de texto completo deben crearse en una unidad de disco duro local asociada con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @path = ] 'root_directory'` Es el directorio raíz (no la ruta de acceso física completa) de una acción de **creación** . *root_directory* es de tipo **nvarchar (100)** y su valor predeterminado es null, lo que indica el uso de la ubicación predeterminada especificada en el programa de instalación. Este es el subdirectorio FTDATA del directorio MSSQL; por ejemplo, C:\Archivos de Programa\microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. El directorio raíz especificado debe existir, residir en una unidad en el mismo equipo y constar de más datos que solo la letra de unidad, y no puede ser una ruta de acceso relativa. No se admiten las unidades de red, discos extraíbles, disquetes y rutas de acceso UNC. Los catálogos de texto completo deben crearse en una unidad de disco duro local asociada con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ** \@ path** solo es válido cuando *Action* es **Create**. En el caso de acciones distintas a **Create** (**Stop**, **rebuild**, etc.), ** \@ path** debe ser null u omitirse.  
   
@@ -135,9 +136,9 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_database &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [sp_fulltext_database &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
+ [sp_help_fulltext_catalogs &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
+ [sp_help_fulltext_catalogs_cursor &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Búsqueda de texto completo](../../relational-databases/search/full-text-search.md)  
   

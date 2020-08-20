@@ -1,4 +1,5 @@
 ---
+description: LIKE (Transact-SQL)
 title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -31,12 +32,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cf0c961903707f86ec838c45d5935e72d72402
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f8886fbf2a94df7fd338572f2156e66ee6fc50ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922971"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467677"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -200,7 +201,7 @@ GO
   
  Si no hay ningún carácter después de un carácter de escape en el patrón de LIKE, el patrón no es válido y LIKE devuelve FALSE. Si el carácter posterior a un carácter de escape no es un carácter comodín, el carácter de escape se descarta y el carácter que sigue al escape se trata como un carácter normal del patrón. Estos caracteres afectan a los caracteres comodín del signo de porcentaje (%), carácter de subrayado (_) y corchete de apertura ([) cuando se encuentran entre corchetes dobles ([ ]). Los caracteres de escape pueden usarse dentro de corchetes dobles ([ ]), y se pueden aplicar caracteres de escape al símbolo de intercalación (^), guión (-) y corchete de cierre (]).  
   
- 0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en LIKE.  
+ 0x0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en LIKE.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -295,7 +296,7 @@ GO
 ```  
   
 ### <a name="d-using-the---wildcard-characters"></a>D. Utilizar el carácter comodín [ ]  
- El ejemplo siguiente busca empleados cuyo nombre sea `Person` o `Cheryl` en la tabla `Sheryl`.  
+ El ejemplo siguiente busca empleados cuyo nombre sea `Cheryl` o `Sheryl` en la tabla `Person`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -321,7 +322,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Utilizar LIKE con el carácter comodín %  
- El siguiente ejemplo busca todos los empleados cuyo número de teléfono empieza por `DimEmployee` en la tabla `612`.  
+ El siguiente ejemplo busca todos los empleados cuyo número de teléfono empieza por `612` en la tabla `DimEmployee`.  
   
 ```sql  
 -- Uses AdventureWorks  

@@ -1,4 +1,5 @@
 ---
+description: sp_estimate_data_compression_savings (Transact-SQL)
 title: sp_estimate_data_compression_savings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94eeb0baeae20327650d0291e0ca4f1725abb1d9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4479aa059222ea7685cf38b56c98cc22ee94df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469479"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +90,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|Tamaño del ejemplo con la opción de compresión actual. Esto incluye cualquier fragmentación.|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|Tamaño del ejemplo que se crea utilizando el valor de compresión solicitado y, si es aplicable, factor de relleno existente, sin fragmentación.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Use `sp_estimate_data_compression_savings` para calcular el ahorro que se puede producir al habilitar una tabla o partición para la compresión de archivo de fila, página, almacén de columnas o almacén de columnas. Por ejemplo, si el tamaño medio de una fila se puede reducir un 40 por ciento, potencialmente también se puede reducir el tamaño del objeto en un 40 por ciento. Es posible que no consiga ahorrar espacio, ya que depende del factor de relleno y del tamaño de la fila. Por ejemplo, si tiene una fila de 8.000 bytes de longitud y reduce su tamaño en un 40 por ciento, puede ajustar solo una fila en una página de datos. No se obtiene ningún ahorro.  
   
  Si los resultados de ejecutar `sp_estimate_data_compression_savings` indican que la tabla crecerá, eso quiere decir que muchas filas de la tabla utilizan prácticamente toda la precisión en los tipos de datos y la adición de la mínima sobrecarga necesaria para el formato comprimido es mayor que el ahorro obtenido por la compresión. En este caso excepcional, no habilite la compresión.  
@@ -149,7 +150,7 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [Sys. partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Implementación de la compresión Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

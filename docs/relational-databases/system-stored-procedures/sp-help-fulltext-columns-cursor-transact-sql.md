@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_columns_cursor (Transact-SQL)
 title: sp_help_fulltext_columns_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1ed545d31cd5f05fa8360d2cf73a88787f98df45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dff9f4ea5fb2eda11da2144114cde959197c3723
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469391"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901473"
   Utiliza un cursor para devolver las columnas designadas para la indización de texto completo.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Use la vista de catálogo [Sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use la vista de catálogo [Sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,11 +45,11 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @cursor_return = ] @cursor_variable OUTPUT`Es la variable de salida de tipo **cursor**. El cursor resultante es desplazable, dinámico y de solo lectura.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` Es la variable de salida de tipo **cursor**. El cursor resultante es desplazable, dinámico y de solo lectura.  
   
-`[ @table_name = ] 'table_name'`Es el nombre de tabla de una o dos partes para la que se solicita información de índice de texto completo. *TABLE_NAME* es de tipo **nvarchar (r)** y su valor predeterminado es NULL. Si se omite *TABLE_NAME* , se recupera la información de la columna de índice de texto completo de cada tabla indizada de texto completo.  
+`[ @table_name = ] 'table_name'` Es el nombre de tabla de una o dos partes para la que se solicita información de índice de texto completo. *TABLE_NAME* es de tipo **nvarchar (r)** y su valor predeterminado es NULL. Si se omite *TABLE_NAME* , se recupera la información de la columna de índice de texto completo de cada tabla indizada de texto completo.  
   
-`[ @column_name = ] 'column_name'`Es el nombre de la columna para la que se desea obtener los metadatos del índice de texto completo. *column_name* es de **tipo sysname y su** valor predeterminado es NULL. Si *column_name* se omite o es null, se devuelve información de la columna de texto completo para cada columna indizada de texto completo de *TABLE_NAME*. Si también se omite *TABLE_NAME* o es null, se devuelve información de la columna de índice de texto completo para cada columna indizada de texto completo de todas las tablas de la base de datos.  
+`[ @column_name = ] 'column_name'` Es el nombre de la columna para la que se desea obtener los metadatos del índice de texto completo. *column_name* es de **tipo sysname y su** valor predeterminado es NULL. Si *column_name* se omite o es null, se devuelve información de la columna de texto completo para cada columna indizada de texto completo de *TABLE_NAME*. Si también se omite *TABLE_NAME* o es null, se devuelve información de la columna de índice de texto completo para cada columna indizada de texto completo de todas las tablas de la base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -89,8 +90,8 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [sp_fulltext_column &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
- [sp_help_fulltext_columns &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
+ [sp_fulltext_column &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
+ [sp_help_fulltext_columns &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

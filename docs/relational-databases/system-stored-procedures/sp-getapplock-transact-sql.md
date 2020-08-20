@@ -1,4 +1,5 @@
 ---
+description: sp_getapplock (Transact-SQL)
 title: sp_getapplock (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03531efe84a3443089922d5f7cfd5b2bc43e5241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469467"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +70,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  \>= 0 (correcto) o < 0 (error)  
   
-|Valor|Resultado|  
+|Value|Resultado|  
 |-----------|------------|  
 |0|Se concedió el bloqueo de forma sincrónica.|  
 |1|Se concedió el bloqueo después de esperar a que se liberaran otros bloqueos no compatibles.|  
@@ -78,7 +79,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|La solicitud de bloqueo fue objeto del propio bloqueo.|  
 |-999|Indica un error de llamada o de validación de parámetros.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Los bloqueos colocados en un recurso se asocian a la transacción o a la sesión actuales. Los bloqueos asociados con la transacción actual se liberan cuando ésta se confirma o se revierte. Los bloqueos asociados a la sesión se liberan cuando se cierra la sesión. Cuando el servidor se cierra por cualquier motivo, se liberan todos los bloqueos.  
   
  El bloqueo de recurso creado por sp_getapplock se crea en la base de datos actual para la sesión. Cada recurso de bloqueo se identifica mediante la combinación de los siguientes valores:  
@@ -164,8 +165,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [APPLOCK_MODE &#40;&#41;de Transact-SQL](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40;&#41;de Transact-SQL](../../t-sql/functions/applock-test-transact-sql.md)   
+ [APPLOCK_MODE &#40;&#41;de Transact-SQL ](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;&#41;de Transact-SQL ](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

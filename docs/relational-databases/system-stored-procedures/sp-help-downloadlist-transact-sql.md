@@ -1,4 +1,5 @@
 ---
+description: sp_help_downloadlist (Transact-SQL)
 title: sp_help_downloadlist (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc658776dddbf79362e3ab4c90ba052abb193e63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469405"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,16 +47,16 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_id = ] job_id`Número de identificación del trabajo del que se va a devolver información. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
+`[ @job_id = ] job_id` Número de identificación del trabajo del que se va a devolver información. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'`Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @operation = ] 'operation'`Operación válida para el trabajo especificado. la *operación* es de tipo **VARCHAR (64)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
+`[ @operation = ] 'operation'` Operación válida para el trabajo especificado. la *operación* es de tipo **VARCHAR (64)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**DEFECT**|Operación del servidor que solicita el defecto del servidor de destino al servicio **SQLServerAgent** maestro.|  
 |**DELETE**|Operación de trabajo que quita un trabajo completo.|  
@@ -67,17 +68,17 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|Operación de servidor que hace que el servidor de destino sincronice su reloj del sistema con el dominio multiservidor. Como ésta es una operación muy costosa, ejecútela de forma limitada, con poca frecuencia.|  
 |**UPDATE**|Operación de trabajo que solo actualiza la información de **sysjobs** para un trabajo, no los pasos o las programaciones de trabajo. **Sp_update_job**llama automáticamente a.|  
   
-`[ @object_type = ] 'object_type'`Tipo de objeto para el trabajo especificado. *object_type* es de tipo **VARCHAR (64)** y su valor predeterminado es NULL. *object_type* puede ser un trabajo o un servidor. Para obtener más información acerca de los valores de *object_type*válidos, vea [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Tipo de objeto para el trabajo especificado. *object_type* es de tipo **VARCHAR (64)** y su valor predeterminado es NULL. *object_type* puede ser un trabajo o un servidor. Para obtener más información acerca de los valores de *object_type*válidos, vea [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
-`[ @object_name = ] 'object_name'`Nombre del objeto. *object_name* es de **tipo sysname y su**valor predeterminado es NULL. Si *object_type* es JOB, *object_name*es el nombre del trabajo. Si *object_type*es SERVER, *object_name*es el nombre del servidor.  
+`[ @object_name = ] 'object_name'` Nombre del objeto. *object_name* es de **tipo sysname y su**valor predeterminado es NULL. Si *object_type* es JOB, *object_name*es el nombre del trabajo. Si *object_type*es SERVER, *object_name*es el nombre del servidor.  
   
-`[ @target_server = ] 'target_server'`Nombre del servidor de destino. *target_server* es de tipo **nvarchar (128)** y su valor predeterminado es NULL.  
+`[ @target_server = ] 'target_server'` Nombre del servidor de destino. *target_server* es de tipo **nvarchar (128)** y su valor predeterminado es NULL.  
   
-`[ @has_error = ] has_error`Indica si el trabajo debe confirmar los errores. *has_error* es de **tinyint**y su valor predeterminado es null, lo que indica que no se debe confirmar ningún error. **1** indica que se deben confirmar todos los errores.  
+`[ @has_error = ] has_error` Indica si el trabajo debe confirmar los errores. *has_error* es de **tinyint**y su valor predeterminado es null, lo que indica que no se debe confirmar ningún error. **1** indica que se deben confirmar todos los errores.  
   
-`[ @status = ] status`El estado del trabajo. *status* es de **tinyint**y su valor predeterminado es NULL.  
+`[ @status = ] status` El estado del trabajo. *status* es de **tinyint**y su valor predeterminado es NULL.  
   
-`[ @date_posted = ] date_posted`Fecha y hora en las que se deben incluir todas las entradas realizadas en el conjunto de resultados o después de la fecha y hora especificadas. *date_posted* es de **tipo DateTime**y su valor predeterminado es NULL.  
+`[ @date_posted = ] date_posted` Fecha y hora en las que se deben incluir todas las entradas realizadas en el conjunto de resultados o después de la fecha y hora especificadas. *date_posted* es de **tipo DateTime**y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

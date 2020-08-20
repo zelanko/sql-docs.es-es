@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_alert_job (Transact-SQL)
 title: sp_help_log_shipping_alert_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d831935d70d65756b431632c0b9b64d87049173c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 799880f18cdb5ad89d27eebeaca48ede85bd50fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469327"
 ---
 # <a name="sp_help_log_shipping_alert_job-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ sp_help_log_shipping_alert_job
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Este procedimiento almacenado devuelve el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID. de trabajo del agente del trabajo de alerta de trasvase de registros. Si no existe ningún trabajo de alerta de trasvase de registros, devuelve un conjunto de resultados vacío.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_help_log_shipping_alert_job** se debe ejecutar desde la base de datos **maestra** del servidor de supervisión.  
   
 ## <a name="permissions"></a>Permisos  

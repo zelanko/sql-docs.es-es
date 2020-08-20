@@ -1,4 +1,5 @@
 ---
+description: USER_NAME (Transact-SQL)
 title: USER_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd303885ba4849932687248b2ae26c78d92b3a8a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: eb4be6c95f60be21e594b98725a636aebce62bfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467711"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ USER_NAME ( [ id ] )
 ## <a name="return-types"></a>Tipos de valor devuelto  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando se omite *id*, se supone que se trata del usuario actual en el contexto actual. Si el parámetro contiene la palabra NULL, se devolverá NULL. Cuando se llama a USER_NAME sin especificar un *id* después de una instrucción EXECUTE AS, USER_NAME devuelve el nombre del usuario representado. Si una entidad de seguridad de Windows ha tenido acceso a la base de datos en forma de miembro de un grupo, USER_NAME devuelve el nombre de la entidad de seguridad de Windows en vez del nombre del grupo.  
  
 > [!NOTE]

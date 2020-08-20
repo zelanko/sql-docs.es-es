@@ -1,4 +1,5 @@
 ---
+description: sp_helpdynamicsnapshot_job (Transact-SQL)
 title: sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a155e7031a78cac6dcea4ca380f7b496d59170f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61e72b03e3bc6adff3a9e3d0858a8a2bdb4b5805
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469297"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,15 +46,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todos los trabajos de instantáneas de datos filtrados que coinciden con el *dynamic_snapshot_jobid*especificado y *dynamic_snapshot_jobname*para todas las publicaciones.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información sobre todos los trabajos de instantáneas de datos filtrados que coinciden con el *dynamic_snapshot_jobid*especificado y *dynamic_snapshot_jobname*para todas las publicaciones.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Es el nombre de un trabajo de instantánea de datos filtrados. *dynamic_snapshot_jobname*es de **tipo sysname y su**valor predeterminado es **%** ', que devuelve todos los trabajos dinámicos de una publicación con el *dynamic_snapshot_jobid*especificado. Si no se especificó un nombre de trabajo explícitamente cuando se creó el trabajo, el formato del nombre del trabajo es el siguiente:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Es el nombre de un trabajo de instantánea de datos filtrados. *dynamic_snapshot_jobname*es de **tipo sysname y su**valor predeterminado es **%** ', que devuelve todos los trabajos dinámicos de una publicación con el *dynamic_snapshot_jobid*especificado. Si no se especificó un nombre de trabajo explícitamente cuando se creó el trabajo, el formato del nombre del trabajo es el siguiente:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Es un identificador para un trabajo de instantánea de datos filtrados. *dynamic_snapshot_jobid*es de tipo **uniqueidentifier**y su valor predeterminado es null, que devuelve todos los trabajos de instantáneas que coinciden con el *dynamic_snapshot_jobname*especificado.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Es un identificador para un trabajo de instantánea de datos filtrados. *dynamic_snapshot_jobid*es de tipo **uniqueidentifier**y su valor predeterminado es null, que devuelve todos los trabajos de instantáneas que coinciden con el *dynamic_snapshot_jobname*especificado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -79,7 +80,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_helpdynamicsnapshot_job** se utiliza en la replicación de mezcla.  
   
  Si se utilizan todos los valores de parámetros predeterminados, se devuelve información sobre todos los trabajos de instantáneas de datos con particiones para toda la base de datos de publicaciones.  

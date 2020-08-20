@@ -1,4 +1,5 @@
 ---
+description: sp_executesql (Transact-SQL)
 title: sp_executesql (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,12 +20,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61a93d541e34c152d7c0ab5191ffe577c782c6e2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 492a0db844d0278808bdc8cf6bba27d980447f8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180242"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469534"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ sp_executesql [ @stmt = ] statement
  Es una cadena Unicode que contiene una [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o un lote. \@stmt debe ser una constante Unicode o una variable Unicode. No se permite utilizar expresiones Unicode más complejas, como una concatenación de dos cadenas con el operador +. Las constantes de caracteres no están permitidas. Si se especifica una constante Unicode, debe ir precedida de **N**. Por ejemplo, la constante Unicode **N ' sp_who '** es válida, pero la constante de caracteres **' sp_who '** no lo es. El tamaño de la cadena solo está limitado por la memoria disponible en el servidor de bases de datos. En los servidores de 64 bits, el tamaño de la cadena está limitado a 2 GB, el tamaño máximo de **nvarchar (Max)**.  
   
 > [!NOTE]  
->  \@stmt puede contener parámetros que tengan el mismo formato que un nombre de variable, por ejemplo:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt puede contener parámetros que tengan el mismo formato que un nombre de variable, por ejemplo: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Cada parámetro incluido en \@ stmt debe tener una entrada correspondiente en la \@ lista de definición de parámetros params y en la lista de valores de parámetro.  
   
@@ -205,7 +206,7 @@ GO
  En este procedimiento, el uso de sp_executesql resulta más eficaz que el de EXECUTE para ejecutar una cadena. Cuando se usa sp_executesql, solo hay doce versiones de la cadena INSERT generada, una por cada tabla mensual. Con EXECUTE, cada cadena INSERT es única, ya que los valores de los parámetros son distintos. Aunque ambos métodos generan el mismo número de lotes, la semejanza de las cadenas INSERT que genera sp_executesql hace más probable que el optimizador de consultas vuelva a utilizar los planes de ejecución.  
   
 ### <a name="c-using-the-output-parameter"></a>C. Utilizar el parámetro OUTPUT  
- En el ejemplo siguiente se utiliza un `OUTPUT` parámetro para almacenar el conjunto de resultados generado por la `SELECT` instrucción en el `@SQLString` parámetro. `SELECT`A continuación, se ejecutan dos instrucciones que utilizan el valor del `OUTPUT` parámetro.  
+ En el ejemplo siguiente se utiliza un `OUTPUT` parámetro para almacenar el conjunto de resultados generado por la `SELECT` instrucción en el `@SQLString` parámetro. `SELECT` A continuación, se ejecutan dos instrucciones que utilizan el valor del `OUTPUT` parámetro.  
   
 ```sql  
 USE AdventureWorks2012;  

@@ -1,4 +1,5 @@
 ---
+description: TYPE_ID (Transact-SQL)
 title: TYPE_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 675240db58ea6c46978987adb39696a8370639bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9fa18e7fd00b50597068695f9b1f20a947289ca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467747"
 ---
 # <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos protegibles que posea o para los que se le haya concedido permiso. Esto significa que las funciones integradas de emisión de metadatos, como TYPE_ID, pueden devolver NULL si el usuario no tiene ningún permiso para el objeto. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  TYPE_ID devuelve NULL si el nombre del tipo no es válido o si el autor de la llamada no tiene suficientes permisos para hacer referencia al tipo.  
   
 ## <a name="examples"></a>Ejemplos  

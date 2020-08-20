@@ -1,4 +1,5 @@
 ---
+description: sp_grantdbaccess (Transact-SQL)
 title: sp_grantdbaccess (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 4fa8894b5c7ac33d8847bc28f2fac7a3c1020362
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0425c6f4108ae48dadcead271814d99c212e8a2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469377"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85891826"
   Agrega un usuario de base de datos a la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]En su lugar, use [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, use [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login_ '`Es el nombre del grupo de Windows, el inicio de sesión de Windows o el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión que se va a asignar al nuevo usuario de base de datos. Los nombres de los grupos de Windows y los inicios de sesión de Windows deben calificarse con un nombre de dominio de Windows con el formato inicio de sesión de *dominio* \\ *login*; por ejemplo, **LONDON\Joeb**. El inicio de sesión ya no se puede asignar a un usuario de la base de datos. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @loginame = ] 'login_ '` Es el nombre del grupo de Windows, el inicio de sesión de Windows o el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión que se va a asignar al nuevo usuario de base de datos. Los nombres de los grupos de Windows y los inicios de sesión de Windows deben calificarse con un nombre de dominio de Windows con el formato inicio de sesión de *dominio* \\ *login*; por ejemplo, **LONDON\Joeb**. El inicio de sesión ya no se puede asignar a un usuario de la base de datos. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``Es el nombre del nuevo usuario de la base de datos. *name_in_db* es una variable de salida con un tipo de datos **sysname y su**valor predeterminado es NULL. Si no se especifica, se usa *login* . Si se especifica como una variable de salida con un valor NULL, ** \@ name_in_db** se establece en *login*. *name_in_db* no debe existir en la base de datos actual.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` Es el nombre del nuevo usuario de la base de datos. *name_in_db* es una variable de salida con un tipo de datos **sysname y su**valor predeterminado es NULL. Si no se especifica, se usa *login* . Si se especifica como una variable de salida con un valor NULL, ** \@ name_in_db** se establece en *login*. *name_in_db* no debe existir en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

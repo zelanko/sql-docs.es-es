@@ -1,4 +1,5 @@
 ---
+description: sp_grant_proxy_to_subsystem (Transact-SQL)
 title: sp_grant_proxy_to_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d772c66af8dfbab805124e4a07d26243865330a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 964bab1ac95d80d05f16fa8b538f1ecd5f15352c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469408"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -41,13 +42,13 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id`Número de identificación del proxy al que se va a conceder acceso. La *proxy_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *proxy_id* o *proxy_name* , pero no se pueden especificar ambos.  
+`[ @proxy_id = ] id` Número de identificación del proxy al que se va a conceder acceso. La *proxy_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *proxy_id* o *proxy_name* , pero no se pueden especificar ambos.  
   
-`[ @proxy_name = ] 'proxy_name'`Nombre del proxy al que se va a conceder acceso. La *proxy_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *proxy_id* o *proxy_name* , pero no se pueden especificar ambos.  
+`[ @proxy_name = ] 'proxy_name'` Nombre del proxy al que se va a conceder acceso. La *proxy_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *proxy_id* o *proxy_name* , pero no se pueden especificar ambos.  
   
-`[ @subsystem_id = ] id`Número de ID. del subsistema al que se va a conceder acceso. La *subsystem_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *subsystem_id* o *subsystem_name* , pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
+`[ @subsystem_id = ] id` Número de ID. del subsistema al que se va a conceder acceso. La *subsystem_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *subsystem_id* o *subsystem_name* , pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**2**|Script[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> Importante el subsistema de scripts ActiveX se quitará del agente en una versión futura de ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
 |**3**|Sistema operativo (**CmdExec**)|  
@@ -62,9 +63,9 @@ sp_grant_proxy_to_subsystem
 |**12**|Script de PowerShell|  
 | &nbsp; | &nbsp; |
   
-`[ @subsystem_name = ] 'subsystem_name'`Nombre del subsistema al que se va a conceder acceso. La **subsystem_name** es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *subsystem_id* o *subsystem_name* , pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
+`[ @subsystem_name = ] 'subsystem_name'` Nombre del subsistema al que se va a conceder acceso. La **subsystem_name** es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *subsystem_id* o *subsystem_name* , pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |**ActiveScripting**|Script ActiveX|  
 |**CmdExec**|Sistema operativo (**CmdExec**)|  
@@ -75,11 +76,11 @@ sp_grant_proxy_to_subsystem
 |**QueueReader**|Agente de lectura de cola de replicación|  
 |**ANALYSISQUERY**|Consulta de Analysis Services|  
 |**ANALYSISCOMMAND**|Comando de Analysis Services|  
-|**DTS**|Ejecución de paquetes SSIS|  
+|**Dts**|Ejecución de paquetes SSIS|  
 |**PowerShell**|Script de PowerShell|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La concesión de acceso al proxy a un subsistema no cambia los permisos para la entidad de seguridad especificada en el proxy.  
   
 ## <a name="permissions"></a>Permisos  
@@ -115,9 +116,9 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Implementar la seguridad de Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_revoke_proxy_from_subsystem &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
- [sp_add_proxy &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [sp_update_proxy &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
+ [sp_revoke_proxy_from_subsystem &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
+ [sp_add_proxy &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_delete_proxy &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_update_proxy &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
   
   

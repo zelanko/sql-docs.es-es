@@ -1,4 +1,5 @@
 ---
+description: SIGNBYCERT (Transact-SQL)
 title: SIGNBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1c0705a6057842b80f7e9bf59412f0a64af30ae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 32fa18577753641583ff5b6c12d864da0f0e36af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467887"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,16 +51,16 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  *certificate_ID*  
  Id. de un certificado de la base de datos actual. *certificate_ID* es **int**.  
   
- *\@cleartext*  
+ *\@texto no cifrado*  
  Es una variable de tipo **nvarchar**, **char**, **varchar** o **nchar** que contiene los datos que se van a firmar.  
   
  **'** *password* **'**  
- Es la contraseña con la que se cifró la clave privada del certificado. *password* es **nvarchar(128)** .  
+ Es la contraseña con la que se cifró la clave privada del certificado. *password* es **nvarchar(128)**.  
   
 ## <a name="return-types"></a>Tipos de valor devuelto  
  **varbinary** con un tamaño máximo de 8000 bytes.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Requiere el permiso CONTROL en el certificado.  
   
 ## <a name="examples"></a>Ejemplos  

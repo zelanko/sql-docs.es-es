@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 title: Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
@@ -20,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 30c024fb1d1298e0ba2f2e4e49b2acf04d9b7619
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 62aec7de63493a94ea05f91883e506d0fc0f6f7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481797"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 

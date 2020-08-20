@@ -1,4 +1,5 @@
 ---
+description: sys.dm_repl_schemas (Transact-SQL)
 title: Sys. dm_repl_schemas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 76fbd6947090d90cadf814ac1af04995acff0782
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4e6a790db9fc4b072eb474157c1f25c46bca4e7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481865"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +84,7 @@ ms.locfileid: "85898714"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos de publicaciones para llamar a **dm_repl_schemas**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La instancia solo se devuelve para objetos de la base de datos replicada que está cargada actualmente en la caché del artículo de replicación.  
   
 ## <a name="see-also"></a>Consulte también  

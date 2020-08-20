@@ -1,4 +1,5 @@
 ---
+description: SECUENCIAS (Transact-SQL)
 title: SECUENCIAS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/30/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ad17bb63dc60accb220799d62a81e625f20d5c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db4fb9d06a6e2197b16ee7c2eee99029ae09d2a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481711"
 ---
 # <a name="sequences-transact-sql"></a>SECUENCIAS (Transact-SQL)
 

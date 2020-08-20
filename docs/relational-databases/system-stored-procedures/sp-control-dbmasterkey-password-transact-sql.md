@@ -1,4 +1,5 @@
 ---
+description: sp_control_dbmasterkey_password (Transact-SQL)
 title: sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/09/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08b749ad756a47ed991acd1ad0ea1d533bbb770c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85870627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481461"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +53,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @action= N'drop '  
  Especifica que se quitará del almacén de credenciales una credencial para la base de datos especificada. El valor que se pasa a @action es **nvarchar**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita la clave maestra de una base de datos para cifrar o descifrar una clave, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará descifrar la clave maestra de la base de datos con la clave maestra de servicio de la instancia. Si el descifrado produce errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buscará en el almacén de credenciales las credenciales de clave maestra con el mismo GUID de familia que la base de datos para la que se necesita la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará después descifrar la clave maestra de la base de datos con cada credencial coincidente hasta que el descifrado se realice correctamente o no queden más credenciales.  
   
 > [!CAUTION]  
@@ -103,7 +104,7 @@ GO
  [Configurar una base de datos reflejada cifrada](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Sys. Credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
+ [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
   
   

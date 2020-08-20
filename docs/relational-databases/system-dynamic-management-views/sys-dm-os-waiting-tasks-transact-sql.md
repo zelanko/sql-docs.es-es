@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_waiting_tasks (Transact-SQL)
 title: Sys. dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1336e65374bace69e0b929d2571a62276bed45b2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fedd70dd33cb49e98d243461bcbd51427db5eec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481976"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +48,7 @@ ms.locfileid: "86010969"
 |**blocking_session_id**|**smallint**|Id. de la sesión que bloquea la solicitud. Si esta columna es NULL, la solicitud no está bloqueada o la información de la sesión de bloqueo no está disponible (o no puede ser identificada).<br /><br /> -2 = El recurso de bloqueo es propiedad de una transacción distribuida huérfana.<br /><br /> -3 = El recurso de bloqueo es propiedad de una transacción de recuperación diferida.<br /><br /> -4 = No se pudo determinar el Id. de sesión del propietario del bloqueo temporal a causa de transiciones internas de estado del bloqueo temporal.|  
 |**blocking_exec_context_id**|**int**|Id. del contexto de ejecución de la tarea de bloqueo.|  
 |**resource_description**|**nvarchar (a.**|Descripción del recurso utilizado. Para obtener más información, vea la siguiente lista:|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="resource_description-column"></a>Columna resource_description  
  La columna resource_description tiene los siguientes posibles valores.  
@@ -77,9 +79,9 @@ ms.locfileid: "86010969"
   
  **Propietario de recurso de bloqueo:**  
   
--   \<type-specific-description>ID = Lock \<lock-hex-address> Mode = \<mode> associatedObjectId =\<associated-obj-id>  
+-   \<type-specific-description> ID = Lock \<lock-hex-address> Mode = \<mode> associatedObjectId =\<associated-obj-id>  
   
-     **\<type-specific-description>puede ser:**  
+     **\<type-specific-description> puede ser:**  
   
     -   Para la base de datos: databaselock subresource = \<databaselock-subresource> DBID =\<db-id>  
   
@@ -103,7 +105,7 @@ ms.locfileid: "86010969"
   
     -   Por ALLOCATION_UNIT: allocunitlock hobtid = \<hobt-id> subresource = \<alloc-unit-subresource> DBID =\<db-id>  
   
-     **\<mode>puede ser:**  
+     **\<mode> puede ser:**  
   
      Sch-S, Sch-M, S, U, X, IS, IU, IX, SIU, SIX, UIX, BU, RangeS-S, RangeS-U, RangeI-N, RangeI-S, RangeI-U, RangeI-X, RangeX-, RangeX-U, RangeX-X  
   
@@ -136,7 +138,7 @@ ms.locfileid: "86010969"
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
  
 ## <a name="example"></a>Ejemplo
 ### <a name="a-identify-tasks-from-blocked-sessions"></a>A. Identificar tareas de sesiones bloqueadas. 

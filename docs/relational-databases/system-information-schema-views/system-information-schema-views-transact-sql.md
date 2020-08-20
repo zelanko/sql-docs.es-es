@@ -1,4 +1,5 @@
 ---
+description: Vistas de esquema de información del sistema (Transact-SQL)
 title: Vistas de esquema de información del sistema (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d004965c3ac358c9caf72c2de55b003a4a24d3c
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c1b093be8f2a3cdb6fceb3cffbbe70ca2312fa81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481724"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Vistas de esquema de información del sistema (Transact-SQL)
 
@@ -41,7 +42,7 @@ Una vista de esquema de información es uno de los diversos métodos que proporc
 |Base de datos|Catálogo|
 |Schema|Schema|
 |Object|Object|
-|tipo de datos definido por el usuario|Dominio|
+|tipo de datos definido por el usuario|Domain|
 
 Esta asignación entre convenciones de nomenclaturas se aplica a las siguientes vistas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibles con ISO.
 

@@ -1,4 +1,5 @@
 ---
+description: sp_columns_ex (Transact-SQL)
 title: sp_columns_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77608294b06025d5c265e67f71f9b0b228732729
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48e8146386cdbeb3ea88ecfd5f23027537c048c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481476"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,17 +45,17 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @table_server = ] 'table_server'`Es el nombre del servidor vinculado cuya información de columna se va a devolver. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @table_server = ] 'table_server'` Es el nombre del servidor vinculado cuya información de columna se va a devolver. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @table_name = ] 'table_name'`Es el nombre de la tabla para la que se va a devolver información de columna. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_name = ] 'table_name'` Es el nombre de la tabla para la que se va a devolver información de columna. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @table_schema = ] 'table_schema'`Es el nombre de esquema de la tabla para la que se va a devolver información de columna. *TABLE_SCHEMA* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_schema = ] 'table_schema'` Es el nombre de esquema de la tabla para la que se va a devolver información de columna. *TABLE_SCHEMA* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @table_catalog = ] 'table_catalog'`Es el nombre de catálogo de la tabla para la que se va a devolver información de columna. *TABLE_CATALOG* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @table_catalog = ] 'table_catalog'` Es el nombre de catálogo de la tabla para la que se va a devolver información de columna. *TABLE_CATALOG* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @column_name = ] 'column'`Es el nombre de la columna de base de datos para la que se va a proporcionar información. la *columna* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @column_name = ] 'column'` Es el nombre de la columna de base de datos para la que se va a proporcionar información. la *columna* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @ODBCVer = ] 'ODBCVer'`Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int**y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para obtener información acerca de las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación ODBC SQLColumns.  
+`[ @ODBCVer = ] 'ODBCVer'` Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int**y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para obtener información acerca de las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación ODBC SQLColumns.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -85,7 +86,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  Para obtener más información, vea la documentación de Microsoft ODBC.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_columns_ex** se ejecuta consultando el conjunto de filas Columns de la interfaz **IDBSchemaRowset** del proveedor de OLE DB correspondiente a *table_server*. Los parámetros *TABLE_NAME*, *TABLE_SCHEMA*, *TABLE_CATALOG*y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
   
  **sp_columns_ex** devuelve un conjunto de resultados vacío si el proveedor de OLE DB del servidor vinculado especificado no admite el conjunto de filas Columns de la interfaz **IDBSchemaRowset** .  
@@ -93,7 +94,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_columns_ex** sigue los requisitos de los identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Ejemplos  
@@ -108,13 +109,13 @@ EXEC sp_columns_ex 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_catalogs &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
- [sp_foreignkeys &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_indexes &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
- [sp_primarykeys &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
- [sp_tables_ex &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
- [sp_table_privileges &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
+ [sp_catalogs &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
+ [sp_foreignkeys &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
+ [sp_indexes &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_primarykeys &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
+ [sp_tables_ex &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
+ [sp_table_privileges &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

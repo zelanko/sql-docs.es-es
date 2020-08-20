@@ -1,4 +1,5 @@
 ---
+description: sys.dm_repl_tranhash (Transact-SQL)
 title: Sys. dm_repl_tranhash (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f2d51c1cc22cc3cb2beb89713d79a8d12ba5688
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c38860b17b3d0b9530f4751c90cd61acf5212823
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481858"
 ---
 # <a name="sysdm_repl_tranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85898681"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos de publicaciones para llamar a **dm_repl_tranhash**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  La instancia solo se devuelve para objetos de la base de datos replicada que está cargada actualmente en la caché del artículo de replicación.  
   
 ## <a name="see-also"></a>Consulte también  

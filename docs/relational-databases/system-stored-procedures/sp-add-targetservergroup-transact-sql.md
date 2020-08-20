@@ -1,4 +1,5 @@
 ---
+description: sp_add_targetservergroup (Transact-SQL)
 title: sp_add_targetservergroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 550f09426f294ecef58398a2bd3b5f03028e0eef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c0c4d50b224de77f4bc794227b583dea6aa5f512
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481588"
 ---
 # <a name="sp_add_targetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`Nombre del grupo de servidores que se va a crear. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. *el nombre* no puede contener comas.  
+`[ @name = ] 'name'` Nombre del grupo de servidores que se va a crear. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. *el nombre* no puede contener comas.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -66,10 +67,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_apply_job_to_targets &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_targetservergroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_help_targetservergroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_help_targetservergroup &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

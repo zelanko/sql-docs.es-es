@@ -1,4 +1,5 @@
 ---
+description: sp_changepublication (Transact-SQL)
 title: sp_changepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481535"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,15 +42,15 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @property = ] 'property'`Es la propiedad de la publicación que se va a cambiar. *Property* es de tipo **nvarchar (255)**.  
+`[ @property = ] 'property'` Es la propiedad de la publicación que se va a cambiar. *Property* es de tipo **nvarchar (255)**.  
   
-`[ @value = ] 'value'`Es el nuevo valor de propiedad. el *valor* es **nvarchar (255)** y su valor predeterminado es NULL.  
+`[ @value = ] 'value'` Es el nuevo valor de propiedad. el *valor* es **nvarchar (255)** y su valor predeterminado es NULL.  
   
  Esta tabla describe las propiedades de la publicación que se pueden cambiar y las restricciones de los valores de esas propiedades.  
   
-|Propiedad|Valor|Descripción|  
+|Propiedad|Value|Descripción|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Se pueden crear suscripciones anónimas para la publicación dada y *immediate_sync* también deben ser **verdaderas**. No se pueden cambiar para publicaciones punto a punto.|  
 ||**false**|No se pueden crear suscripciones anónimas para la publicación indicada. No se pueden cambiar para publicaciones punto a punto.|  
@@ -115,7 +116,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Deshabilita la `DROP TABLE` compatibilidad de dll con los artículos que forman parte de la replicación transaccional. Este es el valor **predeterminado** para esta propiedad.|
 |**Null** (valor predeterminado)||Devuelve la lista de valores admitidos para la *propiedad*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
   - **0** especifica que los cambios en el artículo no hacen que la instantánea no sea válida. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   - **1** especifica que los cambios en el artículo pueden hacer que la instantánea no sea válida. Si existen suscripciones que requieran una nueva instantánea, este valor da permiso para que la instantánea existente se marque como obsoleta y se genere otra nueva.   
 Vea en la sección de Notas las propiedades que, si se cambian, requieren que se genere una instantánea nueva.  
@@ -125,7 +126,7 @@ Vea en la sección de Notas las propiedades que, si se cambian, requieren que se
   - **0** especifica que los cambios en el artículo no harán que se reinicialice la suscripción. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
   - **1** especifica que los cambios en el artículo hacen que se reinicialice la suscripción existente y concede permiso para que se produzca la reinicialización de la suscripción.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
   > [!NOTE]  
   >  no se debe usar el *publicador* al cambiar las propiedades de un artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
@@ -133,7 +134,7 @@ Vea en la sección de Notas las propiedades que, si se cambian, requieren que se
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_changepublication** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
  Después de cambiar cualquiera de las siguientes propiedades, debe generar una nueva instantánea y debe especificar el valor **1** para el parámetro *force_invalidate_snapshot* .  
@@ -165,10 +166,10 @@ Para enumerar los objetos de publicación en el Active Directory mediante el par
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Cambiar las propiedades de la publicación y del artículo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addpublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_droppublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [sp_helppublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [sp_addpublication &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_droppublication &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

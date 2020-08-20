@@ -1,4 +1,5 @@
 ---
+description: sp_configure (Transact-SQL)
 title: sp_configure (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -18,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dd39c7f2a803dc778f8d29530b63daa46fc4b7e2
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 17a4e6aa23b7792daf2d7fe27c694f88cc8abe70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481427"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -60,11 +61,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @configname = ] 'option_name'`Es el nombre de una opción de configuración. *option_name* es **varchar(35)** y su valor predeterminado es NULL. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconoce cualquier cadena única que forme parte del nombre de configuración. Si no se especifica, se devuelve la lista completa de opciones.  
+`[ @configname = ] 'option_name'` Es el nombre de una opción de configuración. *option_name* es **varchar(35)** y su valor predeterminado es NULL. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconoce cualquier cadena única que forme parte del nombre de configuración. Si no se especifica, se devuelve la lista completa de opciones.  
   
  Para obtener información sobre las opciones de configuración disponibles y su configuración, consulte [Opciones de configuración del servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-`[ @configvalue = ] 'value'`Es el nuevo valor de configuración. *value* es de tipo **int**y su valor predeterminado es NULL. El valor máximo depende de la opción individual.  
+`[ @configvalue = ] 'value'` Es el nuevo valor de configuración. *value* es de tipo **int**y su valor predeterminado es NULL. El valor máximo depende de la opción individual.  
   
  Para ver el valor máximo de cada opción, vea la columna **Maximum** de la vista de catálogo **sys.configurations** .  
   

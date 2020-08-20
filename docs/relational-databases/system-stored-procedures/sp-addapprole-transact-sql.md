@@ -1,4 +1,5 @@
 ---
+description: sp_addapprole (Transact-SQL)
 title: sp_addapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4c3420396f1a8149a7c5811f1c7422a6fb960f13
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa68e8b0d965fae3a1c27f5ca2705bc003d7b616
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481563"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85877899"
   Agrega un rol de aplicación a la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]En su lugar, use [crear rol de aplicación](../../t-sql/statements/create-application-role-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, use [crear rol de aplicación](../../t-sql/statements/create-application-role-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +43,11 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`Es el nombre del nuevo rol de aplicación. *role* es de **tipo sysname**y no tiene ningún valor predeterminado. *role* debe ser un identificador válido y no puede existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre del nuevo rol de aplicación. *role* es de **tipo sysname**y no tiene ningún valor predeterminado. *role* debe ser un identificador válido y no puede existir en la base de datos actual.  
   
  Los nombres de roles de aplicación pueden contener entre 1 y 128 caracteres, y pueden incluir letras, símbolos y números. Los nombres de rol no pueden contener una barra diagonal inversa ( \\ ) ni ser null ni una cadena vacía (' ').  
   
-`[ @password = ] 'password'`Es la contraseña requerida para activar el rol de aplicación. *password* es de **tipo sysname**y no tiene ningún valor predeterminado. la *contraseña* no puede ser null.  
+`[ @password = ] 'password'` Es la contraseña requerida para activar el rol de aplicación. *password* es de **tipo sysname**y no tiene ningún valor predeterminado. la *contraseña* no puede ser null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

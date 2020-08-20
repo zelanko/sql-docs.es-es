@@ -1,4 +1,5 @@
 ---
+description: sp_copymergesnapshot (Transact-SQL)
 title: sp_copymergesnapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64d4a6bb067c53b13592074fc1c08b2e35fc4830
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13e7be3229332ece6a95966de84ef5ed59e28289
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481417"
 ---
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,14 +38,14 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación cuyo contenido de instantánea se va a copiar. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación cuyo contenido de instantánea se va a copiar. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @destination_folder = ] 'destination_folder'`Es el nombre de la carpeta donde se va a copiar el contenido de la instantánea de la publicación. *destination_folder*es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado. El *destination_folder* puede ser una ubicación alternativa, por ejemplo, en otro servidor, en una unidad de red o en medios extraíbles (como CD-ROM o discos extraíbles).  
+`[ @destination_folder = ] 'destination_folder'` Es el nombre de la carpeta donde se va a copiar el contenido de la instantánea de la publicación. *destination_folder*es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado. El *destination_folder* puede ser una ubicación alternativa, por ejemplo, en otro servidor, en una unidad de red o en medios extraíbles (como CD-ROM o discos extraíbles).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_copymergesnapshot** se utiliza en la replicación de mezcla. Los suscriptores que ejecutan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la versión 7,0 y versiones anteriores no pueden usar la ubicación de instantáneas alternativa.  
   
 ## <a name="permissions"></a>Permisos  

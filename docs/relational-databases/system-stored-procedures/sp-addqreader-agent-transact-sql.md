@@ -1,4 +1,5 @@
 ---
+description: sp_addqreader_agent (Transact-SQL)
 title: sp_addqreader_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1758f6cd269c911ea582577721d29e6534910e91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 998a8c27af1a44bc477ab232f3b263a5ea70688f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481516"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,16 +41,16 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'`Es el inicio de sesión de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor.  
+`[ @job_login = ] 'job_login'` Es el inicio de sesión de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor.  
   
-`[ @job_password = ] 'job_password'`Es la contraseña de la cuenta de Windows con la que se ejecuta el agente. *job_password* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows con la que se ejecuta el agente. *job_password* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para una mayor seguridad, los nombres de inicio de sesión y las contraseñas se deben proporcionar en tiempo de ejecución.  
   
-`[ @job_name = ] 'job_name'`Es el nombre de un trabajo del agente existente. *job_name* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro solamente se especifica cuando se crea el agente a partir de un trabajo existente, en lugar de hacerlo con un trabajo recién creado (el valor predeterminado).  
+`[ @job_name = ] 'job_name'` Es el nombre de un trabajo del agente existente. *job_name* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro solamente se especifica cuando se crea el agente a partir de un trabajo existente, en lugar de hacerlo con un trabajo recién creado (el valor predeterminado).  
   
-`[ @frompublisher = ] frompublisher`Especifica si el procedimiento se ejecuta en el publicador. *frompublisher* es de bit y su valor predeterminado es **0**. Un valor de **1** significa que el procedimiento se ejecuta desde el publicador en la base de datos de publicación.  
+`[ @frompublisher = ] frompublisher` Especifica si el procedimiento se ejecuta en el publicador. *frompublisher* es de bit y su valor predeterminado es **0**. Un valor de **1** significa que el procedimiento se ejecuta desde el publicador en la base de datos de publicación.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -67,8 +68,8 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="see-also"></a>Consulte también  
  [Habilitar suscripciones de actualización para publicaciones transaccionales](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
  [Actualizar scripts de replicación &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
- [Suscripciones actualizables para la replicación transaccional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_changeqreader_agent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)   
- [sp_helpqreader_agent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)  
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [sp_changeqreader_agent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)   
+ [sp_helpqreader_agent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)  
   
   

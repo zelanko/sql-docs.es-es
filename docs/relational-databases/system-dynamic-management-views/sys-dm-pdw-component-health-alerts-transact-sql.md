@@ -1,4 +1,5 @@
 ---
+description: Sys. dm_pdw_component_health_alerts (Transact-SQL)
 title: Sys. dm_pdw_component_health_alerts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -10,12 +11,12 @@ ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0a3d2a3b85f0b6445229812316cf7893badd344
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 719f6ed133a3ff6163e64cdaf10bc7e35b416f1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481888"
 ---
 # <a name="sysdm_pdw_component_health_alerts-transact-sql"></a>Sys. dm_pdw_component_health_alerts (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

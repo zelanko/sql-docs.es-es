@@ -1,4 +1,5 @@
 ---
+description: sp_changedbowner (Transact-SQL)
 title: sp_changedbowner (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 51f0e6107068f28f1c03c357564f131c133fec9e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 648ac83b7c0af68e0ead64ed7a0868ea5777c389
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481565"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85872481"
   Cambia el propietario de la base de datos actual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]En su lugar, use [ALTER Authorization](../../t-sql/statements/alter-authorization-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, use [ALTER Authorization](../../t-sql/statements/alter-authorization-transact-sql.md) .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -76,10 +77,10 @@ EXEC sp_changedbowner 'Albert';
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [sp_dropalias &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
- [sp_dropuser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_helpdb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helplogins &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_dropalias &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   
+ [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [sp_helpdb &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helplogins &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

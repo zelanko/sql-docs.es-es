@@ -1,8 +1,8 @@
 ---
-description: Función SQLDriverConnect
 title: SQLDriverConnect (función) | Microsoft Docs
+description: La función SQLDriverConnect forma parte del estándar de la API de ODBC y esta documentación de referencia proporciona información sobre su sintaxis.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,32 +20,20 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9ff73c570e607f687ff8293587b8dbcef551926
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476148"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745905"
 ---
 # <a name="sqldriverconnect-function"></a>Función SQLDriverConnect
 **Conformidad**  
  Versión introducida: ODBC 1,0 Standards Compliance: ODBC  
   
  **Resumen**  
- **SQLDriverConnect** es una alternativa a **SQLConnect**. Admite orígenes de datos que requieren más información de conexión que los tres argumentos de **SQLConnect**, cuadros de diálogo para solicitar al usuario toda la información de conexión y orígenes de datos que no están definidos en la información del sistema.  
-  
- **SQLDriverConnect** proporciona los siguientes atributos de conexión:  
-  
--   Establezca una conexión mediante una cadena de conexión que contenga el nombre del origen de datos, uno o varios identificadores de usuario, una o más contraseñas y otra información requerida por el origen de datos.  
-  
--   Establecer una conexión mediante una cadena de conexión parcial o sin información adicional; en este caso, el administrador de controladores y el controlador pueden pedir al usuario la información de conexión.  
-  
--   Establecer una conexión a un origen de datos que no está definida en la información del sistema. Si la aplicación proporciona una cadena de conexión parcial, el controlador puede solicitar al usuario la información de conexión.  
-  
--   Establezca una conexión a un origen de datos mediante una cadena de conexión construida a partir de la información de un archivo. DSN.  
-  
- Una vez establecida una conexión, **SQLDriverConnect** devuelve la cadena de conexión completa. La aplicación puede usar esta cadena para las solicitudes de conexión posteriores. Para obtener más información, consulte [conectar con SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
-  
+ **SQLDriverConnect** es una alternativa a **SQLConnect**. Admite orígenes de datos que requieren más información de conexión que los tres argumentos de **SQLConnect**, cuadros de diálogo para solicitar al usuario toda la información de conexión y orígenes de datos que no están definidos en la información del sistema. Para obtener más información, consulte [conectar con SQLDriverConnect](../develop-app/connecting-with-sqldriverconnect.md).  
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```cpp  
@@ -92,7 +80,7 @@ SQLRETURN SQLDriverConnect(
   
  (Para obtener más información, vea "Comentarios").  
   
-## <a name="returns"></a>Devoluciones  
+## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -367,6 +355,6 @@ int main() {
 |Liberar un identificador|[Función SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Establecer un atributo de conexión|[Función SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

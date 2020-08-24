@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8877bc3e17dfb38be273bd0782643d7fad00f53c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a62e610ae47243e8200a9422639569e91ce2c4c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440307"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771054"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Ejemplo de propiedad Name, métodos Append de tablas y columnas (VB)
 En el código siguiente se muestra cómo crear una nueva tabla.  
@@ -68,10 +68,10 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Append (método) (columnas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (método) (tablas ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Objeto column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name (propiedad, ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Colección de tablas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
+ [Append (método) (columnas ADOX)](./append-method-adox-columns.md)   
+ [Append (método) (tablas ADOX)](./append-method-adox-tables.md)   
+ [Objeto column (ADOX)](./column-object-adox.md)   
+ [Colección de columnas (ADOX)](./columns-collection-adox.md)   
+ [Name (propiedad, ADOX)](./name-property-adox.md)   
+ [Objeto Table (ADOX)](./table-object-adox.md)   
+ [Colección de tablas (ADOX)](./tables-collection-adox.md)

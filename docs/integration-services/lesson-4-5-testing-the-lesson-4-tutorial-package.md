@@ -1,4 +1,5 @@
 ---
+description: 'Paso 5: Prueba del paquete del tutorial de la lección 4'
 title: 'Paso 5: Prueba del paquete del tutorial de la lección 4 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c209aea67a04d7f602ec2015bdb3e7535c9bc8dd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd458d09c43a97693c620b9498ad1d593751905
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457147"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>Lección 4-5: Prueba del paquete de la lección 4
 
@@ -49,7 +50,7 @@ Antes de probar el paquete, compruebe que los flujos de datos y de control del p
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>Visualización del contenido del archivo ErrorOutput.txt  
   
-En el Bloc de notas o en cualquier otro editor de texto, abra el archivo **ErrorOutput.txt**. El orden predeterminado de columna es: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
+En el Bloc de notas o en cualquier otro editor de texto, abra el archivo **ErrorOutput.txt**. El orden predeterminado de las columnas es: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
  
 Todas las filas del archivo contienen el valor "BAD" de CurrencyID sin coincidencia, el valor -1071607778 de ErrorCode, el valor 0 de ErrorColumn y el valor "La fila no produjo ninguna coincidencia durante la búsqueda" de ErrorDescription. El valor de ErrorColumn es 0 porque el error no es específico de la columna; no se ha podido realizar la operación de búsqueda.
   

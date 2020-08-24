@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 144e230b10ac6a73f88be7ab85e779bcda5f2cd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3856bb797417909b2491bf3d5adcd7c5f18bc203
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441187"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778284"
 ---
 # <a name="children-property-ado-md"></a>Los elementos secundarios (propiedad, ADO MD)
-Devuelve una colección de [miembros](../../../ado/reference/ado-md-api/members-collection-ado-md.md) para la que el [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) actual es el elemento primario de la jerarquía.  
+Devuelve una colección de [miembros](./members-collection-ado-md.md) para la que el [miembro](./member-object-ado-md.md) actual es el elemento primario de la jerarquía.  
   
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve una colección de **miembros** y es de solo lectura.  
   
 ## <a name="remarks"></a>Observaciones  
- La propiedad **Children** contiene una colección de **miembros** para la que el **miembro** actual es el elemento primario jerárquico. Los objetos **miembro** de nivel hoja no tienen miembros secundarios en la colección de **miembros** . Esta propiedad solo se admite en los objetos **member** que pertenecen a un objeto [LEVEL](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Se produce un error cuando se hace referencia a esta propiedad desde objetos **member** que pertenecen a un objeto [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) .  
+ La propiedad **Children** contiene una colección de **miembros** para la que el **miembro** actual es el elemento primario jerárquico. Los objetos **miembro** de nivel hoja no tienen miembros secundarios en la colección de **miembros** . Esta propiedad solo se admite en los objetos **member** que pertenecen a un objeto [LEVEL](./level-object-ado-md.md) . Se produce un error cuando se hace referencia a esta propiedad desde objetos **member** que pertenecen a un objeto [Position](./position-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de miembro (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Objeto de miembro (ADO MD)](./member-object-ado-md.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad ChildCount (ADO MD)](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)
+ [Propiedad ChildCount (ADO MD)](./childcount-property-ado-md.md)

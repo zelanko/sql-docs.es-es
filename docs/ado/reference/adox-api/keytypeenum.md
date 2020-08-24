@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f8e1f16d9505de18751e80cc982f472d7ae0422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a1ebbe699f00f29b0aac8e6b7fcbdbfcb1abaa6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439797"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769994"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
-Especifica el tipo de [clave](../../../ado/reference/adox-api/key-object-adox.md): principal, externa o única.  
+Especifica el tipo de [clave](./key-object-adox.md): principal, externa o única.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adKeyPrimary**|1|Predeterminada. La clave es una clave principal.|  
 |**adKeyForeign**|2|Se trata de una clave externa.|  
 |**adKeyUnique**|3|La clave es única.|  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Type (propiedad, clave, ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)
+ [Type (propiedad, clave, ADOX)](./type-property-key-adox.md)

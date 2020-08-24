@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 906a2ffb29345a2bbefdbf5a6bde6e71cd1c5af1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 819e6ebaa3932f19a693cb3d50651f7c451200e6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441647"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777004"
 ---
 # <a name="update-method"></a>Update (método)
-Guarda los cambios realizados en la fila actual de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) o la colección de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) de un objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) .  
+Guarda los cambios realizados en la fila actual de un objeto de [conjunto de registros](./recordset-object-ado.md) o la colección de [campos](./fields-collection-ado.md) de un objeto de [registro](./record-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,11 +44,11 @@ record.Fields.Update
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="recordset"></a>DataRecordsets  
- Utilice el método **Update** para guardar los cambios realizados en el registro actual de un objeto de **conjunto de registros** desde la llamada al método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) o desde la modificación de los valores de campo de un registro existente. El objeto de **conjunto de registros** debe admitir actualizaciones.  
+ Utilice el método **Update** para guardar los cambios realizados en el registro actual de un objeto de **conjunto de registros** desde la llamada al método [AddNew](./addnew-method-ado.md) o desde la modificación de los valores de campo de un registro existente. El objeto de **conjunto de registros** debe admitir actualizaciones.  
   
  Para establecer los valores de los campos, realice una de las acciones siguientes:  
   
--   Asigne valores a la propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) de un objeto [Field](../../../ado/reference/ado-api/field-object.md) y llame al método **Update** .  
+-   Asigne valores a la propiedad [Value](./value-property-ado.md) de un objeto [Field](./field-object.md) y llame al método **Update** .  
   
 -   Pase un nombre de campo y un valor como argumentos con la llamada de **actualización** .  
   
@@ -56,14 +56,14 @@ record.Fields.Update
   
  Cuando se usan matrices de campos y valores, debe haber un número igual de elementos en ambas matrices. Además, el orden de los nombres de campo debe coincidir con el orden de los valores de campo. Si el número y el orden de los campos y valores no coinciden, se produce un error.  
   
- Si el objeto de **conjunto de registros** admite la actualización por lotes, puede almacenar en caché varios cambios en uno o más registros localmente hasta que se llame al método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Si está editando el registro actual o agregando un nuevo registro cuando se llama al método **UpdateBatch** , ADO llamará automáticamente al método **Update** para guardar los cambios pendientes en el registro actual antes de transmitir los cambios por lotes al proveedor.  
+ Si el objeto de **conjunto de registros** admite la actualización por lotes, puede almacenar en caché varios cambios en uno o más registros localmente hasta que se llame al método [UpdateBatch](./updatebatch-method.md) . Si está editando el registro actual o agregando un nuevo registro cuando se llama al método **UpdateBatch** , ADO llamará automáticamente al método **Update** para guardar los cambios pendientes en el registro actual antes de transmitir los cambios por lotes al proveedor.  
   
- Si se mueve del registro que está agregando o editando antes de llamar al método **Update** , ADO llamará automáticamente a **Update** para guardar los cambios. Debe llamar al método [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) si desea cancelar los cambios realizados en el registro actual o descartar un registro recién agregado.  
+ Si se mueve del registro que está agregando o editando antes de llamar al método **Update** , ADO llamará automáticamente a **Update** para guardar los cambios. Debe llamar al método [CancelUpdate](./cancelupdate-method-ado.md) si desea cancelar los cambios realizados en el registro actual o descartar un registro recién agregado.  
   
  El registro actual sigue siendo actual después de llamar al método **Update** .  
   
 ## <a name="record"></a>Registro  
- El método **Update** finaliza las adiciones, eliminaciones y actualizaciones de los campos de la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de un objeto **Record** .  
+ El método **Update** finaliza las adiciones, eliminaciones y actualizaciones de los campos de la colección [Fields](./fields-collection-ado.md) de un objeto **Record** .  
   
  Por ejemplo, los campos eliminados con el método **Delete** se marcan para su eliminación inmediatamente, pero permanecen en la colección. Se debe llamar al método **Update** para eliminar realmente estos campos de la colección del proveedor.  
   
@@ -71,17 +71,17 @@ record.Fields.Update
 
 :::row:::
     :::column:::
-        [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Fields (colección) (ADO)](./fields-collection-ado.md)  
     :::column-end:::
     :::column:::
-        [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de los métodos Update y CancelUpdate (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
- [Ejemplo de los métodos Update y CancelUpdate (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
- [AddNew (método) (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [CancelUpdate (método) (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Propiedad EditMode](../../../ado/reference/ado-api/editmode-property.md)   
- [Método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)
+ [Ejemplo de los métodos Update y CancelUpdate (VB)](./update-and-cancelupdate-methods-example-vb.md)   
+ [Ejemplo de los métodos Update y CancelUpdate (VC + +)](./update-and-cancelupdate-methods-example-vc.md)   
+ [AddNew (método) (ADO)](./addnew-method-ado.md)   
+ [CancelUpdate (método) (ADO)](./cancelupdate-method-ado.md)   
+ [Propiedad EditMode](./editmode-property.md)   
+ [Método UpdateBatch](./updatebatch-method.md)

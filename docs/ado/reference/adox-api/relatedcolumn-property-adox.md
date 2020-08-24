@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d59969ed52f7b26e1b104a8ee40ff3e16a49c4a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 003d3e1fb3ff13c7608e5629c23d5eda8dc3bf05
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439577"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769504"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn (propiedad, ADOX)
-Indica el nombre del objeto de [columna relacionado (Adox)](../../../ado/reference/adox-api/column-object-adox.md) en la tabla relacionada (solo columnas de clave).  
+Indica el nombre del objeto de [columna relacionado (Adox)](./column-object-adox.md) en la tabla relacionada (solo columnas de clave).  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece y devuelve un valor de **cadena** que es el nombre de la columna relacionada en la tabla relacionada.  
@@ -36,11 +36,11 @@ Indica el nombre del objeto de [columna relacionado (Adox)](../../../ado/referen
 ## <a name="remarks"></a>Observaciones  
  El valor predeterminado es una cadena vacía ("").  
   
- Esta propiedad es de solo lectura para los objetos de [columna](../../../ado/reference/adox-api/column-object-adox.md) ya anexados a una colección.  
+ Esta propiedad es de solo lectura para los objetos de [columna](./column-object-adox.md) ya anexados a una colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Objeto Column (ADOX)](./column-object-adox.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de las propiedades de método Append, tipo de clave, RelatedColumn, RelatedTable y UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [Ejemplo de las propiedades de método Append, tipo de clave, RelatedColumn, RelatedTable y UpdateRule (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Objeto Key (ADOX)](./key-object-adox.md)

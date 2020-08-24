@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52e90a1913a0500a174e335c178ea8a556d9659a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6732724e842d4183aa7e663994df34c57f366933
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452017"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759365"
 ---
 # <a name="running-business-objects-in-component-services"></a>Ejecución de objetos de negocios en servicios de componentes
 > [!IMPORTANT]
@@ -28,12 +28,10 @@ ms.locfileid: "88452017"
   
 -   Los objetos comerciales creados como archivos. exe se pueden llamar a través de DCOM. Si estos objetos comerciales se usan a través de Internet Information Services (IIS), están sujetos a la serialización de datos adicional, lo que ralentizará el rendimiento del cliente.  
   
--   Los objetos comerciales creados como archivos. dll se pueden usar a través de IIS y, por tanto, también mediante HTTP. También se pueden usar a través de DCOM a través de servicios de componentes, o a través de Microsoft Transaction Server, si usa Windows NT. Los archivos dll de objetos comerciales deberán registrarse en el equipo del servidor IIS para tener acceso a ellos a través de IIS. Para obtener información acerca de cómo configurar un archivo DLL para que se ejecute en DCOM, consulte la sección [habilitar una DLL para que se ejecute en DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md).  
+-   Los objetos comerciales creados como archivos. dll se pueden usar a través de IIS y, por tanto, también mediante HTTP. También se pueden usar a través de DCOM a través de servicios de componentes, o a través de Microsoft Transaction Server, si usa Windows NT. Los archivos dll de objetos comerciales deberán registrarse en el equipo del servidor IIS para tener acceso a ellos a través de IIS. Para obtener información acerca de cómo configurar un archivo DLL para que se ejecute en DCOM, consulte la sección [habilitar una DLL para que se ejecute en DCOM](./enabling-a-dll-to-run-on-dcom.md).  
   
 > [!NOTE]
->  Cuando los objetos comerciales del nivel intermedio se implementan como componentes de servicios de componentes mediante **GetObjectContext**, **SetComplete**y **SetAbort**, los objetos empresariales pueden usar servicios de componentes (o MTS, si usa Windows NT) objetos de contexto para mantener su estado en varias llamadas de cliente. Este escenario es posible con DCOM, que normalmente se implementa entre clientes y servidores de confianza en una intranet. En este caso, el [objeto RDS. ](../../../ado/reference/rds-api/dataspace-object-rds.md) El objeto DataSpace y el método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) en el lado cliente se sustituyen por el objeto de contexto de transacción y el método **CreateInstance** , que proporcionan la interfaz **ITransactionContext** y los implementan los servicios de componentes.  
+>  Cuando los objetos comerciales del nivel intermedio se implementan como componentes de servicios de componentes mediante **GetObjectContext**, **SetComplete**y **SetAbort**, los objetos empresariales pueden usar servicios de componentes (o MTS, si usa Windows NT) objetos de contexto para mantener su estado en varias llamadas de cliente. Este escenario es posible con DCOM, que normalmente se implementa entre clientes y servidores de confianza en una intranet. En este caso, el [objeto RDS. ](../../reference/rds-api/dataspace-object-rds.md) El objeto DataSpace y el método [CreateObject](../../reference/rds-api/createobject-method-rds.md) en el lado cliente se sustituyen por el objeto de contexto de transacción y el método **CreateInstance** , que proporcionan la interfaz **ITransactionContext** y los implementan los servicios de componentes.  
   
 ## <a name="see-also"></a>Consulte también  
- [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Aspectos básicos de RDS](./rds-fundamentals.md)

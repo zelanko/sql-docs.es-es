@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7baed4eff98c8286c1c84bd346826b4c49e4fa75
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452097"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759565"
 ---
 # <a name="rds-scenario"></a>Escenario de RDS
 > [!IMPORTANT]
@@ -50,22 +50,20 @@ ms.locfileid: "88452097"
   
  Este escenario contiene los siguientes temas.  
   
--   [Requisitos del sistema para la aplicación de la libreta de direcciones](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
+-   [Requisitos del sistema para la aplicación de la libreta de direcciones](./system-requirements-for-the-address-book-application.md)  
   
--   [Ejecución del script de SQL de la libreta de direcciones](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)  
+-   [Ejecución del script de SQL de la libreta de direcciones](./running-the-address-book-sql-script.md)  
   
--   [Ejecución de la aplicación de ejemplo de la libreta de direcciones](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)  
+-   [Ejecución de la aplicación de ejemplo de la libreta de direcciones](./running-the-address-book-sample-application.md)  
   
--   [Objeto de enlace de datos de la libreta de direcciones](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)  
+-   [Objeto de enlace de datos de la libreta de direcciones](./address-book-data-binding-object.md)  
   
--   [Botones de comando de la libreta de direcciones](../../../ado/guide/remote-data-service/address-book-command-buttons.md)  
+-   [Botones de comando de la libreta de direcciones](./address-book-command-buttons.md)  
   
--   [Botones de navegación de la libreta de direcciones](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
+-   [Botones de navegación de la libreta de direcciones](./address-book-navigation-buttons.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Requisitos del sistema para la aplicación de libreta de direcciones](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft Objetos de datos ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [Requisitos del sistema para la aplicación de libreta de direcciones](./system-requirements-for-the-address-book-application.md)   
+ [Microsoft Objetos de datos ActiveX (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [Aspectos básicos de RDS](./rds-fundamentals.md)   
+ [Tutorial de RDS](./rds-tutorial.md)

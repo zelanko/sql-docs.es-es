@@ -1,6 +1,6 @@
 ---
 title: Instalación de SQL Server Integration Services en Linux
-description: En este artículo se explica cómo instalar SQL Server Integration Services (SSIS) en Linux.
+description: En este artículo se explica cómo instalar SQL Server Integration Services (SSIS) en Linux. Puede instalar SSIS en Ubuntu 16.04 y Red Hat Enterprise Linux.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 681ba70f94819d9e7d4f129cfaf409a968e80bca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a8ec33ad6d3c2bfc9c8f3adab2acad2fdb74ce0d
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882525"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088777"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalación de SQL Server Integration Services (SSIS) en Linux
 
@@ -217,7 +217,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | Variable de entorno | Descripción |
 |---|---|
 | ACCEPT_EULA | Acepta los términos de licencia de SQL Server cuando se establece en cualquier valor (por ejemplo, "Y").|
-| SSIS_PID | Establece la edición de SQL Server o la clave de producto. Estos son los valores posibles:<ul><li>Evaluación</li><li>Desarrollador</li><li>Express</li><li>Web</li><li>Estándar</li><li>Enterprise</li><li>Una clave de producto</li></ul>Si especifica una clave de producto, esta debe tener el formato *#####* - *#####* - *#####* - *#####* - *#####* , donde *#* es una letra o un número.  |
+| SSIS_PID | Establece la edición de SQL Server o la clave de producto. Estos son los valores posibles:<ul><li>Evaluación</li><li>Desarrollador</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>Una clave de producto</li></ul>Si especifica una clave de producto, esta debe tener el formato *#####* - *#####* - *#####* - *#####* - *#####* , donde *#* es una letra o un número.  |
 | | |
 
 ## <a name="next-steps"></a>Pasos siguientes
@@ -229,6 +229,6 @@ Para configurar opciones adicionales de SSIS en Linux, vea [Configuración de SQ
 ## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
 
 - [Extracción, transformación y carga de datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
-- [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+- [Configuración de SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
 - [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md)
 - [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)

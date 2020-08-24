@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 528eedeb18de9b0d1a8558edecccf5470a374eda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479161"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -741,14 +741,14 @@ El valor actual de esta opción se puede determinar si examina la columna `is_pa
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 Controla si el almacén de consultas está habilitado en esta base de datos y también controla la eliminación del contenido del almacén de consultas. Para obtener más información, vea [Escenarios de uso del Almacén de consultas](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ACTIVAR     
 Habilita el Almacén de consultas.
 
 Apagado      
-Deshabilita el Almacén de consultas. OFF Es el valor predeterminado. 
+Deshabilita el Almacén de consultas. OFF Es el valor predeterminado. FORCED es opcional. FORCED anula todas las tareas en segundo plano del Almacén de consultas en ejecución y omite el vaciado sincrónico cuando se desactiva el Almacén de consultas. Hace que el Almacén de consultas se apague lo más rápido posible. Desactiva el Almacén de consultas de forma inmediata. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 introduce FORCED.
 
 > [!NOTE]  
 > El Almacén de consultas no se puede deshabilitar en la base de datos única de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ni Grupo elástico. Al ejecutar `ALTER DATABASE [database] SET QUERY_STORE = OFF` se devuelve la advertencia `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
@@ -1868,10 +1868,13 @@ ON | OFF | CLEAR [ ALL ]
 Controla si el almacén de consultas está habilitado en esta base de datos y también controla la eliminación del contenido del almacén de consultas.
 
 ACTIVAR     
-Habilita el Almacén de consultas.
+Habilita el Almacén de consultas. ON es el valor predeterminado.
 
 Apagado     
-Deshabilita el Almacén de consultas. Este es el valor predeterminado.
+Deshabilita el Almacén de consultas. 
+
+> [!NOTE]  
+> El Almacén de consultas no se puede deshabilitar en la base de datos única de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ni Grupo elástico. Al ejecutar `ALTER DATABASE [database] SET QUERY_STORE = OFF` se devuelve la advertencia `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
 Quita el contenido del Almacén de consultas.

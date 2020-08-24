@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 757de54d56b5220b2759e670584e432c595fc45f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe14e37829bbeb501debcf1e8a27bd86d43712d3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440987"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778094"
 ---
 # <a name="hierarchy-object-ado-md"></a>Objeto Hierarchy (ADO MD)
-Representa una manera en la que los miembros de una [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) se pueden agregar o "acumular". Una dimensión se puede Agregar A una o más jerarquías.  
+Representa una manera en la que los miembros de una [dimensión](./dimension-object-ado-md.md) se pueden agregar o "acumular". Una dimensión se puede Agregar A una o más jerarquías.  
   
 ## <a name="remarks"></a>Observaciones  
  Con las colecciones y las propiedades de un objeto **Hierarchy** , puede hacer lo siguiente:  
   
--   Identifique la **jerarquía** con las propiedades [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  
+-   Identifique la **jerarquía** con las propiedades [Name](./name-property-ado-md.md) y [UniqueName](./uniquename-property-ado-md.md) .  
   
--   Devuelve una cadena significativa que describe la **jerarquía** con la propiedad [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) .  
+-   Devuelve una cadena significativa que describe la **jerarquía** con la propiedad [Description](./description-property-ado-md.md) .  
   
--   Devuelve los objetos de [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) que componen la **jerarquía** con la colección [Levels](../../../ado/reference/ado-md-api/levels-collection-ado-md.md) .  
+-   Devuelve los objetos de [nivel](./level-object-ado-md.md) que componen la **jerarquía** con la colección [Levels](./levels-collection-ado-md.md) .  
   
--   Utilice la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) de ADO estándar para obtener información adicional sobre el objeto de **jerarquía** .  
+-   Utilice la colección de [propiedades](../ado-api/properties-collection-ado.md) de ADO estándar para obtener información adicional sobre el objeto de **jerarquía** .  
   
  La colección **Properties** contiene propiedades proporcionadas por el proveedor. En la tabla siguiente se enumeran las propiedades que pueden estar disponibles. La lista de propiedades real puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista más completa de las propiedades disponibles.  
   
@@ -57,11 +57,11 @@ Representa una manera en la que los miembros de una [dimensión](../../../ado/re
   
  Esta sección contiene el siguiente tema.  
   
--   [Propiedades, métodos y eventos](../../../ado/reference/ado-md-api/hierarchy-object-properties-methods-and-events.md)  
+-   [Propiedades, métodos y eventos](./hierarchy-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de CubeDef (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Objeto Dimension (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
- [Colección Hierarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Colección de niveles (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)   
- [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Ejemplo de CubeDef (VBScript)](./cubedef-example-vbscript.md)   
+ [Objeto Dimension (ADO MD)](./dimension-object-ado-md.md)   
+ [Colección Hierarchies (ADO MD)](./hierarchies-collection-ado-md.md)   
+ [Colección de niveles (ADO MD)](./levels-collection-ado-md.md)   
+ [Colección de propiedades (ADO)](../ado-api/properties-collection-ado.md)

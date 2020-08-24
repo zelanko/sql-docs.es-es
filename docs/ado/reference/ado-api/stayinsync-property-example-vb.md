@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13e1026b95386cb051aba0468d371937c4ed52d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e96d32355fa31d79933b23620002f96d23eb7da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441917"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777274"
 ---
 # <a name="stayinsync-property-example-vb"></a>Ejemplo de la propiedad StayInSync (VB)
-En este ejemplo se muestra cómo la propiedad [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) facilita el acceso a las filas de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)jerárquico.  
+En este ejemplo se muestra cómo la propiedad [StayInSync](./stayinsync-property.md) facilita el acceso a las filas de un [conjunto de registros](./recordset-object-ado.md)jerárquico.  
   
- El bucle exterior muestra el nombre y el apellido de cada autor, el estado y la identificación. El conjunto de **registros** anexado para cada fila se recupera de la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) y se asigna automáticamente a **rstTitleAuthor** mediante la propiedad **StayInSync** siempre que el **conjunto de registros** primario se mueve a una nueva fila. El bucle interno muestra cuatro campos de cada fila del conjunto de registros anexado.  
+ El bucle exterior muestra el nombre y el apellido de cada autor, el estado y la identificación. El conjunto de **registros** anexado para cada fila se recupera de la colección [Fields](./fields-collection-ado.md) y se asigna automáticamente a **rstTitleAuthor** mediante la propiedad **StayInSync** siempre que el **conjunto de registros** primario se mueve a una nueva fila. El bucle interno muestra cuatro campos de cada fila del conjunto de registros anexado.  
   
 ```  
 'BeginStayInSyncVB  
@@ -91,6 +91,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propiedad StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)
+ [Fields (colección) (ADO)](./fields-collection-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)   
+ [Propiedad StayInSync](./stayinsync-property.md)

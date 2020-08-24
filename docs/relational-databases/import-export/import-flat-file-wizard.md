@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88fb60179a5503d3c41bbc253c1f7373c1d97184
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
+ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751222"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88251471"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,50 +45,70 @@ Para acceder al Asistente para importación de archivos planos, siga estos pasos
 2. Conéctese a una instancia de Motor de base de datos de SQL Server o el localhost.
 3. Expanda **Bases de datos**, haga clic con el botón derecho en una base de datos (vea el ejemplo siguiente), apunte a **Tareas** y haga clic en **Importar archivo plano**, encima de Importar datos.
 
-![Menú del asistente](media/import-flat-file-wizard/importffmenu.png)
+![Menú del asistente](media/import-flat-file-wizard/import-flat-file-menu.png)
 
 Para obtener más información sobre las diferentes funciones del asistente, consulte el siguiente tutorial:
 
 ## <a name="tutorial"></a>Tutorial
 Dados los objetivos que se contemplan en este tutorial, puede usar un archivo plano propio. En caso contrario, en este tutorial se usará el siguiente archivo .csv de Excel que puede copiar sin ningún problema. Si decide usar este archivo .csv, llámelo **ejemplo.csv** y guárdelo como .csv en una ubicación que pueda encontrar fácilmente, por ejemplo, el escritorio.
 
-![Asistente: Excel](media/import-flat-file-wizard/importffexample.png)
+![Asistente: Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
 ### <a name="step-1-access-wizard-and-intro-page"></a>Paso 1: Acceso al asistente y página de introducción
 Acceda al asistente tal y como se describe [aquí](#started).
 
 La primera página del asistente es la página principal. Si no quiere que se vuelva a mostrar, haga clic en **No volver a mostrar esta página**.
 
-![Asistente: introducción](media/import-flat-file-wizard/importffintro.png)
+![Asistente: introducción](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>Paso 2: Especificación del archivo de entrada
 Haga clic en Examinar y seleccione el archivo de entrada. De forma predeterminada, el asistente buscará archivos .csv y .txt. 
 
 El nuevo nombre de la tabla debe ser único, ya que, en caso contrario, el asistente no le permitirá avanzar.
 
-![Asistente: especificación](media/import-flat-file-wizard/importffspecify.png)
+![Asistente: especificación](media/import-flat-file-wizard/import-flat-file-specify.png)
 
 ### <a name="step-3-preview-data"></a>Paso 3: Vista previa de los datos
 El asistente generará una vista previa para que pueda consultar las primeras 50 filas. Si hay algún problema, haga clic en Cancelar. Si no, proceda a la página siguiente.
 
-![Asistente: vista previa](media/import-flat-file-wizard/importffpreview.png)
+![Asistente: vista previa](media/import-flat-file-wizard/import-flat-file-preview.png)
 
 ### <a name="step-4-modify-columns"></a>Paso 4: Modificación de columnas
 El asistente identificará lo que en teoría son los nombres de columnas, los tipos de datos, etc. En caso de que los campos no sean correctos, en este paso podrá editarlos, por ejemplo, si el tipo de datos debe ser "float" en lugar de "int".
 
 Una vez que todo sea correcto, continúe.
 
-![Asistente: modificación](media/import-flat-file-wizard/importffmodify.png)
+![Asistente: modificación](media/import-flat-file-wizard/import-flat-file-modify.png)
 
 ### <a name="step-5-summary"></a>Paso 5: Resumen
 Esta página es simplemente un resumen en el que figura la configuración actual. Si hay algún problema puede volver a las secciones anteriores. Si no los hay, haga clic en Finalizar para intentar efectuar la importación.
 
-![Asistente: resumen](media/import-flat-file-wizard/importffsummary.png)
+![Asistente: resumen](media/import-flat-file-wizard/import-flat-file-summary.png)
 
 ### <a name="step-6-results"></a>Paso 6: Results
 En esta página se indica si la importación se ha realizado correctamente. Si la operación se ha efectuado correctamente, aparecerá una marca de verificación verde. De lo contrario, deberá comprobar que no haya errores con los archivos de entrada o con la configuración.
 
-![Asistente: resultados](media/import-flat-file-wizard/importffresults.png)
+![Asistente: resultados](media/import-flat-file-wizard/import-flat-file-results.png)
+
+## <a name="troubleshooting"></a>Solución de problemas
+El Asistente para la importación de archivos planos detecta los tipos de datos basados en las primeras 200 filas.  En escenarios en los que los datos adicionales del archivo plano no se ajustan a los tipos de datos detectados automáticamente, se producirá un error durante la importación. El mensaje de error sería similar al siguiente:
+```
+Error inserting data into table. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column. (System.Data)
+String or binary data would be truncated. (System.Data)
+```
+Tácticas para solucionar este error:
+- La expansión de los tamaños de los tipos de datos en el [paso Modificar columnas](#step-4-modify-columns), como la longitud de una columna nvarchar, puede compensar las variaciones en los datos del resto del archivo plano.
+- Al habilitar informes de errores en el [paso Modificar columnas](#step-4-modify-columns), especialmente en un número menor, se revelará qué filas del archivo plano contienen datos que no se ajustan a los tipos de datos seleccionados. Por ejemplo, en un archivo plano en el que la segunda fila presenta un error, la ejecución de la importación con informes de errores con un intervalo de 1 proporciona un mensaje de error específico.  Examinar el archivo directamente en la ubicación puede proporcionar cambios más dirigidos en los tipos de datos basados en los datos de las filas identificadas.
+
+![Resultados de informes de errores](media/import-flat-file-wizard/import-flat-file-error.png)
+
+```
+Error inserting data into table occured while inserting rows 1 - 2. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type float of the specified target column. (System.Data)
+Failed to convert parameter value from a String to a Double. (System.Data)
+```
+
 
 ## <a name="learn-more"></a>Más información
 

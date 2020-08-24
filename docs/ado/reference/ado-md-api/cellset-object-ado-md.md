@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f30243440d9b09194bd3cd1c7ed5a162ad8de34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441217"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778314"
 ---
 # <a name="cellset-object-ado-md"></a>Objeto de conjunto de celdas (ADO MD)
 Representa los resultados de una consulta multidimensional. Es una colección de celdas seleccionadas de cubos u otros celdas.  
@@ -34,35 +34,35 @@ cst.Axes(0).Positions(0).Members(0).Caption
 ```  
   
 ## <a name="remarks"></a>Observaciones  
- No hay ninguna noción de celda actual dentro de un Cellset. En su lugar, la propiedad [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) recupera un objeto [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) específico del objeto Cellset. Los argumentos de la propiedad **Item** determinan qué celda se recupera. Puede especificar el valor ordinal único de una celda. También puede recuperar las celdas usando sus números de posición a lo largo de cada eje del Cellset. Para obtener más información sobre cómo recuperar celdas, vea la propiedad [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) .  
+ No hay ninguna noción de celda actual dentro de un Cellset. En su lugar, la propiedad [Item](./item-property-ado-md-cellset.md) recupera un objeto [Cell](./cell-object-ado-md.md) específico del objeto Cellset. Los argumentos de la propiedad **Item** determinan qué celda se recupera. Puede especificar el valor ordinal único de una celda. También puede recuperar las celdas usando sus números de posición a lo largo de cada eje del Cellset. Para obtener más información sobre cómo recuperar celdas, vea la propiedad [Item](./item-property-ado-md-cellset.md) .  
   
  Con las colecciones, los métodos y las propiedades de un objeto **Cellset** , puede hacer lo siguiente:  
   
--   Asociar una conexión abierta a un objeto **Cellset** estableciendo su propiedad [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) .  
+-   Asociar una conexión abierta a un objeto **Cellset** estableciendo su propiedad [ActiveConnection](./activeconnection-property-ado-md.md) .  
   
--   Ejecutar y recuperar los resultados de una consulta multidimensional con el método [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) .  
+-   Ejecutar y recuperar los resultados de una consulta multidimensional con el método [Open](./open-method-ado-md.md) .  
   
--   Recupera una **celda** del objeto **Cellset** con la propiedad [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) .  
+-   Recupera una **celda** del objeto **Cellset** con la propiedad [Item](./item-property-ado-md-cellset.md) .  
   
--   Devuelve los objetos de [eje](../../../ado/reference/ado-md-api/axis-object-ado-md.md) que definen el conjunto de **celdas** con la colección de [ejes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) .  
+-   Devuelve los objetos de [eje](./axis-object-ado-md.md) que definen el conjunto de **celdas** con la colección de [ejes](./axes-collection-ado-md.md) .  
   
--   Recupera información sobre las dimensiones utilizadas para filtrar los datos del **Cellset** con la propiedad [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) .  
+-   Recupera información sobre las dimensiones utilizadas para filtrar los datos del **Cellset** con la propiedad [FilterAxis](./filteraxis-property-ado-md.md) .  
   
--   Devuelve o especifica la consulta utilizada para definir el **Cellset** con la propiedad [source](../../../ado/reference/ado-md-api/source-property-ado-md.md) .  
+-   Devuelve o especifica la consulta utilizada para definir el **Cellset** con la propiedad [source](./source-property-ado-md.md) .  
   
--   Devuelve el estado actual del **Cellset** (abierto, cerrado, en ejecución o en conexión) con la propiedad [State](../../../ado/reference/ado-md-api/state-property-ado-md.md) .  
+-   Devuelve el estado actual del **Cellset** (abierto, cerrado, en ejecución o en conexión) con la propiedad [State](./state-property-ado-md.md) .  
   
--   Cierre un **Cellset** abierto con el método [Close](../../../ado/reference/ado-md-api/close-method-ado-md.md) .  
+-   Cierre un **Cellset** abierto con el método [Close](./close-method-ado-md.md) .  
   
--   Recupere la información específica del proveedor sobre el conjunto de **celdas** con la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) de ADO estándar.  
+-   Recupere la información específica del proveedor sobre el conjunto de **celdas** con la colección de [propiedades](../ado-api/properties-collection-ado.md) de ADO estándar.  
   
  Esta sección contiene el siguiente tema.  
   
--   [Propiedades, métodos y eventos](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
+-   [Propiedades, métodos y eventos](./cellset-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de Cellset (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Colección axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Objeto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Ejemplo de Cellset (VB)](./cellset-example-vb.md)   
+ [Colección axes (ADO MD)](./axes-collection-ado-md.md)   
+ [Objeto Cell (ADO MD)](./cell-object-ado-md.md)   
+ [Connection (objeto) (ADO)](../ado-api/connection-object-ado.md)   
+ [Colección de propiedades (ADO)](../ado-api/properties-collection-ado.md)

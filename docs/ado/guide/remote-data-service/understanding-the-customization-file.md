@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451877"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759873"
 ---
 # <a name="understanding-the-customization-file"></a>Descripción del archivo de personalización
 Cada encabezado de sección del archivo de personalización consta de corchetes (**[]**) que contienen un tipo y un parámetro. Los cuatro tipos de sección se indican mediante cadenas literales **Connect**, **SQL**, **userList**o **logs**. El parámetro es la cadena literal, el valor predeterminado, un identificador especificado por el usuario o nada.  
@@ -45,7 +45,7 @@ identifier
 |Parte|Descripción|  
 |----------|-----------------|  
 |**connect**|Cadena literal que modifica una cadena de conexión.|  
-|**Server**|Cadena literal que modifica una cadena de comando.|  
+|**sql**|Cadena literal que modifica una cadena de comando.|  
 |**userList**|Cadena literal que modifica los derechos de acceso de un usuario específico.|  
 |**logs**|Cadena literal que especifica un archivo de registro que registra los errores operativos.|  
 |**default**|Cadena literal que se utiliza si no se especifica o se encuentra ningún identificador.|  
@@ -68,11 +68,10 @@ identifier
 -   La sección **logs** se usa siempre que el **DataFactory** está en funcionamiento.  
   
 ## <a name="see-also"></a>Consulte también  
- [Sección de conexión del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Sección de registros de archivo de personalización](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Sección SQL de archivo de personalización](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Sección UserList del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Configuración de cliente requerida](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Escritura de un controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Sección de conexión del archivo de personalización](./customization-file-connect-section.md)   
+ [Sección de registros de archivo de personalización](./customization-file-logs-section.md)   
+ [Sección SQL de archivo de personalización](./customization-file-sql-section.md)   
+ [Sección UserList del archivo de personalización](./customization-file-userlist-section.md)   
+ [Personalización de DataFactory](./datafactory-customization.md)   
+ [Configuración de cliente requerida](./required-client-settings.md)   
+ [Escritura de un controlador personalizado](./writing-your-own-customized-handler.md)

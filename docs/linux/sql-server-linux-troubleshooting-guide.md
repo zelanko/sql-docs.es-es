@@ -1,6 +1,6 @@
 ---
 title: Solución de problemas de SQL Server en Linux
-description: En este artículo se sugieren distintas soluciones a los problemas de uso de SQL Server en Linux.
+description: Solucione los problemas de Microsoft SQL Server en Linux o en un contenedor de Docker. Obtenga información sobre dónde encontrar información de las características admitidas y las limitaciones conocidas.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 7c2c191fa05f1c584c9e45e88cd5bd5b0e3b7851
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897224"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088761"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Solución de problemas de SQL Server en Linux
 
@@ -191,7 +191,7 @@ Como último recurso, puede volver a generar las bases de datos maestra y modelo
    sudo systemctl start mssql-server
    ```
 
-## <a name="improve-performance"></a>Mejora del rendimiento
+## <a name="improve-performance"></a>Mejorar el rendimiento
 
 Hay muchos factores que afectan al rendimiento, como el diseño de la base de datos, el hardware y las demandas de cargas de trabajo. Si quiere mejorar el rendimiento, empiece por revisar los procedimientos recomendados que aparecen en el artículo [Procedimientos recomendados e instrucciones de configuración para SQL Server en Linux](sql-server-linux-performance-best-practices.md). A continuación, explore algunas de las herramientas disponibles para solucionar problemas de rendimiento.
 

@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0024a8b0c96d5007f821da86293d40662ca02d98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd7ab9aeb807ab4a630a325492c274dcd0218471
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441057"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778164"
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Propiedades de la colección de dimensiones, métodos y eventos
 ## <a name="properties"></a>Propiedades  
- [Propiedad Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Propiedad Count](../ado-api/count-property-ado.md)  
   
- [Propiedad Item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propiedad Item](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Refresh (método)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh (método)](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
- [Colección Dimensions (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)
+ [Colección Dimensions (ADO MD)](./dimensions-collection-ado-md.md)

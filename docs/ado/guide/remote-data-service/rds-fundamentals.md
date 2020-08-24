@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6263acd1a51aa73ab004103eb6a7315626335ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f8333c0fd8b4d290f2d76aa35ef8cfea73b35d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452137"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759685"
 ---
 # <a name="rds-fundamentals"></a>Aspectos básicos de RDS
 > [!IMPORTANT]
@@ -27,20 +27,18 @@ ms.locfileid: "88452137"
   
  Los temas siguientes presentan RDS.  
   
--   [Soluciones de acceso a datos remotos](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)  
+-   [Soluciones de acceso a datos remotos](./solutions-for-remote-data-access.md)  
   
--   [Modelo básico de programación de RDS](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)  
+-   [Modelo básico de programación de RDS](./basic-rds-programming-model.md)  
   
--   [Modelo detallado de programación de RDS](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)  
+-   [Modelo detallado de programación de RDS](./rds-programming-model-in-detail.md)  
   
--   [Modelo de programación de RDS con objetos](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)  
+-   [Modelo de programación de RDS con objetos](./rds-programming-model-with-objects.md)  
   
--   [Resumen del modelo de objetos RDS](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
+-   [Resumen del modelo de objetos RDS](./rds-object-model-summary.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Soluciones para el acceso a datos remotos](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
- [Escenario de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Seguridad y uso de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Soluciones para el acceso a datos remotos](./solutions-for-remote-data-access.md)   
+ [Escenario de RDS](./rds-scenario.md)   
+ [Tutorial de RDS](./rds-tutorial.md)   
+ [Seguridad y uso de RDS](./rds-usage-and-security.md)

@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector for Oracle
 title: Microsoft Connector for Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ef8ccdfc30c772548cff4caa816ef1a582c8823
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5bb5631a398e398b45b84a0ee70b51f49c90988
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430757"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -55,6 +56,10 @@ Para ejecutar un paquete SSIS que tenga como destino SQL Server 2017 y version
 - [SQL Server 2016: Microsoft Connector Version 4.0 for Oracle de Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: Microsoft Connector Version 3.0 for Oracle de Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Microsoft Connector Version 2.0 for Oracle de Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="limitations-and-known-issues"></a>Limitaciones y problemas conocidos
+
+- Las vistas no se muestran en el origen de Oracle *Nombre de la tabla o la vista*. Como solución alternativa, use el comando SQL y seleccione * en la vista, o bien establezca el nombre de la vista en la propiedad [Oracle Source].[TableName] en el Editor avanzado.
 
 ## <a name="uninstallation"></a>Desinstalación
 

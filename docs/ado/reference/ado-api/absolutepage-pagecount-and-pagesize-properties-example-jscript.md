@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60fae0949fb3ed44da3aaa585ee8af1f529575dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3f5fb6b387a48fd2c08945bd8047d16f44abaf0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451827"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760025"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>Ejemplo de las propiedades AbsolutePage, PageCount y PageSize (JScript)
 En este ejemplo se muestran las propiedades AbsolutePage, PageCount y PageSize. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **AbsolutePageJS. asp**.  
@@ -159,7 +159,7 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount (propiedad, ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize (propiedad, ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propiedad AbsolutePage (ADO)](./absolutepage-property-ado.md)   
+ [PageCount (propiedad, ADO)](./pagecount-property-ado.md)   
+ [PageSize (propiedad, ADO)](./pagesize-property-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

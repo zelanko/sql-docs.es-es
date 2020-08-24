@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 105cc4eb8fe9584497c3029d5c5ddd81a49c6e82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 614ecee91aadd5ee81d9aa8032f75884ceec9b5d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451517"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760165"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Ejemplos de código ADO en Visual Basic
 Use los siguientes ejemplos de código para obtener información sobre cómo usar los métodos, las propiedades y los eventos de ADO al escribir en Visual Basic.  
@@ -30,133 +30,133 @@ Use los siguientes ejemplos de código para obtener información sobre cómo usa
   
 ## <a name="methods"></a>Métodos  
   
--   [Ejemplo del método AddNew](../../../ado/reference/ado-api/addnew-method-example-vb.md)  
+-   [Ejemplo del método AddNew](./addnew-method-example-vb.md)  
   
--   [Ejemplo de los métodos Append y CreateParameter](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)  
+-   [Ejemplo de los métodos Append y CreateParameter](./append-and-createparameter-methods-example-vb.md)  
   
--   [Ejemplo de los métodos AppendChunk y GetChunk](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)  
+-   [Ejemplo de los métodos AppendChunk y GetChunk](./appendchunk-and-getchunk-methods-example-vb.md)  
   
--   [Ejemplo de los métodos BeginTrans, CommitTrans y RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)  
+-   [Ejemplo de los métodos BeginTrans, CommitTrans y RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-example-vb.md)  
   
--   [Ejemplo del método CANCEL](../../../ado/reference/ado-api/cancel-method-example-vb.md)  
+-   [Ejemplo del método CANCEL](./cancel-method-example-vb.md)  
   
--   [Ejemplo del método Clone](../../../ado/reference/ado-api/clone-method-example-vb.md)  
+-   [Ejemplo del método Clone](./clone-method-example-vb.md)  
   
--   [Ejemplo del método CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)  
+-   [Ejemplo del método CompareBookmarks](./comparebookmarks-method-example-vb.md)  
   
--   [Ejemplo del método ConvertToString](../../../ado/reference/ado-api/converttostring-method-example-vb.md)  
+-   [Ejemplo del método ConvertToString](./converttostring-method-example-vb.md)  
   
--   [Ejemplo de los métodos CopyRecord, CopyTo y SaveToFile](../../../ado/reference/ado-api/copyrecord-copyto-and-savetofile-methods-example-vb.md)  
+-   [Ejemplo de los métodos CopyRecord, CopyTo y SaveToFile](./copyrecord-copyto-and-savetofile-methods-example-vb.md)  
   
--   [Ejemplo del método CreateRecordset](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)  
+-   [Ejemplo del método CreateRecordset](./createrecordset-method-example-vb.md)  
   
--   [Ejemplo del método Delete](../../../ado/reference/ado-api/delete-method-example-vb.md)  
+-   [Ejemplo del método Delete](./delete-method-example-vb.md)  
   
--   [Ejemplo de los métodos DeleteRecord y MoveRecord](../../../ado/reference/ado-api/deleterecord-and-moverecord-methods-example-vb.md)  
+-   [Ejemplo de los métodos DeleteRecord y MoveRecord](./deleterecord-and-moverecord-methods-example-vb.md)  
   
--   [Ejemplo de métodos Execute, Requery y Clear](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)  
+-   [Ejemplo de métodos Execute, Requery y Clear](./execute-requery-and-clear-methods-example-vb.md)  
   
--   [Ejemplo del método Find](../../../ado/reference/ado-api/find-method-example-vb.md)  
+-   [Ejemplo del método Find](./find-method-example-vb.md)  
   
--   [Ejemplo del método GetRows](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
+-   [Ejemplo del método GetRows](./getrows-method-example-vb.md)  
   
--   [Ejemplo del método GetString](../../../ado/reference/ado-api/getstring-method-example-vb.md)  
+-   [Ejemplo del método GetString](./getstring-method-example-vb.md)  
   
--   [Ejemplo de las propiedades método SkipLine, EOS y LineSeparator](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
+-   [Ejemplo de las propiedades método SkipLine, EOS y LineSeparator](./eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
   
--   [Ejemplo del método move](../../../ado/reference/ado-api/move-method-example-vb.md)  
+-   [Ejemplo del método move](./move-method-example-vb.md)  
   
--   [Ejemplo de los métodos MoveFirst, MoveLast, MoveNext y MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)  
+-   [Ejemplo de los métodos MoveFirst, MoveLast, MoveNext y MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)  
   
--   [Ejemplo del método NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)  
+-   [Ejemplo del método NextRecordset](./nextrecordset-method-example-vb.md)  
   
--   [Ejemplo de métodos Open y Close](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)  
+-   [Ejemplo de métodos Open y Close](./open-and-close-methods-example-vb.md)  
   
--   [Ejemplo del método OpenSchema](../../../ado/reference/ado-api/openschema-method-example-vb.md)  
+-   [Ejemplo del método OpenSchema](./openschema-method-example-vb.md)  
   
--   [Ejemplo de métodos Read, READTEXT, Write y WriteText](../../../ado/reference/ado-api/read-readtext-write-and-writetext-methods-example-vb.md)  
+-   [Ejemplo de métodos Read, READTEXT, Write y WriteText](./read-readtext-write-and-writetext-methods-example-vb.md)  
   
--   [Ejemplo del método Refresh](../../../ado/reference/ado-api/refresh-method-example-vb.md)  
+-   [Ejemplo del método Refresh](./refresh-method-example-vb.md)  
   
--   [Ejemplo del método Resync](../../../ado/reference/ado-api/resync-method-example-vb.md)  
+-   [Ejemplo del método Resync](./resync-method-example-vb.md)  
   
--   [Ejemplo de métodos Save y Open](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)  
+-   [Ejemplo de métodos Save y Open](./save-and-open-methods-example-vb.md)  
   
--   [Ejemplo de la propiedad index y el método Seek](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)  
+-   [Ejemplo de la propiedad index y el método Seek](./seek-method-and-index-property-example-vb.md)  
   
--   [Ejemplo del método Supports](../../../ado/reference/ado-api/supports-method-example-vb.md)  
+-   [Ejemplo del método Supports](./supports-method-example-vb.md)  
   
--   [Ejemplo de los métodos Update y CancelUpdate](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)  
+-   [Ejemplo de los métodos Update y CancelUpdate](./update-and-cancelupdate-methods-example-vb.md)  
   
--   [Ejemplo de los métodos UpdateBatch y CancelBatch](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)  
+-   [Ejemplo de los métodos UpdateBatch y CancelBatch](./updatebatch-and-cancelbatch-methods-example-vb.md)  
   
 ## <a name="properties"></a>Propiedades  
   
--   [Ejemplo de propiedades AbsolutePage, PageCount y PageSize](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)  
+-   [Ejemplo de propiedades AbsolutePage, PageCount y PageSize](./absolutepage-pagecount-and-pagesize-properties-example-vb.md)  
   
--   [Ejemplo de las propiedades AbsolutePosition y CursorLocation](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)  
+-   [Ejemplo de las propiedades AbsolutePosition y CursorLocation](./absoluteposition-and-cursorlocation-properties-example-vb.md)  
   
--   [Ejemplo de la propiedad ActiveCommand](../../../ado/reference/ado-api/activecommand-property-example-vb.md)  
+-   [Ejemplo de la propiedad ActiveCommand](./activecommand-property-example-vb.md)  
   
--   [Ejemplo de las propiedades ActiveConnection, CommandText, CommandTimeout, CommandType, size y Direction](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)  
+-   [Ejemplo de las propiedades ActiveConnection, CommandText, CommandTimeout, CommandType, size y Direction](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)  
   
--   [Ejemplo de propiedades ActualSize y DefinedSize](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)  
+-   [Ejemplo de propiedades ActualSize y DefinedSize](./actualsize-and-definedsize-properties-example-vb.md)  
   
--   [Ejemplo de propiedades de atributos y nombres](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)  
+-   [Ejemplo de propiedades de atributos y nombres](./attributes-and-name-properties-example-vb.md)  
   
--   [Ejemplo de las propiedades BOF, EOF y Bookmark](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)  
+-   [Ejemplo de las propiedades BOF, EOF y Bookmark](./bof-eof-and-bookmark-properties-example-vb.md)  
   
--   [Ejemplo de la propiedad CacheSize](../../../ado/reference/ado-api/cachesize-property-example-vb.md)  
+-   [Ejemplo de la propiedad CacheSize](./cachesize-property-example-vb.md)  
   
--   [Ejemplo de las propiedades ConnectionString, ConnectionTimeout y State](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)  
+-   [Ejemplo de las propiedades ConnectionString, ConnectionTimeout y State](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)  
   
--   [Ejemplo de la propiedad Count](../../../ado/reference/ado-api/count-property-example-vb.md)  
+-   [Ejemplo de la propiedad Count](./count-property-example-vb.md)  
   
--   [Ejemplo de las propiedades CursorType, LockType y EditMode](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)  
+-   [Ejemplo de las propiedades CursorType, LockType y EditMode](./cursortype-locktype-and-editmode-properties-example-vb.md)  
   
--   [Ejemplo de las propiedades Description, HelpContext, HelpFile, NativeError, Number, Source y SQLState](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)  
+-   [Ejemplo de las propiedades Description, HelpContext, HelpFile, NativeError, Number, Source y SQLState](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)  
   
--   [Propiedades de EOS y LineSeparator, ejemplo del método SkipLine](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
+-   [Propiedades de EOS y LineSeparator, ejemplo del método SkipLine](./eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
   
--   [Ejemplo de las propiedades Filter y RecordCount](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)  
+-   [Ejemplo de las propiedades Filter y RecordCount](./filter-and-recordcount-properties-example-vb.md)  
   
--   [Ejemplo de las propiedades IsolationLevel y MODE](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)  
+-   [Ejemplo de las propiedades IsolationLevel y MODE](./isolationlevel-and-mode-properties-example-vb.md)  
   
--   [Ejemplo de la propiedad Item](../../../ado/reference/ado-api/item-property-example-vb.md)  
+-   [Ejemplo de la propiedad Item](./item-property-example-vb.md)  
   
--   [Ejemplo de la propiedad MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)  
+-   [Ejemplo de la propiedad MarshalOptions](./marshaloptions-property-example-vb.md)  
   
--   [Ejemplo de la propiedad MaxRecords](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)  
+-   [Ejemplo de la propiedad MaxRecords](./maxrecords-property-example-vb.md)  
   
--   [Ejemplo de las propiedades NumericScale y Precision](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)  
+-   [Ejemplo de las propiedades NumericScale y Precision](./numericscale-and-precision-properties-example-vb.md)  
   
--   [Ejemplo de la propiedad Optimize](../../../ado/reference/ado-api/optimize-property-example-vb.md)  
+-   [Ejemplo de la propiedad Optimize](./optimize-property-example-vb.md)  
   
--   [Ejemplo de las propiedades OriginalValue y UnderlyingValue](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)  
+-   [Ejemplo de las propiedades OriginalValue y UnderlyingValue](./originalvalue-and-underlyingvalue-properties-example-vb.md)  
   
--   [Ejemplo de propiedad prepared](../../../ado/reference/ado-api/prepared-property-example-vb.md)  
+-   [Ejemplo de propiedad prepared](./prepared-property-example-vb.md)  
   
--   [Ejemplo de las propiedades Provider y DefaultDatabase](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)  
+-   [Ejemplo de las propiedades Provider y DefaultDatabase](./provider-and-defaultdatabase-properties-example-vb.md)  
   
--   [Ejemplo de la propiedad Sort](../../../ado/reference/ado-api/sort-property-example-vb.md)  
+-   [Ejemplo de la propiedad Sort](./sort-property-example-vb.md)  
   
--   [Ejemplo de la propiedad Source](../../../ado/reference/ado-api/source-property-example-vb.md)  
+-   [Ejemplo de la propiedad Source](./source-property-example-vb.md)  
   
--   [Ejemplo de la propiedad State](../../../ado/reference/ado-api/state-property-example-vb.md)  
+-   [Ejemplo de la propiedad State](./state-property-example-vb.md)  
   
--   [Ejemplo de la propiedad status](../../../ado/reference/ado-api/status-property-example-recordset-vb.md)  
+-   [Ejemplo de la propiedad status](./status-property-example-recordset-vb.md)  
   
--   [Ejemplo de la propiedad StayInSync](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)  
+-   [Ejemplo de la propiedad StayInSync](./stayinsync-property-example-vb.md)  
   
--   [Ejemplo de la propiedad Type (Field)](../../../ado/reference/ado-api/type-property-example-field-vb.md)  
+-   [Ejemplo de la propiedad Type (Field)](./type-property-example-field-vb.md)  
   
--   [Ejemplo de propiedad de tipo (propiedad)](../../../ado/reference/ado-api/type-property-example-property-vb.md)  
+-   [Ejemplo de propiedad de tipo (propiedad)](./type-property-example-property-vb.md)  
   
--   [Ejemplo de la propiedad Value](../../../ado/reference/ado-api/value-property-example-vb.md)  
+-   [Ejemplo de la propiedad Value](./value-property-example-vb.md)  
   
--   [Ejemplo de la propiedad version](../../../ado/reference/ado-api/version-property-example-vb.md)  
+-   [Ejemplo de la propiedad version](./version-property-example-vb.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplos de código ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Ejemplos de código ADO en Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Apéndice D: Ejemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Ejemplos de código ADO VBScript](./ado-code-examples-vbscript.md)   
+ [Ejemplos de código ADO en Visual C++](./ado-code-examples-in-visual-c.md)   
+ [Apéndice D: Ejemplos de ADO](../../guide/appendixes/appendix-d-ado-samples.md)

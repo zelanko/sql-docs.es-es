@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 148deaa16746bd964e4bed07ed673fea0ec4cb6a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441947"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777294"
 ---
 # <a name="status-property-example-field-vb"></a>Ejemplo de la propiedad de estado (campo) (VB)
-En el ejemplo siguiente se abre un documento desde una carpeta de lectura/escritura mediante el [proveedor de publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La propiedad [status](../../../ado/reference/ado-api/status-property-ado-field.md) de un objeto [Field](../../../ado/reference/ado-api/field-object.md) del [registro](../../../ado/reference/ado-api/record-object-ado.md) se establecerá primero en **adFieldPendingInsert**y, a continuación, se actualizará a **adFieldOk**.  
+En el ejemplo siguiente se abre un documento desde una carpeta de lectura/escritura mediante el [proveedor de publicación en Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La propiedad [status](./status-property-ado-field.md) de un objeto [Field](./field-object.md) del [registro](./record-object-ado.md) se establecerá primero en **adFieldPendingInsert**y, a continuación, se actualizará a **adFieldOk**.  
   
 ```  
 'BeginStatusFieldVB  
@@ -86,13 +86,13 @@ End Sub
 Attribute VB_Name = "StatusField"  
 ```  
   
- El código siguiente elimina un **campo** de un **registro** abierto en un documento de solo lectura. **Status** se establecerá en **adFieldPendingDelete**. En la [actualización](../../../ado/reference/ado-api/update-method.md), se producirá un error en la eliminación y el **Estado** será **adFieldPendingDelete** más **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) borra la configuración de **Estado** pendiente.  
+ El código siguiente elimina un **campo** de un **registro** abierto en un documento de solo lectura. **Status** se establecerá en **adFieldPendingDelete**. En la [actualización](./update-method.md), se producirá un error en la eliminación y el **Estado** será **adFieldPendingDelete** más **adFieldPermissionDenied**. [CancelUpdate](./cancelupdate-method-ado.md) borra la configuración de **Estado** pendiente.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
- [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Propiedad Status (Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Field (objeto)](./field-object.md)   
+ [Objeto Record (ADO)](./record-object-ado.md)   
+ [Propiedad Status (Field ADO)](./status-property-ado-field.md)

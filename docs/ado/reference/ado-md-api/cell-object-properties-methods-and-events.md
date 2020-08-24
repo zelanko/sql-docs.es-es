@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb2a3fd6f848b43de981d1239657ebc5097202fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45644a1b295f7a4e83c2fed7d45daa5291744f65
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441237"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778324"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Propiedades de objetos, métodos y eventos de celda
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
- [Propiedad FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)  
+ [Propiedad FormattedValue](./formattedvalue-property-ado-md.md)  
   
- [Propiedad ordinal (celda)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)  
+ [Propiedad ordinal (celda)](./ordinal-property-ado-md-cell.md)  
   
- [Colección de posiciones](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+ [Colección de posiciones](./positions-collection-ado-md.md)  
   
- [Colección de propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Colección de propiedades](../ado-api/properties-collection-ado.md)  
   
- [Value (propiedad)](../../../ado/reference/ado-md-api/value-property-ado-md.md)  
+ [Value (propiedad)](./value-property-ado-md.md)  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  
@@ -39,4 +39,4 @@ ms.locfileid: "88441237"
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)
+ [Objeto Cell (ADO MD)](./cell-object-ado-md.md)

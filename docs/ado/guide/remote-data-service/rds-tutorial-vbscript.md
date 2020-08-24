@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea18ea1d5df16d26b47bcddcdf284e51dc0c2fcf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c8e93e72833e649f46ebda5885d3a16c5afece6
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452087"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759515"
 ---
 # <a name="rds-tutorial-vbscript"></a>Tutorial de RDS (VBScript)
-Este es el tutorial de RDS, escrito en Microsoft Visual Basic Scripting Edition. Para obtener una descripción del propósito de este tutorial, vea el [tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md).  
+Este es el tutorial de RDS, escrito en Microsoft Visual Basic Scripting Edition. Para obtener una descripción del propósito de este tutorial, vea el [tutorial de RDS](./rds-tutorial.md).  
   
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- En este tutorial, [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) y [RDS. El espacio](../../../ado/reference/rds-api/dataspace-object-rds.md) de bits se crea en tiempo de diseño; es decir, se definen con etiquetas de objeto, como se indica a continuación: `<OBJECT>...</OBJECT>` . Como alternativa, se podrían crear en tiempo de ejecución con el método [CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) . Por ejemplo, **RDS. ** El objeto DataControl podría crearse de la siguiente manera:  
+ En este tutorial, [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) y [RDS. El espacio](../../reference/rds-api/dataspace-object-rds.md) de bits se crea en tiempo de diseño; es decir, se definen con etiquetas de objeto, como se indica a continuación: `<OBJECT>...</OBJECT>` . Como alternativa, se podrían crear en tiempo de ejecución con el método [CreateObject (RDS)](../../reference/rds-api/createobject-method-rds.md) . Por ejemplo, **RDS. ** El objeto DataControl podría crearse de la siguiente manera:  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  
@@ -59,7 +59,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
  Sin embargo, para este tutorial, use el servidor imaginario, "yourServer".  
   
 > [!NOTE]
->  Preste atención al tipo de datos de los argumentos **ByRef** . VBScript no permite especificar el tipo de variable, por lo que siempre debe pasar una **variante**. Cuando se usa HTTP, RDS permitirá pasar una variante a un método que espera un valor no variante si se invoca con el **objeto RDS. ** El método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) del objeto DataSpace. Al utilizar DCOM o un servidor en proceso, debe coincidir con los tipos de parámetro en los lados cliente y servidor, o bien se producirá un error de coincidencia de tipos.  
+>  Preste atención al tipo de datos de los argumentos **ByRef** . VBScript no permite especificar el tipo de variable, por lo que siempre debe pasar una **variante**. Cuando se usa HTTP, RDS permitirá pasar una variante a un método que espera un valor no variante si se invoca con el **objeto RDS. ** El método [CreateObject](../../reference/rds-api/createobject-method-rds.md) del objeto DataSpace. Al utilizar DCOM o un servidor en proceso, debe coincidir con los tipos de parámetro en los lados cliente y servidor, o bien se producirá un error de coincidencia de tipos.  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  
@@ -140,4 +140,4 @@ End Sub
  **Éste es el final del tutorial.**  
   
 ## <a name="see-also"></a>Consulte también  
- [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [Tutorial de RDS](./rds-tutorial.md)

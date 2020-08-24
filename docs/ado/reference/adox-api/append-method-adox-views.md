@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e022afd65b6ea37eda07f6ddb4d35ab135664a8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74432aa3bb610b1cd5688e1f52c7d7ea81166f75
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440457"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771364"
 ---
 # <a name="append-method-adox-views"></a>Append (método) (vistas ADOX)
-Crea un nuevo objeto de [vista](../../../ado/reference/adox-api/view-object-adox.md) y lo anexa a la colección de [vistas](../../../ado/reference/adox-api/views-collection-adox.md) .  
+Crea un nuevo objeto de [vista](./view-object-adox.md) y lo anexa a la colección de [vistas](./views-collection-adox.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,11 +35,11 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Nombre*  
+ *Name*: nombre  
  Valor de **cadena** que especifica el nombre de la vista que se va a crear.  
   
  *Comando*  
- Objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) ADO que representa la vista que se va a crear.  
+ Objeto de [comando](../ado-api/command-object-ado.md) ADO que representa la vista que se va a crear.  
   
 ## <a name="remarks"></a>Observaciones  
  Crea una nueva vista en el origen de datos con el nombre y los atributos especificados en el objeto de **comando** .  
@@ -50,14 +50,14 @@ Views.Append Name, Command
 >  Al usar el proveedor de OLE DB para Microsoft Jet, el método **Append** de la colección **views** le permitirá especificar un **procedimiento** en lugar de una **vista** en el parámetro de *comando* . El **procedimiento** se agregará al origen de datos y se agregará a la colección **views** . Después del **método Append**, si se actualizan las colecciones **Procedures** y **views** , el **procedimiento** ya no estará en la colección **views** y aparecerá en la colección **Procedures** .  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Colección de vistas (ADOX)](./views-collection-adox.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo del método Append de vistas (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Append (método) (columnas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (método) (grupos ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append (método) (índices ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append (método) (claves ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append (método) (procedimientos ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append (método) (tablas ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append (método) (usuarios ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)
+ [Ejemplo del método Append de vistas (VB)](./views-append-method-example-vb.md)   
+ [Append (método) (columnas ADOX)](./append-method-adox-columns.md)   
+ [Append (método) (grupos ADOX)](./append-method-adox-groups.md)   
+ [Append (método) (índices ADOX)](./append-method-adox-indexes.md)   
+ [Append (método) (claves ADOX)](./append-method-adox-keys.md)   
+ [Append (método) (procedimientos ADOX)](./append-method-adox-procedures.md)   
+ [Append (método) (tablas ADOX)](./append-method-adox-tables.md)   
+ [Append (método) (usuarios ADOX)](./append-method-adox-users.md)

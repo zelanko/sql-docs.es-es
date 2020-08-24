@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59984877f4c8d86b9adc18b841b17c92740e8602
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f5763c00222d08f8b0362351879389c43f39f3e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440057"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770524"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Ejemplo de métodos GetPermissions y SetPermissions (VB)
-En este ejemplo se muestran los métodos [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) y [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) . El código siguiente proporciona acceso completo para la tabla Orders al usuario administrador.  
+En este ejemplo se muestran los métodos [GetPermissions](./getpermissions-method-adox.md) y [SetPermissions](./setpermissions-method-adox.md) . El código siguiente proporciona acceso completo para la tabla Orders al usuario administrador.  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -96,8 +96,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetPermissions (método) (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [SetPermissions (método) (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [Objeto user (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Colección de usuarios (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)   
+ [GetPermissions (método) (ADOX)](./getpermissions-method-adox.md)   
+ [SetPermissions (método) (ADOX)](./setpermissions-method-adox.md)   
+ [Objeto user (ADOX)](./user-object-adox.md)   
+ [Colección de usuarios (ADOX)](./users-collection-adox.md)

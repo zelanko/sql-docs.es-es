@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03959b22d0b64f2932326c42f5bb0117441b9051
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452327"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758655"
 ---
 # <a name="address-book-navigation-buttons"></a>Botones de navegación de la libreta de direcciones
 La aplicación de libreta de direcciones muestra los botones de navegación en la parte inferior de la Página Web. Puede usar los botones de navegación para desplazarse por los datos de la pantalla de la cuadrícula HTML seleccionando la primera o la última fila de datos o las filas adyacentes a la selección actual.  
@@ -30,7 +30,7 @@ La aplicación de libreta de direcciones muestra los botones de navegación en l
 ## <a name="navigation-sub-procedures"></a>Procedimientos sub de navegación  
  La aplicación de libreta de direcciones contiene varios procedimientos que permiten a los usuarios hacer clic en los botones **primero**, **siguiente**, **anterior**y **último** para desplazarse por los datos.  
   
- Por ejemplo, al hacer clic en el **primer** botón, se activa el procedimiento Sub de VBScript First_OnClick. El procedimiento ejecuta un método [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , que hace que la primera fila de datos sea la selección actual. Al hacer clic en el **último** botón, se activa el procedimiento Sub Last_OnClick, que invoca el método [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , convirtiendo la última fila de datos en la selección actual. Los botones de navegación restantes funcionan de manera similar.  
+ Por ejemplo, al hacer clic en el **primer** botón, se activa el procedimiento Sub de VBScript First_OnClick. El procedimiento ejecuta un método [MoveFirst](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , que hace que la primera fila de datos sea la selección actual. Al hacer clic en el **último** botón, se activa el procedimiento Sub Last_OnClick, que invoca el método [MoveLast](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , convirtiendo la última fila de datos en la selección actual. Los botones de navegación restantes funcionan de manera similar.  
   
 ```vb
 ' Move to the first record in the bound Recordset.  
@@ -63,8 +63,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
-
-
-
+ [Objeto DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS)](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

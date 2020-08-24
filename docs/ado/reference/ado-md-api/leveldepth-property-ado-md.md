@@ -17,25 +17,25 @@ helpviewer_keywords:
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d5ba44be5c4fa532a754c81c36407f06bfd4f12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91a921d1e318369f875d5dc14c45ddcaef5273a7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440917"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778034"
 ---
 # <a name="leveldepth-property-ado-md"></a>Propiedad LevelDepth (ADO MD)
-Indica el número de niveles entre la raíz de la jerarquía y un [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+Indica el número de niveles entre la raíz de la jerarquía y un [miembro](./member-object-ado-md.md).  
   
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un entero **largo** y es de solo lectura.  
   
 ## <a name="remarks"></a>Observaciones  
- Utilice la propiedad **LevelDepth** para determinar la distancia del objeto [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md)desde el nivel raíz de la jerarquía. El **LevelDepth**de un miembro en el nivel raíz es 0. Esto corresponde a la propiedad [Depth](../../../ado/reference/ado-md-api/depth-property-ado-md.md) de un objeto [LEVEL](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
+ Utilice la propiedad **LevelDepth** para determinar la distancia del objeto [miembro](./member-object-ado-md.md)desde el nivel raíz de la jerarquía. El **LevelDepth**de un miembro en el nivel raíz es 0. Esto corresponde a la propiedad [Depth](./depth-property-ado-md.md) de un objeto [LEVEL](./level-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de miembro (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Objeto de miembro (ADO MD)](./member-object-ado-md.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad Depth (ADO MD)](../../../ado/reference/ado-md-api/depth-property-ado-md.md)   
- [Objeto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)
+ [Propiedad Depth (ADO MD)](./depth-property-ado-md.md)   
+ [Objeto Level (ADO MD)](./level-object-ado-md.md)

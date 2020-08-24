@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 647fe236ad7a616cbce54986f6a3ce3aba0db163
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1992c8c5796052e46719c34ecbc43d6b94553b6e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440357"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771144"
 ---
 # <a name="clustered-property-example-vb"></a>Ejemplo de propiedad Clustered (VB)
-En este ejemplo se muestra la propiedad [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) de un [Índice](../../../ado/reference/adox-api/index-object-adox.md). Tenga en cuenta que las bases de datos de Microsoft Jet no admiten índices clúster, por lo que en este ejemplo se devolverá **false** para la propiedad **Clustered** de todos los índices de la base de datos **Northwind** .  
+En este ejemplo se muestra la propiedad [Clustered](./clustered-property-adox.md) de un [Índice](./index-object-adox.md). Tenga en cuenta que las bases de datos de Microsoft Jet no admiten índices clúster, por lo que en este ejemplo se devolverá **false** para la propiedad **Clustered** de todos los índices de la base de datos **Northwind** .  
   
 ```  
 ' BeginClusteredVB  
@@ -74,7 +74,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Clustered (propiedad, ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Index (objeto) (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Clustered (propiedad, ADOX)](./clustered-property-adox.md)   
+ [Index (objeto) (ADOX)](./index-object-adox.md)   
+ [Objeto Table (ADOX)](./table-object-adox.md)

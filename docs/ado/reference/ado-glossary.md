@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0adcc74321fa5e1d03ea305799ae8aaf654e26e9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441437"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776804"
 ---
 # <a name="ado-glossary"></a>Glosario de términos de ADO
 En este tema se definen los términos relevantes para ADO.  
   
-## <a name="a"></a>A  
+## <a name="a"></a>Un  
  Dirección URL absoluta  
  Una dirección URL completa que especifica la ubicación de un recurso que reside en Internet o en una intranet. Vea también *dirección URL* y *dirección URL relativa*.  
   
@@ -178,7 +178,7 @@ En este tema se definen los términos relevantes para ADO.
  Conjunto de registros jerárquico  
  Un **conjunto de registros** que contiene otro **conjunto de registros**. Vea también forma de datos, capítulo.  
   
- Para obtener más información, vea [obtener acceso a las filas de un conjunto de registros jerárquico](../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Para obtener más información, vea [obtener acceso a las filas de un conjunto de registros jerárquico](../guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
  Jerarquía  
  En general, una jerarquía es una estructura clasificada con niveles de nivel superior y subordinado. En ADO, los **conjuntos de registros** jerárquicos se utilizan para representar la relación de elementos primarios y secundarios entre un registro y un capítulo. También en ADO, los objetos **Record** y **Stream** se pueden usar para tener acceso a estructuras jerárquicas de árbol, como una carpeta y documentos. ADO MD también incluye objetos **Hierarchy** para representar una relación entre los niveles de una dimensión en un cubo OLAP. Vea también conjuntos de registros jerárquicos, relación primario-secundario, capítulo, árbol.  

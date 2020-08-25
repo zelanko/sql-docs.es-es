@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 906c20d19143f4f1e8fe0b6c1e91585893acfa5d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5d0ff58401e5294080c762c1e27f018630364f4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443587"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775104"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren (método) (ADO)
-Devuelve un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) cuyas filas representan los elementos secundarios de un [registro](../../../ado/reference/ado-api/record-object-ado.md)de la colección.  
+Devuelve un [conjunto de registros](./recordset-object-ado.md) cuyas filas representan los elementos secundarios de un [registro](./record-object-ado.md)de la colección.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,9 +44,9 @@ Set recordset = record.GetChildren
 
 :::row:::
     :::column:::
-        [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [Objeto Record (ADO)](./record-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
     :::column-end:::
 :::row-end:::

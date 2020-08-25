@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5375335fe0964107aed54de71d7e700b0588f209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441997"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777364"
 ---
 # <a name="stat-method"></a>Stat (método)
-Recupera información sobre un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Recupera información sobre un objeto de [flujo](./stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,7 +43,7 @@ Long stream.Stat(StatStg, StatFlag)
  *StatFlag*  
  Especifica que este método no devuelve algunos de los miembros de la estructura STATSTG, con lo que se guarda una operación de asignación de memoria. Los valores se toman de la enumeración STATFLAG. La enumeración STATFLAG tiene dos valores  
   
-|Constante|Value|  
+|Constante|Valor|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
@@ -71,4 +71,4 @@ Long stream.Stat(StatStg, StatFlag)
  Si no se especificó STATFLAG_NONAME en el parámetro StatFlag y no hay ningún nombre disponible para la secuencia actual, este valor se E_NOTIMPL.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Objeto de secuencia (ADO)](./stream-object-ado.md)

@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fd002f54010a9bc8d5cf543fe1fd4521bc6d221
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d63e1ccddf4384a01911738e3eabfddb77cd6be
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443257"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774394"
 ---
 # <a name="mode-property-ado"></a>Propiedad Mode (ADO)
-Indica los permisos disponibles para modificar los datos de un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [registro](../../../ado/reference/ado-api/record-object-ado.md)o [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Indica los permisos disponibles para modificar los datos de un objeto de [conexión](./connection-object-ado.md), [registro](./record-object-ado.md)o [secuencia](./stream-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un valor de [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) . El valor predeterminado de una **conexión** es **adModeUnknown**. El valor predeterminado de un objeto de **registro** es **adModeRead**. El valor predeterminado de una **secuencia** asociada a un origen subyacente (abierto con una dirección URL como origen o como la **secuencia** predeterminada de un **registro**) es **adModeRead**. El valor predeterminado de una **secuencia** que no está asociada a un origen subyacente (con instancias en memoria) es **adModeUnknown**.  
+ Establece o devuelve un valor de [ConnectModeEnum](./connectmodeenum.md) . El valor predeterminado de una **conexión** es **adModeUnknown**. El valor predeterminado de un objeto de **registro** es **adModeRead**. El valor predeterminado de una **secuencia** asociada a un origen subyacente (abierto con una dirección URL como origen o como la **secuencia** predeterminada de un **registro**) es **adModeRead**. El valor predeterminado de una **secuencia** que no está asociada a un origen subyacente (con instancias en memoria) es **adModeUnknown**.  
   
 ## <a name="remarks"></a>Observaciones  
  Utilice la propiedad **mode** para establecer o devolver los permisos de acceso que utiliza el proveedor en la conexión actual. Solo puede establecer la propiedad **mode** cuando el objeto de **conexión** está cerrado.  
@@ -45,16 +45,16 @@ Indica los permisos disponibles para modificar los datos de un objeto de [conexi
 
 :::row:::
     :::column:::
-        [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Objeto de conexión (ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [Objeto Record (ADO)](./record-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Objeto de secuencia (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de las propiedades IsolationLevel y MODE (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [Ejemplo de las propiedades IsolationLevel y MODE (VC + +)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+ [Ejemplo de las propiedades IsolationLevel y MODE (VB)](./isolationlevel-and-mode-properties-example-vb.md)   
+ [Ejemplo de las propiedades IsolationLevel y MODE (VC + +)](./isolationlevel-and-mode-properties-example-vc.md)

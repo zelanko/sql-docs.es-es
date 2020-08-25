@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38e1375f0439cbc17d19c3a416bbc51cea01239b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dcf021282d4fce049cd89a154c2d00186b3cbee1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443597"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775084"
 ---
 # <a name="getchunk-method-ado"></a>Método GetChunk (ADO)
-Devuelve todo, o una parte, del contenido de un objeto de [campo](../../../ado/reference/ado-api/field-object.md) de datos binarios o de texto grande.  
+Devuelve todo, o una parte, del contenido de un objeto de [campo](./field-object.md) de datos binarios o de texto grande.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,20 +46,20 @@ variable = field.GetChunk(Size)
   
  Los datos que devuelve una llamada a **GetChunk** se asignan a la *variable*. Si el *tamaño* es mayor que el resto de los datos, el método **GetChunk** devuelve solo los datos restantes sin la *variable* padding con espacios vacíos. Si el campo está vacío, el método **GetChunk** devuelve un valor null.  
   
- Cada llamada a **GetChunk** subsiguiente recupera datos a partir de donde se dejó la anterior llamada a **GetChunk** . Sin embargo, si va a recuperar datos de un campo y, a continuación, establece o lee el valor de otro campo en el registro actual, ADO supone que ha terminado de recuperar los datos del primer campo. Si llama de nuevo al método **GetChunk** en el primer campo, ADO interpreta la llamada como una nueva operación **GetChunk** y comienza a leer desde el principio de los datos. El acceso a los campos de otros objetos de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que no sean clones del primer objeto de **conjunto de registros** no interrumpirá las operaciones de **GetChunk** .  
+ Cada llamada a **GetChunk** subsiguiente recupera datos a partir de donde se dejó la anterior llamada a **GetChunk** . Sin embargo, si va a recuperar datos de un campo y, a continuación, establece o lee el valor de otro campo en el registro actual, ADO supone que ha terminado de recuperar los datos del primer campo. Si llama de nuevo al método **GetChunk** en el primer campo, ADO interpreta la llamada como una nueva operación **GetChunk** y comienza a leer desde el principio de los datos. El acceso a los campos de otros objetos de [conjunto de registros](./recordset-object-ado.md) que no sean clones del primer objeto de **conjunto de registros** no interrumpirá las operaciones de **GetChunk** .  
   
- Si el **bit adFldLong** en la propiedad [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) de un objeto **Field** está establecido en **true**, puede utilizar el método **GetChunk** para ese campo.  
+ Si el **bit adFldLong** en la propiedad [attributes](./attributes-property-ado.md) de un objeto **Field** está establecido en **true**, puede utilizar el método **GetChunk** para ese campo.  
   
  Si no hay ningún registro actual cuando se usa el método **GetChunk** en un objeto de **campo** , se produce el error 3021 (no hay registro actual).  
   
 > [!NOTE]
->  El método **GetChunk** no funciona en objetos de **campo** de un objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) . No realiza ninguna operación y producirá un error en tiempo de ejecución.  
+>  El método **GetChunk** no funciona en objetos de **campo** de un objeto de [registro](./record-object-ado.md) . No realiza ninguna operación y producirá un error en tiempo de ejecución.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+ [Objeto Field](./field-object.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de los métodos AppendChunk y GetChunk (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
- [Ejemplo de los métodos AppendChunk y GetChunk (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
- [AppendChunk (método) (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Propiedad Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Ejemplo de los métodos AppendChunk y GetChunk (VB)](./appendchunk-and-getchunk-methods-example-vb.md)   
+ [Ejemplo de los métodos AppendChunk y GetChunk (VC + +)](./appendchunk-and-getchunk-methods-example-vc.md)   
+ [AppendChunk (método) (ADO)](./appendchunk-method-ado.md)   
+ [Propiedad Attributes (ADO)](./attributes-property-ado.md)

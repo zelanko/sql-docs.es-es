@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 719a647f42c66e73b9bd55ed0a7476dfb95934e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ab44fcbb8409cd866167d4fb58bebc1de906274
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441597"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776983"
 ---
 # <a name="value-property-ado"></a>Value (propiedad) (ADO)
 
-Indica el valor asignado a un [campo](../../../ado/reference/ado-api/field-object.md), un [parámetro](../../../ado/reference/ado-api/parameter-object.md)o un objeto de [propiedad](../../../ado/reference/ado-api/property-object-ado.md) .
+Indica el valor asignado a un [campo](./field-object.md), un [parámetro](./parameter-object.md)o un objeto de [propiedad](./property-object-ado.md) .
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos
 
-Establece o devuelve un valor **Variant** que indica el valor del objeto. El valor predeterminado depende de la propiedad [Type](../../../ado/reference/ado-api/type-property-ado.md) .
+Establece o devuelve un valor **Variant** que indica el valor del objeto. El valor predeterminado depende de la propiedad [Type](./type-property-ado.md) .
   
 ## <a name="remarks"></a>Observaciones
 
@@ -39,25 +39,25 @@ Utilice la propiedad **Value** para establecer o devolver datos de objetos de **
 ADO permite establecer y devolver datos binarios largos con la propiedad **Value** .
   
 > [!NOTE]
-> En el caso de los objetos de **parámetro** , ADO lee la propiedad **Value** solo una vez desde el proveedor. Si un comando contiene un **parámetro** cuya **propiedad Value** está vacía y crea un conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md) a partir del comando, asegúrese de cerrar primero el **conjunto de registros** antes de recuperar la propiedad **Value** . De lo contrario, para algunos proveedores, la propiedad **Value** puede estar vacía y no contendrá el valor correcto.
+> En el caso de los objetos de **parámetro** , ADO lee la propiedad **Value** solo una vez desde el proveedor. Si un comando contiene un **parámetro** cuya **propiedad Value** está vacía y crea un conjunto de [registros](./recordset-object-ado.md) a partir del comando, asegúrese de cerrar primero el **conjunto de registros** antes de recuperar la propiedad **Value** . De lo contrario, para algunos proveedores, la propiedad **Value** puede estar vacía y no contendrá el valor correcto.
 > 
-> En el caso de los nuevos objetos de **campo** que se han anexado a la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de un objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) , la propiedad **Value** debe establecerse antes de que se puedan especificar otras propiedades de **campo** . En primer lugar, se debe haber asignado un valor específico para la propiedad **Value** y [actualizarse](../../../ado/reference/ado-api/update-method.md) en la colección **Fields** denominada. A continuación, se puede tener acceso a otras propiedades, como el [tipo](../../../ado/reference/ado-api/type-property-ado.md) o [los atributos](../../../ado/reference/ado-api/attributes-property-ado.md) .
+> En el caso de los nuevos objetos de **campo** que se han anexado a la colección [Fields](./fields-collection-ado.md) de un objeto [Record](./record-object-ado.md) , la propiedad **Value** debe establecerse antes de que se puedan especificar otras propiedades de **campo** . En primer lugar, se debe haber asignado un valor específico para la propiedad **Value** y [actualizarse](./update-method.md) en la colección **Fields** denominada. A continuación, se puede tener acceso a otras propiedades, como el [tipo](./type-property-ado.md) o [los atributos](./attributes-property-ado.md) .
   
 ## <a name="applies-to"></a>Se aplica a
 
 :::row:::
     :::column:::
-        [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+        [Objeto Field](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)  
+        [Objeto Parameter](./parameter-object.md)  
     :::column-end:::
     :::column:::
-        [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Objeto Property (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte también
 
-[Ejemplo de la propiedad Value (VB)](../../../ado/reference/ado-api/value-property-example-vb.md) 
- [Ejemplo de la propiedad Value (VC + +)](../../../ado/reference/ado-api/value-property-example-vc.md) 
+[Ejemplo de la propiedad Value (VB)](./value-property-example-vb.md) 
+ [Ejemplo de la propiedad Value (VC + +)](./value-property-example-vc.md)

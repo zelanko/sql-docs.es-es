@@ -14,42 +14,42 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80a47336bb6453033a28b2d62eeda3700431594a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d4cce8ba7913b80ea971c563b1235a15b84d372
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451377"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776624"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfaces y objetos ADO
-Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md).  
+Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](./ado-object-model.md).  
   
- Cada objeto puede estar contenido en su colección correspondiente. Por ejemplo, un objeto de [error](../../../ado/reference/ado-api/error-object.md) puede estar contenido en una colección de [errores](../../../ado/reference/ado-api/errors-collection-ado.md) . Para obtener más información, vea [colecciones de ADO](../../../ado/reference/ado-api/ado-collections.md) o un tema específico de la colección.  
+ Cada objeto puede estar contenido en su colección correspondiente. Por ejemplo, un objeto de [error](./error-object.md) puede estar contenido en una colección de [errores](./errors-collection-ado.md) . Para obtener más información, vea [colecciones de ADO](./ado-collections.md) o un tema específico de la colección.  
   
 |Objeto o interfaz|Descripción|  
 |-|-|  
-|[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Se usa para recuperar el comando OLEDB subyacente de un objeto ADOCommand.|  
-|[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Construye un objeto **Record** de ADO a partir de un objeto de **fila** OLE DB en una aplicación de C/C++.|  
-|[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|Construye un objeto de **conjunto de registros** ADO a partir de un objeto de **conjunto de filas** OLE DB en una aplicación de C/C++.|  
-|[Interfaz ADOStreamConstruction](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|Construye un objeto de **secuencia** de ADO a partir de un OLE DB objeto **IStream** en una aplicación de C/C++.|  
-|[Comando](../../../ado/reference/ado-api/command-object-ado.md)|Define un comando específico que se va a ejecutar en un origen de datos.<br /><br /> El objeto **Command** no es seguro para el scripting.|  
-|[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|Representa una conexión abierta a un origen de datos.<br /><br /> El objeto de **conexión** es seguro para el scripting.|  
-|[Interfaz IDSOShapeExtensions](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Obtiene el objeto de origen de datos OLEDB subyacente para el proveedor de formas.|  
-|[Error](../../../ado/reference/ado-api/error-object.md)|Contiene detalles sobre los errores de acceso a datos que pertenecen a una única operación que implica al proveedor.<br /><br /> El objeto de **error** no es seguro para el scripting.|  
-|[Campo](../../../ado/reference/ado-api/field-object.md)|Representa una columna de datos con un tipo de datos común.|  
-|[Parámetro](../../../ado/reference/ado-api/parameter-object.md)|Representa un parámetro o un argumento asociado a un objeto de **comando** basado en una consulta con parámetros o un procedimiento almacenado.<br /><br /> El objeto de **parámetro** no es seguro para el scripting.|  
-|[Propiedad](../../../ado/reference/ado-api/property-object-ado.md)|Representa una característica dinámica de un objeto ADO definido por el proveedor.|  
-|[Registro](../../../ado/reference/ado-api/record-object-ado.md)|Representa una fila de un **conjunto de registros**o un directorio o archivo en un sistema de archivos. El objeto de **registro** es seguro para el scripting.|  
-|[DataRecordsets](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa el conjunto de registros de una tabla base o los resultados de un comando ejecutado. En cualquier momento, el objeto de **conjunto de registros** hace referencia a un único registro del conjunto como el registro actual.<br /><br /> El objeto de **conjunto de registros** es seguro para el scripting.|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Representa un flujo binario de datos.<br /><br /> El objeto de **secuencia** es seguro para el scripting.|  
+|[IADOCommandConstruction](/previous-versions/windows/desktop/aa965677(v=vs.85))|Se usa para recuperar el comando OLEDB subyacente de un objeto ADOCommand.|  
+|[ADORecordConstruction](./adorecordconstruction-interface.md)|Construye un objeto **Record** de ADO a partir de un objeto de **fila** OLE DB en una aplicación de C/C++.|  
+|[ADORecordsetConstruction](./adorecordsetconstruction-interface.md)|Construye un objeto de **conjunto de registros** ADO a partir de un objeto de **conjunto de filas** OLE DB en una aplicación de C/C++.|  
+|[Interfaz ADOStreamConstruction](./adostreamconstruction-interface.md)|Construye un objeto de **secuencia** de ADO a partir de un OLE DB objeto **IStream** en una aplicación de C/C++.|  
+|[Comando](./command-object-ado.md)|Define un comando específico que se va a ejecutar en un origen de datos.<br /><br /> El objeto **Command** no es seguro para el scripting.|  
+|[Connection](./connection-object-ado.md)|Representa una conexión abierta a un origen de datos.<br /><br /> El objeto de **conexión** es seguro para el scripting.|  
+|[Interfaz IDSOShapeExtensions](./idsoshapeextensions-interface.md)|Obtiene el objeto de origen de datos OLEDB subyacente para el proveedor de formas.|  
+|[Error](./error-object.md)|Contiene detalles sobre los errores de acceso a datos que pertenecen a una única operación que implica al proveedor.<br /><br /> El objeto de **error** no es seguro para el scripting.|  
+|[Campo](./field-object.md)|Representa una columna de datos con un tipo de datos común.|  
+|[Parámetro](./parameter-object.md)|Representa un parámetro o un argumento asociado a un objeto de **comando** basado en una consulta con parámetros o un procedimiento almacenado.<br /><br /> El objeto de **parámetro** no es seguro para el scripting.|  
+|[Propiedad](./property-object-ado.md)|Representa una característica dinámica de un objeto ADO definido por el proveedor.|  
+|[Registro](./record-object-ado.md)|Representa una fila de un **conjunto de registros**o un directorio o archivo en un sistema de archivos. El objeto de **registro** es seguro para el scripting.|  
+|[DataRecordsets](./recordset-object-ado.md)|Representa el conjunto de registros de una tabla base o los resultados de un comando ejecutado. En cualquier momento, el objeto de **conjunto de registros** hace referencia a un único registro del conjunto como el registro actual.<br /><br /> El objeto de **conjunto de registros** es seguro para el scripting.|  
+|[Stream](./stream-object-ado.md)|Representa un flujo binario de datos.<br /><br /> El objeto de **secuencia** es seguro para el scripting.|  
   
-## <a name="see-also"></a>Vea también  
- [Referencia de la API de ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
- [Colecciones de ADO](../../../ado/reference/ado-api/ado-collections.md)   
- [Propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [Constantes enumeradas de ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Apéndice B: errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
- [Eventos de ADO](../../../ado/reference/ado-api/ado-events.md)   
- [Métodos de ADO](../../../ado/reference/ado-api/ado-methods.md)   
- [Modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md)   
- [Propiedades de ADO](../../../ado/reference/ado-api/ado-properties.md)
+## <a name="see-also"></a>Consulte también  
+ [Referencia de la API de ADO](./ado-api-reference.md)   
+ [Colecciones de ADO](./ado-collections.md)   
+ [Propiedades dinámicas de ADO](./ado-dynamic-properties.md)   
+ [Constantes enumeradas de ADO](./ado-enumerated-constants.md)   
+ [Apéndice B: errores de ADO](../../guide/appendixes/appendix-b-ado-errors.md)   
+ [Eventos de ADO](./ado-events.md)   
+ [Métodos de ADO](./ado-methods.md)   
+ [Modelo de objetos ADO](./ado-object-model.md)   
+ [Propiedades de ADO](./ado-properties.md)

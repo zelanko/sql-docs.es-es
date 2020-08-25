@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c17ccfe0a31714d5e2b3945960a4ff3d2ad55d1e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451327"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776644"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interfaz ADORecordsetConstruction
 La interfaz **ADORecordsetConstruction** se utiliza para construir un objeto de **conjunto de registros** ADO a partir de un objeto de conjunto de **filas** OLE DB en una aplicación de C/C++.  
@@ -32,9 +32,9 @@ La interfaz **ADORecordsetConstruction** se utiliza para construir un objeto de 
   
 |Propiedad|Descripción|  
 |-|-|  
-|[Capítulo](../../../ado/reference/ado-api/chapter-property-ado.md)|Lectura y escritura.<br />Obtiene o establece un OLE DB objeto **Chapter** en este objeto **Recordset** de ADO.|  
-|[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lectura y escritura.<br />Obtiene o establece un objeto **RowPosition** OLE DB a partir de este objeto de **conjunto de registros** de ADO.|  
-|[Conjunto de filas](../../../ado/reference/ado-api/rowset-property-ado.md)|Lectura y escritura.<br />Obtiene o establece un objeto de **conjunto de filas** de OLE DB de este objeto de conjunto de **registros** de ADO.|  
+|[Capítulo](./chapter-property-ado.md)|Lectura y escritura.<br />Obtiene o establece un OLE DB objeto **Chapter** en este objeto **Recordset** de ADO.|  
+|[RowPosition](./rowposition-property-ado.md)|Lectura y escritura.<br />Obtiene o establece un objeto **RowPosition** OLE DB a partir de este objeto de **conjunto de registros** de ADO.|  
+|[Conjunto de filas](./rowset-property-ado.md)|Lectura y escritura.<br />Obtiene o establece un objeto de **conjunto de filas** de OLE DB de este objeto de conjunto de **registros** de ADO.|  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  
@@ -80,5 +80,5 @@ La interfaz **ADORecordsetConstruction** se utiliza para construir un objeto de 
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propiedad Rowset (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)   
+ [Propiedad Rowset (ADO)](./rowset-property-ado.md)

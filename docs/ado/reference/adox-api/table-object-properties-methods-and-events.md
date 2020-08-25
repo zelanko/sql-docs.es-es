@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b614fc32325ef8a7b64b555f91c32966fdbb438c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c77279fa33781102234fc353aeaad88501e8ce7d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439467"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769294"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Table
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
- [Colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Colección de columnas (ADOX)](./columns-collection-adox.md)  
   
- [DateCreated (propiedad, ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated (propiedad, ADOX)](./datecreated-property-adox.md)  
   
- [DateModified (propiedad, ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified (propiedad, ADOX)](./datemodified-property-adox.md)  
   
- [Colección de índices (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Colección de índices (ADOX)](./indexes-collection-adox.md)  
   
- [Colección de claves (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Colección de claves (ADOX)](./keys-collection-adox.md)  
   
- [Name (propiedad, ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name (propiedad, ADOX)](./name-property-adox.md)  
   
- [ParentCatalog (propiedad, ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [ParentCatalog (propiedad, ADOX)](./parentcatalog-property-adox.md)  
   
- [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Colección de propiedades (ADO)](../ado-api/properties-collection-ado.md)  
   
- [Type (propiedad, tabla, ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
+ [Type (propiedad, tabla, ADOX)](./type-property-table-adox.md)  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  
@@ -47,4 +47,4 @@ ms.locfileid: "88439467"
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Objeto Table (ADOX)](./table-object-adox.md)

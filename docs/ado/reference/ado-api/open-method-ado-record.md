@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7661c142263a785565a7dabc92d9b7f31c93739
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 980e7c840cfb19077c6f4f1d1041d1f1eb8acf64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442977"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773804"
 ---
 # <a name="open-method-ado-record"></a>Open (método) (registro de ADO)
-Abre un objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) existente o crea un nuevo elemento representado por el **registro**, como un archivo o un directorio.  
+Abre un objeto [Record](./record-object-ado.md) existente o crea un nuevo elemento representado por el **registro**, como un archivo o un directorio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,19 +36,19 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Parámetros  
  *Origen*  
- Opcional. Una **variante** que puede representar la dirección URL de la entidad que va a representar este objeto de **registro** , un **comando**, un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) abierto u otro objeto de **registro** , una cadena que contiene una instrucción SELECT de SQL o un nombre de tabla.  
+ Opcional. Una **variante** que puede representar la dirección URL de la entidad que va a representar este objeto de **registro** , un **comando**, un [conjunto de registros](./recordset-object-ado.md) abierto u otro objeto de **registro** , una cadena que contiene una instrucción SELECT de SQL o un nombre de tabla.  
   
  *ActiveConnection*  
- Opcional. **Variante** que representa la cadena de conexión o el objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) abierto.  
+ Opcional. **Variante** que representa la cadena de conexión o el objeto de [conexión](./connection-object-ado.md) abierto.  
   
  *Modo*  
- Opcional. Valor [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) que especifica el modo de acceso para el objeto de **registro** resultante. El valor predeterminado es **adModeUnknown**.  
+ Opcional. Valor [ConnectModeEnum](./connectmodeenum.md) que especifica el modo de acceso para el objeto de **registro** resultante. El valor predeterminado es **adModeUnknown**.  
   
  *CreateOptions*  
- Opcional. Un valor [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) que especifica si se debe abrir un archivo o directorio existente o se debe crear un nuevo archivo o directorio. El valor predeterminado es **adFailIfNotExists**. Si se establece en el valor predeterminado, el modo de acceso se obtiene de la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) . Este parámetro se omite cuando el parámetro de *origen* no contiene una dirección URL.  
+ Opcional. Un valor [RecordCreateOptionsEnum](./recordcreateoptionsenum.md) que especifica si se debe abrir un archivo o directorio existente o se debe crear un nuevo archivo o directorio. El valor predeterminado es **adFailIfNotExists**. Si se establece en el valor predeterminado, el modo de acceso se obtiene de la propiedad [mode](./mode-property-ado.md) . Este parámetro se omite cuando el parámetro de *origen* no contiene una dirección URL.  
   
  *Opciones*  
- Opcional. Valor de [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) que especifica las opciones para abrir el **registro**. El valor predeterminado es **adOpenRecordUnspecified**. Estos valores se pueden combinar.  
+ Opcional. Valor de [RecordOpenOptionsEnum](./recordopenoptionsenum.md) que especifica las opciones para abrir el **registro**. El valor predeterminado es **adOpenRecordUnspecified**. Estos valores se pueden combinar.  
   
  *UserName*  
  Opcional. Valor de **cadena** que contiene el ID. de usuario que, si es necesario, autoriza el acceso al *origen*.  
@@ -69,16 +69,16 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 -   Un nombre de tabla.  
   
- Si el objeto **Record** representa una entidad a la que no se puede tener acceso con una dirección URL (por ejemplo, una fila de un **conjunto de registros** derivado de una base de datos), los valores de la propiedad [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) y el campo al que se obtiene acceso con la constante **adRecordURL** son NULL.  
+ Si el objeto **Record** representa una entidad a la que no se puede tener acceso con una dirección URL (por ejemplo, una fila de un **conjunto de registros** derivado de una base de datos), los valores de la propiedad [ParentURL](./parenturl-property-ado.md) y el campo al que se obtiene acceso con la constante **adRecordURL** son NULL.  
   
 > [!NOTE]
->  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Objeto Record (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Open (método) (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open (método, secuencia de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
+ [Open (método) (conexión de ADO)](./open-method-ado-connection.md)   
+ [Open (método) (conjunto de registros ADO)](./open-method-ado-recordset.md)   
+ [Open (método, secuencia de ADO)](./open-method-ado-stream.md)   
+ [Método OpenSchema](./openschema-method.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40382c77198a50a08ec41101fbda9c1aafcae08c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 883b9216509248d64e550a0eb3557a61cc0ccdaa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450792"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776064"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Ejemplo del método CompareBookmarks (VB)
-En este ejemplo se muestra el método [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado sea de algún modo especial.  
+En este ejemplo se muestra el método [CompareBookmarks](./comparebookmarks-method-ado.md) . El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado sea de algún modo especial.  
   
- Designar una fila aleatoria de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) derivado de la tabla ***authors*** como destino de una búsqueda. A continuación, muestre la posición de cada fila con respecto a ese destino.  
+ Designar una fila aleatoria de un [conjunto de registros](./recordset-object-ado.md) derivado de la tabla ***authors*** como destino de una búsqueda. A continuación, muestre la posición de cada fila con respecto a ese destino.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -134,6 +134,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [CompareBookmarks (método) (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CompareBookmarks (método) (ADO)](./comparebookmarks-method-ado.md)   
+ [CompareEnum](./compareenum.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

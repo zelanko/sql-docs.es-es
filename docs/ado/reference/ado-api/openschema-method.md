@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b0a92e7079338e290f228603767d6d15a3a351e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cade08630577b32d81643cb30b6a1e20656d95bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442927"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773684"
 ---
 # <a name="openschema-method"></a>Método OpenSchema
 Obtiene la información del esquema de la base de datos del proveedor.  
@@ -35,14 +35,14 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contiene información de esquema. El **conjunto de registros** se abrirá como un cursor estático de solo lectura. El *QueryType* determina qué columnas aparecen en el **conjunto de registros**.  
+ Devuelve un objeto de [conjunto de registros](./recordset-object-ado.md) que contiene información de esquema. El **conjunto de registros** se abrirá como un cursor estático de solo lectura. El *QueryType* determina qué columnas aparecen en el **conjunto de registros**.  
   
 #### <a name="parameters"></a>Parámetros  
  *QueryType*  
- Cualquier valor de [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) que represente el tipo de consulta de esquema que se va a ejecutar.  
+ Cualquier valor de [SchemaEnum](./schemaenum.md) que represente el tipo de consulta de esquema que se va a ejecutar.  
   
  *Criterios*  
- Opcional. Una matriz de restricciones de consulta para cada opción de *QueryType* , tal como se muestra en [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Opcional. Una matriz de restricciones de consulta para cada opción de *QueryType* , tal como se muestra en [SchemaEnum](./schemaenum.md).  
   
  *SchemaID*  
  GUID para una consulta de esquema de proveedor no definida por la especificación OLE DB. Este parámetro es necesario si *QueryType* está establecido en **adSchemaProviderSpecific**; de lo contrario, no se utiliza.  
@@ -59,22 +59,22 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  No es necesario que los proveedores admitan todas las consultas de esquema estándar de OLE DB. En concreto, la especificación OLE DB requiere solo **adSchemaTables**, **adSchemaColumns**y **adSchemaProviderTypes** . Sin embargo, no es necesario que el proveedor admita las restricciones de *criterios* enumeradas anteriormente para esas consultas de esquema.  
   
 > [!NOTE]
->  **Uso del servicio de datos remotos** El método **OpenSchema** no está disponible en un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) del lado cliente.  
+>  **Uso del servicio de datos remotos** El método **OpenSchema** no está disponible en un objeto de [conexión](./connection-object-ado.md) del lado cliente.  
   
 > [!NOTE]
->  En Visual Basic, las columnas que tienen un entero sin signo de cuatro bytes (DBTYPE UI4) en el **conjunto de registros** devuelto desde el método **OpenSchema** en el objeto de **conexión** no se pueden comparar con otras variables. Para obtener más información sobre los tipos de datos de OLE DB, vea [tipos de datos en OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) y [Apéndice A: tipos de datos](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) en la referencia del programador de Microsoft OLE DB.  
+>  En Visual Basic, las columnas que tienen un entero sin signo de cuatro bytes (DBTYPE UI4) en el **conjunto de registros** devuelto desde el método **OpenSchema** en el objeto de **conexión** no se pueden comparar con otras variables. Para obtener más información sobre los tipos de datos de OLE DB, vea [tipos de datos en OLE DB (OLE DB)](/previous-versions/windows/desktop/ms714931(v=vs.85)) y [Apéndice A: tipos de datos](/previous-versions/windows/desktop/ms723969(v=vs.85)) en la referencia del programador de Microsoft OLE DB.  
   
 > [!NOTE]
 >  **Usuarios de Visual C/C++** Cuando no se utilizan cursores del lado cliente, la recuperación del "ORDINAL_POSITION" de un esquema de columna en ADO devuelve una variante de tipo VT_R8 en MDAC 2,7, MDAC 2,8 y Windows Data Access Components (Windows DAC) 6,0, mientras que el tipo utilizado en MDAC 2,6 se VT_I4. Programas escritos para MDAC 2,6 que solo buscan una variante devuelta de tipo VT_I4 obtendría un cero para cada ordinal si se ejecuta en MDAC 2,7, MDAC 2,8 y Windows DAC 6,0 sin modificarlo. Este cambio se realizó porque el tipo de datos que OLE DB devuelve es DBTYPE_UI4 y en el tipo de VT_I4 con signo no hay espacio suficiente para contener todos los valores posibles sin que se produzca un truncamiento y, por lo tanto, se produce una pérdida de datos.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Objeto de conexión (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo del método OpenSchema (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
- [Ejemplo del método OpenSchema (VC + +)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
- [Open (método) (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open (método) (record de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open (método, secuencia de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Ejemplo del método OpenSchema (VB)](./openschema-method-example-vb.md)   
+ [Ejemplo del método OpenSchema (VC + +)](./openschema-method-example-vc.md)   
+ [Open (método) (conexión de ADO)](./open-method-ado-connection.md)   
+ [Open (método) (record de ADO)](./open-method-ado-record.md)   
+ [Open (método) (conjunto de registros ADO)](./open-method-ado-recordset.md)   
+ [Open (método, secuencia de ADO)](./open-method-ado-stream.md)   
+ [Apéndice A: Proveedores](../../guide/appendixes/appendix-a-providers.md)

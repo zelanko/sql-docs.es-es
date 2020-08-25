@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ead66b4c3215ef0d7a42e8ec029e97502dac2f4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ddda86faaf032fbc981c159300ee4545643bb2e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439557"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769454"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Especifica los derechos o permisos para un grupo o usuario en un objeto.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (&H4000)|El usuario o el grupo tiene permiso para crear nuevos objetos de este tipo.|  
 |**adRightDelete**|65536 (&H10000)|El usuario o el grupo tiene permiso para eliminar datos de un objeto. En el caso de objetos como **las tablas**, el usuario tiene permiso para eliminar los valores de los datos de los registros.|  
@@ -37,7 +37,7 @@ Especifica los derechos o permisos para un grupo o usuario en un objeto.
 |**adRightInsert**|32768 (&H8000)|El usuario o el grupo tiene permiso para insertar el objeto. En el caso de objetos como **las tablas**, el usuario tiene permiso para insertar datos en la tabla.|  
 |**adRightMaximumAllowed**|33554432 (&H2000000)|El usuario o grupo tiene el número máximo de permisos permitido por el proveedor. Los permisos específicos dependen del proveedor.|  
 |**adRightNone**|0|El usuario o grupo no tiene permisos para el objeto.|  
-|**adRightRead**|-2147483648 (&H80000000)|El usuario o el grupo tiene permiso para leer el objeto. En el caso de objetos como [las tablas](../../../ado/reference/adox-api/table-object-adox.md), el usuario tiene permiso para leer los datos de la tabla.|  
+|**adRightRead**|-2147483648 (&H80000000)|El usuario o el grupo tiene permiso para leer el objeto. En el caso de objetos como [las tablas](./table-object-adox.md), el usuario tiene permiso para leer los datos de la tabla.|  
 |**adRightReadDesign**|1024 (&H400)|El usuario o el grupo tiene permiso para leer el diseño del objeto.|  
 |**adRightReadPermissions**|131072 (&H20000)|El usuario o grupo puede ver, pero no cambiar, los permisos específicos para un objeto en el catálogo.|  
 |**adRightReference**|8192 (&H2000)|El usuario o el grupo tiene permiso para hacer referencia al objeto.|  
@@ -51,9 +51,9 @@ Especifica los derechos o permisos para un grupo o usuario en un objeto.
 
 :::row:::
     :::column:::
-        [GetPermissions (método, ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+        [GetPermissions (método, ADOX)](./getpermissions-method-adox.md)  
     :::column-end:::
     :::column:::
-        [SetPermissions (método, ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+        [SetPermissions (método, ADOX)](./setpermissions-method-adox.md)  
     :::column-end:::
 :::row-end:::

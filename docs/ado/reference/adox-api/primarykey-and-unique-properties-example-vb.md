@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be519ab53b346eee06c45664c512677f5d8628c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa548ea37ffe3c91e8d36febac9f90cf9498d258
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439687"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769754"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>Ejemplo de propiedades PrimaryKey y Unique (VB)
-En este ejemplo se muestran las propiedades [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) y [Unique](../../../ado/reference/adox-api/unique-property-adox.md) de un [Índice](../../../ado/reference/adox-api/index-object-adox.md). El código crea una nueva tabla con dos columnas. Las propiedades **PrimaryKey** y **Unique** se usan para convertir una columna en la clave principal para la que no se permiten valores duplicados.  
+En este ejemplo se muestran las propiedades [PrimaryKey](./primarykey-property-adox.md) y [Unique](./unique-property-adox.md) de un [Índice](./index-object-adox.md). El código crea una nueva tabla con dos columnas. Las propiedades **PrimaryKey** y **Unique** se usan para convertir una columna en la clave principal para la que no se permiten valores duplicados.  
   
 ```  
 ' BeginPrimaryKeyVB  
@@ -114,6 +114,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Index (objeto) (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [PrimaryKey (propiedad, ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
- [Unique (propiedad, ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)
+ [Index (objeto) (ADOX)](./index-object-adox.md)   
+ [PrimaryKey (propiedad, ADOX)](./primarykey-property-adox.md)   
+ [Unique (propiedad, ADOX)](./unique-property-adox.md)

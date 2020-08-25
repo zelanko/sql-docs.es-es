@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e56e93f851d2f5f0dac7df2339dec37c0b6a1ac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c696fb6be361327944223bab19d1edb0cf35460
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450947"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776244"
 ---
 # <a name="clone-method-example-vbscript"></a>Ejemplo del método Clone (VBScript)
-En este ejemplo se usa el método [Clone](../../../ado/reference/ado-api/clone-method-ado.md) para crear copias de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) y, a continuación, se permite al usuario colocar el puntero de registro de cada copia de forma independiente.  
+En este ejemplo se usa el método [Clone](./clone-method-ado.md) para crear copias de un [conjunto de registros](./recordset-object-ado.md) y, a continuación, se permite al usuario colocar el puntero de registro de cada copia de forma independiente.  
   
  Use el ejemplo siguiente en una página de Active Server (ASP). En este ejemplo se usa la base de datos **Northwind** distribuida con Microsoft Access. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como CloneVBS. asp. Puede ver el resultado en cualquier explorador cliente.  
   
@@ -119,5 +119,5 @@ En este ejemplo se usa el método [Clone](../../../ado/reference/ado-api/clone-m
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Clone (método) (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Clone (método) (ADO)](./clone-method-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

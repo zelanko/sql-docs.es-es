@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b57772085e93d03c7ca40364e3074e3bc8228e02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a76da795bcb373126b2e22ad57e5f7369c119829
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443627"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775164"
 ---
 # <a name="find-method-example-vb"></a>Ejemplo del método Find (VB)
-En este ejemplo se usa el método [Find](../../../ado/reference/ado-api/find-method-ado.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para buscar y contar el número de títulos de negocio en la base de datos ***pubs*** . En el ejemplo se da por supuesto que el proveedor subyacente no es compatible con una funcionalidad similar.  
+En este ejemplo se usa el método [Find](./find-method-ado.md) del objeto de [conjunto de registros](./recordset-object-ado.md) para buscar y contar el número de títulos de negocio en la base de datos ***pubs*** . En el ejemplo se da por supuesto que el proveedor subyacente no es compatible con una funcionalidad similar.  
   
 ```  
 'BeginFindVB  
@@ -101,5 +101,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Find (método) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Find (método) (ADO)](./find-method-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

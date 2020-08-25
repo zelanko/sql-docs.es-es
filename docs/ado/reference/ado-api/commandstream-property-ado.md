@@ -16,32 +16,32 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07a16b00a4ec4381dc1dfa07fc57c2b599ed5ba1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20b52a91429e2db6478aab36f2db5928bc2d30f5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450847"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776154"
 ---
 # <a name="commandstream-property-ado"></a>Propiedad CommandStream (ADO)
-Indica la secuencia que se usa como entrada para un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) .  
+Indica la secuencia que se usa como entrada para un objeto de [comando](./command-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve la secuencia que se usa como entrada para un objeto de **comando** . El formato de esta secuencia es específico del proveedor; Consulte la documentación del proveedor para obtener más información. Esta propiedad es similar a la propiedad [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) , que se usa para especificar una cadena para la entrada de un **comando**.  
+ Establece o devuelve la secuencia que se usa como entrada para un objeto de **comando** . El formato de esta secuencia es específico del proveedor; Consulte la documentación del proveedor para obtener más información. Esta propiedad es similar a la propiedad [CommandText](./commandtext-property-ado.md) , que se usa para especificar una cadena para la entrada de un **comando**.  
   
 ## <a name="remarks"></a>Observaciones  
  **CommandStream** y **CommandText** son mutuamente excluyentes. Cuando el usuario establece la propiedad **CommandStream** , la propiedad **CommandText** se establecerá en la cadena vacía (""). Si el usuario establece la propiedad **CommandText** , la propiedad **CommandStream** se establecerá en **Nothing**.  
   
  El proveedor define los comportamientos de los métodos **Command. Parameters. Refresh** y **Command. Prepare** . No se pueden actualizar los valores de los parámetros de una secuencia.  
   
- El flujo de entrada no está disponible para otros objetos ADO que devuelven el origen de un **comando**. Por ejemplo, si el [origen](../../../ado/reference/ado-api/source-property-ado-recordset.md) de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) se establece en un objeto de **comando** que tiene una secuencia como su entrada, **Recordset. Source** continúa devolviendo la propiedad **CommandText** , que contiene una cadena vacía (""), en lugar del contenido de la secuencia de la propiedad **CommandStream** .  
+ El flujo de entrada no está disponible para otros objetos ADO que devuelven el origen de un **comando**. Por ejemplo, si el [origen](./source-property-ado-recordset.md) de un [conjunto de registros](./recordset-object-ado.md) se establece en un objeto de **comando** que tiene una secuencia como su entrada, **Recordset. Source** continúa devolviendo la propiedad **CommandText** , que contiene una cadena vacía (""), en lugar del contenido de la secuencia de la propiedad **CommandStream** .  
   
- Cuando se usa una secuencia de comandos (tal y como se especifica en **CommandStream**), los únicos valores de [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) válidos para la propiedad [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) son **adCmdText** y **adCmdUnknown**. Cualquier otro valor generará un error.  
+ Cuando se usa una secuencia de comandos (tal y como se especifica en **CommandStream**), los únicos valores de [CommandTypeEnum](./commandtypeenum.md) válidos para la propiedad [CommandType](./commandtype-property-ado.md) son **adCmdText** y **adCmdUnknown**. Cualquier otro valor generará un error.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Objeto Command (ADO)](./command-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [CommandText (propiedad, ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [Propiedad Dialect](../../../ado/reference/ado-api/dialect-property.md)   
- [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)
+ [CommandText (propiedad, ADO)](./commandtext-property-ado.md)   
+ [Propiedad Dialect](./dialect-property.md)   
+ [CommandTypeEnum](./commandtypeenum.md)

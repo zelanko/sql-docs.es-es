@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4c633cd1296c9433fbb7dfc185146c8b65e686b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0312fb8a8f91e8b56cb6c29a3a64b3a36bcec69d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443657"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775234"
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
-Busca en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) la fila que cumple los criterios especificados. Opcionalmente, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento de la fila inicial. Si se cumplen los criterios, la posición de la fila actual se establece en el registro encontrado; de lo contrario, la posición se establece en el final (o en el inicio) del **conjunto de registros**.  
+Busca en un [conjunto de registros](./recordset-object-ado.md) la fila que cumple los criterios especificados. Opcionalmente, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento de la fila inicial. Si se cumplen los criterios, la posición de la fila actual se establece en el registro encontrado; de lo contrario, la posición se establece en el final (o en el inicio) del **conjunto de registros**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +42,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Opcional. Un valor **Long** , cuyo valor predeterminado es cero, que especifica el desplazamiento de fila desde la fila actual o el marcador de *Inicio* para comenzar la búsqueda. De forma predeterminada, la búsqueda se iniciará en la fila actual.  
   
  *SearchDirection*  
- Opcional. Valor [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) que especifica si la búsqueda debe comenzar en la fila actual o en la siguiente fila disponible en la dirección de la búsqueda. Una búsqueda incorrecta se detiene al final del **conjunto de registros** si el valor es **adSearchForward**. Una búsqueda incorrecta se detiene al principio del **conjunto de registros** si el valor es **adSearchBackward**.  
+ Opcional. Valor [SearchDirectionEnum](./searchdirectionenum.md) que especifica si la búsqueda debe comenzar en la fila actual o en la siguiente fila disponible en la dirección de la búsqueda. Una búsqueda incorrecta se detiene al final del **conjunto de registros** si el valor es **adSearchForward**. Una búsqueda incorrecta se detiene al principio del **conjunto de registros** si el valor es **adSearchBackward**.  
   
  *Iniciar*  
  Opcional. Marcador de **variante** que funciona como la posición inicial de la búsqueda.  
@@ -59,16 +59,16 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Los asteriscos solo se pueden usar al final de una cadena de criterios, o al principio y al final de una cadena de criterios, como se mostró anteriormente. No se puede usar el asterisco como carácter comodín inicial (' * str ') o como carácter comodín incrustado ( \* r '). Esto producirá un error.  
   
 > [!NOTE]
->  Se producirá un error si no se establece una posición de fila actual antes de llamar a **Find**. Se debe llamar a cualquier método que establezca la posición de la fila, como [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), antes de llamar a **Find**.  
+>  Se producirá un error si no se establece una posición de fila actual antes de llamar a **Find**. Se debe llamar a cualquier método que establezca la posición de la fila, como [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), antes de llamar a **Find**.  
   
 > [!NOTE]
 >  Si llama al método **Find** en un conjunto de registros y la posición actual en el conjunto de registros está en el último registro o final de archivo (EOF), no encontrará nada. Debe llamar al método **MoveFirst** para establecer la posición o el cursor actual al principio del conjunto de registros.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo del método Find (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
- [Index (propiedad)](../../../ado/reference/ado-api/index-property.md)   
- [Optimize (propiedad dinámica) (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Seek (método)](../../../ado/reference/ado-api/seek-method.md)
+ [Ejemplo del método Find (VB)](./find-method-example-vb.md)   
+ [Index (propiedad)](./index-property.md)   
+ [Optimize (propiedad dinámica) (ADO)](./optimize-property-dynamic-ado.md)   
+ [El método de búsqueda](./seek-method.md)

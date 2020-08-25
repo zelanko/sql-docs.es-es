@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6dbeea5a053a1395e051939e313b9f672c73d2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442907"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773634"
 ---
 # <a name="optimize-property-example-vb"></a>Ejemplo de la propiedad Optimize (VB)
-En este ejemplo se muestra la propiedad de **optimización** dinámica del objeto de [campo](../../../ado/reference/ado-api/field-object.md) . El campo ***zip*** de la tabla ***authors*** en la base de datos ***pubs*** no está indizado. Al establecer la propiedad [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) en **true** en el campo ***zip*** , se autoriza a ADO a generar un índice que mejora el rendimiento del método [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
+En este ejemplo se muestra la propiedad de **optimización** dinámica del objeto de [campo](./field-object.md) . El campo ***zip*** de la tabla ***authors*** en la base de datos ***pubs*** no está indizado. Al establecer la propiedad [Optimize](./optimize-property-dynamic-ado.md) en **true** en el campo ***zip*** , se autoriza a ADO a generar un índice que mejora el rendimiento del método [Find](./find-method-ado.md) .  
   
 ```  
 'BeginOptimizeVB  
@@ -88,5 +88,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
- [Propiedad dinámica Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+ [Field (objeto)](./field-object.md)   
+ [Propiedad dinámica Optimize (ADO)](./optimize-property-dynamic-ado.md)

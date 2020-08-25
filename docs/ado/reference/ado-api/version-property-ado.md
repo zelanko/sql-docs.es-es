@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9c2a05f829ff0e9751634e9e50893cd1004db5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6740e999ddcfac16c874bae4e5933f27fa318f38
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441567"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776934"
 ---
 # <a name="version-property-ado"></a>Propiedad Version (ADO)
 Indica el número de versión de ADO.  
@@ -34,11 +34,11 @@ Indica el número de versión de ADO.
 ## <a name="remarks"></a>Observaciones  
  Utilice la propiedad **version** para devolver el número de versión de la implementación de ADO.  
   
- La versión del proveedor estará disponible como una propiedad dinámica en la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) .  
+ La versión del proveedor estará disponible como una propiedad dinámica en la colección de [propiedades](./properties-collection-ado.md) .  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Objeto de conexión (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de la propiedad version (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
- [Ejemplo de la propiedad de versión (VC ++)](../../../ado/reference/ado-api/version-property-example-vc.md)   
+ [Ejemplo de la propiedad version (VB)](./version-property-example-vb.md)   
+ [Ejemplo de la propiedad de versión (VC ++)](./version-property-example-vc.md)

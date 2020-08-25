@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 455db4b01f6e25b6e280a6b33461ed6747cea284
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89dc7e47bbd286d790086bde5da24e0a3316eef3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443437"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774764"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Ejemplo de las propiedades IsolationLevel y MODE (VC + +)
-En este ejemplo se usa la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) para abrir una conexión exclusiva y la propiedad [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) para abrir una transacción que se lleva a cabo en el aislamiento de otras transacciones.  
+En este ejemplo se usa la propiedad [mode](./mode-property-ado.md) para abrir una conexión exclusiva y la propiedad [IsolationLevel](./isolationlevel-property.md) para abrir una transacción que se lleva a cabo en el aislamiento de otras transacciones.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -245,5 +245,5 @@ void PrintComError(_com_error &e) {
 **50 años en cocinas de Buckingham Palacio-trad_cook**  
 **Sushi, cualquiera? -trad_cook**   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Propiedad Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+ [Propiedad IsolationLevel](./isolationlevel-property.md)   
+ [Propiedad Mode (ADO)](./mode-property-ado.md)

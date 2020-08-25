@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43037237ecba87b099c6e74b32f0a78c914a72f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092164ac8df26ae79da94125d0071baccd89a3f5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443647"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775154"
 ---
 # <a name="find-method-example-vc"></a>Ejemplo del método Find (VC ++)
-En este ejemplo se usa el método [Find](../../../ado/reference/ado-api/find-method-ado.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para buscar y contar el número de títulos de negocio en la base de datos **pubs** . En el ejemplo se da por supuesto que el proveedor subyacente no es compatible con una funcionalidad similar.  
+En este ejemplo se usa el método [Find](./find-method-ado.md) del objeto de [conjunto de registros](./recordset-object-ado.md) para buscar y contar el número de títulos de negocio en la base de datos **pubs** . En el ejemplo se da por supuesto que el proveedor subyacente no es compatible con una funcionalidad similar.  
   
 ```  
 // BeginFindCpp.cpp  
@@ -156,5 +156,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Find (método) (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Find (método) (ADO)](./find-method-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

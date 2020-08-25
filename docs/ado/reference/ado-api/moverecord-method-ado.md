@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0aa5aebbd3a87ede7d73223ffa7684bff837a328
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443157"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774224"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
-Mueve la entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md) a otra ubicación.  
+Mueve la entidad representada por un [registro](./record-object-ado.md) a otra ubicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,7 +48,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Opcional. Una **cadena** que contiene la contraseña que, si es necesario, comprueba el *nombre de usuario*.  
   
  *Opciones*  
- Opcional. Un valor de [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) cuyo valor predeterminado es **adMoveUnspecified**. Especifica el comportamiento de este método.  
+ Opcional. Un valor de [MoveRecordOptionsEnum](./moverecordoptionsenum.md) cuyo valor predeterminado es **adMoveUnspecified**. Especifica el comportamiento de este método.  
   
  *Asincrónico*  
  Opcional. Valor **booleano** que, cuando **es true**, especifica que esta operación debe ser asincrónica.  
@@ -64,17 +64,17 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 > [!NOTE]
 >  Use la opción **adMoveOverWrite** con prudencia. Por ejemplo, si se especifica esta opción cuando se mueve un archivo a un directorio, se eliminará el directorio y se reemplazará por el archivo.  
   
- Algunos atributos del objeto de **registro** , como la propiedad [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) , no se actualizarán una vez completada esta operación. Actualice las propiedades del objeto **Record** cerrando el **registro**y, a continuación, vuelva a abrirlo con la dirección URL de la ubicación donde se ha despasado el archivo o directorio.  
+ Algunos atributos del objeto de **registro** , como la propiedad [ParentURL](./parenturl-property-ado.md) , no se actualizarán una vez completada esta operación. Actualice las propiedades del objeto **Record** cerrando el **registro**y, a continuación, vuelva a abrirlo con la dirección URL de la ubicación donde se ha despasado el archivo o directorio.  
   
- Si este **registro** se obtuvo de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), la nueva ubicación del archivo o directorio que se ha descargado no se reflejará inmediatamente en el **conjunto de registros**. Actualice el **conjunto de registros** . para ello, cierre y vuelva a abrirlo.  
+ Si este **registro** se obtuvo de un [conjunto de registros](./recordset-object-ado.md), la nueva ubicación del archivo o directorio que se ha descargado no se reflejará inmediatamente en el **conjunto de registros**. Actualice el **conjunto de registros** . para ello, cierre y vuelva a abrirlo.  
   
 > [!NOTE]
->  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Objeto Record (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Move (método) (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Métodos MoveFirst, MoveLast, MoveNext y MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
+ [Move (método) (ADO)](./move-method-ado.md)   
+ [Métodos MoveFirst, MoveLast, MoveNext y MovePrevious (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst, MoveLast, MoveNext y MovePrevious métodos (RDS)](../rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

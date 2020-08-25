@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58f7761cc67cd1320594988ba50bfcc79bcfc0d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1e67827a5a496b6b9163d8fa8740cc620033efd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450917"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776194"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Colecciones (Visual C++ Índice de sintaxis con #import)
 Resulta útil saber que las colecciones heredan determinados métodos y propiedades comunes.  
@@ -98,7 +98,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Colección de errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters (colección) (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Colección de errores (ADO)](./errors-collection-ado.md)   
+ [Fields (colección) (ADO)](./fields-collection-ado.md)   
+ [Parameters (colección) (ADO)](./parameters-collection-ado.md)   
+ [Colección de propiedades (ADO)](./properties-collection-ado.md)

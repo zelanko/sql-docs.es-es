@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68b6a8dd0b0cd75f511c042981672444d9b3bcb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ce6a6e3c2e665c57b9a82d968dac3cf3c74a731
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444517"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775964"
 ---
 # <a name="connection-object-ado"></a>Objeto de conexión (ADO)
 Representa una conexión abierta a un origen de datos.  
@@ -31,30 +31,30 @@ Representa una conexión abierta a un origen de datos.
   
  Con las colecciones, los métodos y las propiedades de un objeto de **conexión** , puede hacer lo siguiente:  
   
--   Configure la conexión antes de abrirla con las propiedades [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md), [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)y [mode](../../../ado/reference/ado-api/mode-property-ado.md) . **ConnectionString** es la propiedad predeterminada del objeto de **conexión** .  
+-   Configure la conexión antes de abrirla con las propiedades [ConnectionString](./connectionstring-property-ado.md), [ConnectionTimeout](./connectiontimeout-property-ado.md)y [mode](./mode-property-ado.md) . **ConnectionString** es la propiedad predeterminada del objeto de **conexión** .  
   
--   Establezca la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) en cliente para invocar el [servicio de cursores de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md), que admite las actualizaciones por lotes.  
+-   Establezca la propiedad [CursorLocation](./cursorlocation-property-ado.md) en cliente para invocar el [servicio de cursores de Microsoft para OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md), que admite las actualizaciones por lotes.  
   
--   Establezca la base de datos predeterminada para la conexión con la propiedad [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) .  
+-   Establezca la base de datos predeterminada para la conexión con la propiedad [DefaultDatabase](./defaultdatabase-property.md) .  
   
--   Establezca el nivel de aislamiento para las transacciones abiertas en la conexión con la propiedad [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) .  
+-   Establezca el nivel de aislamiento para las transacciones abiertas en la conexión con la propiedad [IsolationLevel](./isolationlevel-property.md) .  
   
--   Especifique un proveedor de OLE DB con la propiedad [Provider](../../../ado/reference/ado-api/provider-property-ado.md) .  
+-   Especifique un proveedor de OLE DB con la propiedad [Provider](./provider-property-ado.md) .  
   
--   Establezca y, posteriormente, interrumpa la conexión física al origen de datos con los métodos de [apertura](../../../ado/reference/ado-api/open-method-ado-connection.md) y [cierre](../../../ado/reference/ado-api/close-method-ado.md) .  
+-   Establezca y, posteriormente, interrumpa la conexión física al origen de datos con los métodos de [apertura](./open-method-ado-connection.md) y [cierre](./close-method-ado.md) .  
   
--   Ejecute un comando en la conexión con el método [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) y configure la ejecución con la propiedad [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md) .  
+-   Ejecute un comando en la conexión con el método [Execute](./execute-method-ado-connection.md) y configure la ejecución con la propiedad [CommandTimeout](./commandtimeout-property-ado.md) .  
   
     > [!NOTE]
-    >  Para ejecutar una consulta sin usar un objeto Command, pase una cadena de consulta al método **Execute** de un objeto **Connection** . Sin embargo, se requiere un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) si desea conservar el texto del comando y volver a ejecutarlo, o usar parámetros de consulta.  
+    >  Para ejecutar una consulta sin usar un objeto Command, pase una cadena de consulta al método **Execute** de un objeto **Connection** . Sin embargo, se requiere un objeto de [comando](./command-object-ado.md) si desea conservar el texto del comando y volver a ejecutarlo, o usar parámetros de consulta.  
   
--   Administrar transacciones en la conexión abierta, incluidas las transacciones anidadas si el proveedor las admite, con los métodos [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md), [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)y [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) y la propiedad [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) .  
+-   Administrar transacciones en la conexión abierta, incluidas las transacciones anidadas si el proveedor las admite, con los métodos [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md), [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)y [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) y la propiedad [attributes](./attributes-property-ado.md) .  
   
--   Examine los errores devueltos del origen de datos con la colección de [errores](../../../ado/reference/ado-api/errors-collection-ado.md) .  
+-   Examine los errores devueltos del origen de datos con la colección de [errores](./errors-collection-ado.md) .  
   
--   Lea la versión de la implementación de ADO utilizada con la propiedad [version](../../../ado/reference/ado-api/version-property-ado.md) .  
+-   Lea la versión de la implementación de ADO utilizada con la propiedad [version](./version-property-ado.md) .  
   
--   Obtenga información de esquema sobre la base de datos con el método [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) .  
+-   Obtenga información de esquema sobre la base de datos con el método [OpenSchema](./openschema-method.md) .  
   
  Puede crear objetos de **conexión** independientemente de cualquier otro objeto definido previamente.  
   
@@ -64,7 +64,7 @@ Representa una conexión abierta a un origen de datos.
 >  No utilice esta característica (llamando a un comando o procedimiento almacenado con nombre como si fuera un método nativo en el objeto de **conexión** ) en una aplicación de Microsoft® .NET Framework, porque la implementación subyacente de la característica entra en conflicto con la forma en que el .NET Framework INTEROPERA con com.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Ejecutar un comando como método nativo de un objeto de conexión  
- Para ejecutar un comando, asigne un nombre al comando mediante la propiedad **Command** Object [Name](../../../ado/reference/ado-api/name-property-ado.md) . Establezca la propiedad **ActiveConnection** del objeto de **comando** en la conexión. A continuación, emita una instrucción en la que el nombre de comando se usa como si fuera un método del objeto de **conexión** , seguido de cualquier parámetro y un objeto de **conjunto de registros** si se devuelven filas. Establezca las propiedades del conjunto de **registros** para personalizar el **conjunto de registros**resultante. Por ejemplo:  
+ Para ejecutar un comando, asigne un nombre al comando mediante la propiedad **Command** Object [Name](./name-property-ado.md) . Establezca la propiedad **ActiveConnection** del objeto de **comando** en la conexión. A continuación, emita una instrucción en la que el nombre de comando se usa como si fuera un método del objeto de **conexión** , seguido de cualquier parámetro y un objeto de **conjunto de registros** si se devuelven filas. Establezca las propiedades del conjunto de **registros** para personalizar el **conjunto de registros**resultante. Por ejemplo:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -93,11 +93,11 @@ cnn. "parameter"
   
  Esta sección contiene el siguiente tema.  
   
--   [Propiedades, métodos y eventos del objeto Connection](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
+-   [Propiedades, métodos y eventos del objeto Connection](./connection-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Command (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Colección de errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Colección Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Command (objeto) (ADO)](./command-object-ado.md)   
+ [Colección de errores (ADO)](./errors-collection-ado.md)   
+ [Colección Properties (ADO)](./properties-collection-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)   
+ [Apéndice A: Proveedores](../../guide/appendixes/appendix-a-providers.md)

@@ -13,32 +13,32 @@ helpviewer_keywords:
 ms.assetid: becd590c-0db7-485c-8bf4-fa3456e4ba20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f1dd6d4e443a0426a5bd88231be944238e58bd7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50845dae282a2fdd63c1e45e459701e62983591b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439387"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769084"
 ---
 # <a name="user-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto User
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
- [Name (propiedad)](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Propiedad Name](./name-property-adox.md)  
   
- [ParentCatalog (propiedad, ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [ParentCatalog (propiedad, ADOX)](./parentcatalog-property-adox.md)  
   
- [Colección de grupos](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Colección de grupos](./groups-collection-adox.md)  
   
- [Colección de propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Colección de propiedades](../ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [ChangePassword (método)](../../../ado/reference/adox-api/changepassword-method-adox.md)  
+ [ChangePassword (método)](./changepassword-method-adox.md)  
   
- [GetPermissions (método)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+ [GetPermissions (método)](./getpermissions-method-adox.md)  
   
- [Método SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+ [Método SetPermissions](./setpermissions-method-adox.md)  
   
 ## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)
+ [Objeto User (ADOX)](./user-object-adox.md)

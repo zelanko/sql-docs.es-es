@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444457"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775904"
 ---
 # <a name="connectionstring-property-ado"></a>Propiedad ConnectionString (ADO)
 Indica la información utilizada para establecer una conexión con un origen de datos.  
@@ -42,9 +42,9 @@ Indica la información utilizada para establecer una conexión con un origen de 
 |*Servidor remoto =*|Especifica el nombre de la ruta de acceso del servidor que se va a utilizar al abrir una conexión del lado cliente. (Solo el servicio de datos remoto).|  
 |*Dirección URL =*|Especifica la cadena de conexión como una dirección URL absoluta que identifica un recurso, como un archivo o un directorio.|  
   
- Después de establecer la propiedad **ConnectionString** y abrir el objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) , el proveedor puede modificar el contenido de la propiedad, por ejemplo, asignando los nombres de argumento definidos por ADO a sus equivalentes para el proveedor específico.  
+ Después de establecer la propiedad **ConnectionString** y abrir el objeto de [conexión](./connection-object-ado.md) , el proveedor puede modificar el contenido de la propiedad, por ejemplo, asignando los nombres de argumento definidos por ADO a sus equivalentes para el proveedor específico.  
   
- La propiedad **ConnectionString** hereda automáticamente el valor utilizado para el argumento *ConnectionString* del método [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) , por lo que puede invalidar la propiedad **ConnectionString** actual durante la llamada al método **Open** .  
+ La propiedad **ConnectionString** hereda automáticamente el valor utilizado para el argumento *ConnectionString* del método [Open](./open-method-ado-connection.md) , por lo que puede invalidar la propiedad **ConnectionString** actual durante la llamada al método **Open** .  
   
  Dado que el argumento de *nombre de archivo* hace que ADO cargue el proveedor asociado, no se pueden pasar los argumentos de *nombre de archivo* y *proveedor* .  
   
@@ -63,9 +63,9 @@ Indica la información utilizada para establecer una conexión con un origen de 
 |No hay valor predeterminado.<br /><br /> Cuando una aplicación ADO se ejecuta en los siguientes sistemas operativos y no especifica el proveedor explícitamente, ADO devuelve el siguiente error: "ADODB. Conexión: no se ha especificado el proveedor y no hay ningún proveedor predeterminado designado "|Windows 2000 (64 bits)<br /><br /> Windows XP (64 bits)<br /><br /> Windows 2003 Server (64 bits)<br /><br /> Windows Vista (64 bits)|  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Objeto de conexión (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de las propiedades ConnectionString, ConnectionTimeout y State (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [Ejemplo de las propiedades ConnectionString, ConnectionTimeout y State (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Ejemplo de las propiedades ConnectionString, ConnectionTimeout y State (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Ejemplo de las propiedades ConnectionString, ConnectionTimeout y State (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Apéndice A: Proveedores](../../guide/appendixes/appendix-a-providers.md)

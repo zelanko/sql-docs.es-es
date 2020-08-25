@@ -9,12 +9,12 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7f106e462d3d1bb7848b15523ef3d3f7feed2a1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401348"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767214"
 ---
 # <a name="backup-and-restore"></a>Copia de seguridad y restauración
 
@@ -24,7 +24,7 @@ Describe cómo funciona la copia de seguridad y restauración de datos para el a
 
 Una *copia de seguridad de base de datos* de PDW es una copia de una base de datos de la aplicación, que se almacena en un formato para que se pueda usar para restaurar la base de datos original en un dispositivo.  
   
-Una copia de seguridad de la base de datos de PDW se crea con [la instrucción de](../t-sql/statements/restore-database-parallel-data-warehouse.md) t-SQL de la base de [datos de copia](../t-sql/statements/backup-database-parallel-data-warehouse.md) no se puede usar para ningún otro propósito. La copia de seguridad solo se puede restaurar en un dispositivo con el mismo número o un número mayor de nodos de proceso.  
+Una copia de seguridad de la base de datos de PDW se crea con [la instrucción de](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) t-SQL de la base de [datos de copia](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016) no se puede usar para ningún otro propósito. La copia de seguridad solo se puede restaurar en un dispositivo con el mismo número o un número mayor de nodos de proceso.  
   
 <!-- MISSING LINKS
 The [master database](master-database.md) is a SMP SQL Server database. It is backed up with the BACKUP DATABASE statement. To restore master, use the [Restore the Master Database](configuration-manager-restore-master-database.md) page of the Configuration Manager tool.  
@@ -82,7 +82,7 @@ El proceso de copia de seguridad funciona de la siguiente manera:
   
     -   Una copia de seguridad solo se puede restaurar en un dispositivo PDW que tenga un número igual o mayor de nodos de proceso.  
   
-    -   No se puede cambiar el nombre de la copia de seguridad antes de realizar una restauración. El nombre del directorio de copia de seguridad debe coincidir con el nombre original de la copia de seguridad. El nombre original de la copia de seguridad se encuentra en el archivo backup. XML dentro del directorio de copia de seguridad. Para restaurar una base de datos a un nombre diferente, puede especificar el nuevo nombre en el comando restore. Por ejemplo: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
+    -   No se puede cambiar el nombre de la copia de seguridad antes de realizar una restauración. El nombre del directorio de copia de seguridad debe coincidir con el nombre original de la copia de seguridad. El nombre original de la copia de seguridad se encuentra en el archivo backup.xml dentro del directorio de copia de seguridad. Para restaurar una base de datos a un nombre diferente, puede especificar el nuevo nombre en el comando restore. Por ejemplo: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
 ## <a name="database-restore-modes"></a><a name="RestoreModes"></a>Modos de restauración de bases de datos
 
@@ -104,7 +104,7 @@ Al restaurar los datos, el dispositivo detecta el número de nodos de proceso en
   
 1.  La copia de seguridad de base de datos que se va a restaurar está disponible en un recurso compartido de archivos de Windows en un servidor que no es de aplicación. Para obtener el mejor rendimiento, este servidor se conecta a la red InfiniBand de la aplicación.  
   
-2.  El usuario envía una instrucción TSQL [restore database](../t-sql/statements/restore-database-parallel-data-warehouse.md) al nodo de control.  
+2.  El usuario envía una instrucción TSQL [restore database](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) al nodo de control.  
   
     -   La restauración es una restauración completa o una restauración de encabezado. La restauración completa restaura una copia de seguridad completa y, a continuación, opcionalmente restaura una copia de seguridad diferencial.  
   
@@ -133,8 +133,8 @@ Después de la redistribución, cada nodo de proceso contendrá menos datos real
 |Tarea de copia de seguridad y restauración|Descripción|  
 |---------------------------|---------------|  
 |Preparar un servidor como servidor de copia de seguridad.|[Adquisición y configuración de servidores de copia de seguridad](acquire-and-configure-backup-server.md)|  
-|Hacer copia de seguridad de una base de datos.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
-|Restaurar una base de datos.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
+|Hacer copia de seguridad de una base de datos.|[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)|  
+|Restaurar una base de datos.|[RESTAURAR BASE DE DATOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)|    
 
 <!-- MISSING LINKS
 

@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06044b54be7066deb5cf7510f060716106816805
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f3ebabab3096217348e2309070d81e90128b8e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443717"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775334"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
-Especifica el [Estado](../../../ado/reference/ado-api/status-property-ado-field.md) de un [objeto de campo](../../../ado/reference/ado-api/field-object.md).  
+Especifica el [Estado](./status-property-ado-field.md) de un [objeto de campo](./field-object.md).  
   
  Los valores de **adFieldPending \* ** indican la operación que provocó el establecimiento del estado y pueden combinarse con otros valores de estado.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|Indica que el campo especificado ya existe.|  
-|**adFieldBadStatus**|12|Indica que se ha enviado un valor de estado no válido desde ADO al proveedor de OLE DB. Entre las posibles causas se incluyen un proveedor OLE DB 1,0 o 1,1, o una combinación incorrecta de [valor](../../../ado/reference/ado-api/value-property-ado.md) y [Estado](../../../ado/reference/ado-api/status-property-ado-field.md).|  
-|**adFieldCannotComplete**|20|Indica que el servidor de la dirección URL especificada por el [origen](../../../ado/reference/ado-api/source-property-ado-record.md) no pudo completar la operación.|  
+|**adFieldBadStatus**|12|Indica que se ha enviado un valor de estado no válido desde ADO al proveedor de OLE DB. Entre las posibles causas se incluyen un proveedor OLE DB 1,0 o 1,1, o una combinación incorrecta de [valor](./value-property-ado.md) y [Estado](./status-property-ado-field.md).|  
+|**adFieldCannotComplete**|20|Indica que el servidor de la dirección URL especificada por el [origen](./source-property-ado-record.md) no pudo completar la operación.|  
 |**adFieldCannotDeleteSource**|23|Indica que durante una operación de movimiento, se ha movido un árbol o un subárbol a una nueva ubicación, pero no se ha podido eliminar el origen.|  
 |**adFieldCantConvertValue**|2|Indica que el campo no se puede recuperar ni almacenar sin pérdida de datos.|  
 |**adFieldCantCreate**|7|Indica que no se pudo agregar el campo porque el proveedor superó una limitación (como el número de campos permitidos).|  
@@ -45,7 +45,7 @@ Especifica el [Estado](../../../ado/reference/ado-api/status-property-ado-field.
 |**adFieldIsNull**|3|Indica que el proveedor devolvió un valor VARIANT de tipo VT_NULL y que el campo no está vacío.|  
 |**adFieldOK**|0|Predeterminada. Indica que el campo se agregó o eliminó correctamente.|  
 |**adFieldOutOfSpace**|22|Indica que el proveedor no puede obtener suficiente espacio de almacenamiento para completar una operación de movimiento o copia.|  
-|**adFieldPendingChange**|0x40000|Indica que el campo se ha eliminado y, a continuación, se ha vuelto a agregar, quizás con un tipo de datos diferente, o que el valor del campo que tenía anteriormente un estado **adFieldOK** ha cambiado. La forma final del campo modificará la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) después de que se llame al método [Update](../../../ado/reference/ado-api/update-method.md) .|  
+|**adFieldPendingChange**|0x40000|Indica que el campo se ha eliminado y, a continuación, se ha vuelto a agregar, quizás con un tipo de datos diferente, o que el valor del campo que tenía anteriormente un estado **adFieldOK** ha cambiado. La forma final del campo modificará la colección [Fields](./fields-collection-ado.md) después de que se llame al método [Update](./update-method.md) .|  
 |**adFieldPendingDelete**|0x20000|Indica que la operación de **eliminación** provocó el establecimiento del estado. El campo se ha marcado para su eliminación de la colección **Fields** después de que se llame al método **Update** .|  
 |**adFieldPendingInsert**|0x10000|Indica que la operación de **anexado** provocó el establecimiento del estado. El **campo** se ha marcado para agregarse a la colección **Fields** después de que se llame al método **Update** .|  
 |**adFieldPendingUnknown**|0x80000|Indica que el proveedor no puede determinar qué operación causó el establecimiento del estado del campo.|  
@@ -65,4 +65,4 @@ Especifica el [Estado](../../../ado/reference/ado-api/status-property-ado-field.
  Estas constantes no tienen equivalentes de ADO/WFC.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Propiedad Status (Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Propiedad Status (Field ADO)](./status-property-ado-field.md)

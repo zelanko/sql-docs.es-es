@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c37ac5209e7244a76f62a2d6979efb2df73a8e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aeab0b42b530c91e57ea25fbca9e7dc3b7bfdba2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451257"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776504"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>Ejemplo de los métodos AppendChunk y GetChunk (VB)
-En este ejemplo se usan los métodos [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) y [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) para rellenar un campo de imagen con datos de otro registro.  
+En este ejemplo se usan los métodos [AppendChunk](./appendchunk-method-ado.md) y [GetChunk](./getchunk-method-ado.md) para rellenar un campo de imagen con datos de otro registro.  
   
 ```  
 'BeginAppendChunkVB  
@@ -149,7 +149,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [AppendChunk (método) (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
- [GetChunk (método) (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
- [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)
+ [AppendChunk (método) (ADO)](./appendchunk-method-ado.md)   
+ [Field (objeto)](./field-object.md)   
+ [GetChunk (método) (ADO)](./getchunk-method-ado.md)   
+ [Objeto Parameter](./parameter-object.md)

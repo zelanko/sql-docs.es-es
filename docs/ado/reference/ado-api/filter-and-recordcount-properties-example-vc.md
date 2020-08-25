@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443677"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775314"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Ejemplo de las propiedades Filter y RecordCount (VC + +)
-En este ejemplo se usa la propiedad [Filter](../../../ado/reference/ado-api/filter-property.md) para abrir un nuevo [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basándose en una condición especificada aplicada a un **conjunto de registros**existente. Usa la propiedad [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) para mostrar el número de registros de los dos **conjuntos de registros**. La función FilterField es necesaria para que este procedimiento se ejecute.  
+En este ejemplo se usa la propiedad [Filter](./filter-property.md) para abrir un nuevo [conjunto de registros](./recordset-object-ado.md) basándose en una condición especificada aplicada a un **conjunto de registros**existente. Usa la propiedad [RecordCount](./recordcount-property-ado.md) para mostrar el número de registros de los dos **conjuntos de registros**. La función FilterField es necesaria para que este procedimiento se ejecute.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -304,6 +304,6 @@ Scootney Books, USA
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad Filter](../../../ado/reference/ado-api/filter-property.md)   
- [Propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propiedad Filter](./filter-property.md)   
+ [Propiedad RecordCount (ADO)](./recordcount-property-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

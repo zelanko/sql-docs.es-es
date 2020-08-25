@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cafee5dbcc5d6469df2d733f1898806069dd112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6654adc5cbf5b01435dbc95a2f630cf980cc6d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451107"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776364"
 ---
 # <a name="cachesize-property-ado"></a>Propiedad CacheSize (ADO)
-Indica el número de registros de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que se almacenan en caché localmente en la memoria.  
+Indica el número de registros de un objeto de [conjunto de registros](./recordset-object-ado.md) que se almacenan en caché localmente en la memoria.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor **Long** que debe ser mayor que 0. El valor predeterminado es 1.  
@@ -41,14 +41,14 @@ Indica el número de registros de un objeto de [conjunto de registros](../../../
   
  No se permite un valor **CacheSize** de cero y devuelve un error.  
   
- Los registros recuperados de la memoria caché no reflejan los cambios simultáneos que otros usuarios han realizado en los datos de origen. Para forzar una actualización de todos los datos en caché, use el método [Resync](../../../ado/reference/ado-api/resync-method.md) .  
+ Los registros recuperados de la memoria caché no reflejan los cambios simultáneos que otros usuarios han realizado en los datos de origen. Para forzar una actualización de todos los datos en caché, use el método [Resync](./resync-method.md) .  
   
- Si **CacheSize** se establece en un valor mayor que uno, los métodos de navegación ([Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext y MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) pueden dar lugar a la navegación a un registro eliminado, en caso de que se produzca la eliminación una vez recuperados los registros. Después de la captura inicial, las eliminaciones posteriores no se reflejarán en la memoria caché de datos hasta que intente obtener acceso a un valor de datos de una fila eliminada. Sin embargo, si se establece **CacheSize** en uno, se elimina este problema, ya que las filas eliminadas no se pueden capturar.  
+ Si **CacheSize** se establece en un valor mayor que uno, los métodos de navegación ([Move](./move-method-ado.md), [MoveFirst, MoveLast, MoveNext y MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) pueden dar lugar a la navegación a un registro eliminado, en caso de que se produzca la eliminación una vez recuperados los registros. Después de la captura inicial, las eliminaciones posteriores no se reflejarán en la memoria caché de datos hasta que intente obtener acceso a un valor de datos de una fila eliminada. Sin embargo, si se establece **CacheSize** en uno, se elimina este problema, ya que las filas eliminadas no se pueden capturar.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de la propiedad CacheSize (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [Ejemplo de la propiedad CacheSize (VC + +)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [Ejemplo de la propiedad CacheSize (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
+ [Ejemplo de la propiedad CacheSize (VB)](./cachesize-property-example-vb.md)   
+ [Ejemplo de la propiedad CacheSize (VC + +)](./cachesize-property-example-vc.md)   
+ [Ejemplo de la propiedad CacheSize (JScript)](./cachesize-property-example-jscript.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce1d75faaf4bbaeb941a0da87b68c09744c2a422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bc68683f337f5a0bdf6fc5679c4276925a4234
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444437"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775854"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-Especifica los permisos disponibles para modificar los datos de una [conexión](../../../ado/reference/ado-api/connection-object-ado.md), abrir un [registro](../../../ado/reference/ado-api/record-object-ado.md)o especificar valores para la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) de los objetos **Record** y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Especifica los permisos disponibles para modificar los datos de una [conexión](./connection-object-ado.md), abrir un [registro](./record-object-ado.md)o especificar valores para la propiedad [mode](./mode-property-ado.md) de los objetos **Record** y [Stream](./stream-object-ado.md) .  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Indica permisos de solo lectura.|  
 |**adModeReadWrite**|3|Indica permisos de lectura y escritura.|  
@@ -57,11 +57,11 @@ Especifica los permisos disponibles para modificar los datos de una [conexión](
 
 :::row:::
     :::column:::
-        [Propiedad Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
-        [Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+        [Propiedad Mode (ADO)](./mode-property-ado.md)  
+        [Open (método) (registro de ADO)](./open-method-ado-record.md)  
     :::column-end:::
     :::column:::
-        [Open (método) (Stream de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
-        [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Open (método) (Stream de ADO)](./open-method-ado-stream.md)  
+        [Objeto de secuencia (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::

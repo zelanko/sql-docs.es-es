@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a181482d7f0b2a1d6589209bc4b4e58ff11f9a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b73660a9eaa94cab33f11577f19bf9cc7cac19c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443107"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774034"
 ---
 # <a name="nextrecordset-method-example-vb"></a>Ejemplo del método NextRecordset (VB)
-En este ejemplo se usa el método [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) para ver los datos de un conjunto de registros que usa una instrucción de comando compuesta formada por tres instrucciones **Select** independientes.  
+En este ejemplo se usa el método [NextRecordset](./nextrecordset-method-ado.md) para ver los datos de un conjunto de registros que usa una instrucción de comando compuesta formada por tres instrucciones **Select** independientes.  
   
 ```  
 'BeginNextRecordsetVB  
@@ -96,5 +96,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [NextRecordset (método) (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [NextRecordset (método) (ADO)](./nextrecordset-method-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

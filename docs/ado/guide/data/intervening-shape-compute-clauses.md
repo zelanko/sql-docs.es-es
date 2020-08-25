@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7674ccde0c2e8cd4a89218c50d19ea15653f2b2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49393765bfedc832f49fef103ba1076b277277fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453227"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805888"
 ---
 # <a name="intervening-shape-compute-clauses"></a>Cláusulas COMPUTE de forma que intervengan
 Es válido incrustar una o más cláusulas Compute entre el elemento primario y el elemento secundario en un comando Shape con parámetros, como en el ejemplo siguiente:  
@@ -37,6 +37,6 @@ RELATE state TO PARAMETER 0)
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de forma de datos](../../../ado/guide/data/data-shaping-example.md)   
- [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
- [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)
+ [Ejemplo de forma de datos](./data-shaping-example.md)   
+ [Gramática de forma formal](./formal-shape-grammar.md)   
+ [Comandos Shape en General](./shape-commands-in-general.md)

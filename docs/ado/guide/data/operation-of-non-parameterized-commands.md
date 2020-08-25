@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453117"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805667"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funcionamiento de los comandos sin parámetros
 En el caso de comandos sin parámetros, se ejecutan todos los comandos de proveedor y los **conjuntos de registros** se crean durante la ejecución del comando. Si el comando se ejecuta sincrónicamente, todos los **conjuntos de registros** se rellenarán por completo. Si se ha seleccionado un modo de llenado asincrónico, el estado rellenado de los **conjuntos de registros** dependerá del modo de llenado y del tamaño de los **conjuntos de registros**.  
@@ -38,11 +38,11 @@ SHAPE {SELECT * FROM Customers}
   
  Cuando se tiene acceso a la referencia en la columna Chapter, ADO recupera automáticamente el **conjunto de registros** representado por la referencia. Tenga en cuenta que en un comando sin parámetros, aunque se ha recuperado todo el **conjunto de registros** secundario, el capítulo solo presenta un subconjunto de filas.  
   
- Si la columna anexada no tiene ningún *alias de capítulo*, se generará un nombre automáticamente. Un objeto de [campo](../../../ado/reference/ado-api/field-object.md) de la columna se anexará a la colección de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) del objeto de **conjunto de registros** y su tipo de datos será **adChapter**.  
+ Si la columna anexada no tiene ningún *alias de capítulo*, se generará un nombre automáticamente. Un objeto de [campo](../../reference/ado-api/field-object.md) de la columna se anexará a la colección de [campos](../../reference/ado-api/fields-collection-ado.md) del objeto de **conjunto de registros** y su tipo de datos será **adChapter**.  
   
- Para obtener información sobre cómo navegar por un **conjunto de registros**jerárquico, vea [obtener acceso a las filas de un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Para obtener información sobre cómo navegar por un **conjunto de registros**jerárquico, vea [obtener acceso a las filas de un conjunto de registros jerárquico](./accessing-rows-in-a-hierarchical-recordset.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de forma de datos](../../../ado/guide/data/data-shaping-example.md)   
- [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
- [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)
+ [Ejemplo de forma de datos](./data-shaping-example.md)   
+ [Gramática de forma formal](./formal-shape-grammar.md)   
+ [Comandos Shape en General](./shape-commands-in-general.md)

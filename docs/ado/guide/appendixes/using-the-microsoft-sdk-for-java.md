@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453977"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806486"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Mediante el SDK de Microsoft para Java
 
@@ -32,7 +32,7 @@ Microsoft SDK para Java es el kit para desarrolladores del entorno de Microsoft 
   
  Este mecanismo lee la biblioteca de tipos ADO y genera clases de las que se pueden crear instancias en la aplicación. Genera esas clases en la siguiente ubicación: \\<directorio de Windows \> \Java\trustlib\msado15.  
   
- La creación de una aplicación ADO en Java mediante el SDK de Microsoft para Java es fundamentalmente idéntica, desde la perspectiva del código fuente, hasta el uso del Asistente para la biblioteca de tipos de Java. Para obtener código de ejemplo, vea [contenedores de clase de Java de ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md). La única diferencia real es la forma en que se generan las clases contenedoras en primer lugar, como se muestra en los pasos siguientes.  
+ La creación de una aplicación ADO en Java mediante el SDK de Microsoft para Java es fundamentalmente idéntica, desde la perspectiva del código fuente, hasta el uso del Asistente para la biblioteca de tipos de Java. Para obtener código de ejemplo, vea [contenedores de clase de Java de ADO](./ado-java-class-wrappers.md). La única diferencia real es la forma en que se generan las clases contenedoras en primer lugar, como se muestra en los pasos siguientes.  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Para crear un proyecto de ADO con el SDK de Microsoft para Java  
   
@@ -50,5 +50,5 @@ Microsoft SDK para Java es el kit para desarrolladores del entorno de Microsoft 
   
 3.  Para usar estos archivos, abra el proyecto en Visual J++. En el menú **proyecto** , elija **Agregar al proyecto**. Seleccione **archivos**y agregue todos los. Archivos de JAVA generados en el directorio trustlib\msado15 para el proyecto.  
   
-## <a name="see-also"></a>Vea también  
- [Contenedores de clase Java de ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+## <a name="see-also"></a>Consulte también  
+ [Contenedores de clase Java de ADO](./ado-java-class-wrappers.md)

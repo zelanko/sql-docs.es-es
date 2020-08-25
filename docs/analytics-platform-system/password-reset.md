@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 952dbda04b4f7132406e3a6de4479afea1be92e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400906"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Restablecimiento de contraseña: Analytics Platform System
@@ -40,11 +40,11 @@ Inicio de sesión **SA** en SQL Server. **SA** es miembro del rol fijo de servid
 Las credenciales de administrador de dominio y las credenciales de administrador del sistema se adhieren a las directivas de seguridad de contraseña para cada tipo de credencial. Al cambiar las credenciales de administrador de dominio, la nueva contraseña se actualiza en el dominio donde sea necesario en PDW de SQL Server.  
   
 > [!IMPORTANT]  
-> PDW de SQL Server no admite el carácter de signo de dólar**$**() en las contraseñas de administrador de dominio o de administrador local. Los caracteres **^% &** se permiten en las contraseñas; sin embargo, PowerShell los considera como caracteres especiales. Si se usa cualquiera de estos caracteres en contraseñas para el administrador del sistema o SQL Server cuentas**SA** (los parámetros **AdminPassword** y **PdwSAPassword** durante la instalación), se producirá un error en la instalación, incluida la instalación, la actualización, la REPLACENODE y la revisión. Para garantizar una actualización correcta cuando las contraseñas actuales contienen caracteres no admitidos, cambie estas contraseñas para que no contengan dichos caracteres antes de ejecutar la actualización. Una vez finalizada la actualización, puede volver a establecer estas contraseñas en sus valores originales. Para obtener más información sobre los requisitos de contraseña, consulte [ALTER login](../t-sql/statements/alter-login-transact-sql.md).  
+> PDW de SQL Server no admite el carácter de signo de dólar ( **$** ) en las contraseñas de administrador de dominio o de administrador local. Los caracteres **^% &** se permiten en las contraseñas; sin embargo, PowerShell los considera como caracteres especiales. Si se usa cualquiera de estos caracteres en contraseñas para el administrador del sistema o SQL Server cuentas**SA** (los parámetros **AdminPassword** y **PdwSAPassword** durante la instalación), se producirá un error en la instalación, incluida la instalación, la actualización, la REPLACENODE y la revisión. Para garantizar una actualización correcta cuando las contraseñas actuales contienen caracteres no admitidos, cambie estas contraseñas para que no contengan dichos caracteres antes de ejecutar la actualización. Una vez finalizada la actualización, puede volver a establecer estas contraseñas en sus valores originales. Para obtener más información sobre los requisitos de contraseña, consulte [ALTER login](../t-sql/statements/alter-login-transact-sql.md).  
   
 ## <a name="to-reset-a-password"></a>Para restablecer una contraseña  
   
-1.  Conéctese al nodo de control e inicie el **Configuration Manager** (**dwconfig. exe**). Para obtener más información, consulte [Inicio del&#41;de &#40;de Configuration Manager de la plataforma de análisis ](launch-the-configuration-manager.md).  
+1.  Conéctese al nodo de control e inicie el **Configuration Manager** (**dwconfig.exe**). Para obtener más información, consulte [Inicio del&#41;de &#40;de Configuration Manager de la plataforma de análisis ](launch-the-configuration-manager.md).  
   
 2.  En el panel izquierdo del **Configuration Manager**, haga clic en **restablecimiento de contraseña**.  
   

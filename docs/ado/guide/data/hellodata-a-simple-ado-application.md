@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2ac1d2ed987b1385c581f147431eaa208b035fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d8f8dac5e6a38e1a394c4646849ddd6a5021131
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453287"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806026"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: una aplicación ADO sencilla
 Esta sencilla aplicación se guía a través de cada una de las cuatro operaciones de ADO principales: obtener, examinar, editar y actualizar datos. Estas operaciones se realizan en la base de datos de ejemplo Northwind incluida en Microsoft® SQL Server. Para centrarse en los aspectos básicos de ADO y evitar la confusión del código, el control de errores en el ejemplo es mínimo.  
   
 ### <a name="to-run-hellodata"></a>Para ejecutar HelloData  
   
-1.  Cree un nuevo EXE estándar Visual Basic proyecto que haga referencia a la biblioteca de ADO. Para obtener más información, vea [hacer referencia a las bibliotecas de ADO](../../../ado/guide/referencing-the-ado-libraries.md).  
+1.  Cree un nuevo EXE estándar Visual Basic proyecto que haga referencia a la biblioteca de ADO. Para obtener más información, vea [hacer referencia a las bibliotecas de ADO](../referencing-the-ado-libraries.md).  
   
 2.  Cree cuatro botones de comando en la parte superior del formulario, estableciendo las propiedades **Name** y **Caption** en los valores que se muestran en la tabla al final de este tema.  
   
@@ -34,12 +34,12 @@ Esta sencilla aplicación se guía a través de cada una de las cuatro operacion
   
 4.  Cree un **cuadro de texto** en el formulario debajo de la cuadrícula y establezca sus propiedades como se muestra en la tabla. Cuando haya terminado, el formulario debería ser similar a la siguiente ilustración.  
   
-5.  Por último, copie el código que aparece en el [código HelloData](../../../ado/guide/data/hellodata-code.md)y péguelo en la ventana Editor de código del formulario. Presione **F5** para ejecutar el código.  
+5.  Por último, copie el código que aparece en el [código HelloData](./hellodata-code.md)y péguelo en la ventana Editor de código del formulario. Presione **F5** para ejecutar el código.  
   
 > [!NOTE]
 >  En el ejemplo siguiente, y a lo largo de la guía, se usa el ID. de usuario "MyId" con la contraseña "123aBc" para autenticarse en el servidor. Debe sustituir estos valores por credenciales de inicio de sesión válidas para el servidor. Además, sustituya el valor de "mi SQLServer" por el nombre del servidor.  
   
- Para obtener una descripción detallada del código, vea [comentarios sobre HelloData](../../../ado/guide/data/comments-on-hellodata.md).  
+ Para obtener una descripción detallada del código, vea [comentarios sobre HelloData](./comments-on-hellodata.md).  
   
  ![Muestra Form1 para la aplicación HelloData de VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   

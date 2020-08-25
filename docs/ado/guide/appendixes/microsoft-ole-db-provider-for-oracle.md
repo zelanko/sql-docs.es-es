@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a81f8b3e8acbe09fed0bac975158a9d5ef26a9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8633a6dd9ef94ff525c99b838de6dcec937d292
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454057"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806556"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Información general de Proveedor OLE DB de Microsoft para Oracle
 > [!IMPORTANT]
@@ -29,13 +29,13 @@ ms.locfileid: "88454057"
  El Proveedor OLE DB de Microsoft para Oracle permite a ADO obtener acceso a las bases de datos de Oracle.
 
 ## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión
- Para conectarse a este proveedor, establezca el argumento de *proveedor* de la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en:
+ Para conectarse a este proveedor, establezca el argumento de *proveedor* de la propiedad [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) en:
 
 ```vb
 MSDAORA
 ```
 
- La lectura de la propiedad [Provider](../../../ado/reference/ado-api/provider-property-ado.md) también devolverá esta cadena.
+ La lectura de la propiedad [Provider](../../reference/ado-api/provider-property-ado.md) también devolverá esta cadena.
 
  Si se ejecuta una consulta join con un cursor Keyset o Dynamic en una base de datos de Oracle, se produce un error. Oracle solo admite un cursor estático de solo lectura.
 
@@ -59,9 +59,9 @@ MSDAORA
 >  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = Yes** o **Integrated Security = SSPI** en lugar de la información de identificador de usuario y contraseña en la cadena de conexión.
 
 ## <a name="provider-specific-connection-parameters"></a>Parámetros de conexión específicos del proveedor
- El proveedor admite varios parámetros de conexión específicos del proveedor además de los definidos por ADO. Al igual que con las propiedades de conexión ADO, estas propiedades específicas del proveedor se pueden establecer a través de la colección [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) de una [conexión](../../../ado/reference/ado-api/connection-object-ado.md) o como parte de **ConnectionString**.
+ El proveedor admite varios parámetros de conexión específicos del proveedor además de los definidos por ADO. Al igual que con las propiedades de conexión ADO, estas propiedades específicas del proveedor se pueden establecer a través de la colección [Properties](../../reference/ado-api/properties-collection-ado.md) de una [conexión](../../reference/ado-api/connection-object-ado.md) o como parte de **ConnectionString**.
 
- Estos parámetros se describen totalmente en la [Referencia del programador de OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). El [Índice de propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) proporciona una referencia cruzada entre estos nombres de parámetro y las propiedades de OLE DB correspondientes.
+ Estos parámetros se describen totalmente en la [Referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)). El [Índice de propiedades dinámicas de ADO](../../reference/ado-api/ado-dynamic-property-index.md) proporciona una referencia cruzada entre estos nombres de parámetro y las propiedades de OLE DB correspondientes.
 
 |Parámetro|Descripción|
 |---------------|-----------------|
@@ -71,5 +71,5 @@ MSDAORA
 |**Aviso**|Indica si se debe preguntar al usuario mientras se establece una conexión.|
 |**Propiedades extendidas**|Cadena que contiene información de conexión ampliada específica del proveedor. Utilice esta propiedad únicamente para la información de conexión específica del proveedor que no se puede describir a través del mecanismo de propiedad.|
 
-## <a name="see-also"></a>Vea también
- [Propiedad ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Provider (propiedad](../../../ado/reference/ado-api/provider-property-ado.md) , ADO) [RECORDSET (objeto) (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>Consulte también
+ [Propiedad ConnectionString (ADO)](../../reference/ado-api/connectionstring-property-ado.md) [Provider (propiedad](../../reference/ado-api/provider-property-ado.md) , ADO) [RECORDSET (objeto) (ADO)](../../reference/ado-api/recordset-object-ado.md)

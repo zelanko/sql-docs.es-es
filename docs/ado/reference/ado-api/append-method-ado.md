@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *object*  
  Variable de objeto que representa el objeto que se va a anexar.  
   
- *Name*: nombre  
+ *Nombre*  
  Valor de **cadena** que contiene el nombre del nuevo objeto de **campo** y no debe tener el mismo nombre que ningún otro objeto de *los campos*.  
   
  *Tipo*  

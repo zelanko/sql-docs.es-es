@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e5e019760c4496b7dab769cb96fbd7b2eab4f47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7772a1c8583619288177dd5115f532b6d51532d9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453707"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806363"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Llamar a un procedimiento almacenado como un método en un objeto de conexión
 Puede llamar a un procedimiento almacenado como si fuera un método nativo en el objeto de **conexión** abierta asociado. Esto es similar a llamar a un comando con nombre en el objeto de **conexión** .  
@@ -80,4 +80,4 @@ Set objComm = Nothing
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Objeto de conexión (ADO)](../../reference/ado-api/connection-object-ado.md)

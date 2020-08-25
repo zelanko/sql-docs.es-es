@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f372951375954a4ed93213cc7cbfd7bc99ef1ecf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a047e28a701e242276255121c33c046537525bf7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453487"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806888"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>Desconectar y volver a conectar el conjunto de registros
 Una de las características más eficaces que se encuentran en ADO es la capacidad de abrir un conjunto de registros del lado cliente desde un origen de datos y, a continuación, desconectar el conjunto de registros del origen de datos. Una vez que se ha desconectado el conjunto de registros, se puede cerrar la conexión al origen de datos, con lo que se liberan los recursos del servidor que se usan para mantenerlo. Puede seguir viendo y editando los datos en el conjunto de registros mientras está desconectado y, posteriormente, volver a conectarse al origen de datos y enviar las actualizaciones en modo por lotes.  
@@ -28,4 +28,4 @@ Una de las características más eficaces que se encuentran en ADO es la capacid
  Usaremos un conjunto de registros desconectado más adelante en esta sección cuando se analice la persistencia del conjunto de registros para abordar un escenario en el que es necesario que los datos de un conjunto de registros estén disponibles para una aplicación mientras el equipo cliente no está conectado a una red.  
   
 ## <a name="see-also"></a>Consulte también  
- [Batch Mode](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](./batch-mode.md)

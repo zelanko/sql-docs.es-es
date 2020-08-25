@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399766"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Desinstalación de las revisiones de Analytics Platform System 
@@ -36,7 +36,7 @@ Para realizar estos pasos, necesitará:
   
 2.  Use la opción ejecutar como administrador para abrir un símbolo del sistema.  
   
-3.  Cambie los directorios `C:\PDWINST\Patches\<kbarticle>\media` a *<kbarticle>* , donde es el número de artículo de Knowledge base de la revisión que se va a desinstalar.  
+3.  Cambie los directorios a, `C:\PDWINST\Patches\<kbarticle>\media` donde *<kbarticle>* es el número de artículo de Knowledge base de la revisión que se va a desinstalar.  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  

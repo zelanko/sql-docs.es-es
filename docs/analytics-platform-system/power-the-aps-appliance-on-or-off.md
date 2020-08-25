@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400620"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Encendido o apagado del dispositivo para el sistema de plataforma de análisis
@@ -27,7 +27,7 @@ Las conexiones a los nodos PDW de SQL Server pueden realizarse mediante las dire
   
 ## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>Apagar el dispositivo  
   
-### <a name="before-you-begin"></a>Antes de empezar  
+### <a name="before-you-begin"></a>Antes de comenzar  
 Antes de apagar el dispositivo, debe finalizar toda la actividad en el dispositivo. Para finalizar toda la actividad:  
   
 -   Use la página **sesiones** de la consola de administración para identificar a los usuarios actuales. Póngase en contacto con ellos y pídale que cierre la sesión.  

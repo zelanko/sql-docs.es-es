@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453837"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806445"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Creación de instancias de eventos de ADO: ADO y WFC
 ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de ADO y presenta una interfaz de programación de aplicaciones simplificada. En general, ADO/WFC intercepta eventos de ADO, consolida los parámetros de evento en una única clase de eventos y, a continuación, llama al controlador de eventos.  
@@ -53,7 +53,7 @@ ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     El primer argumento es el tipo de objeto que envió el evento ([conexión](../../../ado/reference/ado-api/connection-object-ado.md) o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)) y el segundo argumento es el objeto de evento ADO/wfc (**ConnectionEvent** o **RecordsetEvent**).  
+     El primer argumento es el tipo de objeto que envió el evento ([conexión](../../reference/ado-api/connection-object-ado.md) o [conjunto de registros](../../reference/ado-api/recordset-object-ado.md)) y el segundo argumento es el objeto de evento ADO/wfc (**ConnectionEvent** o **RecordsetEvent**).  
   
      La firma del controlador de eventos es más sencilla que un evento de ADO. Sin embargo, todavía debe comprender el modelo de eventos de ADO para saber qué parámetros se aplican a un evento y cómo responder.  
   
@@ -61,9 +61,9 @@ ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de
   
 7.  Cuando haya terminado el procesamiento, quite el controlador de la lista de controladores de eventos ADO/WFC. Use el método con un **nombre como renameon**_eventName_(*controlador*).  
   
-## <a name="see-also"></a>Vea también  
- [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO: índice de sintaxis de WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [Parámetros de evento](../../../ado/guide/data/event-parameters.md)   
- [Cómo funcionan conjuntamente los controladores de eventos](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Tipos de eventos](../../../ado/guide/data/types-of-events.md)
+## <a name="see-also"></a>Consulte también  
+ [Resumen del controlador de eventos de ADO](./ado-event-handler-summary.md)   
+ [ADO: índice de sintaxis de WFC](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [Parámetros de evento](./event-parameters.md)   
+ [Cómo funcionan conjuntamente los controladores de eventos](./how-event-handlers-work-together.md)   
+ [Tipos de eventos](./types-of-events.md)

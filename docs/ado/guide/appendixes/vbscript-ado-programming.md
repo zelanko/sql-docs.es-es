@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8bea576e55537d2b4ee75fb8e7a0fcdebea4847e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 104070ca1f23a4bd142a3a7c755c6c0eb1f409fc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453967"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806751"
 ---
 # <a name="vbscript-ado-programming"></a>Programación ADO en VBScript
 ## <a name="creating-an-ado-project"></a>Crear un proyecto de ADO  
@@ -75,7 +75,7 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- En la documentación de ADO se incluyen ejemplos de VBScript más específicos. Para obtener más información, vea [ejemplos de código ADO en Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md).  
+ En la documentación de ADO se incluyen ejemplos de VBScript más específicos. Para obtener más información, vea [ejemplos de código ADO en Microsoft Visual Basic Scripting Edition](../../reference/ado-api/ado-code-examples-vbscript.md).  
   
 ## <a name="differences-between-vbscript-and-visual-basic"></a>Diferencias entre VBScript y Visual Basic  
  El uso de ADO con VBScript es similar al uso de ADO con Visual Basic de muchas maneras, incluida la forma en que se usa la sintaxis. Sin embargo, existen algunas diferencias importantes:  

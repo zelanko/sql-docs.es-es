@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4642a51b950c6f28566adaeccb6ddfb532d795be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 353e5ae0fe15fb21f04f6efcc97195a5e237b58e
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453727"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806397"
 ---
 # <a name="batch-mode"></a>Modo por lotes
 El modo por lotes está en vigor cuando la propiedad **LockType** está establecida en **adLockBatchOptimistic** y el proveedor admite la actualización por lotes. Ciertas opciones de tipo de bloqueo no están disponibles en función de la ubicación del cursor. Por ejemplo, un tipo de bloqueo pesimista no está disponible cuando **CursorLocation** está establecido en **adUseClient**. Por el contrario, un proveedor no admite un bloqueo optimista por lotes cuando la ubicación del cursor está en el servidor. Debe usar la actualización por lotes solo con un cursor Keyset o static.  
@@ -29,14 +29,14 @@ El modo por lotes está en vigor cuando la propiedad **LockType** está establec
   
  Esta sección contiene los siguientes temas:  
   
--   [Envío de actualizaciones: Método UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [Envío de actualizaciones: Método UpdateBatch](./sending-the-updates-updatebatch-method.md)  
   
--   [Filtrar registros actualizados](../../../ado/guide/data/filtering-for-updated-records.md)  
+-   [Filtrar registros actualizados](./filtering-for-updated-records.md)  
   
--   [Tratar actualizaciones con errores](../../../ado/guide/data/dealing-with-failed-updates.md)  
+-   [Tratar actualizaciones con errores](./dealing-with-failed-updates.md)  
   
--   [Detectar y resolver conflictos](../../../ado/guide/data/detecting-and-resolving-conflicts.md)  
+-   [Detectar y resolver conflictos](./detecting-and-resolving-conflicts.md)  
   
--   [Desconectar y volver a conectar el conjunto de registros](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
+-   [Desconectar y volver a conectar el conjunto de registros](./disconnecting-and-reconnecting-the-recordset.md)  
   
--   [Actualización de resultados unidos: Tabla única](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [Actualización de resultados unidos: Tabla única](./updating-joined-results-unique-table.md)

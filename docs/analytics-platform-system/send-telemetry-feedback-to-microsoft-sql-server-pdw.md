@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400359"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentarios de telemetría a Microsoft for Analytics Platform System
@@ -26,7 +26,7 @@ Analytics Platform System tiene una característica de telemetría opcional que 
 Para proporcionar la máxima protección de privacidad, APS se suministra sin habilitar la telemetría. Antes de habilitar esta característica, revise primero la [Microsoft Analytics Platform System declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=400902). Para participar, ejecute el script de PowerShell que se describe a continuación.  
   
 ## <a name="enable-telemetry"></a><a name="enable"></a>Habilitar la telemetría  
-**Reenvío de DNS:** El envío de datos de telemetría a Microsoft requiere Analytics Platform System para conectarse a Internet a través de un reenviador de DNS. Para habilitar esta característica, debe habilitar el reenvío de DNS en todos los hosts y máquinas virtuales de carga de trabajo. Invoque `Enable-RemoteMonitoring` el comando con `SetupDnsForwarder` la opción de configurar correctamente el reenvío de DNS y habilitar la telemetría. Invoque `Enable-RemoteMonitoring` el comando sin `SetupDnsForwarder` la opción cuando el reenvío de DNS ya esté configurado y solo desee habilitar la supervisión de latidos.  
+**Reenvío de DNS:** El envío de datos de telemetría a Microsoft requiere Analytics Platform System para conectarse a Internet a través de un reenviador de DNS. Para habilitar esta característica, debe habilitar el reenvío de DNS en todos los hosts y máquinas virtuales de carga de trabajo. Invoque el `Enable-RemoteMonitoring` comando con la `SetupDnsForwarder` opción de configurar correctamente el reenvío de DNS y habilitar la telemetría. Invoque el `Enable-RemoteMonitoring` comando sin la `SetupDnsForwarder` opción cuando el reenvío de DNS ya esté configurado y solo desee habilitar la supervisión de latidos.  
   
 > [!IMPORTANT]  
 > Al habilitar el reenvío DNS, se abre la conexión a Internet para todos los hosts y máquinas virtuales de carga de trabajo.  
@@ -35,9 +35,9 @@ Para proporcionar la máxima protección de privacidad, APS se suministra sin ha
   
 1.  Mediante una cuenta de administrador de dominio de dispositivo, conéctese al nodo de control (<strong>*appliance_domain*-CTL01</strong>) y abra un símbolo del sistema con las credenciales de administrador de Windows.  
   
-2.  Navegue hasta el siguiente directorio: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+2.  Navegue hasta el siguiente directorio: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-3.  Importar el módulo`Configure-RemoteMonitoring.ps1`  
+3.  Importar el módulo `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Para importar, debe usar dos puntos en el comando.  
@@ -48,12 +48,12 @@ Para proporcionar la máxima protección de privacidad, APS se suministra sin ha
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
     ```  
   
-4.  Invoque `Enable-RemoteMonitoring` el comando.  
+4.  Invoque el `Enable-RemoteMonitoring` comando.  
   
     > [!NOTE]  
     > El script supone que la conexión a Internet funciona correctamente y no valida la conexión a Internet.  
   
-    1.  La primera vez que habilite la telemetría, use el siguiente comando para asegurarse de que todos los reenviadores DNS estén configurados correctamente. En este ejemplo, reemplace la dirección `xx.xx.xx.xx` IP reenviada DNS por la dirección IP del reenviador DNS de su entorno.  
+    1.  La primera vez que habilite la telemetría, use el siguiente comando para asegurarse de que todos los reenviadores DNS estén configurados correctamente. En este ejemplo, reemplace la dirección IP reenviada DNS `xx.xx.xx.xx` por la dirección IP del reenviador DNS de su entorno.  
   
         ```  
         PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Enable-RemoteMonitoring -SetupDnsForwarder -DnsForwarderIp xx.xx.xx.xx  
@@ -85,9 +85,9 @@ Al deshabilitar la telemetría, se detendrán todas las operaciones que comunica
   
 1.  Con una cuenta de administrador de dominio de dispositivo, conéctese al nodo de control (<strong>*appliance_domain*-CTL01</strong>) y abra una ventana de PowerShell con privilegios de administrador.  
   
-2.  Navegue hasta el siguiente directorio: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+2.  Navegue hasta el siguiente directorio: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-3.  Importar el módulo`Configure-RemoteMonitoring.ps1`  
+3.  Importar el módulo `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Para importar, debe usar dos puntos en el comando.  
@@ -98,7 +98,7 @@ Al deshabilitar la telemetría, se detendrán todas las operaciones que comunica
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
     ```  
   
-4.  Invoque `Disable-RemoteMonitoring` el comando sin parámetros. Este comando dejará de enviar comentarios. (Esto no afectará a la supervisión local). Sin embargo, el comando no deshabilitará el reenviador de DNS ni deshabilitar la conectividad a Internet. Esto debe realizarse manualmente después de deshabilitar correctamente los comentarios.  
+4.  Invoque el `Disable-RemoteMonitoring` comando sin parámetros. Este comando dejará de enviar comentarios. (Esto no afectará a la supervisión local). Sin embargo, el comando no deshabilitará el reenviador de DNS ni deshabilitar la conectividad a Internet. Esto debe realizarse manualmente después de deshabilitar correctamente los comentarios.  
   
     **Ejemplo:**  
   

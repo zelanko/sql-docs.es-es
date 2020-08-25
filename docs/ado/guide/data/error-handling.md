@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26cbadd4f9c6a33c6dc43a6dcc88e0a92f23d65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092f1a767e614b3426db63c95ca8bf4e14954dd0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453447"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806868"
 ---
 # <a name="error-handling-in-ado"></a>Control de errores en ADO
 ADO utiliza varios métodos diferentes para notificar a una aplicación los errores que se producen. En esta sección se describen los tipos de errores que se pueden producir cuando se utiliza ADO y cómo se notifica a la aplicación. Termina realizando sugerencias sobre cómo controlar esos errores.  
@@ -34,7 +34,7 @@ ADO utiliza varios métodos diferentes para notificar a una aplicación los erro
   
 -   Si el error es específico del proveedor de datos, se colocan uno o varios objetos de **error** en la colección de **errores** del objeto de **conexión** que se usó para obtener acceso al almacén de datos cuando se produjo el error.  
   
--   Si el proceso que generó un evento también generó un error, la información de error se coloca en un objeto de **error** y se pasa como un parámetro al evento. Vea [control de eventos de ADO](../../../ado/guide/data/handling-ado-events.md) para obtener más información sobre los eventos.  
+-   Si el proceso que generó un evento también generó un error, la información de error se coloca en un objeto de **error** y se pasa como un parámetro al evento. Vea [control de eventos de ADO](./handling-ado-events.md) para obtener más información sobre los eventos.  
   
 -   Los problemas que se producen al procesar actualizaciones por lotes u otras operaciones masivas que implican un **conjunto de registros** se pueden indicar mediante la propiedad **status** del **conjunto de registros**. Por ejemplo, las infracciones de la restricción de esquema o los permisos insuficientes pueden especificarse mediante los valores de **RecordStatusEnum** .  
   
@@ -42,14 +42,14 @@ ADO utiliza varios métodos diferentes para notificar a una aplicación los erro
   
  Esta sección contiene los temas siguientes.  
   
--   [Errores de tiempo de ejecución de ADO](../../../ado/guide/data/ado-errors.md)  
+-   [Errores de tiempo de ejecución de ADO](./ado-errors.md)  
   
--   [Errores del proveedor](../../../ado/guide/data/provider-errors.md)  
+-   [Errores del proveedor](./provider-errors.md)  
   
--   [Información de Error relacionado con el campo](../../../ado/guide/data/field-related-error-information.md)  
+-   [Información de Error relacionado con el campo](./field-related-error-information.md)  
   
--   [Información de Error relacionado con el conjunto de registros](../../../ado/guide/data/recordset-related-error-information.md)  
+-   [Información de Error relacionado con el conjunto de registros](./recordset-related-error-information.md)  
   
--   [Control de errores en otros lenguajes](../../../ado/guide/data/handling-errors-in-other-languages.md)  
+-   [Control de errores en otros lenguajes](./handling-errors-in-other-languages.md)  
   
--   [Anticipación de errores](../../../ado/guide/data/anticipating-errors.md)
+-   [Anticipación de errores](./anticipating-errors.md)

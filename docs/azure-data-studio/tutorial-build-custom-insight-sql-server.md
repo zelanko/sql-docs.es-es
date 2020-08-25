@@ -2,19 +2,19 @@
 title: 'Tutorial: Compilación de un widget de información personalizada'
 description: En este tutorial se muestra cómo crear widgets de información personalizada y agregarlos a los paneles de la base de datos y el servidor en Azure Data Studio.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 14f3e502c3370056515f17915a370473d10b3b2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efe6473dc716b8e8a2c70349b98e6433105d401a
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661142"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745758"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Compilación de un widget de información personalizada
 

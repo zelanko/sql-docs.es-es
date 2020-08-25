@@ -12,16 +12,18 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 654648ba7206c3d5ce01a715a0ee24eae2d3212b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ae1efd305215d0e64287e6c0a7ad7aa9a70a36
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419009"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646458"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Modificación de los datos de una tabla temporal con control de versiones del sistema
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Se modifican los datos de una tabla temporal con control de versiones del sistema mediante instrucciones DML regulares con una diferencia importante: no es posible modificar directamente los datos de las columnas PERIOD. Al actualizar algún dato, se crea una nueva versión y la instancia antigua de cada fila actualizada se inserta en la tabla de historial. Al eliminar algún dato, la eliminación es lógica; es decir, la fila se mueve a la tabla de historial desde la actual, no se elimina directamente.
 

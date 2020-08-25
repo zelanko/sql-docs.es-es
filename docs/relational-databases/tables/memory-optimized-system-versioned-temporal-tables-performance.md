@@ -12,16 +12,18 @@ ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc57f67eae06d549ce518b57c0468b2303bcef99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a5b6e708d7c81dc358166e49b006324f2a2f43d
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460207"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645822"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Rendimiento de las tablas temporales con control de versiones del sistema con optimización para memoria
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 En este tema se describen algunos aspectos a tener en cuenta sobre el rendimiento cuando se utilizan tablas temporales con control de versiones optimizadas para memoria.
 
@@ -34,7 +36,7 @@ En este tema se describen algunos aspectos a tener en cuenta sobre el rendimient
 - El período de activación de la tarea de vaciado de datos no es configurable, pero puede aplicar el proceso invocando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).
 - Considere la posibilidad de usar el almacén de columnas en clúster como opción de almacenamiento para tablas de historial basadas en disco, en especial si tiene pensado ejecutar solicitudes de análisis sobre datos históricos que utilizan funciones de agregación o de división de particiones. En ese caso, el almacén de columnas en clúster será una buena opción para las tablas de historial dado que proporciona una buena compresión de los datos y un comportamiento que "facilita las inserciones", lo que coincide con el modo en que se generan los datos de historial.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Tablas temporales con control de versiones del sistema con tablas con optimización para memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [Creación de una tabla temporal con control de versiones del sistema con optimización para memoria](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)

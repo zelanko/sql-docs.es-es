@@ -18,15 +18,16 @@ ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfad7e7107c5391280331846e9275ef10112adb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c8972b0f407f7de3a4fa6f825e6a1b2b0d33953
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446407"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645915"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relaciones de claves externas.
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Puede modificar el lado de clave externa de una relación en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modificar los cambios de clave externa de una tabla cuyas columnas están relacionadas con las columnas de la tabla de clave principal.  
   

@@ -2,19 +2,19 @@
 title: Conexión a una base de datos de Azure SQL y consulta de ella
 description: Realice este inicio rápido para usar Azure Data Studio para conectarse a un servidor de Azure SQL Database y, luego, crear y consultar una base de datos.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411301"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766444"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Inicio rápido: Uso de Azure Data Studio para conectarse a una base de datos de Azure SQL y consultarla
 
@@ -24,13 +24,13 @@ En este inicio rápido, se usará Azure Data Studio para conectarse a un servido
 
 Para completar este inicio rápido, necesita Azure Data Studio y un servidor de Azure SQL Database.
 
-- [Instalación de Azure Data Studio](download.md)
+- [Instalación de Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 
 Si no tiene un servidor de Azure SQL, complete uno de los siguientes inicios rápidos de Azure SQL Database. Recuerde el nombre completo del servidor y las credenciales de inicio de sesión para los pasos posteriores:
 
-- [Creación de una base de datos con el portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [Creación de una base de datos con la CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [Creación de una base de datos con PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [Creación de una base de datos con el portal](/azure/sql-database/sql-database-get-started-portal)
+- [Creación de una base de datos con la CLI](/azure/sql-database/sql-database-get-started-cli)
+- [Creación de una base de datos con PowerShell](/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Conectar al servidor de Azure SQL Database
@@ -57,7 +57,7 @@ Use Azure Data Studio para establecer una conexión con el servidor de Azure SQL
 
 3. Seleccione **Conectar**.
 
-4. Si el servidor no tiene una regla de firewall que permita a Azure Data Studio conectarse, se abrirá el formulario **Crear nueva regla de firewall**. Rellene el formulario para crear una nueva regla de firewall. Para obtener detalles, vea [Reglas de firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. Si el servidor no tiene una regla de firewall que permita a Azure Data Studio conectarse, se abrirá el formulario **Crear nueva regla de firewall**. Rellene el formulario para crear una nueva regla de firewall. Para obtener detalles, vea [Reglas de firewall](/azure/sql-database/sql-database-firewall-configure).
 
    ![Nueva regla de firewall](media/quickstart-sql-database/firewall.png)  
 
@@ -150,7 +150,7 @@ Los resultados de la consulta muestran:
 
 ## <a name="clean-up-resources"></a>Limpieza de recursos
 
-Los artículos de inicio rápido posteriores se basan en los recursos creados aquí. Si planea trabajar en estos artículos, asegúrese de no eliminar estos recursos. De lo contrario, en Azure Portal, elimine los recursos que ya no necesite. Para obtener más información, vea [Limpieza de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Los artículos de inicio rápido posteriores se basan en los recursos creados aquí. Si planea trabajar en estos artículos, asegúrese de no eliminar estos recursos. De lo contrario, en Azure Portal, elimine los recursos que ya no necesite. Para obtener más información, vea [Limpieza de recursos](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

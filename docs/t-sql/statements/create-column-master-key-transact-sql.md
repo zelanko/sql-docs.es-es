@@ -27,15 +27,16 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3e6b80b2737517e0d78a5ca4adbd1c66e619fc8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488074"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645962"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Crea un objeto de metadatos de clave maestra de columna en una base de datos. Una entrada de metadatos de la clave maestra de columna representa una clave, almacenada en un almacén de claves externo. Esta clave protege (cifra) las claves de cifrado de columna cuando se usa [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Varias claves maestras de columna permiten la rotación de claves; cambie periódicamente la clave para mejorar la seguridad. Cree una clave maestra de columna en un almacén de claves y su objeto de metadatos relacionado en la base de datos mediante el Explorador de objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Para más detalles, vea [Información general de administración de claves de Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
   

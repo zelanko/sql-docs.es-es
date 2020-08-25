@@ -2,19 +2,19 @@
 title: Adición de funcionalidad adicional a través de la extensibilidad
 description: Más información sobre el modelo de extensibilidad y las áreas de extensibilidad clave para extender la funcionalidad de Azure Data Studio
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483863"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778444"
 ---
 # <a name="azure-data-studio-extensibility"></a>Extensibilidad de Azure Data Studio
 
@@ -111,7 +111,7 @@ Para hacer referencia al contenedor registrado, especifique el identificador del
 
 `dashboard.insights`
 
-Puede registrar información con dashboard.insights. Es similar a lo que se indica en [Tutorial: Compilación de un widget de información personalizada](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Puede registrar información con dashboard.insights. Es similar a lo que se indica en [Tutorial: Compilación de un widget de información personalizada](./tutorial-build-custom-insight-sql-server.md?view=sql-server-ver15)
 
 ```json
 "dashboard.insights": {

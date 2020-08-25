@@ -21,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 4fcda824e7d64bc5eb769f1f1e322430f7f2bb91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a90e0e787abdaedb4cde1a3461349fcd521c6cf9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479184"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646395"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Modifica una clave de cifrado de columna en una base de datos agregando o quitando un valor cifrado. Una clave de cifrado de columna puede tener hasta dos valores de cara a la rotación de la correspondiente clave maestra de columna. La clave de cifrado de columna se usa para cifrar columnas mediante [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) o [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Antes de agregar un valor de clave de cifrado de columna, debe definir la clave maestra de columna que se usó para cifrar el valor mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o la instrucción [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   

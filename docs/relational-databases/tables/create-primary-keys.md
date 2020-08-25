@@ -14,16 +14,17 @@ ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e02d35d518a71ac2381e7bfdce2006d261052dbe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f636cfad5425ec24a41984ddf3b650439b5c13a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427577"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646371"
 ---
 # <a name="create-primary-keys"></a>Crear claves principales
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Puede definir una clave principal en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al crear una clave principal, se crea automáticamente un índice agrupado único o bien un índice no agrupado si así se especifica.
 

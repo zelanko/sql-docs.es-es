@@ -16,15 +16,16 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2b1acccba4fe2f9a9285160bfc25071d7399873
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b422f4c34831c570b3ed6d9d54bcdb90d1d86754
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427467"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645942"
 ---
 # <a name="use-sparse-columns"></a>Usar columnas dispersas
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Las columnas dispersas son columnas normales que disponen de un almacenamiento optimizado para los valores NULL. Este tipo de columnas reducen los requisitos de espacio de los valores NULL a costa de una mayor sobrecarga a la hora de recuperar valores no NULL. Considere la posibilidad de utilizar columnas dispersas si el ahorro de espacio se sitúa entre el 20 y el 40 por ciento. Las columnas dispersas y los conjuntos de columnas se definen mediante las instrucciones [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
   

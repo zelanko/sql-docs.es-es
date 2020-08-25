@@ -2,19 +2,19 @@
 title: Copia de seguridad y restauración de una base de datos
 description: Siga este tutorial para aprender a hacer copias de seguridad y restaurar bases de datos mediante Azure Data Studio.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 5e276a830f5fa6abc9b1fcf70c540d4cb955d5af
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522429"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765804"
 ---
 # <a name="backup-and-restore-databases-using-azure-data-studio"></a>Copia de seguridad y restauración de bases de datos con Azure Data Studio
 
@@ -32,7 +32,7 @@ Para este tutorial, es necesario usar *TutorialDB* de SQL Server. Para crear la 
 
 * [Conectarse a una instancia de SQL Server y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
-Para este tutorial, es necesario conectarse a una base de datos de SQL Server. Azure SQL Database tiene copias de seguridad automatizadas, por lo que Azure Data Studio no realiza copias de seguridad y restauración de Azure SQL Database. Para obtener más información, vea [Copias de seguridad automatizadas](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+Para este tutorial, es necesario conectarse a una base de datos de SQL Server. Azure SQL Database tiene copias de seguridad automatizadas, por lo que Azure Data Studio no realiza copias de seguridad y restauración de Azure SQL Database. Para obtener más información, vea [Copias de seguridad automatizadas](/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="back-up-a-database"></a>Realizar una copia de seguridad de una base de datos
 

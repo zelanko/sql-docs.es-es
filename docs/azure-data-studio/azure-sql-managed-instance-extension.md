@@ -5,21 +5,21 @@ ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: dd1b610c5c8e99fcda446688d0dbdffe0a9dc51e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988605"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778484"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Panel de Azure SQL Managed Instance para Azure Data Studio (versión preliminar)
 
-La extensión de Azure SQL Managed Instance proporciona un panel para trabajar con una instancia de [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) en [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Esta extensión proporciona las características siguientes:
+La extensión de Azure SQL Managed Instance proporciona un panel para trabajar con una instancia de [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index) en [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Esta extensión proporciona las características siguientes:
 
 - Muestra las propiedades de SQL Managed Instance, incluidos los núcleos virtuales y el almacenamiento usado.
 - Supervisa el uso de CPU y de almacenamiento de las dos horas anteriores.
@@ -29,7 +29,7 @@ La extensión de Azure SQL Managed Instance proporciona un panel para trabajar c
 
 ## <a name="install"></a>Instalar
 
-Puede instalar la versión oficial de esta extensión. Siga los pasos descritos en la [documentación de Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+Puede instalar la versión oficial de esta extensión. Siga los pasos descritos en la [documentación de Azure Data Studio](./extensions.md).
 En el panel **Extensiones**, busque "Instancia administrada" e instálela ahí. Una vez que esté instalada, recibirá notificaciones automáticamente sobre las futuras actualizaciones de la extensión.
 
 Con la extensión instalada, verá la pestaña **Instancia administrada** en Azure Data Studio. Aquí puede encontrar información específica para su instancia administrada.
@@ -58,8 +58,8 @@ Es posible que vea algunas de las siguientes recomendaciones:
 - **Se está alcanzando el límite de espacio de almacenamiento**. Elimine los datos innecesarios o aumente el tamaño de almacenamiento de la instancia. Las bases de datos que alcanzan el límite de almacenamiento podrían no procesar, o incluso no leer, las consultas.
 - **Se está alcanzando el límite de rendimiento de la instancia**. Le informa cuando la carga está cerca del límite de su nivel de servicio: 22 MB/s para el nivel de servicio de uso general o 48 MB/s para el nivel de servicio crítico para la empresa. Tenga en cuenta que la instancia administrada limitará la carga para garantizar que se puedan realizar copias de seguridad.
 - **Presión de memoria**. Una baja duración prevista de la página o una gran cantidad de estadísticas de espera `PAGEIOLATCH` podrían indicar que la instancia expulsa páginas de la memoria e intenta constantemente cargar más páginas del disco.
-- **Límites del archivo de registro**. Si los archivos de registro están llegando a los [límites de E/S en el nivel de servicio de uso general](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), es posible que tenga que aumentar el tamaño del archivo de registro para obtener un mejor rendimiento.
-- **Límites de los archivos de datos**. Si sus archivos de datos están llegando a los [límites de E/S en el nivel de servicio de uso general](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), es posible que tenga que aumentar el tamaño del archivo para obtener un mejor rendimiento. Este problema podría generar presión de memoria y ralentizar las copias de seguridad.
+- **Límites del archivo de registro**. Si los archivos de registro están llegando a los [límites de E/S en el nivel de servicio de uso general](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), es posible que tenga que aumentar el tamaño del archivo de registro para obtener un mejor rendimiento.
+- **Límites de los archivos de datos**. Si sus archivos de datos están llegando a los [límites de E/S en el nivel de servicio de uso general](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), es posible que tenga que aumentar el tamaño del archivo para obtener un mejor rendimiento. Este problema podría generar presión de memoria y ralentizar las copias de seguridad.
 - **Problemas de disponibilidad**. Un gran número de archivos de registro virtuales puede afectar al rendimiento. Si se produce un error de proceso, estos problemas pueden dar lugar a una recuperación de bases de datos más larga en el nivel de servicio de uso general.
 
 Revise periódicamente estas recomendaciones, investigue las causas principales y tome medidas para corregir cualquier problema. La extensión SQL Managed Instance proporciona scripts que puede ejecutar para mitigar algunos de los problemas detectados.

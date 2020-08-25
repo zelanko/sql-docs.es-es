@@ -2,19 +2,19 @@
 title: Grupos de servidores
 description: Aprenda a agrupar servidores y bases de datos en grupos de servidores y asignar colores a los grupos. Puede arrastrar y colocar servidores en los grupos adecuados.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: e2936b06376ff130f7bc4e8f3402850c6b2afbef
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 293e90c5df31151cf75490f79dd92dc1b15fa02f
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411221"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745925"
 ---
 # <a name="server-groups-in-azure-data-studio"></a>Grupos de servidores en Azure Data Studio
 

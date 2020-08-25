@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf1757eac1d3c94c0d26439c3519060def03e27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453607"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806209"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Registro actual y el tamaño del conjunto de registros
-En esta sección se describe cómo buscar la posición actual del cursor en el **conjunto de registros** de ejemplo en el [ejemplo de código JScript para devolver un conjunto de registros](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
+En esta sección se describe cómo buscar la posición actual del cursor en el **conjunto de registros** de ejemplo en el [ejemplo de código JScript para devolver un conjunto de registros](./jscript-code-example-to-return-a-recordset.md).  
   
 ## <a name="current-record"></a>Registro actual  
  El registro actual del conjunto de registros corresponde a que apunta a la posición del cursor del objeto de **conjunto de registros** . Cuando se devuelve un objeto de **conjunto de registros** desde el origen de datos como resultado de la llamada a **Recordset. Open**, **Command.Exe**a la variable, o **Connection.Exe** de la misma (incluidos **Connection. NamedCommand** y **Connection. StoredProcedure**), el cursor se establece para apuntar al primer registro. En el conjunto de registros de ejemplo, el registro actual inicial es el elemento "de la" tripas orgánicas orgánicos ".  
@@ -38,14 +38,14 @@ En esta sección se describe cómo buscar la posición actual del cursor en el *
   
  En algunos casos, un proveedor o cursor no puede determinar el valor de **RecordCount** sin obtener primero todos los registros del origen de datos. Para garantizar un recuento preciso, llame al **conjunto de registros**. Método **MoveLast** antes de llamar a **Recordset. RecordCount**.  
   
- El objeto de **conjunto de registros** de ejemplo obtenido mediante el ejemplo de [código JScript](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) utiliza un cursor de solo avance, por lo que llamar a **RecordCount** en este objeto siempre da como resultado-1. Si cambia la línea de código que llama al **conjunto de registros**. **Open** Method tal y como se muestra en el ejemplo siguiente, la propiedad **RecordCount** devolverá el número real de registros capturados.  
+ El objeto de **conjunto de registros** de ejemplo obtenido mediante el ejemplo de [código JScript](./jscript-code-example-to-return-a-recordset.md) utiliza un cursor de solo avance, por lo que llamar a **RecordCount** en este objeto siempre da como resultado-1. Si cambia la línea de código que llama al **conjunto de registros**. **Open** Method tal y como se muestra en el ejemplo siguiente, la propiedad **RecordCount** devolverá el número real de registros capturados.  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   
 ```  
   
- Esto se debe a que los cursores estáticos con el [proveedor de OLE DB de Microsoft para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) admiten **RecordCount**. En este ejemplo, hay cinco registros y, por tanto, **RecordCount** debe proporcionar el valor de 5.  
+ Esto se debe a que los cursores estáticos con el [proveedor de OLE DB de Microsoft para SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md) admiten **RecordCount**. En este ejemplo, hay cinco registros y, por tanto, **RecordCount** debe proporcionar el valor de 5.  
   
  Esta sección contiene el siguiente tema.  
   
- [Límites de un conjunto de registros](../../../ado/guide/data/boundaries-of-a-recordset.md)
+ [Límites de un conjunto de registros](./boundaries-of-a-recordset.md)

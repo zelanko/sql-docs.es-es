@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a6cb124e51c232b0a3a26e9eb84316e3bde7ecd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f69b16392204722e4efd3dc91602a920316919d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441527"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776884"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventos WillChangeRecord y RecordChangeComplete (ADO)
-Se llama al evento **WillChangeRecord** antes de que cambien uno o más registros (filas) del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) . Se llama al evento **RecordChangeComplete** después de que uno o varios registros cambien.  
+Se llama al evento **WillChangeRecord** antes de que cambien uno o más registros (filas) del [conjunto de registros](./recordset-object-ado.md) . Se llama al evento **RecordChangeComplete** después de que uno o varios registros cambien.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,16 +39,16 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parámetros  
  *adReason*  
- Valor [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) que especifica el motivo de este evento. Su valor puede ser **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**o **adRsnFirstChange**.  
+ Valor [EventReasonEnum](./eventreasonenum.md) que especifica el motivo de este evento. Su valor puede ser **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**o **adRsnFirstChange**.  
   
  *cRecords*  
  Un valor **Long** que indica el número de registros que cambian (se ven afectados).  
   
  *pError*  
- Un objeto de [error](../../../ado/reference/ado-api/error-object.md) . Describe el error que se produjo si el valor de *adStatus* es **adStatusErrorsOccurred**; de lo contrario, no se establece.  
+ Un objeto de [error](./error-object.md) . Describe el error que se produjo si el valor de *adStatus* es **adStatusErrorsOccurred**; de lo contrario, no se establece.  
   
  *adStatus*  
- Valor de estado de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
+ Valor de estado de [EventStatusEnum](./eventstatusenum.md) .  
   
  Cuando se llama a **WillChangeRecord** , este parámetro se establece en **adStatusOK** si la operación que causó el evento se realizó correctamente. Se establece en **adStatusCantDeny** si este evento no puede solicitar la cancelación de la operación pendiente.  
   
@@ -62,12 +62,12 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  Objeto de **conjunto de registros** . **Conjunto de registros** para el que se produjo este evento.  
   
 ## <a name="remarks"></a>Observaciones  
- Es posible que se produzca un evento **WillChangeRecord** o **RecordChangeComplete** para el primer campo modificado de una fila debido a las siguientes operaciones de **conjunto de registros** : [Update](../../../ado/reference/ado-api/update-method.md), [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)y [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). El valor de [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) del **conjunto de registros** determina qué operaciones hacen que se produzcan los eventos.  
+ Es posible que se produzca un evento **WillChangeRecord** o **RecordChangeComplete** para el primer campo modificado de una fila debido a las siguientes operaciones de **conjunto de registros** : [Update](./update-method.md), [Delete](./delete-method-ado-recordset.md), [CancelUpdate](./cancelupdate-method-ado.md), [AddNew](./addnew-method-ado.md), [UpdateBatch](./updatebatch-method.md)y [CancelBatch](./cancelbatch-method-ado.md). El valor de [CursorType](./cursortype-property-ado.md) del **conjunto de registros** determina qué operaciones hacen que se produzcan los eventos.  
   
- Durante el evento **WillChangeRecord** , la propiedad del [filtro](../../../ado/reference/ado-api/filter-property.md) del **conjunto de registros** se establece en **adFilterAffectedRecords**. No se puede cambiar esta propiedad mientras se procesa el evento.  
+ Durante el evento **WillChangeRecord** , la propiedad del [filtro](./filter-property.md) del **conjunto de registros** se establece en **adFilterAffectedRecords**. No se puede cambiar esta propiedad mientras se procesa el evento.  
   
  Debe establecer el parámetro **adStatus** en **adStatusUnwantedEvent** para cada valor de **adReason** posible para detener por completo la notificación de eventos para cualquier evento que incluya un parámetro **adReason** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de modelo de eventos de ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Conexión ADO y los eventos de conjunto de registros](../../../ado/guide/data/ado-event-handler-summary.md)
+ [Ejemplo de modelo de eventos de ADO (VC + +)](./ado-events-model-example-vc.md)   
+ [Conexión ADO y los eventos de conjunto de registros](../../guide/data/ado-event-handler-summary.md)

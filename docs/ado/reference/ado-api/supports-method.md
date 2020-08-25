@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b0c05118b0f4b8f952b933bc2474bd1f0879865
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea56dc34cc2c69c7bb9ef30433a6c7c75f26c552
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441757"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777124"
 ---
 # <a name="supports-method"></a>Método Supports
-Determina si un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) especificado admite un tipo determinado de funcionalidad.  
+Determina si un objeto de [conjunto de registros](./recordset-object-ado.md) especificado admite un tipo determinado de funcionalidad.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ boolean = recordset.Supports(CursorOptions )
   
 #### <a name="parameters"></a>Parámetros  
  *CursorOptions*  
- Expresión **larga** que consta de uno o varios valores de [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) .  
+ Expresión **larga** que consta de uno o varios valores de [CursorOptionEnum](./cursoroptionenum.md) .  
   
 ## <a name="remarks"></a>Observaciones  
  Use el método **Supports** para determinar los tipos de funcionalidad que admite un objeto de **conjunto de registros** . Si el objeto de **conjunto de registros** admite las características cuyas constantes correspondientes están en *CursorOptions*, el método **Supports** devuelve **true**. De lo contrario, devuelve **false**.  
@@ -48,9 +48,9 @@ boolean = recordset.Supports(CursorOptions )
 >  Aunque el método **Supports** puede devolver **true** para una funcionalidad determinada, no garantiza que el proveedor pueda hacer que la característica esté disponible en todas las circunstancias. El método **Supports** simplemente devuelve si el proveedor puede admitir la funcionalidad especificada, suponiendo que se cumplen ciertas condiciones. Por ejemplo, el método **Supports** puede indicar que un objeto de **conjunto de registros** admite actualizaciones aunque el cursor se base en una combinación de varias tablas, algunas columnas de las cuales no son actualizables.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo del método Supports (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [Ejemplo del método Supports (VC + +)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
- [Propiedad CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [Ejemplo del método Supports (VB)](./supports-method-example-vb.md)   
+ [Ejemplo del método Supports (VC + +)](./supports-method-example-vc.md)   
+ [Propiedad CursorType (ADO)](./cursortype-property-ado.md)

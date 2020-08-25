@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86c12345995ff71ddb75121114ff70400d36aa05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25f633631f18ec1ec0ae5c954c541e4687f559da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439697"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769804"
 ---
 # <a name="parentcatalog-property-example-vc"></a>Ejemplo de propiedad ParentCatalog (VC++)
-En el código siguiente se muestra cómo utilizar la propiedad [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) para tener acceso a una propiedad específica del proveedor antes de anexar una tabla a un catálogo. La propiedad es **AutoIncrement**, que crea un campo de incremento automático en una base de datos de Microsoft Jet.  
+En el código siguiente se muestra cómo utilizar la propiedad [ParentCatalog](./parentcatalog-property-adox.md) para tener acceso a una propiedad específica del proveedor antes de anexar una tabla a un catálogo. La propiedad es **AutoIncrement**, que crea un campo de incremento automático en una base de datos de Microsoft Jet.  
   
 ```  
 // BeginCreateAutoIncrColumnCpp.cpp  

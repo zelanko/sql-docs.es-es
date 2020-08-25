@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d5af996442e0451a80265b7fbd9fb31450f9475
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a13e1dc23556888c2d4ee5c013472614b764d57
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439527"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769404"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions (método, ADOX)
-Especifica los permisos para un [Grupo](../../../ado/reference/adox-api/group-object-adox.md) o [usuario](../../../ado/reference/adox-api/user-object-adox.md) en un objeto.  
+Especifica los permisos para un [Grupo](./group-object-adox.md) o [usuario](./user-object-adox.md) en un objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,20 +37,20 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Nombre*  
+ *Name*: nombre  
  Valor de **cadena** que especifica el nombre del objeto para el que se van a establecer los permisos.  
   
  *ObjectType*  
- Un valor **Long** que puede ser una de las constantes [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , que especifica el tipo del objeto para el que se van a obtener permisos.  
+ Un valor **Long** que puede ser una de las constantes [ObjectTypeEnum](./objecttypeenum.md) , que especifica el tipo del objeto para el que se van a obtener permisos.  
   
  *Acción*  
- Un valor **Long** que puede ser una de las constantes [ActionEnum](../../../ado/reference/adox-api/actionenum.md) que especifica el tipo de acción que se debe realizar al establecer los permisos.  
+ Un valor **Long** que puede ser una de las constantes [ActionEnum](./actionenum.md) que especifica el tipo de acción que se debe realizar al establecer los permisos.  
   
  *Derechos*  
- Un valor **largo** que puede ser una máscara de máscara de una o varias de las constantes [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) , que indica los derechos que se van a establecer.  
+ Un valor **largo** que puede ser una máscara de máscara de una o varias de las constantes [RightsEnum](./rightsenum.md) , que indica los derechos que se van a establecer.  
   
  *Adopta*  
- Opcional. Un valor **Long** que puede ser una de las constantes de [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) , que especifica cómo heredarán estos permisos los objetos. El valor predeterminado es **adInheritNone**.  
+ Opcional. Un valor **Long** que puede ser una de las constantes de [InheritTypeEnum](./inherittypeenum.md) , que especifica cómo heredarán estos permisos los objetos. El valor predeterminado es **adInheritNone**.  
   
  *ObjectTypeId*  
  Opcional. Valor **Variant** que especifica el GUID de un tipo de objeto de proveedor que no está definido por la especificación OLE DB. Este parámetro es necesario si *objecttype* está establecido en **adPermObjProviderSpecific**; de lo contrario, no se utiliza.  
@@ -65,14 +65,14 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 
 :::row:::
     :::column:::
-        [Objeto Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+        [Objeto Group (ADOX)](./group-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [Objeto User (ADOX)](./user-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de métodos GetPermissions y SetPermissions (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [GetPermissions (método) (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [Name (propiedad, ADOX)](../../../ado/reference/adox-api/name-property-adox.md)
+ [Ejemplo de métodos GetPermissions y SetPermissions (VB)](./getpermissions-and-setpermissions-methods-example-vb.md)   
+ [GetPermissions (método) (ADOX)](./getpermissions-method-adox.md)   
+ [Name (propiedad, ADOX)](./name-property-adox.md)

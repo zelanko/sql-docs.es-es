@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 551c2ec7b8351ed17841ed1a4073c1a411dc77d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d67a4916328d5d6d435da1b8080be42e52b35f67
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451297"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776654"
 ---
 # <a name="affectenum"></a>AffectEnum
 Especifica qué registros se ven afectados por una operación.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|Si no hay ningún [filtro](../../../ado/reference/ado-api/filter-property.md) aplicado al conjunto de **registros**, afecta a todos los registros.<br /><br /> Si la propiedad **Filter** está establecida en un criterio de cadena (por ejemplo, "author = ' Smith '"), la operación afectará a los registros visibles en el capítulo actual.<br /><br /> Si la propiedad **Filter** está establecida en un miembro de [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) o una matriz de marcadores, la operación afectará a todas las filas del conjunto de **registros**. **Nota: adAffectAll** está oculto en el examinador de objetos Visual Basic.|  
+|**adAffectAll**|3|Si no hay ningún [filtro](./filter-property.md) aplicado al conjunto de **registros**, afecta a todos los registros.<br /><br /> Si la propiedad **Filter** está establecida en un criterio de cadena (por ejemplo, "author = ' Smith '"), la operación afectará a los registros visibles en el capítulo actual.<br /><br /> Si la propiedad **Filter** está establecida en un miembro de [FilterGroupEnum](./filtergroupenum.md) o una matriz de marcadores, la operación afectará a todas las filas del conjunto de **registros**. **Nota: adAffectAll** está oculto en el examinador de objetos Visual Basic.|  
 |**adAffectAllChapters**|4|Afecta a todos los registros de todos los capítulos del mismo nivel del **conjunto de registros**, incluidos los que no están visibles a través de cualquier **filtro** aplicado actualmente.|  
 |**adAffectCurrent**|1|Afecta solo al registro actual.|  
-|**adAffectGroup**|2|Afecta únicamente a los registros que cumplen la configuración de propiedad de [filtro](../../../ado/reference/ado-api/filter-property.md) actual. Debe establecer la propiedad **Filter** en un valor **FilterGroupEnum** o una matriz de **marcadores** para usar esta opción.|  
+|**adAffectGroup**|2|Afecta únicamente a los registros que cumplen la configuración de propiedad de [filtro](./filter-property.md) actual. Debe establecer la propiedad **Filter** en un valor **FilterGroupEnum** o una matriz de **marcadores** para usar esta opción.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
  Paquete: **com. ms. wfc. Data**  
@@ -47,11 +47,11 @@ Especifica qué registros se ven afectados por una operación.
 
 :::row:::
     :::column:::
-        [Método CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
-        [Delete (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+        [Método CancelBatch (ADO)](./cancelbatch-method-ado.md)  
+        [Delete (método) (conjunto de registros ADO)](./delete-method-ado-recordset.md)  
     :::column-end:::
     :::column:::
-        [Método Resync](../../../ado/reference/ado-api/resync-method.md)  
-        [Método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
+        [Método Resync](./resync-method.md)  
+        [Método UpdateBatch](./updatebatch-method.md)  
     :::column-end:::
 :::row-end:::

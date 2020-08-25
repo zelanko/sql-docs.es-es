@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9682664c87db42920c2ae78f338103c1d8c13d64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 898f0bdb7571d31d1d7e943bae0937ce198433ce
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451007"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776284"
 ---
 # <a name="charset-property-ado"></a>Propiedad de conjunto de caracteres (ADO)
-Indica el juego de caracteres en el que se debe traducir el contenido de una [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) de texto para el almacenamiento en el búfer interno del objeto de **secuencia** .  
+Indica el juego de caracteres en el que se debe traducir el contenido de una [secuencia](./stream-object-ado.md) de texto para el almacenamiento en el búfer interno del objeto de **secuencia** .  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor de **cadena** que especifica el juego de caracteres al que se traducirá el contenido de la **secuencia** . El valor predeterminado es **Unicode**. Los valores permitidos son cadenas típicas que se pasan a través de la interfaz como nombres de juegos de caracteres de Internet (por ejemplo, "ISO-8859-1", "Windows-1252", etc.). Para obtener una lista de los nombres de los juegos de caracteres que conoce un sistema, vea las subclaves de HKEY_CLASSES_ROOT \MIME\Database\Charset en el registro de Windows.  
@@ -32,11 +32,11 @@ Indica el juego de caracteres en el que se debe traducir el contenido de una [se
 ## <a name="remarks"></a>Observaciones  
  En un objeto de **flujo** de texto, los datos de texto se almacenan en el juego de caracteres especificado por la propiedad **CharSet** . El valor predeterminado es Unicode. La propiedad **CharSet** se usa para convertir los datos que entran en la **secuencia** o salen de la **secuencia**. Por ejemplo, si la **secuencia** contiene datos ISO-8859-1 y esos datos se copian en un BSTR, el objeto de **secuencia** convertirá los datos a Unicode. Lo contrario también es cierto.  
   
- En el caso de una **secuencia**abierta, la [posición](../../../ado/reference/ado-api/position-property-ado.md) actual debe estar al principio de la **secuencia** (0) para poder establecer **CharSet**.  
+ En el caso de una **secuencia**abierta, la [posición](./position-property-ado.md) actual debe estar al principio de la **secuencia** (0) para poder establecer **CharSet**.  
   
- **CharSet** solo se utiliza con objetos de **flujo** de texto (el[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**). Esta propiedad se omite si el **tipo** es **adTypeBinary**.  
+ **CharSet** solo se utiliza con objetos de **flujo** de texto (el[tipo](./type-property-ado-stream.md) es **adTypeText**). Esta propiedad se omite si el **tipo** es **adTypeBinary**.  
   
- Para obtener un ejemplo de código, vea [Step 4: rellenar el cuadro de texto details](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
+ Para obtener un ejemplo de código, vea [Step 4: rellenar el cuadro de texto details](../../guide/data/step-4-populate-the-details-text-box.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Objeto de secuencia (ADO)](./stream-object-ado.md)

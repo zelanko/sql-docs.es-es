@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 290155a3e6ea7e8ec0110d2bc2672cc74f6895b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0df71772820d5871c32e40827400b8cdd40db99d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451237"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776484"
 ---
 # <a name="appendchunk-method-ado"></a>Método AppendChunk (ADO)
-Anexa datos a un [campo](../../../ado/reference/ado-api/field-object.md)de datos binario o de texto grande, o a un objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) .  
+Anexa datos a un [campo](./field-object.md)de datos binario o de texto grande, o a un objeto de [parámetro](./parameter-object.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,14 +45,14 @@ object.AppendChunk Data
  Use el método **AppendChunk** en un **campo** o un objeto de **parámetro** para rellenarlo con datos binarios o de caracteres largos. En situaciones en las que la memoria del sistema es limitada, puede utilizar el método **AppendChunk** para manipular valores largos en partes en lugar de en su totalidad.  
   
 ## <a name="field"></a>Campo  
- Si el **bit adFldLong** en la propiedad [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) de un objeto **Field** está establecido en **true**, puede usar el método **AppendChunk** para ese campo.  
+ Si el **bit adFldLong** en la propiedad [attributes](./attributes-property-ado.md) de un objeto **Field** está establecido en **true**, puede usar el método **AppendChunk** para ese campo.  
   
- La primera llamada a **AppendChunk** en un objeto de **campo** escribe datos en el campo, sobrescribiendo los datos existentes. Las llamadas posteriores a **AppendChunk** se agregan a los datos existentes. Si va a anexar datos a un campo y, a continuación, establece o lee el valor de otro campo en el registro actual, ADO supone que ha terminado de anexar los datos al primer campo. Si llama de nuevo al método **AppendChunk** en el primer campo, ADO interpreta la llamada como una nueva operación de **AppendChunk** y sobrescribe los datos existentes. El acceso a los campos de otros objetos de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que no son clones del primer objeto de **conjunto de registros** no interrumpirá las operaciones de **AppendChunk** .  
+ La primera llamada a **AppendChunk** en un objeto de **campo** escribe datos en el campo, sobrescribiendo los datos existentes. Las llamadas posteriores a **AppendChunk** se agregan a los datos existentes. Si va a anexar datos a un campo y, a continuación, establece o lee el valor de otro campo en el registro actual, ADO supone que ha terminado de anexar los datos al primer campo. Si llama de nuevo al método **AppendChunk** en el primer campo, ADO interpreta la llamada como una nueva operación de **AppendChunk** y sobrescribe los datos existentes. El acceso a los campos de otros objetos de [conjunto de registros](./recordset-object-ado.md) que no son clones del primer objeto de **conjunto de registros** no interrumpirá las operaciones de **AppendChunk** .  
   
  Si no hay ningún registro actual al llamar a **AppendChunk** en un objeto **Field** , se produce un error.  
   
 > [!NOTE]
->  El método **AppendChunk** no funciona en objetos de **campo** de un objeto de [objeto de registro (ADO)](../../../ado/reference/ado-api/record-object-ado.md) . No realiza ninguna operación y producirá un error en tiempo de ejecución.  
+>  El método **AppendChunk** no funciona en objetos de **campo** de un objeto de [objeto de registro (ADO)](./record-object-ado.md) . No realiza ninguna operación y producirá un error en tiempo de ejecución.  
   
 ## <a name="parameter"></a>Parámetro  
  Si el **bit adParamLong** en la propiedad **attributes** de un objeto de **parámetro** se establece en **true**, puede usar el método **AppendChunk** para ese parámetro.  
@@ -63,15 +63,15 @@ object.AppendChunk Data
 
 :::row:::
     :::column:::
-        [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+        [Objeto Field](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)  
+        [Objeto Parameter](./parameter-object.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de los métodos AppendChunk y GetChunk (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
- [Ejemplo de los métodos AppendChunk y GetChunk (VC + +)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
- [Propiedad Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Método GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [Ejemplo de los métodos AppendChunk y GetChunk (VB)](./appendchunk-and-getchunk-methods-example-vb.md)   
+ [Ejemplo de los métodos AppendChunk y GetChunk (VC + +)](./appendchunk-and-getchunk-methods-example-vc.md)   
+ [Propiedad Attributes (ADO)](./attributes-property-ado.md)   
+ [Método GetChunk (ADO)](./getchunk-method-ado.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fd4f1229e5473cbc120df7a88d18cfef9ceac56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a08cabb34fed31ffd8b843fcbb9f76a29b6016b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439957"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770284"
 ---
 # <a name="indexes-append-method-example-vb"></a>Ejemplo de método Append de índices (VB)
 En el código siguiente se muestra cómo crear un nuevo índice. El índice se encuentra en dos columnas de la tabla.  
@@ -82,6 +82,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Append (método) (índices ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Index (objeto) (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Colección de índices (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
+ [Append (método) (índices ADOX)](./append-method-adox-indexes.md)   
+ [Index (objeto) (ADOX)](./index-object-adox.md)   
+ [Colección de índices (ADOX)](./indexes-collection-adox.md)

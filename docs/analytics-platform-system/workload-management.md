@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399445"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Administración de cargas de trabajo en Analytics Platform System
@@ -60,8 +60,8 @@ En la tabla siguiente se describen las clases de recursos y sus asignaciones de 
   
 |Clase de recurso|Importancia de la solicitud|Uso máximo de memoria *|Espacios de simultaneidad (máximo = 32)|Descripción|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|default|Medio|400 MB|1|De forma predeterminada, se permite a cada inicio de sesión una pequeña cantidad de memoria y recursos de simultaneidad para sus solicitudes.<br /><br />Cuando se agrega un inicio de sesión a una clase de recurso, la nueva clase tiene prioridad. Cuando se quita un inicio de sesión de todas las clases de recursos, el inicio de sesión vuelve a la asignación de recursos predeterminada.|  
-|MediumRC|Medio|1200 MB|3|Ejemplos de solicitudes que podrían necesitar la clase de recursos Medium:<br /><br />Operaciones CTAS que tienen combinaciones hash de gran tamaño.<br /><br />Seleccione operaciones que necesiten más memoria para evitar el almacenamiento en caché en disco.<br /><br />Carga de datos en índices de almacén de columnas en clúster.<br /><br />Compilar, recompilar y reorganizar índices de almacén de columnas en clúster para tablas más pequeñas que tienen 10-15 columnas.|  
+|default|Media|400 MB|1|De forma predeterminada, se permite a cada inicio de sesión una pequeña cantidad de memoria y recursos de simultaneidad para sus solicitudes.<br /><br />Cuando se agrega un inicio de sesión a una clase de recurso, la nueva clase tiene prioridad. Cuando se quita un inicio de sesión de todas las clases de recursos, el inicio de sesión vuelve a la asignación de recursos predeterminada.|  
+|MediumRC|Media|1200 MB|3|Ejemplos de solicitudes que podrían necesitar la clase de recursos Medium:<br /><br />Operaciones CTAS que tienen combinaciones hash de gran tamaño.<br /><br />Seleccione operaciones que necesiten más memoria para evitar el almacenamiento en caché en disco.<br /><br />Carga de datos en índices de almacén de columnas en clúster.<br /><br />Compilar, recompilar y reorganizar índices de almacén de columnas en clúster para tablas más pequeñas que tienen 10-15 columnas.|  
 |Largerc|Alto|2,8 GB|7|Ejemplos de solicitudes que podrían necesitar la clase de recursos grandes:<br /><br />Operaciones CTAS muy grandes que tienen combinaciones de hash enormes o que contienen agregaciones de gran tamaño, como las cláusulas ORDER BY o GROUP BY de gran tamaño.<br /><br />Seleccione operaciones que requieran grandes cantidades de memoria para operaciones como combinaciones hash o agregaciones como cláusulas ORDER BY o GROUP BY.<br /><br />Carga de datos en índices de almacén de columnas en clúster.<br /><br />Compilar, recompilar y reorganizar índices de almacén de columnas en clúster para tablas más pequeñas que tienen 10-15 columnas.|  
 |xlargerc|Alto|8,4 GB|22|La clase de recursos extra grande es para las solicitudes que podrían requerir un mayor consumo de recursos en tiempo de ejecución.|  
   
@@ -177,7 +177,7 @@ Vistas del sistema relacionadas que se exponen desde el SQL Server DMV en los no
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Tareas relacionadas  
 [Tareas de administración de cargas de trabajo](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

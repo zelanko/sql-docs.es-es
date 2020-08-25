@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49964c5dc3f9f6402c853f4adddabd798db4b2f0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442087"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777454"
 ---
 # <a name="sort-property-example-vb"></a>Ejemplo de la propiedad de ordenación (VB)
-En este ejemplo se usa la propiedad [Sort](../../../ado/reference/ado-api/sort-property.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para reordenar las filas de un **conjunto de registros** derivado de la tabla ***authors*** de la base de datos ***pubs*** . Una rutina de utilidad secundaria imprime cada fila.  
+En este ejemplo se usa la propiedad [Sort](./sort-property.md) del objeto de [conjunto de registros](./recordset-object-ado.md) para reordenar las filas de un **conjunto de registros** derivado de la tabla ***authors*** de la base de datos ***pubs*** . Una rutina de utilidad secundaria imprime cada fila.  
   
 ```  
 'BeginSortVB  
@@ -111,5 +111,5 @@ Attribute VB_Name = "Sort"
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propiedad de ordenación](../../../ado/reference/ado-api/sort-property.md)
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)   
+ [Propiedad de ordenación](./sort-property.md)

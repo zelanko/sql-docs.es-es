@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d8a29f2e1f35ddddc28e4aa3fb3c52c649e3056
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2f6f3fa47c53a5a6873024284e58604a8e8a2c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453537"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806914"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Eliminar registros mediante el método Delete
-El uso del método **Delete** marca el registro actual o un grupo de registros en un objeto de **conjunto de registros** para su eliminación. Si el objeto de **conjunto de registros** no permite la eliminación de registros, se produce un error. Si está en modo de actualización inmediata, las eliminaciones se producen inmediatamente en la base de datos. Si un registro no se puede eliminar correctamente (debido a infracciones de la integridad de la base de datos, por ejemplo), el registro permanecerá en modo de edición después de la llamada a **Update.** Esto significa que debe cancelar la actualización mediante [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de salir del registro actual (por ejemplo, con [Close](../../../ado/reference/ado-api/close-method-ado.md), [Move](../../../ado/reference/ado-api/move-method-ado.md)o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
+El uso del método **Delete** marca el registro actual o un grupo de registros en un objeto de **conjunto de registros** para su eliminación. Si el objeto de **conjunto de registros** no permite la eliminación de registros, se produce un error. Si está en modo de actualización inmediata, las eliminaciones se producen inmediatamente en la base de datos. Si un registro no se puede eliminar correctamente (debido a infracciones de la integridad de la base de datos, por ejemplo), el registro permanecerá en modo de edición después de la llamada a **Update.** Esto significa que debe cancelar la actualización mediante [CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md) antes de salir del registro actual (por ejemplo, con [Close](../../reference/ado-api/close-method-ado.md), [Move](../../reference/ado-api/move-method-ado.md)o [NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)).  
   
  Si está en modo de actualización por lotes, los registros se marcan para su eliminación de la memoria caché y la eliminación real se produce cuando se llama al método **UpdateBatch** . (Para ver los registros eliminados, establezca la propiedad **Filter** en **adFilterAffectedRecords** después de llamar a **Delete** ).  
   

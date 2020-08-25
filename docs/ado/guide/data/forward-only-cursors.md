@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83cfc60dcbc3efa51b5e1465ff09c80b4db75ead
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e26b3f364595adea7e1eadc65114bffb19db2639
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453367"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806821"
 ---
 # <a name="forward-only-cursors"></a>Cursores de solo avance
 El tipo de cursor predeterminado típico, denominado cursor de solo avance (o no desplazable), solo puede avanzar por el conjunto de resultados. Un cursor de solo avance no admite el desplazamiento (la capacidad de moverse hacia delante y hacia atrás en el conjunto de resultados); solo admite la captura de filas desde el principio hasta el final del conjunto de resultados. Con algunos cursores de solo avance (por ejemplo, con la biblioteca de cursores SQL Server), todas las instrucciones INSERT, Update y DELETE realizadas por el usuario actual (o confirmadas por otros usuarios) que afectan a las filas del conjunto de resultados son visibles a medida que se capturan las filas. Pero como el cursor no se puede desplazar hacia atrás, los cambios realizados en las filas de la base de datos tras capturar la fila no son visibles a través del cursor.  
@@ -31,6 +31,6 @@ El tipo de cursor predeterminado típico, denominado cursor de solo avance (o no
  Si la aplicación no requiere desplazarse por el conjunto de resultados, el cursor de solo avance es la mejor manera de recuperar los datos rápidamente con la menor cantidad de sobrecarga. Use el **AdOpenForwardOnly CursorTypeEnum** para indicar que desea usar un cursor de solo avance en ADO.  
   
 ## <a name="see-also"></a>Consulte también  
- [Cursores estáticos](../../../ado/guide/data/static-cursors.md)   
- [Cursores de conjunto de claves](../../../ado/guide/data/keyset-cursors.md)   
- [Cursores dinámicos](../../../ado/guide/data/dynamic-cursors.md)
+ [Cursores estáticos](./static-cursors.md)   
+ [Cursores de conjunto de claves](./keyset-cursors.md)   
+ [Cursores dinámicos](./dynamic-cursors.md)

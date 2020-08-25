@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c197a7eb88472f609d2d2713b292bc5f98c88c9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b71e3298c18b10fa34615e3382d561f454b5eb4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439897"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770174"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls (propiedad, ADOX)
 Indica si los registros que tienen valores NULL en sus campos de índice tienen entradas de índice.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece y devuelve un valor de [AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md) . El valor predeterminado es **adIndexNullsDisallow**.  
+ Establece y devuelve un valor de [AllowNullsEnum](./allownullsenum.md) . El valor predeterminado es **adIndexNullsDisallow**.  
   
 ## <a name="remarks"></a>Observaciones  
- Esta propiedad es de solo lectura en los objetos de [Índice](../../../ado/reference/adox-api/index-object-adox.md) ya anexados a una colección.  
+ Esta propiedad es de solo lectura en los objetos de [Índice](./index-object-adox.md) ya anexados a una colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Objeto Index (ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de propiedad IndexNulls (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
+ [Ejemplo de propiedad IndexNulls (VB)](./indexnulls-property-example-vb.md)

@@ -17,41 +17,41 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d959578d647e74248fdb58b8c27269c0454c304
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001472bd748d0821beae62801b889024cb699022
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439477"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769264"
 ---
 # <a name="tables-collection-adox"></a>Colección de tablas (ADOX)
-Contiene todos los objetos de [tabla](../../../ado/reference/adox-api/table-object-adox.md) de un catálogo.  
+Contiene todos los objetos de [tabla](./table-object-adox.md) de un catálogo.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) de una colección **tables** es único para ADOX. Puede:  
+ El método [Append](./append-method-adox-tables.md) de una colección **tables** es único para ADOX. Puede:  
   
 -   Agregue una nueva tabla a la colección con el método **Append** .  
   
  Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
--   Obtener acceso a una tabla de la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
+-   Obtener acceso a una tabla de la colección con la propiedad [Item](../ado-api/item-property-ado.md) .  
   
--   Devuelve el número de tablas contenidas en la colección con la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Devuelve el número de tablas contenidas en la colección con la propiedad [Count](../ado-api/count-property-ado.md) .  
   
--   Quite una tabla de la colección con el método [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
+-   Quite una tabla de la colección con el método [Delete](./delete-method-adox-collections.md) .  
   
--   Actualice los objetos de la colección para que reflejen el esquema de la base de datos actual con el método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Actualice los objetos de la colección para que reflejen el esquema de la base de datos actual con el método [Refresh](../ado-api/refresh-method-ado.md) .  
   
  Algunos proveedores pueden devolver otros objetos de esquema, como una vista, en la colección de **tablas** . Por lo tanto, algunas colecciones ADOX pueden contener varias referencias al mismo objeto. Si elimina el objeto de una colección, el cambio no será visible en otra colección que haga referencia al objeto eliminado hasta que se llame al método **Refresh** en la colección. Por ejemplo, con el proveedor de OLE DB para Microsoft Jet, las vistas se devuelven con la colección **tables** . Si quita una vista, debe actualizar la colección de **tablas** antes de que la colección refleje el cambio.  
   
  Esta sección contiene el siguiente tema.  
   
--   [Eventos, métodos y propiedades de la colección de tablas](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
+-   [Eventos, métodos y propiedades de la colección de tablas](./tables-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de propiedad ActiveConnection de catálogo (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Ejemplo de propiedad Name, métodos Append de columnas y tablas (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Ejemplo de propiedad de tipo de tabla método de cierre de conexión (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Ejemplo de las propiedades de método Append, tipo de clave, RelatedColumn, RelatedTable y UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Ejemplo de propiedad ActiveConnection de catálogo (VB)](./catalog-activeconnection-property-example-vb.md)   
+ [Ejemplo de propiedad Name, métodos Append de columnas y tablas (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Ejemplo de propiedad de tipo de tabla método de cierre de conexión (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Ejemplo de las propiedades de método Append, tipo de clave, RelatedColumn, RelatedTable y UpdateRule (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Objeto Table (ADOX)](./table-object-adox.md)

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400930"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Componentes de almacenamiento de datos paralelos: Analytics Platform System
@@ -67,7 +67,7 @@ El servicio de movimiento de datos (DMS) forma parte de la "salsa secreta" de PD
 La consola de administración es una aplicación web que presenta la información sobre el estado del dispositivo, el estado y el rendimiento.  
   
 ### <a name="configuration-manager"></a>Administrador de configuración  
-El Configuration Manager (dwconfig. exe) es la herramienta que los administradores de dispositivos usan para configurar el sistema de plataforma de análisis.  
+El Configuration Manager (dwconfig.exe) es la herramienta que los administradores de dispositivos usan para configurar Analytics Platform System.  
   
 ### <a name="control-node-databases"></a>Controlar las bases de datos de nodo  
 SQL Server administra todas las bases de datos del nodo de control.  
@@ -118,7 +118,7 @@ Windows Server Update Services (WSUS) para aplicar o quitar actualizaciones de W
 ### <a name="windows-server"></a>Windows Server  
 Todos los hosts y las máquinas virtuales del dispositivo ejecutan el sistema operativo Windows Server.  
   
-### <a name="failover-clustering"></a>Clúster de conmutación por error  
+### <a name="failover-clustering"></a>Clústeres de conmutación por error  
 Los clústeres de conmutación por error de Windows proporcionan la capacidad de reiniciar procesos en un host pasivo en caso de que se produzca un error en un host.  
   
 ### <a name="storage-spaces"></a>Espacios de almacenamiento  
@@ -138,7 +138,7 @@ La tecnología de polybase integra PDW de SQL Server datos con datos de Hadoop e
   
 ## <a name="query-tools"></a>Herramientas de consulta   
   
-Las consultas se escriben\-con Transact SQL modificado para ajustarse a la naturaleza MPP de las consultas. Todas las consultas se envían al nodo de control, que genera un plan de consulta paralelo para ejecutar la consulta en los nodos de proceso.  
+Las consultas se escriben con Transact \- SQL modificado para ajustarse a la naturaleza MPP de las consultas. Todas las consultas se envían al nodo de control, que genera un plan de consulta paralelo para ejecutar la consulta en los nodos de proceso.  
   
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 SQL Server Data Tools se ejecuta dentro de Visual Studio y es nuestra herramienta de GUI recomendada para enviar consultas a PDW de SQL Server. Es similar a SQL Server Management Studio permitiéndole desplazarse por un explorador de objetos.  
@@ -149,7 +149,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
 -->
   
 ### <a name="sqlcmd-command-line-query-tool"></a>Herramienta de consulta de línea de comandos SQLCMD  
-Sqlcmd es la SQL Server herramienta de línea de comandos para ejecutar\-instrucciones de Transact SQL y comandos del sistema. Funciona con PDW de SQL Server y es nuestra herramienta de línea de comandos recomendada para consultar PDW de SQL Server. Con SQLCMD, puede ejecutar instrucciones\-Transact-SQL de forma interactiva desde la línea de comandos, como un archivo por lotes o desde Windows PowerShell.  
+Sqlcmd es la SQL Server herramienta de línea de comandos para ejecutar \- instrucciones de Transact SQL y comandos del sistema. Funciona con PDW de SQL Server y es nuestra herramienta de línea de comandos recomendada para consultar PDW de SQL Server. Con SQLCMD, puede ejecutar \- instrucciones Transact-SQL de forma interactiva desde la línea de comandos, como un archivo por lotes o desde Windows PowerShell.  
   
 <!-- MISSING LINKS
 
@@ -165,7 +165,7 @@ For more information, see [Connect With SQL Server Integration Services for Quer
 --> 
   
 ### <a name="linked-server"></a>Servidor vinculado  
-Mediante el uso de un SQL Server conexión de servidor vinculado, puede utilizar SQL Server\-para enviar instrucciones Transact SQL a PDW de SQL Server. 
+Mediante el uso de un SQL Server conexión de servidor vinculado, puede utilizar SQL Server para enviar \- instrucciones Transact SQL a PDW de SQL Server. 
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md). 
 --> 

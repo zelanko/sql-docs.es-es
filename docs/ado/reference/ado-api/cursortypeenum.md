@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: beb6afdd93d69ea920acee3840dc6c0bc44d181e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e0d37d5aad3f27a61cf3ae7c8dad9b27149e09b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444247"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775474"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
-Especifica el tipo de cursor utilizado en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Especifica el tipo de cursor utilizado en un objeto de [conjunto de registros](./recordset-object-ado.md) .  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|Utiliza un cursor dinámico. Las adiciones, cambios y eliminaciones de otros usuarios son visibles y se permiten todos los tipos de movimiento a través del **conjunto de registros** , excepto los marcadores, si el proveedor no los admite.|  
 |**adOpenForwardOnly**|0|Predeterminada. Utiliza un cursor de solo avance. Es idéntico a un cursor estático, salvo que solo puede desplazarse hacia delante por los registros. Esto mejora el rendimiento cuando se necesita hacer un solo paso a través de un **conjunto de registros**.|  
@@ -46,4 +46,4 @@ Especifica el tipo de cursor utilizado en un objeto de [conjunto de registros](.
 |AdoEnums. CursorType. no especificado|  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Propiedad CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [Propiedad CursorType (ADO)](./cursortype-property-ado.md)

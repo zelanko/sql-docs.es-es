@@ -16,31 +16,31 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35846bf873ff98ff15e2581c36e1963b7ddcd08c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83ba6960e6e7f81db55f3a8292fd054c1377b106
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444277"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775524"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
-Especifica qué funcionalidad debe probar el método [Supports](../../../ado/reference/ado-api/supports-method.md) .  
+Especifica qué funcionalidad debe probar el método [Supports](./supports-method.md) .  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adAddNew**|0x1000400|Admite el método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) para agregar nuevos registros.|  
-|**adApproxPosition**|0x4000|Admite las propiedades [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) y [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) .|  
-|**adBookmark**|0x2000|Admite la propiedad [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) para obtener acceso a registros específicos.|  
-|**adDelete**|0x1000800|Admite el método [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) para eliminar registros.|  
-|**adFind**|0x80000|Admite el método [Find](../../../ado/reference/ado-api/find-method-ado.md) para buscar una fila en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|**adAddNew**|0x1000400|Admite el método [AddNew](./addnew-method-ado.md) para agregar nuevos registros.|  
+|**adApproxPosition**|0x4000|Admite las propiedades [AbsolutePosition](./absoluteposition-property-ado.md) y [AbsolutePage](./absolutepage-property-ado.md) .|  
+|**adBookmark**|0x2000|Admite la propiedad [Bookmark](./bookmark-property-ado.md) para obtener acceso a registros específicos.|  
+|**adDelete**|0x1000800|Admite el método [Delete](./delete-method-ado-recordset.md) para eliminar registros.|  
+|**adFind**|0x80000|Admite el método [Find](./find-method-ado.md) para buscar una fila en un [conjunto de registros](./recordset-object-ado.md).|  
 |**adHoldRecords**|0x100|Recupera más registros o cambia la siguiente posición sin confirmar todos los cambios pendientes.|  
-|**adIndex**|0x100000|Admite la propiedad de [Índice](../../../ado/reference/ado-api/index-property.md) para asignar un nombre a un índice.|  
-|**adMovePrevious**|0x200|Admite los métodos [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) y [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) , y los métodos [Move](../../../ado/reference/ado-api/move-method-ado.md) o [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) para mover la posición del registro actual hacia atrás sin necesidad de marcadores.|  
+|**adIndex**|0x100000|Admite la propiedad de [Índice](./index-property.md) para asignar un nombre a un índice.|  
+|**adMovePrevious**|0x200|Admite los métodos [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) y [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) , y los métodos [Move](./move-method-ado.md) o [GetRows](./getrows-method-ado.md) para mover la posición del registro actual hacia atrás sin necesidad de marcadores.|  
 |**adNotify**|0x40000|Indica que el proveedor de datos subyacente admite notificaciones (que determina si se admiten eventos de **conjunto de registros** ).|  
-|**adResync**|0x20000|Admite el método [Resync](../../../ado/reference/ado-api/resync-method.md) para actualizar el cursor con los datos que están visibles en la base de datos subyacente.|  
-|**adSeek**|0x200000|Admite el método [Seek](../../../ado/reference/ado-api/seek-method.md) para buscar una fila en un **conjunto de registros**.|  
-|**adUpdate**|0x1008000|Admite el método [Update](../../../ado/reference/ado-api/update-method.md) para modificar los datos existentes.|  
-|**adUpdateBatch**|0x10000|Admite la actualización por lotes (métodos[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) y [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) ) para transmitir grupos de cambios al proveedor.|  
+|**adResync**|0x20000|Admite el método [Resync](./resync-method.md) para actualizar el cursor con los datos que están visibles en la base de datos subyacente.|  
+|**adSeek**|0x200000|Admite el método [Seek](./seek-method.md) para buscar una fila en un **conjunto de registros**.|  
+|**adUpdate**|0x1008000|Admite el método [Update](./update-method.md) para modificar los datos existentes.|  
+|**adUpdateBatch**|0x10000|Admite la actualización por lotes (métodos[UpdateBatch](./updatebatch-method.md) y [CancelBatch](./cancelbatch-method-ado.md) ) para transmitir grupos de cambios al proveedor.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
  Paquete: **com. ms. wfc. Data**  
@@ -62,4 +62,4 @@ Especifica qué funcionalidad debe probar el método [Supports](../../../ado/ref
 |AdoEnums. CursorOption. UPDATEBATCH|  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Método Supports](../../../ado/reference/ado-api/supports-method.md)
+ [Método Supports](./supports-method.md)

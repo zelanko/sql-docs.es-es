@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff98b6c2fe1dbb6da0131bf1a1d539fdfb74649
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c85e34201cb37745ef9f09b337b8d1f71dd508af
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443397"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774655"
 ---
 # <a name="item-property-example-vb"></a>Ejemplo de la propiedad Item (VB)
-En este ejemplo se muestra cómo la propiedad del [elemento](../../../ado/reference/ado-api/item-property-ado.md) obtiene acceso a los miembros de una colección. En el ejemplo se abre la tabla ***authors*** de la base de datos ***pubs*** con un comando con parámetros.  
+En este ejemplo se muestra cómo la propiedad del [elemento](./item-property-ado.md) obtiene acceso a los miembros de una colección. En el ejemplo se abre la tabla ***authors*** de la base de datos ***pubs*** con un comando con parámetros.  
   
- Se tiene acceso al parámetro del comando emitido en la base de datos desde la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) del objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) por índice y nombre. A continuación, se obtiene acceso a los campos del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) devuelto desde la colección de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) del objeto por índice y nombre.  
+ Se tiene acceso al parámetro del comando emitido en la base de datos desde la colección de [parámetros](./parameters-collection-ado.md) del objeto de [comando](./command-object-ado.md) por índice y nombre. A continuación, se obtiene acceso a los campos del [conjunto de registros](./recordset-object-ado.md) devuelto desde la colección de [campos](./fields-collection-ado.md) del objeto por índice y nombre.  
   
 ```  
 'BeginItemVB  
@@ -136,8 +136,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Command (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item (propiedad) (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameters (colección) (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Command (objeto) (ADO)](./command-object-ado.md)   
+ [Fields (colección) (ADO)](./fields-collection-ado.md)   
+ [Item (propiedad) (ADO)](./item-property-ado.md)   
+ [Parameters (colección) (ADO)](./parameters-collection-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

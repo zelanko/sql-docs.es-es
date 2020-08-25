@@ -20,25 +20,25 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bd35cbd24dadef9d6a9468f65bc85f95169d0cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8da28769a68cf95e727e61114235e76218f1bae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441887"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777254"
 ---
 # <a name="stayinsync-property"></a>Propiedad StayInSync
-Indica, en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) jerárquico, si la referencia a los registros secundarios subyacentes (es decir, el *capítulo*) cambia cuando cambia la posición de la fila primaria.  
+Indica, en un objeto de [conjunto de registros](./recordset-object-ado.md) jerárquico, si la referencia a los registros secundarios subyacentes (es decir, el *capítulo*) cambia cuando cambia la posición de la fila primaria.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor **booleano** . El valor predeterminado es **True**. Si **es true**, el capítulo se actualizará si el objeto de **conjunto de registros** primario cambia la posición de la fila; Si **es false**, el capítulo seguirá haciendo referencia a los datos del capítulo anterior, aunque el objeto de **conjunto de registros** primario haya cambiado la posición de la fila.  
   
 ## <a name="remarks"></a>Observaciones  
- Esta propiedad se aplica a los conjuntos de registros jerárquicos, como los que admite el [servicio de forma de datos de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), y debe establecerse en el **conjunto de registros** primario antes de que se recupere el **conjunto de registros** secundario. Esta propiedad simplifica la navegación por los conjuntos de registros jerárquicos.  
+ Esta propiedad se aplica a los conjuntos de registros jerárquicos, como los que admite el [servicio de forma de datos de Microsoft para OLE DB](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), y debe establecerse en el **conjunto de registros** primario antes de que se recupere el **conjunto de registros** secundario. Esta propiedad simplifica la navegación por los conjuntos de registros jerárquicos.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de la propiedad StayInSync (VB)](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
- [Servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
+ [Ejemplo de la propiedad StayInSync (VB)](./stayinsync-property-example-vb.md)   
+ [Servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios ADO)](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)

@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de97e62a8152e7d14d1442cc1da9b5138ddc39fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cd16324e4daa3e14e47da21ad4fd528e68c1a614
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441747"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777104"
 ---
 # <a name="type-property-ado"></a>Tipo (propiedad, ADO)
-Indica el tipo operativo o el tipo de datos de un [parámetro](../../../ado/reference/ado-api/parameter-object.md), [campo](../../../ado/reference/ado-api/field-object.md)o objeto de [propiedad](../../../ado/reference/ado-api/property-object-ado.md) .  
+Indica el tipo operativo o el tipo de datos de un [parámetro](./parameter-object.md), [campo](./field-object.md)o objeto de [propiedad](./property-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un valor [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) .  
+ Establece o devuelve un valor [DataTypeEnum](./datatypeenum.md) .  
   
 ## <a name="remarks"></a>Observaciones  
- En el caso de los objetos de **parámetro** , la propiedad **Type** es de lectura y escritura. En el caso de los nuevos objetos de **campo** que se han anexado a la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de un [registro](../../../ado/reference/ado-api/record-object-ado.md), el **tipo** es Read/Write solo después de que se haya especificado la propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) para el **campo** y el proveedor de datos haya agregado correctamente el nuevo **campo** llamando al método [Update](../../../ado/reference/ado-api/update-method.md) de la colección **Fields** .  
+ En el caso de los objetos de **parámetro** , la propiedad **Type** es de lectura y escritura. En el caso de los nuevos objetos de **campo** que se han anexado a la colección [Fields](./fields-collection-ado.md) de un [registro](./record-object-ado.md), el **tipo** es Read/Write solo después de que se haya especificado la propiedad [Value](./value-property-ado.md) para el **campo** y el proveedor de datos haya agregado correctamente el nuevo **campo** llamando al método [Update](./update-method.md) de la colección **Fields** .  
   
  Para todos los demás objetos, la propiedad **Type** es de solo lectura.  
   
@@ -39,18 +39,18 @@ Indica el tipo operativo o el tipo de datos de un [parámetro](../../../ado/refe
 
 :::row:::
     :::column:::
-        [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+        [Objeto Field](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)  
+        [Objeto Parameter](./parameter-object.md)  
     :::column-end:::
     :::column:::
-        [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Objeto Property (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de la propiedad de tipo (campo) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
- [Ejemplo de propiedad de tipo (propiedad) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
- [RecordType (propiedad, ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
- [Propiedad Type (objeto Stream de ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Ejemplo de la propiedad de tipo (campo) (VB)](./type-property-example-field-vb.md)   
+ [Ejemplo de propiedad de tipo (propiedad) (VC + +)](./type-property-example-property-vc.md)   
+ [RecordType (propiedad, ADO)](./recordtype-property-ado.md)   
+ [Propiedad Type (objeto Stream de ADO)](./type-property-ado-stream.md)

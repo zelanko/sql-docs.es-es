@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942347"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767054"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de línea de comandos de dwloader para almacenamiento de datos paralelos
 **dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga masivamente filas de tabla en una tabla existente. Al cargar filas, puede agregar todas las filas al final de la tabla (modo*Append* o *modo fastappend*), anexar nuevas filas y actualizar las filas existentes (*modo Upsert*) o eliminar todas las filas existentes antes de cargarlas y, a continuación, insertar todas las filas en una tabla vacía (*modo de recarga*).  
@@ -138,7 +138,7 @@ Use un archivo de parámetros, *parameter_file_name*, en lugar de los parámetro
   
 El archivo de parámetros contiene un parámetro, sin el **-** prefijo, por línea.  
   
-Ejemplos:  
+Ejemplo:  
   
 `rt=percentage`  
   
@@ -193,7 +193,7 @@ Para cargar varios archivos con un comando:
   
 -   Todos los archivos se concatenarán y se cargarán como si fueran un archivo, y las filas rechazadas Irán a un solo archivo de rechazo.  
   
-Ejemplos:  
+Ejemplo:  
   
 -   -i \\ \loadserver\loads\daily \\ *. gz  
   
@@ -234,7 +234,7 @@ Delimitador para cada campo (columna) de la fila. El delimitador de campo es uno
   
 Para especificar el carácter de barra vertical en la línea de comandos, escríbalo entre comillas dobles, "|". Esto evitará que el analizador de la línea de comandos interprete erróneamente. Otros caracteres se incluyen entre comillas simples.  
   
-Ejemplos:  
+Ejemplo:  
   
 -t "|"  
   
@@ -274,7 +274,7 @@ Se requiere un LF para UNIX. Se requiere un CR para Windows.
 **-s** *string_delimiter*  
 El delimitador para el campo de tipo de datos de cadena de un archivo de entrada delimitado por texto. El delimitador de cadena es uno o más valores ASCII.  Se puede especificar como un carácter (por ejemplo,-s *) o como un valor hexadecimal (por ejemplo,-s 0x22 para una comilla doble).  
   
-Ejemplos:  
+Ejemplo:  
   
 seg  
   
@@ -380,7 +380,7 @@ Cada formato de fecha y hora se especifica en un archivo denominado *datetime_fo
   
 Cada línea contiene el nombre de una columna en la tabla de destino y su formato de fecha y hora.  
   
-Ejemplos:  
+Ejemplo:  
   
 `LastReceiptDate=ymd`  
   
@@ -448,7 +448,7 @@ Se utiliza con la `-rt percentage` opción para especificar las comprobaciones d
 **-c**  
 Quita los caracteres de espacio en blanco situados a la izquierda y a la derecha de los campos Char, nchar, VARCHAR y nvarchar. Convierte cada campo que solo contiene caracteres de espacio en blanco en la cadena vacía.  
   
-Ejemplos:  
+Ejemplo:  
   
 ' ' se trunca en ' '  
   
@@ -528,7 +528,7 @@ Los datos cargados pueden requerir más o menos espacio en el dispositivo que en
 Aunque **dwloader** es un proceso de transacción y se revierte correctamente en caso de error, no se puede revertir una vez que la carga masiva se ha completado correctamente. Para cancelar un proceso de **dwloader** activo, escriba Ctrl + C.  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
-El tamaño total de todas las cargas que se producen simultáneamente debe ser menor que LOG_SIZE para la base de datos y se recomienda que el tamaño total de todas las cargas simultáneas sea inferior al 50% del LOG_SIZE. Para lograr este límite de tamaño, puede dividir las cargas grandes en varios lotes. Para obtener más información sobre LOG_SIZE, consulte [Create Database](../t-sql/statements/create-database-parallel-data-warehouse.md) .  
+El tamaño total de todas las cargas que se producen simultáneamente debe ser menor que LOG_SIZE para la base de datos y se recomienda que el tamaño total de todas las cargas simultáneas sea inferior al 50% del LOG_SIZE. Para lograr este límite de tamaño, puede dividir las cargas grandes en varios lotes. Para obtener más información sobre LOG_SIZE, consulte [Create Database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016) .  
   
 Al cargar varios archivos con un comando LOAD, todas las filas rechazadas se escriben en el mismo archivo de rechazo. El archivo de rechazo no muestra el archivo de entrada que contiene cada fila rechazada.  
   
@@ -675,7 +675,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 Descripción de los parámetros de la línea de comandos:  
   
--   *C:\Archivos de programa\microsoft SQL Server Warehouse\100\dwloader.exede datos paralelos* es la ubicación instalada de dwloader.exe.  
+-   *C:\Archivos de programa\microsoft SQL Server Warehouse\100\dwloader.exede datos paralelos * es la ubicación instalada de dwloader.exe.  
   
 -   *-S* va seguido de la dirección IP del nodo de control.  
   
@@ -704,4 +704,3 @@ Descripción de los parámetros de la línea de comandos:
 [Common Metadata Query Examples](metadata-query-examples.md)  
 
 -->
-  

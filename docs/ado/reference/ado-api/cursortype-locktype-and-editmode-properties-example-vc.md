@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 081fafdbc0f12014daf21507184e04375ddd0b38
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 034e7ef1bd472c8ebcc6749797decd8176455801
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444267"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775494"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>Ejemplo de las propiedades CursorType, LockType y EditMode (VC + +)
-Este ejemplo muestra cómo establecer las propiedades [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) y [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) antes de abrir un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). También muestra el valor de la propiedad [EditMode](../../../ado/reference/ado-api/editmode-property.md) en varias condiciones. La función EditModeOutput es necesaria para que este procedimiento se ejecute.  
+Este ejemplo muestra cómo establecer las propiedades [CursorType](./cursortype-property-ado.md) y [LockType](./locktype-property-ado.md) antes de abrir un [conjunto de registros](./recordset-object-ado.md). También muestra el valor de la propiedad [EditMode](./editmode-property.md) en varias condiciones. La función EditModeOutput es necesaria para que este procedimiento se ejecute.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -163,7 +163,7 @@ void PrintComError(_com_error &e) {
 **Después de la edición:**   
  **EditMode = adEditInProgress**   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [Propiedad EditMode](../../../ado/reference/ado-api/editmode-property.md)   
- [LockType (propiedad, ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propiedad CursorType (ADO)](./cursortype-property-ado.md)   
+ [Propiedad EditMode](./editmode-property.md)   
+ [LockType (propiedad, ADO)](./locktype-property-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

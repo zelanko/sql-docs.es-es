@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 607142ec89a1032fe42bab87c0dfad0f2a276387
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c5b5f21c1af3a3438b9e00cd00f4ed2baf338e2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453157"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805802"
 ---
 # <a name="named-commands"></a>Comandos con nombre
-[La creación y ejecución de un comando simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md) muestra una manera de ejecutar un comando. Hay otra manera: puede convertirla en un comando con nombre y, a continuación, llamar a este comando con nombre directamente en el objeto de **conexión** (asignado a la propiedad **ActiveConnection** del objeto **Command** ). El nombre de un comando significa asignar un nombre a la propiedad **Name** de un objeto **Command** . Por ejemplo,  
+[La creación y ejecución de un comando simple](./creating-and-executing-a-simple-command.md) muestra una manera de ejecutar un comando. Hay otra manera: puede convertirla en un comando con nombre y, a continuación, llamar a este comando con nombre directamente en el objeto de **conexión** (asignado a la propiedad **ActiveConnection** del objeto **Command** ). El nombre de un comando significa asignar un nombre a la propiedad **Name** de un objeto **Command** . Por ejemplo,  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -91,4 +91,4 @@ ErrHandler:
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Objeto de conexión (ADO)](../../reference/ado-api/connection-object-ado.md)

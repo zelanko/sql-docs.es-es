@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd1e9e9b2dd1dc3512c95100baed0c83745250bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453267"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806013"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Conjuntos de registros jerárquicos en XML
 ADO permite la persistencia de objetos de conjunto de registros jerárquicos en XML. Con los objetos de conjunto de registros jerárquicos, el valor de un campo del conjunto de registros primario es otro conjunto de registros. Estos campos se representan como elementos secundarios en la secuencia XML en lugar de un atributo.  
@@ -126,4 +126,4 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 -   Si un registro secundario tiene referencias a más de un registro primario, al volver a abrir el conjunto de registros, el conjunto de registros secundario puede contener registros duplicados. Sin embargo, estos duplicados solo estarán visibles si el usuario trabaja directamente con el conjunto de filas secundario subyacente. Si un capítulo se utiliza para navegar por el conjunto de registros secundario (es decir, la única manera de navegar por ADO), los duplicados no estarán visibles.  
   
 ## <a name="see-also"></a>Consulte también  
- [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Almacenar registros en formato XML](./persisting-records-in-xml-format.md)

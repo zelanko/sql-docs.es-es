@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2528c9b7a8cf9eb2918983d90e57ac39e6ee989e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c7ea7ccbf1a588458db9e213bfa57837e89898f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441457"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776824"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
-Especifica los atributos de transacción de un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) .  
+Especifica los atributos de transacción de un objeto de [conexión](./connection-object-ado.md) .  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adXactAbortRetaining**|262 144|Realiza las anulaciones de retención llamando a [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) para iniciar automáticamente una nueva transacción. No todos los proveedores admiten este comportamiento.|  
-|**adXactCommitRetaining**|131 072|Realiza la retención de confirmaciones mediante una llamada a [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) para iniciar automáticamente una nueva transacción. No todos los proveedores admiten este comportamiento.|  
+|**adXactAbortRetaining**|262 144|Realiza las anulaciones de retención llamando a [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) para iniciar automáticamente una nueva transacción. No todos los proveedores admiten este comportamiento.|  
+|**adXactCommitRetaining**|131 072|Realiza la retención de confirmaciones mediante una llamada a [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) para iniciar automáticamente una nueva transacción. No todos los proveedores admiten este comportamiento.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
  Paquete: **com. ms. wfc. Data**  
@@ -40,4 +40,4 @@ Especifica los atributos de transacción de un objeto de [conexión](../../../ad
 |AdoEnums. XactAttribute. COMMITRETAINING|  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Propiedad Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Propiedad Attributes (ADO)](./attributes-property-ado.md)

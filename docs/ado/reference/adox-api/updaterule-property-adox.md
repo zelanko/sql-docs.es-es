@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8fba97eb12a79c20322f53dbd8574165dc3dee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88223eae0a6a6709dc5c45d2ed0da5e17f3e7c17
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439407"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769124"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule (propiedad, ADOX)
-Indica la acción que se realiza cuando se actualiza una [clave](../../../ado/reference/adox-api/key-object-adox.md) principal.  
+Indica la acción que se realiza cuando se actualiza una [clave](./key-object-adox.md) principal.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece y devuelve un valor **Long** que puede ser una de las constantes [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) . El valor predeterminado es **adRINone**.  
+ Establece y devuelve un valor **Long** que puede ser una de las constantes [RuleEnum](./ruleenum.md) . El valor predeterminado es **adRINone**.  
   
 ## <a name="remarks"></a>Observaciones  
- Esta propiedad es de solo lectura en objetos de [clave](../../../ado/reference/adox-api/key-object-adox.md) ya anexados a la colección.  
+ Esta propiedad es de solo lectura en objetos de [clave](./key-object-adox.md) ya anexados a la colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Objeto Key (ADOX)](./key-object-adox.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de propiedades Type, RelatedColumn, RelatedTable y UpdateRule de clave, método Append de claves (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+ [Ejemplo de propiedades Type, RelatedColumn, RelatedTable y UpdateRule de clave, método Append de claves (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355461"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805555"
 ---
 # <a name="ado-glossary-terms"></a>Términos del glosario de ADO
 En este tema se definen los términos relevantes para ADO.
 
-## <a name="a"></a>A
+## <a name="a"></a>Un
  Dirección URL absoluta es una dirección URL completa que especifica la ubicación de un recurso que reside en Internet o en una intranet. Vea también *dirección URL* y *dirección URL relativa*.
 
  Registro automático de controles ActiveX, componente COM en proceso que suele tener un elemento visual en tiempo de diseño o en tiempo de ejecución. Los controles ActiveX también tienen la capacidad de comunicarse con un contenedor de documentos activo, como Microsoft Internet Explorer.
@@ -133,7 +133,7 @@ En este tema se definen los términos relevantes para ADO.
 
  Conjunto de registros jerárquico un **conjunto** de registros que contiene otro **conjunto de registros**. Vea también forma de datos, capítulo.
 
- Para obtener más información, vea [obtener acceso a las filas de un conjunto de registros jerárquico](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).
+ Para obtener más información, vea [obtener acceso a las filas de un conjunto de registros jerárquico](./guide/data/accessing-rows-in-a-hierarchical-recordset.md).
 
  En general, una jerarquía es una estructura clasificada con niveles de nivel superior y subordinado. En ADO, los **conjuntos de registros** jerárquicos se utilizan para representar la relación de elementos primarios y secundarios entre un registro y un capítulo. También en ADO, los objetos **Record** y **Stream** se pueden usar para tener acceso a estructuras jerárquicas de árbol, como una carpeta y documentos. ADO MD también incluye objetos **Hierarchy** para representar una relación entre los niveles de una dimensión en un cubo OLAP. Vea también conjuntos de registros jerárquicos, relación primario-secundario, capítulo, árbol.
 

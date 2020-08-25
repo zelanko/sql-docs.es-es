@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439207"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768644"
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea el proxy para el objeto comercial de destino y devuelve un puntero a él. El proxy empaqueta y calcula las referencias de los datos en el código auxiliar del lado del servidor para las comunicaciones con el objeto comercial para enviar solicitudes y datos a través de Internet. En el caso de los objetos de componente en proceso, no se utiliza ningún proxy, solo se proporciona un puntero al objeto.  
@@ -42,7 +42,7 @@ Crea el proxy para el objeto comercial de destino y devuelve un puntero a él. E
  Variable de objeto que se evalúa como un objeto que es el tipo especificado en *ProgID*.  
   
  *DataSpace*  
- Variable de objeto que representa un objeto [RDS. Objeto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) que se usa para crear una instancia del nuevo objeto.  
+ Variable de objeto que representa un objeto [RDS. Objeto DataSpace](./dataspace-object-rds.md) que se usa para crear una instancia del nuevo objeto.  
   
  *ProgID*  
  Valor de **cadena** que contiene el identificador de programación que especifica un objeto comercial de servidor que implementa las reglas de negocios de la aplicación.  
@@ -54,11 +54,9 @@ Crea el proxy para el objeto comercial de destino y devuelve un puntero a él. E
  El *protocolo http* es el protocolo Web estándar. *Https* es un protocolo Web seguro. Utilice el *Protocolo DCOM* cuando ejecute una red de área local sin http. El protocolo *en proceso* es una biblioteca de vínculos dinámicos (dll) local. no usa una red.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [Objeto DataSpace (RDS)](./dataspace-object-rds.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo del método CreateObject, el método de consulta y el objeto DataFactory (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [Ejemplo del objeto DataSpace y del método CreateObject (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [Ejemplo del método CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
-
+ [Ejemplo del método CreateObject, el método de consulta y el objeto DataFactory (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [Ejemplo del objeto DataSpace y del método CreateObject (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)   
+ [Ejemplo del método CreateRecordset (RDS)](./createrecordset-method-rds.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f3b10494a9ae9fb49de6bf2779395f9eb065cd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 127586308fe030507a2b4f4de6951a8068b034fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453567"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806182"
 ---
 # <a name="data-shaping-example"></a>Ejemplo de la forma de datos
 El siguiente comando de forma de datos muestra cómo generar un conjunto de **registros** jerárquico a partir de las tablas **Customers** y **Orders** de la base de datos Northwind.  
@@ -29,7 +29,7 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- Cuando este comando se usa para abrir un objeto de **conjunto de registros** (como se muestra en [Visual Basic ejemplo de forma de datos](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)), crea un capítulo (**chapOrders**) para cada registro devuelto de la tabla **Customers** . Este capítulo consta de un subconjunto del **conjunto de registros** devuelto de la tabla **Orders** . El capítulo **chapOrders** contiene toda la información solicitada sobre los pedidos realizados por el cliente determinado. En este ejemplo, el capítulo consta de tres columnas: **OrderID**, **OrderDate**y **CustomerID**.  
+ Cuando este comando se usa para abrir un objeto de **conjunto de registros** (como se muestra en [Visual Basic ejemplo de forma de datos](./visual-basic-example-of-data-shaping.md)), crea un capítulo (**chapOrders**) para cada registro devuelto de la tabla **Customers** . Este capítulo consta de un subconjunto del **conjunto de registros** devuelto de la tabla **Orders** . El capítulo **chapOrders** contiene toda la información solicitada sobre los pedidos realizados por el cliente determinado. En este ejemplo, el capítulo consta de tres columnas: **OrderID**, **OrderDate**y **CustomerID**.  
   
  Las dos primeras entradas del **conjunto de registros** con forma resultante son las siguientes:  
   
@@ -42,10 +42,10 @@ RELATE customerID TO customerID)
   
  Hay una segunda manera de usar comandos de forma: es decir, para generar un **conjunto de registros** primario a partir de un **conjunto de registros**secundario. Los registros del conjunto de **registros** secundario se agrupan, normalmente mediante la cláusula by, y se agrega una fila al conjunto de **registros** primario para cada grupo resultante en el elemento secundario. Si se omite la cláusula BY, el **conjunto de registros** secundario formará un solo grupo y el **conjunto de registros** primario contendrá exactamente una fila. Esto resulta útil para calcular agregados "totales generales" en todo el **conjunto de registros**secundario.  
   
- La construcción de comandos SHAPE también permite crear un **conjunto de registros**con forma mediante programación. A continuación, puede tener acceso a los componentes del **conjunto de registros** mediante programación o a través de un control visual adecuado. Un comando de forma se emite como cualquier otro texto de comando de ADO. Para obtener más información, vea [comandos Shape en general](../../../ado/guide/data/shape-commands-in-general.md).  
+ La construcción de comandos SHAPE también permite crear un **conjunto de registros**con forma mediante programación. A continuación, puede tener acceso a los componentes del **conjunto de registros** mediante programación o a través de un control visual adecuado. Un comando de forma se emite como cualquier otro texto de comando de ADO. Para obtener más información, vea [comandos Shape en general](./shape-commands-in-general.md).  
   
  Independientemente de la forma en que se forme el **conjunto de registros** principal, contendrá una columna de capítulo que se utiliza para relacionarla con un **conjunto de registros**secundario. Si lo desea, el **conjunto de registros** primario también puede tener columnas que contengan agregados (SUM, min, Max, etc.) en las filas secundarias. Tanto el **conjunto de registros** primario como el secundario pueden tener columnas que contengan una expresión en la fila del **conjunto de registros**, así como columnas nuevas e inicialmente vacías.  
   
  Esta sección continúa con el siguiente tema.  
   
--   [Ejemplo de Visual Basic de forma de datos](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
+-   [Ejemplo de Visual Basic de forma de datos](./visual-basic-example-of-data-shaping.md)

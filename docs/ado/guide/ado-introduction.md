@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b702f96fab776c383e309a94eea9358ed95cab90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 861b170e55c37f333f09dc8168c35ad7088d17fa
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355441"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805501"
 ---
 # <a name="ado-overview-and-benefits"></a>Información general y ventajas de ADO
 Objetos de datos ActiveX (ADO) es una interfaz de alto nivel y fácil de usar para OLE DB. OLE DB es una interfaz de bajo nivel y alto rendimiento para una variedad de almacenes de datos. Tanto ADO como OLE DB pueden trabajar con datos relacionales (tabulares) y no relacionales (jerárquicos o de secuencia).
@@ -27,14 +27,14 @@ Objetos de datos ActiveX (ADO) es una interfaz de alto nivel y fácil de usar pa
 
  Esta sección contiene los temas siguientes.
 
--   [Características de ADO para cada versión](../../ado/guide/ado-history.md)
+-   [Características de ADO para cada versión](./ado-history.md)
 
--   [Requisitos previos para usar la documentación de ADO](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [Requisitos previos para usar la documentación de ADO](./prerequisites-for-using-the-ado-documentation.md)
 
--   [Hacer referencia a las bibliotecas de ADO](../../ado/guide/referencing-the-ado-libraries.md)
+-   [Hacer referencia a las bibliotecas de ADO](./referencing-the-ado-libraries.md)
 
--   [Tabla de tareas de programación de ADO](../../ado/guide/ado-task-table.md)
+-   [Tabla de tareas de programación de ADO](./ado-task-table.md)
 
--   [Tabla de tecnologías de ADO](../../ado/guide/ado-technology-table.md)
+-   [Tabla de tecnologías de ADO](./ado-technology-table.md)
 
--   [Características de diseño de seguridad de ADO](../../ado/guide/ado-security-design-issues.md)
+-   [Características de diseño de seguridad de ADO](./ado-security-design-issues.md)

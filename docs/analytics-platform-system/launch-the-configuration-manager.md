@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401053"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Inicio del Configuration Manager en Analytics Platform System
@@ -29,15 +29,15 @@ Para ejecutar el Configuration Manager, use Escritorio remoto para conectarse al
   
 #### <a name="to-launch-from-a-browser-window"></a>Para iniciar desde una ventana del explorador  
   
-1.  Abra un explorador y navegue hasta el directorio `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+1.  Abra un explorador y navegue hasta el directorio `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-2.  Haga clic `dwconfig.exe` con el botón secundario y, a continuación, haga clic en **Ejecutar como administrador**.  
+2.  Haga clic con el botón secundario `dwconfig.exe` y, a continuación, haga clic en **Ejecutar como administrador**.  
   
 #### <a name="to-launch-from-a-command-prompt"></a>Para iniciar desde un símbolo del sistema  
   
 1.  En el escritorio, abra el menú **Inicio** , haga clic en **programas**, **accesorios**, haga clic con el botón secundario en **símbolo del sistema** y, a continuación, haga clic en **Ejecutar como administrador**.  
   
-2.  En el símbolo del sistema, escriba el siguiente comando para cambiar los `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`directorios:.  
+2.  En el símbolo del sistema, escriba el siguiente comando para cambiar los directorios: `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"` .  
   
 3.  En el símbolo del sistema, escriba `dwconfig.exe`.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4973bd2e822d3ec56b4e8cb4aa9b7a359e07b977
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453147"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805782"
 ---
 # <a name="namespaces"></a>Espacios de nombres
 El formato de persistencia de XML en ADO utiliza los cuatro espacios de nombres siguientes.  
@@ -47,4 +47,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  El usuario puede definir que sea cualquier nombre, siempre que este nombre se utilice de forma coherente en todo el documento XML. ADO siempre escribe "s", "RS", "DT" y "z", pero estos nombres de prefijo no están codificados de forma rígida en el componente de carga.  
   
 ## <a name="see-also"></a>Consulte también  
- [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Almacenar registros en formato XML](./persisting-records-in-xml-format.md)

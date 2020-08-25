@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbebf1e910fd749ff4f582c57da6c8c2656e9f61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 101eab85f19922b56a7e7f86f330188d87fcc9fe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453767"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806413"
 ---
 # <a name="ado-objects-and-collections"></a>Colecciones y los objetos ADO
 ADO consta de los siguientes nueve objetos y cuatro colecciones.  
@@ -33,11 +33,11 @@ ADO consta de los siguientes nueve objetos y cuatro colecciones.
 |**Parameter** (objeto)|Representa un parámetro o un argumento asociado a un objeto de **comando** , basado en una consulta con parámetros o un procedimiento almacenado.|  
 |**Field** (objeto)|Representa una columna de datos con un tipo de datos común. Cada objeto de **campo** corresponde a una columna del **conjunto de registros**.|  
 |**Property (objeto)**|Representa una característica de un objeto ADO definido por el proveedor. Los objetos ADO tienen dos tipos de propiedades: integrado y dinámico. Las propiedades integradas son aquellas que se implementan en ADO y que están inmediatamente disponibles para cualquier objeto nuevo. El objeto **Property** es un contenedor para las propiedades dinámicas, definido por el proveedor subyacente.|  
-|**Error** (objeto)|Contiene detalles sobre los errores de acceso a datos que pertenecen a una única operación que implica al proveedor.|  
+|Objeto**Error**|Contiene detalles sobre los errores de acceso a datos que pertenecen a una única operación que implica al proveedor.|  
 |Colección **Fields**|Contiene todos los objetos de **campo** de un **conjunto de registros** o un objeto de **registro** .|  
 |Colección de **propiedades**|Contiene todos los objetos de **propiedad** para una instancia específica de un objeto.|  
 |Colección **Parameters**|Contiene todos los objetos de **parámetro** de un objeto **Command** .|  
 |Colección de **errores**|Contiene todos los objetos de **error** creados en respuesta a un error único relacionado con el proveedor.|  
   
-## <a name="see-also"></a>Vea también  
- [Modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md)
+## <a name="see-also"></a>Consulte también  
+ [Modelo de objetos ADO](../../reference/ado-api/ado-object-model.md)

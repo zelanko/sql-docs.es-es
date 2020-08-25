@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf6bae32e9ed966939d5589f779bdb1d4d6d6f4b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453387"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806839"
 ---
 # <a name="filtering-for-updated-records"></a>Filtrar registros actualizados
 Antes de llamar a UpdateBatch, puede usar la propiedad de filtro de conjunto de registros para ver solo los registros que se han modificado desde que se abrió el conjunto de registros o la última llamada a UpdateBatch. Para ello, establezca filtro igual a adFilterPendingRecords para determinar el número de registros que se van a actualizar, como se muestra en el ejemplo de código de la sección siguiente.  
@@ -56,4 +56,4 @@ Antes de llamar a UpdateBatch, puede usar la propiedad de filtro de conjunto de 
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Batch Mode](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](./batch-mode.md)

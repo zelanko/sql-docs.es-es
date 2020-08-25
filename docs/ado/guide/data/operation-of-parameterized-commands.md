@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e21089ed2fd513f4c82ba9c30478b51fee6c4ebe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453107"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805638"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funcionamiento de los comandos con parámetros
 Si está trabajando con un **conjunto de registros**secundario grande, especialmente en comparación con el tamaño del **conjunto de registros**primario, pero solo necesita tener acceso a algunos capítulos secundarios, es posible que le resulte más eficaz usar un comando con parámetros.  
@@ -39,7 +39,7 @@ SHAPE {SELECT * FROM customer}
  Las tablas primaria y secundaria tienen un nombre de columna en común *cust_id*. El *comando secundario* tiene un marcador de posición "?", al que hace referencia la cláusula Relate (es decir, "... PARÁMETRO 0 ").  
   
 > [!NOTE]
->  La cláusula PARAMETER solo pertenece a la sintaxis del comando Shape. No está asociado al objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) de ADO o a la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) .  
+>  La cláusula PARAMETER solo pertenece a la sintaxis del comando Shape. No está asociado al objeto de [parámetro](../../reference/ado-api/parameter-object.md) de ADO o a la colección de [parámetros](../../reference/ado-api/parameters-collection-ado.md) .  
   
  Cuando se ejecuta el comando de forma con parámetros, ocurre lo siguiente:  
   
@@ -49,7 +49,7 @@ SHAPE {SELECT * FROM customer}
   
 3.  Cuando se tiene acceso a la columna Chapter de una fila primaria, el *comando secundario* se ejecuta utilizando el valor de customer. cust_id como valor del parámetro.  
   
-4.  Todas las filas del conjunto de filas del proveedor de datos creadas en el paso 3 se utilizan para rellenar el **conjunto de registros**secundario. En este ejemplo, todas las filas de la tabla Orders en las que el cust_id es igual al valor de Customer. cust_id. De forma predeterminada, los **conjuntos de registros**secundarios se almacenarán en la memoria caché del cliente hasta que se liberen todas las referencias al **conjunto de registros** primario. Para cambiar este comportamiento, establezca las **filas secundarias** de la caché de [propiedades dinámicas](../../../ado/reference/ado-api/ado-dynamic-property-index.md) de **conjunto de registros** en **false**.  
+4.  Todas las filas del conjunto de filas del proveedor de datos creadas en el paso 3 se utilizan para rellenar el **conjunto de registros**secundario. En este ejemplo, todas las filas de la tabla Orders en las que el cust_id es igual al valor de Customer. cust_id. De forma predeterminada, los **conjuntos de registros**secundarios se almacenarán en la memoria caché del cliente hasta que se liberen todas las referencias al **conjunto de registros** primario. Para cambiar este comportamiento, establezca las **filas secundarias** de la caché de [propiedades dinámicas](../../reference/ado-api/ado-dynamic-property-index.md) de **conjunto de registros** en **false**.  
   
 5.  Una referencia a las filas secundarias recuperadas (es decir, el capítulo del **conjunto de registros**secundario) se coloca en la columna Chapter de la fila actual del **conjunto de registros**primario.  
   
@@ -90,6 +90,6 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 >  Al utilizar las cláusulas WHERE, los parámetros no pueden usar los tipos de datos de SQL para Text, ntext e Image, o bien se producirá un error que contiene la siguiente descripción: `Invalid operator for data type` .  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de forma de datos](../../../ado/guide/data/data-shaping-example.md)   
- [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
- [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)
+ [Ejemplo de forma de datos](./data-shaping-example.md)   
+ [Gramática de forma formal](./formal-shape-grammar.md)   
+ [Comandos Shape en General](./shape-commands-in-general.md)

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2502e1dec35ec0d6450190650a18ac765ce14421
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5c3f5f00355bb2c9f9762db1d317a592b4df7dc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355231"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805337"
 ---
 # <a name="capture-ado-error-codes"></a>Capturar códigos de error de ADO
-Además de los errores de proveedor devueltos en los objetos de [error](../../../ado/reference/ado-api/error-object.md) de la colección de [errores](../../../ado/reference/ado-api/errors-collection-ado.md) , ADO puede devolver errores al mecanismo de control de excepciones del entorno en tiempo de ejecución. Use el mecanismo de captura de errores del lenguaje de programación, como la instrucción **on error** de Microsoft® Visual Basic, o el bloque **try-catch** de Microsoft Visual C++® para capturar errores de ADO.
+Además de los errores de proveedor devueltos en los objetos de [error](../../reference/ado-api/error-object.md) de la colección de [errores](../../reference/ado-api/errors-collection-ado.md) , ADO puede devolver errores al mecanismo de control de excepciones del entorno en tiempo de ejecución. Use el mecanismo de captura de errores del lenguaje de programación, como la instrucción **on error** de Microsoft® Visual Basic, o el bloque **try-catch** de Microsoft Visual C++® para capturar errores de ADO.
 
- Para obtener la lista de códigos de error de ADO, vea [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md).
+ Para obtener la lista de códigos de error de ADO, vea [ErrorValueEnum](../../reference/ado-api/errorvalueenum.md).
 
 ## <a name="see-also"></a>Consulte también
- Colección de errores de [objetos de error](../../../ado/reference/ado-api/error-object.md) [(ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)
+ Colección de errores de [objetos de error](../../reference/ado-api/error-object.md) [(ADO)](../../reference/ado-api/errors-collection-ado.md)

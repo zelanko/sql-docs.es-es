@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 799a238d37e7b2fe4f5f4c8af5bb396513b75b03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85d313dabe9c6c0cf8c4dcdb76e01b0f2962d7d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453737"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806405"
 ---
 # <a name="anticipating-errors"></a>Anticipación de errores
 La prevención de errores es al menos tan importante como el control de errores. Esta sección final contiene una breve lista de las precauciones que puede llevar a cabo la aplicación para ayudar a que se produzcan errores menos probables.  
@@ -29,7 +29,7 @@ La prevención de errores es al menos tan importante como el control de errores.
   
 -   Cualquier programa que acepte datos de un usuario debe incluir código para validar los datos antes de enviarlos al almacén de datos. No se puede confiar en el almacén de datos, en el proveedor, en ADO o incluso en el lenguaje de programación para notificarle de problemas. Debe comprobar todos los bytes especificados por los usuarios, asegurándose de que los datos son del tipo correcto para su campo y de que los campos obligatorios no están vacíos.  
   
- Compruebe los datos antes de intentar escribir datos en el almacén de datos. La forma más fácil de hacerlo es controlar el evento **WillMove** o el evento **WillUpdateRecordset** . Para obtener una explicación más completa del control de eventos de ADO, vea [controlar eventos de ADO](../../../ado/guide/data/handling-ado-events.md).  
+ Compruebe los datos antes de intentar escribir datos en el almacén de datos. La forma más fácil de hacerlo es controlar el evento **WillMove** o el evento **WillUpdateRecordset** . Para obtener una explicación más completa del control de eventos de ADO, vea [controlar eventos de ADO](./handling-ado-events.md).  
   
  Asegúrese de que los objetos de **conjunto de registros** no superan los límites del **conjunto de registros** antes de intentar desplace el puntero de registro. Si intenta **MoveNext** cuando **EOF** es true o **MovePrev** cuando **BOF** es true, se producirá un error. Si realiza cualquiera de los métodos **Move** cuando **EOF** y **BOF** son true, se generará un error.  
   

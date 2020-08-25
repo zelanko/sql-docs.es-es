@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f83f151331fe483400edda90d7deb7c469b5574
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e1f1e1ecfef6725cfb15640486d7aeb63e348af
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444557"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806596"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Introducción al servicio de cursores de Microsoft para OLE DB
 El servicio de cursores de Microsoft para OLE DB complementa las funciones de compatibilidad de cursores de los proveedores de datos. Como resultado, el usuario percibe una funcionalidad relativamente uniforme de todos los proveedores de datos.
 
- El servicio de cursor hace que las propiedades dinámicas estén disponibles y mejora el comportamiento de ciertos métodos. Por ejemplo, la propiedad dinámica [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) permite la creación de índices temporales para facilitar ciertas operaciones, como el método [Find](../../../ado/reference/ado-api/find-method-ado.md) .
+ El servicio de cursor hace que las propiedades dinámicas estén disponibles y mejora el comportamiento de ciertos métodos. Por ejemplo, la propiedad dinámica [Optimize](../../reference/ado-api/optimize-property-dynamic-ado.md) permite la creación de índices temporales para facilitar ciertas operaciones, como el método [Find](../../reference/ado-api/find-method-ado.md) .
 
  El servicio de cursor habilita la compatibilidad con la actualización por lotes en todos los casos. También simula tipos de cursor más compatibles, como los cursores dinámicos, cuando un proveedor de datos solo puede proporcionar cursores menos compatibles, como cursores estáticos.
 
 ## <a name="keyword"></a>Palabra clave
- Para invocar este componente de servicio, establezca la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) o del objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) en **adUseClient**.
+ Para invocar este componente de servicio, establezca la propiedad [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) del objeto de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) o del objeto de [conexión](../../reference/ado-api/connection-object-ado.md) en **adUseClient**.
 
 ```vb
 connection.CursorLocation=adUseClient
@@ -37,7 +37,7 @@ recordset.CursorLocation=adUseClient
 ```
 
 ## <a name="dynamic-properties"></a>Propiedades dinámicas
- Cuando se invoca el servicio de cursor para OLE DB, se agregan las siguientes propiedades dinámicas a la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) del objeto de **conjunto de registros** . La lista completa de propiedades dinámicas de objetos de **conjunto de registros** y de **conexión** se muestra en el [Índice de propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md). Los nombres de propiedad OLE DB asociados, si procede, se incluyen entre paréntesis después del nombre de la propiedad ADO.
+ Cuando se invoca el servicio de cursor para OLE DB, se agregan las siguientes propiedades dinámicas a la colección de [propiedades](../../reference/ado-api/properties-collection-ado.md) del objeto de **conjunto de registros** . La lista completa de propiedades dinámicas de objetos de **conjunto de registros** y de **conexión** se muestra en el [Índice de propiedades dinámicas de ADO](../../reference/ado-api/ado-dynamic-property-index.md). Los nombres de propiedad OLE DB asociados, si procede, se incluyen entre paréntesis después del nombre de la propiedad ADO.
 
  Los cambios en algunas propiedades dinámicas no son visibles para el origen de datos subyacente una vez invocado el servicio de cursor. Por ejemplo, el establecimiento de la propiedad *tiempo de espera de comando* en un conjunto de **registros** no será visible para el proveedor de datos subyacente.
 
@@ -64,16 +64,16 @@ Recordset1.Properties.Item("Command Time out") = 50
 |Almacenar en caché filas secundarias (DBPROP_ADC_CACHECHILDROWS)|En el caso de los conjuntos de registros creados con el servicio de forma de datos, este valor indica si los conjuntos de registros secundarios se almacenan en una memoria caché para su uso posterior.|
 |Versión del motor de cursores (DBPROP_ADC_CEVER)|Indica la versión del servicio de cursor que se está usando.|
 |Mantener el estado de los cambios (DBPROP_ADC_MAINTAINCHANGESTATUS)|Indica el texto del comando que se usa para volver a sincronizar una o más filas en una combinación de varias tablas.|
-|[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) (Optimizar)|Indica si se debe crear un índice. Cuando se establece en **true**, autoriza la creación temporal de índices para mejorar la ejecución de determinadas operaciones.|
-|[Nombre de la reformación](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Indica el nombre del **conjunto de registros**. Se puede hacer referencia a él en los comandos de forma de datos actuales o posteriores.|
-|[Comando Resync](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Indica una cadena de comandos personalizada que usa el método [Resync](../../../ado/reference/ado-api/resync-method.md) cuando la propiedad de [tabla única](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) está en vigor.|
-|[Catálogo único](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica el nombre de la base de datos que contiene la tabla a la que se hace referencia en la propiedad de **tabla única** .|
-|[Esquema único](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica el nombre del propietario de la tabla a la que se hace referencia en la propiedad de **tabla única** .|
-|[Tabla única](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica el nombre de la tabla de un **conjunto de registros** creado a partir de varias tablas que pueden ser modificadas por inserciones, actualizaciones o eliminaciones.|
+|[Optimize](../../reference/ado-api/optimize-property-dynamic-ado.md) (Optimizar)|Indica si se debe crear un índice. Cuando se establece en **true**, autoriza la creación temporal de índices para mejorar la ejecución de determinadas operaciones.|
+|[Nombre de la reformación](../../reference/ado-api/reshape-name-property-dynamic-ado.md)|Indica el nombre del **conjunto de registros**. Se puede hacer referencia a él en los comandos de forma de datos actuales o posteriores.|
+|[Comando Resync](../../reference/ado-api/resync-command-property-dynamic-ado.md)|Indica una cadena de comandos personalizada que usa el método [Resync](../../reference/ado-api/resync-method.md) cuando la propiedad de [tabla única](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) está en vigor.|
+|[Catálogo único](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica el nombre de la base de datos que contiene la tabla a la que se hace referencia en la propiedad de **tabla única** .|
+|[Esquema único](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica el nombre del propietario de la tabla a la que se hace referencia en la propiedad de **tabla única** .|
+|[Tabla única](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Indica el nombre de la tabla de un **conjunto de registros** creado a partir de varias tablas que pueden ser modificadas por inserciones, actualizaciones o eliminaciones.|
 |Criterios de actualización (DBPROP_ADC_UPDATECRITERIA)|Indica qué campos de la cláusula **Where** se utilizan para controlar las colisiones que se producen durante una actualización.|
-|[Actualización](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) de la sincronización (DBPROP_ADC_UPDATERESYNC)|Indica si el método **Resync** se invoca implícitamente después del método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) (y su comportamiento) cuando la propiedad de **tabla única** está en vigor.|
+|[Actualización](../../reference/ado-api/update-resync-property-dynamic-ado.md) de la sincronización (DBPROP_ADC_UPDATERESYNC)|Indica si el método **Resync** se invoca implícitamente después del método [UpdateBatch](../../reference/ado-api/updatebatch-method.md) (y su comportamiento) cuando la propiedad de **tabla única** está en vigor.|
 
- También puede establecer o recuperar una propiedad dinámica especificando su nombre como índice de la colección de **propiedades** . Por ejemplo, obtenga e imprima el valor actual de la propiedad de [optimización](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) dinámica y, a continuación, establezca un nuevo valor, como se indica a continuación:
+ También puede establecer o recuperar una propiedad dinámica especificando su nombre como índice de la colección de **propiedades** . Por ejemplo, obtenga e imprima el valor actual de la propiedad de [optimización](../../reference/ado-api/optimize-property-dynamic-ado.md) dinámica y, a continuación, establezca un nuevo valor, como se indica a continuación:
 
 ```vb
 Debug.Print rs.Properties("Optimize")
@@ -85,9 +85,9 @@ rs.Properties("Optimize") = True
 
 |Nombre de propiedad|Descripción|
 |-------------------|-----------------|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complementa los tipos de cursores que están disponibles para un **conjunto de registros**.|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complementa los tipos de bloqueos disponibles para un **conjunto de registros**. Habilita las actualizaciones por lotes.|
-|[Sort](../../../ado/reference/ado-api/sort-property.md)|Especifica uno o más nombres de campo en los que se ordena el **conjunto de registros** y si cada campo se ordena en orden ascendente o descendente.|
+|[CursorType](../../reference/ado-api/cursortype-property-ado.md)|Complementa los tipos de cursores que están disponibles para un **conjunto de registros**.|
+|[LockType](../../reference/ado-api/locktype-property-ado.md)|Complementa los tipos de bloqueos disponibles para un **conjunto de registros**. Habilita las actualizaciones por lotes.|
+|[Sort](../../reference/ado-api/sort-property.md)|Especifica uno o más nombres de campo en los que se ordena el **conjunto de registros** y si cada campo se ordena en orden ascendente o descendente.|
 
 ## <a name="method-behavior"></a>Comportamiento del método
- El servicio de cursor para OLE DB habilita o afecta al comportamiento del método [Append](../../../ado/reference/ado-api/append-method-ado.md) del objeto de [campo](../../../ado/reference/ado-api/field-object.md) ; y los métodos [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)y [Save](../../../ado/reference/ado-api/save-method.md) del objeto de **conjunto de registros** .
+ El servicio de cursor para OLE DB habilita o afecta al comportamiento del método [Append](../../reference/ado-api/append-method-ado.md) del objeto de [campo](../../reference/ado-api/field-object.md) ; y los métodos [Open](../../reference/ado-api/open-method-ado-recordset.md), [Resync](../../reference/ado-api/resync-method.md), [UpdateBatch](../../reference/ado-api/updatebatch-method.md)y [Save](../../reference/ado-api/save-method.md) del objeto de **conjunto de registros** .

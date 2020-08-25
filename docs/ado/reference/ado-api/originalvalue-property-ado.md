@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13353013575db87f5ec30ceb8cf4a5aab6a06079
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5aedfa688b2d29a80eb0bc2e06d113e908e122c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443127"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773574"
 ---
 # <a name="originalvalue-property-ado"></a>Propiedad OriginalValue (ADO)
-Indica el valor de un [campo](../../../ado/reference/ado-api/field-object.md) que existía en el registro antes de que se realizaran cambios.  
+Indica el valor de un [campo](./field-object.md) que existía en el registro antes de que se realizaran cambios.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un valor de **tipo Variant** que representa el valor de un campo antes de cualquier cambio.  
@@ -32,17 +32,17 @@ Indica el valor de un [campo](../../../ado/reference/ado-api/field-object.md) qu
 ## <a name="remarks"></a>Observaciones  
  Utilice la propiedad **OriginalValue** para devolver el valor de campo original de un campo del registro actual.  
   
- En el *modo de actualización inmediata* (en el que el proveedor escribe los cambios en el origen de datos subyacente después de llamar al método [Update](../../../ado/reference/ado-api/update-method.md) ), la propiedad **OriginalValue** devuelve el valor del campo que existía antes de cualquier cambio (es decir, desde la última llamada al método **Update** ). Este es el mismo valor que utiliza el método [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) para reemplazar la propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) .  
+ En el *modo de actualización inmediata* (en el que el proveedor escribe los cambios en el origen de datos subyacente después de llamar al método [Update](./update-method.md) ), la propiedad **OriginalValue** devuelve el valor del campo que existía antes de cualquier cambio (es decir, desde la última llamada al método **Update** ). Este es el mismo valor que utiliza el método [CancelUpdate](./cancelupdate-method-ado.md) para reemplazar la propiedad [Value](./value-property-ado.md) .  
   
- En el *modo de actualización por lotes* (en el que el proveedor almacena en caché varios cambios y los escribe en el origen de datos subyacente solo cuando se llama al método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) ), la propiedad **OriginalValue** devuelve el valor del campo que existía antes de cualquier cambio (es decir, desde la última llamada al método **UpdateBatch** ). Este es el mismo valor que utiliza el método [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) para reemplazar la propiedad **Value** . Cuando se usa esta propiedad con la propiedad [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) , se pueden resolver los conflictos que surgen de las actualizaciones por lotes.  
+ En el *modo de actualización por lotes* (en el que el proveedor almacena en caché varios cambios y los escribe en el origen de datos subyacente solo cuando se llama al método [UpdateBatch](./updatebatch-method.md) ), la propiedad **OriginalValue** devuelve el valor del campo que existía antes de cualquier cambio (es decir, desde la última llamada al método **UpdateBatch** ). Este es el mismo valor que utiliza el método [CancelBatch](./cancelbatch-method-ado.md) para reemplazar la propiedad **Value** . Cuando se usa esta propiedad con la propiedad [UnderlyingValue](./underlyingvalue-property.md) , se pueden resolver los conflictos que surgen de las actualizaciones por lotes.  
   
 ## <a name="record"></a>Registro  
- En el caso de los objetos de [registro](../../../ado/reference/ado-api/record-object-ado.md) , la propiedad **OriginalValue** estará vacía para los campos agregados antes de llamar a [Update](../../../ado/reference/ado-api/update-method.md) .  
+ En el caso de los objetos de [registro](./record-object-ado.md) , la propiedad **OriginalValue** estará vacía para los campos agregados antes de llamar a [Update](./update-method.md) .  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+ [Objeto Field](./field-object.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de las propiedades OriginalValue y UnderlyingValue (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
- [Ejemplo de las propiedades OriginalValue y UnderlyingValue (VC + +)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
- [Propiedad UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [Ejemplo de las propiedades OriginalValue y UnderlyingValue (VB)](./originalvalue-and-underlyingvalue-properties-example-vb.md)   
+ [Ejemplo de las propiedades OriginalValue y UnderlyingValue (VC + +)](./originalvalue-and-underlyingvalue-properties-example-vc.md)   
+ [Propiedad UnderlyingValue](./underlyingvalue-property.md)

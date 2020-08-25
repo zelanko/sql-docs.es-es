@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 720dd70896fe4c30d10214b7102bbd77beab5e48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400212"
 ---
 # <a name="system-databases-in-parallel-data-warehouse-pdw"></a>Bases de datos del sistema en almacenamiento de datos paralelos (PDW)
@@ -23,7 +23,7 @@ Las bases de datos del sistema son bases de datos que PDW de SQL Server utiliza 
   
 -   [Base de datos maestra](master-database.md)  
   
--   [Base de datos Tempdb](tempdb-database.md)  
+-   [Base de datos tempdb](tempdb-database.md)  
   
 <!-- MISSING LINKS 
 ## See Also  

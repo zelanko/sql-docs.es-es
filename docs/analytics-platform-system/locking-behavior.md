@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401001"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportamiento de bloqueo en almacenamiento de datos paralelos
@@ -27,7 +27,7 @@ PDW de SQL Server admite cuatro modos de bloqueo:
 Exclusivo  
 El bloqueo exclusivo prohíbe escribir o leer el objeto bloqueado hasta que se complete la transacción que contiene el bloqueo exclusivo. No se permiten otros bloqueos de ningún modo mientras el bloqueo exclusivo está en vigor. Por ejemplo, DROP TABLE y CREATE DATABASE usan un bloqueo exclusivo.  
   
-Shared  
+Compartido  
 El bloqueo compartido prohíbe la iniciación de un bloqueo exclusivo en el objeto afectado, pero permite todos los demás modos de bloqueo. Por ejemplo, la instrucción SELECT inicia un bloqueo compartido y, por lo tanto, permite que varias consultas tengan acceso a los datos seleccionados simultáneamente, pero impide que se lean las actualizaciones de los registros hasta que se complete la instrucción SELECT.  
   
 ExclusiveUpdate  

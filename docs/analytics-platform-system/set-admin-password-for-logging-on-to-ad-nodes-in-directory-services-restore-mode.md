@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400336"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Establecimiento de la contraseña de administrador para iniciar sesión en los nodos de AD en Modo de restauración de servicios de directorio (DSRM)-Analytics Platform System
@@ -25,9 +25,9 @@ Modo de restauración de servicios de directorio (DSRM) es un modo de arranque p
   
 2.  En el símbolo del sistema, escriba `ntdsutil`.  
   
-3.  En el **ntdsutil** símbolo del sistema de `set dsrm password`Ntdsutil, escriba.  
+3.  En el símbolo del sistema de **Ntdsutil** , escriba `set dsrm password` .  
   
-4.  En el símbolo del sistema de **Restablecer contraseña de administrador:** , escriba `reset password on server null`.  
+4.  En el símbolo del sistema de **Restablecer contraseña de administrador:** , escriba `reset password on server null` .  
   
 5.  En el símbolo del sistema, escriba la nueva contraseña.  
   

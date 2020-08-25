@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f418d2eb21f2cb02223234f6231efb39b232faa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1bf51c8d7d6db2ac898787c3a649a0ecb0610cb
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453407"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806848"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabricación de conjuntos de registros jerárquicos
 En el ejemplo siguiente se muestra cómo fabricar un conjunto de registros jerárquico sin un origen de datos subyacente mediante la gramática de forma de datos para definir columnas para los **conjuntos de registros**primarios, secundarios y terciarios.  
   
- Para fabricar un **conjunto de registros**jerárquico, debe especificar el [servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) y puede especificar un valor de proveedor de datos de None en el parámetro de cadena de conexión del método [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) del objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Para obtener más información, vea [proveedores necesarios para la forma de datos](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Para fabricar un **conjunto de registros**jerárquico, debe especificar el [servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios ADO)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) y puede especificar un valor de proveedor de datos de None en el parámetro de cadena de conexión del método [Open](../../reference/ado-api/open-method-ado-connection.md) del objeto [Connection](../../reference/ado-api/connection-object-ado.md) . Para obtener más información, vea [proveedores necesarios para la forma de datos](./required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -56,8 +56,8 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
  En cuanto se ha fabricado el **conjunto de registros** , se puede rellenar, manipular o guardar en un archivo.  
   
 ## <a name="see-also"></a>Consulte también  
- [Obtener acceso a las filas de un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
- [Proveedores necesarios para el modelado de datos](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Cláusula APPEND de forma](../../../ado/guide/data/shape-append-clause.md)   
- [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)
+ [Obtener acceso a las filas de un conjunto de registros jerárquico](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Gramática de forma formal](./formal-shape-grammar.md)   
+ [Proveedores necesarios para el modelado de datos](./required-providers-for-data-shaping.md)   
+ [Cláusula APPEND de forma](./shape-append-clause.md)   
+ [Comandos Shape en General](./shape-commands-in-general.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6904bc0b3459f25af955d804ed4764ae57238b90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f646a608c8cbc25e16c5200f8271c133a62d3457
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453477"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806157"
 ---
 # <a name="dynamic-cursors"></a>Cursores dinámicos
 Los cursores dinámicos detectan todos los cambios realizados en las filas del conjunto de resultados, independientemente de si los cambios se producen dentro del cursor o por otros usuarios fuera del cursor. Todas las instrucciones INSERT, Update y DELETE realizadas por todos los usuarios son visibles a través del cursor. El cursor dinámico puede detectar los cambios realizados en las filas, el orden y los valores del conjunto de resultados después de abrir el cursor. Las actualizaciones realizadas fuera del cursor no son visibles hasta que se confirman (a menos que el nivel de aislamiento de transacción del cursor se establezca en "uncommited").  
@@ -29,6 +29,6 @@ Los cursores dinámicos detectan todos los cambios realizados en las filas del c
  El cursor dinámico es una buena opción si la aplicación debe detectar todas las actualizaciones simultáneas realizadas por otros usuarios. Use el **AdOpenDynamic CursorTypeEnum** para indicar que desea utilizar un cursor dinámico en ADO.  
   
 ## <a name="see-also"></a>Consulte también  
- [Cursores de solo avance](../../../ado/guide/data/forward-only-cursors.md)   
- [Cursores estáticos](../../../ado/guide/data/static-cursors.md)   
- [Cursores KEYSET](../../../ado/guide/data/keyset-cursors.md)
+ [Cursores de solo avance](./forward-only-cursors.md)   
+ [Cursores estáticos](./static-cursors.md)   
+ [Cursores KEYSET](./keyset-cursors.md)

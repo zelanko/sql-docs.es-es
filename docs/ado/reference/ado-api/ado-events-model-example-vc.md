@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19743fb8434ddfb75025ae47da079a8256f270f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451437"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776713"
 ---
 # <a name="ado-events-model-example-vc"></a>Ejemplo de modelo de eventos de ADO (VC ++)
-En la sección Visual C++ de la [creación de instancias de eventos de ADO por lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md) se ofrece una descripción general de cómo crear una instancia del modelo de eventos de ADO. El siguiente es un ejemplo específico de la creación de instancias del modelo de eventos dentro del entorno creado por la directiva **#import** .  
+En la sección Visual C++ de la [creación de instancias de eventos de ADO por lenguaje](../../guide/data/ado-event-instantiation-by-language.md) se ofrece una descripción general de cómo crear una instancia del modelo de eventos de ADO. El siguiente es un ejemplo específico de la creación de instancias del modelo de eventos dentro del entorno creado por la directiva **#import** .  
   
  La descripción general utiliza **adoint. h** como referencia para las firmas de método. Sin embargo, algunos detalles de la descripción general cambian ligeramente como resultado del uso de la directiva **#import** :  
   

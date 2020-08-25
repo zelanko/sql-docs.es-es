@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4e8304204a6eaebf6b64d5cb9ad44e5fa1602da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: efb206f3c0fbbeb0fbc700f8e714ddd1d5ee5a8c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454017"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806516"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Usar ADO con Microsoft Visual Basic y Visual Basic para Aplicaciones
 La configuración de un proyecto de ADO y la escritura de código ADO es similar si se utiliza Visual Basic o Visual Basic para Aplicaciones. En este tema se trata el uso de ADO con Visual Basic y Visual Basic para Aplicaciones y se indica cualquier diferencia.
@@ -43,7 +43,7 @@ La configuración de un proyecto de ADO y la escritura de código ADO es similar
 
     -   OLE Automation
 
-3.  Haga clic en **OK**.
+3.  Haga clic en **Aceptar**.
 
  Puede usar ADO con la misma facilidad con Visual Basic para Aplicaciones, por ejemplo, con Microsoft Access.
 
@@ -61,7 +61,7 @@ La configuración de un proyecto de ADO y la escritura de código ADO es similar
 
     -   Biblioteca de objetos de Microsoft DAO 3,5 (o posterior)
 
-4.  Haga clic en **OK**.
+4.  Haga clic en **Aceptar**.
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Crear objetos ADO en Visual Basic
  Para crear una variable de Automation y una instancia de un objeto para esa variable, puede usar dos métodos: **Dim** o **CreateObject**.
@@ -110,10 +110,10 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  La creación de instancias de objetos mediante el método **CreateObject** suele ser más lenta que la utilización de la instrucción **Dim** .
 
 ## <a name="handling-events"></a>Controlar eventos
- Para controlar los eventos de ADO en Microsoft Visual Basic, debe declarar una variable de nivel de módulo mediante la palabra clave **WithEvents** . La variable solo se puede declarar como parte de un módulo de clase y se debe declarar en el nivel de módulo. Para obtener una explicación más detallada sobre el control de eventos de ADO, vea [controlar eventos de ADO](../../../ado/guide/data/handling-ado-events.md).
+ Para controlar los eventos de ADO en Microsoft Visual Basic, debe declarar una variable de nivel de módulo mediante la palabra clave **WithEvents** . La variable solo se puede declarar como parte de un módulo de clase y se debe declarar en el nivel de módulo. Para obtener una explicación más detallada sobre el control de eventos de ADO, vea [controlar eventos de ADO](../data/handling-ado-events.md).
 
 ## <a name="visual-basic-examples"></a>Ejemplos de Visual Basic
- En la documentación de ADO se incluyen muchos ejemplos de Visual Basic. Para obtener más información, vea [ejemplos de código ADO en Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md).
+ En la documentación de ADO se incluyen muchos ejemplos de Visual Basic. Para obtener más información, vea [ejemplos de código ADO en Microsoft Visual Basic](../../reference/ado-api/ado-code-examples-in-visual-basic.md).
 
-## <a name="see-also"></a>Vea también
- [Microsoft objetos de datos ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [usar ado con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [usar ado con lenguajes de scripting](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+## <a name="see-also"></a>Consulte también
+ [Microsoft objetos de datos ActiveX (ADO)](../../microsoft-activex-data-objects-ado.md) [usar ado con Microsoft Visual C++](./using-ado-with-microsoft-visual-c.md) [usar ado con lenguajes de scripting](./using-ado-with-scripting-languages.md)

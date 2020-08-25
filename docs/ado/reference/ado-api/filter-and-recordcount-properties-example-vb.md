@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f948d2f0ba3a70c1f9a7b3279b0eb9bf68b5b3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bf78308afe6a48a071daa8a68a0a3cfaecd907c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443697"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775304"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Ejemplo de las propiedades Filter y RecordCount (VB)
-En este ejemplo se abre un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) en la tabla Publishers en la base de datos ***pubs*** . A continuación, usa la propiedad [Filter](../../../ado/reference/ado-api/filter-property.md) para limitar el número de registros visibles a los publicadores de un país o región determinados. La propiedad **RecordCount** se usa para mostrar la diferencia entre los conjuntos de registros filtrados y sin filtrar.  
+En este ejemplo se abre un [conjunto de registros](./recordset-object-ado.md) en la tabla Publishers en la base de datos ***pubs*** . A continuación, usa la propiedad [Filter](./filter-property.md) para limitar el número de registros visibles a los publicadores de un país o región determinados. La propiedad **RecordCount** se usa para mostrar la diferencia entre los conjuntos de registros filtrados y sin filtrar.  
   
 ```  
 'BeginFilterVB  
@@ -116,6 +116,6 @@ Attribute VB_Name = "Filter"
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad Filter](../../../ado/reference/ado-api/filter-property.md)   
- [Propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propiedad Filter](./filter-property.md)   
+ [Propiedad RecordCount (ADO)](./recordcount-property-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

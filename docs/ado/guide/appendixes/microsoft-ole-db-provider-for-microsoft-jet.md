@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 822c9f6ef6aebe5e32bb37e4c89a9bb4e6d7db68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1747f01b554e8df45a7835e2cb2006adcdb3079a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454077"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806622"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Introducción al proveedor de Microsoft OLE DB para Microsoft Jet
 El proveedor de OLE DB para Microsoft Jet permite a ADO obtener acceso a las bases de datos de Microsoft Jet.
 
 ## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión
- Para conectarse a este proveedor, establezca el argumento de *proveedor* de la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en lo siguiente:
+ Para conectarse a este proveedor, establezca el argumento de *proveedor* de la propiedad [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) en la siguiente propiedad:
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
- La lectura de la propiedad [Provider](../../../ado/reference/ado-api/provider-property-ado.md) también devolverá esta cadena.
+ La lectura de la propiedad [Provider](../../reference/ado-api/provider-property-ado.md) también devolverá esta cadena.
 
 ## <a name="typical-connection-string"></a>Cadena de conexión típica
  Una cadena de conexión típica para este proveedor es:
@@ -69,7 +69,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: cifrar base de datos (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Indica si se debe cifrar una base de datos compactada. Si no se establece esta propiedad, la base de datos compactada se cifrará si la base de datos original también se cifró.|
 |Jet OLEDB: tipo de motor (DBPROP_JETOLEDB_ENGINE)|Indica el motor de almacenamiento usado para obtener acceso al almacén de datos actual.|
 |Jet OLEDB: retraso asincrónico exclusivo (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|Indica el período de tiempo máximo, en milisegundos, que jet puede retrasar las escrituras asincrónicas en el disco cuando la base de datos se abre exclusivamente.<br /><br /> Esta propiedad se omite a menos que el tiempo de espera de la **transacción jet OleDb: Flush** se establezca en 0.|
-|Jet OLEDB: tiempo de espera de transacciones de vaciado (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Indica la cantidad de tiempo que hay que esperar antes de que los datos almacenados en una memoria caché para la escritura asincrónica se escriban realmente en el disco. Esta configuración invalida los valores de **jet OleDb: retardo asincrónico compartido** y **jet OleDb: Exclusive Async Delay**.|
+|Jet OLEDB: tiempo de espera de transacciones de vaciado (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Indica la cantidad de tiempo que hay que esperar antes de que los datos almacenados en una memoria caché para escritura asincrónica se escriban en el disco. Esta configuración invalida los valores de **jet OleDb: retardo asincrónico compartido** y **jet OleDb: Exclusive Async Delay**.|
 |Jet OLEDB: transacciones masivas globales (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|Indica si se transaccionan las transacciones masivas de SQL.|
 |Jet OLEDB: operaciones masivas parciales globales (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|Indica la contraseña utilizada para abrir la base de datos.|
 |Jet OLEDB: sincronización de confirmación implícita (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|Indica si los cambios realizados en transacciones implícitas internas se escriben en modo sincrónico o asincrónico.|
@@ -106,16 +106,16 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: consulta almacenada (DBPROP_JETOLEDB_STOREDQUERY)|Indica si el texto del comando debe interpretarse como una consulta almacenada en lugar de como un comando SQL.|
 |Jet OLEDB: Validate rules on set (DBPROP_JETOLEDB_VALIDATEONSET)|Indica si las reglas de validación de jet se evalúan cuando se establecen datos de columna o cuando los cambios se confirman en la base de datos.|
 
- De forma predeterminada, el proveedor de OLE DB para Microsoft Jet abre las bases de datos de Microsoft Jet en modo de lectura y escritura. Para abrir una base de datos en modo de solo lectura, establezca la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) en el objeto de **conexión** ADO en **adModeRead**.
+ De forma predeterminada, el proveedor de OLE DB para Microsoft Jet abre las bases de datos de Microsoft Jet en modo de lectura y escritura. Para abrir una base de datos en modo de solo lectura, establezca la propiedad [mode](../../reference/ado-api/mode-property-ado.md) en el objeto de **conexión** ADO en **adModeRead**.
 
 ## <a name="command-object-usage"></a>Uso de objetos de comando
- El texto del comando en el objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) usa el dialecto SQL de Microsoft Jet. Puede especificar consultas que devuelven filas, consultas de acción y nombres de tabla en el texto del comando. sin embargo, no se admiten los procedimientos almacenados y no se deben especificar.
+ El texto del comando en el objeto [Command](../../reference/ado-api/command-object-ado.md) usa el dialecto SQL de Microsoft Jet. Puede especificar consultas que devuelven filas, consultas de acción y nombres de tabla en el texto del comando. sin embargo, no se admiten los procedimientos almacenados y no se deben especificar.
 
 ## <a name="recordset-behavior"></a>Comportamiento del conjunto de registros
- El motor de base de datos de Microsoft Jet no es compatible con cursores dinámicos. Por lo tanto, el proveedor de OLE DB para Microsoft Jet no admite el tipo de cursor **adLockDynamic** . Cuando se solicita un cursor dinámico, el proveedor devolverá un cursor de conjunto de claves y restablecerá la propiedad [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) para indicar el tipo de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que se devuelve. Además, si se solicita un **conjunto de registros** actualizable (**LockType** es **adLockOptimistic**, **adLockBatchOptimistic**o **adLockPessimistic**), el proveedor también devolverá un cursor de conjunto de claves y restablecerá la propiedad **CursorType** .
+ El motor de base de datos de Microsoft Jet no es compatible con cursores dinámicos. Por lo tanto, el proveedor de OLE DB para Microsoft Jet no admite el tipo de cursor **adLockDynamic** . Cuando se solicita un cursor dinámico, el proveedor devolverá un cursor de conjunto de claves y restablecerá la propiedad [CursorType](../../reference/ado-api/cursortype-property-ado.md) para indicar el tipo de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) que se devuelve. Además, si se solicita un **conjunto de registros** actualizable (**LockType** es **adLockOptimistic**, **adLockBatchOptimistic**o **adLockPessimistic**), el proveedor también devolverá un cursor de conjunto de claves y restablecerá la propiedad **CursorType** .
 
 ## <a name="dynamic-properties"></a>Propiedades dinámicas
- El proveedor de OLE DB para Microsoft Jet inserta varias propiedades dinámicas en la colección de **propiedades** de los objetos de [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)y [comando](../../../ado/reference/ado-api/command-object-ado.md) no abiertos.
+ El proveedor de OLE DB para Microsoft Jet inserta varias propiedades dinámicas en la colección de **propiedades** de los objetos de [conexión](../../reference/ado-api/connection-object-ado.md), [conjunto de registros](../../reference/ado-api/recordset-object-ado.md)y [comando](../../reference/ado-api/command-object-ado.md) no abiertos.
 
  Las tablas siguientes son un índice entre los nombres de ADO y OLE DB para cada propiedad dinámica. La referencia del programador de OLE DB hace referencia a un nombre de propiedad ADO por el término "Descripción". Puede encontrar más información sobre estas propiedades en la referencia del programador de OLE DB.
 
@@ -336,4 +336,4 @@ Microsoft.Jet.OLEDB.4.0
 |Actualización|DBPROP_UPDATABILITY|
 |Usar marcadores|DBPROP_BOOKMARKS|
 
- Para obtener detalles de implementación específicos e información funcional sobre el proveedor de OLE DB para Microsoft Jet, consulte [proveedor de jet](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) en la documentación de OLE DB.
+ Para obtener detalles de implementación específicos e información funcional sobre el proveedor de OLE DB para Microsoft Jet, consulte [proveedor de jet](/previous-versions/windows/desktop/ms722791(v=vs.85)) en la documentación de OLE DB.

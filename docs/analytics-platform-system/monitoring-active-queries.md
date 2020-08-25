@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400911"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Supervisión de consultas activas: almacenamiento de datos paralelos
@@ -36,9 +36,9 @@ Tanto la consola de administración como la PDW de SQL Server vistas del sistema
     Para ver información más detallada de una consulta determinada, haga clic en el identificador de la consulta. Verá información que incluye la consulta completa y el plan de consulta, con información de estado para cada paso de la ejecución de la consulta. Si se devolvieron errores, también puede ver información detallada sobre los errores. <!-- MISSING LINKS See [Understanding Query Plans &#40;SQL Server PDW&#41;](../sqlpdw/understanding-query-plans-sql-server-pdw.md) for information on how to interpret the query plan information available in the Admin Console.  -->
   
 ### <a name="to-monitor-active-queries-by-using-the-system-views"></a>Para supervisar las consultas activas mediante las vistas del sistema  
-La vista del sistema principal utilizada para supervisar consultas es [Sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Utilice esta vista del sistema para buscar `request_id` el para una consulta activa o reciente, en función del texto de la consulta.  
+La vista del sistema principal utilizada para supervisar consultas es [Sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Utilice esta vista del sistema para buscar el `request_id` para una consulta activa o reciente, en función del texto de la consulta.  
   
-Por ejemplo, la siguiente consulta busca el `request_id` y el actual `status` de cualquier consulta que seleccione todas las columnas de `memberAddresses` la tabla.  
+Por ejemplo, la siguiente consulta busca el `request_id` y el actual `status` de cualquier consulta que seleccione todas las columnas de la `memberAddresses` tabla.  
   
 ```sql  
 SELECT request_id, command, status   

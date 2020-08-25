@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453257"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805977"
 ---
 # <a name="how-event-handlers-work-together"></a>Cómo funcionan conjuntamente los controladores de eventos
-A menos que esté programando en Visual Basic, se deben implementar todos los controladores de eventos para los eventos **Connection** y **Recordset** , independientemente de si realmente procesa todos los eventos. La cantidad de trabajo de implementación que tiene que hacer depende del lenguaje de programación. Para obtener más información, vea [creación de instancias de eventos de ADO por lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+A menos que esté programando en Visual Basic, se deben implementar todos los controladores de eventos para los eventos **Connection** y **Recordset** , independientemente de si realmente procesa todos los eventos. La cantidad de trabajo de implementación que tiene que hacer depende del lenguaje de programación. Para obtener más información, vea [creación de instancias de eventos de ADO por lenguaje](./ado-event-instantiation-by-language.md).  
   
 ## <a name="paired-event-handlers"></a>Controladores de eventos emparejados  
  Cada controlador de eventos tiene asociado un controlador de eventos **completo** . Por ejemplo, cuando la aplicación cambia el valor de un campo, se llama al controlador de eventos **WillChangeField** . Si el cambio es aceptable, la aplicación deja el parámetro **adStatus** sin modificar y se realiza la operación. Una vez finalizada la operación, un evento **FieldChangeComplete** notifica a la aplicación que la operación ha finalizado. Si se completó correctamente, **adStatus** contiene **adStatusOK**; de lo contrario, **adStatus** contiene **adStatusErrorsOccurred** y debe comprobar el objeto de **error** para determinar la causa del error.  
@@ -46,7 +46,7 @@ A menos que esté programando en Visual Basic, se deben implementar todos los co
   
  Los controladores de eventos **completos** pueden ser útiles para administrar operaciones asincrónicas. Cada operación asincrónica tiene un evento **completo** adecuado.  
   
- Por ejemplo, puede tardar mucho tiempo en rellenar un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) grande. Si la aplicación se ha escrito correctamente, puede iniciar una `Recordset.Open(...,adAsyncExecute)` operación y continuar con otro procesamiento. Finalmente recibirá una notificación cuando el **conjunto de registros** se rellene con un evento **ExecuteComplete** .  
+ Por ejemplo, puede tardar mucho tiempo en rellenar un objeto de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) grande. Si la aplicación se ha escrito correctamente, puede iniciar una `Recordset.Open(...,adAsyncExecute)` operación y continuar con otro procesamiento. Finalmente recibirá una notificación cuando el **conjunto de registros** se rellene con un evento **ExecuteComplete** .  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>Controladores de eventos únicos y varios objetos  
  La flexibilidad de un lenguaje de programación como Microsoft Visual C++® permite que un controlador de eventos procese eventos de varios objetos. Por ejemplo, podría tener un controlador de eventos de **desconexión** que procese eventos de varios objetos de **conexión** . Si una de las conexiones ha finalizado, se llamará al controlador de eventos **Disconnect** . Podría indicar qué conexión causó el evento porque el parámetro de objeto de controlador de eventos se establecería en el objeto de **conexión** correspondiente.  
@@ -55,7 +55,7 @@ A menos que esté programando en Visual Basic, se deben implementar todos los co
 >  Esta técnica no se puede usar en Visual Basic porque ese lenguaje solo puede correlacionar un objeto con un controlador de eventos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Creación de instancias de eventos de ADO por lenguaje](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Parámetros de evento](../../../ado/guide/data/event-parameters.md)   
- [Tipos de eventos](../../../ado/guide/data/types-of-events.md)
+ [Resumen del controlador de eventos de ADO](./ado-event-handler-summary.md)   
+ [Creación de instancias de eventos de ADO por lenguaje](./ado-event-instantiation-by-language.md)   
+ [Parámetros de evento](./event-parameters.md)   
+ [Tipos de eventos](./types-of-events.md)

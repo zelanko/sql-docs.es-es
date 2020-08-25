@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f544805336fdea586fac5697b3abde009dc6f7ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6a682a706e18046bde0a6d117d1964262700c1c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453627"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806263"
 ---
 # <a name="creating-a-connection-string"></a>Creación de una cadena de conexión
 Una cadena de conexión consta de una lista de pares de argumentos y valores (es decir, parámetros), separados por punto y coma. Por ejemplo:  
@@ -42,7 +42,7 @@ Una cadena de conexión consta de una lista de pares de argumentos y valores (es
   
  Otros argumentos se pasan al proveedor denominado en el argumento del *proveedor* , sin ningún procesamiento por parte de ADO.  
   
- La aplicación HelloData en [HelloData: una aplicación simple de ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md) usó la siguiente cadena de conexión:  
+ La aplicación HelloData en [HelloData: una aplicación simple de ADO](./hellodata-a-simple-ado-application.md) usó la siguiente cadena de conexión:  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  

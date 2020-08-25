@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0794c1ab1f92a44ff59bb66306d348244666f9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad70cc527a42188588df31ea7f3a53678423f37d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453907"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806713"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Obtener acceso a las filas de un conjunto de registros jerárquico (ejemplo)
-En el ejemplo siguiente se muestran los pasos necesarios para tener acceso a las filas de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)jerárquico:
+En el ejemplo siguiente se muestran los pasos necesarios para tener acceso a las filas de un [conjunto de registros](../../reference/ado-api/recordset-object-ado.md)jerárquico:
 
 1.  Los objetos de **conjunto de registros** de las tablas **authors** y **TITLEAUTHOR** están relacionados con el identificador de autor.
 
 2.  El bucle exterior muestra el nombre y el apellido de cada autor, el estado y la identificación.
 
-3.  El conjunto de **registros** anexado para cada fila se recupera de la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) y se asigna a *rstTitleAuthor*.
+3.  El conjunto de **registros** anexado para cada fila se recupera de la colección [Fields](../../reference/ado-api/fields-collection-ado.md) y se asigna a *rstTitleAuthor*.
 
 4.  El bucle interno muestra cuatro campos de cada fila del **conjunto de registros**anexado.
 
- La propiedad [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) está establecida en **false** para fines ilustrativos, de modo que puede ver el cambio de capítulo explícitamente en cada iteración del bucle exterior. Para que el ejemplo de código sea más eficaz, puede pasar la asignación en el paso 3 antes de la primera línea del paso 2, de modo que la asignación se realice solo una vez. A continuación, establezca la propiedad [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) en **true**para que *rstTitleAuthor* cambie implícita y automáticamente al capítulo correspondiente siempre que *RST* se mueva a una nueva fila.
+ La propiedad [StayInSync](../../reference/ado-api/stayinsync-property.md) está establecida en **false** para fines ilustrativos, de modo que puede ver el cambio de capítulo explícitamente en cada iteración del bucle exterior. Para que el ejemplo de código sea más eficaz, puede pasar la asignación en el paso 3 antes de la primera línea del paso 2, de modo que la asignación se realice solo una vez. A continuación, establezca la propiedad [StayInSync](../../reference/ado-api/stayinsync-property.md) en **true**para que *rstTitleAuthor* cambie implícita y automáticamente al capítulo correspondiente siempre que *RST* se mueva a una nueva fila.
 
 ## <a name="example"></a>Ejemplo
 
@@ -69,4 +69,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>Consulte también
- [Información general sobre](../../../ado/guide/data/data-shaping-overview.md) la forma de datos colección de campos de [objeto de campo](../../../ado/reference/ado-api/field-object.md) [(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [gramática de forma Formal](../../../ado/guide/data/formal-shape-grammar.md) [servicio de forma de datos de OLE DB (proveedor de servicios ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [proveedores necesarios para la forma de datos](../../../ado/guide/data/required-providers-for-data-shaping.md) los comandos de forma de la [cláusula Append](../../../ado/guide/data/shape-append-clause.md) [de forma general en](../../../ado/guide/data/shape-commands-in-general.md) [las funciones](../../../ado/guide/data/visual-basic-for-applications-functions.md) de la [cláusula COMPUTE de Shape](../../../ado/guide/data/shape-compute-clause.md) Visual Basic para aplicaciones
+ [Información general sobre](./data-shaping-overview.md) la forma de datos colección de campos de [objeto de campo](../../reference/ado-api/field-object.md) [(ADO)](../../reference/ado-api/fields-collection-ado.md) [gramática de forma Formal](./formal-shape-grammar.md) [servicio de forma de datos de OLE DB (proveedor de servicios ADO)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [objeto de conjunto de registros (ADO)](../../reference/ado-api/recordset-object-ado.md) [proveedores necesarios para la forma de datos](./required-providers-for-data-shaping.md) los comandos de forma de la [cláusula Append](./shape-append-clause.md) [de forma general en](./shape-commands-in-general.md) [las funciones](./visual-basic-for-applications-functions.md) de la [cláusula COMPUTE de Shape](./shape-compute-clause.md) Visual Basic para aplicaciones

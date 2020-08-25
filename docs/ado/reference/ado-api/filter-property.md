@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443687"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775324"
 ---
 # <a name="filter-property"></a>Propiedad Filter
-Indica un filtro para los datos de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Indica un filtro para los datos de un [conjunto de registros](./recordset-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos
 
@@ -34,11 +34,11 @@ Establece o devuelve un valor **Variant** , que puede contener uno de los siguie
   
 -   **Matriz de marcadores:** Matriz de valores de marcador únicos que apuntan a los registros del objeto de **conjunto de registros** .  
   
--   Un valor de [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) .  
+-   Un valor de [FilterGroupEnum](./filtergroupenum.md) .  
   
 ## <a name="remarks"></a>Observaciones
 
-Utilice la propiedad **Filter** para filtrar de forma selectiva los registros de un objeto de **conjunto de registros** . El conjunto de **registros** filtrado se convierte en el cursor actual. Otras propiedades que devuelven valores basados en el **cursor** actual se ven afectadas, como la [propiedad AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), la [propiedad AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), la [propiedad RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)y la [propiedad PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Al establecer la propiedad **Filter** en un valor nuevo específico, se mueve el registro actual al primer registro que satisface el nuevo valor.
+Utilice la propiedad **Filter** para filtrar de forma selectiva los registros de un objeto de **conjunto de registros** . El conjunto de **registros** filtrado se convierte en el cursor actual. Otras propiedades que devuelven valores basados en el **cursor** actual se ven afectadas, como la [propiedad AbsolutePosition (ADO)](./absoluteposition-property-ado.md), la [propiedad AbsolutePage (ADO)](./absolutepage-property-ado.md), la [propiedad RecordCount (ADO)](./recordcount-property-ado.md)y la [propiedad PageCount (ADO)](./pagecount-property-ado.md). Al establecer la propiedad **Filter** en un valor nuevo específico, se mueve el registro actual al primer registro que satisface el nuevo valor.
   
 La cadena de criterios se compone de cláusulas con el formato *FieldName-Operator-Value* (por ejemplo, `"LastName = 'Smith'"` ). Puede crear cláusulas compuestas mediante la concatenación de cláusulas individuales con **y** (por ejemplo, `"LastName = 'Smith' AND FirstName = 'John'"` ) o **o** (por ejemplo, `"LastName = 'Smith' OR LastName = 'Jones'"` ). En el caso de las cadenas de criterios, use las siguientes directrices:
 
@@ -57,11 +57,11 @@ La cadena de criterios se compone de cláusulas con el formato *FieldName-Operat
 -   En su lugar, crearía este filtro como  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo, `LastName Like 'Smit*'`.  
+-   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo: `LastName Like 'Smit*'`.  
   
- Las constantes de filtro facilitan la resolución de conflictos de registros individuales durante el modo de actualización por lotes, ya que permiten ver, por ejemplo, solo los registros que se vieron afectados durante la última llamada al método del [método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
+ Las constantes de filtro facilitan la resolución de conflictos de registros individuales durante el modo de actualización por lotes, ya que permiten ver, por ejemplo, solo los registros que se vieron afectados durante la última llamada al método del [método UpdateBatch](./updatebatch-method.md) .  
   
-Puede producirse un error en la configuración de la propiedad de **filtro** debido a un conflicto con los datos subyacentes. Por ejemplo, este error puede producirse cuando otro usuario ya ha eliminado un registro. En tal caso, el proveedor devuelve advertencias a la colección de [errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) , pero no detiene la ejecución del programa. Un error en tiempo de ejecución solo se produce si hay conflictos en todos los registros solicitados. Utilice la propiedad [status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md) para buscar registros con conflictos.  
+Puede producirse un error en la configuración de la propiedad de **filtro** debido a un conflicto con los datos subyacentes. Por ejemplo, este error puede producirse cuando otro usuario ya ha eliminado un registro. En tal caso, el proveedor devuelve advertencias a la colección de [errores (ADO)](./errors-collection-ado.md) , pero no detiene la ejecución del programa. Un error en tiempo de ejecución solo se produce si hay conflictos en todos los registros solicitados. Utilice la propiedad [status (conjunto de registros ADO)](./status-property-ado-recordset.md) para buscar registros con conflictos.  
   
 Establecer la propiedad **Filter** en una cadena de longitud cero ("") tiene el mismo efecto que el uso de la constante **adFilterNone** .
   
@@ -74,7 +74,7 @@ Supongamos que un **conjunto de registros** se filtra en función de un campo de
 
 Esta configuración genera el error durante el tiempo de ejecución. Sin embargo, si `rs.Filter = "C=2"` se aplica en el mismo campo, no se producirá ningún error. Y se filtra el campo del conjunto de registros actual.
 
-Vea la propiedad [Bookmark (propiedad de ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) para obtener una explicación de los valores de marcador desde los que puede crear una matriz que se va a usar con la propiedad Filter.
+Vea la propiedad [Bookmark (propiedad de ADO)](./bookmark-property-ado.md) para obtener una explicación de los valores de marcador desde los que puede crear una matriz que se va a usar con la propiedad Filter.
 
 Solo los filtros en forma de cadenas de criterios afectan al contenido de un **conjunto de registros**guardado. Un ejemplo de una cadena de criterios es `OrderDate > '12/31/1999'` . Los filtros creados con una matriz de marcadores o el uso de un valor de **FilterGroupEnum**no afectan al contenido del **conjunto de registros**guardado. Estas reglas se aplican a los conjuntos de registros creados con cursores del lado cliente o del lado servidor.
   
@@ -100,11 +100,11 @@ En la tabla siguiente se resumen los efectos de **adFilterPendingRecords** en di
   
 ## <a name="applies-to"></a>Se aplica a
 
-[Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también
 
-[Ejemplo de las propiedades Filter y RecordCount (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
- [Ejemplo de las propiedades Filter y RecordCount (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 
- [Clear (método) (ADO)](../../../ado/reference/ado-api/clear-method-ado.md) 
- [Optimize (propiedad dinámica) (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Ejemplo de las propiedades Filter y RecordCount (VB)](./filter-and-recordcount-properties-example-vb.md) 
+ [Ejemplo de las propiedades Filter y RecordCount (VC + +)](./filter-and-recordcount-properties-example-vc.md) 
+ [Clear (método) (ADO)](./clear-method-ado.md) 
+ [Optimize (propiedad dinámica) (ADO)](./optimize-property-dynamic-ado.md)

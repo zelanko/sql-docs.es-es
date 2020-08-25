@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6decee7fddc4748a7d0931ab671f66b11161cc9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fd27476f577be4719489bc5ca2e1bfee95c5166
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453997"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806493"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar ADO con lenguajes de Scripting
 En un entorno de scripting, ADO permite exponer datos por medio de scripting del lado servidor. En este escenario, ADO, el proveedor de OLE DB subyacente que utiliza y cualquier otro componente necesario para hacer referencia a un almacén de datos determinado se instalan en un servidor que ejecuta Internet Information Services (IIS). Con Active Server páginas (ASP), ADO es un componente al que se hace referencia en un script que puede generar HTML, por ejemplo. Este contenido HTML se puede pasar a través de HTTP a un explorador Web del cliente. Mediante el uso de scripting, la página web puede enviar acciones de vuelta al script del lado servidor, lo que le permite actualizar, recorrer o ver datos específicos.  
@@ -62,11 +62,11 @@ En un entorno de scripting, ADO permite exponer datos por medio de scripting del
   
  Los temas siguientes contienen información más específica sobre el uso de ADO con lenguajes de scripting:  
   
--   [Programación ADO en VBScript](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
+-   [Programación ADO en VBScript](./vbscript-ado-programming.md)  
   
--   [Programación ADO con JScript](../../../ado/guide/appendixes/jscript-ado-programming.md)  
+-   [Programación ADO con JScript](./jscript-ado-programming.md)  
   
-## <a name="see-also"></a>Vea también  
- [Microsoft Objetos de datos ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Usar ADO con Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Usar ADO con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+## <a name="see-also"></a>Consulte también  
+ [Microsoft Objetos de datos ActiveX (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [Usar ADO con Microsoft Visual Basic](./using-ado-with-microsoft-visual-basic.md)   
+ [Usar ADO con Microsoft Visual C++](./using-ado-with-microsoft-visual-c.md)

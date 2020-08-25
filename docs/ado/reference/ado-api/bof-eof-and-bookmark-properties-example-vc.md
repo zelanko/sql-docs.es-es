@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33bd0bf737b6c586c0cb97072b28650898e86696
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be80fc6c09279920a992b25bb91ee7621aabf5a1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451147"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776597"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>Ejemplo de las propiedades BOF, EOF y Bookmark (VC + +)
-La primera función de este ejemplo usa las propiedades [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) para mostrar un mensaje si un usuario intenta moverse más allá del primer o último registro de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Usa la propiedad [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) para permitir que el usuario Marque un registro en un **conjunto de registros** y vuelva a él más adelante.  
+La primera función de este ejemplo usa las propiedades [BOF](./bof-eof-properties-ado.md) y [EOF](./bof-eof-properties-ado.md) para mostrar un mensaje si un usuario intenta moverse más allá del primer o último registro de un [conjunto de registros](./recordset-object-ado.md). Usa la propiedad [Bookmark](./bookmark-property-ado.md) para permitir que el usuario Marque un registro en un **conjunto de registros** y vuelva a él más adelante.  
   
  La segunda función usa la propiedad Bookmark para colocar el **marcador** de cada otro registro de un **conjunto de registros** en una matriz y, a continuación, filtra el conjunto de registros mediante la matriz.  
   
@@ -207,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedades BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark (propiedad, ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propiedades BOF, EOF (ADO)](./bof-eof-properties-ado.md)   
+ [Bookmark (propiedad, ADO)](./bookmark-property-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

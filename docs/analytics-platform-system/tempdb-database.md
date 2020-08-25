@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400139"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>base de datos Tempdb en almacenamiento de datos paralelos
@@ -25,7 +25,7 @@ Para obtener más información acerca de las bases de datos del sistema, vea bas
 *tabla temporal local*  
 Una *tabla temporal local* usa el prefijo # delante del nombre de la tabla y es una tabla temporal creada por una sesión de usuario local. Cada sesión solo puede tener acceso a los datos de las tablas temporales locales para su propia sesión.  
   
-Cada sesión puede ver los metadatos de las tablas temporales locales en todas las sesiones. Por ejemplo, todas las sesiones pueden ver los metadatos de todas las tablas temporales `SELECT * FROM tempdb.sys.tables` locales con la consulta.  
+Cada sesión puede ver los metadatos de las tablas temporales locales en todas las sesiones. Por ejemplo, todas las sesiones pueden ver los metadatos de todas las tablas temporales locales con la `SELECT * FROM tempdb.sys.tables` consulta.  
   
 tabla temporal global  
 En esta versión de PDW de SQL Server no se admiten *tablas temporales globales*, admitidas en SQL Server con la sintaxis # #.  

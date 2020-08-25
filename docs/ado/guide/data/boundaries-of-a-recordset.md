@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aec0ad3065deb60f99f672712c085fe054885d27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453717"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806381"
 ---
 # <a name="boundaries-of-a-recordset"></a>Límites de un conjunto de registros
 **Recordset** admite las propiedades **BOF** y **EOF** para delimitar el principio y el final, respectivamente, del conjunto de registros. Puede pensar en **BOF** y **EOF** como registros "fantasma" que se colocan al principio y al final del **conjunto de registros**. Contando **BOF** y **EOF**, nuestro **conjunto de registros** de ejemplo tendría el siguiente aspecto:  
@@ -70,4 +70,4 @@ else
   
  Este esquema funciona con todos los tipos de cursor y es independiente de los proveedores subyacentes. Si intenta determinar el Emptiness de un objeto de **conjunto de registros** comprobando si el valor de la propiedad **RecordCount** es cero (0) o no, debe tomar precauciones para usar un cursor y un proveedor adecuados que admitan la devolución del número de registros en el resultado.  
   
- Si elimina el último registro restante en el objeto de **conjunto de registros** , el cursor se queda en un estado indeterminado. Es posible que las propiedades **BOF** y **EOF** sigan siendo **false** hasta que intente volver a colocar el registro actual, dependiendo del proveedor. Para obtener más información, vea [eliminar registros con el método Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+ Si elimina el último registro restante en el objeto de **conjunto de registros** , el cursor se queda en un estado indeterminado. Es posible que las propiedades **BOF** y **EOF** sigan siendo **false** hasta que intente volver a colocar el registro actual, dependiendo del proveedor. Para obtener más información, vea [eliminar registros con el método Delete](./deleting-records-using-the-delete-method.md).

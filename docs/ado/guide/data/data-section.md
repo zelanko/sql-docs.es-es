@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453577"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806194"
 ---
 # <a name="data-section"></a>Sección de datos
 La sección de datos define los datos del conjunto de filas junto con las actualizaciones, inserciones o eliminaciones pendientes. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila esté definida por el esquema. Además, como se indicó antes, se pueden omitir las columnas sin datos. Si se utiliza un atributo o subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se pasa por alto de forma silenciosa.  
@@ -86,4 +86,4 @@ La sección de datos define los datos del conjunto de filas junto con las actual
  Una actualización siempre contiene los datos de fila originales completos seguidos de los datos de fila modificados. La fila modificada puede contener todas las columnas o solo las columnas que realmente han cambiado. En el ejemplo anterior, no se cambia la fila del remitente 2 y solo la columna Phone ha cambiado los valores para el remitente 3 y, por lo tanto, la única columna incluida en la fila modificada. Las filas insertadas para los distribuidores 12, 13 y 14 se agrupan por lotes en una etiqueta RS: INSERT. Tenga en cuenta que las filas eliminadas también se pueden agrupar por lotes, aunque esto no se muestra en el ejemplo anterior.  
   
 ## <a name="see-also"></a>Consulte también  
- [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Almacenar registros en formato XML](./persisting-records-in-xml-format.md)

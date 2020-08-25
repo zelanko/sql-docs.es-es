@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9ab7dd72816d47b4f8a1c7aa55ba8751399e41a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9676087d23ff17b7aaa4c4ad6cab20eaec644ca
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453517"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806906"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectar y resolver conflictos
 Si trabaja con el conjunto de registros en modo inmediato, hay mucha menos posibilidad de que se produzcan problemas de simultaneidad. Por otro lado, si la aplicación usa la actualización del modo por lotes, puede haber una buena posibilidad de que un usuario cambie un registro antes de que se guarden los cambios realizados por otro usuario que edite el mismo registro. En tal caso, querrá que la aplicación controle correctamente el conflicto. Es posible que desee que la última persona envíe una actualización al servidor "gana". O bien, puede que desee permitir que el usuario más reciente decida qué actualización debe tener prioridad proporcionándole una opción entre los dos valores en conflicto.  
@@ -114,7 +114,7 @@ Si trabaja con el conjunto de registros en modo inmediato, hay mucha menos posib
   
  Puede usar la propiedad status del registro actual o de un campo específico para determinar el tipo de conflicto que se ha producido.  
   
- Para obtener información detallada sobre el control de errores, vea [control de errores](../../../ado/guide/data/error-handling.md).  
+ Para obtener información detallada sobre el control de errores, vea [control de errores](./error-handling.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Batch Mode](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](./batch-mode.md)

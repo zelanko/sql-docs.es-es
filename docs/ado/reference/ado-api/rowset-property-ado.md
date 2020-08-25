@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f6342de5be5b2c6ba6e1bf58408cfabc6e31088
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f966261864cb7717b31e4851062228c3e6d63e92
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442237"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777624"
 ---
 # <a name="rowset-property-ado"></a>Propiedad Rowset (ADO)
 Obtiene o establece un objeto de **conjunto de filas** OLE DB de/en un objeto **ADORecordsetConstruction** . Cuando se utiliza put_Rowset, el conjunto de filas se convierte en un objeto de **conjunto de registros** de ADO.  
@@ -50,4 +50,4 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
  Este método de propiedad devuelve los valores HRESULT estándar, incluidos S_OK y E_FAIL.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Interfaz ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
+ [Interfaz ADORecordsetConstruction](./adorecordsetconstruction-interface.md)

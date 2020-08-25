@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bea36687e0fbe8aea4768386f4435ceece621bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e60bbc81f7b40dac7d1564a32f1e60eb8456c9bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442117"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777504"
 ---
 # <a name="seekenum"></a>SeekEnum
-Especifica el tipo de [búsqueda](../../../ado/reference/ado-api/seek-method.md) que se va a ejecutar.  
+Especifica el tipo de [búsqueda](./seek-method.md) que se va a ejecutar.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|Busca la primera clave igual a *keyValues*.|  
 |**adSeekLastEQ**|2|Busca la última clave igual a *keyValues*.|  
@@ -48,4 +48,4 @@ Especifica el tipo de [búsqueda](../../../ado/reference/ado-api/seek-method.md)
 |AdoEnums. Seek. BEFORe|  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Seek (método)](../../../ado/reference/ado-api/seek-method.md)
+ [El método de búsqueda](./seek-method.md)

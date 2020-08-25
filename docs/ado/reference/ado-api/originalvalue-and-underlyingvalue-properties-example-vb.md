@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 189ca54160090bde8b526b8feec481dc31104ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74cb7f53f7fd55332469a74e77405aa3312aef7e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442877"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773614"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>Ejemplo de las propiedades OriginalValue y UnderlyingValue (VB)
-En este ejemplo se muestran las propiedades [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) al mostrar un mensaje si los datos subyacentes de un registro han cambiado durante una actualización por lotes del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+En este ejemplo se muestran las propiedades [OriginalValue](./originalvalue-property-ado.md) y [UnderlyingValue](./underlyingvalue-property.md) al mostrar un mensaje si los datos subyacentes de un registro han cambiado durante una actualización por lotes del [conjunto de registros](./recordset-object-ado.md) .  
   
 ```  
 'BeginOriginalValueVB  
@@ -121,6 +121,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [OriginalValue (propiedad, ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propiedad UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [OriginalValue (propiedad, ADO)](./originalvalue-property-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)   
+ [Propiedad UnderlyingValue](./underlyingvalue-property.md)

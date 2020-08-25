@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4093cfbd1ca5372d86fd07b6fc7716d484c4f51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66e80c85d1361c99499c91685d46e2df29b59957
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439717"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769814"
 ---
 # <a name="parentcatalog-property-example-vb"></a>Ejemplo de propiedad ParentCatalog (VB)
-En el código siguiente se muestra cómo utilizar la propiedad [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) para tener acceso a una propiedad específica del proveedor antes de anexar una tabla a un catálogo. La propiedad es **AutoIncrement**, que crea un campo de incremento automático en una base de datos de Microsoft Jet.  
+En el código siguiente se muestra cómo utilizar la propiedad [ParentCatalog](./parentcatalog-property-adox.md) para tener acceso a una propiedad específica del proveedor antes de anexar una tabla a un catálogo. La propiedad es **AutoIncrement**, que crea un campo de incremento automático en una base de datos de Microsoft Jet.  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -85,12 +85,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Append (método) (columnas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (método) (tablas ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name (propiedad, ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [ParentCatalog (propiedad, ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
- [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Type (propiedad, columna, ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
+ [Append (método) (columnas ADOX)](./append-method-adox-columns.md)   
+ [Append (método) (tablas ADOX)](./append-method-adox-tables.md)   
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Objeto column (ADOX)](./column-object-adox.md)   
+ [Colección de columnas (ADOX)](./columns-collection-adox.md)   
+ [Name (propiedad, ADOX)](./name-property-adox.md)   
+ [ParentCatalog (propiedad, ADOX)](./parentcatalog-property-adox.md)   
+ [Objeto Table (ADOX)](./table-object-adox.md)   
+ [Type (propiedad, columna, ADOX)](./type-property-column-adox.md)

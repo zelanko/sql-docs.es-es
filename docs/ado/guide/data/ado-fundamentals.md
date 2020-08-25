@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3f76cca88b2be94973b2271c81279b76b2706bc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453777"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806425"
 ---
 # <a name="ado-fundamentals"></a>Conceptos básicos de ADO
 ADO ofrece a los desarrolladores un modelo de objetos lógico y eficaz para obtener acceso, editar y actualizar datos mediante programación desde una amplia variedad de orígenes de datos a través de interfaces del sistema OLE DB. El uso más común de ADO es consultar una tabla o tablas en una base de datos relacional, recuperar y mostrar los resultados en una aplicación y, quizás, permitir que los usuarios realicen y guarden los cambios en los datos. Entre otras tareas se incluyen las siguientes:  
@@ -57,10 +57,10 @@ ADO ofrece a los desarrolladores un modelo de objetos lógico y eficaz para obte
   
  Sin embargo, antes de describir estos detalles, presentaremos información general sobre el modelo de objetos ADO y una sencilla aplicación ADO, que está escrita en Microsoft® Visual Basic® y realiza cada una de las cuatro operaciones principales de ADO:  
   
--   [Colecciones y los objetos ADO](../../../ado/guide/data/ado-objects-and-collections.md)  
+-   [Colecciones y los objetos ADO](./ado-objects-and-collections.md)  
   
--   [HelloData: una aplicación ADO sencilla](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData: una aplicación ADO sencilla](./hellodata-a-simple-ado-application.md)  
   
--   [Proveedores de OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [Proveedores de OLE DB](./ole-db-providers-ado.md)  
   
--   [Errores](../../../ado/guide/data/errors-ado.md)
+-   [Errores](./errors-ado.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: baa3cb3eb5b2284a606362e31e0f185ab768c5f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 333d20ee58123e9f1120e22d1770bd2a74ad97ae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442957"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773784"
 ---
 # <a name="open-method-ado-stream"></a>Open (método) (Stream de ADO)
-Abre un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) para manipular flujos de datos binarios o de texto.  
+Abre un objeto de [flujo](./stream-object-ado.md) para manipular flujos de datos binarios o de texto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,13 +36,13 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
   
 #### <a name="parameters"></a>Parámetros  
  *Origen*  
- Opcional. Valor **Variant** que especifica el origen de datos para la **secuencia**. *Source* puede contener una cadena de dirección URL absoluta que apunta a un nodo existente en una estructura de árbol conocida, como un sistema de archivos o de correo electrónico. Se debe especificar una dirección URL mediante la palabra clave URL ("URL =*Scheme*:/*server*/ / *carpeta*del servidor"). Como alternativa, *source* puede contener una referencia a un objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) ya abierto, que abre la secuencia predeterminada asociada al **registro**. Si no se especifica *source* , se crea una instancia de un **flujo** y se abre, y se asocia sin ningún origen subyacente de forma predeterminada. Para obtener más información sobre los esquemas de dirección URL y sus proveedores asociados, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+ Opcional. Valor **Variant** que especifica el origen de datos para la **secuencia**. *Source* puede contener una cadena de dirección URL absoluta que apunta a un nodo existente en una estructura de árbol conocida, como un sistema de archivos o de correo electrónico. Se debe especificar una dirección URL mediante la palabra clave URL ("URL =*Scheme*:/*server*/ / *carpeta*del servidor"). Como alternativa, *source* puede contener una referencia a un objeto [Record](./record-object-ado.md) ya abierto, que abre la secuencia predeterminada asociada al **registro**. Si no se especifica *source* , se crea una instancia de un **flujo** y se abre, y se asocia sin ningún origen subyacente de forma predeterminada. Para obtener más información sobre los esquemas de dirección URL y sus proveedores asociados, consulte [direcciones URL absolutas y relativas](../../guide/data/absolute-and-relative-urls.md).  
   
  *Modo*  
- Opcional. Un valor [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) que especifica el modo de acceso para la **secuencia** resultante (por ejemplo, de lectura/escritura o de solo lectura). El valor predeterminado es **adModeUnknown**. Vea la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) para obtener más información sobre los modos de acceso. Si no se especifica *mode* , lo hereda el objeto de origen. Por ejemplo, si el **registro** de origen se abre en modo de solo lectura, el **flujo** también se abrirá de forma predeterminada en modo de solo lectura.  
+ Opcional. Un valor [ConnectModeEnum](./connectmodeenum.md) que especifica el modo de acceso para la **secuencia** resultante (por ejemplo, de lectura/escritura o de solo lectura). El valor predeterminado es **adModeUnknown**. Vea la propiedad [mode](./mode-property-ado.md) para obtener más información sobre los modos de acceso. Si no se especifica *mode* , lo hereda el objeto de origen. Por ejemplo, si el **registro** de origen se abre en modo de solo lectura, el **flujo** también se abrirá de forma predeterminada en modo de solo lectura.  
   
  *OpenOptions*  
- Opcional. Valor de [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) . El valor predeterminado es **adOpenStreamUnspecified**.  
+ Opcional. Valor de [StreamOpenOptionsEnum](./streamopenoptionsenum.md) . El valor predeterminado es **adOpenStreamUnspecified**.  
   
  *UserName*  
  Opcional. Valor de **cadena** que contiene la identificación del usuario que, si es necesario, tiene acceso al objeto de **secuencia** .  
@@ -51,20 +51,20 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  Opcional. Valor de **cadena** que contiene la contraseña que, si se necesita, tiene acceso al objeto de **secuencia** .  
   
 ## <a name="remarks"></a>Observaciones  
- Cuando se pasa un objeto de **registro** como parámetro de origen, no se usan los parámetros *userid* y *password* porque el acceso al objeto **Record** ya está disponible. De forma similar, el [modo](../../../ado/reference/ado-api/mode-property-ado.md) del objeto de **registro** se transfiere al objeto de **secuencia** . Cuando no se especifica *source* , el **flujo** abierto no contiene datos y [su tamaño](../../../ado/reference/ado-api/size-property-ado-stream.md) es cero (0). Para evitar la pérdida de datos que se escriben en esta **secuencia** cuando la **secuencia** está cerrada, guarde la **secuencia** con los métodos [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) o [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) , o guárdela en otra ubicación de memoria.  
+ Cuando se pasa un objeto de **registro** como parámetro de origen, no se usan los parámetros *userid* y *password* porque el acceso al objeto **Record** ya está disponible. De forma similar, el [modo](./mode-property-ado.md) del objeto de **registro** se transfiere al objeto de **secuencia** . Cuando no se especifica *source* , el **flujo** abierto no contiene datos y [su tamaño](./size-property-ado-stream.md) es cero (0). Para evitar la pérdida de datos que se escriben en esta **secuencia** cuando la **secuencia** está cerrada, guarde la **secuencia** con los métodos [CopyTo](./copyto-method-ado.md) o [SaveToFile](./savetofile-method.md) , o guárdela en otra ubicación de memoria.  
   
  Un valor *OpenOptions* de **adOpenStreamFromRecord** identifica el contenido del parámetro de *origen* para que sea un objeto **Record** ya abierto. El comportamiento predeterminado es tratar el *origen* como una dirección URL que apunta directamente a un nodo en una estructura de árbol, como un archivo. Se abre el flujo predeterminado asociado a ese nodo.  
   
- Mientras la **secuencia** no está abierta, es posible leer todas las propiedades de solo lectura de la **secuencia**. Si un **flujo** se abre de forma asincrónica, todas las operaciones subsiguientes (distintas de la comprobación del [Estado](../../../ado/reference/ado-api/state-property-ado.md) y otras propiedades de solo lectura) se bloquean hasta que se completa la operación de **apertura** .  
+ Mientras la **secuencia** no está abierta, es posible leer todas las propiedades de solo lectura de la **secuencia**. Si un **flujo** se abre de forma asincrónica, todas las operaciones subsiguientes (distintas de la comprobación del [Estado](./state-property-ado.md) y otras propiedades de solo lectura) se bloquean hasta que se completa la operación de **apertura** .  
   
- Además de las opciones descritas anteriormente, si no se especifica *source*, puede crear una instancia de un objeto **Stream** en la memoria sin asociarla a un origen subyacente. Puede agregar datos a la secuencia de forma dinámica escribiendo datos binarios o de texto en la **secuencia** con [Write](../../../ado/reference/ado-api/write-method.md) o [WRITETEXT](../../../ado/reference/ado-api/writetext-method.md), o cargando datos de un archivo con [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md).  
+ Además de las opciones descritas anteriormente, si no se especifica *source*, puede crear una instancia de un objeto **Stream** en la memoria sin asociarla a un origen subyacente. Puede agregar datos a la secuencia de forma dinámica escribiendo datos binarios o de texto en la **secuencia** con [Write](./write-method.md) o [WRITETEXT](./writetext-method.md), o cargando datos de un archivo con [LoadFromFile](./loadfromfile-method-ado.md).  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Objeto de secuencia (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Open (método) (conexión de ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open (método) (record de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [OpenSchema (método)](../../../ado/reference/ado-api/openschema-method.md)   
- [Método SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)
+ [Open (método) (conexión de ADO)](./open-method-ado-connection.md)   
+ [Open (método) (record de ADO)](./open-method-ado-record.md)   
+ [Open (método) (conjunto de registros ADO)](./open-method-ado-recordset.md)   
+ [OpenSchema (método)](./openschema-method.md)   
+ [Método SaveToFile](./savetofile-method.md)

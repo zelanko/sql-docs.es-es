@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400544"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacidad de procesamiento y almacenamiento en Analytics Platform System
@@ -81,13 +81,13 @@ La elevación es el porcentaje de aumento de capacidad incrementando el Uunits d
 ## <a name="planning-for-storage-capacity"></a><a name="section2"></a>Planeación de la capacidad de almacenamiento  
 En esta tabla se calcula que se pueden cargar y almacenar hasta 6 petabytes de datos sin comprimir en una aplicación de sistema de análisis de plataforma totalmente compilada. 
   
-|Fabricante|Tamaño de la unidad|Almacenamiento físico de datos por nodo de proceso|Máximo de nodos de proceso por bastidor|Almacenamiento de datos máximo físico por bastidor|Almacenamiento de datos de usuario máximo estimado por bastidor|Bastidor máximo|Almacenamiento de datos de usuario máximo estimado por dispositivo|  
+|Vendor|Tamaño de la unidad|Almacenamiento físico de datos por nodo de proceso|Máximo de nodos de proceso por bastidor|Almacenamiento de datos máximo físico por bastidor|Almacenamiento de datos de usuario máximo estimado por bastidor|Bastidor máximo|Almacenamiento de datos de usuario máximo estimado por dispositivo|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
-|HPE|1 TB|16 TB|8|128 TB|320 TB|7|2.240 TB|  
-|HPE|2 TB|32 TB|8|256 TB|640 TB|7|4.480 TB|  
+|HPE|1 TB|16 TB|8|128 TB|320 TB|7|2.240 TB|  
+|HPE|2 TB|32 TB|8|256 TB|640 TB|7|4.480 TB|  
 |HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8.960 TB|  
-|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2.160 TB|  
-|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4.320 TB|  
+|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2.160 TB|  
+|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4.320 TB|  
 |DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8.640 TB|   
   
 Explicación:  
@@ -100,7 +100,7 @@ Explicación:
   
 -   **Almacenamiento de datos máximo físico por bastidor** = (almacenamiento de datos físico por nodo de proceso) * (máximo de nodos de proceso por bastidor).  
   
--   **Almacenamiento de datos de usuario máximo estimado por bastidor** = (almacenamiento de datos máximo físico por bastidor) * (5 para una relación \* de compresión 5:1) (50% para registros y tempDB). Se trata de una estimación conservadora para los datos de usuario sin comprimir que se pueden cargar y almacenar en el dispositivo. Esta es una estimación y no la aplica el software. El almacenamiento de datos de usuario real depende de los datos y la configuración.  
+-   **Almacenamiento de datos de usuario máximo estimado por bastidor** = (almacenamiento de datos máximo físico por bastidor) * (5 para una relación de compresión 5:1) \* (50% para registros y tempDB). Se trata de una estimación conservadora para los datos de usuario sin comprimir que se pueden cargar y almacenar en el dispositivo. Esta es una estimación y no la aplica el software. El almacenamiento de datos de usuario real depende de los datos y la configuración.  
   
 -   El **número máximo de bastidores** es específico para cada proveedor de hardware.  
   

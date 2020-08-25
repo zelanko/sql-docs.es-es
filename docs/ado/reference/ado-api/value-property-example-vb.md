@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb8c23168cb68438b2f8a74359f14b05795ad913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c388b12b70213afb297508ccac91315d828c9d4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441587"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776945"
 ---
 # <a name="value-property-example-vb"></a>Ejemplo de la propiedad de valor (VB)
-En este ejemplo se muestra la propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) con objetos [Field](../../../ado/reference/ado-api/field-object.md) y [Property](../../../ado/reference/ado-api/property-object-ado.md) al mostrar los valores de campo y propiedad de la tabla ***Employees*** .  
+En este ejemplo se muestra la propiedad [Value](./value-property-ado.md) con objetos [Field](./field-object.md) y [Property](./property-object-ado.md) al mostrar los valores de campo y propiedad de la tabla ***Employees*** .  
   
 ```  
 'BeginValueVB  
@@ -102,6 +102,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Field (objeto)](../../../ado/reference/ado-api/field-object.md)   
- [Property (objeto) (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Value (propiedad) (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
+ [Field (objeto)](./field-object.md)   
+ [Property (objeto) (ADO)](./property-object-ado.md)   
+ [Value (propiedad) (ADO)](./value-property-ado.md)

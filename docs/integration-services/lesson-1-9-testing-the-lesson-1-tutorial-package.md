@@ -1,4 +1,5 @@
 ---
+description: 'Paso 9: Prueba del paquete del tutorial de la lección 1'
 title: 'Paso 9: Prueba del paquete del tutorial de la lección 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 13c24945715ca9b0fa1ebac06b66d777c4eadaea
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 758f5e0c312afc2a8310743f917cc00a1c43462c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462017"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>Lección 1-9: Prueba del paquete de la lección 1
 
@@ -56,7 +57,7 @@ Antes de probar el paquete, compruebe que los flujos de datos y de control del p
 ## <a name="go-to-next-lesson"></a>Ir a la lección siguiente
 [Lección 2: Adición de bucles con SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 [Ejecución de proyectos y paquetes](packages/run-integration-services-ssis-packages.md) 
   
   

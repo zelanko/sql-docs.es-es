@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451137"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776404"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF (propiedades) (ADO)
--   **BOF** Indica que la posición del registro actual es anterior al primer registro de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+-   **BOF** Indica que la posición del registro actual es anterior al primer registro de un objeto de [conjunto de registros](./recordset-object-ado.md) .  
   
 -   **EOF** Indica que la posición del registro actual es posterior al último registro de un objeto de **conjunto de registros** .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88451137"
   
  Si el valor de la propiedad **BOF** o **EOF** es **true**, no hay ningún registro actual.  
   
- Si abre un objeto **de conjunto de registros** que no contiene registros, las propiedades **BOF** y **EOF** se establecen en **true** (vea la propiedad [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) para obtener más información sobre este estado de un **conjunto de registros**). Al abrir un objeto de **conjunto de registros** que contiene al menos un registro, el primer registro es el registro actual y las propiedades **BOF** y **EOF** son **false**.  
+ Si abre un objeto **de conjunto de registros** que no contiene registros, las propiedades **BOF** y **EOF** se establecen en **true** (vea la propiedad [RecordCount](./recordcount-property-ado.md) para obtener más información sobre este estado de un **conjunto de registros**). Al abrir un objeto de **conjunto de registros** que contiene al menos un registro, el primer registro es el registro actual y las propiedades **BOF** y **EOF** son **false**.  
   
  Si elimina el último registro restante en el objeto de **conjunto de registros** , las propiedades **BOF** y **EOF** pueden seguir siendo **false** hasta que intente volver a colocar el registro actual.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "88451137"
 |**MoveNext**, **Move** > 0|Sin cambios|Establézcalo en **true**|  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de las propiedades BOF, EOF y Bookmark (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [Ejemplo de las propiedades BOF, EOF y Bookmark (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [Ejemplo de las propiedades BOF, EOF y Bookmark (VB)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [Ejemplo de las propiedades BOF, EOF y Bookmark (VC + +)](./bof-eof-and-bookmark-properties-example-vc.md)

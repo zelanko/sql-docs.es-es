@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bceacc215a67050142c773675a0af464ff9b9ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3048bf470ed27adb3fb3ceaaef3c7658c1fb93fb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442247"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777634"
 ---
 # <a name="row-property-ado"></a>Propiedad de las filas (ADO)
-Obtiene o establece un objeto de **fila** de OLE DB desde o en un objeto de [interfaz ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) . Cuando se usa **put_Row** para establecer un objeto **Row** , una fila se convierte en un objeto **Record** de ADO.  
+Obtiene o establece un objeto de **fila** de OLE DB desde o en un objeto de [interfaz ADORecordConstruction](./adorecordconstruction-interface.md) . Cuando se usa **put_Row** para establecer un objeto **Row** , una fila se convierte en un objeto **Record** de ADO.  
   
 ## <a name="readwritesyntax"></a>Lectura/escritura. Sintáctica  
   
@@ -48,4 +48,4 @@ HRESULT put_Row([in] IUnknown* pRow);
  Este método de propiedad devuelve los valores HRESULT estándar, incluidos S_OK y E_FAIL.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Interfaz ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [Interfaz ADORecordConstruction](./adorecordconstruction-interface.md)

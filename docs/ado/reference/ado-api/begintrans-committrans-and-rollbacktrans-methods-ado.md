@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71dd02544e80d24e96d9cc64fa1e5947f38c685a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cefa913c42440d69345bfa9c8d4b8826a0bc3d84
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451197"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776574"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>Métodos BeginTrans, CommitTrans y RollbackTrans (ADO)
-Estos métodos de transacción administran el procesamiento de transacciones dentro de un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) de la manera siguiente:  
+Estos métodos de transacción administran el procesamiento de transacciones dentro de un objeto de [conexión](./connection-object-ado.md) de la manera siguiente:  
   
 -   **BeginTrans** Inicia una nueva transacción.  
   
@@ -60,7 +60,7 @@ object.RollbackTrans
  Utilice estos métodos con un objeto de **conexión** si desea guardar o cancelar una serie de cambios realizados en los datos de origen como una sola unidad. Por ejemplo, para transferir el dinero entre cuentas, se resta una cantidad de una y se agrega la misma cantidad al otro. Si se produce un error en alguna de las actualizaciones, las cuentas ya no se equilibran. Al realizar estos cambios dentro de una transacción abierta, se garantiza que todos los cambios o ninguno de ellos pasen.  
   
 > [!NOTE]
->  No todos los proveedores admiten transacciones. Compruebe que la propiedad definida por el proveedor "**Transaction DDL**" aparece en la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) del objeto de **conexión** , lo que indica que el proveedor admite transacciones. Si el proveedor no admite transacciones, al llamar a uno de estos métodos se devolverá un error.  
+>  No todos los proveedores admiten transacciones. Compruebe que la propiedad definida por el proveedor "**Transaction DDL**" aparece en la colección de [propiedades](./properties-collection-ado.md) del objeto de **conexión** , lo que indica que el proveedor admite transacciones. Si el proveedor no admite transacciones, al llamar a uno de estos métodos se devolverá un error.  
   
  Después de llamar al método **BeginTrans** , el proveedor ya no confirmará de forma instantánea los cambios que realice hasta que llame a **CommitTrans** o a **RollbackTrans** para finalizar la transacción.  
   
@@ -68,15 +68,15 @@ object.RollbackTrans
   
  La llamada al método **CommitTrans** guarda los cambios realizados en una transacción abierta en la conexión y finaliza la transacción. La llamada al método **RollbackTrans** invierte los cambios realizados en una transacción abierta y finaliza la transacción. Si se llama a cualquier método cuando no hay ninguna transacción abierta, se genera un error.  
   
- Dependiendo de la propiedad [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) del objeto **Connection** , llamar a los métodos **CommitTrans** o **RollbackTrans** puede iniciar automáticamente una nueva transacción. Si la propiedad **attributes** está establecida en **adXactCommitRetaining**, el proveedor inicia automáticamente una nueva transacción después de una llamada a **CommitTrans** . Si la propiedad **attributes** está establecida en **adXactAbortRetaining**, el proveedor inicia automáticamente una nueva transacción después de una llamada a **RollbackTrans** .  
+ Dependiendo de la propiedad [attributes](./attributes-property-ado.md) del objeto **Connection** , llamar a los métodos **CommitTrans** o **RollbackTrans** puede iniciar automáticamente una nueva transacción. Si la propiedad **attributes** está establecida en **adXactCommitRetaining**, el proveedor inicia automáticamente una nueva transacción después de una llamada a **CommitTrans** . Si la propiedad **attributes** está establecida en **adXactAbortRetaining**, el proveedor inicia automáticamente una nueva transacción después de una llamada a **RollbackTrans** .  
   
 ## <a name="remote-data-service"></a>Servicio de datos remotos  
  Los métodos **BeginTrans**, **CommitTrans**y **RollbackTrans** no están disponibles en un objeto de **conexión** del lado cliente.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Objeto de conexión (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de los métodos BeginTrans, CommitTrans y RollbackTrans (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [Ejemplo de los métodos BeginTrans, CommitTrans y RollbackTrans (VC + +)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
- [Propiedad Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Ejemplo de los métodos BeginTrans, CommitTrans y RollbackTrans (VB)](./begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [Ejemplo de los métodos BeginTrans, CommitTrans y RollbackTrans (VC + +)](./begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
+ [Propiedad Attributes (ADO)](./attributes-property-ado.md)

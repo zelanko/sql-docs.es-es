@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7c9bc68b33e9a8ed8878e153b5fb2eb11d27ba2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4a63bf9d324fc9c2e0363576814e1c97c9ad6aeb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441487"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776864"
 ---
 # <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
 Se llama al evento **WillConnect** antes de que se inicie una conexión.  
   
- **Se aplica a:** [objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **Se aplica a:** [objeto Connection (ADO)](./connection-object-ado.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,14 +50,14 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  Un valor **Long** que indica cómo el proveedor debe evaluar la *ConnectionString*. La única opción es **adAsyncOpen**.  
   
  *adStatus*  
- Valor de estado de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
+ Valor de estado de [EventStatusEnum](./eventstatusenum.md) .  
   
  Cuando se llama a este evento, este parámetro se establece en **adStatusOK** de forma predeterminada. Se establece en **adStatusCantDeny** si el evento no puede solicitar la cancelación de la operación pendiente.  
   
  Antes de que se devuelva este evento, establezca este parámetro en **adStatusUnwantedEvent** para evitar notificaciones posteriores. Establezca este parámetro en **adStatusCancel** para solicitar la operación de conexión que causó la cancelación de esta notificación.  
   
  *pConnection*  
- Objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) para el que se aplica esta notificación de eventos. Los cambios en los parámetros de la **conexión** mediante el controlador de eventos **WillConnect** no surtirán efecto en la **conexión**.  
+ Objeto de [conexión](./connection-object-ado.md) para el que se aplica esta notificación de eventos. Los cambios en los parámetros de la **conexión** mediante el controlador de eventos **WillConnect** no surtirán efecto en la **conexión**.  
   
 ## <a name="remarks"></a>Observaciones  
  Cuando se llama al método **WillConnect** , los parámetros *ConnectionString*, *userid*, *password*y *Options* se establecen en los valores establecidos por la operación que provocó este evento (la conexión pendiente) y se pueden cambiar antes de que el evento vuelva. **WillConnect** puede devolver una solicitud de cancelación de la conexión pendiente.  
@@ -65,5 +65,5 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  Cuando se cancela este evento, se llamará a **ConnectComplete** con su parámetro *adStatus* establecido en **adStatusErrorsOccurred**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de modelo de eventos de ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Conexión ADO y los eventos de conjunto de registros](../../../ado/guide/data/ado-event-handler-summary.md)
+ [Ejemplo de modelo de eventos de ADO (VC + +)](./ado-events-model-example-vc.md)   
+ [Conexión ADO y los eventos de conjunto de registros](../../guide/data/ado-event-handler-summary.md)

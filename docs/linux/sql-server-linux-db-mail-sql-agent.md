@@ -1,6 +1,6 @@
 ---
 title: Correo electrónico de BD y alertas por correo electrónico con el Agente SQL en Linux
-description: En este artículo se describe cómo usar las alertas de correo electrónico y el correo electrónico de base de datos con SQL Server en Linux
+description: Obtenga información sobre cómo usar el correo electrónico de BD y cómo configurar las alertas por correo electrónico con el Agente SQL Server (mssql-server-agent) en Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: d2e759d5cfa0f7b1fa918bde8547d3cbee2439af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92306aa0c6fa28b2cd094e85f439d654605483b6
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896513"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088992"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Correo electrónico de BD y alertas por correo electrónico con el Agente SQL en Linux
 

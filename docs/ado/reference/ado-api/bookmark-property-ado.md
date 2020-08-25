@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3ab83bb44bca7598074eb81d832ca9ed9b954d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2966868bc8f2cf9d706b4c9f2352c4f8ac5ef583
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451117"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776394"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark (propiedad) (ADO)
-Indica un marcador que identifica de forma única el registro actual en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) o establece el registro actual de un objeto de **conjunto de registros** en el registro identificado por un marcador válido.  
+Indica un marcador que identifica de forma única el registro actual en un objeto de [conjunto de registros](./recordset-object-ado.md) o establece el registro actual de un objeto de **conjunto de registros** en el registro identificado por un marcador válido.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve una expresión **Variant** que se evalúa como un marcador válido.  
@@ -36,15 +36,15 @@ Indica un marcador que identifica de forma única el registro actual en un objet
   
  Es posible que el usuario no pueda ver el valor del marcador. Además, los usuarios no deben esperar que los marcadores sean comparables directamente, ya que dos marcadores que hacen referencia al mismo registro pueden tener valores diferentes.  
   
- Si usa el método [Clone](../../../ado/reference/ado-api/clone-method-ado.md) para crear una copia de un objeto de **conjunto de registros** , los valores de propiedad de **marcador** para los objetos de conjunto de **registros** original y duplicado son idénticos y se pueden usar indistintamente. Sin embargo, no puede usar los marcadores de distintos objetos de **conjunto de registros** indistintamente, aunque se hayan creado a partir del mismo origen o comando.  
+ Si usa el método [Clone](./clone-method-ado.md) para crear una copia de un objeto de **conjunto de registros** , los valores de propiedad de **marcador** para los objetos de conjunto de **registros** original y duplicado son idénticos y se pueden usar indistintamente. Sin embargo, no puede usar los marcadores de distintos objetos de **conjunto de registros** indistintamente, aunque se hayan creado a partir del mismo origen o comando.  
   
 > [!NOTE]
 >  **Uso del servicio de datos remotos** Cuando se usa en un objeto de **conjunto de registros** del lado cliente, la propiedad de **marcador** siempre está disponible.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de las propiedades BOF, EOF y Bookmark (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [Ejemplo de las propiedades BOF, EOF y Bookmark (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
- [Método Supports](../../../ado/reference/ado-api/supports-method.md)
+ [Ejemplo de las propiedades BOF, EOF y Bookmark (VB)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [Ejemplo de las propiedades BOF, EOF y Bookmark (VC + +)](./bof-eof-and-bookmark-properties-example-vc.md)   
+ [Método Supports](./supports-method.md)

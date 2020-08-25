@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99c4e9be5c998b8abc1a5b609bbdeb249fa6c7b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451207"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776454"
 ---
 # <a name="attributes-property-ado"></a>Propiedad Attributes (ADO)
 Indica una o más características de un objeto.  
@@ -31,13 +31,13 @@ Indica una o más características de un objeto.
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor **Long** .  
   
- Para un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) , la propiedad **attributes** es de lectura y escritura, y su valor puede ser la suma de uno o más valores [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) . El valor predeterminado es cero (0).  
+ Para un objeto de [conexión](./connection-object-ado.md) , la propiedad **attributes** es de lectura y escritura, y su valor puede ser la suma de uno o más valores [XactAttributeEnum](./xactattributeenum.md) . El valor predeterminado es cero (0).  
   
- Para un objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) , la propiedad **attributes** es de lectura y escritura, y su valor puede ser la suma de uno o más valores [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) . El valor predeterminado es **adParamSigned**.  
+ Para un objeto de [parámetro](./parameter-object.md) , la propiedad **attributes** es de lectura y escritura, y su valor puede ser la suma de uno o más valores [ParameterAttributesEnum](./parameterattributesenum.md) . El valor predeterminado es **adParamSigned**.  
   
- Para un objeto de [campo](../../../ado/reference/ado-api/field-object.md) , la propiedad **attributes** puede ser la suma de uno o más valores de [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) . Normalmente es de solo lectura. Sin embargo, para los nuevos objetos de **campo** que se han anexado a la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) de un [registro](../../../ado/reference/ado-api/record-object-ado.md), **los atributos** son de lectura y escritura solo después de que se haya especificado la propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) para el **campo** y el proveedor de datos haya agregado correctamente el nuevo **campo** llamando al método [Update](../../../ado/reference/ado-api/update-method.md) de la colección **Fields** .  
+ Para un objeto de [campo](./field-object.md) , la propiedad **attributes** puede ser la suma de uno o más valores de [FieldAttributeEnum](./fieldattributeenum.md) . Normalmente es de solo lectura. Sin embargo, para los nuevos objetos de **campo** que se han anexado a la colección [Fields](./fields-collection-ado.md) de un [registro](./record-object-ado.md), **los atributos** son de lectura y escritura solo después de que se haya especificado la propiedad [Value](./value-property-ado.md) para el **campo** y el proveedor de datos haya agregado correctamente el nuevo **campo** llamando al método [Update](./update-method.md) de la colección **Fields** .  
   
- Para un objeto de [propiedad](../../../ado/reference/ado-api/property-object-ado.md) , la propiedad **attributes** es de solo lectura y su valor puede ser la suma de uno o más valores [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) .  
+ Para un objeto de [propiedad](./property-object-ado.md) , la propiedad **attributes** es de solo lectura y su valor puede ser la suma de uno o más valores [PropertyAttributesEnum](./propertyattributesenum.md) .  
   
 ## <a name="remarks"></a>Observaciones  
  Utilice la propiedad **attributes** para establecer o devolver características de objetos de **conexión** , objetos de **parámetro** , objetos de **campo** o objetos de **propiedad** .  
@@ -51,18 +51,18 @@ Indica una o más características de un objeto.
 
 :::row:::
     :::column:::
-        [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
-        [Objeto Field](../../../ado/reference/ado-api/field-object.md)  
+        [Objeto de conexión (ADO)](./connection-object-ado.md)  
+        [Objeto Field](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)  
-        [Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Objeto Parameter](./parameter-object.md)  
+        [Objeto Property (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de propiedades de atributos y nombres (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Ejemplo de propiedades de atributos y nombres (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [AppendChunk (método) (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Métodos BeginTrans, CommitTrans y RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Método GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [Ejemplo de propiedades de atributos y nombres (VB)](./attributes-and-name-properties-example-vb.md)   
+ [Ejemplo de propiedades de atributos y nombres (VC + +)](./attributes-and-name-properties-example-vc.md)   
+ [AppendChunk (método) (ADO)](./appendchunk-method-ado.md)   
+ [Métodos BeginTrans, CommitTrans y RollbackTrans (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Método GetChunk (ADO)](./getchunk-method-ado.md)

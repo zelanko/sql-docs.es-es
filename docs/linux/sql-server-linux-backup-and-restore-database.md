@@ -1,6 +1,6 @@
 ---
 title: Copia de seguridad y restauración de bases de datos de SQL Server en Linux
-description: Aprenda a realizar copias de seguridad de bases de datos de SQL Server y a restaurarlas en Linux.
+description: Aprenda a realizar copias de seguridad de bases de datos de SQL Server y a restaurarlas en Linux. Obtenga también información sobre cómo realizar copias de seguridad y restaurar con SQL Server Management Studio (SSMS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882333"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088976"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Copia de seguridad y restauración de bases de datos de SQL Server en Linux
 
@@ -87,7 +87,7 @@ Los pasos siguientes le guían durante la realización de una copia de seguridad
 
 1. Inicie SSMS y conéctese al servidor en SQL Server 2017 en Linux.
 
-1. En el Explorador de objetos, haga clic con el botón derecho en la base de datos, haga clic en **Tareas** y, luego, en **Hacer copia de seguridad...** .
+1. En el Explorador de objetos, haga clic con el botón derecho en la base de datos, haga clic en **Tareas** y, luego, en **Hacer copia de seguridad...**.
 
 1. En el cuadro de diálogo **Hacer copia de seguridad de base de datos**, compruebe los parámetros y las opciones y haga clic en **Aceptar**.
  
@@ -97,17 +97,17 @@ SQL Server completa la copia de seguridad de base de datos.
 
 Los siguientes pasos le guían durante la restauración de una base de datos con SSMS.
 
-1. En SSMS, haga clic con el botón derecho en **Bases de datos** y, luego, en **Restaurar bases de datos...** . 
+1. En SSMS, haga clic con el botón derecho en **Bases de datos** y, luego, en **Restaurar bases de datos...**. 
 
 1. En **Origen**, haga clic en **Dispositivo:** y, luego, en los puntos suspensivos (...).
 
 1. Busque el archivo de copia de seguridad de base de datos y haga clic en **Aceptar**. 
 
-1. En **Plan de restauración**, compruebe el archivo de copia de seguridad y la configuración. Haga clic en **OK**. 
+1. En **Plan de restauración**, compruebe el archivo de copia de seguridad y la configuración. Haga clic en **Aceptar**. 
 
 1. SQL Server restaura la base de datos. 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Creación de una copia de seguridad completa de base de datos (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [Realización de una copia de seguridad de un registro de transacciones (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)

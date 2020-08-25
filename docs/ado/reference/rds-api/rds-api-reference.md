@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d531744fd5803181997a58c0e9a6d586a9af6a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0379d8409d73a483ef3362f1ae0ba88b9ba4192c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438857"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767894"
 ---
 # <a name="rds-api-reference"></a>Referencia de la API de RDS
 > [!IMPORTANT]
@@ -26,14 +26,12 @@ ms.locfileid: "88438857"
   
  Esta sección de la documentación de ADO contiene temas de referencia para cada objeto, propiedad, método y evento de RDS, así como ejemplos de código de RDS:  
   
--   [Objetos RDS](../../../ado/reference/rds-api/rds-objects.md)  
+-   [Objetos RDS](./rds-objects.md)  
   
--   [Propiedades de RDS](../../../ado/reference/rds-api/rds-properties.md)  
+-   [Propiedades de RDS](./rds-properties.md)  
   
--   [Métodos RDS](../../../ado/reference/rds-api/rds-methods.md)  
+-   [Métodos RDS](./rds-methods.md)  
   
--   [Eventos RDS](../../../ado/reference/rds-api/rds-events.md)  
+-   [Eventos RDS](./rds-events.md)  
   
--   [Ejemplos de código RDS](../../../ado/reference/rds-api/rds-code-examples.md)
-
-
+-   [Ejemplos de código RDS](./rds-code-examples.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7de7de37cf298005e7a8bdf58d1712d8cb46919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3feab164032044d954a0ff90f909c210dc851743
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442207"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777594"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Ejemplo de métodos Save y Open (VC + +)
-En estos tres ejemplos se muestra cómo se pueden usar los métodos [Save](../../../ado/reference/ado-api/save-method.md) y **Open** juntos.  
+En estos tres ejemplos se muestra cómo se pueden usar los métodos [Save](./save-method.md) y **Open** juntos.  
   
- Supongamos que está trabajando en un viaje de negocios y desea tomar una tabla de una base de datos. Antes de comenzar, debe tener acceso a los datos como un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) y guardarlos en un formulario transportable. Cuando llegue a su destino, tendrá acceso al **conjunto** de registros como un **conjunto de registros**local y desconectado. Realice cambios en el **conjunto de registros**y, después, guárdelo de nuevo. Por último, cuando vuelva a la Página principal, vuelva a conectarse a la base de datos y actualícelo con los cambios que haya realizado en la carretera.  
+ Supongamos que está trabajando en un viaje de negocios y desea tomar una tabla de una base de datos. Antes de comenzar, debe tener acceso a los datos como un [conjunto de registros](./recordset-object-ado.md) y guardarlos en un formulario transportable. Cuando llegue a su destino, tendrá acceso al **conjunto** de registros como un **conjunto de registros**local y desconectado. Realice cambios en el **conjunto de registros**y, después, guárdelo de nuevo. Por último, cuando vuelva a la Página principal, vuelva a conectarse a la base de datos y actualícelo con los cambios que haya realizado en la carretera.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -262,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Save (método)](../../../ado/reference/ado-api/save-method.md)
+ [Open (método) (conjunto de registros ADO)](./open-method-ado-recordset.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)   
+ [Save (método)](./save-method.md)

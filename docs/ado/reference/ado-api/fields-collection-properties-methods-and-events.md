@@ -13,34 +13,34 @@ helpviewer_keywords:
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c0e77444c95e90344ba1fc3786b8b5307c86b22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ca0d0c4a655c4f3b188788b0f0d7b2f54a7e710
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443727"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775344"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Propiedades, métodos y eventos de la colección Fields
 ## <a name="properties"></a>Propiedades  
- [Propiedad Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Propiedad Count](./count-property-ado.md)  
   
- [Propiedad Item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propiedad Item](./item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Append (método)](../../../ado/reference/ado-api/append-method-ado.md)  
+ [Append (método)](./append-method-ado.md)  
   
- [CancelUpdate (método)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+ [CancelUpdate (método)](./cancelupdate-method-ado.md)  
   
- [El método Delete (colección Fields de ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)  
+ [El método Delete (colección Fields de ADO)](./delete-method-ado-fields-collection.md)  
   
- [Refresh (método)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh (método)](./refresh-method-ado.md)  
   
- [Método Resync](../../../ado/reference/ado-api/resync-method.md)  
+ [Método Resync](./resync-method.md)  
   
- [Update (método)](../../../ado/reference/ado-api/update-method.md)  
+ [Update (método)](./update-method.md)  
   
 ## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
- [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)
+ [Fields (colección) (ADO)](./fields-collection-ado.md)

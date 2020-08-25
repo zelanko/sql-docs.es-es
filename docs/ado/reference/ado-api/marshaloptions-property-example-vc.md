@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e591ca4524bbbdd13ccd934434c743e49c0b2c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e29b5d53b46248ba9ba4017692f51f2c01cbc8b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443307"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774474"
 ---
 # <a name="marshaloptions-property-example-vc"></a>Ejemplo de la propiedad MarshalOptions (VC ++)
-En este ejemplo se usa la propiedad [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) para especificar las filas que se devuelven al servidor: todas las filas o solo las filas modificadas.  
+En este ejemplo se usa la propiedad [MarshalOptions](./marshaloptions-property-ado.md) para especificar las filas que se devuelven al servidor: todas las filas o solo las filas modificadas.  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  
@@ -246,4 +246,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+ [Propiedad MarshalOptions (ADO)](./marshaloptions-property-ado.md)

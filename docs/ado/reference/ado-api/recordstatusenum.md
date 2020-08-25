@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 506fdd70-4452-4e83-95d5-c94311988dfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d48e9538fb8ec4f0dac8c3a17457b04b0ace963
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57edf327f2ba4661ba47f43cf8b2f128b9fe92ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442397"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772134"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
-Especifica el [Estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) de un registro con respecto a las actualizaciones por lotes y otras operaciones masivas.  
+Especifica el [Estado](./status-property-ado-recordset.md) de un registro con respecto a las actualizaciones por lotes y otras operaciones masivas.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Indica que el registro no se guardó porque se canceló la operación.|  
 |**adRecCantRelease**|0x400|Indica que el nuevo registro no se guardó porque el registro existente estaba bloqueado.|  
@@ -74,4 +74,4 @@ Especifica el [Estado](../../../ado/reference/ado-api/status-property-ado-record
 |AdoEnums. RecordStatus. Unmodified|  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Propiedad Status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Propiedad Status (conjunto de registros ADO)](./status-property-ado-recordset.md)

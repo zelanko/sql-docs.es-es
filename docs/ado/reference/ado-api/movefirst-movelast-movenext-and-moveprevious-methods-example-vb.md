@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38725ffc91ff14d45c8f7d3fa1fb65825833f797
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f4015e2dca626824e8621fe9d2398d5022b23b5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443197"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774274"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>Ejemplo de los métodos MoveFirst, MoveLast, MoveNext y MovePrevious (VB)
-En este ejemplo se usan los métodos [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)y [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) para trasladar el puntero de registro de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basándose en el comando proporcionado. El procedimiento MoveAny es necesario para que este procedimiento se ejecute.  
+En este ejemplo se usan los métodos [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)y [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) para trasladar el puntero de registro de un [conjunto de registros](./recordset-object-ado.md) basándose en el comando proporcionado. El procedimiento MoveAny es necesario para que este procedimiento se ejecute.  
   
 ```  
 'BeginMoveFirstVB  
@@ -125,5 +125,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Métodos MoveFirst, MoveLast, MoveNext y MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Métodos MoveFirst, MoveLast, MoveNext y MovePrevious (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

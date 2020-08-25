@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6b7e95f654482e7026e288420d2ad10f36ab71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 364f8ac8d799e8d354b43f5902eff5f3b46f4b59
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439267"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768834"
 ---
 # <a name="cancel-method-example-vbscript"></a>Ejemplo del método Cancel (VBScript)
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- En el ejemplo siguiente se muestra cómo leer el método [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) en tiempo de ejecución. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como CancelVBS. asp. Puede ver el resultado en cualquier explorador cliente.  
+ En el ejemplo siguiente se muestra cómo leer el método [Cancel](../ado-api/cancel-method-ado.md) en tiempo de ejecución. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como CancelVBS. asp. Puede ver el resultado en cualquier explorador cliente.  
   
 ```  
 <!-- BeginCancelVBS -->  
@@ -70,6 +70,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Cancel (método) (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)
-
-
+ [Cancel (método) (ADO)](../ado-api/cancel-method-ado.md)

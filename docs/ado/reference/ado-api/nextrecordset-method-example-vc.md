@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9543501582e8cff357a2677f88e7a917224d866
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77d6e70dcc1d2fa7d3fc0ad3d4e14139e8e4dace
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443087"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774044"
 ---
 # <a name="nextrecordset-method-example-vc"></a>Ejemplo del método NextRecordset (VC ++)
-En este ejemplo se usa el método [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) para ver los datos de un conjunto de registros que usa una instrucción de comando compuesta formada por tres instrucciones **Select** independientes.  
+En este ejemplo se usa el método [NextRecordset](./nextrecordset-method-ado.md) para ver los datos de un conjunto de registros que usa una instrucción de comando compuesta formada por tres instrucciones **Select** independientes.  
   
 ```  
 // BeginNextRecordsetCpp.cpp  
@@ -140,4 +140,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Método NextRecordset (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)
+ [Método NextRecordset (ADO)](./nextrecordset-method-ado.md)

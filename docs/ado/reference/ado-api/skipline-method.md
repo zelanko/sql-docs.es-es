@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 463de3740ce29b859732c5ddb7ba69d58069f93f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0897d90ffeccabbce57525f268214577a523d92
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442107"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777474"
 ---
 # <a name="skipline-method"></a>Método SkipLine
-Omite una línea completa cuando se lee una [secuencia](../../../ado/reference/ado-api/stream-object-ado.md)de texto.  
+Omite una línea completa cuando se lee una [secuencia](./stream-object-ado.md)de texto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,9 +35,9 @@ Stream.SkipLine
 ```  
   
 ## <a name="remarks"></a>Observaciones  
- Se omiten todos los caracteres hasta el separador de línea siguiente, incluido. De forma predeterminada, el valor de [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) es **adCRLF**. Si intenta omitir más allá de [EOS](../../../ado/reference/ado-api/eos-property.md), la posición actual permanecerá en **EOS**.  
+ Se omiten todos los caracteres hasta el separador de línea siguiente, incluido. De forma predeterminada, el valor de [LineSeparator](./lineseparator-property-ado.md) es **adCRLF**. Si intenta omitir más allá de [EOS](./eos-property.md), la posición actual permanecerá en **EOS**.  
   
- El método **SkipLine** se usa con secuencias de texto (el[tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) es **adTypeText**).  
+ El método **SkipLine** se usa con secuencias de texto (el[tipo](./type-property-ado-stream.md) es **adTypeText**).  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Objeto de secuencia (ADO)](./stream-object-ado.md)

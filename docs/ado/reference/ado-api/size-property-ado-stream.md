@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92b546b95c1033b6222a0acc99355c5e0906de21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cde1911a2e8bf318af14fab9cf45c1d12c72b904
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442137"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777464"
 ---
 # <a name="size-property-ado-stream"></a>Propiedad Size (Stream de ADO)
 Indica el tamaño de la secuencia en número de bytes.  
@@ -30,13 +30,13 @@ Indica el tamaño de la secuencia en número de bytes.
  Devuelve un valor de **tipo Long** que especifica el tamaño de la secuencia en número de bytes. El valor predeterminado es el tamaño de la secuencia o-1 si no se conoce el tamaño de la secuencia.  
   
 ## <a name="remarks"></a>Observaciones  
- **El tamaño** solo se puede usar con objetos de [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) abiertos.  
+ **El tamaño** solo se puede usar con objetos de [secuencia](./stream-object-ado.md) abiertos.  
   
 > [!NOTE]
 >  Cualquier número de bits se puede almacenar en un objeto de **secuencia** , limitado solo por los recursos del sistema. Si la **secuencia** contiene más bits de los que se pueden representar con un valor **Long** , **el tamaño** se trunca y, por lo tanto, no representa con precisión la longitud de la **secuencia**.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Objeto de secuencia (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad Size (parámetro de ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [Propiedad Size (parámetro de ADO)](./size-property-ado-parameter.md)

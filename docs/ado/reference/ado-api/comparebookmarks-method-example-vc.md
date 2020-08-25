@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca1a9f62d293e3be0c7c27ce8dec8bc58e7d5c43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 921fccf29a823be169f16a0144aa0cdb0cabe232
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450777"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776054"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>Ejemplo del método CompareBookmarks (VC ++)
-En este ejemplo se muestra el método [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado sea de algún modo especial.  
+En este ejemplo se muestra el método [CompareBookmarks](./comparebookmarks-method-ado.md) . El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado sea de algún modo especial.  
   
- Designar una fila aleatoria de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) derivado de la tabla ***authors*** como destino de una búsqueda. A continuación, muestre la posición de cada fila con respecto a ese destino.  
+ Designar una fila aleatoria de un [conjunto de registros](./recordset-object-ado.md) derivado de la tabla ***authors*** como destino de una búsqueda. A continuación, muestre la posición de cada fila con respecto a ese destino.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -171,5 +171,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [CompareBookmarks (método) (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CompareBookmarks (método) (ADO)](./comparebookmarks-method-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

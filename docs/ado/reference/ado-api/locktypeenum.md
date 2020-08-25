@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52a6e4af75ac8887c23dd245a58981b1bbfb7eb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ba912f082cbd621d2d2205c6505e8c2be309bec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443337"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774554"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Especifica el tipo de bloqueo colocado en los registros durante la edición.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|Indica actualizaciones de Batch optimistas. Necesario para el modo de actualización por lotes.|  
-|**adLockOptimistic**|3|Indica bloqueo optimista, registro por registro. El proveedor utiliza el bloqueo optimista y bloquea los registros solo cuando se llama al método [Update](../../../ado/reference/ado-api/update-method.md) .|  
+|**adLockOptimistic**|3|Indica bloqueo optimista, registro por registro. El proveedor utiliza el bloqueo optimista y bloquea los registros solo cuando se llama al método [Update](./update-method.md) .|  
 |**adLockPessimistic**|2|Indica un bloqueo pesimista, registro por registro. El proveedor hace lo necesario para garantizar la correcta edición de los registros, normalmente mediante el bloqueo de registros en el origen de datos inmediatamente después de la edición.|  
 |**adLockReadOnly**|1|Indica los registros de solo lectura. No se pueden modificar los datos.|  
 |**adLockUnspecified**|-1|No especifica un tipo de bloqueo. En el caso de los clones, el clon se crea con el mismo tipo de bloqueo que el original.|  
@@ -49,11 +49,11 @@ Especifica el tipo de bloqueo colocado en los registros durante la edición.
 
 :::row:::
     :::column:::
-        [Clone (método) (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
-        [Propiedad LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+        [Clone (método) (ADO)](./clone-method-ado.md)  
+        [Propiedad LockType (ADO)](./locktype-property-ado.md)  
     :::column-end:::
     :::column:::
-        [Open (método) (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
-        [Evento WillExecute (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+        [Open (método) (conjunto de registros ADO)](./open-method-ado-recordset.md)  
+        [Evento WillExecute (ADO)](./willexecute-event-ado.md)  
     :::column-end:::
 :::row-end:::

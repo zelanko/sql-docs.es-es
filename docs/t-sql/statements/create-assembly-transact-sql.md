@@ -1,4 +1,5 @@
 ---
+description: CREATE ASSEMBLY (Transact-SQL)
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
@@ -23,12 +24,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7de8aed89c10e434ed8ef451a5e49f604d01995
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 556cab50de2e8207eb78d829f18373213ee171b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496872"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -63,15 +64,15 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  AUTHORIZATION *owner_name*  
  Especifica el nombre de un usuario o rol como propietario del ensamblado. *owner_name* debe ser el nombre de un rol del que el usuario actual sea miembro, o bien el usuario actual debe tener el permiso IMPERSONATE sobre *owner_name*. Si no se especifica, la propiedad se otorga al usuario actual.  
   
- \<especificador_de_ensamblado_de_cliente>  
-Especifica la ruta de acceso local o ubicación de red en la que se encuentra el ensamblado que se carga y, además, el nombre de archivo de manifiesto que se corresponde con el ensamblado.  \<especificador_de_ensamblado_de_cliente> se puede expresar como una cadena fija o una expresión que se evalúe como una cadena fija, con variables. CREATE ASSEMBLY no admite la carga de ensamblados de varios módulos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también busca cualquier ensamblado dependiente de este ensamblado en la misma ubicación y lo carga con el mismo propietario que el ensamblado de nivel raíz. Si estos ensamblados dependientes no se encuentran o aún no están cargados en la base de datos actual, CREATE ASSEMBLY produce un error. Si los ensamblados dependientes ya están cargados en la base de datos actual, el propietario de los mismos deberá ser el mismo que el del ensamblado nuevo que se crea.
+ \<client_assembly_specifier>  
+Especifica la ruta de acceso local o ubicación de red en la que se encuentra el ensamblado que se carga y, además, el nombre de archivo de manifiesto que se corresponde con el ensamblado.  \<client_assembly_specifier> se puede expresar como una cadena fija o una expresión que se evalúe como una cadena fija, con variables. CREATE ASSEMBLY no admite la carga de ensamblados de varios módulos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también busca cualquier ensamblado dependiente de este ensamblado en la misma ubicación y lo carga con el mismo propietario que el ensamblado de nivel raíz. Si estos ensamblados dependientes no se encuentran o aún no están cargados en la base de datos actual, CREATE ASSEMBLY produce un error. Si los ensamblados dependientes ya están cargados en la base de datos actual, el propietario de los mismos deberá ser el mismo que el del ensamblado nuevo que se crea.
 
 > [!IMPORTANT]
 > Azure SQL Database no admite la creación de un ensamblado desde un archivo.
   
- No se puede especificar \<especificador_de_ensamblado_de_cliente> si el usuario que ha iniciado sesión es suplantado.  
+ No se puede especificar \<client_assembly_specifier> si el usuario que ha iniciado sesión es suplantado.  
   
- \<bits_de_ensamblado>  
+ \<assembly_bits>  
  Es la lista de valores binarios que forman el ensamblado y sus ensamblados dependientes. El primer valor de esta lista se considera el ensamblado raíz. Los valores correspondientes a los ensamblados dependientes pueden suministrarse en cualquier orden. Se ignora cualquier valor que no se corresponda con los ensamblados dependientes del ensamblado raíz.  
   
 > [!NOTE]  
@@ -117,7 +118,7 @@ Cuando se habilita, la opción `PERMISSION_SET` en las instrucciones `CREATE ASS
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite registrar distintas versiones de un ensamblado con el mismo nombre, referencia cultural y clave pública.  
   
-Cuando se intenta obtener acceso al ensamblado especificado en \<especificador_de_ensamblado_de_cliente>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suplanta el contexto de seguridad del inicio de sesión de Windows actual. Si \<especificador_de_ensamblado_de_cliente> especifica una ubicación de red (ruta de acceso UNC), la suplantación del inicio de sesión actual no se mantiene en la ubicación de red debido a las limitaciones de delegación. En este caso, el acceso se realiza mediante el contexto de seguridad de la cuenta del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, vea [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).
+Cuando se intenta obtener acceso al ensamblado especificado en \<client_assembly_specifier>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suplanta el contexto de seguridad del inicio de sesión de Windows actual. Si \<client_assembly_specifier> especifica una ubicación de red (ruta de acceso UNC), la suplantación del inicio de sesión actual no se mantiene en la ubicación de red debido a las limitaciones de delegación. En este caso, el acceso se realiza mediante el contexto de seguridad de la cuenta del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, vea [Credenciales &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).
   
  Además del ensamblado raíz especificado por *assembly_name*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta cargar cualquier ensamblado al que haga referencia el ensamblado raíz que se carga. Si ya se ha cargado en la base de datos un ensamblado referenciado por la existencia de una instrucción CREATE ASSEMBLY anterior, este ensamblado no se carga, sino que está disponible para el ensamblado raíz. Si no se ha cargado antes un ensamblado dependiente, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede localizar el archivo de manifiesto en el directorio de origen, CREATE ASSEMBLY produce un error.  
   

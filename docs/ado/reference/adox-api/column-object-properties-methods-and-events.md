@@ -13,34 +13,34 @@ helpviewer_keywords:
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 025f5c3caafd950df9510c41129cea8f5da17c5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 554c32d7a9bbdaec3a5b98f5f85d2a6965cf86c8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440337"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771104"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Column
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
- [Propiedad Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)  
+ [Propiedad Attributes](./attributes-property-adox.md)  
   
- [Propiedad DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)  
+ [Propiedad DefinedSize](./definedsize-property-adox.md)  
   
- [Name (propiedad)](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Propiedad Name](./name-property-adox.md)  
   
- [Propiedad NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)  
+ [Propiedad NumericScale](./numericscale-property-adox.md)  
   
- [Propiedad ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [Propiedad ParentCatalog](./parentcatalog-property-adox.md)  
   
- [Propiedad Precision](../../../ado/reference/adox-api/precision-property-adox.md)  
+ [Propiedad Precision](./precision-property-adox.md)  
   
- [Colección de propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Colección de propiedades](../ado-api/properties-collection-ado.md)  
   
- [Propiedad RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)  
+ [Propiedad RelatedColumn](./relatedcolumn-property-adox.md)  
   
- [SortOrder (propiedad)](../../../ado/reference/adox-api/sortorder-property-adox.md)  
+ [SortOrder (propiedad)](./sortorder-property-adox.md)  
   
- [Type (propiedad, Column)](../../../ado/reference/adox-api/type-property-column-adox.md)  
+ [Type (propiedad, Column)](./type-property-column-adox.md)  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  
@@ -49,4 +49,4 @@ ms.locfileid: "88440337"
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Objeto Column (ADOX)](./column-object-adox.md)

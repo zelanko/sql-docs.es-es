@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03728baab7882597cfba29d2f566d73ac98f9300
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ceba3183cf400556524b5f424a2703fafefc74bd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443147"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774184"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
-Especifica el comportamiento del método [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) del objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) .  
+Especifica el comportamiento del método [MoveRecord](./moverecord-method-ado.md) del objeto de [registro](./record-object-ado.md) .  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|Predeterminada. Realiza la operación de movimiento predeterminada: se produce un error en la operación si el archivo o directorio de destino ya existe y la operación actualiza los vínculos de hipertexto.|  
 |**adMoveOverWrite**|1|Sobrescribe el archivo o directorio de destino, incluso si ya existe.|  
@@ -37,4 +37,4 @@ Especifica el comportamiento del método [MoveRecord](../../../ado/reference/ado
  Estas constantes no tienen equivalentes de ADO/WFC.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Método MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+ [Método MoveRecord (ADO)](./moverecord-method-ado.md)

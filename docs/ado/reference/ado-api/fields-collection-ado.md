@@ -18,33 +18,33 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1374770ab86038d50c4dd8cafabff328a5275ace
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d94803ecbe53addb2efb7ef738863bc6541a5801
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443737"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775384"
 ---
 # <a name="fields-collection-ado"></a>Fields (colección) (ADO)
-Contiene todos los objetos de [campo](../../../ado/reference/ado-api/field-object.md) de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) o un objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) .  
+Contiene todos los objetos de [campo](./field-object.md) de un [conjunto de registros](./recordset-object-ado.md) o un objeto de [registro](./record-object-ado.md) .  
   
 ## <a name="remarks"></a>Observaciones  
- Un objeto de **conjunto de registros** tiene una colección **Fields** formada por objetos **Field** . Cada objeto de **campo** corresponde a una columna del **conjunto de registros**. Puede rellenar la colección **Fields** antes de abrir el **conjunto de registros** llamando al método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) de la colección.  
+ Un objeto de **conjunto de registros** tiene una colección **Fields** formada por objetos **Field** . Cada objeto de **campo** corresponde a una columna del **conjunto de registros**. Puede rellenar la colección **Fields** antes de abrir el **conjunto de registros** llamando al método [Refresh](./refresh-method-ado.md) de la colección.  
   
 > [!NOTE]
 >  Vea el tema objeto de **campo** para obtener una explicación más detallada de cómo usar los objetos de **campo** .  
   
- La colección **Fields** tiene un método [Append](../../../ado/reference/ado-api/append-method-ado.md) , que crea y agrega de forma aprovisionada un objeto **Field** a la colección, y un método **Update** , que finaliza cualquier adición o eliminación.  
+ La colección **Fields** tiene un método [Append](./append-method-ado.md) , que crea y agrega de forma aprovisionada un objeto **Field** a la colección, y un método **Update** , que finaliza cualquier adición o eliminación.  
   
- Un objeto **Record** tiene dos campos especiales que se pueden indizar con constantes [FieldEnum](../../../ado/reference/ado-api/fieldenum.md) . Una constante obtiene acceso a un campo que contiene la secuencia predeterminada del **registro**y el otro tiene acceso a un campo que contiene la cadena de dirección URL absoluta del **registro**.  
+ Un objeto **Record** tiene dos campos especiales que se pueden indizar con constantes [FieldEnum](./fieldenum.md) . Una constante obtiene acceso a un campo que contiene la secuencia predeterminada del **registro**y el otro tiene acceso a un campo que contiene la cadena de dirección URL absoluta del **registro**.  
   
- Algunos proveedores (por ejemplo, el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) pueden rellenar la colección de **campos** con un subconjunto de campos disponibles para el **registro** o el **conjunto de registros**. No se agregarán otros campos a la colección hasta que se haga referencia a ellos por su nombre o se indexen por primera vez por su código.  
+ Algunos proveedores (por ejemplo, el [proveedor de Microsoft OLE DB para la publicación en Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) pueden rellenar la colección de **campos** con un subconjunto de campos disponibles para el **registro** o el **conjunto de registros**. No se agregarán otros campos a la colección hasta que se haga referencia a ellos por su nombre o se indexen por primera vez por su código.  
   
- Si intenta hacer referencia a un campo inexistente por su nombre, se anexará un nuevo objeto de **campo** a la colección **Fields** con el [Estado](../../../ado/reference/ado-api/status-property-ado-field.md) **adFieldPendingInsert**. Al llamar a [Update](../../../ado/reference/ado-api/update-method.md), ADO creará un nuevo campo en el origen de datos si lo permite el proveedor.  
+ Si intenta hacer referencia a un campo inexistente por su nombre, se anexará un nuevo objeto de **campo** a la colección **Fields** con el [Estado](./status-property-ado-field.md) **adFieldPendingInsert**. Al llamar a [Update](./update-method.md), ADO creará un nuevo campo en el origen de datos si lo permite el proveedor.  
   
  Esta sección contiene el siguiente tema.  
   
--   [Propiedades, métodos y eventos de la colección Fields](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
+-   [Propiedades, métodos y eventos de la colección Fields](./fields-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto Field](../../../ado/reference/ado-api/field-object.md)
+ [Objeto Field](./field-object.md)

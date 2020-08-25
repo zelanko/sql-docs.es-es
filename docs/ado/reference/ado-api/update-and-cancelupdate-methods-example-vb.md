@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 973a5f715f0a3d544e268f00f78143aab1395543
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 71ce20eb1c1fc76643d4650080afdbb956cfe882
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441667"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777034"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Ejemplo de los métodos Update y CancelUpdate (VB)
-En este ejemplo se muestra el método [Update](../../../ado/reference/ado-api/update-method.md) junto con el método [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
+En este ejemplo se muestra el método [Update](./update-method.md) junto con el método [CancelUpdate](./cancelupdate-method-ado.md) .  
   
 ```  
 'BeginUpdateVB  
@@ -115,13 +115,13 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- En este ejemplo se muestra el método **Update** junto con el método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) .  
+ En este ejemplo se muestra el método **Update** junto con el método [AddNew](./addnew-method-ado.md) .  
   
 ```  
 Attribute VB_Name = "Update"  
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [CancelUpdate (método) (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Update (método)](../../../ado/reference/ado-api/update-method.md)
+ [CancelUpdate (método) (ADO)](./cancelupdate-method-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)   
+ [Update (método)](./update-method.md)

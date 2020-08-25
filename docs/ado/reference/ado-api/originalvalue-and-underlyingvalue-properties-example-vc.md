@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f230bc40d310570ab717eee06a454fb3ef2b52b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442897"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773584"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Ejemplo de las propiedades OriginalValue y UnderlyingValue (VC + +)
-En este ejemplo se muestran las propiedades [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) y [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) al mostrar un mensaje si los datos subyacentes de un registro han cambiado durante una actualización por lotes del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+En este ejemplo se muestran las propiedades [OriginalValue](./originalvalue-property-ado.md) y [UnderlyingValue](./underlyingvalue-property.md) al mostrar un mensaje si los datos subyacentes de un registro han cambiado durante una actualización por lotes del [conjunto de registros](./recordset-object-ado.md) .  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -221,6 +221,6 @@ void PrintComError(_com_error &e) {
 **Valor original: Psicología**   
 **Valor subyacente: Sociology**    
 ## <a name="see-also"></a>Consulte también  
- [OriginalValue (propiedad, ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Propiedad UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)
+ [OriginalValue (propiedad, ADO)](./originalvalue-property-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)   
+ [Propiedad UnderlyingValue](./underlyingvalue-property.md)

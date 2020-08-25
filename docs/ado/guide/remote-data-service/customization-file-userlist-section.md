@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: afdd3560de5ca7e64d8a378f1eca04f875903a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14308aeda28311b73dc34a323a9a9bf662770e8b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452237"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759819"
 ---
 # <a name="customization-file-userlist-section"></a>Sección UserList del archivo de personalización
 La sección **userList** pertenece a la sección **Connect** con el mismo parámetro de *identificador* de sección.  
@@ -41,12 +41,10 @@ La sección **userList** pertenece a la sección **Connect** con el mismo parám
 |**_accessRights_**|Uno de los siguientes derechos de acceso:<br /><br /> -   **NoAccess** : el usuario no puede tener acceso al origen de datos.<br />-   **ReadOnly** : el usuario puede leer el origen de datos.<br />-   **ReadWrite** : el usuario puede leer o escribir en el origen de datos.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Sección de conexión del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Sección de registros de archivo de personalización](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Sección SQL de archivo de personalización](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Configuración de cliente requerida](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Descripción del archivo de personalización](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Escritura de un controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [Sección de conexión del archivo de personalización](./customization-file-connect-section.md)   
+ [Sección de registros de archivo de personalización](./customization-file-logs-section.md)   
+ [Sección SQL de archivo de personalización](./customization-file-sql-section.md)   
+ [Personalización de DataFactory](./datafactory-customization.md)   
+ [Configuración de cliente requerida](./required-client-settings.md)   
+ [Descripción del archivo de personalización](./understanding-the-customization-file.md)   
+ [Escritura de un controlador personalizado](./writing-your-own-customized-handler.md)

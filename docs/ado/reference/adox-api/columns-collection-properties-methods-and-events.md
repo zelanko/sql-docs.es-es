@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52845dfe57cf84b2cffa25940186a8197f548ac4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3afb4aea6ac939b2581b3c2a59250062932ffb97
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440277"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770974"
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>Eventos, métodos y propiedades de la colección de columnas
 ## <a name="properties"></a>Propiedades  
- [Propiedad Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Propiedad Count](../ado-api/count-property-ado.md)  
   
- [Propiedad Item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propiedad Item](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Append (método) (columnas)](../../../ado/reference/adox-api/append-method-adox-columns.md)  
+ [Append (método) (columnas)](./append-method-adox-columns.md)  
   
- [Delete (método, colecciones)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete (método, colecciones)](./delete-method-adox-collections.md)  
   
- [Refresh (método)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh (método)](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
- [Colección de columnas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)
+ [Colección de columnas (ADOX)](./columns-collection-adox.md)

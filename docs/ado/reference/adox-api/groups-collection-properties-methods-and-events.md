@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9489321120377a0ec5c53132a3e9b07224776e48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74865f8679a892db6efdeac2b8d6a1615dac0a0a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439967"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770324"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Eventos, métodos y propiedades de la colección de grupos
 ## <a name="properties"></a>Propiedades  
- [Propiedad Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Propiedad Count](../ado-api/count-property-ado.md)  
   
- [Propiedad Item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propiedad Item](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Append (método) (Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)  
+ [Append (método) (Groups)](./append-method-adox-groups.md)  
   
- [Delete (método, colecciones)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete (método, colecciones)](./delete-method-adox-collections.md)  
   
- [Refresh (método)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh (método)](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
- [Colección de grupos (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)
+ [Colección de grupos (ADOX)](./groups-collection-adox.md)

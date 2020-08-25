@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e8e171362e66c9809e646eb33cecfbad91f30df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8254dd1e47d6f6d3042e88365bd3c6ad0ea4301f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442757"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773244"
 ---
 # <a name="parenturl-property-ado"></a>Propiedad ParentURL (ADO)
-Indica una cadena de dirección URL absoluta que apunta al [registro](../../../ado/reference/ado-api/record-object-ado.md) primario del objeto de **registro** actual.  
+Indica una cadena de dirección URL absoluta que apunta al [registro](./record-object-ado.md) primario del objeto de **registro** actual.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un valor de **cadena** que indica la dirección URL del **registro**primario.  
   
 ## <a name="remarks"></a>Observaciones  
- La propiedad **ParentURL** depende del origen utilizado para abrir el objeto de **registro** . Por ejemplo, el **registro** se puede abrir con un origen que contiene un nombre de ruta de acceso relativa de un directorio al que hace referencia la propiedad [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) .  
+ La propiedad **ParentURL** depende del origen utilizado para abrir el objeto de **registro** . Por ejemplo, el **registro** se puede abrir con un origen que contiene un nombre de ruta de acceso relativa de un directorio al que hace referencia la propiedad [ActiveConnection](./activeconnection-property-ado.md) .  
   
  Supongamos que "Second" es una carpeta contenida en "First". Abra el objeto de **registro** con la siguiente sintaxis:  
   
@@ -49,16 +49,16 @@ record.Open "second"
   
 -   El objeto **Record** representa una entidad que no se puede especificar con una dirección URL.  
   
- Esta propiedad es de solo lectura.  
+ Esta propiedad es de sólo lectura.  
   
 > [!NOTE]
->  Esta propiedad solo es compatible con proveedores de origen de documentos, como el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [registros y campos proporcionados por el proveedor](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+>  Esta propiedad solo es compatible con proveedores de origen de documentos, como el [proveedor de Microsoft OLE DB para la publicación en Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [registros y campos proporcionados por el proveedor](../../guide/data/records-and-provider-supplied-fields.md).  
   
 > [!NOTE]
->  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Las direcciones URL que usan el esquema http invocarán automáticamente el [proveedor de Microsoft OLE DB para la publicación en Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obtener más información, consulte [direcciones URL absolutas y relativas](../../guide/data/absolute-and-relative-urls.md).  
   
 > [!NOTE]
 >  Si el registro actual contiene un registro de datos de un **conjunto de registros**ADO, el acceso a la propiedad **ParentURL** produce un error en tiempo de ejecución, lo que indica que no es posible ninguna dirección URL.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Objeto Record (ADO)](./record-object-ado.md)

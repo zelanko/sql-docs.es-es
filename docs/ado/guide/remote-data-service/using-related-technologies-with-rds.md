@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 506c20cddf6527e0d8c61a9a9c7133cefef0b1c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 744bb7a701207ef92bc23fa2d9728c0b86092fd0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451857"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760085"
 ---
 # <a name="using-related-technologies-with-rds"></a>Uso de tecnologías relacionadas con RDS
 Esta sección contiene los temas siguientes.  
   
--   [Uso de RDS con la agrupación de conexiones de ODBC](../../../ado/guide/remote-data-service/using-rds-with-odbc-connection-pooling.md)  
+-   [Uso de RDS con la agrupación de conexiones de ODBC](./using-rds-with-odbc-connection-pooling.md)  
   
--   [Ejecución de objetos de negocios en servicios de componentes](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
+-   [Ejecución de objetos de negocios en servicios de componentes](./running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -45,7 +45,4 @@ Esta sección contiene los temas siguientes.
  **Microsoft Windows NT Server/windows 2000 Server** Para obtener más información acerca de la seguridad en Microsoft Windows NT Server o Windows 2000 Server, vea el sitio web de Microsoft Windows.  
   
 ## <a name="see-also"></a>Consulte también  
- [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
+ [Aspectos básicos de RDS](./rds-fundamentals.md)

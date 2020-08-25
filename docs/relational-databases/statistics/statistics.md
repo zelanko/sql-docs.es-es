@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae25071d2740306c8ff6156a51cc380101046ba8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457021"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147746"
 ---
 # <a name="statistics"></a>Estadísticas
 
@@ -113,16 +113,25 @@ ORDER BY s.name;
     * Si la cardinalidad de tabla era de 500 o menos en el momento de la evaluación de las estadísticas, se actualizará cada 500 modificaciones.
     * Si la cardinalidad de tabla estaba por encima de 500 en el momento de la evaluación de las estadísticas, se actualizará cada 500 modificaciones, más el 20 % pertinente.
 
-* A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en el [nivel de compatibilidad de base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un umbral de actualización de estadísticas dinámico y decreciente que se ajusta según el número de filas de la tabla. Esto se calcula como la raíz cuadrada de 1000 multiplicado por la cardinalidad de tabla actual. Por ejemplo, si la tabla contiene 2 millones de filas, entonces, el cálculo es? sqrt (1000 * 2000000) = 44 721,359. Con este cambio, las estadísticas en tablas de gran tamaño se actualizarán con más frecuencia. Sin embargo, si una base de datos tiene un nivel de compatibilidad inferior a 130, se aplicará el umbral de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
+* A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en el [nivel de compatibilidad de base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un umbral de actualización de estadísticas dinámico y decreciente que se ajusta según el número de filas de la tabla. Esto se calcula como la raíz cuadrada de 1000 multiplicado por la cardinalidad de tabla actual. Por ejemplo, si la tabla contiene 2 millones de filas, entonces, el cálculo es sqrt (1000 * 2000000) = 44721,359. Con este cambio, las estadísticas en tablas de gran tamaño se actualizarán con más frecuencia. Sin embargo, si una base de datos tiene un nivel de compatibilidad inferior a 130, se aplicará el umbral de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
-> A partir de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o bien en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores en el [nivel de compatibilidad de base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) inferior a 130, use la [marca de seguimiento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] empleará un umbral de actualización de estadísticas dinámico y decreciente que se ajustará según el número de filas de la tabla.
+> En [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], o bien en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores en el [nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 e inferior, habilite la [marca de seguimiento 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use un umbral de actualización de estadísticas descendente y dinámico.
+
+Puede usar las siguientes instrucciones para habilitar la marca de seguimiento 2371 en su entorno anterior a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]:
+
+ - Si no ha observado problemas de rendimiento debido a las estadísticas obsoletas, no es necesario habilitar esta marca de seguimiento.
+ - Si está en sistemas SAP, habilite esta marca de seguimiento.  Consulte este [blog](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371) para más información.
+ - Si tiene que confiar en el trabajo nocturno para actualizar las estadísticas porque la actualización automática actual no se desencadena con la frecuencia suficiente, considere la posibilidad de habilitar la marca de seguimiento 2371 para reducir el umbral.
   
 El Optimizador de consultas comprueba que hay estadísticas obsoletas antes de compilar una consulta y antes de ejecutar un plan de consulta almacenado en la memoria caché. Antes de compilar una consulta, el Optimizador de consultas utiliza las columnas, tablas y vistas indexadas en el predicado de consulta para determinar qué estadísticas podrían estar obsoletas. Antes de ejecutar un plan de consulta almacenado en la memoria caché, [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprueba que el plan de consulta hace referencia a las estadísticas actualizadas.  
   
 La opción AUTO_UPDATE_STATISTICS se aplica a los objetos de estadísticas creados para los índices, columnas únicas de predicados de consulta y las estadísticas creadas con la instrucción [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Esta opción también se aplica a las estadísticas filtradas.  
  
-Para obtener más información sobre el control de AUTO_UPDATE_STATISTICS, consulte [Controlar el comportamiento de Autostat (AUTO_UPDATE_STATISTICS) en SQL Server](https://support.microsoft.com/help/2754171).
+Puede usar [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) para realizar un seguimiento de forma precisa del número de filas cambiadas en una tabla y decidir si desea actualizar las estadísticas manualmente.
+
+
+
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  La opción de actualización asincrónica de estadísticas [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) determina si el optimizador de consultas usa actualizaciones sincrónicas o asincrónicas de las estadísticas. La opción de actualización asincrónica de las estadísticas está desactivada de forma predeterminada y el optimizador de consultas actualiza las estadísticas sincrónicamente. La opción AUTO_UPDATE_STATISTICS_ASYNC se aplica a los objetos de estadísticas creados para índices y columnas únicas de los predicados de consulta, así como a las estadísticas creadas con la instrucción [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09dabe4cdb4e897bd7b9d0916bbe1e057cbbd02f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451717"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759935"
 ---
 # <a name="activecommand-property-example-vc"></a>Ejemplo de la propiedad ActiveCommand (VC ++)
-En este ejemplo se muestra la propiedad [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
+En este ejemplo se muestra la propiedad [ActiveCommand](./activecommand-property-ado.md) .  
   
- A una subrutina se le asigna un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) cuya propiedad **ActiveCommand** se usa para mostrar el texto del comando y el parámetro que creó el **conjunto de registros**.  
+ A una subrutina se le asigna un objeto de [conjunto de registros](./recordset-object-ado.md) cuya propiedad **ActiveCommand** se usa para mostrar el texto del comando y el parámetro que creó el **conjunto de registros**.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -222,5 +222,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propiedad ActiveCommand (ADO)](./activecommand-property-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

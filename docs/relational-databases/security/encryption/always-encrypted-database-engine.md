@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec29c3c9c9486c08ee8c95625b026f7b51ef5e0
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472681"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216774"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -163,21 +163,20 @@ Always Encrypted no se admite para las columnas con las características siguie
 - Columnas con la propiedad `IDENTITY`.  
 - Columnas con la propiedad `ROWGUIDCOL`.  
 - Columnas de cadena (`varchar`, `char`, etc.) con intercalaciones que no son BIN2.  
-- Columnas que son claves para índices no agrupados mediante una columna cifrada aleatoria como columna de clave (las columnas cifradas deterministas son válidas).  
-- Columnas que son claves para índices agrupados mediante una columna cifrada aleatoria como columna de clave (las columnas cifradas deterministas son válidas).  
-- Columnas que son claves para índices de texto completo que contienen columnas cifradas tanto aleatorias como deterministas.  
+- Columnas que son claves para índices agrupados y no agrupados al usar el cifrado aleatorio (se admite el cifrado determinista).
+- Columnas que son claves para índices de texto completo al usar el cifrado aleatorio (se admite el cifrado determinista).  
 - Columnas calculadas
 - Columnas que hacen referencia a columnas calculadas (cuando la expresión realiza operaciones no admitidas para Always Encrypted).  
 - Un conjunto de columnas dispersas.  
-- Columnas a las que hacen referencia las estadísticas.  
-- Columnas con tipo de alias.  
+- Columnas a las que hacen referencia las estadísticas mediante el cifrado aleatorio (se admite el cifrado determinista).  
+- Columnas con tipos de alias.  
 - Columnas de partición.  
 - Columnas con restricciones predeterminadas.  
 - Columnas a las que hacen referencia las restricciones únicas mediante el cifrado aleatorio (se admite el cifrado determinista).  
 - Columnas de clave principal al usar cifrado aleatorio (se admite el cifrado determinista).  
 - Columnas de referencia en las restricciones de clave externa cuando se usa el cifrado aleatorio o el cifrado determinista, si las columnas de referencia y las que se hace referencia usan diferentes claves o algoritmos.  
 - Columnas de referencia por restricciones de comprobación.  
-- Columnas de tablas que usan la captura de datos modificados.  
+- Columnas capturadas/con seguimiento mediante captura de datos modificados.  
 - Columnas de clave principal en tablas que tienen seguimiento de cambios.  
 - Columnas que están enmascaradas (con Enmascaramiento dinámico de datos).  
 - Columnas de tablas de Stretch Database. (Las tablas con columnas cifradas con Always Encrypted pueden habilitarse para Stretch).  

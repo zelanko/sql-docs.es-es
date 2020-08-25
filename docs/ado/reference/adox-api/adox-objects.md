@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d67a9d7fa099b0b716d0c2769a1af0cbf64abdb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca5131235b4c34c05f4cc3b783087f25dc027e95
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440567"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771584"
 ---
 # <a name="adox-objects"></a>Objetos ADOX
 ## <a name="adox-object-summary"></a>Resumen de objetos ADOX  
   
 |Object|Descripción|  
 |------------|-----------------|  
-|[Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md)|Contiene colecciones que describen el catálogo de esquema de un origen de datos.|  
-|[Columna](../../../ado/reference/adox-api/column-object-adox.md)|Representa una columna de una tabla, un índice o una clave.|  
-|[Grupo](../../../ado/reference/adox-api/group-object-adox.md)|Representa una cuenta de grupo que tiene permisos de acceso en una base de datos protegida.|  
-|[Index](../../../ado/reference/adox-api/index-object-adox.md)|Representa un índice de una tabla de base de datos.|  
-|[Clave](../../../ado/reference/adox-api/key-object-adox.md)|Representa un campo de clave principal, externa o única de una tabla de base de datos.|  
-|[Procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md)|Representa un procedimiento almacenado.|  
-|[Table](../../../ado/reference/adox-api/table-object-adox.md)|Representa una tabla de base de datos, que incluye columnas, índices y claves.|  
-|[User](../../../ado/reference/adox-api/user-object-adox.md)|Representa una cuenta de usuario que tiene permisos de acceso en una base de datos protegida.|  
-|[Vista](../../../ado/reference/adox-api/view-object-adox.md)|Representa un conjunto filtrado de registros o una tabla virtual.|  
+|[Catálogo](./catalog-object-adox.md)|Contiene colecciones que describen el catálogo de esquema de un origen de datos.|  
+|[Columna](./column-object-adox.md)|Representa una columna de una tabla, un índice o una clave.|  
+|[Grupo](./group-object-adox.md)|Representa una cuenta de grupo que tiene permisos de acceso en una base de datos protegida.|  
+|[Index](./index-object-adox.md)|Representa un índice de una tabla de base de datos.|  
+|[Clave](./key-object-adox.md)|Representa un campo de clave principal, externa o única de una tabla de base de datos.|  
+|[Pasos](./procedure-object-adox.md)|Representa un procedimiento almacenado.|  
+|[Table](./table-object-adox.md)|Representa una tabla de base de datos, que incluye columnas, índices y claves.|  
+|[User](./user-object-adox.md)|Representa una cuenta de usuario que tiene permisos de acceso en una base de datos protegida.|  
+|[Ver](./view-object-adox.md)|Representa un conjunto filtrado de registros o una tabla virtual.|  
   
- Las relaciones entre estos objetos se ilustran en el [modelo de objetos ADOX](../../../ado/reference/adox-api/adox-object-model.md).  
+ Las relaciones entre estos objetos se ilustran en el [modelo de objetos ADOX](./adox-object-model.md).  
   
- Cada objeto puede estar contenido en su colección correspondiente. Por ejemplo, un objeto **TABLE** puede estar contenido en una colección [tables](../../../ado/reference/adox-api/tables-collection-adox.md) . Para obtener más información, vea [colecciones de ADOX](../../../ado/reference/adox-api/adox-collections.md) o un tema específico de la colección.  
+ Cada objeto puede estar contenido en su colección correspondiente. Por ejemplo, un objeto **TABLE** puede estar contenido en una colección [tables](./tables-collection-adox.md) . Para obtener más información, vea [colecciones de ADOX](./adox-collections.md) o un tema específico de la colección.  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de la API de ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
- [Colecciones de ADOX](../../../ado/reference/adox-api/adox-collections.md)   
- [Modelo de objetos ADOX](../../../ado/reference/adox-api/adox-object-model.md)   
- [Extensiones de ADO para lenguaje de definición de datos y seguridad (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [Referencia de la API de ADOX](./adox-object-model.md?view=sql-server-ver15)   
+ [Colecciones de ADOX](./adox-collections.md)   
+ [Modelo de objetos ADOX](./adox-object-model.md)   
+ [Extensiones de ADO para lenguaje de definición de datos y seguridad (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

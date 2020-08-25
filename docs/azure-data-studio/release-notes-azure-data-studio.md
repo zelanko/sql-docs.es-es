@@ -8,17 +8,31 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/17/2020
-ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.date: 08/12/2020
+ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988564"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147206"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](download.md)** .
+
+## <a name="august-2020"></a>Agosto de 2020
+
+12 de agosto de 2020 &nbsp; / &nbsp; versión: 1.21.0
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Nuevas características de los cuadernos | &bull; &nbsp; Mover ubicaciones de celda <br/> &bull; &nbsp; Convertir celdas en celda de texto o celda de código
+| Selector de Jupyter Books | Los usuarios ya pueden elegir Jupyter Books en las versiones de GitHub y abrir dichos libros sin problemas en Azure Data Studio |
+| Búsqueda agregada al viewlet de cuadernos | Los usuarios pueden buscar fácilmente en el contenido de sus cuadernos y Jupyter Books |
+| Problemas y errores resueltos | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2020-hotfix"></a>Julio de 2020 (revisión, hotfix)
 

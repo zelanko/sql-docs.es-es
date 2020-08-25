@@ -1,19 +1,19 @@
 ---
 title: Instalación desatendida de SQL Server en Ubuntu
 titleSuffix: SQL Server
-description: 'Script de SQL Server de ejemplo: instalación desatendida en Ubuntu'
+description: Aprenda a usar un script de Bash de ejemplo para instalar SQL Server 2017 en Ubuntu 16.04 sin la intervención del usuario.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e9921f6b2639d533674a487de26c1d26aa365a0f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 555a15c3120b9dec2bfc367f9f15f23d967e0c05
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900159"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089005"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Sample: script de instalación desatendida de SQL Server para Ubuntu
 

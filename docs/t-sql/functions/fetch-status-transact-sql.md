@@ -1,5 +1,6 @@
 ---
-title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;FETCH_STATUS (Transact-SQL)'
+title: FETCH_STATUS (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73c5802df5988c323efb7ae1c5554b4835063e4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b8e44321611a4e814a1102a0cec233ede45eb2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631722"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310111"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,10 +36,12 @@ Esta función devuelve el estado de la última instrucción FETCH del cursor emi
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 @@FETCH_STATUS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>Tipo de valor devuelto  
  **integer**  
   
@@ -51,7 +54,7 @@ Esta función devuelve el estado de la última instrucción FETCH del cursor emi
 |-2|Falta la fila capturada.|
 |-9|El cursor no está realizando ninguna operación de búsqueda.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Como `@@FETCH_STATUS` es global para todos los cursores de una conexión, úselo con cuidado. Después de ejecutar una instrucción FETCH, la prueba de `@@FETCH_STATUS` se debe realizar antes de que se ejecute otra instrucción FETCH sobre otro cursor. `@@FETCH_STATUS` no está definido antes de producirse las capturas en la conexión.  
   
 Por ejemplo, supongamos que un usuario ejecuta una instrucción FETCH sobre un cursor y a continuación llama a un procedimiento almacenado que abre y procesa los resultados de otro cursor. Cuando devuelve el control desde el procedimiento almacenado llamado, `@@FETCH_STATUS` refleja la última instrucción FETCH ejecutada dentro de ese procedimiento almacenado, no la ejecutada antes de llamar al procedimiento almacenado.  
@@ -76,7 +79,7 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Funciones del cursor &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
  [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   

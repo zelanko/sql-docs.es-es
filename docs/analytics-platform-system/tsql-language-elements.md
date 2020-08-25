@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 148dc3033fdcf0fe9b5e86f4e3efa69717c32dfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d28d64c4c59655c1f08eb0e4c6dc979a7814652
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399832"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778414"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos del lenguaje T-SQL para almacenamiento de datos paralelos
 Elementos del lenguaje T-SQL para el sistema de plataforma analítica (APS) SQL Server almacenamiento de datos paralelos (PDW).
@@ -23,7 +23,7 @@ Elementos del lenguaje T-SQL para el sistema de plataforma analítica (APS) SQL 
 * [convenciones de sintaxis](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [reglas de nomenclatura de objetos](../relational-databases/databases/database-identifiers.md)
 * [palabras clave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [intercalaciones](https://msdn.microsoft.com/library/ff848763.aspx)
+* [intercalaciones](../t-sql/statements/collations.md?view=sql-server-ver15)
 * [comentarios](../t-sql/language-elements/comment-transact-sql.md)
 * [constantes](../t-sql/data-types/constants-transact-sql.md)
 * [tipos de datos](../t-sql/data-types/data-types-transact-sql.md)

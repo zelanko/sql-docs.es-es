@@ -1,6 +1,6 @@
 ---
 title: 'Especificación de copia de seguridad de VDI: SQL Server en Linux'
-description: Especificación de interfaz de dispositivo virtual de copia de seguridad de SQL Server.
+description: Obtenga información sobre las interfaces proporcionadas por el SDK de cliente de la interfaz de dispositivo virtual (VDI) de SQL Server en Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 0ee533d9a0c3dace8f7fe8ec8e0c615b444ea91d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1580977da984e84bd244166651330ab91665c774
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892285"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088995"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Especificación del SDK de cliente VDI de SQL Server en Linux
 

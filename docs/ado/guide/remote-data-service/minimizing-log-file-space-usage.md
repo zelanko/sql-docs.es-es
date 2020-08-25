@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 986d527f0d4f59053a53a8b566d28d43151c0f99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b839f5f31671d7364eeec022da1b25bdf584a3a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452167"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759725"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimización del uso de espacio de archivo de registro
 Un archivo de registro puede llenarse rápidamente (con lo que se detiene el servidor) si hay un gran volumen de actividad en una base de datos de SQL Server. Puede establecer el archivo de registro en **truncar en el punto de comprobación** para ampliar significativamente la duración del archivo de registro de una base de datos.  
@@ -47,6 +47,4 @@ Un archivo de registro puede llenarse rápidamente (con lo que se detiene el ser
  Para obtener más información acerca de la característica **truncar en punto de comprobación** , consulte la documentación de Microsoft SQL Server.  
   
 ## <a name="see-also"></a>Consulte también  
- [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Aspectos básicos de RDS](./rds-fundamentals.md)

@@ -1,7 +1,7 @@
 ---
 title: Introducción a SQL Server (en Linux) en la nube
 titleSuffix: SQL Server
-description: En este inicio rápido se muestra cómo ejecutar SQL Server en Linux en la nube que elija.
+description: Obtenga información sobre cómo instalar SQL Server en Red Hat Enterprise Linux (RHEL), en SUSE Linux Enterprise Server (SLES) o en Ubuntu en la nube que prefiera.
 author: VanMSFT
 ms.author: vanto
 ms.date: 11/04/2019
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: cb24499b411d288e1e79b49d202fba63b251a805
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d40072ea8b347001feba5d74e6e08c8c4c8ae340
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897545"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089035"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Inicio rápido: Ejecutar SQL Server en la nube
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]

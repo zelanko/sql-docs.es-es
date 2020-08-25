@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 521ed958411e2943d0f01d25cb417aee569f1912
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b99e08e689e9e37ae489f61c742819e9d8a8afca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442337"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771964"
 ---
 # <a name="refresh-method-example-vc"></a>Actualización de ejemplo del método (VC ++)
-En este ejemplo se muestra cómo usar el método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) para actualizar la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) para un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de procedimiento almacenado.  
+En este ejemplo se muestra cómo usar el método [Refresh](./refresh-method-ado.md) para actualizar la colección de [parámetros](./parameters-collection-ado.md) para un objeto de [comando](./command-object-ado.md) de procedimiento almacenado.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -235,6 +235,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Command (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameters (colección) (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Actualizar (método, ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Command (objeto) (ADO)](./command-object-ado.md)   
+ [Parameters (colección) (ADO)](./parameters-collection-ado.md)   
+ [Actualizar (método, ADO)](./refresh-method-ado.md)

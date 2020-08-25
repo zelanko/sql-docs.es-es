@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74734bd5518f7691107fff873379879b2edd2fa8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6d402470724cfaaaa4a27e2c0d2d3843b7904c2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451557"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760207"
 ---
 # <a name="addnew-method-example-vbscript"></a>Ejemplo del método AddNew (VBScript)
-En este ejemplo se usa el método [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) para crear un nuevo registro con el nombre especificado.  
+En este ejemplo se usa el método [AddNew](./addnew-method-ado.md) para crear un nuevo registro con el nombre especificado.  
   
  Use el ejemplo siguiente en una página de Active Server (ASP). Use **Buscar** para buscar el archivo adovbs. Inc y colóquelo en el directorio que piensa usar. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **AddNewVBS. asp**. Puede ver el resultado en cualquier explorador cliente.  
   
- Para practicar el ejemplo, agregue un nuevo registro en el formulario HTML. Haga clic en **Agregar nuevo**. Vea el [ejemplo del método Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) para quitar registros no deseados.  
+ Para practicar el ejemplo, agregue un nuevo registro en el formulario HTML. Haga clic en **Agregar nuevo**. Vea el [ejemplo del método Delete](./delete-method-example-vbscript.md) para quitar registros no deseados.  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -214,5 +214,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [AddNew (método) (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AddNew (método) (ADO)](./addnew-method-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

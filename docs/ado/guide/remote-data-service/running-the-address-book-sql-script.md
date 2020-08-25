@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17ea6bc39986239f0dc7c16c245bc08807b3f207
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c8c47f4e5cd5235ee0289df27d31193db8a2e1d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451997"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759315"
 ---
 # <a name="running-the-address-book-sql-script"></a>Ejecución del script de SQL de la libreta de direcciones
 > [!IMPORTANT]
@@ -70,6 +70,4 @@ ms.locfileid: "88451997"
 7.  Una vez ejecutada, cierre las ventanas **consulta**, **analizador de consultas**y **Administrador corporativo** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejecución de la aplicación de ejemplo de la libreta de direcciones](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+ [Ejecución de la aplicación de ejemplo de la libreta de direcciones](./running-the-address-book-sample-application.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c76d2efccf6f9031d21b85b3bfd3aabed47708c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: d8d91f01faa2f8ce6e81579964d7027122cd8d38
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988385"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200796"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -310,7 +310,7 @@ Antes de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, las ope
 
 ## <a name="logging-behavior"></a>Comportamiento del registro
 
- Para más información sobre cuándo se incluyen en el registro de transacciones las operaciones de inserción de filas realizadas durante una importación en bloque a SQL Server, vea [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). En Azure SQL Database no se admite el registro mínimo.
+ Para más información sobre cuándo se incluyen en el registro de transacciones las operaciones de inserción de filas realizadas durante una importación en bloque a SQL Server, consulte [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). En Azure SQL Database no se admite el registro mínimo.
 
 ## <a name="restrictions"></a><a name="Limitations"></a> Restricciones
 

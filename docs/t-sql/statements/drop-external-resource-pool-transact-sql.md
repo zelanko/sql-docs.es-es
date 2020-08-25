@@ -1,7 +1,8 @@
 ---
+description: DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 title: DROP EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -18,23 +19,23 @@ ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-ms.openlocfilehash: 25a9714b02330bcaebd041c5f193700ac2f6d0ca
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7a32d1693f48ea56f3edd8c8c7373c88d6369bb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358521"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Elimina un grupo de recursos externos de Resource Governor que sirve para definir los recursos de los procesos externos. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] en [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], el grupo externo rige `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], el grupo externo rige `rterm.exe`, `python.exe`, `BxlServer.exe` y otros procesos generados por ellos.
 ::: moniker-end
 
@@ -77,6 +78,9 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
 ```  
+
+> [!NOTE]
+> SQL Machine Learning Services 2019 para Linux no admite la capacidad de establecer la afinidad de CPU.
 
 ## <a name="see-also"></a>Consulte también
 

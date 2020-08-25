@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5674fc090a9803f6ce5249c48c65615edb2581bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67dd2ac9820167c92b16d11b056e02f796e56f5f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451887"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759893"
 ---
 # <a name="troubleshooting-rds"></a>Solución de problemas de RDS
 > [!IMPORTANT]
@@ -26,19 +26,17 @@ ms.locfileid: "88451887"
   
  Consulte esta sección para obtener soluciones a errores o problemas específicos de RDS. Esta sección contiene los temas siguientes.  
   
--   [Configuración de RDS en Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
+-   [Configuración de RDS en Windows 2000](./configuring-rds-on-windows-2000.md)  
   
--   ["Error de servidor de Internet: acceso denegado"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   ["Error de servidor de Internet: acceso denegado"](./internet-server-error-access-denied.md)  
   
--   [RDS devuelve el error "Stream Not Read" (Objeto Stream no leído)](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
+-   [RDS devuelve el error "Stream Not Read" (Objeto Stream no leído)](./rds-returns-stream-not-read-error.md)  
   
--   [Interbloqueos con el nivel de aislamiento REPEATABLE de lectura](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
+-   [Interbloqueos con el nivel de aislamiento REPEATABLE de lectura](./deadlocks-with-read-repeatable-isolation-level.md)  
   
--   [Garantía de espacio suficiente de TempDB](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
+-   [Garantía de espacio suficiente de TempDB](./ensuring-sufficient-tempdb-space.md)  
   
--   [Minimización del uso de espacio de archivo de registro](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
+-   [Minimización del uso de espacio de archivo de registro](./minimizing-log-file-space-usage.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Aspectos básicos de RDS](./rds-fundamentals.md)

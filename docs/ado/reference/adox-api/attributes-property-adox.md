@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eade69c5a19e3ffc8d6b6d933b9d4f8453b4b6f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2fca7e2cf9bce25d1993d16d4ec6a44bf53ef67
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440447"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771354"
 ---
 # <a name="attributes-property-adox"></a>Attributes (propiedad, ADOX)
 Describe las características de las columnas.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un valor **Long** . El valor especifica las características de la tabla representada por el objeto de [columna](../../../ado/reference/adox-api/column-object-adox.md) . El valor puede ser una combinación de constantes [ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md) . El valor predeterminado es cero (**0**), que no es ni **adColFixed** ni **adColNullable**.  
+ Establece o devuelve un valor **Long** . El valor especifica las características de la tabla representada por el objeto de [columna](./column-object-adox.md) . El valor puede ser una combinación de constantes [ColumnAttributesEnum](./columnattributesenum.md) . El valor predeterminado es cero (**0**), que no es ni **adColFixed** ni **adColNullable**.  
   
 ## <a name="applies-to"></a>Se aplica a  
   
-- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+- [Objeto Column (ADOX)](./column-object-adox.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de propiedad Attributes (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)
+ [Ejemplo de propiedad Attributes (VB)](./attributes-property-example-vb.md)

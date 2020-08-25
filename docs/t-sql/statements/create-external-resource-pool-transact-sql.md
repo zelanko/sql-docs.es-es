@@ -1,7 +1,8 @@
 ---
+description: CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning-services
@@ -21,24 +22,24 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ffb59b95b555196aa72662dd2b7111eca488872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 64294b819d05e46077fd6a94008d64fc60eb717f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426727"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Crea un grupo externo que sirve para definir los recursos de los procesos externos. Un grupo de recursos de servidor representa un subconjunto de los recursos físicos (memoria y CPU) de una instancia del motor de base de datos. El Regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos, hasta un máximo de 64 grupos.
+Crea un grupo externo para definir los recursos de los procesos externos. Un grupo de recursos de servidor representa un subconjunto de los recursos físicos (memoria y CPU) de una instancia del motor de base de datos. Un Regulador de recursos puede distribuir los recursos del servidor entre los grupos de recursos, hasta un máximo de 64 grupos.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] en [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], el grupo externo rige `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], el grupo externo rige `rterm.exe`, `python.exe`, `BxlServer.exe` y otros procesos generados por ellos.
 ::: moniker-end
   
@@ -68,25 +69,28 @@ CREATE EXTERNAL RESOURCE POOL pool_name
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+> [!NOTE]
+> SQL Machine Learning Services 2019 para Linux no admite la capacidad de establecer la afinidad de CPU.
+
 ## <a name="arguments"></a>Argumentos
 
 *pool_name*  
 Es el nombre definido por el usuario para identificar el grupo de recursos externos. *pool_name* es alfanumérico y puede tener hasta 128 caracteres. Este argumento debe ser únicos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
 
 MAX_CPU_PERCENT =*value*  
-Especifica el promedio máximo de ancho de banda de CPU que pueden recibir todas las solicitudes en el grupo de recursos externo cuando haya contención de CPU. *value* es un valor entero. El intervalo permitido para *value* es de 1 a 100.
+El promedio máximo de ancho de banda de CPU que pueden recibir todas las solicitudes en el grupo de recursos externos cuando haya contención de CPU. *value* es un valor entero. El intervalo permitido para *value* es de 1 a 100.
 
-AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} Adjunte el grupo de recursos externos a CPU específicas.
+AFFINITY {CPU = AUTO | ( <CPU_range_spec>) | NUMANODE = (\<NUMA_node_range_spec>)} Adjunte el grupo de recursos externos a CPU específicas.
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** asigna el grupo de recursos externos a las CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas por los valores CPU_ID dados.
+AFFINITY CPU = **(** <CPU_range_spec> **)** asigna el grupo de recursos externos a las CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas por los CPU_ID dados.
 
-Cuando se usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , se establece una afinidad entre el grupo de recursos externos y las CPU físicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondientes al nodo o al intervalo de nodos NUMA especificado. 
+Cuando usa AFFINITY NUMANODE = **(\<NUMA_node_range_spec> **)** , se establece una afinidad entre el grupo de recursos externos y las CPU físicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondientes al nodo o al intervalo de nodos NUMA especificado. 
 
 MAX_MEMORY_PERCENT =*value*  
 Especifica la memoria total del servidor que puede ser usada por las solicitudes en este grupo de recursos externos. *value* es un valor entero. El intervalo permitido para *value* es de 1 a 100.
 
 MAX_PROCESSES =*value*  
-Especifica el número máximo de procesos permitidos para el grupo de recursos externos. Especifique 0 para establecer un umbral ilimitado para el grupo, que estará enlazado solamente por recursos del equipo.
+El número máximo de procesos permitidos para el grupo de recursos externos. 0 = umbral ilimitado para el grupo, que estará enlazado solamente por recursos del equipo.
 
 ## <a name="remarks"></a>Observaciones
 
@@ -102,7 +106,7 @@ Requiere el permiso `CONTROL SERVER`.
 
 ## <a name="examples"></a>Ejemplos
 
-La siguiente instrucción define un grupo externo que restringe el uso de CPU al 75 por ciento. La instrucción también define la cantidad máxima de memoria al 30 por ciento de la memoria disponible en el equipo.
+El grupo externo ha restringido el uso de CPU al 75 por ciento. La cantidad máxima de memoria es el 30 por ciento de la memoria disponible en el equipo.
 
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1

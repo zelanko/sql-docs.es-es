@@ -1,6 +1,6 @@
 ---
 title: Limitaciones de seguridad para SQL Server en Linux
-description: En este artículo se describen las restricciones de SQL Server en Linux.
+description: Obtenga información sobre las restricciones de SQL Server en Linux, incluida la incompatibilidad con el uso de claves almacenadas en Azure Key Vault y la administración extensible de claves.
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/12/2019
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: f1820b54532a820a47babdaf79e28d1baa0f096b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 611afe6c02e979c7c9672d7d94f84844b8932cf6
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895299"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088808"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Limitaciones de seguridad para SQL Server en Linux
 

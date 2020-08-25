@@ -1,6 +1,6 @@
 ---
 title: Cifrado de conexiones a SQL Server en Linux
-description: En este artículo se describe el cifrado de conexiones a SQL Server en Linux.
+description: SQL Server en Linux usa TLS para cifrar los datos transmitidos a través de una red entre una aplicación cliente y una instancia de SQL Server.
 ms.date: 06/29/2020
 author: vin-yu
 ms.author: vinsonyu
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 53da117e95d235b0de22b8265439721b94346024
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 44903475ed2202ba3cc40de388ccc00511075dac
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894017"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088915"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Cifrado de conexiones a SQL Server en Linux
 

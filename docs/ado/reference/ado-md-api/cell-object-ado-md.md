@@ -16,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6cb4d32a4a527cce7bc69eb39f8829bbf5cf58a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28058d792b0525aafe8850158a71afcc4423b38f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441247"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778334"
 ---
 # <a name="cell-object-ado-md"></a>Objeto Cell (ADO MD)
 Representa los datos en la intersección de las coordenadas del eje contenidas en un Cellset.  
   
 ## <a name="remarks"></a>Observaciones  
- La propiedad [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) de un objeto [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) devuelve un objeto **Cell** .  
+ La propiedad [Item](./item-property-ado-md-cellset.md) de un objeto [Cellset](./cellset-object-ado-md.md) devuelve un objeto **Cell** .  
   
  Con las colecciones y las propiedades de un objeto **Cell** , puede hacer lo siguiente:  
   
--   Devuelve los datos de la **celda** con la propiedad [Value](../../../ado/reference/ado-md-api/value-property-ado-md.md) .  
+-   Devuelve los datos de la **celda** con la propiedad [Value](./value-property-ado-md.md) .  
   
--   Devuelve la cadena que representa la presentación con formato de la propiedad **Value** con la propiedad [FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md) .  
+-   Devuelve la cadena que representa la presentación con formato de la propiedad **Value** con la propiedad [FormattedValue](./formattedvalue-property-ado-md.md) .  
   
--   Devuelve el valor ordinal de la **celda** dentro del **Cellset** con la propiedad [ordinal](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md) .  
+-   Devuelve el valor ordinal de la **celda** dentro del **Cellset** con la propiedad [ordinal](./ordinal-property-ado-md-cell.md) .  
   
--   Determinar la posición de la **celda** dentro del [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) con la colección [positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
+-   Determinar la posición de la **celda** dentro del [CubeDef](./cubedef-object-ado-md.md) con la colección [positions](./positions-collection-ado-md.md) .  
   
--   Recupere otra información sobre la **celda** con la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) de ADO estándar.  
+-   Recupere otra información sobre la **celda** con la colección de [propiedades](../ado-api/properties-collection-ado.md) de ADO estándar.  
   
  La colección **Properties** contiene propiedades proporcionadas por el proveedor. En la tabla siguiente se enumeran las propiedades que pueden estar disponibles. La lista de propiedades real puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista más completa de las propiedades disponibles.  
   
@@ -54,10 +54,10 @@ Representa los datos en la intersección de las coordenadas del eje contenidas e
   
  Esta sección contiene el siguiente tema.  
   
--   [Propiedades, métodos y eventos](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
+-   [Propiedades, métodos y eventos](./cell-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de eje (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [Colección positions (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Ejemplo de eje (VBScript)](./axis-example-vbscript.md)   
+ [Objeto Cellset (ADO MD)](./cellset-object-ado-md.md)   
+ [Colección positions (ADO MD)](./positions-collection-ado-md.md)   
+ [Colección de propiedades (ADO)](../ado-api/properties-collection-ado.md)

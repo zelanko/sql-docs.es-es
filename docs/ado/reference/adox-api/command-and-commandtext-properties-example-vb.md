@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a607b44311ab9229ecbcf8171e1a506d7b6713d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23136450602552394eb20a4ace7272081d9bf68f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440267"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770964"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Ejemplo de propiedades Command y CommandText (VB)
-En el código siguiente se muestra cómo utilizar la propiedad [Command](../../../ado/reference/adox-api/command-property-adox.md) para actualizar el texto de un procedimiento.  
+En el código siguiente se muestra cómo utilizar la propiedad [Command](./command-property-adox.md) para actualizar el texto de un procedimiento.  
   
 ```  
 ' BeginProcedureTextVB  
@@ -77,8 +77,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [ActiveConnection (propiedad, ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command (propiedad, ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Procedure (objeto) (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Colección de procedimientos (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection (propiedad, ADOX)](./activeconnection-property-adox.md)   
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Command (propiedad, ADOX)](./command-property-adox.md)   
+ [Procedure (objeto) (ADOX)](./procedure-object-adox.md)   
+ [Colección de procedimientos (ADOX)](./procedures-collection-adox.md)

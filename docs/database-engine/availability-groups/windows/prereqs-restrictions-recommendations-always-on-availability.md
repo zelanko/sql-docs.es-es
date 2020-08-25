@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363008"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88092015"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "87363008"
 > [!IMPORTANT]  
 >  Antes de implementar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], le recomendamos encarecidamente que lea todas las secciones de este tema.  
     
-##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Revisiones de .Net que admiten Grupos de disponibilidad  
- Según los componentes y características de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que use con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], puede que tenga que instalar las revisiones de .Net adicionales identificadas en la tabla siguiente. Las revisiones pueden instalarse en cualquier orden.  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Revisiones de .NET que admiten Grupos de disponibilidad  
+ Según los componentes y características de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que use con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], puede que tenga que instalar las revisiones de .NET adicionales identificadas en la tabla siguiente. Las revisiones pueden instalarse en cualquier orden.  
   
 |Característica dependiente|Revisión|Vínculo|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|La revisión para .Net 3.5 SP1 incorpora compatibilidad con las características cliente SQL para AlwaysOn de intención de lectura, de solo lectura y de conmutación por error de múltiples subredes. La revisión tiene que instalarse en cada servidor de informes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Revisión para .Net 3.5 SP1 para agregar compatibilidad con las características de Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|La revisión para .NET 3.5 SP1 incorpora compatibilidad con las características cliente SQL para AlwaysOn de intención de lectura, de solo lectura y de conmutación por error de múltiples subredes. La revisión tiene que instalarse en cada servidor de informes [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Revisión para .NET 3.5 SP1 para agregar compatibilidad con las características de Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> Lista de comprobación: Requisitos (sistema de Windows)  
@@ -162,7 +162,9 @@ ms.locfileid: "87363008"
   
     -   Cada réplica principal usa 1 subproceso de captura de registro para cada base de datos principal. Además, usa 1 subproceso de envío de registro para cada base de datos secundaria. Los subprocesos de envío de registro se liberan después de unos 15 segundos de inactividad.    
   
-    -   Una copia de seguridad en una réplica secundaria contiene un subproceso en la réplica principal mientras dura la operación de copia de seguridad.  
+    -   Una copia de seguridad en una réplica secundaria contiene un subproceso en la réplica principal mientras dura la operación de copia de seguridad. 
+
+-  SQL Server 2019 presentó una puesta al día en paralelo de las bases de datos de grupo de disponibilidad optimizadas para memoria. En SQL Server 2016 y 2017, las tablas basadas en disco no usan la puesta al día en paralelo si una base de datos de un grupo de disponibilidad también está optimizada para memoria. 
   
  Para más información, vea [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (Series de aprendizaje de Always ON - HADRON: Uso del grupo de trabajo para las bases de datos compatibles con HADRON) (Blog de ingenieros de CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   

@@ -16,29 +16,29 @@ helpviewer_keywords:
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 050651b5c25fcfdfa6723936659b9a11772c2b03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9b5095432d283a2a0695d948de08a9f6b0ab25c5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442697"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773134"
 ---
 # <a name="prepared-property-ado"></a>Propiedad Prepared (ADO)
-Indica si se debe guardar una versión compilada de un [comando](../../../ado/reference/ado-api/command-object-ado.md) antes de la ejecución.  
+Indica si se debe guardar una versión compilada de un [comando](./command-object-ado.md) antes de la ejecución.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor **booleano** que, si se establece en **true**, indica que el comando debe estar preparado.  
   
 ## <a name="remarks"></a>Observaciones  
- Use la propiedad **Prepared** para que el proveedor guarde una versión preparada (o compilada) de la consulta especificada en la propiedad [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) antes de la primera ejecución de un objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) . Esto puede ralentizar la primera ejecución de un comando, pero una vez que el proveedor compila un comando, el proveedor usará la versión compilada del comando para las ejecuciones posteriores, lo que dará como resultado un rendimiento mejorado.  
+ Use la propiedad **Prepared** para que el proveedor guarde una versión preparada (o compilada) de la consulta especificada en la propiedad [CommandText](./commandtext-property-ado.md) antes de la primera ejecución de un objeto [Command](./command-object-ado.md) . Esto puede ralentizar la primera ejecución de un comando, pero una vez que el proveedor compila un comando, el proveedor usará la versión compilada del comando para las ejecuciones posteriores, lo que dará como resultado un rendimiento mejorado.  
   
  Si la propiedad es **false**, el proveedor ejecutará el objeto de **comando** directamente sin crear una versión compilada.  
   
  Si el proveedor no admite la preparación de comandos, puede devolver un error si esta propiedad se establece en **true**. Si el proveedor no devuelve un error, simplemente omite la solicitud para preparar el comando y establece la propiedad **preparado** en **false**.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Objeto Command (ADO)](./command-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de propiedad Prepared (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
- [Ejemplo de la propiedad Prepared (VC ++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   
+ [Ejemplo de propiedad Prepared (VB)](./prepared-property-example-vb.md)   
+ [Ejemplo de la propiedad Prepared (VC ++)](./prepared-property-example-vc.md)

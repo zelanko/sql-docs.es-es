@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a97292cc702dc675aaf14ae34c4b792b541f758
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 037d12b831f1cc652df6b53e4eb1a27bf7dace89
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440517"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771564"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Property (ADOX)
 ## <a name="properties"></a>Propiedades  
- [Attributes (propiedad, ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)  
+ [Attributes (propiedad, ADOX)](./attributes-property-adox.md)  
   
- [Name (propiedad, ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name (propiedad, ADOX)](./name-property-adox.md)  
   
- [Type (propiedad, columna, ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)  
+ [Type (propiedad, columna, ADOX)](./type-property-column-adox.md)  
   
- [Value (propiedad) (ADO)](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Value (propiedad) (ADO)](../ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  
@@ -37,4 +37,4 @@ ms.locfileid: "88440517"
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto Property (ADOX)](../../../ado/reference/adox-api/property-object-adox.md)
+ [Objeto Property (ADOX)](./property-object-adox.md)

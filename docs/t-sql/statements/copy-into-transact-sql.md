@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (versión preliminar)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use la instrucción COPY en Azure SQL Data Warehouse para la carga desde cuentas de almacenamiento externo.
-ms.date: 06/19/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807508"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091960"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versión preliminar)
 
@@ -102,7 +102,7 @@ Es donde se almacenan provisionalmente los archivos que contienen los datos. Act
 - *Ubicación externa* para ADLS Gen2: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> El punto de conexión de blob está disponible para ADLS Gen2 y solo para la compatibilidad con versiones anteriores. Use el punto de conexión **dfs** para ADLS Gen2 para obtener el mejor rendimiento.
+> El punto de conexión de blob está disponible para ADLS Gen2 para la compatibilidad con versiones anteriores. Use el punto de conexión de **blob** para obtener el mejor rendimiento.
 
 - *Cuenta*: el nombre de la cuenta de almacenamiento
 
@@ -139,10 +139,12 @@ Solo se pueden especificar varias ubicaciones de archivos desde el mismo contene
 *CREDENTIAL (IDENTITY = '', SECRET = '')*</br>
 *CREDENTIAL* especifica el mecanismo de autenticación para tener acceso a la cuenta de almacenamiento externa. Los métodos de autenticación son:
 
-|                          |                CSV                |              Parquet              |                ORC                |
-| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
-|  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY              |              SAS/KEY              |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |              Parquet               |                ORC                 |
+| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
+|  **Azure Blob Storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD |
+
+\* Solo se admite con el punto de conexión de blob
 
 Al autenticarse mediante AAD o en una cuenta de almacenamiento pública, no es necesario especificar CREDENTIAL. 
 
@@ -416,7 +418,7 @@ Las instrucciones sobre el número de archivos se describen en la tabla siguient
 |  3000  |    360     |
 |  5\.000  |    600     |
 |  6,000  |    720     |
-|  7500  |    900     |
+|  7 500  |    900     |
 | 10 000  |    1200    |
 | 15,000  |    1800    |
 | 30,000  |    3600    |
@@ -429,7 +431,7 @@ No es necesario dividir los archivos ORC o Parquet porque el comando COPY lo har
 El comando COPY estará disponible con carácter general a principios del siguiente año natural (2020). 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>¿Hay alguna limitación en el número o el tamaño de los archivos?
-Los archivos deben tener al menos 4 MB.
+No hay limitaciones en cuanto al número o tamaño de los archivos; sin embargo, para obtener el mejor rendimiento, recomendamos usar archivos de al menos 4 MB.
 
 
 Envíe cualquier comentario o problema a la lista de distribución sqldwcopypreview@service.microsoft.com.

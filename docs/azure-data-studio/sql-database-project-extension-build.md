@@ -9,12 +9,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 4348f117b57c9b13a70f4a6db39ab6710eafd0ef
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 191b10fd32d7c49c3f4a4e81c109e52fb2a1a81c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519194"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88171374"
 ---
 # <a name="build-and-publish-a-project"></a>Compilación y publicación de un proyecto
 
@@ -32,7 +32,6 @@ El proceso de compilación en la extensión Proyectos de base de datos de SQL pa
 
  ``` ... exited with code: 0 ```
 
-
 ## <a name="publish-a-database-project"></a>Publicación de un proyecto de base de datos
 
 Una vez que un proyecto se compila correctamente a través del proceso de compilación, la base de datos se puede publicar en una instancia de SQL Server. Para publicar un proyecto de base de datos, en el viewlet **Proyectos** del **Explorador**, haga clic con el botón derecho en el nodo raíz *.sqlproj* y seleccione **Publicar**.
@@ -42,6 +41,4 @@ En el cuadro de diálogo **Publicar base de datos** que aparece, especifique una
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Extensión Proyectos de base de datos de SQL para Azure Data Studio](sql-database-project-extension.md)
-- [Aplicaciones de capa de datos](../relational-databases/data-tier-applications/data-tier-applications.md)
-
-
+- [Creación de proyectos de base de datos SQL desde la línea de comandos](sql-database-project-extension-build-from-command-line.md)

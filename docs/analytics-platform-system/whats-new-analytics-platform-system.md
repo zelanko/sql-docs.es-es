@@ -9,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 684979981878590c0fbd8d56c648525b25e7c8b6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5e0193fb7e749b7127d59743557e58cb049e734c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243083"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778474"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacenamiento de datos MPP de escalabilidad horizontal
 Vea las novedades de las últimas actualizaciones del dispositivo para Microsoft Analytics Platform System (AP). APS es un dispositivo local de escalado horizontal que hospeda MPP SQL Server almacenamiento de datos paralelos. 
@@ -25,23 +25,23 @@ Vea las novedades de las últimas actualizaciones del dispositivo para Microsoft
 Fecha de lanzamiento: abril 2020
 
 ### <a name="rename-column"></a>Cambio del nombre de columna
-Después de actualizar a CU 7.6, los clientes podrán cambiar el nombre de una columna de una tabla creada por el usuario. Vea [Rename (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/rename-transact-sql) para ver la sintaxis, ejemplos, limitaciones y más información.
+Después de actualizar a CU 7.6, los clientes podrán cambiar el nombre de una columna de una tabla creada por el usuario. Vea [Rename (Transact-SQL)](../t-sql/statements/rename-transact-sql.md) para ver la sintaxis, ejemplos, limitaciones y más información.
 
 ### <a name="alter-view"></a>Modificar vista
-Los clientes ahora podrán modificar las vistas. Vea [ALTER View (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-view-transact-sql) para obtener más información.
+Los clientes ahora podrán modificar las vistas. Vea [ALTER View (Transact-SQL)](../t-sql/statements/alter-view-transact-sql.md) para obtener más información.
 
 <a name="h2-aps-cu7.5"></a>
 ## <a name="aps-cu75"></a>APS CU7.5
 Fecha de lanzamiento: septiembre 2019
 
 ### <a name="alter-external-data-source"></a>Modificar origen de datos externo
-Los clientes podrán modificar la definición del origen de datos externo con la actualización CU 7.5. Los clientes con la alta disponibilidad del nodo de nombre de Hadoop ahora pueden modificar el origen de datos para cambiar los argumentos cuando se produce una conmutación por error. En el caso de los APS, solo se pueden cambiar la ubicación, la RESOURCE_MANAGER_LOCATION y la credencial. Vea [ALTER external Data Source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) para obtener más información.
+Los clientes podrán modificar la definición del origen de datos externo con la actualización CU 7.5. Los clientes con la alta disponibilidad del nodo de nombre de Hadoop ahora pueden modificar el origen de datos para cambiar los argumentos cuando se produce una conmutación por error. En el caso de los APS, solo se pueden cambiar la ubicación, la RESOURCE_MANAGER_LOCATION y la credencial. Vea [ALTER external Data Source](../t-sql/statements/alter-external-data-source-transact-sql.md?view=sql-server-2017) para obtener más información.
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>Compatibilidad con CDH 5,15 y 5,16 con polybase
 Polybase en APS con la actualización CU 7.5 admite ahora CDH 5,15 y 5,16 versiones de la distribución de Hadoop desde Cloudera. Use la opción 6 para las versiones de CDH 5. x. 
 
 ### <a name="try_convert-and-try_cast-support"></a>Compatibilidad con Try_Convert y Try_Cast
-CU 7.5 APS ahora admite funciones de [TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-2017) y [TRY_CONVERT](https://docs.microsoft.com/sql/t-sql/functions/try-convert-transact-sql?view=sql-server-2017) TSQL. Ambas funciones devuelven un valor convertido al tipo de datos especificado si la conversión se realiza correctamente; de lo contrario, devuelve NULL.
+CU 7.5 APS ahora admite funciones de [TRY_CAST](../t-sql/functions/try-cast-transact-sql.md?view=sql-server-2017) y [TRY_CONVERT](../t-sql/functions/try-convert-transact-sql.md?view=sql-server-2017) TSQL. Ambas funciones devuelven un valor convertido al tipo de datos especificado si la conversión se realiza correctamente; de lo contrario, devuelve NULL.
 
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4
@@ -51,10 +51,10 @@ Fecha de lanzamiento: 2019 de mayo
 A partir de APS CU 7.4, los clientes podrán usar un nuevo dwloader para cargar filas en tablas de más de 32 KB (32.768 bytes). El nuevo dwloader admite el modificador-l que toma un valor entero entre 32768 y 33554432 (en bytes) para cargar filas de más de 32 KB. Use esta opción solo cuando se carguen grandes filas (más de 32 KB), ya que este modificador asignará más memoria en el cliente y en el servidor y puede ralentizar las cargas. Puede descargar el nuevo dwloader desde el [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).  
 
 ### <a name="hdp-30-and-31-support-with-polybase"></a>Compatibilidad con HDP 3,0 y 3,1 con polybase
-Polybase en APS ahora admite HDP 3,0 y 3,1 con esta actualización. Use la opción 7 para las versiones de HDP 3. x. Para obtener más información, consulte la página de [conectividad de polybase](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) .
+Polybase en APS ahora admite HDP 3,0 y 3,1 con esta actualización. Use la opción 7 para las versiones de HDP 3. x. Para obtener más información, consulte la página de [conectividad de polybase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) .
 
 ### <a name="utf16-file-support-with-polybase"></a>Compatibilidad con archivos UTF16 con polybase
-Polybase admite ahora la lectura de archivos de texto delimitados que están en la codificación UTF16 (LE). Vea [Create external File Format](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) para obtener información detallada sobre la instalación. 
+Polybase admite ahora la lectura de archivos de texto delimitados que están en la codificación UTF16 (LE). Vea [Create external File Format](../t-sql/statements/create-external-file-format-transact-sql.md) para obtener información detallada sobre la instalación. 
 
 <a name="h2-aps-cu7.3"></a>
 ## <a name="aps-cu73"></a>APS CU7.3
@@ -132,7 +132,7 @@ El nuevo adaptador de destino de SSIS de APS que admite SQL Server 2017 como des
 Fecha de lanzamiento: 2018 de julio
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>Los comandos DBCC no consumen espacios de simultaneidad (cambio de comportamiento)
-APS admite un subconjunto de [comandos DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) de T-SQL, como [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Anteriormente, estos comandos consumían un [espacio de simultaneidad](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) reduciendo el número de cargas y consultas de usuario que podían ejecutarse. Los `DBCC` comandos se ejecutan ahora en una cola local que no consume un espacio de simultaneidad de usuarios que mejora el rendimiento general de la ejecución de consultas.
+APS admite un subconjunto de [comandos DBCC](../t-sql/database-console-commands/dbcc-transact-sql.md) de T-SQL, como [DBCC DROPCLEANBUFFERS](../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md). Anteriormente, estos comandos consumían un [espacio de simultaneidad](./workload-management.md?view=aps-pdw-2016-au7#concurrency-slots) reduciendo el número de cargas y consultas de usuario que podían ejecutarse. Los `DBCC` comandos se ejecutan ahora en una cola local que no consume un espacio de simultaneidad de usuarios que mejora el rendimiento general de la ejecución de consultas.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Reemplaza algunas llamadas de metadatos por objetos de catálogo
 El uso de objetos de catálogo para llamadas de metadatos en lugar de usar SMO ha mostrado la mejora del rendimiento en APS. A partir de CU 7.1, algunas de estas llamadas de metadatos ahora usan objetos de catálogo de forma predeterminada. Este comportamiento se puede desactivar por el [modificador de características](appliance-feature-switch.md) si los clientes que usan consultas de metadatos se ejecutan en cualquier problema.
@@ -156,9 +156,9 @@ APS 2016 es un requisito previo para actualizar a AU7. A continuación se muestr
 APS AU7 crea y actualiza automáticamente las estadísticas de forma predeterminada. Para actualizar la configuración de las estadísticas, los administradores pueden usar un nuevo elemento de menú de modificador de características en el [Configuration Manager](appliance-configuration.md#CMTasks). El [modificador de características](appliance-feature-switch.md) controla el comportamiento de la creación automática, la actualización automática y la actualización asincrónica de las estadísticas. También puede actualizar la configuración de las estadísticas con la instrucción [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) .
 
 ### <a name="t-sql"></a>T-SQL
-@varAhora se admite Select. Para obtener más información, vea [seleccionar variable local](/sql/t-sql/language-elements/select-local-variable-transact-sql) . 
+@varAhora se admite Select. Para obtener más información, vea [seleccionar variable local](../t-sql/language-elements/select-local-variable-transact-sql.md) . 
 
-Ahora se admiten las sugerencias de consulta HASH y el grupo de pedidos. Para obtener más información, vea [sugerencias (Transact-SQL)-Query](/sql/t-sql/queries/hints-transact-sql-query)
+Ahora se admiten las sugerencias de consulta HASH y el grupo de pedidos. Para obtener más información, vea [sugerencias (Transact-SQL)-Query](../t-sql/queries/hints-transact-sql-query.md)
 
 ### <a name="feature-switch"></a>Modificador de características
 APS AU7 introduce el modificador de características en [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled y DmsProcessStopMessageTimeoutInSeconds son ahora opciones configurables que los administradores pueden cambiar.
@@ -264,7 +264,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp (utilidad)]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[ALFANUMÉRICO]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [FILAS o intervalo]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
@@ -278,7 +278,4 @@ The proper formats have at least two big advantages.  One big advantage is that 
 
 
   
-
-  
-
 

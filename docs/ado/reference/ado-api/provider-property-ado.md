@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4e8b5f57a9d6ba15a12c8da8bb4e85012b53da9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d96acadcd4b2df0eca5ff9655d9bcdd31cabe0f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442587"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772794"
 ---
 # <a name="provider-property-ado"></a>Propiedad de proveedor (ADO)
-Indica el nombre del proveedor de un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) .  
+Indica el nombre del proveedor de un objeto de [conexión](./connection-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor de **cadena** que indica el nombre del proveedor.  
   
 ## <a name="remarks"></a>Observaciones  
- Utilice la propiedad **Provider** para establecer o devolver el nombre del proveedor de una conexión. Esta propiedad también se puede establecer mediante el contenido de la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) o el argumento *ConnectionString* del método [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) ; sin embargo, la especificación de un proveedor en más de un lugar mientras se llama al método **Open** puede tener resultados imprevisibles. Si no se especifica ningún proveedor, la propiedad se establecerá de forma predeterminada en MSDASQL ([proveedor de Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)).  
+ Utilice la propiedad **Provider** para establecer o devolver el nombre del proveedor de una conexión. Esta propiedad también se puede establecer mediante el contenido de la propiedad [ConnectionString](./connectionstring-property-ado.md) o el argumento *ConnectionString* del método [Open](./open-method-ado-connection.md) ; sin embargo, la especificación de un proveedor en más de un lugar mientras se llama al método **Open** puede tener resultados imprevisibles. Si no se especifica ningún proveedor, la propiedad se establecerá de forma predeterminada en MSDASQL ([proveedor de Microsoft OLE DB para ODBC](../../guide/appendixes/microsoft-ole-db-provider-for-odbc.md)).  
   
- La propiedad del **proveedor** es de lectura y escritura cuando la conexión está cerrada y es de solo lectura cuando está abierta. La configuración no surte efecto hasta que se abra el objeto de **conexión** o se tenga acceso a la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) del objeto de **conexión** . Si el valor no es válido, se produce un error.  
+ La propiedad del **proveedor** es de lectura y escritura cuando la conexión está cerrada y es de solo lectura cuando está abierta. La configuración no surte efecto hasta que se abra el objeto de **conexión** o se tenga acceso a la colección de [propiedades](./properties-collection-ado.md) del objeto de **conexión** . Si el valor no es válido, se produce un error.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Objeto de conexión (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de las propiedades Provider y DefaultDatabase (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [Ejemplo de las propiedades Provider y DefaultDatabase (VB)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
- [Proveedor de OLE DB de Microsoft para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Ejemplo de las propiedades Provider y DefaultDatabase (VB)](./provider-and-defaultdatabase-properties-example-vb.md)   
+ [Ejemplo de las propiedades Provider y DefaultDatabase (VB)](./provider-and-defaultdatabase-properties-example-vb.md)   
+ [Proveedor de OLE DB de Microsoft para ODBC](../../guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   
+ [Apéndice A: Proveedores](../../guide/appendixes/appendix-a-providers.md)

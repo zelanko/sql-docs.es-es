@@ -18,28 +18,28 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b9915366d96975ffd02f6fae7ddd25ce35c81f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e1526ceeb62b8205a8c0d40af39a72731d17634
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442657"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772994"
 ---
 # <a name="properties-collection-ado"></a>Colección de propiedades (ADO)
-Contiene todos los objetos de [propiedad](../../../ado/reference/ado-api/property-object-ado.md) para una instancia específica de un objeto.  
+Contiene todos los objetos de [propiedad](./property-object-ado.md) para una instancia específica de un objeto.  
   
 ## <a name="remarks"></a>Observaciones  
  Algunos objetos de ADO tienen una colección de **propiedades** formada por objetos de **propiedad** . Cada objeto de **propiedad** corresponde a una característica del objeto ADO específico del proveedor.  
   
 > [!NOTE]
->  Vea el tema sobre el objeto de [propiedad](../../../ado/reference/ado-api/property-object-ado.md) para obtener una explicación más detallada de cómo usar los objetos de **propiedad** .  
+>  Vea el tema sobre el objeto de [propiedad](./property-object-ado.md) para obtener una explicación más detallada de cómo usar los objetos de **propiedad** .  
   
  Las **propiedades dinámicas** del objeto de **conjunto de registros** salen del ámbito (no están disponibles) cuando se cierra el **conjunto de registros** .  
   
  Esta sección contiene los temas siguientes.  
   
--   [Propiedades, métodos y eventos de la colección Properties](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
+-   [Propiedades, métodos y eventos de la colección Properties](./properties-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Property (objeto) (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Property (objeto) (ADO)](./property-object-ado.md)   
+ [Apéndice A: Proveedores](../../guide/appendixes/appendix-a-providers.md)

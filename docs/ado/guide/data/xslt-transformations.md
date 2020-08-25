@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13326277c0be8abbf7c2d7d623233b34ad2ed348
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ae0f13b2ece4ae21e8a8f8312a561bcfd0e6c88
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452487"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758965"
 ---
 # <a name="xslt-transformations"></a>Transformaciones XSLT
 XSLT se puede aplicar al XML generado para transformarlo en otro formato. Entender el formato XML en ADO ayuda a desarrollar plantillas XSLT que pueden transformarlas en un formato más fácil de utilizar.  
   
  Por ejemplo, sabe que cada fila del conjunto de registros se guarda como el elemento z:Row dentro del elemento RS: Data. Del mismo modo, cada campo del conjunto de registros se guarda como un par atributo-valor para este elemento.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El siguiente script XSLT se puede aplicar al XML que se muestra en la sección anterior para transformarlo en una tabla HTML que se mostrará en el explorador:  
   
 ```  
@@ -54,4 +54,4 @@ XSLT se puede aplicar al XML generado para transformarlo en otro formato. Entend
  El XSLT convierte la secuencia XML generada por el método Save de ADO en una tabla HTML que muestra cada campo del conjunto de registros junto con un encabezado de tabla. También se asignan fuentes y colores diferentes a los encabezados y las filas de la tabla.  
   
 ## <a name="see-also"></a>Consulte también  
- [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Almacenar registros en formato XML](./persisting-records-in-xml-format.md)

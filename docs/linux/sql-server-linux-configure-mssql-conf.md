@@ -3,17 +3,17 @@ title: Configuración de las opciones de SQL Server en Linux
 description: En este artículo se describe cómo usar la herramienta mssql-conf para configurar las opciones de SQL Server en Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/30/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 2e21b8f811af5887147ddb71b211e3a876b728d2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472191"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180017"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configuración de SQL Server en Linux con la herramienta mssql-conf
 
@@ -42,6 +42,8 @@ ms.locfileid: "87472191"
 | [Directorio de auditoría local](#localaudit) | Establezca un directorio para agregar los archivos de la auditoría local. |
 | [Configuración regional](#lcid) | Establezca la configuración regional de SQL Server que se va a usar. |
 | [Límite de memoria](#memorylimit) | Establezca el límite de memoria de SQL Server. |
+| [Configuración de red](#network) | Configuración de red adicional para SQL Server. |
+| [Microsoft DTC (Coordinador de transacciones distribuidas)](#msdtc) | Configure y solucione problemas de MSDTC en Linux. |
 | [Puerto TCP](#tcpport) | Cambie el puerto en el que SQL Server escucha las conexiones. |
 | [TLS](#tls) | Configure la seguridad de nivel de transporte. |
 | [Marcas de seguimiento](#traceflags) | Establezca las marcas de seguimiento que va a usar el servicio. |
@@ -72,6 +74,7 @@ ms.locfileid: "87472191"
 | [Límite de memoria](#memorylimit) | Establezca el límite de memoria de SQL Server. |
 | [Microsoft DTC (Coordinador de transacciones distribuidas)](#msdtc) | Configure y solucione problemas de MSDTC en Linux. |
 | [CLUF de MLServices](#mlservices-eula) | Acepte los CLUF de R y Python de los paquetes de mlservices. Solo se aplica a SQL Server 2019.|
+| [Configuración de red](#network) | Configuración de red adicional para SQL Server. |
 | [outboundnetworkaccess](#mlservices-outbound-access) |Habilite el acceso de red saliente para las extensiones de R, Python y Java de [mlservices](sql-server-linux-setup-machine-learning.md).|
 | [Puerto TCP](#tcpport) | Cambie el puerto en el que SQL Server escucha las conexiones. |
 | [TLS](#tls) | Configure la seguridad de nivel de transporte. |
@@ -107,6 +110,34 @@ Para cambiar esta configuración, siga estos pasos:
    ```bash
    sudo systemctl restart mssql-server
    ```
+
+### <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> Establecimiento del perfil de correo electrónico de base de datos predeterminado para SQL Server en Linux
+
+**sqlpagent.databasemailprofile** le permite establecer el perfil de correo electrónico de base de datos predeterminado de las alertas por correo electrónico.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
+
+### <a name="sql-agent-error-logs"></a><a id="agenterrorlog"></a> Registros de errores del Agente SQL
+
+La configuración **sqlpagent.errorlogfile** y **sqlpagent.errorlogginglevel** permite establecer el nivel de registro y la ruta del archivo de registro del Agente SQL, respectivamente. 
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorfile <path>
+```
+
+Los niveles de registro del Agente SQL son valores de máscara de bits con las siguientes equivalencias:
+
+- 1 = errores
+- 2 = advertencias
+- 4 = información
+
+Si desea capturar todos los niveles, utilice `7` como valor.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
+```
 
 ## <a name="change-the-sql-server-collation"></a><a id="collation"></a> Cambio de la intercalación de SQL Server
 
@@ -335,6 +366,7 @@ Para cambiar esta configuración:
    sudo systemctl restart mssql-server
    ```
 
+La configuración `errorlog.numerrorlogs` permitirá especificar el número de registros de errores mantenidos antes de recorrer el registro.
 
 ## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> Cambio de la ubicación predeterminada del directorio de copia de seguridad
 
@@ -393,20 +425,13 @@ La primera captura de fase se controla mediante la configuración **coredump.cor
 
     En la siguiente tabla se muestran los posibles valores de **coredump.coredumptype**.
 
-    | Tipo | Description |
+    | Tipo | Descripción |
     |-----|-----|
     | **mini** | Mini es el tipo de archivo de volcado más pequeño. Usa la información del sistema Linux para determinar los subprocesos y los módulos del proceso. El volcado solo contiene los módulos y las pilas de subprocesos del entorno del host. No contiene referencias de memoria indirectas ni globales. |
     | **miniplus** | MiniPlus es similar a mini, pero incluye memoria adicional. Comprende los aspectos internos de SQLPAL y el entorno de host, y agrega las siguientes regiones de memoria al volcado:</br></br> - Varias globales</br> - Toda la memoria superior a 64 TB</br> - Todas las regiones con nombre que están en **/proc/$pid/maps**</br> - Memoria indirecta de los subprocesos y las pilas</br> - Información del subproceso</br> - Valores de Teb y Peb asociados</br> - Información del módulo</br> - Árbol de VAD y VMM |
     | **filtered** | Filtered usa un diseño basado en la resta en el que se incluye toda la memoria del proceso a menos que se excluya específicamente. El diseño comprende los aspectos internos de SQLPAL y el entorno de host, y excluye determinadas regiones del volcado.
     | **full** | Full es un volcado de proceso completo que incluye todas las regiones que están en **/proc/$pid/maps**. No se controla mediante la configuración **coredump.captureminiandfull**. |
 
-## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> Establecimiento del perfil de correo electrónico de base de datos predeterminado para SQL Server en Linux
-
-**sqlpagent.databasemailprofile** le permite establecer el perfil de correo electrónico de base de datos predeterminado de las alertas por correo electrónico.
-
-```bash
-sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
-```
 ## <a name="high-availability"></a><a id="hadr"></a> Alta disponibilidad
 
 La opción **hadr.hadrenabled** habilita los grupos de disponibilidad en la instancia de SQL Server. El siguiente comando habilita los grupos de disponibilidad al establecer **hadr.hadrenabled** en 1. Debe reiniciar SQL Server para que la configuración surta efecto.
@@ -485,7 +510,14 @@ La configuración **memory.memorylimitmb** controla la cantidad de memoria físi
    sudo systemctl restart mssql-server
    ```
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+### <a name="additional-memory-settings"></a>Configuración de memoria adicional
+
+Las opciones siguientes están disponibles para la configuración de memoria.
+
+|Opción |Descripción |
+|--- |--- |
+| memory.disablememorypressure | Deshabilitación de la presión de memoria de SQL Server. Los valores pueden ser `true` o `false`. |
+| memory.memory_optimized | Habilitación o deshabilitación de características optimizadas para memoria de SQL Server: optimización de archivos de memoria persistente, protección de la memoria. Los valores pueden ser `true` o `false`. |
 
 ## <a name="configure-msdtc"></a><a id="msdtc"></a> Configuración de MSDTC
 
@@ -527,7 +559,6 @@ Hay algunas otras configuraciones de mssql-conf que puede usar para supervisar y
 | distributedtransaction.tracefilepath | Carpeta en la que deben almacenarse los archivos de seguimiento. |
 | distributedtransaction.turnoffrpcsecurity | Habilite o deshabilite la seguridad RPC de las transacciones distribuidas. |
 
-::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> Aceptación de los CLUF de MLServices
@@ -624,6 +655,22 @@ Las opciones siguientes configuran TLS para una instancia de SQL Server que se 
 
 Para obtener un ejemplo del uso de la configuración de TLS, consulte [Cifrar conexiones a SQL Server en Linux](sql-server-linux-encrypted-connections.md).
 
+## <a name="network-settings"></a><a id="network"></a> Configuración de red
+
+Consulte [Tutorial: Uso de la autenticación de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md) para obtener información completa sobre el uso de la autenticación de AD con SQL Server en Linux.
+
+Las siguientes opciones son configuraciones de red adicionales que se pueden configurar mediante `mssql-conf`.
+
+|Opción |Descripción |
+|--- |--- |
+| network.disablesssd | Deshabilitación de la consulta SSSD para obtener información de cuenta de AD y establecer las llamadas LDAP como método predeterminado. Los valores pueden ser `true` o `false`. |
+| network.enablekdcfromkrb5conf | Habilitación de la búsqueda de información de KDC desde krb5.conf. Los valores pueden ser `true` o `false`. |
+| network.forcesecureldap | Forzamiento del uso de LDAPS para contactar con el controlador de dominio. Los valores pueden ser `true` o `false`. |
+| network.ipaddress | Dirección IP para las conexiones entrantes. |
+| network.kerberoscredupdatefrequency | Tiempo en segundos entre las comprobaciones de las credenciales de Kerberos que deben actualizarse. El valor es un entero.|
+| network.privilegedadaccount | Usuario con privilegios de AD que se usará para la autenticación de AD. El valor es `<username>`. Para más información, consulte el [Tutorial: Usar la autenticación de Active Directory con SQL Server en Linux](sql-server-linux-active-directory-authentication.md#spn)|
+| uncmapping | Asigna la ruta de acceso UNC a una ruta de acceso local. Por ejemplo, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
+
 ## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> Habilitación o deshabilitación de las marcas de seguimiento
 
 La opción **traceflag** habilita o deshabilita las marcas de seguimiento del inicio del servicio SQL Server. Para habilitar o deshabilitar una marca de seguimiento, use los siguientes comandos:
@@ -676,7 +723,7 @@ Para ver todas las opciones configuradas, ejecute el siguiente comando para gene
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-Tenga en cuenta que cualquier configuración que no se muestre en este archivo usa sus valores predeterminados. En la sección siguiente se proporciona un archivo **mssql.conf** de ejemplo.
+Cualquier configuración que no se muestre en este archivo usa sus valores predeterminados. En la sección siguiente se proporciona un archivo **mssql.conf** de ejemplo.
 
 
 ## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> Formato de mssql.conf

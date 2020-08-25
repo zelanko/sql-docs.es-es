@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84ca29160d8d26930a3edb644b9317392dc0603f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b850e6b64c5acc8a504c5d684e4472a05f4eeef
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440427"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771324"
 ---
 # <a name="attributes-property-example-vc"></a>Ejemplo de propiedad Attributes (VC++)
-En este ejemplo se muestra la propiedad [attributes](../../../ado/reference/adox-api/attributes-property-adox.md) de una [columna](../../../ado/reference/adox-api/column-object-adox.md). Si se establece en **adColNullable** , el usuario puede establecer el valor de un [campo](../../../ado/reference/ado-api/field-object.md) de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) en una cadena vacía. En esta situación, el usuario puede distinguir entre un registro en el que no se conocen los datos y un registro en el que los datos no se aplican.  
+En este ejemplo se muestra la propiedad [attributes](./attributes-property-adox.md) de una [columna](./column-object-adox.md). Si se establece en **adColNullable** , el usuario puede establecer el valor de un [campo](../ado-api/field-object.md) de [conjunto de registros](../ado-api/recordset-object-ado.md) en una cadena vacía. En esta situación, el usuario puede distinguir entre un registro en el que no se conocen los datos y un registro en el que los datos no se aplican.  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -204,5 +204,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Attributes (propiedad, ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Attributes (propiedad, ADOX)](./attributes-property-adox.md)   
+ [Objeto Column (ADOX)](./column-object-adox.md)

@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28c61045a301047b944447f6037f06324a49cadb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc85218dd65c900c1e62afb54bdd73becc7b9161
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439447"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769214"
 ---
 # <a name="type-property-key-adox"></a>Type (propiedad, clave, ADOX)
 Indica el tipo de la clave.  
   
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
- Establece o devuelve un valor **Long** que puede ser una de las constantes [KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md) . El valor predeterminado es **adKeyPrimary**.  
+ Establece o devuelve un valor **Long** que puede ser una de las constantes [KeyTypeEnum](./keytypeenum.md) . El valor predeterminado es **adKeyPrimary**.  
   
 ## <a name="remarks"></a>Observaciones  
- Esta propiedad es de solo lectura en objetos de [clave](../../../ado/reference/adox-api/key-object-adox.md) ya anexados a una colección.  
+ Esta propiedad es de solo lectura en objetos de [clave](./key-object-adox.md) ya anexados a una colección.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Objeto Key (ADOX)](./key-object-adox.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de las propiedades de método Append, tipo de clave, RelatedColumn, RelatedTable y UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Type (propiedad, Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Type (propiedad, tabla, ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [Ejemplo de las propiedades de método Append, tipo de clave, RelatedColumn, RelatedTable y UpdateRule (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Type (propiedad, Column) (ADOX)](./type-property-column-adox.md)   
+ [Type (propiedad, tabla, ADOX)](./type-property-table-adox.md)

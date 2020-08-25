@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80407971"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88122282"
 ---
 Cada grupo de disponibilidad tiene solo una réplica principal. La réplica principal permite lecturas y escrituras. Para cambiar la réplica principal, puede efectuar una conmutación por error. En un grupo de disponibilidad de alta disponibilidad, el administrador de clústeres automatiza el proceso de conmutación por error. En un grupo de disponibilidad con el tipo de clúster NONE, el proceso de conmutación por error es manual. 
 
@@ -51,7 +51,7 @@ Para realizar la conmutación por error manual sin pérdida de datos:
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-2. Ejecute la consulta siguiente para identificar que las transacciones activas se confirman en la réplica principal y en al menos una réplica secundaria sincrónica: 
+1. Ejecute la consulta siguiente para identificar que las transacciones activas se confirman en la réplica principal y en al menos una réplica secundaria sincrónica: 
 
    ```SQL
    SELECT ag.name, 
@@ -66,7 +66,7 @@ Para realizar la conmutación por error manual sin pérdida de datos:
 
    La réplica secundaria se sincroniza si `synchronization_state_desc` es `SYNCHRONIZED`.
 
-3. Actualice `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` a 1.
+1. Actualice `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` a 1.
 
    El siguiente script establece `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` en 1 en un grupo de disponibilidad denominado `ag1`. Antes de ejecutar el siguiente script, reemplace `ag1` por el nombre del grupo de disponibilidad:
 
@@ -79,18 +79,18 @@ Para realizar la conmutación por error manual sin pérdida de datos:
    >[!NOTE]
    >Esta opción no es específica de la conmutación por error y se debe establecer en función de los requisitos del entorno.
    
-4. Desconecte la réplica principal para preparar los cambios de rol.
+1. Desconecte la réplica principal para preparar los cambios de rol.
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
-5. Ascienda la réplica secundaria de destino a principal. 
+1. Ascienda la réplica secundaria de destino a principal. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-6. Actualice el rol de la réplica principal antigua a `SECONDARY`, ejecute el comando siguiente en la instancia de SQL Server en la que se hospeda la réplica principal:
+1. Actualice el rol de la réplica principal antigua a `SECONDARY`, ejecute el comando siguiente en la instancia de SQL Server en la que se hospeda la réplica principal:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -99,3 +99,10 @@ Para realizar la conmutación por error manual sin pérdida de datos:
 
    > [!NOTE] 
    > Para eliminar un grupo de disponibilidad, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). Para un grupo de disponibilidad creado con el tipo de clúster NONE o EXTERNAL, ejecute el comando en todas las réplicas que forman parte del grupo de disponibilidad.
+
+1. Reanude el movimiento de datos, ejecute el siguiente comando para cada base de datos del grupo de disponibilidad en la instancia de SQL Server que hospeda la réplica principal: 
+
+   ```sql
+   ALTER DATABASE [db1]
+        SET HADR RESUME
+   ```

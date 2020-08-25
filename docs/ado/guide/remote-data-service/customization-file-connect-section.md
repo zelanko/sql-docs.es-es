@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8c712efc368d9b84158697d3b7e6eedfb4224ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452267"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759851"
 ---
 # <a name="customization-file-connect-section"></a>Sección de conexión del archivo de personalización
 El comportamiento predeterminado del controlador es denegar todas las conexiones. La sección **Connect** especifica excepciones a ese comportamiento. Por ejemplo, si todas las secciones de **conexión** faltan o están vacías, de forma predeterminada no se pueden realizar conexiones.  
@@ -52,7 +52,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 |Parte|Descripción|  
 |----------|-----------------|  
@@ -64,13 +64,10 @@ connectionString
  Si desea permitir cualquier conexión (en efecto, deshabilitar el comportamiento predeterminado del controlador), establezca la entrada de acceso en la sección **conectar de forma predeterminada** en `Access=ReadWrite` y elimine o comente cualquier otra sección de _identificador_ de **conexión** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Sección de registros de archivo de personalización](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Sección SQL de archivo de personalización](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Sección UserList del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Configuración de cliente requerida](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Descripción del archivo de personalización](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Escritura de un controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
+ [Sección de registros de archivo de personalización](./customization-file-logs-section.md)   
+ [Sección SQL de archivo de personalización](./customization-file-sql-section.md)   
+ [Sección UserList del archivo de personalización](./customization-file-userlist-section.md)   
+ [Personalización de DataFactory](./datafactory-customization.md)   
+ [Configuración de cliente requerida](./required-client-settings.md)   
+ [Descripción del archivo de personalización](./understanding-the-customization-file.md)   
+ [Escritura de un controlador personalizado](./writing-your-own-customized-handler.md)

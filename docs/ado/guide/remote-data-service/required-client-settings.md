@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452027"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759385"
 ---
 # <a name="required-client-settings"></a>Configuración de cliente requerida
 > [!IMPORTANT]
@@ -26,11 +26,11 @@ ms.locfileid: "88452027"
   
  Especifique la siguiente configuración para usar un controlador de **DataFactory** personalizado.  
   
--   Especifique "Provider = MS Remote" en la propiedad de la propiedad del [proveedor](../../../ado/reference/ado-api/provider-property-ado.md) de objetos de [objeto de conexión (ADO](../../../ado/reference/ado-api/connection-object-ado.md) ) o la palabra clave "**Provider**=" **de la cadena** de conexión del objeto de conexión.  
+-   Especifique "Provider = MS Remote" en la propiedad de la propiedad del [proveedor](../../reference/ado-api/provider-property-ado.md) de objetos de [objeto de conexión (ADO](../../reference/ado-api/connection-object-ado.md) ) o la palabra clave "**Provider**=" **de la cadena** de conexión del objeto de conexión.  
   
--   Establezca la propiedad [CursorLocation (propiedad de ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) en **adUseClient**.  
+-   Establezca la propiedad [CursorLocation (propiedad de ADO)](../../reference/ado-api/cursorlocation-property-ado.md) en **adUseClient**.  
   
--   Especifique el nombre del controlador que se va a usar en la propiedad de **controlador** del objeto [DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) o la palabra clave "**handler**=" de la cadena de conexión del objeto de [conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) . (El controlador no se puede establecer en la cadena de conexión del objeto de **conexión** ).  
+-   Especifique el nombre del controlador que se va a usar en la propiedad de **controlador** del objeto [DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md) o la palabra clave "**handler**=" de la cadena de conexión del objeto de [conjunto de registros (ADO)](../../reference/ado-api/recordset-object-ado.md) . (El controlador no se puede establecer en la cadena de conexión del objeto de **conexión** ).  
   
  RDS proporciona un controlador predeterminado en el servidor denominado **MSDFMAP. Controlador**. (El archivo de personalización predeterminado se denomina MSDFMAP.INI).  
   
@@ -67,7 +67,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Especifique la propiedad o palabra clave de la [propiedad de controlador (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) ; propiedad o palabra clave de la [propiedad del proveedor (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) ; y los identificadores *CustomerById* y *CustomerDatabase* . Después, abra el objeto de **conjunto de registros** .  
+ Especifique la propiedad o palabra clave de la [propiedad de controlador (RDS)](../../reference/rds-api/handler-property-rds.md) ; propiedad o palabra clave de la [propiedad del proveedor (ADO)](../../reference/ado-api/provider-property-ado.md) ; y los identificadores *CustomerById* y *CustomerDatabase* . Después, abra el objeto de **conjunto de registros** .  
   
  RS. Abra "CustomerById (4)", "handler = MSDFMAP. Controlador; "& _  
   
@@ -77,11 +77,10 @@ rs.CursorLocation = adUseClient
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Sección de conexión del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Sección SQL de archivo de personalización](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Sección UserList del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Configuración de cliente requerida](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Descripción del archivo de personalización](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Escritura de un controlador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Sección de conexión del archivo de personalización](./customization-file-connect-section.md)   
+ [Sección SQL de archivo de personalización](./customization-file-sql-section.md)   
+ [Sección UserList del archivo de personalización](./customization-file-userlist-section.md)   
+ [Personalización de DataFactory](./datafactory-customization.md)   
+ [Configuración de cliente requerida]()   
+ [Descripción del archivo de personalización](./understanding-the-customization-file.md)   
+ [Escritura de un controlador personalizado](./writing-your-own-customized-handler.md)

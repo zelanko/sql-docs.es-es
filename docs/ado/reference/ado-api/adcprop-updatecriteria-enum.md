@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31205bbe32dd3c09d70fe4baeb41261be985096c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b0e2a308d9a83c936abe8f5f39b29dac86795ec
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451607"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760259"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
-Especifica los campos que se pueden utilizar para detectar conflictos durante una actualización optimista de una fila del origen de datos con un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Especifica los campos que se pueden utilizar para detectar conflictos durante una actualización optimista de una fila del origen de datos con un objeto de [conjunto de registros](./recordset-object-ado.md) .  
   
- Use estas constantes con la propiedad dinámica "**criterios de actualización**" del **conjunto de registros** , a la que se hace referencia en el [Índice de propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) y que se documenta en la documentación del [servicio de cursor de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) .  
+ Use estas constantes con la propiedad dinámica "**criterios de actualización**" del **conjunto de registros** , a la que se hace referencia en el [Índice de propiedades dinámicas de ADO](./ado-dynamic-property-index.md) y que se documenta en la documentación del [servicio de cursor de Microsoft para OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) .  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adCriteriaAllCols**|1|Detecta conflictos si se ha cambiado alguna columna de la fila del origen de datos.|  
 |**adCriteriaKey**|0|Detecta conflictos si la columna de clave de la fila de origen de datos ha cambiado, lo que significa que se ha eliminado la fila.|  

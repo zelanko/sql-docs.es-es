@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0174e4d40aba55e012b333045bcedfb4fea460
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c28555be7737129553c01ca4fd863505e2090b0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438707"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767544"
 ---
 # <a name="reset-method-rds"></a>Reset (método) (RDS)
 Ejecuta la ordenación o el filtro en un conjunto de **registros** del lado cliente basándose en las propiedades de ordenación y filtro especificadas.  
@@ -36,15 +36,15 @@ DataControl.Reset(value)
   
 #### <a name="parameters"></a>Parámetros  
  *DataControl*  
- Variable de objeto que representa un objeto [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Variable de objeto que representa un objeto [RDS. Objeto DataControl](./datacontrol-object-rds.md) .  
   
  *value*  
  Opcional. Un valor **booleano** que es **true** (valor predeterminado) Si desea filtrar por el conjunto de filas "filtrado" actual. **False** indica que se filtra por el conjunto de filas original y se quitan las opciones de filtro anteriores.  
   
 ## <a name="remarks"></a>Observaciones  
- Las propiedades [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)y [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basándose en un criterio de búsqueda, mientras que el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método **RESET** ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros**actualizable.  
+ Las propiedades [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)y [FilterColumn](./filtercolumn-property-rds.md) proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basándose en un criterio de búsqueda, mientras que el [conjunto de registros](../ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método **RESET** ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros**actualizable.  
   
- Si hay cambios en los datos originales que no se han enviado, se producirá un error en el método de **restablecimiento** . En primer lugar, use el método [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) para guardar los cambios en un **conjunto de registros**de lectura/escritura y, a continuación, utilice el método **RESET** para ordenar o filtrar los registros.  
+ Si hay cambios en los datos originales que no se han enviado, se producirá un error en el método de **restablecimiento** . En primer lugar, use el método [SubmitChanges](./submitchanges-method-rds.md) para guardar los cambios en un **conjunto de registros**de lectura/escritura y, a continuación, utilice el método **RESET** para ordenar o filtrar los registros.  
   
  Si desea realizar más de un filtro en el conjunto de filas, puede usar el argumento *booleano* opcional con el método **RESET** . El ejemplo siguiente muestra cómo hacerlo:  
   
@@ -72,11 +72,8 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de las propiedades FilterColumn, FilterCriterion, FilterValue, SortColumn y SortDirection y el método Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [Método SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
-
+ [Ejemplo de las propiedades FilterColumn, FilterCriterion, FilterValue, SortColumn y SortDirection y el método Reset (VBScript)](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [Método SubmitChanges (RDS)](./submitchanges-method-rds.md)

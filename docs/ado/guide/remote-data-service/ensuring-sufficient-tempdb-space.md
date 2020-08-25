@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0554bb48a7995e00f0a5c138cc4409ad4d0fd71
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452197"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759778"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Garantía de espacio suficiente de TempDB
-Si se producen errores al controlar objetos de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que necesitan espacio de procesamiento en Microsoft SQL Server 6,5, puede que necesite aumentar el tamaño de tempdb. (Algunas consultas requieren un espacio de procesamiento temporal; por ejemplo, una consulta con una cláusula ORDER BY requiere una ordenación del **conjunto de registros**, que requiere cierto espacio temporal).  
+Si se producen errores al controlar objetos de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) que necesitan espacio de procesamiento en Microsoft SQL Server 6,5, puede que necesite aumentar el tamaño de tempdb. (Algunas consultas requieren un espacio de procesamiento temporal; por ejemplo, una consulta con una cláusula ORDER BY requiere una ordenación del **conjunto de registros**, que requiere cierto espacio temporal).  
   
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -57,6 +57,4 @@ Si se producen errores al controlar objetos de [conjunto de registros](../../../
  Para obtener más información acerca de este tema, busque el archivo de ayuda del administrador de Microsoft SQL Server Enterprise para "expandir base de datos (cuadro de diálogo)".  
   
 ## <a name="see-also"></a>Consulte también  
- [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Aspectos básicos de RDS](./rds-fundamentals.md)

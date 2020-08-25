@@ -17,41 +17,41 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3719107d002e91880d59b0ba33c25c09596a80b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97421c9020750627dcd27f6188ae5cda72a2d90c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439627"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769634"
 ---
 # <a name="procedures-collection-adox"></a>Colección de procedimientos (ADOX)
-Contiene todos los objetos de [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md) de un catálogo.  
+Contiene todos los objetos de [procedimiento](./procedure-object-adox.md) de un catálogo.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) de una colección **Procedures** es único para ADOX. Puede:  
+ El método [Append](./append-method-adox-procedures.md) de una colección **Procedures** es único para ADOX. Puede:  
   
 -   Agregue un nuevo procedimiento a la colección con el método **Append** .  
   
  Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
--   Obtener acceso a un procedimiento de la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
+-   Obtener acceso a un procedimiento de la colección con la propiedad [Item](../ado-api/item-property-ado.md) .  
   
--   Devuelve el número de procedimientos contenidos en la colección con la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Devuelve el número de procedimientos contenidos en la colección con la propiedad [Count](../ado-api/count-property-ado.md) .  
   
--   Quite un procedimiento de la colección con el método [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
+-   Quite un procedimiento de la colección con el método [Delete](./delete-method-adox-collections.md) .  
   
--   Actualice los objetos de la colección para que reflejen el esquema de la base de datos actual con el método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Actualice los objetos de la colección para que reflejen el esquema de la base de datos actual con el método [Refresh](../ado-api/refresh-method-ado.md) .  
   
  Esta sección contiene el siguiente tema.  
   
--   [Eventos, métodos y propiedades de la colección de índices](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
+-   [Eventos, métodos y propiedades de la colección de índices](./indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de propiedades Command y CommandText (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Ejemplo de propiedad de comando, colección de parámetros (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Ejemplo de método Append de procedimientos (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Ejemplo de método Delete de procedimientos (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Ejemplo de método de actualización de procedimientos (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [Propiedades, métodos y eventos de la colección Procedures](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
+ [Ejemplo de propiedades Command y CommandText (VB)](./command-and-commandtext-properties-example-vb.md)   
+ [Ejemplo de propiedad de comando, colección de parámetros (VB)](./parameters-collection-command-property-example-vb.md)   
+ [Ejemplo de método Append de procedimientos (VB)](./procedures-append-method-example-vb.md)   
+ [Ejemplo de método Delete de procedimientos (VB)](./procedures-delete-method-example-vb.md)   
+ [Ejemplo de método de actualización de procedimientos (VB)](./procedures-refresh-method-example-vb.md)   
+ [Propiedades, métodos y eventos de la colección Procedures](./procedures-collection-properties-methods-and-events.md)   
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Objeto Procedure (ADOX)](./procedure-object-adox.md)

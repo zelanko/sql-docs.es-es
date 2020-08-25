@@ -1,4 +1,5 @@
 ---
+description: 'Supresión de errores del modelo de recuperación: opción de configuración del servidor'
 title: Supresión de errores del modelo de recuperación (opción de configuración del servidor) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/20/2020
@@ -9,12 +10,12 @@ ms.technology: configuration
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a59ff201edb153487640b4c5781d38a2df3756f9
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 73681a19df18a7bdae9c49b78c283a8345820322
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496249"
 ---
 # <a name="suppress-recovery-model-errors-server-configuration-option"></a>Supresión de errores del modelo de recuperación (opción de configuración del servidor)
 

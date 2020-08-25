@@ -1,4 +1,5 @@
 ---
+description: 'Índices de almacén de columnas: Guía de carga de datos'
 title: 'Índices de almacén de columnas: Guía de carga de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/03/2017
@@ -11,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482745"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices de almacén de columnas: Guía de carga de datos
 
@@ -52,6 +53,8 @@ La carga masiva tiene estas optimizaciones de rendimiento integradas:
 -   **Optimization de bloqueo:** El bloqueo X de un grupo de filas se adquiere automáticamente al cargar los datos en un grupo de filas comprimido. Sin embargo, cuando la carga masiva se realiza en un grupo de filas delta, se obtiene un bloqueo X en el grupo de filas, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continúa bloqueando los bloqueos de página y extensión, ya que el bloqueo de grupos de filas X no forma parte de la jerarquía de bloqueo.  
   
 Si tiene un índice no agrupado de árbol B en un índice de almacén de columnas, no habrá ninguna optimización de registro ni de bloqueo para el propio índice. Sin embargo, las optimizaciones del índice agrupado de almacén de columnas se seguirán aplicando, tal como se ha descrito anteriormente.  
+
+Tenga en cuenta que DML (insert, delete, update) no es una operación de modo por lotes porque no es paralela.
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Planeación de los tamaños de carga masiva para minimizar los grupos de filas delta
 Los índices de almacén de columnas funcionan mejor cuando la mayoría de las filas se comprimen en el almacén de columnas y no se ubican en grupos de filas delta. Se recomienda cambiar el tamaño de las cargas para que las filas pasen directamente al almacén de columnas y omitan lo máximo posible el almacén delta.

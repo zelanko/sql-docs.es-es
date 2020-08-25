@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9e993d547e6f28c9fc17e074d005af67f6d7a4a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439157"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768624"
 ---
 # <a name="createrecordset-method-rds"></a>Ejemplo del método CreateRecordset (RDS)
-Crea un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)vacío y desconectado.  
+Crea un [conjunto de registros](../ado-api/recordset-object-ado.md)vacío y desconectado.  
   
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -42,7 +42,7 @@ object.CreateRecordset(ColumnInfos)
   
 #### <a name="parameters"></a>Parámetros  
  *Object*  
- Variable de objeto que representa un objeto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) o [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Variable de objeto que representa un objeto [RDSServer. DataFactory](./datafactory-object-rdsserver.md) o [RDS. Objeto DataControl](./datacontrol-object-rds.md) .  
   
  *ColumnsInfos*  
  Matriz de atributos **Variant** que define cada columna del conjunto de **registros** creado. Cada definición de columna contiene una matriz de cuatro atributos necesarios y un atributo opcional.  
@@ -60,7 +60,7 @@ object.CreateRecordset(ColumnInfos)
 ## <a name="remarks"></a>Observaciones  
  El objeto comercial del lado servidor puede rellenar el **conjunto de registros** resultante con datos de un proveedor de datos no OLE DB, como un archivo del sistema operativo que contiene cotizaciones bursátiles.  
   
- En la tabla siguiente se enumeran los valores de [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) admitidos por el método **CreateRecordset** . El número mostrado es el número de referencia que se usa para definir los campos.  
+ En la tabla siguiente se enumeran los valores de [DataTypeEnum](../ado-api/datatypeenum.md) admitidos por el método **CreateRecordset** . El número mostrado es el número de referencia que se usa para definir los campos.  
   
  Cada uno de los tipos de datos tiene una longitud fija o una longitud variable. Los tipos de longitud fija deben definirse con un tamaño de-1, ya que el tamaño está predeterminado y todavía se requiere una definición de tamaño. Los tipos de datos de longitud variable permiten un tamaño de 1 a 32767.  
   
@@ -103,17 +103,14 @@ object.CreateRecordset(ColumnInfos)
 
 :::row:::
     :::column:::
-        [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+        [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  
     :::column-end:::
     :::column:::
-        [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+        [Objeto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo del método CreateRecordset (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
- [Ejemplo del método CreateRecordset (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
- [CreateObject (método) (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)
-
-
-
+ [Ejemplo del método CreateRecordset (VB)](../ado-api/createrecordset-method-example-vb.md)   
+ [Ejemplo del método CreateRecordset (VBScript)](./createrecordset-method-example-vbscript.md)   
+ [CreateObject (método) (RDS)](./createobject-method-rds.md)

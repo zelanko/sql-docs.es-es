@@ -1,6 +1,6 @@
 ---
 title: Creación y ejecución de trabajos de SQL Server en Linux
-description: En este tutorial se explica cómo ejecutar trabajos del Agente SQL Server en Linux.
+description: Obtenga información sobre cómo crear un trabajo del Agente SQL Server en Linux con Transact-SQL y SQL Server Management Studio (SSMS).
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 1bad76e2cec68ba2e4c54f698c44e38590efd344
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 49d8dab49fef03b3bf06269ef4397656dfa888e3
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883065"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088825"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Creación y ejecución de trabajos del Agente SQL Server en Linux
 

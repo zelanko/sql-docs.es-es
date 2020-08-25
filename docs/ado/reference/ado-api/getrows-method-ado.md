@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a197cf085c4c1d741c19a55524313edbd4c5906
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f91e83f1b4da0623b9903a5016701fc6557e1d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443567"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775064"
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
-Recupera varios registros de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) en una matriz.  
+Recupera varios registros de un objeto de [conjunto de registros](./recordset-object-ado.md) en una matriz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,10 +39,10 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>Parámetros  
  *Filas*  
- Opcional. Valor de [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) que indica el número de registros que se van a recuperar. El valor predeterminado es **adGetRowsRest**.  
+ Opcional. Valor de [GetRowsOptionEnum](./getrowsoptionenum.md) que indica el número de registros que se van a recuperar. El valor predeterminado es **adGetRowsRest**.  
   
  *Iniciar*  
- Opcional. Un valor de **cadena** o una **variante** que se evalúa como el marcador del registro del que debe comenzar la operación de **GetRows** . También puede usar un valor de [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
+ Opcional. Un valor de **cadena** o una **variante** que se evalúa como el marcador del registro del que debe comenzar la operación de **GetRows** . También puede usar un valor de [BookmarkEnum](./bookmarkenum.md) .  
   
  *Campos*  
  Opcional. **Variante** que representa un nombre de campo único o una posición ordinal, o una matriz de nombres de campo o números de posición ordinal. ADO solo devuelve los datos de estos campos.  
@@ -52,15 +52,15 @@ array = recordset.GetRows(Rows, Start, Fields )
   
  Si no especifica un valor para el argumento *Rows* , el método **GetRows** recupera automáticamente todos los registros del objeto de conjunto de **registros** . Si solicita más registros de los que están disponibles, **GetRows** solo devuelve el número de registros disponibles.  
   
- Si el objeto de **conjunto de registros** admite marcadores, puede especificar en qué registro el método **GetRows** debe empezar a recuperar datos pasando el valor de la propiedad [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) del registro en el argumento *Start* .  
+ Si el objeto de **conjunto de registros** admite marcadores, puede especificar en qué registro el método **GetRows** debe empezar a recuperar datos pasando el valor de la propiedad [Bookmark](./bookmark-property-ado.md) del registro en el argumento *Start* .  
   
  Si desea restringir los campos que devuelve la llamada **GetRows** , puede pasar un nombre o número de campo único o una matriz de nombres de campo/números en el argumento *campos* .  
   
- Después de llamar a **GetRows**, el registro unread siguiente se convierte en el registro actual, o la propiedad [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) se establece en **true** si no hay más registros.  
+ Después de llamar a **GetRows**, el registro unread siguiente se convierte en el registro actual, o la propiedad [EOF](./bof-eof-properties-ado.md) se establece en **true** si no hay más registros.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo del método GetRows (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
- [Ejemplo del método GetRows (VC ++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   
+ [Ejemplo del método GetRows (VB)](./getrows-method-example-vb.md)   
+ [Ejemplo del método GetRows (VC ++)](./getrows-method-example-vc.md)

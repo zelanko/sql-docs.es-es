@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d00dd737f6b775d9d46bfb6af96a5ce76aa3a8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ce3ed45c6ed45f0fdd4ac6f84db9895faec6d21
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439027"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768284"
 ---
 # <a name="fetchoptions-property-rds"></a>Propiedad FetchOptions (RDS)
 Indica el tipo de captura asincrónica.  
@@ -32,9 +32,9 @@ Indica el tipo de captura asincrónica.
   
 |Constante|Descripción|  
 |--------------|-----------------|  
-|**adcFetchUpFront**|Se capturan todos los registros del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) antes de que se devuelva el control a la aplicación. Se captura el **conjunto de registros** completo antes de que la aplicación pueda hacer nada con él.|  
+|**adcFetchUpFront**|Se capturan todos los registros del [conjunto de registros](../ado-api/recordset-object-ado.md) antes de que se devuelva el control a la aplicación. Se captura el **conjunto de registros** completo antes de que la aplicación pueda hacer nada con él.|  
 |**adcFetchBackground**|El control puede volver a la aplicación en cuanto se ha capturado el primer lote de registros. Una lectura posterior del **conjunto de registros** que intenta tener acceso a un registro que no se captura en el primer lote se retrasará hasta que se recupere realmente el registro buscado, momento en el que el control de tiempo vuelve a la aplicación.|  
-|**adcFetchAsync**|Predeterminada. El control vuelve inmediatamente a la aplicación mientras se capturan los registros en segundo plano. Si la aplicación intenta leer un registro que todavía no se ha capturado, el registro más cercano al registro buscado se leerá y el control se devolverá inmediatamente, lo que indica que se ha alcanzado el final actual del **conjunto de registros** . Por ejemplo, una llamada a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) moverá la posición del registro actual al último registro que se ha capturado realmente, aunque más registros continúen rellenando el **conjunto de registros**.|  
+|**adcFetchAsync**|Predeterminada. El control vuelve inmediatamente a la aplicación mientras se capturan los registros en segundo plano. Si la aplicación intenta leer un registro que todavía no se ha capturado, el registro más cercano al registro buscado se leerá y el control se devolverá inmediatamente, lo que indica que se ha alcanzado el final actual del **conjunto de registros** . Por ejemplo, una llamada a [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-rds.md) moverá la posición del registro actual al último registro que se ha capturado realmente, aunque más registros continúen rellenando el **conjunto de registros**.|  
   
 > [!NOTE]
 >  Cada archivo ejecutable del lado cliente que utiliza estas constantes debe proporcionar declaraciones para ellas. Puede cortar y pegar las declaraciones de constantes que desee del archivo Adcvbs. Inc, que se encuentra en la carpeta de instalación predeterminada de la biblioteca RDS.  
@@ -43,10 +43,8 @@ Indica el tipo de captura asincrónica.
  En una aplicación Web, normalmente querrá usar **adcFetchAsync** (el valor predeterminado), ya que proporciona un mejor rendimiento. En una aplicación cliente compilada, normalmente querrá usar **adcFetchBackground**.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de las propiedades ExecuteOptions y FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
- [Cancel (método) (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
-
-
+ [Ejemplo de las propiedades ExecuteOptions y FetchOptions (VBScript)](./executeoptions-and-fetchoptions-properties-example-vbscript.md)   
+ [Cancel (método) (RDS)](./cancel-method-rds.md)

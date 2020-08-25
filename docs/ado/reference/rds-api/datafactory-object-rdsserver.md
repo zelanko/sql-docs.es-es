@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a27d7911b00e5172941245ef5dcd587345aa1fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 066add7729712c6c8c40951a3139dcba00ed5a70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439107"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768464"
 ---
 # <a name="datafactory-object-rdsserver"></a>Objeto DataFactory (RDSServer)
 > [!IMPORTANT]
@@ -29,11 +29,11 @@ ms.locfileid: "88439107"
   
  El objeto **RDSServer. DataFactory** está diseñado como un objeto de automatización de servidor que recibe las solicitudes del cliente. En una implementación de Internet, reside en un servidor Web y se crea una instancia del componente ADISAPI. El objeto **RDSServer. DataFactory** proporciona acceso de lectura y escritura a los orígenes de datos especificados, pero no contiene ninguna lógica de reglas de negocios o de validación.  
   
- Si usa un método que está disponible tanto en **RDSServer. DataFactory** como en [RDS. Objetos DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) , el servicio de datos remotos utiliza **RDS. ** Versión de control de DataControl de forma predeterminada. El valor predeterminado supone un escenario de programación básico, donde **RDSServer. DataFactory** actúa como un objeto de negocio del lado servidor genérico.  
+ Si usa un método que está disponible tanto en **RDSServer. DataFactory** como en [RDS. Objetos DataControl](./datacontrol-object-rds.md) , el servicio de datos remotos utiliza **RDS. ** Versión de control de DataControl de forma predeterminada. El valor predeterminado supone un escenario de programación básico, donde **RDSServer. DataFactory** actúa como un objeto de negocio del lado servidor genérico.  
   
  Si desea que la aplicación web controle el procesamiento del lado servidor específico de la tarea, puede reemplazar **RDSServer. DataFactory** por un objeto comercial personalizado.  
   
- Puede crear objetos de negocio del lado servidor que llamen a los métodos **RDSServer. DataFactory** , como [query](../../../ado/reference/rds-api/query-method-rds.md) y [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md). Esto resulta útil si desea agregar funcionalidad a los objetos de negocio, pero puede aprovechar las tecnologías existentes de servicio de datos remotos.  
+ Puede crear objetos de negocio del lado servidor que llamen a los métodos **RDSServer. DataFactory** , como [query](./query-method-rds.md) y [CreateRecordset](./createrecordset-method-rds.md). Esto resulta útil si desea agregar funcionalidad a los objetos de negocio, pero puede aprovechar las tecnologías existentes de servicio de datos remotos.  
   
  El objeto **DataFactory** no es seguro para los scripts que se ejecutan en el lado cliente.  
   
@@ -41,9 +41,7 @@ ms.locfileid: "88439107"
   
  Esta sección contiene el siguiente tema.  
   
--   [Eventos, métodos y propiedades del objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
+-   [Eventos, métodos y propiedades del objeto DataFactory (RDSServer)](./datafactory-object-rdsserver-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto DataFactory, método de consulta y ejemplo del método CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
-
-
+ [Objeto DataFactory, método de consulta y ejemplo del método CreateObject (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)

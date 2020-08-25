@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451837"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760035"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -50,21 +50,19 @@ En cada sección de este artículo se describe un componente de ADO.
  ADOX es una biblioteca complementaria para los objetos principales de ADO. Expone objetos adicionales para crear, modificar y eliminar objetos de esquema, como tablas y procedimientos. También incluye los objetos de seguridad para mantener a los usuarios y grupos, y para conceder y revocar los permisos en los objetos.  
   
 ## <a name="documentation"></a>Documentación  
- [Características de diseño de seguridad de ADO](../ado/guide/ado-security-design-issues.md)  
+ [Características de diseño de seguridad de ADO](./guide/ado-security-design-issues.md)  
   
- [Programador de ADO ' s guía para el uso de objetos ADO](../ado/guide/ado-programmer-s-guide.md)  
+ [Programador de ADO ' s guía para el uso de objetos ADO](./guide/ado-programmer-s-guide.md)  
   
  Una introducción al uso de ADO, RDS, ADO MD y ADOX.  
   
- [Referencia del programador de ADO](../ado/reference/ado-programmer-s-reference.md)  
+ [Referencia del programador de ADO](./reference/ado-programmer-s-reference.md)  
   
  Esta sección de la documentación de ADO contiene temas para cada objeto, colección, propiedad, propiedad dinámica, método, evento y enumeración de ADO, RDS, ADO MD y ADOX.  
   
- [Glosario de términos de ADO](../ado/ado-glossary.md)  
+ [Glosario de términos de ADO](./ado-glossary.md)  
   
-## <a name="support"></a>Compatibilidad  
+## <a name="support"></a>Soporte técnico  
  Para obtener ayuda gratuita con los problemas de ADO, intente publicar en el grupo de noticias público de ADO. Este grupo de noticias lo supervisan los profesionales de soporte técnico de los servicios de soporte técnico de Microsoft (PSS) que cubren ADO y otros desarrolladores de ADO con experiencia.  
   
  Puede encontrar más información sobre las opciones de soporte técnico en el sitio web de ayuda y soporte técnico de Microsoft.
-
-

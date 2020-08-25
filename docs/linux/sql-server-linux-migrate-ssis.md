@@ -1,6 +1,6 @@
 ---
 title: Extracción, transformación y carga de datos en Linux con SSIS
-description: En este artículo se describe SQL Server Integration Services (SSIS) para equipos Linux
+description: Obtenga información sobre cómo ejecutar paquetes de SQL Server Integration Services (SSIS) en Linux. Además, obtenga información sobre dónde encontrar más información de las funcionalidades de SSIS.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882724"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088875"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extracción, transformación y carga de datos en Linux con SSIS
 
@@ -25,7 +25,7 @@ Los paquetes SSIS que se ejecutan en Linux pueden conectarse a Microsoft SQL Ser
 
 Para obtener más información sobre las capacidades de SSIS, vea [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Para ejecutar paquetes SSIS en un equipo Linux, primero tiene que instalar SQL Server Integration Services. SSIS no se incluye en la instalación de SQL Server para equipos Linux. Para obtener instrucciones de instalación, consulte [Instalación de SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 
@@ -36,7 +36,7 @@ También debe tener un equipo Windows para crear y mantener paquetes. Las herram
 Para ejecutar un paquete SSIS en un equipo Linux, haga lo siguiente:
 
 1.  Copie el paquete SSIS en el equipo Linux.
-2.  Ejecute el siguiente comando:
+2.  Ejecute el comando siguiente:
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```
@@ -112,6 +112,6 @@ Para más información sobre SSIS, vea los siguientes artículos:
 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
 -   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
--   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Configuración de SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md)
 -   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)

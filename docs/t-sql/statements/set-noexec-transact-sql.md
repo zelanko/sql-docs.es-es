@@ -1,4 +1,5 @@
 ---
+description: SET NOEXEC (Transact-SQL)
 title: SET NOEXEC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e32f168c04aba303dc33e1e3db8c268e163ef82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356631"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,8 +44,10 @@ ms.locfileid: "85765776"
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Observaciones  
- Cuando SET NOEXEC es ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila cada lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] pero no las ejecuta. Cuando SET NOEXEC es OFF, todos los lotes se ejecutan después de su compilación.  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Comentarios  
+ Cuando SET NOEXEC es ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analiza y compila cada lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] pero no las ejecuta. Cuando SET NOEXEC es OFF, todos los lotes se ejecutan después de su compilación.  NOEXEC admite la resolución de nombres diferida; si no existen uno o más objetos a los que se hace referencia en el lote, no se generará ningún error.
   
  La ejecución de instrucciones en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene dos fases: compilación y ejecución. Esta opción es útil para hacer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide la sintaxis y los nombres de objeto del código [!INCLUDE[tsql](../../includes/tsql-md.md)] durante la ejecución. También es útil para depurar instrucciones que normalmente serían parte de un lote de instrucciones mayor.  
   

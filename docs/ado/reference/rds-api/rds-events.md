@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c66bd5fc3c0274985dfcfc1ebbd323b6677b718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0874d04d779b517971d215735fe2bb34d1677e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438807"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767794"
 ---
 # <a name="rds-events"></a>Eventos RDS
 > [!IMPORTANT]
@@ -27,7 +27,5 @@ ms.locfileid: "88438807"
   
 |Evento|Descripción|  
 |-|-|  
-|[OnError (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)|Se llama siempre que se produce un error durante una operación.|  
-|[onReadyStateChange (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|Se llama siempre que cambia el valor de la propiedad **ReadyState** .|
-
-
+|[OnError (RDS)](./onerror-event-rds.md)|Se llama siempre que se produce un error durante una operación.|  
+|[onReadyStateChange (RDS)](./onreadystatechange-event-rds.md)|Se llama siempre que cambia el valor de la propiedad **ReadyState** .|

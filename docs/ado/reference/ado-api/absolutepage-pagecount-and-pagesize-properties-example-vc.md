@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce6c0042c92611c65bf243da7bbbf59bbeb748be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80c5d3666c4b3b60aa622874dfec2388fa008898
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451807"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760005"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>Ejemplo de propiedades AbsolutePage, PageCount y PageSize (VC + +)
-En este ejemplo se usan las propiedades [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)y [pageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) para mostrar los nombres y las fechas de contratación de la tabla ***Employee*** , cinco registros a la vez.  
+En este ejemplo se usan las propiedades [AbsolutePage](./absolutepage-property-ado.md), [PageCount](./pagecount-property-ado.md)y [pageSize](./pagesize-property-ado.md) para mostrar los nombres y las fechas de contratación de la tabla ***Employee*** , cinco registros a la vez.  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -180,7 +180,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount (propiedad, ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize (propiedad, ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Propiedad AbsolutePage (ADO)](./absolutepage-property-ado.md)   
+ [PageCount (propiedad, ADO)](./pagecount-property-ado.md)   
+ [PageSize (propiedad, ADO)](./pagesize-property-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

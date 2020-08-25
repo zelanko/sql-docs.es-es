@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3957c6cf6843ba27c54fb5a979901bd4a656c2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cab5acb3ccedb9a1e42426da3701bc015f0ec2d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443457"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774834"
 ---
 # <a name="infomessage-event-ado"></a>Evento InfoMessage (ADO)
 Se llama al evento **InfoMessage** siempre que se produce una advertencia durante una operación **ConnectionEvent** .  
@@ -36,17 +36,17 @@ InfoMessage pError, adStatus, pConnection
   
 #### <a name="parameters"></a>Parámetros  
  *pError*  
- Un objeto de [error](../../../ado/reference/ado-api/error-object.md) . Este parámetro contiene los errores que se devuelven. Si se devuelven varios errores, enumere la colección de **errores** para encontrarlos.  
+ Un objeto de [error](./error-object.md) . Este parámetro contiene los errores que se devuelven. Si se devuelven varios errores, enumere la colección de **errores** para encontrarlos.  
   
  *adStatus*  
- Valor de estado de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Si se produce una advertencia, *adStatus* se establece en **AdStatusOK** y el *perror* contiene la advertencia.  
+ Valor de estado de [EventStatusEnum](./eventstatusenum.md) . Si se produce una advertencia, *adStatus* se establece en **AdStatusOK** y el *perror* contiene la advertencia.  
   
  Antes de que se devuelva este evento, establezca este parámetro en **adStatusUnwantedEvent** para evitar notificaciones posteriores.  
   
  *pConnection*  
- Objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) . La conexión para la que se produjo la advertencia. Por ejemplo, se pueden producir advertencias al abrir un objeto de **conexión** o ejecutar un [comando](../../../ado/reference/ado-api/command-object-ado.md) en una **conexión**.  
+ Objeto de [conexión](./connection-object-ado.md) . La conexión para la que se produjo la advertencia. Por ejemplo, se pueden producir advertencias al abrir un objeto de **conexión** o ejecutar un [comando](./command-object-ado.md) en una **conexión**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de modelo de eventos de ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Ejemplo de modelo de eventos de ADO (VC + +)](./ado-events-model-example-vc.md)   
+ [Resumen del controlador de eventos de ADO](../../guide/data/ado-event-handler-summary.md)   
+ [Objeto de conexión (ADO)](./connection-object-ado.md)

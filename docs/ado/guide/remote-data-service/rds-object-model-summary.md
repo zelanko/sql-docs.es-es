@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7488811326dda4228ef2f458b70d5575b33b122
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50776f67f09fabbba2282867e09db1e94a49772b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452147"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759695"
 ---
 # <a name="rds-object-model-summary"></a>Resumen del modelo de objetos de RDS
 > [!IMPORTANT]
@@ -27,14 +27,12 @@ ms.locfileid: "88452147"
   
 |Object|Descripción|  
 |------------|-----------------|  
-|[ActiveX. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|Este objeto contiene un método para obtener un proxy de servidor. El proxy puede ser el predeterminado o un programa de servidor personalizado (objeto comercial). El programa de servidor se puede invocar en Internet, en una intranet, en una red de área local o en una biblioteca de vínculos dinámicos local.<br /><br /> El objeto **DataSpace** es seguro para el scripting.|  
-|[RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Este objeto representa el programa de servidor predeterminado. Ejecuta la recuperación de datos y el comportamiento de actualización de RDS predeterminados.<br /><br /> El objeto **DataFactory** no es seguro para el scripting.|  
-|[ActiveX. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Este objeto puede invocar automáticamente a **RDS. Objetos DataSpace** y **RDSServer. DataFactory** .<br /><br /> Utilice este objeto para invocar la recuperación de datos predeterminada de RDS o el comportamiento de actualización.<br /><br /> Este objeto también proporciona los medios para que los controles visuales tengan acceso al objeto de **conjunto de registros** devuelto.<br /><br /> El objeto **DataControl** es seguro para el scripting.|  
+|[ActiveX. DataSpace](../../reference/rds-api/dataspace-object-rds.md)|Este objeto contiene un método para obtener un proxy de servidor. El proxy puede ser el predeterminado o un programa de servidor personalizado (objeto comercial). El programa de servidor se puede invocar en Internet, en una intranet, en una red de área local o en una biblioteca de vínculos dinámicos local.<br /><br /> El objeto **DataSpace** es seguro para el scripting.|  
+|[RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md)|Este objeto representa el programa de servidor predeterminado. Ejecuta la recuperación de datos y el comportamiento de actualización de RDS predeterminados.<br /><br /> El objeto **DataFactory** no es seguro para el scripting.|  
+|[ActiveX. DataControl](../../reference/rds-api/datacontrol-object-rds.md)|Este objeto puede invocar automáticamente a **RDS. Objetos DataSpace** y **RDSServer. DataFactory** .<br /><br /> Utilice este objeto para invocar la recuperación de datos predeterminada de RDS o el comportamiento de actualización.<br /><br /> Este objeto también proporciona los medios para que los controles visuales tengan acceso al objeto de **conjunto de registros** devuelto.<br /><br /> El objeto **DataControl** es seguro para el scripting.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [Escenario de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Seguridad y uso de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Aspectos básicos de RDS](./rds-fundamentals.md)   
+ [Escenario de RDS](./rds-scenario.md)   
+ [Tutorial de RDS](./rds-tutorial.md)   
+ [Seguridad y uso de RDS](./rds-usage-and-security.md)

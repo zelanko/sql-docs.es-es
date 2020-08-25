@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98a7fefe85c953cfb186951ff69e287288fa0ac0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883506"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091996"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Instalar SQL Server con el almacenamiento de recursos compartidos de archivos SMB
 
@@ -111,7 +111,7 @@ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las bases de dato
   
 ## <a name="known-issues"></a>Problemas conocidos  
   
--   Después de separar una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que reside en el almacenamiento conectado a la red, pueden surgir problemas con los permisos de base de datos al intentar volver a adjuntar la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El problema se define en [este artículo de KB](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). Para conocer una solución alternativa a este problema, vea la sección **Más información** del artículo de KB.  
+-   Después de separar una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que reside en el almacenamiento conectado a la red, pueden surgir problemas con los permisos de base de datos al intentar volver a adjuntar la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Error 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
   
 -   Si se usa un recurso compartido de archivo SMB como opción de almacenamiento para una instancia en clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el registro de diagnóstico del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede escribirse de forma predeterminada en el recurso compartido de archivo porque la biblioteca DLL de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carece de permiso de lectura y escritura en el recurso compartido de archivo. Para resolver este problema, intente uno de los métodos siguientes:  
   

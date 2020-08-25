@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a481db1f6b185c082dc26cc8ede030938bbfce9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 172b45d111b74f81e416118f489ef3e0a40dd871
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439327"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768974"
 ---
 # <a name="views-append-method-example-vb"></a>Ejemplo de método Append de vistas (VB)
-En el código siguiente se muestra cómo usar un objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) y el método [Append](../../../ado/reference/adox-api/append-method-adox-views.md) de la colección [views](../../../ado/reference/adox-api/views-collection-adox.md) para crear una nueva vista en el origen de datos subyacente.  
+En el código siguiente se muestra cómo usar un objeto [Command](../ado-api/command-object-ado.md) y el método [Append](./append-method-adox-views.md) de la colección [views](./views-collection-adox.md) para crear una nueva vista en el origen de datos subyacente.  
   
 ```  
 ' BeginCreateViewVB  
@@ -63,8 +63,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [ActiveConnection (propiedad, ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append (método) (vistas ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto de vista (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Colección de vistas (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection (propiedad, ADOX)](./activeconnection-property-adox.md)   
+ [Append (método) (vistas ADOX)](./append-method-adox-views.md)   
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Objeto de vista (ADOX)](./view-object-adox.md)   
+ [Colección de vistas (ADOX)](./views-collection-adox.md)

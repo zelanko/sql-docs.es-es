@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 231c5d4858436dc1c026f53ce002561529841c35
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dee5bda39c96dbfe70818a6b0e0aa4eb4f6ee6b7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443387"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774644"
 ---
 # <a name="item-property-example-vc"></a>Ejemplo de la propiedad de elemento (VC ++)
-En este ejemplo se muestra cómo la propiedad del [elemento](../../../ado/reference/ado-api/item-property-ado.md) obtiene acceso a los miembros de una colección. En el ejemplo se abre la tabla ***authors*** de la base de datos ***pubs*** con un comando con parámetros.  
+En este ejemplo se muestra cómo la propiedad del [elemento](./item-property-ado.md) obtiene acceso a los miembros de una colección. En el ejemplo se abre la tabla ***authors*** de la base de datos ***pubs*** con un comando con parámetros.  
   
- Se tiene acceso al parámetro del comando emitido en la base de datos desde la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) del objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) por índice y nombre. A continuación, se obtiene acceso a los campos del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) devuelto desde la colección de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) de ese objeto por índice y nombre.  
+ Se tiene acceso al parámetro del comando emitido en la base de datos desde la colección de [parámetros](./parameters-collection-ado.md) del objeto de [comando](./command-object-ado.md) por índice y nombre. A continuación, se obtiene acceso a los campos del [conjunto de registros](./recordset-object-ado.md) devuelto desde la colección de [campos](./fields-collection-ado.md) de ese objeto por índice y nombre.  
   
 ```  
 // BeginItemCpp.cpp  
@@ -233,8 +233,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Command (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item (propiedad) (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameters (colección) (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Command (objeto) (ADO)](./command-object-ado.md)   
+ [Fields (colección) (ADO)](./fields-collection-ado.md)   
+ [Item (propiedad) (ADO)](./item-property-ado.md)   
+ [Parameters (colección) (ADO)](./parameters-collection-ado.md)   
+ [Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)

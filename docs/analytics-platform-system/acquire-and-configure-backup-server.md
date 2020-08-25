@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401493"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767164"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquisición y configuración de un servidor de copia de seguridad para almacenamiento de datos paralelos
 En este artículo se describe cómo configurar un sistema de Windows que no es de aplicación como un servidor de copia de seguridad para su uso con las características de copia de seguridad y restauración de Analytics Platform System (APS) y almacenamiento de datos paralelos (PDW).  
@@ -50,7 +50,7 @@ Se recomienda Windows Server 2012 o posterior para:
   
 -   Obtenga la ventaja de rendimiento de la asignación previa de archivos a través de SMB.  
   
--   Use la inicialización instantánea de archivos (IFI) para las operaciones de copia de seguridad. El equipo de ti administra esta configuración en el servidor de copia de seguridad. El Configuration Manager PDW (dwconfig. exe) no establece ni controla IFI en el servidor de copia de seguridad. Las versiones anteriores de Windows no tienen IFI, pero todavía se pueden usar como servidores de copia de seguridad.  
+-   Use la inicialización instantánea de archivos (IFI) para las operaciones de copia de seguridad. El equipo de ti administra esta configuración en el servidor de copia de seguridad. El Configuration Manager PDW (dwconfig.exe) no establece ni controla IFI en el servidor de copia de seguridad. Las versiones anteriores de Windows no tienen IFI, pero todavía se pueden usar como servidores de copia de seguridad.  
   
 ### <a name="networking-requirements"></a>Requisitos de red  
 Aunque no es necesario, InfiniBand es el tipo de conexión recomendado para los servidores de copia de seguridad. Para preparar la conexión del servidor de carga a la red InfiniBand Network:  
@@ -118,11 +118,11 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-Para obtener más información, consulte: 
+Para más información, consulte: 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTAURAR BASE DE DATOS](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Avisos de seguridad  
 El servidor de copia de seguridad no está unido al dominio privado del dispositivo. Está en su propia red y no hay ninguna relación de confianza entre su dominio y el dominio de la aplicación privada.  
@@ -151,4 +151,3 @@ Las operaciones en el servidor de carga pueden usar una ruta de acceso UNC para 
   
 ## <a name="see-also"></a>Consulte también  
 [Copia de seguridad y restauración](backup-and-restore-overview.md)  
-  

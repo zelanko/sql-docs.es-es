@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400991"
 ---
 # <a name="monitor-appliance-health-state"></a>Supervisar el estado de mantenimiento del dispositivo
@@ -22,7 +22,7 @@ En este artículo se explica cómo supervisar el estado de un dispositivo de sis
 ## <a name="to-monitor-the-appliance-state"></a>Para supervisar el estado del dispositivo  
 Un administrador del sistema puede usar la consola de administración de o las PDW de SQL Server vistas de administración dinámica (DMV) para recuperar la jerarquía completa de nodos, componentes y software. En el siguiente diagrama se ofrece una descripción de alto nivel de los componentes que PDW de SQL Server supervisa.  
   
-![Información general de la supervisión](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
+![Información general acerca de la supervisión](./media/monitor-appliance-health-state/SQL_Server_PDW_Monitoring_Overview.png "SQL_Server_PDW_Monitoring_Overview")  
   
 ### <a name="monitor-component-status-by-using-the-admin-console"></a>Supervisar el estado de los componentes mediante la consola de administración  
 Para recuperar el estado de los componentes mediante la consola de administración:  
@@ -73,7 +73,7 @@ Los valores posibles devueltos para la propiedad status son:
   
 -   No crítico  
   
--   Crítico  
+-   Crítica  
   
 -   Unknown  
   
@@ -83,7 +83,7 @@ Los valores posibles devueltos para la propiedad status son:
   
 -   irrecuperable  
   
-Para ver todas las propiedades de todos los componentes, quite `WHERE  p.property_name = 'Status'` la cláusula.  
+Para ver todas las propiedades de todos los componentes, quite la `WHERE  p.property_name = 'Status'` cláusula.  
   
 La columna **[Update_time]** muestra la última vez que los agentes de mantenimiento de PDW de SQL Server sondean el componente.  
   

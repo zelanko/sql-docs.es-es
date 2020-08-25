@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 412401ba2b1d5a676b5f5172c59c6e4ffc5cce7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ee73221460a177e24317c9c3d7ff9ab5c06dec9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439057"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768404"
 ---
 # <a name="execute21-method-rds"></a>Método Execute21 (RDS)
 Ejecuta la solicitud y crea un conjunto de registros ADO para su uso en ADO 2,1.  
@@ -74,9 +74,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  El parámetro *HandlerString* puede ser null. Lo que sucede en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP. handler" indica que se debe usar el controlador proporcionado por Microsoft (Msdfmap.dll). Una cadena de controlador de "MASDFMAP. handler, sample.ini" indica que se debe usar el controlador de Msdfmap.dll y que el argumento "sample.ini" se debe pasar al controlador. MSDFMAP.dll interpretará el argumento como una dirección para usar el sample.ini para comprobar las cadenas de conexión y de consulta.  
   
 > [!NOTE]
->  El método **Execute21** es una versión del [método execute (RDS)](../../../ado/reference/rds-api/execute-method-rds.md). En el caso de que necesite usar el método **Execute** para comunicarse con ADO 2,1, se puede llamar al método **Execute21** en su lugar. Las capacidades del método **Execute** en ADO 2,5 y versiones posteriores son un superconjunto de las funciones proporcionadas para el mismo método en ADO 2,1.  
+>  El método **Execute21** es una versión del [método execute (RDS)](./execute-method-rds.md). En el caso de que necesite usar el método **Execute** para comunicarse con ADO 2,1, se puede llamar al método **Execute21** en su lugar. Las capacidades del método **Execute** en ADO 2,5 y versiones posteriores son un superconjunto de las funciones proporcionadas para el mismo método en ADO 2,1.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Objeto DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

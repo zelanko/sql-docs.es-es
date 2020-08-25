@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26586cf6a01b51e01ca695252dcdbf6e197b77c9
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453177"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805844"
 ---
 # <a name="keyset-cursors"></a>Cursores KEYSET
 El cursor de conjunto de claves proporciona funcionalidad entre un cursor estático y dinámico en su capacidad para detectar cambios. Al igual que un cursor estático, no siempre detecta los cambios realizados en la pertenencia y el orden del conjunto de resultados. Como un cursor dinámico, detecta cambios en los valores de las filas del conjunto de resultados.  
@@ -39,6 +39,6 @@ El cursor de conjunto de claves proporciona funcionalidad entre un cursor estát
  El cursor controlado por conjunto de claves es difícil de usar correctamente porque la sensibilidad a los cambios en los datos depende de muchas circunstancias diferentes, como se ha descrito anteriormente. Sin embargo, si la aplicación no está relacionada con las actualizaciones simultáneas, puede administrar mediante programación las claves no válidas y debe tener acceso directamente a determinadas filas con clave, el cursor controlado por conjunto de claves podría funcionar en su caso. Use el **AdOpenKeyset CursorTypeEnum** para indicar que desea utilizar un cursor de conjunto de claves en ADO.  
   
 ## <a name="see-also"></a>Consulte también  
- [Cursores de solo avance](../../../ado/guide/data/forward-only-cursors.md)   
- [Cursores estáticos](../../../ado/guide/data/static-cursors.md)   
- [Cursores dinámicos](../../../ado/guide/data/dynamic-cursors.md)
+ [Cursores de solo avance](./forward-only-cursors.md)   
+ [Cursores estáticos](./static-cursors.md)   
+ [Cursores dinámicos](./dynamic-cursors.md)

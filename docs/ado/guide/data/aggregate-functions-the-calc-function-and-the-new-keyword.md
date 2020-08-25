@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3ef1ae1b6b5d60774e220cc4594cd54eda291e7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453757"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806961"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Las funciones de agregado, la función CALC y la palabra clave NEW
 La forma de datos admite las siguientes funciones. El nombre asignado al capítulo que contiene la columna en la que se va a operar es el *alias de capítulo*.  
@@ -40,7 +40,7 @@ La forma de datos admite las siguientes funciones. El nombre asignado al capítu
   
 |Expresión calculada|Descripción|  
 |---------------------------|-----------------|  
-|CALC (*expresión*)|Calcula una expresión arbitraria, pero solo en la fila del conjunto de **registros** que contiene la función Calc. Se permite cualquier expresión que use estas [funciones Visual Basic para aplicaciones (VBA)](../../../ado/guide/data/visual-basic-for-applications-functions.md) .|  
+|CALC (*expresión*)|Calcula una expresión arbitraria, pero solo en la fila del conjunto de **registros** que contiene la función Calc. Se permite cualquier expresión que use estas [funciones Visual Basic para aplicaciones (VBA)](./visual-basic-for-applications-functions.md) .|  
   
 |NEW (palabra clave)|Descripción|  
 |-----------------|-----------------|  
@@ -73,7 +73,7 @@ La forma de datos admite las siguientes funciones. El nombre asignado al capítu
   
  Cuando el nuevo campo es de tipo decimal (en OLE DB, DBTYPE_DECIMAL, o en ADO, adDecimal), debe especificar los valores de precisión y escala.  
   
-## <a name="see-also"></a>Vea también  
- [Ejemplo de forma de datos](../../../ado/guide/data/data-shaping-example.md)   
- [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
- [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)
+## <a name="see-also"></a>Consulte también  
+ [Ejemplo de forma de datos](./data-shaping-example.md)   
+ [Gramática de forma formal](./formal-shape-grammar.md)   
+ [Comandos Shape en General](./shape-commands-in-general.md)

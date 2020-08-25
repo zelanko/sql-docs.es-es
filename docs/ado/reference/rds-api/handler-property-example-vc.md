@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a570727ef9bdee2ac1411a1594dae518dd4fe36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d57c984912b46e03f8e07c85d028680196cc67cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438967"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768164"
 ---
 # <a name="handler-property-example-vc"></a>Ejemplo de la propiedad de controlador (VC ++)
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- En este ejemplo se muestra la propiedad de [controlador](../../../ado/reference/rds-api/handler-property-rds.md) de objetos [DataControl de RDS](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Consulte [Personalización de factoría](../../../ado/guide/remote-data-service/datafactory-customization.md) de datos para obtener más detalles).  
+ En este ejemplo se muestra la propiedad de [controlador](./handler-property-rds.md) de objetos [DataControl de RDS](./datacontrol-object-rds.md) . (Consulte [Personalización de factoría](../../guide/remote-data-service/datafactory-customization.md) de datos para obtener más detalles).  
   
  Asuma las siguientes secciones del archivo de parámetros, Msdfmap.ini, que se encuentran en el servidor:  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- El código tiene un aspecto similar al siguiente. El comando que se asigna a la propiedad [SQL](../../../ado/reference/rds-api/sql-property.md) coincidirá con el identificador ***AuthorById*** y recuperará una fila para el autor Michael O'Leary. Aunque la propiedad [Connect](../../../ado/reference/rds-api/connect-property-rds.md) del código especifica el origen de datos Northwind, este origen de datos se sobrescribirá en la sección Msdfmap.ini *Connect* . La propiedad [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) del objeto **DataControl** se asigna a un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) desconectado únicamente como una comodidad de codificación.  
+ El código tiene un aspecto similar al siguiente. El comando que se asigna a la propiedad [SQL](./sql-property.md) coincidirá con el identificador ***AuthorById*** y recuperará una fila para el autor Michael O'Leary. Aunque la propiedad [Connect](./connect-property-rds.md) del código especifica el origen de datos Northwind, este origen de datos se sobrescribirá en la sección Msdfmap.ini *Connect* . La propiedad [Recordset](./recordset-sourcerecordset-properties-rds.md) del objeto **DataControl** se asigna a un objeto de [conjunto de registros](../ado-api/recordset-object-ado.md) desconectado únicamente como una comodidad de codificación.  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -130,27 +130,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Propiedad de controlador (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Propiedad de controlador (RDS)](./handler-property-rds.md)

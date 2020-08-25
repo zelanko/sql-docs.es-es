@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2c24d7d5470ed4c78f74b78b38158113e3f4894
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f7f994f29b41015d60912901100ac5b73c829e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440097"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770564"
 ---
 # <a name="deleterule-property-example-vc"></a>Ejemplo de propiedad DeleteRule (VC++)
-En este ejemplo se muestra la propiedad [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) de un objeto de [clave](../../../ado/reference/adox-api/key-object-adox.md) . El código anexa una nueva [tabla](../../../ado/reference/adox-api/table-object-adox.md) y, a continuación, define una nueva clave principal, estableciendo **DeleteRule** en **adRICascade**.  
+En este ejemplo se muestra la propiedad [DeleteRule](./deleterule-property-adox.md) de un objeto de [clave](./key-object-adox.md) . El código anexa una nueva [tabla](./table-object-adox.md) y, a continuación, define una nueva clave principal, estableciendo **DeleteRule** en **adRICascade**.  
   
 ```  
 // BeginDeleteRuleCpp.cpp  
@@ -109,5 +109,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [DeleteRule (propiedad, ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
- [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [DeleteRule (propiedad, ADOX)](./deleterule-property-adox.md)   
+ [Objeto Key (ADOX)](./key-object-adox.md)

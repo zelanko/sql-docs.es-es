@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b145e538ea44d5f007f800f70df84b8eed0b116
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422199"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806657"
 ---
 # <a name="datacontrol-object-error-codes"></a>Códigos de error de objetos DataControl
-En la tabla siguiente se muestra el [objeto RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Códigos de error del objeto DataControl. La traducción decimal positiva de los dos bytes inferiores, la traducción decimal negativa del código de error completo y los valores hexadecimales se muestran.
+En la tabla siguiente se muestra el [objeto RDS. ](../../reference/rds-api/datacontrol-object-rds.md) Códigos de error del objeto DataControl. La traducción decimal positiva de los dos bytes inferiores, la traducción decimal negativa del código de error completo y los valores hexadecimales se muestran.
 
 |ActiveX. Códigos de error de DataControl|Number|Descripción|
 |---------------------------------|------------|-----------------|
@@ -48,4 +48,4 @@ En la tabla siguiente se muestra el [objeto RDS. ](../../../ado/reference/rds-ap
 |**IDS_URLMONNotFound**|4119-2146824169 0x800A1017|La propiedad de **dirección URL** de DataControl requiere el archivo del sistema Urlmon.dll, que no se encuentra.|
 
 ## <a name="see-also"></a>Consulte también
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
+ [Objeto DataControl (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

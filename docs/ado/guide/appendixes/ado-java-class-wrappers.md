@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c02865fc20d741fc8b3f80ccecd56fcb105ad45e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c72f8cc605c427eda4f6d75b329d192306c60616
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355221"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805328"
 ---
 # <a name="ado-java-class-wrappers"></a>Contenedores de clase Java de ADO
-Este código declara una instancia del contenedor de clase de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de ADO y lo inicializa, todo en la misma línea de código. Además, declara variables para cada uno de los argumentos en el método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) , especialmente para [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) y [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (porque Java no admite tipos enumerados). Se abre y se cierra el objeto de **conjunto de registros** . Establecer RS1 en NULL simplemente programa esa variable para que se libere cuando Java realiza su liberación sistemática y intermitente de objetos no utilizados.  
+Este código declara una instancia del contenedor de clase de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) de ADO y lo inicializa, todo en la misma línea de código. Además, declara variables para cada uno de los argumentos en el método [Open](../../reference/ado-api/open-method-ado-recordset.md) , especialmente para [LockType](../../reference/ado-api/locktype-property-ado.md) y [CursorType](../../reference/ado-api/cursortype-property-ado.md) (porque Java no admite tipos enumerados). Se abre y se cierra el objeto de **conjunto de registros** . Establecer RS1 en NULL simplemente programa esa variable para que se libere cuando Java realiza su liberación sistemática y intermitente de objetos no utilizados.  
   
 ```java
 public static void main( String args[])  
@@ -42,4 +42,4 @@ public static void main( String args[])
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Mediante el SDK de Microsoft para Java](../../../ado/guide/appendixes/using-the-microsoft-sdk-for-java.md)
+ [Mediante el SDK de Microsoft para Java](./using-the-microsoft-sdk-for-java.md)

@@ -1,5 +1,5 @@
 ---
-title: Aprovisionamiento de certificados
+title: Aprovisionamiento del certificado
 description: Aprovisionamiento de certificados en Analytics Platform System.
 author: mzaman1
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 669e65a7d27b208d861a33618d889707134dfefa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400511"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Aprovisionamiento de certificados en Analytics Platform System
@@ -40,7 +40,7 @@ Aunque la conexión a través del certificado autofirmado cifra los datos en vue
   
 La ruta de certificación debe contener el nombre de dominio completo que se asigna a la dirección IP del clúster del nodo de control (recomendado) o el nombre que los usuarios escriben en sus barras de direcciones del explorador para tener acceso a la **consola de administración**.  
   
-Use el**Configuration Manager** del sistema de plataforma de análisis para agregar o quitar el certificado de confianza. No se admite la utilización directa de la herramienta de configuración de certificados de servicios HTTP de Microsoft Windows (**winHttpCertCfg. exe**) para administrar el certificado.  
+Use el**Configuration Manager** del sistema de plataforma de análisis para agregar o quitar el certificado de confianza. No se admite la utilización directa de la herramienta de configuración de certificados (**winHttpCertCfg.exe**) de Microsoft Windows http Services para administrar el certificado.  
   
 ## <a name="import-or-remove-the-certificate"></a>Importar o quitar el certificado  
 Las instrucciones siguientes muestran cómo importar o quitar el certificado de la aplicación.  

@@ -17,40 +17,40 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aaf12e802e41b2dab638858eb2a08aacc3140ab6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a024f21e83a25a82a226428835215a8cba9e21e9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439317"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768924"
 ---
 # <a name="views-collection-adox"></a>Colección de vistas (ADOX)
-Contiene todos los objetos de [vista](../../../ado/reference/adox-api/view-object-adox.md) de un catálogo.  
+Contiene todos los objetos de [vista](./view-object-adox.md) de un catálogo.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](../../../ado/reference/adox-api/append-method-adox-views.md) de una colección **views** es único para ADOX. Puede:  
+ El método [Append](./append-method-adox-views.md) de una colección **views** es único para ADOX. Puede:  
   
 -   Agregue una nueva vista a la colección con el método **Append** .  
   
  Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
--   Obtener acceso a una vista de la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
+-   Obtener acceso a una vista de la colección con la propiedad [Item](../ado-api/item-property-ado.md) .  
   
--   Devuelve el número de vistas contenidas en la colección con la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Devuelve el número de vistas contenidas en la colección con la propiedad [Count](../ado-api/count-property-ado.md) .  
   
--   Quitar una vista de la colección con el método [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
+-   Quitar una vista de la colección con el método [Delete](./delete-method-adox-collections.md) .  
   
--   Actualice los objetos de la colección para que reflejen el esquema de la base de datos actual con el método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Actualice los objetos de la colección para que reflejen el esquema de la base de datos actual con el método [Refresh](../ado-api/refresh-method-ado.md) .  
   
  Esta sección contiene el siguiente tema.  
   
--   [Eventos, métodos y propiedades de la colección de vistas](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
+-   [Eventos, métodos y propiedades de la colección de vistas](./views-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejemplo de colecciones y campos de vistas (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Ejemplo del método Append de vistas (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Colección views, ejemplo de propiedad CommandText (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Ejemplo de método Delete de vistas (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Ejemplo del método de actualización de vistas (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
+ [Ejemplo de colecciones y campos de vistas (VB)](./views-and-fields-collections-example-vb.md)   
+ [Ejemplo del método Append de vistas (VB)](./views-append-method-example-vb.md)   
+ [Colección views, ejemplo de propiedad CommandText (VB)](./views-collection-commandtext-property-example-vb.md)   
+ [Ejemplo de método Delete de vistas (VB)](./views-delete-method-example-vb.md)   
+ [Ejemplo del método de actualización de vistas (VB)](./views-refresh-method-example-vb.md)   
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Objeto View (ADOX)](./view-object-adox.md)

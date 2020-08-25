@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a46604cb33d5f52a6f889da5b3b28ef6dc38254
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1f6890d25922789a4b3656429582e4e8a60efc1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442187"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777554"
 ---
 # <a name="savetofile-method"></a>Método SaveToFile
-Guarda el contenido binario de una [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) en un archivo.  
+Guarda el contenido binario de una [secuencia](./stream-object-ado.md) en un archivo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,21 +39,21 @@ Stream.SaveToFile FileName, SaveOptions
  Valor de **cadena** que contiene el nombre completo del archivo en el que se guardará el contenido de la **secuencia** . Puede guardar en cualquier ubicación local válida o en cualquier ubicación a la que tenga acceso a través de un valor UNC.  
   
  *SaveOptions*  
- Valor [SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md) que especifica si **SaveToFile**debe crear un nuevo archivo, si aún no existe. El valor predeterminado es **adSaveCreateNotExists**. Con estas opciones, puede especificar que se produzca un error si el archivo especificado no existe. También puede especificar que **SaveToFile** sobrescriba el contenido actual de un archivo existente.  
+ Valor [SaveOptionsEnum](./saveoptionsenum.md) que especifica si **SaveToFile**debe crear un nuevo archivo, si aún no existe. El valor predeterminado es **adSaveCreateNotExists**. Con estas opciones, puede especificar que se produzca un error si el archivo especificado no existe. También puede especificar que **SaveToFile** sobrescriba el contenido actual de un archivo existente.  
   
 > [!NOTE]
->  Si sobrescribe un archivo existente (cuando se establece **adSaveCreateOverwrite** ), **SaveToFile** truncará cualquier byte del archivo existente original que siga el nuevo [EOS](../../../ado/reference/ado-api/eos-property.md).  
+>  Si sobrescribe un archivo existente (cuando se establece **adSaveCreateOverwrite** ), **SaveToFile** truncará cualquier byte del archivo existente original que siga el nuevo [EOS](./eos-property.md).  
   
 ## <a name="remarks"></a>Observaciones  
  **SaveToFile** se puede usar para copiar el contenido de un objeto de **secuencia** en un archivo local. No hay ningún cambio en el contenido o las propiedades del objeto de **secuencia** . El objeto de **secuencia** debe estar abierto antes de llamar a **SaveToFile**.  
   
  Este método no cambia la Asociación del objeto de **secuencia** a su origen subyacente. El objeto de **secuencia** todavía se asociará a la dirección URL o **registro** original que era su origen al abrirse.  
   
- Después de una operación de **SaveToFile** , la posición actual ([posición](../../../ado/reference/ado-api/position-property-ado.md)) en la secuencia se establece en el principio de la secuencia (0).  
+ Después de una operación de **SaveToFile** , la posición actual ([posición](./position-property-ado.md)) en la secuencia se establece en el principio de la secuencia (0).  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Objeto de secuencia (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Open (método, secuencia de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Save (método)](../../../ado/reference/ado-api/save-method.md)
+ [Open (método, secuencia de ADO)](./open-method-ado-stream.md)   
+ [Save (método)](./save-method.md)

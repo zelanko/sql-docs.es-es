@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4895f1ec08a0f10c93335fc36954f3a9098ffce4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee63f567e3bb9c1f389ada4bf2e76ed6f3b39929
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440417"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771254"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Ejemplo de propiedad ActiveConnection de catálogo (VB)
-Si se establece la propiedad [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) en una conexión válida abierta, "abre" el catálogo. En un catálogo abierto, puede tener acceso a los objetos de esquema que contiene el catálogo.  
+Si se establece la propiedad [ActiveConnection](./activeconnection-property-adox.md) en una conexión válida abierta, "abre" el catálogo. En un catálogo abierto, puede tener acceso a los objetos de esquema que contiene el catálogo.  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -67,8 +67,8 @@ Attribute VB_Name = "Catalog"
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [ActiveConnection (propiedad, ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Colección de tablas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type (propiedad, tabla, ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [ActiveConnection (propiedad, ADOX)](./activeconnection-property-adox.md)   
+ [Objeto Catalog (ADOX)](./catalog-object-adox.md)   
+ [Objeto Table (ADOX)](./table-object-adox.md)   
+ [Colección de tablas (ADOX)](./tables-collection-adox.md)   
+ [Type (propiedad, tabla, ADOX)](./type-property-table-adox.md)

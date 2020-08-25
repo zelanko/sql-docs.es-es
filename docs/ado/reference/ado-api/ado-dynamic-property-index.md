@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbd7933ac206f81460a7d0d50d0a7ac332cf154a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451467"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771744"
 ---
 # <a name="ado-dynamic-property-index"></a>Índice de propiedades dinámicas de ADO
-Los proveedores de datos, los proveedores de servicios y los componentes de servicio pueden agregar propiedades dinámicas a las colecciones de **propiedades** de los objetos [Connection](../../../ado/reference/ado-api/connection-object-ado.md) y [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) no abiertos. Un proveedor determinado también puede insertar propiedades adicionales cuando se abren estos objetos. Algunas de estas propiedades se muestran en la sección [propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) . Encontrará más información en los proveedores específicos de la sección [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md) .  
+Los proveedores de datos, los proveedores de servicios y los componentes de servicio pueden agregar propiedades dinámicas a las colecciones de **propiedades** de los objetos [Connection](./connection-object-ado.md) y [Recordset](./recordset-object-ado.md) no abiertos. Un proveedor determinado también puede insertar propiedades adicionales cuando se abren estos objetos. Algunas de estas propiedades se muestran en la sección [propiedades dinámicas de ADO](./ado-dynamic-properties.md) . Encontrará más información en los proveedores específicos de la sección [Apéndice A: proveedores](../../guide/appendixes/appendix-a-providers.md) .  
   
  Las tablas siguientes son índices cruzados de los nombres de ADO y OLE DB para cada propiedad dinámica de proveedor de OLE DB estándar. Los proveedores pueden agregar más propiedades de las que se muestran aquí. Para obtener información específica sobre las propiedades dinámicas específicas del proveedor, consulte la documentación del proveedor.  
   
- La referencia del programador de OLE DB hace referencia a un nombre de propiedad ADO por el término "Descripción". Para obtener más información acerca de estas propiedades estándar, busque o examine el índice en la [documentación de OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)para la propiedad OLE DB por su nombre.  
+ La referencia del programador de OLE DB hace referencia a un nombre de propiedad ADO por el término "Descripción". Para obtener más información acerca de estas propiedades estándar, busque o examine el índice en la [documentación de OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))para la propiedad OLE DB por su nombre.  
   
 ## <a name="connection-dynamic-properties"></a>Propiedades dinámicas de conexión  
   

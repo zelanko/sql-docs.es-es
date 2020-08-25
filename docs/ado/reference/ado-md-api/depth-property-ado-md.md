@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5633df4158aeafc2e650d5c89aa5d83b02fe8a11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e050f73aaa2ceb174c115218796e166b72f39381
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441137"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778214"
 ---
 # <a name="depth-property-ado-md"></a>Profundidad (propiedad, ADO MD)
-Indica el número de niveles entre el [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) y la raíz de la jerarquía.  
+Indica el número de niveles entre el [nivel](./level-object-ado-md.md) y la raíz de la jerarquía.  
   
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un entero y es de solo lectura.  
@@ -34,7 +34,7 @@ Indica el número de niveles entre el [nivel](../../../ado/reference/ado-md-api/
  Un **nivel** en la raíz de una jerarquía tiene un valor de **profundidad** de cero (0).  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto Level (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+ [Objeto Level (ADO MD)](./level-object-ado-md.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad LevelDepth (ADO MD)](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)
+ [Propiedad LevelDepth (ADO MD)](./leveldepth-property-ado-md.md)

@@ -2,7 +2,7 @@
 title: Iniciar SQL Server en modo de usuario único | Microsoft Docs
 description: Obtenga información sobre el modo de usuario único en SQL Server. Vea cuándo es útil y cómo usar la opción de inicio "-m" para iniciar una instancia de SQL Server en este modo.
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/11/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8651bcaa4aebf69eae9622031b49fb562b7be9f6
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764012"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147307"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Iniciar SQL Server en modo de usuario único
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,13 @@ Por ejemplo, **-m"SQLCMD"** limita las conexiones a una conexión única y esa c
   
 > [!IMPORTANT]  
 >  No use esta opción como una característica de seguridad. La aplicación cliente proporciona el nombre de la misma y puede proporcionar un nombre falso como parte de la cadena de conexión.  
-  
+
+En el siguiente ejemplo se inicia la instancia de SQL Server en modo de usuario único y solo se permite la conexión a través del Editor de consultas de SQL Server Management Studio.
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## <a name="note-for-clustered-installations"></a>Nota para instalaciones en clúster  
  Para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno en clúster, cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia en modo de usuario único, la DLL de recursos de clúster utiliza la conexión disponible, con lo que impide cualquier otra conexión con el servidor. Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en este estado, si se intenta poner en línea el recurso del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede producir la conmutación por error del recurso de SQL a otro nodo si el recurso está configurado para afectar al grupo.  
   

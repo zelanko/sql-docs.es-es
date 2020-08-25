@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea2a4f39b16fe2f8b23d6a6a229ce9b936e6e6d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401016"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766764"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carga de datos con Integration Services en el almacenamiento de datos paralelos
 Proporciona información de referencia e implementación para cargar datos en SQL Server almacenamiento de datos paralelos mediante el uso de paquetes de SQL Server Integration Services (SSIS).  
@@ -54,12 +54,12 @@ De forma predeterminada, BIDS ejecuta paquetes mediante archivos binarios de 64 
 Para ejecutar el paquete desde SQL Server Data Tools, haga clic con el botón derecho en el paquete y elija **Ejecutar paquete**.  
   
 ### <a name="run-from-powershell"></a>Ejecutar desde PowerShell  
-Para ejecutar el paquete desde Windows PowerShell, con la utilidad **DTExec** :`dtexec /FILE <packagePath>`  
+Para ejecutar el paquete desde Windows PowerShell, con la utilidad **DTExec** : `dtexec /FILE <packagePath>`  
   
-Por ejemplo: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Por ejemplo, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`.  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Ejecutar desde un símbolo del sistema de Windows 
-Para ejecutar el paquete desde un símbolo del sistema de Windows, mediante la utilidad **DTExec** :`dtexec /FILE <packagePath>`  
+Para ejecutar el paquete desde un símbolo del sistema de Windows, mediante la utilidad **DTExec** : `dtexec /FILE <packagePath>`  
   
 Por ejemplo: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -149,12 +149,12 @@ Si el número de cargas en la cola de carga supera el máximo de cargas en cola,
 ## <a name="locking-behavior"></a><a name="Locks"></a>Comportamiento de bloqueo  
 Al cargar datos con Integration Services, SQL ServerPDW utiliza bloqueos de nivel de fila para actualizar los datos de la tabla de destino. Esto significa que cada fila se bloquea para la lectura y escritura mientras se actualiza. Las filas de la tabla de destino no se bloquean mientras se cargan los datos en la tabla de ensayo.  
   
-## <a name="examples"></a><a name="Examples"></a>Example  
+## <a name="examples"></a><a name="Examples"></a>Ejemplos  
   
 ### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. Carga sencilla desde un archivo plano  
 En el siguiente tutorial se muestra una carga de datos simple mediante Integration Services para cargar datos de archivo sin formato en un dispositivo PDW de SQL Server.  En este ejemplo se da por supuesto que ya se ha instalado Integration Services en el equipo cliente y que se ha instalado el PDW de SQL Server destino, tal y como se ha descrito anteriormente.  
   
-En este ejemplo, se cargará en `Orders` la tabla, que tiene el siguiente DDL. La `Orders` tabla forma parte de la `LoadExampleDB` base de datos.  
+En este ejemplo, se cargará en la `Orders` tabla, que tiene el siguiente DDL. La `Orders` tabla forma parte de la `LoadExampleDB` base de datos.  
   
 ```sql  
 CREATE TABLE LoadExampleDB.dbo.Orders (  
@@ -174,7 +174,7 @@ id        city           lastUpdateDate     orderdate
 2         Denver         2002-06-25         1999-01-02  
 ```  
   
-Como preparación para la carga, cree el archivo `exampleLoad.txt`plano que contiene los datos de carga:  
+Como preparación para la carga, cree el archivo plano `exampleLoad.txt` que contiene los datos de carga:  
   
 ```  
 id,city,lastUpdateDate,orderDate  
@@ -184,7 +184,7 @@ id,city,lastUpdateDate,orderDate
   
 En primer lugar, cree un paquete de Integration Services realizando estos pasos:  
   
-1.  En SQL Server Data Tools \(SSDT\), seleccione **archivo**, **nuevo**y **proyecto**. Seleccione **Integration Services proyecto** en las opciones que aparecen. Asigne a este `ExampleLoad`proyecto el nombre y haga clic en **Aceptar**.  
+1.  En SQL Server Data Tools \( SSDT \) , seleccione **archivo**, **nuevo**y **proyecto**. Seleccione **Integration Services proyecto** en las opciones que aparecen. Asigne a este proyecto el nombre `ExampleLoad` y haga clic en **Aceptar**.  
   
 2.  Haga clic en la pestaña **flujo de control** y arrastre la **tarea flujo de datos** desde el cuadro de **herramientas** hasta el panel **flujo de control** .  
   
@@ -192,9 +192,9 @@ En primer lugar, cree un paquete de Integration Services realizando estos pasos:
   
 4.  Haga clic en **Administrador de conexiones** y, a continuación, en **nuevo**.  
   
-5.  En el cuadro **nombre del administrador de conexiones** , escriba un nombre descriptivo para la conexión. En este ejemplo, `Example Load Flat File CM`.  
+5.  En el cuadro **nombre del administrador de conexiones** , escriba un nombre descriptivo para la conexión. En este ejemplo, `Example Load Flat File CM` .  
   
-6.  Haga clic en **examinar** y `ExampleLoad.txt` Seleccione el archivo en el equipo local.  
+6.  Haga clic en **examinar** y seleccione el `ExampleLoad.txt` archivo en el equipo local.  
   
 7.  Puesto que el archivo sin formato contiene una fila con nombres de columna, haga clic en los **nombres de columna en el cuadro de la primera fila de datos** .  
   
@@ -228,7 +228,7 @@ Especifique el destino para el flujo de datos.
   
     **Base de datos de destino:**`LoadExampleDB`  
   
-6.  Seleccione la tabla de destino `Orders`:.  
+6.  Seleccione la tabla de destino: `Orders` .  
   
 7.  Seleccione **anexar** como modo de carga y haga clic en **Aceptar**.  
   
@@ -242,7 +242,7 @@ Especifique el flujo de datos del origen al destino.
   
 Ejecute el paquete en el equipo Integration Services.  
   
-1.  En el**Explorador de soluciones** de Integration Services (columna derecha), haga clic `Package.dtsx` con el botón derecho y seleccione **Ejecutar**.  
+1.  En el**Explorador de soluciones** de Integration Services (columna derecha), haga clic con el botón derecho `Package.dtsx` y seleccione **Ejecutar**.  
   
 2.  El paquete se ejecutará y el progreso más los errores se mostrarán en el panel **progreso** . Use un cliente SQL para confirmar la carga o supervise la carga a través de la consola de administración de PDW de SQL Server.  
   
@@ -253,11 +253,11 @@ Ejecute el paquete en el equipo Integration Services.
 [Tutorial: Crear un paquete básico con un asistente](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Introducción (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [Ejemplo de generación de paquetes dinámicos](https://go.microsoft.com/fwlink/?LinkId=202413)  
-[Diseñar paquetes SSIS para el paralelismo (vídeo de SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Diseñar paquetes SSIS para el paralelismo (vídeo de SQL Server)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))  
 [Ejemplos de la comunidad Microsoft SQL Server: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Mejorar las cargas incrementales con la captura de datos modificados](../integration-services/change-data-capture/change-data-capture-ssis.md)  
-[Dimensión de variación lenta, transformación](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
-[Inserción masiva, tarea](../integration-services/control-flow/bulk-insert-task.md)  
+[Transformación Dimensión de variación lenta](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+[Tarea Inserción masiva](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

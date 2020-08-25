@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 03dc1e08-5f03-49e5-8596-76b306b931bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aed04340ae89c5dbf80c91d85d592b657e6b627b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 874f56db913888892dcd56f4753ae594f6ff36ba
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442647"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772974"
 ---
 # <a name="properties-collection-properties-methods-and-events"></a>Propiedades, métodos y eventos de la colección Properties
 ## <a name="properties"></a>Propiedades  
- [Propiedad Count](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Propiedad Count](./count-property-ado.md)  
   
- [Propiedad Item](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Propiedad Item](./item-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [Refresh (método)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh (método)](./refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  
- [Colección de propiedades (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Colección de propiedades (ADO)](./properties-collection-ado.md)

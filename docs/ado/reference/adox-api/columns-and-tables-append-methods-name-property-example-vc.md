@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 655c1d014f312ae0706b242bb8b108d871bcef3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e729cc177c6c994d8dc0d16392a6e5b3281a610
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440297"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771004"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Ejemplo de propiedad Name, métodos Append de tablas y columnas (VC++)
 En el código siguiente se muestra cómo crear una nueva tabla.  
@@ -83,6 +83,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Append (método) (columnas ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append (método) (tablas ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Name (propiedad, ADOX)](../../../ado/reference/adox-api/name-property-adox.md)
+ [Append (método) (columnas ADOX)](./append-method-adox-columns.md)   
+ [Append (método) (tablas ADOX)](./append-method-adox-tables.md)   
+ [Name (propiedad, ADOX)](./name-property-adox.md)

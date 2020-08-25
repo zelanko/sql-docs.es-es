@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c28d15febb08855b914e4cd6ed04a97850ffe02c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401018"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766866"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Carga de datos con INSERT en almacenamiento de datos paralelos
 
@@ -157,7 +157,7 @@ En la tabla siguiente se definen las reglas y los formatos aceptados para insert
   
 ## <a name="see-also"></a>Consulte también  
  
-[Datos distribuidos](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
+[Datos distribuidos](/azure/synapse-analytics/sql-data-warehouse/massively-parallel-processing-mpp-architecture)  
 [INSERT](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS

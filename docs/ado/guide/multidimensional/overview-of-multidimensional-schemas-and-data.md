@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452427"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758365"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Información general de esquemas y datos multidimensionales
 ## <a name="understanding-multidimensional-schemas"></a>Descripción de los esquemas multidimensionales  
@@ -32,7 +32,7 @@ ms.locfileid: "88452427"
   
  Un *miembro* es un elemento de datos de una dimensión. Normalmente, se crea un título o se describe una medida de la base de datos mediante miembros.  
   
- Los cubos se representan mediante objetos [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) en ADO MD. Las dimensiones, las jerarquías, los niveles y los miembros también se representan mediante sus objetos de ADO MD correspondientes: [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md)y [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+ Los cubos se representan mediante objetos [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) en ADO MD. Las dimensiones, las jerarquías, los niveles y los miembros también se representan mediante sus objetos de ADO MD correspondientes: [dimensión](../../reference/ado-md-api/dimension-object-ado-md.md), [jerarquía](../../reference/ado-md-api/hierarchy-object-ado-md.md), [nivel](../../reference/ado-md-api/level-object-ado-md.md)y [miembro](../../reference/ado-md-api/member-object-ado-md.md).  
   
 ### <a name="dimensions"></a>Dimensions  
  Las dimensiones de un cubo dependen de las entidades empresariales y los tipos de datos que se van a modelar en la base de datos. Normalmente, cada dimensión es un punto de entrada independiente o un mecanismo para seleccionar los datos.  
@@ -69,7 +69,7 @@ Hamburg, Munich, Stuttgart}
   
 -   Cities `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Miembros  
+### <a name="members"></a>Members  
  Los miembros del nivel hoja de una jerarquía no tienen elementos secundarios y los miembros del nivel raíz no tienen ningún elemento primario. Todos los demás miembros tienen al menos un elemento primario y al menos un elemento secundario. Por ejemplo, un recorrido parcial del árbol de jerarquía de la dimensión Geography produce las siguientes relaciones de elementos primarios y secundarios:  
   
 -   `{All} (parent of) {Europe, North America}`  
@@ -85,8 +85,8 @@ Hamburg, Munich, Stuttgart}
  En este ejemplo también se muestra otra característica: algunos miembros del nivel semana de la jerarquía del año de la semana no aparecen en ningún nivel de la jerarquía del año. Por lo tanto, una jerarquía no necesita incluir todos los miembros de una dimensión.  
   
 ## <a name="see-also"></a>Consulte también  
- [Modelo de objetos de ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Programar con ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Usar ADO con ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
- [Trabajo con datos multidimensionales](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [Modelo de objetos de ADO MD](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (multidimensional) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Programar con ADO MD](./programming-with-ado-md.md)   
+ [Usar ADO con ADO MD](./using-ado-with-ado-md.md)   
+ [Trabajo con datos multidimensionales](./working-with-multidimensional-data.md)

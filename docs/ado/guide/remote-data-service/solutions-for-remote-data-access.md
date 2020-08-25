@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27217324754143bcb1933bc1b9b139dccc7dee45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d337ef92600dbda0a54d2c2c51ab4e8caeed646c
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451967"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759215"
 ---
 # <a name="solutions-for-remote-data-access"></a>Soluciones de acceso a datos remotos
 ## <a name="the-issue"></a>El problema  
@@ -44,9 +44,7 @@ ms.locfileid: "88451967"
  RDS define un modelo de programación: la secuencia de actividades necesarias para obtener acceso y actualizar un origen de datos, para obtener acceso a los datos a través de un intermediario, como Internet Information Services (IIS). El modelo de programación resume toda la funcionalidad de RDS.  
   
 ## <a name="see-also"></a>Consulte también  
- [Modelo de programación básica de RDS](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
- [Escenario de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Seguridad y uso de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Modelo de programación básica de RDS](./basic-rds-programming-model.md)   
+ [Escenario de RDS](./rds-scenario.md)   
+ [Tutorial de RDS](./rds-tutorial.md)   
+ [Seguridad y uso de RDS](./rds-usage-and-security.md)

@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 326fc4f1b9b77c8a4470fedc7d55f2d379aff6f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d7b443e94f3bea5977aeaf953e84c66c826daeb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442717"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773174"
 ---
 # <a name="positionenum"></a>PositionEnum
-Especifica la posición actual del puntero de registro dentro de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Especifica la posición actual del puntero de registro dentro de un [conjunto de registros](./recordset-object-ado.md).  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adPosBOF**|-2|Indica que el puntero del registro actual está en BOF (es decir, la propiedad [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) es **true**).|  
-|**adPosEOF**|-3|Indica que el puntero del registro actual está en EOF (es decir, la propiedad [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) es **true**).|  
-|**adPosUnknown**|-1|Indica que el **conjunto de registros** está vacío, se desconoce la posición actual o el proveedor no admite la propiedad [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) o [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) .|  
+|**adPosBOF**|-2|Indica que el puntero del registro actual está en BOF (es decir, la propiedad [BOF](./bof-eof-properties-ado.md) es **true**).|  
+|**adPosEOF**|-3|Indica que el puntero del registro actual está en EOF (es decir, la propiedad [EOF](./bof-eof-properties-ado.md) es **true**).|  
+|**adPosUnknown**|-1|Indica que el **conjunto de registros** está vacío, se desconoce la posición actual o el proveedor no admite la propiedad [AbsolutePage](./absolutepage-property-ado.md) o [AbsolutePosition](./absoluteposition-property-ado.md) .|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
  Paquete: **com. ms. wfc. Data**  
@@ -45,9 +45,9 @@ Especifica la posición actual del puntero de registro dentro de un [conjunto de
 
 :::row:::
     :::column:::
-        [Propiedad AbsolutePage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+        [Propiedad AbsolutePage (ADO)](./absolutepage-property-ado.md)  
     :::column-end:::
     :::column:::
-        [Propiedad AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+        [Propiedad AbsolutePosition (ADO)](./absoluteposition-property-ado.md)  
     :::column-end:::
 :::row-end:::

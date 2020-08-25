@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b2d5e2b34c5a82d222ee7018d0751cb7ec5f092
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0cb6a0695405bc8a3d8a96045b67efcadff308b3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438947"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768114"
 ---
 # <a name="internettimeout-property-example-vb"></a>Ejemplo de la propiedad InternetTimeout (VB)
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- En este ejemplo se muestra la propiedad [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) , que existe en los objetos [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) y [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) . En este ejemplo se usa el objeto **DataControl** y se establece el tiempo de espera en 20 segundos.  
+ En este ejemplo se muestra la propiedad [InternetTimeout](./internettimeout-property-rds.md) , que existe en los objetos [DataControl](./datacontrol-object-rds.md) y [DataSpace](./dataspace-object-rds.md) . En este ejemplo se usa el objeto **DataControl** y se establece el tiempo de espera en 20 segundos.  
   
 ```  
 'BeginInternetTimeoutVB  
@@ -77,8 +77,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Objeto DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Propiedad InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
-
-
+ [Objeto DataControl (RDS)](./datacontrol-object-rds.md)   
+ [Objeto DataSpace (RDS)](./dataspace-object-rds.md)   
+ [Propiedad InternetTimeout (RDS)](./internettimeout-property-rds.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bac29c74bf70e29828fe8ec238839cd64e78fd7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 823505aae912c64c2fd7d3375b3426cb6428bcdd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442567"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772874"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-Especifica los atributos de un objeto de [propiedad](../../../ado/reference/ado-api/property-object-ado.md) .  
+Especifica los atributos de un objeto de [propiedad](./property-object-ado.md) .  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|Indica que el proveedor no admite la propiedad.|  
 |**adPropRequired**|1|Indica que el usuario debe especificar un valor para esta propiedad antes de inicializar el origen de datos.|  
@@ -46,4 +46,4 @@ Especifica los atributos de un objeto de [propiedad](../../../ado/reference/ado-
 |AdoEnums. PropertyAttributes. WRITE|  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Propiedad Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Propiedad Attributes (ADO)](./attributes-property-ado.md)

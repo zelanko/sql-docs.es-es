@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9bdcecf462476b7f2fecfea48f174e0b4b2c499e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 686d3caeb7835d05a4e2eff0c588a4fb2ca18cf4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452067"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759495"
 ---
 # <a name="rds-usage-and-security"></a>Seguridad y uso de RDS
 Utilice la información de esta sección para configurar el servidor y usar RDS rápidamente. En esta sección se incluyen los pasos de configuración específicos que podría tener que realizar al implementar RDS, se describen algunas de las relaciones clave entre RDS y otras tecnologías, y se ayuda a identificar soluciones a problemas que pueden surgir al configurar una solución de RDS.  
@@ -29,17 +29,15 @@ Utilice la información de esta sección para configurar el servidor y usar RDS 
   
  Esta sección contiene los temas siguientes.  
   
--   [Configuración de RDS](../../../ado/guide/remote-data-service/configuring-rds.md)  
+-   [Configuración de RDS](./configuring-rds.md)  
   
--   [Uso de tecnologías relacionadas con RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)  
+-   [Uso de tecnologías relacionadas con RDS](./using-related-technologies-with-rds.md)  
   
--   [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)  
+-   [Personalización de DataFactory](./datafactory-customization.md)  
   
--   [Solución de problemas de RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
+-   [Solución de problemas de RDS](./troubleshooting-rds.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Aspectos básicos de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [Escenario de RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Tutorial de RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [Aspectos básicos de RDS](./rds-fundamentals.md)   
+ [Escenario de RDS](./rds-scenario.md)   
+ [Tutorial de RDS](./rds-tutorial.md)

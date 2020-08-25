@@ -1,4 +1,5 @@
 ---
+description: Destino de OLE DB
 title: Destino de OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477797"
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
 
@@ -129,6 +130,8 @@ ms.locfileid: "86908474"
   
 > [!NOTE]  
 >  La propiedad **CommandTimeout** del destino de OLE DB no está disponible en el **Editor de destino de OLE DB**, pero se puede establecer mediante el **Editor avanzado**. Además, ciertas opciones de carga rápida solo están disponibles en el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el destino de OLE DB en [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
+> 
+>  La propiedad **CommandTimeout** solo resulta efectiva cuando el modo de acceso a datos es el **comando SQL**.
   
 ### <a name="static-options"></a>Opciones estáticas  
  **Administrador de conexiones OLE DB**  

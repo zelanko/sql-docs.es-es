@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 477db26b27b0b6222da55585661db1dc37d64b82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51f325977e068e89e540a798f9bccdfa2c784f8e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438787"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767734"
 ---
 # <a name="rds-objects"></a>Objetos RDS
 > [!IMPORTANT]
@@ -27,12 +27,10 @@ ms.locfileid: "88438787"
   
 |Object|Descripción|  
 |-|-|  
-|[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Enlaza un **conjunto de registros** de consulta de datos a uno o varios controles (por ejemplo, un cuadro de texto, un control de cuadrícula o un cuadro combinado) para mostrar los datos del **conjunto de registros** en una página web.<br /><br /> El objeto **DataControl** es seguro para el scripting.|  
-|[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Implementa métodos que proporcionan acceso a los datos de lectura y escritura a los orígenes de datos especificados para las aplicaciones del lado cliente.<br /><br /> El objeto **DataFactory** no es seguro para el scripting.|  
-|[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Crea proxies del lado cliente para objetos comerciales personalizados ubicados en el nivel intermedio.<br /><br /> El objeto **DataSpace** es seguro para el scripting.|  
-|[Interfaz IRDSService (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Expone el método [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) , que se usa para devolver un puntero a la interfaz solicitada en una versión más capaz del objeto.|  
+|[DataControl (RDS)](./datacontrol-object-rds.md)|Enlaza un **conjunto de registros** de consulta de datos a uno o varios controles (por ejemplo, un cuadro de texto, un control de cuadrícula o un cuadro combinado) para mostrar los datos del **conjunto de registros** en una página web.<br /><br /> El objeto **DataControl** es seguro para el scripting.|  
+|[DataFactory (RDSServer)](./datafactory-object-rdsserver.md)|Implementa métodos que proporcionan acceso a los datos de lectura y escritura a los orígenes de datos especificados para las aplicaciones del lado cliente.<br /><br /> El objeto **DataFactory** no es seguro para el scripting.|  
+|[DataSpace (RDS)](./dataspace-object-rds.md)|Crea proxies del lado cliente para objetos comerciales personalizados ubicados en el nivel intermedio.<br /><br /> El objeto **DataSpace** es seguro para el scripting.|  
+|[Interfaz IRDSService (RDS)](./irdsservice-interface-rds.md)|Expone el método [InvokeService (RDS)](./invokeservice-rds.md) , que se usa para devolver un puntero a la interfaz solicitada en una versión más capaz del objeto.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de la API de RDS](../../../ado/reference/rds-api/rds-api-reference.md)
-
-
+ [Referencia de la API de RDS](./rds-api-reference.md)

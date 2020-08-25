@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 168bdaa7736c5f9d3c974d0a5f6aa4fae2b323bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a019d0f4e260feb7e9e9034fc7b9cf63b623bedf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442347"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771974"
 ---
 # <a name="refresh-method-example-vb"></a>Actualización de ejemplo del método (VB)
-En este ejemplo se muestra cómo usar el método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) para actualizar la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) para un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de procedimiento almacenado.  
+En este ejemplo se muestra cómo usar el método [Refresh](./refresh-method-ado.md) para actualizar la colección de [parámetros](./parameters-collection-ado.md) para un objeto de [comando](./command-object-ado.md) de procedimiento almacenado.  
   
 ```vb
 'BeginRefreshVB  
@@ -122,6 +122,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Command (objeto) (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameters (colección) (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Actualizar (método, ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Command (objeto) (ADO)](./command-object-ado.md)   
+ [Parameters (colección) (ADO)](./parameters-collection-ado.md)   
+ [Actualizar (método, ADO)](./refresh-method-ado.md)

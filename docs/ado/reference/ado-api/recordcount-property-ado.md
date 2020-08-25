@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c7615a61622be136b0be951b71a1788d5f45bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b307a4116731016858ce4cc74f37bdcfbd258f3a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442487"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772484"
 ---
 # <a name="recordcount-property-ado"></a>Propiedad RecordCount (ADO)
 
-Indica el número de registros de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .
+Indica el número de registros de un objeto de [conjunto de registros](./recordset-object-ado.md) .
   
 ## <a name="return-value"></a>Valor devuelto
 
@@ -53,11 +53,11 @@ El tipo de cursor del objeto de **conjunto de registros** afecta a si se puede d
   
 ## <a name="applies-to"></a>Se aplica a
 
-[Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Objeto de conjunto de registros (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también
 
-[Ejemplo de las propiedades Filter y RecordCount (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
-[Ejemplo de las propiedades Filter y RecordCount (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
-[AbsolutePosition (propiedad, ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
-[PageCount (propiedad, ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)
+[Ejemplo de las propiedades Filter y RecordCount (VB)](./filter-and-recordcount-properties-example-vb.md)   
+[Ejemplo de las propiedades Filter y RecordCount (VC + +)](./filter-and-recordcount-properties-example-vc.md)   
+[AbsolutePosition (propiedad, ADO)](./absoluteposition-property-ado.md)   
+[PageCount (propiedad, ADO)](./pagecount-property-ado.md)

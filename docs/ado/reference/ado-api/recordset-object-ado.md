@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3750a779c434810856e1cae979b7471aa3f8428c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9fade9e23303c9adaa22cad9822381fd10bb513
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442427"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772274"
 ---
 # <a name="recordset-object-ado"></a>Objeto de conjunto de registros (ADO)
 Representa el conjunto completo de registros de una tabla base o los resultados de un comando ejecutado. En cualquier momento, el objeto de **conjunto de registros** hace referencia a un único registro del conjunto como el registro actual.  
@@ -41,26 +41,26 @@ Representa el conjunto completo de registros de una tabla base o los resultados 
   
 -   **Cursor de solo avance** Permite solo desplazarse hacia delante por el **conjunto de registros**. Las adiciones, cambios o eliminaciones de otros usuarios no estarán visibles. Esto mejora el rendimiento en situaciones en las que es necesario hacer un solo paso a través de un **conjunto de registros**.  
   
- Establezca la propiedad [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) antes de abrir el **conjunto de registros** para elegir el tipo de cursor o pase un argumento *CursorType* con el método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) . Algunos proveedores no admiten todos los tipos de cursores. Consulte la documentación del proveedor. Si no se especifica un tipo de cursor, ADO abre un cursor de solo avance de forma predeterminada.  
+ Establezca la propiedad [CursorType](./cursortype-property-ado.md) antes de abrir el **conjunto de registros** para elegir el tipo de cursor o pase un argumento *CursorType* con el método [Open](./open-method-ado-recordset.md) . Algunos proveedores no admiten todos los tipos de cursores. Consulte la documentación del proveedor. Si no se especifica un tipo de cursor, ADO abre un cursor de solo avance de forma predeterminada.  
   
- Si la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) está establecida en **adUseClient** para abrir un **conjunto de registros**, la propiedad **UnderlyingValue** en los objetos de [campo](../../../ado/reference/ado-api/field-object.md) no está disponible en el objeto de **conjunto de registros** devuelto. Cuando se usa con algunos proveedores (como el proveedor ODBC de Microsoft para OLE DB junto con Microsoft SQL Server), puede crear objetos de **conjunto de registros** independientemente de un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) definido previamente pasando una cadena de conexión con el método **Open** . ADO todavía crea un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) , pero no asigna ese objeto a una variable de objeto. Sin embargo, si está abriendo varios objetos de **conjunto de registros** en la misma conexión, debe crear y abrir explícitamente un objeto de **conexión** . Esto asigna el objeto de **conexión** a una variable de objeto. Si no usa esta variable de objeto al abrir los objetos de **conjunto de registros** , ADO crea un nuevo objeto de **conexión** para cada nuevo conjunto de **registros**, incluso si pasa la misma cadena de conexión.  
+ Si la propiedad [CursorLocation](./cursorlocation-property-ado.md) está establecida en **adUseClient** para abrir un **conjunto de registros**, la propiedad **UnderlyingValue** en los objetos de [campo](./field-object.md) no está disponible en el objeto de **conjunto de registros** devuelto. Cuando se usa con algunos proveedores (como el proveedor ODBC de Microsoft para OLE DB junto con Microsoft SQL Server), puede crear objetos de **conjunto de registros** independientemente de un objeto de [conexión](./connection-object-ado.md) definido previamente pasando una cadena de conexión con el método **Open** . ADO todavía crea un objeto de [conexión](./connection-object-ado.md) , pero no asigna ese objeto a una variable de objeto. Sin embargo, si está abriendo varios objetos de **conjunto de registros** en la misma conexión, debe crear y abrir explícitamente un objeto de **conexión** . Esto asigna el objeto de **conexión** a una variable de objeto. Si no usa esta variable de objeto al abrir los objetos de **conjunto de registros** , ADO crea un nuevo objeto de **conexión** para cada nuevo conjunto de **registros**, incluso si pasa la misma cadena de conexión.  
   
  Puede crear tantos objetos de **conjunto de registros** como sea necesario.  
   
- Al abrir un **conjunto de registros**, el registro actual se coloca en el primer registro (si existe) y las propiedades [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) se establecen en **false**. Si no hay ningún registro, los valores de la propiedad **BOF** y **EOF** son **true**.  
+ Al abrir un **conjunto de registros**, el registro actual se coloca en el primer registro (si existe) y las propiedades [BOF](./bof-eof-properties-ado.md) y [EOF](./bof-eof-properties-ado.md) se establecen en **false**. Si no hay ningún registro, los valores de la propiedad **BOF** y **EOF** son **true**.  
   
- Puede usar los métodos [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**y **MovePrevious** ; método [Move](../../../ado/reference/ado-api/move-method-ado.md) ; y las propiedades [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)y [Filter](../../../ado/reference/ado-api/filter-property.md) para cambiar la posición del registro actual, suponiendo que el proveedor admita la funcionalidad pertinente. Los objetos de **conjunto de registros** de solo avance solo admiten el método [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) . Cuando se usan los métodos **Move** para visitar cada registro (o enumerar el **conjunto de registros**), se pueden usar las propiedades **BOF** y **EOF** para determinar si se ha movido más allá del principio o el final del **conjunto de registros**.  
+ Puede usar los métodos [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**y **MovePrevious** ; método [Move](./move-method-ado.md) ; y las propiedades [AbsolutePosition](./absoluteposition-property-ado.md), [AbsolutePage](./absolutepage-property-ado.md)y [Filter](./filter-property.md) para cambiar la posición del registro actual, suponiendo que el proveedor admita la funcionalidad pertinente. Los objetos de **conjunto de registros** de solo avance solo admiten el método [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) . Cuando se usan los métodos **Move** para visitar cada registro (o enumerar el **conjunto de registros**), se pueden usar las propiedades **BOF** y **EOF** para determinar si se ha movido más allá del principio o el final del **conjunto de registros**.  
   
  Antes de usar cualquier funcionalidad de un objeto de **conjunto de registros** , debe llamar al método **Supports** en el objeto para comprobar que la funcionalidad es compatible o disponible. No debe utilizar la funcionalidad cuando el método **Supports** devuelve false. Por ejemplo, puede usar el método **MovePrevious** solo si `Recordset.Supports(adMovePrevious)` devuelve **true**. De lo contrario, obtendrá un error porque el objeto de **conjunto de registros** podría haberse cerrado y la funcionalidad se representara no disponible en la instancia. Si no se admite una característica que le interese, **Supports** también devolverá FALSE. En este caso, debe evitar llamar a la propiedad o al método correspondiente en el objeto de **conjunto de registros** .  
   
- Los objetos de **conjunto de registros** pueden admitir dos tipos de actualización: inmediato y por lotes. En la actualización inmediata, todos los cambios en los datos se escriben inmediatamente en el origen de datos subyacente una vez que se llama al método [Update](../../../ado/reference/ado-api/update-method.md) . También puede pasar matrices de valores como parámetros con los métodos [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) y **Update** y actualizar simultáneamente varios campos en un registro.  
+ Los objetos de **conjunto de registros** pueden admitir dos tipos de actualización: inmediato y por lotes. En la actualización inmediata, todos los cambios en los datos se escriben inmediatamente en el origen de datos subyacente una vez que se llama al método [Update](./update-method.md) . También puede pasar matrices de valores como parámetros con los métodos [AddNew](./addnew-method-ado.md) y **Update** y actualizar simultáneamente varios campos en un registro.  
   
- Si un proveedor admite la actualización por lotes, puede hacer que la memoria caché del proveedor cambie a más de un registro y, a continuación, transmitirlos en una única llamada a la base de datos con el método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Esto se aplica a los cambios realizados con los métodos **AddNew**, **Update**y [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) . Después de llamar al método **UpdateBatch** , puede usar la propiedad [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) para comprobar los conflictos de datos con el fin de resolverlos.  
+ Si un proveedor admite la actualización por lotes, puede hacer que la memoria caché del proveedor cambie a más de un registro y, a continuación, transmitirlos en una única llamada a la base de datos con el método [UpdateBatch](./updatebatch-method.md) . Esto se aplica a los cambios realizados con los métodos **AddNew**, **Update**y [Delete](./delete-method-ado-recordset.md) . Después de llamar al método **UpdateBatch** , puede usar la propiedad [status](./status-property-ado-recordset.md) para comprobar los conflictos de datos con el fin de resolverlos.  
   
 > [!NOTE]
->  Para ejecutar una consulta sin usar un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) , pase una cadena de consulta al método **Open** de un objeto de **conjunto de registros** . Sin embargo, se requiere un objeto de **comando** si desea conservar el texto del comando y volver a ejecutarlo, o usar parámetros de consulta.  
+>  Para ejecutar una consulta sin usar un objeto de [comando](./command-object-ado.md) , pase una cadena de consulta al método **Open** de un objeto de **conjunto de registros** . Sin embargo, se requiere un objeto de **comando** si desea conservar el texto del comando y volver a ejecutarlo, o usar parámetros de consulta.  
   
- La propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) rige los permisos de acceso.  
+ La propiedad [mode](./mode-property-ado.md) rige los permisos de acceso.  
   
  La colección **Fields** es el miembro predeterminado del objeto **Recordset** . Como resultado, las dos instrucciones de código siguientes son equivalentes.  
   
@@ -75,10 +75,10 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
  Esta sección contiene el siguiente tema.  
   
--   [Eventos, métodos y propiedades del objeto de conjunto de registros](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
+-   [Eventos, métodos y propiedades del objeto de conjunto de registros](./recordset-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Fields (colección) (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Colección Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Connection (objeto) (ADO)](./connection-object-ado.md)   
+ [Fields (colección) (ADO)](./fields-collection-ado.md)   
+ [Colección Properties (ADO)](./properties-collection-ado.md)   
+ [Apéndice A: Proveedores](../../guide/appendixes/appendix-a-providers.md)

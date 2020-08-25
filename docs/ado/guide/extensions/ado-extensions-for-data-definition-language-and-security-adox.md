@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 505acc976f47d7888d941fa90af2482aa0049554
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 807cd8a739956c56457c20b6b3bcc327dd5d3d51
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452477"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758915"
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>Extensiones de ADO para lenguaje de definición de datos y seguridad (ADOX)
 Esta sección contiene los temas siguientes.  
   
--   [Aspectos básicos de ADOX](../../../ado/guide/extensions/adox-fundamentals.md)  
+-   [Aspectos básicos de ADOX](./adox-fundamentals.md)  
   
--   [Compatibilidad del proveedor con ADOX](../../../ado/guide/extensions/provider-support-for-adox-ado.md)
+-   [Compatibilidad del proveedor con ADOX](./provider-support-for-adox-ado.md)

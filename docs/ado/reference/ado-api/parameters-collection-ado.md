@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442767"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773344"
 ---
 # <a name="parameters-collection-ado"></a>Colección de parámetros (ADO)
-Contiene todos los objetos de [parámetro](../../../ado/reference/ado-api/parameter-object.md) de un objeto [Command](../../../ado/reference/ado-api/command-object-ado.md) .  
+Contiene todos los objetos de [parámetro](./parameter-object.md) de un objeto [Command](./command-object-ado.md) .  
   
 ## <a name="remarks"></a>Observaciones  
  Un objeto **Command** tiene una colección **Parameters** formada por objetos **Parameter** .  
   
- El uso del método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) en la colección de **parámetros** de un objeto **Command** recupera información de parámetros del proveedor para el procedimiento almacenado o la consulta con parámetros especificados en el objeto **Command** . Algunos proveedores no admiten llamadas a procedimientos almacenados o consultas parametrizadas; la llamada al método **Refresh** en la colección **Parameters** cuando se usa este tipo de proveedor devolverá un error.  
+ El uso del método [Refresh](./refresh-method-ado.md) en la colección de **parámetros** de un objeto **Command** recupera información de parámetros del proveedor para el procedimiento almacenado o la consulta con parámetros especificados en el objeto **Command** . Algunos proveedores no admiten llamadas a procedimientos almacenados o consultas parametrizadas; la llamada al método **Refresh** en la colección **Parameters** cuando se usa este tipo de proveedor devolverá un error.  
   
  Si no ha definido sus propios objetos de **parámetro** y tiene acceso a la colección **Parameters** antes de llamar al método **Refresh** , ADO llamará automáticamente al método y rellenará la colección.  
   
- Puede minimizar las llamadas al proveedor para mejorar el rendimiento si conoce las propiedades de los parámetros asociados al procedimiento almacenado o a la consulta parametrizada a la que desea llamar. Use el método [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) para crear objetos de **parámetro** con los valores de propiedad adecuados y use el método [Append](../../../ado/reference/ado-api/append-method-ado.md) para agregarlos a la colección de **parámetros** . Esto le permite establecer y devolver los valores de los parámetros sin tener que llamar al proveedor para obtener la información de los parámetros. Si está escribiendo en un proveedor que no proporciona información de parámetros, debe rellenar manualmente la colección **Parameters** mediante este método para poder usar parámetros en absoluto. Use el método [Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) para quitar objetos de **parámetro** de la colección **Parameters** si es necesario.  
+ Puede minimizar las llamadas al proveedor para mejorar el rendimiento si conoce las propiedades de los parámetros asociados al procedimiento almacenado o a la consulta parametrizada a la que desea llamar. Use el método [CreateParameter](./createparameter-method-ado.md) para crear objetos de **parámetro** con los valores de propiedad adecuados y use el método [Append](./append-method-ado.md) para agregarlos a la colección de **parámetros** . Esto le permite establecer y devolver los valores de los parámetros sin tener que llamar al proveedor para obtener la información de los parámetros. Si está escribiendo en un proveedor que no proporciona información de parámetros, debe rellenar manualmente la colección **Parameters** mediante este método para poder usar parámetros en absoluto. Use el método [Delete](./delete-method-ado-parameters-collection.md) para quitar objetos de **parámetro** de la colección **Parameters** si es necesario.  
   
  Los objetos de la colección **Parameters** de un **conjunto de registros** salen del ámbito (por lo que no están disponibles) cuando se cierra el conjunto de **registros** .  
   
@@ -83,9 +83,9 @@ Contiene todos los objetos de [parámetro](../../../ado/reference/ado-api/parame
   
  Esta sección contiene el siguiente tema.  
   
--   [Propiedades, métodos y eventos de la colección Parameters](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Propiedades, métodos y eventos de la colección Parameters](./parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Append (método) (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter (método) (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)
+ [Append (método) (ADO)](./append-method-ado.md)   
+ [CreateParameter (método) (ADO)](./createparameter-method-ado.md)   
+ [Objeto Parameter](./parameter-object.md)

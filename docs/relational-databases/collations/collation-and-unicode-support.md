@@ -276,7 +276,7 @@ En la tabla siguiente se muestran las designaciones predeterminadas de intercala
 |Lituano (Lituania)|0x0427|0x0427|Lithuanian_CI_AS|
 |Bajo sorbio (Alemania)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxemburgués (Luxemburgo)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedonio (Macedonia del Norte, ARYM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedonio (Macedonia del Norte)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malayo (Brunéi Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malayo (Malasia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (India)|0x044c|0x0439|No disponible en el nivel de servidor|

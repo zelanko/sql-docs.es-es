@@ -3,7 +3,7 @@ description: Propiedad IsolationLevel
 title: Propiedad IsolationLevel | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f46199512521e6fe6fda6dc40fe894ba113c0229
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 91945d36801005fb7f7c4dbcc9df5a464c6e4fa4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774724"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990776"
 ---
 # <a name="isolationlevel-property"></a>Propiedad IsolationLevel
 Indica el nivel de aislamiento para un objeto de [conexión](./connection-object-ado.md) .  

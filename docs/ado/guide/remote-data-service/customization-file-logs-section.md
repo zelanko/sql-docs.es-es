@@ -3,7 +3,7 @@ description: Sección de registros del archivo de personalización
 title: Sección de registros de archivo de personalización | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f478a1e1c18e9182d2effe77d37c0c329ba22c54
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 890ba32615cdd78d9b999958f3ce3cb1e0755b81
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759839"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978246"
 ---
 # <a name="customization-file-logs-section"></a>Sección de registros del archivo de personalización
 La sección de **registros** contiene una entrada de archivo de registro, que especifica el nombre de un archivo que registra los errores durante la operación de la **factoría**de archivos.  
@@ -37,7 +37,7 @@ FileName
   
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
   
 |Parte|Descripción|  
 |----------|-----------------|  

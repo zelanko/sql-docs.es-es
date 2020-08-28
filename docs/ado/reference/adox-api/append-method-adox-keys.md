@@ -3,7 +3,7 @@ description: Append (método) (claves ADOX)
 title: Append (método) (claves ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6334f4edb0d98e7fa0dca49f1c024f63e471c7f8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2531031808c16db4892fb0b759a8a8d819a2222d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771434"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985486"
 ---
 # <a name="append-method-adox-keys"></a>Append (método) (claves ADOX)
 Agrega un nuevo objeto [clave](./key-object-adox.md) a la colección de [claves](./keys-collection-adox.md) .  

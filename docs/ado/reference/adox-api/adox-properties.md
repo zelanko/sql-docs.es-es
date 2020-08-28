@@ -3,7 +3,7 @@ description: Propiedades ADOX
 title: Propiedades de ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aae7fdebfa01972709cd8e84c9e92a59f24acff1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 71c53b9a1f57e5c207500d25f1ab3eb0fec16ad8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771634"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985596"
 ---
 # <a name="adox-properties"></a>Propiedades ADOX
 
@@ -36,7 +36,7 @@ ms.locfileid: "88771634"
 |[DeleteRule](./deleterule-property-adox.md)|Indica la acción que se realiza cuando se elimina una clave principal.|  
 |[IndexNulls](./indexnulls-property-adox.md)|Indica si los registros que tienen valores NULL en sus campos de índice tienen entradas de índice.|  
 |[Elemento](../ado-api/item-property-ado.md)|Indica un miembro específico de una colección, por nombre o número ordinal.|  
-|[Name](./name-property-adox.md): nombre|Indica el nombre del objeto.|  
+|[Nombre](./name-property-adox.md)|Indica el nombre del objeto.|  
 |[NumericScale](./numericscale-property-adox.md)|Indica la escala de un valor numérico de la columna.|  
 |[ParentCatalog](./parentcatalog-property-adox.md)|Especifica el catálogo primario de una tabla o columna para proporcionar acceso a las propiedades específicas del proveedor.|  
 |[Precisión](./precision-property-adox.md)|Indica la precisión máxima de los valores de datos de la columna.|  

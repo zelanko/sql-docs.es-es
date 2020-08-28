@@ -3,7 +3,7 @@ description: Extensiones de Visual C++
 title: Usar extensiones de Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa5ed351f150aa913a9a454f42bd11c9fcb7ac00
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0419311c4d8e952a5212f60dee055c7b37aed5f4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806464"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990936"
 ---
 # <a name="visual-c-extensions"></a>Extensiones de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>La Interfaz IADORecordBinding
@@ -129,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  Al establecer los datos, el *Estado* puede establecerse en **adFldNull** para indicar que el campo de **conjunto de registros** debe establecerse en NULL.
 
-|Constante|Value|Descripción|
+|Constante|Valor|Descripción|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Se devolvió un valor de campo que no es NULL.|
 |**adFldBadAccessor**|1|El enlace no era válido.|

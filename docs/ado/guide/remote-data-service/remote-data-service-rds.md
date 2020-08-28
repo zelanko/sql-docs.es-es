@@ -3,7 +3,7 @@ description: Servicio de datos remotos (RDS)
 title: Servicio de datos remotos (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f21ac9577b45bbeca2d57a3c54c40d542fe5220
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 238dd8457b4397ee8ad6bd7480c030a090e66979
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759425"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977776"
 ---
 # <a name="remote-data-service-rds"></a>Servicio de datos remotos (RDS)
 El servicio de datos remoto (RDS) es una característica de ADO, con la que puede trasladar datos de un servidor a una aplicación cliente o una página web, manipular los datos en el cliente y devolver actualizaciones al servidor en un único viaje de ida y vuelta.  

@@ -3,7 +3,7 @@ description: Visual Basic para las funciones de aplicaciones
 title: Funciones de Visual Basic para Aplicaciones | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d680d8a0f0f7d34e9074b5e2e9e63aedd82a1217
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452557"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978936"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic para las funciones de aplicaciones
 Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las expresiones de cálculo de la forma de datos:  
@@ -63,7 +63,7 @@ Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las
         Error  
         Error$  
         Exp  
-        Corrección  
+        Fix  
         Formato  
         Format$  
         FV  
@@ -71,7 +71,7 @@ Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las
     :::column-end:::
     :::column:::
         Hex$  
-        Hora  
+        Hour  
         IIF  
         InStr  
         Int  
@@ -120,7 +120,7 @@ Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las
         Rnd  
         RTrim  
         RTrim $  
-        Second  
+        Segundo  
         Sgn  
         Seno  
         SLN  
@@ -137,7 +137,7 @@ Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las
         String$  
         SYD  
         Tan  
-        Tiempo  
+        Hora  
         Time$  
         Temporizador  
         TimeSerial  
@@ -150,7 +150,7 @@ Las siguientes funciones de Visual Basic para Aplicaciones se pueden usar en las
         Val  
         VarType  
         Día de la semana  
-        Year  
+        Año  
     :::column-end:::
 :::row-end:::
 

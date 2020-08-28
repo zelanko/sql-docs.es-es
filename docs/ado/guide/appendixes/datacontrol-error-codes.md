@@ -3,7 +3,7 @@ description: Códigos de error de objetos DataControl
 title: Códigos de error de DataControl | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b145e538ea44d5f007f800f70df84b8eed0b116
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 3554898451228afee73914a82907f6348ad1cff0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806657"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991136"
 ---
 # <a name="datacontrol-object-error-codes"></a>Códigos de error de objetos DataControl
 En la tabla siguiente se muestra el [objeto RDS. ](../../reference/rds-api/datacontrol-object-rds.md) Códigos de error del objeto DataControl. La traducción decimal positiva de los dos bytes inferiores, la traducción decimal negativa del código de error completo y los valores hexadecimales se muestran.

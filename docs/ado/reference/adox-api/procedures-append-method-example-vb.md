@@ -3,7 +3,7 @@ description: Ejemplo de método Append de procedimientos (VB)
 title: Ejemplo de método Append de procedimientos (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8b9b58c50a1e3c77a6239c73222ea7a1656b882
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d757b2df05bd4f376bb7c6744fa75ac5453f83f6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769644"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983586"
 ---
 # <a name="procedures-append-method-example-vb"></a>Ejemplo de método Append de procedimientos (VB)
 En el código siguiente se muestra cómo usar un objeto [Command](../ado-api/command-object-ado.md) y el método [Append](./append-method-adox-procedures.md) de la colección [Procedures](./procedures-collection-adox.md) para crear un nuevo procedimiento en el origen de datos subyacente.  

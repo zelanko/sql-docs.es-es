@@ -3,7 +3,7 @@ description: Ejemplo de catálogo (VB)
 title: Ejemplo de catálogo (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 172edf69b1840c51aac11dcc66a209b469148d3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 018b4d96995e11f98fc06ad382033c2059d3ef25
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441257"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987316"
 ---
 # <a name="catalog-example-vb"></a>Ejemplo de catálogo (VB)
 En este Visual Basic proyecto se crea un nuevo cubo mediante MDX. A continuación, documenta la estructura de un cubo en un documento de Microsoft Word.  

@@ -3,7 +3,7 @@ description: Ejemplo de la propiedad InternetTimeout (VC ++)
 title: Ejemplo de la propiedad InternetTimeout (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74fc1cb8504e027db7181657cbcc74452cd5dfe4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b9cc1c6a53a3b541fb59caad456c9818254c7f45
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768094"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981996"
 ---
 # <a name="internettimeout-property-example-vc"></a>Ejemplo de la propiedad InternetTimeout (VC ++)
 > [!IMPORTANT]

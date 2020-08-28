@@ -3,7 +3,7 @@ description: Colección de grupos (ADOX)
 title: Colección de grupos (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5edecbbfebeea82d28f97bc31d15e04bf28c576a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9624a30970e5a6f6a0186d2cb9e2390c98968d9e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770334"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984376"
 ---
 # <a name="groups-collection-adox"></a>Colección de grupos (ADOX)
 Contiene todos los objetos de [Grupo](./group-object-adox.md) almacenados de un catálogo o usuario.  
@@ -31,11 +31,11 @@ Contiene todos los objetos de [Grupo](./group-object-adox.md) almacenados de un 
 ## <a name="remarks"></a>Observaciones  
  La colección de **grupos** de un [Catálogo](./catalog-object-adox.md) representa todas las cuentas de grupo del catálogo. La colección de **grupos** para un [usuario](./user-object-adox.md) representa solo el grupo al que pertenece el usuario.  
   
- El método [Append](./append-method-adox-groups.md) de una colección **Groups** es único para ADOX. Puede:  
+ El método [Append](./append-method-adox-groups.md) de una colección **Groups** es único para ADOX. Se puede hacer lo siguiente:  
   
 -   Agregue un nuevo grupo de seguridad a la colección con el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Se puede hacer lo siguiente:  
   
 -   Obtener acceso a un grupo de la colección con la propiedad [Item](../ado-api/item-property-ado.md) .  
   

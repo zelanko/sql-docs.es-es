@@ -3,7 +3,7 @@ description: Ejemplo de propiedad IndexNulls (VB)
 title: Ejemplo de propiedad IndexNulls (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aba3aed53a3640ff76b2d46b221265d1505e020a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27cb2f163f1c6732715f2e199a66ac95a39f11e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770154"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984076"
 ---
 # <a name="indexnulls-property-example-vb"></a>Ejemplo de propiedad IndexNulls (VB)
 En este ejemplo se muestra la propiedad [IndexNulls](./indexnulls-property-adox.md) de un [Índice](./index-object-adox.md). El código crea un nuevo índice y establece el valor de **IndexNulls** en función de los datos proporcionados por el usuario (de un cuadro de lista denominado list1). A continuación, el **Índice** se anexa a la [Tabla](./table-object-adox.md) **Employees** del *Northwind* [Catálogo](./catalog-object-adox.md)de Northwind. El nuevo **Índice** se aplica a un [conjunto de registros](../ado-api/recordset-object-ado.md) basado en la tabla **Employees** y se abre el **conjunto de registros** . Se agrega un nuevo registro a la tabla **Employees** , con un valor **null** en el campo indexado. El hecho de que se muestre este nuevo registro depende de la configuración de la propiedad **IndexNulls** .  

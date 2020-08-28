@@ -3,7 +3,7 @@ description: Ejemplo de los métodos de apertura y cierre (VB)
 title: Ejemplo de los métodos Open y Close (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 433854566bb329547e362e4e4d3ef4628e6069d3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 631afc8911c02dd58f819ffab0f162f952fddeec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773864"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990376"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Ejemplo de los métodos de apertura y cierre (VB)
 En este ejemplo se usan los métodos **Open** y [Close](./close-method-ado.md) en los objetos [Recordset](./recordset-object-ado.md) y [Connection](./connection-object-ado.md) que se han abierto.  

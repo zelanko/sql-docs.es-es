@@ -3,7 +3,7 @@ description: Definición del formato de serialización de secuencias de DCOM
 title: Estableciendo el formato de serialización de secuencia DCOM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42d49824bc814026348c6f3aef99860b40f20f76
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d1841c497faaab71b9d8cc9434adb686ca7293ab
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759265"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977646"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>Definición del formato de serialización de secuencias de DCOM
 Un equipo cliente que usa componentes de RDS 1,5 o anterior no es compatible con un servidor que usa componentes de RDS 2,0 o posterior. Al utilizar DCOM como el protocolo subyacente, la compatibilidad con RDS 2,0 o posterior es más eficaz en el transporte de objetos de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) . Si el cliente ejecuta componentes de RDS 1,5 o anterior, puede configurar el servidor para que funcione con la compatibilidad de RDS anterior (denominada RDS 1,0) o con la compatibilidad de RDS más reciente (denominada RDS 2,0 o posterior). Establezca una de las siguientes entradas del registro:  

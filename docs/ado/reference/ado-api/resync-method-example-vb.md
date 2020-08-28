@@ -3,7 +3,7 @@ description: Ejemplo del método Resync (VB)
 title: Ejemplo del método Resync (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f7bbad7f16191b6ff9d1c3b5c497995733ab10b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8a82961fd96fe0cebbd04d313a8074c920b6ca0c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777674"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989526"
 ---
 # <a name="resync-method-example-vb"></a>Ejemplo del método Resync (VB)
 En este ejemplo se muestra cómo usar el método [Resync](./resync-method.md) para actualizar datos en un conjunto de registros estático.  

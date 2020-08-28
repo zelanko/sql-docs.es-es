@@ -3,7 +3,7 @@ description: 'Parámetro (Visual C++ Índice de sintaxis con #import)'
 title: 'Parameter (Visual C++ Índice de sintaxis con #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 421be6cd81a556d2e3a835abba125a90772e02ad
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8158bdde481d6f13810500d755bf9a3509e8c6f7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773404"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990156"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>Parámetro (Visual C++ Índice de sintaxis con #import)
 ## <a name="methods"></a>Métodos  

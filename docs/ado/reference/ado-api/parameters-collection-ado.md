@@ -3,7 +3,7 @@ description: Colección de parámetros (ADO)
 title: Colección Parameters (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bad2570c368e469afeb7c69e4f283bdbdfe04674
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773344"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990126"
 ---
 # <a name="parameters-collection-ado"></a>Colección de parámetros (ADO)
 Contiene todos los objetos de [parámetro](./parameter-object.md) de un objeto [Command](./command-object-ado.md) .  

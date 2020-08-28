@@ -3,7 +3,7 @@ description: Ejemplos de código RDS en VBScript
 title: Ejemplos de código RDS en VBScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba3d23cf360285f87b0034e5b73162e7b2408da0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0f6c226d0b59d8e2f5d8e586058308903374debb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767914"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981796"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>Ejemplos de código RDS en VBScript
 > [!IMPORTANT]
@@ -32,7 +32,7 @@ ms.locfileid: "88767914"
 > [!NOTE]
 >  Pegue el ejemplo de código completo en el editor de código. Es posible que el ejemplo no se ejecute correctamente si se usan ejemplos parciales o si se pierde el formato del párrafo.  
   
-## <a name="objects"></a>de la empresa  
+## <a name="objects"></a>Objetos  
   
 -   [Ejemplo del objeto DataControl](./datacontrol-object-example-vbscript.md)  
   

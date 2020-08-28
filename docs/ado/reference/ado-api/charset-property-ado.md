@@ -3,7 +3,7 @@ description: Propiedad de conjunto de caracteres (ADO)
 title: Propiedad charset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 898f0bdb7571d31d1d7e943bae0937ce198433ce
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 52daa13826bbe372b141501a0c99ac281d3118dc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776284"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975506"
 ---
 # <a name="charset-property-ado"></a>Propiedad de conjunto de caracteres (ADO)
 Indica el juego de caracteres en el que se debe traducir el contenido de una [secuencia](./stream-object-ado.md) de texto para el almacenamiento en el búfer interno del objeto de **secuencia** .  

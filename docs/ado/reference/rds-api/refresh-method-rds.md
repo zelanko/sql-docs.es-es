@@ -1,7 +1,7 @@
 ---
 description: Método Refresh (RDS)
 title: Método Refresh (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b55794815808b65ae4ad7f1dc5cc684360766aa8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bf89101c070b883fe33cf1b4065f732f2c305943
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767554"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981326"
 ---
 # <a name="refresh-method-rds"></a>Método Refresh (RDS)
 Vuelve a consultar el origen de datos especificado en la propiedad [Connect](./connect-property-rds.md) y actualiza los resultados de la consulta.  

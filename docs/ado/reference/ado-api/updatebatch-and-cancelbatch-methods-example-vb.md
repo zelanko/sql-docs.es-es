@@ -3,7 +3,7 @@ description: Ejemplo de los métodos UpdateBatch y CancelBatch (VB)
 title: Ejemplo de los métodos UpdateBatch y CancelBatch (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3bd1d0d54c73a675f2fc84f47646c909d2eb2f9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: fe9d475ac047dc137c74a4ac75ce33c526db15bc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776994"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988076"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>Ejemplo de los métodos UpdateBatch y CancelBatch (VB)
 En este ejemplo se muestra el método [UpdateBatch](./updatebatch-method.md) junto con el método [CancelBatch](./cancelbatch-method-ado.md) .  

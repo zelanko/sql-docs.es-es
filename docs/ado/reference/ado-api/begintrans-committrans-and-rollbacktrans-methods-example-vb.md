@@ -3,7 +3,7 @@ description: Ejemplo de los métodos BeginTrans, CommitTrans y RollbackTrans (VB
 title: Ejemplo de los métodos BeginTrans, CommitTrans y RollbackTrans (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9579e5314bb298eed65145548d848e31bf47c1b9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ac6978aba505110066229bc13f359e9215a25611
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776434"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975926"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>Ejemplo de los métodos BeginTrans, CommitTrans y RollbackTrans (VB)
 En este ejemplo se cambia el tipo de libro de todos los libros de Psicología de la tabla ***titles*** de la base de datos. Después de que el método [BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) inicia una transacción que aísla todos los cambios realizados en la tabla ***titles*** , el método [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) guarda los cambios. Puede usar el método [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) para deshacer los cambios que ha guardado con el método [Update](./update-method.md) .  

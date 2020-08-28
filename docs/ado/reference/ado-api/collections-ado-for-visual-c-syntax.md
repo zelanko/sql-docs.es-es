@@ -3,7 +3,7 @@ description: Colecciones (ADO para la sintaxis Visual C++)
 title: Colecciones (ADO para la sintaxis de Visual C++) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c1e7719277bd7b03dac00d315243a94c9b84ec01
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b4bc59facd753bf6d36c3a79d06a4efe29e7c235
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776214"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975386"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Colecciones (ADO para la sintaxis Visual C++)
 ## <a name="parameters"></a>Parámetros  
@@ -57,7 +57,7 @@ get_Item(VARIANT Index, _ADOParameter **ppvObject);
   
 -   [Propiedad Item (ADO)](./item-property-ado.md)  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
   
 ### <a name="methods"></a>Métodos  
   
@@ -88,7 +88,7 @@ get_Item(VARIANT Index, ADOField **ppvObject);
   
 -   [Propiedad Item (ADO)](./item-property-ado.md)  
   
-## <a name="errors"></a>Errors  
+## <a name="errors"></a>Errores  
   
 ### <a name="methods"></a>Métodos  
   

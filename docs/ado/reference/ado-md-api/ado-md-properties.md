@@ -3,7 +3,7 @@ description: Propiedades de ADO MD
 title: Propiedades de ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f6628f0f172e81a490d0abd6a8cb2ae2a73679e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776692"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987426"
 ---
 # <a name="ado-md-properties"></a>Propiedades de ADO MD
 
@@ -40,7 +40,7 @@ ms.locfileid: "88776692"
 |[FormattedValue](./formattedvalue-property-ado-md.md)|Indica la presentación con formato de un valor de celda.|  
 |[LevelDepth](./leveldepth-property-ado-md.md)|Indica el número de niveles entre la raíz de la jerarquía y un miembro.|  
 |[LevelName](./levelname-property-ado-md.md)|Indica el nombre del nivel de un miembro.|  
-|[Name](./name-property-ado-md.md): nombre|Indica el nombre de un objeto.|  
+|[Nombre](./name-property-ado-md.md)|Indica el nombre de un objeto.|  
 |[Ordinal (celda)](./ordinal-property-ado-md-cell.md)|Identifica de forma única una celda por su posición dentro de un Cellset.|  
 |[Ordinal (posición)](./ordinal-property-ado-md-position.md)|Identifica de forma única una posición a lo largo de un eje.|  
 |[Parent](./parent-property-ado-md.md)|Indica el miembro que es primario del miembro actual de una jerarquía.|  

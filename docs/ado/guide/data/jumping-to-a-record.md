@@ -3,7 +3,7 @@ description: Saltar a un registro
 title: Saltar a un registro | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcbdf68a7d79b64e25dcb700b989628a6a72b8e2
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 96987a5c51d7a888672609aa28f3fd223ccfffa1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805862"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980406"
 ---
 # <a name="jumping-to-a-record"></a>Saltar a un registro
 El método [Move](../../reference/ado-api/move-method-ado.md) permite desplazarse hacia delante o hacia atrás en el **conjunto** de registros un número especificado de registros utilizando la sintaxis siguiente:  

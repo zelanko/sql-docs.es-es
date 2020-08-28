@@ -3,7 +3,7 @@ description: ¿Qué es un bloqueo?
 title: ¿Qué es un bloqueo? | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db730cbda8ad0d24aa7d1400e67919ad37f987ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d64d6b417f6430cb834c48b8caf93e041a2084e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452537"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978876"
 ---
 # <a name="what-is-a-lock"></a>¿Qué es un bloqueo?
 El bloqueo es el proceso por el que un DBMS restringe el acceso a una fila en un entorno de varios usuarios. Cuando una fila o columna está bloqueada de forma exclusiva, no se permite a otros usuarios obtener acceso a los datos bloqueados hasta que se libera el bloqueo. Esto garantiza que dos usuarios no puedan actualizar simultáneamente la misma columna de una fila.  

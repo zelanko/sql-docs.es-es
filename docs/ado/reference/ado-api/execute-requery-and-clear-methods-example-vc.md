@@ -3,7 +3,7 @@ description: Ejemplo de los métodos Execute, Requery y Clear (VC + +)
 title: Ejemplo de los métodos Execute, Requery y Clear (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a57cf16ebd90d762803d9a23027651d4b7ddc9b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82940d8ac9779d17a469c3681e1ddd00b861c288
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443857"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973425"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Ejemplo de los métodos Execute, Requery y Clear (VC + +)
 En este ejemplo se muestra el método **Execute** cuando se ejecuta desde un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) y un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) . También usa el método [Requery](../../../ado/reference/ado-api/requery-method.md) para recuperar los datos actuales en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)y el método [Clear](../../../ado/reference/ado-api/clear-method-ado.md) para borrar el contenido de la colección de [errores](../../../ado/reference/ado-api/errors-collection-ado.md) . Las funciones ExecuteCommand y PrintOutput son necesarias para que se ejecute este ejemplo.  

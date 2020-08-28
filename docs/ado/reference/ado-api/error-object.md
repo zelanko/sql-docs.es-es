@@ -3,7 +3,7 @@ description: Objeto de error
 title: Error (objeto) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f243fba25a185025c51fb53c030a360a062ef78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03f02654e281d052ec8bbb9b8f9df041484cc005
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443977"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973666"
 ---
 # <a name="error-object"></a>Objeto de error
 Contiene detalles sobre los errores de acceso a datos que pertenecen a una única operación que implica al proveedor.  

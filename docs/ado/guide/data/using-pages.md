@@ -3,7 +3,7 @@ description: Usando las páginas
 title: Usar páginas | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71a4c9524090c85881e3aa194f7afbb3c11f0678
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 636e4822be1ecce136302b7f36289857546eab2f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452577"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978976"
 ---
 # <a name="using-pages"></a>Usando las páginas
 Use la propiedad **PageCount** para determinar el número de páginas de datos que se encuentran en el objeto de **conjunto de registros** . *Las páginas* son grupos de registros cuyo tamaño es igual al valor de la propiedad **pageSize** . Incluso si la última página está incompleta porque hay menos registros que el valor de **pageSize** , cuenta como página adicional en el valor de **PageCount** . Si el objeto de **conjunto de registros** no admite esta propiedad, **PageCount** será-1 para indicar que **PageCount** es Indeterminista.  

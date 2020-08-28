@@ -3,7 +3,7 @@ description: Minimización del uso de espacio de archivo de registro
 title: Minimizar el uso del espacio del archivo de registro | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b839f5f31671d7364eeec022da1b25bdf584a3a
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d6eeb933553d37df7db377d56ff0ff2e713ffef9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759725"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978016"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimización del uso de espacio de archivo de registro
 Un archivo de registro puede llenarse rápidamente (con lo que se detiene el servidor) si hay un gran volumen de actividad en una base de datos de SQL Server. Puede establecer el archivo de registro en **truncar en el punto de comprobación** para ampliar significativamente la duración del archivo de registro de una base de datos.  

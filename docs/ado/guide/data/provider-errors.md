@@ -3,7 +3,7 @@ description: Errores del proveedor
 title: Errores del proveedor | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9588ddddf094f391f442dd7ad9c4172cce70970e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b31f530bafd69d59c98893cc2ead29039372dea9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453027"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979986"
 ---
 # <a name="provider-errors"></a>Errores del proveedor
 Cuando se produce un error de proveedor, se devuelve un error en tiempo de ejecución de-2147467259. Cuando reciba este error, Compruebe la colección de **errores** del objeto de **conexión** activo, que contendrá uno o más errores que describan lo que ha ocurrido.  
@@ -65,7 +65,7 @@ End Function
 ## <a name="the-error-object"></a>El objeto de error  
  Al examinar un objeto de **error** , puede determinar qué error se produjo y más importante, qué aplicación o qué objeto provocó el error. El objeto de **error** tiene las siguientes propiedades:  
   
-|Nombre de propiedad|Descripción|  
+|Nombre de la propiedad|Descripción|  
 |-------------------|-----------------|  
 |**Descripción**|Descripción de texto del error que se ha producido.|  
 |**HelpContext, HelpFile**|Hace referencia al tema de ayuda y al archivo de ayuda que contiene una descripción del error que se ha producido.|  

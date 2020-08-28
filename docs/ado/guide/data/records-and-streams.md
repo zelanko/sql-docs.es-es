@@ -3,7 +3,7 @@ description: Registros y secuencias
 title: Registros y secuencias | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8afaae4221c57a7f7d832c34f0a374981e081cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38bf8e44ec6b9521a1608c6081697295e6d9aedf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452987"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979916"
 ---
 # <a name="records-and-streams"></a>Registros y secuencias
 ADO actualmente proporciona el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) como medio principal para tener acceso a la información de los orígenes de datos, como las bases de datos relacionales. Sin embargo, algunos proveedores admiten los objetos [Record](../../../ado/reference/ado-api/record-object-ado.md) y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) como objetos complementarios o alternativos con los que se pueden manipular los datos de los proveedores. Para obtener información específica sobre el comportamiento del **registro** , consulte la documentación del proveedor.  

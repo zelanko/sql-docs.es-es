@@ -3,7 +3,7 @@ description: Recuperar conjuntos de resultados en secuencias
 title: Recuperar conjuntos de ResultSet en secuencias | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53dcb66eb2abb311b1114928a8696c6502454770
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13aeddcf9a826cff5caa33172f785f2e42747a3f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452927"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979756"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recuperar conjuntos de resultados en secuencias
 En lugar de recibir resultados en el objeto de **conjunto de registros** tradicional, ADO puede recuperar los resultados de la consulta en un flujo. El objeto de **secuencia** de ADO (u otros objetos que admiten la interfaz **IStream** com, como los objetos de **solicitud** y **respuesta** de ASP) se pueden usar para contener estos resultados. Un uso de esta característica consiste en recuperar los resultados en formato XML. Con SQL Server, por ejemplo, los resultados XML se pueden devolver de varias maneras, como usar la cláusula FOR XML con una consulta SELECT de SQL o mediante una consulta XPath.  

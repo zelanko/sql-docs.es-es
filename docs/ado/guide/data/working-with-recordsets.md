@@ -3,7 +3,7 @@ description: Trabajar con conjuntos de registros
 title: Trabajar con conjuntos de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f60e269bcd01bdacc7647f1498c588620f049e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a8ffeab33125b3b13ca5725125654bd3ed1f822
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452527"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978846"
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
 El objeto de **conjunto de registros** tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados, buscar un registro específico en función de los criterios proporcionados e incluso optimizar esas operaciones de búsqueda mediante índices. El uso de estas características depende del proveedor y, en algunos casos, como el de la propiedad de [Índice](../../../ado/reference/ado-api/index-property.md) , la estructura del propio origen de datos.  

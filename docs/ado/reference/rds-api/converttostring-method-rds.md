@@ -3,7 +3,7 @@ description: Método ConvertToString (RDS)
 title: Método ConvertToString (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b3bf5e24fdb3ef05795d4ebd66a65baea984a42
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6f0d262e3ffeee6b5c5fecf32a12f89a5b5b8c12
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768664"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982626"
 ---
 # <a name="converttostring-method-rds"></a>Método ConvertToString (RDS)
 Convierte un [conjunto de registros](../ado-api/recordset-object-ado.md) en una cadena MIME que representa los datos del conjunto de registros.  

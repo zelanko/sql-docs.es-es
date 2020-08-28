@@ -1,8 +1,9 @@
 ---
 title: Usar AddNew en los modos inmediato y por lotes | Microsoft Docs
+description: Explica cómo usar AddNew en los modos inmediato y por lotes.
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93fc9cb388440a8efd9099d6ae82b110cb60b2d0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 689b8fbc6c8bb9446adfeb9fec98d53d59b28917
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763076"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979056"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>Uso de AddNew de inmediato y modos de lote
 El comportamiento del método **AddNew** depende del modo de actualización del objeto de **conjunto de registros** y de si se pasan los argumentos *FieldList* y *Values* .  

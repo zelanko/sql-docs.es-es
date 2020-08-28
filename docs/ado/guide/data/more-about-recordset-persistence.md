@@ -3,7 +3,7 @@ description: Más información acerca de la persistencia de conjunto de registro
 title: Más información sobre la persistencia de conjuntos de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1dca646b07c441a4fccd617723aba98536f1a7e1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805833"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980336"
 ---
 # <a name="more-about-recordset-persistence"></a>Más información acerca de la persistencia de conjunto de registros
 El objeto ADO Recordset permite almacenar el contenido de un objeto de **conjunto de registros** en un archivo mediante el método [Save](../../reference/ado-api/save-method.md) . El archivo almacenado de forma persistente puede existir en una unidad local, en un servidor o como una dirección URL en un sitio Web. Más adelante, el archivo se puede restaurar con el método [Open](../../reference/ado-api/open-method-ado-recordset.md) del objeto **Recordset** o el método [Execute](../../reference/ado-api/execute-method-ado-connection.md) del objeto [Connection](../../reference/ado-api/connection-object-ado.md) .  

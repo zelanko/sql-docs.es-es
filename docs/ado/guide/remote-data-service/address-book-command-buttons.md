@@ -3,7 +3,7 @@ description: Botones de comando de la libreta de direcciones
 title: Botones de comando de la libreta de direcciones | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0abdb36a7ff51bdf0b01e21957c10ca8b9f995e4
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d80417306c4fe466003a48739b65c337424487a6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758615"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978476"
 ---
 # <a name="address-book-command-buttons"></a>Botones de comando de la libreta de direcciones
 La aplicación de libreta de direcciones incluye los siguientes botones de comando:  

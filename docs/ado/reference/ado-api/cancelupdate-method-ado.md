@@ -3,7 +3,7 @@ description: Método CancelUpdate (ADO)
 title: CancelUpdate (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e845757f510c6e81260fbd735fd1e1c05ac87fb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2355d2a0b2ff0bbe14eb9b7d2a9a373164a4f5e5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776294"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975566"
 ---
 # <a name="cancelupdate-method-ado"></a>Método CancelUpdate (ADO)
 Cancela los cambios realizados en la fila actual o nueva de un objeto de [conjunto de registros](./recordset-object-ado.md) , o la colección de [campos](./fields-collection-ado.md) de un objeto de [registro](./record-object-ado.md) , antes de llamar al método [Update](./update-method.md) .  

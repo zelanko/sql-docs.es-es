@@ -3,7 +3,7 @@ description: Ejemplo de la propiedad MarshalOptions (VB)
 title: Ejemplo de la propiedad MarshalOptions (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a8fc5df35b017913b5178d06ab4f51a0d8a720a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 08ac6a07341c37e412a6bc030e37e04a8ff8e787
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774494"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990666"
 ---
 # <a name="marshaloptions-property-example-vb"></a>Ejemplo de la propiedad MarshalOptions (VB)
 En este ejemplo se usa la propiedad [MarshalOptions](./marshaloptions-property-ado.md) para especificar las filas que se devuelven al servidor: todas las filas o solo las filas modificadas.  

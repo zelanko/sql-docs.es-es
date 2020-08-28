@@ -3,7 +3,7 @@ description: Fields (colección)
 title: Colección Fields | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 580ded2e3f2539d484d2a60c85adca56ac8e3ac1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45bad5289a33b5b1f76807f1f7a9da62044dafc2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452757"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979386"
 ---
 # <a name="the-fields-collection"></a>Fields (colección)
 La colección **Fields** es una de las colecciones intrínsecas de ADO. Una colección es un conjunto ordenado de elementos a los que se puede hacer referencia como una unidad. Para obtener más información acerca de las colecciones de ADO, vea [el modelo de objetos ADO](../../../ado/guide/data/ado-objects-and-collections.md).  

@@ -3,7 +3,7 @@ description: Propiedades, métodos y eventos del objeto Field
 title: Propiedades, métodos y eventos del objeto Field | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5705a557a3a0152430b696497899a46073d76ca0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd7275a0f316c28656362e77af9fd9f2ff54c745
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443797"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973246"
 ---
 # <a name="field-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Field
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -28,7 +28,7 @@ ms.locfileid: "88443797"
   
  [Propiedad DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)  
   
- [Name (propiedad)](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Propiedad Name](../../../ado/reference/ado-api/name-property-ado.md)  
   
  [Propiedad NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)  
   

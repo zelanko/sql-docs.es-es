@@ -3,7 +3,7 @@ description: Los elementos secundarios (propiedad, ADO MD)
 title: Propiedad Children (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61d36468-1ccd-467a-9cb5-17d0bfacc766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3856bb797417909b2491bf3d5adcd7c5f18bc203
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7f6af5f18de07a3d9eb2f74ace77a9b4032303f1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778284"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987126"
 ---
 # <a name="children-property-ado-md"></a>Los elementos secundarios (propiedad, ADO MD)
 Devuelve una colección de [miembros](./members-collection-ado-md.md) para la que el [miembro](./member-object-ado-md.md) actual es el elemento primario de la jerarquía.  

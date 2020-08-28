@@ -3,7 +3,7 @@ description: Otras formas de mover en un conjunto de registros
 title: Más formas de moverse en un conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: e8c668bc24b388d0367429086416cd67b5355550
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805815"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980296"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Otras formas de mover en un conjunto de registros
 Los cuatro métodos siguientes se usan para moverse o desplazarse por el **conjunto de registros**: [MoveFirst, MoveLast, MoveNext y MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Algunos de estos métodos no están disponibles en los cursores de solo avance).  

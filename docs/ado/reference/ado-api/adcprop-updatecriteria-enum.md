@@ -3,7 +3,7 @@ description: ADCPROP_UPDATECRITERIA_ENUM
 title: ADCPROP_UPDATECRITERIA_ENUM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b0e2a308d9a83c936abe8f5f39b29dac86795ec
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 3711266f3658fe2366caa56c6afba07d6b63c4c9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760259"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976816"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
 Especifica los campos que se pueden utilizar para detectar conflictos durante una actualización optimista de una fila del origen de datos con un objeto de [conjunto de registros](./recordset-object-ado.md) .  

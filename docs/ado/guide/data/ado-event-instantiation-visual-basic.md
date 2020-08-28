@@ -3,7 +3,7 @@ description: 'Creación de instancias de eventos de ADO: Visual Basic'
 title: 'Creación de instancias de eventos de ADO: Visual Basic | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ea53b5d48c0eb72fe91ebeda2d2612437cf4c36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32b4c4e9da14c264913ed477059fa00eed093e1b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453797"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991686"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>Creación de instancias de eventos de ADO: Visual Basic
 Para controlar los eventos de ADO en Microsoft® Visual Basic®, debe declarar una variable de nivel de módulo mediante la palabra clave **WithEvents** . La variable solo se puede declarar como parte de un módulo de clase y se debe declarar en el nivel de módulo. No obstante, esto no es tan restrictivo como parece, porque Visual Basic objetos **Form** también son clases. La manera más sencilla de controlar los eventos de ADO es declarar una variable mediante **WithEvents**. En el ejemplo siguiente se controla el evento **ConnectComplete** para un objeto **Connection** :  

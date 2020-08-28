@@ -3,7 +3,7 @@ description: RowPosition (propiedad, ADO)
 title: RowPosition (propiedad, ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f5f78843e38c2a3ff6b21c90bc9ed7f2c573ee4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5072555e07a9fafb70b90a1bc19fa06f12c17d45
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777614"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989386"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition (propiedad, ADO)
 Obtiene o establece un objeto **RowPosition** OLE DB de/en un objeto **ADORecordsetConstruction** . Cuando se usa **put_RowPosition** para establecer el objeto **rowposition** , el objeto de **conjunto de registros** resultante utiliza el objeto **rowposition** para determinar la fila actual.  

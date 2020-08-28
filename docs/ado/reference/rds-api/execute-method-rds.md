@@ -3,7 +3,7 @@ description: Execute (método) (RDS)
 title: Método execute (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f1c68dc55a4ae57283ce4ca7e6d357fd47030e4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1be1721851bc5f0b969e8f38700ea1f63d91bbcc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768444"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982336"
 ---
 # <a name="execute-method-rds"></a>Execute (método) (RDS)
 Ejecuta la solicitud y crea un conjunto de registros ADO para su uso en ADO 2,5 y versiones posteriores.  

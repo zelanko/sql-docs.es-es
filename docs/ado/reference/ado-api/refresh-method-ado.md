@@ -3,7 +3,7 @@ description: Actualizar (método, ADO)
 title: Refresh (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b172179adefc880034443b29ed36bb309215ec5a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 66324860f931a919cccc36d3de9464d2ad2e48d0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771984"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989616"
 ---
 # <a name="refresh-method-ado"></a>Actualizar (método, ADO)
 Actualiza los objetos de una colección para reflejar los objetos disponibles en el proveedor y específicos de este.  
@@ -48,7 +48,7 @@ collection.Refresh
 > [!NOTE]
 >  Si usa el método **Refresh** para obtener información de parámetros del proveedor y devuelve uno o más objetos de [parámetro](./parameter-object.md) de tipo de datos de longitud variable, ADO puede asignar memoria para los parámetros en función de su tamaño máximo potencial, lo que producirá un error durante la ejecución. Debe establecer explícitamente la propiedad [size](./size-property-ado-parameter.md) para estos parámetros antes de llamar al método [Execute](./execute-method-ado-command.md) para evitar errores.  
   
-### <a name="fields"></a>Campos  
+### <a name="fields"></a>Fields  
  El uso del método **Refresh** en la colección [Fields](./fields-collection-ado.md) no tiene ningún efecto visible. Para recuperar los cambios de la estructura de base de datos subyacente, debe utilizar el método [Requery](./requery-method.md) o, si el objeto de [conjunto de registros](./recordset-object-ado.md) no admite marcadores, el método [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
 ### <a name="properties"></a>Propiedades  

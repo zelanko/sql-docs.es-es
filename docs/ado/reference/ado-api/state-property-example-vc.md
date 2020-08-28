@@ -3,7 +3,7 @@ description: Ejemplo de la propiedad State (VC ++)
 title: Ejemplo de la propiedad State (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5cd76fac1fa65f74935f318e2d39d6a1502f2428
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c1eeb97d29525a7aa3a48b0c123f60776fc5e223
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777334"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988796"
 ---
 # <a name="state-property-example-vc"></a>Ejemplo de la propiedad State (VC ++)
 En este ejemplo se usa la propiedad [State](./state-property-ado.md) para mostrar un mensaje mientras se abren las conexiones asincrónicas y se ejecutan los comandos asincrónicos.  

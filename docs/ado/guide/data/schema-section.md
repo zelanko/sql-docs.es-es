@@ -3,7 +3,7 @@ description: Sección de esquema
 title: Sección de esquema | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b7d3a82231e31771a6f01dc558feebdc98dcbe1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a1f294e9c0258f1cc9d108d1eb9a47087b456ca8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452897"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979726"
 ---
 # <a name="schema-section"></a>Sección de esquema
 La sección Schema es obligatoria. Como se muestra en el ejemplo anterior, ADO escribe metadatos detallados sobre cada columna para conservar la semántica de los valores de datos tanto como sea posible para la actualización. Sin embargo, para cargar en el XML, ADO solo requiere los nombres de las columnas y el conjunto de filas al que pertenecen. A continuación se muestra un ejemplo de un esquema mínimo:  
@@ -175,5 +175,5 @@ La sección Schema es obligatoria. Como se muestra en el ejemplo anterior, ADO e
   
  Para obtener más información sobre las construcciones de OLE DB disponibles para su uso en el esquema de un documento XML para OLE DB, vea la definición de "urn: schemas-microsoft-com: Rowset" y la guía del programador de OLE DB.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

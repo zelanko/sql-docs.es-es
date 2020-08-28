@@ -3,7 +3,7 @@ description: Cláusula APPEND Shape
 title: Cláusula APPEND de Shape | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452867"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979626"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND Shape
 La cláusula APPEND del comando Shape anexa una o varias columnas a un **conjunto de registros**. Con frecuencia, estas columnas son columnas de capítulo, que hacen referencia a un **conjunto de registros**secundario.  
@@ -96,8 +96,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  La cláusula después de la palabra clave APPEND es realmente una lista, donde cada cláusula está separada por una coma y define otra columna que se va a anexar al elemento primario.  
   
-## <a name="remarks"></a>Observaciones  
- Al construir comandos de proveedor a partir de datos proporcionados por el usuario como parte de un comando de forma, forma tratará el comando de proveedor proporcionado por el usuario como una cadena opaca y los pasará fielmente al proveedor. Por ejemplo, en el siguiente comando SHAPE,  
+Al construir comandos de proveedor a partir de datos proporcionados por el usuario como parte de un comando de forma, forma tratará el comando de proveedor proporcionado por el usuario como una cadena opaca y los pasará fielmente al proveedor. Por ejemplo, en el siguiente comando SHAPE,  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
@@ -121,7 +120,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [Cláusulas COMPUTE de forma que intervengan](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejemplo de forma de datos](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Comandos Shape en General](../../../ado/guide/data/shape-commands-in-general.md)

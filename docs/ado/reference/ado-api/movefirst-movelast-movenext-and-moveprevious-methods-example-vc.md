@@ -3,7 +3,7 @@ description: Ejemplo de los métodos MoveFirst, MoveLast, MoveNext y MovePreviou
 title: Ejemplo del puntero de movimiento de registro del conjunto de registros (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7aca1d8a8f34bc4e3122c393727bf0728d0f881
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e763e4d1d69a4f0cfbabd92e20bc60e80fabf67d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774214"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990526"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>Ejemplo de los métodos MoveFirst, MoveLast, MoveNext y MovePrevious (VC + +)
 En este ejemplo se usan los métodos [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)y [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) para trasladar el puntero de registro de un [conjunto de registros](./recordset-object-ado.md) basándose en el comando proporcionado. La función MoveAny es necesaria para que se ejecute este ejemplo.  

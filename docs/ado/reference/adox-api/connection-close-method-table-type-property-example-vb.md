@@ -3,7 +3,7 @@ description: Ejemplo de propiedad Type de tabla, método connection close (VB)
 title: Ejemplo de propiedad de tipo de tabla método de cierre de conexión (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b651389b4badd57e6a76b3b38c47c34cc814706
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: acd8183389276b47502b7ef14978eac855c74743
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770914"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984892"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Ejemplo de propiedad Type de tabla, método connection close (VB)
 Si se establece la propiedad [ActiveConnection](./activeconnection-property-adox.md) en **Nothing** , se debe cerrar la conexión con el catálogo. Las colecciones asociadas estarán vacías. Todos los objetos que se crearon a partir de objetos de esquema en el catálogo se quedarán huérfanos. Todas las propiedades de los objetos que se han almacenado en caché seguirán estando disponibles, pero se producirá un error al intentar leer las propiedades que requieren una llamada al proveedor.  

@@ -3,7 +3,7 @@ description: Utilizar marcadores
 title: Usar marcadores | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98c8f08d6d60a47da2cdf4de6459e90cee4d716e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34fc17275609dbf08ffa02a1bc89902c904cac85
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452597"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979046"
 ---
 # <a name="using-bookmarks"></a>Utilizar marcadores
 A menudo resulta útil volver directamente a un registro específico después de moverse por el conjunto de **registros** sin tener que desplazarse por cada registro y comparar los valores. Por ejemplo, si intenta buscar un registro con el método **Find** pero la búsqueda no devuelve ningún registro, se coloca automáticamente en cualquier extremo del **conjunto de registros**. Si el proveedor lo admite, se pueden usar marcadores para marcar su lugar antes de usar el método **Buscar** para que pueda volver a su ubicación. Un marcador es un valor de tipo **Variant** que identifica de forma única un registro en un objeto de **conjunto de registros** .  

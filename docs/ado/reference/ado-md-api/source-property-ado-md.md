@@ -3,7 +3,7 @@ description: Propiedad de origen (ADO MD)
 title: Propiedad Source (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 875a99ea-7f1a-4570-87b1-5ecbebbcf845
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79e6014e3bccc8ced6c8637f8966181069a42dd5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c07acdd7e1ed5a80e7b2633731d88ad5ea173769
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777834"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986006"
 ---
 # <a name="source-property-ado-md"></a>Propiedad de origen (ADO MD)
 Indica el origen de los datos del [Cellset](./cellset-object-ado-md.md).  

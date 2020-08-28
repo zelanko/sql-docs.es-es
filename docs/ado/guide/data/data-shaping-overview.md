@@ -3,7 +3,7 @@ description: Información general sobre la forma de datos
 title: Información general sobre la forma de datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9dfaba8c2ae2511de9a07aa800abc08f76ec885
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 45538bd81be1e4a64c41479ab6c4fb2165b26b78
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806951"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991436"
 ---
 # <a name="data-shaping-overview"></a>Información general sobre la forma de datos
 La forma de *datos* significa generar relaciones jerárquicas entre dos o más entidades lógicas en una consulta. La jerarquía se puede ver en las relaciones de elementos primarios y secundarios entre un registro de un [conjunto de registros](../../reference/ado-api/recordset-object-ado.md)y uno o más registros (también denominados capítulo) de otro **conjunto**de registros. En una relación de elementos primarios y secundarios, el **conjunto de registros** primario contiene el **conjunto de registros**secundario. Un ejemplo de una relación jerárquica de este tipo son los clientes y los pedidos. Para cada cliente de una base de datos, puede haber cero o más pedidos. La relación jerárquica puede ser recursiva, lo que significa que los registros terciarios se pueden anidar en un registro secundario. En principio, un registro jerárquico puede estar anidado a cualquier profundidad. En la práctica, ADO limita la recursividad a un máximo de 512 **conjuntos de registros**.  

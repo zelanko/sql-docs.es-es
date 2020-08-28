@@ -3,7 +3,7 @@ description: La importancia de la ubicación del Cursor
 title: Importancia de la ubicación del cursor | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acfb19f341bef22a9922e075d144026b9ef5f29d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ee12680e5d5acd0d4091e0c1864ae51b285a0e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452727"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979356"
 ---
 # <a name="the-significance-of-cursor-location"></a>La importancia de la ubicación del Cursor
 Cada cursor utiliza recursos temporales para almacenar sus datos. Estos recursos pueden ser memoria, un archivo de paginación de disco, archivos temporales de disco o incluso almacenamiento temporal en la base de datos. El cursor se denomina cursor *del lado cliente* cuando estos recursos se encuentran en el equipo cliente. El cursor se denomina cursor de *servidor* cuando estos recursos se encuentran en el servidor.  

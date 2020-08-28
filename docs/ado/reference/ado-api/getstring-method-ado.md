@@ -3,7 +3,7 @@ description: GetString (método) (ADO)
 title: GetString (método) (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a972edd11c419c1990c78635d42c44d8c06db2c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 15a3ffc6252f1caf56ea1d47006cb84d7f3df201
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774914"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990866"
 ---
 # <a name="getstring-method-ado"></a>GetString (método) (ADO)
 Devuelve el [conjunto de registros](./recordset-object-ado.md) como una cadena.  

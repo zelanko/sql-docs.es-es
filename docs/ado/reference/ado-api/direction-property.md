@@ -3,7 +3,7 @@ description: Propiedad Direction
 title: Propiedad direction | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37987e58829b1b6957b4fe1de440aaeb4aae1763
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af002ff20ff3ad27ab2395529c533738ad797ea6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444057"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973876"
 ---
 # <a name="direction-property"></a>Propiedad Direction
 Indica si el [parámetro](../../../ado/reference/ado-api/parameter-object.md) representa un parámetro de entrada, un parámetro de salida, una entrada y un parámetro de salida, o si el parámetro es el valor devuelto de un procedimiento almacenado.  
@@ -35,7 +35,7 @@ Indica si el [parámetro](../../../ado/reference/ado-api/parameter-object.md) re
  No todos los proveedores pueden determinar la dirección de los parámetros en sus procedimientos almacenados. En estos casos, debe establecer la propiedad **Direction** antes de ejecutar la consulta.  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Parameter (objeto)](../../../ado/reference/ado-api/parameter-object.md)  
+ [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de las propiedades ActiveConnection, CommandText, CommandTimeout, CommandType, size y Direction (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   

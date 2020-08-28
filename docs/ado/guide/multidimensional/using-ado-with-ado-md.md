@@ -3,7 +3,7 @@ description: Uso de ADO con ADO MD
 title: Usar ADO con ADO MD | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7829b984b603f7b21a339886d956b6db5cc0ffd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 17d4094959c72389bf1cef71e6547394e676f78f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758385"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978586"
 ---
 # <a name="using-ado-with-ado-md"></a>Uso de ADO con ADO MD
 ADO y ADO MD están relacionados pero modelos de objetos independientes. ADO proporciona objetos para conectarse a orígenes de datos, ejecutar comandos, recuperar datos tabulares y metadatos de esquema en un formato tabular, y ver la información de error del proveedor. ADO MD proporciona objetos para recuperar datos multidimensionales y ver metadatos de esquema multidimensionales.  

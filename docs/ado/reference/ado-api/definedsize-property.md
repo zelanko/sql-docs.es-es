@@ -3,7 +3,7 @@ description: Propiedad DefinedSize
 title: Propiedad DefinedSize | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa6b01afc3a8643f7e4f28917ebaa8283bf1876e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35330c6cae4a3450d4a970edddf360296ce33148
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444187"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974156"
 ---
 # <a name="definedsize-property"></a>Propiedad DefinedSize
 Indica la capacidad de los datos de un objeto de [campo](../../../ado/reference/ado-api/field-object.md) .  

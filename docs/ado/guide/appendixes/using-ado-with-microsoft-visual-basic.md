@@ -3,7 +3,7 @@ description: Usar ADO con Microsoft Visual Basic y Visual Basic para Aplicacione
 title: Usar ADO con Microsoft Visual Basic | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efb206f3c0fbbeb0fbc700f8e714ddd1d5ee5a8c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8e2076732536c8d9862ebc022f7a78b197ff428c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806516"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990976"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Usar ADO con Microsoft Visual Basic y Visual Basic para Aplicaciones
 La configuración de un proyecto de ADO y la escritura de código ADO es similar si se utiliza Visual Basic o Visual Basic para Aplicaciones. En este tema se trata el uso de ADO con Visual Basic y Visual Basic para Aplicaciones y se indica cualquier diferencia.
@@ -43,7 +43,7 @@ La configuración de un proyecto de ADO y la escritura de código ADO es similar
 
     -   OLE Automation
 
-3.  Haga clic en **Aceptar**.
+3.  Haga clic en **OK**.
 
  Puede usar ADO con la misma facilidad con Visual Basic para Aplicaciones, por ejemplo, con Microsoft Access.
 
@@ -61,7 +61,7 @@ La configuración de un proyecto de ADO y la escritura de código ADO es similar
 
     -   Biblioteca de objetos de Microsoft DAO 3,5 (o posterior)
 
-4.  Haga clic en **Aceptar**.
+4.  Haga clic en **OK**.
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Crear objetos ADO en Visual Basic
  Para crear una variable de Automation y una instancia de un objeto para esa variable, puede usar dos métodos: **Dim** o **CreateObject**.

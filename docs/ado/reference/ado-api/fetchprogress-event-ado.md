@@ -3,7 +3,7 @@ description: Evento FetchProgress (ADO)
 title: Evento FetchProgress (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53f22936f17e70c02a7640355250cdb5f2bcea95
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b84b963f42c83191c613dbb4849288fc862df474
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443817"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973336"
 ---
 # <a name="fetchprogress-event-ado"></a>Evento FetchProgress (ADO)
 Se llama al evento **FetchProgress**periódicamente durante una operación asincrónica larga para informar del número de filas que se han recuperado actualmente en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -3,7 +3,7 @@ description: Examinar los datos
 title: Examinar datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28c548316ebb6ede317f13d20ff82de0b802659e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1f13e39dd6c1740fb29fc0347a835d568aee352a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806116"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991296"
 ---
 # <a name="examining-data"></a>Examinar los datos
 En la sección [obtención de datos](./getting-data.md) se explica cómo recuperar datos de un origen de datos como uno o varios objetos de **conjunto de registros** . En esta sección se describe el **conjunto de registros** con más detalle, incluido cómo navegar por el **conjunto de registros** y ver sus datos.  

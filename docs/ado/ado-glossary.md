@@ -3,7 +3,7 @@ description: Términos del glosario de ADO
 title: Términos del glosario de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -11,19 +11,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805555"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980856"
 ---
 # <a name="ado-glossary-terms"></a>Términos del glosario de ADO
 En este tema se definen los términos relevantes para ADO.
 
-## <a name="a"></a>Un
+## <a name="a"></a>A
  Dirección URL absoluta es una dirección URL completa que especifica la ubicación de un recurso que reside en Internet o en una intranet. Vea también *dirección URL* y *dirección URL relativa*.
 
  Registro automático de controles ActiveX, componente COM en proceso que suele tener un elemento visual en tiempo de diseño o en tiempo de ejecución. Los controles ActiveX también tienen la capacidad de comunicarse con un contenedor de documentos activo, como Microsoft Internet Explorer.
@@ -138,7 +138,7 @@ En este tema se definen los términos relevantes para ADO.
  En general, una jerarquía es una estructura clasificada con niveles de nivel superior y subordinado. En ADO, los **conjuntos de registros** jerárquicos se utilizan para representar la relación de elementos primarios y secundarios entre un registro y un capítulo. También en ADO, los objetos **Record** y **Stream** se pueden usar para tener acceso a estructuras jerárquicas de árbol, como una carpeta y documentos. ADO MD también incluye objetos **Hierarchy** para representar una relación entre los niveles de una dimensión en un cubo OLAP. Vea también conjuntos de registros jerárquicos, relación primario-secundario, capítulo, árbol.
 
 ## <a name="i-l"></a>I-L
- ISAPI (interfaz de programación de aplicaciones de servidor de Internet) conjunto de funciones para servidores de Internet, como un servidor de Windows NT® o Windows 2000 con Microsoft® Internet Information Services (IIS).
+ ISAPI (interfaz de programación de aplicaciones para servidores de Internet) conjunto de funciones para los servidores de Internet, como un servidor Windows NT &reg; Server/windows 2000 que ejecuta Microsoft &reg; Internet Information Services (IIS).
 
  Clave: columna o columnas de una tabla que identifican de forma única una fila; se utiliza a menudo para indizar una tabla.
 

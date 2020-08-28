@@ -3,7 +3,7 @@ description: DrilledDown (propiedad, ADO MD)
 title: Propiedad DrilledDown (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7560f7f2c487f42d26d83236d824bf997b4f49d1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3e20e911eefabdf086c805d8b6cbaa87ea7b76b5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778154"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986736"
 ---
 # <a name="drilleddown-property-ado-md"></a>DrilledDown (propiedad, ADO MD)
 Indica si los elementos secundarios siguen inmediatamente al [miembro](./member-object-ado-md.md) en el eje.  

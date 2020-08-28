@@ -18,12 +18,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c76005fefffdbce76309762b1d2a1cd81d83537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ab11e74205f47d50e927680081e8e13dfee37fb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474980"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042486"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>Sys. dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -57,44 +57,42 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|
 |**DBID**|**smallint**|Identificador de la base de datos de contexto que estaba activa al compilarse la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente a este plan. En el caso de instrucciones SQL ad hoc y preparadas, identificador de la base de datos en que se compilaron las instrucciones.<br /><br /> Esta columna acepta valores NULL.|  
-|**objectId**|**int**|Identificador del objeto (por ejemplo, procedimiento almacenado o función definida por el usuario) de este plan de consulta. Para lotes "ad hoc" y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
+|**objectid**|**int**|Identificador del objeto (por ejemplo, procedimiento almacenado o función definida por el usuario) de este plan de consulta. Para lotes "ad hoc" y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
 |**número**|**smallint**|Entero de procedimiento almacenado numerado. Por ejemplo, un grupo de procedimientos de la aplicación **orders** puede llamarse **orderproc;1**, **orderproc;2**, etc.  Para lotes "ad hoc" y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
 |**cifra**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
 |**query_plan**|**xml**|Contiene la última representación de SHOWPLAN en tiempo de ejecución conocida del plan de ejecución de consulta real que se especifica con *plan_handle*. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.| 
 
 ## <a name="remarks"></a>Observaciones
-Esta función del sistema está disponible a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4.
-
-Se trata de una característica opcional que requiere que la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esté habilitada. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, para realizar esta acción en el nivel de base de datos, vea la opción LAST_QUERY_PLAN_STATS en [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+Esta característica es opcional. Para habilitar en el nivel de servidor, use la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. Para habilitar en el nivel de base de datos, use la opción LAST_QUERY_PLAN_STATS en [ALTER DATABASE scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Esta función del sistema funciona en la infraestructura de generación de perfiles de estadísticas de ejecución de consultas **ligeras** . Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
-La salida del plan de presentación por sys. dm_exec_query_plan_stats contiene la siguiente información:
+La salida del plan de presentación `sys.dm_exec_query_plan_stats` contiene la siguiente información:
 -  Toda la información de tiempo de compilación que se encuentra en el plan almacenado en caché
 -  Información en tiempo de ejecución, como el número real de filas por operador, el tiempo de la CPU de consulta total y el tiempo de ejecución, las advertencias de derrame, el DOP real, la memoria máxima usada y la memoria concedida
 
-En las siguientes condiciones, se devuelve un resultado de SHOWPLAN **equivalente a un plan de ejecución real** en la columna **query_plan** de la tabla devuelta para **Sys. dm_exec_query_plan_stats**:  
+En las siguientes condiciones, se devuelve un resultado de SHOWPLAN **equivalente a un plan de ejecución real** en la columna **query_plan** de la tabla devuelta para `sys.dm_exec_query_plan_stats` :  
 
 -   El plan se puede encontrar en [Sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
     **AND**    
 -   La consulta que se ejecuta es compleja o de consumo de recursos.
 
-En las siguientes condiciones, se devuelve una salida del plan de presentación **simplificada <sup>1</sup> ** en la **query_plan** columna de la tabla devuelta para **Sys. dm_exec_query_plan_stats**:  
+En las siguientes condiciones, se devuelve una salida del plan de presentación **simplificada <sup>1</sup> ** en la **query_plan** columna de la tabla devuelta para `sys.dm_exec_query_plan_stats` :  
 
 -   El plan se puede encontrar en [Sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
     **AND**    
 -   La consulta es lo suficientemente sencilla, normalmente clasificada como parte de una carga de trabajo OLTP.
 
-<sup>1</sup> a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,5, esto hace referencia a un plan de presentación que solo contiene el operador de nodo raíz (Select). En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] el caso de CTP 2,4, esto hace referencia al plan almacenado en caché como disponible a través de `sys.dm_exec_cached_plans` .
+<sup>1</sup> hace referencia a un plan de presentación que solo contiene el operador de nodo raíz (Select).
 
-En las siguientes condiciones, **no se devuelve ningún resultado** desde **Sys. dm_exec_query_plan_stats**:
+En las siguientes condiciones, **no se devuelve ninguna salida** de `sys.dm_exec_query_plan_stats` :
 
--   El plan de consulta especificado mediante *plan_handle* se ha expulsado de la caché del plan.     
+-   El plan de consulta especificado mediante `plan_handle` se ha expulsado de la caché del plan.     
     **OR**    
 -   No se pudo almacenar en caché el plan de consulta en primer lugar. Para obtener más información, consulte [almacenamiento en caché y reutilización del plan de ejecución ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> Debido a una limitación en el número de niveles anidados permitidos en el tipo de datos **XML** , **Sys. dm_exec_query_plan** no puede devolver planes de consulta que cumplan o superen los 128 niveles de elementos anidados. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta condición impedía la devolución del plan de consulta y generaba el [error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y versiones posteriores, la columna **QUERY_PLAN** devuelve NULL.  
+> Debido a una limitación en el número de niveles anidados permitidos en el tipo de datos **XML** , `sys.dm_exec_query_plan` no puede devolver planes de consulta que cumplan o superen los 128 niveles de elementos anidados. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta condición impedía la devolución del plan de consulta y generaba el [error 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 y versiones posteriores, la `query_plan` columna devuelve NULL.  
 
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE` en el servidor.  

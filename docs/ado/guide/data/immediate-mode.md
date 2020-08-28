@@ -1,8 +1,9 @@
 ---
 title: Modo inmediato | Microsoft Docs
+description: Describe el modo inmediato, que está en vigor cuando la propiedad LockType está establecida en adLockOptimistic o adLockPessimistic.
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d036b2fa33c2f9fd5696eeb2984d07d4217eff6e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e57d39fedb6509663ec21f28341d6bbca57dbd5c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757911"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980506"
 ---
 # <a name="immediate-mode"></a>Modo inmediato
 El modo inmediato está en vigor cuando la propiedad **LockType** está establecida en **adLockOptimistic** o **adLockPessimistic**. En el modo inmediato, los cambios en un registro se propagan al origen de datos en cuanto se declara el trabajo en una fila completa llamando al método **Update** .  

@@ -3,7 +3,7 @@ description: ConnectOptionEnum
 title: ConnectOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73fb0218b9a4a9437dbe8c103c8496f0a209e9b1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b924acf0f41ead3025197bade8bcc2d459508f2a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775814"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974696"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 Especifica si el método [Open](./open-method-ado-connection.md) de un objeto [Connection](./connection-object-ado.md) debe devolver una vez establecida la conexión (sincrónicamente) o antes de (de forma asincrónica).  

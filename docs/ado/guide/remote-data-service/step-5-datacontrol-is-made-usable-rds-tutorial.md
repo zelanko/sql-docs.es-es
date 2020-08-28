@@ -3,7 +3,7 @@ description: 'Paso 5: Habilitación del uso del control de datos (Tutorial de RD
 title: 'Paso 5: DataControl se puede usar (tutorial de RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 616b82b397694e4db41f709080dc4beafd945878
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 8aa0697e7f4acbae9fbc25ba3e14bccb4a468499
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759025"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977516"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Paso 5: Habilitación del uso del control de datos (Tutorial de RDS)
 El objeto de **conjunto de registros** devuelto está disponible para su uso. Puede examinarlo, desplazarse o editarlo como lo haría con cualquier otro **conjunto de registros**. Lo que puede hacer con el **conjunto de registros** depende de su entorno. Visual Basic y Visual C++ tienen controles visuales que pueden usar un **conjunto de registros** directa o indirectamente con la ayuda de un control de datos habilitado.  

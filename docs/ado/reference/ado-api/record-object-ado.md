@@ -3,7 +3,7 @@ description: Objeto Record (ADO)
 title: Objeto Record (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6860e10d3639fcbfdf59e8ff5fe8a5a8b675662a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6066d43bfa52d65ee133fd748f76fc651fac7379
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772604"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989866"
 ---
 # <a name="record-object-ado"></a>Objeto Record (ADO)
 Representa una fila de un [conjunto de registros](./recordset-object-ado.md) o del proveedor de datos, o un objeto devuelto por un proveedor de datos semiestructurados, como un archivo o un directorio.  

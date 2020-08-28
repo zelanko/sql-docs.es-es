@@ -3,7 +3,7 @@ description: 'Paso 6: Envío de los cambios al servidor (Tutorial de RDS)'
 title: 'Paso 6: los cambios se envían al servidor (tutorial de RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0056f965e36fb1fadd3d7f8c08c2514ee2593d46
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 33a80f1cf59ff314236e69085c7625521d6f721f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759005"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977476"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Paso 6: Envío de los cambios al servidor (Tutorial de RDS)
 Si se edita el objeto de **conjunto de registros** , los cambios (es decir, las filas que se agregan, se modifican o se eliminan) pueden enviarse de vuelta al servidor.  

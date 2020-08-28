@@ -3,7 +3,7 @@ description: Registro de objetos de negocios en el cliente para usarlos con DCOM
 title: Registro de objetos comerciales en el cliente para su uso con DCOM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa974d7c0f495639f576604933fc0ce10fd4451f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 611ebf58419d893b5295bd2a7370cc9ac71c74b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452047"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977796"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>Registro de objetos de negocios en el cliente para usarlos con DCOM
 Los objetos comerciales personalizados deben asegurarse de que el lado cliente puede asignar el nombre del programa (ProgId) a un identificador (CLSID) que se puede usar a través de DCOM. Por esta razón, el ProgID del objeto DCOM debe estar en el registro del lado cliente y asignarse al identificador de clase del objeto comercial del lado servidor. Para los demás protocolos admitidos (HTTP, HTTPS y en proceso), esto no es necesario.  

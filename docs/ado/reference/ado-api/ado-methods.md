@@ -3,7 +3,7 @@ description: Métodos de ADO
 title: Métodos de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7702a90afe7ef4c96b1cc4bd01bd45e774a0bacc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 13e126f070f188e47582227fabf4a1e37d6901a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771804"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976376"
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 
 |Método|Descripción|  
 |-|-|  
 |[AgregarNuevo](./addnew-method-ado.md)|Crea un nuevo registro para un objeto de **conjunto de registros** actualizable.|  
-|[Append](./append-method-ado.md)|Anexa un objeto a una colección. Si la colección es **campos**, puede crearse un nuevo objeto de **campo** antes de que se anexe a la colección.|  
+|[Anexar](./append-method-ado.md)|Anexa un objeto a una colección. Si la colección es **campos**, puede crearse un nuevo objeto de **campo** antes de que se anexe a la colección.|  
 |[AppendChunk](./appendchunk-method-ado.md)|Anexa datos a un **campo**de datos binario o de texto grande, o a un objeto de **parámetro** .|  
 |[BeginTrans, CommitTrans y RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)|Administra el procesamiento de transacciones dentro de un objeto de **conexión** de la manera siguiente:<br /><br /> **BeginTrans** : inicia una nueva transacción.<br /><br /> **CommitTrans** : guarda los cambios y finaliza la transacción actual. También puede iniciar una nueva transacción.<br /><br /> **RollbackTrans** : cancela cualquier cambio y finaliza la transacción actual. También puede iniciar una nueva transacción.|  
 |[Cancelar](./cancel-method-ado.md)|Cancela la ejecución de una llamada de método pendiente y asincrónica.|  

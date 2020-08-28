@@ -3,7 +3,7 @@ description: Ejemplo del método CompareBookmarks (VB)
 title: Ejemplo del método CompareBookmarks (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 883b9216509248d64e550a0eb3557a61cc0ccdaa
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1b651d20173659052a6958b9ce561081f9aff9b3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776064"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975046"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Ejemplo del método CompareBookmarks (VB)
 En este ejemplo se muestra el método [CompareBookmarks](./comparebookmarks-method-ado.md) . El valor relativo de los marcadores rara vez es necesario a menos que un marcador determinado sea de algún modo especial.  

@@ -3,7 +3,7 @@ description: Propiedad AbsolutePage (ADO)
 title: Propiedad AbsolutePage (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c5c9d802dd6ba373b7bf92f063125f0b656eab8
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 1d735a8a61d4b62e6fa57427ecbee247d4589040
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759995"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977246"
 ---
 # <a name="absolutepage-property-ado"></a>Propiedad AbsolutePage (ADO)
 Indica en qué página reside el registro actual.  
@@ -31,7 +31,7 @@ Indica en qué página reside el registro actual.
   
  Para el código de 64 bits, use un tipo de datos que proporcione para el almacenamiento de un valor de 64 bits. Por ejemplo, puede usar un valor **Long** u otro que puede tener una longitud de 64 bits como DBORDINAL. No use valores **PositionEnum** porque están limitados a una longitud de 32 bits.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Esta propiedad se puede utilizar para identificar el número de página en el que se encuentra el registro actual. Usa la propiedad [pageSize](./pagesize-property-ado.md) para dividir lógicamente el número total de conjuntos de filas del objeto de **conjunto de registros** en una serie de páginas, cada una de las cuales tiene el número de registros igual a **pageSize** (excepto en la última página, que puede tener menos registros). El proveedor debe admitir la funcionalidad adecuada para que esta propiedad esté disponible.  
   
 -   Al obtener o establecer la propiedad **AbsolutePage** , ADO utiliza la propiedad [AbsolutePosition](./absoluteposition-property-ado.md) y la propiedad [pageSize](./pagesize-property-ado.md) conjuntamente de la siguiente manera:  

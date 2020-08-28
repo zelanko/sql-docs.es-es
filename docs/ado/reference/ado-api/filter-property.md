@@ -3,7 +3,7 @@ description: Propiedad Filter
 title: Propiedad Filter | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2519fdf691cc0f982f16a3aa77fdb66036bd86e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775324"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973006"
 ---
 # <a name="filter-property"></a>Propiedad Filter
 Indica un filtro para los datos de un [conjunto de registros](./recordset-object-ado.md).  
@@ -57,7 +57,7 @@ La cadena de criterios se compone de cláusulas con el formato *FieldName-Operat
 -   En su lugar, crearía este filtro como  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo: `LastName Like 'Smit*'`.  
+-   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo, `LastName Like 'Smit*'`.  
   
  Las constantes de filtro facilitan la resolución de conflictos de registros individuales durante el modo de actualización por lotes, ya que permiten ver, por ejemplo, solo los registros que se vieron afectados durante la última llamada al método del [método UpdateBatch](./updatebatch-method.md) .  
   

@@ -3,7 +3,7 @@ description: Descripción del archivo de personalización
 title: Descripción del archivo de personalización | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759873"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977396"
 ---
 # <a name="understanding-the-customization-file"></a>Descripción del archivo de personalización
 Cada encabezado de sección del archivo de personalización consta de corchetes (**[]**) que contienen un tipo y un parámetro. Los cuatro tipos de sección se indican mediante cadenas literales **Connect**, **SQL**, **userList**o **logs**. El parámetro es la cadena literal, el valor predeterminado, un identificador especificado por el usuario o nada.  
@@ -45,7 +45,7 @@ identifier
 |Parte|Descripción|  
 |----------|-----------------|  
 |**connect**|Cadena literal que modifica una cadena de conexión.|  
-|**sql**|Cadena literal que modifica una cadena de comando.|  
+|**Server**|Cadena literal que modifica una cadena de comando.|  
 |**userList**|Cadena literal que modifica los derechos de acceso de un usuario específico.|  
 |**logs**|Cadena literal que especifica un archivo de registro que registra los errores operativos.|  
 |**default**|Cadena literal que se utiliza si no se especifica o se encuentra ningún identificador.|  

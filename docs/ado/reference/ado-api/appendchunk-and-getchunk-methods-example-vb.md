@@ -3,7 +3,7 @@ description: Ejemplo de los métodos AppendChunk y GetChunk (VB)
 title: Ejemplo de los métodos AppendChunk y GetChunk (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aeab0b42b530c91e57ea25fbca9e7dc3b7bfdba2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 28e47e8f74eba5fce8315da884486512663c1d71
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776504"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976076"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>Ejemplo de los métodos AppendChunk y GetChunk (VB)
 En este ejemplo se usan los métodos [AppendChunk](./appendchunk-method-ado.md) y [GetChunk](./getchunk-method-ado.md) para rellenar un campo de imagen con datos de otro registro.  

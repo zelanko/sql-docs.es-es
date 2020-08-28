@@ -3,7 +3,7 @@ description: Errores de ADO
 title: Referencia de error de ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a286804eb5ea575e259c3b54a106edea83f55f57
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 83f3d5e9408180c4ff513f1457a2972a676fa726
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806698"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991746"
 ---
 # <a name="ado-errors"></a>Errores de tiempo de ejecución de ADO
 La constante **ErrorValueEnum** describe los valores de error de ADO. Para obtener una lista completa de estas constantes enumeradas, incluidos los valores, vea el [Apéndice B: errores de ADO](../appendixes/appendix-b-ado-errors.md). En esta sección se examinan algunos de los errores más interesantes y se explican algunas situaciones específicas que pueden generarlos, o soluciones para solucionar el problema. Se enumeran la constante **ErrorValueEnum** y el número decimal positivo corto.

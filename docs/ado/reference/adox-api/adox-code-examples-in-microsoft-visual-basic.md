@@ -3,7 +3,7 @@ description: Ejemplos de código ADOX en Microsoft Visual Basic
 title: Ejemplos de código ADOX en Microsoft Visual Basic | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ee5e076ca28d3c91f77d514ee004eb853387799
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 32c78e82e72826b1d440a8c150d1d9e771d811e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777754"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985766"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Ejemplos de código ADOX en Microsoft Visual Basic
 En estos temas se proporciona código de ejemplo para ayudarle a entender cómo usar ADOX. Todos los ejemplos de código se escriben con Microsoft Visual Basic.  
@@ -94,7 +94,7 @@ En estos temas se proporciona código de ejemplo para ayudarle a entender cómo 
   
 -   [Propiedades de tipo de tabla, método de cierre de conexión, ejemplo (VB)](./connection-close-method-table-type-property-example-vb.md)  
   
-## <a name="collections"></a>Recopilaciones  
+## <a name="collections"></a>Colecciones  
   
 -   [Ejemplo de propiedad Command, colección de parámetros (VB)](./parameters-collection-command-property-example-vb.md)  
   

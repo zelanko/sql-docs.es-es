@@ -3,7 +3,7 @@ description: Encabezado de extensiones de Visual C++
 title: Visual C++ encabezado Extensions | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d3793049d9fa1f86dd9aa6f928ffe6003882a1e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1e8c15738d7ad6fe93a1401636239369b3a87381
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806740"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991806"
 ---
 # <a name="visual-c-extensions-header"></a>Encabezado de extensiones de Visual C++
 El encabezado siguiente, **icrsint. h**, detalla la interfaz que permite a los clientes recuperar los campos de un **conjunto de registros** en las variables definidas en una clase derivada de **CADORecordBinding**. Debe especificar una macro de enlace ADO para cada campo al que vaya a tener acceso.  

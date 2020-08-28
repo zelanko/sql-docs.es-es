@@ -3,7 +3,7 @@ description: Ejemplo del método GetRows (VC ++)
 title: Ejemplo del método GetRows (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70882984404dab2905e10344af88c2d933aceacc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 012d0bc96f50919b02e11329f4aebc5bb3ecb269
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774974"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990886"
 ---
 # <a name="getrows-method-example-vc"></a>Ejemplo del método GetRows (VC ++)
 En este ejemplo se usa el método [GetRows](./getrows-method-ado.md) para recuperar un número especificado de filas de un [conjunto de registros](./recordset-object-ado.md) y para rellenar una matriz con los datos resultantes. El método **GetRows** devolverá un valor menor que el número deseado de filas en dos casos: si se ha alcanzado [EOF](./bof-eof-properties-ado.md) o si **GetRows** ha intentado recuperar un registro eliminado por otro usuario. La función devuelve **false** solo si se produce el segundo caso. La función GetRowsOK es necesaria para que este procedimiento se ejecute.  

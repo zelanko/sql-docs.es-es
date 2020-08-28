@@ -3,7 +3,7 @@ description: Eventos, métodos y propiedades del objeto de miembro
 title: Propiedades, métodos y eventos del objeto Member | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b12131ae069b9be362aebb93c90272d81de1d036
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 752c1ec4dbc8d78cbc123c2553f36557f7729afa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777994"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986426"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de miembro
 ## <a name="propertiescollections"></a>Propiedades/colecciones  

@@ -3,7 +3,7 @@ description: Direcciones URL absolutas y relativas
 title: Direcciones URL absolutas y relativas | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 285fba254c025268abc9ea93f6d6e53e39a87aca
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 19ade6a2c9501523e97d30f496249a423445d3c0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806725"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991796"
 ---
 # <a name="absolute-and-relative-urls"></a>Direcciones URL absolutas y relativas
 Una dirección URL especifica la ubicación de un destino almacenado en un equipo local o en red. El destino puede ser un archivo, un directorio, una página HTML, una imagen, un programa, etc.  

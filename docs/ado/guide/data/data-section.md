@@ -3,7 +3,7 @@ description: Sección de datos
 title: Sección de datos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806194"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991456"
 ---
 # <a name="data-section"></a>Sección de datos
 La sección de datos define los datos del conjunto de filas junto con las actualizaciones, inserciones o eliminaciones pendientes. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila esté definida por el esquema. Además, como se indicó antes, se pueden omitir las columnas sin datos. Si se utiliza un atributo o subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se pasa por alto de forma silenciosa.  

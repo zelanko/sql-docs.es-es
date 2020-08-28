@@ -6,19 +6,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, technologies
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a6432b1644d92e931aa9707e9b9cf01fc573ce6
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1cd2f1da937b663b1cc32939c0fb0de17dad8fb7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805380"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991216"
 ---
 # <a name="products-and-technologies-table"></a>Tabla productos y tecnologías
 En la tabla siguiente se enumeran los productos, las herramientas y las tecnologías de Microsoft que se describen en la guía del programador de ADO. Proporciona vínculos, siempre que sea posible, a temas relevantes en la guía.

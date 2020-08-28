@@ -3,7 +3,7 @@ description: Proveedor de persistencia de Microsoft OLE DB (proveedor de servici
 title: Proveedor de persistencia de Microsoft OLE DB (proveedor de servicios ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7010c2dc4be6207397ee5e57fc999c3cacbba0b7
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 8b9cfce1762ef678e544a2148df4a4d79074e152
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806609"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991076"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Introducción al proveedor de persistencia de Microsoft OLE DB
 El proveedor de persistencia de Microsoft OLE DB permite guardar un objeto de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) en un archivo y, posteriormente, restaurar ese objeto de **conjunto de registros** desde el archivo. Se conserva la información de esquema, los datos y los cambios pendientes.
@@ -34,7 +34,7 @@ El proveedor de persistencia de Microsoft OLE DB permite guardar un objeto de [c
 "Provider=MSPersist"
 ```
 
-## <a name="errors"></a>Errors
+## <a name="errors"></a>Errores
  Los siguientes errores emitidos por este proveedor se pueden detectar en la aplicación.
 
 |Constante|Descripción|

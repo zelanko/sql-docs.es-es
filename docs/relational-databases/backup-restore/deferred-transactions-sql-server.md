@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91d8cdd0c776a7cc8f3e0fcb9ef73da83bf37e6c
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748409"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618127"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transacciones diferidas (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,14 @@ ms.locfileid: "85748409"
 |Puesta al día en la creación de reflejo de la base de datos|transacción diferida|  
 |Grupo de archivos sin conexión|transacción diferida|  
   
+### <a name="requirements-and-limitations"></a>Requisitos y limitaciones
+
+ - La base de datos debe usar el modelo de recuperación FULL o BULK-LOGGED.
+ - Se debe haber completado al menos una copia de seguridad del registro de transacciones y de la base de datos para la base de datos.
+ - Las transacciones aplazadas no se aplican a los errores detectados durante la reversión de una transacción cuando la base de datos está en línea (por ejemplo, error en tiempo de ejecución).
+ - Las transacciones no se pueden diferir por errores de recuperación mientras se adjunta una base de datos.
+ - Algunas transacciones, como las del sistema (por ejemplo, la asignación de páginas), no se pueden diferir.
+
 ## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Eliminar el estado DEFERRED de una transacción  
   
 > [!IMPORTANT]  

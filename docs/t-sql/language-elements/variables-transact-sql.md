@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459268"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807032"
 ---
 # <a name="variables-transact-sql"></a>Variables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,10 +31,9 @@ Una variable local de Transact-SQL es un objeto que contiene un valor individual
 * Para guardar el valor de un dato que se va a devolver en un código de retorno de un procedimiento almacenado o un valor devuelto de una función.
 
 > [!NOTE]
-> Los nombres de algunas funciones del sistema Transact-SQL comienzan por dos *arrobas* (\@\@). A pesar de que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se hacía referencia a las funciones que empiezan por \@\@ como variables globales, no son variables y no tienen el mismo comportamiento que las variables. Las funciones que empiezan por \@\@ son funciones del sistema, y el uso de su sintaxis sigue las reglas de las funciones.
-
-> [!NOTE]
-> Las variables no se pueden usar en las vistas.
+> - Los nombres de algunas funciones del sistema Transact-SQL comienzan por dos *arrobas* (\@\@). A pesar de que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se hacía referencia a las funciones que empiezan por \@\@ como variables globales, estas funciones \@\@ no son variables y no tienen el mismo comportamiento. Las funciones que empiezan por \@\@ son funciones del sistema, y el uso de su sintaxis sigue las reglas de las funciones.
+> - No se pueden usar variables en una vista.
+> - Los cambios en las variables no se ven afectados por la reversión de una transacción.
 
 Este script crea una pequeña tabla de prueba y la rellena con 26 filas. El script usa una variable para hacer tres cosas: 
 

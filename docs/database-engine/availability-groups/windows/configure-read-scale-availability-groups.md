@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 5681516c193a45fb3cee540d21bbc3e88a917d31
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565313"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564535"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Configuración de escalado de lectura para un grupo de disponibilidad Always On
 
@@ -79,7 +79,7 @@ Este grupo de disponibilidad no es una configuración de alta disponibilidad. Si
 
 Hay dos maneras de conectarse a réplicas secundarias de solo lectura:
 * Las aplicaciones se pueden conectar directamente a la instancia de SQL Server que hospeda la réplica secundaria y consultar las bases de datos. Para obtener más información, vea [Réplicas secundarias legibles](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
-* Las aplicaciones también pueden usar el enrutamiento de solo lectura, lo que requiere un agente de escucha. Para obtener más información, vea [Enrutamiento de solo lectura](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
+* Las aplicaciones también pueden usar el enrutamiento de solo lectura, lo que requiere un agente de escucha. Si va a implementar un escenario de escalado de lectura sin un administrador de clústeres, puede crear un cliente de escucha que apunte a la dirección IP de la réplica principal actual y al puerto, distinto al que escucha SQL Server. Tendrá que volver a crear el cliente de escucha para que apunte a la nueva dirección IP principal después de una conmutación por error. Para obtener más información, vea [Enrutamiento de solo lectura](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Conmutación por error de la réplica principal en un grupo de disponibilidad de escalado de lectura
 

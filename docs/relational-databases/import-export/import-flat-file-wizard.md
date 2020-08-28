@@ -13,18 +13,18 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
-ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
+ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251471"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646057"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > Para obtener más información sobre el Asistente para importación y exportación, consulte [Asistente para importación y exportación de SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-El Asistente para la importación de archivos planos es una forma muy sencilla de copiar datos de un archivo plano (.csv, .txt) a una nueva tabla de la base de datos. En la información general puede consultar los motivos por los que el asistente resulta tan útil, el proceso para encontrarlo y un ejemplo que podrá seguir fácilmente.
+El Asistente para la importación de archivos planos es una forma muy sencilla de copiar datos de un archivo plano (.csv, .txt) a una nueva tabla de la base de datos.  El Asistente para importar archivos planos admite archivos separados por comas y de ancho fijo. En la información general puede consultar los motivos por los que el asistente resulta tan útil, el proceso para encontrarlo y un ejemplo que podrá seguir fácilmente.
 
 ## <a name="why-would-i-use-this-wizard"></a>¿Por qué el asistente es tan útil?
 El objetivo del asistente es mejorar la experiencia de importación actual y ofrece un marco inteligente conocido como Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). Para un usuario sin conocimientos especializados en el tema de los dominios, importar datos puede ser una tarea compleja y tediosa, además de que se suelen producir errores. Este asistente permite simplificar el proceso de importación, ya que basta con seleccionar un archivo de entrada y un nombre de tabla único. El marco de PROSE se encarga del resto.
@@ -36,7 +36,7 @@ Para comprender mejor la mejora de la experiencia de usuario del Asistente para 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prerrequisitos
-Esta característica solo está disponible para la versión 17.3 de SQL Server Management Studio (SSMS) u otras posteriores. Asegúrese de utilizar la última versión, que podrá encontrar [aquí](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Esta característica está disponible en la versión 17.3 de SQL Server Management Studio (SSMS) u otras posteriores. Asegúrese de utilizar la última versión, que podrá encontrar [aquí](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
  
 ## <a name="getting-started"></a><a id="started"></a>Introducción
 Para acceder al Asistente para importación de archivos planos, siga estos pasos:
@@ -54,6 +54,14 @@ Dados los objetivos que se contemplan en este tutorial, puede usar un archivo pl
 
 ![Asistente: Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
+Introducción:
+1. [Asistente de acceso](#step-1-access-wizard-and-intro-page)
+2. [Especificación del archivo de entrada](#step-2-specify-input-file)
+3. [Vista previa de los datos](#step-3-preview-data)
+4. [Modificación de columnas](#step-4-modify-columns)
+5. [Resumen](#step-5-summary)
+6. [Resultados](#step-6-results)
+
 ### <a name="step-1-access-wizard-and-intro-page"></a>Paso 1: Acceso al asistente y página de introducción
 Acceda al asistente tal y como se describe [aquí](#started).
 
@@ -62,7 +70,7 @@ La primera página del asistente es la página principal. Si no quiere que se vu
 ![Asistente: introducción](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>Paso 2: Especificación del archivo de entrada
-Haga clic en Examinar y seleccione el archivo de entrada. De forma predeterminada, el asistente buscará archivos .csv y .txt. 
+Haga clic en Examinar y seleccione el archivo de entrada. De forma predeterminada, el asistente buscará archivos .csv y .txt. PROSE detectará si el archivo está separado por comas o tiene un ancho fijo independientemente de la su extensión.
 
 El nuevo nombre de la tabla debe ser único, ya que, en caso contrario, el asistente no le permitirá avanzar.
 
@@ -75,6 +83,8 @@ El asistente generará una vista previa para que pueda consultar las primeras 50
 
 ### <a name="step-4-modify-columns"></a>Paso 4: Modificación de columnas
 El asistente identificará lo que en teoría son los nombres de columnas, los tipos de datos, etc. En caso de que los campos no sean correctos, en este paso podrá editarlos, por ejemplo, si el tipo de datos debe ser "float" en lugar de "int".
+
+Las columnas en las que se detecten valores vacíos tendrán activada la casilla "Permitir valores NULL". Sin embargo, si espera valores NULL en una columna y no ha activado "Permitir valores NULL", aquí puede actualizar la definición de la tabla para permitir los valores NULL en una o todas las columnas.
 
 Una vez que todo sea correcto, continúe.
 

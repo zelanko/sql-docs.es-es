@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772507"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564665"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitación de conexiones cifradas en el Motor de base de datos
 
@@ -123,6 +123,10 @@ Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[
 9. Haga clic con el botón derecho en el certificado importado, seleccione **Todas las tareas**y, luego, haga clic en **Administrar claves privadas**. En el cuadro de diálogo **Seguridad**, agregue el permiso de lectura para la cuenta de usuario que usa la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 10. Finalice el **Asistente para importación de certificados**para agregar un certificado al equipo y cierre la consola MMC. Para obtener más información acerca de cómo agregar un certificado a un equipo, vea la documentación de Windows.  
+
+> [!IMPORTANT]
+> En los entornos de producción, se recomienda obtener un certificado de confianza emitido por una entidad de certificación.    
+> Con fines de prueba, también se puede usar un certificado autofirmado. Para crear un certificado autofirmado, consulte [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) o [certreq command](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
   
 ## <a name="install-across-multiple-servers"></a>Instalación en varios servidores
 
@@ -141,7 +145,7 @@ Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[
 Configure el servidor para forzar conexiones cifradas.
 
 > [!IMPORTANT]
-> La cuenta de servicio de SQL Server debe tener permisos de lectura en el certificado que se usa para forzar el cifrado en la instancia de SQL Server. En el caso de una cuenta de servicio sin privilegios, será necesario agregar permisos de lectura al certificado. Si no lo hace, se puede producir un error en el reinicio del servicio SQL Server.
+> La cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de lectura en el certificado que se usa para forzar el cifrado en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el caso de una cuenta de servicio sin privilegios, será necesario agregar permisos de lectura al certificado. Si no lo hace, se puede producir un error en el reinicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 1. En el **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<server instance>_ y, después, seleccione **Propiedades**.  
   
@@ -168,7 +172,7 @@ Configure el cliente para que solicite conexiones cifradas.
   
 ## <a name="use-sql-server-management-studio"></a>Usar SQL Server Management Studio
   
-Para cifrar una conexión desde SQL Server Management Studio:  
+Para cifrar una conexión desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
 
 1. En la barra de herramientas del Explorador de objetos, haga clic en **Conectar**y, a continuación, en **Motor de base de datos**.  
   
@@ -183,3 +187,4 @@ Los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden
 
 + [Soporte de TLS 1.2 para Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Configure the Windows Firewall to Allow SQL Server Access (Configurar el Firewall de Windows para permitir el acceso a SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [Powershell Cmdlet New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)

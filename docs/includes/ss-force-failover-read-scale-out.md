@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88122282"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88655043"
 ---
 Cada grupo de disponibilidad tiene solo una réplica principal. La réplica principal permite lecturas y escrituras. Para cambiar la réplica principal, puede efectuar una conmutación por error. En un grupo de disponibilidad de alta disponibilidad, el administrador de clústeres automatiza el proceso de conmutación por error. En un grupo de disponibilidad con el tipo de clúster NONE, el proceso de conmutación por error es manual. 
 
@@ -43,7 +43,7 @@ Use este método si la réplica principal está disponible, pero necesita modifi
 
 Para realizar la conmutación por error manual sin pérdida de datos:
 
-1. Cree la réplica secundaria de destino `SYNCHRONOUS_COMMIT`.
+1. Establezca las réplicas de destino principal y secundaria actuales en `SYNCHRONOUS_COMMIT`.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -90,7 +90,7 @@ Para realizar la conmutación por error manual sin pérdida de datos:
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. Actualice el rol de la réplica principal antigua a `SECONDARY`, ejecute el comando siguiente en la instancia de SQL Server en la que se hospeda la réplica principal:
+1. Actualice el rol de la réplica principal antigua a `SECONDARY`, ejecute el comando siguiente en la instancia de SQL Server en la que se hospeda la réplica principal anterior:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -106,3 +106,5 @@ Para realizar la conmutación por error manual sin pérdida de datos:
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. Vuelva a crear cualquier cliente de escucha que haya creado para fines de escalado de lectura y que no esté administrado por un administrador de clústeres. Si el cliente de escucha original apunta a la réplica principal anterior, suéltela y vuelva a crearla para que apunte a la nueva réplica principal.

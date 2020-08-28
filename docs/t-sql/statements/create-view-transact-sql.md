@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a71a0ffe8cfa34ee61b5396146d46f8f174bc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1545d389f19aeee3c1cefa2e17bcc8c60bcd495
+ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444857"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88602200"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 
@@ -143,8 +143,8 @@ OR ALTER
  CHECK OPTION  
  Fuerza que todas las instrucciones de modificación de datos que se ejecuten en la vista sigan los criterios establecidos en *select_statement*. Cuando una fila se modifica mediante una vista, WITH CHECK OPTION garantiza que los datos permanezcan visibles en toda la vista después de confirmar la modificación.  
   
-> [!NOTE]  
->  Cualquier actualización realizada directamente en las tablas subyacentes de una vista no se comprueba en la vista, aunque se haya especificado CHECK OPTION.  
+> [!NOTE]
+>  La opción CHECK solo se aplica a las actualizaciones realizadas a través de la vista. No tiene ninguna aplicabilidad en las actualizaciones realizadas directamente en las tablas subyacentes de una vista.  
   
  ENCRYPTION  
  **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  

@@ -4,29 +4,32 @@ titlesuffix: SQL Server
 description: Obtenga información sobre cómo instalar SQL Server PolyBase en Linux. PolyBase le permite ejecutar consultas externas en orígenes de datos remotos.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.date: 7/22/2019
+ms.reviewer: dakryze
+ms.date: 8/18/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: f886c1d1ae3b5054c6ca0f0159ca8202054ec375
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 6bed37e6fe0451e45e9d99fd9c15d03d12a30a4b
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88087383"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564655"
 ---
 # <a name="install-polybase-on-linux"></a>Instalación de PolyBase en Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [sqlserver2019-linux](../../includes/applies-to-version/sqlserver2019-linux.md)]
 
-Siga estos pasos para instalar [PolyBase](../../relational-databases/search/full-text-search.md) (**mssql-server-polybase**) en Linux. PolyBase le permite ejecutar consultas externas en orígenes de datos remotos. 
+Siga estos pasos para instalar [PolyBase](../../relational-databases/polybase/polybase-guide.md) (`mssql-server-polybase` y `mssql-server-polybase-hadoop`) en Linux. PolyBase le permite ejecutar consultas externas en orígenes de datos remotos.
 
 >[!NOTE]
-> Antes de la instalación de PolyBase, se tiene que [instalar SQL Server 2019 en versión preliminar](../../linux/sql-server-linux-setup.md#platforms). Esto configura las claves y los repositorios que se usan para instalar el paquete **mssql-server-polybase**.
+> Antes de instalar PolyBase, hay que [instalar SQL Server 2019](../../linux/sql-server-linux-setup.md#platforms). Esto configura las claves y los repositorios que se usan para instalar el paquete `mssql-server-polybase` y `mssql-server-polybase-hadoop`.
+
+>[!NOTE]
 >
-> PolyBase no es compatible con SQL Server 2017 para Linux.
-> Actualmente la escalabilidad horizontal de PolyBase en Linux está deshabilitada.
+> - PolyBase no es compatible con SQL Server 2017 para Linux.
+> - Actualmente la escalabilidad horizontal de PolyBase en Linux está deshabilitada.
 
 Instalación de PolyBase en el sistema operativo:
 
@@ -34,11 +37,9 @@ Instalación de PolyBase en el sistema operativo:
 - [Ubuntu](#ubuntu)
 - [SUSE Linux Enterprise Server](#SLES)
 
+## <a name="install-on-rhel"></a><a name="RHEL"></a>Instalación en RHEL
 
-
-## <a name=""></a><a name="RHEL">Instalación en RHEL</a>
-
-Use el comando siguiente para instalar el paquete **mssql-server-polybase** en Red Hat Enterprise Linux. 
+Use el comando siguiente para instalar el paquete `mssql-server-polybase` en Red Hat Enterprise Linux. 
 
 ```bash
 sudo yum install -y mssql-server-polybase
@@ -53,11 +54,32 @@ sudo systemctl restart mssql-server
 >[!NOTE]
 >Después de la instalación, debe [habilitar la característica PolyBase](#enable).
 
+Use el siguiente comando para instalar `mssql-server-polybase-hadoop`. 
+
+```bash
+sudo yum install -y mssql-server-polybase-hadoop
+```
+
+El paquete de PolyBase Hadoop tiene dependencias en los siguientes paquetes:
+- `mssql-server`
+- `mssql-server-polybase`
+- `mssql-server-extensibility`
+- `mssql-zulu-jre-11`. 
+
+La instalación le pide que reinicie `launchpadd`. Para ello, use el comando siguiente.
+
+```bash
+sudo systemctl restart mssql-launchpadd
+```
+
+>[!NOTE]
+>Después de la instalación, debe [establecer el nivel de conectividad de Hadoop](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md#c-set-hadoop-connectivity).
+
 Si necesita una instalación sin conexión, busque la descarga del paquete PolyBase en [Notas de la versión](../../linux/sql-server-linux-release-notes.md). Luego use los mismos pasos de instalación sin conexión descritos en el artículo [Instalar SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
-## <a name=""></a><a name="ubuntu">Instalación en Ubuntu</a>
+## <a name="install-on-ubuntu"></a><a name="ubuntu"></a>Instalación en Ubuntu
 
-Use el comando siguiente para instalar el paquete **mssql-server-polybase** en Ubuntu. 
+Use el comando siguiente para instalar el paquete `mssql-server-polybase` en Ubuntu. 
 
 ```bash
 sudo apt-get install mssql-server-polybase
@@ -74,9 +96,30 @@ sudo systemctl restart mssql-server
 
 Si necesita una instalación sin conexión, busque la descarga del paquete PolyBase en [Notas de la versión](../../linux/sql-server-linux-release-notes.md). Luego use los mismos pasos de instalación sin conexión descritos en el artículo [Instalar SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
-## <a name=""></a><a name="SLES">Instalación en SLES</a>
+Use el siguiente comando para instalar `mssql-server-polybase-hadoop`. 
 
-Use los comandos siguientes para instalar el paquete **mssql-server-polybase** en SUSE Linux Enterprise Server. 
+```bash
+sudo apt-get install mssql-server-polybase-hadoop
+```
+
+El paquete de PolyBase Hadoop tiene dependencias en los siguientes paquetes:
+- `mssql-server`
+- `mssql-server-polybase`
+- `mssql-server-extensibility`
+- `mssql-zulu-jre-11`. 
+
+La instalación le pide que reinicie `launchpadd`. Para ello, use el comando siguiente.
+
+```bash
+sudo systemctl restart mssql-launchpadd
+```
+
+>[!NOTE]
+>Después de la instalación, debe [establecer el nivel de conectividad de Hadoop](../../relational-databases/polybase/polybase-configure-hadoop.md#configure-hadoop-connectivity).
+
+## <a name="install-on-sles"></a><a name="SLES"></a>Instalación en SLES
+
+Use los comandos siguientes para instalar el paquete `mssql-server-polybase` en SUSE Linux Enterprise Server. 
 
 ```bash
 sudo zypper install mssql-server-polybase
@@ -91,11 +134,10 @@ sudo systemctl restart mssql-server
 >[!NOTE]
 >Después de la instalación, debe [habilitar la característica PolyBase](#enable).
 
-
 Si necesita una instalación sin conexión, busque la descarga del paquete PolyBase en [Notas de la versión](../../linux/sql-server-linux-release-notes.md). Luego use los mismos pasos de instalación sin conexión descritos en el artículo [Instalar SQL Server](../../linux/sql-server-linux-setup.md#offline).
 
 
-## <a name=""></a><a name="enable">Habilitación de PolyBase</a> 
+## <a name="enable-polybase"></a><a name="enable"></a> Habilitar PolyBase
 
 Tras la instalación, se debe habilitar PolyBase para acceder a sus características. Conéctese a la instancia de SQL Server instalada y use el comando de Transact-SQL siguiente para habilitarlo.
 
@@ -106,14 +148,16 @@ RECONFIGURE WITH OVERRIDE;
 
 ## <a name="update-polybase"></a>Actualización de PolyBase
 
-Si ya tiene **mssql-server-polybase** instalado, se puede actualizar a la versión más reciente con los comandos siguientes:
+Si ya tiene `mssql-server-polybase` instalado, se puede actualizar a la versión más reciente con los comandos siguientes:
 
 ### <a name="rhel"></a>RHEL
 
 ```bash
+sudo yum remove -y mssql-server-polybase-hadoop
 sudo yum remove -y mssql-server-polybase
 sudo yum check-update
 sudo yum install -y mssql-server-polybase
+sudo yum install -y mssql-server-polybase-hadoop
 ```
 
 Se le pedirá que reinicie la instancia de SQL Server. Para ello, use el comando siguiente.
@@ -125,9 +169,11 @@ sudo systemctl restart mssql-server
 ### <a name="ubuntu"></a>Ubuntu
 
 ```bash
+sudo apt-get remove mssql-server-polybase-hadoop
 sudo apt-get remove mssql-server-polybase
 sudo apt-get update 
 sudo apt-get install mssql-server-polybase
+sudo apt-get remove mssql-server-polybase-hadoop
 ```
 
 Se le pedirá que reinicie la instancia de SQL Server. Para ello, use el comando siguiente.
@@ -157,7 +203,9 @@ sudo systemctl restart mssql-server
 
 PolyBase en Linux puede tener acceso a los orígenes de datos siguientes. Siga los vínculos proporcionados para obtener más información sobre cómo crear una tabla externa a partir de estos orígenes cuando PolyBase está habilitado. 
 
-- [SQL Server (y SQL Database, Azure SQL Data Warehouse)](../../relational-databases/polybase/polybase-configure-sql-server.md)
+- [SQL Server, SQL Database, Azure Synapse Analytics)](../../relational-databases/polybase/polybase-configure-sql-server.md)
+- [Hadoop](../../relational-databases/polybase/polybase-configure-hadoop.md)
+- [Azure Blob Storage](../../relational-databases/polybase/polybase-configure-azure-blob-storage.md)
 - [Oracle](../../relational-databases/polybase/polybase-configure-oracle.md)
 - [Teradata](../../relational-databases/polybase/polybase-configure-teradata.md)
 - [MongoDB (y Cosmos DB)](../../relational-databases/polybase/polybase-configure-mongodb.md)

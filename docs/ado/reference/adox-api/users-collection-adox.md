@@ -3,7 +3,7 @@ description: Colección de usuarios (ADOX)
 title: Colección de usuarios (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d452075b3659d3ad01ba28540217b8447950084
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a1f511e637696e5b14905bcccba50cb13737d6e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769044"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983036"
 ---
 # <a name="users-collection-adox"></a>Colección de usuarios (ADOX)
 Contiene todos los objetos de [usuario](./user-object-adox.md) almacenados de un [Catálogo](./catalog-object-adox.md) o [Grupo](./group-object-adox.md).  
@@ -31,11 +31,11 @@ Contiene todos los objetos de [usuario](./user-object-adox.md) almacenados de un
 ## <a name="remarks"></a>Observaciones  
  La colección de **usuarios** de un [Catálogo](./catalog-object-adox.md) representa todos los usuarios del catálogo. La colección de **usuarios** de un [Grupo](./group-object-adox.md) representa solo los usuarios que tienen una pertenencia al grupo específico.  
   
- El método [Append](./append-method-adox-users.md) de una colección **users** es único para ADOX. Puede:  
+ El método [Append](./append-method-adox-users.md) de una colección **users** es único para ADOX. Se puede hacer lo siguiente:  
   
 -   Agregue un nuevo usuario a la colección mediante el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Se puede hacer lo siguiente:  
   
 -   Acceder a un usuario de la colección con la propiedad [Item](../ado-api/item-property-ado.md) .  
   

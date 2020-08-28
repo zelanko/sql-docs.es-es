@@ -3,7 +3,7 @@ description: Colección Axes (ADO MD)
 title: Colección axes (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33839c31745976cc6df89e02b728a25ae8624fa5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 78113cb7854ec3f56ffe6f7322a6bb732939f27f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776714"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987416"
 ---
 # <a name="axes-collection-ado-md"></a>Colección Axes (ADO MD)
 Contiene los objetos de [eje](./axis-object-ado-md.md) que definen un objeto Cellset.  

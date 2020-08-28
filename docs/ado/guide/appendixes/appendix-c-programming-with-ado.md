@@ -3,7 +3,7 @@ description: 'Apéndice C: programar con ADO en entornos de desarrollo'
 title: 'Apéndice C: programar con ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43763af1f0a4e48adfd41c0e6d42bf3cbb4f5879
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 63240be1e7e0b9c439f39ee93f09552d4d708caa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806669"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991156"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Apéndice C: programar con ADO en entornos de desarrollo
 ADO es un componente de interfaz de automatización COM que se puede usar con muchos lenguajes de programación, incluidos Microsoft Visual Basic, VBScript, JScript y Visual C++. Se instala una versión de ADO con cada una de estas herramientas y otras aplicaciones, como Microsoft Office y Microsoft SQL Server.

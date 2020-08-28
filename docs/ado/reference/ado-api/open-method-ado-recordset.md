@@ -3,7 +3,7 @@ description: Open (método) (conjunto de registros ADO)
 title: Open (método) (conjunto de registros ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fdece8acce83c9e87a84dbeffe7ebc486287fcc
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 879456c30c3b34773d6f6b1395a88e04f5faaf9e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773774"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990316"
 ---
 # <a name="open-method-ado-recordset"></a>Open (método) (conjunto de registros ADO)
 Abre un cursor en un objeto de [conjunto de registros](./recordset-object-ado.md) .  

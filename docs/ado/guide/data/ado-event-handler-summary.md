@@ -3,7 +3,7 @@ description: Eventos Connection y Recordset de ADO
 title: Resumen del controlador de eventos ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46e352b88ea24d264ccde8a4d3932f748082723b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ddec7c573c7d208d80fe05dc8f15ba2d0d02c428
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806458"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991726"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Eventos Connection y Recordset de ADO
 Dos objetos ADO pueden generar eventos: el objeto de [conexión](../../reference/ado-api/connection-object-ado.md) y el objeto de [conjunto de registros](../../reference/ado-api/recordset-object-ado.md) . La familia **ConnectionEvent** pertenece a las operaciones en el objeto de **conexión** y la familia **RecordsetEvent** pertenece a las operaciones en el objeto de conjunto de **registros** .

@@ -3,7 +3,7 @@ description: Ejemplo de las propiedades Provider y DefaultDatabase (VC ++)
 title: Ejemplo de las propiedades Provider y DefaultDatabase (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49d1e08e421c520238573cd802a592cc970b19da
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5842bbdfc43a76797dd48aa75db133b9942a368e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772804"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989926"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Ejemplo de las propiedades Provider y DefaultDatabase (VC ++)
 En este ejemplo se muestra la propiedad de [proveedor](./provider-property-ado.md) abriendo tres objetos de [conexión](./connection-object-ado.md) mediante proveedores diferentes. También utiliza la propiedad [DefaultDatabase](./defaultdatabase-property.md) para establecer la base de datos predeterminada para el proveedor ODBC de Microsoft.  

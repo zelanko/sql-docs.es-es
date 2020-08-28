@@ -2,7 +2,7 @@
 description: Índice de propiedades dinámicas de ADO
 title: Índice de propiedades dinámicas de ADO | Microsoft Docs
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771744"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976496"
 ---
 # <a name="ado-dynamic-property-index"></a>Índice de propiedades dinámicas de ADO
 Los proveedores de datos, los proveedores de servicios y los componentes de servicio pueden agregar propiedades dinámicas a las colecciones de **propiedades** de los objetos [Connection](./connection-object-ado.md) y [Recordset](./recordset-object-ado.md) no abiertos. Un proveedor determinado también puede insertar propiedades adicionales cuando se abren estos objetos. Algunas de estas propiedades se muestran en la sección [propiedades dinámicas de ADO](./ado-dynamic-properties.md) . Encontrará más información en los proveedores específicos de la sección [Apéndice A: proveedores](../../guide/appendixes/appendix-a-providers.md) .  

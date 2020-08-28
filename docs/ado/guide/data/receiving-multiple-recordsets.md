@@ -3,7 +3,7 @@ description: Recibir varios conjuntos de registros
 title: Recibir varios conjuntos de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5aad021e1d6003ba3c8d30915f1648f57124984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abac183f348553f30bf0cf5ed91725ef421afb3e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453017"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979976"
 ---
 # <a name="receiving-multiple-recordsets"></a>Recibir varios conjuntos de registros
 El [proveedor de Microsoft OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) admite la devolución de varios objetos de **conjunto de registros** para un único comando que contiene varias instrucciones SQL, un **conjunto de registros** por cada instrucción SQL. El orden en el que se devuelven los **conjuntos de registros**sigue el orden en el que se colocan las instrucciones SQL en el texto del comando.  

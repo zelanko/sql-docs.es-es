@@ -3,7 +3,7 @@ description: Propiedad State (ADO)
 title: Propiedad State (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14e9a083c9f80d2c6485a9444211a2796b7fabee
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d118ed6d695f8f047640f0ef16c139204ae36277
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777354"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988846"
 ---
 # <a name="state-property-ado"></a>Propiedad State (ADO)
 Indica para todos los objetos aplicables si el estado del objeto es abierto o cerrado. Si el objeto está ejecutando un método asincrónico, indica si el estado actual del objeto es conexión, ejecución o recuperación.  

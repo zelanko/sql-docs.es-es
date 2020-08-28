@@ -3,7 +3,7 @@ description: Anexar y ejemplo de los métodos CreateParameter (VB)
 title: Ejemplo de los métodos Append y CreateParameter (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bf807a1883aaaa85b8485a9f58a1414248f02075
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0d301542b3f5d9bb31478f3636320857a1f514c3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776534"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976156"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Anexar y ejemplo de los métodos CreateParameter (VB)
 En este ejemplo se utilizan los métodos [Append](./append-method-ado.md) y [CreateParameter](./createparameter-method-ado.md) para ejecutar un procedimiento almacenado con un parámetro de entrada.  

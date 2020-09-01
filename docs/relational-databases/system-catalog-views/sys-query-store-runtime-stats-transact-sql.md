@@ -22,12 +22,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca567df477cf06c6f40e7f9a2d7c8b4964eaa6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f59f8e08001ac926a0e129944753ecb40153217
+ms.sourcegitcommit: e103ae3f2d05431fdb8334aeaf1ed3b4fa1f593c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377382"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89225205"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>Sys. query_store_runtime_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -94,11 +94,11 @@ ms.locfileid: "88377382"
 |**min_log_bytes_used**|**bigint**|Número mínimo de bytes en el registro de base de datos utilizado por el plan de consulta, dentro del intervalo de agregación.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
 |**max_log_bytes_used**|**bigint**|Número máximo de bytes en el registro de base de datos utilizado por el plan de consulta, dentro del intervalo de agregación.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|
 |**stdev_log_bytes_used**|**float**|Desviación estándar del número de bytes en el registro de base de datos utilizado por un plan de consulta, dentro del intervalo de agregación.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
-|**avg_tempdb_space_used**|**float**|Número promedio de lecturas de página para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**last_tempdb_space_used**|**bigint**|Último número de lecturas de página para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**min_tempdb_space_used**|**bigint**|Número mínimo de lecturas de página para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**max_tempdb_space_used**|**bigint**|Número máximo de lecturas de página para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**stdev_tempdb_space_used**|**float**|El número de páginas lee la desviación estándar del plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**avg_tempdb_space_used**|**float**|Número promedio de lecturas de páginas de tempdb para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**last_tempdb_space_used**|**bigint**|Último número de lecturas de páginas de tempdb para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**min_tempdb_space_used**|**bigint**|Número mínimo de lecturas de páginas de tempdb para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**max_tempdb_space_used**|**bigint**|Número máximo de lecturas de páginas de tempdb para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**stdev_tempdb_space_used**|**float**|Número de páginas de tempdb lee la desviación estándar del plan de consulta en el intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**avg_page_server_io_reads**|**float**|Número promedio de lecturas de e/s del servidor de páginas para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** Hiperescala Azure SQL Database</br>**Nota:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Instancia administrada (no hiperescala) siempre devolverá cero (0).|
 |**last_page_server_io_reads**|**bigint**|Último número de lecturas de e/s del servidor de páginas para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** Hiperescala Azure SQL Database</br>**Nota:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Instancia administrada (no hiperescala) siempre devolverá cero (0).|
 |**min_page_server_io_reads**|**bigint**|Número mínimo de lecturas de e/s del servidor de páginas para el plan de consulta dentro del intervalo de agregación. (expresado como un número de 8 KB de lectura).<br><br/>**Se aplica a:** Hiperescala Azure SQL Database</br>**Nota:** Azure SQL Data Warehouse, Azure SQL Database, Azure SQL Instancia administrada (no hiperescala) siempre devolverá cero (0).|
@@ -108,7 +108,7 @@ ms.locfileid: "88377382"
 ## <a name="permissions"></a>Permisos  
 Requiere el permiso `VIEW DATABASE STATE`.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Sys. database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [Sys. query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [Sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   

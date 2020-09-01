@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2fee6052dea18c25b093ee75b53c56b1dd053aad
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892055"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042505"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configuración de los grupos de escalado horizontal de PolyBase en Windows
 
@@ -34,7 +34,7 @@ Los pasos siguientes resumen el proceso de creación de un grupo de escalado hor
   
 1. Instale la misma versión de SQL Server con PolyBase en cualquier número de máquinas.
   
-2. Seleccione una instancia de SQL Server como nodo principal. Solo se puede designar un nodo principal en una instancia de SQL Server Enterprise.
+2. Seleccione una instancia de SQL Server como nodo principal. 
   
 3. Agregue las instancias de SQL Server restantes como nodos de ejecución usando [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).
 

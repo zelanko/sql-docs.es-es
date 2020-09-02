@@ -33,7 +33,7 @@ ms.locfileid: "88379801"
 |Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
-|Texto del mensaje|No se puede %1! %2! '%3!' porque se está utilizando para la replicación.|  
+|Texto del mensaje|No se puede %1! %2! '%.*ls!' porque se está utilizando para la replicación.|  
   
 ## <a name="explanation"></a>Explicación  
  Cuando se replican objetos en una base de datos, se marcan como replicados en la tabla del sistema **sysarticles** (en publicaciones de instantáneas y transaccionales) o **sysmergearticles** (en publicaciones de combinación). Si intenta quitar un objeto replicado, se produce este error.  

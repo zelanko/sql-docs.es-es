@@ -33,7 +33,7 @@ ms.locfileid: "88379481"
 |Origen de eventos|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
-|Texto del mensaje|No se puede modificar el %1! '%2!' porque se está publicando para replicación.|  
+|Texto del mensaje|No se puede modificar el %1! '%.*ls!' porque se está publicando para replicación.|  
   
 ## <a name="explanation"></a>Explicación  
  Normalmente este error se produce si intenta quitar la restricción de clave principal en una tabla que está publicada para replicación transaccional. La replicación transaccional requiere una clave principal para cada tabla publicada; por tanto, no se puede quitar la restricción.  

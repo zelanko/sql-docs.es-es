@@ -48,7 +48,7 @@ ms.locfileid: "88393560"
   
  Para enviar varios archivos y tener acceso a varios archivos y directorios locales, también puede ejecutar la tarea FTP varias veces incluyéndola en un contenedor de bucles Foreach. El contenedor de bucles Foreach puede recorrer los archivos de un directorio mediante el enumerador Foreach File. Para más información, vea [Contenedor Foreach Loop](../../integration-services/control-flow/foreach-loop-container.md).  
   
- La tarea FTP admite los caracteres comodín *?* y *\** en las rutas. Esto permite que la tarea tenga acceso a varios archivos. Sin embargo, solo puede usar caracteres comodín en la parte de la ruta de acceso que especifica el nombre de archivo. Por ejemplo, C:\MiDirectorio\\*.txt es una ruta válida, pero C:\\\**\MiTexto.txt no.  
+ La tarea FTP admite los caracteres comodín *?* y *\** en las rutas. Esto permite que la tarea tenga acceso a varios archivos. Sin embargo, solo puede usar caracteres comodín en la parte de la ruta de acceso que especifica el nombre de archivo. Por ejemplo, C:\MiDirectorio\\*.txt es una ruta válida, pero C:\\\*\MiTexto.txt no.  
   
  Es posible configurar las operaciones de FTP para detener la tarea Sistema de archivos cuando la operación no se realice correctamente o para transferir archivos en modo ASCII. Las operaciones que envían y reciben archivos pueden configurarse para sobrescribir los archivos y directorios de destino.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9848ba94687f6f4555492de868f32431b3e1de84
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425267"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042414"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Conectarse a Azure Blob Storage (Asistente para importación y exportación de SQL Server)
 
@@ -52,7 +52,7 @@ Escriba la clave de la cuenta de almacenamiento de Azure.
  Especifique si desea utilizar HTTP o HTTPS para conectarse a la cuenta de almacenamiento.  
   
  **Use local developer account (Usar cuenta de desarrollador local)**  
- Especifique si desea utilizar el emulador de almacenamiento en el equipo local.  
+ Especifique si quiere usar el emulador de Azure Storage en el equipo local.  
   
  **Nombre del contenedor de blob**  
  Seleccione uno en la lista de contenedores de almacenamiento disponibles en la cuenta de almacenamiento especificada.  

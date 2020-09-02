@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1ed78e1cce742ce508237b7e04187927cf931cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01a82400b668243b48047e7118f7b7b0c4095a60
+ms.sourcegitcommit: d7accd198ee94e9d87eca8ed86fdb70bc60819e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486505"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89385976"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,6 +57,8 @@ Si la instancia del servidor local no puede comunicar con el clúster de conmuta
 |**modify_date**|**datetime**|Fecha de la última modificación de la réplica.<br /><br /> NULL = La réplica no está en esta instancia de servidor.|  
 |**backup_priority**|**int**|Representa la prioridad definida por el usuario para realizar copias de seguridad en esta réplica en relación con las otras réplicas del mismo grupo de disponibilidad. El valor es un número entero en el intervalo de 0..100.<br /><br /> Para más información, consulte [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar(256)**|Extremo de conectividad (URL) de la réplica de disponibilidad de solo lectura. Para obtener más información, vea [Configurar el enrutamiento de solo lectura para un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
+|**seeding_mode**|**tinyint**|Uno de los valores siguientes: </br></br> 0: manual </br></br> 1: automático|
+|**seeding_mode_desc**|**nvarchar(60)**|Describe el modo de propagación. </br></br> MANUAL </br></br> AUTOMATIC|
   
 ## <a name="security"></a>Seguridad  
   

@@ -13,14 +13,15 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b93d177ad3f73982386407e019629401d70ec57f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 78b6370a7041a5e29720acce5dfcf2b0bdf1c607
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447505"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283581"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>Sys. dm_pdw_node_status (Transact-SQL)
+
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Contiene información adicional (sobre [Sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) sobre el rendimiento y el estado de todos los nodos del dispositivo. Muestra una fila por nodo en el dispositivo.  
@@ -42,7 +43,7 @@ ms.locfileid: "88447505"
 |received_time|**datetime**|Última vez que este nodo recibió un paquete de red.||  
 |error_id|**nvarchar (36)**|Identificador único del último error que se produjo en este nodo.||  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

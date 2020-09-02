@@ -23,15 +23,16 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e13b8a3a6514548b05b3663a4a785128e23c80d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62591df1ce4a2a048c544b219f7efcc3fe18aa61
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454907"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283666"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>Sys. dm_exec_compute_nodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+
+[!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Contiene información acerca de los nodos usados con la administración de datos de polybase. Muestra una fila por nodo.  
   

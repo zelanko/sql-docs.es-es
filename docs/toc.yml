@@ -201,23 +201,23 @@
                 - name: Python
                   items:
                     - name: Ejecución de scripts de Python
-                      href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Objetos y estructuras de datos
-                      href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Funciones de Python
-                      href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Entrenamiento y puntuación de un modelo
-                      href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                 - name: R
                   items:
                     - name: Ejecutar scripts de R
-                      href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Tipos de datos y objetos
-                      href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Funciones R
-                      href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Entrenamiento y puntuación de un modelo
-                      href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: Tutoriales de Machine Learning
               items:
                 - name: Python
@@ -225,87 +225,87 @@
                     - name: Alquiler de esquís (regresión lineal)
                       items:
                         - name: 1 - Introducción
-                          href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - Preparación de los datos
-                          href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3 - Entrenamiento del modelo
-                          href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - Implementación del modelo
-                          href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Categorización de clientes (agrupación en clústeres k-means)
                       items:
                         - name: 1 - Introducción
-                          href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - Preparación de los datos
-                          href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3 - Creación del modelo
-                          href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - Implementación del modelo
-                          href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Recomendaciones de taxis de Nueva York (clasificación)
                       items:
                         - name: 1 - Introducción
-                          href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - Exploración de datos
-                          href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3 - Ingeniería de características
-                          href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - Entrenamiento e implementación
-                          href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 5 - Predicciones
-                          href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                 - name: R
                   items:
                     - name: Alquiler de material para esquiar (árbol de decisión)
                       items:
                         - name: 1 - Introducción
-                          href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - Preparación de los datos
-                          href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3 - Entrenamiento del modelo
-                          href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - Implementación del modelo
-                          href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Categorización de clientes (agrupación en clústeres k-means)
                       items:
                         - name: 1 - Introducción
-                          href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - Preparación de los datos
-                          href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3 - Creación del modelo
-                          href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - Implementación del modelo
-                          href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Recomendaciones de taxis de Nueva York (clasificación)
                       items:
                         - name: 1 - Introducción
-                          href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 2 - Exploración de datos
-                          href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 3 - Ingeniería de características
-                          href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 4 - Entrenamiento e implementación
-                          href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                         - name: 5 - Predicciones
-                          href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                          href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: Administración de paquetes de Python y R
               items:
                 - name: Python
                   items:
                     - name: Obtención de información de paquetes de Python
-                      href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Instalación con sqlmlutils
-                      href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                 - name: R
                   items:
                     - name: Obtención de información de paquetes de R
-                      href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Instalación con sqlmlutils
-                      href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Creación de un repositorio de miniCRAN
-                      href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
                     - name: Sugerencias para usar paquetes de R
-                      href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15
+                      href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: Limpieza y transformación de datos mediante el acelerador de código PROSE
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: Modelos de aprendizaje automático de Spark con MLeap
@@ -4447,7 +4447,7 @@
         - name: Actualizaciones de ediciones y versiones admitidas de SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: Actualizaciones de ediciones y versiones admitidas de SQL Server 2016
-          href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016
+          href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true
         - name: Preparar la actualización con la ejecución de Data Migration Assistant
           href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
         - name: Analysis Services

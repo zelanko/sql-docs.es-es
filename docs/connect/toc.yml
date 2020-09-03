@@ -5787,6 +5787,10 @@
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
     - name: 'Paso 3: Prueba de concepto de la conexión a SQL mediante Ruby'
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
+- name: Spark
+  items:
+    - name: "Conector para SQL\_Server"
+      href: ../connect/spark/connector.md
 - name: ADO
   items:
     - name: Microsoft ActiveX Data Objects (ADO)

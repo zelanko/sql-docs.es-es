@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
-ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
+ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88602210"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901565"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versión preliminar)
 
@@ -432,6 +432,15 @@ El comando COPY estará disponible con carácter general a principios del siguie
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>¿Hay alguna limitación en el número o el tamaño de los archivos?
 No hay limitaciones en cuanto al número o tamaño de los archivos; sin embargo, para obtener el mejor rendimiento, recomendamos usar archivos de al menos 4 MB.
 
+### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>¿Existe alguna limitación para COPY al usar áreas de trabajo de Synapse (versión preliminar)?
+
+La autenticación mediante identidad administrada (MSI) no se admite con la instrucción COPY o PolyBase (incluido cuando se usa en canalizaciones). Puede aparecer un mensaje de error similar al siguiente:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: La identidad de servicio administrada no se ha habilitado en este servidor. Habilite la identidad de servicio administrada e inténtelo de nuevo.*
+
+La autenticación mediante identidad de servicio administrada es necesaria cuando la cuenta de almacenamiento está asociada a una red virtual. Debe usar BCP/Bulk Insert para cargar datos en lugar de COPY o PolyBase si la cuenta de almacenamiento está conectada a una red virtual.
+
+Esta limitación solo se aplica a los grupos de SQL que pertenezcan a una área de trabajo de Synapse (versión preliminar). Se habilitará la compatibilidad con la identidad de servicio administrada en las áreas de trabajo de SYNAPSE en una próxima versión. 
 
 Envíe cualquier comentario o problema a la lista de distribución sqldwcopypreview@service.microsoft.com.
 

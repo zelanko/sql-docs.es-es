@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 48a599580206e17131c28ecad757f11669851751
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435430"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991879"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)
 
@@ -63,7 +63,7 @@ Descargue la versión más reciente de los componentes de conectividad de Excel 
 
 -   Si el equipo ya tiene una versión de 32 bits de Office, tendrá que instalar la versión de 32 bits de los componentes. También tendrá que asegurarse de ejecutar el paquete de SSIS en modo de 32 bits o de ejecutar la versión de 32 bits del Asistente para importación y exportación.
 
--   Si tiene una suscripción de Office 365, puede que vea un mensaje de error al ejecutar el programa de instalación. El error indica que no se puede instalar la descarga en paralelo con componentes para hacer clic y ejecutar de Office. Para omitir este mensaje de error, ejecute la instalación en modo silencioso abriendo una ventana del símbolo del sistema y ejecutando el archivo .EXE que descargó con el modificador `/quiet`. Por ejemplo:
+-   Si tiene una suscripción de Microsoft 365, puede que vea un mensaje de error al ejecutar el programa de instalación. El error indica que no se puede instalar la descarga en paralelo con componentes para hacer clic y ejecutar de Office. Para omitir este mensaje de error, ejecute la instalación en modo silencioso abriendo una ventana del símbolo del sistema y ejecutando el archivo .EXE que descargó con el modificador `/quiet`. Por ejemplo:
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c641b2562fa15f17bcb6ce235529916ca70a2a52
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646325"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195102"
 ---
 # <a name="create-unique-constraints"></a>Crear restricciones UNIQUE
 
@@ -63,9 +63,9 @@ ms.locfileid: "88646325"
   
 3.  En el cuadro de diálogo **Índices o claves** , haga clic en **Agregar**.  
   
-4.  En la cuadrícula situada debajo de **General**, haga clic en **Tipo** y elija **Clave UNIQUE** en el cuadro de lista desplegable situado a la derecha de la propiedad.  
+4.  En la cuadrícula situada debajo de **General**, haga clic en **Tipo** y elija **Clave UNIQUE** en el cuadro de lista desplegable situado a la derecha de la propiedad y, a continuación, haga clic en **Cerrar**.  
   
-5.  En el menú **Archivo**, haga clic en ***Guardar**_nombre de tabla_.  
+5.  En el menú **Archivo**, haga clic en ***Guardar** _nombre de tabla_.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -106,7 +106,7 @@ ms.locfileid: "88646325"
   
     ```  
   
-#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>Para crear una restricción UNIQUE en una tabla nueva  
+#### <a name="to-create-a-unique-constraint-on-a-new-table"></a>Para crear una restricción UNIQUE en una tabla nueva  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

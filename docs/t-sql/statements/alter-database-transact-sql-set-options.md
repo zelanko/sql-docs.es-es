@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d75f734b3a45942155afaa7a85f4817fe868f3a0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778554"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900957"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -753,13 +753,13 @@ ACTIVAR
 Habilita el Almacén de consultas.
 
 Apagado      
-Deshabilita el Almacén de consultas. OFF Es el valor predeterminado. FORCED es opcional. FORCED anula todas las tareas en segundo plano del Almacén de consultas en ejecución y omite el vaciado sincrónico cuando se desactiva el Almacén de consultas. Hace que el Almacén de consultas se apague lo más rápido posible. Desactiva el Almacén de consultas de forma inmediata. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 introduce FORCED.
+Deshabilita el Almacén de consultas. OFF Es el valor predeterminado. FORCED es opcional. FORCED anula todas las tareas en segundo plano del Almacén de consultas en ejecución y omite el vaciado sincrónico cuando se desactiva el Almacén de consultas. Hace que el Almacén de consultas se apague lo más rápido posible. FORCED se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 y a las compilaciones posteriores.
 
 > [!NOTE]  
 > El Almacén de consultas no se puede deshabilitar en la base de datos única de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ni Grupo elástico. Al ejecutar `ALTER DATABASE [database] SET QUERY_STORE = OFF` se devuelve la advertencia `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
-Quita el contenido del Almacén de consultas.
+Quita los datos relacionados con las consultas del Almacén de consultas. ALL es opcional. ALL quita los datos y metadatos relacionados con las consultas del Almacén de consultas.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 Describe el modo de operación del Almacén de consultas.

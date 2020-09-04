@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d7dccda143515b801f06664d1916fbec6e2dcea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445375"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062334"
 ---
 # <a name="hints-transact-sql---table"></a>Sugerencias (Tabla de Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,10 +72,9 @@ ms.locfileid: "88445375"
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
-[ NOEXPAND ] {   
-    INDEX  ( index_value [ ,...n ] )   
-  | INDEX =  ( index_value )      
-  | FORCESEEK [( index_value ( index_column_name  [ ,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ] 
   | FORCESCAN  
   | FORCESEEK  
   | HOLDLOCK   
@@ -90,7 +89,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT   
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
@@ -145,15 +144,15 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 Recomendamos utilizar comas entre las sugerencias de tabla.  
   
 > [!IMPORTANT]  
->  La separación de las sugerencias con espacios en lugar de comas es una característica obsoleta: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+> La separación de las sugerencias con espacios en lugar de comas es una característica obsoleta: [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
 Especifica que las vistas indizadas no se expandan para obtener acceso a las tablas subyacentes cuando el optimizador de consultas procesa la consulta. El optimizador de consultas trata la vista como una tabla con un índice clúster. NOEXPAND solo se aplica a las vistas indizadas. Para más información, vea, [Uso de NOEXPAND](#using-noexpand).  
   
-INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
-La sintaxis de INDEX() especifica los nombres o los identificadores de los índices que el optimizador de consultas va a utilizar al procesar la instrucción. La sintaxis alternativa INDEX = especifica un valor de índice único. Solamente se puede especificar una sugerencia de índice por cada tabla.  
+INDEX  **(** _<index\_value>_ [ **,** ... _n_ ] ) | INDEX =  ( _<index\_value>_ **)**  
+La sintaxis de INDEX() especifica los nombres o los identificadores de los índices que el optimizador de consultas va a utilizar al procesar la instrucción. La sintaxis alternativa `INDEX =` especifica un valor de índice único. Solamente se puede especificar una sugerencia de índice por cada tabla.  
   
-Si existe un índice agrupado, INDEX(0) exige un recorrido del índice agrupado e INDEX(1) exige un recorrido o una búsqueda del índice agrupado. Si no existe un índice clúster, INDEX(0) exige un recorrido de tabla e INDEX(1) se interpreta como error.  
+Si existe un índice agrupado, `INDEX(0)` exige un recorrido del índice agrupado e `INDEX(1)` exige un recorrido o una búsqueda del índice agrupado. Si no existe un índice clúster, `INDEX(0)` exige un recorrido de tabla e `INDEX(1)` se interpreta como error.  
   
  Si se utilizan varios índices en una lista de sugerencias, los índices duplicados se omiten y el resto se utiliza para recuperar las filas de la tabla. El orden de los índices de la sugerencia de índice es importante. Una sugerencia de varios índices obliga a hacer AND entre los índices y el optimizador de consultas aplica todas las condiciones posibles a cada uno de los índices a los que tiene acceso. Si la colección de índices sugeridos no incluye todas las columnas a las que hace referencia la consulta, se realiza una captura para recuperar las columnas restantes, una vez que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] recupera todas las columnas indizadas.  
   
@@ -181,7 +180,7 @@ Especifica la inserción del valor predeterminado de la columna de una tabla, si
   
 Para obtener un ejemplo que utiliza esta sugerencia en una instrucción INSERT... SELECT * FROM OPENROWSET(BULK...), vea [Mantener valores NULL o usar valores predeterminados durante la importación masiva &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
+FORCESEEK [ **(** _<index\_value>_ **(** _<index\_column\_name>_ [ **,** ... _n_ ] **))** ]  
 Especifica que el optimizador de consultas use solamente una operación de búsqueda de índice como ruta de acceso a los datos de la tabla o la vista. 
 
 > [!NOTE]
@@ -234,7 +233,7 @@ En las tablas y los índices con particiones, FORCESCAN se aplica una vez elimin
 La sugerencia FORCESCAN tiene las restricciones siguientes:  
 -   La sugerencia no se puede especificar para una tabla que es el destino de una instrucción INSERT, UPDATE o DELETE.  
 -   La sugerencia no se puede emplear con más de una sugerencia de índice.  
--   La sugerencia impide que el optimizador considere ningún índice espacial o XML de la tabla.  
+-   La sugerencia impide que el optimizador de consultas considere ningún índice espacial o XML de la tabla.  
 -   No se puede especificar la sugerencia para un origen de datos remoto.  
 -   La sugerencia no se puede especificar junto con la sugerencia FORCESEEK.  
   
@@ -331,9 +330,9 @@ LEFT JOIN dbo.[Order History] AS oh
     ON c.customer_id=oh.customer_id;  
 ```  
   
-SPATIAL_WINDOW_MAX_CELLS = *entero*  
+SPATIAL_WINDOW_MAX_CELLS = *<integer\_value>*  
 **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
-Especifica el número máximo de celdas que se van a usar para teselar un objeto de geometría o geografía. *number* es un valor entre 1 y 8192.  
+Especifica el número máximo de celdas que se van a usar para teselar un objeto de geometría o geografía. *<integer\_value>* es un valor entre 1 y 8192.  
   
 Esta opción permite optimizar el tiempo de ejecución de la consulta ajustando el equilibrio entre el tiempo de ejecución del filtro primario y secundario. Un número mayor reduce el tiempo de ejecución del filtro secundario, pero aumenta el tiempo de ejecución del filtro primario y un número menor disminuye el tiempo de ejecución del filtro primario, pero aumenta el tiempo de ejecución del filtro secundario. En el caso de datos espaciales más densos, un número mayor debe producir un tiempo de ejecución más rápido proporcionando una mejor aproximación con el filtro primario y reduciendo el tiempo de ejecución del filtro secundario. Si se trata de datos más dispersos, un número menor disminuirá el tiempo de ejecución del filtro primario.  
   
@@ -393,9 +392,9 @@ GO
 El optimizador de consultas no considerará una sugerencia de índice si las opciones SET no tienen los valores necesarios para los índices filtrados. Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="using-noexpand"></a>Usar NOEXPAND  
-NOEXPAND solo se aplica a las *vistas indizadas*. Una vista indizada es una vista con un único índice clúster creado en ella. Si una consulta tiene referencias a columnas que están presentes en una vista indizada y en tablas base, y el optimizador de consultas determina que el uso de vistas indizadas proporciona el mejor método para ejecutar la consulta, el optimizador de consultas utiliza el índice en la vista. Esta funcionalidad se denomina *coincidencia de vista indizada*. Antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, el uso automático de una vista indizada por parte del optimizador de consultas solo se admite en determinadas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+NOEXPAND solo se aplica a las *vistas indizadas*. Una vista indizada es una vista con un único índice clúster creado en ella. Si una consulta tiene referencias a columnas que están presentes en una vista indizada y en tablas base, y el optimizador de consultas determina que el uso de vistas indizadas proporciona el mejor método para ejecutar la consulta, el optimizador de consultas utiliza el índice en la vista. Esta funcionalidad se denomina *coincidencia de vista indizada*. Antes de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, el uso automático de una vista indizada por parte del optimizador de consultas solo se admite en determinadas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), [Características compatibles con las ediciones de SQL Server 2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md) y [Características compatibles con las ediciones de SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
-Sin embargo, para que el optimizador considere las vistas indizadas para establecer coincidencias o utilice una vista indizada a la que se hace referencia con una sugerencia NOEXPAND, las siguientes opciones SET deben estar establecidas en ON.  
+Sin embargo, para que el optimizador de consultas considere las vistas indizadas para establecer coincidencias o utilice una vista indizada a la que se hace referencia con una sugerencia NOEXPAND, las siguientes opciones SET deben estar establecidas en ON.  
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el uso automático de vistas indexadas sin especificar la sugerencia NOEXPAND.
@@ -411,13 +410,13 @@ Sin embargo, para que el optimizador considere las vistas indizadas para estable
 
 Asimismo, la opción NUMERIC_ROUNDABORT debe establecerse en OFF.  
   
- Para exigir que el optimizador utilice un índice para una vista indizada, especifique la opción NOEXPAND. Esta sugerencia solo se puede usar si la vista también aparece en la consulta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporciona ninguna sugerencia que obligue a usar una vista indizada determinada en una consulta que no mencione la vista directamente en la cláusula FROM. Sin embargo, el optimizador de consultas considera el uso de vistas indizadas, incluso aunque no se haga referencia directa a ellas en la consulta. SQL Server solo creará automáticamente las estadísticas en una vista indexada cuando se usa una sugerencia de tabla NOEXPAND. La omisión de esta sugerencia puede provocar advertencias del plan de ejecución sobre estadísticas que faltan que no se pueden resolver mediante la creación manual de estadísticas. Durante la optimización de consultas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usará las estadísticas de vista creadas de forma automática o manual cuando la consulta hace referencia directamente a la vista y se usa la sugerencia NOEXPAND.    
+ Para exigir que el optimizador de consultas utilice un índice para una vista indizada, especifique la opción NOEXPAND. Esta sugerencia solo se puede usar si la vista también aparece en la consulta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no proporciona ninguna sugerencia que obligue a usar una vista indizada determinada en una consulta que no mencione la vista directamente en la cláusula FROM. Sin embargo, el optimizador de consultas considera el uso de vistas indizadas, incluso aunque no se haga referencia directa a ellas en la consulta. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] solo creará automáticamente las estadísticas en una vista indexada cuando se usa una sugerencia de tabla NOEXPAND. La omisión de esta sugerencia puede provocar advertencias del plan de ejecución sobre estadísticas que faltan que no se pueden resolver mediante la creación manual de estadísticas. Durante la optimización de consultas, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usará las estadísticas de vista creadas de forma automática o manual cuando la consulta hace referencia directamente a la vista y se usa la sugerencia NOEXPAND.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Usar una sugerencia de tabla como una sugerencia de consulta  
  Las *sugerencias de tabla* también se pueden especificar como sugerencias de consulta mediante la cláusula OPTION (TABLE HINT). Se recomienda usar una sugerencia de tabla como una sugerencia de consulta únicamente en el contexto de una [guía de plan](../../relational-databases/performance/plan-guides.md). Para las consultas ad hoc, especifique estas sugerencias únicamente como sugerencias de tabla. Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="permissions"></a>Permisos  
- Las sugerencias KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS requieren permisos ALTER en la tabla.  
+ Las sugerencias KEEPIDENTITY, IGNORE_CONSTRAINTS e IGNORE_TRIGGERS requieren permisos `ALTER` en la tabla.  
   
 ## <a name="examples"></a>Ejemplos  
   

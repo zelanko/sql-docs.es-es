@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f45667dad4466789823a8ff36ccc0b665f531db3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813929"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480597"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novedades de Master Data Services (MDS)
 
@@ -71,7 +71,7 @@ ms.locfileid: "85813929"
   
  Se vuelve a generar en línea un índice con más de un 30 % de fragmentación. Durante la regeneración, el rendimiento se ve afectado en la operación CRUD en la misma tabla. Si la degradación del rendimiento es un problema, se recomienda que ejecute el procedimiento almacenado fuera del horario laboral. Para obtener más información acerca de la fragmentación de índices, vea [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- Para obtener más información, consulte esta publicación en el blog de Master Data Services, [Performance and Scale Improvement in SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375)(Mejora del rendimiento y la escala en SQL Server 2016).  
+ Para obtener más información, consulte esta publicación en el blog de Master Data Services, [Performance and Scale Improvement in SQL Server 2016](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-and-scale-improvement-in-sql-server-2016/ba-p/388225)(Mejora del rendimiento y la escala en SQL Server 2016).  
   
 ##  <a name="improved-security"></a>Seguridad mejorada  
   
@@ -123,7 +123,7 @@ ms.locfileid: "85813929"
   
 -   Cambio del nombre y ocultación de los atributos Name y Code.  
   
- Para obtener más información, vea los temas siguientes:  
+ Para obtener más información, vea los siguientes temas.  
   
 -   [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   

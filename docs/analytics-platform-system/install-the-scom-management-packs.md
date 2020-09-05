@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0db3a588dfabf290f2e095adafcd3331187af957
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 666eb33667f9badc2c09e4f7afa872622bedb67f
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766984"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480309"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Instalación de los módulos de administración de SQL Server Operations Manager (SCOM) para Analytics Platform System
 Siga estos pasos para descargar e instalar los módulos de administración de System Center Operations Manager (SCOM) para PDW de SQL Server. Los módulos de administración son necesarios para supervisar PDW de SQL Server de SCOM.  
@@ -29,7 +29,7 @@ Para la carga de trabajo PDW de APS, descargue el [módulo de administración de
   
 Para la administración del dispositivo, descargue el módulo de administración de la [base de SQL Server Appliance](/previous-versions/system-center/packs/gg602398(v=technet.10)).  
   
-Para versiones anteriores de PDW sin APS, descargue el[módulo de supervisión de System Center para el dispositivo de almacenamiento de datos paralelos Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkId=282661).  
+Para versiones anteriores de PDW sin APS, descargue el[módulo de supervisión de System Center para el dispositivo de almacenamiento de datos paralelos Microsoft SQL Server 2012](https://docs.microsoft.com/sql/analytics-platform-system/download-and-apply-microsoft-updates?view=aps-pdw-2016-au7).  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   

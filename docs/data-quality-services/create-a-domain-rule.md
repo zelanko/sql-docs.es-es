@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487939"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480425"
 ---
 # <a name="create-a-domain-rule"></a>Cree una regla de dominio
 
@@ -127,7 +127,7 @@ ms.locfileid: "88487939"
 |El valor es fecha u hora|Solo serán válidos los valores con un tipo de datos de fecha y hora de SQL Server. Esto incluye los tipos datetime, time, date, etc.|Operando de ejemplo: N/D<br /><br /> Valores válidos: 1916-06-04; 1916-06-04 18:24:24; 21 de marzo de 2001; 5/18/2011; 18:24:24<br /><br /> Valores no válidos: marzo 213, 2006|  
 |El valor está en|Solo serán válidos los valores que están en el conjunto del operando.<br /><br /> Para especificar los valores del conjunto, haga clic en el cuadro de texto del operando, escriba el primer valor, presione Entrar, escriba el segundo valor, repita este procedimiento con tantos valores como desee incluir en el conjunto y, a continuación, haga clic de nuevo en el cuadro de texto del operando. DQS insertará una coma entre los valores del conjunto. Si especifica una única cadena con comas y sin un retorno de carro (por ejemplo, "A1, B1"), DQS considerará esa cadena como un valor único del conjunto.|Operando de ejemplo: [A1, B1]<br /><br /> Valores válidos: A1, B1<br /><br /> Valores no válidos: AA, 11|  
 |El valor no está en|Solo serán válidos los valores que no están en el conjunto del operando.|Operando de ejemplo: [A1, B1]<br /><br /> Valores válidos: AA, 11<br /><br /> Valores no válidos: A1, B1|  
-|El valor coincide con el modelo|Solo serán válidos los valores que coincidan con el modelo de caracteres, dígitos o caracteres especiales del operando.<br /><br /> Se puede usar cualquier letra (A...Z) como patrón para cualquier letra; no se distinguen mayúsculas de minúsculas. Se puede usar cualquier dígito (0...9) como patrón para cualquier dígito. Se puede usar cualquier carácter especial, excepto una letra o un dígito, como patrón de sí mismo. Los corchetes, [], definen una coincidencia opcional.|Operando de ejemplo: AA:000 (un patrón de *cualesquiera* dos caracteres seguidos de un signo de dos puntos (:), que a su vez va seguido de *cualesquiera* tres dígitos.<br /><br /> Valores válidos: AB:012, df:257<br /><br /> Valores no válidos: abc:123, FJ-369<br /><br /> Para obtener más información sobre las reglas de patrón en DQS y ejemplos, vea [Coincidencias de patrón en reglas de dominio de DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
+|El valor coincide con el modelo|Solo serán válidos los valores que coincidan con el modelo de caracteres, dígitos o caracteres especiales del operando.<br /><br /> Se puede usar cualquier letra (A...Z) como patrón para cualquier letra; no se distinguen mayúsculas de minúsculas. Se puede usar cualquier dígito (0...9) como patrón para cualquier dígito. Se puede usar cualquier carácter especial, excepto una letra o un dígito, como patrón de sí mismo. Los corchetes, [], definen una coincidencia opcional.|Operando de ejemplo: AA:000 (un patrón de *cualesquiera* dos caracteres seguidos de un signo de dos puntos (:), que a su vez va seguido de *cualesquiera* tres dígitos.<br /><br /> Valores válidos: AB:012, df:257<br /><br /> Valores no válidos: abc:123, FJ-369<br /><br /> Para obtener más información sobre las reglas de patrón en DQS y ejemplos, vea [Coincidencias de patrón en reglas de dominio de DQS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/pattern-matching-in-dqs-domain-rules/ba-p/388103).|  
 |El valor no coincide con el modelo|Solo serán válidos los valores que no coincidan con el modelo de caracteres, dígitos o caracteres especiales del operando.|Operando de ejemplo: A1 (el valor no debe coincidir con un patrón de *cualquier* carácter seguido de *cualquier* dígito).<br /><br /> Valores válidos: AB1, A, A:5<br /><br /> Valores no válidos: B7, c9|  
 |El valor contiene el modelo|Solo serán válidos los valores que contengan el modelo de caracteres, dígitos o caracteres especiales del operando.|Operando de ejemplo: AA-12 (el valor contiene un modelo de *cualesquiera* dos caracteres seguidos de un guion (-), que a su vez va seguido de *cualesquiera* dos dígitos).<br /><br /> Valores válidos: AAA-01, ab-975<br /><br /> Valores no válidos: A7, AA-6, C-45, aa;98|  
 |El valor no contiene el modelo|Solo serán válidos los valores que no contengan el modelo de caracteres del operando.|Operando de ejemplo: AB-12 (el valor no debe contener un modelo de *cualesquiera* dos caracteres seguidos de un guion (-), que a su vez va seguido de *cualesquiera* dos dígitos).<br /><br /> Valores válidos: A7, AA-6, C-45, aa;98<br /><br /> Valores no válidos: AAA-01, ab-975|  

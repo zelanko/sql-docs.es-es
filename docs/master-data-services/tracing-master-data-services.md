@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: e471a3ab0f6d2ce120ae5b20cd07ef71891dadc9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812690"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480457"
 ---
 # <a name="tracing-master-data-services"></a>Seguimiento (Master Data Services)
 
@@ -67,9 +67,9 @@ ms.locfileid: "85812690"
     |CorrelationID|Se asigna un identificador de correlación para cada solicitud. Todos los seguimientos desencadenados por esta solicitud compartirán el mismo identificador de correlación.<br /><br /> Cuando se produce un error en la interfaz de usuario, aparece el identificador de correlación en el mensaje de error.|  
     |Operación|Nombre de la operación de solicitud. Si la solicitud es una solicitud de interfaz de usuario web, el nombre de la operación es la dirección URL. Si la solicitud es una solicitud de API, el nombre de la operación es el nombre del servicio.|  
     |Nivel|Nivel de esta entrada de seguimiento.|  
-    |Message|Cuerpo del mensaje de seguimiento.|  
+    |Mensaje|Cuerpo del mensaje de seguimiento.|  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377)(Solución de problemas de mejora del registro), en msdn.com.  
+ Entrada de blog [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)(Solución de problemas de mejora del registro), en msdn.com.  
   
   

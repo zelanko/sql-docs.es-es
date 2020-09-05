@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812842"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480331"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
 
@@ -72,7 +72,7 @@ ms.locfileid: "85812842"
 |Administrador de la entidad|Puede ser un administrador de entidad según los permisos de administrador que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Solo tiene acceso a áreas funcionales a las que se permita el acceso.<br /><br /> Tiene automáticamente todos los permisos para todos los objetos y miembros en la entidad concreta.<br /><br /> Puede aprobar los conjuntos de cambios pendientes si los cambios de entidad exigen aprobación.|  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Mejoras de seguridad), en msdn.com.  
+ Entrada de blog, [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)(Mejoras de seguridad), en msdn.com.  
   
 ## <a name="see-also"></a>Consulte también  
  [Cree un administrador de modelos &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   

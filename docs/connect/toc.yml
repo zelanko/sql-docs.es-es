@@ -6,7 +6,7 @@
   href: ../connect/sql-connection-libraries.md
 - name: Matriz de compatibilidad de características del controlador
   href: ../connect/driver-feature-matrix.md
-- name: Historial de controladores de SQL Server
+- name: "Historial de controladores de SQL\_Server"
   href: ../connect/connect-history.md
 - name: Desarrollador de datos SQL
   href: ../connect/sql-data-developer.md
@@ -14,31 +14,31 @@
   items:
     - name: Microsoft ADO.NET para SQL Server
       href: ../connect/ado-net/microsoft-ado-net-sql-server.md
-    - name: Introducción al controlador SqlClient
+    - name: Introducción
       href: ../connect/ado-net/get-started-sqlclient-driver.md
       items:
-        - name: 'Paso 1: Configuración del entorno de desarrollo para el desarrollo de ADO.NET'
+        - name: 'Paso 1: Configuración del entorno de desarrollo'
           href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
-        - name: 'Paso 2: Creación de una base de datos SQL para el desarrollo de ADO.NET'
+        - name: 'Paso 2: Creación de una base de datos SQL'
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-        - name: 'Paso 3: Prueba de concepto de la conexión a SQL mediante ADO.NET'
+        - name: 'Paso 3: Prueba de concepto de la conexión a SQL'
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-        - name: 'Paso 4: Conexión de forma resistente a SQL con ADO.NET'
+        - name: 'Paso 4: Conexión resistente a SQL'
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
-    - name: Información general sobre el controlador SqlClient
+    - name: Información general
       href: ../connect/ado-net/overview-sqlclient-driver.md
       items:
-        - name: Introducción al espacio de nombres Microsoft.Data.SqlClient
+        - name: Espacio de nombres Microsoft.Data.SqlClient
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
-        - name: Descarga del proveedor de datos SqlClient de Microsoft para SQL Server
+        - name: Descargar
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
-        - name: Habilitación del seguimiento de eventos en SqlClient
-          href: ../connect/ado-net/enable-eventsource-tracing.md
-        - name: Modificadores de AppContext en SqlClient
-          href: ../connect/ado-net/appcontext-switches.md
-        - name: Ciclo de vida de la compatibilidad del controlador SqlClient
+        - name: Ciclo de vida de soporte técnico
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
-        - name: Búsqueda de información adicional del controlador SqlClient
+        - name: Activación del seguimiento de eventos
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: Cambios de AppContext
+          href: ../connect/ado-net/appcontext-switches.md
+        - name: Búsqueda de información adicional
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
     - name: SQL Server y ADO.NET
       href: ../connect/ado-net/sql/index.md
@@ -163,7 +163,43 @@
   items:
     - name: Microsoft JDBC Driver para SQL Server
       href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md
-    - name: Referencia de API del controlador JDBC
+    - name: Introducción
+      href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
+      items:
+        - name: 'Paso 1: Configuración del entorno de desarrollo'
+          href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
+        - name: 'Paso 2: Creación de una base de datos SQL'
+          href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
+        - name: 'Paso 3: Prueba de concepto de la conexión a SQL'
+          href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
+    - name: Información general
+      href: ../connect/jdbc/overview-of-the-jdbc-driver.md
+      items:
+        - name: Descargar
+          href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: Notas de la versión
+          href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
+        - name: Requisitos del sistema
+          href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
+        - name: Matrices compatibles
+          href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
+        - name: Uso del controlador
+          href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: Análisis de los resultados
+          href: ../connect/jdbc/parsing-the-results.md
+        - name: Uso de useFMTOnly
+          href: ../connect/jdbc/using-usefmtonly.md
+        - name: Descripción de la compatibilidad con Java EE
+          href: ../connect/jdbc/understanding-java-ee-support.md
+        - name: Implementación de la directiva
+          href: ../connect/jdbc/deploying-the-jdbc-driver.md
+        - name: Búsqueda de información adicional
+          href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
+        - name: Preguntas más frecuentes
+          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+        - name: Dependencias de características
+          href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
+    - name: Referencia de API
       href: ../connect/jdbc/reference/jdbc-driver-api-reference.md
       items:
         - name: Interfaz ISQLServerCallableStatement
@@ -2498,43 +2534,7 @@
               items:
                 - name: Campo SSTRANSTIGHTLYCPLD (SQLServerXAResource)
                   href: ../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md
-    - name: Primeros pasos con el controlador JDBC
-      href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
-      items:
-        - name: 'Paso 1: configuración del entorno de desarrollo para el desarrollo de Java'
-          href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: 'Paso 2: creación de una base de datos SQL para el desarrollo de Java'
-          href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
-        - name: 'Paso 3: prueba de concepto de la conexión a SQL mediante Java'
-          href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
-    - name: Introducción al controlador JDBC
-      href: ../connect/jdbc/overview-of-the-jdbc-driver.md
-      items:
-        - name: Descarga de Microsoft JDBC Driver para SQL Server
-          href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
-        - name: Análisis de los resultados
-          href: ../connect/jdbc/parsing-the-results.md
-        - name: Notas de la versión para el controlador JDBC
-          href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
-        - name: Requisitos del sistema para el controlador JDBC
-          href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
-        - name: Usar el controlador JDBC
-          href: ../connect/jdbc/using-the-jdbc-driver.md
-        - name: Uso de useFMTOnly
-          href: ../connect/jdbc/using-usefmtonly.md
-        - name: Descripción de la compatibilidad con Java EE
-          href: ../connect/jdbc/understanding-java-ee-support.md
-        - name: Implementar el controlador JDBC
-          href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: Encontrar información sobre el Controlador JDBC
-          href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
-        - name: Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server
-          href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
-        - name: Preguntas más frecuentes (P+F) sobre el controlador JDBC
-          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
-        - name: Dependencias de características de Microsoft JDBC Driver para SQL Server
-          href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
-    - name: Proteger las aplicaciones del controlador JDBC
+    - name: Protección de aplicaciones
       href: ../connect/jdbc/securing-jdbc-driver-applications.md
       items:
         - name: Proteger las cadenas de conexión
@@ -2554,7 +2554,7 @@
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: Modo FIPS
           href: ../connect/jdbc/fips-mode.md
-    - name: Mejorar el rendimiento y la confiabilidad con el controlador JDBC
+    - name: Mejora del rendimiento y la confiabilidad
       href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
       items:
         - name: Cerrar los objetos cuando no se usan
@@ -2569,7 +2569,7 @@
           href: ../connect/jdbc/sparse-columns.md
         - name: Almacenamiento en caché de metadatos de instrucción preparado para el controlador JDBC
           href: ../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md
-    - name: Diagnosticar problemas del controlador JDBC
+    - name: Diagnóstico de problemas
       href: ../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md
       items:
         - name: Control de errores
@@ -2582,7 +2582,7 @@
           href: ../connect/jdbc/troubleshooting-connectivity.md
         - name: Obtener acceso a información de diagnóstico en el registro de eventos extendidos
           href: ../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md
-    - name: Ejemplos de código de aplicación de controlador JDBC
+    - name: Código de ejemplo de la aplicación
       href: ../connect/jdbc/sample-jdbc-driver-applications.md
       items:
         - name: Conectar y recuperar datos
@@ -2621,7 +2621,7 @@
               href: ../connect/jdbc/updating-large-data-sample.md
         - name: Ejemplo de clasificación y detección de datos
           href: ../connect/jdbc/data-discovery-classification-sample.md
-    - name: Cumplimiento y aspectos legales del controlador JDBC para SQL
+    - name: Cumplimiento y aspectos legales
       href: ../connect/jdbc/compliance-and-legal-for-the-jdbc-sql-driver.md
       items:
         - name: Cumplimiento de JDBC 4.1 con el controlador JDBC
@@ -2630,25 +2630,25 @@
           href: ../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md
         - name: Cumplimiento de JDBC 4.3 con el controlador JDBC
           href: ../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md
-    - name: Guía de programación del controlador JDBC para SQL
+    - name: Guía de programación
       href: ../connect/jdbc/programming-guide-for-jdbc-sql-driver.md
       items:
-        - name: Conectar SQL Server con el controlador JDBC
+        - name: Conexión con SQL
           href: ../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md
-        - name: Describir los tipos de datos del controlador JDBC
+        - name: Descripción de los tipos de datos de JDBC
           href: ../connect/jdbc/understanding-the-jdbc-driver-data-types.md
-        - name: Usar instrucciones con el controlador JDBC
+        - name: Uso de las instrucciones
           href: ../connect/jdbc/using-statements-with-the-jdbc-driver.md
-        - name: Administrar conjuntos de resultados con el controlador JDBC
+        - name: Administración de conjuntos de resultados
           href: ../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md
-        - name: Realizar transacciones con el controlador JDBC
+        - name: Realización de transacciones
           href: ../connect/jdbc/performing-transactions-with-the-jdbc-driver.md
-        - name: Controlar metadatos con el controlador JDBC
+        - name: Control de los metadatos
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
-        - name: Usar Always Encrypted con el controlador JDBC
+        - name: Uso de Always Encrypted
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: Uso de Always Encrypted con enclaves seguros y el controlador JDBC
+            - name: Uso de Always Encrypted con enclaves seguros
               href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: Artículos de la guía
           items:
@@ -2777,17 +2777,19 @@
   items:
     - name: Controlador Node.js de SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: 'Paso 1:  Configuración del entorno de desarrollo para el desarrollo de Node.js'
+    - name: 'Paso 1:  Configuración del entorno de desarrollo'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-    - name: 'Paso 2: Creación de una instancia de SQL Database para el desarrollo de Node.js'
+    - name: 'Paso 2: Creación de una base de datos SQL'
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: 'Paso 3: Prueba de concepto de la conexión a SQL mediante Node.js'
+    - name: 'Paso 3: Prueba de concepto de la conexión a SQL'
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
     - name: Controlador ODBC de Microsoft para SQL Server
       href: ../connect/odbc/microsoft-odbc-driver-for-sql-server.md
-    - name: Linux y Mac
+    - name: Descargar
+      href: ../connect/odbc/download-odbc-driver-for-sql-server.md
+    - name: Linux y macOS
       items:
         - name: Requisitos del sistema
           href: ../connect/odbc/linux-mac/system-requirements.md
@@ -2821,13 +2823,13 @@
           href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: Problemas conocidos
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
-        - name: Preguntas más frecuentes (P+F) sobre ODBC en Linux y macOS
+        - name: Preguntas más frecuentes
           href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
     - name: Windows
       items:
         - name: Microsoft ODBC Driver for SQL Server en Windows
           href: ../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md
-        - name: Características de Microsoft ODBC Driver for SQL Server en Windows
+        - name: Características
           href: ../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
         - name: Notas de la versión
           href: ../connect/odbc/windows/release-notes-odbc-sql-server-windows.md
@@ -2835,13 +2837,13 @@
           href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
         - name: Guías de características
           items:
-            - name: Resistencia de conexión en el controlador Windows ODBC
+            - name: Resistencia de la conexión
               href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
-            - name: Agrupación de conexiones dependientes del controlador ODBC para SQL Server
+            - name: Agrupación de conexiones dependientes del controlador
               href: ../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
         - name: Ejemplo de ejecución asincrónica (método de notificación)
           href: ../connect/odbc/windows/asynchronous-execution-notification-method-sample.md
-        - name: Temas de ayuda
+        - name: 'Ayuda, temas'
           items:
             - name: Pantalla del Asistente para orígenes de datos 1
               href: ../connect/odbc/windows/dsn-wizard-1.md
@@ -2871,9 +2873,7 @@
           href: ../connect/odbc/use-xa-with-dtc.md
         - name: Correcciones de errores
           href: ../connect/odbc/bug-fixes.md
-    - name: Descargar controlador ODBC para SQL Server
-      href: ../connect/odbc/download-odbc-driver-for-sql-server.md
-    - name: Aplicación de ejemplo C++ con ODBC
+    - name: Aplicación de ejemplo en C++
       href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
     - name: ODBC avanzada
       items:
@@ -5083,15 +5083,15 @@
   items:
     - name: Controlador Microsoft OLE DB para SQL Server
       href: ../connect/oledb/oledb-driver-for-sql-server.md
+    - name: Descargar
+      href: ../connect/oledb/download-oledb-driver-for-sql-server.md
     - name: Notas de la versión
       href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
-    - name: Descarga del controlador Microsoft OLE DB para SQL Server
-      href: ../connect/oledb/download-oledb-driver-for-sql-server.md
     - name: Requisitos del sistema
       href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
-    - name: Casos de uso del controlador OLE DB para SQL Server
+    - name: Casos de uso del controlador OLE DB
       href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
-    - name: Búsqueda de más información sobre el controlador OLE DB para SQL Server
+    - name: Buscar más información
       href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
     - name: Características
       href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
@@ -5478,35 +5478,35 @@
     - name: Introducción
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
-        - name: 'Paso 1: Configuración del entorno de desarrollo para el desarrollo de PHP'
+        - name: 'Paso 1: Configuración del entorno de desarrollo'
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-        - name: 'Paso 2: Creación de una instancia de SQL Database para el desarrollo de PHP'
+        - name: 'Paso 2: Creación de una base de datos SQL'
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-        - name: 'Paso 3: Prueba de concepto de la conexión a SQL Server con PHP'
+        - name: 'Paso 3: Prueba de concepto de la conexión a SQL'
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-        - name: 'Paso 4: Conexión con resistencia a SQL Server con PHP'
+        - name: 'Paso 4: Conexión resistente a SQL'
           href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
     - name: Información general
       href: ../connect/php/overview-of-the-php-sql-driver.md
       items:
+        - name: Descargar
+          href: ../connect/php/download-drivers-php-sql-server.md
+        - name: Instalación en Linux y macOS
+          href: ../connect/php/installation-tutorial-linux-mac.md
+        - name: Notas de la versión
+          href: ../connect/php/release-notes-php-sql-driver.md
         - name: Requisitos del sistema
           href: ../connect/php/system-requirements-for-the-php-sql-driver.md
-        - name: Descarga de controladores para PHP para SQL Server
-          href: ../connect/php/download-drivers-php-sql-server.md
+        - name: Matrices compatibles
+          href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
         - name: Carga de los controladores
           href: ../connect/php/loading-the-php-sql-driver.md
         - name: Configuración de IIS
           href: ../connect/php/configuring-iis-for-php-sql-driver.md
-        - name: Tutorial de instalación de controladores de PHP en Linux y Mac
-          href: ../connect/php/installation-tutorial-linux-mac.md
-        - name: Notas de la versión
-          href: ../connect/php/release-notes-php-sql-driver.md
-        - name: Recursos de soporte
+        - name: Recursos de soporte técnico
           href: ../connect/php/support-resources-for-the-php-sql-driver.md
         - name: Sobre los ejemplos de código
           href: ../connect/php/about-code-examples-in-the-documentation.md
-        - name: Matriz de compatibilidad de los controladores de Microsoft para PHP para SQL Server
-          href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
     - name: Guía de programación
       href: ../connect/php/programming-guide-for-php-sql-driver.md
       items:
@@ -5751,9 +5751,9 @@
     - name: Ejemplos de código
       href: ../connect/php/code-samples-for-php-sql-driver.md
       items:
-        - name: Aplicación de ejemplo (controlador PDO_SQLSRV)
+        - name: Aplicación de ejemplo (PDO_SQLSRV)
           href: ../connect/php/example-application-pdo-sqlsrv-driver.md
-        - name: Aplicación de ejemplo (controlador SQLSRV)
+        - name: Aplicación de ejemplo (SQLSRV)
           href: ../connect/php/example-application-sqlsrv-driver.md
 - name: Python
   items:
@@ -5762,30 +5762,30 @@
     - name: Controlador Python para SQL (pyodbc)
       href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
       items:
-        - name: 'Paso 1: Configuración del entorno de desarrollo para el desarrollo de Python pyodbc'
+        - name: 'Paso 1: Configuración del entorno de desarrollo'
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-        - name: 'Paso 2: Creación de una instancia de SQL Database para el desarrollo de Python pyodbc'
+        - name: 'Paso 2: Creación de una base de datos SQL'
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: 'Paso 3: Prueba de concepto de la conexión a SQL con pyodbc'
+        - name: 'Paso 3: Prueba de concepto de la conexión a SQL'
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: 'Controlador Python para SQL: pymssql'
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
       items:
-        - name: 'Paso 1: Configuración del entorno de desarrollo para el desarrollo de Python pymssql'
+        - name: 'Paso 1: Configuración del entorno de desarrollo'
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-        - name: 'Paso 2: Creación de una instancia de SQL Database para el desarrollo de Python pymssql'
+        - name: 'Paso 2: Creación de una base de datos SQL'
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: 'Paso 3: Prueba de concepto de la conexión a SQL con pymssql'
+        - name: 'Paso 3: Prueba de concepto de la conexión a SQL'
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
     - name: Controlador Ruby para SQL Server
       href: ../connect/ruby/ruby-driver-for-sql-server.md
-    - name: 'Paso 1: Configuración del entorno de desarrollo para el desarrollo Ruby'
+    - name: 'Paso 1: Configuración del entorno de desarrollo'
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-    - name: 'Paso 2: Creación de una base de datos SQL para el desarrollo Ruby'
+    - name: 'Paso 2: Creación de una base de datos SQL'
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-    - name: 'Paso 3: Prueba de concepto de la conexión a SQL mediante Ruby'
+    - name: 'Paso 3: Prueba de concepto de la conexión a SQL'
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 - name: Spark
   items:

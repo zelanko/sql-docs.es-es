@@ -17,14 +17,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4a4caafa49aca29e1093ffb6304b292bcd5c7735
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e59789c2d4de9174a43b34881e7b45a914cfd2c3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492826"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525651"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88492826"
 |**page_size**|**int**|Tamaño de la página, en bytes.|  
 |**file_number**|**Numeric (10, 0)**|Número de identificación de archivo único en una base de datos (corresponde a **Sys. database_files**.** file_id**).|  
 |**backed_up_page_count**|**Numeric (10, 0)**|Número de páginas incluidas en la copia de seguridad. Puede ser NULL.|  
-|**file_type**|**Char (1)**|Archivo incluido en la copia de seguridad; uno de los siguientes:<br /><br /> D = Archivo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = Archivo de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = Catálogo de texto completo.<br /><br /> Puede ser NULL.|  
+|**file_type**|**char(1)**|Archivo incluido en la copia de seguridad; uno de los siguientes:<br /><br /> D = Archivo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = Archivo de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = Catálogo de texto completo.<br /><br /> Puede ser NULL.|  
 |**source_file_block_size**|**Numeric (10, 0)**|Dispositivo en el que se encontraba el archivo de datos o de registro original cuando se hizo la copia de seguridad del mismo. Puede ser NULL.|  
 |**file_size**|**numeric(20,0)**|Longitud en bytes del archivo del que se hace una copia de seguridad. Puede ser NULL.|  
 |**logical_name**|**nvarchar(128)**|Nombre lógico del archivo del que se hace una copia de seguridad. Puede ser NULL.|  

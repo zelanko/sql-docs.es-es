@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 598c25263761041693d99a2c72526a2333c50e1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 05389c23d73c80af8544696977daf3edd04a4042
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88374931"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89519274"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88374931"
 |date_modified|**datetime**|Fecha y hora en que se creó la condición. Es NULL si nunca se produjo una modificación.|  
 |is_name_condition|**smallint**|Especifica si la condición es de denominación.<br /><br /> 0 = la expresión de condición no contiene la variable @Name.<br /><br /> 1 = la expresión de condición contiene la variable @Name.|  
 |facet|**nvarchar(max)**|Nombre de la faceta en que está basada la condición.|  
-|Expression|**nvarchar(max)**|Expresión de los estados de faceta.|  
+|Expresión|**nvarchar(max)**|Expresión de los estados de faceta.|  
 |obj_name|**sysname**|Nombre de objeto asignado a @Name si la expresión de condición contiene esta variable.|  
   
 ## <a name="remarks"></a>Observaciones  
@@ -51,7 +51,7 @@ ms.locfileid: "88374931"
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar servidores mediante la administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

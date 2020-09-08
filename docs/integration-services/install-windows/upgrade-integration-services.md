@@ -17,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: d2a2de2fd59222b174fe6b02fae12ff344a3de04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c86a5f51e1d78b15a85a2063530bfb9ac4183a7d
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346231"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480626"
 ---
 # <a name="upgrade-integration-services"></a>Actualizar Integration Services
 
@@ -150,6 +150,6 @@ ms.locfileid: "88346231"
 -   No puede utilizar los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en equipos con [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para ejecutar los paquetes de [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] que están almacenados en la instancia actualizada de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog [Hacer que las extensiones y aplicaciones personalizadas existentes de SSIS funcionen en Denali](https://go.microsoft.com/fwlink/?LinkId=238157), en blogs.msdn.com.  
+ Entrada de blog [Hacer que las extensiones y aplicaciones personalizadas existentes de SSIS funcionen en Denali](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951), en blogs.msdn.com.  
   
   

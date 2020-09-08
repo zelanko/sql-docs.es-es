@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce049f8c597526187ccce8ba7fdb498d8280cf1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e7467127593b5a853bf5c26df75e9bc52ff12e4
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455959"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480944"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 
@@ -85,7 +85,7 @@ En los equipos con varios procesadores que ejecutan SQL Server 2016, puede que l
   
 Debido a que un bloqueo S o un bloqueo Sch-M se conservan en la fase final de la operación de índice, debe tener cuidado cuando ejecute una operación de índice en línea dentro de una transacción de usuario explícita, como el bloque BEGIN TRANSACTION...COMMIT. De esta manera el bloqueo se conserva hasta el final de la transacción y se impide la simultaneidad de usuarios.  
   
-La regeneración de índices en línea puede aumentar la fragmentación cuando se puede ejecutar con las opciones `MAX DOP > 1` y `ALLOW_PAGE_LOCKS = OFF` . Para obtener más información, vea el blog [How It Works: Online Index Rebuild - Can Cause Increased Fragmentation](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx)(Cómo la regeneración de índices en línea puede provocar una fragmentación mayor).  
+La regeneración de índices en línea puede aumentar la fragmentación cuando se puede ejecutar con las opciones `MAX DOP > 1` y `ALLOW_PAGE_LOCKS = OFF` . Para obtener más información, vea el blog [How It Works: Online Index Rebuild - Can Cause Increased Fragmentation](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation)(Cómo la regeneración de índices en línea puede provocar una fragmentación mayor).  
   
 ## <a name="transaction-log-considerations"></a>Consideraciones del registro de transacciones
 
@@ -129,7 +129,7 @@ ELEVATE_ONLINE y ELEVATE_RESUMABLE solo se aplican a las instrucciones de DDL qu
 > [!NOTE]
 > ELEVATE_ONLINE y ELEVATE_RESUMABLE no se aplican a las operaciones de índice XML.
 
-## <a name="related-content"></a>Contenidos relacionados
+## <a name="related-content"></a>Contenido relacionado
 
 - [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Realizar operaciones de índice en línea](../../relational-databases/indexes/perform-index-operations-online.md)  

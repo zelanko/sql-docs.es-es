@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a79a235f7329b3bac84a34b0d8ff10b1faa889d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9173bfca78a0fcb872e2eac408ca6992738d7dbb
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457797"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480757"
 ---
 # <a name="creating-a-package-programmatically"></a>Crear un paquete mediante programación
 
@@ -155,9 +155,9 @@ End Module
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Entrada del blog sobre el [ejemplo de API, origen OleDB y destino OleDB](https://go.microsoft.com/fwlink/?LinkId=220824), en blogs.msdn.com.  
+-   Entrada del blog sobre el [ejemplo de API, origen OleDB y destino OleDB](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553), en blogs.msdn.com.  
   
--   Entrada de blog sobre [EzAPI, actualizado para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
+-   Entrada de blog sobre [EzAPI, actualizado para SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042), en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Consulte también  
  [Agregar tareas mediante programación](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  

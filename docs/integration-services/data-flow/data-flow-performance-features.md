@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a0803ef58ede892cec17937cb4c38895de6cf53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf9cc8d20f6cf8c380524806700373229cf22995
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425867"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480887"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
 
@@ -189,7 +189,7 @@ ms.locfileid: "88425867"
   
 -   Artículo técnico y ejemplo, [The "Balanced Data Distributor" for SSIS](https://go.microsoft.com/fwlink/?LinkId=220822), en sqlcat.com.  
   
--   Publicación de blog acerca sobre [la solución de problemas de rendimiento de los paquetes SSIS](https://go.microsoft.com/fwlink/?LinkId=238156), en blogs.msdn.com  
+-   Publicación de blog acerca sobre [la solución de problemas de rendimiento de los paquetes SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553), en blogs.msdn.com  
   
  **Vídeos**  
   

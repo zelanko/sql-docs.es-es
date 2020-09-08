@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e0c43fc088fbf6ed8f95fdd418b50dc93563b662
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ef015c1cdaef9794546c8284e968b53a20ca197
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457901"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480734"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Agregar componentes de flujo de datos mediante programación
 
@@ -155,7 +155,7 @@ End Module
 ## <a name="next-step"></a>siguiente paso  
  Después de agregar y configurar el componente, el paso siguiente será crear rutas de acceso entre componentes, que se describe en el tema [Crear una ruta de acceso entre dos componentes](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
   
-## <a name="sample"></a>Muestra  
+## <a name="sample"></a>Ejemplo  
  En el siguiente ejemplo de código se agrega el componente de origen de OLE DB a una tarea de flujo de datos, se crea una instancia en tiempo de diseño del componente y se configuran las propiedades del componente. En este ejemplo se requiere una referencia adicional al ensamblado Microsoft.SqlServer.DTSRuntimeWrap.  
   
 ```csharp  
@@ -285,7 +285,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog sobre [EzAPI, actualizado para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
+ Entrada de blog sobre [EzAPI, actualizado para SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042), en blogs.msdn.com.  
 
 ## <a name="see-also"></a>Consulte también  
  [Conectar componentes de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 992766acbc277706711d488ebe164575c4913a88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c5090cbe224a9ac3f94bff828189d3517c1dd376
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457827"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480800"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>Agregar la tarea de flujo de datos mediante programación
 
@@ -37,7 +37,7 @@ ms.locfileid: "88457827"
   
  La tarea Flujo de datos se agrega a un paquete de la misma forma que otras tareas. Una vez agregada, la tarea se configura; para ello, se agregan componentes a la tarea de flujo de datos y, después, se configuran y conectan sus componentes.  
   
-## <a name="sample"></a>Muestra  
+## <a name="sample"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra cómo agregar una tarea Flujo de datos a un paquete. En este ejemplo, es necesario establecer una referencia a los ensamblados Microsoft.SqlServer.PipelineHost, Microsoft.SqlServer.DTSPipelineWrap y Microsoft.SqlServer.ManagedDTS.  
   
 ```csharp  
@@ -82,7 +82,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Recursos externos  
- Entrada de blog sobre [EzAPI, actualizado para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
+ Entrada de blog sobre [EzAPI, actualizado para SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042), en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Consulte también  
  [Detectar componentes de flujo de datos mediante programación](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  

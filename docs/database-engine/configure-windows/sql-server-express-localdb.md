@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2bc9a5c4ca7481d9d3d1039e0e467e35d5c2631b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 0073698d4cc7ce29912be8bbce3badf3eeea6742
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363058"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288337"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -93,7 +93,7 @@ Solo un administrador del equipo puede crear una instancia compartida de LocalDB
 
 ### <a name="connect-to-the-automatic-instance"></a>Conexión a la instancia automática
 
-La manera más fácil de usar LocalDB es conectarse a la instancia automática propiedad del usuario actual mediante la cadena de conexión `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Para conectarse a una base de datos específica usando el nombre de archivo, conéctese con una cadena de conexión similar a `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
+La manera más fácil de usar LocalDB es conectarse a la instancia automática propiedad del usuario actual mediante la cadena de conexión `Server=(localdb)\MSSQLLocalDB;Integrated Security=true`. Para conectarse a una base de datos específica usando el nombre de archivo, conéctese con una cadena de conexión similar a `Server=(LocalDB)\MSSQLLocalDB;Integrated Security=true;AttachDbFileName=D:\Data\MyDB1.mdf`.
 
 La convención de nomenclatura y la cadena de conexión para el formato de LocalDB cambió en SQL Server 2014. Anteriormente, el nombre de instancia era un solo carácter v seguido de LocalDB y el número de versión. A partir de SQL Server 2014, este formato de nombre de instancia ya no se admite y se debe usar en su lugar la cadena de conexión mencionada anteriormente.  
 

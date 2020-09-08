@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c92cc173544c1cd7985b3bf58d7ebd22ea100b6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 39f3bd57ced73fb4fb5f5d4a34232b9b2bd7c92e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759142"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480573"
 ---
 # <a name="server-properties---connections-page"></a>Propiedades del servidor (página Conexiones)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85759142"
  Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
 ## <a name="see-also"></a>Consulte también  
- [Options &#40;Query Execution: SQL Server: Advanced Page&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)  (Opciones [Ejecución de consultas: SQL Server: página Avanzado])  
+ [Options &#40;Query Execution: SQL Server: Advanced Page&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio)  (Opciones [Ejecución de consultas: SQL Server: página Avanzado])  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

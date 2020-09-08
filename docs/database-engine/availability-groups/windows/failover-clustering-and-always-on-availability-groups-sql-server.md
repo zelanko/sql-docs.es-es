@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f53ae6f4a35cb539da1d5689ad2ba1086dd4c1b
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: c10980b60d41f107ff0104eedd5b51aa40cd6a6e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522937"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480657"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn (SQL Server)
 
@@ -117,7 +117,7 @@ ms.locfileid: "87522937"
   
      [Blogs del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
+     [Blogs de los ingenieros de SQL Server de CSS](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **Notas del producto:**  
   

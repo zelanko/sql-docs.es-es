@@ -14,12 +14,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d1da7312c338a866b4fb22df94175a7500d8f7c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 8801e4727beba94c95408716606208c122e96204
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457647"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480361"
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +77,7 @@ Cuando identifique una consulta con un rendimiento deficiente, la acción depend
   
 -   Crear índices que faltan en las tablas a las que hacen referencia las consultas costosas.  
   
--   Aplicar una directiva de filtrado para la seguridad de nivel de fila. Para obtener más información, vea [Optimizing Row Level Security with Query Store](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx) (Optimización de la seguridad de nivel de fila con el Almacén de consultas).  
+-   Aplicar una directiva de filtrado para la seguridad de nivel de fila. Para obtener más información, vea [Optimizing Row Level Security with Query Store](https://docs.microsoft.com/archive/blogs/sqlsecurity/optimizing-rls-performance-with-the-query-store) (Optimización de la seguridad de nivel de fila con el Almacén de consultas).  
   
 -   Agregar versiones de sistema temporales a tablas que las aplicaciones de OLTP modifican con frecuencia.  
   

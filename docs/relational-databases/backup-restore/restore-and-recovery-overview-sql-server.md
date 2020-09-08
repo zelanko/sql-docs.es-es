@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: bde7cdd19ac66d30ceee0e73d6ea74ff5a66b2a8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717965"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480420"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -174,7 +174,7 @@ El Asistente para recuperación de base de datos facilita la creación de planes
   
 Para obtener más información sobre el Asistente para recuperación de base de datos, vea los siguientes blogs de Facilidad de uso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Asistente para la recuperación: Introducción](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Asistente para la recuperación: Introducción](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
 -   [Asistente para la recuperación: uso de SSMS para crear o restaurar copias de seguridad de división](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 

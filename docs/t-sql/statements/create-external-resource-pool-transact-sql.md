@@ -23,19 +23,19 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 64294b819d05e46077fd6a94008d64fc60eb717f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59a754655eff7c701a91013e686e7ff1105a4cfe
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426727"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283706"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Crea un grupo externo para definir los recursos de los procesos externos. Un grupo de recursos de servidor representa un subconjunto de los recursos físicos (memoria y CPU) de una instancia del motor de base de datos. Un Regulador de recursos puede distribuir los recursos del servidor entre los grupos de recursos, hasta un máximo de 64 grupos.
 
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 En [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] en [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], el grupo externo rige `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos.
 ::: moniker-end
 
@@ -44,9 +44,27 @@ En [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)],
 ::: moniker-end
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
-  
+ 
+
 ## <a name="syntax"></a>Sintaxis  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+```syntaxsql
+CREATE EXTERNAL RESOURCE POOL pool_name  
+[ WITH (  
+    [ MAX_CPU_PERCENT = value ]  
+    [ [ , ] MAX_MEMORY_PERCENT = value ]  
+    [ [ , ] MAX_PROCESSES = value ]   
+    )   
+]  
+[ ; ]  
   
+<CPU_range_spec> ::=    
+{ CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
+```  
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
@@ -66,17 +84,28 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 <CPU_range_spec> ::=    
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+::: moniker-end
 
-> [!NOTE]
-> SQL Machine Learning Services 2019 para Linux no admite la capacidad de establecer la afinidad de CPU.
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Argumentos
 
 *pool_name*  
 Es el nombre definido por el usuario para identificar el grupo de recursos externos. *pool_name* es alfanumérico y puede tener hasta 128 caracteres. Este argumento debe ser únicos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+MAX_CPU_PERCENT =*value*  
+El promedio máximo de ancho de banda de CPU que pueden recibir todas las solicitudes en el grupo de recursos externos cuando haya contención de CPU. *value* es un valor entero. El intervalo permitido para *value* es de 1 a 100.
+
+
+MAX_MEMORY_PERCENT =*value*  
+Especifica la memoria total del servidor que puede ser usada por las solicitudes en este grupo de recursos externos. *value* es un valor entero. El intervalo permitido para *value* es de 1 a 100.
+
+MAX_PROCESSES =*value*  
+El número máximo de procesos permitidos para el grupo de recursos externos. 0 = umbral ilimitado para el grupo, que estará enlazado solamente por recursos del equipo.
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 El promedio máximo de ancho de banda de CPU que pueden recibir todas las solicitudes en el grupo de recursos externos cuando haya contención de CPU. *value* es un valor entero. El intervalo permitido para *value* es de 1 a 100.
 
@@ -91,6 +120,7 @@ Especifica la memoria total del servidor que puede ser usada por las solicitudes
 
 MAX_PROCESSES =*value*  
 El número máximo de procesos permitidos para el grupo de recursos externos. 0 = umbral ilimitado para el grupo, que estará enlazado solamente por recursos del equipo.
+::: moniker-end
 
 ## <a name="remarks"></a>Observaciones
 
@@ -108,6 +138,20 @@ Requiere el permiso `CONTROL SERVER`.
 
 El grupo externo ha restringido el uso de CPU al 75 por ciento. La cantidad máxima de memoria es el 30 por ciento de la memoria disponible en el equipo.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+```sql
+CREATE EXTERNAL RESOURCE POOL ep_1
+WITH (  
+    MAX_CPU_PERCENT = 75
+    , MAX_MEMORY_PERCENT = 30
+);
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
+```
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  
@@ -119,7 +163,8 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
-  
+::: moniker-end
+
 ## <a name="see-also"></a>Consulte también
 
 + [Opción de configuración de servidor Scripts externos habilitados](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)

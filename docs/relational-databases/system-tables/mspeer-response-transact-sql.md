@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_response system table
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e0bb95540f6731c9fc1d49711b85d03c9fa2efad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7e6133bee999ad828516f908aaf770321a59ec3c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488712"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545593"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88488712"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**request_id**|**int**|Identifica una entrada de solicitud de estado en la tabla [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) .|  
+|**id_de_solicitud**|**int**|Identifica una entrada de solicitud de estado en la tabla [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) .|  
 |**personas**|**sysname**|Nodo del mismo nivel que generó la respuesta.|  
 |**peer_db**|**sysname**|Base de datos de suscripciones del nodo del mismo nivel que generó la respuesta.|  
 |**received_date**|**datetime**|La fecha y hora en que se recibió la solicitud del mismo nivel.|  

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - system tables [SQL Server], retrieving information from
 - retrieving system table information
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bb4aba7e3ad13edd1d71266b96d6ef956a162cba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0c5c02dd0849b22749f1227c41bb76097ec2259c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446612"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545489"
 ---
 # <a name="system-tables-transact-sql"></a>Tablas del sistema (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "88446612"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Vistas de compatibilidad &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a86eec0b939a579d01c36d8c9739f8d9251636
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481535"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543731"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  Esta tabla describe las propiedades de la publicación que se pueden cambiar y las restricciones de los valores de esas propiedades.  
   
-|Propiedad|Value|Descripción|  
+|Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Se pueden crear suscripciones anónimas para la publicación dada y *immediate_sync* también deben ser **verdaderas**. No se pueden cambiar para publicaciones punto a punto.|  
 ||**false**|No se pueden crear suscripciones anónimas para la publicación indicada. No se pueden cambiar para publicaciones punto a punto.|  
@@ -108,7 +108,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**status**|**active**|Los datos de la publicación están disponibles inmediatamente para los suscriptores cuando se crea la publicación. No es compatible con publicadores de Oracle.|  
 ||**inactive**|Los datos de la publicación no están disponibles para los suscriptores cuando se crea la publicación. No es compatible con publicadores de Oracle.|  
 |**sync_method**|**native**|Utiliza la salida de todas las tablas mediante copia masiva en modo nativo al sincronizar las suscripciones.|  
-||**óptico**|Utiliza la salida de todas las tablas mediante copia masiva en modo de carácter al sincronizar las suscripciones.|  
+||**carácter**|Utiliza la salida de todas las tablas mediante copia masiva en modo de carácter al sincronizar las suscripciones.|  
 ||**simultáneas**|Utiliza un programa de copia masiva en modo nativo de todas las tablas, pero no bloquea las tablas durante el proceso de generación de instantáneas. No es válido para la replicación de instantáneas.|  
 ||**concurrent_c**|Utiliza un programa de copia masiva en modo de carácter de todas las tablas, pero no bloquea las tablas durante el proceso de generación de instantáneas. No es válido para la replicación de instantáneas.|  
 |**TaskID**||Esta propiedad ha quedado desusada y ya no se admite.|  

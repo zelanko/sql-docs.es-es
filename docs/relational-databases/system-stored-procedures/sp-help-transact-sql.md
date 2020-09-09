@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486068"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543358"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +55,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     |Nombre de la columna|Tipo de datos|Descripción|  
     |-----------------|---------------|-----------------|  
-    |**Nombre**|**nvarchar (** 128 **)**|Nombre del objeto|  
+    |**Name**|**nvarchar (** 128 **)**|Nombre del objeto|  
     |**Propietario**|**nvarchar (** 128 **)**|Propietario del objeto (esta es la entidad de seguridad de base de datos que posee el objeto. De forma predeterminada, es el propietario del esquema que contiene el objeto).|  
     |**Object_type**|**nvarchar (** 31 **)**|Tipo de objeto|  
   
@@ -77,7 +77,7 @@ sp_help [ [ @objname = ] 'name' ]
 
     |Nombre de la columna|Tipo de datos|Descripción|  
     |-----------------|---------------|-----------------|  
-    |**Nombre**|**nvarchar (** 128 **)**|Nombre de la tabla|  
+    |**Name**|**nvarchar (** 128 **)**|Nombre de la tabla|  
     |**Propietario**|**nvarchar (** 128 **)**|Propietario de la tabla.|  
     |**Tipo**|**nvarchar (** 31 **)**|Tipo de tabla.|  
     |**Created_datetime**|**datetime**|Tabla de fechas de creación|  
@@ -106,9 +106,9 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de la columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Identidad**|**nvarchar (** 128 **)**|Nombre de la columna cuyo tipo de datos se declara como identidad.|  
-        |**Propagación**|**numeric**|Valor inicial de la columna de identidad.|  
+        |**Seed**|**numeric**|Valor inicial de la columna de identidad.|  
         |**Incremento**|**numeric**|Incremento que se va a utilizar en los valores de esta columna.|  
-        |**No para replicación**|**int**|La propiedad IDENTITY no se aplica cuando un inicio de sesión de replicación, como **sqlrepl**, inserta datos en la tabla:<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**No disponible para replicación**|**int**|La propiedad IDENTITY no se aplica cuando un inicio de sesión de replicación, como **sqlrepl**, inserta datos en la tabla:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Conjunto de resultados adicional devuelto en las columnas:  
   
@@ -191,7 +191,7 @@ EXEC sp_help 'Person.Person';
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpindex &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   

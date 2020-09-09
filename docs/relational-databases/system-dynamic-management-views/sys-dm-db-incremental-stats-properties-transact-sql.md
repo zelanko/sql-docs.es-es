@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f6661c9dd7f581bb7c8dccc62b0b11547a73b4fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: caa090c1835c34bd2d1da6d6b3bcb6caa4077217
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460450"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544825"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>Argumentos  
  *object_id*  
- Es el identificador del objeto en la base de datos actual para el que se solicitaron las propiedades de una de sus estadísticas incrementales. *object_id* es **int**.  
+ Es el identificador del objeto en la base de datos actual para el que se solicitaron las propiedades de una de sus estadísticas incrementales. *object_id* es de **tipo int**.  
   
  *stats_id*  
  Es el identificador de estadísticas para el *object_id*especificado. El identificador de estadísticas se puede obtener desde la vista de administración dinámica [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* es **int**.  

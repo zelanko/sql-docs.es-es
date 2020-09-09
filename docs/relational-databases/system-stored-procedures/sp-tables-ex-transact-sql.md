@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480991"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544743"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,16 +55,16 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'` Es el tipo de la tabla que se va a devolver. *TABLE_TYPE* es de **tipo sysname, su**valor predeterminado es NULL y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**ALIAS**|Nombre de un alias.|  
 |**GLOBAL TEMPORARY**|Nombre de una tabla temporal disponible en todo el sistema.|  
 |**LOCAL TEMPORARY**|Nombre de una tabla temporal disponible solo para el trabajo actual.|  
-|**Sinónimo**|Nombre de un sinónimo.|  
+|**SYNONYM**|Nombre de un sinónimo.|  
 |**TABLA DEL SISTEMA**|Nombre de una tabla del sistema.|  
 |**VISTA DEL SISTEMA**|Nombre de una vista del sistema.|  
-|**CUADRO**|Nombre de una tabla de usuario.|  
-|**Visores**|Nombre de una vista.|  
+|**TABLE**|Nombre de una tabla de usuario.|  
+|**VIEW**|Nombre de una vista.|  
   
 `[ @fUsePattern = ] 'fUsePattern'` Determina si los caracteres **_**, **%** , **[** y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es de **bit**y su valor predeterminado es 1.  
   

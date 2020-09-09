@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_task_space_usage dynamic management view
 ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f1780eebd0ea64039b72b7447ca651ad5a21040
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6676eba5608202de4a1ba1df69a8134ac4ece208
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399401"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544008"
 ---
 # <a name="sysdm_db_task_space_usage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88399401"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|Id. de sesión.|  
-|**request_id**|**int**|Id. de solicitud en la sesión.<br /><br /> Una solicitud también se llama lote y puede contener una o más consultas. Una sesión puede tener varias solicitudes activas al mismo tiempo. Cada consulta en la solicitud puede iniciar varios subprocesos (tareas) si se utiliza un plan de ejecución paralelo.|  
+|**id_de_solicitud**|**int**|Id. de solicitud en la sesión.<br /><br /> Una solicitud también se llama lote y puede contener una o más consultas. Una sesión puede tener varias solicitudes activas al mismo tiempo. Cada consulta en la solicitud puede iniciar varios subprocesos (tareas) si se utiliza un plan de ejecución paralelo.|  
 |**exec_context_id**|**int**|Id. del contexto de ejecución de la tarea. Para obtener más información, vea [Sys. dm_os_tasks &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
 |**database_id**|**smallint**|Id. de la base de datos.|  
 |**user_objects_alloc_page_count**|**bigint**|Número de páginas reservadas o asignadas para objetos de usuario por esta tarea.|  
@@ -92,7 +92,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Relación|  
+|From|En|Relación|  
 |----------|--------|------------------|  
 |dm_db_task_space_usage.request_id|dm_exec_requests.request_id|Uno a uno|  
 |dm_db_task_space_usage.session_id|dm_exec_requests.session_id|Uno a uno|  

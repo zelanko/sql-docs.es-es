@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_file_io_requests catalog view
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f7078fde9e869886c12bc9a20784c6cf44bc40ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f4f675f0022b3afeeaccbdc6e907b5ce1c17ca7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474953"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543900"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88474953"
 |**current_spid**|**smallint**|Muestra el ID. de proceso del sistema (SPID) de la conexión del SQL Server actual. No admite valores NULL.|  
 |**request_type**|**nvarchar(60)**|Muestra el tipo de paquete de solicitud de E/S (IRP). Los tipos de solicitud posibles son REQ_PRE_CREATE, REQ_POST_CREATE, REQ_RESOLVE_VOLUME, REQ_GET_VOLUME_INFO, REQ_GET_LOGICAL_NAME, REQ_GET_PHYSICAL_NAME, REQ_PRE_CLEANUP, REQ_POST_CLEANUP, REQ_CLOSE, REQ_FSCTL, REQ_QUERY_INFO, REQ_SET_INFO, REQ_ENUM_DIRECTORY, REQ_QUERY_SECURITY y REQ_SET_SECURITY. No admite valores NULL|  
 |**request_state**|**nvarchar(60)**|Muestra el estado de la solicitud de E/S en el NSO. Los valores posibles son REQ_STATE_RECEIVED, REQ_STATE_INITIALIZED, REQ_STATE_ENQUEUED, REQ_STATE_PROCESSING, REQ_STATE_FORMATTING_RESPONSE, REQ_STATE_SENDING_RESPONSE, REQ_STATE_COMPLETING y REQ_STATE_COMPLETED. No admite valores NULL.|  
-|**request_id**|**int**|Muestra el identificador de solicitud único asignado por el controlador a esta solicitud. No admite valores NULL.|  
+|**id_de_solicitud**|**int**|Muestra el identificador de solicitud único asignado por el controlador a esta solicitud. No admite valores NULL.|  
 |**irp_id**|**int**|Muestra el identificador de IRP único. Esto es útil para identificar todas las solicitudes de E/S relacionadas con el IRP determinado. No admite valores NULL.|  
 |**handle_id**|**int**|Indica el id. del identificador del espacio de nombres. Se trata del identificador específico del NSO y es único en una instancia. No admite valores NULL.|  
 |**client_thread_id**|**varbinary(8**|Muestra el identificador de subproceso de la aplicación cliente que origina la solicitud.<br /><br /> ADVERTENCIA esto solo es significativo si la aplicación cliente se ejecuta en el mismo equipo que SQL Server. ** \* \* \* \* ** Cuando la aplicación cliente se ejecuta de forma remota, en el **client_thread_id** se muestra el identificador de subproceso del proceso del sistema que funciona en nombre del cliente remoto.<br /><br /> Acepta valores NULL.|  

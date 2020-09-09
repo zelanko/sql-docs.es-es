@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1deb0895de1b0a3694465ccb0f9e95228fbedd0b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb85ff45fcb9ebe35920ca858cc9dc6336475cb8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489495"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543585"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_cursoroption cursor, code, value
  *code*  
  Se usa para estipular varios factores de los valores devueltos del cursor. el *código* requiere uno de los siguientes valores de entrada **int** :  
   
-|Value|Nombre|Descripción|  
+|Valor|Nombre|Descripción|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Devuelve el puntero de texto y no los datos reales, para ciertas columnas de imagen o texto designado.<br /><br /> TEXTPTR_ONLY permite usar punteros de texto como *identificadores* para objetos BLOB que se pueden recuperar o actualizar de forma selectiva mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o con instalaciones de DBLIB (por ejemplo, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT o DBLIB DBWRITETEXT).<br /><br /> Si se asigna el valor "0", todas las columnas de imagen y texto de la lista de selección devolverán punteros de texto en lugar de datos.|  
 |0x0002|CURSOR_NAME|Asigna el nombre especificado en el *valor* al cursor. Esto, a su vez, permite a ODBC utilizar [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones UPDATE/DELETE posicionadas en cursores abiertos a través de Sp_cursoropen.<br /><br /> La cadena se puede especificar como cualquier tipo de datos Unicode o de caracteres.<br /><br /> Dado que [!INCLUDE[tsql](../../includes/tsql-md.md)] las instrucciones UPDATE/DELETE colocadas operan, de forma predeterminada, en la primera fila de un cursor FAT, se debe usar SP_CURSOR SETPOSITION para colocar el cursor antes de emitir la instrucción UPDATE/DELETE posicionada.|  

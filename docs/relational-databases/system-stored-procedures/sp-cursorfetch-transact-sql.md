@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7d68223e7ed12477b446934f01b600b840b6651a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 45621f2b99616085a2543972df7109b2f2fe8e3c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447366"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543601"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  Especifica qué búfer de cursor se va a capturar. *fetchtype* es un parámetro opcional que requiere uno de los siguientes valores de entrada enteros.  
   
-|Value|Nombre|Descripción|  
+|Valor|Nombre|Descripción|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Captura el primer búfer de filas de *nrows* . Si *nrows* es igual a 0, el cursor se coloca antes del conjunto de resultados y no se devuelve ninguna fila.|  
 |0x0002|NEXT|Captura el siguiente búfer de filas *nrows* .|  
@@ -134,7 +134,7 @@ sp_cursorfetch cursor
   
  El parámetro de estado de RPC se establece en uno de los valores mostrados en la siguiente tabla.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|El procedimiento se ejecutó correctamente.|  
 |0x0001|Se produjo un error en el procedimiento.|  
@@ -143,7 +143,7 @@ sp_cursorfetch cursor
   
  Las filas se devuelven como un conjunto de resultados típico, es decir, formato de columna (0x2a), filas (0xd1), seguido de Done (0xfd). Los tokens de metadatos se envían en el mismo formato que el especificado para sp_cursoropen, es decir, 0x81, 0xa5 y 0xa4 para los usuarios de SQL Server 7.0, etc. Los indicadores del estado de la fila se envían como columnas ocultas, similar al modo BROWSE, al final de cada fila con el nombre de columna rowstat y el tipo de datos INT4. Esta columna rowstat tiene uno de los valores que se muestran en la tabla siguiente.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

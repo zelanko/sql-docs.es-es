@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b74d9846d672a59adbde9eada760af1d60fc725e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489339"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543283"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**status**|**int**|Estado de la suscripción:<br /><br /> **0** = suscripción inactiva<br /><br /> **1** = suscripción activa<br /><br /> **2** = suscripción eliminada<br /><br /> **3** = suscripción desasociada<br /><br /> **4** = suscripción adjunta<br /><br /> **5** = la suscripción se ha marcado para reinicializarla con carga<br /><br /> **6** = error al adjuntar la suscripción<br /><br /> **7** = suscripción restaurada desde la copia de seguridad|  
 |**subscriber_type**|**int**|Tipo de suscriptor:<br /><br /> **1** = global<br /><br /> **2** = local<br /><br /> **3** = anónimo|  
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserciones<br /><br /> **1** = extracción<br /><br /> **2** = anónimo|  
-|**Prior**|**Float (8)**|Prioridad de la suscripción. El valor debe ser menor que **100,00**.|  
+|**priority**|**Float (8)**|Prioridad de la suscripción. El valor debe ser menor que **100,00**.|  
 |**sync_type**|**tinyint**|Tipo de sincronización de suscripción:<br /><br /> **1** = automática<br /><br /> **2** = no se usa la instantánea.|  
 |**description**|**nvarchar(255)**|Breve descripción de la suscripción de extracción.|  
 |**merge_jobid**|**binario (16)**|Id. de trabajo del Agente de mezcla.|  

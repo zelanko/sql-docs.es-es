@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetNumericalValue method
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 56c41876bc7b6c534f9d4872a0cb43eef9826282
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3c9ccf43a8edd0298de5d9d7ecbcfbbcfea3c5e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427197"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542783"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>Método SetNumericalValue (clase SqlServiceAdvancedProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ object.SetNumericalValue(NumValue)
 ## <a name="remarks"></a>Observaciones  
  El tipo de valor de propiedad debe ser numérico para poder establecer la propiedad en un valor numérico.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f678427f05b5c3b136a7dfe18e1f51eb91773b91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480968"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543010"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 |Número de evento|Nombre del evento|Descripción|  
 |------------------|----------------|-----------------|  
-|0-9|Reserved|Reserved|  
+|0-9|Reservado|Reservado|  
 |10|RPC:Completed|Se produce cuando se ha completado una llamada a procedimiento remoto (RPC).|  
 |11|RPC:Starting|Se produce cuando se ha iniciado una RPC.|  
 |12|SQL:BatchCompleted|Se produce cuando se ha completado un proceso por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
@@ -74,8 +74,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|Lock:Cancel|Indica la anulación de la adquisición de un bloqueo en un recurso (por ejemplo, debido a un interbloqueo).|  
 |27|Lock:Timeout|Indica que una solicitud de un bloqueo en un recurso, como una página, ha agotado el tiempo de espera debido a que existía otra transacción que mantenía un bloqueo en el recurso requerido. El tiempo de espera viene determinado por la @LOCK_TIMEOUT función @ y se puede establecer con la instrucción set LOCK_TIMEOUT.|  
 |28|Degree of Parallelism Event (7.0 Insert)|Se produce antes de ejecutarse una instrucción SELECT, INSERT o UPDATE.|  
-|29-31|Reserved|Utilice el evento 28 en su lugar.|  
-|32|Reserved|Reserved|  
+|29-31|Reservado|Utilice el evento 28 en su lugar.|  
+|32|Reservado|Reservado|  
 |33|Excepción|Indica que se ha producido una excepción en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |34|SP:CacheMiss|Indica que no se ha encontrado un procedimiento almacenado en la caché de procedimientos.|  
 |35|SP:CacheInsert|Indica que se ha insertado un elemento en la caché de procedimientos.|  
@@ -91,20 +91,20 @@ sp_trace_setevent [ @traceid = ] trace_id
 |45|SP:StmtCompleted|Indica que se ha finalizado la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] de un procedimiento almacenado.|  
 |46|Object:Created|Indica que se ha creado un objeto, como para las instrucciones CREATE INDEX, CREATE TABLE o CREATE DATABASE.|  
 |47|Object:Deleted|Indica que se ha eliminado un objeto, como en las instrucciones DROP INDEX o DROP TABLE.|  
-|48|Reserved||  
-|49|Reserved||  
+|48|Reservado||  
+|49|Reservado||  
 |50|SQL Transaction|Realiza un seguimiento de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] BEGIN, COMMIT, SAVE y ROLLBACK TRANSACTION.|  
 |51|Scan:Started|Indica que se ha iniciado un recorrido de tabla o de índice.|  
 |52|Scan:Stopped|Indica que se ha detenido un recorrido de tabla o de índice.|  
 |53|CursorOpen|Indica cuándo ODBC, OLE DB o DB-Library ha abierto un cursor en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |54|TransactionLog|Realiza un seguimiento cuando se escriben transacciones en el registro de transacciones.|  
 |55|Hash Warning|Indica que una operación de hash (por ejemplo, combinación hash, agregado hash, unión hash o distinción hash) que no se procesa en una partición de búfer ha vuelto a un plan alternativo. Esto puede producirse debido a la profundidad de repetición, el sesgo de datos, las marcas de seguimiento o el recuento de bits.|  
-|56-57|Reserved||  
+|56-57|Reservado||  
 |58|Auto Stats|Indica una actualización automática de las estadísticas indizadas.|  
 |59|Lock:Deadlock Chain|Se produce para cada evento que lleva a un interbloqueo.|  
 |60|Lock:Escalation|Indica que un bloqueo específico se ha convertido en un bloqueo general (por ejemplo, un bloqueo de página se ha concentrado o convertido en un bloqueo de tabla o de HoBT).|  
 |61|OLE DB Errors|Indica un error OLE DB.|  
-|62-66|Reserved||  
+|62-66|Reservado||  
 |67|Execution Warnings|Indica las advertencias producidas durante la ejecución de una instrucción o un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |68|Showplan Text (Unencoded)|Muestra el árbol del plan de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutado.|  
 |69|Sort Warnings|Indica operaciones de orden que no caben en la memoria. No incluye aquellas operaciones de orden que implican la creación de índices, solo las operaciones de orden dentro de una consulta (como las de una cláusula ORDER BY en una instrucción SELECT).|  
@@ -128,9 +128,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 |96|Showplan Text|Muestra el árbol del plan de consulta de la instrucción SQL desde el optimizador de consultas. Tenga en cuenta que la columna **TextData** no contiene el plan de presentación para este evento.|  
 |97|Showplan All|Muestra el plan de consulta con detalles completos del tiempo de compilación de la instrucción SQL ejecutada. Tenga en cuenta que la columna **TextData** no contiene el plan de presentación para este evento.|  
 |98|Showplan Statistics Profile|Muestra el plan de consulta con detalles completos del tiempo de ejecución de la instrucción SQL ejecutada. Tenga en cuenta que la columna **TextData** no contiene el plan de presentación para este evento.|  
-|99|Reserved||  
+|99|Reservado||  
 |100|RPC Output Parameter|Produce valores de salida de los parámetros para cada RPC.|  
-|101|Reserved||  
+|101|Reservado||  
 |102|Audit Database Scope GDR|Se produce siempre que un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite una instrucción GRANT, DENY o REVOKE para acciones exclusivas de base de datos como la concesión de permisos en una base de datos.|  
 |103|Audit Object GDR Event|Se produce cada vez que un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite GRANT, DENY, REVOKE para un permiso de objeto.|  
 |104|Audit AddLogin Event|Se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se agrega o se quita un inicio de sesión; por **sp_addlogin** y **sp_droplogin**.|  
@@ -173,15 +173,15 @@ sp_trace_setevent [ @traceid = ] trace_id
 |141|Broker:Message Classify|Se produce cuando [!INCLUDE[ssSB](../../includes/sssb-md.md)] determina el enrutamiento de un mensaje.|  
 |142|Broker:Transmission|Indica que se han producido errores en la capa de transporte de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Los valores del estado y del número de error indican el origen del mismo.|  
 |143|Broker:Queue Disabled|Indica que se detectó un mensaje dudoso porque se produjeron cinco reversiones de transacción seguidas en una cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. El evento contiene el Id. de base de datos y el Id. de cola de la cola que contiene el mensaje dudoso.|  
-|144-145|Reserved||  
+|144-145|Reservado||  
 |146|Showplan XML Statistics Profile|Se produce cuando se ejecuta una instrucción SQL. Identifica los operadores de plan de presentación y muestra todos los datos de tiempo de compilación. Tenga en cuenta que la columna **binaria** de este evento contiene el plan de presentación codificado. Use SQL Server Profiler para abrir el seguimiento y ver el plan de presentación.|  
 |148|Deadlock Graph|Se produce cuando se cancela un intento de obtener un bloqueo porque dicho intento forma parte de un interbloqueo y se ha elegido como sujeto del interbloqueo. Proporciona una descripción en XML de un interbloqueo.|  
 |149|Broker:Remote Message Acknowledgement|Se produce cuando [!INCLUDE[ssSB](../../includes/sssb-md.md)] envía o recibe un reconocimiento de mensaje.|  
 |150|Trace File Close|Se produce cuando se cierra un archivo de seguimiento durante una reversión del mismo.|  
-|151|Reserved||  
+|151|Reservado||  
 |152|Audit Change Database Owner|Se produce cuando se utiliza ALTER AUTHORIZATION para cambiar el propietario de una base de datos y se comprueban los permisos para realizar dicha acción.|  
 |153|Audit Schema Object Take Ownership Event|Se produce cuando se utiliza ALTER AUTHORIZATION para asignar un propietario a un objeto y se comprueban los permisos para realizar dicha acción.|  
-|154|Reserved||  
+|154|Reservado||  
 |155|FT:Crawl Started|Se produce cuando se inicia un rastreo de texto completo (llenado). Utilice esta clase de evento para comprobar si las tareas de trabajo están recogiendo una solicitud de rastreo.|  
 |156|FT:Crawl Stopped|Se produce cuando se detiene un rastreo de texto completo (llenado). La detención se debe a un rastreo finalizado correctamente o a un error irrecuperable.|  
 |157|FT:Crawl Aborted|Se produce cuando se ha detectado una excepción durante un rastreo de texto completo. Normalmente, el error hará que se detenga el rastreo de texto completo.|  
@@ -222,7 +222,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |194|OLEDB Provider Information|Se produce cuando una consulta distribuida se ejecuta y recopila información correspondiente a la conexión del proveedor.|  
 |195|Mount Tape|Se produce cuando se recibe una solicitud de montaje de cinta.|  
 |196|Assembly Load|Se produce cuando se ejecuta una solicitud para cargar un ensamblado CLR.|  
-|197|Reserved||  
+|197|Reservado||  
 |198|XQuery Static Type|Se produce cuando se ejecuta una expresión XQuery. Esta clase de eventos proporciona el tipo estático de la expresión XQuery.|  
 |199|QN: subscription|Se produce cuando no se puede suscribir un registro de consulta. La columna **TextData** contiene información sobre el evento.|  
 |200|QN: parameter table|La información sobre las suscripciones activas se almacena en tablas de parámetros internos. Esta clase de evento se produce al crear o eliminar una tabla de parámetros. Normalmente, estas tablas se crean o eliminan al reiniciar la base de datos. La columna **TextData** contiene información sobre el evento.|  
@@ -241,7 +241,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  En la tabla siguiente se muestra una lista de las columnas que pueden agregarse para un evento.  
   
-|Número de columna|Nombre de la columna|Descripción|  
+|Número de columna|Nombre de columna|Descripción|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Valor de texto que depende de la clase de eventos que se captura en el seguimiento.|  
 |2|**BinaryData**|Valor binario que depende de la clase de eventos que se captura en el seguimiento.|  
@@ -255,7 +255,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |10|**ApplicationName**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|  
 |11|**LoginName**|Nombre de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del cliente.|  
 |12|**SPID**|Identificador de proceso del servidor que asigna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al proceso relacionado con el cliente.|  
-|13|**Duration**|Cantidad de tiempo transcurrido (en microsegundos) que tarda el evento. Esta columna de datos no se llena con el evento Hash Warning.|  
+|13|**Duración**|Cantidad de tiempo transcurrido (en microsegundos) que tarda el evento. Esta columna de datos no se llena con el evento Hash Warning.|  
 |14|**StartTime**|Hora a la que se inició el evento, si está disponible.|  
 |15|**EndTime**|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como **SQL:BatchStarting** o **SP:Starting**. Tampoco se rellena mediante el evento de **ADVERTENCIA hash** .|  
 |16|**Reads**|Número de lecturas lógicas de disco que realiza el servidor en nombre del evento. Esta columna no se rellena con el evento **Lock: released** .|  
@@ -305,7 +305,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |60|**IsSystem**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> **1** = sistema<br /><br /> **0** = usuario.|  
 |61|**Offset**|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|  
 |62|**SourceDatabaseID**|Id. de la base de datos en la que se encuentra el origen del objeto.|  
-|63|**SqlHandle**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor se puede pasar a **Sys. dm_exec_sql_text ()** para recuperar el texto SQL asociado.|  
+|63|**SqlHandle**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a **sys.dm_exec_sql_text()** para recuperar el texto SQL asociado.|  
 |64|**SessionLoginName**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con **inicioDeSesión1** y ejecuta una instrucción como **inicioDeSesión2**, **SessionLoginName** muestra **inicioDeSesión1**y **LoginName** muestra **inicioDeSesión2**. En esta columna de datos se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|  
   
  **[ @on =]** *en*  
@@ -317,9 +317,9 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  En esta tabla se muestra la interacción entre ** \@ on** y ** \@ columnid**.  
   
-|\@en|\@columnid|Resultado|  
+|\@on|\@columnid|Resultado|  
 |---------|---------------|------------|  
-|EN (**1**)|NULL|El evento está activado.<br /><br /> Se borran todas las columnas.|  
+|ON (**1**)|NULL|El evento está activado.<br /><br /> Se borran todas las columnas.|  
 ||NOT NULL|La columna está activada para el evento especificado.|  
 |OFF (**0**)|NULL|El evento está desactivado.<br /><br /> Se borran todas las columnas.|  
 ||NOT NULL|La columna está desactivada para el evento especificado.|  
@@ -336,7 +336,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |4|La columna especificada no es válida.|  
 |9|El identificador de seguimiento especificado no es válido.|  
 |11|La columna especificada está utilizándose internamente y no puede eliminarse.|  
-|13|Memoria insuficiente. Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
+|13|Memoria insuficiente Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
 |16|La función no es válida para este seguimiento.|  
   
 ## <a name="remarks"></a>Observaciones  

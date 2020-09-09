@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1ef51387b774f8961cb7abe30f2af4615adc0973
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fc67de5d66f897ccc54a1cc06cf88aac35e572b5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419239"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540976"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "88419239"
 |**instance_id**|**int**|Identifica la instancia actual del registro del artículo para la tabla publicada.|  
 |**use_default_datatypes**|**bit**|Indica si el artículo utiliza asignaciones de tipos de datos predeterminadas; un valor de **1** indica que se usan las asignaciones de tipos de datos predeterminados.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

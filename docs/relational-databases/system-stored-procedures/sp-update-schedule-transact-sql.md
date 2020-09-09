@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_schedule
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a8616c3b10257440210f80de1ef45832d3b88e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5aead8188bbdaac714bb68e44be0c54cce12fce6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480920"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541600"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type` Valor que indica cuándo se va a ejecutar un trabajo. *freq_type*es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**4**|Diario|  
@@ -90,10 +90,10 @@ sp_update_schedule
   
 `[ @freq_subday_type = ] freq_subday_type` Especifica las unidades de *freq_subday_interval * *.* *freq_subday_type*es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Value|Descripción (unidad)|  
+|Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**0x1**|A la hora especificada|  
-|**0X2**|Segundos|  
+|**0x2**|Segundos|  
 |**0x4**|Minutos|  
 |**0x8**|Horas|  
   
@@ -101,10 +101,10 @@ sp_update_schedule
   
 `[ @freq_relative_interval = ] freq_relative_interval` La repetición de un trabajo de *freq_interval* en cada mes, si *freq_interval* es **32** (relativo mensual). *freq_relative_interval*es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Value|Descripción (unidad)|  
+|Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|Segundo|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
 |**16**|Último|  
@@ -158,7 +158,7 @@ EXEC dbo.sp_update_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [Programar un trabajo](../../ssms/agent/schedule-a-job.md)   
  [Crear una programación](../../ssms/agent/create-a-schedule.md)   

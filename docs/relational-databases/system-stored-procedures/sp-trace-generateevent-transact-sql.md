@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ebb89cf26de4d5f9dd8020c71d0870f038242b98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d8a5e027b2d76aa1e6965f1fe782b8987a927ce3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481014"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541596"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**0**|Sin errores.|  
 |**1**|Error desconocido.|  
 |**3**|El evento especificado no es válido. Puede que el evento no exista o que no sea adecuado para el procedimiento almacenado.|  
-|**13**|Memoria insuficiente. Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
+|**13**|Memoria insuficiente Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
   
 ## <a name="remarks"></a>Observaciones  
  **sp_trace_generateevent** realiza muchas de las acciones ejecutadas previamente por los procedimientos almacenados extendidos de **xp_trace_ \* ** . Use **sp_trace_generateevent** en lugar de **xp_trace_generate_event**.  

@@ -4,7 +4,6 @@ title: Sys. server_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
-ms.reviewer: carlrab, edmaca
 ms.topic: language-reference
 f1_keywords:
 - resource_stats
@@ -20,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ef3f27b814405cf6ca56a47ffcac8dd467f939f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed975dd768bc9d7979dd254fddec715ed07b3b2f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88376711"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542519"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>Sys. server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -43,7 +42,7 @@ La vista **Sys. server_resource_stats** tiene definiciones diferentes en funció
 |end_time|**datetime**|Hora UTC que indica el final del intervalo de informes de quince segundos|
 |resource_type|Nvarchar(128)|Tipo del recurso para el que se proporcionan las métricas|
 |resource_name|nvarchar(128)|Nombre del recurso.|
-|sku|nvarchar(128)|Instancia administrada nivel de servicio de la instancia. Los posibles valores son los siguientes: <br><ul><li>De uso general</li></ul><ul><li>Crítico para la empresa</li></ul>|
+|sku|nvarchar(128)|Instancia administrada nivel de servicio de la instancia. Los posibles valores son los siguientes: <br><ul><li>Uso general</li></ul><ul><li>Crítico para la empresa</li></ul>|
 |hardware_generation|nvarchar(128)|Identificador de generación de hardware: como gen 4 o gen 5|
 |virtual_core_count|int|Representa el número de núcleos virtuales por instancia (8, 16 o 24 en versión preliminar pública)|
 |avg_cpu_percent|decimal (5, 2)|Uso de proceso promedio en porcentaje del límite del nivel de servicio Instancia administrada utilizado por la instancia de. Se calcula como suma del tiempo de CPU de todos los grupos de recursos para todas las bases de datos de la instancia y dividido por el tiempo de CPU disponible para ese nivel en el intervalo especificado.|

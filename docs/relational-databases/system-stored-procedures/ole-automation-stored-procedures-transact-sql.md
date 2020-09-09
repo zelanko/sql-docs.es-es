@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], OLE Automation
 - OLE Automation [SQL Server], stored procedures
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 820a100a4da0ed62fd22bb64b22bf83daacee490
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ae6119639e67cd073e90baec7db430ab3451af7d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454768"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548450"
 ---
 # <a name="ole-automation-stored-procedures-transact-sql"></a>Procedimientos almacenados de OLE Automation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

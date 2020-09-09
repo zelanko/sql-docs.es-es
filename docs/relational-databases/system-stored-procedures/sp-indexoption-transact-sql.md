@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 509d58a28f768fe774c813a8235ae4c0d9cd718a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: aaaf9863e6226de5aa30d553bfa4c7766588524b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469262"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547910"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 `[ @OptionName = ] 'option_name'` Es un nombre de opción de índice. *option_name* es de tipo **VARCHAR (35)** y no tiene ningún valor predeterminado. *option_name* puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Cuando el valor es TRUE, se permiten bloqueos de fila al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila. Cuando es FALSE, no se utilizan bloqueos de fila. El valor predeterminado es TRUE.|  
 |**AllowPageLocks**|Cuando el valor es TRUE, se permiten bloqueos de página al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página. Cuando es FALSE, no se utilizan bloqueos de página. El valor predeterminado es TRUE.|  

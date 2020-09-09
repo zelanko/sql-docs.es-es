@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 008c9b4f6cd0478e960d77ff6c39b45d9a34fbe2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2884cda986a99f23c88c71c8960d25a467de0663
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489379"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548047"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**nombre del catálogo de texto completo**|**int**|Nombre del catálogo de texto completo.|  
 |**identificador del catálogo de texto completo**|**sysname**|Id. del catálogo de texto completo.|  
-|**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> Filtrar<br /><br /> Controlador de protocolo<br /><br /> Separador de palabras|  
+|**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> Filter<br /><br /> Controlador de protocolo<br /><br /> Separador de palabras|  
 |**componentName**|**sysname**|Nombre del componente.|  
 |**CLSID**|**uniqueidentifier**|Identificador de clase del componente.|  
 |**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el autor de la llamada no es miembro del rol fijo de servidor **ServerAdmin** .|  
@@ -60,7 +60,7 @@ sp_help_fulltext_catalog_components
   
 ## <a name="see-also"></a>Consulte también  
  [Búsqueda de texto completo y procedimientos almacenados de búsqueda semántica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [Sys. fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [Búsqueda de texto completo](../../relational-databases/search/full-text-search.md)  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cf2b3eb0d8d71ce85ac7a5de4fddcd5a34ae97a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8edccbecb7d5a44b2fc8a5eed2297498c0f94bae
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480993"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547851"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
 `[ @comparison_operator = ] comparison_operator` Especifica el tipo de comparación que se va a realizar. *comparison_operator* es de **tipo int**y no tiene ningún valor predeterminado. Esta tabla contiene los operadores de comparación y sus valores representativos.  
   
-|Value|Operadores de comparación|  
+|Valor|Operadores de comparación|  
 |-----------|-------------------------|  
 |**0**|= (Es igual a)|  
 |**1**|<>  (no igual)|  
@@ -89,7 +89,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |6|El operador de comparación especificado no es válido.|  
 |7|El operador lógico especificado no es válido.|  
 |9|El identificador de seguimiento especificado no es válido.|  
-|13|Memoria insuficiente. Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
+|13|Memoria insuficiente Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
 |16|La función no es válida para este seguimiento.|  
   
 ## <a name="remarks"></a>Observaciones  
@@ -111,8 +111,8 @@ sp_trace_setfilter  1, 10, 0, 6, N'MS%';
 sp_trace_setfilter  1, 11, 0, 0, N'joe';  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [Sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+## <a name="see-also"></a>Vea también  
+ [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md)  
   

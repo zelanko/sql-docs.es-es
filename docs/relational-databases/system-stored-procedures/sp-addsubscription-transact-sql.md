@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1cf622748da040060681dac848273238f73c66a5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918949"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548357"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -96,7 +96,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|Ninguna|El suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas.<br /><br /> Nota: esta opción está en desuso. En su lugar, utilice replication support only.|  
+|ninguno|El suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas.<br /><br /> Nota: esta opción está en desuso. En su lugar, utilice replication support only.|  
 |automatic (predeterminado)|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
 |replication support only|Proporciona la generación automática en el suscriptor de los desencadenadores y procedimientos almacenados personalizados de artículos que admiten las suscripciones de actualización, si es apropiado. Supone que el suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas. Al configurar una topología de replicación transaccional punto a punto, asegúrese de que los datos de todos los nodos de la topología son idénticos. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *No se admite para las suscripciones a publicaciones que no son de SQL Server.*|  
 |initialize with backup|El esquema y los datos iniciales de las tablas publicadas se obtienen de una copia de seguridad de la base de datos de publicaciones. Se da por supuesto que el suscriptor tiene acceso a una copia de seguridad de la base de datos de publicaciones. La ubicación de la copia de seguridad y el tipo de medio para la copia de seguridad se especifican mediante *backupdevicename* y *backupdevicetype*. Cuando se utiliza esta opción, la topología de replicación transaccional punto a punto no debe detenerse durante la configuración.<br /><br /> *No se admite para las suscripciones a publicaciones que no son de SQL Server.*|  
@@ -137,7 +137,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|true|El Agente de distribución no envía las transacciones originadas en el suscriptor al mismo suscriptor. Se utilizan con replicación transaccional bidireccional. Para obtener más información, consulte la [replicación transaccional bidireccional](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|true|El Agente de distribución no envía las transacciones originadas en el suscriptor al mismo suscriptor. Se utilizan con replicación transaccional bidireccional. Para más información, consulte [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|El Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor.|  
 |NULL (predeterminado)|Se establece automáticamente en true para un suscriptor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en false para un suscriptor que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
@@ -163,7 +163,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|1|Primero|  
+|1|First|  
 |2|Segundo|  
 |4|Tercero|  
 |8|Cuarto|  
@@ -181,7 +181,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |1|Una sola vez|  
 |2|Segundo|  
 |4|Minute|  
-|8|Hour|  
+|8|Hora|  
 |NULL||  
   
  [ @frequency_subday_interval =] *frequency_subday_interval*  
@@ -281,7 +281,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|0 (predeterminado)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Suscriptor|  
+|0 (predeterminado)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Suscriptor|  
 |1|Servidor del origen de datos ODBC|  
 |2|Base de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |3|Proveedor OLE DB|  
@@ -323,10 +323,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Crear una suscripción para un suscriptor que no sea de SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [sp_changesubstatus &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_addpushsubscription_agent &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_changesubstatus &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 57037217d1c50de3b37618da856288ed85adaa40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 46f76ceeba699f614e19b494785c42591ab5299a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481667"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549995"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -69,7 +69,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type` Valor que indica cuándo se va a ejecutar el trabajo. *frequency_type* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de los valores siguientes:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**4**|Diario|  
@@ -81,7 +81,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_interval = ] frequency_interval` Día en el que se ejecuta el trabajo. *frequency_interval* es de **tipo int**, su valor predeterminado es 0 y depende del valor de *frequency_type* como se indica en la tabla siguiente:  
   
-|Value|Efecto|  
+|Valor|Efecto|  
 |-----------|------------|  
 |**1** (una vez)|*frequency_interval* no se usa.|  
 |**4** (diariamente)|Cada *frequency_interval* días.|  
@@ -93,7 +93,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_type = ] frequency_subday_type` Especifica las unidades para *frequency_subday_interval*. *frequency_subday_type* es de **tipo int**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes:  
   
-|Value|Descripción (unidad)|  
+|Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**0x1**|A la hora especificada|  
 |**0x4**|Minutos|  
@@ -105,10 +105,10 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* es de **tipo int**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes:  
   
-|Value|Descripción (unidad)|  
+|Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|Segundo|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
 |**16**|Último|  

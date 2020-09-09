@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0db25b095536c06e03c87b3bc21dacc5f8c7d0f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d500bad167bda9085d4caf40bdaa9e442cb26efb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481291"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549718"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @class = ] 'class'` Clase sobre la que se solicita información. la *clase* es **VARCHAR (8)** y su valor predeterminado es **Job**. la *clase* puede ser uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**TRABAJO**|Proporciona información acerca de una categoría de trabajo.|  
 |**ONALERT**|Proporciona información acerca de una categoría de alerta.|  
@@ -53,7 +53,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'` Tipo de categoría para la que se solicita información. *Type* es de tipo **VARCHAR (12)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**LOCAL**|Categoría de trabajo local.|  
 |**MULTI -SERVER**|Categoría de trabajo multiservidor.|  

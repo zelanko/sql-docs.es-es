@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2196e6fbbbd0089c7e65592bfc4ebfd17bb14239
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469405"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549737"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,14 +56,14 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'` Operación válida para el trabajo especificado. la *operación* es de tipo **VARCHAR (64)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**DEFECT**|Operación del servidor que solicita el defecto del servidor de destino al servicio **SQLServerAgent** maestro.|  
 |**DELETE**|Operación de trabajo que quita un trabajo completo.|  
 |**INSERT**|Operación de trabajo que inserta un trabajo completo o actualiza un trabajo existente. Esta operación incluye todos los pasos y programaciones del trabajo, si corresponde.|  
 |**RE-ENLIST**|Operación del servidor que hace que el servidor de destino vuelva a enviar la información de alta, incluidos el intervalo de sondeo y la zona horaria del dominio multiservidor. El servidor de destino también redescarga los detalles de **MSXOperator** .|  
 |**SET-POLL**|Operación del servidor que establece el intervalo, en segundos, con el que los servidores de destino sondean el dominio multiservidor. Si se especifica, el *valor* se interpreta como el valor de intervalo necesario y puede ser un valor comprendido entre **10** y **28.800**.|  
-|**INICIALES**|Operación de trabajo que solicita el inicio de la ejecución del trabajo.|  
+|**INICIO**|Operación de trabajo que solicita el inicio de la ejecución del trabajo.|  
 |**DETENER**|Operación de trabajo que solicita la detención de la ejecución del trabajo.|  
 |**SYNC-TIME**|Operación de servidor que hace que el servidor de destino sincronice su reloj del sistema con el dominio multiservidor. Como ésta es una operación muy costosa, ejecútela de forma limitada, con poca frecuencia.|  
 |**UPDATE**|Operación de trabajo que solo actualiza la información de **sysjobs** para un trabajo, no los pasos o las programaciones de trabajo. **Sp_update_job**llama automáticamente a.|  

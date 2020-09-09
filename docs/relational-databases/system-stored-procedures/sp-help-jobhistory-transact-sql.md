@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bf0766388b50fabfe3a0571b5cf4e86ab7e15520
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d805cfb7f6cf682e07e703e6854e25737a82b9cc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464290"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548002"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,14 +76,14 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status` El estado de ejecución del trabajo. *run_status* es de **tipo int**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**0**|Con error|  
+|**0**|Failed|  
 |**1**|Correcto|  
 |**2**|Reintento (solo pasos)|  
 |**3**|Canceled|  
 |**4**|Mensaje en curso|  
-|**5**|Desconocido|  
+|**5**|Unknown|  
   
 `[ @minimum_retries = ] minimum_retries` El número mínimo de veces que un trabajo debe volver a ejecutarse. *minimum_retries* es de **tipo int**y su valor predeterminado es NULL.  
   

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a22465af8c3d4e7e3bb0cabd76752d642c2f2423
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2b67e5754fdc0124d105d99954361535933c88b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447484"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539256"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,7 +82,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @pager_days = ] pager_days` Es un número que indica los días en los que el operador está disponible para las páginas (sujeto a las horas de inicio y finalización especificadas). *pager_days*es de tipo **tinyint**y su valor predeterminado es **0** , lo que indica que el operador nunca está disponible para recibir una página. Los valores válidos son de **0** a **127**. *pager_days*se calcula agregando los valores individuales de los días necesarios. Por ejemplo, de lunes a viernes, **2** + **4** + **8** + **16** + **32**  =  **62**. En la siguiente tabla se incluye el valor para cada día de la semana.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -130,7 +130,7 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_delete_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_update_operator &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

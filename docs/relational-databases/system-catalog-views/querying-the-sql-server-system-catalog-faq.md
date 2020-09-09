@@ -17,14 +17,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17b7367ddcd8795eef64181934c8d44bb648c6e8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 346ae709b81c1d5f3892a7e7b5acfd98c3ff7d3b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486618"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539795"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88486618"
 ##  <a name="frequently-asked-questions"></a><a name="_TOP"></a> Preguntas más frecuentes  
  En las secciones siguientes se enumeran las preguntas más frecuentes por categoría.  
   
-### <a name="data-types"></a>Tipo de datos  
+### <a name="data-types"></a>Tipos de datos  
   
 -   [¿Cómo busco los tipos de datos de las columnas de una tabla específica?](#_FAQ7)  
   

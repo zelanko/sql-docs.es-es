@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7b0b7486de9709b0cfb4fc9ab20b8c8dd2da0f58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01f3c79cf6097f3e916d7faa5e77e508b75015e8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399181"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539441"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88399181"
 |-|-|-|  
 |**Nombre de la columna**|**Tipo**|**Descripción**|  
 |*class*|**int**|1 = Objeto o columna (incluye módulos, XP, vistas, sinónimos y tablas).<br /><br /> 4 = entidad de seguridad de base de datos<br /><br /> 5 = Ensamblado<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (índice de texto completo)<br /><br /> 12 = desencadenador DDL de base de datos<br /><br /> 19 = Ruta<br /><br /> 30 = Especificación de auditoría|  
-|*class_desc*|**nvarchar(120)**|Descripción de la clase de la entidad. Uno de los siguientes para que coincida con la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBL**<br /><br /> **TYPE**<br /><br /> **AJUSTAR**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **DISTRIBUYA**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class_desc*|**nvarchar(120)**|Descripción de la clase de la entidad. Uno de los siguientes para que coincida con la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBL**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **DISTRIBUYA**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|Identificador de la entidad.<br /><br /> Si *Class* = 1, object_id<br /><br /> Si *Class* = 4, entonces sys. database_principals. principal_id.<br /><br /> Si *Class* = 5, entonces sys. Assemblies. assembly_id.<br /><br /> Si *Class* = 6, entonces sys. types. user_type_id.<br /><br /> Si *Class* = 7, entonces sys. Indexes. index_id.<br /><br /> Si *Class* = 12, entonces sys. Triggers. object_id.<br /><br /> Si *Class* = 19, entonces sys. Routes. Route_ID.<br /><br /> Si *Class* = 30, entonces sys. database_audit_specifications. database_specification_id.|  
 |*statement_line_number*|**int**|Si la clase es un módulo, devuelve el número de línea en el que se encuentra el uso del objeto no contenido.  De lo contrario, el valor es NULL.|  
 |*statement_ offset_begin*|**int**|Si la clase es un módulo, indica en bytes, comenzando por 0, la posición inicial donde comienza el uso del objeto no contenido. De lo contrario el valor devuelto es NULL.|  

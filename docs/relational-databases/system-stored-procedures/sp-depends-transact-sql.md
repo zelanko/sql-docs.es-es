@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba819cdb8b3e9108fbae3e6405a87b78964931a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 64bbce5c077d6752c97fd5791d5820e9cc4a2857
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447280"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539081"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sp_depends [ @objname = ] '<object>'
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nombre del elemento que tiene una dependencia.|  
 |**type**|**nvarchar (16)**|Tipo del elemento.|  
-|**Actualice**|**nvarchar (7)**|Indica si el elemento está actualizado.|  
+|**actualizado**|**nvarchar (7)**|Indica si el elemento está actualizado.|  
 |**seleccionadas**|**nvarchar (8)**|Indica si el elemento se utiliza en una instrucción SELECT.|  
 |**column**|**sysname**|Columna o parámetro con el que existe la dependencia.|  
   

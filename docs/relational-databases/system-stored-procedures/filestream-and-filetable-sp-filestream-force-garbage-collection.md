@@ -17,14 +17,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 63880b69a9c33b0f388fd25945aa9b8f0fae7cdf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eeb70b4bc548496dcb8d0c93eeba27a9644c5bca
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427717"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539207"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,14 +54,14 @@ sp_filestream_force_garbage_collection
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
   
-| Value | Descripción |
+| Valor | Descripción |
 | ----- | ----------- |   
 |0|Operación correcta|  
 |1|Error de operación|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*file_name*|Indica el nombre del contenedor de FILESTREAM|  
 |*num_collected_items*|Indica el número de elementos de FILESTREAM (archivos o directorios) que el recolector de elementos eliminados ha eliminado en este contenedor.|  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], query store
 - query store [SQL Server], stored procedures
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9d39754684615128402d6b4e1605062b3857da7
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 3e4219850fec566b39371629226e74e5d6aeaf00
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646575"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539179"
 ---
 # <a name="query-store-stored-procedures-transact-sql"></a>Almacén de consultas procedimientos almacenados (Transact-SQL)
 
@@ -45,7 +45,7 @@ ms.locfileid: "88646575"
   
 -   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Almacén de consultas vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Supervisar el rendimiento mediante el Almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

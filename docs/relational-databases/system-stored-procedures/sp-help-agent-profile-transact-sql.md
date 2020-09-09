@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_profile
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5c6873ada83a846ae719e5498a296df02fa2a9c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7bcb9de7480bf0aea92f585cfece47cf09545195
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469367"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538865"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="arguments"></a>Argumentos  
 `[ @agent_type = ] agent_type` Es el tipo de agente. *agent_type* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Agente de instantáneas|  
 |**2**|Agente de registro del LOG|  

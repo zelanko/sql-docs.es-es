@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 339bbba2335512c582251f960224baae15513618
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4ceeb3ad0d977282c88314a7305099f7c0db0496
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88399791"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537695"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,7 +58,7 @@ SELECT parameter_name, parameter_value
 FROM msdb.dbo.syscollector_config_store;  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Vistas del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   

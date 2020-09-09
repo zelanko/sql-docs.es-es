@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_deauthorize_db stored procedure
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 11e039ad6c0550942632be6f34d23972e1897e2b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c8413bf0a78ea1780d0babfc6fd88abb615d4ea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243366"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538487"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>Sys. sp_rda_deauthorize_db (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Quita la conexión autenticada entre una base de datos habilitada para Stretch local y la base de datos de Azure remota. Ejecute **sp_rda_deauthorize_db** cuando no se pueda tener acceso a la base de datos remota o en un estado incoherente y desee cambiar el comportamiento de la consulta para todas las tablas habilitadas para stretch en la base de datos.  
+  Quita la conexión autenticada entre una base de datos habilitada para Stretch local y la base de datos de Azure remota. Ejecute **sp_rda_deauthorize_db**  cuando no se pueda tener acceso a la base de datos remota o en un estado incoherente y desee cambiar el comportamiento de la consulta para todas las tablas habilitadas para stretch en la base de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_rda_deauthorize_db
 ## <a name="remarks"></a>Observaciones  
  Después de ejecutar **sp_rda_deauthorize_db** , se producirá un error en todas las consultas de bases de datos y tablas habilitadas para Stretch. Es decir, el modo de consulta se establece en Disabled. Para salir de este modo, realice una de las siguientes acciones.  
   
--   Ejecute [Sys. sp_rda_reauthorize_db &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos remota de Azure. Esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
+-   Ejecute [Sys. sp_rda_reauthorize_db &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos remota de Azure. Esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
   
 -   Ejecute [Sys. sp_rda_set_query_mode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) con el argumento LOCAL_ONLY para permitir que las consultas sigan ejecutándose solo con datos locales.  
   

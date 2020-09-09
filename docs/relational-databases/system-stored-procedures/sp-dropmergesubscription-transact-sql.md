@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4d5b3726aecea192501255efedf0be970549e612
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8d1b10deb11751ba8a8d2c5ee49cda293e695d50
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493274"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538957"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type*es **nvarchar (15)** y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**todos**|Suscripciones de inserción, de extracción y anónimas.|  
 |**Anonymous**|Suscripción anónima.|  
@@ -75,7 +75,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_dropmergesubscription**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addmergesubscription &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

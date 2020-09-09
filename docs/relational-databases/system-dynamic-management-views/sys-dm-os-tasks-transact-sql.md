@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_tasks dynamic management view
 ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efad6c04a5a2f2e2705b24f639fd798197a2b26d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b19ef563d8726b88f7a5432c6a42deeb687e72b4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493617"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539336"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88493617"
 |**scheduler_id**|**int**|Id. del programador primario. Es un identificador de la información del programador para esta tarea. Para obtener más información, vea [Sys. dm_os_schedulers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |**session_id**|**smallint**|Id. de la sesión que está asociada a la tarea.|  
 |**exec_context_id**|**int**|Id. del contexto de ejecución que está asociado a la tarea.|  
-|**request_id**|**int**|Id. de la solicitud de la tarea. Para obtener más información, vea [Sys. dm_exec_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|**id_de_solicitud**|**int**|Id. de la solicitud de la tarea. Para obtener más información, vea [Sys. dm_exec_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |**worker_address**|**varbinary(8**|Dirección de memoria del trabajador que ejecuta la tarea.<br /><br /> NULL = La tarea espera un trabajador que pueda ejecutarla o la tarea acaba de finalizar la ejecución.<br /><br /> Para obtener más información, vea [Sys. dm_os_workers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |**host_address**|**varbinary(8**|Dirección de memoria del host.<br /><br /> 0 = No se ha usado el hospedaje para crear la tarea. Esto ayuda a identificar el host que se ha utilizado para crear esta tarea.<br /><br /> Para obtener más información, vea [Sys. dm_os_hosts &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
 |**parent_task_address**|**varbinary(8**|Dirección de memoria de la tarea que es el elemento primario del objeto.|  

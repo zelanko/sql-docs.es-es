@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 01e7850faa83e6d8854b5ac1a0138cd4363adf4b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eec1a0d9d8e61613558e0f34b13080a67ba5335b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447266"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539009"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ sp_describe_cursor_tables
  Es el nombre de una variable de cursor asociada a un cursor abierto. *input_cursor_variable* es **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- None  
+ Ninguno  
   
 ## <a name="cursors-returned"></a>Cursores devueltos  
  sp_describe_cursor_tables encapsula su informe como un parámetro de salida de [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor** . De esta forma, los lotes, los procedimientos almacenados y los desencadenadores de [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden trabajar con la salida de fila en fila. También significa que no se puede llamar al procedimiento directamente desde funciones de una API. El parámetro de salida **cursor** debe estar enlazado a una variable de programa, pero las API no admiten parámetros de **cursor** de enlace o variables.  
@@ -130,7 +130,7 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Cursores](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;&#41;de Transact-SQL ](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   

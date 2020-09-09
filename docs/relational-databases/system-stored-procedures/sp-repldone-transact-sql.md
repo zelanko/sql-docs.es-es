@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repldone
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e627296cecad35b21c84b928f4474f6302e9214d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7a8e32127986fb67a28abfa2433caefc044ed1b2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725744"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538607"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,20 +44,20 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @xactid = ] xactid`Es el número de secuencia de registro (LSN) del primer registro de la última transacción distribuida del servidor. *xactid* es **binario (10)** y no tiene ningún valor predeterminado.  
+`[ @xactid = ] xactid` Es el número de secuencia de registro (LSN) del primer registro de la última transacción distribuida del servidor. *xactid* es **binario (10)** y no tiene ningún valor predeterminado.  
   
-`[ @xact_seqno = ] xact_seqno`Es el LSN del último registro de la última transacción distribuida del servidor. *xact_seqno* es **binario (10)** y no tiene ningún valor predeterminado.  
+`[ @xact_seqno = ] xact_seqno` Es el LSN del último registro de la última transacción distribuida del servidor. *xact_seqno* es **binario (10)** y no tiene ningún valor predeterminado.  
   
-`[ @numtrans = ] numtrans`Es el número de transacciones distribuidas. *numtrans* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @numtrans = ] numtrans` Es el número de transacciones distribuidas. *numtrans* es de **tipo int**y no tiene ningún valor predeterminado.  
   
-`[ @time = ] time`Es el número de milisegundos, si se proporciona, necesarios para distribuir el último lote de transacciones. *Time* es de **tipo int**y no tiene ningún valor predeterminado.  
+`[ @time = ] time` Es el número de milisegundos, si se proporciona, necesarios para distribuir el último lote de transacciones. *Time* es de **tipo int**y no tiene ningún valor predeterminado.  
   
-`[ @reset = ] reset`Es el estado de restablecimiento. *RESET* es de **tipo int**y no tiene ningún valor predeterminado. Si es **1**, todas las transacciones replicadas del registro se marcan como distribuidas. Si es **0**, el registro de transacciones se restablece a la primera transacción replicada y no hay transacciones replicadas marcadas como distribuidas. *RESET* solo es válido cuando *xactid* y *xact_seqno* son NULL.  
+`[ @reset = ] reset` Es el estado de restablecimiento. *RESET* es de **tipo int**y no tiene ningún valor predeterminado. Si es **1**, todas las transacciones replicadas del registro se marcan como distribuidas. Si es **0**, el registro de transacciones se restablece a la primera transacción replicada y no hay transacciones replicadas marcadas como distribuidas. *RESET* solo es válido cuando *xactid* y *xact_seqno* son NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  **sp_repldone** se utiliza en la replicación transaccional.  
   
  el proceso de registro del log utiliza **sp_repldone** para realizar un seguimiento de las transacciones que se han distribuido.  
@@ -80,7 +80,7 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 >  Este procedimiento se puede utilizar en situaciones de emergencia para permitir que se trunque el registro de transacciones cuando existen transacciones pendientes de replicación.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_replcmds &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replflush &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replflush &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

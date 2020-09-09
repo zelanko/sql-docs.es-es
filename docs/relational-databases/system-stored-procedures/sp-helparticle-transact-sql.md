@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ca400eb6fc015acff452ca4ae6a7658a05145f8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7bc639fef551b78dd73da39cd404999e39219b2d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474169"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538801"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -105,9 +105,9 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del artículo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [sp_addarticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_changearticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_droparticle &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

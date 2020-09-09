@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 133f564d4f131e187334e5ebe5d4a2561dd21dcc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a99c9adb21d6c9b09d4e1e29ad845253ba3c9b19
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473688"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538541"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

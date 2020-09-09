@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c3705d08778a50cb603ed3fed5c0d609e3e5fb42
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: edfe9a3a3d69c95b2a8778ca44583e005c6495c6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485808"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538661"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +62,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objtype =] '*object_type*'  
  Es el tipo de objeto cuyo nombre se va a cambiar. *object_type* es de tipo **VARCHAR (13)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |COLUMN|Una columna cuyo nombre se va a cambiar.|  
 |DATABASE|Una base de datos definida por el usuario. Este tipo de objeto es necesario cuando se cambia el nombre de una base de datos|  

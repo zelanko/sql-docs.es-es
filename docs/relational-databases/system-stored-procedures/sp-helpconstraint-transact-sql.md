@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpconstraint
 ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d743730b70559d928f4fd46db67e9602168c139
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af8424ad63c110f8c6c8b9814b384450ba2bc9cf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474117"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538764"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

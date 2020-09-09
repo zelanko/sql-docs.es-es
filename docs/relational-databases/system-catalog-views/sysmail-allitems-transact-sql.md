@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0c5a41e6f0c150638eeed8e1c7cdd4fbb3c6bf2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9eb8d8b48203b047df830670eb88b0956d04c4dc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419919"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537966"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88419919"
 |**attach_query_result_as_file**|**bit**|Si el valor es 0, los resultados de la consulta se incluyeron en el cuerpo del mensaje de correo electrónico, después del contenido del cuerpo. Si el valor es 1, los resultados se devolvieron como datos adjuntos.|  
 |**query_result_header**|**bit**|Si el valor es 1, los resultados de la consulta contenían encabezados de columna. Si el valor es 0, los resultados de la consulta no contenían encabezados de columna.|  
 |**query_result_width**|**int**|**Query_result_width** parámetro del mensaje.|  
-|**query_result_separator**|**Char (1)**|Carácter utilizado para separar columnas en la salida de la consulta.|  
+|**query_result_separator**|**char(1)**|Carácter utilizado para separar columnas en la salida de la consulta.|  
 |**exclude_query_output**|**bit**|**Exclude_query_output** parámetro del mensaje. Para obtener más información, vea [sp_send_dbmail &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|**Append_query_error** parámetro del mensaje. El valor 0 indica que el Correo electrónico de base de datos no debe enviar el mensaje de correo electrónico si hay un error en la consulta.|  
 |**send_request_date**|**datetime**|Fecha y hora en que se colocó el mensaje en la cola de correo electrónico.|  

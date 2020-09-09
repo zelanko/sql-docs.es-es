@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 266098010f7da11f431c3bb334761209c7049cba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fb7ee524e2b9849c9c8a348cd6c8a9de7fb74e2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474124"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538788"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>Argumentos  
 `[ @source_dbms = ] 'source_dbms'` Es el nombre del DBMS desde el que se asignan los tipos de datos. *source_dbms* es de **tipo sysname**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|El origen es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El origen es una base de datos de Oracle.|  
@@ -57,7 +57,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'` Es el nombre del DBMS de destino. *destination_dbms* es de **tipo sysname**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|El destino es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El destino es una base de datos de Oracle.|  
@@ -72,7 +72,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de la columna|Descripción|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**mapping_id**|Identifica una asignación de tipos de datos.|  
 |**source_dbms**|El nombre y el número de versión del DBMS de origen.|  
@@ -92,7 +92,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** en el distribuidor o los miembros del rol fijo de base de datos **db_owner** en la base de datos de distribución pueden ejecutar **sp_helpdatatypemap**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_getdefaultdatatypemapping &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
  [sp_setdefaultdatatypemapping &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   

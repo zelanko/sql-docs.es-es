@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_sys_memory dynamic management view
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78f02c014874bdce9cf6d1f6e2c27ad0b3fad24d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 490a70abe37841cd5d0a6f7f34a1a58a8fd794a8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493673"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539296"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "88493673"
 |**system_memory_state_desc**|**nvarchar(256)**|Descripción del estado de la memoria. Vea la tabla siguiente.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-|Condición|Value|  
+|Condición|Valor|  
 |---------------|-----------|  
 |system_high_memory_signal_state = 1<br /><br /> y<br /><br /> system_low_memory_signal_state = 0|La memoria física disponible es alta.|  
 |system_high_memory_signal_state = 0<br /><br /> y<br /><br /> system_low_memory_signal_state = 1|La memoria física disponible es baja.|  

@@ -21,14 +21,14 @@ helpviewer_keywords:
 - csv name
 - cluster shared volume names
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0f81bd26a6ec2a43e9f063466bfa77c793ac4d8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 18a1e01e893486a7ce32f1c3510fb52d5fd7ec0e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419659"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532232"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88419659"
 |-----------------|---------------|-----------------|  
 |**path_name**|**Nvarchar (512)**|Punto de montaje del volumen o ruta de acceso de unidad que se puede usar como directorio raíz de los archivos de base de datos y de registro. No admite valores NULL.|  
 |**cluster_owner_node**|**Nvarchar (64)**|Propietario actual de la unidad. Para los volúmenes compartidos en clúster (CSV), el propietario es el nodo que hospeda el servidor de metadatos. No admite valores NULL.|  
-|**is_cluster_shared_volume**|**Poco**|Devuelve 1 si la unidad en la que se encuentra esta ruta de acceso es un volumen compartido en clúster; de lo contrario, devuelve 0.|  
+|**is_cluster_shared_volume**|**bit**|Devuelve 1 si la unidad en la que se encuentra esta ruta de acceso es un volumen compartido en clúster; de lo contrario, devuelve 0.|  
   
 ## <a name="remarks"></a>Observaciones  
  Una instancia de clúster de conmutación por error (FCI) de SQL Server debe usar almacenamiento compartido entre todos los nodos de FCI para el almacenamiento de archivos de datos y de registro. Los discos que se muestran en esta vista son los que se encuentran en el grupo de recursos de clúster asociado a la instancia y son los únicos discos que se pueden usar para el almacenamiento de archivos de datos o de registro.  

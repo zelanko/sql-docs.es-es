@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f3080ccf17862cdcc2002c37576802b2e7c32a4
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 678c6710e17d8383077be4acff8921268e9a0b6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680820"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89532367"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

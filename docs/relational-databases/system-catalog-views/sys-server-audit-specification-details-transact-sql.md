@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audit_specification_details catalog view
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ee48556a3e06eef76975f17ea698a8372d71f0cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 20f119f3db641ebffd61ba4465abeea3c99515e5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447787"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550458"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "88447787"
 |server_specification_id|**int**|Identificador de la especificación de auditoría de servidor|  
 |audit_action_id|**int**|Identificador de la acción de auditoría|  
 |audit_action_name|**sysname**|Nombre del grupo o nombre de la acción de auditoría|  
-|clase|**tinyint**|Reserved|  
-|class_desc|**nvarchar(60)**|Reserved|  
-|major_id|**int**|Reserved|  
-|minor_id|**int**|Reserved|  
-|audited_principal_id|**int**|Reserved|  
+|clase|**tinyint**|Reservado|  
+|class_desc|**nvarchar(60)**|Reservado|  
+|major_id|**int**|Reservado|  
+|minor_id|**int**|Reservado|  
+|audited_principal_id|**int**|Reservado|  
 |audited_result|**nvarchar(60)**|Resultado auditado:<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|Indica si el objeto auditado es un grupo:<br /><br /> 0 - no es un grupo<br /><br /> 1 - es un grupo|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "88447787"
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [CREAR &#40;de auditoría de servidor de Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
+ [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

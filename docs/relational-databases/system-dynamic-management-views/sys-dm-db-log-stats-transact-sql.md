@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_stats dynamic management function
 ms.assetid: ''
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b70d0b23a55584bb866c278086bec7f437cedd2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98c8b45ccde39b7155443b1ef7fabd994f6b26ab
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423279"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550311"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Devuelve atributos de nivel de resumen e información sobre los archivos de regi
 
 *database_id* | NULL | **Valor predeterminado**
 
-Es el ID. de la base de datos. `database_id` es `int`. Las entradas válidas son el número de identificación de una base de datos, `NULL` o `DEFAULT` . De manera predeterminada, es `NULL`. `NULL` y `DEFAULT` son valores equivalentes en el contexto de la base de datos actual.  
+Es el ID. de la base de datos. `database_id` es `int`. Las entradas válidas son el número de identificación de una base de datos, `NULL` o `DEFAULT` . El valor predeterminado es `NULL`. `NULL` y `DEFAULT` son valores equivalentes en el contexto de la base de datos actual.  
 Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Al usar `DB_ID` sin especificar un nombre de base de datos, el nivel de compatibilidad de la base de datos actual debe ser 90 o superior.
 
   

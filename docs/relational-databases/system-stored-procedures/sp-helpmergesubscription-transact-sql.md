@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6892f15293c66e36afe7108047a7e81539559fc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48d40b3209311968443a6c6d2b713b4aa1e3d43a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464248"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535204"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type*es **nvarchar (15)** y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |de **extracción** (valor predeterminado)|Suscripción de inserción.|  
 |**obtener**|Suscripción de extracción|  
@@ -77,7 +77,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**status**|**int**|Estado de la suscripción:<br /><br /> **0** = todos los trabajos están a la espera de iniciarse<br /><br /> **1** = uno o más trabajos se están iniciando<br /><br /> **2** = todos los trabajos se han ejecutado correctamente<br /><br /> **3** = al menos un trabajo se está ejecutando<br /><br /> **4** = todos los trabajos están programados e inactivos<br /><br /> **5** = al menos un trabajo está intentando ejecutarse después de un error anterior<br /><br /> **6** = al menos un trabajo no se pudo ejecutar correctamente|  
 |**subscriber_type**|**int**|Tipo de suscriptor.|  
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserciones<br /><br /> **1** = extracción<br /><br /> **2** = ambos|  
-|**Prior**|**Float (8)**|Número que indica la prioridad de la suscripción.|  
+|**priority**|**Float (8)**|Número que indica la prioridad de la suscripción.|  
 |**sync_type**|**tinyint**|Tipo de sincronización de la suscripción.|  
 |**description**|**nvarchar(255)**|Breve descripción de esta suscripción de mezcla.|  
 |**merge_jobid**|**binario (16)**|Id. de trabajo del Agente de mezcla.|  

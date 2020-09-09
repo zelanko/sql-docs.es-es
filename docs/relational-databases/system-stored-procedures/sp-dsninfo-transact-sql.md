@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 378b50379ab03124db37c296be273f0a68db59d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 451d19531bbee4814fe9335bc4aaba7707263a10
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486082"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536124"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'` Es el tipo de información que se va a devolver. Si no se especifica *info_type* o si se especifica null, se devuelven todos los tipos de información. *info_type* es de tipo **VARCHAR (128)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Especifica el nombre del proveedor del origen de datos.|  
 |**DBMS_VERSION**|Especifica la versión del origen de datos.|  
@@ -59,7 +59,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type` Es el tipo de origen de datos. *dso_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Origen de datos ODBC|  
 |**3**|Origen de datos OLE DB|  

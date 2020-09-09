@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppeerresponses
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9c1570b01ca8ae3d62303e64760dbc8664981bcb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1b3918d773984223c450e11ead71d045bf21db6d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485939"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535135"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_helppeerresponses [ @request_id = ] request_id
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**request_id**|**int**|Id. de la solicitud de estado.|  
+|**id_de_solicitud**|**int**|Id. de la solicitud de estado.|  
 |**personas**|**sysname**|Nombre del elemento del mismo nivel que generó la respuesta.|  
 |**peer_db**|**sysname**|Nombre de la base de datos del mismo nivel que generó la respuesta.|  
 |**received_date**|**datetime**|Fecha y hora cuando el solicitante recibió la respuesta del elemento del mismo nivel que la envió.|  

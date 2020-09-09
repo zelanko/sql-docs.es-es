@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tableoption
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06655c8dd684ca89d6e67b065d3943ee57f752fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3920007400a4ae407303f3fddff50c0a5ace2328
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473567"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534813"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +53,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] '*option_name*'  
  Es un nombre de opción de tabla. *option_name* es de tipo **VARCHAR (35)** y no tiene ningún valor predeterminado de NULL. *option_name* puede ser uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |table lock on bulk load|Cuando está deshabilitado (valor predeterminado), hace que los procesos de carga masiva en tablas definidas por el usuario obtengan bloqueos de fila. Cuando está habilitado, hace que los procesos de carga masiva en tablas definidas por el usuario obtengan un bloqueo de actualización masiva.|  
 |insert row lock|Ya no se admite.<br /><br /> Esta opción no afecta al comportamiento de bloqueo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y solo está incluida para mantener la compatibilidad con los scripts y procedimientos existentes.|  

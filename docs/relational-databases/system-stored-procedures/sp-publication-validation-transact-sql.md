@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 02409799b4fe597eb784ffe9d94d645c92cddcd0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dccdb0f168b7b1e113a38c64a111e35e5bf62d77
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485858"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535014"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] 'rowcount_only'` Indica si se devuelve solo el recuento de filas de la tabla. *rowcount_only* es **smallint** y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Realiza una suma de comprobación compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: cuando un artículo se filtra horizontalmente, se realiza una operación de recuento de filas en lugar de una operación de suma de comprobación.|  
 |**1** (predeterminado)|Realiza solamente un recuento de filas.|  
@@ -54,7 +54,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @full_or_fast = ] 'full_or_fast'` Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint** y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Realiza un recuento completo mediante COUNT(*).|  
 |**1**|Realiza un recuento rápido de **sysindexes. Rows**. El recuento de filas en [sys.sysíndices](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) es mucho más rápido que contar las filas de la tabla real. Sin embargo, dado que [sys.sysíndices](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) se actualizan de forma diferida, es posible que el recuento de filas no sea preciso.|  

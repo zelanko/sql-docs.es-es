@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_columns_cursor
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: dff9f4ea5fb2eda11da2144114cde959197c3723
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 60cc0643d08ca46aef4fc77803e3a277a0b3ab5f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469391"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535423"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_session_wait_stats
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1a856f10e59fa41bc9cd6d27c9c88097aa90c9c4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6668ab7b975c7325ab4b5d03ca2f30856b2ffbd0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646375"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537021"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>Sys. dm_exec_session_wait_stats (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "88646375"
 ## <a name="permissions"></a>Permisos  
  Si el usuario tiene el permiso **View Server State** en el servidor, el usuario verá todas las sesiones en ejecución en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; de lo contrario, el usuario solo verá la sesión actual.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server vistas de administración dinámica relacionadas con el sistema operativo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)  

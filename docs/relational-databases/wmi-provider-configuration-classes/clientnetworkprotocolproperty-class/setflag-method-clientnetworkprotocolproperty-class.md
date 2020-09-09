@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetFlag method
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ba969526eddb477a918334e30fab033e4888a1ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 69cd62178a35ea88c9a2d76bff14cb6b4405a061
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446282"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537236"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Método SetFlag (clase ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ object.SetFlag(BoolValue) [=]
   
 ## <a name="remarks"></a>Observaciones  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

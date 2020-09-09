@@ -19,15 +19,15 @@ helpviewer_keywords:
 - change tracking [SQL Server], sys.change_tracking_tables
 - sys.change_tracking_tables
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d9287586105befd5606d4bf115b13068cecccc7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b865d0d62f1029f3c8ebb976e8ed9cb5b8f0dd7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486620"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537561"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>Change Tracking vistas de catálogo: sys. change_tracking_tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88486620"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;&#41;de Transact-SQL ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
  [Change Tracking vistas de catálogo &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   

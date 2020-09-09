@@ -11,15 +11,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a4bd565004a7977a1ab58d1db0f265aeb6d9f33
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 2c53ddf41cd1d1ac1b71b28779e19383d4266834
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646075"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537654"
 ---
 # <a name="sysdm_column_store_object_pool-transact-sql"></a>Sys. dm_column_store_object_pool (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "88646075"
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el  **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
   
  [Funciones y vistas de administración dinámica relacionadas con índices &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   

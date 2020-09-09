@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a133709a8fbaaabd58a9ad00d7298bf34317b0cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81d3b8ac9e8eda12ed27099fed5623d0fd3da489
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486368"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536770"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addscriptexec**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ejecutar scripts durante la sincronización &#40;la programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [Sincronizar datos](../../relational-databases/replication/synchronize-data.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

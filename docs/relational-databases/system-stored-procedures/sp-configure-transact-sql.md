@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 17a4e6aa23b7792daf2d7fe27c694f88cc8abe70
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd9ba41579e8d1c0bac76bb634e9074bf9e5c670
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481427"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536649"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]

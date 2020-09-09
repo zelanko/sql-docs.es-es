@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7c5f355f735ba32c639d21d5137d6879f83cfa89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f62a88f7bc1bd3cf60c2d15fe71c3d1b6e571ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469827"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536818"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,14 +54,14 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @agent_type = ] agent_type` Es el tipo de agente. *agent_type* es **smallint**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Agente de distribución|  
 |**1**|Agente de mezcla|  
   
 `[ @frequency_type = ] frequency_type` Es la frecuencia con la que se programa el Agente de distribución. *frequency_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
@@ -76,10 +76,10 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha del Agente de distribución. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|First|  
-|**2**|Second|  
+|**2**|Segundo|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
 |**16**|Último|  
@@ -88,10 +88,10 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday` Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
-|**2**|Second|  
+|**2**|Segundo|  
 |**4** (valor predeterminado)|Minute|  
 |**8**|Hora|  
   
@@ -119,7 +119,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_addsubscriber_schedule**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [sp_changesubscriber_schedule &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

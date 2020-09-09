@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 48c548ed85c5110c8e3c117da796c6189eee39de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef8bc8087811e25c8fde893a251e77d25661b5ea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486454"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537496"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

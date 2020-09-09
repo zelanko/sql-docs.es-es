@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a0df750dd3f582e712c41a01ce1406586b2cecf6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498318"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536911"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,11 +59,11 @@ ms.locfileid: "88498318"
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Relación|  
+|From|En|Relación|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|Varios a uno|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_row_groups catalog view
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a7a6f8a54469aa8a87eb02128ef91672ff69ea3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e10a81e518b9b82b8aea1ed100bad29974438c21
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486477"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537475"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88486477"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|El identificador de la tabla en el que se define este índice.|  
-|**index_id**|**int**|Identificador del índice de la tabla que contiene este índice de almacén de columnas.|  
+|**id_de_índice**|**int**|Identificador del índice de la tabla que contiene este índice de almacén de columnas.|  
 |**partition_number**|**int**|Identificador de la partición de la tabla que contiene el grupo de filas row_group_id. Puede utilizar partition_number para unir esta DMV a sys.partitions.|  
 |**row_group_id**|**int**|El número de grupo de filas asociado con este grupo de filas. Es único en la partición.<br /><br /> -1 = final de una tabla en memoria.|  
 |**delta_store_hobt_id**|**bigint**|El hobt_id para el grupo de filas abierto en el almacén Delta.<br /><br /> Es NULL si el grupo de filas no está en el almacén Delta.<br /><br /> NULL para la cola de una tabla en memoria.|  

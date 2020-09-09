@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75a3d3f6c38b6d63ad8127966cba118f4c3455dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d087a160324ec84cbb94a73cba3ab45f36dfc29e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481386"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536682"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,10 +51,10 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Es un parámetro necesario que designa qué operación realizará el cursor. *optype* requiere uno de los siguientes valores de entrada **int** .  
   
-|Value|Nombre|Descripción|  
+|Valor|Nombre|Descripción|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Se usa para actualizar una o varias filas en el búfer de captura.  Se vuelve a tener acceso a las filas especificadas en *ROWNUM* y se actualizan.|  
-|0x0002|SUPRIMIR|Se usa para eliminar una o varias filas en el búfer de captura. Se vuelve a tener acceso a las filas especificadas en *ROWNUM* y se eliminan.|  
+|0x0002|DELETE|Se usa para eliminar una o varias filas en el búfer de captura. Se vuelve a tener acceso a las filas especificadas en *ROWNUM* y se eliminan.|  
 |0X0004|INSERT|Inserta datos sin generar una instrucción **Insert** de SQL.|  
 |0X0008|REFRESH|Se usa para rellenar el búfer a partir de las tablas subyacentes y se puede usar para actualizar la fila si una actualización o eliminación no puede realizarse debido a un control de simultaneidad optimista o después de una operación UPDATE.|  
 |0X10|LOCK|Hace que se adquiera un SQL Server U-Lock en la página que contiene la fila especificada. Este bloqueo es compatible con los bloqueos S. No es compatible con los bloqueos X ni U. Se puede usar para implementar el bloqueo a corto plazo.|  

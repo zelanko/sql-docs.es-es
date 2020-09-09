@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 388d33f9d812534ecee54dac41cfe7ad852e139d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d1df7bd62aa2cecb23096121630eb0d89ce21dc8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474476"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536673"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,10 +53,10 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'` Es el nuevo valor de la *propiedad*especificada. el *valor* es **nvarchar (255)** y puede ser uno de los valores de la tabla.  
   
-|Propiedad|Value|Descripción|  
+|Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**description**||Descripción de esta suscripción de mezcla.|  
-|**Prior**||Es la prioridad de la suscripción. La prioridad la utiliza el solucionador predeterminado para elegir un ganador cuando se detectan conflictos.|  
+|**priority**||Es la prioridad de la suscripción. La prioridad la utiliza el solucionador predeterminado para elegir un ganador cuando se detectan conflictos.|  
 |**merge_job_login**||Inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente.|  
 |**merge_job_password**||Contraseña de la cuenta de Windows con la que se ejecuta el agente.|  
 |**publisher_security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el publicador.|  

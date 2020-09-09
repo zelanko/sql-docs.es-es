@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_filestream_options catalog view
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e52c737798c6aff82194d74808edb1e37a9f8531
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c2255471d44962aae91147f7a3e903bfe9a240cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486426"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537391"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88486426"
 |**non_transacted_access**|**tinyint**|El nivel de acceso no transaccional a los datos de FILESTREAM habilitados. El nivel de acceso se establece mediante la opción NON_TRANSACTED_ACCESS de la instrucción **Create Database** o **ALTER DATABASE** .<br /><br /> Esta configuración tiene uno de los siguientes valores:<br /><br /> 0: no habilitado. Este es el valor predeterminado. Este nivel se establece al proporcionar **el valor para** la opción **NON_TRANSACTED_ACCESS** .<br /><br /> 1: acceso de solo lectura. Este nivel se establece proporcionando el valor **READ_ONLY** para la opción **NON_TRANSACTED_ACCESS** .<br /><br /> 3-acceso completo. Este nivel se establece proporcionando el valor **completo** de la opción **NON_TRANSACTED_ACCESS** .<br /><br /> 5: en transición a READONLY<br /><br /> 6-en transición a desactivado|  
 |**non_transacted_access_desc**|**nvarchar(60)**|La descripción del nivel de acceso no transaccional identificado en non_transacted_access.<br /><br /> Esta configuración tiene uno de los siguientes valores:<br /><br /> NINGUNO: este es el valor predeterminado.<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Habilitar los requisitos previos de FileTables](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
   

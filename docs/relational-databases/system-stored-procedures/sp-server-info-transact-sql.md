@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 09a7f0e7b0496d3f38ca31bc4a1df369133bb548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5936e83d902926ad1cab22c7046693aab47cd97e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489158"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547501"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -69,23 +69,23 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**16**|IDENTIFIER_CASE<br /><br /> Especifica los nombres definidos por el usuario (nombres de tablas, nombres de columnas, nombres de procedimientos almacenados) de la base de datos (el uso de mayúsculas y minúsculas en los objetos de los catálogos del sistema).|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> Especifica el nivel de aislamiento de transacción inicial que da por supuesto el servidor, que corresponde a un nivel de aislamiento definido en SQL-92.|2|  
 |**18**|COLLATION_SEQ<br /><br /> Especifica el orden del juego de caracteres para este servidor.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
-|**19**|SAVEPOINT_SUPPORT<br /><br /> Especifica si el DBMS subyacente admite puntos de retorno con nombre.|Y|  
-|**20**|MULTI_RESULT_SETS<br /><br /> Especifica si la base de datos subyacente o la propia puerta de enlace admite varios conjuntos de resultados (si se pueden enviar a través de la puerta de enlace varias instrucciones que devuelvan varios conjuntos de resultados al cliente).|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> Especifica si en **sp_tables**, la puerta de enlace solo devuelve tablas, vistas, etc., a las que puede tener acceso el usuario actual (es decir, el usuario que tiene al menos permisos SELECT para la tabla).|Y|  
+|**19**|SAVEPOINT_SUPPORT<br /><br /> Especifica si el DBMS subyacente admite puntos de retorno con nombre.|esté|  
+|**20**|MULTI_RESULT_SETS<br /><br /> Especifica si la base de datos subyacente o la propia puerta de enlace admite varios conjuntos de resultados (si se pueden enviar a través de la puerta de enlace varias instrucciones que devuelvan varios conjuntos de resultados al cliente).|esté|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> Especifica si en **sp_tables**, la puerta de enlace solo devuelve tablas, vistas, etc., a las que puede tener acceso el usuario actual (es decir, el usuario que tiene al menos permisos SELECT para la tabla).|esté|  
 |**100**|USERID_LENGTH<br /><br /> Especifica el número máximo de caracteres de un nombre de usuario.|128|  
 |**101**|QUALIFIER_TERM<br /><br /> Especifica el término del proveedor de DBMS para un calificador de tabla (la primera parte de un nombre de tres partes).|database|  
-|**102**|NAMED_TRANSACTIONS<br /><br /> Especifica si el DBMS subyacente acepta transacciones con nombre.|Y|  
-|**103**|SPROC_AS_LANGUAGE<br /><br /> Especifica si los procedimientos almacenados se pueden ejecutar como eventos de lenguaje.|Y|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> Especifica si en **sp_stored_procedures**, la puerta de enlace solo devuelve los procedimientos almacenados que son ejecutables por el usuario actual.|Y|  
+|**102**|NAMED_TRANSACTIONS<br /><br /> Especifica si el DBMS subyacente acepta transacciones con nombre.|esté|  
+|**103**|SPROC_AS_LANGUAGE<br /><br /> Especifica si los procedimientos almacenados se pueden ejecutar como eventos de lenguaje.|esté|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> Especifica si en **sp_stored_procedures**, la puerta de enlace solo devuelve los procedimientos almacenados que son ejecutables por el usuario actual.|esté|  
 |**105**|MAX_INDEX_COLS<br /><br /> Especifica el número máximo de columnas de un índice del DBMS.|16|  
-|**106**|RENAME_TABLE<br /><br /> Especifica si se puede cambiar el nombre de las tablas.|Y|  
-|**107**|RENAME_COLUMN<br /><br /> Especifica si se puede cambiar el nombre de las columnas.|Y|  
-|**108**|DROP_COLUMN<br /><br /> Especifica si se pueden quitar columnas.|Y|  
-|**109**|INCREASE_COLUMN_LENGTH<br /><br /> Especifica si se puede aumentar el tamaño de las columnas.|Y|  
-|**110**|DDL_IN_TRANSACTION<br /><br /> Especifica si pueden aparecer instrucciones DDL en las transacciones.|Y|  
-|**111**|DESCENDING_INDEXES<br /><br /> Especifica si se admiten índices descendentes.|Y|  
-|**112**|SP_RENAME<br /><br /> Especifica si se puede cambiar el nombre de un procedimiento almacenado.|Y|  
-|**113**|REMOTE_SPROC<br /><br /> Especifica si se pueden ejecutar procedimientos almacenados a través de las funciones de procedimientos almacenados remotos de DB-Library.|Y|  
+|**106**|RENAME_TABLE<br /><br /> Especifica si se puede cambiar el nombre de las tablas.|esté|  
+|**107**|RENAME_COLUMN<br /><br /> Especifica si se puede cambiar el nombre de las columnas.|esté|  
+|**108**|DROP_COLUMN<br /><br /> Especifica si se pueden quitar columnas.|esté|  
+|**109**|INCREASE_COLUMN_LENGTH<br /><br /> Especifica si se puede aumentar el tamaño de las columnas.|esté|  
+|**110**|DDL_IN_TRANSACTION<br /><br /> Especifica si pueden aparecer instrucciones DDL en las transacciones.|esté|  
+|**111**|DESCENDING_INDEXES<br /><br /> Especifica si se admiten índices descendentes.|esté|  
+|**112**|SP_RENAME<br /><br /> Especifica si se puede cambiar el nombre de un procedimiento almacenado.|esté|  
+|**113**|REMOTE_SPROC<br /><br /> Especifica si se pueden ejecutar procedimientos almacenados a través de las funciones de procedimientos almacenados remotos de DB-Library.|esté|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Especifica la versión de los procedimientos almacenados de catálogo actualmente implementados.|Número de versión actual|  
   
 ## <a name="remarks"></a>Observaciones  
@@ -94,7 +94,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

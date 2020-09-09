@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.index_columns catalog view
 ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7ab62980770499214f05fce8cfc1096aa7d088f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dccbbac037400f0addda79c3fc61adfb0b971f3d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470006"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546813"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88470006"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Id. del objeto en el que se define el índice.|  
-|**index_id**|**int**|Id. del índice en el que se define la columna.|  
+|**id_de_índice**|**int**|Id. del índice en el que se define la columna.|  
 |**index_column_id**|**int**|Id. de la columna de índice. **index_column_id** es único solo dentro de **index_id**.|  
 |**column_id**|**int**|IDENTIFICADOR de la columna en **object_id**.<br /><br /> 0 = Identificador de fila (RID) en un índice no clúster.<br /><br /> **column_id** es único solo dentro de **object_id**.|  
 |**key_ordinal**|**tinyint**|Ordinal (de base 1) en el conjunto de columnas de clave.<br /><br /> 0 = No es una columna de clave; es un índice XML, un índice de almacén de columnas o un índice espacial.<br /><br /> Nota: un índice XML o espacial no puede ser una clave porque las columnas subyacentes no son comparables, lo que significa que sus valores no se pueden ordenar.|  
@@ -88,7 +88,7 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

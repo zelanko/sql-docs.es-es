@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da3d1e8bd762f31a7592d90957c3a8680c29dbfb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 304eef1c0e707ecb77fb8d13d5e2b524eb9e9e00
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489213"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546014"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_post_msx_operation
   
 |Tipo de objeto|Operación|  
 |-----------------|---------------|  
-|**TRABAJO**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> START<br /><br /> STOP|  
+|**TRABAJO**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> INICIO<br /><br /> STOP|  
 |**SERVIDOR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**PLANEA**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
   

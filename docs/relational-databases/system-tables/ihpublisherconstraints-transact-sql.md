@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublisherconstraints system table
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a99a457051126a9eccddf8f40d011415824e01ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24ab58c617748d52c8c7463454b4d701bf826c42
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488845"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545770"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "88488845"
 |**publisherconstraint_id**|**int**|Identifica una restricción publicada.|  
 |**table_id**|**int**|Identifica la tabla de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) a la que pertenece la restricción.|  
 |**publisher_id**|**smallint**|Identifica el publicador que no es de SQL Server desde el que se publica la columna.|  
-|**Nombre**|**Predeterminado**|Nombre de la restricción publicada.|  
+|**Name**|**Predeterminado**|Nombre de la restricción publicada.|  
 |**Tipo**|**nvarchar(255)**|Un tipo de restricción compatible de la tabla del sistema [IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) .|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], data collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7f89f82689677fbd43a1fdf3e66c189f19de4bb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fa98a7f469c465ffb497c4a375082fcde795c621
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493541"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546331"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Procedimientos almacenados del recopilador de datos (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "88493541"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

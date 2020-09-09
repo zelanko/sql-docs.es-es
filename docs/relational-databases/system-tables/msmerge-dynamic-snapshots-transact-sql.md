@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_dynamic_snapshots system table
 ms.assetid: a5592b3c-731b-4fc9-ae4b-2602ed78248e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b03489bc2901bc13de483cf90e62fbc9645fab66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51e98246a61d18206015e358a83aee5c66a26711
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473237"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547096"
 ---
 # <a name="msmerge_dynamic_snapshots-transact-sql"></a>MSmerge_dynamic_snapshots (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88473237"
 |**dynamic_snapshot_location**|**nvarchar(255)**|La ubicación de la instantánea de datos filtrados de la partición.|  
 |**last_updated**|**datetime**|La fecha en que se ha actualizado la instantánea de datos filtrados.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ddfa137e0efd93bfad2a59a4fc2c8da2c189cdc3
-ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 481638908fea0dbad0c593b2ca8ee28195b3eaf8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88618110"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546615"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -92,7 +92,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 ### <a name="evaluating-set-options"></a>Evaluar las opciones de Set  
  Para traducir el valor devuelto en **set_options** a las opciones con las que se compiló el plan, reste los valores del valor **set_options** , empezando por el mayor valor posible, hasta que llegue a 0. Cada valor que reste se corresponde con una opción que se usó en el plan de consulta. Por ejemplo, si el valor de **set_options** es 251, las opciones con las que se compiló el plan son ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), paralelo plan (2) y ANSI_PADDING (1).  
   
-|Opción|Value|  
+|Opción|Valor|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |ParallelPlan<br /><br /> Indica que las opciones de paralelismo del plan han cambiado.|2|  
@@ -120,7 +120,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 ### <a name="evaluating-cursor-options"></a>Evaluar las opciones de los cursores  
  Para traducir el valor devuelto en **required_cursor_options** y **acceptable_cursor_options** a las opciones con las que se compiló el plan, reste los valores del valor de la columna, empezando por el mayor valor posible, hasta que llegue a 0. Cada valor que reste se corresponde con una opción de cursor que se usó en el plan de consulta.  
   
-|Opción|Value|  
+|Opción|Valor|  
 |------------|-----------|  
 |None|0|  
 |INSENSITIVE|1|  
@@ -167,7 +167,7 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   

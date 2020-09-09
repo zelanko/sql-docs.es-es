@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHconstrainttypes system table
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d03babf8250ee41f15fa5f06cd32318873ec276d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eaa7ef45e9e6b9ae71eceee558af116fe3314449
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480813"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540419"
 ---
 # <a name="ihconstrainttypes-transact-sql"></a>IHconstrainttypes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88480813"
 |-----------------|---------------|-----------------|  
 |**type**|**nvarchar(255)**|El nombre de un tipo de restricción que no es de SQL Server compatible.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

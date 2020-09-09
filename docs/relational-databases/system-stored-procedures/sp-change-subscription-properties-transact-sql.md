@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da197fc6b4cc8b253b3597981a6973e9b77891bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad4761fdbac615ad453741a0b01d410ca3b5d572
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493438"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528890"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type` Especifica el tipo de replicación de la publicación. *publication_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Tipo de publicación|  
+|Valor|Tipo de publicación|  
 |-----------|----------------------|  
 |**0**|Transaccional|  
 |**1**|Instantánea|  
@@ -64,7 +64,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
-|Propiedad|Value|Descripción|  
+|Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Especifica la ubicación de la carpeta alternativa de la instantánea. Si el valor es NULL, los archivos de instantáneas se toman de la ubicación predeterminada que se especifica en el publicador.|  
 |**distrib_job_login**||Inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente.|  

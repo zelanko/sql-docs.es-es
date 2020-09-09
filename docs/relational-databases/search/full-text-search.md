@@ -34,7 +34,7 @@ En este tema se proporciona información general sobre la búsqueda de texto com
 -   [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)
 
 > [!NOTE]
-> Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si no ha seleccionado la búsqueda de texto completo al instalar SQL Server, ejecute de nuevo el programa de instalación de SQL Server para agregarla.
+> La búsqueda de texto completo es un componente opcional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Si no ha seleccionado la búsqueda de texto completo al instalar SQL Server, ejecute de nuevo el programa de instalación de SQL Server para agregarla.
 
 ## <a name="overview"></a>Información general
 Los índices de texto completo incluyen una o varias columnas basadas en caracteres en una tabla. Estas columnas pueden tener cualquier de los siguientes tipos de datos: **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** o **varbinary(max)** y **FILESTREAM**. Cada índice de texto completo indiza una o varias columnas de la tabla base y cada columna puede usar un idioma concreto.  

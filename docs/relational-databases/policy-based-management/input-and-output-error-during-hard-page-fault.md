@@ -1,5 +1,5 @@
 ---
-description: Input and Output Error During Hard Page Fault
+description: Error de entrada y salida durante error grave de página
 title: Error de entrada y salida durante otro error de página en disco | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017

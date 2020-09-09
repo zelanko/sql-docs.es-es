@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.server_event_session_fields catalog view
 - xe
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ffead368e1c89d9e2d963eb4fb3f806c4bde327a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 18849b0e5a3911022e90a6f9a768fbbb7e921729
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475304"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551415"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88475304"
 ## <a name="remarks"></a>Observaciones  
  Esta vista tiene las siguientes cardinalidades de relación.  
   
-| De | En | Relación |
+| From | En | Relación |
 | ---- | -- | ------------ |
 |sys.server_event_session_actions.event_session_id|Sys. server_event_sessions. event_session_id|Varios a uno|  
 |sys.server_event_session_actions.event_id<br /><br /> sys.server_event_session_actions.object_id<br /><br /> sys.server_event_session_actions.event_session_id|sys.server_event_session_events.event_session_id<br /><br /> sys.server_event_session_events.event_id|Varios a uno|  

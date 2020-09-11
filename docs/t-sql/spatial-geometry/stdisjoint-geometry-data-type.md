@@ -48,7 +48,7 @@ ms.locfileid: "88416901"
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Dos instancias de **geometry** no son contiguas si la intersección de sus conjuntos de puntos está vacía.  
   
  Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**.  
@@ -64,7 +64,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STDisjoint(@h);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

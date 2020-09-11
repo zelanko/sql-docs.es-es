@@ -116,7 +116,7 @@ Extended_ASCII CHARACTER
 230            æ
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

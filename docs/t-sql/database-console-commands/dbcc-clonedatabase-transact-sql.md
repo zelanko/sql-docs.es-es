@@ -91,7 +91,7 @@ Especifica si los catálogos del sistema relacionados con Service Broker deben i
 BACKUP_CLONEDB  
 Crea y comprueba una copia de seguridad de la base de datos clonada.  Si se usa en combinación con VERIFY_CLONEDB, la base de datos clonada se comprueba antes de que se realice la copia de seguridad.  Esta opción está disponible a partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 DBCC CLONEDATABASE lleva a cabo las siguientes validaciones. Se produce un error en el comando si alguna de las validaciones no se efectúa correctamente.
 - La base de datos de origen debe ser una base de datos de usuario. No se permite clonar bases de datos del sistema (master, model, msdb, tempdb, bases de datos de distribución, etc.).
 - La base de datos de origen debe ser legible o estar en línea.
@@ -254,7 +254,7 @@ DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, B
 GO 
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)    
 [Cómo generar un script de los metadatos de base de datos necesarios para crear una base de datos de solo estadísticas en SQL Server](https://support.microsoft.com/help/914288)   
 

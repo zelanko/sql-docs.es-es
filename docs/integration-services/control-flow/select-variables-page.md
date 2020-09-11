@@ -36,13 +36,13 @@ ms.locfileid: "88349311"
  Seleccionar cuadro  
  Selecciona una variable concreta, selecciona todas las variables o borra la selección de todas las variables.  
   
- **Nombre**  
+ **Name**  
  Especifica el nombre de una variable.  
   
  **Tipo**  
  Especifica el tipo de datos de una variable.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Editor de la tarea Script &#40;página Script&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

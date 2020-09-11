@@ -58,7 +58,7 @@ Es el nombre de la columna de base de datos de la que se va a quitar la clasific
     - *table_name*: es el nombre de la tabla a la que pertenece la columna clasificada.
     - *column_name*: es el nombre de la columna de la que se va a quitar la clasificación.
 
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 
 - Se pueden quitar varias clasificaciones de objetos con una sola instrucción "DROP SENSITIVITY CLASSIFICATION".
 
@@ -88,7 +88,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price, dbo.sales.discount, SalesLT.Customer.Phone  
 ```
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 

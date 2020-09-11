@@ -53,7 +53,7 @@ Un tipo **int**, que representa el número de niveles que subir en la jerarquía
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 Se usa para probar si cada nodo de la salida tiene el nodo actual como antecesor en el nivel especificado.
   
 Si se pasa un número mayor que [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md), se devuelve NULL.
@@ -119,7 +119,7 @@ En el fragmento de código siguiente se llama al método `GetAncestor()`.
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [IsDescendantOf &#40;motor de base de datos&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  

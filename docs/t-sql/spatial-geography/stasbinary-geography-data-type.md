@@ -46,7 +46,7 @@ ms.locfileid: "88359451"
   
  Tipo de valor devuelto de CLR: **SqlBytes**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  El tipo OGC de una instancia de **geography** se puede determinar mediante la invocación de [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
 ## <a name="examples"></a>Ejemplos  
@@ -58,7 +58,7 @@ SET @g = geography::STGeomFromText('LINESTRING( -122.360 47.656, -122.343 47.656
 SELECT @g.STAsBinary();  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -44,7 +44,7 @@ ms.locfileid: "88405541"
  **Marcar para reinicializar**  
  Haga clic en esta opción para marcar cada suscripción para reinicializarla. Una vez que hay una instantánea disponible, se aplicará dicha instantánea al suscriptor la próxima vez que se ejecute el Agente de distribución o el Agente de mezcla para la suscripción.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Reinicializar suscripciones](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

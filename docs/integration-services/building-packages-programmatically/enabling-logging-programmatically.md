@@ -53,14 +53,14 @@ ms.locfileid: "88352141"
 |SQL Server Profiler|Genera archivos de Seguimiento de SQL que se pueden capturar y ver en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. La extensión predeterminada de los nombres de archivo de este proveedor es .trc.|No se requiere ninguna configuración.|  
 |SQL Server|Escribe las entradas del registro de eventos en la tabla **sysssislog** de cualquier base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|El proveedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que se especifique la conexión a la base de datos y el nombre de la base de datos de destino.|  
 |Archivo de texto|Escribe las entradas de registro de eventos en archivos de texto ASCII con un formato de valores separados por comas (CSV). La extensión predeterminada de los nombres de archivo de este proveedor es .log.|El nombre de un administrador de conexión de archivos.|  
-|Registro de sucesos de Windows|Escribe las entradas en el registro de eventos estándar de Windows en el equipo local, en el registro de aplicaciones.|No se requiere ninguna configuración.|  
+|Registro de eventos de Windows|Escribe las entradas en el registro de eventos estándar de Windows en el equipo local, en el registro de aplicaciones.|No se requiere ninguna configuración.|  
 |Archivo XML|Escribe las entradas del registro de eventos en archivos con formato XML. La extensión predeterminada de los nombres de archivo de este proveedor es .xml.|El nombre de un administrador de conexión de archivos.|  
   
  Los eventos se incluyen en el registro de eventos o se excluyen del mismo mediante las propiedades **EventFilterKind** y **EventFilter** del contenedor. La estructura **EventFilterKind** contiene dos valores, **ExclusionFilter** y **InclusionFilter**, que indican si los eventos que se agregan a **EventFilter** se incluyen en el registro de eventos. A continuación, se asigna una matriz de cadenas que contiene los nombres de los eventos sujetos del filtrado a la propiedad **EventFilter**.  
   
  El código siguiente habilita el registro en un paquete, agrega el proveedor de registro para archivos de texto a la colección <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> y especifica una lista de eventos para incluir en la salida del registro.  
   
-## <a name="sample"></a>Muestra  
+## <a name="sample"></a>Ejemplo  
   
 ```csharp  
 using System;  

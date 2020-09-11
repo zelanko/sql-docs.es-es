@@ -44,7 +44,7 @@ Devuelve la dimensión máxima de una instancia de **geometry**.
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  `STDimension()` devuelve -1 si la instancia de **geometry** está vacía.  
   
 ## <a name="examples"></a>Ejemplos  

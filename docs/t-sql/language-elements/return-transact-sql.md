@@ -52,13 +52,13 @@ RETURN [ integer_expression ]
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## <a name="return-types"></a>Tipos de valor devuelto
+## <a name="return-types"></a>Tipos de valor devueltos
  Devuelve opcionalmente **int**.  
   
 > [!NOTE]  
 >  A menos que se documente de otra manera, todos los procedimientos almacenados del sistema devuelven el valor 0. Esto indica que son correctos y un valor distinto de cero indica que se ha producido un error.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se utiliza con un procedimiento almacenado, RETURN no puede devolver un valor NULL. Si un procedimiento intenta devolver un valor NULL (por ejemplo, al utilizar RETURN @status cuando @status es NULL), se genera un mensaje de advertencia y se devuelve un valor 0.  
   
  El valor de estado devuelto se puede incluir en las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] del lote o procedimiento que ha ejecutado el procedimiento actual, pero se debe escribir de la forma siguiente: `EXECUTE @return_status = <procedure_name>`.  

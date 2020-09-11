@@ -45,7 +45,7 @@ ms.locfileid: "88365391"
 ## <a name="return-types"></a>Tipos de valor devuelto
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se completa una instrucción INSERT, SELECT INTO o de copia masiva, @@IDENTITY contiene el último valor de identidad generado por la instrucción. Si la instrucción no afectó a ninguna tabla con columnas de identidad, @@IDENTITY devuelve NULL. Si se insertan varias filas, lo que genera varios valores de identidad, @@IDENTITY devuelve el último valor de identidad generado. Si la instrucción activa uno o más desencadenadores que realizan inserciones que, a su vez, generan valores de identidad, al llamar a @@IDENTITY inmediatamente después de la instrucción se obtiene el último valor de identidad generado por los desencadenadores. Si un desencadenador se activa tras una acción de inserción en una tabla que tiene una columna de identidad y se inserta en otra tabla que no tiene una columna de identidad, @@IDENTITY devuelve el valor de identidad de la primera inserción. Si se produce un error en la instrucción INSERT o SELECT INTO o en la copia masiva o se revierte la transacción, el valor de @@IDENTITY no revierte a un valor anterior.  
   
  Las instrucciones y transacciones con errores pueden cambiar la identidad actual de una tabla y crear huecos en los valores de columna de identidad. El valor de identidad jamás se revierte, aun cuando no se haya confirmado la transacción que intentó insertar el valor en la tabla. Por ejemplo, si se produce un error en una instrucción INSERT debido a una infracción de tipo IGNORE_DUP_KEY, el valor de identidad actual de la tabla se sigue incrementando.  

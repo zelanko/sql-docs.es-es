@@ -56,7 +56,7 @@ NULL o el **hierarchyid** de un nodo secundario del nodo actual.
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 Devuelve un nodo secundario que es un descendiente del nodo primario.
 -   Si el elemento primario es NULL, devolverá NULL.  
 -   Si el elemento primario no es NULL, y child1 y child2 son NULL, devuelve un elemento secundario del elemento primario.  

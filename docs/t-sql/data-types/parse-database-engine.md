@@ -58,7 +58,7 @@ CLR: Valor de cadena que se va a evaluar.
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 Si Parse recibe un valor que no es una representación de cadena válida de un **hierarchyid**, se producirá una excepción. Por ejemplo, si los tipos de datos **char** contienen espacios finales, se producirá una excepción.
   
 ## <a name="examples"></a>Ejemplos  

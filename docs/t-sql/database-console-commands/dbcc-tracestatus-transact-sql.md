@@ -69,11 +69,11 @@ En la tabla siguiente se describe la información del conjunto de resultados.
 |**TraceFlag**|Nombre de la marca de seguimiento.|  
 |**Estado**|Indica si la marca de seguimiento está establecida en ON o en OFF, ya sea globalmente o para la sesión.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|Indica si la marca de seguimiento está establecida globalmente.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**Sesión**|Indica si la marca de seguimiento está establecida para la sesión.<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**De sesión**|Indica si la marca de seguimiento está establecida para la sesión.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS devuelve una columna para el número de la marca de seguimiento y otra para el estado. Esto indica si la marca de seguimiento está establecida en ON (1) o en OFF (0). El encabezado de columna para el número de la marca de seguimiento es **Global Trace Flag** o **Session Trace Flag**, según se esté comprobando el estado de una marca de seguimiento global o de sesión.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], hay dos tipos de marcas de seguimiento: sesión y global. Las marcas de seguimiento de sesión se activan para una conexión y solo están visibles para esa conexión. Las marcas de seguimiento globales se establecen en el nivel del servidor y están visibles para todas las conexiones del servidor.
   
 ## <a name="permissions"></a>Permisos  

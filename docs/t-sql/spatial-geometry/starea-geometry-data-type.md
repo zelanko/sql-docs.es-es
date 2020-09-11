@@ -44,7 +44,7 @@ ms.locfileid: "88422289"
   
  Tipo de valor devuelto de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  `STArea()` devuelve 0 si una instancia de **geometry** contiene únicamente figuras no dimensionales o unidimensionales, o si está vacía. `STArea()` devuelve **NULL** si la instancia de **geometry** no se ha inicializado.  
   
 ## <a name="examples"></a>Ejemplos  

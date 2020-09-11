@@ -46,7 +46,7 @@ Si los paquetes no se ejecutan correctamente, debe solucionarlos antes de ir a l
 3.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 2: Crear el paquete de implementación en SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+[Lección 2: Creación del paquete de implementación en SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
   
   
   

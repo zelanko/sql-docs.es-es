@@ -41,7 +41,7 @@ Tipos de datos binarios de longitud fija o variable.
   
 **varbinary** [ (_n_ | **max**) ] Datos binarios de longitud variable. _n_ puede ser un valor de 1 a 8000. **max** indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes. El tamaño de almacenamiento es la longitud real de los datos especificados + 2 bytes. Los datos especificados pueden tener una longitud de 0 bytes. El sinónimo de ANSI SQL para **varbinary** es **binary varying**.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 Cuando no se especifica _n_ en una instrucción de definición de datos o de declaración de variables, la longitud predeterminada es 1. Cuando no se especifica _n_ con la función CAST, la longitud predeterminada es 30.
 
 | Tipo de datos | Usar cuando... |

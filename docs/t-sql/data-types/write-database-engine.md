@@ -42,7 +42,7 @@ void Write( BinaryWriter w )
 *w*  
 Un objeto **BinaryWriter** en el que se escribirá la representación binaria de este nodo de **hierarchyid**.
   
-## <a name="return-types"></a>Tipos de valor devuelto  
+## <a name="return-types"></a>Tipos de valor devueltos  
 **Tipo de valor devuelto de CLR: void**
   
 ## <a name="remarks"></a>Observaciones  

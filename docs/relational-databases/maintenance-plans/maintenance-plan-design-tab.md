@@ -115,7 +115,7 @@ ms.locfileid: "88420879"
  **Zoom**  
  Cambia el tamaño de las tareas en el área de diseño.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Crear un plan de mantenimiento](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

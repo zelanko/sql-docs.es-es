@@ -126,11 +126,11 @@ ms.locfileid: "88425617"
  Use el cuadro de diálogo **Abrir** para buscar el archivo de datos XML.  
   
 #### <a name="data-access-mode--xml-file-from-variable"></a>Modo de acceso a datos = Datos XML de variable  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene la ruta de acceso y el nombre del archivo XML.  
   
 #### <a name="data-access-mode--xml-data-from-variable"></a>Modo de acceso a datos = Datos XML de variable  
- **Nombre de variable**  
+ **Nombre de la variable**  
  Seleccione la variable que contiene los datos XML.  
   
 ## <a name="xml-source-editor-columns-page"></a>Editor de origen de XML (página Columnas)

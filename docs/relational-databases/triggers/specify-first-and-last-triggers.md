@@ -34,7 +34,7 @@ ms.locfileid: "88427357"
 |------------|-----------------|  
 |**Primero**|Especifica que el desencadenador DML es el primer desencadenador AFTER que se activa para una acción desencadenadora.|  
 |**Último**|Especifica que el desencadenador DML es el último desencadenador AFTER que se activa para una acción desencadenadora.|  
-|**None**|Especifica que no hay ningún orden determinado para la activación del desencadenador DML. Se utiliza principalmente para restablecer un desencadenador que era el primero o el último.|  
+|**Ninguno**|Especifica que no hay ningún orden determinado para la activación del desencadenador DML. Se utiliza principalmente para restablecer un desencadenador que era el primero o el último.|  
   
  En el siguiente ejemplo se muestra el uso de **sp_settriggerorder**:  
   

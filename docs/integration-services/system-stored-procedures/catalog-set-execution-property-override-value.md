@@ -44,7 +44,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  Ruta de acceso a la propiedad en el paquete. El parámetro *property_path* es **nvarchar(4000)**.  
   
  [ @property_value = ] *property_value*  
- El valor de invalidación que se va a asignar a la propiedad. El parámetro *property_value* es **nvarchar(max)**.  
+ El valor de invalidación que se va a asignar a la propiedad. El parámetro *property_value* es **nvarchar(max)** .  
   
  [ @sensitive = ] *sensitive*  
  Cuando el valor es 1, la propiedad es confidencial y se cifra cuando se almacena. Cuando el valor es 0, la propiedad no es confidencial y el valor se almacena como texto simple. El argumento *sensitive* es **bit**.  

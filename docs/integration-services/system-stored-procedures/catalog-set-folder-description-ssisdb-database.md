@@ -42,7 +42,7 @@ catalog.set_folder_description [ @folder_name = ] folder_name
  Descripción de la carpeta. El parámetro *folder_description* es **nvarchar(MAX)**.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
- Ninguno  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  

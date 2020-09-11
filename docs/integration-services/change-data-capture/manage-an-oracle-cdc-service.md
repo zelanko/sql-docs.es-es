@@ -46,7 +46,7 @@ ms.locfileid: "88426077"
 ##  <a name="what-can-you-do-with-a-cdc-service"></a><a name="BKMK_WhatcandowithCDCService"></a> Lo que puede hacer con un servicio CDC  
  Puede realizar las acciones siguientes al trabajar con un servicio CDC.  
   
-### <a name="delete-the-service"></a>Eliminación del servicio  
+### <a name="delete-the-service"></a>Eliminar el servicio  
  En el panel **Acciones** del lado derecho de la Consola de configuración del servicio CDC, haga clic en **Eliminar** para eliminar el servicio.  
   
  También puede hacer clic con el botón derecho en el servicio CDC que quiera eliminar y seleccionar **Eliminar**.  

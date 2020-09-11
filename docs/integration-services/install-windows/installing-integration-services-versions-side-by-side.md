@@ -37,8 +37,8 @@ ms.locfileid: "88346001"
 |Versión de destino de SQL Server|Entorno de desarrollo para paquetes de SSIS|  
 |----------------------------------|-----------------------------------------------|  
 |2016|SQL Server Data Tools para Visual Studio 2015|  
-|2014|SQL Server Data Tools para Visual Studio 2015<br /><br /> o bien<br /><br /> SQL Server Data Tools - Business Intelligence para Visual Studio 2013|  
-|2012|SQL Server Data Tools para Visual Studio 2015<br /><br /> o bien<br /><br /> SQL Server Data Tools: inteligencia empresarial para Visual Studio 2012|  
+|2014|SQL Server Data Tools para Visual Studio 2015<br /><br /> o<br /><br /> SQL Server Data Tools - Business Intelligence para Visual Studio 2013|  
+|2012|SQL Server Data Tools para Visual Studio 2015<br /><br /> o<br /><br /> SQL Server Data Tools: inteligencia empresarial para Visual Studio 2012|  
 |2008|Business Intelligence Development Studio desde SQL Server 2008|  
   
  Cuando se agrega un paquete existente a un proyecto existente, el paquete se convierte al formato al que se orienta el proyecto.  

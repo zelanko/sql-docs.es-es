@@ -39,14 +39,14 @@ En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la unidad que se 
   
 6.  En el cuadro de diálogo **Ubicación del proyecto** , haga clic en la carpeta y, después, en **Abrir**.  
   
-7.  Haga clic en **OK**.  
+7.  Haga clic en **Aceptar**.  
   
 8.  De forma predeterminada, se crea un paquete vacío, denominado Package.dtsx, que se agrega al nuevo proyecto. Sin embargo, no utilizará este paquete; en su lugar, agregará paquetes existentes al proyecto. Puesto que todos los paquetes de un proyecto se incluirán en la implementación, deber eliminar Package.dtsx. Para eliminarlo, haga clic con el botón derecho en el paquete y, después, haga clic en **Eliminar**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
 [Paso 3: Adición de paquetes y otros archivos](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
 [Proyectos de Integration Services &#40;SSIS&#41;](~/integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

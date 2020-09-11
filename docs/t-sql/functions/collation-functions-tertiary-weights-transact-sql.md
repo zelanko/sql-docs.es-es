@@ -50,7 +50,7 @@ Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de c
 ## <a name="return-types"></a>Tipos de valores devueltos
 `TERTIARY_WEIGHTS` devuelve **varbinary** cuando *non_Unicode_character_string_expression* es **char** o **varchar**, y devuelve **varbinary(max)** cuando *non_Unicode_character_string_expression* tiene un tipo de datos **varchar(max)**.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 `TERTIARY_WEIGHTS` devuelve NULL cuando una colección terciaria de SQL no define *non_Unicode_character_string_expression*. En esta tabla se muestran las intercalaciones terciarias de SQL:
   
 |Id. de orden|Intercalación de SQL|  
@@ -101,6 +101,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también
-[ORDER BY Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+[Cláusula ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

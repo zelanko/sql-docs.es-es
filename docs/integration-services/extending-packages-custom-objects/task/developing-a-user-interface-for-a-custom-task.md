@@ -59,7 +59,7 @@ ms.locfileid: "88477407"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Muestra el nombre de tarea en el cuadro de herramientas Flujo de control.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|La descripción de la tarea (se hereda de <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Esta propiedad se muestra en la información sobre herramientas.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|El icono que se muestra en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)].|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Si se utiliza, establézcala en uno de los valores de la enumeración <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Por ejemplo, `RequiredProductLevel = DTSProductLevel.None`.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Si se utiliza, establézcala en uno de los valores de la enumeración <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Por ejemplo: `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Contiene información de contacto para las ocasiones en que la tarea requiere soporte técnico.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Asigna un tipo a la tarea.|  
 |Attribute.TypeId|Cuando se implementa en una clase derivada, obtiene un identificador único para este atributo. Para obtener más información, vea la propiedad **Attribute.TypeID** en la biblioteca de clases de .NET Framework.|  

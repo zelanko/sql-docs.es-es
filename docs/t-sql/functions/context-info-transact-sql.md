@@ -51,7 +51,7 @@ Si **context_info** no se ha establecido:
 -   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve NULL.  
 -   En [!INCLUDE[ssSDS](../../includes/sssds-md.md)] devuelve un GUID único específico de sesión.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 La característica de conjuntos de resultados activos múltiples (MARS) permite a las aplicaciones ejecutar varios lotes o solicitudes al mismo tiempo en la misma conexión. Cuando uno de los lotes de una conexión MARS ejecuta SET CONTEXT_INFO, la función `CONTEXT_INFO` devuelve el nuevo valor de contexto cuando la función `CONTEXT_INFO` se ejecuta en el mismo lote que la instrucción SET. Si la función `CONTEXT_INFO` se ejecuta en uno o más de los otros lotes de conexión, `CONTEXT_FUNCTION` no devuelve el nuevo valor a menos que esos lotes hayan comenzado después de completar el lote que ejecutó la instrucción SET.
   
 ## <a name="permissions"></a>Permisos  

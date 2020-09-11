@@ -106,7 +106,7 @@ GO
   
 La creación del índice en la columna calculada se materializa en la columna de suma de comprobación y cualquier cambio en el valor de `ProductName` se propagará a la columna de suma de comprobación. Como alternativa se puede crear un índice directamente en la columna que se quiere indizar, aunque para los valores de clave largos es probable que un índice normal no se comporte tan bien como un índice de suma de comprobación.
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)

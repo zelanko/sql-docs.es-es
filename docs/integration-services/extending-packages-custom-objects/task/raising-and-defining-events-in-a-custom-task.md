@@ -121,7 +121,7 @@ Me.onBeforeIncrement.Description, arguments, _
 Nothing,  bFireOnBeforeIncrement)  
 ```  
   
-## <a name="sample"></a>Muestra  
+## <a name="sample"></a>Ejemplo  
  En el ejemplo siguiente se muestra una tarea que define un evento personalizado en el método **InitializeTask**, agrega el evento personalizado a la colección <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> y, a continuación, genera el evento personalizado durante su método **Execute** llamando al método <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>.  
   
 ```csharp  

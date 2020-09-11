@@ -101,7 +101,7 @@ SELECT * FROM Production.TransactionHistory
 WHERE $PARTITION.TransactionRangePF1(TransactionDate) = 5 ;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   
   

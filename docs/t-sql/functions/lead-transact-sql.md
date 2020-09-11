@@ -169,7 +169,7 @@ Year Quarter  SalesQuota  NextQuota  Diff
 2002 4       154000.0000      0.0000  154000.0000
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)  
   
   

@@ -45,7 +45,7 @@ ms.locfileid: "88456031"
   
  También se proporcionan dos eventos de auditoría de seguridad para Service Broker. Para obtener más información sobre estos eventos, vea [Clase de eventos Audit Broker Login](../../relational-databases/event-classes/audit-broker-login-event-class.md) y [Audit Broker Conversation (clase de eventos)](../../relational-databases/event-classes/audit-broker-conversation-event-class.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Auditoría de seguridad (categoría de eventos)](https://docs.microsoft.com/analysis-services/trace-events/security-audit-event-category)  
   
   

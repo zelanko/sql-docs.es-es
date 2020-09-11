@@ -68,7 +68,7 @@ ms.locfileid: "88446368"
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|Quite UPDATE y DELETE de la lista.|  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
 7.  En el **Editor de consultas**, reemplace el comentario `-- Insert statements for trigger here` con la instrucción siguiente:  
   

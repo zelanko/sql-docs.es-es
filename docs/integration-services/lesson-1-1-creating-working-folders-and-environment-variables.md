@@ -55,7 +55,7 @@ Si planea implementar los paquetes en otro equipo, debe crear dos conjuntos de v
   
 5.  En el cuadro de diálogo **Nueva variable del sistema** , escriba **DataTransfer** en el cuadro **Nombre de variable** y **C:\DeploymentTutorial\datatransferconfig.dtsconfig** en el cuadro **Valor de variable** .  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
 7.  Haga clic en **Nueva** otra vez y escriba **LoadXMLData** en el cuadro **Nombre de variable** y **C:\DeploymentTutorial\loadxmldataconfig.dtsconfig** en el cuadro **Valor de variable** .  
   
@@ -77,7 +77,7 @@ Si planea implementar los paquetes en otro equipo, debe crear dos conjuntos de v
   
 5.  En el cuadro de diálogo **Nueva variable del sistema** , escriba **DataTransfer** en el cuadro **Nombre de variable** y **C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig** en el cuadro **Valor de variable** .  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
 7.  Haga clic en **Nueva** otra vez y escriba **LoadXMLData** en el cuadro **Nombre de variable** y **C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig** en el cuadro **Valor de variable** .  
   

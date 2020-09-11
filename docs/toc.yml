@@ -7094,8 +7094,8 @@
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
             - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: Foros de MSDN >>
-              href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
+            - name: Preguntas y respuestas de Microsoft >>
+              href: 'https://https://docs.microsoft.com/answers/products/sql-server'
             - name: Envío de comentarios >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
             - name: Reddit >>
@@ -10110,8 +10110,8 @@
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: Foros de MSDN >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
+        - name: Preguntas y respuestas de Microsoft >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: Envío de comentarios >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: Reddit >>
@@ -10140,16 +10140,16 @@
       items:
         - name: Obtener ayuda
           href: sql-server/sql-server-get-help.md
-        - name: Control de versiones de documentos de SQL
-          href: sql-server/versioning-system-monikers-ui-sql-server.md
+        - name: Preguntas y respuestas de Microsoft >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: Cambio de la pila DBA >>
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: Foros de MSDN >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
+        - name: Sugerencias de navegación por la documentación
+          href: sql-server/sql-docs-navigation-guide.md
     - name: Blogs
       items:
         - name: SQL Server >>

@@ -91,7 +91,7 @@ ms.locfileid: "88496255"
   
  En la tabla siguiente, la primera columna muestra los valores devueltos desde la tarea Ejecutar SQL por la consulta de ejemplo de Transact-SQL. La segunda columna muestra cómo responden los otros componentes a estos valores.  
   
-|Valor devuelto|Significado|Respuesta|  
+|Valor devuelto|Significado|Response|  
 |------------------|-------------|--------------|  
 |0|Indica que los datos modificados no están listos.<br /><br /> No hay ningún registro de captura de datos modificados posterior al punto final del intervalo seleccionado.|La ejecución continúa con el componente que implementa un retraso. A continuación, el control vuelve al contenedor de bucles For, que sigue comprobando la tarea Ejecutar SQL mientras el valor devuelto sea 0.|  
 |1|Podría indicar que no se han capturado los datos modificados para el intervalo completo, o que se ha eliminado. Esto se trata como una condición de error.<br /><br /> No hay ningún registro de captura de datos modificados anterior al punto inicial del intervalo seleccionado.|La ejecución continúa con el componente opcional que registra el error.|  
@@ -192,7 +192,7 @@ ms.locfileid: "88496255"
         System.Threading.Thread.Sleep((int)Dts.Variables["DelaySeconds"].Value * 1000);  
         ```  
   
-         \- O bien  
+         \- o -  
   
     -   Si está programando en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], escriba la línea de código siguiente:  
   

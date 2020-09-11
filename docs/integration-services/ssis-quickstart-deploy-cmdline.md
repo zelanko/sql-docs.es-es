@@ -25,7 +25,7 @@ En este inicio rápido se muestra cómo implementar un proyecto de SSIS desde el
 
 Para obtener más información sobre el asistente para la implementación de Integration Services, consulte [Integration Services Deployment Wizard (Asistente para la implementación de Integration Services)](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 La validación que de describe en este artículo para la implementación en Azure SQL Database requiere SQL Server Data Tools (SSDT), versión 17.4 o posterior. Para obtener la versión más reciente de SSDT, consulte [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 

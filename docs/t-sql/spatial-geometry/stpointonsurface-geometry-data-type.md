@@ -46,7 +46,7 @@ Devuelve un punto arbitrario situado en el interior de una instancia de **geomet
   
  Tipo Open Geospatial Consortium (OGC): **Point**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si la instancia está vacía, este método devuelve NULL.  
   
 ## <a name="examples"></a>Ejemplos  

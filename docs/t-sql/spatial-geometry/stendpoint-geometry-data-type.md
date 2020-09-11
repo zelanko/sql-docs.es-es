@@ -46,7 +46,7 @@ Devuelve el extremo de una instancia de **geometry**.
   
  Tipo Open Geospatial Consortium (OGC): **Point**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  `STEndPoint()` es el equivalente de [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints()).  
   
  Este método devuelve NULL si se llama en una instancia de **geometry** vacía.  

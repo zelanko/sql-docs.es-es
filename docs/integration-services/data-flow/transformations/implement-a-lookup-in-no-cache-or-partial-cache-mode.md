@@ -112,7 +112,7 @@ ms.locfileid: "88430677"
   
 14. Haga clic en **Aceptar** para guardar los cambios en la transformación Búsqueda y, a continuación, ejecute el paquete.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

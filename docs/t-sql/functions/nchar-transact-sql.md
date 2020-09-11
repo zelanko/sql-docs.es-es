@@ -48,7 +48,7 @@ NCHAR ( integer_expression )
   
  Cuando la intercalación de la base de datos admite la marca SC, se trata de un entero positivo de 0 a 1114111 (de 0 a 0x10FFFF). Si se especifica un valor fuera de este rango, se devuelve NULL.  
   
-## <a name="return-types"></a>Tipos de valor devuelto  
+## <a name="return-types"></a>Tipos de valor devueltos  
  **nchar(1)** cuando la intercalación de la base de datos predeterminada no admite caracteres complementarios.  
   
  **nvarchar(2)** cuando la intercalación de la base de datos predeterminada admite caracteres complementarios.  
@@ -215,7 +215,7 @@ Character # Unicode Character UNICODE Value
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  

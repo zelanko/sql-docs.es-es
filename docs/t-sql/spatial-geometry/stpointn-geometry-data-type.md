@@ -50,7 +50,7 @@ Devuelve un punto especificado de una instancia de **geometry**.
   
  Tipo Open Geospatial Consortium (OGC): **Point**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si se trata de una instancia de **geometry** creada por el usuario, `STPointN()` devuelve el punto especificado por *expression* considerando los puntos en el orden en el que se especificaron inicialmente.  
   
  Si se trata de una instancia de **geometry** generada por el sistema, `STPointN()` devuelve el punto especificado por *expression* considerando todos los puntos en el orden en que se generarían: primero por geometrías, después por anillos dentro de la geometría (si procede) y, luego, por puntos dentro del anillo. Este orden es determinista.  

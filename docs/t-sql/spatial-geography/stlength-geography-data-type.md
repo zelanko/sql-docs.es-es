@@ -44,7 +44,7 @@ ms.locfileid: "88445193"
   
  Tipo de valor devuelto de CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si se trata de una instancia de **geography** cerrada, su longitud se calcula como la longitud total alrededor de la instancia; la longitud de cualquier polígono es su perímetro y la longitud de un punto es 0. La longitud de una colección de **GeometryCollection** se halla calculando la suma de las longitudes de todas las instancias de **geography** contenidas dentro de la colección.  
   
  STLength() funciona con LineString válidos y no válidos. Si un LineString no es válido normalmente se debe a la superposición de segmentos, lo cual se puede deber a anomalías como seguimientos de GPS inexactos. STLength() no quita segmentos superpuestos o no válidos. Incluye los segmentos superpuestos y no válidos en el valor de longitud que devuelve. El método MakeValid() puede quitar segmentos superpuestos de un LineString.  

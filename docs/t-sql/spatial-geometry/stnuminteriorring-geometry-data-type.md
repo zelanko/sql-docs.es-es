@@ -45,7 +45,7 @@ Devuelve el número de anillos interiores de una instancia de **Polygongeometry*
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
 ## <a name="remarks"></a>Observaciones  
- Este método devuelve NULL si la instancia de **geometry** no es un polígono.  
+ Este método devuelve null si la instancia de **geometry** no es un polígono.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una instancia de `Polygon` y se usa `STNumInteriorRing()` para averiguar cuántos anillos interiores tiene dicha instancia.  

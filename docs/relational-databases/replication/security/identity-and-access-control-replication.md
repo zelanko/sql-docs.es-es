@@ -54,7 +54,7 @@ Cuando configure la replicación, especifique los inicios de sesión y las contr
 
 La compatibilidad con el uso de cuentas de servicio administradas de grupo (gMSA) se introdujo en SQL Server 2014. Para más información, vea el blog de [Replicación y cuentas de servicio administradas de grupo](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/).
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Mitigar amenazas y vulnerabilidades &#40;replicación&#41;](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [Modelo de seguridad del Agente de replicación](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Procedimientos recomendados de seguridad de replicación](../../../relational-databases/replication/security/replication-security-best-practices.md)   
 

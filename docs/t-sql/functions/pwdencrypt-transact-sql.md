@@ -47,7 +47,7 @@ PWDENCRYPT ( 'password' )
  *password*  
  Es la contraseña que se va a cifrar. *password* es **sysname**.  
   
-## <a name="return-types"></a>Tipos de valor devuelto  
+## <a name="return-types"></a>Tipos de valor devueltos  
  **varbinary(128)**  
   
 ## <a name="permissions"></a>Permisos  

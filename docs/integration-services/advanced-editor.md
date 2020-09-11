@@ -57,7 +57,7 @@ ms.locfileid: "88478082"
   
 -   [Transformaciones de Integration Services](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

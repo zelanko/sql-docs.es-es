@@ -58,7 +58,7 @@ SYSDATETIMEOFFSET ( )
 ## <a name="return-type"></a>Tipo de valor devuelto  
  **datetimeoffset(7)**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden hacer referencia a SYSDATETIMEOFFSET en cualquier punto desde el que puedan hacer referencia a una expresión **datetimeoffset**.  
   
  SYSDATETIMEOFFSET es una función no determinista. Las vistas y las expresiones que hacen referencia a esta función en una columna no se pueden indizar.  

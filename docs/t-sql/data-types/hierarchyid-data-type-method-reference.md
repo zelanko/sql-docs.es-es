@@ -43,7 +43,7 @@ Un valor del tipo de datos **hierarchyid** representa una posición en una jerar
   
 El tipo **hierarchyid** está disponible para clientes CLR como el tipo de datos **SqlHierarchyId**.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 El tipo **hierarchyid** codifica lógicamente la información de un nodo único en un árbol de jerarquía mediante la codificación de la ruta de acceso desde la raíz del árbol hasta el nodo. Este tipo de ruta de acceso se representa lógicamente como una secuencia de etiquetas de nodo de todos los elementos secundarios visitados después de la raíz. Una barra diagonal inicia la representación y una barra diagonal única representa una ruta de acceso que solo visita la raíz. Para los niveles por debajo de la raíz, cada etiqueta se codifica como una secuencia de enteros separados por puntos. La comparación entre los elementos secundarios se realiza comparando las secuencias de enteros separados por puntos en orden alfabético. Una barra diagonal termina cada nivel. Por consiguiente, una barra diagonal separa los elementos primarios de los secundarios. Por ejemplo, estas son rutas de acceso de **hierarchyid** válidas con longitudes 1, 2, 2, 3 y 3 niveles, respectivamente:
   
 -   /  
@@ -91,7 +91,7 @@ La replicación bidireccional incluye la replicación transaccional con suscripc
 -   Los filtros de columnas no pueden filtrar las columnas **hierarchyid** que no admiten valores NULL: la operación de inserción desde el suscriptor generará un error porque no hay ningún valor predeterminado de la columna **hierarchyid** en el publicador.  
 -   Se admite el filtrado de filas con tal de que el filtro no incluya una columna **hierarchyid**.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Datos jerárquicos &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [Referencia de los métodos del tipo de datos hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

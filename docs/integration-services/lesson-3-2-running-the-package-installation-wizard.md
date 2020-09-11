@@ -58,7 +58,7 @@ En una lección anterior, modificó los paquetes del tutorial para utilizar conf
     > [!IMPORTANT]  
     > En el valor de las variables de entorno que utilizan las configuraciones se hace referencia a este nombre. El nombre de la carpeta y la referencia deben coincidir o el paquete no se ejecutará.  
   
-12. Haga clic en **OK**.  
+12. Haga clic en **Aceptar**.  
   
 13. En la página Seleccionar la carpeta de instalación, compruebe que el cuadro Carpeta contiene **C:\DeploymentTutorialInstall** y luego haga clic en **Siguiente**.  
   

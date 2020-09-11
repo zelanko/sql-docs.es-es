@@ -37,7 +37,7 @@ y el entero 75 lo hace en el binario 0100 1011.
 |operator|cálculo bit a bit|
 |---- |---- |
 |y <br> Si los dos bits, en cualquier ubicación, son 1, el resultado es 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
-|O BIEN <br> Si cualquiera de los dos bits, en cualquier ubicación, es 1, el resultado es 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
+|O <br> Si cualquiera de los dos bits, en cualquier ubicación, es 1, el resultado es 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> Invierte el valor de bit en cada ubicación de bits. |1010 1010 = 170 <br>----------------- <br>  0101 0101 = 85 |
   
 Vea los siguientes temas:   
@@ -61,7 +61,7 @@ Vea los siguientes temas:
 |[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** o **varbinary**|  
 |[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** o **tinyint**|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Operadores compuestos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)

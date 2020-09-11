@@ -100,7 +100,7 @@ ms.locfileid: "88482540"
   
 4.  Continúe agregando filas hasta que haya creado todos los grupos de archivos que la tabla con particiones.  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
 6.  En **Seleccionar una página**, seleccione **Archivos**.  
   
@@ -410,7 +410,7 @@ ms.locfileid: "88482540"
     GO  
     ```  
   
- Para más información, consulte:  
+ Para obtener más información, consulte:  
   
 -   [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   

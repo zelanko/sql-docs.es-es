@@ -44,7 +44,7 @@ ms.locfileid: "88479306"
   
  Tipo de valor devuelto de CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  STDimension() devuelve 1 si una instancia de **geography** está vacía.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -70,6 +70,6 @@ FROM @temp;
 |Polygon|2|  
   
 ## <a name="see-also"></a>Consulte también  
- [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Métodos de OGC en instancias de Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

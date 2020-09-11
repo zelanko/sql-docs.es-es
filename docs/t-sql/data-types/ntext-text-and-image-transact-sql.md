@@ -46,7 +46,7 @@ Datos no Unicode de longitud variable en la página de códigos del servidor y c
 **image**  
 Datos binarios de longitud variable desde 0 hasta 2^31-1 (2.147.483.647) bytes.
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 Las siguientes funciones e instrucciones se pueden usar con datos de tipo **ntext**, **text** o **image**.
   
 |Functions|Instrucciones|  

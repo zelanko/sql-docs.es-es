@@ -48,7 +48,7 @@ Devuelve un objeto que representa la unión de una instancia de **geometry** con
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Este método siempre devuelve NULL si no coinciden los identificadores de referencia espacial (SRID) de las instancias de **geometry**. El resultado puede contener segmentos de arco circulares solo si las instancias de entrada contienen segmentos de arco circulares.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -75,7 +75,7 @@ SELECT @g.STUnion(@h).ToString();
   
  `STUnion()` devuelve un resultado que contiene un segmento de arco circular porque la instancia que invocó `STUnion()` contiene un segmento de arco circular.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

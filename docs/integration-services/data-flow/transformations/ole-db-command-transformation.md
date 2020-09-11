@@ -101,7 +101,7 @@ ms.locfileid: "88477652"
   
     -   Haga clic en **Asignaciones de columnas** y asigne las columnas de la lista **Columnas de entrada disponibles** a parámetros de la lista **Columnas de destino disponibles** .  
   
-14. Haga clic en **OK**.  
+14. Haga clic en **Aceptar**.  
   
 15. Para guardar el paquete actualizado, haga clic en **Guardar** en el menú **Archivo** .  
   

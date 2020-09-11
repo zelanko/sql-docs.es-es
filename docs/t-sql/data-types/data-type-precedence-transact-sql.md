@@ -64,7 +64,7 @@ Cuando un operador combina dos expresiones de tipos de datos distintos, el tipo 
 1. **varbinary** (**varbinary(max)** incluido)  
 1. **binary** (el más bajo)  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [CAST y CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

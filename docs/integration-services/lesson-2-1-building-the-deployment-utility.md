@@ -41,7 +41,7 @@ Antes de generar la utilidad de implementación, debe modificar las propiedades 
   
 5.  En el panel derecho del cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial), compruebe que **AllowConfigurationChanges** se establece en **True**, establezca **CreateDeploymentUtility** en **True**y, de manera opcional, actualice el valor predeterminado de **DeploymentOutputPath**.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
 ### <a name="to-build-the-deployment-utility"></a>Para generar las propiedades de la utilidad de implementación  
   

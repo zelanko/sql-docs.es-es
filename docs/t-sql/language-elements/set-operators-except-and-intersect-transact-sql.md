@@ -72,7 +72,7 @@ Devuelve todos los valores distintos de la consulta del lado izquierdo del opera
 INTERSECT  
 Devuelve los valores distintos devueltos por las consultas situadas a los lados izquierdo y derecho del operador INTERSECT.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 Los tipos de datos de las columnas comparables los devuelven las consultas de los lados izquierdo y derecho de los operadores EXCEPT o INTERSECT. Estos tipos de datos pueden incluir tipos de datos de caracteres con intercalaciones diferentes. Cuando lo hacen, la comparación requerida se ejecuta según las reglas de [prioridad de intercalación](../../t-sql/statements/collation-precedence-transact-sql.md). Si no puede ejecutar esta conversión, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devuelve un error.  
   
 Cuando se comparan los valores de columna para determinar filas DISTINCT, dos valores NULL se consideran equivalentes.  

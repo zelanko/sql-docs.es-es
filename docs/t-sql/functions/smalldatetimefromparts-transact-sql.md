@@ -57,7 +57,7 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
  *minute*  
  Expresión entera que especifica minutos.  
   
-## <a name="return-types"></a>Tipos de valor devuelto  
+## <a name="return-types"></a>Tipos de valor devueltos  
  **smalldatetime**  
   
 ## <a name="remarks"></a>Observaciones  

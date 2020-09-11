@@ -60,7 +60,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  *replaceWith_expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos de caracteres. *character_expression* puede ser una constante, una variable o una columna de datos binarios o de caracteres. Esta expresión reemplaza los caracteres *legth* de *character_expression*, empezando por *start*. Si se proporciona `NULL` como *replaceWith_expression*, los caracteres se quitan sin insertar nada.   
   
-## <a name="return-types"></a>Tipos de valor devuelto  
+## <a name="return-types"></a>Tipos de valor devueltos  
  Devuelve datos de caracteres si *character_expression* es de alguno de los tipos de datos de caracteres admitidos. Devuelve datos binarios si *character_expression* es de alguno de los tipos de datos binarios admitidos.  
   
 ## <a name="remarks"></a>Observaciones  

@@ -51,7 +51,7 @@ ms.locfileid: "88479374"
 ## <a name="exceptions"></a>Excepciones  
  Si n < 1, se produce una excepción **ArgumentOutOfRangeException**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Cuando se dan los criterios siguientes, se devuelve **NULL**.  
   
 -   Se declara la instancia de **geography**, pero no se crea.  
@@ -116,7 +116,7 @@ ms.locfileid: "88479374"
  END
   ```  
   
-## <a name="see-also"></a>Vea también  
- [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+## <a name="see-also"></a>Consulte también  
+ [Métodos de OGC en instancias de Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

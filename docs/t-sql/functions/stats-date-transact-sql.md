@@ -54,7 +54,7 @@ STATS_DATE ( object_id , stats_id )
  *stats_id*  
  Identificador del objeto de estadísticas.  
   
-## <a name="return-types"></a>Tipos de valor devuelto  
+## <a name="return-types"></a>Tipos de valor devueltos  
  Devuelve **datetime** si es correcto. Devuelve **NULL** si no se creó un blob de estadísticas.  
   
 ## <a name="remarks"></a>Observaciones  

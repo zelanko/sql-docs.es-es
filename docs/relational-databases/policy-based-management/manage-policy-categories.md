@@ -63,7 +63,7 @@ ms.locfileid: "88494022"
   
      La siguiente información está disponible en el cuadro de diálogo **Administrar categorías de directiva** :  
   
-     **Nombre**  
+     **Name**  
      Nombre de la categoría de directiva.  
   
      **Suscripciones de base de datos de mandatos**  

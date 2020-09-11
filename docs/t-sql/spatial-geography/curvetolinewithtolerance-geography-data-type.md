@@ -54,7 +54,7 @@ Tipo de valor devuelto de CLR: **SqlGeography**
 ## <a name="exceptions"></a>Excepciones  
 Si se establece la tolerancia <= 0, se produce una excepción **ArgumentOutOfRange**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 Este método permite especificar una cantidad de tolerancia a errores para el valor **LineString** resultante.  
   
 El método **CurveToLineWithTolerance** devolverá una instancia de **LineString** para una instancia de **CircularString** o **CompoundCurve** y una instancia de **Polygon** para una instancia de **CurvePolygon**.  

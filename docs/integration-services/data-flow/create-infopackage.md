@@ -62,7 +62,7 @@ ms.locfileid: "88457377"
  **Guardar y activar**  
  Permite guardar y activar el nuevo InfoPackage.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Ayuda F1 de Microsoft Connector for SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

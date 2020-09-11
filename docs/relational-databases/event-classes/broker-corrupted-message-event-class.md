@@ -47,7 +47,7 @@ ms.locfileid: "88456027"
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
 |**ObjectName**|**nvarchar**|Nombre de servicio del otro lado de la conversación y cadena de conexión que la base de datos remota ha utilizado para conectarse a esta base de datos.|34|No|  
-|**RoleName**|**nvarchar**|Rol del extremo que recibe este mensaje. Uno de los valores siguientes.<br /><br /> **iniciador**: el punto de conexión receptor es el iniciador de la conversación.<br /><br /> **destino**: el punto de conexión receptor es el destino de la conversación.|38|No|  
+|**RoleName**|**nvarchar**|Rol del extremo que recibe este mensaje. Uno de los siguientes valores.<br /><br /> **iniciador**: el punto de conexión receptor es el iniciador de la conversación.<br /><br /> **destino**: el punto de conexión receptor es el destino de la conversación.|38|No|  
 |**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |**Gravedad**|**int**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha quitado el mensaje debido a un error, gravedad de este error.|29|No|  
 |**SPID**|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  

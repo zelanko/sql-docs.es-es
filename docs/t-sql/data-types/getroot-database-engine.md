@@ -50,7 +50,7 @@ static SqlHierarchyId GetRoot ( )
   
 **Tipo devuelto de CLR: SqlHierarchyId**
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
 Se utiliza para determinar el nodo raíz de un árbol de jerarquía.
   
 ## <a name="examples"></a>Ejemplos  

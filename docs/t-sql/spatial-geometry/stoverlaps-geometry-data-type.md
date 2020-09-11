@@ -48,7 +48,7 @@ Devuelve 1 si una instancia de **geometry** se superpone con otra instancia de *
   
  Tipo de valor devuelto de CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Dos instancias de **geometry** se superponen si la región que representa su intersección tiene la misma dimensión que tienen las instancias y la región no es igual a ninguna instancia.  
   
  `STOverlaps()` siempre devuelve 0 si los puntos de intersección de las instancias de **geometry** no son de la misma dimensión.  
@@ -66,7 +66,7 @@ SET @h = geometry::STGeomFromText('POLYGON((1 1, 3 1, 3 3, 1 3, 1 1))', 0);
 SELECT @g.STOverlaps(@h);  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

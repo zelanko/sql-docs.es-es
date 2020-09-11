@@ -38,7 +38,7 @@ ms.locfileid: "88457357"
 ## <a name="fast-parse"></a>Fast Parse
 El análisis rápido ofrece un conjunto rápido y simple de rutinas para analizar datos. Estas rutinas no son dependientes de la configuración regional y solo admiten un subconjunto de formatos de fecha, hora y número entero.  
   
-### <a name="requirements-and-limitations"></a>Requisitos y limitaciones  
+### <a name="requirements-and-limitations"></a>Limitaciones y requisitos  
  Al implementar el análisis rápido, un paquete arriesga su capacidad de interpretar los datos numéricos y de fecha y hora en formatos específicos de configuración regional, así como varios formatos ISO 8601 básicos y extendidos utilizados con frecuencia, pero el paquete mejora su rendimiento. Por ejemplo, el análisis rápido admite únicamente las representaciones de formato de fecha usadas con más frecuencia, como DDMMYYYY y DD-MM-YYYY, no realiza ningún análisis específico de una configuración regional, no reconoce caracteres especiales en los datos de moneda y no puede convertir una representación hexadecimal o científica de números enteros.  
   
  El análisis rápido solamente está disponible cuando se utiliza el origen de archivo plano o la transformación Conversión de datos. El aumento del rendimiento puede ser considerable, por lo que debería tener en cuenta la posibilidad de utilizar el análisis rápido en estos componentes de flujo de datos, si es posible.  
@@ -185,7 +185,7 @@ El análisis rápido ofrece un conjunto rápido y simple de rutinas para analiza
 |Minutos|Agregar 00:00.|  
 |Hora|Agregar 00:00:00.|  
 |Día|Agregar 01 para el día del mes.|  
-|Month|Agregar 01 para el mes del año.|  
+|Month (Mes)|Agregar 01 para el mes del año.|  
   
  Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
@@ -200,7 +200,7 @@ La propiedad de análisis rápido debe configurarse para cada columna del origen
   
 4.  En la ventana Propiedades, expanda el nodo **Propiedades personalizadas** y establezca la propiedad **FastParse** en **True**.  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
 
 ## <a name="standard-parse"></a>Standard Parse
 El análisis estándar es un conjunto de rutinas de análisis dependientes de la configuración regional y que admiten todas las conversiones de tipo de datos proporcionadas por las API de conversión de tipo de datos de Automation disponibles en Oleaut32.dll y Ole2dsip.dll. El análisis estándar es equivalente a las API de análisis de OLE DB.  

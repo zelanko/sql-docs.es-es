@@ -73,7 +73,7 @@ Una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de c
 * **nvarchar**  
 * **varchar**  
 
-o bien  
+o  
 
 * **sql_variant** (si el tipo base de **sql_variant** es un tipo de datos String).  
   

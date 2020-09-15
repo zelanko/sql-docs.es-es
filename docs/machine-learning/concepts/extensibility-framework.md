@@ -10,15 +10,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 2303fdda5ae28fb9a384a174a128b2487e637f7e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406298"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173323"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitectura de extensibilidad en SQL Server Machine Learning Services 
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 En este artículo se describe la arquitectura del marco de extensibilidad para ejecutar un script externo de R o Python en SQL Server Machine Learning Services. El script se ejecuta en un entorno de ejecución de lenguajes como extensión del motor de base de datos principal.
 

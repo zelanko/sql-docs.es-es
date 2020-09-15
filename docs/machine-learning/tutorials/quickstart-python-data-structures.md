@@ -11,15 +11,15 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ed35820d38ea31ea0b7f8bae9b0a440398d55674
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41feb1db8b5ad14469dbf544e9cdbe083e2e6088
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784101"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178532"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-with-sql-machine-learning"></a>Inicio rápido: Estructuras de datos y objetos mediante Python con aprendizaje automático de SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En este inicio rápido, aprenderá a usar estructuras de datos y tipos de datos cuando use Python en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o en [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md). Aprenderá a mover datos entre Python y SQL Server, así como los problemas comunes que pueden producirse.

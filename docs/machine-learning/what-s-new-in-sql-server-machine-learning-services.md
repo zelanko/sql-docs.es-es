@@ -10,16 +10,15 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning-services
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e4092bd98749006b6f68b8c55fee3baca678255
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9f5cd84574a5e1a009c96863808e3cdaaf8818c5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245264"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179704"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services
-
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../includes/applies-to-version/sqlserver2016.md)]
 
 Se han agregado funciones de aprendizaje automático a SQL Server en cada versión a medida que se continúa la expansión, ampliación y profundización de la integración entre la plataforma de datos, el análisis avanzado y la ciencia de datos. 
 

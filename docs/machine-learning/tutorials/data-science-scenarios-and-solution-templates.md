@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 241affaea232fcc916456b96ff724655b9289618
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728638"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178838"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Escenarios de ciencia de datos y plantillas de soluciones
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 En este artículo se describe una serie de plantillas de solución de aprendizaje automático de SQL Server. Estas plantillas demuestran procedimientos recomendados y proporcionan los bloques de creación para ayudarle a implementar una solución de aprendizaje automático rápidamente. Cada plantilla está diseñada para resolver un problema específico de ciencia de datos, para un segmento o un sector en concreto.
 Las tareas de cada plantilla permiten desde preparación de datos e ingeniería de características hasta el entrenamiento y la puntuación de modelos. 

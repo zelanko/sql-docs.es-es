@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a5bdd0eb36873c179b51f2a867feac1c7539165d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e0f7cf6f904768f8394b690c1a45d3cfb4c9bd71
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253743"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173476"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>Recopilación de datos para la solución de problemas de aprendizaje automático en SQL
 
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 En este artículo se describe cómo recopilar los datos que necesita cuando intenta resolver problemas de aprendizaje automático de SQL. Estos datos pueden ser útiles si está resolviendo problemas por su cuenta o con la ayuda del servicio de atención al cliente de Microsoft.
 

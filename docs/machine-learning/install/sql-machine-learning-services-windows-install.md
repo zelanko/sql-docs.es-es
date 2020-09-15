@@ -9,16 +9,16 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 8cbfbe14eba45d5bb82b0741fb2ccfa809001038
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3cf6afe4f99e7a728368f3454cc125998d806fa
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885961"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178672"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Instalación de SQL Server Machine Learning Services (Python y R) en Windows
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Obtenga información sobre cómo instalar SQL Server Machine Learning Services en Windows. Puede usar Machine Learning Services para ejecutar scripts de Python y R en la base de datos.
 
@@ -369,4 +369,4 @@ Los desarrolladores de Python pueden aprender a usar Python con SQL Server con e
 Los desarrolladores de R pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de R con SQL Server. Para conocer el siguiente paso, vea los vínculos siguientes:
 
 + [Inicio rápido: Ejecutar R en T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Tutorial: Análisis en base de datos para desarrolladores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Análisis en base de datos para desarrolladores de R](../tutorials/r-taxi-classification-introduction.md)

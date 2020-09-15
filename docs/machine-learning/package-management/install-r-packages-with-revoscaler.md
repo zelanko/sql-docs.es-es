@@ -9,16 +9,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 7f2978cd971f2259d7155d9d6c69c32ffe923ee5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b2dd0f77dcfc8c116bfbf0f4431c2825f6cb9e68
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723927"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179369"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>Uso de RevoScaleR para instalar paquetes de R
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
 En este artículo se describe cómo usar las funciones de [RevoScaleR](../r/ref-r-revoscaler.md) (versión 9.0.1 y posteriores) para instalar paquetes de R en SQL Server con Machine Learning Services o R Services. Las funciones RevoScaleR las pueden usar los usuarios remotos y no administradores para instalar paquetes en SQL Server sin acceso directo al servidor.
 

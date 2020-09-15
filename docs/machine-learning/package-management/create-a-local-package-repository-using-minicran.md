@@ -10,15 +10,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a980e356496e3e2e1cdbc5010e8f1c6f7ec7d8c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf93d618ad03122cc7eecf641573d70b2b72158e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783504"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173531"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Creación de un repositorio de paquetes de R local mediante miniCRAN
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 En este artículo se describe cómo instalar paquetes de R sin conexión mediante [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) para crear un repositorio local de paquetes y dependencias. **miniCRAN** identifica y descarga paquetes y dependencias en una única carpeta que se copia en otros equipos para la instalación de paquetes de R sin conexión.
 

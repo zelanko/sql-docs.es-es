@@ -9,14 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d3be71d304cb17392fcc4ec5a8796588de9d884
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 79053a7dcf91b220bdb288fc7efc711c80684aa0
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352322"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88171874"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Supervisar instrucciones de T-SQL PREDICT con eventos extendidos en SQL Server Machine Learning Services
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Obtenga información sobre cómo usar eventos extendidos para supervisar y solucionar problemas de instrucciones de T-SQL [PREDICT](../../t-sql/queries/predict-transact-sql.md) en SQL Server Machine Learning Services.
 

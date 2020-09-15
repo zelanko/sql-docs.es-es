@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ae408162ada9b43a9601c4058b9850db5a4afec4
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c638b3c32af037b8c597c840d4bdf388aad56efc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406198"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178595"
 ---
 # <a name="microsoftml-python-package-in-sql-server-machine-learning-services"></a>microsoftml (paquete de Python en SQL Server Machine Learning Services)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 **microsoftml** es un paquete de Python de Microsoft que proporciona algoritmos de aprendizaje automático de alto rendimiento. Incluye funciones para el entrenamiento y las transformaciones, la puntuación, el análisis de texto y de imágenes, y la extracción de características para derivar valores a partir de datos existentes. El paquete se incluye en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) y admite un alto rendimiento en macrodatos, mediante el procesamiento de varios núcleos y un flujo de datos rápido.
 

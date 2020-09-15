@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1c5e16667f311c3afff9b2ada9e17c8ffe3751c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b7f711ae8b90762003f903b7fd4a59771c5d3f53
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916635"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178692"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>Ejecución de scripts de Python y R en cuadernos de Azure Data Studio con Machine Learning Services de SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Obtenga información sobre cómo ejecutar scripts de Python y R en cuadernos de [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) con [Machine Learning Services de SQL Server](../sql-server-machine-learning-services.md). Azure Data Studio es una herramienta de base de datos multiplataforma.
 

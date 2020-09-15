@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aa50fd62b3f1d3c1d40f3603b6a0b3fc4182497f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86aad616cc8c9fc54adc2fffd14bfc663acf3887
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771769"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179732"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalación de modelos de aprendizaje automático entrenados previamente en SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 En este artículo se explica cómo usar PowerShell para agregar modelos gratuitos de aprendizaje automático entrenados previamente para el *análisis de sentimiento* y las *características de imagen* a una instancia de SQL Server que tenga integración con R o Python. Los modelos entrenados previamente están compilados por Microsoft y listos para su uso, que se agregan a una instancia como una tarea posterior a la instalación. Para obtener más información acerca de estos modelos, vea la sección [Recursos](#bkmk_resources) de este artículo.
 

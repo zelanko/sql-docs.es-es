@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6f6f8611885a0628d3b2cf719947006a7c5094c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11c963405245b28efd40949c8fe1f8d6227d4119
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753353"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179914"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>Guardar y cargar objetos de R desde SQL Server mediante ODBC
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 SQL Server R Services puede almacenar objetos serializados de R en una tabla y luego cargar el objeto desde la tabla si es necesario, sin tener que volver a ejecutar el código R ni reciclar el modelo. Esta capacidad de guardar objetos de R en una base de datos es fundamental para escenarios como el reciclaje y el guardado de un modelo y su uso más adelante para puntuación o análisis.
 

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2438ff265c788753a42bc01119f954359c799ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95600d85c02d120f1bb4df2e7a73411a9965550a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753401"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180002"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Rendimiento de R Services: optimización de datos
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este artículo es el tercero de una serie de cuatro artículos en los que se describe la optimización del rendimiento de R Services, en función de dos casos prácticos. En este artículo se describen las optimizaciones de rendimiento para scripts de R o Python que se ejecutan en SQL Server. También se describen los métodos que puede usar para actualizar el código de R, tanto para mejorar el rendimiento como para evitar problemas conocidos.
 

@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: ab427983bdd327775ab817d6b56f496afe733127
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406158"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179980"
 ---
 # <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR (paquete de R en SQL Server Machine Learning Services)
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **RevoScaleR** es un paquete de R de Microsoft que admite computación distribuida, contextos de cálculo remoto y algoritmos de ciencia de datos de alto rendimiento. También admite la importación de datos, la transformación de datos, el resumen, la visualización y el análisis. El paquete se incluye en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) y en [SQL Server 2016 R Services](sql-server-r-services.md).
 
@@ -151,6 +151,6 @@ Cuando esté preparado para encapsular el script de R dentro de un procedimiento
 
 + [Tutoriales de R](../tutorials/sql-server-r-tutorials.md)
 + [Información sobre cómo usar contextos de cálculo](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [R para desarrolladores de SQL: Entrenar y hacer operativo un modelo](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [R para desarrolladores de SQL: Entrenar y hacer operativo un modelo](../tutorials/r-taxi-classification-introduction.md)
 + [Ejemplos de productos de Microsoft en GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [Referencia de R (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

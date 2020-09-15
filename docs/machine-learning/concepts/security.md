@@ -10,16 +10,16 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 80f14fc69a6abf0720f3f9d9fb3c170f0ab1da0d
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 5110f96b654847a0288471d28c72afa37d3df8c2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406228"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179854"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Información general sobre seguridad para el marco de extensibilidad en SQL Server Machine Learning Services
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 En este artículo se describe la arquitectura de seguridad general que se usa para integrar el motor de base de datos de SQL Server y los componentes relacionados con el marco de extensibilidad en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Examina los elementos protegibles, los servicios, la identidad del proceso y los permisos. Para obtener más información sobre los conceptos clave y los componentes de extensibilidad en SQL Server, vea [Arquitectura de extensibilidad en SQL Server Machine Learning Services](extensibility-framework.md).
 

@@ -1,4 +1,5 @@
 ---
+description: Método setBoolean (SQLServerCallableStatement)
 title: Método setBoolean (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8cd810b1-9858-4e51-9535-239d864cd288
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 40cd72a4eca8f8174996b955e994295978d87fa6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 406af612bb46c03fb9b624aa034bc5a0edad8ce4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432407"
 ---
 # <a name="setboolean-method-sqlservercallablestatement"></a>Método setBoolean (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

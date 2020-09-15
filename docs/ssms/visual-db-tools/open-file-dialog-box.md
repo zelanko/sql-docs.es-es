@@ -1,4 +1,5 @@
 ---
+description: Cuadro de diálogo Abrir archivo
 title: Cuadro de diálogo Abrir archivo
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 214942feecf0161f373ca588c15510bcd5c0615f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6d9c0a9d83f0004c534f3548cb114f06de2861f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423049"
 ---
 # <a name="open-file-dialog-box"></a>Cuadro de diálogo Abrir archivo
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Use el cuadro de diálogo **Abrir archivo** para abrir un archivo existente en el disco. Este cuadro de diálogo también se puede utilizar para abrir un archivo ya abierto mediante opciones de codificación de lenguaje distintas.  
+ Use el cuadro de diálogo **Abrir archivo** para abrir un archivo existente en el disco. Este cuadro de diálogo también se puede utilizar para abrir un archivo ya abierto mediante opciones de codificación de lenguaje distintas.  
   
 Para tener acceso a este cuadro de diálogo, seleccione **Abrir** en el menú **Archivo** y, a continuación, elija **Archivo**. Este cuadro de diálogo también aparece al abrir archivos desde otros elementos, como el cuadro de diálogo **Herramientas externas** . En el menú **Archivo** , seleccione **Abrir**y elija **Proyecto o solución** para abrir el cuadro de diálogo similar **Abrir proyecto** .  
   
@@ -33,7 +34,7 @@ Para tener acceso a este cuadro de diálogo, seleccione **Abrir** en el menú **
 Busque la carpeta del proyecto actual en este menú desplegable. Al seleccionar una carpeta de la lista, aparece su contenido en el panel principal.  
   
 ## <a name="my-places-bar"></a>Barra Mis direcciones  
-**Escritorio**  
+**Dispositivo de escritorio**  
 Muestra los archivos y las carpetas del escritorio.  
   
 **Mis proyectos**  
@@ -46,7 +47,7 @@ Muestra el contenido de los disquetes, el disco duro y la unidad de CD-ROM.
 **Nombre de archivo**  
 Utilice esta opción para filtrar los archivos y las carpetas mostrados. Escriba un nombre de archivo completo o parte del mismo para filtrar. Puede utilizar el asterisco (*) como carácter comodín.  
   
-**Archivos de tipo**  
+**Tipo de archivo**  
 Utilice esta opción para filtrar según un determinado tipo de archivo el contenido de la carpeta o el directorio seleccionado en Buscar en.  
   
 **Abrir con y opciones de codificación**  

@@ -1,4 +1,5 @@
 ---
+description: Método setClientInfo (SQLServerConnection)
 title: Método setClientInfo (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9eaafb0e-8bfa-456c-a481-8e06e5d539e1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20878762ce7bd225ad90471fa43c16e652de7ed4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b6a7d0bed14adc6054c36f5ece40e8615654d5db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432187"
 ---
 # <a name="setclientinfo-method-sqlserverconnection"></a>Método setClientInfo (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80927182"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |[Método setClientInfo &#40;java.util.Properties&#41;](../../../connect/jdbc/reference/setclientinfo-method-java-util-properties.md)|Establece el valor de las propiedades de información de cliente de la conexión.|  
 |[Método setClientInfo &#40;java.lang.String, java.lang.String&#41;](../../../connect/jdbc/reference/setclientinfo-method-java-lang-string-java-lang-string.md)|Establece el valor de la propiedad de información de cliente especificada.|  

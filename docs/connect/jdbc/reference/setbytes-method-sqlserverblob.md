@@ -1,4 +1,5 @@
 ---
+description: Método setBytes (SQLServerBlob)
 title: Método setBytes (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cd193265-3a65-4b1e-86ec-7818c3c0c1e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: baa203771d86fe75bbafd56916d770fc678994ee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c6bc87c79dda50746d7a67d8e533b00e71e5581
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432307"
 ---
 # <a name="setbytes-method-sqlserverblob"></a>Método setBytes (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80929127"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |[setBytes (long, byte&#91;&#93;)](../../../connect/jdbc/reference/setbytes-method-long-byte.md)|Escribe la matriz de bytes determinada en el BLOB comenzando en la posición determinada y posteriormente devuelve el número de bytes escritos.|  
 |[setBytes (long, byte&#91;&#93;, int, int)](../../../connect/jdbc/reference/setbytes-method-long-byte-int-int.md)|Escribe todo o parte de la matriz de bytes determinada en el BLOB comenzando en la posición, desplazamiento y longitud determinados; y posteriormente devuelve el número de bytes escritos.|  

@@ -1,4 +1,5 @@
 ---
+description: Método setEncrypt (SQLServerDataSource)
 title: Método setEncrypt (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da0aa987f1ec773e2f61e738bc4045136c64859a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: e7da98aa70be2066c370b75e2bc213c25ba16e03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431977"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Método setEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ public void setEncypt(boolean encrypt)
   
 -   Configurar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con un certificado de servidor que tenga una clave pública RSA más pequeña  
   
--   Configurar la JVM para usar un proveedor de seguridad JSSE diferente en el archivo de propiedades de seguridad "\<java-home>/lib/security/java.security"  
+-   Configurar la JVM para usar otro proveedor de seguridad JSSE en el archivo de propiedades de seguridad "\<java-home>/lib/security/java.security"  
   
 -   Usar una JVM distinta  
   

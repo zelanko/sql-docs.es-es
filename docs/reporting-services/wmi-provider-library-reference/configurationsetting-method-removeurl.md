@@ -1,4 +1,5 @@
 ---
+description: Método RemoveURL (MSReportServer_ConfigurationSetting de WMI)
 title: Método RemoveURL (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3d98bd97-e152-48ce-ab1c-bd2c4f8b7fe9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3ea8098d3dd6a1512f83022fe7ab7e733bd42ae5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 69112a88d00af4c82e10471addc32eff6d3e7cde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423159"
 ---
 # <a name="configurationsetting-method---removeurl"></a>Método ConfigurationSetting - RemoveURL
   Quita una dirección URL reservada para el servidor de informes. Si es necesario quitar varias direcciones URL, esta operación debe realizarse una a una llamando a esta API.  

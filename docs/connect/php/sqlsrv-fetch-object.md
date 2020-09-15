@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_fetch_object
 title: sqlsrv_fetch_object | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426307"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +43,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *$ctorParams* (opcional): una matriz que contiene los valores que se transmiten al constructor de la clase especificada con el parámetro *$className*. Si el constructor de la clase especificada acepta los valores de parámetro, el parámetro *$ctorParams* debe usarse al llamar a **sqlsrv_fetch_object**.  
   
-*row* (opcional): uno de los siguientes valores; sirve para especificar la fila a la que se accederá en un conjunto de resultados que use un cursor desplazable. (Si se indica *row*, se tendrá que especificar explícitamente *$className* y *$ctorParams*, aunque debe proporcionar el valor NULL para *$className* y *$ctorParams*).  
+*row* [OPCIONAL]: Uno de los siguientes valores; sirve para especificar la fila a la que se accederá en un conjunto de resultados que utilice un cursor desplazable (Si se indica *row*, se tendrá que especificar explícitamente *$className* y *$ctorParams*, aunque debe proporcionar el valor NULL para *$className* y *$ctorParams*).  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -58,7 +59,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 Para obtener más información sobre estos valores, vea [Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*offset* [OPCIONAL]: se usa con SQLSRV_SCROLL_ABSOLUTE y SQLSRV_SCROLL_RELATIVE para especificar la fila que se va a recuperar. El primer registro del conjunto de resultados es 0.  
+*offset* [OPCIONAL]: Se usa con SQLSRV_SCROLL_ABSOLUTE y SQLSRV_SCROLL_RELATIVE para especificar la fila que se va a recuperar. El primer registro del conjunto de resultados es 0.  
   
 ## <a name="return-value"></a>Valor devuelto  
 Un objeto PHP con propiedades que se corresponden con los nombres de campo del conjunto de resultados. Los valores de propiedad se rellenan con los valores de campo del conjunto de resultados correspondiente. Si la clase especificada con el parámetro *$className* opcional no existe o si no hay ningún conjunto de resultados activo asociado con la instrucción especificada, se devolverá el valor **False** . Si no hay más filas para recuperar, se devolverá el valor **Null** .  
@@ -233,7 +234,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-La variable **sqlsrv_fetch_object** siempre devuelve datos según los [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obtener información sobre cómo especificar el tipo de datos PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+La variable **sqlsrv_fetch_object** siempre devuelve datos según los [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obtener información sobre cómo especificar el tipo de datos PHP, vea [Procedimiento para especificar tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Si se devuelve un campo sin nombre, **sqlsrv_fetch_object** descartará el valor del campo y generará una advertencia. Por ejemplo, observe esta instrucción de Transact-SQL que inserta un valor en una tabla de base de datos y recupera la clave principal generada por el servidor:  
   

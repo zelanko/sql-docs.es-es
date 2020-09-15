@@ -1,4 +1,5 @@
 ---
+description: Establecer permisos para elementos del servidor de informes en un sitio de SharePoint
 title: Establecer permisos para elementos del servidor de informes en un sitio de SharePoint | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2eacc9d9163773076ce1792d3c58a07fef83f126
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423199"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>Establecer permisos para elementos del servidor de informes en un sitio de SharePoint
   Si la configuración de seguridad predeterminada no proporciona el nivel de acceso necesario, puede crear nuevos niveles de permisos para proporcionar acceso a elementos u operaciones específicos del servidor de informes. La configuración de seguridad personalizada puede ser útil si desea restringir el acceso a un informe determinado.  
@@ -55,7 +56,7 @@ ms.locfileid: "65570614"
   
 5.  Haga clic en **Acciones**.  
   
-6.  Haga clic en **Editar permisos**. Haga clic en **OK**.  
+6.  Haga clic en **Editar permisos**. Haga clic en **Aceptar**.  
   
 7.  Haga clic en **Nueva**.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "65570614"
   
 11. Haga clic en **Control total**.  
   
-12. Haga clic en **OK**. Una vez que el usuario pueda administrar permisos para un modelo específico, dicho usuario podrá abrir el modelo para editar los permisos de dicho modelo.  
+12. Haga clic en **Aceptar**. Una vez que el usuario pueda administrar permisos para un modelo específico, dicho usuario podrá abrir el modelo para editar los permisos de dicho modelo.  
   
 ## <a name="see-also"></a>Consulte también  
  [Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   

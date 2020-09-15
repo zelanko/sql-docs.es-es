@@ -1,4 +1,5 @@
 ---
+description: Desplazarse por el Diseñador de consultas y vistas (Visual Database Tools)
 title: Navegación por el Diseñador de consultas y vistas
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 57141f45ed985932d365bffb9479e085ba59e9bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ff0153da9b3905fb57d0e1359ff71aaaeef663df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85996770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423079"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Desplazarse por el Diseñador de consultas y vistas (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ En el Diseñador de consultas y vistas puede trabajar tanto con el teclado como 
   
 ## <a name="any-pane"></a>En cualquier panel  
   
-|**To**|**Presione**|**Hacer clic en .**|  
+|**To**|**Presione**|**Haga clic en**|  
 |----------|-------------|-------------|  
 |Desplazarse por los paneles del Diseñador de consultas y vistas|F6, MAYÚS+F6|En cualquier parte del panel de destino|  
   
@@ -37,7 +38,7 @@ En el Diseñador de consultas y vistas puede trabajar tanto con el teclado como 
   
 ## <a name="diagram-pane"></a>panel Diagrama  
   
-|**To**|**Presione**|**Hacer clic en .**|  
+|**To**|**Presione**|**Haga clic en**|  
 |----------|-------------|-------------|  
 |Desplazarse por las tablas, objetos con estructura de tabla, y líneas de combinación (si existen)|TAB, o MAYÚS+TAB|En la tabla, el objeto con estructura de tabla o la línea de combinación a la que desea moverse|  
 |Desplazarse por las columnas de una tabla o un objeto con estructura de tabla|Teclas de dirección|En la columna a la que desea ir|  
@@ -52,7 +53,7 @@ Para más información, consulte [Panel Diagrama &#40;Visual Database Tools&#41;
   
 ## <a name="criteria-pane"></a>Panel de criterios  
   
-|A|Presione|Haga clic en|  
+|En|Presione|Haga clic en|  
 |------|---------|---------|  
 |Desplazarse por las celdas|Teclas de dirección o TAB o MAYÚS+TAB|En la celda de destino|  
 |Desplazarse a la última fila de la columna seleccionada|CTRL+FLECHA ABAJO||  
@@ -87,7 +88,7 @@ Para más información, consulte [Panel SQL &#40;Visual Database Tools&#41;](../
   
 ## <a name="results-pane"></a>Panel Resultados  
   
-|**To**|**Presione**|**Hacer clic en .**|  
+|**To**|**Presione**|**Haga clic en**|  
 |----------|-------------|-------------|  
 |Moverse entre los celdas|Teclas de dirección o TAB o MAYÚS+TAB|En la celda de destino|  
 |Desplazarse a la primera o la última celda de la fila actual|INICIO o FIN||  

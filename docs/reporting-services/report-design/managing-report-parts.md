@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 233aa6a48937d26b9e9f9c486f4cda7238245a47
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: a1c8b7ee7baed3008dece84d1a2f7f0f4e28e8f9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689677"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934275"
 ---
 # <a name="managing-report-parts"></a>Administrar elementos de informe
   Los elementos de informe se pueden reutilizar en informes paginados, por varios usuarios y en varios informes. Los usuarios pueden buscar elementos de informe en el servidor y agregarlos a un informe.  También pueden informarse de las actualizaciones del elemento de informe en el servidor y volver a publicar versiones nuevas de un elemento de informe. Esas acciones de creación de informes se pueden ver afectadas por los permisos de seguridad de los servicios de informe, que las controlan.  En este tema se revisan las propiedades de los elementos de informe y su comportamiento cuando se encuentran en el servidor.  
@@ -90,7 +90,6 @@ ms.locfileid: "83689677"
 ## <a name="see-also"></a>Consulte también  
  [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Solucionar problemas de elementos de informe (Generador de informes y SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

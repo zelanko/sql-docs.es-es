@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 03c4fa2ddf36130fb9ff96899870207c6427efe1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84011863"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939225"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Generador de informes y SSRS)
   En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , una región de datos de medidor muestra un solo valor del conjunto de datos. Los medidores siempre se sitúan dentro de un panel de medidores, en el que pueden agregarse medidores secundarios o adyacentes. En un mismo panel de medidores, puede crear varios medidores que comparten funciones comunes como el filtrado, la agrupación o la ordenación.  
@@ -283,16 +283,13 @@ ms.locfileid: "84011863"
   
 -   [Establecer un valor mínimo o máximo en un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Establecer un intervalo de ajuste en un medidor (Generador de informes y SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
-  
--   [Especificar una imagen como puntero en un medidor (Generador de informes y SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [Establecer un intervalo de ajuste en un medidor (Generador de informes y SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> En esta sección  
  En los siguientes temas se proporciona información adicional acerca de cómo trabajar con medidores.  
   
-|||  
-|-|-|  
 |Término|Definición|  
+|-|-|  
 |[Aplicar formato a las escalas de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información general acerca de cómo dar formato a las escalas en los medidores e información detallada sobre las opciones de formato para las escalas en los medidores radiales y lineales.|  
 |[Aplicar formato a los punteros de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información general acerca de cómo dar formato a los punteros en los medidores, e información detallada sobre las opciones de formato para los estilos de puntero disponibles para los medidores radiales y lineales.|  
 |[Aplicar formato a los rangos de un medidor &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Proporciona información acerca de cómo dar formato a intervalos en medidores para indicar una subsección importante de valores en el medidor o indicar visualmente cuándo el valor de puntero entra en un intervalo de valores determinado.|  

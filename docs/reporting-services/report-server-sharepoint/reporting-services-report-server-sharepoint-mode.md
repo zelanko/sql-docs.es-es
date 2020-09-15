@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 66cd108b1f96e003645510e3a17a3627a45495e4
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b1e4c3e685bd3dc294ae1a71d54a478b937df8a0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83765058"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934294"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de informes de Reporting Services (modo de SharePoint)
 
@@ -29,7 +29,7 @@ ms.locfileid: "83765058"
 
  Para obtener información sobre la instalación y la configuración, vea lo siguiente:  
   
--   [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
+-   [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode).  
   
 -   [Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
@@ -129,7 +129,7 @@ ms.locfileid: "83765058"
   
 |**Task**|**Vínculo**|  
 |--------------|--------------|  
-|Pasos detallados para instalar y configurar Reporting Services en el modo de SharePoint.|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) y [Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Pasos detallados para instalar y configurar Reporting Services en el modo de SharePoint.|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode) y [Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |Escale la implementación de SharePoint de Reporting Services al agregar servidores de informes adicionales.|[Agregar un servidor de informes adicional a una granja de servidores](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) y [Topologías de implementación para las características BI de SQL Server en SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |Agregue front-end web de SharePoint adicionales que tengan los componentes de Reporting Services instalados para ver e imprimir elementos.|[Agregar un front-end web adicional de Reporting Services a una granja de servidores](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Configure el correo electrónico para el servidor de informes en SharePoint.|[Configurar el correo electrónico para una aplicación de servicio de Reporting Services](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|

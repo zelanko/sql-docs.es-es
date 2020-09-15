@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b44e664d75735a6283d12f218b904fbdd07ad481
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248557"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396540"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
@@ -233,9 +233,8 @@ La nueva versión de SSDT incluye plantillas de proyecto para [!INCLUDE[ssRSCurr
 
 **Nueva interfaz de usuario del Generador de informes:** la interfaz de usuario principal de [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] ahora tiene un aspecto moderno, con elementos de interfaz de usuario mejorados.  
 
-|||  
-|-|-|  
 |Nuevo|Previous|  
+|-|-|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
 **Panel de parámetros personalizado:** ahora puede personalizar el panel de parámetros. Al usar la superficie de diseño en el Generador de informes, puede arrastrar un parámetro a una columna y una fila específica en el panel de parámetros. Puede agregar y quitar columnas para cambiar el diseño del panel. Para más información, vea [Customize the Parameters Pane in a Report &#40;Report Builder&#41; (Personalizar el panel de parámetros en un informe [Generador de informes])](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd4e3ee094bca1d27543a92a357f705b0e3d82fe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c8100d6f18803f891ac9ba5607185fdbac782660
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883734"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332525"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar una instancia existente de SQL Server (programa de instalación)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -46,11 +46,18 @@ ms.locfileid: "85883734"
   
     Entre los archivos que debe guardar se incluyen los siguientes archivos de base de datos:  
 
-    |             |            |           |            |
-    | :---------- | :--------- |:--------- | :--------- |
-    | master.mdf  | mastlog.ldf| model.mdf | modellog.ldf| 
-    | msdbdata.mdf| msdblog.ldf| Mssqlsystemresource.mdf | Mssqlsustemresource.ldf |
-    | Tempdb.mdf | Templog.ldf|  ReportServer[$InstanceName] | ReportServer[$InstanceName]TempDB| 
+    * master.mdf
+    * msdbdata.mdf
+    * Tempdb.mdf
+    * mastlog.ldf
+    * msdblog.ldf
+    * Templog.ldf
+    * model.mdf
+    * Mssqlsystemresource.mdf
+    * ReportServer[$InstanceName]
+    * modellog.ldf
+    * Mssqlsustemresource.ldf
+    * ReportServer[$InstanceName]TempDB
 
     > [!NOTE]
     > Las bases de datos de ReportServer se incluyen con SQL Server Reporting Services.   

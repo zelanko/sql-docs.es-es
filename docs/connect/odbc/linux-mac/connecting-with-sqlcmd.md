@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e96d05b14cb9922572ee5f5c9e773f1c7bc35590
-ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
+ms.openlocfilehash: 586e55397297277130b61b2e6468dac0ada7b38a
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2020
-ms.locfileid: "86465312"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807104"
 ---
 # <a name="connecting-with-sqlcmd"></a>Conexión con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -225,4 +225,4 @@ Los scripts existentes que invocan a `isql` pueden modificarse para usar `sqlcmd
 
 ## <a name="see-also"></a>Consulte también  
 [Conexión con **bcp**](connecting-with-bcp.md)  
- 
+[Notas de la versión](release-notes-tools.md)

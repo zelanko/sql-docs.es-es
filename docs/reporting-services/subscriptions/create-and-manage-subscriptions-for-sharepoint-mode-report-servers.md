@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5275678180b785b1d41705d4f2debdada8fd5a78
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 0da2edb5af1484d6d8f9428ec6ec9a7f9e7c554f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742260"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87945457"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo de SharePoint
   Puede crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para entregar informes desde una aplicación web de SharePoint que esté integrada con un servidor de informes en el modo de SharePoint. Las suscripciones pueden entregar informes a una biblioteca de documentos, a una carpeta de archivos o como un correo electrónico. En este tema se resumen los requisitos y los pasos para crear una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -160,6 +160,6 @@ ms.locfileid: "80742260"
  [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Entrega a recursos compartidos de archivos en Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Entrega de la biblioteca de SharePoint en Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](https://docs.microsoft.com/sql/reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager)  
   
   

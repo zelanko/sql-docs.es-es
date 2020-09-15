@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 069fb0c365e3ecb5353e9dad99f116779222af87
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a8977a2b0b90a83e920452d2a843d0c035440113
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248134"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87945231"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , obtendrá información sobre las características de mapa que puede usar para mostrar datos en un fondo geográfico de un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -33,7 +33,7 @@ En este tutorial, compilará un informe de mapa que muestre ubicaciones de almac
 Tiempo estimado para completar este tutorial: 30 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
-Para este tutorial, deberá configurarse el servidor de informes para que admita los mapas de Bing como fondo. Para obtener más información, consulte [Planear la compatibilidad de informe de mapa](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+Para este tutorial, deberá configurarse el servidor de informes para que admita los mapas de Bing como fondo. Para obtener más información, consulte [Planear la compatibilidad de informe de mapa](https://docs.microsoft.com/sql/reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs). 
 
 Para obtener información sobre otros requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   

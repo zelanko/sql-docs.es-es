@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7db8a7ec6a9f4340dcbdf03badb0a77cdbc42591
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 3959fdd6512afe12270b353393e4c72c651fc57a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778917"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939189"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Buscar elementos de informe y establecer una carpeta predeterminada (Generador de informes y SSRS)
 La manera más fácil de crear un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es agregar elementos de informe existentes, como tablas y gráficos, desde la galería de elementos de informe. Al agregar un elemento de informe al informe, también agrega todo lo que debe tener para que funcione. Por ejemplo, cualquier elemento de informe que muestre los datos depende de un conjunto de datos, es decir, una consulta y una conexión a un origen de datos. Después de agregar el elemento de informe a un informe, puede modificarlo como convenga.  
@@ -62,10 +62,6 @@ La manera más fácil de crear un informe paginado de [!INCLUDE[ssRSnoversion](.
  No necesita reiniciar el Generador de informes para que esta configuración surta efecto.  
   
 ## <a name="see-also"></a>Consulte también  
- [Buscar o desactivar actualizaciones (Generador de informes y SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Solucionar problemas de elementos de informe (Generador de informes y SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Publicar y volver a publicar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
-  
-  
+ [Publicar y volver a publicar elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)

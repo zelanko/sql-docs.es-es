@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c8beab2bdd11e0b8f3b550d46601b5e00069525
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: f8848fb3d8d474083e0ce1a10b7d355a2e4b886e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255228"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928636"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Publicar y volver a publicar elementos de informe (Generador de informes y SSRS)
   Se trata de elementos de informe paginado que se han publicado por separado en un servidor de informes y se pueden volver a usar en otros informes paginados. Puede publicar un elemento de informe con la configuración predeterminada en una ubicación predeterminada, o editar los metadatos del elemento de informe , por ejemplo el nombre y la descripción, y guardarlo en otra ubicación de un servidor de informes. También puede guardarlo en un sitio de SharePoint que esté integrado con un servidor de informes si tiene los permisos necesarios.  
@@ -58,8 +58,6 @@ ms.locfileid: "84255228"
 ## <a name="see-also"></a>Consulte también  
  [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Solucionar problemas de elementos de informe (Generador de informes y SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Buscar o desactivar actualizaciones (Generador de informes y SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Buscar elementos de informe y establecer una carpeta predeterminada &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

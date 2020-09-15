@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55842ea259a2298388dc82b89cc941f561c029fb
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 964e6752dc44477215180e6e61f6440feb8972af
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742206"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939442"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>Usar Mis suscripciones (servidor de informes en modo nativo)
 El portal web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una página **Mis suscripciones** que organiza todas las suscripciones en un solo lugar. Puede usar *Mis suscripciones* para ver, modificar, habilitar, deshabilitar y eliminar suscripciones existentes. Sin embargo, no puede utilizar esta página para crear suscripciones.  Mis suscripciones solo muestra las suscripciones que haya creado. No enumera las suscripciones que sean propiedad de otros usuarios, aunque el usuario esté agregado como suscriptor a ellas, ni muestra suscripciones controladas por datos.
@@ -55,6 +55,6 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ## <a name="see-also"></a>Consulte también  
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Crear y administrar suscripciones para servidores de informes en modo nativo](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)  
+ [Crear y administrar suscripciones para servidores de informes en modo nativo](https://docs.microsoft.com/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers)  
   
   

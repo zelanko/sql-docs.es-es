@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 064b6294a33b87e41a9439e2759be2461131e388
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425827"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424425"
 ---
 # <a name="odata-source"></a>Origen OData
 
@@ -54,6 +54,13 @@ En el caso del tipo de datos **decimal**, los metadatos de origen determinan la 
 
 > [!IMPORTANT]
 > El componente de origen de OData no admite tipos complejos, como los elementos de opción múltiple, en las listas de SharePoint.
+
+> [!Note]
+> Si el origen solo permite la conexión TLS 1.2, debe aplicar TLS 1.2 en el equipo a través de la configuración del Registro. En un símbolo del sistema con privilegios elevados, ejecute los comandos siguientes:
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:64
+>
+> reg add HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319 /v SchUseStrongCrypto /t REG_DWORD /d 1 /reg:32
 
 ## <a name="odata-format-and-performance"></a>Formato y rendimiento de OData
  La mayoría de los servicios de OData puede devolver resultados en varios formatos. Puede especificar el formato del conjunto de resultados mediante la opción de consulta `$format`. Los formatos como JSON y JSON Light son más eficaces que ATOM o XML, y pueden conseguir mejor rendimiento cuando se transfieren grandes cantidades de datos. En la tabla siguiente se muestran resultados de pruebas de ejemplo. Como puede ver, hubo una mejora del rendimiento del 30-53 % al cambiar de ATOM a JSON y del 67 % cuando se cambió de ATOM al nuevo formato JSON Light (disponible en WCF Data Services 5.1).  

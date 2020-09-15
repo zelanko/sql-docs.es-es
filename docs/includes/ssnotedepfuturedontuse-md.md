@@ -1,1 +1,1 @@
- Esta característica se quitará en una versión futura de Microsoft SQL Server. No utilice esta característica en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que actualmente la utilizan. 
+Esta característica se quitará en una versión futura de Microsoft SQL Server. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. 

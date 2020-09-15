@@ -1,20 +1,20 @@
 ---
-title: 'Tutorial: Compilación de un widget de información personalizada'
+title: Compilación de un widget de información personalizada
 description: En este tutorial se muestra cómo crear widgets de información personalizada y agregarlos a los paneles de la base de datos y el servidor en Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: efe6473dc716b8e8a2c70349b98e6433105d401a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 08/26/2020
+ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745758"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283756"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Compilación de un widget de información personalizada
 
@@ -104,7 +104,7 @@ En este paso, ejecute un script SQL para consultar las sesiones activas actuales
 
 7. Guarde el archivo de *Configuración de usuario* y abra el panel de base de datos *TutorialDB* para ver el widget de sesiones activas:
 
-   ![Información de activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![Panel de información de sesiones activas](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>Adición de detalles a información personalizada
 
@@ -159,7 +159,7 @@ En este paso, ejecute un script SQL para consultar las sesiones activas actuales
 
 7. Guarde el archivo de *Configuración de usuario* y abra el panel de base de datos *TutorialDB*. Haga clic en el botón de puntos suspensivos (...) situado junto a *My-Widget* para mostrar los detalles:
 
-    ![Información de activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![Detalles de la información de sesiones activas](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
 En este tutorial, ha aprendido a:

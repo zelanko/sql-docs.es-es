@@ -35,10 +35,10 @@
       href: ../machine-learning/install/sql-ml-component-commandline-install.md
     - name: Instalación de modelos previamente entrenados
       href: ../machine-learning/install/sql-pretrained-models-install.md
+    - name: Cambio del tiempo de ejecución predeterminado de Python y R
+      href: ../machine-learning/install/change-default-language-runtime-version.md
     - name: Actualización de Python y R
       href: ../machine-learning/install/upgrade-r-and-python.md
-    - name: Cambio de la versión de idioma predeterminado
-      href: ../machine-learning/install/change-default-language-runtime-version.md
     - name: Azure Data Studio Notebooks
       href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
     - name: Configuración de un cliente de Python

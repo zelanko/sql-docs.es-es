@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395060"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424435"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "87395060"
   Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol secundario de las réplicas de disponibilidad suelen ser intercambiables en un proceso denominado *conmutación por error*. Hay tres formas de conmutación por error: conmutación por error automática (sin pérdida de datos), conmutación por error manual planeada (sin pérdida de datos) y conmutación por error manual forzada (con posible pérdida de datos), normalmente denominada *conmutación por error forzada*. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos. Un grupo de disponibilidad realiza la conmutación por error en el nivel de la réplica de disponibilidad. Es decir, un grupo de disponibilidad conmuta por error a una de sus réplicas secundarias (el *destino de conmutación por error*actual).  
   
 > [!NOTE]  
->  Los problemas que se producen en el nivel de la base de datos, como, por ejemplo, en el caso de que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos, la eliminación de una base de datos o los daños de un registro de transacciones, no producen la conmutación por error del grupo de disponibilidad.  
+>   A menos que la [Detección del estado del nivel de la base de datos](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) esté configurada, los problemas que se producen en el nivel de la base de datos, como, por ejemplo, que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos, la eliminación de una base de datos o los daños de un registro de transacciones, no producen la conmutación por error del grupo de disponibilidad.  
   
  Durante la conmutación por error, el destino de la conmutación por error asume el rol principal, recupera las bases de datos y las pone en línea como las nuevas bases de datos principales. La réplica principal anterior, cuando está disponible, cambia al rol secundario y sus bases de datos se convierten en bases de datos secundarias. Estos roles podrían conmutarse repetidamente (o usar un destino de conmutación por error distinto) como respuesta a varios errores o con fines administrativos.  
   

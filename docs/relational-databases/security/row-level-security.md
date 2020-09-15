@@ -2,7 +2,7 @@
 title: Seguridad de nivel de fila | Microsoft Docs
 description: Obtenga información sobre cómo la característica Seguridad de nivel de fila utiliza la pertenencia a un grupo o el contexto de ejecución para controlar el acceso a las filas de una tabla de base de datos en SQL Server.
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 88f809409337557603120cc87a24874319a96c9a
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000534"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392193"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
 
@@ -256,7 +256,6 @@ GRANT SELECT ON security.fn_securitypredicate TO Sales1;
 GRANT SELECT ON security.fn_securitypredicate TO Sales2;  
 ```
 
-
 Pruebe ahora el predicado de filtrado seleccionando de la tabla Ventas como cada usuario.
 
 ```sql
@@ -272,6 +271,7 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
+
 El administrador debe ver las seis filas. Los usuarios Sales1 y Sales2 solo deben ver sus propias ventas.
 
 Modifique la directiva de seguridad para deshabilitar la directiva.
@@ -298,18 +298,26 @@ DROP SCHEMA Security;
 
 ### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> B. Escenarios para el uso de Seguridad de nivel de fila en una tabla externa de Azure Synapse
 
-Este breve ejemplo crea tres usuarios y una tabla externa con seis filas. Después, crea una función con valores de tabla insertados y una directiva de seguridad para la tabla externa. El ejemplo muestra cómo seleccionar instrucciones filtradas para los distintos usuarios.
+Este breve ejemplo crea tres usuarios y una tabla externa con seis filas. Después, crea una función con valores de tabla insertados y una directiva de seguridad para la tabla externa. El ejemplo muestra cómo seleccionar instrucciones filtradas para los distintos usuarios. 
 
-Cree tres cuentas de usuario que mostrarán las distintas capacidades de acceso.
+### <a name="prerequisites"></a>Prerrequisitos
+
+1. Debe tener un grupo de SQL. Vea [Creación de un grupo de Synapse SQL](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. El servidor que hospeda el grupo de SQL debe estar registrado con AAD y debe tener una cuenta de almacenamiento de Azure con permisos de colaborador de blog de Storage. Siga [estos](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) pasos.
+1. Cree un sistema de archivos para la cuenta de Azure Storage. Use el Explorador de Storage para ver la cuenta de almacenamiento. Haga clic con el botón derecho en los contenedores y seleccione *Crear sistema de archivos*.  
+
+Después de implementar los requisitos previos, cree tres cuentas de usuario que mostrarán las distintas funciones de acceso.
 
 ```sql
-CREATE LOGIN Manager WITH PASSWORD = 'somepassword'
+--run in master
+CREATE LOGIN Manager WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales1 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales1 WITH PASSWORD = '<user_password>'
 GO
-CREATE LOGIN Sales2 WITH PASSWORD = 'somepassword'
+CREATE LOGIN Sales2 WITH PASSWORD = '<user_password>'
 GO
 
+--run in master and your SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;
@@ -330,12 +338,12 @@ CREATE TABLE Sales
 Rellene la tabla con seis filas de datos que muestren tres pedidos para cada representante de ventas.  
 
 ```sql
-INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
-INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
-INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
-INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
-INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
-INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
+INSERT INTO Sales VALUES (1, 'Sales1', 'Valve', 5);
+INSERT INTO Sales VALUES (2, 'Sales1', 'Wheel', 2);
+INSERT INTO Sales VALUES (3, 'Sales1', 'Valve', 4);
+INSERT INTO Sales VALUES (4, 'Sales2', 'Bracket', 2);
+INSERT INTO Sales VALUES (5, 'Sales2', 'Wheel', 5);
+INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 -- View the 6 rows in the table  
 SELECT * FROM Sales;
 ```
@@ -343,15 +351,15 @@ SELECT * FROM Sales;
 Cree una tabla externa de Azure Synapse a partir de la tabla Sales creada.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
 
 CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
 
-CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<file_system_name@storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
 
 CREATE EXTERNAL FILE FORMAT MSIFormat  WITH (FORMAT_TYPE=DELIMITEDTEXT);
   
-CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='RLSExtTabletest.tbl', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
+CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
 AS SELECT * FROM sales;
 ```
 
@@ -363,7 +371,21 @@ GRANT SELECT ON Sales_ext TO Sales2;
 GRANT SELECT ON Sales_ext TO Manager;
 ```
 
-Cree una directiva de seguridad en una tabla externa mediante la función de la sesión A como predicado de filtro. El estado se debe configurar en ON para habilitar la directiva.
+Cree un esquema y una función con valores de tabla insertada; es posible que lo haya completado en el ejemplo A. La función devuelve 1 cuando una fila de la columna SalesRep es la misma que el usuario que ejecuta la consulta (`@SalesRep = USER_NAME()`) o si el usuario que ejecuta la consulta es el usuario administrador (`USER_NAME() = 'Manager'`).
+
+```sql
+CREATE SCHEMA Security;  
+GO  
+  
+CREATE FUNCTION Security.fn_securitypredicate(@SalesRep AS sysname)  
+    RETURNS TABLE  
+WITH SCHEMABINDING  
+AS  
+    RETURN SELECT 1 AS fn_securitypredicate_result
+WHERE @SalesRep = USER_NAME() OR USER_NAME() = 'Manager';  
+```
+
+Cree una directiva de seguridad en una tabla externa mediante la función con valores de tabla insertada como predicado de filtro. El estado se debe configurar en ON para habilitar la directiva.
 
 ```sql
 CREATE SECURITY POLICY SalesFilter_ext

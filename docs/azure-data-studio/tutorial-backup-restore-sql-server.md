@@ -6,17 +6,17 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a7d3ca36634e449dd26dfdb0df75f09608d25f51
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765804"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283696"
 ---
-# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Copia de seguridad y restauración de bases de datos con Azure Data Studio
+# <a name="tutorial-backup-and-restore-databases-using-azure-data-studio"></a>Tutorial: Copia de seguridad y restauración de bases de datos con Azure Data Studio
 
 En este tutorial, obtendrá información sobre cómo usar Azure Data Studio para:
 > [!div class="checklist"]
@@ -36,16 +36,16 @@ Para este tutorial, es necesario conectarse a una base de datos de SQL Server. A
 
 ## <a name="back-up-a-database"></a>Realizar una copia de seguridad de una base de datos
 
-1. Abra el panel de la base de datos TutorialDB (abra la barra lateral **SERVIDORES** [**CTRL+G**], expanda **Bases de datos**, haga clic con el botón derecho en **TutorialDB** y seleccione **Administrar**).
+1. Abra el panel de la base de datos TutorialDB (abra la barra lateral **SERVIDORES** (**CTRL+G**), expanda **Bases de datos**, haga clic con el botón derecho en **TutorialDB** y seleccione **Administrar**).
 
-2. Abra el cuadro de diálogo **Copia de seguridad de la base de datos** (haga clic en **Copia de seguridad** en el widget **Tareas**).
+2. Abra el cuadro de diálogo **Copia de seguridad de la base de datos** (seleccione **Copia de seguridad** en el widget **Tareas**).
 
    ![Widget Tareas](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. Como en este tutorial se usan las opciones de copia de seguridad predeterminadas, haga clic en **Copia de seguridad**.
+3. En este tutorial se usan las opciones de copia de seguridad predeterminadas, por lo que debe seleccionar **Copia de seguridad**.
    ![cuadro de diálogo Copia de seguridad](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-Después de hacer clic en **Copia de seguridad**, desaparecerá el cuadro de diálogo **Copia de seguridad de la base de datos** y se iniciará proceso de copia de seguridad.
+Después de seleccionar **Copia de seguridad**, desaparecerá el cuadro de diálogo **Copia de seguridad de la base de datos** y se iniciará el proceso de copia de seguridad.
 
 ## <a name="view-the-backup-status-and-view-the-backup-script"></a>Ver el estado de la copia de seguridad y ver el script de copia de seguridad
 
@@ -61,18 +61,18 @@ Después de hacer clic en **Copia de seguridad**, desaparecerá el cuadro de di�
 
 1. Abra la barra lateral **SERVIDORES** (**CTRL+G**), haga clic con el botón derecho en el servidor y, después, seleccione **Administrar**.
 
-2. Abra el cuadro de diálogo **Restaurar base de datos** (haga clic en **Restaurar** en el widget **Tareas**).
+2. Abra el cuadro de diálogo **Restaurar base de datos** (seleccione **Restaurar** en el widget **Tareas**).
 
-   ![Tarea Restaurar](media/tutorial-backup-restore-sql-server/tasks-restore.png)
+   ![Restauración de tareas](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
 3. Seleccione **Archivo de copia de seguridad** en el campo **Restaurar desde**.
 
-4. Haga clic en el signo de puntos suspensivos (…) en el campo **Ruta de acceso del archivo de copia de seguridad** y seleccione el archivo de copia de seguridad más reciente de *TutorialDB*.
+4. Seleccione los puntos suspensivos (…) del campo **Ruta de acceso del archivo de copia de seguridad** y seleccione el archivo de copia de seguridad más reciente de *TutorialDB*.
 
 5. Escriba **TutorialDB_Restored** en el campo **Base de datos de destino** de la sección **Destino** para restaurar el archivo de copia de seguridad en una nueva base de datos. Después, seleccione **Restaurar**.
 
-   ![Restauración](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![Restauración de la copia de seguridad](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. Para ver el estado de la operación de restauración, presione **CTRL+T** para abrir el **Historial de tareas**.
 
-   ![Restauración](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![Restauración del historial de tareas](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

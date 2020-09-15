@@ -18,19 +18,29 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915851"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511317"
 ---
 # <a name="joins-sql-server"></a>Combinaciones (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza operaciones de ordenación, intersección, unión y diferencia mediante una tecnología de ordenación en memoria y combinación hash. Con este tipo de plan de consulta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acepta la partición vertical de tablas, a veces llamada almacenamiento en columnas.   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza operaciones de ordenación, intersección, unión y diferencia mediante una tecnología de ordenación en memoria y combinación hash. Con este tipo de plan de consulta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acepta la creación de particiones de tablas verticales.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea cuatro tipos de operaciones de combinación:    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa operaciones de combinación lógicas, según lo determinado por la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)]:
+-   Combinación interna
+-   Combinación externa izquierda
+-   Combinación externa derecha
+-   Combinación externa completa
+-   Combinación cruzada
+
+> [!NOTE]
+> Para obtener más información sobre la sintaxis de combinación, vea [Cláusula FROM más JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa cuatro tipos de operaciones de combinación físicas para realizar las operaciones de combinación lógica:    
 -   Combinaciones de bucles anidados     
 -   Combinaciones de mezcla   
 -   Combinaciones hash   
@@ -41,50 +51,57 @@ Las combinaciones permiten recuperar datos de dos o más tablas según las relac
 
 Una condición de combinación define la forma en la que dos tablas se relacionan en una consulta al:    
 -   Especificar la columna de cada tabla que debe usarse para la combinación. Una condición de combinación típica especifica una clave externa de una tabla y su clave asociada en otra tabla.    
--   Especificar un operador lógico (por ejemplo, = o <>,) para usarlo en los valores de comparación de las columnas.    
+-   Especificar un operador lógico (por ejemplo, = o <>,) para usarlo en los valores de comparación de las columnas.   
 
-Las combinaciones internas se pueden especificar en las cláusulas `FROM` o `WHERE`. Las combinaciones externas solo se pueden especificar en la cláusula `FROM`. Las condiciones de combinación se combinan con las condiciones de búsqueda de `WHERE` y `HAVING` para controlar cuáles son las filas seleccionadas de las tablas base a las que se hace referencia en la cláusula `FROM`.    
+Las combinaciones se expresan de forma lógica mediante la siguiente sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)]:
+-   INNER JOIN
+-   LEFT [ OUTER ] JOIN
+-   RIGHT [ OUTER ] JOIN
+-   FULL [ OUTER ] JOIN
+-   CROSS JOIN
 
-Especificar las condiciones de la combinación en la cláusula `FROM` ayuda a separarlas de cualquier otra condición de búsqueda que se pueda especificar en una cláusula `WHERE`; es el método recomendado para especificar combinaciones. La sintaxis simplificada de la combinación de la cláusula FROM de ISO es:
+Las **combinaciones internas** se pueden especificar en las cláusulas `FROM` o `WHERE`. Las **combinaciones externas** y las **combinaciones cruzadas** solo se pueden especificar en la cláusula `FROM`. Las condiciones de combinación se combinan con las condiciones de búsqueda de `WHERE` y `HAVING` para controlar cuáles son las filas seleccionadas de las tablas base a las que se hace referencia en la cláusula `FROM`.    
+
+Especificar las condiciones de la combinación en la cláusula `FROM` ayuda a separarlas de cualquier otra condición de búsqueda que se pueda especificar en una cláusula `WHERE`; es el método recomendado para especificar combinaciones. La sintaxis simplificada de combinación de la cláusula `FROM` de ISO es:
 
 ```
-FROM first_table join_type second_table [ON (join_condition)]
+FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-*join_type* especifica qué tipo de combinación se lleva a cabo: interior, exterior o cruzada. *join_condition* define el predicado que se va a evaluar para cada par de filas combinadas. A continuación se muestra un ejemplo de la especificación de una combinación en la cláusula FROM:
+*join_type* especifica qué tipo de combinación se lleva a cabo: interior, exterior o cruzada. *join_condition* define el predicado que se va a evaluar para cada par de filas combinadas. El siguiente es un ejemplo de la especificación de una combinación en la cláusula `FROM`:
 
 ```sql
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
-     ON (ProductVendor.BusinessEntityID = Vendor.BusinessEntityID)
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
+     ON ( ProductVendor.BusinessEntityID = Vendor.BusinessEntityID )
 ```
 
-A continuación se incluye un ejemplo de una instrucción SELECT sencilla con esta combinación:
+El siguiente es un ejemplo de una instrucción `SELECT` sencilla con esta combinación:
 
 ```sql
 SELECT ProductID, Purchasing.Vendor.BusinessEntityID, Name
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
     ON (Purchasing.ProductVendor.BusinessEntityID = Purchasing.Vendor.BusinessEntityID)
 WHERE StandardPrice > $10
   AND Name LIKE N'F%'
 GO
 ```
 
-La selección devuelve la información de los productos y proveedores de cualquier combinación de partes suministrada por una empresa cuyo nombre empieza por la letra F y el precio del producto es superior a 10 $.   
+La instrucción `SELECT` devuelve la información de los productos y proveedores de cualquier combinación de partes suministrada por una empresa cuyo nombre empieza por la letra F y el precio del producto es superior a 10 USD.   
 
-Cuando en una consulta simple se hace referencia a varias tablas, ninguna de las referencias a las columnas debe ser ambigua. En el ejemplo anterior, las tablas ProductVendor y Vendor tienen una columna denominada BusinessEntityID. Cualquier nombre de columna que esté duplicado en varias tablas a las que se hace referencia en la consulta debe ser calificado con el nombre de la tabla. Todas las referencias a las columnas de Vendor del ejemplo están calificadas.   
+Cuando en una consulta simple se hace referencia a varias tablas, ninguna de las referencias a las columnas debe ser ambigua. En el ejemplo anterior, las tablas `ProductVendor` y `Vendor` incluyen una columna denominada `BusinessEntityID`. Cualquier nombre de columna que esté duplicado en varias tablas a las que se hace referencia en la consulta debe ser calificado con el nombre de la tabla. Todas las referencias a las columnas `Vendor` del ejemplo están calificadas.   
 
-Cuando el nombre de una columna no está duplicado en varias de las tablas usadas en la consulta, las referencias al mismo no tienen que calificarse con el nombre de la tabla. Esto se muestra en el ejemplo anterior. Algunas veces, resulta difícil entender una instrucción SELECT porque no hay nada que indique la tabla que ha suministrado cada columna. La legibilidad de la consulta puede mejorarse si todas las columnas se califican con sus nombres de tabla. Incluso puede mejorarse más si se usan alias de tablas, especialmente cuando los propios nombres de las tablas se deben calificar con los nombres de las bases de datos y de los propietarios. A continuación se incluye el mismo ejemplo, con la salvedad de que se han asignado alias de tablas y las columnas se han calificado con dichos alias para facilitar su lectura:
+Cuando el nombre de una columna no está duplicado en varias de las tablas usadas en la consulta, las referencias al mismo no tienen que calificarse con el nombre de la tabla. Esto se muestra en el ejemplo anterior. En ocasiones resulta difícil entender una cláusula `SELECT` de este tipo, porque no hay nada que indique la tabla que ha suministrado cada columna. La legibilidad de la consulta puede mejorarse si todas las columnas se califican con sus nombres de tabla. Incluso puede mejorarse más si se usan alias de tablas, especialmente cuando los propios nombres de las tablas se deben calificar con los nombres de las bases de datos y de los propietarios. A continuación se incluye el mismo ejemplo, con la salvedad de que se han asignado alias de tablas y las columnas se han calificado con dichos alias para facilitar su lectura:
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
 FROM Purchasing.ProductVendor AS pv 
-JOIN Purchasing.Vendor AS v
+INNER JOIN Purchasing.Vendor AS v
     ON (pv.BusinessEntityID = v.BusinessEntityID)
 WHERE StandardPrice > $10
     AND Name LIKE N'F%';
 ```
 
-Los ejemplos anteriores han especificado las condiciones de combinación en la cláusula FROM, lo que constituye el método recomendado. La siguiente consulta contiene la misma condición de combinación especificada en la cláusula WHERE:
+Los ejemplos anteriores han especificado las condiciones de combinación en la cláusula `FROM`, el método recomendado. La consulta siguiente contiene la misma condición de combinación especificada en la cláusula `WHERE`:
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
@@ -94,13 +111,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-La lista de selección de una combinación puede hacer referencia a todas las columnas de las tablas combinadas o a cualquier subconjunto de las columnas. No es necesario que la lista de selección contenga columnas de cada tabla de la combinación. Por ejemplo, en una combinación de tres tablas, solo se puede usar una tabla para pasar de una de las dos tablas a la tercera y no es necesario que se haga referencia a ninguna columna de la tabla intermedia en la lista de selección.   
+La lista `SELECT` de una combinación puede hacer referencia a todas las columnas de las tablas combinadas, o bien a cualquier subconjunto de las columnas. No es necesario que la lista `SELECT` contenga columnas de todas las tablas de la combinación. Por ejemplo, en una combinación de tres tablas, solo se puede usar una tabla para pasar de una de las dos tablas a la tercera y no es necesario que se haga referencia a ninguna columna de la tabla intermedia en la lista de selección. Esto también se denomina **anti semicombinación**.  
 
 Aunque las condiciones de combinación suelen tener comparaciones de igualdad (=), también se pueden especificar otros operadores relacionales o de comparación, así como otros predicados. Para obtener más información, vea [Operadores de comparación &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) y [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
 
-Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa combinaciones, el motor de consultas elige el método más eficaz entre varias posibilidades para procesar la combinación. La ejecución física de varias combinaciones puede utilizar muchas optimizaciones diferentes y, por consiguiente. no se puede predecir de forma confiable.   
+Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa combinaciones, el optimizador de consultas elige el método más eficaz (entre varias posibilidades) para procesar la combinación. Esto incluye elegir el tipo de combinación física más eficaz, el orden en el que se combinarán las tablas e, incluso, usar tipos de operaciones de combinación lógica que no se pueden expresar directamente con la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)], como **semicombinaciones** y **anti semicombinaciones**. La ejecución física de varias combinaciones puede utilizar muchas optimizaciones diferentes y, por consiguiente. no se puede predecir de forma confiable. Para obtener más información sobre las semicombinaciones y las anti semicombinaciones, vea [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
 
-No es necesario que las columnas utilizadas en una condición de combinación tengan el mismo nombre o sean del mismo tipo de datos. Sin embargo, si los tipos de datos no son idénticos, deben ser compatibles o bien deben ser tipos que SQL Server pueda convertir implícitamente. Si los tipos de datos no se pueden convertir implícitamente, la condición de combinación debe convertir explícitamente el tipo de datos mediante la función `CAST`. Para obtener más información sobre la conversión de datos, vea [Conversión de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
+No es necesario que las columnas utilizadas en una condición de combinación tengan el mismo nombre o sean del mismo tipo de datos. Pero si los tipos de datos no son idénticos, deben ser compatibles, o bien deben ser tipos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueda convertir de forma implícita. Si los tipos de datos no se pueden convertir implícitamente, la condición de combinación debe convertir explícitamente el tipo de datos mediante la función `CAST`. Para obtener más información sobre la conversión de datos, vea [Conversión de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
 
 La mayor parte de las consultas que usan una combinación se pueden volver a escribir con una subconsulta (una consulta anidada dentro de otra consulta). La mayor parte de las subconsultas se pueden volver a escribir como combinaciones. Para obtener más información sobre las subconsultas, vea [Subqueries](../../relational-databases/performance/subqueries.md) (Subconsultas).   
 
@@ -356,3 +373,4 @@ Los resultados no facilitan la distinción de NULL en los datos de NULL que repr
 [Conversión de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subqueries](../../relational-databases/performance/subqueries.md)     (Subconsultas)  
 [Combinaciones adaptables](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[Cláusula FROM más JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)

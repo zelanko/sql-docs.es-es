@@ -1,4 +1,5 @@
 ---
+description: Método valueOf (java.sql.Timestamp, java.util.Calendar)
 title: Método valueOf (java.sql.Timestamp, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 41234033feda27a48aa9f2c8d3cf573926db8c50
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6046069a5e2e93cf2d14d0ec999670054348765a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396121"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>Método valueOf (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,6 +47,6 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
 ## <a name="see-also"></a>Consulte también  
  [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   
- [Miembros DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
+ [Miembros de DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   

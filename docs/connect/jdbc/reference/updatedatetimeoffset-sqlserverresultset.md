@@ -1,4 +1,5 @@
 ---
+description: updateDateTimeOffset (SQLServerResultSet)
 title: updateDateTimeOffset (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,23 +11,23 @@ ms.topic: conceptual
 ms.assetid: 40d7fced-cce1-4534-b794-71bc735e53e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5941023335fcdf807457dddf5df38d38c7e34ee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: df865957174d87b0dfb19fceebf38976187a0010
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353761"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Este método se agregó en [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
+  Este método se agregó en [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  Actualiza el valor de la columna especificada a un valor [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |[updateDateTimeOffset(int, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|Actualiza el valor de la columna especificada al valor de la [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md), según un ordinal de columna basado en cero.|  
 |[updateDateTimeOffset(string, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|Actualiza el valor de la columna especificada al valor de la [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) según un nombre de columna.|  

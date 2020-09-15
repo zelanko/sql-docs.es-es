@@ -1,4 +1,5 @@
 ---
+description: updateDateTimeOffset(int, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
 title: updateDateTimeOffset(int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 21ec0054-c808-4e88-9c8d-c71b696ce658
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: debdb8bb5ddbe6c9c1646632a3f863d1c81c37d5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1b8a6c4902dd4059a461b4d2947c789a393a0a4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353841"
 ---
 # <a name="updatedatetimeoffsetint-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(int, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Este método se agregó en [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
+  Este método se agregó en [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  Actualiza el valor de la columna especificada al valor de la [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md), según un ordinal de columna basado en cero.  
   
@@ -38,7 +39,7 @@ public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x)
   
  *x*  
   
- Un objeto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).  
+ Un objeto [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

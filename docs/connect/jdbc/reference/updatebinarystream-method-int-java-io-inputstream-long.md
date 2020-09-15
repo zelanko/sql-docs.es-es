@@ -1,4 +1,5 @@
 ---
+description: Método updateBinaryStream (int, java.io.InputStream, long)
 title: Método updateBinaryStream (int, java.io.InputStream, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f84cfbe6-ebab-4357-8770-f1db34ecb04f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d72ab6b28dd1622c628619fbf6ef773742245dc3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e6e7ffce80688ad82930629f09055457854c467e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354271"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream-long"></a>Método updateBinaryStream (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ public void updateBinaryStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Observaciones  
- El método updateBinaryStream especifica este método updateBinaryStream en la interfaz java.sql.ResultSet.  
+ Este método updateBinaryStream se especifica mediante el método updateBinaryStream de la interfaz java.sql.ResultSet.  
   
  Este método pasa bytes desde un objeto InputStream a las columnas binarias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seleccionadas, como binary, varbinary, varbinary(max), image, xml y udt. Este método no admite la actualización de columnas de caracteres. Para actualizar las columnas de caracteres con un elemento InputStream, use el método [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   

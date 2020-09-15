@@ -1,18 +1,19 @@
 ---
+description: Sistema de control de versiones para la documentación de SQL
 title: Sistema de control de versiones para la documentación de SQL
-ms.date: 07/22/2020
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373171"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Sistema de control de versiones para la documentación de SQL
 
@@ -111,7 +112,7 @@ En el siguiente escenario poco habitual se explica lo que sucede si se hace clic
 
 El siguiente artículo se ha agregado como novedad para SQL Server 2017. En el artículo se describen las características que se han agregado a la versión 2017 de SQL Server. La mayoría o todas esas características nuevas también forman parte de la versión 2019. Estos son los atributos del artículo.
 
-| Atributo | Value |
+| Atributo | Valor |
 | :-------- | :---- |
 | Título | Novedades de SQL Server 2017 |
 | Intervalo de moniker | `>= sql-server-2017 || = sqlallproducts-allversions` |
@@ -164,7 +165,7 @@ El sistema de control de versiones está totalmente implementado para SQL Server
     - [Documentación de SQL Server 2014 sin conexión](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 y versiones posteriores:_ &nbsp; el sistema de control de versiones está totalmente implementado para SQL Server 2016 y versiones posteriores.
-    - [Bienvenido a la documentación de SQL Server 2016 y versiones posteriores](/sql/sql-server/?view=sql-server-2016)
+    - [Bienvenido a la documentación de SQL Server 2016 y versiones posteriores](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
     - [Documentación de SQL Server 2016 sin conexión](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>Consulte también

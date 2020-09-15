@@ -1,4 +1,5 @@
 ---
+description: Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
 title: Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed7a08a8f109da6151ffba2efed9df4263f2db5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373371"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
   En este tema se proporciona una referencia de los permisos de SharePoint que se pueden usar para conceder acceso a las operaciones del servidor de informes para un servidor de informes que se ejecuta en el modo integrado de SharePoint. Si va a crear niveles de permisos personalizados, este tema puede ayudarle a elegir qué permisos usar.  
@@ -27,18 +28,25 @@ ms.locfileid: "65570684"
   
  Cada tabla comienza por una lista de los permisos de SharePoint y una descripción. La tabla incluye tres columnas que indican cómo se usa un permiso en niveles de permiso predefinidos. Entre los niveles de permisos predefinidos se incluyen los siguientes:  
   
-|Nivel del permiso|Abreviatura|  
+|Nivel de permiso|Abreviatura|  
 |----------------------|------------------|  
 |Control total|**F**|  
-|Contribuciones|**C**|  
+|Contribuir|**C**|  
 |Visitante|**V**|  
   
  Los permisos que no afectan a un servidor de informes no se muestran en esta referencia. Todos los permisos de personalización se excluyen de este artículo de referencia. Aunque puede incluir elementos del servidor de informes en un sitio web personalizado, el servidor de informes no controla directamente las operaciones o solicitudes de personalización.  
-  
-||  
-|-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013.|  
-  
+
+[!INCLUDE[applies](../../includes/applies-md.md)]
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint  
+    :::column-end:::
+    :::column:::
+        SharePoint 2010 y SharePoint 2013  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="list-permissions"></a>Permisos de lista  
  Los permisos que se establecen en la biblioteca que contiene los elementos del servidor de informes determinan la forma en que los usuarios obtienen acceso a dichos elementos.  
   

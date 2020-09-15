@@ -1,4 +1,5 @@
 ---
+description: Proteger los elementos de un conjunto de datos compartido
 title: Proteger los elementos de un conjunto de datos compartido | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80cfeba2128e82c6254ba962e91c6c51461ff955
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373221"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger los elementos de un conjunto de datos compartido
   En un servidor de informes, los elementos de un conjunto de datos compartido se pueden usar en varios informes. Puede proteger los conjuntos de datos compartidos para controlar el grado de acceso que los usuarios tienen. De forma predeterminada, solo los usuarios que son miembros del grupo integrado **Administradores** pueden ver los conjuntos de datos compartidos, modificar las propiedades, habilitar el almacenamiento en caché, crear planes de actualización de caché y eliminar elementos. Para todos los demás usuarios se deben crear asignaciones de roles que permitan el acceso a un conjunto de datos compartido.  
@@ -40,7 +41,7 @@ ms.locfileid: "65570680"
 |Seleccione esta tarea|Para conceder a los usuarios permiso para|Roles predeterminados que incluyen la tarea|  
 |----------------------|---------------------------------|-----------------------------------------|  
 |Ver informes|Ver el elemento del conjunto de datos compartido en la jerarquía de carpetas. Sin esta tarea, el elemento no está visible para los usuarios y podrían no saber que el conjunto de datos está disponible.|Browser<br /><br /> Administrador de contenido<br /><br /> Generador de informes<br /><br /> Mis informes|  
-|Administrar informes|Ver propiedades que especifican el nombre, la descripción y la información de conexión. Esta tarea también se utiliza para mostrar un elemento de conjunto de datos compartido en la jerarquía de carpetas. Si elige esta tarea, puede omitir la tarea "Ver informes".|Administrador de contenido<br /><br /> Publicador<br /><br /> Mis informes|  
+|Administrar informes|Ver propiedades que especifican el nombre, la descripción y la información de conexión. Esta tarea también se utiliza para mostrar un elemento de conjunto de datos compartido en la jerarquía de carpetas. Si elige esta tarea, puede omitir la tarea "Ver informes".|Administrador de contenido<br /><br /> Publisher<br /><br /> Mis informes|  
 |Usar informes|Ver la definición del conjunto de datos compartido.|Administrador de contenido<br /><br /> Generador de informes|  
 |Establecer la seguridad de elementos individuales|Crear y modificar asignaciones de roles que controlen el acceso al conjunto de datos compartido. Esta tarea debe utilizarse con las tareas "Ver informes" o "Administrar informes". De lo contrario, no surte efecto porque el usuario no puede seleccionar el elemento.|Administrador de contenido|  
   

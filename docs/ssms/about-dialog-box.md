@@ -1,4 +1,5 @@
 ---
+description: cuadro de diálogo Acerca de
 title: cuadro de diálogo Acerca de
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,17 +14,17 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 24fb3fcc579b30d0eb3964405867add08c05ba69
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 994838ff8296e79d673b4f3bfcb0d062830a5b8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372951"
 ---
 # <a name="about-dialog-box"></a>cuadro de diálogo Acerca de
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
-El cuadro de diálogo **Acerca de** proporciona información sobre el producto y permite obtener acceso a información acerca del equipo en el que se ejecuta dicho producto. En las copias de evaluación, la entrada [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] indica el número de días que restan hasta la expiración de la instalación. Este cuadro de diálogo está disponible en el menú **Ayuda** .  
+ En el cuadro de diálogo **Acerca de** se proporciona información sobre el producto y permite obtener acceso a información sobre el equipo en el que se ejecuta ese producto. En las copias de evaluación, la entrada [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] indica el número de días que restan hasta la expiración de la instalación. Este cuadro de diálogo está disponible en el menú **Ayuda** .   
   
 ## <a name="options"></a>Opciones  
 **Nombre de componente**  

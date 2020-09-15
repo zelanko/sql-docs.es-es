@@ -1,4 +1,5 @@
 ---
+description: Conectar al servidor (página Propiedades de conexión del motor de base de datos)
 title: Conectar al servidor (página Propiedades de conexión del motor de base de datos)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370851"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar al servidor (página Propiedades de conexión del motor de base de datos)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use esta pestaña para ver o especificar opciones cuando se conecte a una instancia de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] o cuando registre [!INCLUDE[ssDE](../../includes/ssde_md.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectarse a una instancia del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-**Conectar con base de datos**  
+**Conexión a la base de datos**  
 Seleccione en la lista una base de datos a la que conectarse. Si selecciona **<default>** , se conectará a la base de datos predeterminada del servidor. Si selecciona **<Browse server>** , podrá buscar el servidor de la base de datos a la que se conecta.  
   
 Al conectarse a una instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de la base de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], es preciso que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y especifique una base de datos en el cuadro de diálogo **Conectar al servidor** en la pestaña **Propiedades de conexión** . Asegúrese de que activa la casilla **Cifrar conexión** .  
@@ -68,12 +69,12 @@ Intenta establecer una conexión utilizando los valores de la lista.
 **Opciones**  
 Haga clic aquí para modificar el cuadro de diálogo y ocultar las opciones adicionales de conexión al servidor, como recordar la contraseña.  
   
-**Test**  
+**Prueba**  
 Al registrar [!INCLUDE[ssDE](../../includes/ssde_md.md)] en **Servidores registrados**, haga clic para probar la conexión.  
   
 **Guardar**  
 Guarda la configuración en **Servidores registrados**.  
   
 ## <a name="see-also"></a>Consulte también  
-[Cuadro de diálogo Propiedades de conexión](../../ssms/f1-help/connection-properties-dialog-box.md)  
+[Propiedades de conexión, cuadro de diálogo](../../ssms/f1-help/connection-properties-dialog-box.md)  
   

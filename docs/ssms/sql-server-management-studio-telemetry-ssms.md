@@ -1,4 +1,5 @@
 ---
+description: Auditoría local para la recopilación de datos de uso y diagnóstico de SSMS
 title: Datos de uso y diagnóstico
 ms.custom: seo-lt-2019
 ms.date: 04/16/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e9ecc82ab14bf73ab52219301ca5843673b3ba4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c26ab977839927751903eead0533256ab91fde2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370141"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SSMS
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ Para ver los datos de uso de características recopilados mediante SSMS, realice
 
 1.  Inicie SSMS.
 2.  Haga clic en **Ver** y en **Salida** en el menú principal para mostrar la ventana **Salida**. 
-3.  Cuando aparezca la ventana **Salida**, seleccione **Telemetría** en el menú **Mostrar salida de:** .
+3.  Cuando aparezca la ventana **Salida**, seleccione **Telemetría** en el menú **Mostrar salida de:**.
 
 Mientras use SSMS para interactuar con las bases de datos, la ventana **Salida** mostrará los datos que se recopilen.
 

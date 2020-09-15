@@ -1,4 +1,5 @@
 ---
+description: Panel de detalles del Explorador de objetos
 title: Panel de detalles del Explorador de objetos
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370791"
 ---
 # <a name="object-explorer-details-pane"></a>Panel de detalles del Explorador de objetos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ Detalles del Explorador de objetos se puede utilizar para navegar por las carpet
   
 Detalles del explorador de objetos incluye una barra de herramientas que contiene los iconos descritos en la siguiente tabla. Los iconos solo están disponibles cuando proceda.  
   
-|Icono|Acción|  
+|Iconos|Acción|  
 |--------|----------|  
 |**Atrás**|Se desplaza a los elementos anteriores mostrados en Detalles del Explorador de objetos. Vuelve a ejecutar una búsqueda cuando la presentación previa es el resultado de una operación de búsqueda.|  
 |**Adelante**|Se desplaza a la siguiente pantalla después de seleccionar una operación **Atrás** .|  
@@ -55,7 +56,7 @@ Las columnas de Detalles del Explorador de objetos se pueden seleccionar. Puede 
 > [!CAUTION]  
 > Si se muestran todas las columnas de algunos tipos de objetos, como las bases de datos, se puede reducir ligeramente la velocidad de representación de conjuntos de objetos grandes.  
   
-### <a name="sorting"></a>Ordenación  
+### <a name="sorting"></a>Ordenar  
 Al hacer clic una vez en el encabezado de una columna, se ordenará por esa columna. Si vuelve a hacer clic en la misma columna, se clasifica en orden inverso por esa columna. Las selecciones de ordenación se mantienen para cada usuario en los objetos y las carpetas, así como al reiniciar [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 ### <a name="filtering"></a>Filtros  

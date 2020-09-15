@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 991f9f0ddbe58e5591a89ff16bf8455d5a5cdca4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cedb8cd13db6c8d27b987c60881093caa91af50a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756474"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180468"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Optimización del rendimiento de R en SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este artículo es el primero de una serie de cuatro artículos que describen la optimización del rendimiento de R Services, en función de dos casos prácticos:
 

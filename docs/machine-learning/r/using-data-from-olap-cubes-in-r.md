@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f27866a242cb03839a67a8f68478bc786222aa64
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4ae9985ae7d203387eb268a50d97ee91849b33a8
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86968057"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180452"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Uso de datos de cubos OLAP en R
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 El paquete de **OLAP** es un paquete de R, proporcionado por Microsoft para su uso con Machine Learning Server y SQL Server, que le permite ejecutar consultas MDX para obtener datos de cubos OLAP. Con este paquete, no necesita crear servidores vinculados ni limpiar conjuntos de filas planas; se pueden obtener datos OLAP directamente de R.
 

@@ -1,4 +1,5 @@
 ---
+description: Ventanas de herramientas de SQL Server Management Studio
 title: Ventanas de herramientas de SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ec93cc023145e051115318c67c644ea98403663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417851"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Ventanas de herramientas de SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "87236970"
 |-|-|   
 |[Explorador de objetos](../ssms/object/object-explorer.md)|Examinar servidores, crear y ubicar objetos, administrar orígenes de datos y ver registros. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
 |[Explorador de soluciones](../ssms/solution/solution-explorer.md)|Almacenar y organizar scripts e información de conexión relacionada en proyectos denominados Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Es posible almacenar varios Scripts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como Soluciones y utilizar el control de código fuente para administrar los scripts a medida que evolucionan. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
-|[Explorador de plantillas](../ssms/template/template-explorer.md)|Crear consultas basadas en las plantillas existentes. También es posible crear consultas personalizadas o modificar las plantillas existentes de modo que se ajusten a su situación. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
+|[Template Explorer](../ssms/template/template-explorer.md)|Crear consultas basadas en las plantillas existentes. También es posible crear consultas personalizadas o modificar las plantillas existentes de modo que se ajusten a su situación. A esta herramienta se obtiene acceso desde el menú **Ver** .|  
 |[Ayuda dinámica](../ssms/user-assistance-in-sql-server-management-studio.md)|Mostrar una lista de temas relacionados de la Ayuda cuando se hace clic en un componente o en un tipo de código.|  
   
 Las herramientas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] funcionan conjuntamente. Por ejemplo, puede:  

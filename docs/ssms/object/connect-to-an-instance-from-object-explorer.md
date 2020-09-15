@@ -1,4 +1,5 @@
 ---
+description: Conexión a SQL Server o Azure SQL Database
 title: Conexión a SQL Server o Azure SQL Database
 ms.custom: seo-lt-2019
 ms.date: 01/28/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d489dac9355a573473063d1cafb32d42ed5fd98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2530029b43a4b01d8b6fce8b321f0c9b66a6a852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417941"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Conexión a SQL Server o Azure SQL Database
 
@@ -26,7 +27,7 @@ Para trabajar con servidores y bases de datos, primero debe conectarse al servid
   
 ## <a name="connecting-to-a-server"></a>Conectar a un servidor  
 
-1. En **Explorador de objetos**, haga clic en **Conectar > Motor de base de datos...** .
+1. En **Explorador de objetos**, haga clic en **Conectar > Motor de base de datos... **.
 
    ![conectar](../media/connect-to-server/connect-db-engine.png)
 
@@ -34,7 +35,7 @@ Para trabajar con servidores y bases de datos, primero debe conectarse al servid
 
    ![conectar con el servidor](../media/connect-to-server/connect.png)
 
-1. Si se está conectando a un servidor SQL de Azure, puede que se le pida que inicie sesión para crear una regla de firewall. Haga clic en **Iniciar sesión...** . Si no es así, vaya directamente al paso 6.
+1. Si se está conectando a un servidor SQL de Azure, puede que se le pida que inicie sesión para crear una regla de firewall. Haga clic en **Iniciar sesión... **. Si no es así, vaya directamente al paso 6.
 
    ![firewall](../media/connect-to-server/firewall-rule-sign-in.png)
 
@@ -55,7 +56,7 @@ Para trabajar con servidores y bases de datos, primero debe conectarse al servid
 ## <a name="see-also"></a>Consulte también
 
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
-[Descarga de SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+[Descarga de SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
 [Servicio de integración](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  

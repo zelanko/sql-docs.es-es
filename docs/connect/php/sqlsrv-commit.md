@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_commit
 title: sqlsrv_commit | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a219e0e9c1fd11a7a99fb941eca571fb59800a2a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0d42500c2764815ade1a2bf2292320f4b8745e88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413971"
 ---
 # <a name="sqlsrv_commit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,7 +127,7 @@ Con el fin de resaltar el comportamiento de las transacciones, en el ejemplo ant
 ## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Realización de transacciones](../../connect/php/how-to-perform-transactions.md)
+[Procedimientos: Realización de transacciones](../../connect/php/how-to-perform-transactions.md)
 
 [Información general de los controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
   

@@ -1,4 +1,5 @@
 ---
+description: Asistencia al usuario en SQL Server Management Studio
 title: Asistencia al usuario en SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6fe67dc138f9c3661732f1c1cbbf5038d9013f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 26b2ecf32bb6c7a683f0321f342258b44ff4d214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417841"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Asistencia al usuario en SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], la asistencia
 ## <a name="the-help-interface"></a>La interfaz de la Ayuda  
 El **Contenido** y el **Índice** ofrecen una funcionalidad y una interfaz con las que los usuarios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ya están familiarizados. Las demás opciones son:  
   
--   **Cómo**  
+-   **¿Cómo...?**  
   
     Proporciona un conjunto jerárquico de páginas vinculadas que contienen temas de utilidad relacionados con las tareas comunes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El contenido está organizado por componente y tarea, por ejemplo, temas sobre replicación.  
   
@@ -71,15 +72,15 @@ La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofre
   
 2.  En el área **Cuando cargue contenido de la Ayuda** , seleccione una opción en línea.  
   
-3.  En la lista **Buscar estos proveedores** , active los buscadores en los que desea buscar y desactive los que no vaya a necesitar.  
+3.  En la lista **Buscar estos proveedores**, active los buscadores en los que desea buscar y desactive los que no vaya a necesitar.  
   
 4.  Si **Comunidad de Codezone** es uno de los buscadores que activa, en la lista **Comunidad de Codezone** , active y desactive los elementos adecuados.  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>Para buscar en MSDN Online y en comunidades centradas en SQL Server desde la página Buscar  
   
-1.  En el menú **Ayuda** , haga clic en **Buscar**.  
+1.  En el menú **Ayuda**, haga clic en **Buscar**.  
   
 2.  Escriba los términos de búsqueda en el cuadro de texto **Buscar** y, a continuación, haga clic en **Buscar**.  
   

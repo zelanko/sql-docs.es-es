@@ -1,4 +1,5 @@
 ---
+description: Actualizar diagramas de base de datos de ediciones anteriores (Visual Database Tools)
 title: Actualizar diagramas de bases de datos de ediciones anteriores
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9a0221259c40a171b02d4d7b6af1d8f65f329a8a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6f303bdee6d19af39600317c2147728c89e2b3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417701"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Actualizar diagramas de base de datos de ediciones anteriores (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,6 +41,6 @@ Los diagramas de bases de datos creados en las ediciones anteriores de bases de 
     Así se actualizarán los diagramas almacenados en la base de datos.  
   
 ## <a name="see-also"></a>Consulte también  
-[Descripción de la propiedad de un diagrama de base de datos](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[Información sobre la propiedad del diagrama de base de datos](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
 [Configurar el Diseñador de diagramas de base de datos](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   

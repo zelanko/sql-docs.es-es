@@ -1,4 +1,5 @@
 ---
+description: Buscar objetos (Explorador de objetos)
 title: Buscar objetos (Explorador de objetos)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4a81024ef1f28a2d650dbc37f23527063da82c5d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7957d4138176c4c898f3888c39d4280e3883d706
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317441"
 ---
 # <a name="browse-for-objects-object-explorer"></a>Buscar objetos (Explorador de objetos)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ Actívela para incluir el objeto.
 Un icono representa el tipo de objeto.  
   
 **Nombre**  
-Nombre del objeto.  
+El nombre del objeto.  
   
 **Tipo**  
 Tipo del objeto de base de datos.  

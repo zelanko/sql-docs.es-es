@@ -1,4 +1,5 @@
 ---
+description: Arguments for External Tools
 title: Arguments for External Tools
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23c2680b2043ff35e882e801a684f8aeb9503b21
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4cf19970c7c742701248c362806bc823d38cf8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314961"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments for External Tools
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Los argumentos son variables para las que el entorno de Studio proporciona valores cuando se inicia una herramienta desde el menú **Herramientas** . Es posible agregar herramientas externas, como el Bloc de notas, al menú **Herramientas** mediante el cuadro de diálogo **Herramientas externas** .  
+ Los argumentos son variables para las que el entorno de Studio proporciona valores cuando se inicia una herramienta desde el menú **Herramientas**. Es posible agregar herramientas externas, como el Bloc de notas, al menú **Herramientas** mediante el cuadro de diálogo **Herramientas externas** .  
   
 En la tabla siguiente se enumeran los argumentos de las herramientas externas.  
   
-|Nombre|Argumento|Descripción|  
+|NOMBRE|Argumento|Descripción|  
 |--------|------------|---------------|  
 |**Ruta de acceso del elemento**|$(ItemPath)|El nombre completo del archivo de origen actual (definido como unidad + ruta de acceso + nombre de archivo); en blanco si hay una ventana de no origen activa.|  
 |**Directorio del elemento**|$(ItemDir)|El directorio del origen actual (definido como unidad + ruta de acceso); en blanco si hay una ventana de no origen activa.|  

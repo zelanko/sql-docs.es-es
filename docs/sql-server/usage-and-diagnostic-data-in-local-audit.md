@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a8162132f884c1bda7ea673eedbbceffa604e44
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812640"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362522"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server (CEIP)
 
@@ -78,12 +78,12 @@ Cree una carpeta nueva (directorio de auditoría local) donde la uditoría local
   >[!NOTE] 
   >Configure la ruta de acceso al directorio para auditoría local fuera de la ruta de instalación de SQL Server para evitar que el hecho de permitir la funcionalidad de auditoría y de aplicar revisiones provoque problemas potenciales con SQL Server.
 
-  ||Decisión de diseño|Recomendación|  
-  |------|-----------------|----------|  
-  |![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|Disponibilidad de espacio |En una carga de trabajo moderada con alrededor de 10 bases de datos, disponga de unos 2 MB de espacio en disco por base de datos por instancia.|  
-|![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|Directorios independientes | Cree un directorio para cada instancia. Por ejemplo, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* para una instancia de SQL Server denominada `MSSQLSERVER`. Esto simplifica la administración de archivos.
-|![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|Carpetas independientes |Use una carpeta específica para cada servicio. Por ejemplo, para un nombre de instancia determinado, debe tener una carpeta para el motor de base de datos. Si una instancia de Analysis Services usa el mismo nombre de instancia, cree una carpeta independiente para Analysis Services. Si tiene las instancias de Motor de base de datos y de Analysis Services configuradas en la misma carpeta, la auditoría local escribirá todo en el mismo archivo de registro desde ambas instancias.| 
-|![Casilla](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|Concesión de permisos a la cuenta de inicio de sesión del servicio de CEIP de SQL Server|Habilite **Mostrar el contenido de la carpeta**, el acceso de **lectura** y **escritura** a la cuenta de inicio de sesión del servicio CEIP de SQL Server.|
+|Decisión de diseño|Recomendación|  
+|-----------------|----------|  
+|Disponibilidad de espacio |En una carga de trabajo moderada con alrededor de 10 bases de datos, disponga de unos 2 MB de espacio en disco por base de datos por instancia.|  
+|Directorios independientes | Cree un directorio para cada instancia. Por ejemplo, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* para una instancia de SQL Server denominada `MSSQLSERVER`. Esto simplifica la administración de archivos.
+|Carpetas independientes |Use una carpeta específica para cada servicio. Por ejemplo, para un nombre de instancia determinado, debe tener una carpeta para el motor de base de datos. Si una instancia de Analysis Services usa el mismo nombre de instancia, cree una carpeta independiente para Analysis Services. Si tiene las instancias de Motor de base de datos y de Analysis Services configuradas en la misma carpeta, la auditoría local escribirá todo en el mismo archivo de registro desde ambas instancias.| 
+|Concesión de permisos a la cuenta de inicio de sesión del servicio de CEIP de SQL Server|Habilite **Mostrar el contenido de la carpeta**, el acceso de **lectura** y **escritura** a la cuenta de inicio de sesión del servicio CEIP de SQL Server.|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>Concesión de permisos a la cuenta de inicio de sesión del servicio de CEIP de SQL Server
@@ -155,8 +155,8 @@ CEIP de SQL Server debe reconocer inmediatamente la configuración de auditorí
 
 1. Vaya al servicio correspondiente. 
 
-    - Para Motor de base de datos, use **Servicio CEIP de SQL Server (*Nombre-Instancia*)** .     
-    - Para Analysis Services, use **CEIP de SQL Server Analysis Services (*Nombre-Instancia*)** .
+    - Para Motor de base de datos, use **Servicio CEIP de SQL Server (*Nombre-Instancia*)**.     
+    - Para Analysis Services, use **CEIP de SQL Server Analysis Services (*Nombre-Instancia*)**.
     - Para Integration Services, 
         - Para SQL 2016, use *Servicio CEIP para SQL Server Integration Services 13.0*.
         - Para SQL 2017, use *Servicio CEIP para SQL Server Integration Services 14.0*.
@@ -201,7 +201,7 @@ La auditoría local generará un archivo de registro al día. Los archivos de re
 
 Las columnas siguientes representan el orden de la salida de archivo de auditoría local. Se usa un hash unidireccional con SHA 256 para anonimizar los valores para varias de las columnas siguientes.  
 
-| Nombre | Descripción | Valores de ejemplo
+| NOMBRE | Descripción | Valores de ejemplo
 |-------|--------| ----------|
 |instanceUniqueID| Identificador de instancia anonimizada | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| La versión del esquema de SQLCEIP |  3 
@@ -214,9 +214,9 @@ Las columnas siguientes representan el orden de la salida de archivo de auditor�
 |querySetVersion | La versión de un grupo de definiciones de consulta | 1.0.0.0 
 |traceName | Categorías de seguimientos: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Un identificador de la consulta | SQLServerProperties.002 
-|datos   | El resultado de la información recopilada en queryIdentifier como salida de la consulta T-SQL, la sesión de XE o la aplicación |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep 7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|datos   | El resultado de la información recopilada en queryIdentifier como salida de la consulta T-SQL, la sesión de XE o la aplicación |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |Query| Si corresponde, la definición de consulta T-SQL relacionada con el identificador queryIdentifier que genera los datos.        El servicio CEIP de SQL Server no carga este componente. Solo se incluye en la auditoría local como referencia para los clientes.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | Duración necesaria para que se ejecute la consulta con la siguiente categoría de seguimiento: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|queryTimeInTicks | La duración necesaria para que se ejecute la consulta con la siguiente categoría de seguimiento: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Categorías de seguimiento 
 Actualmente recopilamos las siguientes categorías de seguimiento: 

@@ -1,4 +1,5 @@
 ---
+description: Resumir o agregar valores mediante expresiones personalizadas (Visual Database Tools)
 title: Resumir o agregar valores mediante expresiones personalizadas
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f2ed48eba4722522645f904de0775db056ffc1fd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e71f0ffc06314678becda493f6e45c98060d3a32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312551"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>Resumir o agregar valores mediante expresiones personalizadas (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ No se pueden incluir expresiones basadas en cálculos en los que solo se utilice
   
 3.  En la columna **Agrupar por** de la expresión, seleccione **Expresión**.  
   
-4.  Ejecuta la consulta.  
+4.  Ejecutar la consulta.  
   
 ## <a name="see-also"></a>Consulte también  
 [Ordenar y agrupar los resultados de una consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

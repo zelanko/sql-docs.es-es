@@ -1,4 +1,5 @@
 ---
+description: Panel Criterios (Visual Database Tools)
 title: Panel de criterios
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6f1df4856844b162560f562e487f970dc1974d04
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4738edd7c0db3522547bba26cd637a132f6630bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314761"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Panel Criterios (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,16 +59,16 @@ Si no se ve el panel Criterios, haga clic con el botón derecho en el diseñador
   
 |**Columna**|**Tipo de consulta**|**Descripción**|  
 |--------------|------------------|-------------------|  
-|Columna|All|Muestra el nombre de una columna de datos utilizada para la consulta o la expresión de una columna calculada. Esta columna está bloqueada de modo que sea siempre visible a medida que se desplaza horizontalmente.|  
+|Columna|Todo|Muestra el nombre de una columna de datos utilizada para la consulta o la expresión de una columna calculada. Esta columna está bloqueada de modo que sea siempre visible a medida que se desplaza horizontalmente.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica un nombre alternativo para una columna o el nombre que puede utilizar para una columna calculada.|  
 |Tabla|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica el nombre de la tabla u objeto con estructura de tabla para la columna de datos asociada. Esta columna está en blanco para las columnas calculadas.|  
-|Output|SELECT, INSERT FROM, MAKE TABLE|Especifica si una columna de datos aparece en los resultados de consulta.<br /><br />Nota: Si la base de datos lo permite, puede utilizar una columna de datos para las cláusulas de orden o búsqueda sin mostrarla en el conjunto de resultados.|  
+|Resultados|SELECT, INSERT FROM, MAKE TABLE|Especifica si una columna de datos aparece en los resultados de consulta.<br /><br />Nota: Si la base de datos lo permite, puede utilizar una columna de datos para las cláusulas de orden o búsqueda sin mostrarla en el conjunto de resultados.|  
 |Tipo de orden|SELECT, INSERT FROM|Especifica que se utiliza la columna de datos asociada para ordenar los resultados de una consulta y si el orden es ascendente o descendente.|  
 |Criterio de ordenación|SELECT, INSERT FROM|Especifica la prioridad de orden de las columnas de datos utilizadas para ordenar el conjunto de resultados. Cuando cambia el criterio de ordenación de una columna de datos, el criterio de ordenación del resto de las columnas se actualiza en consecuencia.|  
 |Agrupar por|SELECT, INSERT FROM, MAKE TABLE|Especifica que la columna de datos asociada se está utilizando para crear una consulta de funciones agregadas. Esta columna de cuadrícula aparece solamente si ha elegido **Agrupar por** en el menú **Herramientas** o si ha agregado una cláusula GROUP BY al panel SQL.<br /><br />De forma predeterminada, el valor de esta columna se establece en **Agrupar por**y la columna se incluye en la cláusula GROUP BY.<br /><br />Al moverse a una celda de esta columna y seleccionar una función de agregado para aplicar a la columna de datos asociada, se agrega la expresión resultante de forma predeterminada como una columna de resultados para el conjunto de resultados.|  
-|Criterios|All|Especifica una condición de búsqueda (filtro) para la columna de datos asociada. Escriba un operador (el predeterminado es "=") y el valor que haya que buscar. Incluya los valores de texto entre comillas simples.<br /><br />Si la columna de datos asociada forma parte de una cláusula GROUP BY, la expresión especificada se utilizará para una cláusula HAVING.<br /><br />Si especifica valores para más de una celda de la columna de cuadrícula **Criterios**, las condiciones de búsqueda resultantes se vinculan de forma automática con un operador lógico AND.<br /><br />Para especificar varias expresiones de condición de búsqueda para una sola columna de base de datos, por ejemplo (fname > 'A') AND (fname < 'M'), agregue la columna de datos al panel Criterios dos veces y especifique valores independientes en la columna de cuadrícula **Criterios** para cada instancia de la columna de datos.|  
-|O...|All|Especifica una expresión de condición de búsqueda adicional para la columna de datos, vinculada a expresiones previas con un operador lógico OR. Puede agregar más columnas de cuadrícula **O…** presionando la tecla TAB en la columna **O…** situada más a la derecha.|  
-|Append|INSERT FROM|Especifica el nombre de la columna de datos de destino de la columna de datos asociada. Al crear una consulta Insert From, el Diseñador de consultas y vistas intenta hacer coincidir el origen con una columna de datos de destino adecuada. Si el Diseñador de consultas y vistas no puede elegir una columna coincidente, se deberá proporcionar el nombre de columna.|  
+|Criterios|Todo|Especifica una condición de búsqueda (filtro) para la columna de datos asociada. Escriba un operador (el predeterminado es "=") y el valor que haya que buscar. Incluya los valores de texto entre comillas simples.<br /><br />Si la columna de datos asociada forma parte de una cláusula GROUP BY, la expresión especificada se utilizará para una cláusula HAVING.<br /><br />Si especifica valores para más de una celda de la columna de cuadrícula **Criterios**, las condiciones de búsqueda resultantes se vinculan de forma automática con un operador lógico AND.<br /><br />Para especificar varias expresiones de condición de búsqueda para una sola columna de base de datos, por ejemplo (fname > 'A') AND (fname < 'M'), agregue la columna de datos al panel Criterios dos veces y especifique valores independientes en la columna de cuadrícula **Criterios** para cada instancia de la columna de datos.|  
+|O bien...|Todo|Especifica una expresión de condición de búsqueda adicional para la columna de datos, vinculada a expresiones previas con un operador lógico OR. Puede agregar más columnas de cuadrícula **O…** presionando la tecla TAB en la columna **O…** situada más a la derecha.|  
+|Anexar|INSERT FROM|Especifica el nombre de la columna de datos de destino de la columna de datos asociada. Al crear una consulta Insert From, el Diseñador de consultas y vistas intenta hacer coincidir el origen con una columna de datos de destino adecuada. Si el Diseñador de consultas y vistas no puede elegir una columna coincidente, se deberá proporcionar el nombre de columna.|  
 |Valor nuevo|UPDATE, INSERT INTO|Especifica el valor que se va a colocar en la columna asociada. Escriba un valor literal o una expresión.|  
   
 ## <a name="see-also"></a>Consulte también  

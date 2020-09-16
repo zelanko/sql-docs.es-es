@@ -1,26 +1,28 @@
 ---
 title: Abrir un editor (SQL Server Management Studio)
 description: Aprenda a abrir los editores de consultas, MDX, DMX y XML/A del motor de base de datos en SQL Server Management Studio.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122576"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093496"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir un editor (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se abre, cada ventana del editor aparece como una pestaña en el panel central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+
+En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se abre, cada ventana del editor aparece como una pestaña en el panel central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] admite cuatro editores: el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para editar scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , los editores DMX y MDX para editar scripts con esos lenguajes y el editor XML/A para editar scripts XML/A o archivos XML. Cualquiera de los editores también se puede usar para editar archivos de texto.  
@@ -81,6 +83,4 @@ ms.locfileid: "87122576"
   
 -   La ventana del **Explorador de plantillas** aparece en el panel derecho.  
   
--   Haga doble clic en una plantilla para abrir una ventana Consulta de motor de base de datos con el texto de la plantilla. Por ejemplo, para abrir una plantilla CREATE DATABASE, abra la carpeta **Plantillas de SQL Server** , abra la carpeta **Bases de datos** y haga doble clic en **Crear base de datos**.  
-  
-  
+-   Haga doble clic en una plantilla para abrir una ventana Consulta de motor de base de datos con el texto de la plantilla. Por ejemplo, para abrir una plantilla CREATE DATABASE, abra la carpeta **Plantillas de SQL Server** , abra la carpeta **Bases de datos** y haga doble clic en **Crear base de datos**.

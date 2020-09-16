@@ -1,4 +1,5 @@
 ---
+description: Método getMinutesOffset (DateTimeOffset)
 title: Método getMinutesOffset (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 18ba844a-ea36-42de-87da-bbc222082efe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 350a1f63eefa87eccbca7ba0a12c4381ab820854
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a3184c0dc0389a696904386361496ea31582b0af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435417"
 ---
 # <a name="getminutesoffset-method-datetimeoffset"></a>Método getMinutesOffset (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,6 +38,6 @@ public int getMinutesOffset()
   
 ## <a name="see-also"></a>Consulte también  
  [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   
- [Miembros DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
+ [Miembros de DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Método getPrecision (SQLServerResultSetMetaData)
 title: Método getPrecision (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: de46c96e-6ad6-4946-883e-807123658500
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f49e65585aa9834a5df8890e243d8feb5b38834b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4c658d96cf3ce52e5a489961bc60e23b879778aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434947"
 ---
 # <a name="getprecision-method-sqlserverresultsetmetadata"></a>Método getPrecision (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

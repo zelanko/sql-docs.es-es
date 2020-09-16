@@ -1,4 +1,5 @@
 ---
+description: Método getSendStringParametersAsUnicode (SQLServerDataSource)
 title: Método getSendStringParametersAsUnicode (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 3836d0ab-c3fb-41ff-bb89-10389594ae51
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b54715e0eb4e813c65b0ea9cf750bc07388d291d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0fc9c5e4ba97f1e48e446768d59d5308604d5b29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434587"
 ---
 # <a name="getsendstringparametersasunicode-method-sqlserverdatasource"></a>Método getSendStringParametersAsUnicode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public boolean getSendStringParametersAsUnicode()
 ## <a name="remarks"></a>Observaciones  
  Si la propiedad sendStringParametersAsUnicode está configurada en **true**, que es el valor predeterminado, los parámetros de cadena se envían al servidor en formato UNICODE. Si la propiedad sendStringParametersAsUnicode está configurada en **false**, los parámetros de cadena se envían al servidor en formato ASCII/MBCS y no en UNICODE. Si no se establece sendStringParametersAsUnicode, getSendStringParametersAsUnicode devuelve el valor predeterminado **true**.  
   
- Para más información sobre la propiedad de conexión sendStringParametersAsUnicode, consulte [Establecimiento de las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md).  
+ Para obtener más información sobre la propiedad de conexión sendStringParametersAsUnicode, consulte [Establecimiento de las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

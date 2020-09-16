@@ -1,4 +1,5 @@
 ---
+description: Método getNCharacterStream (int) (SQLServerResultSet)
 title: Método getNCharacterStream (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1cfa4e4-3e1f-4504-b0de-cc626d653661
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c78a2289ce7332a06d3c9ef004a138afb8921cd9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78d94536a297d28c1a181c165b6ceda39456d9aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435367"
 ---
 # <a name="getncharacterstream-method-int-sqlserverresultset"></a>Método getNCharacterStream (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +44,7 @@ public java.io.Reader getNCharacterStream(int columnIndex)
 ## <a name="remarks"></a>Observaciones  
  El método getNCharacterStream especifica este método getNCharacterStream en la interfaz java.sql.ResultSet.  
   
- Este método se puede usar para recuperar el valor de una columna **nvarchar**, **nchar**, **nvarchar(max)** , **ntext** o **xml** en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). Si intenta utilizar este método para recuperar valores de otros tipos de datos, se producirá una excepción.  
+ Este método se puede usar para recuperar el valor de una columna **nvarchar**, **nchar**, **nvarchar(max)**, **ntext** o **xml** en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). Si intenta utilizar este método para recuperar valores de otros tipos de datos, se producirá una excepción.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

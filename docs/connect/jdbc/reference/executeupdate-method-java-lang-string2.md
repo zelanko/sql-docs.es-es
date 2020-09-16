@@ -1,4 +1,5 @@
 ---
+description: Método executeUpdate (java.lang.String)
 title: Método executeUpdate (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 428127147d00885dc379752e97154e8eabad54d1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fcfb5f6bf2c8697b4463b6726b844bd883e05c19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437617"
 ---
 # <a name="executeupdate-method-javalangstring"></a>Método executeUpdate (java.lang.String)
 
@@ -52,6 +53,6 @@ Si se llama a este método se producirá una excepción, ya que la instrucción 
 
 [Método executeUpdate &#40;SQLServerPreparedStatement&#41;](./executeupdate-method-sqlserverpreparedstatement.md)
 
-[Miembros SQLServerPreparedStatement](./sqlserverpreparedstatement-members.md)
+[Miembros de SQLServerPreparedStatement](./sqlserverpreparedstatement-members.md)
 
 [Clase SQLServerPreparedStatement](./sqlserverpreparedstatement-class.md)

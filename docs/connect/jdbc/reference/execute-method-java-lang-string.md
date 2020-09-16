@@ -1,4 +1,5 @@
 ---
+description: Método execute (java.lang.String)
 title: Método execute (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1715a24f6104a6542d3c2847345adb438620a618
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0375eb9dd2d9252ed914fa554beb54faa7e345ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437757"
 ---
 # <a name="execute-method-javalangstring"></a>Método execute (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ public final boolean execute(java.lang.String sql)
  Un valor **String** que contiene una instrucción SQL.  
   
 ## <a name="return-value"></a>Valor devuelto  
- **true**  si la instrucción devuelve un conjunto de resultados. **false** si devuelve un recuento de actualizaciones o no devuelve ningún resultado.  
+ **true ** si la instrucción devuelve un conjunto de resultados. **false** si devuelve un recuento de actualizaciones o no devuelve ningún resultado.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

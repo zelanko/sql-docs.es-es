@@ -1,4 +1,5 @@
 ---
+description: Método getBigDecimal (SQLServerCallableStatement)
 title: Método getBigDecimal (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bc81b9a3-96ae-4c9c-b6c4-abd7b83175e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 57daa16957ae9e33e50d606c205428b87710834d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a82b14a20b775729cc18b1daafc3f42776c51302
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920559"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437247"
 ---
 # <a name="getbigdecimal-method-sqlservercallablestatement"></a>Método getBigDecimal (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80920559"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |[getBigDecimal (int)](../../../connect/jdbc/reference/getbigdecimal-method-int.md)|Recupera el valor del parámetro designado como java.math.BigDecimal con precisión completa según el índice de parámetro.|  
 |[getBigDecimal (int, int)](../../../connect/jdbc/reference/getbigdecimal-method-int-int.md)|(En desuso) recupera el valor del parámetro designado como java.math.BigDecimal según el índice de parámetro y la escala.|  

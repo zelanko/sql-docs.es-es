@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39803c2063bf6afbae9bc6797d85499fc91a10bd
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.openlocfilehash: ed482982ecee2de572bc4241f199a7d16abc47d1
+ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564675"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89875604"
 ---
 # <a name="collation-and-unicode-support"></a>Compatibilidad con la intercalación y Unicode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -647,7 +647,9 @@ Para más información, vea el contenido relacionado siguiente:
 * [Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
 * [Nombre de intercalación de SQL Server (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)  
 * [Nombre de intercalación de Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)  
-* [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928) (Presentación de la compatibilidad de UTF-8 con SQL Server)       
+* [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928) (Presentación de la compatibilidad de UTF-8 con SQL Server)      
+* [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)      
+* [Prioridad de intercalación](../../t-sql/statements/collation-precedence-transact-sql.md)    
     
 ## <a name="see-also"></a>Consulte también    
 [Intercalaciones de bases de datos independientes](../../relational-databases/databases/contained-database-collations.md)     

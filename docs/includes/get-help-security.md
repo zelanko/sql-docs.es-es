@@ -1,7 +1,7 @@
-##  <a name="info-tippng-get-help"></a>![info-tip.png](media/info-tip.png) Obtener ayuda
+##  <a name="info-icon-get-help"></a>![Icono de información](media/info-tip.png) Obtener ayuda
 
 - [UserVoice - ¿Alguna sugerencia para mejorar SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
-- [Seguridad de SQL Server: foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
+- [Preguntas y respuestas de Microsoft (SQL Server)](https://docs.microsoft.com/answers/products/sql-server)
 - [DBA Stack Exchange (etiqueta sql-server): formule preguntas sobre SQL Server](https://dba.stackexchange.com/questions/tagged/sql-server)
 - [stack Overflow (etiqueta sql-server) también cuenta con algunas respuestas sobre el desarrollo de SQL](https://stackoverflow.com/questions/tagged/sql-server) 
 - [Reddit: debate general sobre SQL Server](https://www.reddit.com/r/SQLServer/)

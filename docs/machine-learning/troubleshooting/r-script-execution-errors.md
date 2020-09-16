@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ebcedf2adc48fad6668b30d9c34d21b7557879dc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253760"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569935"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Errores comunes de scripting de R en SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 En este artículo se documentan varios errores comunes de scripting cuando se ejecuta el código de R en SQL Server. Esta lista no está completa. Hay muchos paquetes y los errores pueden variar entre las distintas versiones del mismo paquete.
-
-Si encuentra errores de scripts que no se describen aquí, publíquelos en el [foro de Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR). Este foro es compatible con los componentes de aprendizaje automático que se usan en varios productos de aprendizaje automático de SQL.
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Se produce un error en un script válido en T-SQL o en los procedimientos almacenados
 
@@ -100,6 +98,6 @@ Si quiere eliminar varias variables, se recomienda guardar los nombres de las va
 
 [Recopilación de datos para la solución de problemas de aprendizaje automático](data-collection-ml-troubleshooting-process.md)
 
-[Preguntas más frecuentes sobre actualización e instalación](upgrade-and-installation-faq-sql-server-r-services.md)
+[Instalación de SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
 [Solución de problemas de conexiones de motor de base de datos](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

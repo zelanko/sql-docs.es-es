@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111013"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570314"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ Se ha agregado la vista de administración dinámica (DMV) **sys.dm_db_stats_pro
 ## <a name="20-before-you-install"></a>2.0 Antes de la instalación  
 Para obtener información acerca de cómo instalar las actualizaciones de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , vea [Documentación de mantenimiento de SQL Server 2008 R2](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Para obtener una introducción e información acerca de cómo instalar SQL Server 2008 R2, vea el documento Léame de SQL Server 2008 R2. El documento Léame está disponible en el disco de instalación. También puede encontrar más información en los [foros de SQL Server](https://social.msdn.microsoft.com/Forums/category/sqlserver/).
+Para obtener una introducción e información acerca de cómo instalar SQL Server 2008 R2, vea el documento Léame de SQL Server 2008 R2. El documento Léame está disponible en el disco de instalación.
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Elegir el archivo correcto para su descarga e instalación  
 Use la tabla siguiente para determinar qué archivo va a descargar e instalar. Compruebe que cumple los requisitos del sistema correctos antes de instalar el Service Pack. Los requisitos del sistema se proporcionan en las páginas de descarga cuyos vínculos aparecen en la tabla.  

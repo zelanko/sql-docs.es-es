@@ -1,4 +1,5 @@
 ---
+description: Opciones (Entorno -página Fuentes y colores)
 title: Opciones (Entorno -página Fuentes y colores)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fac8e4cdb99d19da39f60585db3f77a27975983a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8981ada42e88eadcb263e01dd65f1b2cf9015852
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011832"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480237"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Opciones (Entorno -página Fuentes y colores)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -83,5 +84,3 @@ Muestra un ejemplo de la combinación de estilo, tamaño y color de fuente para 
   
 ## <a name="see-also"></a>Consulte también  
 [Codificación de colores en los editores de código](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-[Opciones (pestaña Editor de texto/Editor y página Barra de estado)](https://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
-  

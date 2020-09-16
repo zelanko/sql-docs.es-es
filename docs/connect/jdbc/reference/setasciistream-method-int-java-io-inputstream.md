@@ -1,4 +1,5 @@
 ---
+description: Método setAsciiStream (int, java.io.InputStream)
 title: Método setAsciiStream (int, java.io.InputStream) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 02c2443d-44e1-4f16-a0d5-08d197838214
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af25d40d7b216d027a22474846323d8aeecadb70
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67a03bb83327d165591244c2301829fde30322f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432617"
 ---
 # <a name="setasciistream-method-int-javaioinputstream"></a>Método setAsciiStream (int, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,6 +48,6 @@ public final void setAsciiStream(int parameterIndex,
   
 ## <a name="see-also"></a>Consulte también  
  [Método setAsciiStream &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setasciistream-method-sqlserverpreparedstatement.md)   
- [Miembros SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
+ [Miembros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

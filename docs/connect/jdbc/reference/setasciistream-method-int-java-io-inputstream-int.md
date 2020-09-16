@@ -1,4 +1,5 @@
 ---
+description: Método setAsciiStream (int, java.io.InputStream, int)
 title: Método setAsciiStream (int, java.io.InputStream, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9436c39f-f1a1-484a-a75b-776a72ca70f4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0db1f78923cd7c91c6b94061a2d2ac9451f22974
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 70c2f79fa005a8d8e5b7f8494b649bc4fce9a27a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432627"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-int"></a>Método setAsciiStream (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +48,7 @@ public final void setAsciiStream(int n,
   
  *length*  
   
- El número de bytes.  
+ Número de bytes.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -61,6 +62,6 @@ public final void setAsciiStream(int n,
   
 ## <a name="see-also"></a>Consulte también  
  [Método setAsciiStream &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setasciistream-method-sqlserverpreparedstatement.md)   
- [Miembros SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
+ [Miembros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

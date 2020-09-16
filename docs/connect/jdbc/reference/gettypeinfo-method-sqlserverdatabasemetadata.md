@@ -1,4 +1,5 @@
 ---
+description: Método getTypeInfo (SQLServerDatabaseMetaData)
 title: Método getTypeInfo (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b007e5db3358cd1af350ac0d87af7df1af18518
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f58266a7b90b88c49aabfb60062e396181f8dde7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434017"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Método getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +56,7 @@ public java.sql.ResultSet getTypeInfo()
 |CREATE_PARAMS|**String**|Descripción de los parámetros de creación para el tipo de datos.|  
 |NULLABLE|**short**|Indica si la columna puede contener un valor NULL. Puede ser uno de los siguientes valores:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Indica si el tipo de datos distingue mayúsculas de minúsculas. "**true**" si el tipo distingue mayúsculas de minúsculas; de lo contrario, es "**false**".|  
-|SEARCHABLE|**short**|Indica si la columna se puede utilizar en una cláusula WHERE de SQL. Puede ser uno de los siguientes valores:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|BUSCABLE|**short**|Indica si la columna se puede utilizar en una cláusula WHERE de SQL. Puede ser uno de los siguientes valores:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Indica el signo del tipo de datos. "**true**" si el tipo no tiene signo; de lo contrario, es "**false**".|  
 |FIXED_PREC_SCALE|**boolean**|Indica que el tipo de datos puede ser un valor de moneda. "**true**" si el tipo de datos es de tipo moneda; de lo contrario, es "**false**".|  
 |AUTO_INCREMENT|**boolean**|Indica que el tipo de datos se puede incrementarse automáticamente. "**true**" si el tipo se puede incrementar automáticamente; de lo contrario, es "**false**".|  

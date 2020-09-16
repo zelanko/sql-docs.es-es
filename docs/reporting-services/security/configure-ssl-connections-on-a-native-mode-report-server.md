@@ -1,4 +1,5 @@
 ---
+description: Configuración de conexiones TLS en un servidor de informes en modo nativo
 title: Configuración de conexiones TLS en un servidor de informes en modo nativo | Microsoft Docs
 ms.date: 05/14/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c2bd66eacb5a91def2a9f6c9f7cb2e807e404f1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 3362783a3558c2ce6d74e68d666bbf791957046a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498044"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Configuración de conexiones TLS en un servidor de informes en modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo nativo usa el servicio HTTP SSL (Capa de sockets seguros) para establecer conexiones cifradas con un servidor de informes. La Seguridad de la capa de transporte (TLS) se conocía antes como Capa de sockets seguros (SSL). Si tiene el archivo de certificado (.cer) instalado en un almacén de certificados local en el equipo del servidor de informes, puede enlazar el certificado a una reserva de direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para admitir las conexiones con el servidor de informes en un canal cifrado.  

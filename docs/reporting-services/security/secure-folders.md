@@ -1,4 +1,5 @@
 ---
+description: Proteger carpetas
 title: Proteger carpetas | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00bf03cedffd985726eb10e1c048132c415b241e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f873c02fe9cf0657edbaefd7411b6f3409ed1a0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498008"
 ---
 # <a name="secure-folders"></a>Proteger carpetas
   La seguridad de las carpetas es fundamental para proteger todo el contenido de un servidor de informes. Puesto que la seguridad se hereda en toda la estructura de carpetas, puede designar secciones grandes o pequeñas de la jerarquía de carpetas para permitir ciertos tipos de acceso.  

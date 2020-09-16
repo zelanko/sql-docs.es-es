@@ -1,4 +1,5 @@
 ---
+description: Método DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting)
 title: Método DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e40c53c5c46d37a996805105563b809ad278b9a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b34f0a58d8a0c65c71b353259c5445daea0c5e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497948"
 ---
 # <a name="configurationsetting-method---deleteencryptionkey"></a>Método ConfigurationSetting - DeleteEncryptionKey
   Elimina las claves de cifrado de la base de datos del servidor de informes.  

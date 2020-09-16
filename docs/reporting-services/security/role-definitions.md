@@ -1,4 +1,5 @@
 ---
+description: Definiciones de roles
 title: Definiciones de roles | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22087b03c0c11d008d91de80930d98fef79fc3a5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 985ba6df5091c13ab4b91c7f2ba95b4c1484a584
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498058"
 ---
 # <a name="role-definitions"></a>Definiciones de roles
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], una *definición de rol* es una colección con nombre de tareas que definen las operaciones disponibles en un servidor de informes. Las definiciones de roles proporcionan las reglas que el servidor de informes utiliza para aplicar la seguridad. Cuando un usuario intenta realizar una tarea, como publicar un informe, el servidor de informes comprueba la asignación de roles de dicho usuario para determinar si la tarea está incluida en su definición de roles. Si la tarea está incluida en la definición de roles, se envía la solicitud.  

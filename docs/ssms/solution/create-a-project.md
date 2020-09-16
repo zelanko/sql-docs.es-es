@@ -1,4 +1,5 @@
 ---
+description: Crear un proyecto
 title: Crear un proyecto
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 41737a8e6c68c27266feec1be69abee28413d287
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e3bc58b9f702478bdef96535bc7c784d9e410df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497365"
 ---
 # <a name="create-a-project"></a>Crear un proyecto
 
@@ -91,7 +92,7 @@ Puede crear uno o varios proyectos nuevos en una solución existente.
     **Agregar al control de código fuente**  
     Cuando esta casilla está seleccionada, la aplicación de control de código fuente se abre al hacer clic en **Aceptar**. Complete la información que necesite la aplicación de control de código fuente para continuar. Para utilizar esta opción, deberá tener una aplicación cliente de control de código fuente instalada.  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
 Puede establecer un nombre para el proyecto de script, aunque [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] establece los nombres de las carpetas y no se pueden modificar. Puede configurar la unidad y la especificación de la ruta de acceso de los conjuntos comunes de carpetas mediante el cuadro de diálogo **Agregar nuevo proyecto** . Haga clic con el botón derecho en el icono de soluciones del **Explorador de soluciones**y, a continuación, haga clic en **Agregar**. La ubicación predeterminada de las carpetas de los proyectos de script es: C:\Documents and Settings\\*NombreDeUsuario*\Mis documentos\SQL Server Management Studio\Projects\\.  
   

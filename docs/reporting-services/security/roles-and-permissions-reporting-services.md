@@ -1,4 +1,5 @@
 ---
+description: Roles y permisos (Reporting Services)
 title: Roles y permisos (Reporting Services) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2fc536de2312bc9adf1cba103ffde0999a83609e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 18dbb9344ff8dd2284ba200dc667057ffbeedf44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498028"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>Roles y permisos (Reporting Services)
   Reporting Services proporciona un subsistema de autenticación y un modelo de autorización basada en roles. Los modelos de autenticación y autorización varían en función de que el servidor de informes se ejecute en modo nativo o en modo de SharePoint. Si el servidor de informes forma parte de una implementación de SharePoint, los permisos de SharePoint determinarán quién tiene acceso a dicho servidor de informes.  

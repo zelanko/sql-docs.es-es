@@ -1,4 +1,5 @@
 ---
+description: Índice de texto completo (cuadro de diálogo, Visual Database Tools)
 title: Cuadro de diálogo Índice de texto completo
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 8330963e62c3185203c9b25c53785f12ec9fb8be
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 566239ac238afb66650c50cd9d96c8fa81d3f70c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497148"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Índice de texto completo (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +44,7 @@ Elimina el índice de texto seleccionado en la lista **Índice de texto completo
 Expandido, muestra **Columnas** y **Nombre de catálogo de texto completo**.  
   
 **Columnas**  
-Muestra una lista separada por comas de los nombres de las columnas en las que se pueden realizar búsquedas de texto completo. Para ver la lista completa, haga clic en el botón de puntos suspensivos ( **...** ) situado a la izquierda del campo de propiedad.  
+Muestra una lista separada por comas de los nombres de las columnas en las que se pueden realizar búsquedas de texto completo. Para ver la lista completa, haga clic en el botón de puntos suspensivos (**...**) situado a la izquierda del campo de propiedad.  
   
 **Full-Text Catalog Name**  
 Muestra el nombre del catálogo de texto completo en el que se almacena el índice de texto completo. Para guardar el índice en un catálogo diferente, haga clic en el nombre del catálogo y elija otro catálogo en la lista desplegable.  

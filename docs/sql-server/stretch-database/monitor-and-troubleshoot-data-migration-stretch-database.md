@@ -1,4 +1,5 @@
 ---
+description: Supervisión y solución de problemas de migración de datos (Stretch Database)
 title: Supervisión y solución de problemas de migración de datos
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7e4ca3f7b7a857e5c8592844c9523753b68a3728
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492679"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Supervisión y solución de problemas de migración de datos (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Para supervisar la migración de datos en Stretch Database Monitor, seleccione **Tareas | Stretch | Monitor** para una base de datos en SQL Server Management Studio.  
@@ -50,7 +51,7 @@ ms.locfileid: "73843778"
   
     -   Para obtener más información sobre el contenido de un mensaje de error de SQL Server, vea [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).  
   
- **El firewall de Azure bloquea las conexiones de mi servidor local.**  
+ **El firewall de Azure está bloqueando las conexiones desde mi servidor local.**  
  Es posible que tenga que agregar una regla en la configuración del Firewall de Azure para permitir que SQL Server se comunique con el servidor remoto de Azure.  
   
 ## <a name="see-also"></a>Consulte también  

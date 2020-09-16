@@ -1,4 +1,5 @@
 ---
+description: Configurar las direcciones URL del servidor de informes (Administrador de configuración de SSRS)
 title: Configuración de las direcciones URL del servidor de informes (Configuration Manager) | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 021df541af90bcaae13e1544f9f6a72e77f8eaf7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f80b3232fa7631add5850777db4affc5d25a67d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463527"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar las direcciones URL del servidor de informes (Administrador de configuración de SSRS)
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], las direcciones URL se usan para obtener acceso al servicio web del servidor de informes y al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Para poder usar cualquier aplicación, debe configurar al menos una dirección URL para el servicio web y otra para el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] indica valores predeterminados para ambas direcciones URL de la aplicación que mejor funcionan en la mayoría de los escenarios de implementación, incluso en las implementaciones en paralelo con otros servicios web y aplicaciones.  

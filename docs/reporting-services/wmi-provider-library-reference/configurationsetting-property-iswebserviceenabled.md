@@ -1,4 +1,5 @@
 ---
+description: Propiedad IsWebServiceEnabled (MSReportServer_ConfigurationSetting de WMI)
 title: Propiedad IsWebServiceEnabled (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e37eecf6-bf83-4015-be76-bac2ae9d344d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9859e89a35f7e2da6dbfe9f033984c7c7b514fbd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: faa30141f0f54c51888ad7aa7dbf96bbc6550319
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468947"
 ---
 # <a name="configurationsetting-property---iswebserviceenabled"></a>Propiedad ConfigurationSetting - IsWebServiceEnabled
   Indica si el servicio web del servidor de informes está habilitado. Solo lectura.  

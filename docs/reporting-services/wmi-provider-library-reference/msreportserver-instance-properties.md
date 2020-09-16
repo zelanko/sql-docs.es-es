@@ -1,4 +1,5 @@
 ---
+description: Propiedades de MSReportServer_Instance
 title: Propiedades de MSReportServer_Instance | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1b8de8961ef9001c7ef94356a2b82bb248271af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f33795c9b030727e448440d3585e19b2a83fc418
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468921"
 ---
 # <a name="msreportserver_instance-properties"></a>Propiedades de MSReportServer_Instance
   La clase MSReportServer_Instance proporciona la información básica necesaria para que un cliente se conecte a un servidor de informes instalado.  
   
 ## <a name="public-properties"></a>Propiedades públicas  
   
-|||  
+|Propiedad|Descripción|  
 |-|-|  
 |[Propiedad EditionID &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Devuelve la edición del servidor de informes.|  
 |[Propiedad EditionName &#40;MSReportServer_Instance de WMI&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Devuelve el nombre legible de la edición del servidor de informes.|  
@@ -37,6 +38,6 @@ ms.locfileid: "65569137"
 |[Versión](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md)|Devuelve la versión del servidor de informes.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Miembros MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
+ [Miembros de MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

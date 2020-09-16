@@ -1,4 +1,5 @@
 ---
+description: Constructor SQLServerXADataSource ()
 title: Constructor SQLServerXADataSource () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 03649d56-3319-4867-bef1-559dfd221b8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b3b53d832aa29a36d5574ae7bef5d36dbb53b04
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 660ee83adf3d380f8abe7f1156d263168cc5bdd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462527"
 ---
 # <a name="sqlserverxadatasource-constructor-"></a>Constructor SQLServerXADataSource ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

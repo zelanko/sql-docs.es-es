@@ -1,4 +1,5 @@
 ---
+description: Propiedades de objeto con valores de tabla (Visual Database Tools)
 title: Propiedades de objeto con valores de tabla
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,22 +13,22 @@ ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 9e21318c245ab43b288ac4784289a62673e7e94a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2606f055597438aa852c787c45c9c489cd4e5743
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468321"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propiedades de objeto con valores de tabla (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Estas propiedades aparecen en la ventana Propiedades cuando selecciona un objeto con valores de tabla en el **Diseñador de vistas y de consultas**. El objeto con valores de tabla puede ser una vista, un sinónimo, una tabla derivada o una función con valores de tabla. A menos que se indique lo contrario, estas propiedades son de solo lectura en la ventana **Propiedades** .  
+ Estas propiedades aparecen en la ventana Propiedades cuando selecciona un objeto con valores de tabla en el **Diseñador de consultas y vistas**. El objeto con valores de tabla puede ser una vista, un sinónimo, una tabla derivada o una función con valores de tabla. A menos que se indique lo contrario, estas propiedades son de solo lectura en la ventana **Propiedades** .  
   
 > [!NOTE]  
 > Las propiedades de este tema se ordenan por categoría en lugar de alfabéticamente.  
   
 > [!NOTE]  
-> Los cuadros de diálogo y comandos de menú que ve podrían diferir de aquellos que se describen en la Ayuda en función de la edición o configuración activa. Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas** .  
+> Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .  
   
 **Categoría Identidad**  
 Se expande para mostrar las propiedades de **Nombre** y **Tipo TVO** .  

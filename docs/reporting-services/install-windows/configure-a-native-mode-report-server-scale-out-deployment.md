@@ -1,4 +1,5 @@
 ---
+description: Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo
 title: Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo | Microsoft Docs
 ms.date: 11/29/2018
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460007"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo
 
@@ -75,7 +76,7 @@ Para SQL Server 2016 Reporting Services y versiones anteriores, los servidores d
 
 Las cuentas de servicio de la instancia de Reporting Services son importantes cuando se trabaja con una implementación escalada. Debe llevar a cabo una de las siguientes acciones al implementar las instancias de Reporting Services.
 
-**Opción 1:** todas las instancias de Reporting Services deben configurarse con la misma cuenta de usuario de dominio como cuenta de servicio.
+**Opción 1:** todas las instancias de Reporting Services deben configurarse con la misma cuenta de usuario de dominio para la cuenta de servicio.
 
 **Opción 2:** se deben conceder permisos dbadmin a todas las cuentas de servicio (sean cuentas de dominio o no) dentro de la instancia de base de datos de SQL Server que hospeda la base de datos de catálogos ReportServer.
 
@@ -117,7 +118,7 @@ El problema será intermitente; es decir, solo el servidor que creó la tarea de
   
     6.  En **Base de datos del servidor de informes**, seleccione la base de datos que creó para el primer servidor de informes y, después, seleccione **Siguiente**. El nombre predeterminado es ReportServer. No seleccione ReportServerTempDB; solo se usa para almacenar datos temporales al procesar los informes. Si la lista de bases de datos está vacía, repita los cuatro pasos anteriores para establecer una conexión con el servidor.  
   
-    7.  En la página Credenciales, seleccione el tipo de cuenta y las credenciales que el servidor de informes utilizará para conectarse a la base de datos del servidor de informes. Puede utilizar las mismas credenciales que para la primera instancia del servidor de informes u otras. Seleccione **Next** (Siguiente).  
+    7.  En la página Credenciales, seleccione el tipo de cuenta y las credenciales que el servidor de informes utilizará para conectarse a la base de datos del servidor de informes. Puede utilizar las mismas credenciales que para la primera instancia del servidor de informes u otras. Seleccione **Siguiente**.  
   
     8.  Seleccione **Resumen** y, después, **Finalizar**.  
   
@@ -138,7 +139,7 @@ El problema será intermitente; es decir, solo el servidor que creó la tarea de
     > [!NOTE]  
     >  **Problema:** al intentar combinar una instancia del servidor de informes de Reporting Services con la implementación escalada, es posible que aparezcan mensajes de error similares a "Acceso denegado".  
     >   
-    >  **Solución alternativa:** haga una copia de seguridad de la clave de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la primera instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y restáurela en el segundo servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. A continuación, intente unir el segundo servidor a la implementación escalada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    >  **Solución alternativa:** haga una copia de seguridad de la clave de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la primera instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y restáurela en el segundo servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A continuación, intente unir el segundo servidor a la implementación escalada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  Ahora debería poder para comprobar que ambas instancias del servidor de informes están operativas. Para comprobar la segunda instancia, puede usar la herramienta Configuración de Reporting Services con el fin de conectarse al servidor de informes y hacer clic en **Dirección URL del servicio web** o en **Dirección URL del Portal web**.  
   

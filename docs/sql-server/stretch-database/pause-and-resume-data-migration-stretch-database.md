@@ -1,4 +1,5 @@
 ---
+description: Pausa y reanudación de la migración de datos (Stretch Database)
 title: Pausa y reanudación de la migración de datos
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -12,15 +13,15 @@ ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5146c258c099c487643ca343ecd06402fc623c84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469010"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>Pausa y reanudación de la migración de datos (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Para pausar o reanudar la migración de datos en Azure, seleccione **Stretch** para una tabla en SQL Server Management Studio y después seleccione **Pausar** para pausar la migración de datos o **Reanudar** para reanudar la migración de datos. También puede usar Transact-SQL para pausar o reanudar la migración de datos.  
@@ -36,7 +37,7 @@ ms.locfileid: "73844541"
 2.  Haga clic con el botón derecho y seleccione **Stretch**; después, seleccione **Pausar**.  
   
 ### <a name="use-transact-sql-to-pause-data-migration"></a>Use Transact-SQL para pausar la migración de datos  
- Ejecute el siguiente comando:  
+ Ejecute el siguiente comando.  
   
 ```sql  
 USE <Stretch-enabled database name>;
@@ -55,7 +56,7 @@ GO
 2.  Haga clic con el botón derecho y seleccione **Stretch**; después, seleccione **Reanudar**.  
   
 ### <a name="use-transact-sql-to-resume-data-migration"></a>Use Transact-SQL para reanudar la migración de datos  
- Ejecute el siguiente comando:  
+ Ejecute el siguiente comando.  
   
 ```sql  
 USE <Stretch-enabled database name>;

@@ -1,4 +1,5 @@
 ---
+description: Miembros SQLServerParameterMetaData
 title: Miembros SQLServerParameterMetaData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f9ebb203-2013-4feb-94f5-494b7f098f9a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6255e854bd7c6a9d5d8dca99a4b702ad7e0bbce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7e466581d6012a96584a378e426fc87f8f912958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462677"
 ---
 # <a name="sqlserverparametermetadata-members"></a>Miembros SQLServerParameterMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "80923510"
   
 ## <a name="inherited-fields"></a>Campos heredados  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |java.sql.ParameterMetaData|parameterModeIn, parameterModeInOut, parameterModeOut, parameterModeUnknown, parameterNoNulls, parameterNullable, parameterNullableUnknown|  
   

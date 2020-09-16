@@ -1,4 +1,5 @@
 ---
+description: Agregar tablas a diagramas (Visual Database Tools)
 title: Agregar tablas a diagramas
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: da818756c2239d460af2d18b3050e9681aff2698
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5aa8b90a1a6d3b03ec7a8c091d2f17cbb669823f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462937"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Agregar tablas a diagramas (Visual Database Tools)
 
@@ -32,7 +33,7 @@ Puede agregar una tabla al diagrama de base de datos para editar su estructura o
 
    Para crear una tabla en el diagrama actual, haga clic en el botón **Nueva tabla** de la barra de herramientas.
 
-   O bien  
+   o bien  
 
    Haga clic con el botón derecho en el diagrama y seleccione **Nueva tabla**.
 

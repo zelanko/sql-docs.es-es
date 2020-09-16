@@ -1,4 +1,5 @@
 ---
+description: Actualización de datos (controladores de Microsoft para PHP para SQL Server)
 title: Actualización de datos (controladores de Microsoft para PHP para SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6431ba7d874d93bfac7510eb21815dc79f093694
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 350b0d1cd368664598fa766f125956fb7bedf4f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466681"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Actualización de datos (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +35,9 @@ Los pasos para utilizar los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md
   
 |Tema|Descripción|  
 |---------|---------------|  
-|[Realización de consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)|Describe cómo realizar consultas con parámetros.|  
-|[Envío de datos como una secuencia](../../connect/php/how-to-send-data-as-a-stream.md)|Describe cómo transmitir datos al servidor.|  
-|[Realización de transacciones](../../connect/php/how-to-perform-transactions.md)|Describe cómo utilizar las funciones de **sqlsrv** para realizar transacciones.|  
+|[Cómo: Realización de consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)|Describe cómo realizar consultas con parámetros.|  
+|[Cómo: Envío de datos en forma de secuencia](../../connect/php/how-to-send-data-as-a-stream.md)|Describe cómo transmitir datos al servidor.|  
+|[Procedimientos: Realización de transacciones](../../connect/php/how-to-perform-transactions.md)|Describe cómo utilizar las funciones de **sqlsrv** para realizar transacciones.|  
   
 ## <a name="see-also"></a>Consulte también  
 [Aplicación de ejemplo &#40;controlador SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)

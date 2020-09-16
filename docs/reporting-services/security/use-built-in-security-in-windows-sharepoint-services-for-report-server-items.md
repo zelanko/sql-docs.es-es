@@ -1,4 +1,5 @@
 ---
+description: Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes
 title: Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d57768a580b4343fbe1e6ee2919a8161013371a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74129105d15b437578fa1088d112a4594e2a8b7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469017"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes
   SharePoint proporciona características de seguridad integradas que se pueden usar para tener acceso a elementos del servidor de informes desde bibliotecas y sitios de SharePoint. Si ya asignó permisos de sitio y lista a los usuarios, dichos usuarios tendrán acceso a los elementos y las operaciones del servidor de informes inmediatamente después de configurar la integración entre SharePoint y un servidor de informes.  
@@ -42,10 +43,10 @@ ms.locfileid: "65579421"
   
  SharePoint proporciona grupos estándar que se asignan a niveles de permisos predefinidos que determinan el acceso a los documentos y las páginas de un sitio de SharePoint. Si está usando grupos estándar y niveles de permiso predeterminados, y los sitios están configurados para heredar permisos, es de esperar que trabajará con las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de las siguientes formas:  
   
-|**Grupos de SharePoint**|**Nivel del permiso**|**Resumen**|**Acceso al servidor de informes**|  
+|**Grupos de SharePoint**|**Nivel de permiso**|**Resumen**|**Acceso al servidor de informes**|  
 |---------------------------|--------------------------|-----------------|------------------------------|  
 |**Propietarios**|Control total|Los propietarios tienen permiso total para crear, administrar y proteger los elementos y operaciones del servidor de informes.|Establecen los permisos que controlan el acceso a todos los elementos del servidor de informes almacenados en las bibliotecas del sitio. Establecen los permisos dentro de un modelo de informe (también llamado seguridad de elementos de modelo). Personalizan un elemento web Visor de informes. Agregan informes y otros elementos a las bibliotecas. Modifican las propiedades de los elementos de los informes y otros documentos. Eliminan informes y otros elementos. Ven informes, incluidos los informes que usan modelos de informe para la exploración de datos. Establecen los parámetros de los informes. Establecen las opciones de procesamiento de un informe. Generan modelos de informe. Crean informes con el Generador de informes. Crean y administran orígenes de datos compartidos. Crean, cambian y eliminan suscripciones que pertenecen a cualquier usuario. Crean y administran programaciones compartidas usadas en todo el sitio. Crean y administran versiones de un documento, incluido el historial del informe. Descargan el archivo de origen para una definición de informe o un modelo de informe. Reemplazan una definición de informe, un modelo de informe, un origen de datos compartido o un recurso (manteniendo las propiedades de los elementos y los permisos).|  
-|**Miembros**|Contribuciones|Los miembros pueden crear elementos y publicar elementos, informes y modelos desde herramientas de diseño en una biblioteca de SharePoint.|Agregan informes y otros elementos a las bibliotecas. Modifican las propiedades de los elementos de los informes y otros documentos. Eliminan informes y otros elementos. Ven informes, incluidos los informes que usan modelos de informe para la exploración de datos. Ven versiones anteriores de un documento, incluidas las instantáneas del historial del informe (requiere que un usuario también tenga permiso para abrir el informe para el que se creó el historial del informe). Establecen los parámetros de los informes. Establecen las opciones de procesamiento de un informe. Generan modelos de informe. Crean informes con el Generador de informes. Crean y administran orígenes de datos compartidos. Crean, cambian y eliminan suscripciones que pertenecen al usuario. Usan programaciones compartidas con una suscripción. Crean y administran versiones de un documento, incluido el historial del informe. Descargan el archivo de origen para una definición de informe o un modelo de informe. Reemplazan una definición de informe, un modelo de informe, un origen de datos compartido o un recurso (manteniendo las propiedades de los elementos y los permisos).|  
+|**Miembros**|Contribuir|Los miembros pueden crear elementos y publicar elementos, informes y modelos desde herramientas de diseño en una biblioteca de SharePoint.|Agregan informes y otros elementos a las bibliotecas. Modifican las propiedades de los elementos de los informes y otros documentos. Eliminan informes y otros elementos. Ven informes, incluidos los informes que usan modelos de informe para la exploración de datos. Ven versiones anteriores de un documento, incluidas las instantáneas del historial del informe (requiere que un usuario también tenga permiso para abrir el informe para el que se creó el historial del informe). Establecen los parámetros de los informes. Establecen las opciones de procesamiento de un informe. Generan modelos de informe. Crean informes con el Generador de informes. Crean y administran orígenes de datos compartidos. Crean, cambian y eliminan suscripciones que pertenecen al usuario. Usan programaciones compartidas con una suscripción. Crean y administran versiones de un documento, incluido el historial del informe. Descargan el archivo de origen para una definición de informe o un modelo de informe. Reemplazan una definición de informe, un modelo de informe, un origen de datos compartido o un recurso (manteniendo las propiedades de los elementos y los permisos).|  
 |**Visitantes** y **Visores**|Lectura|Los visitantes pueden ver informes|Ven informes, incluidos los informes que usan modelos de informe para la exploración de datos.|  
   
  Si no está usando los niveles de permiso y grupos integrados, debe incluir permisos específicos para tener acceso a las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md).  

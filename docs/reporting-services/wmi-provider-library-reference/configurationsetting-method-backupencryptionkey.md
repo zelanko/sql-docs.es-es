@@ -1,4 +1,5 @@
 ---
+description: Método BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
 title: Método BackupEncryptionKey (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 869967e3f8797aa9af4bf59f128730a9fc39641d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 78ee3bbe67be0c5739b2759c51ceb5ac2c5bb32c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469004"
 ---
 # <a name="configurationsetting-method---backupencryptionkey"></a>Método ConfigurationSetting - BackupEncryptionKey
   Realiza una copia de seguridad de la clave de cifrado de la instancia del servidor de informes especificada. La clave de cifrado se almacena cifrada con una contraseña.  

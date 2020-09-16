@@ -1,4 +1,5 @@
 ---
+description: Soluciones (SQL Server Management Studio)
 title: Soluciones (SQL Server Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e964439576d46004fc4f499f74340e5ed1a4a2b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61e10c2e90e7b3942e36c59a2f395b84a7fb3ea3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468557"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluciones (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,5 +57,5 @@ Las soluciones y proyectos pueden integrarse en una base de datos [!INCLUDE[msCo
 ## <a name="see-also"></a>Consulte también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
 [Proyectos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[Control de código fuente del Explorador de soluciones](https://msdn.microsoft.com/library/ms173879.aspx)  
+[Control de código fuente del Explorador de soluciones](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   

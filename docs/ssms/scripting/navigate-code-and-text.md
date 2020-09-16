@@ -1,11 +1,8 @@
 ---
 title: Navegar por código y texto
 description: 'Obtenga información sobre cómo navegar por un documento con diversas técnicas: establecer un marcador para una ubicación para que sea más fácil volver a ella; buscar incrementalmente; usar el mouse y el teclado; y usar el comando Ir a para ir a una línea especificando su número.'
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - searches [SQL Server Management Studio], incremental
@@ -21,17 +18,22 @@ helpviewer_keywords:
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac0d91b3d6bc3dd6527063a176b0728f96f144e
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 69892b05d5e9d34784a06551b929fe9664e2ca4b
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122596"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093503"
 ---
 # <a name="navigate-code-and-text"></a>Navegar por código y texto
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Para moverse por el texto utilice:  
+
+Para moverse por el texto utilice:  
   
 -   Marcadores  
   
@@ -72,6 +74,4 @@ ms.locfileid: "87122596"
   
 1.  Haga clic en **Ir a** en el menú **Editar** .  
   
-2.  Escriba el número de línea que desea ver.  
-  
-  
+2.  Escriba el número de línea que desea ver.

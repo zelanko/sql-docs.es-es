@@ -3,7 +3,7 @@ title: Especificar una acción del punto de interrupción
 description: 'Obtenga información sobre cómo especificar una acción de detección: una tarea personalizada para el depurador de Transact-SQL que se realizará cuando se alcance un punto de interrupción y se cumplan otras condiciones concretas.'
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbe5cd84c13c84f8902ac82bd8ef3ef54dc82bda
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: a9f25e1c75bfeef51562dddd71f5dc376d46b927
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122740"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901616"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar una acción del punto de interrupción
 

@@ -1,11 +1,8 @@
 ---
 title: Administrar el editor y el modo de vista
 description: 'Obtenga información sobre cómo seleccionar uno de los dos modos de vista de SQL Server Management Studio: Organización por fichas e Interfaz de múltiples documentos. Obtenga también información sobre las vistas en dos paneles, el ajuste de línea, el modo de espacio virtual, la visualización de números de línea, el modo de pantalla completa y Ocultar todo automáticamente.'
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -20,20 +17,26 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122594"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093441"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Administrar el editor y el modo de vista
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  El editor permite controlar la vista del código de diferentes maneras.  
-  
+
+El editor permite controlar la vista del código de diferentes maneras.  
+
 ## <a name="changing-the-view-mode"></a>Cambiar el modo de vista  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye un modo de vista denominado **Organización por pestañas**que permite abrir varios editores y documentos al mismo tiempo, y tener acceso a ellos mediante pestañas situadas en la parte superior del editor. También puede abrir el entorno de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] en modo Interfaz de múltiples documentos (MDI) para unir las ventanas sin las pestañas y poder organizarlas en mosaico, minimizarlas, etc.  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye un modo de vista denominado **Organización por pestañas**que permite abrir varios editores y documentos al mismo tiempo, y tener acceso a ellos mediante pestañas situadas en la parte superior del editor. También puede abrir el entorno de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] en modo Interfaz de múltiples documentos (MDI) para unir las ventanas sin las pestañas y poder organizarlas en mosaico, minimizarlas, etc.  
   
 #### <a name="to-switch-between-view-modes"></a>Para cambiar de un modo de vista a otro  
   

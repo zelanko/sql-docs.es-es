@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882362"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042846"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solución de problemas: El grupo de disponibilidad superó el RPO
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85882362"
   
  Además, resulta útil para comprobar los dos objetos de rendimiento: `SQL Server:Availability Replica > Flow Control Time (ms/sec)` y `SQL Server:Availability Replica > Flow Control/sec`. Al multiplicar estos dos valores, puede saber en el último segundo cuánto tiempo tardó en borrarse el control de flujo. Cuanto más tiempo de espera tarde el control de flujo, menor será la velocidad de envío.  
   
- Las siguientes métricas son útiles para diagnosticar el rendimiento y la latencia de red. Puede usar otras herramientas de Windows, como **ping.exe** y [Monitor de red](https://www.microsoft.com/download/details.aspx?id=4865) para evaluar el uso de la latencia y la red.  
+ Las siguientes métricas son útiles para diagnosticar el rendimiento y la latencia de red. Puede usar otras herramientas de Windows, como **ping.exe** y [Monitor de red](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7) para evaluar el uso de la latencia y la red.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB error handling, error interfaces
 - ISQLErrorInfo interface
 - errors [OLE DB], error interfaces
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f398cb4ca6cdeaa9484e01b5ca41ae28b7d9f095
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 023926ff67c85dcf8d95499b8281853bf7b3b1f3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003367"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860005"
 ---
 # <a name="information-in-error-interfaces"></a>Información en interfaces de error
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "86003367"
 |Función de miembro|Descripción|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Llena una estructura ERRORINFO con información básica acerca de un error. Una estructura ERRORINFO contiene miembros que identifican el valor devuelto HRESULT del error así como el proveedor y la interfaz a los que se aplica el error.|  
-|**GetCustomErrorObject**|Devuelve una referencia en las interfaces **ISQLErrorInfo** e [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).|  
+|**GetCustomErrorObject**|Devuelve una referencia en las interfaces **ISQLErrorInfo** e [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15).|  
 |**GetErrorInfo**|Devuelve una referencia en una interfaz **IErrorInfo**.|  
 |**GetErrorParameters**|OLE DB Driver for SQL Server no devuelve parámetros al consumidor mediante **GetErrorParameters**.|  
 |**GetRecordCount**|Recuento de registros de error disponibles.|  

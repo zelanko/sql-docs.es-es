@@ -3,7 +3,7 @@ title: Cuadro de diálogo Inspección rápida
 description: Aprenda a usar el cuadro de diálogo Inspección rápida mientras depura el código para ver rápidamente el tipo de datos y el valor de una expresión de Transact-SQL, como una variable.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab9e15deb9c1f46750d15e2a05e632e4f3f5b0f5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a958b77c4ad0bec747ec6a39bc25781eb96156cb
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247324"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900439"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Depurador de Transact-SQL: cuadro de diálogo Inspección rápida
 

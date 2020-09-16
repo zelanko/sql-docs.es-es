@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [OLE DB]
 - OLE DB error handling, about error handling
 - OLE DB error handling
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 141269a245a483266dd74a5c11f2ffe9e5bef71d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ddd8fd4e6280e49d924a0bf60f4d8a4900c114e4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003371"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861998"
 ---
 # <a name="errors"></a>Errors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "86003371"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede devolver varios errores. Una aplicación puede recuperar los errores de servidor de uno en uno mediante una llamada a [IMultipleResults::GetResult](https://go.microsoft.com/fwlink/?LinkId=129630) combinada con ISQLErrorInfo e IErrorRecords.  
   
- El controlador OLE DB para SQL Server expone la interfaz **IErrorInfo** mejorada por registro de OLE DB, la interfaz **ISQLErrorInfo** personalizada y las interfaces de objeto de error [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) específicas del proveedor.  
+ El controlador OLE DB para SQL Server expone la interfaz **IErrorInfo** mejorada por registro de OLE DB, la interfaz **ISQLErrorInfo** personalizada y las interfaces de objeto de error [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) específicas del proveedor.  
   
  Para obtener información sobre cómo realizar un seguimiento de los errores, vea [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (Seguimiento de acceso a datos). Para información sobre las mejoras en el seguimiento de errores agregadas en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], consulte [Acceso a información de diagnóstico en el registro de eventos extendidos](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   

@@ -3,7 +3,7 @@ title: Barra de estado (Editor de consultas del motor de base de datos)
 description: Obtenga información sobre cómo codificar mediante colores la barra de estado de una ventana del Editor de consultas del motor de base de datos para indicar a qué instancia del motor de base de datos está conectada.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
@@ -12,12 +12,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95cccb6c8f63e149de806c4c956e1371a83f3619
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 59183c647c9bb767767a536e82be9f8dfb8b7188
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243775"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480399"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra de estado (Editor de consultas del motor de base de datos)
 
@@ -95,6 +95,6 @@ Si desea establecer un color de barra de estado personalizado para un nodo de se
 -   Complete el resto de la información de conexión y, a continuación, haga clic en el botón **Conectar** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
+ [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)  
   
   

@@ -1,11 +1,8 @@
 ---
 title: Editores XML (SQL Server Management Studio)
 description: Aprenda a usar las herramientas visuales del Editor XML de SQL Server Management Studio para trabajar con esquemas XML (XSD), conjuntos de datos ADO.NET y documentos XML.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.editor.xml.f1
@@ -17,22 +14,27 @@ helpviewer_keywords:
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 528293a500c391fa2d7efbcd9fe8a35f6a797f23
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1de79327a877be44f6c17639a7c3a9e0fb1425ad
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87237085"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093571"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editores XML (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Proporciona un conjunto de herramientas visuales para trabajar con esquemas XML, conjuntos de datos ADO.NET y documentos XML. El Diseñador XML admite el lenguaje de definición de esquemas XML (XSD) definido por el World Wide Web Consortium (WC3). El diseñador no admite definiciones de tipo de documento (DTD) ni otros lenguajes de esquemas XML, como el esquema XML simplificado (XDR).  
-  
- Para mostrar el diseñador, agregue un conjunto de datos, un esquema XML o un archivo XML al proyecto o abra cualquiera de los tipos de archivos que se enumeran en la siguiente tabla.  
-  
-> [!CAUTION]  
->  No hay ningún comando **Deshacer** cuando se trabaja en la vista Esquema. Planifique su trabajo meticulosamente y guarde los archivos con frecuencia.  
+
+Proporciona un conjunto de herramientas visuales para trabajar con esquemas XML, conjuntos de datos ADO.NET y documentos XML. El Diseñador XML admite el lenguaje de definición de esquemas XML (XSD) definido por el World Wide Web Consortium (WC3). El diseñador no admite definiciones de tipo de documento (DTD) ni otros lenguajes de esquemas XML, como el esquema XML simplificado (XDR).  
+
+Para mostrar el diseñador, agregue un conjunto de datos, un esquema XML o un archivo XML al proyecto o abra cualquiera de los tipos de archivos que se enumeran en la siguiente tabla.  
+
+> [!CAUTION]
+> No hay ningún comando **Deshacer** cuando se trabaja en la vista Esquema. Planifique su trabajo meticulosamente y guarde los archivos con frecuencia.  
   
  El diseñador proporciona las tres siguientes vistas (o modos) para trabajar en archivos XML, esquemas XML y conjuntos de datos:  
   

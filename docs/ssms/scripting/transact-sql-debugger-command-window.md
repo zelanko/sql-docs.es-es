@@ -3,7 +3,7 @@ title: Ventana de comandos
 description: Obtenga información sobre cómo usar la ventana Comandos del depurador de Transact-SQL para ejecutar comandos de depuración y editar comandos en el código que depura.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Command Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e9a1e432de7b9bb0871ffc094f7d37cd1709aff
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3465a430f9b9103088e08db045d1c42338c0224f
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248069"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901432"
 ---
 # <a name="transact-sql-debugger---command-window"></a>Depurador de Transact-SQL: ventana Comandos
 

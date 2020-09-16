@@ -19,12 +19,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d0f81ad846185978a73bfcc1de75f33b83c5ca0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d37d26a54bb3659f7cd1fe929d8fbf1ee48624e
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479511"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076722"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -40,7 +40,7 @@ TRIM ( [ characters FROM ] string )
 ```
 
 ```
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 TRIM ( string )
 ```
 
@@ -56,7 +56,7 @@ TRIM ( string )
 
 Devuelve una expresión de caracteres con un tipo de argumento de cadena donde el carácter de espacio `char(32)` u otros caracteres especificados se quitan de ambos lados. Devuelve `NULL` si la cadena de entrada es `NULL`.
 
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Observaciones
 
 De manera predeterminada, la función `TRIM` quita el carácter de espacio de los extremos de inicio y final de la cadena. Este comportamiento equivale a `LTRIM(RTRIM(@string))`.
 

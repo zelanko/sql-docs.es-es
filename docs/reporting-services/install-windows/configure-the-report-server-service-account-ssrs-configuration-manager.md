@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: f1c17f3a3f3accdbc9fcefa4872100d6a4ee2889
-ms.sourcegitcommit: 60900cdd520ec723102b54ccd27b102bf6c91d25
+ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84638289"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042856"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS)
 
@@ -95,7 +95,7 @@ Las siguientes directrices y los vínculos de esta sección pueden ayudarle a el
   
 - [Configuración de permisos y cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-- [Guía de planeamiento de seguridad para servicios y cuentas de servicio](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [Guía de planeamiento de seguridad para servicios y cuentas de servicio](https://www.zubairalexander.com/blog/services-and-service-accounts-security-planning-guide/).  
   
 ## <a name="updating-an-expired-password"></a>Actualizar una contraseña que ha expirado
 

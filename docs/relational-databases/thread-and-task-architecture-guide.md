@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485586"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076810"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -177,9 +177,13 @@ Microsoft Windows utiliza un sistema de prioridad numérica con intervalos de 1 
 
 De manera predeterminada, cada instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]tiene la prioridad 7, que se denomina prioridad normal. Esto proporciona a los subprocesos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] una prioridad lo suficientemente alta como para obtener los recursos adecuados de la CPU sin afectar negativamente a otras aplicaciones. 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 La opción de configuración [Aumento de prioridad](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) se puede usar para aumentar la prioridad de los subprocesos de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a 13. Se denomina prioridad alta. Esta configuración da a los subprocesos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] una prioridad más alta que la del resto de las aplicaciones. De esta forma, se tenderá a generar los subprocesos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en cuanto estén listos para ejecutarse y no habrá subprocesos de otras aplicaciones con mayor prioridad. Esto puede mejorar el rendimiento cuando un servidor ejecuta únicamente instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y ninguna otra aplicación. Sin embargo, si se produce en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] una operación que consume mucha memoria, probablemente las demás aplicaciones no tendrán suficiente prioridad para tener preferencia ante el subproceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 Si está ejecutando varias instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un equipo y activa la opción aumento de prioridad solo para algunas instancias, se puede ver afectado el rendimiento de las instancias que se ejecutan con prioridad normal. También se puede ver afectado el rendimiento de otras aplicaciones y componentes del servidor si se activa aumento de prioridad. Por tanto, debe utilizarse bajo condiciones rigurosamente controladas.
+
 
 ## <a name="hot-add-cpu"></a>CPU instalada en caliente
 Agregar CPU sin interrupción es la capacidad para agregar CPU de forma dinámica a un sistema en funcionamiento. Las CPU se pueden agregar físicamente, mediante la instalación de nuevo hardware; lógicamente, haciendo particiones de hardware en línea, o bien virtualmente a través de un nivel de virtualización. A partir de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite la adición de CPU sin interrupción.

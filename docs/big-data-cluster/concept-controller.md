@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5a294bf705e4caf4a79c0f67ce925187e24c0f00
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8fd56c7b3c3177f1ae08c9b2c5d821d1c2552f70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730705"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765684"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>¿Qué es el controlador de un clúster de macrodatos de SQL Server?
 
@@ -57,7 +57,7 @@ Toda la comunicación con el servicio del controlador se realiza mediante una AP
 La autenticación en el punto de conexión de servicio del controlador se realiza mediante una identidad de Active Directory o basada en un nombre de usuario y una contraseña. Estas credenciales se aprovisionan en el momento de arranque del clúster mediante la entrada de las variables de entorno `AZDATA_USERNAME` y `AZDATA_PASSWORD`.
 
 > [!NOTE]
-> Debe proporcionar una contraseña que cumpla los [requisitos de complejidad de las contraseñas de SQL Server](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
+> Debe proporcionar una contraseña que cumpla los [requisitos de complejidad de las contraseñas de SQL Server](../relational-databases/security/password-policy.md?view=sql-server-2017).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3fe867d6f075067d949becdbcae4630f1ad019d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5d0c4f21d6fcf8f90026164dded1007de4e34164
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784312"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765844"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalación de las herramientas de macrodatos de SQL Server 2019
 
@@ -33,9 +33,9 @@ En la tabla siguiente se indican herramientas comunes de clúster de macrodatos 
 | `kubectl`<sup>1</sup> | Sí | Herramienta de línea de comandos para supervisar el clúster de Kubernetes subyacente ([Más información](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | Sí | Herramienta gráfica multiplataforma para consultar SQL Server. | [Instalación](https://aka.ms/getazuredatastudio) |
 | **Extensión de virtualización de datos** | Sí | Extensión de Azure Data Studio que proporciona un asistente para la virtualización de datos. | [Instalación](../azure-data-studio/data-virtualization-extension.md) |
-| **CLI de Azure**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para administrar servicios de Azure. Se usa con implementaciones de clústeres de macrodatos de AKS ([Más información](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Instalación](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **CLI de Azure**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para administrar servicios de Azure. Se usa con implementaciones de clústeres de macrodatos de AKS ([Más información](/cli/azure/?view=azure-cli-latest)). | [Instalación](/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Opcional | Interfaz de línea de comandos moderna para consultar SQL Server ([Más información](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **sqlcmd** | Para algunos scripts | Herramienta de línea de comandos heredada para consultar SQL Server ([Más información](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). Es posible que tenga que instalar Microsoft ODBC Driver 11 para SQL Server antes de instalar el paquete SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | Para algunos scripts | Herramienta de línea de comandos heredada para consultar SQL Server ([Más información](../tools/sqlcmd-utility.md?view=sql-server-ver15)). Es posible que tenga que instalar Microsoft ODBC Driver 11 para SQL Server antes de instalar el paquete SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | Para algunos scripts | Herramienta de línea de comandos para transferir datos con direcciones URL. | [Windows](https://curl.haxx.se/windows/) \| Linux: instalación de paquete curl |
 | `oc` | Obligatoria para las implementaciones de Red Hat OpenShift y Red Hat OpenShift en Azure. |`oc` es la interfaz de la línea de comandos (CLI) de Open Shift. | [Instalación de la CLI](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli)
 
@@ -87,7 +87,7 @@ Azure Data Studio proporciona funcionalidades y características específicament
 
 [Obtenga la versión más reciente de Azure Data Studio](https://aka.ms/getazuredatastudio).
 
-Para más información sobre la última versión, consulte las [notas de la versión](../big-data-cluster/release-notes-big-data-cluster.md).
+Para más información sobre la última versión, consulte las [notas de la versión](./release-notes-big-data-cluster.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

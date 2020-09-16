@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: a29748dc5c62d3102dc964871b416e175dbd725a
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487874"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746075"
 ---
 # <a name="python-sql-driver"></a>Controlador de SQL para Python
 
@@ -37,7 +37,7 @@ Hay varios controladores de SQL para Python disponibles. Sin embargo, Microsoft 
 * [Comunidad de python.org](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>Más ejemplos  
-* [Creación de una aplicación web de Python con DJango y SQL Database en el sitio web de Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Creación de una aplicación de Python en Azure App Service en Linux](https://docs.microsoft.com/azure/app-service/containers/quickstart-python?tabs=bash)
 * [Introducción a Python en Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
 * [Introducción a Python en macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
 * [Introducción a Python en Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)

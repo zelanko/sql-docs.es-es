@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 72b9d67488e43a9d87ed52243b20fb49219887c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e66adad7e724f0ed18c53693c4c56567fb9d8e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722637"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713803"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Cuadros de diálogo de SQL Server Profiler
 
@@ -52,7 +52,7 @@ Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedad
 |---|---
 |Columna**Eventos**|Especifique los eventos de seguimiento seleccionando o desactivando la casilla de la columna de eventos. Los**eventos** se organizan por categoría. Las clases de evento especificadas en la plantilla se seleccionan automáticamente. Para obtener más información, consulte [Referencia de las clase de eventos de SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md).  
 |Columnas de datos|Especifique las columnas de datos de seguimiento activando la casilla que se corresponda con el evento y la columna de datos necesarios. Todas las columnas de eventos importantes se activan de manera predeterminada en cada evento incluido en el seguimiento.  
-|Filtros|Especifique los filtros haciendo clic en el encabezado de la columna de datos y especificando los criterios de filtro. Las columnas de datos filtradas se indican mediante un icono de filtro situado a la izquierda de la etiqueta de columna en el cuadro de diálogo **Editar filtro** . Para obtener más información, vea [SQL Server Profiler (Editar filtro)](https://msdn.microsoft.com/library/a589eff5-6ec6-4f6e-94b8-831658257f14).  
+|Filtros|Especifique los filtros haciendo clic en el encabezado de la columna de datos y especificando los criterios de filtro. Las columnas de datos filtradas se indican mediante un icono de filtro situado a la izquierda de la etiqueta de columna en el cuadro de diálogo **Editar filtro** . Para obtener más información, vea [SQL Server Profiler (Editar filtro)](?view=sql-server-ver15).  
 |**Mostrar todos los eventos**|Se muestran todos los eventos disponibles. De forma predeterminada, solo se muestran las filas de la cuadrícula **Selección de eventos** que están seleccionadas. Desactive esta casilla para ocultar todos los eventos que no estén seleccionados en la cuadrícula **Selección de eventos** .  
 |**Mostrar todas las columnas**|Muestra todas las columnas de datos disponibles. De forma predeterminada, solo se muestran las columnas de datos seleccionadas. Desactive esta casilla para ocultar todas las columnas de datos que no estén seleccionadas en la cuadrícula **Selección de eventos** .  
 |**Filtros de columnas**|Inicia el cuadro de diálogo **Editar filtro** . Puede utilizar este cuadro de diálogo para editar filtros de columnas de datos.  
@@ -279,5 +279,4 @@ Utilice el cuadro de diálogo **Seleccionar nombre de plantilla** para seleccion
 ## <a name="see-also"></a>Consulte también 
 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
 [Supervisión de la actividad y rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
-  
   

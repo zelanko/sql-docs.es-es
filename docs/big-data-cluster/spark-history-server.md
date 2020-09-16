@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6bdded00e9f4cc9fb5048bf242c0333cb88f186f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728029"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778524"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones Spark en clústeres de macrodatos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con el servidor de historial de Spark
 
@@ -210,6 +210,6 @@ El servidor de historial de Spark tiene los siguientes problemas conocidos:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Introducción a los clústeres de macrodatos de SQL Server](../big-data-cluster/deploy-get-started.md)
+* [Introducción a los clústeres de macrodatos de SQL Server](./deploy-get-started.md)
 * Configuración de las opciones de Spark
 * [Configurar las opciones de Spark](/azure/hdinsight/spark/apache-spark-settings/)

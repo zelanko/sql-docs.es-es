@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 16843ff8599e9cda540c2a9f3ac264c8edc2dc88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f6f001aa71a5ae2fd397fae2d89bdd951956987
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726919"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713833"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Lección 1: Navegación básica en el Asistente para la optimización de motor de base de datos (DTA)
 
@@ -30,12 +30,12 @@ El Asistente para la optimización de motor de base de datos ofrece una interfaz
 
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Descargue las [bases de datos de ejemplo de AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017).
+- Descargue las [bases de datos de ejemplo de AdventureWorks2017](../../samples/adventureworks-install-configure.md?view=sql-server-2017).
 
 
-Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > Este tutorial está destinado a un usuario familiarizado con el uso de SQL Server Management Studio y las tareas básicas de administración de bases de datos. 
@@ -89,6 +89,5 @@ Cuando se abre por primera vez, aparecen dos paneles principales en la GUI del A
   
 ## <a name="next-lesson"></a>Lección siguiente  
 [Lección 2: Usar el Asistente para la optimización de motor de base de datos](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
-  
   
   

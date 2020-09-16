@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b05cbaf1978ec06da1f364d337509ca3652d030
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 14f3a13e566fc56332c79fd104ef584be098cda7
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681330"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714193"
 ---
 # <a name="install-distributed-replay"></a>Instalar Distributed Replay
 
@@ -192,7 +192,7 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
 -   Los valores de línea de comandos sobrescriben los valores del archivo de configuración.  
   
- Para obtener más información sobre cómo usar un archivo de configuración, vea [Instalar SQL Server 2016 usando un archivo de configuración](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
+ Para obtener más información sobre cómo usar un archivo de configuración, vea [Instalar SQL Server 2016 usando un archivo de configuración](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md?view=sql-server-ver15).  
   
 > [!IMPORTANT]  
 >  Después de instalar Distributed Replay, debe crear las reglas de firewall en los equipos cliente y de controlador, y conceder a cada equipo cliente permisos en el servidor de destino. Para obtener más información, vea [Completar los pasos posteriores a la instalación](../../tools/distributed-replay/complete-the-post-installation-steps.md).  

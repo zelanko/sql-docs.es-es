@@ -13,12 +13,12 @@ ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3afc39516bc50a6a4f1a2fb7ad67d7b0c3602e7e
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457524"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713743"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lección 3: Uso de la utilidad del símbolo del sistema dta
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,19 +36,19 @@ Esta lección no cubre el uso de la funcionalidad de entrada XML del Asistente p
   
  Esta tarea le guía por los pasos necesarios para iniciar la utilidad **dta**, ver su Ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Se usará la carga de trabajo (MyScript.sql) que ha creado para la práctica sobre la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos: [Optimizar una carga de trabajo](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload).  
   
-El tutorial usa la base de datos de ejemplo de AdventureWorksLT2017. Por motivos de seguridad, las bases de datos de ejemplo no se instalan de manera predeterminada. Para instalarlas, consulte [Instalar ejemplos de SQL Server y bases de datos de ejemplo](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
+El tutorial usa la base de datos de ejemplo de AdventureWorksLT2017. Por motivos de seguridad, las bases de datos de ejemplo no se instalan de manera predeterminada. Para instalarlas, consulte [Instalar ejemplos de SQL Server y bases de datos de ejemplo](../../samples/adventureworks-install-configure.md).  
   
-Las tareas siguientes le guían por los pasos necesarios para abrir un símbolo del sistema, iniciar la utilidad **dta** , ver la Ayuda de la sintaxis y optimizar una carga de trabajo sencilla (MyScript.sql) que ha creado en [Optimizar una carga de trabajo](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+Las tareas siguientes le guían por los pasos necesarios para abrir un símbolo del sistema, iniciar la utilidad **dta** , ver la Ayuda de la sintaxis y optimizar una carga de trabajo sencilla (MyScript.sql) que ha creado en [Optimizar una carga de trabajo](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15).  
 
 ## <a name="prerequisites"></a>Requisitos previos 
 
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Descargue la [base de datos de ejemplo de AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Descargue la [base de datos de ejemplo de AdventureWorks2017](../../samples/adventureworks-install-configure.md).
 
 
-Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > Este tutorial está destinado a un usuario familiarizado con el uso de SQL Server Management Studio y las tareas básicas de administración de bases de datos. 
@@ -84,7 +84,7 @@ Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaura
 
   ![uso de CMD con DTA](media/dta-tutorials/dta-cmd.png)
   
-3.  Una vez que el Asistente para la optimización de motor de base de datos acabe de optimizar la carga de trabajo, mostrará un mensaje para indicar que la sesión de optimización finalizó correctamente. Puede ver los resultados de la optimización utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para abrir los archivos MySession2OutputScript.sql y MySession2Output.xml. También puede abrir la sesión de optimización MySession2 en la GUI del Asistente para la optimización de motor de base de datos y ver las recomendaciones e informes de la misma forma que ha hecho en [Ver recomendaciones de optimización](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) y [Ver informes de optimización](../../tools/dta/lesson-1-3-viewing-tuning-reports.md).  
+3.  Una vez que el Asistente para la optimización de motor de base de datos acabe de optimizar la carga de trabajo, mostrará un mensaje para indicar que la sesión de optimización finalizó correctamente. Puede ver los resultados de la optimización utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para abrir los archivos MySession2OutputScript.sql y MySession2Output.xml. También puede abrir la sesión de optimización MySession2 en la GUI del Asistente para la optimización de motor de base de datos y ver las recomendaciones e informes de la misma forma que ha hecho en [Ver recomendaciones de optimización](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15) y [Ver informes de optimización](./lesson-2-using-database-engine-tuning-advisor.md?view=sql-server-ver15).  
   
  
 ## <a name="after-you-finish-this-tutorial"></a>Al finalizar este tutorial  
@@ -97,4 +97,3 @@ Para volver al inicio del tutorial, consulte [Tutorial: Asistente para la optimi
   
 ## <a name="see-also"></a>Consulte también  
 [Tutoriales del motor de base de datos](../../relational-databases/database-engine-tutorials.md)  
-    

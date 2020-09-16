@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 385171c8465a06595a65c02ff457d003ce723a7f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: bd60220151fb8f389ac7c82c1bdb0f10cf46bba1
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458697"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713813"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Lección 2: Uso del Asistente para la optimización de motor de base de datos
 
@@ -30,12 +30,12 @@ El Asistente para la optimización de motor de base de datos le permite optimiza
 
 Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, acceso a un servidor que ejecute SQL Server y una base de datos de AdventureWorks.
 
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instale [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Descargue la [base de datos de ejemplo de AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017).
+- Descargue la [base de datos de ejemplo de AdventureWorks2017](../../samples/adventureworks-install-configure.md?view=sql-server-2017).
 
 
-Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > Este tutorial está destinado a un usuario familiarizado con el uso de SQL Server Management Studio y las tareas básicas de administración de bases de datos. 
@@ -147,5 +147,4 @@ Ha explorado la pestaña **Informes** de la GUI del Asistente para la optimizaci
  ## <a name="next-lesson"></a>Lección siguiente  
 [Lección 3: Usa la utilidad del símbolo del sistema DTA](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
    
-  
   

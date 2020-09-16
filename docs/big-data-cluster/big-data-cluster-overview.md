@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942795"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765744"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -26,14 +26,14 @@ En [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] se introducen los cl�
 
 Use los clústeres de macrodatos de SQL Server para:
 
-- [Implementación de clústeres escalables](../big-data-cluster/deploy-get-started.md) de contenedores de SQL Server, Spark y HDFS que se ejecutan en Kubernetes. 
+- [Implementación de clústeres escalables](./deploy-get-started.md) de contenedores de SQL Server, Spark y HDFS que se ejecutan en Kubernetes. 
 - Leer, escribir y procesar macrodatos desde Transact-SQL o Spark.
 - Combinar y analizar de forma sencilla datos relacionales de alto valor con macrodatos de gran volumen.
 - Consultar orígenes de datos externos.
 - Almacenar macrodatos en HDFS administrados mediante SQL Server.
 - Consultar datos de varios orígenes de datos externos a través del clúster.
 - Usar los datos para tareas de inteligencia artificial, aprendizaje automático y otras tareas de análisis.
-- [Implementar y ejecutar aplicaciones](../big-data-cluster/concept-application-deployment.md) en [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- [Implementar y ejecutar aplicaciones](./concept-application-deployment.md) en [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
 - Virtualización de datos con [PolyBase](../relational-databases/polybase/polybase-guide.md). Consulte datos de orígenes de datos externos de SQL Server, Oracle, Teradata, MongoDB y ODBC con tablas externas.
 - Proporcione alta disponibilidad para la instancia maestra de SQL Server y todas las bases de datos mediante la tecnología de grupos de disponibilidad AlwaysOn.
 

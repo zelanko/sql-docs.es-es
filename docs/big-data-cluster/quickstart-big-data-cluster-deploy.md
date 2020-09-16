@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 052e3794fa058ec988160855123c5b0993f3fbd4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d547dc374de8171097ceda77afb234d4e5dfa451
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85699826"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772394"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Uso de un script de Python para implementar un clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -75,14 +75,14 @@ Siga estos pasos para ejecutar el script de implementación en un símbolo del s
    | **Id. de suscripción a Azure** | Identificador de suscripción de Azure que se usará para AKS. Puede enumerar todas las suscripciones y sus identificadores ejecutando `az account list` desde otra línea de comandos. |
    | **Grupo de recursos de Azure** | Nombre del grupo de recursos de Azure que se va a crear para el clúster de AKS. |
    | **Región de Azure** | La región de Azure del nuevo clúster de AKS (**westus** de forma predeterminada). |
-   | **Tamaño de la máquina** | El [tamaño de la máquina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) que se va a usar para los nodos del clúster de AKS (**Standard_L8s** de forma predeterminada). |
+   | **Tamaño de la máquina** | El [tamaño de la máquina](/azure/virtual-machines/windows/sizes) que se va a usar para los nodos del clúster de AKS (**Standard_L8s** de forma predeterminada). |
    | **Nodos de trabajo** | El número de nodos de trabajo en el clúster de AKS (valor predeterminado **1**). |
    | **Nombre del clúster** | El nombre del clúster de AKS y del clúster de macrodatos. El nombre del clúster de macrodatos debe estar formado solo por caracteres alfanuméricos en minúsculas y sin espacios (valor predeterminado**sqlbigdata**). |
    | **Contraseña** | Contraseña del controlador, puerta de enlace de HDFS/Spark e instancia maestra (valor predeterminado **MySQLBigData2019**). |
    | **Nombre de usuario** | Nombre de usuario del controlador (valor predeterminado: **admin**). |
 
    > [!IMPORTANT]
-   > Es posible que el tamaño de máquina predeterminado **Standard_L8s** no esté disponible en todas las regiones de Azure. Si selecciona un tamaño de máquina diferente, asegúrese de que el número total de discos que se pueden conectar a través de los nodos del clúster es mayor o igual que 24. Cada notificación de volumen persistente en el clúster requiere un disco conectado. Actualmente, el clúster de macrodatos requiere 24 notificaciones de volumen persistentes. Por ejemplo, el tamaño de la máquina [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) admite 32 discos conectados, por lo que puede evaluar los clústeres de macrodatos con un solo nodo de este tamaño de máquina.
+   > Es posible que el tamaño de máquina predeterminado **Standard_L8s** no esté disponible en todas las regiones de Azure. Si selecciona un tamaño de máquina diferente, asegúrese de que el número total de discos que se pueden conectar a través de los nodos del clúster es mayor o igual que 24. Cada notificación de volumen persistente en el clúster requiere un disco conectado. Actualmente, el clúster de macrodatos requiere 24 notificaciones de volumen persistentes. Por ejemplo, el tamaño de la máquina [Standard_L8s](/azure/virtual-machines/lsv2-series) admite 32 discos conectados, por lo que puede evaluar los clústeres de macrodatos con un solo nodo de este tamaño de máquina.
 
    > [!NOTE]
    > La cuenta `sa` de SQL Server está deshabilitada durante la implementación del clúster de macrodatos. En la instancia maestra de SQL Server se aprovisiona un nuevo inicio de sesión de sysadmin con el mismo nombre especificado para la entrada **Nombre de usuario** y la contraseña correspondiente a la entrada **Contraseña**. Se usan los mismos valores **Nombre de usuario** y **Contraseña** para aprovisionar un usuario administrador de controlador. En los clústeres implementados antes de SQL Server CU5 2019, el único usuario compatible con la puerta de enlace (Knox) es **root** y la contraseña es la misma que la anterior.

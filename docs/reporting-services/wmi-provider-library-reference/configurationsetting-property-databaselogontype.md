@@ -1,4 +1,5 @@
 ---
+description: Propiedad DatabaseLogonType (WMI MSReportServer_ConfigurationSetting)
 title: Propiedad DatabaseLogonType (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 078c430e2300a0b80f85357f9f962e8e2dd72838
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9536d9cf0d97576558ce378418769e3db4f543da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472677"
 ---
 # <a name="configurationsetting-property---databaselogontype"></a>Propiedad ConfigurationSetting - DatabaseLogonType
   Especifica si el servidor de informes usa una cuenta de servicio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, una cuenta de usuario de Windows o un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para tener acceso a la base de datos del servidor de informes. Solo lectura.  

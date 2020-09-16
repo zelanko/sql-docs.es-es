@@ -1,4 +1,5 @@
 ---
+description: Propiedad SendUsingSMTPServer (MSReportServer_ConfigurationSetting de WMI)
 title: Propiedad SendUsingSMTPServer (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5e292a91ff23e658ca31ae42401df8ea846fcc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4c033d4787bfa31f61b8657ecf9e7ccf7db1e59a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472603"
 ---
 # <a name="configurationsetting-property---sendusingsmtpserver"></a>Propiedad de ConfigurationSetting: SendUsingSMTPServer
   Especifica si el elemento **SendUsing** de la configuración del correo electrónico para el servidor de informes se ha establecido en **true**.  

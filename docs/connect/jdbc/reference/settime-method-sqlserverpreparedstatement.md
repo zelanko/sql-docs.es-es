@@ -1,4 +1,5 @@
 ---
+description: Método setTime (SQLServerPreparedStatement)
 title: Método setTime (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e51be70ac4d6d17a953a401807306f16a60d6553
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1beac0c34b17e851cbe2a0dbc94445e25a9c8254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926560"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472187"
 ---
 # <a name="settime-method-sqlserverpreparedstatement"></a>Método setTime (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "80926560"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |[setTime (int, java.sql.Time)](../../../connect/jdbc/reference/settime-method-int-java-sql-time.md)|Establece el parámetro designado para el valor de hora determinado.|  
 |[setTime (int, java.sql.Time, java.util.Calendar)](../../../connect/jdbc/reference/settime-method-int-java-sql-time-java-util-calendar.md)|Establece el parámetro designado para los valores de hora y de calendario determinados.|  

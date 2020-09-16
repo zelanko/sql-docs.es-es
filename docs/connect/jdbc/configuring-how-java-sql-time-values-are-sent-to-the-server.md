@@ -1,4 +1,5 @@
 ---
+description: Configurar el modo en que los valores java.sql.Time se envían al servidor
 title: Configuración del modo en que los valores java.sql.Time se envían al servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1aa775d7b9d2b4778cfded5be1f5ffe16aca736
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a360def7656fb270267372d5b226b68d30aeaf57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438477"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configurar el modo en que los valores java.sql.Time se envían al servidor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Si usa un objeto java.sql.Time o el tipo de JDBC java.sql.Types.TIME para establecer un parámetro, podrá configurar la forma en que el valor java.sql.Time se envía al servidor; es decir, como un tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]time**o un tipo**datetime**de**.  
+  Si usa un objeto java.sql.Time o el tipo de JDBC java.sql.Types.TIME para establecer un parámetro, podrá configurar la forma en que el valor java.sql.Time se envía al servidor; es decir, como un tipo  **time** o un tipo **datetime** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Este escenario se aplica al utilizar uno de los siguientes métodos:  
   
@@ -40,9 +41,9 @@ ms.locfileid: "80922512"
   
  Puede modificar mediante programación el valor de la propiedad de conexión **sendTimeAsDatetime** con [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] no admiten el tipo de datos **time**, por ello, las aplicaciones que usen java.sql.Time por lo general almacenan valores de java.sql.Time como tipos de datos **datetime** o **smalldatetime** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] no admiten el tipo de datos **time**, por ello, las aplicaciones que usen java.sql.Time por lo general almacenan valores de java.sql.Time como tipos de datos **datetime** o **smalldatetime de ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Si quiere usar los tipos de datos **datetime** y **smalldatetime** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando trabaje con valores java.sql.Time, debería establecer la propiedad de conexión **sendTimeAsDatetime** en **true**. Si quiere usar el tipo de datos **time** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando trabaje con valores java.sql.Time, debería establecer la propiedad de conexión **sendTimeAsDatetime** en **false**.  
+ Si quiere usar los tipos de datos **datetime** y **smalldatetime** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando trabaje con valores java.sql.Time, debería establecer la propiedad de conexión **sendTimeAsDatetime** en **true**. Si quiere usar el tipo de datos **time de ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando trabaje con valores java.sql.Time, debería establecer la propiedad de conexión **sendTimeAsDatetime** en **false**.  
   
  Tenga en cuenta que al enviar valores java.sql.Time a un parámetro cuyo tipo de datos también pueda almacenar fechas, esos valores predeterminados de fecha serán distintos en función de si el valor java.sql.Time se envía como un valor **datetime** (1/1/1970) o un valor **time** (1/1/1900). Para más información sobre las conversiones de datos al enviar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Usar datos de fecha y hora](https://go.microsoft.com/fwlink/?LinkID=145211).  
   

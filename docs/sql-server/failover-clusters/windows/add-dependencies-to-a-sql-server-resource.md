@@ -1,4 +1,5 @@
 ---
+description: Agregar dependencias a un recurso de SQL Server
 title: Adición de dependencias a un recurso de FCI de SQL Server
 descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager.
 ms.custom: seo-lt-2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84633c480003acc62b464c2609d7143051547de9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: edfe4aef388749cf1a9362f31f9ae2668f85b524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454447"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Agregar dependencias a un recurso de SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85897360"
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Requisitos previos](#Prerequisites)  
   
--   **Para agregar una dependencia a un recurso de SQL Server, mediante:** [Administrador de clústeres de conmutación por error de Windows](#WinClusManager)  
+-   **Para agregar una dependencia a un recurso de SQL Server con:** [Administrador de clústeres de conmutación por error de Windows](#WinClusManager)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -45,13 +46,13 @@ ms.locfileid: "85897360"
   
  Tenga en cuenta también estos problemas adicionales:  
   
--   FTP con replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: para las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que utilicen FTP con replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el servicio FTP debe usar uno de los mismos discos físicos configurados para que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilice el servicio FTP.  
+-   FTP con replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : para las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que utilicen FTP con replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el servicio FTP debe usar uno de los mismos discos físicos configurados para que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilice el servicio FTP.  
   
--   Dependencias de recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: si agrega un recurso a un grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y tiene una dependencia en el recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para asegurarse de que esté disponible [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda agregar una dependencia en el recurso del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. No agregue una dependencia en el recurso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para asegurarse de que el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permanece altamente disponible, configure el recurso del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de modo que no afecte al grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si se produce un error en el recurso del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : si agrega un recurso a un grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y tiene una dependencia en el recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para asegurarse de que esté disponible [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda agregar una dependencia en el recurso del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No agregue una dependencia en el recurso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para asegurarse de que el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permanece altamente disponible, configure el recurso del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de modo que no afecte al grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si se produce un error en el recurso del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Recursos compartidos de archivos e impresoras: cuando instale recursos de archivo o recursos de clústeres de impresora, no los coloque en los mismos recursos de disco físico que el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si los coloca en los mismos recursos de disco físico, puede experimentar una degradación del rendimiento y la pérdida de servicio en el equipo donde se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Consideraciones de MS DTC: después de instalar el sistema operativo y configurar la FCI, debe configurar el coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MS DTC) para que funcione en un clúster mediante el complemento Administrador de clústeres de conmutación por error. Si no logra crear el clúster de MS DTC, no se bloqueará el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , pero la funcionalidad de la aplicación [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede verse afectada si MS DTC no se configura correctamente.  
+-   Consideraciones sobre MS DTC: Después de instalar el sistema operativo y configurar la FCI, debe configurar el coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MS DTC) para que funcione en un clúster mediante el complemento Administrador de clústeres de conmutación por error. Si no logra crear el clúster de MS DTC, no se bloqueará el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , pero la funcionalidad de la aplicación [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede verse afectada si MS DTC no se configura correctamente.  
   
      Si instala MS DTC en el grupo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y tiene otros recursos que dependen de MS DTC, MS DTC no estará disponible si este grupo se encuentra en modo sin conexión ni durante una conmutación por error. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda que, si es posible, sitúe MS DTC en su propio grupo con su propio recurso de disco físico.  
   

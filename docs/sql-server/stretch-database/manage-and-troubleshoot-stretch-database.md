@@ -1,5 +1,6 @@
 ---
-title: Administración y solución de problemas
+description: Administración y solución de problemas de Stretch Database
+title: Supervisión y solución de problemas
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -13,15 +14,15 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: efe0b68c605c96423dae5206693ff733430aff63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454338"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Administración y solución de problemas de Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Para administrar y solucionar problemas de Stretch Database, use las herramientas y los métodos que se describen en este artículo.  
@@ -120,7 +121,7 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>Realización de eliminaciones y actualizaciones administrativas  
+ ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>Efectuar actualizaciones y eliminaciones administrativas  
  De forma predeterminada, no se pueden actualizar o eliminar de una tabla habilitada para Stretch filas que son aptas para la migración ni filas que ya se han migrado. Cuando tiene que solucionar un problema, un miembro del rol db_owner puede ejecutar una operación UPDATE o DELETE si agrega la sugerencia de consulta **WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = *valor* )** a la instrucción. La sugerencia de consulta REMOTE_DATA_ARCHIVE_OVERRIDE puede tener los siguientes valores:  
  -   **LOCAL_ONLY**. Solo se actualizan o eliminan los datos locales.  
    

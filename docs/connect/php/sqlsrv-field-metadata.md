@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2020
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d235fdf00922453b90979f5f8d5b6c720b7dac3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449971"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,22 +44,22 @@ Una **matriz** de matrices o el valor **False**. La matriz consta de una matriz 
   
 |Clave|Descripción|  
 |-------|---------------|  
-|Nombre|Nombre de la columna a la que corresponde el campo.|  
+|NOMBRE|Nombre de la columna a la que corresponde el campo.|  
 |Tipo|Valor numérico que corresponde a un tipo SQL.|  
-|Size|Número de caracteres de los campos de tipo de carácter: char(n), varchar(n), nchar(n), nvarchar(n) y XML. Número de bytes de los campos de tipo binario: binary(n), varbinary(n) y UDT. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
-|Precision|La precisión de los tipos de precisión de variables: real, numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
+|Tamaño|Número de caracteres de los campos de tipo de carácter: char(n), varchar(n), nchar(n), nvarchar(n) y XML. Número de bytes de los campos de tipo binario: binary(n), varbinary(n) y UDT. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
+|Precisión|La precisión de los tipos de precisión de variables: real, numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
 |Escala|La escala de los tipos de escala de variables: numeric, decimal, datetime2, datetimeoffset y time. En otros tipos de datos de SQL Server, se devuelve**NULL** .|  
 |Nullable|Un valor enumerado que indica si la columna acepta valores Null (**SQLSRV_NULLABLE_YES**), no los acepta (**SQLSRV_NULLABLE_NO**) o no se sabe si los acepta (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 En la tabla siguiente se proporciona más información sobre las claves de cada submatriz (consulte la documentación de SQL Server para obtener más información sobre estos tipos):  
   
-|Tipo de datos de SQL Server 2008|Tipo|Precisión mín./máx.|Escala mín./máx.|Size|  
+|Tipo de datos de SQL Server 2008|Tipo|Precisión mín./máx.|Escala mín./máx.|Tamaño|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |bigint|SQL_BIGINT (-5)|||8|  
 |binary|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
 |char|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
-|date|SQL_TYPE_DATE (91)|10/10|0/0||  
+|Fecha|SQL_TYPE_DATE (91)|10/10|0/0||  
 |datetime|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
@@ -75,12 +76,12 @@ En la tabla siguiente se proporciona más información sobre las claves de cada 
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
 |SMALLINT|SQL_SMALLINT (5)|||2 bytes|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
-|sql_variant|SQL_SS_VARIANT (-150)|||Variable|  
-|text|SQL_LONGVARCHAR (-1)|||2 GB|  
+|sql_variant|SQL_SS_VARIANT (-150)|||variable|  
+|texto|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |timestamp|SQL_BINARY (-2)|||8 bytes|  
 |TINYINT|SQL_TINYINT (-6)|||1 byte|  
-|udt|SQL_SS_UDT (-151)|||Variable|  
+|udt|SQL_SS_UDT (-151)|||variable|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
 |varchar|SQL_VARCHAR (12)|||0 < *n* < 8000 <sup>1</sup>|  

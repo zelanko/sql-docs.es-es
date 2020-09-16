@@ -1,4 +1,5 @@
 ---
+description: Especificar varias condiciones de búsqueda para varias columnas (Visual Database Tools)
 title: Especificar varias condiciones de búsqueda en varias columnas
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,16 +17,16 @@ ms.assetid: 06617729-0d0b-4da2-9890-b7e2f5cdbc7b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a78fbabb45d634e88b7b6bf1c5b663b8d6d6b15
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5a5f5d4e3396e3ccbff7280fbae14036015ba5eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446004"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>Especificar varias condiciones de búsqueda para varias columnas (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Puede ampliar o reducir el alcance de la consulta incluyendo varias columnas de datos como parte de la condición de búsqueda. Por ejemplo, podría:  
+Puede ampliar o reducir el alcance de la consulta incluyendo varias columnas de datos como parte de la condición de búsqueda. Por ejemplo, puedes:  
   
 -   Buscar los empleados que han trabajado más de cinco años en la compañía o que tienen determinados puestos de trabajo.  
   
@@ -78,7 +79,7 @@ Para buscar en columnas de datos diferentes utilizando condiciones vinculadas co
   
 ## <a name="see-also"></a>Consulte también  
 [Combinación de condiciones cuando AND tiene prioridad](../../ssms/visual-db-tools/combine-conditions-when-and-has-precedence-visual-database-tools.md)  
-[Combinar condiciones cuando OR tiene prioridad](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Combinar condiciones cuando OR tiene precedencia](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
 [Convenciones para combinar condiciones de búsqueda en el panel Criterios](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Especificar criterios de búsqueda](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

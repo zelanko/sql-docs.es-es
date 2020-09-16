@@ -1,4 +1,5 @@
 ---
+description: Método setResponseBuffering (SQLServerStatement)
 title: Método setResponseBuffering (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f3a6765bf5665704293233293982edfc1e746ce5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d4432c50432a22e7c0700c464a0d1f6d37f32cfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458437"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>Método setResponseBuffering (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

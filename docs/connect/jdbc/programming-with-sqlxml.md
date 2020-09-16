@@ -1,4 +1,5 @@
 ---
+description: Programar con SQLXML
 title: Programar con SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6571c9592514bb0f29c796ae5a671363f3214ca7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67766bb505750a4fbaaa1081dcf1d0441a44166e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920641"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438327"
 ---
 # <a name="programming-with-sqlxml"></a>Programar con SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "80920641"
  El código de ejemplo de [Ejemplo de tipos de datos SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md) muestra cómo realizar estas tareas de API comunes.  
   
 ## <a name="readable-and-writable-sqlxml-objects"></a>Objetos SQLXML de lectura y escritura  
- La tabla siguiente enumera qué tipos de objetos SQLXML son compatibles con los métodos establecedor, captador y actualizador de la API de JDBC. Las columnas de la tabla hacen referencia a lo siguiente:  
+ La tabla siguiente enumera qué tipos de objetos SQLXML son compatibles con los métodos establecedor, captador y actualizador de la API de JDBC.  Las columnas de la tabla hacen referencia a lo siguiente:  
   
 -   La columna **Nombre de método** enumera los métodos compatibles establecedor, captador y actualizador de la API de JDBC.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "80920641"
   
 -   La columna **Objeto SQLXML establecedor** representa un objeto SQLXML que es creado por el método [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Tenga en cuenta que los métodos establecedor que se indican abajo solamente aceptan un objeto SQLXML creado por el método [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md).  
   
-|Nombre de método|Objeto SQLXML de captador<br /><br /> (lectura)|Objeto SQLXML establecedor<br /><br /> (escritura)|  
+|Nombre del método|Objeto SQLXML de captador<br /><br /> (lectura)|Objeto SQLXML establecedor<br /><br /> (escritura)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
 |CallableStatement.setSQLXML()|No compatible|Compatible|  
 |CallableStatement.setObject()|No compatible|Compatible|  

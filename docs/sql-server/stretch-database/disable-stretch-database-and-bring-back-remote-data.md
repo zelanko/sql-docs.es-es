@@ -1,4 +1,5 @@
 ---
+description: Deshabilitación de Stretch Database y devolución de datos remotos
 title: Deshabilitación de Stretch Database y devolución de datos remotos
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 80974811f45a88b740aa8d84ea9ac67c2c2c1c07
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed34730c85a8d492bb40e3013ea5a9a05fc01d90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843821"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454385"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Deshabilitación de Stretch Database y devolución de datos remotos
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Para deshabilitar Stretch Database para una tabla, seleccione **Stretch** para una tabla en SQL Server Management Studio. Seleccione una de las siguientes opciones.  
@@ -100,7 +101,7 @@ ms.locfileid: "73843821"
 > Al deshabilitar Stretch Database para una base de datos no se elimina la base de datos remota. Si quiere eliminar la base de datos remota, debe hacerlo mediante el Portal de administración de Azure. La base de datos remota sigue acumulando costos de Azure hasta que se elimina. Para obtener más información, consulte [Precios SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
   
 ### <a name="use-transact-sql-to-disable-stretch-database-for-a-database"></a>Usar Transact-SQL para deshabilitar Stretch Database para una base de datos  
- Ejecute el siguiente comando:  
+ Ejecute el siguiente comando.  
   
 ```sql  
 ALTER DATABASE <Stretch-enabled database name>  

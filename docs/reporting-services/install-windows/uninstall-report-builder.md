@@ -1,4 +1,5 @@
 ---
+description: Desinstalar el Generador de informes
 title: Desinstalar el Generador de informes | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed8c8eb56d23d03ab77aa7bf7cc3ce3e0553e614
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e92f5eafad039858022a915fd0006ea3130a2c75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65502663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446049"
 ---
 # <a name="uninstall-report-builder"></a>Desinstalar el Generador de informes
 
@@ -50,7 +51,7 @@ Si las carpetas utilizadas por el Generador de informes incluyen archivos person
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-5.  Presione **Entrar**.  
+5.  Presione **ENTRAR**.  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

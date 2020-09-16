@@ -1,4 +1,5 @@
 ---
+description: Método setSavepoint (java.lang.String)
 title: Método setSavepoint (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d7af636bd72c3c46a0f327a48bad644c8b4344b2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 57ed08c322b8579b92165306397fb26312d95fa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458429"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>Método setSavepoint (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

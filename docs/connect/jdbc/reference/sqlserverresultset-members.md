@@ -1,4 +1,5 @@
 ---
+description: Miembros SQLServerResultSet
 title: Miembros SQLServerResultSet | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17d15be7b332d899aa35a0ce7c3d7c2b9cac1edf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dd331cec7252fb0fd0b3099800837cf667fce336
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927124"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458244"
 ---
 # <a name="sqlserverresultset-members"></a>Miembros SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,9 +26,9 @@ ms.locfileid: "80927124"
 ## <a name="constructors"></a>Constructores  
  Ninguno.  
   
-## <a name="fields"></a>Fields  
+## <a name="fields"></a>Campos  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|Se utiliza para especificar un tipo de simultaneidad optimista de lectura y escritura de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin bloqueos de fila.|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|Se utiliza para especificar un tipo de simultaneidad optimista de lectura y escritura de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin bloqueos de fila.|  
@@ -105,7 +106,7 @@ ms.locfileid: "80927124"
 |[last](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|Mueve el cursor a la última fila en este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|Mueve el cursor a la posición que se recuerda, que suele ser la fila actual.|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|Mueve el cursor a la fila de inserción.|  
-|[next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Mueve el cursor una fila hacia abajo desde su posición actual.|  
+|[siguiente](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Mueve el cursor una fila hacia abajo desde su posición actual.|  
 |[previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|Mueve el cursor a la fila anterior en este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|Actualiza la fila actual con el valor más reciente en la base de datos.|  
 |[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|Mueve el cursor tantas filas como se hayan indicado, con respecto a la fila actual, tanto en una posición positiva como en una negativa.|  

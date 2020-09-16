@@ -1,4 +1,5 @@
 ---
+description: Método getDate (int)
 title: Método getDate (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: aa9f08af-df24-4c80-8298-c4007339b20a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 313ae3564d79861d43ccb02e7e79d1e18da27a67
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d90d3bf7ee9fedc405fba52fce426ba0201114b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436387"
 ---
 # <a name="getdate-method-int"></a>Método getDate (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ public java.sql.Date getDate(int index)
 ## <a name="remarks"></a>Observaciones  
  El método getDate especifica este método getDate en la interfaz java.sql.CallableStatement.  
   
- Este método devuelve una fecha válida que forma parte de un tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**o**smalldatetime**de**, con la parte correspondiente a la hora establecida en la hora de inicio de Java de 00:00 (media noche).  
+ Este método devuelve una fecha válida que forma parte de un tipo de datos  **datetime** o **smalldatetime** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte correspondiente a la hora establecida en la hora de inicio de Java de 00:00 (media noche).  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getDate &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   

@@ -1,4 +1,5 @@
 ---
+description: Método getCharacterStream (SQLServerClob)
 title: Método getCharacterStream (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c755b24da3157a5e4ba1612de72713b08513333
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0a935192df4449d5092898ee342872592cd4a6fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436767"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>Método getCharacterStream (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80907664"
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |[Método getCharacterStream &#40;&#41;](../../../connect/jdbc/reference/getcharacterstream-method.md)|Devuelve los datos de Clob como un objeto java.io.Reader o como un flujo de caracteres.|  
 |[Método getCharacterStream &#40;long, long&#41;](../../../connect/jdbc/reference/getcharacterstream-method-long-long.md)|Devuelve los datos de Clob como un objeto java.io.Reader o como un flujo de caracteres con la posición y longitud especificadas.|  

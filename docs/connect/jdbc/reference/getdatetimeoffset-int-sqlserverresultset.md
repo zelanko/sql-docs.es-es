@@ -1,4 +1,5 @@
 ---
+description: getDateTimeOffset(int) (SQLServerResultSet)
 title: getDateTimeOffset(int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 60abf83d-6f97-4e47-b9d3-5072bd09d869
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6c6021b4b9fad7b6cfb50df8ce230e3409db59cd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4e5be97cad607e9aca323436ccc393875e8d299a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920028"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436327"
 ---
 # <a name="getdatetimeoffsetint-sqlserverresultset"></a>getDateTimeOffset(int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Este método se agregó en [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
+  Este método se agregó en [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  Recupera el valor de la columna designada como un objeto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) en el lenguaje de programación Java según el índice de parámetro.  
   
@@ -37,7 +38,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int columnIndex)
  Ordinal de la columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md).  
+ Un objeto [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

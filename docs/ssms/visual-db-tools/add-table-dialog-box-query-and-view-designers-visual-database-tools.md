@@ -1,4 +1,5 @@
 ---
+description: Agregar tabla (cuadro de diálogo, Diseñadores de consultas y vistas, Visual Database Tools)
 title: Agregar tabla (Cuadro de diálogo, Diseñadores de consultas y vistas)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 47ded1289c8daec463913060ce205c162143eeb1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 25fa8fa0a204b4dba994be11123c3241d1f7cd0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497303"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Agregar tabla (cuadro de diálogo, Diseñadores de consultas y vistas, Visual Database Tools)
 

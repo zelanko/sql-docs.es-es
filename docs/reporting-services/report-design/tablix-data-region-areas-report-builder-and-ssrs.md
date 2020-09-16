@@ -1,4 +1,5 @@
 ---
+description: Describir las áreas de la región de datos Tablix (Generador de informes y SSRS)
 title: Áreas de la región de datos Tablix (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 890d15b32f26664aca1e9144d42aa480789f2eb7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 118a913dd9b42b5742b70691a5f4202f3c67df89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484974"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Describir las áreas de la región de datos Tablix (Generador de informes y SSRS)
  En un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , una región de datos Tablix tiene cuatro áreas que contienen celdas de Tablix:   
@@ -26,7 +27,7 @@ En cada área, las celdas tienen una función diferente. Las celdas que se agreg
   
 En la superficie de diseño, las líneas de puntos representan las cuatro áreas de la región de datos Tablix que se encuentra seleccionada. En la ilustración siguiente, se muestran las áreas de una región de datos Tablix que tiene grupos de filas anidados basados en la categoría y la subcategoría, grupos de columnas anidados basados en la geografía y el país o región, y un grupo de columnas adyacente basado en el año.  
   
- ![Descripción de las áreas de la región de datos Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Descripción de las áreas de la región de datos Tablix")  
+ ![Áreas de la región de datos Tablix](../../reporting-services/report-design/media/rs-tablixareas.gif "Áreas de la región de datos Tablix")  
   
  En la lista siguiente, se describe cada área:  
   

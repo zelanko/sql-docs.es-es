@@ -1,4 +1,5 @@
 ---
+description: 'Visita guiada: Agregar y modificar un diagrama de base de datos'
 title: Incorporación y cambio de un diagrama de base de datos
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 41ecd01badd21d8c3198dfb661d63b7d14753d76
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 87ff469370e58c261e762cf9c4d6c604488ccfb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479930"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Tutorial: Incorporación y cambio de un diagrama de base de datos
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Visita guiada: Agregar y modificar un diagrama de base de datos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 En este tutorial se muestra cómo crear y modificar un diagrama de base de datos, así como la forma de realizar cambios en la base de datos mediante el componente Diagramas de base de datos. También se explica cómo agregar tablas al diagrama, crear relaciones entre las tablas, crear restricciones e índices en las columnas y modificar el nivel de información que puede verse en cada tabla.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
-Para completar esta visita guiada, necesitará:  
+## <a name="prerequisites"></a>Requisitos previos  
+Para poder completar este tutorial, necesitará:  
   
 -   Acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
   
@@ -45,7 +46,7 @@ Para completar esta visita guiada, necesitará:
   
 3.  Haga clic con el botón derecho en el nodo Diagramas de base de datos y elija **Nuevo diagrama de base de datos**.  
   
-    Si la base de datos no tiene los objetos necesarios para crear diagramas, aparece el mensaje siguiente: **Esta base de datos no tiene uno o varios de los objetos de soporte necesarios para usar diagramas de base de datos. ¿Desea crearlos?** Elija **Sí**.  
+    Si la base de datos no dispone de los objetos necesarios para crear diagramas, aparecerá el mensaje siguiente: **Esta base de datos no tiene uno o varios de los objetos de soporte necesarios para usar diagramas de base de datos. ¿Desea crearlos?** Elija **Sí**.  
   
     Aparecerá el cuadro de diálogo **Agregar tabla** .  
   
@@ -59,7 +60,7 @@ Para completar esta visita guiada, necesitará:
   
 1.  Haga clic con el botón secundario en la tabla `Address` . En el menú contextual, seleccione **Vista de tabla**y, a continuación, haga clic en **Estándar**.  
   
-    La cuadrícula de tabla muestra tres columnas: **Nombre de columna**, **Tipo de datos**, y **Permitir nulos**.  
+    En la tabla con cuadrícula se muestran tres columnas: **Nombre de columna**, **Tipo de datos**y **Permitir valores NULL**.  
   
 2.  Haga clic con el botón derecho en la tabla `Address` , haga clic en **Vista de tabla** y seleccione **Claves**.  
   
@@ -73,15 +74,15 @@ Para completar esta visita guiada, necesitará:
   
 2.  En el cuadro de diálogo **Elegir nombre** , haga clic en **Aceptar** para admitir el nombre predeterminado, **Table1**.  
   
-    Aparecerá una nueva cuadrícula de tabla con tres columnas: **Nombre de columna**, **Tipo de datos**, y **Permitir nulos**.  
+    Aparecerá una nueva tabla con cuadrícula con tres columnas: **Nombre de columna**, **Tipo de datos**y **Permitir valores NULL**.  
   
 3.  Agregue la siguiente información a **Table1**:  
   
     |**Nombre de la columna**|**Tipo de datos**|**Permitir valores NULL**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|Activado|  
-    |**T1col2**|**varchar(50)**|Activado|  
-    |**T1col3**|**float**|Activado|  
+    |**T1col1**|**int**|checked|  
+    |**T1col2**|**varchar(50)**|checked|  
+    |**T1col3**|**float**|checked|  
   
 4.  Haga clic con el botón derecho en `T1col1` y seleccione **Establecer clave principal**.  
   
@@ -91,7 +92,7 @@ Para completar esta visita guiada, necesitará:
   
 6.  En el cuadro de diálogo **Elegir nombre**, haga clic en **Aceptar** para admitir el nombre predeterminado **Diagram1**.  
   
-7.  Aparecerá el cuadro de diálogo **Guardar`Table1` con un mensaje que indica que**  se guardará en la base de datos. Haga clic en **Sí**.  
+7.  Aparecerá el cuadro de diálogo **Guardar`Table1` con un mensaje que indica que ** se guardará en la base de datos. Haga clic en **Sí**.  
   
 ## <a name="modifying-table-structure"></a>Modificar la estructura de la tabla  
 Se pueden agregar restricciones CHECK y crear relaciones entre las tablas en el Diseñador de diagramas.  
@@ -123,15 +124,15 @@ Se pueden agregar restricciones CHECK y crear relaciones entre las tablas en el 
     |**Nombre de la columna**|**Tipo de datos**|**Permitir valores NULL**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|no seleccionado|  
-    |**T2col2**|**varchar(50)**|Activado|  
-    |**T2col3**|**xml**|Activado|  
+    |**T2col2**|**varchar(50)**|checked|  
+    |**T2col3**|**xml**|checked|  
   
     > [!NOTE]  
     > Las columnas del lado de la clave principal de una relación de clave externa deben participar en una restricción PRIMARY KEY o UNIQUE.  
   
 2.  Arrastre `T2col1` hasta `T1col1`.  
   
-    Aparecen dos cuadros de diálogo: **Relación de clave externa** en segundo plano y **Tablas y columnas** en primer plano.  
+    Aparecen dos cuadros de diálogo: **Relación de clave externa** en segundo plano y **Tablas y columnas** , en primer plano.  
   
 3.  Haga clic en **Aceptar** para guardar la nueva relación.  
   
@@ -192,7 +193,7 @@ Todos los cambios realizados en el diagrama no se publican en la base de datos h
   
     Aparecerá el cuadro de diálogo **Guardar** . Si selecciona la opción **Advertir sobre las tablas afectadas** , se proporcionará información acerca de las tablas nuevas o modificadas.  
   
-2.  Haga clic en **OK**.  
+2.  Haga clic en **Aceptar**.  
   
 3.  Si se produce algún error, aparecerá el cuadro de diálogo **Notificaciones después de guardar** con los errores y las causas. Solucione los errores y guarde el diagrama de nuevo.  
   

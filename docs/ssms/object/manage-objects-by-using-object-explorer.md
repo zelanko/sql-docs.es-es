@@ -1,4 +1,5 @@
 ---
+description: Administrar objetos mediante el Explorador de objetos
 title: Administrar objetos mediante el Explorador de objetos
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 71e5db112d4949bc38f777a514754ef55e856308
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 974cf89ca255f42f088d9b271863c45f4294fbbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491907"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Administrar objetos mediante el Explorador de objetos
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,6 +59,6 @@ Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en l
 [Explorador de objetos](../../ssms/object/object-explorer.md)  
 [Abrir y configurar el Explorador de objetos](../../ssms/object/open-and-configure-object-explorer.md)  
 [Conectarse a una instancia desde el Explorador de objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
-[Panel Detalles del Explorador de objetos](../../ssms/object/object-explorer-details-pane.md)  
+[Panel de detalles del Explorador de objetos](../../ssms/object/object-explorer-details-pane.md)  
 [Informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   

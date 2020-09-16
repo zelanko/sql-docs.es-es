@@ -1,4 +1,5 @@
 ---
+description: Datos de demostración de la llegada de vuelos de líneas aéreas para tutoriales de Python y R de SQL Server
 title: Datos de demostración de vuelos de líneas aéreas para tutoriales
 Description: Cree una base de datos que contenga el conjunto de datos para líneas aéreas de R y Python. Este conjunto de datos se utiliza en los tutoriales de R y Python para SQL Server Machine Learning Services.
 ms.prod: sql
@@ -9,15 +10,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f697287bff5ad4734d11c3d6391154a3a970470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e00d3814b20f774568da007ba1e60f6784b1c9fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484078"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Datos de demostración de la llegada de vuelos de líneas aéreas para tutoriales de Python y R de SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 En este ejercicio, va a crear una base de datos de SQL Server para almacenar los datos importados de los conjuntos de datos de demostración de líneas aéreas integradas en R o Python. Las distribuciones de R y Python proporcionan datos equivalentes, que puede importar a una base de datos de SQL Server mediante Management Studio.
 

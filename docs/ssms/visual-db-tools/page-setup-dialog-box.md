@@ -1,4 +1,5 @@
 ---
+description: Configurar página (cuadro de diálogo)
 title: Configurar página (cuadro de diálogo)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b395ad0cb0d570f74f84937ee78cb7118a5f8404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 698e9022fc5fbb4b3ba5d33a13c7495b7d96c118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003248"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491702"
 ---
 # <a name="page-setup-dialog-box"></a>Configurar página (cuadro de diálogo)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Puede personalizar su diseño de la página seleccionando las opciones del cuadro de diálogo **Configurar página** . La disponibilidad de algunas opciones depende de los idiomas que estén instalados y habilitados para la edición.  
+ Puede personalizar el diseño de la página seleccionando las opciones del cuadro de diálogo **Configurar página**. La disponibilidad de algunas opciones depende de los idiomas que estén instalados y habilitados para la edición.  
   
 ## <a name="paper"></a>Documento  
 **Tamaño**  

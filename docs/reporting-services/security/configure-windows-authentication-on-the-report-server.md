@@ -1,4 +1,5 @@
 ---
+description: Configurar la autenticación de Windows en el servidor de informes
 title: Configurar la autenticación de Windows en el servidor de informes | Microsoft Docs
 ms.date: 06/22/2020
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3320851b253b8ca509b564405db4b873e5dea0b
-ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
+ms.openlocfilehash: eb6981b3396afdc387693c7ae89430179a6d68b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492658"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
   De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si la implementación incluye aplicaciones cliente y exploradores que utilizan estos proveedores de seguridad, puede utilizar los valores predeterminados sin necesidad de ninguna configuración adicional. Si desea utilizar un proveedor de seguridad diferente para la seguridad integrada de Windows (por ejemplo, si desea utilizar directamente Kerberos) o si modificó los valores predeterminados y prefiere restaurar los originales, puede utilizar la información de este tema para especificar los valores de autenticación en el servidor de informes.  

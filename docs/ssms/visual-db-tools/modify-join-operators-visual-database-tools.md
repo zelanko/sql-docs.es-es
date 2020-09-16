@@ -1,4 +1,5 @@
 ---
+description: Modificar operadores de combinación (Visual Database Tools)
 title: Modificar operadores de combinación
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,16 +15,16 @@ ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3d040785075bc122e8ccf8a4d4d71001c3b8e81a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 004ab11cbcbe0305a99e9bc1e17e3ddaca8aab2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480011"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modificar operadores de combinación (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-De forma predeterminada, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) combina tablas usando un signo igual (una combinación de igualdad), que compara los valores de las dos columnas de combinación. Si lo desea, puede cambiar el operador utilizado para comparar valores de las columnas de combinación.  
+ De forma predeterminada, el [Diseñador de consultas y vistas](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) combina tablas mediante un signo igual (una combinación de igualdad), que compara los valores de las dos columnas de combinación. Si lo desea, puede cambiar el operador utilizado para comparar valores de las columnas de combinación.  
   
 ### <a name="to-modify-join-operators"></a>Para modificar operadores de combinación  
   

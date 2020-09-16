@@ -1,4 +1,5 @@
 ---
+description: 'Tareas y permisos: tareas de nivel de elemento'
 title: Tareas de nivel de elemento | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6ff9b1cef9a4ee7edf5b71d669416921330e5d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492578"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Tareas y permisos: tareas de nivel de elemento
   Una tarea de nivel de elemento es una recopilación de permisos que relacionan con un informe, carpeta, modelo de informe, recurso u origen de datos compartido. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] también incluye tareas de nivel de sistema que se aplican en el sitio del servidor de informes en conjunto. Para más información, vea [Tareas de nivel de sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Para obtener más información acerca de tareas y permisos en general, vea [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
->  Si trabaja con estas tareas en programación, debe utilizar métodos que admitan tareas de nivel de elemento. Para más información, vea <xref:ReportService2010.ReportingService2010.ListTasks%2A> y <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  
+>  Si trabaja con estas tareas en programación, debe utilizar métodos que admitan tareas de nivel de elemento. Para obtener más información, vea <xref:ReportService2010.ReportingService2010.ListTasks%2A> y <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  
   
 ## <a name="permissions-in-item-level-tasks"></a>Permisos en tareas de nivel de elemento  
  La siguiente tabla muestra las tareas de nivel de elemento, los permisos que se incluyen en cada tarea y los elementos a los que se aplican los permisos. Los permisos se incluyen con fin informativo únicamente, para proporcionar una descripción más exacta de la funcionalidad disponible con cada tarea.  
@@ -53,8 +54,8 @@ ms.locfileid: "65570278"
 |Ver modelos|Modelos de informe|Leer propiedades<br /><br /> Leer contenido<br /><br /> Leer orígenes de datos|  
 |Ver informes|Informes|Leer contenido<br /><br /> Leer propiedades|  
 |Ver informes|Conjuntos de datos compartidos|Leer contenido<br /><br /> Leer propiedades|  
-|Ver recursos|Recursos|Leer contenido<br /><br /> Leer propiedades|  
-|Ver recursos|Elementos de informe|Leer contenido<br /><br /> Leer propiedades|  
+|Visualización de recursos|Recursos|Leer contenido<br /><br /> Leer propiedades|  
+|Visualización de recursos|Elementos de informe|Leer contenido<br /><br /> Leer propiedades|  
   
 ## <a name="see-also"></a>Consulte también  
  [Concesión de permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

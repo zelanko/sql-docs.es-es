@@ -1,4 +1,5 @@
 ---
+description: Seguridad y protección de Reporting Services
 title: Seguridad y protección de Reporting Services | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 189c0d314ba3f16b00ad570b3e0f9fbce9fa2f7e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e81ddb5a5255f8f7f03491709ae77da47a398de9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480712"
 ---
 # <a name="reporting-services-security-and-protection"></a>Seguridad y protección de Reporting Services
   Puede usar la información de esta sección para obtener información acerca de las características de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. También se explican en ella los modelos de autorización y los proveedores de autenticación que se admiten en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

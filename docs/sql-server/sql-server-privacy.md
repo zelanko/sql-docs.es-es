@@ -1,4 +1,5 @@
 ---
+description: Complemento de privacidad de SQL Server
 title: Complemento de privacidad de SQL Server | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916916"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480697"
 ---
 # <a name="sql-server-privacy-supplement"></a>Complemento de privacidad de SQL Server
 
@@ -44,7 +45,7 @@ Información relacionada con las credenciales que se usa para proteger inicios d
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario |Restricciones de acceso |Requisitos de retención |
+|Escenario |Restricciones de acceso              |Requisitos de retención |
 |---------|---------|---------|
 |Estas credenciales nunca salen del equipo del usuario con los datos de diagnóstico y uso. |- |- |
 |Los volcados de memoria pueden contener datos de control de acceso. |- |Volcado de memoria: máximo 30 días. |
@@ -63,7 +64,7 @@ El contenido de cliente se define como los datos almacenados en tablas de usuari
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario  |Restricciones de acceso  |Requisitos de retención |
+|Escenario  |Restricciones de acceso               |Requisitos de retención |
 |---------|---------|---------|
 |Estos datos no salen del equipo del usuario con los datos de uso y diagnóstico. |- |- |
 |Los volcados de memoria pueden incluir contenido de cliente y pueden emitirse para Microsoft. |- |Volcados de memoria: máximo 30 días. |
@@ -86,7 +87,7 @@ Datos recibidos de un usuario o generados a partir de su uso del producto.
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario  |Restricciones de acceso  |Requisitos de retención|
+|Escenario  |Restricciones de acceso               |Requisitos de retención|
 |---------|---------|---------|
 |Estos datos no salen del equipo del usuario con los datos de uso y diagnóstico. |- |- |
 |Los volcados de memoria pueden incluir EUII y pueden emitirse para Microsoft. |- |Volcados de memoria: máximo 30 días |
@@ -108,7 +109,7 @@ Datos necesarios para ofrecer servicios basados en Internet, según los término
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario  |Restricciones de acceso  |Requisitos de retención|
+|Escenario  |Restricciones de acceso               |Requisitos de retención|
 |---------|---------|---------| 
 |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original.  Por ejemplo, a través de paneles. |Mínimo 90 días, máximo 3 años. |
 |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |
@@ -162,7 +163,7 @@ Datos que describen servidores, bases de datos, tablas y otros recursos o que se
 > Se aplica el algoritmo hash a todos los valores de metadatos del objeto antes de la colección.
 >
 
-|Escenario  |Restricciones de acceso  |Requisitos de retención|
+|Escenario  |Restricciones de acceso               |Requisitos de retención|
 |---------|---------|---------|
 |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales. |Limitado al uso interno de Microsoft sin acceso de terceros. |Mínimo 90 días, máximo 3 años.|
 

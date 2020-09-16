@@ -1,4 +1,5 @@
 ---
+description: Propiedades de columna (Visual Database Tools)
 title: Propiedades de columna
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56bb24bbf28a07da1ade12eecea0e0db5b2badbd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480097"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ Hay dos conjuntos de propiedades para columnas: un conjunto completo que se pued
 > Las propiedades de este tema se ordenan por categoría en lugar de alfabéticamente.  
   
 > [!NOTE]  
-> Los cuadros de diálogo y comandos de menú que ve podrían diferir de aquellos que se describen en la Ayuda en función de la edición o configuración activa. Para cambiar la configuración, elija **Importar y exportar configuraciones** en el menú **Herramientas** .  
+> Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .  
   
 ## <a name="properties-window"></a>Ventana Propiedades  
 Estas propiedades aparecen en la ventana Propiedades cuando selecciona una columna en el Explorador de servidores.  

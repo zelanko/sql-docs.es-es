@@ -1,4 +1,5 @@
 ---
+description: Agregar elementos existentes a un proyecto
 title: Agregar elementos existentes a un proyecto
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60939da70ed334f4fc7c020f123fff9441a27088
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3744d99ede7e4f50e7fb4393d8e58cff314f4f06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480134"
 ---
 # <a name="add-existing-items-to-a-project"></a>Agregar elementos existentes a un proyecto
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,14 +34,14 @@ Agregue elementos nuevos a un proyecto para ampliar la funcionalidad de la aplic
     **Look in**  
     Busque en esta lista los archivos o las carpetas que se agregarán al proyecto. En el caso de servicios web XML y aplicaciones Web ASP.NET, los archivos se encuentran en el servidor web.  
   
-    **Escritorio**  
+    **Dispositivo de escritorio**  
     Muestra los archivos y las carpetas del escritorio.  
   
     **Mis proyectos**  
     Muestra los archivos y las carpetas de la ubicación predeterminada **Mis proyectos** .  
   
     **Mi PC**  
-    Muestra el contenido de la carpeta **Mi PC** .  
+    Muestra el contenido de la carpeta **Mi PC**.  
   
     **Nombre de archivo**  
     Utilice esta opción para filtrar los archivos y las carpetas mostrados. Especifique el nombre de archivo completo o parcial que se filtrará, utilice un asterisco (`*`) como comodín.  
@@ -48,7 +49,7 @@ Agregue elementos nuevos a un proyecto para ampliar la funcionalidad de la aplic
     > [!NOTE]  
     > Navegue a las ubicaciones web o de red especificando la dirección URL o la ruta de red en el cuadro **Nombre de archivo** . Por ejemplo, **`https://mywebsite`** muestra los archivos disponibles en la ubicación web miSitioWeb y **\\\miServidor\miRecursoCompartido** muestra los archivos disponibles en la ubicación miRecursoCompartido en miServidor.  
   
-    **Archivos de tipo**  
+    **Tipo de archivo**  
     Utilice esta opción para filtrar archivos según la extensión de archivo. Cada producto muestra los filtros predeterminados de los tipos de archivo más comunes.  
   
     **Add (Agregar)**  

@@ -1,4 +1,5 @@
 ---
+description: Ordenar en orden ascendente o descendente (Visual Database Tools)
 title: Ordenación ascendente o descendente
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ ms.assetid: d61cc55b-9ee8-4ecf-a32f-6459ae43910b
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 947ff75c1eb3f0a20b0bc3c415645254a7c4b6c4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1826914bd042ad897dc7eb143dfd38d18104e7a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491645"
 ---
 # <a name="sort-in-ascending-or-descending-order-visual-database-tools"></a>Ordenar en orden ascendente o descendente (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Puede ordenar los resultados de la consulta en orden ascendente o descendente en una o más columnas del conjunto de resultados utilizando las palabras clave **ASC** o **DESC** con la cláusula **ORDER BY** .  
+ Puede ordenar los resultados de la consulta en orden ascendente o descendente por una o más columnas del conjunto de resultados mediante las palabras clave **ASC** o **DESC** con la cláusula **ORDER BY**.  
   
 > [!NOTE]  
 > La secuencia de intercalación de la columna determina en parte el criterio de ordenación. La secuencia de intercalación se puede modificar en el [cuadro de diálogo Intercalación](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md).  

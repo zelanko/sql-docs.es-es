@@ -1,4 +1,5 @@
 ---
+description: 'Comparación de orígenes de datos compartidos e incrustados: generador de informes y Reporting Services (SSRS)'
 title: 'Comparación de orígenes de datos compartidos e incrustados: Generador de informes y Reporting Services | Microsoft Docs'
 ms.date: 11/18/2019
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 33e257659922e3e0dcf06f559838db0c58f0b18e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 25721242123d34c1cb4b826cd937df2decf02523
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484998"
 ---
 # <a name="compare-shared-and-embedded-data-sources---report-builder--reporting-services-ssrs"></a>Comparación de orígenes de datos compartidos e incrustados: generador de informes y Reporting Services (SSRS)
 

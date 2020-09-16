@@ -1,4 +1,5 @@
 ---
+description: Agregar minigráficos y barras de datos (Generador de informes y SSRS)
 title: Adición de minigráficos y barras de datos (Generador de informes) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c33752294c7335dca86dd51d7d06478188c20548
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74db316bf1e8eb4d72f3419799f76e3c2742fa81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081533"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484963"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Agregar minigráficos y barras de datos (Generador de informes y SSRS)
   Los minigráficos y barras de datos son gráficos pequeños y accesorios que comunican mucha información con pocos detalles. Para más información, vea [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
@@ -37,9 +38,9 @@ ms.locfileid: "77081533"
   
      El panel **Datos del gráfico** se abre.  
   
-6.  En el área **Valores** , haga clic en el signo más ( **) de** Agregar campos **+** y, después, haga clic en el campo cuyos valores quiera incluir en el gráfico.  
+6.  En el área **Valores** , haga clic en el signo más ( **) de** Agregar campos**+** y, después, haga clic en el campo cuyos valores quiera incluir en el gráfico.  
   
-7.  En el área **Grupos de categorías** , haga clic en el signo más ( **) de** Agregar campos **+** y, después, haga clic en el campo por cuyos valores quiera agrupar.  
+7.  En el área **Grupos de categorías** , haga clic en el signo más ( **) de** Agregar campos**+** y, después, haga clic en el campo por cuyos valores quiera agrupar.  
   
      Normalmente, para los minigráficos y barras de datos, no se agregará un campo al área **Grupo de series** porque solo se desea una serie para cada fila.  
   

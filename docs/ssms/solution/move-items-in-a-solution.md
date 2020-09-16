@@ -1,4 +1,5 @@
 ---
+description: Mover elementos en una solución
 title: Mover elementos en una solución
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67456bfd826610aaf500735d4f055e00f0c58aa7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 871f86e949eb8c4567b6998f5f664de554e4f466
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497314"
 ---
 # <a name="move-items-in-a-solution"></a>Mover elementos en una solución
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ Los elementos de proyecto en los proyectos de [!INCLUDE[ssManStudioFull](../../i
   
 3.  En el Explorador de soluciones, seleccione el destino.  
   
-4.  En el menú **Editar** , haga clic en **Pegar**.  
+4.  En el menú **Edición**, haga clic en **Pegar**.  
   
 Puede mover elementos si arrastra consultas y archivos varios dentro del Explorador de soluciones. La acción de arrastrarlos permite ver el resultado de la operación. El mover consultas de un tipo de proyecto a otro puede dar lugar a que éstas se consideren del tipo archivos varios en el proyecto de destino.  
   

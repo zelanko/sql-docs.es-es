@@ -1,4 +1,5 @@
 ---
+description: Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
 title: Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0924181e87591db6ac7ac21fd8f70429802a19e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c2cc71bd272c0f2865d2e4491ff9a373e897b2bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492005"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Esta pestaña del cuadro de diálogo **Personalizar el cuadro de herramientas** muestra una lista de todos los componentes de tareas de mantenimiento registrados en el equipo y permite cambiar los que muestra el cuadro de herramientas. Puede abrir el cuadro de diálogo **Personalizar el cuadro de herramientas** en el menú **Herramientas** . Para ordenar la lista de componentes, seleccione un encabezado de columna.  
+ En esta pestaña del cuadro de diálogo **Personalizar el cuadro de herramientas** se muestra una lista de todos los componentes de tareas de mantenimiento registrados en el equipo y permite cambiar los que se muestran en el cuadro de herramientas. Puede abrir el cuadro de diálogo **Personalizar el cuadro de herramientas** en el menú **Herramientas** . Para ordenar la lista de componentes, seleccione un encabezado de columna.  
   
 ## <a name="options"></a>Opciones  
 La pestaña **Tareas de mantenimiento** incluye las siguientes columnas de información.  

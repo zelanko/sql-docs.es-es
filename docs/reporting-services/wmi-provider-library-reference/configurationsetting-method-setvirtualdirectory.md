@@ -1,4 +1,5 @@
 ---
+description: Método SetVirtualDirectory (WMI MSReportServer_ConfigurationSetting)
 title: Método SetVirtualDirectory (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e00728af89cf85beb53ef667e91f4011b3fd9e0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8c0ef6785a38b0b9dacce50e6b52e63979f255e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480587"
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>Método ConfigurationSetting - SetVirtualDirectory
   Establece el nombre del directorio virtual para una aplicación dada.  

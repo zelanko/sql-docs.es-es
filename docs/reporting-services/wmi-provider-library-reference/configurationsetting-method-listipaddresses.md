@@ -1,4 +1,5 @@
 ---
+description: Método ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
 title: Método ListIPAddresses (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b39009d020d906837f4ca4ae4091d12d83cc94c5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 822b2022bd8a6ede5c750c1560f1e1424e9576ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480637"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>Método de ConfigurationSetting: ListIPAddresses
   Enumera las direcciones IP para el equipo del servidor de informes.  

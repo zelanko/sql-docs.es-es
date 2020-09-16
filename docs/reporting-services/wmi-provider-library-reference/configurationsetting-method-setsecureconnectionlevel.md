@@ -1,4 +1,5 @@
 ---
+description: Método SetSecureConnectionLevel (WMI MSReportServer_ConfigurationSetting)
 title: Método SetSecureConnectionLevel (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36b5efb8a1be107504cfcd7641b44c83924faa92
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b7cc099e20e27f16e1d58779bba7d76f47f5d269
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480597"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>Método ConfigurationSetting - SetSecureConnectionLevel
   Establece el nivel de conexión segura del servidor de informes.  

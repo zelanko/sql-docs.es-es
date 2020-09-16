@@ -1,4 +1,5 @@
 ---
+description: Descripción del bloqueo de fila
 title: Descripción del bloque de fila | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2f7887768d7155ab2f7ff2b0a12c1b713bddced
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69b04db86ce8784f5f346a4ac0d19b2bedd0e456
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488038"
 ---
 # <a name="understanding-row-locking"></a>Descripción del bloqueo de fila
 

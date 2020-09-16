@@ -1,4 +1,5 @@
 ---
+description: Tareas y permisos
 title: Tareas y permisos | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8724bbcfdb410f573ea65fbc1b9364d44f9af23d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 410d8748e4ccdc853ab37d001685a5adebb0da69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480667"
 ---
 # <a name="tasks-and-permissions"></a>Tareas y permisos
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], *tareas* son las acciones que un usuario o administrador puede llevar a cabo. Las tareas están predefinidas. No se puede crear tareas personalizadas ni modificar las que se proporcionan ni mediante programación ni con una herramienta. En total, hay veinticinco tareas. Estas tareas comprenden todo el conjunto de operaciones que están disponibles en la seguridad basada en roles. Algunos ejemplos de tareas son "Ver informes", "Administrar informes" y "Administrar propiedades del servidor de informes".  

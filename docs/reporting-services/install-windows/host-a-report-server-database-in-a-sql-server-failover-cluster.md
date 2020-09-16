@@ -1,4 +1,5 @@
 ---
+description: Hospedar una base de datos del servidor de informes en un clúster de conmutación por error de SQL Server
 title: Hospedar una base de datos del servidor de informes en un clúster de conmutación por error de SQL Server | Microsoft Docs
 ms.date: 03/30/2016
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7bd5f019-2857-452f-a023-cc3b9e93aec4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: edef2cd21dacb5911a37a6a1f46afd17e76e57be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1bceb380b1c21f717ba6e20fd6a41c78cc393dba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492676"
 ---
 # <a name="host-a-report-server-database-in-a-sql-server-failover-cluster"></a>Hospedar una base de datos del servidor de informes en un clúster de conmutación por error de SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el uso de clústeres de conmutación por error para que se puedan utilizar varios discos para una o más instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El uso de clústeres de conmutación por error solamente se admite para la base de datos del servidor de informes; no se puede ejecutar el servicio del servidor de informes como parte de un clúster de conmutación por error.  

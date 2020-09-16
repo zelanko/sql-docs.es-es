@@ -1,4 +1,5 @@
 ---
+description: Configuración de filtro (Explorador de objetos y Explorador de la utilidad)
 title: Configuración de filtro (Explorador de objetos y Explorador de la utilidad)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 66ae081ad6fcfb5b5d361201430ea9fb4d8dcd6c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4595be9c345b32c20bf028cc384a2e61766295d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480194"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Configuración de filtro (Explorador de objetos y Explorador de la utilidad)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

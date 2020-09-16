@@ -1,4 +1,5 @@
 ---
+description: Roles y tareas de Reporting Services frente a grupos y permisos de SharePoint
 title: Roles y tareas de Reporting Services frente a grupos y permisos de SharePoint | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -16,19 +17,30 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2200027e65978ea0af8cdcc100cda830e8a35881
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 577f31593aae858596ac08c4aa7f44e121a22ce8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75240622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480717"
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Roles y tareas de Reporting Services frente a grupos y permisos de SharePoint
   En este tema se comparan las características de autorización basadas en roles y tareas en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con las características de seguridad de los productos de SharePoint. En este tema se comparan la terminología y las características de los roles, las tareas, los grupos de SharePoint, los niveles de permiso y los permisos.  
   
-||  
-|-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo|  
+[!INCLUDE[applies](../../includes/applies-md.md)]
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint  
+        SharePoint 2010 y SharePoint 2013  
+    :::column-end:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo  
+    :::column-end:::
+:::row-end:::
+
+
+
   
  **En este tema:**  
   
@@ -39,9 +51,9 @@ ms.locfileid: "75240622"
 -   [Comparación de las tareas de modo nativo y los permisos de SharePoint](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> Comparación de las herramientas y la terminología de permisos  
- **Modo nativo:** Los objetos de permiso en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (roles y tareas) se crean en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y se configuran para los usuarios individuales en el Administrador de informes.  
+ **Modo nativo:** los objetos de permiso en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (roles y tareas) se crean en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y se configuran para los usuarios individuales en el Administrador de informes.  
   
- **Modo SharePoint:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo SharePoint usa las características de permisos de SharePoint. Los grupos y los permisos de SharePoint se administran desde la página **Configuración del sitio** .  
+ **Modo de SharePoint:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa las características de permisos de SharePoint. Los grupos y los permisos de SharePoint se administran desde la página **Configuración del sitio** .  
   
  En la tabla siguiente se comparan los objetos y conceptos relacionados con los permisos entre el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y SharePoint.  
   
@@ -74,7 +86,7 @@ ms.locfileid: "75240622"
 |Tarea de modo nativo|Tipo de rol|Permiso de SharePoint equivalente|  
 |----------------------|---------------|--------------------------------------|  
 |Usar informes|Elemento|Editar elementos, Ver elementos.|  
-|Crear informes vinculados|Elemento|No compatible.|  
+|Crear informes vinculados|Elemento|No se admite.|  
 |Administrar todas las suscripciones|Elemento|Administrar alertas.|  
 |Administración de orígenes de datos|Elemento|Agregar elementos, Editar elementos, Eliminar elementos, Ver elementos.|  
 |Administrar carpetas|Elemento|Agregar elementos, Editar elementos, Eliminar elementos, Ver elementos.|  
@@ -88,7 +100,7 @@ ms.locfileid: "75240622"
 |Ver carpetas|Elemento|Ver elementos.|  
 |Ver modelos|Elemento|Ver elementos.|  
 |Ver informes|Elemento|Ver elementos.|  
-|Ver recursos|Elemento|Ver elementos.|  
+|Visualización de recursos|Elemento|Ver elementos.|  
 ||||  
 |Ejecutar definiciones de informe|Sistema|Ver elementos.|  
 |Generación de eventos|Sistema|Administración del sitio web.|  

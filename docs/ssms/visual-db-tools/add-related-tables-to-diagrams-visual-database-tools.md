@@ -1,4 +1,5 @@
 ---
+description: Agregar tablas relacionadas a diagramas (Visual Database Tools)
 title: Agregar tablas relacionadas a diagramas
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 3fa341cd7ea7ad77595e8f638a421299c1acb442
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 799a1664b16525679970f76966b0a78bc752de26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480129"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>Agregar tablas relacionadas a diagramas (Visual Database Tools)
 

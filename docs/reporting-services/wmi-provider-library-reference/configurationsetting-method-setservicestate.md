@@ -1,4 +1,5 @@
 ---
+description: Método SetServiceState (WMI MSReportServer_ConfigurationSetting)
 title: Método SetServiceState (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1ee42d-b388-4929-89c7-8741b956c3be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 83aa9fb906fc71b1dfb7fd3d036c119d9b4e41e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3607488ec4a9511c9cf95410a4c249a740132d82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480607"
 ---
 # <a name="configurationsetting-method---setservicestate"></a>Método de ConfigurationSetting: SetServiceState
   Activa y desactiva los servicios web y los servicios del Servidor de informes de Windows.  

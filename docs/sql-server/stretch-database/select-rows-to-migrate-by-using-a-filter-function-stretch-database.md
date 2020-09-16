@@ -1,4 +1,5 @@
 ---
+description: Seleccionar las filas que se van a migrar mediante una función de filtro (Stretch Database)
 title: Selección de las filas que se van a migrar mediante una función de filtro
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9bb34b5e716f4cb0da7f11e5ce4772f52712127f
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492618"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Seleccionar las filas que se van a migrar mediante una función de filtro (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Si almacena los datos inactivos en una tabla independiente, puede configurar Stretch Database para migrar toda la tabla. Por otro lado, si la tabla contiene datos activos e inactivos, puede especificar un predicado de filtro para seleccionar las filas que se migrarán. El predicado de filtro es una función insertada con valores de tabla. En este artículo se describe cómo escribir una función insertada con valores de tabla para seleccionar las filas que se migrarán.  
@@ -197,7 +198,7 @@ ALTER TABLE SensorTelemetry
   )
 ```
   
-## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>Incorporación de una función de filtro después de ejecutar el asistente  
+## <a name="add-a-filter-function-after-running-the-wizard"></a><a name="addafterwiz"></a>Agregar una función de filtro después de ejecutar el asistente  
   
 Si quiere usar una función que no se puede crear en el Asistente para **habilitar base de datos para Stretch** , puede ejecutar la instrucción **ALTER TABLE** para especificar una función después de salir del asistente. No obstante, antes de aplicar una función, tendrá que detener la migración de datos que ya está en curso y devolver los datos migrados. (Para obtener más información en la que se explica por qué esto es necesario, vea [Reemplazar una función de filtro existente](#replacePredicate)).
   
@@ -492,7 +493,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
   
  Si la función devuelve un resultado no vacío para la fila, la fila será apta para la migración.  
   
-## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>Reemplazo de una función de filtro existente  
+## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>Reemplazar una función de filtro existente  
  Para reemplazar una función de filtro especificada anteriormente, vuelva a ejecutar la instrucción **ALTER TABLE** y especifique un nuevo valor para el parámetro **FILTER_PREDICATE** . Por ejemplo:  
   
 ```sql  

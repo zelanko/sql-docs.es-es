@@ -1,4 +1,5 @@
 ---
+description: Directiva de soporte técnico de SQL Server Management Studio (SSMS)
 title: Directiva de soporte técnico de SQL Server Management Studio (SSMS)
 ms.date: 11/13/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 035ea616a92f1760252087bc6a8e27bec3fe2d24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245669"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497273"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Directiva de soporte técnico de SQL Server Management Studio (SSMS)
 
@@ -43,4 +44,4 @@ Fase de servicio de **soporte total**: cuando se ejecuta la versión más recien
 
 
 > [!NOTE]
-> La versión más reciente de la rama actual siempre está en la fase de servicio de **soporte total**. Esta directiva de soporte técnico significa que si detecta un defecto de código que garantice una actualización crítica, debe tener la última versión de la rama actual instalada para recibir una corrección.
+> La versión más reciente de la rama actual siempre está en la fase de servicio de **soporte total**. Esta instrucción de compatibilidad significa que, si encuentra un defecto en el código que garantice una actualización crítica, debe tener instalada la versión más reciente de la rama actual para recibir una corrección.

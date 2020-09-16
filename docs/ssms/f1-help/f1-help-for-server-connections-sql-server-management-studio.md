@@ -1,4 +1,5 @@
 ---
+description: Ayuda F1 para conexiones de servidor (SQL Server Management Studio)
 title: Ayuda F1 para las conexiones de servidor
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: a285146c8bf82b0baea9c991ce933abb236c5835
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: e4ef2a2727b66324dd0f28efab6382d8de265885
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492092"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>Ayuda F1 para conexiones de servidor (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Esta sección contiene la Ayuda F1 para las páginas de los cuadros de diálogo de **Conectar al servidor** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Esta sección contiene la Ayuda F1 para las páginas del cuadro de diálogo **Conectar al servidor** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Buscar servidores &#40;Servidores locales&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

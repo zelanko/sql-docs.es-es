@@ -1,4 +1,5 @@
 ---
+description: Complemento de privacidad de SQL Server 2019
 title: Complemento de privacidad de SQL Server 2019 | Microsoft Docs
 ms.date: 09/20/2019
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords: ''
 author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 393656057ae547c770f37e1e7db4c5b5373ac1bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c365f3e9aa5221e29d875d05ba3daf4337ca44cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480695"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>Complemento de privacidad de SQL Server 2019
 
@@ -45,11 +46,11 @@ Información relacionada con las credenciales que se usa para proteger inicios d
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario |Restricciones de acceso |Requisitos de retención |
+|Escenario |Restricciones de acceso              |Requisitos de retención |
 |---------|---------|---------|
 |Estas credenciales nunca salen del equipo del usuario con los datos de diagnóstico y uso. |- |- |
-|Los volcados de memoria pueden contener datos de control de acceso. |- |Volcados de memoria: 30 días como máximo |
-|Estas credenciales nunca salen del equipo del usuario con los comentarios del usuario, a menos que el cliente las inserte manualmente. |Limitado al uso interno de Microsoft sin acceso de terceros. |Comentarios del usuario: 1 año como máximo|
+|Los volcados de memoria pueden contener datos de control de acceso. |- |Volcado de memoria: máximo 30 días. |
+|Estas credenciales nunca salen del equipo del usuario con los comentarios del usuario, a menos que el cliente las inserte manualmente. |Limitado al uso interno de Microsoft sin acceso de terceros. |Comentarios del usuario: máximo 1 año.|
 |&nbsp;|&nbsp;|&nbsp;|
 
 ## <a name="customer-content"></a>Contenido de cliente
@@ -64,11 +65,11 @@ El contenido de cliente se define como los datos almacenados en tablas de usuari
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario  |Restricciones de acceso  |Requisitos de retención |
+|Escenario  |Restricciones de acceso               |Requisitos de retención |
 |---------|---------|---------|
 |Estos datos no salen del equipo del usuario con los datos de uso y diagnóstico. |- |- |
-|Los volcados de memoria pueden incluir contenido de cliente y pueden emitirse para Microsoft. |- |Volcados de memoria: 30 días como máximo |
-|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: 1 año como máximo |
+|Los volcados de memoria pueden incluir contenido de cliente y pueden emitirse para Microsoft. |- |Volcados de memoria: máximo 30 días. |
+|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: máximo 1 año. |
 
 ## <a name="end-user-identifiable-information-euii"></a>Información de identificación del usuario final (EUII)
 
@@ -87,12 +88,12 @@ Datos recibidos de un usuario o generados a partir de su uso del producto.
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario  |Restricciones de acceso  |Requisitos de retención|
+|Escenario  |Restricciones de acceso               |Requisitos de retención|
 |---------|---------|---------|
 |Estos datos no salen del equipo del usuario con los datos de uso y diagnóstico. |- |- |
-|Los volcados de memoria pueden incluir EUII y pueden emitirse para Microsoft. |- |Volcados de memoria: 30 días como máximo |
+|Los volcados de memoria pueden incluir EUII y pueden emitirse para Microsoft. |- |Volcados de memoria: máximo 30 días |
 |Puede emitirse para Microsoft un identificador de cliente con el fin de ofrecer nuevas características híbridas y en la nube a las que se han suscrito los usuarios. |- |Actualmente no existe ninguna característica híbrida o en la nube de este tipo.|
-|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente.|Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: 1 año como máximo |
+|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente.|Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: máximo 1 año |
 
 ## <a name="internet-based-services-data"></a>Datos de servicios basados en Internet
 
@@ -109,7 +110,7 @@ Datos necesarios para ofrecer servicios basados en Internet, según los término
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario  |Restricciones de acceso  |Requisitos de retención|
+|Escenario  |Restricciones de acceso               |Requisitos de retención|
 |---------|---------|---------| 
 |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original.  Por ejemplo, a través de paneles. |Mínimo 90 días, máximo 3 años. |
 |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |
@@ -155,10 +156,10 @@ Microsoft examina los valores de nombre de aplicación establecidos por otros pr
 |Escenario  |Restricciones de acceso  |Requisitos de retención|
 |---------|---------|---------|
 |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales.|Limitado al uso interno de Microsoft sin acceso de terceros. |Mínimo 90 días, máximo 3 años. |
-|Pueden usarse para realizar sugerencias para el cliente.  Por ejemplo, "En función de su uso del producto, considere la posibilidad de usar la característica *X*, ya que obtendría mejores resultados". |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Registros de seguridad de datos de cliente: 3 años como mínimo, 6 años como máximo. |
+|Pueden usarse para realizar sugerencias para el cliente.  Por ejemplo, "En función de su uso del producto, considere la posibilidad de usar la característica *X*, ya que obtendría mejores resultados". |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Registros de seguridad de datos de cliente: mínimo 3 años, máximo 6 años. |
 |Microsoft podría usarlos para la planeación de productos en el futuro. |Microsoft puede compartir esta información con otros proveedores de hardware y software para mejorar el funcionamiento de sus productos con software de Microsoft. |Mínimo 90 días, máximo 3 años.|
 |Microsoft podría usarlos para proporcionar servicios en la nube basados en los datos de uso y diagnóstico emitidos. Por ejemplo, a través de un panel de cliente en el que se muestra el uso de características en todas las instalaciones de SQL Server de una organización. |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Mínimo 90 días, máximo 3 años. |
-|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: 1 año como máximo |
+|Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: máximo 1 año. |
 |Puede usar el nombre de la base de datos y el de la aplicación para asignar categorías conocidas a las bases de datos y aplicaciones, por ejemplo, para las que pueden estar ejecutando software proporcionado por Microsoft u otras empresas.|Limitado al uso interno de Microsoft sin acceso de terceros.|Mínimo 90 días, máximo 3 años. |
 
 ## <a name="object-metadata"></a>Metadatos de objetos
@@ -177,7 +178,7 @@ Datos que describen servidores, bases de datos, tablas y otros recursos o que se
 > Se aplica el algoritmo hash a todos los valores de metadatos del objeto antes de la colección.
 >
 
-|Escenario  |Restricciones de acceso  |Requisitos de retención|
+|Escenario  |Restricciones de acceso               |Requisitos de retención|
 |---------|---------|---------|
 |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales. |Limitado al uso interno de Microsoft sin acceso de terceros. |Mínimo 90 días, máximo 3 años.|
 

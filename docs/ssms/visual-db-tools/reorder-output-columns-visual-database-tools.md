@@ -1,4 +1,5 @@
 ---
+description: Reordenar las columnas del resultado (Visual Database Tools)
 title: Reordenar las columnas de salida
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f168b16ef5407b8ebf47e55f7062b1b7c8c7b180
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9268fb47c89732ccaf5af6460119ddc9664daf24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497114"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>Reordenar las columnas del resultado (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ Para controlar si se muestra una columna de datos en el conjunto de resultados o
   
 2.  Señale el botón selector de fila y arrastre la fila a una nueva ubicación.  
   
-    O bien  
+    o bien  
   
     Edite el orden de los nombres de columna en el [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   

@@ -1,4 +1,5 @@
 ---
+description: Datos de demostración de Iris para tutoriales de Python y R con aprendizaje automático de SQL Server
 title: Conjunto de datos de demostración de iris para tutoriales
 titleSuffix: SQL machine learning
 Description: Cree una base de datos que contenga el conjunto de datos de iris y los modelos predictivos. Este conjunto de datos se utiliza en los tutoriales de R y Python con aprendizaje automático de SQL Server.
@@ -10,15 +11,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a5b7cc5c89874bddfda0ac978bce5899b1cd64b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495008"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Datos de demostración de Iris para tutoriales de Python y R con aprendizaje automático de SQL Server
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 En este ejercicio va a crear una base de datos para almacenar los datos del [conjunto de datos flor Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) y los modelos basados en los mismos datos. Los datos de Iris se incluyen en las distribuciones de R y Python y se usan en los tutoriales de aprendizaje automático para SQL Machine Learning.
 

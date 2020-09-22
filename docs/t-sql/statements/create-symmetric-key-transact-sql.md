@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c378e113e07a9d85bbeedbf585f9b58f417812f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48e25e4a2bc22d56503b3f0cc1819bb10b856e9d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426677"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688723"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -161,7 +161,7 @@ Especifica el algoritmo de cifrado.
 ### <a name="a-creating-a-symmetric-key"></a>A. Crear una clave simétrica  
  En el siguiente ejemplo se crea una clave simétrica denominada `JanainaKey09` mediante el algoritmo `AES 256` y se cifra la nueva clave con el certificado `Shipping04`.  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY JanainaKey09   
 WITH ALGORITHM = AES_256  
 ENCRYPTION BY CERTIFICATE Shipping04;  
@@ -171,8 +171,7 @@ GO
 ### <a name="b-creating-a-temporary-symmetric-key"></a>B. Crear una clave simétrica temporal  
  En el siguiente ejemplo se crea una clave simétrica temporal denominada `#MarketingXXV` a partir de la frase de contraseña: `The square of the hypotenuse is equal to the sum of the squares of the sides`. La clave se suministra con un GUID generado a partir de la cadena `Pythagoras` y se cifra con el certificado `Marketing25`.  
   
-```  
-  
+```sql 
 CREATE SYMMETRIC KEY #MarketingXXV   
 WITH ALGORITHM = AES_128,  
 KEY_SOURCE   
@@ -185,7 +184,7 @@ GO
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. Crear una clave simétrica mediante un dispositivo de Administración extensible de claves (EKM)  
  El ejemplo siguiente crea una clave simétrica llamada `MySymKey` mediante un proveedor llamado `MyEKMProvider` y un nombre de clave de `KeyForSensitiveData`. Asigna la autorización a `User1` y se supone que el administrador del sistema ya ha registrado el proveedor llamado `MyEKMProvider` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 CREATE SYMMETRIC KEY MySymKey  
 AUTHORIZATION User1  
 FROM PROVIDER EKMProvider  

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa1828f1a6c684c0028ed3ada229aca3811a88a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a8ba9a6a1dbc0f1c6e6c6312c627f83335bbe09
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541503"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688224"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,6 @@ WITH
 {  
    ( MAXDOP = max_degree_of_parallelism )  
 }  
-  
 ```  
   
 
@@ -180,14 +179,14 @@ A diferencia de REORGANIZE en tablas de usuario, REORGANIZE en una cola siempre 
 ### <a name="a-making-a-queue-unavailable"></a>A. Hacer que una cola no esté disponible  
  En el ejemplo siguiente se hace que la cola de `ExpenseQueue` no esté disponible para recibir mensajes.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;  
 ```  
   
 ### <a name="b-changing-the-activation-stored-procedure"></a>B. Cambiar el procedimiento almacenado de activación  
  En el siguiente ejemplo se muestra cómo cambiar el procedimiento almacenado iniciado por la cola. El procedimiento almacenado se ejecuta como el usuario que ejecutó la instrucción `ALTER QUEUE`.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = new_stored_proc,  
@@ -197,14 +196,14 @@ ALTER QUEUE ExpenseQueue
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. Cambiar el número de lectores de cola  
  En el ejemplo siguiente se establece en `7` el número máximo de instancias de procedimiento almacenado que inicia [!INCLUDE[ssSB](../../includes/sssb-md.md)] para esta cola.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
 ```  
   
 ### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>D. Cambiar el procedimiento almacenado de activación y la cuenta EXECUTE AS  
  En el ejemplo siguiente se cambia el procedimiento almacenado iniciado por [!INCLUDE[ssSB](../../includes/sssb-md.md)]. El procedimiento almacenado se ejecuta como el usuario `SecurityAccount`.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
@@ -214,7 +213,7 @@ ALTER QUEUE ExpenseQueue
 ### <a name="e-setting-the-queue-to-retain-messages"></a>E. Configurar la cola para retener mensajes  
  En el siguiente ejemplo se muestra cómo configurar la cola para retener mensajes. La cola retiene todos los mensajes enviados a o desde los servicios que utilizan la cola hasta que la conversación que contiene el mensaje finaliza.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;  
 ```  
   
@@ -231,7 +230,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
  En el ejemplo siguiente se recompilan índices de cola.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
@@ -241,7 +240,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
  En el ejemplo siguiente se reorganizan índices de cola.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
@@ -249,7 +248,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 **Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   

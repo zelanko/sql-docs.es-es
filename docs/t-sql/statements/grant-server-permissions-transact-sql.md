@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a208dc9a99f18a9bfad061afc9caae7f3e859add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23ff7a537598cde913635d427bdbd58388e16803
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444660"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570536"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT (permisos de servidor de Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-a-permission-to-a-login"></a>A. Conceder un permiso a un inicio de sesión  
  En el siguiente ejemplo se concede el permiso `CONTROL SERVER` al inicio de sesión `TerryEminhizer` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Conceder un permiso que dispone del permiso GRANT  
  En el siguiente ejemplo se concede `ALTER ANY EVENT NOTIFICATION` al inicio de sesión `JanethEsteves` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el derecho para conceder este permiso a otro inicio de sesión.  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -168,7 +168,7 @@ GO
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. Conceder un permiso a un rol de servidor  
  En el ejemplo siguiente se crean dos roles de servidor denominados `ITDevAdmin` e `ITDevelopers`. Concede el permiso `ALTER ANY DATABASE` al rol de servidor definido por el usuario `ITDevAdmin` incluida la opción `WITH GRANT` de manera que el rol de servidor `ITDevAdmin` pueda reasignar el permiso `ALTER ANY DATABASE`. A continuación, el ejemplo concede a `ITDevelopers` el permiso para utilizar el permiso `ALTER ANY DATABASE` del rol de servidor `ITDevAdmin`.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

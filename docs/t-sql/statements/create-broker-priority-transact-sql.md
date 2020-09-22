@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0a17f41df5e7b35abe757be7a5e2e98997e253c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9c50ce97995322a025feb1e201682717d7d2234d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539929"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688506"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,6 @@ ms.locfileid: "89539929"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 CREATE BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  
 [ SET ( [ CONTRACT_NAME = {ContractName | ANY } ]  
@@ -169,7 +168,7 @@ FOR CONVERSATION
 ### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>A. Asignar un nivel de prioridad a las dos direcciones de una conversación.  
  Estas dos prioridades de conversación permiten asegurarse de que se asigna el nivel de prioridad 3 a todas las operaciones que utilizan `SimpleContract` entre `TargetService` e `InitiatorAService`.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY InitiatorAToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -187,7 +186,7 @@ CREATE BROKER PRIORITY TargetToInitiatorAPriority
 ### <a name="b-setting-the-priority-level-for-all-conversations-that-use-a-contract"></a>B. Establecer el nivel de prioridad para todas las conversaciones que utilizan un contrato  
  Asigna un nivel de prioridad `7` a todas las operaciones que utilizan un contrato denominado `SimpleContract`. Esto supone que no hay ninguna otra prioridad que especifica `SimpleContract` y un servicio local o un servicio remoto.  
   
-```  
+```sql 
 CREATE BROKER PRIORITY SimpleContractDefaultPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -199,7 +198,7 @@ CREATE BROKER PRIORITY SimpleContractDefaultPriority
 ### <a name="c-setting-a-base-priority-level-for-a-database"></a>C. Establecer un nivel de prioridad base para una base de datos.  
  Define prioridades de conversación para dos servicios concretos y, a continuación, define una prioridad de conversación que coincidirá con todos los demás extremos de conversación. Esto no reemplaza la prioridad predeterminada, que siempre es 5, pero minimiza el número de elementos a los que se asigna el valor predeterminado.  
   
-```  
+```sql 
 CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/ClaimPriority]  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = ANY,  

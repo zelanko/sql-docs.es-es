@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dff53a56e9acd613322be5af1de6e5f0207abd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 60eca69999f7e21164eac2ce35add549d767dc26
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547591"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688524"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,6 @@ ms.locfileid: "89547591"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
    TO SERVICE 'target_service_name'  
@@ -79,7 +78,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
   
  *service_broker_guid* es de tipo **nvarchar(128)**. Para buscar el *service_broker_guid* de una base de datos, ejecute la siguiente consulta en la base de datos:  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID() ;  
@@ -132,7 +131,7 @@ WHERE database_id = DB_ID() ;
 ### <a name="a-beginning-a-dialog"></a>A. Iniciar un diálogo  
  El ejemplo siguiente comienza una conversación del diálogo y almacena un identificador para el diálogo en `@dialog_handle.` El servicio `//Adventure-Works.com/ExpenseClient` es el iniciador para el diálogo, y el servicio `//Adventure-Works.com/Expenses` es el destino del diálogo. El diálogo sigue el contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -144,7 +143,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>B. Iniciar un diálogo con una vigencia explícita  
  En el ejemplo siguiente se inicia una conversación de diálogo y se almacena un identificador para el diálogo en `@dialog_handle`. El servicio `//Adventure-Works.com/ExpenseClient` es el iniciador del diálogo y el servicio `//Adventure-Works.com/Expenses` es el destino del diálogo. El diálogo sigue el contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`. Si el diálogo no se ha cerrado mediante el comando END CONVERSATION en `60` segundos, el broker finaliza el diálogo con un error.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -157,7 +156,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="c-beginning-a-dialog-with-a-specific-broker-instance"></a>C. Iniciar un diálogo con una instancia de broker específica  
  En el ejemplo siguiente se inicia una conversación de diálogo y se almacena un identificador para el diálogo en `@dialog_handle`. El servicio `//Adventure-Works.com/ExpenseClient` es el iniciador del diálogo y el servicio `//Adventure-Works.com/Expenses` es el destino del diálogo. El diálogo sigue el contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`. El broker enruta mensajes de este diálogo al broker identificado por el GUID `a326e034-d4cf-4e8b-8d98-4d7e1926c904.`  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -170,7 +169,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="d-beginning-a-dialog-and-relating-it-to-an-existing-conversation-group"></a>D. Iniciar un diálogo y relacionarlo con un grupo de conversación existente  
  En el ejemplo siguiente se inicia una conversación de diálogo y se almacena un identificador para el diálogo en `@dialog_handle`. El servicio `//Adventure-Works.com/ExpenseClient` es el iniciador del diálogo y el servicio `//Adventure-Works.com/Expenses` es el destino del diálogo. El diálogo sigue el contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`. El broker asocia el diálogo al grupo de conversación identificado por `@conversation_group_id` en lugar de crear un grupo de conversación.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
@@ -186,7 +185,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="e-beginning-a-dialog-with-an-explicit-lifetime-and-relating-the-dialog-to-an-existing-conversation"></a>E. Iniciar un diálogo con una vigencia explícita y relacionarlo con una conversación existente  
  En el ejemplo siguiente se inicia una conversación de diálogo y se almacena un identificador para el diálogo en `@dialog_handle`. El servicio `//Adventure-Works.com/ExpenseClient` es el iniciador del diálogo y el servicio `//Adventure-Works.com/Expenses` es el destino del diálogo. El diálogo sigue el contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`. El nuevo diálogo pertenece al mismo grupo de conversación al que pertenece `@existing_conversation_handle`. Si el diálogo no se ha cerrado mediante el comando END CONVERSATION en `600` segundos, [!INCLUDE[ssSB](../../includes/sssb-md.md)] finaliza el diálogo con un error.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
 DECLARE @existing_conversation_handle UNIQUEIDENTIFIER  
   
@@ -203,7 +202,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="f-beginning-a-dialog-with-optional-encryption"></a>F. Iniciar un diálogo con cifrado opcional  
  En el ejemplo siguiente se inicia un diálogo y se almacena un identificador para el diálogo en `@dialog_handle`. El servicio `//Adventure-Works.com/ExpenseClient` es el iniciador del diálogo y el servicio `//Adventure-Works.com/Expenses` es el destino del diálogo. El diálogo sigue el contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`. La conversación de este ejemplo permite que el mensaje viaje por la red sin cifrado en caso de no estar disponible.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abfc897a88941c6220235616a3476dae7ea6c1e9
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496718"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570588"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT (permisos de objeto de sistema de Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  La siguiente consulta muestra información acerca de los permisos de objetos del sistema:  
   
-```  
+```sql  
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -81,7 +81,7 @@ GO
 ### <a name="a-granting-select-permission-on-a-view"></a>A. Conceder el permiso SELECT para una vista  
  En este ejemplo se concede el permiso `Sylvester1` del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seleccionar una vista que presente todos los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el ejemplo concede el permiso adicional necesario para ver los metadatos para los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son propiedad del usuario.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GRANT SELECT ON sys.sql_logins TO Sylvester1;  
 GRANT VIEW SERVER STATE to Sylvester1;  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. Conceder el permiso EXECUTE para un procedimiento almacenado extendido  
  En el siguiente ejemplo se concede el permiso `EXECUTE` para `xp_readmail` a `Sylvester1`.  
   
-```  
+```sql  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  
 GO  
 ```  

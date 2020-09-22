@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa614b7b0496c1547f85106758f6ff5d7dd2835a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb9a8dbb4b67a514d56febaed13a33d7f7eb2a8a
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444792"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688647"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,8 +42,7 @@ ms.locfileid: "88444792"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```syntaxsql
 CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expression  
 ```  
   
@@ -84,7 +83,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. Crear una colección de esquemas XML en la base de datos  
  En el ejemplo siguiente se crea la colección de esquemas XML `ManuInstructionsSchemaCollection`. La colección solo tiene un espacio de nombres de esquema.  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -176,7 +175,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Especificar varios espacios de nombres de esquema en una colección de esquemas  
  Al crear una colección de esquemas XML, puede especificar varios esquemas XML. Por ejemplo:  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->    
@@ -188,7 +187,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
   
  En el ejemplo siguiente se crea la colección de esquemas XML `ProductDescriptionSchemaCollection`, que incluye dos espacios de nombres de esquema XML.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -234,7 +233,7 @@ GO
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importar un esquema que no especifique un espacio de nombres de destino  
  Si un esquema que no contiene un atributo **targetNamespace** se importa en una colección, sus componentes se asocian al espacio de nombres de destino de cadena vacío, como se muestra en el ejemplo siguiente. Tenga en cuenta que no asociar uno o varios esquemas importados a la colección provoca que varios componentes del esquema (potencialmente no relacionados) se asocien con el espacio de nombres de cadena vacía.  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  
@@ -254,7 +253,7 @@ WHERE  sys.xml_schema_namespaces.name='';
 ### <a name="d-using-an-xml-schema-collection-and-batches"></a>D. Usar lotes y una colección de esquemas XML  
  No se puede hacer referencia a una colección de esquemas en el mismo lote en que se creó. Si intenta hacer referencia a una colección en el mismo lote en que se creó, recibirá un error que indica que la colección no existe. El siguiente ejemplo funciona; no obstante, si quita `GO` y, por tanto, intenta hacer referencia a la colección de esquemas XML para escribir una variable `xml` en el mismo lote, devolverá un error.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION mySC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="string"/>  

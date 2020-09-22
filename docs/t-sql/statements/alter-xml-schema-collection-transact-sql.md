@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c3fc7061750b7adea9cd90eda39b2364740dc9ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 615a18de5c90bec08d79579a038cb106f2a6d3fc
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479066"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688551"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,8 +45,7 @@ ms.locfileid: "88479066"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```syntaxsql
 ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Component'  
 ```  
   
@@ -67,7 +66,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
   
  En el siguiente ejemplo se agrega un \<element> nuevo al espacio de nombres `https://MySchema/test_xml_schema` existente en la colección `MyColl`.  
   
-```  
+```sql  
 -- First create an XML schema collection.  
 CREATE XML SCHEMA COLLECTION MyColl AS '  
    <schema   
@@ -99,7 +98,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>A. Crear una colección de esquemas XML en la base de datos  
  En el ejemplo siguiente se crea la colección de esquemas XML `ManuInstructionsSchemaCollection`. La colección solo tiene un espacio de nombres de esquema.  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -171,7 +170,7 @@ DROP DATABASE SampleDB;
   
  También puede asignar la colección de esquemas a una variable y especificar la variable en la instrucción `CREATE XML SCHEMA COLLECTION` de la forma siguiente:  
   
-```  
+```sql  
 DECLARE @MySchemaCollection nvarchar(max);  
 SET @MySchemaCollection  = N' copy the schema collection here';  
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
@@ -192,7 +191,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Especificar varios espacios de nombres de esquema en una colección de esquemas  
  Al crear una colección de esquemas XML, puede especificar varios esquemas XML. Por ejemplo:  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION N'  
 <xsd:schema>....</xsd:schema>  
 <xsd:schema>...</xsd:schema>';  
@@ -200,7 +199,7 @@ CREATE XML SCHEMA COLLECTION N'
   
  En el ejemplo siguiente se crea la colección de esquemas XML `ProductDescriptionSchemaCollection`, que incluye dos espacios de nombres de esquema XML.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -247,7 +246,7 @@ GO
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importar un esquema que no especifique un espacio de nombres de destino  
  Si un esquema que no contiene un atributo **targetNamespace** se importa en una colección, sus componentes se asocian al espacio de nombres de destino de cadena vacío, como se muestra en el ejemplo siguiente. Tenga en cuenta que si no asocia uno o varios esquemas importados en la colección, varios componentes del esquema (potencialmente no relacionados) se asociarán al espacio de nombres de cadena vacía predeterminado.  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  

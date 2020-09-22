@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: efef9df2254c9f0c27e23733e24afaddf23f4435
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95c7f778abe9417a108e4df6982b73d3037f5ae9
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479216"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688771"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88479216"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 ALTER CRYPTOGRAPHIC PROVIDER provider_name   
     [ FROM FILE = path_of_DLL ]  
     ENABLE | DISABLE  
@@ -83,21 +83,21 @@ Cuando el archivo de encabezado utilizado para crear la DLL del proveedor de EKM
  En el ejemplo siguiente se modifica un proveedor criptográfico, denominado `SecurityProvider` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a una versión más reciente de un archivo .dll. Esta nueva versión se denomina `c:\SecurityProvider\SecurityProvider_v2.dll` y se instala en el servidor. El certificado del proveedor debe estar instalado en el servidor.  
   
 1. Deshabilite el proveedor para llevar a cabo la actualización. Con esto se finalizarán todas las sesiones criptográficas abiertas.  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
 2. Actualice el archivo .dll del proveedor. El GUID debe ser el mismo que el de la versión anterior, pero la versión puede ser diferente.  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
 ```  
 
 3. Habilite el proveedor actualizado.   
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c617d405aed8f9144ab7d85b16bb3c428f4ae541
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9edfba19ad84a0334f85e6990f0e3cd1c2ccee81
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540799"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688684"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -203,7 +203,7 @@ Los permisos siguientes son necesarios para modificar un ensamblado CLR cuando l
 > [!NOTE]  
 >  El ensamblado `ComplexNumber` se puede crear ejecutando los scripts de ejemplo UserDefinedDataType. Para obtener más información, vea [Tipo definido por el usuario](https://msdn.microsoft.com/library/a9b75f36-d7f5-47f7-94d6-b4448c6a2191).  
   
- ```
+ ```sql
  ALTER ASSEMBLY ComplexNumber 
  FROM 'C:\Program Files\Microsoft SQL Server\130\Tools\Samples\1033\Engine\Programmability\CLR\UserDefinedDataType\CS\ComplexNumber\obj\Debug\ComplexNumber.dll' 
   ```
@@ -214,7 +214,7 @@ Los permisos siguientes son necesarios para modificar un ensamblado CLR cuando l
 ### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. Agregar una archivo para asociarlo con el ensamblado  
  En el siguiente ejemplo se carga el archivo de código de origen `Class1.cs` para asociarlo con el ensamblado `MyClass`. En este ejemplo se asume que el ensamblado `MyClass` ya está creado en la base de datos.  
   
-```  
+```sql  
 ALTER ASSEMBLY MyClass   
 ADD FILE FROM 'C:\MyClassProject\Class1.cs';  
 ```  
@@ -225,7 +225,7 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 ### <a name="c-changing-the-permissions-of-an-assembly"></a>C. Cambiar los permisos de un ensamblado  
  En el ejemplo siguiente se cambia el conjunto de permisos del ensamblado `ComplexNumber` de SAFE a `EXTERNAL ACCESS`.  
   
-```  
+```sql  
 ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   

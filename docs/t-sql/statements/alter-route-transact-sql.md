@@ -23,12 +23,12 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ff8c86ef00124329600a99ef85cd471c81e25ff7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6aa1bf54d0d21ea05c16dc4808c6e7ff4191236d
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544276"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688215"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "89544276"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 ALTER ROUTE route_name  
 WITH    
   [ SERVICE_NAME = 'service_name' [ , ] ]  
@@ -71,7 +70,7 @@ WITH
  BROKER_INSTANCE **='** _broker\_instance_ **'**  
  Especifica la base de datos que hospeda el servicio de destino. El parámetro *instancia_de_broker* debe ser el identificador de la instancia de broker para la base de datos remota, que se puede obtener al ejecutar la consulta siguiente en la base de datos seleccionada:  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID();  
@@ -95,7 +94,7 @@ WHERE database_id = DB_ID();
   
  El *port_number* especificado debe coincidir con el número de puerto del extremo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Se puede obtener ejecutando la consulta siguiente en la base de datos seleccionada:  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -119,7 +118,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  El *port_number* especificado debe coincidir con el número de puerto del extremo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Se puede obtener ejecutando la consulta siguiente en la base de datos seleccionada:  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -151,7 +150,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-changing-the-service-for-a-route"></a>A. Cambiar el servicio para una ruta  
  En el ejemplo siguiente se modifica la ruta `ExpenseRoute` para que señale al servicio remoto `//Adventure-Works.com/Expenses`.  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
@@ -160,7 +159,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="b-changing-the-target-database-for-a-route"></a>B. Cambiar la base de datos de destino para una ruta  
  En el ejemplo siguiente se cambia la base de datos de destino para la ruta `ExpenseRoute` a la base de datos identificada por el identificador único `D8D4D268-00A3-4C62-8F91-634B89B1E317.`  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317';  
@@ -169,7 +168,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="c-changing-the-address-for-a-route"></a>C. Cambiar la dirección para una ruta  
  En el ejemplo siguiente se cambia la dirección de red para la ruta `ExpenseRoute` al puerto TCP `1234` en el host con la dirección IP `10.2.19.72`.  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute   
    WITH   
      ADDRESS = 'TCP://10.2.19.72:1234';  
@@ -178,7 +177,7 @@ ALTER ROUTE ExpenseRoute
 ### <a name="d-changing-the-database-and-address-for-a-route"></a>D. Cambiar la base de datos y la dirección para una ruta  
  En el ejemplo siguiente se cambia la dirección de red para la ruta `ExpenseRoute` al puerto TCP `1234` en el host con el nombre DNS `www.Adventure-Works.com`. También se cambia la base de datos de destino a la base de datos identificada por el identificador único `D8D4D268-00A3-4C62-8F91-634B89B1E317`.  
   
-```  
+```sql  
 ALTER ROUTE ExpenseRoute  
    WITH   
      BROKER_INSTANCE = 'D8D4D268-00A3-4C62-8F91-634B89B1E317',  

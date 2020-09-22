@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5d3e39d3a9533a75089c3126503abdd338c25ca1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abfb423e90d8c7776fe9d2f5eb8815a37254a3b8
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472340"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688515"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY (permisos de objeto de sistema de Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88472340"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
   
@@ -67,7 +66,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  La siguiente consulta muestra información acerca de los permisos de objetos del sistema:  
   
-```  
+```sql
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -81,7 +80,7 @@ GO
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se deniega el permiso `EXECUTE` para `xp_cmdshell` a `public`.  
   
-```  
+```sql
 DENY EXECUTE ON sys.xp_cmdshell TO public;  
 GO  
 ```  

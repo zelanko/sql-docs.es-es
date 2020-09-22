@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919b355458d7a3b975906f5bc6f5cb72322fdc2a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae8e04d348f6a3146030d4f0bf8856b2d343b682
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544247"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688181"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "89544247"
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
     [ INCREMENT BY <constant> ]  
@@ -93,7 +92,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ### <a name="permissions"></a>Permisos  
  Requiere permiso **ALTER** en la secuencia o permiso **ALTER** en el esquema. Para otorgar el permiso **ALTER** en la secuencia, use **ALTER ON OBJECT** en el siguiente formato:  
   
-```  
+```sql  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
@@ -108,7 +107,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ### <a name="a-altering-a-sequence"></a>A. Modificar una secuencia  
  En el siguiente ejemplo se crea un esquema denominado Test y una secuencia denominada TestSeq usando el tipo de datos **int**, con un rango de 100 a 200. La secuencia se inicia con 125 y se incrementa en 25 cada vez que se genera un número. Dado que la secuencia está configurada para recorrerla en ciclo, cuando el valor supera el valor máximo de 200, se reinicia en el valor mínimo de 100.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
   
@@ -126,7 +125,7 @@ GO
   
  En el siguiente ejemplo se modifica la secuencia TestSeq para que tenga un rango de 50 a 200. La secuencia reinicia la serie de la numeración con 100 y se incrementa en 50 cada vez que se genera un número.  
   
-```  
+```sql  
 ALTER SEQUENCE Test. TestSeq  
     RESTART WITH 100  
     INCREMENT BY 50  
@@ -143,25 +142,25 @@ GO
 ### <a name="b-restarting-a-sequence"></a>B. Reiniciar una secuencia  
  En el siguiente ejemplo se crea una secuencia llamada CountBy1. La secuencia usa los valores predeterminados.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1 ;  
 ```  
   
  Para generar un valor de secuencia, el propietario ejecuta la siguiente instrucción:  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
  El valor devuelto de -9.223.372.036.854.775.808 es el más bajo posible para el tipo de datos **bigint**. El propietario se da cuenta de que deseaba que la secuencia comenzase con 1, pero no indicó la cláusula **START WITH** al crear la secuencia. Para corregir este error, el propietario ejecuta la siguiente instrucción.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
 ```  
   
  A continuación, el propietario ejecuta de nuevo la siguiente instrucción para generar un número de secuencia.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1;  
 ```  
   
@@ -169,11 +168,10 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  La secuencia CountBy1 se creó usando el valor predeterminado de NO CYCLE de modo que dejara de funcionar después de generar el número 9.223.372.036.854.775.807. Las llamadas subsiguientes al objeto de secuencia devolverán el error 11728. La siguiente instrucción cambia el objeto de secuencia para que se recorra en ciclo y establece una memoria caché de 20.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1  
     CYCLE  
-    CACHE 20 ;  
-  
+    CACHE 20 ; 
 ```  
   
  Ahora, cuando el objeto de secuencia alcance 9.223.372.036.854.775.807 se recorrerá en ciclo y el número siguiente al recorrido del ciclo será el mínimo del tipo de datos, -9.223.372.036.854.775.808.  

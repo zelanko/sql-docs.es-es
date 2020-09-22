@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5bed49596a21ca699f68cb3e8ae31d00f4cea81d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c5f94122daad6d7dba18e391e6f5c8998bb01acd
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484979"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688901"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo DENY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -102,7 +102,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. Denegar el permiso VIEW DEFINITION en un grupo de disponibilidad  
  En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` en el grupo de disponibilidad `MyAg` para el inicio de sesión `ZArifin`de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -111,7 +111,7 @@ GO
 ### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>B. Denegar el permiso TAKE OWNERSHIP con CASCADE OPTION  
  En el siguiente ejemplo se deniega el permiso `TAKE OWNERSHIP` en el grupo de disponibilidad `MyAg` al usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`PKomosinski` con la opción `CASCADE`.  
   
-```  
+```sql  
 USE master;  
 DENY TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     CASCADE;  

@@ -27,12 +27,12 @@ ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81488cc34df6c86d47473e522fcc5ca9e5900ed8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0e46ee18c46206470e3f1286ffb2e94f81c4cea8
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484102"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570605"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT (permisos de entidad de seguridad de base de datos de Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -174,7 +174,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. Conceder el permiso CONTROL sobre un usuario a otro usuario  
  En el siguiente ejemplo se concede el permiso `CONTROL` para el usuario `AdventureWorks2012` de `Wanida` al usuario `RolandX`.  
   
-```  
+```sql  
 GRANT CONTROL ON USER::Wanida TO RolandX;  
 GO  
 ```  
@@ -182,7 +182,7 @@ GO
 ### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. Conceder el permiso VIEW DEFINITION sobre un rol a un usuario con GRANT OPTION  
  En el siguiente ejemplo se concede el permiso `VIEW DEFINITION` para el rol `AdventureWorks2012` de `SammamishParking` junto con `GRANT OPTION` al usuario de base de datos `JinghaoLiu`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
     TO JinghaoLiu WITH GRANT OPTION;  
 GO  
@@ -193,7 +193,7 @@ GO
   
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
-```  
+```sql  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  
 GO    
 ```  

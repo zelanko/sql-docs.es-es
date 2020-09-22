@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4deccd8bcfd4650a8f670969d1ec112f9f99d08d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447476"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990248"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>Sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -45,16 +45,16 @@ ms.locfileid: "88447476"
 |group_name|**sysname** |En el caso de las solicitudes que usan recursos, group_name es el nombre del grupo de cargas de trabajo en el que se ejecuta la solicitud.  Si la solicitud no emplea recursos, group_name es NULL.</br>Se aplica a: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|Para las solicitudes que usan recursos, el nombre del clasificador utilizado para asignar recursos e importancia.||
 |resource_allocation_percentage|**decimal (5, 2)**|La cantidad de recursos asignados a la solicitud.</br>Se aplica a: Azure SQL Data Warehouse|
-|result_cache_hit|**decimal**|Detalla si una consulta completada ha utilizado caché de conjunto de resultados.  </br>Se aplica a: Azure SQL Data Warehouse| 1 = acierto de caché de conjunto de resultados </br> 0 = error de caché de conjunto de resultados </br> Valores negativos = motivos por los que no se ha usado el almacenamiento en caché del conjunto de resultados.  Vea la sección Comentarios para obtener más información.|
+|result_cache_hit|**int**|Detalla si una consulta completada ha utilizado caché de conjunto de resultados.  </br>Se aplica a: Azure SQL Data Warehouse| 1 = acierto de caché de conjunto de resultados </br> 0 = error de caché de conjunto de resultados </br> Valores enteros negativos = motivos por los que no se ha usado el almacenamiento en caché del conjunto de resultados.  Vea la sección Comentarios para obtener más información.|
 ||||
   
-## <a name="remarks"></a>Observaciones 
+## <a name="remarks"></a>Comentarios 
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
- El result_cache_hit es una máscara de máscara del uso de la memoria caché del conjunto de resultados de una consulta.  Esta columna puede ser la [| (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de estos valores:  
+El valor entero negativo de la columna result_cache_hit es un valor de mapa de bits de todos los motivos aplicados por los que el conjunto de resultados de una consulta no se puede almacenar en caché.  Esta columna puede ser la [| (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de los siguientes valores:  
   
-|Valor hexadecimal (decimal)|Descripción|  
-|-----------|-----------------|  
+|Valor            |Descripción  |  
+|-----------------|-----------------|  
 |**1**|Acierto de caché de conjunto de resultados|  
 |**0x00** (**0**)|Error de caché de conjunto de resultados|  
 |-**0x01** (**-1**)|El almacenamiento en caché del conjunto de resultados está deshabilitado en la base de datos.|  
@@ -63,8 +63,10 @@ ms.locfileid: "88447476"
 |-**0x08** (**-8**)|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a predicados de seguridad de nivel de fila.|  
 |-**0x10** (**-16**)|El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso de la tabla del sistema, la tabla temporal o la tabla externa en la consulta.|  
 |-**0x20** (**-32**)|El almacenamiento en caché del conjunto de resultados está deshabilitado porque la consulta contiene constantes de tiempo de ejecución, funciones definidas por el usuario o funciones no deterministas.|  
-|-**0x40** (**-64**)|El almacenamiento en caché del conjunto de resultados está deshabilitado porque el tamaño estimado del conjunto de resultados es >10 GB.|  
-|-**0x80** (**-128**)|El almacenamiento en caché del conjunto de resultados está deshabilitado porque el conjunto de resultados contiene filas con un tamaño grande (>64 KB).|  
+|-**0x40**(**-64**)|El almacenamiento en caché del conjunto de resultados está deshabilitado porque el tamaño estimado del conjunto de resultados es >10 GB.|  
+|-**0x80**(**-128**) |El almacenamiento en caché del conjunto de resultados está deshabilitado porque el conjunto de resultados contiene filas con un tamaño grande (>64 KB).|  
+|-**0x100**(**-256**) |El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso del enmascaramiento dinámico de datos granular.|  
+
   
 ## <a name="permissions"></a>Permisos
 
@@ -77,6 +79,6 @@ ms.locfileid: "88447476"
 >[!WARNING]  
 >Un atacante puede usar sys. dm_pdw_exec_requests para recuperar información acerca de objetos de base de datos específicos con solo tener el permiso VIEW SERVER STATE y no tiene permiso específico de la base de datos.  
   
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
  [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

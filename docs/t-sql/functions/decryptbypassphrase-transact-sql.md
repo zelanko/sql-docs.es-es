@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b183d118a9b09bd4bb35f122ae1c1986148fe9df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 96f5b7e89f1fd8ef297fabf3c27169375e53951f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417401"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117100"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ Esta función descifra los datos que se cifraron originalmente con una frase de 
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 DecryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }  
@@ -84,10 +83,10 @@ Si se incluyó un autenticador en el momento de cifrar el texto cifrado, `DECRYP
 ## <a name="examples"></a>Ejemplos  
 En este ejemplo se descifra el registro actualizado en [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 -- Get the passphrase from the user.  
-DECLARE @PassphraseEnteredByUser nvarchar(128);  
+DECLARE @PassphraseEnteredByUser NVARCHAR(128);  
 SET @PassphraseEnteredByUser   
 = 'A little learning is a dangerous thing!';  
   

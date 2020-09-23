@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: dcfdfec2bb179d6182df1306ffc5b46dbd86bf59
-ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
+ms.openlocfilehash: 93113a42ca267f9d5c241636dfbf49aa8e75ae90
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942318"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117070"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -75,7 +75,7 @@ Es una expresión de caracteres Unicode que contiene texto JSON.
 OPENJSON recorre en iteración los elementos de la matriz o las propiedades del objeto en la expresión JSON y devuelve una fila por cada elemento o propiedad. En el ejemplo siguiente se devuelve cada propiedad del objeto proporcionado como *expresiónJSON*:  
 
 ```sql
-DECLARE @json NVarChar(2048) = N'{
+DECLARE @json NVARCHAR(2048) = N'{
    "String_value": "John",
    "DoublePrecisionFloatingPoint_value": 45,
    "DoublePrecisionFloatingPoint_value": 2.3456,
@@ -204,11 +204,11 @@ DECLARE @json NVARCHAR(MAX) = N'[
 SELECT *
 FROM OPENJSON ( @json )  
 WITH (   
-              Number   varchar(200)   '$.Order.Number',  
-              Date     datetime       '$.Order.Date',  
-              Customer varchar(200)   '$.AccountNumber',  
-              Quantity int            '$.Item.Quantity',  
-              [Order]  nvarchar(MAX)  AS JSON  
+              Number   VARCHAR(200)   '$.Order.Number',  
+              Date     DATETIME       '$.Order.Date',  
+              Customer VARCHAR(200)   '$.AccountNumber',  
+              Quantity INT            '$.Item.Quantity',  
+              [Order]  NVARCHAR(MAX)  AS JSON  
  )
 ```  
   
@@ -326,7 +326,7 @@ Se puede rescribir la misma consulta mediante `OPENJSON` con un esquema definido
 ```sql  
 SELECT SalesOrderID, OrderDate, value AS Reason  
 FROM Sales.SalesOrderHeader  
-     CROSS APPLY OPENJSON (SalesReasons) WITH (value nvarchar(100) '$')
+     CROSS APPLY OPENJSON (SalesReasons) WITH (value NVARCHAR(100) '$')
 ```  
   
 En este ejemplo, la ruta de acceso `$` hace referencia a cada elemento de la matriz. Si quiere convertir explícitamente el valor devuelto, puede usar este tipo de consulta.  
@@ -339,7 +339,7 @@ En la consulta siguiente se combinan filas relacionales y elementos de JSON en l
 SELECT store.title, location.street, location.lat, location.long  
 FROM store  
 CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')   
-     WITH (street varchar(500) ,  postcode  varchar(500) '$.postcode' ,  
+     WITH (street VARCHAR(500) ,  postcode VARCHAR(500) '$.postcode' ,  
      lon int '$.geo.longitude', lat int '$.geo.latitude')  
      AS location
 ```  
@@ -369,10 +369,10 @@ DECLARE @json NVARCHAR(max)  = N'{
   INSERT INTO Person  
   SELECT *   
   FROM OPENJSON(@json)  
-  WITH (id int,  
-        firstName nvarchar(50), lastName nvarchar(50),   
-        isAlive bit, age int,  
-        dateOfBirth datetime2, spouse nvarchar(50))
+  WITH (id INT,  
+        firstName NVARCHAR(50), lastName NVARCHAR(50),   
+        isAlive BIT, age INT,  
+        dateOfBirth DATETIME, spouse NVARCHAR(50))
 ```  
 
 ### <a name="example-6---simple-example-with-json-content"></a>Ejemplo 6: Ejemplo sencillo con contenido JSON

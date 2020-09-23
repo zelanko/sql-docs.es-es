@@ -37,7 +37,7 @@
       href: ../machine-learning/install/sql-pretrained-models-install.md
     - name: Cambio del tiempo de ejecución predeterminado de Python y R
       href: ../machine-learning/install/change-default-language-runtime-version.md
-    - name: Actualización de Python y R
+    - name: Actualización del entorno de ejecución de Python y R con enlace
       href: ../machine-learning/install/upgrade-r-and-python.md
     - name: Azure Data Studio Notebooks
       href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md

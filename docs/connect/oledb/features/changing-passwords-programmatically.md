@@ -1,6 +1,6 @@
 ---
 title: Cambio de las contraseñas mediante programación | Microsoft Docs
-description: Cambio de las contraseñas mediante programación con OLE DB Driver for SQL Server
+description: OLE DB Driver for SQL Server permite administrar la expiración de contraseñas mediante programación a través del controlador OLE DB y los cuadros de diálogo de inicio de sesión de SQL Server.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - expired passwords [OLE DB Driver for SQL Server]
 - OLE DB Driver for SQL Server, password expiration
 - modifying passwords
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 186a413fbaf55bc8caae1c2170fd54297b106a3e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: afd00e1de90941c3e5c1ff069c1f1413dfc9f2df
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006965"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861500"
 ---
 # <a name="changing-passwords-programmatically"></a>Cambiar las contraseñas mediante programación
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

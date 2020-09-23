@@ -1,21 +1,21 @@
 ---
-title: Directivas de compatibilidad del controlador OLE DB para SQL Server | Microsoft Docs
-description: Directivas de compatibilidad del controlador OLE DB para SQL Server
-ms.date: 05/25/2020
+title: Directivas de compatibilidad del controlador OLE DB para SQL Server
+description: Obtenga información sobre las directivas de compatibilidad de OLE DB Driver for SQL Server y las versiones de sistemas operativos y de bases de datos SQL compatibles con cada versión del controlador.
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7e4b77a700d494f1ed8f11a0004c60b37c5cc361
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca90e20ef6dab5a61bfa6b2969a1220d4a22db2e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007043"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860641"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Directivas de compatibilidad del controlador OLE DB para SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,26 +28,26 @@ En este tema se describe la forma de usar diversos componentes de acceso a datos
 
 OLE DB Driver for SQL Server se ha probado y admite conexiones a las versiones de SQL Server siguientes.
 
-| Versión del controlador | Azure SQL Database | Azure SQL DW | Instancia administrada de Azure SQL | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
-|----|-|-|-|-|-|-|-|-|
-|18.4|Y|Y|Y|Y|Y|Y|Y|Y|
-|18.3|Y|Y|Y|Y|Y|Y|Y|Y|
-|18.2|Y|Y|Y|Y|Y|Y|Y|Y|
-|18.1|Y|Y|Y| |Y|Y|Y|Y|
-|18.0|Y|Y|Y| |Y|Y|Y|Y|
+| Versión de la base de datos&nbsp;&#8594;<br />&#8595; versión del controlador | Azure SQL Database | Azure Synapse Analytics | Instancia administrada de Azure SQL | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
+|----|---|---|---|---|---|---|---|---|
+|18.4|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|18.3|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|18.2|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|18.1|Sí|Sí|Sí|   |Sí|Sí|Sí|Sí|
+|18.0|Sí|Sí|Sí|   |Sí|Sí|Sí|Sí|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="supported-operating-system-versions"></a>Versiones de sistemas operativos admitidos  
 
 En la tabla siguiente se enumeran los sistemas operativos que admite OLE DB Driver for SQL Server.  
 
-| Versión del controlador | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
-|----|-|-|-|-|-|-|
-|18.4|Y|Y|Y|Y|Y|Y|
-|18.3|Y|Y|Y|Y|Y|Y|
-|18.2|Y|Y|Y|Y|Y|Y|
-|18.1| |Y|Y|Y|Y|Y|
-|18.0| |Y|Y|Y|Y|Y|
+| Sistema operativo&nbsp;&#8594;<br />&#8595; versión del controlador | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
+|----|---|---|---|---|---|---|
+|18.4|Sí|Sí|Sí|Sí|Sí|Sí|
+|18.3|Sí|Sí|Sí|Sí|Sí|Sí|
+|18.2|Sí|Sí|Sí|Sí|Sí|Sí|
+|18.1|   |Sí|Sí|Sí|Sí|Sí|
+|18.0|   |Sí|Sí|Sí|Sí|Sí|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Se admite en Windows Server 2012 con [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  

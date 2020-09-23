@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión para Reporting Services 2017 y posterior | Microsoft Docs
 description: Obtenga más información sobre los cambios en SQL Server Reporting Services (SSRS), para las versiones 2017 y posteriores.
-ms.date: 04/28/2020
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a97ab8d68a1b265a25eb3b97a5146a402aa9b3b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3b1984133387f1cbf5405f0c90b4532e56e776b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247514"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282401"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Notas de la versión de SQL Server Reporting Services (SSRS) 2017 y versiones posteriores
 
@@ -53,12 +53,39 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
+## <a name="15075454810-20200831"></a>15.0.7545.4810, 2020/08/31 
+
+| Problema corregido | Detalles |
+| :---------- | :------ |
+| Actualizaciones de seguridad  | &nbsp; |
+| Compatibilidad con datos adjuntos de comentarios restringidos para dejar de permitir documentos PDF  | &nbsp; |
+| El truncamiento del nombre de archivo fijo al exportar informes con un punto en el nombre  | &nbsp; |
+| Se ha corregido un problema relacionado con las suscripciones y la referencia cultural zh-TW que daba lugar a errores de formato de fecha no válido  | &nbsp; |
+| Se ha corregido un problema con algunos informes que hacía que el acceso a la opción de parámetros diera lugar a un desbordamiento indefinido  | &nbsp; |
+| Se han corregido problemas relacionados con comillas simples en nombres de informes  | &nbsp; |
+| Se ha corregido un problema en el acceso URL que hacía que FindString no encontrara coincidencias  | &nbsp; |
+| Se ha corregido un problema que hacía que el texto alternativo para la exportación a PDF no se codificara correctamente para caracteres multibyte  | &nbsp; |
+| Se ha corregido la apariencia no deseada de una imagen vacía en un elemento lineal  | &nbsp; |
+| Se ha corregido un error no admitido erróneo para la autenticación personalizada en Web Edition  | &nbsp; |
+| Se ha corregido un problema que hacía que un lector de pantalla leyese una fila y columna adicionales en un Tablix  | &nbsp; |
+| Se ha corregido un problema de truncamiento con el ajuste de tamaño al ampliarse hasta la página entera  | &nbsp; |
+| La actualización de la línea de comandos ya no requiere la marca EULA  | &nbsp; |
+
 ## <a name="150724337714-20191101"></a>15.0.7243.37714, 01/11/2019
 
 Versión inicial.
 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+## <a name="1406001669-20200831"></a>14.0.600.1669, 2020/08/31 
+
+| Problema corregido | Detalles |
+| :---------- | :------ |
+| Actualizaciones de seguridad  | &nbsp; |
+| Compatibilidad con datos adjuntos de comentarios restringidos para dejar de permitir documentos PDF  | &nbsp; |
+| El truncamiento del nombre de archivo fijo al exportar informes con un punto en el nombre  | &nbsp; |
+| Se ha corregido un problema relacionado con las suscripciones y la referencia cultural zh-TW que daba lugar a errores de formato de fecha no válido  | &nbsp; |
 
 ## <a name="1406001572-20200406"></a>14.0.600.1572, 2020/04/06 
 

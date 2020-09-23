@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/28/2020
+ms.date: 08/17/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286469"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282405"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Página Opciones avanzadas de las propiedades del servidor: Power BI Report Server y Reporting Services
 
@@ -51,7 +51,17 @@ Para abrir esta página, inicie SQL Server Management Studio, conéctese a una i
 
 (Solo Power BI Report Server de enero de 2020 y Reporting Services 2019 y versiones posteriores)
 
-Establece los valores de encabezado para todas las direcciones URL que coinciden con el patrón de expresión regular especificado. Los usuarios pueden actualizar el valor CustomHeaders con XML válido para establecer los valores de encabezado de las direcciones URL de solicitud seleccionadas. Los administradores pueden agregar cualquier número de encabezados en el XML. De forma predeterminada, no hay ningún encabezado personalizado y el valor está en blanco. 
+Establece los valores de encabezado para todas las direcciones URL que coinciden con el patrón de expresión regular especificado. Los usuarios pueden actualizar el valor CustomHeaders con XML válido para establecer los valores de encabezado de las direcciones URL de solicitud seleccionadas. Los administradores pueden agregar cualquier número de encabezados en el XML. En Reporting Services 2019, de forma predeterminada, no hay ningún encabezado personalizado y el valor está en blanco. En Power BI Report Server (enero de 2020) y versiones posteriores, el valor es este:
+
+```xml
+<CustomHeaders>
+    <Header>
+        <Name>X-Frame-Options</Name>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Value>SAMEORIGIN</Value>
+    </Header>
+</CustomHeaders>
+```
 
 > [!NOTE]
 > Un número excesivo de encabezados puede afectar el rendimiento. 
@@ -154,7 +164,7 @@ Indica si se envían mensajes de error detallados al equipo cliente cuando los u
 Número de días que mantener la información de ejecución de informes en el registro de ejecución. Entre los valores válidos de esta propiedad están el rango **-1** - **2**,**147**,**483**y**647**. Si el valor es **-1**, no se eliminan las entradas de la tabla del registro de ejecución. El valor predeterminado es **60**.  
 
 > [!NOTE]
-> Si establece un valor de **0**, se *eliminan* todas las entradas del registro de ejecución. Un valor de **-1** mantiene las entradas del registro de ejecución y no las elimina.
+> Si establece un valor de **0, se ** *eliminan* todas las entradas del registro de ejecución. Un valor de **-1** mantiene las entradas del registro de ejecución y no las elimina.
 
 ### <a name="executionloglevel"></a>ExecutionLogLevel
 Establezca el nivel de registro de ejecución. *El valor predeterminado es Normal.*
@@ -184,7 +194,7 @@ El nombre del rol que se usa al crear directivas de seguridad en las carpetas Mi
 (Solo Power BI Report Server) Establece la dirección de la instancia de Office Online Server para ver Libros de Excel.
 
 ### <a name="rdlxreporttimetout"></a>RDLXReportTimetout
-El valor de tiempo de espera de procesamiento del informe RDLX *(informes de Power View en SharePoint Server)* , en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos para esta propiedad van desde **-1** a **2** **147** **483** **647**. Si el valor es **-1**, no se agota el tiempo de espera de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es **1800**.
+El valor de tiempo de espera de procesamiento del informe RDLX *(informes de Power View en SharePoint Server)*, en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos para esta propiedad van desde **-1** a **2****147****483****647**. Si el valor es **-1**, no se agota el tiempo de espera de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es **1800**.
 
 ### <a name="requireintune"></a>RequireIntune
 (Solo Power BI Report Server, Reporting Services 2017 y versiones posteriores) Requiere Intune para acceder a los informes de la organización a través de la aplicación móvil de Power BI. *El valor predeterminado es False.*
@@ -213,8 +223,8 @@ Define la manera en la que se comprimen las instantáneas. El valor predetermina
 |Valores|Descripción|
 |---------|---------|
 |**SQL**|Las instantáneas se comprimen cuando se almacenan en la base de datos del servidor de informes. Esta compresión es el comportamiento actual.|
-|**None**|Las instantáneas no se comprimen.|
-|**Todo**|Las instantáneas se comprimen para todas las opciones de almacenamiento, lo que incluye la base de datos del servidor de informes o el sistema de archivos.|
+|**Ninguno**|Las instantáneas no se comprimen.|
+|**All**|Las instantáneas se comprimen para todas las opciones de almacenamiento, lo que incluye la base de datos del servidor de informes o el sistema de archivos.|
 
 ### <a name="storedparameterslifetime"></a>StoredParametersLifetime
 Especifica el número máximo de días que un parámetro almacenado puede estar almacenado. Los valores válidos **-1**y de **+1** a **2 147 483 647**. El valor predeterminado es **180** días.  
@@ -223,13 +233,13 @@ Especifica el número máximo de días que un parámetro almacenado puede estar 
 Especifica el número máximo de valores de parámetro que se pueden almacenar por el servidor de informes. Los valores válidos **-1**y de **+1** a **2 147 483 647**. El valor predeterminado es **1500**.  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
-(Solo Power BI Report Server de enero de 2019, Reporting Services 2019 y versiones posteriores) Establece una lista separada por comas de los esquemas de URI que se pueden definir en acciones de hipervínculo que pueden representarse o "&ast;" para habilitar todos los esquemas de hipervínculo. Por ejemplo, al establecer "http, https" se permitirían los hipervínculos a "https://www. contoso.com", pero se quitarían los hipervínculos a "mailto:bill@contoso.com" o "javascript:window.open(‘ www.contoso.com’, ‘_blank’)". El valor predeterminado es "&ast;".
+(Solo Power BI Report Server de enero de 2019, Reporting Services 2019 y versiones posteriores) Establece una lista separada por comas de los esquemas de URI que se pueden definir en acciones de hipervínculo que pueden representarse o "&ast;" para habilitar todos los esquemas de hipervínculo. Por ejemplo, al establecer "http, https" se permitirían los hipervínculos a "https://www. contoso.com", pero quitaría hipervínculos a "mailto:bill@contoso.com" o "javascript:window.open(‘ www.contoso.com’, ‘_blank’)". El valor predeterminado es "&ast;".
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
-El valor de tiempo de espera de procesamiento de informes predeterminado, en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos para esta propiedad van desde **-1** a **2** **147** **483** **647**. Si el valor es **-1**, no se agota el tiempo de espera de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es **1800**.  
+El valor de tiempo de espera de procesamiento de informes predeterminado, en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos para esta propiedad van desde **-1** a **2****147****483****647**. Si el valor es **-1**, no se agota el tiempo de espera de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es **1800**.  
 
 ### <a name="systemsnapshotlimit"></a>SystemSnapshotLimit
-Número máximo de instantáneas almacenadas para un informe. Los valores válidos para esta propiedad van desde **-1** a **2** **147** **483** **647**. Si el valor es **-1**, no hay ningún límite de instantáneas.  
+Número máximo de instantáneas almacenadas para un informe. Los valores válidos para esta propiedad van desde **-1** a **2****147****483****647**. Si el valor es **-1**, no hay ningún límite de instantáneas.  
 
 ### <a name="timerinitialdelayseconds"></a>TimerInitialDelaySeconds
 (Solo Power BI Report Server, Reporting Services 2017 y versiones posteriores) Establece cuánto tiempo, en segundos, quiere que se retrase la hora de inicio. *El valor predeterminado es 60.*

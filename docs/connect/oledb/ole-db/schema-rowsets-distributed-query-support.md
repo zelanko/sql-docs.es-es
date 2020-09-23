@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad con consultas distribuidas en conjuntos de filas de esquema | Microsoft Docs
-description: Compatibilidad con consultas distribuidas en conjuntos de filas de esquema
+description: La interfaz IDBSchemaRowset de OLE DB Driver for SQL Server devuelve metadatos en servidores vinculados para admitir consultas distribuidas de SQL Server.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB, schema rowsets
 - OLE DB rowsets, schema
 - rowsets [OLE DB], schema
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9c1207278d194df83a69109b14768eb3b99a719e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 61105b2e974cd111cd4f5dfd10e7f528cd04519a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012797"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861564"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Conjuntos de filas de esquema: compatibilidad con consultas distribuidas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

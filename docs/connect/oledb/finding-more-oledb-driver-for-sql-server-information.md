@@ -1,6 +1,6 @@
 ---
-title: Búsqueda de más información sobre el controlador OLE DB para SQL Server | Microsoft Docs
-description: Dónde buscar más información sobre el controlador OLE DB para SQL Server
+title: Búsqueda de más información sobre el controlador OLE DB para SQL Server
+description: Use estos recursos para obtener más información sobre OLE DB Driver for SQL Server y otros tipos de programación de acceso a datos.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - MSOLEDBSQL, additional resources
 - OLE DB Driver for SQL Server, additional resources
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: aec9888c6d362fede8cd1991f05892315982eb11
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7f0beae794a4958a74b0ffa1b80b72bc41b0a396
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986963"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480637"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>Búsqueda de más información sobre el controlador OLE DB para SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85986963"
  [Centro para desarrolladores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink?linkid=4173)  
  Este sitio proporciona artículos técnicos, código de ejemplo y otros recursos para el controlador OLE DB para SQL Server y otras tecnologías de acceso a datos.  
   
- [Blog de acceso a datos](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog de acceso a datos](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)  
  Este blog proporciona información sobre las tecnologías de acceso a datos y le permite interactuar directamente con miembros del equipo del producto.  
   
  [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907) (Componentes de Windows Data Access)  

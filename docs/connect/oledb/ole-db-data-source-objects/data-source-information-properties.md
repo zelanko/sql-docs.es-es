@@ -1,6 +1,6 @@
 ---
 title: Propiedades de información de orígenes de datos (controlador OLE DB) | Microsoft Docs
-description: Propiedades de información de orígenes de datos
+description: Obtenga información sobre las propiedades de información del origen de datos para el conjunto de propiedades específico del proveedor DBPROPSET_SQLSERVERDATASOURCEINFO en OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data source properties [OLE DB]
 - information properties [OLE DB]
 - OLE DB data source properties [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e68103f98e9a1de3902206876cd95c48b22ff7cb
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 866d4edb2aaece799a25f5f95d176b3702cbb476
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977792"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862431"
 ---
 # <a name="data-source-information-properties"></a>Propiedades de información de orígenes de datos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

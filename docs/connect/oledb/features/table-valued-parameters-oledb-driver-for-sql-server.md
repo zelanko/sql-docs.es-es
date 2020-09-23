@@ -1,6 +1,6 @@
 ---
 title: Parámetros con valores de tabla (controlador OLE DB para SQL Server) | Microsoft Docs
-description: Parámetros con valores de tabla (controlador OLE DB para SQL Server)
+description: OLE DB Driver for SQL Server admite parámetros con valores de tabla, que proporcionan una manera eficaz de pasar varias filas de datos al servidor.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, table-valued parameters
 - table-valued parameters (OLE DB Driver for SQL Server)
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 8b8744730f04c60859fb997bbda20e3895dc7f3d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 56e01f06791a81d1af0bc6229d4eb197bd1d6184
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85987459"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861655"
 ---
 # <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>Parámetros con valores de tabla (controlador OLE DB para SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

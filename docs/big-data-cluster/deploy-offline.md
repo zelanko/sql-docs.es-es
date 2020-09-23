@@ -1,7 +1,7 @@
 ---
 title: Implementación sin conexión
 titleSuffix: SQL Server big data clusters
-description: Aprenda a realizar una implementación sin conexión de un clúster de macrodatos de SQL Server.
+description: Obtenga información sobre cómo realizar una implementación sin conexión de un clúster de macrodatos de SQL Server 2019 y cómo cargar imágenes de contenedor en un repositorio privado.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
+ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423164"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89875564"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realización de una implementación sin conexión de un clúster de macrodatos de SQL Server
 
@@ -80,7 +80,6 @@ Las siguientes imágenes de contenedor de clúster de macrodatos son necesarias 
 - **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
-- **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
 - **mssql-ha-operator**

@@ -1,6 +1,6 @@
 ---
 title: Ejecución de un comando (controlador OLE DB) | Microsoft Docs
-description: Ejecutar un comando
+description: Obtenga información sobre cómo un consumidor en OLE DB Driver for SQL Server ejecuta un comando primero mediante la creación de una sesión, la obtención de un conjunto de filas y el uso de Execute.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - sessions [OLE DB Driver for SQL Server]
 - OLE DB extensions for XML
 - OLE DB Driver for SQL Server, command execution
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5077f621e8a3698e5aec09b79f28a2f5cf9257e7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f24216ec62b77c56d5d2b18563f64e37fd4b7691
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244856"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861528"
 ---
 # <a name="executing-a-command"></a>Ejecutar un comando
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

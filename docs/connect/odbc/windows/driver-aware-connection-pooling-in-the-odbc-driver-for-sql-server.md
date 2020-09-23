@@ -2,7 +2,7 @@
 title: Agrupación de conexiones dependientes del controlador ODBC
 description: Obtenga información sobre las mejoras realizadas en la característica de agrupación de conexiones dependientes del controlador de Microsoft ODBC Driver for SQL Server en Windows.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b1d8700e6868781480771c4a62f2a5fc6c92ddfc
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922083"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288117"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Agrupación de conexiones dependientes del controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -43,7 +43,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
   
 -   Si hay una diferencia en cualquiera de las siguientes palabras clave de conexión entre la cadena de conexión y una cadena de conexión agrupada, no se utilizará una conexión agrupada.  
   
-    |Palabra clave|ODBC Driver 13|ODBC Driver 11|
+    |Palabra clave|ODBC Driver 17/13|ODBC Driver 11|
     |-|-|-|
     |`Address`|Sí|Sí|
     |`AnsiNPW`|Sí|Sí|
@@ -68,7 +68,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
     
 - Si hay una diferencia en cualquiera de los siguientes atributos de conexión entre la cadena de conexión y una cadena de conexión agrupada, no se utilizará una conexión agrupada.  
   
-    |Atributo|ODBC Driver 13|ODBC Driver 11|  
+    |Atributo|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Sí|Sí|
     |`SQL_ATTR_PACKET_SIZE`|Sí|Sí|
@@ -94,7 +94,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
   
      Estas palabras clave de conexión no se tienen en cuenta cuando el Administrador de controladores intenta hacer coincidir la conexión con una conexión del grupo. Aunque cambie uno de estos parámetros, se puede utilizar una conexión existente. El controlador restablecerá las opciones según proceda. Estos atributos se pueden restablecer en el cliente sin realizar ninguna llamada de red adicional.  
   
-    |Palabra clave|ODBC Driver 13|ODBC Driver 11|  
+    |Palabra clave|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`AutoTranslate`|Sí|Sí|
     |`Description`|Sí|Sí|
@@ -108,7 +108,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
   
      Si cambia uno de los siguientes atributos de conexión, se puede reutilizar una conexión existente.  El controlador restablecerá el valor según proceda. El controlador puede restablecer estos atributos en el cliente sin realizar una llamada de red adicional.  
   
-    |Atributo|ODBC Driver 13|ODBC Driver 11|  
+    |Atributo|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |Todos los atributos de instrucción|Sí|Sí|
     |`SQL_ATTR_AUTOCOMMIT`|Sí|Sí|

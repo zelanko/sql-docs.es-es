@@ -1,6 +1,6 @@
 ---
 title: Objetos de origen de datos (controlador OLE DB) | Microsoft Docs
-description: Objetos de origen de datos (OLE DB)
+description: Obtenga información sobre cómo un consumidor de OLE DB Driver for SQL Server crea una instancia de un objeto de origen de datos para un proveedor.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - OLE DB data source objects [OLE DB Driver for SQL Server]
 - data source objects [OLE DB]
 - CLSID
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5bdfdd91daf1e41b7eae33cd504e127c249de1b8
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9abdf54d533eab604ff564c9f32b99b2eba566d9
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976439"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862406"
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de origen de datos (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

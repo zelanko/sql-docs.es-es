@@ -3,25 +3,25 @@ title: Administración con Resource Governor
 description: Obtenga información sobre cómo usar Resource Governor para administrar la asignación de recursos de CPU, E/S físicas y memoria para cargas de trabajo de Python y R en SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/02/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f5a567ee0d4937341bb6d9f62a75955635118d1c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881969"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283556"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Administración de cargas de trabajo de Python y R con Resource Governor en SQL Server Machine Learning Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Obtenga información sobre cómo usar [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) para administrar la asignación de recursos de CPU, E/S físicas y memoria para cargas de trabajo de Python y R en SQL Server Machine Learning Services.
 
-Los algoritmos de aprendizaje automático en Python y R suelen usar una gran cantidad de recursos de proceso. Según sus prioridades de cargas de trabajo, puede que necesite incrementar o reducir los recursos disponibles para Machine Learning Services.
+Los algoritmos de aprendizaje automático en Python y R usan una gran cantidad de recursos de proceso. Según sus prioridades de cargas de trabajo, puede que necesite incrementar o reducir los recursos disponibles para Machine Learning Services.
 
 Para obtener información general, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).
 
@@ -36,7 +36,7 @@ De forma predeterminada, los tiempos de ejecución de scripts externos para apre
  
 De forma predeterminada, los procesos externos usan hasta un 20 % del total de memoria del host en el servidor local. Puede modificar el grupo de recursos predeterminado para realizar cambios en todo el servidor, de forma que los procesos de R y Python usen la capacidad que configure como disponible para procesos externos.
 
-Como alternativa, puede crear **grupos de recursos externos personalizados**, con clasificadores y grupos de cargas de trabajo asociados, para determinar la asignación de recursos de las solicitudes originadas desde programas o hosts específicos, o bien otros criterios que proporcione. Un grupo de recursos externos es un tipo de grupo de recursos introducido en [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] para facilitar la administración de procesos de R y Python externos al motor de base de datos.
+Como opción, puede crear **grupos de recursos externos** personalizados, con clasificadores y grupos de cargas de trabajo asociados, para determinar la asignación de recursos de las solicitudes originadas desde programas o hosts específicos, o bien otros criterios que proporcione. Un grupo de recursos externos es un tipo de grupo de recursos introducido en [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] para facilitar la administración de procesos de R y Python externos al motor de base de datos.
 
 1. [Habilite la gobernanza de recursos](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (está desactivada de forma predeterminada).
 

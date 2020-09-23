@@ -1,6 +1,6 @@
 ---
 title: Fecha y hora y conjuntos de filas de esquema | Microsoft Docs
-description: Fecha y hora y conjuntos de filas de esquema
+description: Obtenga información sobre las mejoras de fecha y hora de OLE DB en relación con los conjuntos de filas COLUMNS y PROCEDURE_PARAMETERS en OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f9d852689f008fcaaff53a3325a298a66be5f4e9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 44b3959b72d07cb12d6523e063a0ddfa75b59c97
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004466"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862013"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadatos: fecha y hora y conjuntos de filas de esquema
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

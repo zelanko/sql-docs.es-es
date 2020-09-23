@@ -1,6 +1,6 @@
 ---
 title: Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream | Microsoft Docs
-description: Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
+description: Obtenga información sobre cómo los datos grandes se pueden enlazar o recuperar mediante la interfaz ISequentialStream en OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Open method
 - ISequentialStream interface, samples
 - GetColumns method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 099c2ded895cae98a63d1c6e74688a2b26fb171f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eeaebe20dd27eb24edc1d23060d7a64fec8f0916
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003627"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860606"
 ---
-# <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
+# <a name="fetch-columns-by-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

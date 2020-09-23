@@ -1,6 +1,6 @@
 ---
 title: ICommand (controlador OLE DB) | Microsoft Docs
-description: Interfaz ICommand (OLE DB)
+description: Obtenga información sobre el comportamiento del método ICommand::Execute que es específico de OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - ICommand [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 90c9822736ab27a3432c65940f912421a1f9bb85
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf787628804f3597fa724c0ab6313a450e365d58
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244527"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861900"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +27,11 @@ ms.locfileid: "87244527"
   En este artículo se describe el comportamiento de OLE DB específico de OLE DB Driver for SQL Server.  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
- Insertar datos que sean mayores que el tamaño de una columna suele producir un error. Sin embargo, hay situaciones en las que se devolverá S_OK pero *dwStatus* se configurará en DBSTATUS_S_TRUNCATED. Se suele producir al insertar datos con parámetros, donde la columna no es lo bastante grande para contener los datos y no se ha llamado a **ICommandWithParameters::SetParameterInfo**.  
+ Insertar datos que sean mayores que el tamaño de una columna suele producir un error. Sin embargo, hay situaciones en las que se devuelve S_OK y `dwStatus` se establece en DBSTATUS_S_TRUNCATED. Estos son algunos escenarios en los que normalmente se produce:
+
+- Al insertar datos con parámetros  
+- Donde la columna no es lo suficientemente grande como para contener los datos  
+- Cuando no se ha llamado a `ICommandWithParameters::SetParameterInfo`  
   
 ## <a name="see-also"></a>Consulte también  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)

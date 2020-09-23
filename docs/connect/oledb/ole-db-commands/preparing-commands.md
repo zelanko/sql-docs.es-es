@@ -1,6 +1,6 @@
 ---
 title: Preparación de comandos (controlador OLE DB)
-description: Preparar comandos mediante OLE DB Driver for SQL Server
+description: En el caso de un solo comando que se ejecuta varias veces, OLE DB Driver for SQL Server admite la preparación de comandos para mejorar el rendimiento.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - prepared statements [OLE DB Driver for SQL Server]
 - commands [OLE DB]
 - command preparation [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 285b6549f146e2a94e807481e93a97191398b8ed
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5b2bb5f167361ad5fec4a5580c49378144cbbf26
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244981"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862422"
 ---
 # <a name="preparing-commands"></a>Preparar comandos
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

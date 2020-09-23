@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPReadFmt (controlador OLE DB) | Microsoft Docs
-description: Uso de IBCPSession::BCPReadFmt para leer datos de un archivo de formato (OLE DB)
+description: El método BCPReadFmt de OLE DB Driver for SQL Server lee datos de un archivo de formato que especifica el formato de datos en el archivo de datos.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPReadFmt method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e8df0e8b64795414734c93512a17951f8867c3a8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c1310e39aae4de72e85d6c3633b663d193995f12
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244620"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861937"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ HRESULT BCPReadFmt(
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
+ Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15).  
   
  E_OUTOFMEMORY  
  Error de memoria insuficiente.  

@@ -34,25 +34,32 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6c14ef618f8f2e64a4b3a59f7bd29dfaf327b6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bff0a596c457ee5ce24b665be3897f86e625b3b0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459909"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076718"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-DBCC SHOW_STATISTICS muestra las estadísticas de optimización de consulta actuales de una tabla o vista indizada. El optimizador de consultas utiliza las estadísticas para estimar la cardinalidad o el número de filas del resultado de la consulta, lo que hace posible que el optimizador de consultas pueda crear un plan de consulta de alta calidad. Por ejemplo, el optimizador de consultas podría utilizar las estimaciones de cardinalidad para elegir el operador index seek en lugar del operador index scan en el plan de consulta, lo que mejoraría el rendimiento de las consultas al evitar el examen de índices con una gran cantidad de recursos.
+DBCC SHOW_STATISTICS muestra las estadísticas de optimización de consulta actuales de una tabla o vista indizada. El optimizador de consultas usa las estadísticas para estimar la cardinalidad o el número de filas del resultado de la consulta, lo que permite que el optimizador de consultas cree un plan de consultas de alta calidad. Por ejemplo, el optimizador de consultas podría utilizar las estimaciones de cardinalidad para elegir el operador index seek en lugar del operador index scan en el plan de consulta, lo que mejoraría el rendimiento de las consultas al evitar el examen de índices con una gran cantidad de recursos.
   
-El optimizador de consultas almacena las estadísticas de una tabla o vista indizada en un objeto de estadísticas. En una tabla, el objeto de estadísticas se crea en un índice o en una lista de columnas de la tabla. El objeto de estadísticas incluye un encabezado con metadatos sobre las estadísticas, un histograma con la distribución de valores de la primera columna de clave del objeto de estadísticas y un vector de la densidad para medir la correlación entre las columnas. [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede calcular las estimaciones de cardinalidad con cualquiera de los datos del objeto de estadísticas.
+El optimizador de consultas almacena las estadísticas de una tabla o vista indizada en un objeto de estadísticas. En una tabla, el objeto de estadísticas se crea en un índice o en una lista de columnas de la tabla. El objeto de estadísticas incluye un encabezado con metadatos sobre las estadísticas, un histograma con la distribución de valores de la primera columna de clave del objeto de estadísticas y un vector de la densidad para medir la correlación entre las columnas. [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede calcular las estimaciones de cardinalidad con cualquiera de los datos del objeto de estadísticas. Para obtener más información, vea [Estadísticas](../../relational-databases/statistics/statistics.md) y [Estimación de cardinalidad (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md).
   
 DBCC SHOW_STATISTICS muestra el encabezado, el histograma y el vector de densidad en función de los datos guardados en el objeto de estadísticas. La sintaxis le permite especificar una tabla o vista indizada junto con un nombre del índice de destino, un nombre de las estadísticas o un nombre de columna. En este tema se describe cómo se muestran las estadísticas y cómo se interpretan los resultados mostrados.
-  
-Para más información, consulte [Estadísticas](../../relational-databases/statistics/statistics.md).
-  
+
+> [!IMPORTANT]
+> A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, la vista de administración dinámica [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) está disponible para recuperar mediante programación la información de encabezado incluida en el objeto de estadísticas para las estadísticas no incrementales.
+
+> [!IMPORTANT]
+> A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, la vista de administración dinámica [sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) está disponible para recuperar mediante programación la información de encabezado incluida en el objeto de estadísticas para las estadísticas incrementales.
+
+> [!IMPORTANT]
+> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2, la vista de administración dinámica [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) está disponible para recuperar mediante programación la información del histograma incluida en el objeto de estadísticas.
+
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis
@@ -67,10 +74,10 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   
-    [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
+    [ WITH { STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
 [;]
 ```
 
@@ -162,15 +169,15 @@ El optimizador de consultas utiliza las densidades para mejorar las estimaciones
 |(IdCliente, IdArtículo, Precio)|Filas con valores que se corresponden con IdCliente, IdArtículo y Precio|  
   
 ## <a name="restrictions"></a>Restricciones  
- DBCC SHOW_STATISTICS no proporciona estadísticas de índices de almacén de columnas optimizadas en memoria xVelocity o espaciales.  
+ DBCC SHOW_STATISTICS no proporciona estadísticas de índices espaciales ni índices de almacén de columnas optimizados para memoria.  
   
 ## <a name="permissions-for-ssnoversion-and-sssds"></a>Permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Para ver el objeto de estadísticas, el usuario debe tener el permiso SELECT en la tabla.
+Para ver el objeto de estadísticas, el usuario debe tener el permiso `SELECT` en la tabla.
 Tenga en cuenta los siguientes requisitos para que los permisos SELECT sean suficientes para ejecutar el comando:
 -   Los usuarios deben tener permisos en todas las columnas del objeto de estadísticas  
 -   Los usuarios deben tener permiso en todas las columnas de una condición de filtro (si existe alguna)  
 -   La tabla no puede tener una directiva de seguridad de nivel de fila.
--   Si alguna de las columnas de un objeto de estadísticas se enmascara con reglas de Enmascaramiento dinámico de datos, además del permiso SELECT, el usuario debe tener el permiso UNMASK
+-   Si alguna de las columnas de un objeto de estadísticas se enmascara con reglas de Enmascaramiento dinámico de datos, además del permiso `SELECT`, el usuario debe tener el permiso `UNMASK`.
 
 En versiones anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor `sysadmin`, o bien de los roles fijos de base de datos `db_owner` o `db_ddladmin`.
 
@@ -178,10 +185,7 @@ En versiones anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1
  > Para volver a cambiar el comportamiento al anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, use la marca de seguimiento 9485.
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>Permisos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC SHOW_STATISTICS requiere el permiso SELECT en la tabla o pertenecer a uno de los siguientes roles:
--   rol fijo de servidor sysadmin  
--   rol fijo de base de datos db_owner  
--   rol fijo de base de datos db_ddladmin  
+DBCC SHOW_STATISTICS requiere el permiso `SELECT` en la tabla o la pertenencia al rol fijo de servidor `sysadmin`, el rol fijo de base de datos `db_owner` o el rol fijo de base de datos `db_ddladmin`.  
   
 ## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Limitaciones y restricciones de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS muestra las estadísticas almacenadas en la base de datos de shell en el nivel del nodo de control. No muestra las estadísticas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea automáticamente en los nodos de ejecución.
@@ -234,3 +238,4 @@ Los resultados muestran el encabezado, el vector de densidad y parte del histogr
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)   

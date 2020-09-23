@@ -1,6 +1,6 @@
 ---
 title: Captura de columnas mediante IRow::GetColumns (controlador OLE DB) | Microsoft Docs
-description: Capturar columnas mediante IRow::GetColumns (OLE DB)
+description: Obtenga información sobre cómo capturar columnas a través del método IRow::GetColumns en OLE DB Driver for SQL Server. En este ejemplo se obtiene una columna a la vez desde una fila.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - IRow interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d2ca2ba9284c0e1fca7eef3f6b8911111c4559f6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c22a948cad5fdc2b41f1ac14b73d728be06b9c3f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244811"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860610"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Capturar columnas mediante IRow::GetColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

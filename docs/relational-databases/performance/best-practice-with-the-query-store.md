@@ -2,10 +2,9 @@
 title: Procedimientos recomendados con el almacén de consultas | Microsoft Docs
 description: Obtenga información sobre las prácticas recomendadas para utilizar el Almacén de consultas de SQL Server con su carga de trabajo, como usar las versiones más recientes de SQL Server Management Studio e Información de rendimiento de consultas.
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 09/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: carlrab
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970086"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042830"
 ---
 # <a name="best-practices-with-query-store"></a>Procedimientos recomendados con el almacén de consultas
 
@@ -421,7 +420,7 @@ Los planes de ejecución hacen referencia a objetos mediante nombres de tres par
 
 Si cambia el nombre de una base de datos, al forzar el plan se produce un error que provoca la recompilación en todas las ejecuciones de consulta posteriores.
 
-## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> Uso de marcas de seguimiento en servidores críticos
+## <a name="using-query-store-in-mission-critical-servers"></a><a name="Recovery"></a> Uso de Almacén de consultas en servidores críticos
 
 Las marcas de seguimiento globales 7745 y 7752 se pueden usar para mejorar la disponibilidad de las bases de datos mediante el almacén de consultas. Para más información, vea [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -432,7 +431,10 @@ Las marcas de seguimiento globales 7745 y 7752 se pueden usar para mejorar la di
 > A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], este comportamiento se controla mediante el motor, y la marca de seguimiento 7752 no tiene ningún efecto.
 
 > [!IMPORTANT]
-> Si va a usar el almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planee instalar las correcciones de escalabilidad de rendimiento descritas en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible.
+> Si va a usar el Almacén de consultas para resultados de la carga de trabajo Just-In-Time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prevea la instalación de las mejoras de escalabilidad de rendimiento descritas en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)) lo antes posible. Sin estas mejoras, cuando la base de datos está sometida a cargas de trabajo intensas, puede producirse la contención de bloqueo por subproceso y el rendimiento del servidor puede resultar lento. En concreto, puede ver una contención intensa en el bloqueo por subproceso `QUERY_STORE_ASYNC_PERSIST` o `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Después de aplicar esta mejora, el Almacén de consultas ya no producirá la contención de bloqueo por subproceso.
+
+> [!IMPORTANT]
+> Si va a usar el Almacén de consultas para resultados de la carga de trabajo Just-In-Time en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], prevea la instalación de la mejora de escalabilidad de rendimiento descrita en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22 lo antes posible. Sin esta mejora, cuando la base de datos se encuentra sometida a cargas de trabajo ad hoc intensas, el Almacén de consultas puede usar una gran cantidad de memoria y el rendimiento del servidor puede ser lento. Después de aplicar esta mejora, el Almacén de consultas impone límites internos a la cantidad de memoria que pueden usar sus distintos componentes y puede cambiar automáticamente el modo de operación a solo lectura hasta que se devuelva suficiente memoria a [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Tenga en cuenta que los límites de memoria interna del Almacén de consultas no están documentados porque están sujetos a cambios.  
 
 ## <a name="see-also"></a>Consulte también
 

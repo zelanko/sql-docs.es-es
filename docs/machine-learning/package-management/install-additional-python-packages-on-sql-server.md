@@ -3,26 +3,27 @@ title: Instalación de paquetes de Python con sqlmlutils
 description: Obtenga más información sobre cómo usar PIP de Python para instalar nuevos paquetes de Python en una instancia de SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/29/2020
+ms.date: 08/26/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: fda7421a3a7004c4d7c14fcc098d56a0c7a264e5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a387e10afc9210fd90248fb0240e3b77c37b2afd
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242365"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042538"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Instalación de paquetes de Python con sqlmlutils
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 En este artículo se describe cómo usar las funciones del paquete [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) para instalar nuevos paquetes de Python en una instancia de [Machine Learning Services en SQL Server](../sql-server-machine-learning-services.md) y en [Clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md). Los paquetes que se instalen podrán usarse en los scripts de Python que se ejecutan en la base de datos mediante la instrucción T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 En este artículo se describe cómo usar las funciones del paquete [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) para instalar nuevos paquetes de Python en una instancia de [Machine Learning Services en Azure SQL Managed Instance](/azure/azure-sql/managed-instance/machine-learning-services-overview). Los paquetes que se instalen podrán usarse en los scripts de Python que se ejecutan en la base de datos mediante la instrucción T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 ::: moniker-end
@@ -50,7 +51,7 @@ Para obtener más información sobre la ubicación de los paquetes y las rutas d
 
 + La biblioteca de paquetes de Python se encuentra en la carpeta Archivos de programa de la instancia de SQL Server y, de forma predeterminada, se requieren permisos de administrador para instalar contenido en esta carpeta. Para obtener más información, consulte [Ubicación de la biblioteca de paquetes](../package-management/python-package-information.md#default-python-library-location).
 
-+ La instalación de paquetes se realiza por instancia. Si tiene varias instancias de Machine Learning Services, debe agregar el paquete a cada una de ellas.
++ La instalación del paquete es específica de la instancia, la base de datos y el usuario de SQL especificados en la información de conexión proporcionada a **sqlmlutils**. Para usar el paquete en varias instancias o bases de datos de SQL, o bien para usuarios diferentes, deberá instalar el paquete para cada uno. La excepción es que si un miembro de `dbo` instala el paquete, este será *público* y se compartirá con todos los usuarios. Si un usuario instala una versión más reciente de un paquete público, este no se verá afectado, pero ese usuario tendrá acceso a la versión más reciente.
 
 + Antes de agregar un paquete, piense si es adecuado para el entorno de SQL Server.
 
@@ -98,7 +99,7 @@ También puede instalar **sqlmlutils** desde un archivo ZIP:
 
 ## <a name="add-a-python-package-on-sql-server"></a>Adición de un paquete de Python en SQL Server
 
-Mediante **sqlmlutils**, puede instalar paquetes de Python en una instancia de SQL. Después, puede usar esos paquetes en el código de Python que se ejecuta en la instancia de SQL.
+Mediante **sqlmlutils**, puede instalar paquetes de Python en una instancia de SQL. Después, puede usar esos paquetes en el código de Python que se ejecuta en la instancia de SQL. **sqlmlutils** usa [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) para instalar el paquete y cada una de sus dependencias.
 
 En el ejemplo siguiente, agregará el paquete [text-tools](https://pypi.org/project/text-tools/) en SQL Server.
 

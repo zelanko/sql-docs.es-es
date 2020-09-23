@@ -26,12 +26,12 @@ ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f756dda5a0fc09eaad4e20fb6436a8fb5957fb2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c820f664d6d8b56453c39f117d373f44312f898e
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468267"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076750"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS (Transact-SQL)
 
@@ -42,12 +42,12 @@ Quita del grupo de búferes todos los búferes borrados y quita del grupo de obj
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis
-Sintaxis para SQL Server:
+Sintaxis de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 ```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
-Sintaxis para Azure SQL Warehouse y Almacenamiento de datos paralelos:
+Sintaxis de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
@@ -77,14 +77,8 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Permisos  
-
-Se aplica a: SQL Server, Almacenamiento de datos paralelos 
-
-- Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
-
-Se aplica a: Azure SQL Data Warehouse
-
-- Requiere pertenencia al rol fijo de servidor DB_OWNER.  
+Debe pertenecer al rol fijo de servidor `sysadmin` para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+Debe pertenecer al rol fijo de servidor `DB_OWNER` para [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

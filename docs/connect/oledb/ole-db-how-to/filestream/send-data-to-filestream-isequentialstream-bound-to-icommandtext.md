@@ -1,6 +1,6 @@
 ---
 title: 'Enviar datos a FILESTREAM: ISequentialStream enlazado a ICommandText | Microsoft Docs'
-description: 'Enviar datos a FILESTREAM: ISequentialStream enlazado a ICommandText'
+description: Obtenga información sobre cómo usar la interfaz de ISequentialStream enlazada a un parámetro ICommandText para enviar de 4 MB a 4 GB de datos a una columna de secuencia de archivos con este ejemplo.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 41017357a19c9778a0165ab4b9db5aad6b920962
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bb5b4d3e87e0f7d4d39bc183328dff9a996557e5
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007577"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860542"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Enviar datos a FILESTREAM: ISequentialStream enlazado a ICommandText
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 212cf0c286ec0f55a76d16c27a66fac6a6f1f5e4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003954"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195131"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas de la versión de SQL Server Data Tools (SSDT)
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6,&nbsp; SSDT para VS 2017
+
+_Publicado:_ &nbsp; 31 de agosto de 2020  
+_Número de compilación:_ &nbsp; 14.0.16222.0  
+_SSDT para Visual Studio 2017._
+
+### <a name="whats-new"></a>Novedades
+
+| Nuevo elemento | Detalles |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Se ha corregido un problema que hacía que el botón **Vista previa** no funcionara en el origen de OLE DB al conectarse a un origen de datos de SQL Server Analysis Services (SSAS). |
+| Integration Services (SSIS) | Se ha corregido un problema que hacía que la eliminación de una entrada o salida de un componente de flujo de datos antes de la de la ruta de acceso asociada diera lugar a un error COMException. |
+| Integration Services (SSIS) | Se ha corregido un problema que hacía que la tarea de procesamiento de SSAS no se pudiera conectar al área de trabajo de Power BI y actualizar sus modelos. |
+| Integration Services (SSIS) | Se ha corregido un problema que hacía que Visual Studio no respondiera al depurar el componente o la tarea de script al usar el tiempo de ejecución x64 y cuando el destino es SQL Server 2017. |
+| Integration Services (SSIS) | Se ha corregido un problema que hacía que el asistente para importación y exportación se bloqueara al seleccionar un controlador de MySQL en algunos entornos. |
+| Integration Services (SSIS) | Se han corregido algunos problemas relacionados con la accesibilidad y la configuración elevada de ppp. |
+| Integration Services (SSIS) | Permita a los usuarios omitir la validación al abrir paquetes, lo que mejora el rendimiento. Para obtener más información, consulte [Accelerate opening SSIS packages in SSDT](https://techcommunity.microsoft.com/t5/sql-server-integration-services/accelerate-the-opening-of-ssis-package-in-ssdt/ba-p/1607099) (Acelerar la apertura de paquetes SSIS en SSDT). |
+| Integration Services (SSIS) | Bloquee la implementación en Azure-SSIS cuando la versión del servidor de destino no sea SQL Server 2017. |
+
+### <a name="known-issues"></a>Problemas conocidos
+
+| Problema conocido | Detalles |
+| :---------- | :------ |
+| La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. | Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas. |
+| El origen de Power Query puede no admitir OData v4 cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
+| El origen de Power Query puede no admitir el empleo de ODBC para conectarse a Oracle cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
+| El origen de Power Query no está localizado. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1595nbsp-ssdt-for-vs-2017"></a>15.9.5,&nbsp; SSDT para VS 2017
 
@@ -989,7 +1018,7 @@ _Para SQL Server 2016._
 **Actualizaciones y correcciones**
 * **Herramientas para bases de datos:**
     * De ahora en adelante SSDT nunca deshabilitará el cifrado de datos transparente (TDE) en una base de datos. Antes, cuando la opción de cifrado predeterminada de la configuración de la base de datos de un proyecto estaba deshabilitada, se desactivaba el cifrado. Con esta corrección, se puede habilitar el cifrado, pero nunca deshabilitar durante la publicación. 
-    * Se ha aumentado el número de reintentos y la resistencia para las conexiones de base de datos de Azure SQL durante la conexión inicial.
+    * Se ha aumentado el número de reintentos y la resistencia para las conexiones de Azure SQL Database durante la conexión inicial.
     * Si el grupo de archivos predeterminado no es Principal, las acciones de importar y publicar en Azure V12 producían un error. Ahora, este valor se omite cuando se publica.
     * Se ha corregido un problema por el que, al exportar una base de datos con un objeto con identificador entre comillas, la validación de la exportación podía producir un error en algunas instancias.
     * Se ha corregido un problema por el que la opción TEXTIMAGE_ON se agregaba incorrectamente para creaciones de tabla de Hekaton cuando no está permitido.

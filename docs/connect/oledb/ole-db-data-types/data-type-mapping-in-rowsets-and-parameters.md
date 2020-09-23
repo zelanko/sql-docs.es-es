@@ -1,6 +1,6 @@
 ---
 title: Asignación de tipos de datos en conjuntos de filas y parámetros (controlador OLE DB) | Microsoft Docs
-description: Asignar tipos de datos en conjuntos de filas y parámetros
+description: Obtenga información sobre cómo OLE DB Driver for SQL Server representa los datos de SQL Server en conjuntos de filas y como valores de parámetro mediante el uso de tipos de datos definidos por OLE DB.
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SSPROP_ALLOWNATIVEVARIANT property
 - GetParameterInfo function
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 373bb0165c663232342b690711d5f56e18544211
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbe23a1e1edce96997968bf40075b2fc3b13db49
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244925"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861607"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

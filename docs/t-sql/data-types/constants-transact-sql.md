@@ -2,7 +2,7 @@
 description: Constantes (Transact-SQL)
 title: Constantes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422939"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027286"
 ---
 # <a name="constants-transact-sql"></a>Constantes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +46,12 @@ ms.locfileid: "88422939"
 Una constante, también conocida como valor literal o escalar, es un símbolo que representa un valor de datos específico. El formato de las constantes depende del tipo de datos del valor que representan.
   
 ## <a name="character-string-constants"></a>Constantes de cadena de caracteres
-Las constantes de cadena de caracteres van entre comillas simples e incluyen caracteres alfanuméricos (a-z, A-Z y 0-9) y caracteres especiales, como el signo de exclamación (!), la arroba (@) y el signo de número (#). A las constantes de cadena de caracteres se les asigna la intercalación predeterminada de la base de datos actual, a menos que se utilice la cláusula COLLATE para especificar una intercalación. Las cadenas de caracteres escritas por los usuarios se evalúan a través de la página de códigos del equipo y, si es necesario, se traducen a la página de códigos predeterminada de la base de datos.
+Las constantes de cadena de caracteres van entre comillas simples e incluyen caracteres alfanuméricos (a-z, A-Z y 0-9) y caracteres especiales, como el signo de exclamación (!), la arroba (@) y el signo de número (#). La intercalación predeterminada de la base de datos actual se asigna a las constantes de la cadena de caracteres. Si se utiliza la cláusula COLLATE, la conversión a la página de códigos predeterminada de la base de datos sigue teniendo lugar antes de la conversión a la intercalación especificada por la cláusula COLLATE. Las cadenas de caracteres escritas por los usuarios se evalúan a través de la página de códigos del equipo y, si es necesario, se traducen a la página de códigos predeterminada de la base de datos.
+
+> [!NOTE]
+> Cuando se especifica una [intercalación habilitada para UTF8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) mediante la cláusula COLLATE, la conversión a la página de códigos predeterminada de la base de datos sigue teniendo lugar antes de la conversión a la intercalación especificada por la cláusula COLLATE. La conversión no se realiza directamente en la intercalación habilitada para Unicode especificada. Para obtener más información, vea [Cadena de Unicode](#unicode-strings).
   
-Si la opción QUOTED_IDENTIFIER se ha establecido en OFF para una conexión, las cadenas de caracteres también pueden encerrarse entre comillas dobles, pero el proveedor de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y el controlador ODBC utilizan automáticamente SET QUOTED_IDENTIFIER ON. Se recomienda el uso de comillas simples.
+Si la opción QUOTED_IDENTIFIER se ha establecido en OFF para una conexión, las cadenas de caracteres también pueden encerrarse entre comillas dobles, pero [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) y [ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) usan automáticamente `SET QUOTED_IDENTIFIER ON`. Se recomienda el uso de comillas simples.
   
 Si una cadena de caracteres entre comillas simples contiene una comilla, represente la comilla interna con dos comillas simples. Esto no es necesario en las cadenas incluidas entre comillas dobles.
   
@@ -64,18 +67,23 @@ Si una cadena de caracteres entre comillas simples contiene una comilla, represe
   
 Las cadenas vacías se representan como dos comillas simples sin nada entre ellas. En el modo de compatibilidad 6.x, una cadena vacía se trata como un espacio.
   
-Las constantes de cadena de caracteres admiten intercalaciones mejoradas.
+Las constantes de cadena de caracteres admiten [intercalaciones](../../relational-databases/collations/collation-and-unicode-support.md) mejoradas.
   
 > [!NOTE]  
->  Las constantes de caracteres con más de 8000 bytes se consideran como tipos de datos **varchar(max)**.  
+> Las constantes de caracteres con más de 8000 bytes se consideran como tipos de datos **varchar(max)**.  
   
 ## <a name="unicode-strings"></a>Cadenas Unicode
-Las cadenas Unicode tienen un formato similar al de las cadenas de caracteres, pero están precedidas por el identificador N (N es el idioma nacional en el estándar SQL-92). El prefijo N tiene que estar en mayúsculas. Por ejemplo, 'Michél' es una constante de caracteres, mientras que N'Michél' es una constante Unicode. Las constantes Unicode se interpretan como datos Unicode y no se evalúan mediante una página de códigos. Las constantes Unicode tienen intercalación. Esta intercalación controla principalmente las comparaciones y la distinción entre mayúsculas y minúsculas. A las constantes Unicode se les asigna la intercalación predeterminada de la base de datos actual, a menos que se utilice la cláusula COLLATE para especificar una intercalación. Los datos Unicode se almacenan con 2 bytes por carácter en lugar de 1 byte por carácter, como los datos de cadenas de caracteres. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+Las cadenas Unicode tienen un formato similar al de las cadenas de caracteres, pero están precedidas por el identificador N (N es el idioma nacional en el estándar SQL-92). 
+
+> [!IMPORTANT]  
+> El prefijo N tiene que estar en mayúsculas. 
+
+Por ejemplo, `'Michél'` es una constante de caracteres, mientras que `N'Michél'` es una constante Unicode. Las constantes Unicode se interpretan como datos Unicode y no se evalúan mediante una página de códigos. Las constantes Unicode tienen intercalación. Esta intercalación controla principalmente las comparaciones y la distinción entre mayúsculas y minúsculas. La intercalación predeterminada de la base de datos actual se asigna a las constantes de Unicode. Si se utiliza la cláusula COLLATE, la conversión a la intercalación predeterminada de la base de datos sigue teniendo lugar antes de la conversión a la intercalación especificada por la cláusula COLLATE. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
   
 Las constantes de cadena Unicode aceptan intercalaciones mejoradas.
   
 > [!NOTE]  
->  Las constantes Unicode con más de 8000 bytes se consideran como tipos de datos **nvarchar(max)**.  
+> Las constantes Unicode con más de 8000 bytes se consideran como tipos de datos **nvarchar(max)**.  
   
 ## <a name="binary-constants"></a>Constantes binarias
 Las constantes binarias tienen el prefijo `0x` y son cadenas de números hexadecimales. No se incluyen entre comillas.
@@ -200,11 +208,12 @@ Expresiones **money** con signo:
 ```
   
 ## <a name="enhanced-collations"></a>Intercalaciones mejoradas  
-SQL Server admite las constantes de cadena de caracteres y Unicode compatibles con las intercalaciones mejoradas. Para más información, vea la cláusula [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] admite las constantes de cadena de caracteres y Unicode compatibles con las intercalaciones mejoradas. Para más información, vea la cláusula [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md).
   
 ## <a name="see-also"></a>Consulte también
 [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
-  
+[Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
+[Prioridad de intercalación](../../t-sql/statements/collation-precedence-transact-sql.md)    
   

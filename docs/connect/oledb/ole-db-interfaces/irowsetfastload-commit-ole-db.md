@@ -1,6 +1,6 @@
 ---
 title: IRowsetFastLoad::Commit (controlador OLE DB) | Microsoft Docs
-description: IRowsetFastLoad::Commit (OLE DB)
+description: Obtenga información sobre cómo el método IRowsetFastLoad::Commit marca el final de un lote de filas insertadas y las escribe en una tabla de SQL Server en OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - Commit method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6c932947a77d2170dd1e92c47c19f5ff3959cba9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8e0248c160b80203a09f4712d697d1896732033e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244476"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860694"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

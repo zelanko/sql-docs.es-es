@@ -2,19 +2,19 @@
 title: Uso de Always Encrypted con el controlador ODBC
 description: Obtenga información sobre cómo desarrollar aplicaciones ODBC con Always Encrypted y Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886302"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288187"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -41,7 +41,7 @@ Configure Always Encrypted en su base de datos. Esto implica el aprovisionamient
 La forma más fácil de habilitar el cifrado de parámetros y el descifrado de la columna cifrada del conjunto de resultados consiste en establecer el valor de la palabra clave de la cadena de conexión `ColumnEncryption` en **Habilitado**. A continuación se muestra un ejemplo de una cadena de conexión que habilita Always Encrypted:
 
 ```
-SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
+SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
 ```
 
 Always Encrypted también puede habilitarse en la configuración de DSN, con la misma clave y el mismo valor (que se sobrescribirán con la configuración de la cadena de conexión, si existe), o mediante programación con el atributo anterior a la conexión `SQL_COPT_SS_COLUMN_ENCRYPTION`. Con una configuración de este tipo, se sobrescribe el valor definido en la cadena de conexión o en DSN:
@@ -309,6 +309,8 @@ En esta sección se describen las optimizaciones integradas de rendimiento en OD
 
 De forma predeterminada, si Always Encrypted está habilitado para una conexión, el controlador llamará a [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta con parámetros, al pasar la instrucción de consulta (sin ningún valor de parámetro) a SQL Server. Este procedimiento almacenado analiza la instrucción de consulta para averiguar si algún parámetro necesita cifrarse y, de ser así, devuelve la información relacionada con el cifrado de cada parámetro que permitirá al controlador realizar el cifrado. El comportamiento anterior garantiza un alto nivel de transparencia para la aplicación cliente: la aplicación (y el desarrollador de la aplicación) no necesita conocer qué consultas tienen acceso a las columnas cifradas, siempre y cuando los valores que tienen como destino estas columnas se pasen al controlador en parámetros.
 
+A partir de la versión 17.6, el controlador también almacena en caché los metadatos de cifrado para las instrucciones preparadas, mejorando el rendimiento al permitir que las llamadas posteriores a `SQLExecute` no requieran un recorrido de ida y vuelta adicional para recuperar los metadatos de cifrado.
+
 ### <a name="per-statement-always-encrypted-behavior"></a>Comportamiento de Always Encrypted por cada instrucción
 
 Para controlar el impacto en el rendimiento a la hora de recuperar metadatos de cifrado para las consultas con parámetros, puede alterar el comportamiento de Always Encrypted para las consultas individuales si se ha habilitado en la conexión. De esta manera, puede estar seguro de que `sys.sp_describe_parameter_encryption` se invoca solo para las consultas que sabe que incluyen parámetros que tienen como destino las columnas cifradas. Pero tenga en cuenta que haciendo esto reduce la transparencia del cifrado: si cifra columnas adicionales en la base de datos, puede que necesite cambiar el código de la aplicación para alinearlo con los cambios de esquema.
@@ -330,6 +332,8 @@ Si la mayoría de las consultas de una aplicación cliente acceden a columnas ci
 - Establezca el atributo `SQL_SOPT_SS_COLUMN_ENCRYPTION` en `SQL_CE_DISABLED` en las instrucciones que no acceden a ninguna columna cifrada. De esta forma, se deshabilitarán la llamada a `sys.sp_describe_parameter_encryption` y los intentos para descifrar los valores del conjunto de resultados.
     
 - Establezca el atributo `SQL_SOPT_SS_COLUMN_ENCRYPTION` en `SQL_CE_RESULTSETONLY` en las instrucciones que no tienen ningún parámetro que requiera cifrado, pero que recuperan datos de las columnas cifradas. Esto deshabilitará la llamada a `sys.sp_describe_parameter_encryption` y el cifrado de parámetros. Los resultados que contienen columnas cifradas seguirán descifrándose.
+
+- Use instrucciones preparadas para las consultas que se ejecutarán más de una vez. Prepare la consulta con `SQLPrepare` y guarde el identificador de la instrucción, para reutilizarlo con `SQLExecute` cada vez que se ejecute. Este es el método preferido para el rendimiento, incluso cuando no hay columnas cifradas, y permite que el controlador aproveche los metadatos almacenados en caché.
 
 ## <a name="always-encrypted-security-settings"></a>Configuración de seguridad de Always Encrypted
 
@@ -395,7 +399,7 @@ El controlador admite la autenticación en Azure Key Vault mediante los siguient
 
 Para permitir que el controlador use las CMK almacenadas en AKV para el cifrado de columnas, utilice las siguientes palabras clave solo para la cadena de conexión:
 
-|Tipo de credencial| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
+|Tipo de credencial|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
 |-|-|-|-|
 |Nombre de usuario y contraseña| `KeyVaultPassword`|Nombre principal del usuario|Contraseña|
 |Id. de cliente/secreto| `KeyVaultClientSecret`|Id. de cliente|Secreto|
@@ -408,13 +412,13 @@ Las cadenas de conexión siguientes muestran cómo autenticarse en Azure Key Vau
 **ClientID o secreto**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
 **Nombre de usuario y contraseña**:
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
 **Identidad administrada (asignada por el sistema)**
@@ -596,7 +600,7 @@ Al usar la utilidad **bcp**: para controlar la configuración de `ColumnEncrypti
 
 En la tabla siguiente se proporciona un resumen de las acciones al trabajar en una columna cifrada:
 
-|`ColumnEncryption`|Dirección BCP|Descripción|
+|<code>ColumnEncryption</code>|Dirección BCP|Descripción|
 |----------------|-------------|-----------|
 |`Disabled`|OUT (al cliente)|Recupera el texto cifrado. El tipo de datos observado es **varbinary(max)** .|
 |`Enabled`|OUT (al cliente)|Recupera el texto no cifrado. El controlador descifrará los datos de la columna.|
@@ -641,7 +645,7 @@ Vea [Migración de datos confidenciales protegidos mediante Always Encrypted](..
 
 |Campo de IPD|Tamaño/Tipo|Valor predeterminado|Descripción|
 |-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 bytes)|0|Cuando 0 (valor predeterminado): la decisión para cifrar este parámetro la determina la disponibilidad de los metadatos de cifrado.<br><br>Cuando es distinto de cero: si los metadatos de cifrado están disponibles para este parámetro, se cifran. De lo contrario, la solicitud produce un error [CE300] [Microsoft][Controlador ODBC 13 para SQL Server]El cifrado obligatorio se específico para un parámetro, pero el servidor no proporcionó ningún metadato de cifrado.|
+|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 bytes)|0|Cuando 0 (valor predeterminado): la decisión para cifrar este parámetro la determina la disponibilidad de los metadatos de cifrado.<br><br>Cuando es distinto de cero: si los metadatos de cifrado están disponibles para este parámetro, se cifran. De lo contrario, la solicitud produce un error [CE300] [Microsoft][Controlador ODBC 17 para SQL Server]El cifrado obligatorio se específico para un parámetro, pero el servidor no proporcionó ningún metadato de cifrado.|
 
 ### <a name="bcp_control-options"></a>Opciones de bcp_control
 

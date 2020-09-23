@@ -1,6 +1,6 @@
 ---
 title: SQL Server Management Studio (SSMS)
-description: Se describe qué es SQL Server Management Studio (SSMS) y lo que puede hacer.
+description: Obtenga información sobre SQL Server Management Studio (SSMS) y lo que puede hacer SMMS, incluso cómo administrar soluciones de Analysis Services.
 ms.prod: sql
 ms.technology: ssms
 ms.topic: overview
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 80f6a13c952c09153713a36e3e0f8f979ee7bcd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0b46427196ad48bc6dbfaeaca25fa7e327d114f8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001593"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480462"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>¿Qué es SQL Server Management Studio (SSMS)?
 
@@ -43,7 +43,7 @@ ms.locfileid: "86001593"
 |Cómo usar el **Explorador de plantillas** para compilar y administrar archivos de texto reutilizable que se pueden usar para acelerar el desarrollo de consultas y scripts.|[Explorador de plantillas](../ssms/template/template-explorer.md)|  
 |Cómo usar el **Explorador de soluciones** desusado para compilar proyectos que se emplean para administrar elementos de administración como scripts y consultas.|[Explorador de soluciones](../ssms/solution/solution-explorer.md)|  
 |Cómo usar las herramientas de diseño visual incluidas en [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|Cómo usar los editores de lenguaje de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para compilar y depurar interactivamente consultas y scripts.|[Editores de texto y consultas](scripting/query-and-text-editors-sql-server-management-studio.md)
+|Cómo usar los editores de lenguaje de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para compilar y depurar interactivamente consultas y scripts.|[Editores de texto y consultas](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>SQL Server Management Studio para Business Intelligence
 

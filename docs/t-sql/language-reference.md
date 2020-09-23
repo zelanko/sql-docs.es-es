@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362d2643557229b64961217d9a5b5b3c4f784bff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360701"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076662"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Referencia de Transact-SQL (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ Por ejemplo, este tema se aplica a todas las versiones y tiene la etiqueta sigui
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-A modo de etiqueta adicional, la etiqueta siguiente indica un tema que solo se aplica a Azure SQL Data Warehouse y al Almacenamiento de datos paralelos.
+A modo de ejemplo adicional, la etiqueta siguiente indica un tema que solo se aplica a Azure Synapse Analytics y al Almacenamiento de datos paralelos.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 En algunos casos, hay un producto o servicio que utiliza el tema en cuestión, pero no se admiten todos los argumentos. En este caso, las secciones **Se aplica a** adicionales se insertan en las descripciones del argumento correspondiente en el cuerpo del tema.  
  
-## <a name="get-help-from-the-msdn-forum"></a>Obtener ayuda en el foro de MSDN  
-Para obtener ayuda en línea, consulte el [foro de MSDN para Transact-SQL](https://social.msdn.microsoft.com/Forums/home).  
+## <a name="get-help-from-microsoft-q--a"></a>Obtención de ayuda en las preguntas y respuestas de Microsoft  
+Para obtener ayuda en línea, consulte el [foro Transact-SQL de preguntas y respuestas de Microsoft](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
  
 ## <a name="see-other-language-references"></a>Ver otras referencias de idioma
 En los documentos de SQL se incluyen estas otras referencias de idioma:

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ff0a0b7c59dc70e085c5a61d9b88e28dd41cded
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3076c0f00a358a1a2adbee57178561649e6a44c2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487216"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395199"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Error de Reporting Services
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Id. de evento|rsServerConfiguration|  
@@ -46,7 +46,7 @@ ms.locfileid: "81487216"
 ## <a name="user-action"></a>Acción del usuario  
  Si este error empezara a producirse después de editar manualmente un archivo de configuración, quite los cambios efectuados y especifique el valor anterior, o restaure una versión anterior si tiene una copia de seguridad.  
   
- Para revisar la información adicional del mensaje que acompaña al error **rsServerConfiguration**, revise los archivos de registro de seguimiento del servidor de informes, que se encuentran en \Microsoft SQL Server\MSRS12.\<nombreDeInstancia>\Reporting Services\LogFiles. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Para revisar la información adicional del mensaje que acompaña al error **rsServerConfiguration**, revise los archivos de registro de seguimiento del servidor de informes, que se encuentran en \Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Solo para uso interno  
   

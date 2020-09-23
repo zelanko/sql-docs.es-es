@@ -5,16 +5,16 @@ description: En este artículo se describen las actualizaciones más recientes y
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 212c80adf64c9991aaf80cb422ded8fcbd1266ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 32cfd85d1b07a315a196c2728c776297c4d85d9d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772905"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392180"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notas de la versión para los Clústeres de macrodatos de SQL Server 2019
 
@@ -47,7 +47,7 @@ En esta sección se explican las plataformas compatibles con BDC.
 
 |Edición|Notas|
 |---------|---------|
-|Enterprise<br/>Estándar<br/>Desarrollador| La edición del clúster de macrodatos la determina la edición de la instancia maestra de SQL Server. En el momento de la implementación, se implementa de forma predeterminada la edición Developer. Puede cambiar la edición después de la implementación. Vea [Configuración de la instancia maestra de SQL Server](../big-data-cluster/configure-sql-server-master-instance.md). |
+|Enterprise<br/>Estándar<br/>Desarrollador| La edición del clúster de macrodatos la determina la edición de la instancia maestra de SQL Server. En el momento de la implementación, se implementa de forma predeterminada la edición Developer. Puede cambiar la edición después de la implementación. Vea [Configuración de la instancia maestra de SQL Server](./configure-sql-server-master-instance.md). |
 
 ## <a name="tools"></a>Herramientas
 
@@ -64,6 +64,7 @@ En la tabla siguiente, se muestra la lista del historial de versiones de [!INCLU
 
 | Release          | Versión de BDC    | Versión de `azdata`| Fecha de la versión |
 |------------------|----------------|-----------------|--------------|
+| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 04-08-2020   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 22-06-2020   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 31-03-2020   |
 | [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 12-03-2020   |
@@ -71,9 +72,31 @@ En la tabla siguiente, se muestra la lista del historial de versiones de [!INCLU
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 07-01-2020   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
+> [!NOTE]
+> No hay actualizaciones de clústeres de macrodatos de SQL Server 2019 para CU7.
+
 ## <a name="how-to-install-updates"></a>Instalación de las actualizaciones
 
 Para instalar las actualizaciones, consulte [Cómo actualizar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (julio de 2020)
+
+Versión de actualización acumulativa 6 (CU6) para SQL Server 2019.
+
+|Versión del paquete | Etiqueta de imagen |
+|-----|-----|
+|15.0.4053.23 |[2019-CU6-ubuntu-16.04]
+
+Esta versión incluye mejoras y correcciones menores. En los siguientes artículos se incluye información relacionada con estas actualizaciones:
+
+- [Administración del acceso al clúster de macrodatos en el modo de Active Directory](manage-user-access.md)
+- [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory](deploy-active-directory.md)
+- [Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad](deployment-high-availability.md)
+- [Configuración de un clúster de macrodatos de SQL Server](configure-cluster.md)
+- [Configuración de Apache Spark y Apache Hadoop en clústeres de macrodatos](configure-spark-hdfs.md)
+- [Propiedades de configuración de la instancia maestra de SQL Server](reference-config-master-instance.md)
+- [Propiedades de configuración de Apache Spark y Apache Hadoop (HDFS)](reference-config-spark-hadoop.md)
+- [Modelo e impacto de RBAC de Kubernetes en los usuarios y las cuentas de servicio que administran BDC](kubernetes-rbac.md)
 
 ## <a name="cu5-june-2020"></a><a id="cu5"></a> CU5 (junio de 2020)
 
@@ -89,7 +112,7 @@ Versión de actualización acumulativa 5 (CU5) para SQL Server 2019.
 - Se ha actualizado el modelo de seguridad de implementación de BDC, de modo que los contenedores con privilegios implementados como parte de BDC ya no son *necesarios*. Además de que ya no necesiten privilegios, los contenedores se ejecutan como un usuario que no es de raíz de forma predeterminada para todas las implementaciones nuevas mediante SQL Server 2019 CU5. 
 - Se ha agregado compatibilidad para implementar varios clústeres de macrodatos en un dominio de Active Directory.
 - La CLI de `azdata` tiene su propia versión semántica, independiente del servidor. Se quitan todas las dependencias entre el cliente y la versión del servidor de azdata. Se recomienda usar la versión más reciente del cliente y del servidor para asegurarse de que se beneficia de las últimas mejoras y correcciones.
-- Se han introducido dos nuevos procedimientos almacenados, sp_data_source_objects y sp_data_source_columns, para admitir la introspección de determinados orígenes de datos externos. Los clientes pueden usarlos directamente a través de T-SQL para la detección de esquemas y ver qué tablas están disponibles para su virtualización. Estos cambios se aprovechan en el Asistente para tablas externas de la [extensión Virtualización de datos](../azure-data-studio/data-virtualization-extension.md) para Azure Data Studio, lo que permite crear tablas externas a partir de SQL Server, Oracle, MongoDB y Teradata.
+- Se han introducido dos nuevos procedimientos almacenados, sp_data_source_objects y sp_data_source_table_columns, para admitir la introspección de determinados orígenes de datos externos. Los clientes pueden usarlos directamente a través de T-SQL para la detección de esquemas y ver qué tablas están disponibles para su virtualización. Estos cambios se aprovechan en el Asistente para tablas externas de la [extensión Virtualización de datos](../azure-data-studio/data-virtualization-extension.md) para Azure Data Studio, lo que permite crear tablas externas a partir de SQL Server, Oracle, MongoDB y Teradata.
 - Se ha agregado compatibilidad para conservar las personalizaciones realizadas en Grafana. Antes de CU5, los clientes observaban que las modificaciones en las configuraciones de Grafana se perdían al reiniciar el pod `metricsui` (en el que se hospeda el panel de Grafana). Este problema se ha corregido y ahora se conservan todas las configuraciones. 
 - Se ha corregido un problema de seguridad relacionado con la API que se usa para recopilar métricas de pods y nodos mediante Telegraf (que se hospeda en los pods `metricsdc`). Como resultado de este cambio, ahora en Telegraf es necesario que una cuenta de servicio, el rol de clúster y los enlaces de clúster tengan los permisos necesarios para recopilar las métricas de pods y nodos. Vea [Rol de clúster necesario para la recopilación de métricas de pods y nodos](kubernetes-rbac.md#cluster-role-required-for-pods-and-nodes-metrics-collection) para obtener más información.
 - Se han agregado dos modificadores de características para controlar la recopilación de métricas de pods y nodos. En caso de que use otras soluciones para la supervisión de la infraestructura de Kubernetes, puede desactivar la recopilación de métricas integradas para pods y nodos de host si establece *allowNodeMetricsCollection* y *allowPodMetricsCollection* en false en el archivo de configuración de implementación control.json. Para los entornos de OpenShift, estos valores se establecen en false de forma predeterminada en los perfiles de implementación integrados, ya que la recopilación de métricas de pods y nodos requiere funciones con privilegios.
@@ -144,6 +167,28 @@ Versión de distribución general 1 (GDR1) de SQL Server 2019, presenta la dis
 [!INCLUDE [sql-server-servicing-updates-version-15](../includes/sql-server-servicing-updates-version-15.md)]
 
 ## <a name="known-issues"></a>Problemas conocidos
+
+### <a name="empty-livy-jobs-before-you-apply-cumulative-updates"></a>Trabajos de Livy vacíos antes de aplicar las actualizaciones acumulativas
+
+- **Versiones afectadas**: con la actualización acumulativa actual
+
+- **Problema e impacto en el cliente**: durante una actualización, sparkhead devuelve el error 404.
+
+- **Solución alternativa**: antes de actualizar BDC, asegúrese de que no haya trabajos por lotes o sesiones de Livy activos. Siga las instrucciones de [Actualización desde una versión compatible](deployment-upgrade.md#upgrade-from-supported-release) para evitar esto. 
+
+   Si Livy devuelve un error 404 durante el proceso de actualización, reinicie el servidor de Livy en ambos nodos de sparkhead. Por ejemplo:
+
+   ```console
+   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
+   ```
+
+### <a name="big-data-cluster-generated-service-accounts-passwords-expiration"></a>Expiración de contraseñas de cuentas de servicio generadas por el clúster de macrodatos
+
+- **Versiones afectadas**: todas las implementaciones de clústeres de macrodatos con la integración de Active Directory, independientemente de la versión.
+
+- **Problema e impacto en el cliente**: durante la implementación del clúster de macrodatos, el flujo de trabajo genera un conjunto de [cuentas de servicio](active-directory-objects.md). En función de la directiva de expiración de contraseñas establecida en el controlador de dominio, las contraseñas de estas cuentas pueden expirar (el tiempo predeterminado es 42 días). En este momento, no hay ningún mecanismo para rotar las credenciales para todas las cuentas del clúster de macrodatos, por lo que el clúster dejará de funcionar cuando se cumpla el período de expiración.
+
+- **Solución alternativa**: actualice la directiva de expiración de las cuentas de servicio del clúster de macrodatos a "La contraseña nunca expira" en el controlador de dominio. Para obtener una lista completa de estas cuentas, vea [Objetos de Active Directory generados automáticamente](active-directory-objects.md). Esta acción se puede realizar antes o después de la fecha de expiración. En el último caso, Active Directory reactivará las contraseñas expiradas.
 
 ### <a name="credentials-for-accessing-services-through-gateway-endpoint"></a>Credenciales para acceder a los servicios a través del punto de conexión de puerta de enlace
 

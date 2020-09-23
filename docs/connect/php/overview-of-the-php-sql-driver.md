@@ -1,5 +1,6 @@
 ---
-title: Información general de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
+title: Información general de los controladores de Microsoft para PHP para SQL Server
+description: Obtenga información general de los controladores SQLSRV y PDO_SQSRV de Microsoft para PHP para SQL Server y cómo puede usarlos en una aplicación PHP para el acceso a bases de datos.
 ms.custom: ''
 ms.date: 03/27/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c8f5cbf011165b41b353a37d8973031f55c2db6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 556d13a5b29a53b323b41bc9b697d7ad934ca143
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922815"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042786"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Información general de los controladores de Microsoft para PHP para SQL Server
 
@@ -43,8 +44,6 @@ Para usar [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], debe tener 
 
 ## <a name="see-also"></a>Consulte también
 
-[Introducción a los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
-
-[Guía de programación para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
-
-[Aplicación de ejemplo &#40;controlador SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+[Introducción a los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)  
+[Guía de programación para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)  
+[Aplicación de ejemplo &#40;controlador SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

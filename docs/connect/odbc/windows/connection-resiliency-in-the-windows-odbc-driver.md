@@ -1,7 +1,8 @@
 ---
-title: Resistencia de conexión en el controlador Windows ODBC | Microsoft Docs
+title: Resistencia de conexión en el controlador Windows ODBC
+description: Obtenga información sobre cómo la resistencia de la conexión del controlador ODBC restaura de forma transparente las conexiones y mejora el comportamiento de la aplicación cuando el servidor cierra las conexiones inactivas.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c04c0f1573fe3353c7cc65e614b784822e578ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01b8da5d2a7f7c0e49d54a9fe237367ab3ed405f
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928316"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288127"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resistencia de conexión en el controlador Windows ODBC
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80928316"
   Para asegurarse de que las aplicaciones permanezcan conectadas a una [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], el controlador ODBC en Windows puede restaurar las conexiones inactivas.  
   
 > [!IMPORTANT]  
->  La característica de resistencia de conexión es compatible con versiones de bases de datos SQL de Microsoft Azure y SQL Server 2014 (y posterior).  
+>  La característica de resistencia de conexión es compatible con las versiones de servidores de Microsoft Azure SQL Database y SQL Server 2014 y posteriores.  
   
  Para obtener más información sobre la resistencia de conexión inactiva, vea [el artículo técnico sobre esta característica](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx).
   
@@ -55,13 +56,13 @@ ms.locfileid: "80928316"
   
  Si una aplicación establece una conexión con SQL_DRIVER_COMPLETE_REQUIRED y después trata de ejecutar una instrucción en una conexión  interrumpida, el controlador ODBC no mostrará nuevamente el cuadro de diálogo. Además, durante la recuperación en curso:  
   
--   Durante la recuperación, las llamadas a **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** , deben devolver **SQL_CD_FALSE**.  
+-   Durante la recuperación, las llamadas a **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, deben devolver **SQL_CD_FALSE**.  
   
--   Si se produce un error de recuperación, las llamadas a **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** , deben devolver **SQL_CD_TRUE**.  
+-   Si se produce un error de recuperación, las llamadas a **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, deben devolver **SQL_CD_TRUE**.  
   
  Cualquier función que ejecuta un comando en el servidor devuelve los siguientes códigos de estado:  
   
-|State|Message|  
+|State|Mensaje|  
 |-----------|-------------|  
 |IMC01|La conexión se interrumpe y no es posible realizar la recuperación. El controlador cliente intentó recuperar el error una o más veces y todos los intentos fallaron. Aumente el valor de ConnectRetryCount para aumentar el número de intentos de recuperación.|  
 |IMC02|El servidor no reconoció un intento de recuperación y no es posible recuperar la conexión.|  
@@ -137,7 +138,7 @@ void func2() {
   
 #define MAXBUFLEN 255  
   
-   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 13 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
+   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
    SQLCHAR ConnStrOut[MAXBUFLEN];
 
    SQLSMALLINT cbConnStrOut = 0;  

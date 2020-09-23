@@ -1,6 +1,6 @@
 ---
 title: Siguiente posición de captura (controlador OLE DB) | Microsoft Docs
-description: 'Capturar filas: siguiente posición de captura'
+description: OLE DB Driver for SQL Server realiza el seguimiento de la posición de captura siguiente para que una secuencia de llamadas al método GetNextRows lea el conjunto de filas completo.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB rowsets, fetching
 - next fetch position
 - rowsets [OLE DB], fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d6fd65f54f0c6f6aa219595e1948ce758c50b4db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0ba713e9da40255d992e7cccf8c8430a205cadf4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244206"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861583"
 ---
 # <a name="fetching-rows---next-fetch-position-ole-db-driver"></a>Captura de filas: siguiente posición de captura (controlador OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

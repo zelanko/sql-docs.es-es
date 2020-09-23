@@ -1,7 +1,7 @@
 ---
 title: Ciclo de vida de soporte del controlador SqlClient
 description: Página que contiene información del ciclo de vida de soporte técnico.
-ms.date: 11/25/2019
+ms.date: 09/08/2020
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: db1258fec30ad326babdf7268dff3c17c212efed
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5b9b461454db98de77ed6003477b7a02114067eb
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918259"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614591"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Ciclo de vida de soporte del controlador SqlClient
 
@@ -32,17 +32,26 @@ La biblioteca Microsoft.Data.SqlClient sigue la directiva de soporte técnico de
 
 Las nuevas versiones estables (GA) se publicarán cada 6 meses a partir de una cadencia regular a partir de la versión 1.2, junto con 2 a 3 versiones preliminares entre medio. Las partes interesadas y los mantenedores elegirán las versiones de soporte técnico a largo plazo (LTS) en función de unas cuantas calificaciones y de la respuesta de los clientes.
 
-## <a name="release-life-cycles"></a>Ciclos de vida de la versión
+### <a name="release-life-cycles"></a>Ciclos de vida de la versión
 
 | Versión | Fecha oficial de lanzamiento | Última versión de revisión | Fecha de publicación de la actualización acumulativa | Nivel de soporte técnico  | Finalización del soporte |
 | -- | -- | -- | -- | -- | -- |
-| 1.1 | 20 de noviembre de 2019 |  |  | Current |  |
+| 2.0 | 16 de junio de 2020 | 2.0.1 | 25 de agosto de 2020 | Current | |
+| 1.1 | 20 de noviembre de 2019 | 1.1.3 | 15 de mayo de 2020 | LTS | 21 de noviembre de 2022 |
 | 1.0 | 28 de agosto de 2019 | 1.0.19269.1 | 26 de septiembre de 2019 | Current | 20 de febrero de 2020 |
 
-## <a name="long-term-support-lts-releases"></a>Versiones de soporte técnico a largo plazo (LTS)
+### <a name="long-term-support-lts-releases"></a>Versiones de soporte técnico a largo plazo (LTS)
 
 Las versiones de LTS se admiten durante tres años después de la versión inicial.
 
-## <a name="current-releases"></a>Versiones actuales
+### <a name="current-releases"></a>Versiones actuales
 
 Las versiones actuales se admiten durante tres meses después de la versión actual o LTS posterior.
+
+## <a name="sql-version-compatibility-with-microsoftdatasqlclient"></a>Compatibilidad de versiones de SQL con Microsoft.Data.SqlClient
+
+|Versión de la base de datos&nbsp;&#8594;<br />&#8595; Versión del controlador|Azure SQL Database|Azure Synapse Analytics|Instancia administrada de Azure SQL|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
+|---|---|---|---|---|---|---|---|---|
+|2.0|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|1,1|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|1.0|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|

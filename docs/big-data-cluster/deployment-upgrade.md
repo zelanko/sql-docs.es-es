@@ -5,16 +5,16 @@ description: Aprenda a actualizar clústeres de macrodatos de SQL Server a una 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764064"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392183"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Cómo actualizar los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -36,8 +36,16 @@ Antes de continuar, consulte las [notas de la versión de la actualización para
 
 En esta sección se explica cómo actualizar un clúster de macrodatos de SQL Server desde una versión compatible (a partir de SQL Server 2019 GDR1) a una versión compatible más reciente.
 
+1. Compruebe que no hay sesiones de Livy activas.
+
+   Asegúrese de que no haya ninguna sesión de Livy activa o trabajos por lotes en ejecución en Azure Data Studio. Una manera fácil de confirmar esto es a través del comando `curl` o un explorador para solicitar estas direcciones URL:
+
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/sessions`
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/batches`
+
 1. Haga una copia de seguridad de la instancia maestra de SQL Server.
-2. Haga una copia de seguridad de HDFS.
+
+1. Haga una copia de seguridad de HDFS.
 
    ```
    azdata bdc hdfs cp --from-path <path> --to-path <path>
@@ -49,7 +57,7 @@ En esta sección se explica cómo actualizar un clúster de macrodatos de SQL S
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-3. Actualice `azdata`.
+1. Actualice `azdata`.
 
    Siga las instrucciones para instalar `azdata`. 
    - [Windows Installer](deploy-install-azdata-installer.md)
@@ -66,10 +74,10 @@ En esta sección se explica cómo actualizar un clúster de macrodatos de SQL S
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   Por ejemplo, el script siguiente usa la etiqueta de imagen `2019-CU4-ubuntu-16.04`:
+   Por ejemplo, el script siguiente usa la etiqueta de imagen `2019-CU6-ubuntu-16.04`:
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU6-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -96,7 +104,7 @@ Se puede producir un tiempo de espera si no se actualizan determinados component
 Para aumentar los tiempos de expiración de una actualización, use los parámetros **--controller-timeout** y **--component-timeout** para especificar valores más altos al emitir la actualización. Esta opción solo está disponible a partir de la versión SQL Server 2019 CU2. Por ejemplo:
 
    ```bash
-   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU6-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** designa el número de minutos que se esperará a que finalice la actualización del controlador o de la base de datos del controlador.
 **--component-timeout** designa la cantidad de tiempo en que se debe completar cada fase posterior de la actualización.

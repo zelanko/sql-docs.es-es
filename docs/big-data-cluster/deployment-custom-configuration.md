@@ -1,7 +1,7 @@
 ---
 title: Configuración de implementaciones
 titleSuffix: SQL Server big data clusters
-description: Aprenda a personalizar una implementación de clúster de macrodatos con archivos de configuración.
+description: Aprenda a personalizar una implementación de clúster de macrodatos con los archivos de configuración integrados en la herramienta de administración de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad43f370db096450a88bf1ffe3dd742c86be3206
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db42b544127041a0d06cce8ff5f94466198bfa9f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728019"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860569"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configuración de opciones de implementación de recursos y servicios de clúster
 
@@ -307,58 +307,67 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 
 ## <a name="configure-storage"></a><a id="storage"></a> Configuración del almacenamiento
 
-También puede cambiar la clase de almacenamiento y las características que se usan para cada grupo. En el siguiente ejemplo se asigna una clase de almacenamiento personalizada al grupo de almacenamiento y al grupo de datos, y se actualiza el tamaño de la notificación de volumen persistente para almacenar datos de hasta 500 GB para HDFS (grupo de almacenamiento) y de hasta 100 GB para el grupo de datos. 
+También puede cambiar la clase de almacenamiento y las características que se usan para cada grupo. En el ejemplo siguiente se asigna una clase de almacenamiento personalizada al grupo de almacenamiento y al grupo de datos, y se actualiza el tamaño de la notificación de volumen persistente para almacenar datos de hasta 500 GB para HDFS (grupo de almacenamiento) y de hasta 100 GB para el grupo maestro y de datos. 
 
 > [!TIP]
 > Para obtener más información sobre la configuración de almacenamiento, vea [Persistencia de datos con clústeres de macrodatos de SQL Server en Kubernetes](concept-data-persistence.md).
 
-En primer lugar, cree un archivo patch.json como el de abajo, que incluye la nueva sección *storage*, además de *type* y *replicas*.
+En primer lugar, cree un archivo patch.json como se muestra a continuación para ajustar la configuración de *almacenamiento*.
 
 ```json
 {
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.resources.storage-0.spec",
-      "value": {
-        "type": "Storage",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "500Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    },
-    {
-      "op": "replace",
-      "path": "spec.resources.data-0.spec",
-      "value": {
-        "type": "Data",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "100Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    }
-  ]
+        "patch": [
+                {
+                        "op": "add",
+                        "path": "spec.resources.storage-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "500Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+        {
+                        "op": "add",
+                        "path": "spec.resources.master.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+                {
+                        "op": "add",
+                        "path": "spec.resources.data-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                }
+        ]
 }
+
 ```
 
 Después, puede usar el comando `azdata bdc config patch` para actualizar el archivo de configuración `bdc.json`.
@@ -666,7 +675,7 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 > [!IMPORTANT]
 > Como procedimiento recomendado, se aconseja actualizar manualmente el valor de `max_map_count` en cada host del clúster de Kubernetes según se indica en las instrucciones de [este artículo](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 
-## <a name="turn-pods-and-nodes-metrics-colelction-onoff"></a>Activación y desactivación de la recopilación de métricas de pods y nodos
+## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Activación y desactivación de la recopilación de métricas de pods y nodos
 
 En SQL Server 2019 CU5 se han habilitado dos modificadores de características para controlar la recopilación de métricas de pods y nodos. Si usa soluciones distintas para la supervisión de la infraestructura de Kubernetes, y quiere desactivar la recopilación de métricas integradas para pods y nodos de host, establezca *allowNodeMetricsCollection* y *allowPodMetricsCollection* en *false* en el archivo de configuración de implementación de *control.json*. En el caso de entornos OpenShift, esta configuración se establece en *false* de forma predeterminada en los perfiles de implementación integrados, ya que la recopilación de métricas de pods y nodos requiere capacidades con privilegios.
 Ejecute este comando para actualizar los valores de esta configuración en el archivo de configuración personalizado mediante la CLI de *azdata*:

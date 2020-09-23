@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c4ed5c985340e45b46b664dc4b6a53ff70f1b1a
+ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244324"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468350"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Lección 1: Creación de un proyecto de servidor de informes (Reporting Services)
 
@@ -36,7 +36,8 @@ Al crear informes con el Diseñador de informes, se crea un proyecto de servidor
     ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > Para VS, si no ve Reporting Services en la columna izquierda, agregue el Diseñador de informes mediante la instalación de la carga de trabajo SSDT. En el menú **Herramientas**, seleccione **Obtener herramientas y características...** y, después, **SQL Server Data Tools** en las cargas de trabajo mostradas. Si no ve los objetos de los servicios de informes en la columna central, agregue las extensiones de Reporting Services. En el menú **Herramientas**, seleccione **Extensiones y actualizaciones** > **En línea**. En la columna central, seleccione **Proyectos de Microsoft Reporting Services** > **Descargar** en las extensiones mostradas. Para SSDT, ea [Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio](../ssdt/download-sql-server-data-tools-ssdt.md).
+    > Para VS, si no ve Reporting Services en la columna izquierda, agregue el Diseñador de informes mediante la instalación de la carga de trabajo SSDT. En el menú **Herramientas**, seleccione **Obtener herramientas y características...** y, después, **SQL Server Data Tools** en las cargas de trabajo mostradas. Si no ve los objetos de los servicios de informes en la columna central, agregue las extensiones de Reporting Services. En el menú **Herramientas**, seleccione **Extensiones y actualizaciones** > **En línea**. En la columna central, seleccione **Proyectos de Microsoft Reporting Services** > **Descargar** en las extensiones mostradas. Para SSDT, ea [Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio](../ssdt/download-sql-server-data-tools-ssdt.md). En Visual Studio 2019, si los pasos anteriores no funcionan, intente instalar la [extensión de proyectos de Microsoft Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
+
 
 3. Seleccione el icono de **Proyecto de servidor de informes**&nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;en la columna central del cuadro de diálogo **Nuevo proyecto**.
 
@@ -68,4 +69,4 @@ Hasta ahora, ha creado el proyecto de informe Tutorial y el informe Sales Orders
 - Crear un conjunto de datos a partir del origen de datos
 - Diseñar el informe y dar formato a dicho diseño
 
-Continúe con la [Lección 2: Especificación de información de conexión &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).
+Continúe con la [Lección 2: Especificar información de conexión &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

@@ -2,7 +2,7 @@
 title: Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server
 description: Esta página contiene la matriz de compatibilidad y la directiva de ciclo de vida de soporte del controlador Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cd2c88cc64f068cb2926fa17302063bd7f15193
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f8fc0f34c860c9919d56d3d2c4645e9fea8bb428
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487824"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042406"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server
 
@@ -34,9 +34,10 @@ Se admiten los siguientes controladores Microsoft JDBC Driver hasta la fecha de 
   
 |Nombre del controlador|Versión del paquete de controladores|Archivos JAR aplicables|Finalización del soporte estándar|
 |-|-|-|-|  
-|Microsoft JDBC Driver 8.2 para SQL Server|8,2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|24 de marzo de 2025|
-|Microsoft JDBC Driver 7.4 para SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2 de agosto de 2024|
-|Microsoft JDBC Driver 7.2 para SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 de abril de 2024|
+|Microsoft JDBC Driver 8.4 para SQL Server|8,4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|31 de julio de 2025|
+|Microsoft JDBC Driver 8.2 para SQL Server|8,2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|31 de enero de 2025|
+|Microsoft JDBC Driver 7.4 para SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|31 de julio de 2024|
+|Microsoft JDBC Driver 7.2 para SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|31 de enero de 2024|
 |Microsoft JDBC Driver 7.0 para SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 de julio de 2023|
 |Microsoft JDBC Driver 6.4 para SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 de febrero de 2023|
 |Microsoft JDBC Driver 6.2 para SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 de junio de 2022|
@@ -58,26 +59,24 @@ Se admiten los siguientes controladores Microsoft JDBC Driver hasta la fecha de 
   
 ## <a name="sql-version-compatibility"></a>Compatibilidad con versiones de SQL  
   
-|Versión del controlador|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
-|-|-|-|-|-|-|-|-|-|-|-|
-|8,2|N|N|Y|Y|Y|Y|Y|Y|Y|
-|7.4|N|N|Y|Y|Y|Y|Y|Y|Y|
-|7.2|N|Y|Y|Y|Y|Y|Y|Y|N|
-|7.0|N|Y|Y|Y|Y|Y|Y|Y|N|
-|6.4|N|Y|Y|Y|Y|Y|Y|Y|N|
-|6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
-|6.1|Y|Y|Y|Y|Y|Y|Y|N|N|
-|6.0|Y|Y|Y|Y|Y|Y|Y|N|N|
-|4,2|Y|Y|Y|Y|Y|Y|Y|N|N|
-|4,1|Y|Y|Y|Y|Y|Y|Y|N|N|
-|4.0|Y|Y|Y|Y|Y|Y|Y|N|N|
-|3.0|Y|Y|S<sup>1</sup>|S<sup>2</sup>|N|S<sup>5</sup>|N|N|N|
-|2.0|S<sup>3</sup>|S<sup>3</sup>|N|N|N|N|N|N|N|
-|1.2|S<sup>3</sup>|N|N|N|N|N|N|N|N|
-|1.1|N|N|N|N|N|N|N|N|N|
-|1.0|N|N|N|N|N|N|N|N|N|
-|2000|N|N|N|N|N|N|N|N|N|
-  
+|Versión de la base de datos&nbsp;&#8594;<br />&#8595; versión del controlador|Azure SQL Database|Azure Synapse Analytics|Instancia administrada de Azure SQL|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|8,4|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|   |   |
+|8,2|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|   |   |
+|7.4|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|Sí|   |   |
+|7.2|Sí|Sí|Sí|   |Sí|Sí|Sí|Sí|Sí|Sí|   |
+|7.0|Sí|Sí|Sí|   |Sí|Sí|Sí|Sí|Sí|Sí|   |
+|6.4|Sí|Sí|Sí|   |Sí|Sí|Sí|Sí|Sí|Sí|   |
+|6.2|Sí|Sí|   |   |Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|6.1|Sí|   |   |   |   |Sí|Sí|Sí|Sí|Sí|Sí|
+|6,0|Sí|   |   |   |   |Sí|Sí|Sí|Sí|Sí|Sí|
+|4,2|Sí|   |   |   |   |Sí|Sí|Sí|Sí|Sí|Sí|
+|4,1|Sí|   |   |   |   |Sí|Sí|Sí|Sí|Sí|Sí|
+|4,0|Sí|   |   |   |   |Sí|Sí|Sí|Sí|Sí|Sí|
+|3.0|Sí<sup>2</sup>|   |   |   |   |   |Sí<sup>5</sup>|Sí<sup>1</sup>|   |Sí|Sí|
+|2.0|   |   |   |   |   |   |   |   |   |Sí<sup>3</sup>|Sí<sup>3</sup>|
+|1.2|   |   |   |   |   |   |   |   |   |   |Sí<sup>3</sup>|
+
  <sup>1</sup> Microsoft JDBC Driver 3.0 para SQL Server puede conectarse a SQL Server 2012 como cliente de nivel inferior.  
   
  <sup>2</sup> La compatibilidad con Azure SQL Database se introdujo como revisión en la versión 3.0 del controlador. Se recomienda que los clientes de Base de datos SQL de Azure usen la versión más reciente del controlador que haya disponible.  
@@ -92,6 +91,7 @@ Se admiten los siguientes controladores Microsoft JDBC Driver hasta la fecha de 
   
 |Versión de Microsoft JDBC Driver|Versiones de JRE|Versión de la API de JDBC|
 |-|-|-|
+|[8,4](release-notes-for-the-jdbc-driver.md#84)|1.8, 11, 14|4.2, 4.3 (parcialmente)|
 |[8.2](release-notes-for-the-jdbc-driver.md#82)|1.8, 11, 13|4.2, 4.3 (parcialmente)|
 |[7.4](release-notes-for-the-jdbc-driver.md#74)|1.8, 11, 12|4.2, 4.3 (parcialmente)|
 |[7.2](release-notes-for-the-jdbc-driver.md#72)|1.8, 11|4.2, 4.3 (parcialmente)|
@@ -112,7 +112,7 @@ Se admiten los siguientes controladores Microsoft JDBC Driver hasta la fecha de 
 
 ## <a name="supported-operating-systems"></a>Sistemas operativos admitidos
 
-Microsoft JDBC Driver se ha diseñado para que funcione en cualquier sistema operativo que admita el uso de una máquina virtual Java (JVM). Algunas de las plataformas que más se usan son, por ejemplo, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX y macOS.  
+Microsoft JDBC Driver se ha diseñado para que funcione en cualquier sistema operativo que admita el uso de una máquina virtual Java (JVM). Algunas de las plataformas que más se usan son, por ejemplo, Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Linux, Unix, AIX y macOS.  
 
 El equipo del producto JDBC comprueba nuestro controlador en Windows, Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux y macOS.
 

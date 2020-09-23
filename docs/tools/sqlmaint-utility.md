@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aaa935a955610ce5acb75a4b70141f8252cb3092
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3d6e9aff189018cf140ac3a39593e11e69241e4e
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918367"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332262"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint, utilidad
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -218,7 +218,7 @@ dbname_log_yyyymmddhhmm.BAK
  **-VrfyBackup**  
  Especifica que solo se ejecute RESTORE VERIFYONLY en la copia de seguridad cuando finalice.  
   
- *número*[**minutos**| **horas**| **día**| **semanas**| **meses**]  
+ *number*[**minutes**\| **hours**\| **day**\| **weeks**\| **months**]  
  Especifica el intervalo de tiempo que se utiliza para determinar si un informe o un archivo de copia de seguridad son suficientemente antiguos para poder eliminarlos. *number* es un número entero seguido (sin espacio) de una unidad de tiempo. Ejemplos válidos:  
   
 -   **12weeks**  

@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo actualizar los clústeres de macro
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243086"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076654"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory
 
@@ -31,9 +31,16 @@ Para habilitar la autenticación Active Directory (AD), el BDC crea automáticam
 
 Para crear automáticamente todos los objetos necesarios en Active Directory, el BDC necesita una cuenta de AD durante la implementación. Esta cuenta debe tener permisos para crear usuarios, grupos y cuentas de máquina dentro de la UO proporcionada.
 
-En los pasos siguientes se da por hecho que ya cuenta con un controlador de dominio de Active Directory. Si no se tiene un controlador de dominio, la [guía](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) siguiente incluye pasos que pueden resultar útiles.
+>[!IMPORTANT]
+>En función de la directiva de expiración de contraseñas establecida en el controlador de dominio, las contraseñas de estas cuentas pueden expirar. La directiva de expiración predeterminada es de 42 días. No hay ningún mecanismo para rotar las credenciales para todas las cuentas del clúster de macrodatos, por lo que el clúster dejará de funcionar cuando se cumpla el período de expiración. Para solucionar este problema, actualice la directiva de expiración de las cuentas de servicio del clúster de macrodatos a "La contraseña nunca expira" en el controlador de dominio. Esta acción se puede realizar antes o después de la fecha de expiración. En el último caso, Active Directory reactivará las contraseñas expiradas.
+>
+>En la imagen siguiente se muestra dónde se establece esta propiedad en Usuarios y equipos de Active Directory.
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="Establecimiento de directivas de expiración de contraseñas":::
 
 Para obtener una lista de cuentas y grupos de AD, vea [Objetos de Active Directory generados automáticamente](active-directory-objects.md).
+
+En los pasos siguientes se da por hecho que ya cuenta con un controlador de dominio de Active Directory. Si no se tiene un controlador de dominio, la [guía](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) siguiente incluye pasos que pueden resultar útiles.
 
 ## <a name="create-ad-objects"></a>Creación de objetos de AD
 
@@ -180,6 +187,9 @@ La integración de AD necesita los parámetros siguientes. Agregue estos paráme
 
 - **Parámetro opcional** `security.activeDirectory.realm`: en la mayoría de casos, el dominio es igual al nombre de dominio. En los casos en los que no sean iguales, use este parámetro para definir el nombre del dominio (por ejemplo, `CONTOSO.LOCAL`). El valor proporcionado para este parámetro debe ser completo.
 
+  > [!IMPORTANT]
+  > En este momento, el clúster de macrodatos no es compatible con una configuración en la que el nombre de dominio de Active Directory sea diferente del nombre de **NETBIOS** del dominio de Active Directory.
+
 - `security.activeDirectory.domainDnsName`: Nombre del dominio DNS que se usará para el clúster (por ejemplo, `contoso.local`).
 
 - `security.activeDirectory.clusterAdmins`: este parámetro toma un grupo de AD. El ámbito del grupo de AD debe ser universal o global. Los miembros de este grupo tendrán el rol de clúster *bdcAdmin*, que les concederá permisos de administrador en el clúster. Esto significa que tendrán [permisos de `sysadmin` en SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [permisos de `superuser` en HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User) y permisos de administrador cuando se conecten al punto de conexión del controlador.
@@ -192,6 +202,9 @@ La integración de AD necesita los parámetros siguientes. Agregue estos paráme
 Los grupos de AD de esta lista se asignan al rol de clúster de macrodatos *bdcUser* y se les debe conceder acceso a SQL Server (vea [Permisos de SQL Server](../relational-databases/security/permissions-hierarchy-database-engine.md)) o a HDFS (vea [Guía de permisos de HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). Al conectarse al punto de conexión del controlador, estos usuarios solo pueden mostrar los puntos de conexión disponibles en el clúster mediante el comando *azdata bdc endpoint list*.
 
 A fin de obtener información detallada sobre cómo actualizar los grupos de AD para esta configuración, vea [Administración del acceso al Clúster de macrodatos en el modo de Active Directory](manage-user-access.md).
+
+  >[!TIP]
+  >Para habilitar la experiencia de exploración de HDFS cuando se conecta a SQL Server maestro en Azure Data Studio, se debe conceder a un usuario con el rol bdcUser permisos VIEW SERVER STATE, ya que Azure Data Studio usa la DMV *sys.dm_cluster_endpoints* para obtener el punto de conexión de la puerta de enlace de Knox requerido para conectarse a HDFS.
 
   >[!IMPORTANT]
   >Cree estos grupos en AD antes de comenzar la implementación. Si el ámbito de cualquiera de estos grupos de AD es el dominio local, se produce un error en la implementación.
@@ -261,9 +274,9 @@ En la tabla siguiente se muestra el modelo de autorización para la administraci
 - `security.activeDirectory.accountPrefix`: **Parámetro opcional** Este parámetro se incluye en la versión SQL Server 2019 CU5 para admitir la implementación de varios clústeres de macrodatos en el mismo dominio. Esta configuración garantiza la exclusividad de los nombres de cuenta de varios servicios de clúster de macrodatos, que deben ser diferentes entre cualquier par de clústeres. La personalización del nombre del prefijo de la cuenta es opcional; de forma predeterminada, el nombre del subdominio se usa como prefijo de la cuenta. Si el nombre de subdominio es mayor de 12 caracteres, los primeros 12 caracteres del nombre de subdominio se usan como el prefijo de la cuenta.  
 
   >[!NOTE]
-  >Active Directory requiere que los nombres de cuenta se limiten a 20 caracteres. El clúster de BDC debe usar 8 caracteres de estos para distinguir entre pods y StatefulSets. Esto nos deja 12 caracteres como límite para el prefijo de la cuenta.
+  >Active Directory requiere que los nombres de cuenta se limiten a 20 caracteres. El clúster de macrodatos debe usar 8 de estos caracteres para distinguir entre pods y StatefulSets. Esto nos deja 12 caracteres como límite para el prefijo de la cuenta.
 
-[Compruebe el ámbito del grupo de AD](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), para determinar si es DomainLocal.
+[Compruebe el ámbito del grupo de AD](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), para determinar si es DomainLocal.
 
 Si aún no ha inicializado el archivo de configuración de la implementación, puede ejecutar este comando para obtener una copia de la configuración. En los ejemplos siguientes se usa el perfil de `kubeadm-prod` y lo mismo se aplica a `openshift-prod`.
 
@@ -422,7 +435,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Antes de la versión SQL Server 2019 CU5 solo se permite un BDC por dominio (Active Directory). La habilitación de varios BDC por dominio está disponible a partir de la versión CU5.
 
-- Ninguno de los grupos de AD especificados en las configuraciones de seguridad puede tener definido el ámbito DomainLocal. Puede comprobar el ámbito de un grupo de AD siguiendo [estas instrucciones](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+- Ninguno de los grupos de AD especificados en las configuraciones de seguridad puede tener definido el ámbito DomainLocal. Puede comprobar el ámbito de un grupo de AD siguiendo [estas instrucciones](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
 
 - Se permite el uso de la cuenta de AD que se puede usar para iniciar sesión en BDC en el mismo dominio en el que se ha configurado para BDC. No se admite la habilitación de inicios de sesión desde otro dominio de confianza.
 

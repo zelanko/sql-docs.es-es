@@ -1,6 +1,6 @@
 ---
 title: ISSAsynchStatus::Abort (controlador OLE DB) | Microsoft Docs
-description: ISSAsynchStatus::Abort (OLE DB)
+description: Obtenga información sobre cómo el método ISSAsynchStatus::Abort cancela una operación de ejecución asincrónica en OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - Abort method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e3c6e3ba45774362834c8a8391f5658670e01434
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbbef11ae17029500a6910e5b28c121f6312dce2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244365"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862204"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,18 +64,18 @@ HRESULT Abort(
  El parámetro *hChapter* no es DB_NULL_HCHAPTER, o bien *eOperation* no es DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- Se ha llamado a **ISSAsynchStatus::Abort** en un objeto de origen de datos en el que no se ha llamado a **IDBInitialize::Initialize**, o bien no se ha completado.  
+ Se ha llamado a `ISSAsynchStatus::Abort` en un objeto de origen de datos en el que no se ha llamado a `IDBInitialize::Initialize`, o bien no se ha completado.  
   
- Se llamó a**ISSAsynchStatus::Abort** en un objeto de origen de datos en el que se llamó a **IDBInitialize::Initialize** pero se canceló posteriormente antes de la inicialización, o se ha superado el tiempo de espera. Todavía no se ha inicializado el objeto de origen de datos.  
+ Se ha llamado a `ISSAsynchStatus::Abort` en un objeto de origen de datos en el que se ha llamado a `IDBInitialize::Initialize` e inmediatamente se ha cancelado antes de la inicialización o se ha agotado el tiempo de espera. Todavía no se ha inicializado el objeto de origen de datos.  
   
- Se ha llamado a **ISSAsynchStatus::Abort** en un conjunto de filas en el que previamente se había llamado a **ITransaction::Commit** o a **ITransaction::Abort**, y el conjunto de filas no ha conservado la confirmación o anulación y se encuentra en un estado zombi.  
+ Se ha llamado a `ISSAsynchStatus::Abort` en un conjunto de filas en el que previamente se había llamado a `ITransaction::Commit` o a `ITransaction::Abort`, y el conjunto de filas no ha conservado la confirmación o anulación y se encuentra en un estado zombi.  
   
- Se llamó a**ISSAsynchStatus::Abort** en un conjunto de filas que se canceló de forma asincrónica en su fase de inicialización. El conjunto de filas se encuentra en estado inerte.  
+ Se llamó a`ISSAsynchStatus::Abort` en un conjunto de filas que se canceló de forma asincrónica en su fase de inicialización. El conjunto de filas se encuentra en estado inerte.  
   
 ## <a name="remarks"></a>Observaciones  
- Al anular la inicialización de un conjunto de filas u objeto de origen de datos, se podría dejar el conjunto de filas u objeto de origen de datos en un estado zombi, de forma que todos los métodos distintos de los métodos **IUnknown** devuelvan un valor E_UNEXPECTED. Si esto sucede, la única acción posible para el consumidor es liberar el conjunto de filas u objeto de origen de datos.  
+ Al anular la inicialización de un conjunto de filas u objeto de origen de datos, se podría dejar el conjunto de filas u objeto de origen de datos en un estado zombi, de forma que todos los métodos distintos de los métodos `IUnknown` devuelvan un valor E_UNEXPECTED. Si esto sucede, la única acción posible para el consumidor es liberar el conjunto de filas u objeto de origen de datos.  
   
- Llamando a **ISSAsynchStatus::Abort** y pasando un valor para *eOperation* distinto de DBASYNCHOP_OPEN, devuelve S_OK. Esto no implica que la operación se haya completado o cancelado.  
+ Llamando a `ISSAsynchStatus::Abort` y pasando un valor para *eOperation* distinto de DBASYNCHOP_OPEN, devuelve S_OK. Este valor no implica que la operación se haya completado o cancelado.  
   
 ## <a name="see-also"></a>Consulte también  
  [Realizar operaciones asincrónicas](../../oledb/features/performing-asynchronous-operations.md)  

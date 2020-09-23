@@ -1,6 +1,6 @@
 ---
 title: Propiedades de orígenes de datos (controlador OLE DB) | Microsoft Docs
-description: Propiedades de orígenes de datos (OLE DB)
+description: Obtenga información sobre cómo OLE DB Driver for SQL Server implementa propiedades de origen de datos, incluido un conjunto de propiedades específico del proveedor con propiedades de origen de datos adicionales.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - properties [OLE DB]
 - data source properties [OLE DB]
 - OLE DB data source properties [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f9eb49b87333c30cef03426b1fc3d7567274a167
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 281e5b04b76317a24c15fce962e88ebbe3de3b02
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976588"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862386"
 ---
 # <a name="data-source-properties-ole-db"></a>Propiedades de orígenes de datos (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

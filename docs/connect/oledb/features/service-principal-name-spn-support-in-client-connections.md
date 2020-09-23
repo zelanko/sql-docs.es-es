@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad con nombre de entidad de seguridad de servicio (SPN) en conexiones de cliente | Microsoft Docs
-description: Compatibilidad con nombre de entidad de seguridad de servicio (SPN) en conexiones de cliente
+description: Obtenga información sobre cómo SQL Server admite el nombre de entidad de seguridad de servicio en las conexiones de cliente. Consulte los escenarios de uso más comunes.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -12,17 +12,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, SPNs
 - OLE DB, SPNs
 - SPNs [SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6c1cfc2ff97c29f7ee22f6b4050634c95ae6a846
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007260"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195151"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -50,7 +51,7 @@ ms.locfileid: "86007260"
 |Escenario|Descripción|  
 |--------------|-----------------|  
 |Una aplicación heredada no especifica ningún SPN.|Este escenario de compatibilidad garantiza que no habrá ningún cambio de comportamiento en las aplicaciones desarrolladas para versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se especifica ningún SPN, la aplicación se basa en los SPN generados y no tiene ningún conocimiento del método de autenticación utilizado.|  
-|Una aplicación cliente que usa la versión actual del controlador OLE DB para SQL Server especifica un SPN en la cadena de conexión como un usuario de dominio o cuenta de equipo, como un SPN específico de la instancia o como una cadena definida por el usuario.|La palabra clave **ServerSPN** puede usarse en una cadena de conexión, inicialización o proveedor para hacer lo siguiente:<br /><br /> \- Especificar la cuenta usada por la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para una conexión. Esto simplifica el acceso a la autenticación Kerberos. Si hay presente un centro de distribución de claves Kerberos (KDC) y se especifica la cuenta correcta, es más probable que se use la autenticación Kerberos que la autenticación NTLM. El KDC reside normalmente en el mismo equipo que el controlador de dominio.<br /><br /> \- Especificar un SPN para buscar la cuenta de servicio para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se generan dos SPN predeterminados que pueden usarse para este propósito. No obstante, no se garantiza que estas claves estén presentes en Active Directory, por lo que en esta situación no se garantiza la autenticación Kerberos.<br /><br /> \- Especificar un SPN que se usará para buscar la cuenta de servicio para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ésta puede ser cualquier cadena definida por el usuario que se asigne a la cuenta de servicio. En este caso, la clave debe registrarse manualmente en el KDC y debe cumplir las reglas de un SPN definido por el usuario.<br /><br /> La palabra clave **FailoverPartnerSPN** puede usarse para especificar el SPN para el servidor del asociado de conmutación por error. El intervalo de valores de cuenta y de clave de Active Directory es el mismo que los valores que pueden especificarse para el servidor principal.|  
+|Una aplicación cliente que usa la versión actual del controlador OLE DB para SQL Server especifica un SPN en la cadena de conexión como un usuario de dominio o cuenta de equipo, como un SPN específico de la instancia o como una cadena definida por el usuario.|La palabra clave **ServerSPN** puede usarse en una cadena de conexión, inicialización o proveedor para hacer lo siguiente:<br /><br /> - Especificar la cuenta usada por la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para una conexión. Esto simplifica el acceso a la autenticación Kerberos. Si hay presente un centro de distribución de claves Kerberos (KDC) y se especifica la cuenta correcta, es más probable que se use la autenticación Kerberos que la autenticación NTLM. El KDC reside normalmente en el mismo equipo que el controlador de dominio.<br /><br /> - Especificar un SPN para buscar la cuenta de servicio para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se generan dos SPN predeterminados que pueden usarse para este propósito. No obstante, no se garantiza que estas claves estén presentes en Active Directory, por lo que en esta situación no se garantiza la autenticación Kerberos.<br /><br /> - Especificar un SPN que se usará para buscar la cuenta de servicio para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ésta puede ser cualquier cadena definida por el usuario que se asigne a la cuenta de servicio. En este caso, la clave debe registrarse manualmente en el KDC y debe cumplir las reglas de un SPN definido por el usuario.<br /><br /> La palabra clave **FailoverPartnerSPN** puede usarse para especificar el SPN para el servidor del asociado de conmutación por error. El intervalo de valores de cuenta y de clave de Active Directory es el mismo que los valores que pueden especificarse para el servidor principal.|  
 |Una aplicación OLE DB especifica un SPN como una propiedad de inicialización del origen de datos para el servidor principal o para un servidor del asociado de conmutación por error.|La propiedad de conexión **SSPROP_INIT_SERVER_SPN** del conjunto de propiedades **DBPROPSET_SQLSERVERDBINIT** puede usarse para especificar el SPN de una conexión.<br /><br /> La propiedad de conexión **SSPROP_INIT_FAILOVER_PARTNER_SPN** de **DBPROPSET_SQLSERVERDBINIT** puede usarse para especificar el SPN para el servidor del asociado de conmutación por error.|   
 |El usuario especifica un SPN para un servidor o servidor de asociado de conmutación por error en un cuadro de diálogo **Vínculo de datos** o **Inicio de sesión** de OLE DB.|El SPN puede especificarse en un cuadro de diálogo **Vínculo de datos** o **Inicio de sesión** .|   
 |Una aplicación OLE DB determina el método de autenticación que se usa para establecer una conexión.|Cuando una conexión se ha abierto correctamente, una aplicación puede consultar la propiedad de conexión **SSPROP_AUTHENTICATION_METHOD** en el conjunto de propiedades **DBPROPSET_SQLSERVERDATASOURCEINFO** para determinar qué método de autenticación se ha utilizado. Entre los valores se incluyen **NTLM** y **Kerberos**.|  
@@ -102,7 +103,7 @@ ms.locfileid: "86007260"
 ## <a name="ole-db-syntax-supporting-spns"></a>Sintaxis de OLE DB compatible con los SPN  
  Para obtener información específica de la sintaxis, vea los siguientes temas:  
   
--   [Nombres de entidad de seguridad de servicio &#40;SPN&#41; en conexiones de cliente &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Nombres de entidad de seguridad de servicio &#40;SPNs&#41; en conexiones cliente &#40;OLE DB&#41;](../../oledb/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   
  Para obtener información sobre las aplicaciones de ejemplo que muestran esta característica, vea [Ejemplos de programación de datos de SQL Server](https://msftdpprodsamples.codeplex.com/).  
   

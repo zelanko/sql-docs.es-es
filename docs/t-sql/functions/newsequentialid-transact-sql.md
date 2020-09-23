@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b3d0648e3e017179ff91ae7e2d951967cb7517cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fe754848be676d40387d4887a5a7e519da697f7
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445722"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111052"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,13 +56,13 @@ NEWSEQUENTIALID ( )
 ## <a name="remarks"></a>Comentarios  
  NEWSEQUENTIALID() solo se puede usar con restricciones DEFAULT en columnas de tabla de tipo **uniqueidentifier**. Por ejemplo:  
   
-```  
+```sql  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   
 ```  
   
  Cuando NEWSEQUENTIALID() se utiliza en expresiones DEFAULT, no se puede combinar con otros operadores escalares. Por ejemplo, no se puede ejecutar lo siguiente:  
   
-```  
+```sql 
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENTIALID()));  
 ```  
   
@@ -74,7 +74,7 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
   
  Cada GUID generado utilizando NEWSEQUENTIALID es único en ese equipo. Los GUID generados utilizando NEWSEQUENTIALID solo son únicos en varios equipos si el equipo de origen tiene una tarjeta de red.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
  [Operadores de comparación &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   

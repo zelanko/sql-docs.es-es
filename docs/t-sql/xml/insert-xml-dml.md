@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 138f38e4972d2f6a4359bb44194ec8188ff7bee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73d68149950542082127e4132db529ad18cbc03d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496416"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112499"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,13 +31,11 @@ ms.locfileid: "88496416"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```syntaxsql
-  
-insert   
-      Expression1 (  
-                 {as first | as last} into | after | before  
-                                    Expression2  
-                )  
+```syntaxsql 
+insert Expression1 (  
+{AS first | AS last} INTO | AFTER | BEFORE  
+Expression2  
+)  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -63,10 +61,10 @@ insert
 ### <a name="a-inserting-element-nodes-into-the-document"></a>A. Insertar nodos de elemento en el documento  
  En el siguiente ejemplo se muestra cómo insertar elementos en un documento. Primero, se asigna un documento XML a una variable de tipo **xml**. Después, por medio de varias instrucciones **insert** XML DML, se muestra cómo se insertan nodos de elemento en el documento. Después de cada inserción, la instrucción SELECT muestra el resultado.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;         
+DECLARE @myDoc XML;         
 SET @myDoc = '<Root>         
     <ProductDescription ProductID="1" ProductName="Road Bike">         
         <Features>         
@@ -76,30 +74,30 @@ SET @myDoc = '<Root>
 SELECT @myDoc;     
 -- insert first feature child (no need to specify as first or as last)         
 SET @myDoc.modify('         
-insert <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>   
-into (/Root/ProductDescription/Features)[1]') ;  
+INSERT <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>   
+INTO (/Root/ProductDescription/Features)[1]') ;  
 SELECT @myDoc ;        
 -- insert second feature. We want this to be the first in sequence so use 'as first'         
-set @myDoc.modify('         
-insert <Warranty>1 year parts and labor</Warranty>          
-as first         
-into (/Root/ProductDescription/Features)[1]         
+SET @myDoc.modify('         
+INSERT <Warranty>1 year parts and labor</Warranty>          
+AS first         
+INTO (/Root/ProductDescription/Features)[1]         
 ')  ;       
 SELECT @myDoc  ;       
 -- insert third feature child. This one is the last child of <Features> so use 'as last'         
 SELECT @myDoc         
 SET @myDoc.modify('         
-insert <Material>Aluminium</Material>          
-as last         
-into (/Root/ProductDescription/Features)[1]         
+INSERT <Material>Aluminium</Material>          
+AS last         
+INTO (/Root/ProductDescription/Features)[1]         
 ')         
 SELECT @myDoc ;        
 -- Add fourth feature - this time as a sibling (and not a child)         
 -- 'after' keyword is used (instead of as first or as last child)         
 SELECT @myDoc  ;       
-set @myDoc.modify('         
-insert <BikeFrame>Strong long lasting</BikeFrame>   
-after (/Root/ProductDescription/Features/Material)[1]         
+SET @myDoc.modify('         
+INSERT <BikeFrame>Strong long lasting</BikeFrame>   
+AFTER (/Root/ProductDescription/Features/Material)[1]         
 ')  ;       
 SELECT @myDoc;  
 GO  
@@ -110,10 +108,10 @@ GO
 ### <a name="b-inserting-multiple-elements-into-the-document"></a>B. Insertar varios elementos en el documento  
  En el ejemplo siguiente, primero se asigna un documento a una variable de tipo **xml**. Luego se asigna una secuencia de dos elementos que representan las características del producto a una segunda variable de tipo **xml**. Después, esta secuencia se inserta en la primera variable.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc = N'<Root>             
 <ProductDescription ProductID="1" ProductName="Road Bike">             
     <Features> </Features>             
@@ -133,10 +131,10 @@ GO
 ### <a name="c-inserting-attributes-into-a-document"></a>C. Insertar atributos en un documento  
  En el ejemplo siguiente se muestra cómo se insertan los atributos en un documento. Primero, se asigna un documento a una variable de tipo **xml**. Después, se usa una serie de instrucciones **insert** XML DML para insertar atributos en el documento. Después de cada inserción de atributo, la instrucción SELECT muestra el resultado.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml ;            
+DECLARE @myDoc XML;            
 SET @myDoc =   
 '<Root>             
     <Location LocationID="10" >             
@@ -144,15 +142,15 @@ SET @myDoc =
         <step>Manufacturing step 2 at this work center</step>             
     </Location>             
 </Root>' ;  
-SELECT @myDoc  ;          
+SELECT @myDoc;          
 -- insert LaborHours attribute             
 SET @myDoc.modify('             
 insert attribute LaborHours {".5" }             
-into (/Root/Location[@LocationID=10])[1] ') ;           
-SELECT @myDoc  ;          
+into (/Root/Location[@LocationID=10])[1] ');           
+SELECT @myDoc;          
 -- insert MachineHours attribute but its value is retrived from a sql variable @Hrs             
-DECLARE @Hrs float ;            
-SET @Hrs =.2   ;          
+DECLARE @Hrs FLOAT;            
+SET @Hrs =.2;          
 SET @myDoc.modify('             
 insert attribute MachineHours {sql:variable("@Hrs") }             
 into   (/Root/Location[@LocationID=10])[1] ');            
@@ -164,7 +162,7 @@ insert (
            attribute SetupHours {".5" },             
            attribute SomeOtherAtt {".2"}             
         )             
-into (/Root/Location[@LocationID=10])[1] ');             
+INTO (/Root/Location[@LocationID=10])[1] ');             
 SELECT @myDoc;  
 GO  
 ```  
@@ -172,10 +170,10 @@ GO
 ### <a name="d-inserting-a-comment-node"></a>D. Insertar un nodo de comentario  
  En esta consulta primero se asigna un documento XML a una variable de tipo **xml**. Después, se utiliza XML DML para insertar un nodo de comentario detrás del primer elemento <`step`>.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;             
+DECLARE @myDoc XML;             
 SET @myDoc =   
 '<Root>             
     <Location LocationID="10" >             
@@ -194,10 +192,10 @@ GO
 ### <a name="e-inserting-a-processing-instruction"></a>E. Insertar una instrucción de procesamiento  
  En la consulta siguiente primero se asigna un documento XML a una variable de tipo **xml**. Después, se utiliza la palabra clave XML DML para insertar una instrucción de procesamiento al principio del documento.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc =   
 '<Root>   
     <Location LocationID="10" >   
@@ -216,10 +214,10 @@ GO
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. Insertar datos mediante una sección CDATA  
  Cuando se inserta texto que incluye caracteres que no son válidos en XML, como < o >, se pueden utilizar secciones CDATA para insertar los datos, como se muestra en la consulta siguiente. La consulta especifica una sección CDATA, pero se agrega como un nodo de texto con los caracteres no válidos convertidos en entidades. Por ejemplo, `<` se guarda como `&lt;`.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;             
+DECLARE @myDoc XML;             
 SET @myDoc =   
 '<Root>             
     <ProductDescription ProductID="1" ProductName="Road Bike">             
@@ -247,10 +245,10 @@ GO
 ### <a name="g-inserting-text-node"></a>G. Insertar un nodo de texto  
  En esta consulta primero se asigna un documento XML a una variable de tipo **xml**. Después, se utiliza XML DML para insertar un nodo de texto como el primer elemento secundario del elemento <`Root`>. Para especificar el texto se utiliza el constructor de texto.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -259,7 +257,7 @@ SET @myDoc = '<Root>
 </ProductDescription>  
 </Root>'  
 SELECT @myDoc;  
-set @myDoc.modify('  
+SET @myDoc.modify('  
  insert text{"Product Catalog Description"}   
  as first into (/Root)[1]  
 ');  
@@ -269,11 +267,11 @@ SELECT @myDoc;
 ### <a name="h-inserting-a-new-element-into-an-untyped-xml-column"></a>H. Insertar un nuevo elemento en una columna xml sin tipo  
  En el ejemplo siguiente se usa XML DML para actualizar una instancia XML almacenada en una columna de tipo **xml**:  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-CREATE TABLE T (i int, x xml);  
-go  
+CREATE TABLE T (i INT, x XML);  
+GO  
 INSERT INTO T VALUES(1,'<Root>  
     <ProductDescription ProductID="1" ProductName="Road Bike">  
         <Features>  
@@ -282,7 +280,7 @@ INSERT INTO T VALUES(1,'<Root>
         </Features>  
     </ProductDescription>  
 </Root>');  
-go  
+GO  
 -- insert a new element  
 UPDATE T  
 SET x.modify('insert <Material>Aluminium</Material> as first  
@@ -293,7 +291,7 @@ GO
   
  De nuevo, cuando se inserta el nodo de elemento <`Material`>, la expresión de ruta de acceso debe devolver un único destino. Esto se especifica explícitamente al agregar [1] al final de la expresión.  
   
-```  
+```sql
 -- check the update  
 SELECT x.query(' //ProductDescription/Features')  
 FROM T;  
@@ -303,10 +301,10 @@ GO
 ### <a name="i-inserting-based-on-an-if-condition-statement"></a>I. Inserción basada en una instrucción de condición IF  
  En el ejemplo siguiente se especifica una condición IF como parte de Expression1 en la instrucción **insert** XML DML. Si la condición es True, se agrega un atributo al elemento <`WorkCenter`>.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc =   
 '<Root>  
     <Location LocationID="10" LaborHours="1.2" >  
@@ -327,10 +325,10 @@ GO
   
  El ejemplo siguiente es similar, con la diferencia de que la instrucción **insert** XML DML inserta un elemento en el documento si la condición es True. En otras palabras, si el elemento <`WorkCenter`> tiene dos elementos secundarios <`step`> o menos.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc =   
 '<Root>  
     <Location LocationID="10" LaborHours="1.2" >  
@@ -365,13 +363,14 @@ GO
   
  En el ejemplo, primero se crea una tabla (T) con una columna **xml** con tipo en la base de datos AdventureWorks. A continuación, se copia en la tabla T una instancia XML con instrucciones de fabricación procedentes de la columna Instructions de la tabla ProductModel. Después se aplican las inserciones a XML en la tabla T.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO            
 DROP TABLE T;  
 GO             
-CREATE TABLE T(ProductModelID int primary key,    
-Instructions xml (Production.ManuInstructionsSchemaCollection));  
+CREATE TABLE T(
+  ProductModelID INT PRIMARY KEY,    
+  Instructions XML (Production.ManuInstructionsSchemaCollection));  
 GO  
 INSERT T              
     SELECT ProductModelID, Instructions             
@@ -384,7 +383,7 @@ FROM T;
 --1) insert a new manu. Location. The <Root> specified as              
 -- expression 2 in the insert() must be singleton.      
 UPDATE T   
-set Instructions.modify('   
+SET Instructions.modify('   
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
 insert <MI:Location LocationID="1000" >   
            <MI:step>New instructions go here</MI:step>   

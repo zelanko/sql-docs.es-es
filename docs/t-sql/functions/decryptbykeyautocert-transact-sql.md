@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 73aa01ab2817f9435791af4f2bb01ae81ef86fcc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e45c856ee8ce1942840f47f5878de57525426c94
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417441"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111079"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,6 @@ Esta función descifra datos con una clave simétrica. Esa clave simétrica se d
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 DecryptByKeyAutoCert ( cert_ID , cert_password   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }   
@@ -81,7 +80,7 @@ Se requiere el permiso `VIEW DEFINITION` en la clave simétrica y el permiso `CO
 ## <a name="examples"></a>Ejemplos  
 En este ejemplo se muestra cómo `DECRYPTBYKEYAUTOCERT` puede simplificar el código de descifrado. Este código se debería ejecutar en una base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] que aún no tenga una clave maestra de base de datos.  
   
-```  
+```sql  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdlk979438teag$$ds987yghn)(*&4fdg^';  

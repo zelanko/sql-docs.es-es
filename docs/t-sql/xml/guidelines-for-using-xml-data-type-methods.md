@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25452e6ae26e8375799a344f459473db446c2d5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8a429071f406be0309d89bbb9ea0253b86905a8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355971"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112310"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Directrices para utilizar los métodos del tipo de datos xml
 
@@ -33,7 +33,7 @@ En este tema se describen instrucciones para usar los métodos de tipo de datos 
 Los métodos del tipo de datos **xml** no se pueden usar en la instrucción PRINT, como se muestra en el ejemplo siguiente. Los métodos del tipo de datos **xml** se tratan como subconsultas y éstas no están permitidas en la instrucción PRINT. Como resultado, el ejemplo siguiente devuelve un error:
 
 ```sql
-DECLARE @x xml
+DECLARE @x XML
 SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
@@ -41,10 +41,10 @@ PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treat
 Una solución es asignar primero el resultado del método **value()** a una variable de tipo **xml** y, después, especificar la variable en la consulta.
 
 ```sql
-DECLARE @x xml
-DECLARE @c varchar(max)
+DECLARE @x XML
+DECLARE @c VARCHAR(max)
 SET @x = '<root>Hello</root>'
-SET @c = @x.value('/root[1]', 'varchar(11)')
+SET @c = @x.value('/root[1]', 'VARCHAR(11)')
 PRINT @c
 ```
 
@@ -77,8 +77,8 @@ Los pasos de ubicación, los parámetros de funciones y los operadores que requi
 En este ejemplo, el método **nodes()** genera una fila distinta por cada elemento `<book>`. El método **value()** que se evalúa en un nodo `<book>` extrae el valor de `@genre` y, siendo un atributo, es un singleton.
 
 ```sql
-SELECT nref.value('@genre', 'varchar(max)') LastName
-FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
+SELECT nref.value('@genre', 'VARCHAR(max)') LastName
+FROM T CROSS APPLY xCol.nodes('//book') AS R(nref)
 ```
 
 El esquema XML se utiliza para comprobar el tipo del XML con tipo. Si se especifica un nodo como singleton en el esquema XML, el compilador usa esa información y no se produce ningún error. En caso contrario, se necesita un ordinal que seleccione un solo nodo. En particular, el uso de ejes descendant-or-self (//), como en `/book//title`, pierde inferencia de cardinalidad de singleton para el elemento `<title>`, incluso si el esquema XML especifica que sea así. Por tanto, se debe volver a escribir como `(/book//title)[1]`.
@@ -90,22 +90,22 @@ Es importante ser consciente de la diferencia entre `//first-name[1]` y `(//firs
 La siguiente consulta en una columna XML sin tipo da como resultado un error de compilación estático. Esto se debe a que **value()** espera un nodo singleton como primer argumento y el compilador no puede determinar si solo va a aparecer un nodo `<last-name>` en tiempo de ejecución:
 
 ```sql
-SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 A continuación, se ofrece una solución que debe contemplar:
 
 ```sql
-SELECT xCol.value('//author/last-name[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 No obstante, esta solución no resuelve el error, ya que pueden aparecer varios nodos `<author>` en cada instancia XML. Resulta útil volver a escribir lo siguiente:
 
 ```sql
-SELECT xCol.value('(//author/last-name/text())[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('(//author/last-name/text())[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 Esta consulta devuelve el valor del primer elemento `<last-name>` de cada instancia XML.

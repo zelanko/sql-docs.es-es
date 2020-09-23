@@ -1,4 +1,5 @@
 ---
+description: Actualizar informes (SSRS)
 title: Actualizar informes | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1454c579739c892cc3d0c03211283589ba3e6b82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446033"
 ---
 # <a name="upgrade-reports-ssrs"></a>Actualizar informes (SSRS)
 
@@ -127,7 +128,7 @@ Los archivos de definición de informe (.rdl) se actualizan automáticamente de 
   
 -   **No** : elija **No** si no desea convertir los CRI del informe. El procesador de informes no puede mostrar la versión actual de estos CRI. Si el administrador del sistema tiene pensado instalar una nueva versión de los CRI de otros fabricantes de software que es compatible con el nuevo formato de definición de informe, debería elegir **No**. Hasta que estén disponibles las nuevas versiones, los CRI se muestran en el informe como un cuadro de texto vacío con una X roja.  
   
- En cualquier caso, el informe se actualiza al nuevo formato de definición de informe y se guarda una copia de seguridad del informe original como *\<Nombre del informe>* `-` Backup.rdl. Si guarda el informe en la herramienta de creación de informes, está guardando el informe actualizado en el nuevo formato de definición de informe. Si publica el informe, éste se guarda primero en su equipo y, a continuación, se publica en el servidor de informes. En realidad, está publicando la versión actualizada del informe en el servidor de informes.  
+ En cualquier caso, el informe se actualiza al nuevo formato de definición de informe y se guarda una copia de seguridad del informe original como *\<Report Name>* `-` Backup.rdl. Si guarda el informe en la herramienta de creación de informes, está guardando el informe actualizado en el nuevo formato de definición de informe. Si publica el informe, éste se guarda primero en su equipo y, a continuación, se publica en el servidor de informes. En realidad, está publicando la versión actualizada del informe en el servidor de informes.  
   
  Si no guarda el informe, el informe original no varía. Pero no puede modificar este informe en la versión SQL Server 2016 de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ni en un entorno de creación de informes que use un formato de definición de informes más nuevo. Puede continuar ejecutando la versión original del informe cargándolo en un servidor de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] mediante el portal web. Para más información, vea [Web Portal](../../reporting-services/web-portal-ssrs-native-mode.md) (Portal web).  
   
@@ -140,6 +141,6 @@ Los archivos de definición de informe (.rdl) se actualizan automáticamente de 
 [Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Elementos de informe personalizados](../../reporting-services/custom-report-items/custom-report-items.md)   
-[Actualización de una base de datos del servidor de informes](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
+[Actualizar una base de datos del servidor de informes](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,7 +1,8 @@
 ---
-title: Control de errores y advertencias con el controlador SQLSRV | Microsoft Docs
+title: 'Procedimientos: Control de errores y advertencias con el controlador SQLSRV'
+description: Obtenga información acerca de cómo controlar errores y advertencias al usar el controlador SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0605fc5a0fc27abfbcd15c22d5553587eecb0349
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ebb3ef454e23ad181bfee856a5b09d01b20632e9
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916269"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680650"
 ---
-# <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Cómo controlar errores y advertencias con el controlador SQLSRV
+# <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Procedimientos: Control de errores y advertencias con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 De forma predeterminada, el controlador SQLSRV trata las advertencias como errores; una llamada a una función de **sqlsrv** que genera un error o una advertencia devuelve el valor **False**. En este tema se muestra cómo desactivar este comportamiento predeterminado y cómo controlar las advertencias y los errores por separado.  
@@ -200,7 +201,7 @@ function DisplayWarnings()
 ```  
   
 ## <a name="see-also"></a>Consulte también  
-[Configuración del control de errores y advertencias con el controlador SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
+[Procedimientos: Configuración del control de errores y advertencias con el controlador SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

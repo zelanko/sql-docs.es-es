@@ -2,7 +2,7 @@
 title: Desarrollador de datos SQL | Microsoft Docs
 description: Use la plataforma de datos SQL de Microsoft para crear soluciones basadas en datos en dispositivos móviles y escritorios para servidores web, servidores empresariales y la nube.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,25 +11,26 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ff3fb2b5e789d9eb9d89100e1722b37c9eae6385
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922304"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988485"
 ---
 # <a name="sql-data-developer"></a>Desarrollador de datos SQL
 Use la plataforma de datos SQL de Microsoft para crear soluciones basadas en datos en dispositivos móviles y escritorios para servidores web, servidores empresariales y la nube.  
 
 ## <a name="sql-data-storage"></a>Almacenamiento de datos SQL
 * [Motor de base de datos de SQL Server](../database-engine/configure-windows/sql-server-database-engine.md): use el Motor de base de datos de SQL Server para crear bases de datos relacionales para el procesamiento de transacciones en línea o el procesamiento de datos analíticos en línea. 
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database/): use SQL Azure para trasladar su base de datos a la nube. 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): SQL Server Compact para compilar aplicaciones independientes y conectadas de manera ocasional para dispositivos móviles, escritorios y clientes web.
+* [Azure SQL](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview): use Azure SQL para trasladar su base de datos a la nube. 
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): use SQL Server Compact para compilar aplicaciones independientes y conectadas de manera ocasional para dispositivos móviles, escritorios y clientes web.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): use LocalDB durante el desarrollo para escribir y probar código Transact-SQL sin tener que administrar una instancia de servidor de SQL Server.
 
 ## <a name="sql-data-tools"></a>SQL Data Tools
-* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md): use SSDT para compilar bases de datos relacionales, bases de datos de Azure SQL, paquetes de Integration Services, modelos de datos de Analysis Services e informes de Reporting Services.
-* [Herramientas de administración de SQL Server](../ssms/download-sql-server-management-studio-ssms.md):  use SSMS para configurar, supervisar y administrar instancias de SQL Server.
+* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md): use Azure Data Studio en Windows, macOS y Linux para ejecutar cuadernos de SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebook y muchos más.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md): use SSDT en Visual Studio para compilar bases de datos relacionales, bases de datos de Azure SQL, paquetes de Integration Services, modelos de datos de Analysis Services e informes de Reporting Services.
+* [Herramientas de administración de SQL Server](../ssms/download-sql-server-management-studio-ssms.md):  use SSMS en Windows para configurar, supervisar y administrar instancias de SQL Server.
 
 ## <a name="sql-data-access"></a>Acceso a datos SQL
 * [Controladores cliente SQL](sql-connection-libraries.md):  use los controladores SQL para conectar, consultar, actualizar, insertar o eliminar datos de una base de datos SQL.

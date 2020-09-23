@@ -1,7 +1,7 @@
 ---
 title: 'Administrar: Azure Data Studio Notebooks'
 titleSuffix: SQL Server Big Data Clusters
-description: Use un cuaderno de Azure Data Studio para administrar un clúster de macrodatos y solucionar problemas de este.
+description: Use un cuaderno de Azure Data Studio para administrar Clústeres de macrodatos de SQL Server y solucionar sus problemas.
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5a1f176cba1212b305f4f2f3b2031e7882d692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660401"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778534"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Administración de clústeres de macrodatos de SQL Server con cuadernos de Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "85660401"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] proporciona una extensión para Azure Data Studio que incluye cuadernos. Un cuaderno proporciona documentación y código que se puede usar en Azure Data Studio para administrar clústeres de macrodatos de SQL Server 2019.
 
-Los [cuadernos](../azure-data-studio/notebooks-guidance.md), que originalmente se implementaban como un proyecto de código abierto, se han incorporado a [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). Puede usar Markdown para el texto de las celdas de texto y uno de los kernels disponibles para escribir código en las celdas de código.
+Los [cuadernos](../azure-data-studio/notebooks-guidance.md), que originalmente se implementaban como un proyecto de código abierto, se han incorporado a [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Puede usar Markdown para el texto de las celdas de texto y uno de los kernels disponibles para escribir código en las celdas de código.
 
 Puede usar cuadernos para implementar clústeres de macrodatos para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 

@@ -1,6 +1,6 @@
 ---
 title: Movimiento de datos con el archivo XDF
-description: 'Tutorial 13 de RevoScaleR: Traslado de datos usando XDF y el lenguaje R en SQL Server.'
+description: Use un archivo XDF para transferir datos entre contextos de cálculo remotos y locales. El almacenamiento de los datos en un archivo XDF permite realizar transformaciones en los datos.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c7e5ce4cbe995fd677acd406187dfaf264a7461
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04c84a81b61d0c8bb5e377dcd2c282495886fd02
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680005"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173460"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>Movimiento de datos entre SQL Server y el archivo XDF (tutorial de SQL Server y RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este es el tutorial 13 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 

@@ -1,6 +1,6 @@
 ---
 title: Propiedades y comportamientos de conjunto de filas (controlador OLE DB)
-description: Propiedades y comportamientos del conjunto de filas en OLE DB driver for SQL Server
+description: Estas son las propiedades del conjunto de filas de OLE DB Driver for SQL Server, incluido el nombre y la descripción de la propiedad.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, rowsets
 - properties [OLE DB]
 - OLE DB rowsets, properties
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e541289c5ae71a7289cd005ba03ca2f886fc0bb7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244186"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859992"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propiedades y comportamientos de conjuntos de filas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

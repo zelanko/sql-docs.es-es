@@ -1,5 +1,5 @@
 ---
-title: Bibliotecas de conexiones para Microsoft SQL Databases | Microsoft Docs
+title: Bibliotecas de conexiones para Microsoft SQL Database | Microsoft Docs
 description: Proporciona vínculos de descarga para los módulos que permiten la conexión a Microsoft SQL Server y a Azure SQL Database, desde diversos lenguajes de programación de cliente.
 author: David-Engel
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: f6f75adc047f39ae3e0e0c21143f64cf57d2803a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244056"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988512"
 ---
-# <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexión para las bases de datos SQL de Microsoft
+# <a name="connection-modules-for-microsoft-sql-database"></a>Módulos de conexión para las bases de datos SQL de Microsoft
 
 En este artículo se proporcionan vínculos de descarga a módulos de conexión o *controladores* que los programas cliente pueden usar para interactuar con [Microsoft SQL Server](../relational-databases/database-features.md) y con su gemelo en la nube, [Azure SQL Database](/azure/sql-database/). Hay controladores disponibles para diversos lenguajes de programación, que se ejecutan en los siguientes sistemas operativos:
 
@@ -50,7 +50,7 @@ En el presente artículo se dedican secciones independientes para estos dos tipo
 
 ## <a name="drivers-for-orm-access"></a>Controladores para el acceso ORM
 
-En la tabla siguiente se muestran ejemplos de marcos de asignación relacional de objetos (ORM) que las aplicaciones cliente utilizan para conectarse a bases de datos SQL de Microsoft.
+En la tabla siguiente se muestran ejemplos de marcos de asignación relacional de objetos (ORM) que las aplicaciones cliente utilizan para conectarse a Microsoft SQL Database.
 
 | Idioma | Descargar controlador de ORM |
 | :------- | :------------------ |

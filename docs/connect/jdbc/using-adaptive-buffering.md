@@ -1,4 +1,5 @@
 ---
+description: Empleo de almacenamiento en búfer adaptable
 title: Empleo de almacenamiento en búfer adaptable | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44b4b01798ac0bf37ce6e8deaadd2d0f02d9e5d4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 720baad5c144148fae222bc19bb268aa9adae463
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487949"
 ---
 # <a name="using-adaptive-buffering"></a>Empleo de almacenamiento en búfer adaptable
 
@@ -56,9 +57,9 @@ Cuando se leen valores grandes una vez con los métodos get\<Type>Stream y se ti
 
 - Los métodos get\<Type>Stream definidos en las clases [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) devuelven secuencias de una sola lectura de forma predeterminada, aunque se pueden restablecer las secuencias si lo determina la aplicación. Si la aplicación quiere `reset` el flujo, tiene que llamar primero al método `mark` en ese flujo.
 
-- Los métodos get\<Type>Stream definidos en las clases [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) y [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) devuelven secuencias cuya posición siempre se puede cambiar a la posición inicial del flujo sin llamar al método `mark`.
+- Los métodos get\<Type>Stream definidos en las clases [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) y [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) devuelven secuencias cuya posición siempre se puede cambiar a la posición inicial de la secuencia sin llamar al método `mark`.
 
-Cuando la aplicación utiliza el almacenamiento en búfer adaptable, los valores recuperados por los métodos get\<Type>Stream solo se pueden recuperar una vez. Si intenta llamar a cualquier método get\<Type> en la misma columna o parámetro después de llamar al método get\<Type>Stream del mismo objeto, se produce una excepción con un mensaje similar a "Se obtuvo acceso a los datos y estos no están disponibles para esta columna o parámetro".
+Cuando la aplicación utiliza el almacenamiento en búfer adaptable, los valores recuperados por los métodos get\<Type>Stream solo se pueden recuperar una vez. Si intenta llamar a cualquier método get\<Type> en la misma columna o parámetro después de llamar al método get\<Type>Stream del mismo objeto, se produce una excepción con el mensaje "Se obtuvo acceso a los datos y estos no están disponibles para esta columna o parámetro".
 
 > [!NOTE]
 > Una llamada a ResultSet.close() en pleno procesamiento de un conjunto ResultSet requeriría que Microsoft JDBC Driver para SQL Server leyese y descartase todos los paquetes restantes. Esto puede tardar un tiempo sustancial si la consulta ha devuelto un conjunto de datos grandes y, sobre todo, si la conexión de red es lenta.
@@ -69,11 +70,11 @@ Los desarrolladores de software deberían seguir estas importantes directrices p
 
 - Evite utilizar la propiedad de cadena de conexión **selectMethod=cursor** para permitir a la aplicación procesar un conjunto de resultados muy grande. La característica de almacenamiento en búfer adaptable permite a las aplicaciones procesar los conjuntos de resultados de solo avance y solo lectura muy grandes sin utilizar un cursor de servidor. Tenga en cuenta que cuando configura **selectMethod=cursor**, se ven impactados todos los conjuntos de resultados de solo avance y solo lectura producidos por esa conexión. Dicho de otro modo, si la aplicación procesa rutinariamente conjuntos de resultados cortos con pocas filas, crear, leer y cerrar un cursor de servidor por cada conjunto de resultados usará más recursos del lado cliente y en el lado servidor de lo que sucede cuando **selectMethod** no está configurado en **cursor**.
 
-- Lea valores binarios o de texto grandes como flujos mediante los métodos getAsciiStream, getBinaryStream o getCharacterStream en lugar de los métodos getBlob o getClob. Desde la versión 1.2, la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) proporciona métodos get\<Type>Stream nuevos para este propósito.
+- Lea valores binarios o de texto grandes como flujos mediante los métodos getAsciiStream, getBinaryStream o getCharacterStream en lugar de los métodos getBlob o getClob. A partir de la versión 1.2, la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) proporciona nuevos métodos get\<Type>Stream para este fin.
 
 - Asegúrese de que las columnas con valores potencialmente grandes se colocan en último lugar en la lista de columnas en una instrucción SELECT y de que se usan los métodos get\<Type>Stream de [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) para acceder a las columnas en el orden en que se seleccionan.
 
-- Asegúrese de que los parámetros OUT con valores potencialmente grandes se declaran en último lugar en la lista de parámetros del código SQL que se usa para crear [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Además, compruebe que se usan los métodos get\<Type>Stream de [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) para acceder a los parámetros OUT en el orden en que se declaran.
+- Asegúrese de que los parámetros OUT con valores potencialmente grandes se declaran en último lugar en la lista de parámetros del código SQL que se usa para crear [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Además, compruebe que los métodos get\<Type>Stream de [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) se usan para acceder a los parámetros OUT en el orden en que se declaran.
 
 - Evite ejecutar simultáneamente más de una instrucción en la misma conexión. Ejecutar otra instrucción antes de procesar los resultados de la anterior puede provocar que los resultados sin procesar se almacenen en el búfer en la memoria de la aplicación.
 

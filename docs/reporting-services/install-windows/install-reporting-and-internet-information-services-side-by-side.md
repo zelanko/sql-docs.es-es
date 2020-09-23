@@ -1,4 +1,5 @@
 ---
+description: Instalar Reporting Services e Internet Information Services en paralelo
 title: Instalar Reporting Services e Internet Information Services en paralelo | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b854add44b256078cd19963f2ef22d55a7b3d300
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6e32958f17e4cdb57b37fcf4a85ad54a11b48821
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "64330629"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472687"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Instalar Reporting Services e Internet Information Services en paralelo
 
@@ -54,8 +55,8 @@ Puede instalar y ejecutar SQL Server Reporting Services (SSRS) e Internet Inform
   
 |Application|Reserva de direcciones URL|Descripción|Confirmación de solicitud|  
 |-----------------|---------------------|-----------------|---------------------|  
-|Servidor de informes|`https://+:80/ReportServer`|Carácter comodín fuerte en el puerto 80, con directorio virtual del servidor de informes.|Recibe todas las solicitudes del puerto 80 que especifican el directorio virtual del servidor de informes. El servicio web del servidor de informes recibe todas las solicitudes para https://\<nombreDeEquipo>/servidorDeInformes.|  
-|Portal web|`https://+:80/Reports`|Carácter comodín fuerte en el puerto 80, con directorio virtual Reports.|Recibe todas las solicitudes del puerto 80 que especifican el directorio virtual de informes. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] recibe todas las solicitudes para https://\<nombreDeEquipo>/reports.|  
+|Servidor de informes|`https://+:80/ReportServer`|Carácter comodín fuerte en el puerto 80, con directorio virtual del servidor de informes.|Recibe todas las solicitudes del puerto 80 que especifican el directorio virtual del servidor de informes. El servicio web del servidor de informes recibe todas las solicitudes a https://\<computername>/reportserver.|  
+|Portal web|`https://+:80/Reports`|Carácter comodín fuerte en el puerto 80, con directorio virtual Reports.|Recibe todas las solicitudes del puerto 80 que especifican el directorio virtual de informes. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] recibe todas las solicitudes a https://\<computername>/reports.|  
 |IIS|`https://*:80/`|Carácter comodín débil en el puerto 80.|Recibe las solicitudes restantes del puerto 80 que no recibe ninguna otra aplicación.|  
 
 ## <a name="side-by-side-deployments-of-sql-server-reporting-services-on-iis-80-85"></a>Implementaciones en paralelo de SQL Server Reporting Services en IIS 8.0 y 8.5
@@ -66,7 +67,7 @@ Puede instalar y ejecutar SQL Server Reporting Services (SSRS) e Internet Inform
   
 -   Una instancia del servidor de informes instalada en la configuración predeterminada, donde la reserva de direcciones URL también especifica el puerto 80 y la aplicación [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] también usa "Reports" como nombre del directorio virtual.  
   
- Dada esta configuración, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] recibe una solicitud enviada a https://\<nombreDeEquipo>:80/reports. La aplicación a la que se acceda a través del directorio virtual Reports en IIS ya no recibe solicitudes una vez instalada la instancia del servidor de informes.  
+ Dada esta configuración, una solicitud que se envía a https://\<computername>:80/reports la recibirá el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. La aplicación a la que se acceda a través del directorio virtual Reports en IIS ya no recibe solicitudes una vez instalada la instancia del servidor de informes.  
   
  Si ejecuta implementaciones simultáneas de versiones anteriores y más recientes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es probable que encuentre el problema de enrutamiento que acabamos de describir. Esto se debe a que todas las versiones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usan "ReportServer" y "Reports" como nombres de directorio virtual para las aplicaciones del servidor de informes y del [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] , lo que aumenta la probabilidad de que tenga los directorios virtuales "reports" y "reportserver" en IIS.  
   

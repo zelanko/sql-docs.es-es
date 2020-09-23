@@ -1,7 +1,8 @@
 ---
-title: Agrupación de conexiones (controladores de Microsoft para PHP para SQL Server) | Microsoft Docs
+title: Agrupación de conexiones (controladores de Microsoft para PHP para SQL Server)
+description: Obtenga información sobre la agrupación de conexiones al usar los controladores de Microsoft para PHP para SQL Server y cómo puede variar la experiencia en función del sistema operativo.
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 08/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714a3436cc79f3568e14c5e2609e16fd408f288e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 147e744a69850a5c76b9706c03a96fa67d2efb5f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900991"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435261"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Agrupación de conexiones (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ A continuación, se muestran consideraciones importantes que hay tener cuenta so
   
 -   De forma predeterminada, la agrupación de conexiones está habilitada en Windows. En Linux y macOS, las conexiones se agrupan solo si la agrupación de conexiones está habilitada para ODBC (consulte [Habilitación y deshabilitación de la agrupación de conexiones](#enablingdisabling-connection-pooling)). Cuando la agrupación de conexiones está habilitada y se conecta a un servidor, el controlador intenta usar una conexión agrupada antes de crear una. Si no encuentra una conexión equivalente en el grupo, se crea una nueva conexión y se agrega al grupo. El controlador determina si las conexiones son equivalentes según una comparación de las cadenas de conexión.  
   
--   Cuando se utiliza una conexión del grupo, se restablece el estado de conexión.  
+-   Cuando se utiliza una conexión del grupo, se restablece el estado de conexión (solo Windows).  
   
 -   Al cerrar la conexión, la conexión vuelve al grupo.  
   
@@ -39,8 +40,12 @@ Para obtener más información sobre la agrupación de conexiones, consulte [Agr
 Puede forzar a que el controlador cree una nueva conexión en lugar de buscar una equivalente en la agrupación de conexiones mediante el establecimiento del valor del atributo *ConnectionPooling* de la cadena de conexión en **false** (o 0).  
   
 Si el atributo *ConnectionPooling* se omite de la cadena de conexión, o si se establece en **True** (o 1), el controlador solo crea una nueva conexión en el caso de que no exista una equivalente en la agrupación de conexiones.  
+
+> [!NOTE]  
+> Conjuntos de resultados activos múltiples (MARS) está habilitado de forma predeterminada. Cuando tanto MARS como la agrupación están en uso, para que MARS funcione correctamente, el controlador requiere un tiempo más largo para restablecer la conexión en la *primera* consulta, por lo que se omite cualquier tiempo de espera de consulta especificado. Sin embargo, el valor de tiempo de espera de consulta surtirá efecto en las consultas posteriores.
   
-Para obtener información sobre otros atributos de conexión, consulte [Connection Options](../../connect/php/connection-options.md).  
+Si es necesario, consulte [Procedimiento: Desactivación de los conjuntos de resultados activos múltiples (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md). Para obtener información sobre otros atributos de conexión, consulte [Connection Options](../../connect/php/connection-options.md).  
+
 ### <a name="linux-and-macos"></a>Linux y macOS
 No se puede usar el atributo *ConnectionPooling* para habilitar o deshabilitar la agrupación de conexiones. 
 
@@ -51,7 +56,7 @@ Si se establece `Pooling` en `Yes` y un valor de `CPTimeout` positivo en el arch
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
+[ODBC Driver 17 for SQL Server]
 CPTimeout=<int value>
 ```
   
@@ -61,9 +66,9 @@ Como mínimo, el archivo odbcinst.ini debe tener un aspecto similar al de este e
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
-Description=Microsoft ODBC Driver 13 for SQL Server
-Driver=/opt/microsoft/msodbcsql/lib64/libmsodbcsql-13.1.so.3.0
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.1
 UsageCount=1
 CPTimeout=120
 ```
@@ -75,7 +80,7 @@ Pooling=No
 ```
 
 ## <a name="remarks"></a>Observaciones
-- En Linux o macOS, todas las conexiones se agruparán si está habilitada la agrupación en el archivo odbcinst.ini. Esto significa que la opción de conexión ConnectionPooling no tiene ningún efecto. Para deshabilitar la agrupación, establezca Pooling=No en el archivo odbcinst.ini y vuelva a cargar los controladores.
+- En Linux o macOS, no se recomienda la agrupación de conexiones con una versión de unixODBC inferior a la 2.3.7. Todas las conexiones se agruparán si está habilitada la agrupación en el archivo odbcinst.ini, lo que significa que la opción de conexión ConnectionPooling no tiene ningún efecto. Para deshabilitar la agrupación, establezca Pooling=No en el archivo odbcinst.ini y vuelva a cargar los controladores. 
   - Puede que unixODBC <= 2.3.4 (Linux y macOS) no devuelva la información de diagnóstico adecuada, como mensajes de error, advertencias y mensajes de información.
   - Por esta razón, es posible que los controladores SQLSRV y PDO_SQLSRV no puedan capturar correctamente datos largos (por ejemplo, XML, binarios) como cadenas. Como solución temporal, los datos largos se pueden capturar como secuencias. Consulte el ejemplo siguiente para obtener más información sobre SQLSRV.
 
@@ -125,7 +130,7 @@ function getColumn($conn)
 
 
 ## <a name="see-also"></a>Consulte también  
-[Conexión mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+[Procedimientos: Conexión con la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Cómo: Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

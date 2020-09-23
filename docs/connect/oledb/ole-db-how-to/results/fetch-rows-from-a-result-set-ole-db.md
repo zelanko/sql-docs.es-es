@@ -1,6 +1,6 @@
 ---
 title: Captura de filas de un conjunto de resultados (controlador OLE DB) | Microsoft Docs
-description: Cómo capturar filas de un conjunto de resultados mediante OLE DB Driver for SQL Server
+description: Obtenga información sobre cómo capturar filas de un conjunto de resultados mediante el uso de OLE DB Driver for SQL Server. En este ejemplo se utiliza la base de datos de ejemplo AdventureWorks.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - rows [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 26d224012aadbd382ac3db1d66627e2e5b6160fd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 967b8613902900b436abc6ab282c1cf6329dca71
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244720"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860282"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Cómo capturar filas de un conjunto de resultados (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

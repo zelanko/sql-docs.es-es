@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8a3ab7a079106cf009bbae82a1116a93499e0d71
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487224"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396843"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
     
 ## <a name="details"></a>Detalles  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Nombre de producto|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Id. de evento|rsProcessingError|  
@@ -71,7 +71,7 @@ ms.locfileid: "81487224"
   
 -   Si está viendo un informe como administrador local en el servidor de informes, puede ver la pila de llamadas si hace clic con el botón derecho en la página y selecciona **Ver código fuente**. En ella se proporciona información adicional.  
   
--   Si actúa como administrador local en el servidor de informes, busque `ReportProcessingException`en el archivo de registro. Las entradas del registro contienen más información. El archivo de registro del servidor de informes suele encontrarse en \<*unidad*>:\Archivos de programa\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*marcaDeFechaYHora*.log. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+-   Si actúa como administrador local en el servidor de informes, busque `ReportProcessingException`en el archivo de registro. Las entradas del registro contienen más información. El archivo de registro del servidor de informes suele encontrarse en \<*drive*>:\Archivos de programa\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*marcaDeFechaYHora*.log. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Error al cargar el ensamblado de expresiones  
  Los ensamblados personalizados necesitan tener un nombre seguro y el atributo AllowPartiallyTrustedCallers establecido. Para obtener más información, consulte [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) y [Understanding Security Policies](../../reporting-services/extensions/secure-development/understanding-security-policies.md).  
@@ -97,11 +97,11 @@ ms.locfileid: "81487224"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>No se pueden comparar los tipos de datos para un filtro  
  En una ecuación de filtro, la expresión de filtro que define lo que se ha de filtrar y el valor de filtro deben ser del mismo tipo de datos para poder compararse. Si ve alguno de los errores siguientes, modifique la expresión de campo o el valor de filtro para que los tipos de datos coincidan:  
   
--   No se puede efectuar el procesamiento de *\<tipo de elemento de informe>* del *\<nombre del elemento de informe>* . No se pueden comparar los datos de los tipos *\<tipo>* y *\<tipo>* . Compruebe el tipo de datos devuelto por el *\<nombre del elemento de informe>* .  
+-   No se puede procesar *\<report item type>* para *\<report item name>* . No se pueden comparar datos de tipos *\<type>* y *\<type>* . Compruebe el tipo de datos devuelto por *\<report item name>* .  
   
--   Error al evaluar el *\<nombre de propiedad>* .  
+-   Error al evaluar *\<property name>* .  
   
--   Error al evaluar el *\<nombre de propiedad>* . Hace referencia a un campo de conjunto de datos que contiene un error: *\<cadena de error>* .  
+-   Error al evaluar *\<property name>* . Hace referencia a un campo de conjunto de datos que tiene un error: *\<error string>* .  
   
  Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -110,13 +110,13 @@ ms.locfileid: "81487224"
   
  También se puede pasar el nombre de un ámbito concreto a una función de agregado. El ámbito puede hacer referencia al nombre de un conjunto de datos, una región de datos o el nombre un ámbito superior en la jerarquía de datos. Esto se aplica a los mensajes siguientes:  
   
--   El *\<tipo de elemento de informe>* " *\<nombre de elemento de informe>* " tiene el ámbito no válido " *\<nombre de ámbito>* ". El ámbito debe ser el actual o estar dentro del actual.  
+-   El elemento " *\<report item name>* "de tipo *\<report item type>* tiene un ámbito no válido " *\<scope name>* ". El ámbito debe ser el actual o estar dentro del actual.  
   
--   La expresión *\<nombre de propiedad>* del *\<tipo de elemento de informe>* " *\<nombre de elemento de informe>* " tiene un parámetro de ámbito que no es válido para una función de agregado. El parámetro de ámbito debe establecerse en una constante de cadena que sea igual al nombre de un grupo contenedor, al nombre de una región de datos contenedora o al nombre de un conjunto de datos.  
+-   La expresión *\<property name>* del elemento " *\<report item name>* " de tipo *\<report item type>* tiene un parámetro de ámbito que no es válido para una función de agregado. El parámetro de ámbito debe establecerse en una constante de cadena que sea igual al nombre de un grupo contenedor, al nombre de una región de datos contenedora o al nombre de un conjunto de datos.  
   
  Para las funciones de agregado que calculan totales acumulados (**Previous**, **RunningValue**o **RowNumber**), se puede especificar un parámetro de ámbito que sea un nombre de grupo de filas o de grupo de columnas, pero no ambos. Esto se aplica al mensaje de error siguiente:  
   
--   Las funciones de agregado **Previous**, **RunningValue** o **RowNumber** usadas en las celdas de datos del *\<tipo de elemento de informe>* ' *\<nombre de elemento de informe>* ' hacen referencia a ámbitos de agrupación tanto de las columnas como de las filas del *\<tipo de elemento de informe>* . Los parámetros de ámbito de todas las funciones de agregado **Previous**, **RunningValue** y **RowNumber** de *\<tipo de elemento de informe>* pueden hacer referencia a agrupaciones de filas o agrupaciones de columnas de datos, pero no a ambos.  
+-   Las funciones de agregado **Previous**, **RunningValue** o **RowNumber** utilizadas en las celdas de datos del objeto " *\<report item name>* " de tipo *\<report item type>* hacen referencia a los ámbitos de agrupación de las columnas y filas de *\<report item type>* . Los parámetros de ámbito de todas las funciones de agregado **Previous**, **RunningValue** y **RowNumber** de *\<report item type>* pueden hacer referencia a agrupaciones de filas o agrupaciones de columnas de datos, pero no a ambos.  
   
  Para más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) y [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

@@ -1,7 +1,7 @@
 ---
 title: Novedades de las extensiones de lenguaje de SQL Server
 titleSuffix: ''
-description: Obtenga información sobre las novedades de las extensiones de lenguaje de SQL Server.
+description: Obtenga información sobre las novedades de las extensiones de lenguaje de SQL Server que amplía, amplía y profundiza la integración entre lenguajes externos y la plataforma de datos.
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b52daf4ad0e789dc1508b5903cc95a92c39e0929
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4a38bba48d9accd16a3e8ca68bd3136c3419e5ad
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921066"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173521"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>Novedades de las extensiones de lenguaje de SQL Server
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 Se han agregado funcionalidades de [extensiones de lenguaje](language-extensions-overview.md) a SQL Server en cada versión a medida que se continúa la expansión, ampliación y profundización de la integración entre los lenguajes externos y la plataforma de datos. 
 

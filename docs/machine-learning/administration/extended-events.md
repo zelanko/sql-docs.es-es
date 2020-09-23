@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 66abbc624cfb4126a55ce36b9ea67cbdd9aaeff2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110169"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860027"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Supervisar scripts de Python o R con eventos extendidos en SQL Server Machine Learning Services
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Obtenga información sobre cómo usar eventos extendidos para supervisar y solucionar problemas de operaciones relacionadas con los scripts externos de trabajos de Python o R, SQL Server Machine Learning Services y SQL Server Launchpad.
 
@@ -102,7 +102,7 @@ SQL Server Machine Learning Services inicia algunos servicios que se ejecutan fu
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
-    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
+    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs`.
 
 El archivo de configuración se debe llamar igual que el ejecutable, con el formato "[nombre].xevents.xml". Dicho de otro modo, los archivos deben tener el siguiente nombre:
 
@@ -112,7 +112,7 @@ El archivo de configuración se debe llamar igual que el ejecutable, con el form
 El propio archivo de configuración presenta el siguiente formato:
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="you">Xevent for launchpad or bxl server.</description>  

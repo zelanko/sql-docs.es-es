@@ -1,4 +1,5 @@
 ---
+description: Pantalla 1 del Asistente para orígenes de datos (ODBC Driver for SQL Server)
 title: Pantalla del Asistente para orígenes de datos 1 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28c89bd90a8182a8fd8114de4a9e2ec9da4e9464
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78009925b5d62e8a314d0a3fdc27c29acaee5c5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462229"
 ---
 # <a name="data-source-wizard-screen-1"></a>Pantalla del Asistente para orígenes de datos 1
 
@@ -23,7 +24,7 @@ Especifique el nombre y la descripción del origen de datos y el nombre del serv
     
 ## <a name="options"></a>Opciones
 
-### <a name="name"></a>Nombre
+### <a name="name"></a>NOMBRE
 
 El nombre del origen de datos usado por una aplicación ODBC cuando solicita una conexión al origen de datos. Por ejemplo, "Personal". El nombre del origen de datos se muestra en el cuadro de diálogo Administrador de orígenes de datos ODBC.
 
@@ -45,7 +46,7 @@ Para más información acerca de los nombres de servidor para diferentes tipos d
 
 Si la información especificada en esta pantalla es todo lo que se necesita para conectar con SQL Server, puede hacer clic en **Finalizar**. Los valores predeterminados se utilizan para todos los atributos especificados en otras pantallas del asistente.
 
-### <a name="next"></a>Siguiente
+### <a name="next"></a>Siguientes
 
 Para continuar con la siguiente pantalla del asistente, haga clic en **Siguiente**.
 

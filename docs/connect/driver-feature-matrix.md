@@ -2,19 +2,19 @@
 title: Matriz de compatibilidad de características del controlador
 description: Obtenga información sobre las características populares que se admiten en los controladores para SQL Server y dónde encontrar información sobre ellas.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: a879b3784b19de4e7d30e1af213953b8e592abf9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4071353214f7ffde54ecd1097defaa6c60aa19d6
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947895"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823360"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matriz de compatibilidad de características del controlador para Microsoft SQL Server
 
@@ -60,8 +60,8 @@ Queremos que todos los controladores admitan todas las características y dedica
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Sí](odbc/using-always-encrypted-with-the-odbc-driver.md) | [Sí](odbc/using-always-encrypted-with-the-odbc-driver.md) | [Sí](jdbc/using-always-encrypted-with-the-jdbc-driver.md) |
 | [Always Encrypted con enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Sí](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [Sí](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [Sí](jdbc/using-always-encrypted-with-the-jdbc-driver.md) | |
 | [Autenticación de token de acceso de Azure Active Directory](/azure/active-directory/develop/access-tokens) | [Sí](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Sí](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Sí](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) | [Sí](oledb/features/using-azure-active-directory.md) |
-| [Autenticación de contraseña de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) |  [Sí](odbc/using-azure-active-directory.md) | [Sí](odbc/using-azure-active-directory.md)<sup>[1](#note1)</sup> | [Sí](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sí](oledb/features/using-azure-active-directory.md) |
-| [Autenticación integrada de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sí](odbc/using-azure-active-directory.md) | | [Sí](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sí](oledb/features/using-azure-active-directory.md) |
+| [Autenticación de contraseña de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) |  [Sí](odbc/using-azure-active-directory.md) | [Sí](odbc/using-azure-active-directory.md) | [Sí](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sí](oledb/features/using-azure-active-directory.md) |
+| [Autenticación integrada de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sí](odbc/using-azure-active-directory.md) | [Sí](odbc/using-azure-active-directory.md) | [Sí](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sí](oledb/features/using-azure-active-directory.md) |
 | [Autenticación interactiva (MFA) de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sí](odbc/using-azure-active-directory.md) | | | [Sí](oledb/features/using-azure-active-directory.md) |
 | [Autenticación de identidad administrada de Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Sí](odbc/using-azure-active-directory.md) | [Sí](odbc/using-azure-active-directory.md) | [Sí](jdbc/connecting-using-azure-active-directory-authentication.md) | [Sí](oledb/features/using-azure-active-directory.md) |
 | [Autenticación de entidad de servicio de Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
@@ -75,14 +75,14 @@ Queremos que todos los controladores admitan todas las características y dedica
 | [Resolución de IP de red transparente](odbc/using-transparent-network-ip-resolution.md) | [Sí](odbc/using-transparent-network-ip-resolution.md) | [Sí](odbc/using-transparent-network-ip-resolution.md) | [Sí](jdbc/setting-the-connection-properties.md) | [Sí](oledb/features/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-| <a id="table3"></a>Característica | [Controladores de PHP para SQL Server en Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Controladores de PHP para SQL Server en Linux y macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[2](#note2)</sup> |
+| <a id="table3"></a>Característica | [Controladores de PHP para SQL Server en Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Controladores de PHP para SQL Server en Linux y macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[1](#note1)</sup> |
 | :-- | :-- | :-- | :-- | :-- |
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Sí](php/using-always-encrypted-php-drivers.md) | [Sí](php/using-always-encrypted-php-drivers.md) | | Sí |
 | [Always Encrypted con enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Sí](php/always-encrypted-secure-enclaves.md) | [Sí](php/always-encrypted-secure-enclaves.md) | | Sí |
 | [Autenticación de token de acceso de Azure Active Directory](/azure/active-directory/develop/access-tokens) | [Sí](php/azure-active-directory.md) | [Sí](php/azure-active-directory.md) | [Sí](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Sí |
-| [Autenticación de contraseña de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sí](php/azure-active-directory.md) | [Sí](php/azure-active-directory.md)<sup>[1](#note1)</sup> | [Sí](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Sí |
-| [Autenticación integrada de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | | | | Sí<sup>[3](#note3)</sup> |
-| [Autenticación interactiva (MFA) de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | | | | Sí<sup>[3](#note3)</sup> |
+| [Autenticación de contraseña de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sí](php/azure-active-directory.md) | [Sí](php/azure-active-directory.md) | [Sí](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Sí |
+| [Autenticación integrada de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Sí](php/azure-active-directory.md) | [Sí](php/azure-active-directory.md) | | Sí |
+| [Autenticación interactiva (MFA) de Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | | | | Sí<sup>[2](#note2)</sup> |
 | [Autenticación de identidad administrada de Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Sí](php/azure-active-directory.md) | [Sí](php/azure-active-directory.md) | [Sí](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Sí |
 | [Autenticación de entidad de servicio de Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
 | [Autenticación integrada de Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | [Sí](php/how-to-connect-using-windows-authentication.md) | [Sí](odbc/linux-mac/using-integrated-authentication.md) | | Sí |
@@ -95,11 +95,9 @@ Queremos que todos los controladores admitan todas las características y dedica
 | [Resolución de IP de red transparente](odbc/using-transparent-network-ip-resolution.md) | [Sí](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Sí](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Sí](odbc/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<a id="note1"></a><sup>1</sup> La autenticación federada de Active Directory sin sincronización de hash de contraseñas o la autenticación de paso a través no es compatible con Linux y macOS.
+<a id="note1"></a><sup>1</sup> Debido a que estos controladores se basan en Microsoft ODBC Driver for SQL Server, también se debe usar una versión de ese controlador que admita la característica.
 
-<a id="note2"></a><sup>2</sup> Debido a que estos controladores se basan en Microsoft ODBC Driver for SQL Server, también se debe usar una versión de ese controlador que admita la característica.
-
-<a id="note3"></a><sup>3</sup> Solo en Windows.
+<a id="note2"></a><sup>2</sup> Solo en Windows.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

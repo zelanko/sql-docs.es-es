@@ -1,4 +1,5 @@
 ---
+description: Operadores
 title: Operadores
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -24,18 +25,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a500a4c03562d024bb64a65053fe1afc374844c8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9727e0ac0270b32fe4df943e6ab91d2748cc7994
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88319021"
 ---
 # <a name="operators"></a>Operadores
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 Los operadores son alias para personas o grupos que pueden recibir una notificación electrónica cuando los trabajos se completan o se activa una alerta. El servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la notificación de administradores a través de operadores. Los operadores habilitan las capacidades de notificación y supervisión del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

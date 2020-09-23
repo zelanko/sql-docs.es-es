@@ -2,7 +2,7 @@
 title: Mejora del rendimiento y la confiabilidad con el controlador JDBC
 description: Obtenga información sobre las distintas técnicas para mejorar el rendimiento y la confiabilidad de la aplicación al usar Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: bc04a90569974acbc99dcb66680d66289db1c0d1
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728473"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565388"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>Mejora del rendimiento y la confiabilidad con el controlador JDBC
 
@@ -37,6 +37,7 @@ En los temas de esta sección se describen las distintas técnicas para aumentar
 |[Columnas dispersas](../../connect/jdbc/sparse-columns.md)|En este tema se detalla la compatibilidad del controlador JDBC con las columnas dispersas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Almacenamiento en caché de metadatos de instrucciones preparadas para el controlador JDBC](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Describe las técnicas para aumentar el rendimiento con consultas de instrucciones preparadas.|
 |[Uso de la API de copia masiva para la operación de inserción por lotes](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|Describe cómo habilitar la API de copia masiva para las operaciones de inserción por lotes y sus ventajas.|
+|[No se envían parámetros de cadena como Unicode](../../connect/jdbc/setting-the-connection-properties.md)|Al trabajar con datos **CHAR**, **VARCHAR** y **LONGVARCHAR**, los usuarios pueden establecer la propiedad de conexión **sendStringParametersAsUnicode** en `false` para obtener un aumento óptimo del rendimiento.|
 
 ## <a name="see-also"></a>Consulte también
 

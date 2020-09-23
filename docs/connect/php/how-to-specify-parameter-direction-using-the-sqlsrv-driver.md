@@ -1,7 +1,8 @@
 ---
-title: Especificación de la dirección del parámetro con el controlador SQLSRV | Microsoft Docs
+title: Especificación de la dirección del parámetro con el controlador SQLSRV
+description: Aprenda a especificar la dirección del parámetro al llamar a un procedimiento almacenado mediante el controlador SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 85a106a8e6a7f9afcac449b241b0255a16c51233
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f085fc40ded15310b81d6a447f30676ed011e7f8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915931"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680260"
 ---
-# <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Cómo especificar la dirección del parámetro con el controlador SQLSRV
+# <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Procedimientos: Especificación de la dirección del parámetro con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 En este tema se describe cómo utilizar el controlador SQLSRV para especificar la dirección del parámetro cuando se llama a un procedimiento almacenado. La dirección del parámetro se especifica cuando se crea un parámetro de matriz (paso 3) que se transmite a [sqlsrv_query](../../connect/php/sqlsrv-query.md) o [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
@@ -43,7 +44,7 @@ En este tema se describe cómo utilizar el controlador SQLSRV para especificar l
     ```  
   
     > [!NOTE]  
-    > Las variables que se inicializan o actualizan a **Null**, **DateTime**o tipos de secuencia no se pueden usar como parámetros de salida.  
+    >  Las variables que se inicializan o actualizan a **Null**, **DateTime**o tipos de secuencia no se pueden usar como parámetros de salida.  
   
 3.  Use las variables PHP del paso 2 para crear o actualizar una matriz de valores de parámetro que se corresponden, en orden, con los marcadores de posición de la cadena de Transact-SQL. Especifique la dirección de cada parámetro de la matriz. La dirección de cada parámetro se establece de una de estas dos maneras: de forma predeterminada (para los parámetros de entrada) o mediante las constantes **SQLSRV_PARAM_\*** (para los parámetros de salida y bidireccionales). Por ejemplo, en el siguiente código se especifica el parámetro *$employeeId* como parámetro de entrada, y el parámetro *$usedVacationHours* , como un parámetro bidireccional:  
   
@@ -83,7 +84,7 @@ En este tema se describe cómo utilizar el controlador SQLSRV para especificar l
     ```  
   
 ## <a name="see-also"></a>Consulte también  
-[Recuperación de parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Procedimientos: Recuperación de los parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[Recuperación de parámetros de entrada y salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[Procedimientos: Recuperación de los parámetros de entrada y salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

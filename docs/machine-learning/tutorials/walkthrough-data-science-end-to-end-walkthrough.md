@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial de R: Desarrollo del modelo en SQL'
-description: Tutorial en el que se explica cómo crear una solución de R completa para el análisis en bases de datos.
+description: Aprenda a crear una solución completa para el modelado de predicción basado en la compatibilidad con características de R de SQL Server 2016 o SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 10/11/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781799"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179780"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: Desarrollo de SQL para científicos de datos de R
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 En este tutorial para científicos de datos, aprenderá a crear una solución completa para el modelado de predicción basado en la compatibilidad con características de R de SQL Server 2016 o SQL Server 2017. En este tutorial se usa una base de datos [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) en SQL Server. 
 

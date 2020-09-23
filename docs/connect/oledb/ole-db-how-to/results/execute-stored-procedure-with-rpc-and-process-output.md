@@ -1,6 +1,6 @@
 ---
 title: Ejecutar un procedimiento almacenado con RPC y procesar la salida | Microsoft Docs
-description: Ejecutar un procedimiento almacenado con RPC y procesar la salida
+description: Obtenga información sobre cómo ejecutar procedimientos almacenados de SQL Server con RPC y procesar códigos de devolución y parámetros de salida en este ejemplo.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - RPC syntax
 - stored procedures [SQL Server], RPC syntax
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 26d944b3e6b040baa7f2105d09429f827b2094d0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b9e62ebb5b8060c3b19e06d4e0af71981a63660c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012499"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860302"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Ejecutar procedimiento almacenado con RPC y procesar la salida
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

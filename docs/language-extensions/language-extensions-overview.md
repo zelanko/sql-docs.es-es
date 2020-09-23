@@ -4,24 +4,27 @@ titleSuffix: ''
 description: Las extensiones de lenguaje son una característica de SQL Server que se usa para ejecutar código externo. En SQL Server 2019, se admite Java. Los datos relacionales se pueden usar en el código externo mediante el uso del marco de extensibilidad.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 08/19/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f5ef0b9dd1023f662850e6e680507f5bf4041051
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3877e08c3f8976fc6a5c0aedfca594b8dee165a6
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921076"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645934"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>¿Qué son las extensiones de lenguaje de SQL Server?
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
 
 Las extensiones de lenguaje son una característica de SQL Server que se usa para ejecutar código externo. Los datos relacionales se pueden usar en el código externo mediante el uso del [marco de extensibilidad](concepts/extensibility-framework.md).
 
 En SQL Server 2019, se admite Java. El entorno de ejecución predeterminado de Java es Zulu Open JRE. También puede usar otro JRE o SDK de Java.
+
+> [!NOTE]
+> Para ejecutar Python o R en SQL Server, consulte la documentación de [Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md).
 
 ## <a name="what-you-can-do-with-language-extensions"></a>Qué puede hacer con las extensiones de lenguaje
 
@@ -35,7 +38,7 @@ Las extensiones de lenguaje proporcionan varias ventajas:
 + Velocidad. Las bases de datos están optimizadas para operaciones basadas en conjuntos. Las innovaciones recientes en las bases de datos, como las tablas en memoria, permiten realizar resúmenes y agregaciones con suma rapidez, y son un complemento perfecto para la ciencia de datos.
 + Facilidad de implementación e integración. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es el punto central de operaciones para muchas otras tareas y aplicaciones de administración de datos. El uso de los datos que residen en la base de datos, garantiza que la información que usa Java es coherente y está actualizada.
 
-## <a name="how-to-get-started"></a>Introducción
+## <a name="how-to-get-started"></a>Primeros pasos
 
 ### <a name="step-1-install-the-software"></a>Paso 1: Instalar el software
 

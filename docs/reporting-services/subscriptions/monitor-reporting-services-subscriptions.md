@@ -15,20 +15,27 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742040"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396097"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Supervisar suscripciones de Reporting Services
   Puede supervisar las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la interfaz de usuario, Windows PowerShell o los archivos de registro. Las opciones disponibles para la supervisión dependen del modo de servidor de informes que esté ejecutando.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
-  
+**[!INCLUDE[applies](../../includes/applies-md.md)]**
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo  
+    :::column-end:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint  
+    :::column-end:::
+:::row-end:::
+
  **En este artículo:**  
   
 -   [Interfaz de usuario del modo nativo](#bkmk_native_mode)  
@@ -48,17 +55,17 @@ ms.locfileid: "80742040"
 |------------|-----------------|  
 |Suscripción nueva|Aparece cuando crea la suscripción.|  
 |Inactivo|Aparece cuando no se puede procesar una suscripción. Para obtener más información, vea "Administrar suscripciones inactivas" más adelante en este artículo.|  
-|Hecho: \<*número*> procesados de un total de \<*número*>; \<*número*> errores.|Muestra el estado de la ejecución de una suscripción controlada por datos; este mensaje procede del Procesador de entrega y programación.|  
-|\<*número*> procesadas|El número de notificaciones que el Procesador de entrega y programación ha entregado correctamente o que ya no intenta entregar. Cuando se completa una entrega controlada por datos, el número de notificaciones procesadas debe ser igual al número total de notificaciones generadas.|  
-|\<*número*> total|El número total de notificaciones generadas para la última entrega de la suscripción.|  
-|\<*número*> error|El número de notificaciones que el Procesador de entrega y programación no ha podido entregar o que ya no intenta entregar.|  
+|Listo: se han procesado \<*number*> de un total de \<*number*>; \<*number*> errores.|Muestra el estado de la ejecución de una suscripción controlada por datos; este mensaje procede del Procesador de entrega y programación.|  
+|Se han procesado \<*number*>|El número de notificaciones que el Procesador de entrega y programación ha entregado correctamente o que ya no intenta entregar. Cuando se completa una entrega controlada por datos, el número de notificaciones procesadas debe ser igual al número total de notificaciones generadas.|  
+|\<*number*> en total|El número total de notificaciones generadas para la última entrega de la suscripción.|  
+|\<*number*> con error|El número de notificaciones que el Procesador de entrega y programación no ha podido entregar o que ya no intenta entregar.|  
 |Error al enviar correo: error de transporte en la conexión al servidor.|Indica que el servidor de informes no se ha conectado al servidor de correo; este mensaje procede de la extensión de entrega por correo electrónico.|  
-|El archivo \<*nombreDeArchivo*> se ha escrito en \<ruta de acceso>.|Indica que se ha realizado correctamente la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
+|El archivo \<*filename*> se ha escrito en \<path>.|Indica que se ha realizado correctamente la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
 |Error desconocido al escribir el archivo.|Indica que no se ha realizado la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
-|Error al conectar con la carpeta de destino, \<ruta de acceso>. Compruebe si existe la carpeta de destino o el recurso compartido.|Indica que no se puede encontrar la carpeta que ha especificado; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
-|No se ha podido escribir el archivo \<nombreDeArchivo> en \<ruta de acceso>. Nuevo intento.|Indica que no se ha podido actualizar el archivo con una versión más reciente; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
-|Error al escribir el archivo \<nombreDeArchivo>: \<mensaje>|Indica que no se ha realizado la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
-|\<mensajes de estado personalizados>|Los mensajes de estado sobre entregas correctas o no realizadas, procedentes de las extensiones de entrega. Si usa una extensión de entrega personalizada o de terceros, pueden proporcionarse mensajes de estado adicionales.|  
+|Error al conectar con la carpeta de destino, \<path>. Compruebe si existe la carpeta de destino o el recurso compartido.|Indica que no se puede encontrar la carpeta que ha especificado; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
+|No se pudo escribir el archivo \<filename> en \<path>. Nuevo intento.|Indica que no se ha podido actualizar el archivo con una versión más reciente; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
+|Error al escribir el archivo \<filename>: \<message>|Indica que no se ha realizado la entrega a la ubicación del recurso compartido de archivos; este mensaje procede de la extensión de entrega a recursos compartidos de archivos.|  
+|\<custom status messages>|Los mensajes de estado sobre entregas correctas o no realizadas, procedentes de las extensiones de entrega. Si usa una extensión de entrega personalizada o de terceros, pueden proporcionarse mensajes de estado adicionales.|  
   
  Los administradores del servidor de informes también pueden supervisar las suscripciones estándar que se estén procesando. No es posible supervisar las suscripciones controladas por datos. Para obtener más información, vea [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -95,9 +102,8 @@ ms.locfileid: "80742040"
 ### <a name="sharepoint-uls-log-files"></a>Archivos de registro de ULS de SharePoint  
  La información relacionada con la suscripción se escribe en el registro de ULS de SharePoint. Para más información sobre cómo configurar eventos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para el registro de ULS, vea [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  Este es un ejemplo de entrada de registro ULS relacionada con las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-||||||||  
-|-|-|-|-|-|-|-|  
 |Date|Proceso|Área|Category|Nivel|Correlation|Message|  
+|-|-|-|-|-|-|-|  
 |21/05/2019 14:34:06:15|Grupo de aplicaciones: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extensión de correo electrónico del servidor de informes|Inesperado|(vacío)|**Error al enviar correo electrónico.** Excepción: System.Net.Mail.SmtpException: buzón no disponible. La respuesta del servidor fue: 5.7.1 El cliente no tiene permisos para enviar como este remitente en System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) en System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) en System.Net.Mail.SmtpClient.Send(MailMessage message) en Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Usar PowerShell para supervisar suscripciones  

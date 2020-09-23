@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindParam | Microsoft Docs
+title: PDOStatement::bindParam
+description: Referencia de API de la función PDOStatement::bindParam en el controlador PDO_SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 245cdc56e47c87bc5c31435e1967ecb74a8c05bc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918768"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646618"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,13 +31,13 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-$*parameter*: un identificador de parámetro (mixto). En una instrucción que use marcadores de posición con nombre, emplee un nombre de parámetro (:name). En una instrucción preparada mediante la sintaxis de signos de interrogación, es el índice basado en 1 del parámetro.  
+$*parameter*: identificador de parámetro (mixto). En una instrucción que use marcadores de posición con nombre, emplee un nombre de parámetro (:name). En una instrucción preparada mediante la sintaxis de signos de interrogación, es el índice basado en 1 del parámetro.  
   
-&$*variable*: el nombre (mixto) de la variable PHP para enlazar con el parámetro de instrucción SQL.  
+&$*variable*: nombre (mixto) de la variable PHP para enlazar con el parámetro de instrucción SQL.  
   
-$*data_type*: una constante PDO::PARAM_* opcional (valor entero). El valor predeterminado es PDO::PARAM_STR.  
+$*data_type*: constante PDO::PARAM_* opcional (entero). El valor predeterminado es PDO::PARAM_STR.  
   
-$*length*: una longitud opcional (valor entero) del tipo de datos. Puede especificar PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE para indicar el tamaño predeterminado al usar PDO::PARAM_INT o PDO::PARAM_BOOL en $*data_type*.  
+$*length*: longitud opcional (entero) del tipo de datos. Puede especificar PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE para indicar el tamaño predeterminado al usar PDO::PARAM_INT o PDO::PARAM_BOOL en $*data_type*.  
   
 $*driver_options*: las opciones específicas del controlador opcionales (mixto). Por ejemplo, podría especificar PDO::SQLSRV_ENCODING_UTF8 para enlazar la columna a una variable como una cadena codificada en UTF-8.  
   

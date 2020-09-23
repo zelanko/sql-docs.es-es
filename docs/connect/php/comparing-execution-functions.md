@@ -1,7 +1,8 @@
 ---
-title: Comparación de funciones de ejecución | Microsoft Docs
+title: Comparación de las funciones de ejecución
+description: En este tema se enumeran las diferentes funciones de ejecución de consultas al usar los controladores de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68575f3a0227c6400ed5d927ff603b66bd6f440d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33d7ebe420dd59d4f659dbe2ce6c784b49b89d04
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925866"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680750"
 ---
 # <a name="comparing-execution-functions"></a>Comparación de las funciones de ejecución
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

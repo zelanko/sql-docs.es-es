@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2142e67f7e758b6e949b160842adc954390b42db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495064"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemas conocidos de SQL Server Machine Learning Services
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 En este artículo se describen las limitaciones o los problemas conocidos de los componentes de Python y R que se proporcionan en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) y [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 
 ## <a name="setup-and-configuration-issues"></a>Problemas de instalación y configuración
 
-Para consultar una descripción de los procesos y preguntas comunes relacionadas con la instalación y configuración iniciales, vea [Preguntas más frecuentes sobre actualización e instalación](upgrade-and-installation-faq-sql-server-r-services.md). Contiene información sobre las actualizaciones, la instalación en paralelo y la instalación de nuevos componentes de R o Python.
+Para ver una descripción de los procesos relacionados con la instalación y la configuración iniciales, consulte [Instalación de SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). Contiene información sobre las actualizaciones, la instalación en paralelo y la instalación de nuevos componentes de R o Python.
 
 ### <a name="1-inconsistent-results-in-mkl-computations-due-to-missing-environment-variable"></a>1. Resultados incoherentes en los cálculos de MKL debido a la falta de una variable de entorno
 

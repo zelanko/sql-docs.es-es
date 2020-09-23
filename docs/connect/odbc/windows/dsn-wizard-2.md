@@ -1,7 +1,8 @@
 ---
+description: Pantalla 2 del Asistente para orígenes de datos (ODBC Driver for SQL Server)
 title: Pantalla del Asistente para orígenes de datos 2 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: e2e6b323428b1ad8ae188ea65bf10382651d3d71
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d1e18939ab9d3f2e86452dd3f1847971157ca92c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462214"
 ---
 # <a name="data-source-wizard-screen-2"></a>Pantalla del Asistente para orígenes de datos 2
 
@@ -43,19 +44,23 @@ Especifica que el controlador se autentique en SQL Server mediante un id. y una 
 
 ### <a name="with-active-directory-interactive-authentication"></a>Con autenticación interactiva de Active Directory
 
-Especifica que el controlador se autentique en SQL Server mediante el modo Azure Active Directory interactivo proporcionando un id. de inicio de sesión. Esto desencadenará el cuadro de diálogo de pedidos Autenticación de Azure.
+Especifica que el controlador se autentique en SQL Server mediante el modo Azure Active Directory interactivo proporcionando un id. de inicio de sesión. Esta opción desencadenará el cuadro de diálogo de aviso de Autenticación de Azure.
+
+### <a name="with-managed-identity-authentication"></a>Con autenticación de Managed Identity
+
+Especifica que el controlador se autentique en SQL Server mediante una identidad administrada.
 
 ### <a name="login-id"></a>Id. de inicio de sesión
 
-Especifica el id. de inicio de sesión que usa el controlador al conectarse a SQL Server si se selecciona **Con la autenticación de SQL Server, mediante un identificador de inicio de sesión y una contraseña escritos por el usuario**, **Con la autenticación de contraseña de Active Directory, mediante un id. de inicio de sesión y una contraseña especificados por el usuario** o **Con la autenticación interactiva de Active Directory, mediante un id. de inicio de sesión especificado por el usuario**. Esto solo se aplica a la conexión que se realiza para determinar la configuración de servidor predeterminada; no se aplica a las conexiones subsiguientes realizadas utilizando el origen de datos una vez creado.
+Especifica el id. de inicio de sesión que usa el controlador al conectarse a SQL Server si se selecciona **Con la autenticación de SQL Server, mediante un identificador de inicio de sesión y una contraseña escritos por el usuario**, **Con la autenticación de contraseña de Active Directory, mediante un id. de inicio de sesión y una contraseña especificados por el usuario** o **Con la autenticación interactiva de Active Directory, mediante un id. de inicio de sesión especificado por el usuario**. Si la opción **With Managed Identity authentication** (Con autenticación de Managed Identity) está seleccionada, especifique el identificador de objeto de la identidad administrada o déjelo en blanco para usar la identidad predeterminada. Este campo solo se aplica a la conexión realizada para determinar la configuración de servidor predeterminada, no a las sucesivas conexiones realizadas utilizando el origen de datos una vez creado, excepto si se usa la autenticación de Managed Identity.
 
 ### <a name="password"></a>Contraseña
 
-Especifica la contraseña que usa el controlador al conectarse a SQL Server si se selecciona **Con la autenticación de SQL Server, mediante un identificador de inicio de sesión y una contraseña escritos por el usuario** o **Con la autenticación de contraseña de Active Directory, mediante un id. de inicio de sesión y una contraseña especificados por el usuario**. Esto solo se aplica a la conexión que se realiza para determinar la configuración de servidor predeterminada; no se aplica a las conexiones subsiguientes realizadas utilizando el nuevo origen de datos.
+Especifica la contraseña que usa el controlador al conectarse a SQL Server si se selecciona **Con la autenticación de SQL Server, mediante un identificador de inicio de sesión y una contraseña escritos por el usuario** o **Con la autenticación de contraseña de Active Directory, mediante un id. de inicio de sesión y una contraseña especificados por el usuario**. Este campo solo se aplica a la conexión realizada para determinar la configuración de servidor predeterminada, no a las sucesivas conexiones realizadas utilizando el nuevo origen de datos.
 
 Tanto la casilla **Id. de inicio de sesión** como **Contraseña** están deshabilitadas si se selecciona **Con autenticación de Windows integrada** o **Con la autenticación integrada de Active Directory**.
 
-### <a name="next"></a>Siguiente
+### <a name="next"></a>Siguientes
 
 Avanza a la siguiente pantalla del asistente.
 

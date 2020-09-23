@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd90e97a8703e4d4a11f082b864555621542f745
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518855"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934116"
 ---
 # <a name="database-project-settings"></a>Configuración del proyecto de base de datos
 
@@ -151,7 +151,7 @@ La característica de comprobación extendida puede usarse también al desarroll
   
 2.  En **Propiedades**, cambie la propiedad **Extended T-SQL Verification** (Comprobación extendida de T-SQL) a **False**.  
   
-![Propiedades del archivo](../ssdt/media/ssdt-evf.gif "Propiedades del archivo")  
+    ![Propiedades del archivo](../ssdt/media/ssdt-evf.gif "Propiedades del archivo")  
   
 ### <a name="special-considerations-for-collations"></a>Consideraciones especiales para las intercalaciones  
 Para obtener más información acerca de las intercalaciones en las bases de datos parcialmente independientes, vea [Intercalaciones en bases de datos independientes](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  

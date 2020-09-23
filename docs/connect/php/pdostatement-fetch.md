@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetch | Microsoft Docs
+title: PDOStatement::fetch
+description: Referencia de API de la función PDOStatement::fetch en el controlador PDO_SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0f1c5684ac655d0fa2b653138ff55042e9266048
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 338d871e7e0cbbfa2da04d04d33fe672f85d8083
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928611"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645112"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

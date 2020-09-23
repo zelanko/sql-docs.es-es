@@ -5,16 +5,16 @@ description: Aprenda a implementar clústeres de macrodatos de SQL Server con al
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279467"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790285"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de clústeres de macrodatos de SQL Server con alta disponibilidad
 
@@ -133,6 +133,9 @@ En determinadas operaciones, como el establecimiento de configuraciones de nivel
 
 > [!IMPORTANT]
 > El punto de conexión expuesto para las conexiones de la instancia de SQL Server solo admite autenticación SQL, incluso en clústeres en los que Active Directory está habilitado. De forma predeterminada, durante la implementación de un clúster de macrodatos, el inicio de sesión `sa` está deshabilitado y se aprovisiona un nuevo inicio de sesión `sysadmin` basado en los valores proporcionados en el momento de la implementación para las variables de entorno `AZDATA_USERNAME` y `AZDATA_PASSWORD`.
+
+> [!IMPORTANT]
+> El DDL del grupo de disponibilidad contenido es exclusivamente autoadministrado en BDC. No se admite ningún intento ( de usuario externo) de quitar el disponibilidad contenida o el punto de conexión de creación de reflejo de la base de datos y puede dar lugar a un estado de BDC irrecuperable.
 
 Este es un ejemplo que muestra cómo exponer este punto de conexión y luego agregar la base de datos creada con un flujo de trabajo de restauración al grupo de disponibilidad. Se aplican instrucciones similares para configurar una conexión a la instancia maestra de SQL Server cuando se quieren cambiar las configuraciones de servidor con `sp_configure`.
 

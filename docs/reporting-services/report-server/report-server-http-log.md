@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c1f270bb3f26cada3944979ee32019737dcb13e3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548007"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392081"
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
   El archivo de registro HTTP del servidor de informes guarda un registro de cada solicitud y respuesta HTTP administradas por el servidor de informes. Dado que los errores de desbordamiento y de tiempo de espera de la solicitud no alcanzan el servidor de informes, no se graban en el archivo de registro.  
@@ -26,7 +26,7 @@ ms.locfileid: "84548007"
 ## <a name="viewing-log-information"></a>Ver la información del registro  
  El registro es un archivo de texto ASCII. Para ver el archivo se puede usar cualquier editor de texto. El archivo de registro HTTP del servidor de informes es equivalente al archivo de registro extendido W3C de IIS y utiliza campos similares para que pueda utilizar los visores del archivo de registro de IIS existentes con el fin de leer el archivo de registro HTTP del servidor de informes. La tabla siguiente proporciona información adicional sobre el archivo de registro HTTP:  
   
-|||  
+|Información del archivo de registro|Descripción|  
 |-|-|  
 |Nombre de archivo|De forma predeterminada, el nombre del archivo es ReportServerService_HTTP_\<timestamp>.log. Puede personalizar el prefijo del nombre de archivo si modifica el atributo HttpTraceFileName en el archivo ReportingServicesService.exe.config. La marca de tiempo se basa en la hora universal coordinada (UTC).|  
 |Ubicación del archivo|El archivo se encuentra en \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles.|  

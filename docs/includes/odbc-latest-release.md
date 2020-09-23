@@ -1,1 +1,1 @@
-Versión: 17.5.2.1 Fecha: 3 de marzo de 2020
+Versión: Fecha de 17.6.1.1: 31 de julio de 2020

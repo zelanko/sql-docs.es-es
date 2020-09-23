@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server | Microsoft Docs
-description: Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server
+description: Obtenga información sobre la compatibilidad de OLE DB Driver for SQL Server con la codificación de cliente UTF-8 y la codificación de servidor UTF-8.
 ms.custom: ''
 ms.date: 05/25/2020
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: d2074ea992872da02a781ef48f633cd8539c931f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 424b18f18fb519b0e8755606d0af7488d9885007
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85986823"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147556"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: Conjuntos de filas (controlador OLE DB)
-description: Conjuntos de filas en el controlador OLE DB para SQL Server
+description: Obtenga información sobre las interfaces que admiten un consumidor mediante la creación de un conjunto de filas en una sesión en OLE DB Driver for SQL Server. Para más información, consulte los artículos que aparecen en esta sección.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB rowsets
 - OLE DB rowsets, about rowsets
 - rowsets [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7cb9a52e9b7b1cd5ec243db15f666a5b5ef9c4a9
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 55100932092abeb81da7fa1c156ccb5a61fc193c
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244183"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859945"
 ---
 # <a name="rowsets"></a>Conjuntos de filas
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

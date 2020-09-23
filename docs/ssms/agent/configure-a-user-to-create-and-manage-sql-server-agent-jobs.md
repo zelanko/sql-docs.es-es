@@ -1,7 +1,6 @@
 ---
+description: Configure a User to Create and Manage SQL Server Agent Jobs
 title: Configure a User to Create and Manage SQL Server Agent Jobs
-ms.custom: seo-lt-2019
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -15,26 +14,29 @@ ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b266b6baa81ab9786b33641355baae5cdd0b81f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2d1d75a6ff5dbdce3d3201abc9db6ce85a8e602a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749129"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497878"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 En este tema se describe cómo configurar un usuario para que cree o ejecute trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
--   **Antes de empezar:**  [Seguridad](#Security)  
-  
--   **Para configurar un usuario para crear y administrar trabajos del Agente SQL Server, utilizando lo siguiente:**  [SQL Server Management Studio](#SSMS)  
-  
+
+- **Antes de empezar:**  [Seguridad](#Security)  
+ 
+- **Para configurar un usuario para crear y administrar trabajos del Agente SQL Server, usando:**  [SQL Server Management Studio](#SSMS)  
+
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Antes de empezar  
   
 ### <a name="security"></a><a name="Security"></a>Seguridad  
@@ -68,10 +70,15 @@ Para obtener información detallada, vea [Implementar la seguridad del Agente SQ
   
 4.  En la página **General** del cuadro de diálogo **Nueva cuenta de proxy** , especifique el nombre del proxy, el nombre de credencial y la descripción del nuevo proxy. Tenga en cuenta que debe crear una credencial antes de crear un proxy del Agente SQL Server. Para obtener más información acerca de cómo crear una credencial, vea [Procedimientos para: crear una credencial](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586) y [CREATE CREDENTIAL (Transact-SQL)](https://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d).  
   
-5.  Seleccione los subsistemas correspondientes para este proxy.  
+5.  Seleccione los subsistemas correspondientes para este proxy.
+    1. [Sistema operativo (CmdExec)](create-a-cmdexec-job-step.md)
+    1. [Consulta de SQL Server Analysis Services](create-an-analysis-services-job-step.md#to-create-an-analysis-services-query-job-step)
+    1. [Comando de SQL Server Analysis Services](create-an-analysis-services-job-step.md#to-create-an-analysis-services-command-job-step-1)
+    1. [Paquete de SQL Server Integration Services](../../integration-services/packages/run-integration-services-ssis-packages.md)
+    1. [PowerShell](../../powershell/run-windows-powershell-steps-in-sql-server-agent.md)
   
 6.  En la página **Entidades de seguridad** , agregue o quite inicios de sesión o roles para conceder o quitar el acceso a la cuenta de proxy.  
-  
-## <a name="see-also"></a>Consulte también  
-[Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
-  
+
+## <a name="see-also"></a>Consulte también
+- [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
+

@@ -1,4 +1,5 @@
 ---
+description: Crear el RSExecRole
 title: Crear RSExecRole | Microsoft Docs
 ms.date: 06/12/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08895328856056d01b927a8c80962ff0b90570f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492648"
 ---
 # <a name="create-the-rsexecrole"></a>Crear el RSExecRole
 
@@ -30,7 +31,7 @@ ms.locfileid: "67140476"
 > [!NOTE]  
 > Las instrucciones de este tema están destinadas a los usuarios que no desean ejecutar un script o escribir código WMI para proporcionar la base de datos del servidor de informes. Si administra una implementación grande y va a mover las bases de datos habitualmente, debe escribir un script para automatizar estos pasos. Para obtener más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-## <a name="before-you-start"></a>Antes de comenzar  
+## <a name="before-you-start"></a>Antes de empezar  
   
 -   Realice una copia de seguridad de las claves de cifrado para poder restaurarlas después de mover la base de datos. Este paso no afecta directamente a la capacidad personal para crear y proporcionar el rol **RSExecRole**, pero se debe disponer de una copia de seguridad de las claves para comprobar el trabajo. Para obtener más información, vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
@@ -69,13 +70,13 @@ ms.locfileid: "67140476"
   
 11. Haga clic en **Buscar**. Aparece el cuadro de diálogo **Agregar objetos** . La opción **Especificar objetos** está seleccionada de forma predeterminada.  
   
-12. Haga clic en **OK**. Aparece el cuadro de diálogo **Seleccionar objetos** .  
+12. Haga clic en **Aceptar**. Aparece el cuadro de diálogo **Seleccionar objetos** .  
   
 13. Haga clic en **Tipos de objeto**.  
   
 14. Haga clic en **Procedimientos almacenados extendidos**.  
   
-15. Haga clic en **OK**.  
+15. Haga clic en **Aceptar**.  
   
 16. Haga clic en **Examinar**.  
   
@@ -120,13 +121,13 @@ ms.locfileid: "67140476"
   
 9.  Haga clic en **Buscar**. Aparece el cuadro de diálogo **Agregar objetos** . La opción **Especificar objetos** está seleccionada de forma predeterminada.  
   
-10. Haga clic en **OK**.  
+10. Haga clic en **Aceptar**.  
   
 11. Haga clic en **Tipos de objeto**.  
   
 12. Haga clic en **Procedimientos almacenados**.  
   
-13. Haga clic en **OK**.  
+13. Haga clic en **Aceptar**.  
   
 14. Haga clic en **Examinar**.  
   
@@ -162,13 +163,13 @@ ms.locfileid: "67140476"
   
 20. Todavía en la página **Elementos protegibles**, haga clic en **Buscar**. Aparece el cuadro de diálogo **Agregar objetos** . La opción **Especificar objetos** está seleccionada de forma predeterminada.  
   
-21. Haga clic en **OK**.  
+21. Haga clic en **Aceptar**.  
   
 22. Haga clic en **Tipos de objeto**.  
   
 23. Haga clic en **Tablas**.  
   
-24. Haga clic en **OK**.  
+24. Haga clic en **Aceptar**.  
   
 25. Haga clic en **Examinar**.  
   
@@ -208,7 +209,7 @@ ms.locfileid: "67140476"
   
 4.  Haga clic en **Elija una base de datos del servidor de informes existente**.  
   
-5.  Escriba el nombre del servidor del motor de base de datos. Si ha adjuntado las bases de datos del servidor de informes a una instancia con nombre, debe escribir el nombre de la instancia con este formato: \<nombreDeServidor>\\<nombreDeInstancia\>.  
+5.  Escriba el nombre del servidor del motor de base de datos. Si ha asociado las bases de datos del servidor de informes a una instancia con nombre, debe escribir el nombre de la instancia con este formato: \<servername>\\<nombre de la instancia\>.  
   
 6.  Haga clic en **Probar conexión**. Debería ver un cuadro de diálogo que indica "Prueba de conexión realizada correctamente".
   
@@ -267,6 +268,6 @@ GO
 [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
 [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
-[Copia de seguridad y restauración de claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+[Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,5 +1,6 @@
 ---
-title: 'Procedimientos: Conexión a un puerto especificado | Microsoft Docs'
+title: 'Procedimientos: Conexión a un puerto específico'
+description: Obtenga información sobre cómo conectarse a una base de datos configurada en un puerto específico mediante los controladores SQLSRV y PDO_SQLSRV de Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44df1e9c8809fed016a5c041d34f0f46cae83654
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b55f12bbfe4bbe255af2d62c2ed0c5ab3f968e98
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916511"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435238"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Procedimientos: Conexión a un puerto específico
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

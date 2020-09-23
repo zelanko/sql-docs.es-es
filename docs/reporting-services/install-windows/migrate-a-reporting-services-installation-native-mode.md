@@ -1,4 +1,5 @@
 ---
+description: Migrar una instalación de Reporting Services (modo nativo)
 title: Migrar una instalación de Reporting Services (modo nativo) | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -6,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454585"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrar una instalación de Reporting Services (modo nativo)
 
@@ -265,7 +266,7 @@ Si modificó el archivo RSReportServer.config o el archivo RSWebApplication.conf
 
 ## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Grupo de servicios de Windows y ACL de seguridad
 
- En [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] hay un grupo de servicios, el grupo de servicios [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de Windows, que se usa para crear listas de control de acceso (ACL) de seguridad para todas las claves del Registro, archivos y carpetas que se instalan con SQL Server Reporting Services. Este nombre de grupo de Windows aparece con el formato SQLServerReportServerUser$\<*nombreDeEquipo*>$\<*nombreDeInstancia*>.  
+ En [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] hay un grupo de servicios, el grupo de servicios [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de Windows, que se usa para crear listas de control de acceso (ACL) de seguridad para todas las claves del Registro, archivos y carpetas que se instalan con SQL Server Reporting Services. Este nombre de grupo de Windows aparece en el formato SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>.  
 
 ## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Comprobar la implementación
 

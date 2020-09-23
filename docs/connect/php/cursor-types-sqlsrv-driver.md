@@ -1,5 +1,6 @@
 ---
-title: Tipos de cursor (controlador SQLSRV) | Microsoft Docs
+title: Tipos de cursor (controlador SQLSRV)
+description: Obtenga información sobre cómo usar los tipos de cursor para crear un conjunto de resultados al que pueda acceder en cualquier orden mediante los controladores de Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 763795618eb90fe24db313b801bc01af3cd6737b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e72381eed4aa89ccd9656d3eabadb22bccd357d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928040"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411471"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (controlador SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

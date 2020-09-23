@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea5c622385b4350fb74362451eef3bb061d78fbc
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160163"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472341"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>Use un script de Python para implementar un clúster de macrodatos de SQL Server en Red Hat OpenShift en Azure (ARO).
 
@@ -25,9 +25,13 @@ En este tutorial se usa un script de implementación de Python de ejemplo para i
 > [!TIP]
 > ARO es solo una opción para hospedar Kubernetes para el clúster de macrodatos. Para obtener información sobre otras opciones de implementación y sobre cómo personalizarlas, vea [Cómo implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes](deployment-guidance.md).
 
+
+> [!WARNING]
+> Los volúmenes persistentes creados con la clase de almacenamiento integrada *managed-premium* tienen una directiva de reclamación de *Eliminar*. Por lo tanto, al eliminar el clúster de macrodatos de SQL Server, también se eliminarán las reclamaciones de volúmenes persistentes, así como los volúmenes persistentes. Debe crear clases de almacenamiento personalizadas mediante el aprovisionador azure-disk con una directiva de reclamación de tipo *Retener*, como se explica en los [conceptos de almacenamiento](/azure/aks/concepts-storage/#storage-classes). El script siguiente usa la clase de almacenamiento *managed-premium*. Consulte [Persistencia de los datos](concept-data-persistence.md) para más detalles.
+
 La implementación del clúster de macrodatos predeterminada que se usa aquí consta de una instancia maestra de SQL, una instancia de grupo de proceso, dos instancias de grupo de datos y dos instancias de grupo de almacenamiento. Los datos se conservan con volúmenes persistentes de Kubernetes que usan las clases de almacenamiento predeterminadas de ARO. La configuración predeterminada que se usa en este tutorial es adecuada para entornos de desarrollo y pruebas.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Suscripción a Azure.
 - [OC](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)

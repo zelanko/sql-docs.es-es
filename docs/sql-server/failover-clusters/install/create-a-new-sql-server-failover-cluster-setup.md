@@ -1,6 +1,6 @@
 ---
-title: Creación de un clúster de conmutación por error nuevo
-description: En este artículo se describe cómo usar el programa de instalación para instalar o actualizar un clúster de conmutación por error de SQL Server o agregar un nodo a un clúster existente.
+title: Creación de una nueva instancia de clúster de conmutación por error
+description: En este artículo se describe cómo usar el programa de instalación para instalar o actualizar una instancia de clúster de conmutación por error Always On de SQL Server o agregar un nodo a una instancia de clúster de conmutación por error existente.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
@@ -17,34 +17,36 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8425df35905f08b49750a2d265a260438bbbf2ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03a3b84d5f21391d957ea1ae1f71286133e4d492
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897723"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442378"
 ---
-# <a name="create-a-new-sql-server-failover-cluster-setup"></a>Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)
+# <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>Creación de una nueva instancia de clúster de conmutación por error Always On (programa de instalación)
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Para instalar o actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe ejecutar el programa de instalación en cada nodo de los clústeres de conmutación por error. Para agregar un nodo a un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente, debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el nodo que se va a agregar a la instancia del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No ejecute el programa de instalación en el nodo activo para administrar los demás nodos.  
+
+  Para instalar o actualizar una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe ejecutar el programa de instalación en cada nodo del clúster de conmutación por error de Windows Server subyacente. Para agregar un nodo a una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente, debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el nodo que se va a agregar a la instancia del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. No ejecute el programa de instalación en el nodo activo para administrar los demás nodos.  
   
- Dependiendo de cómo se agrupen en clústeres los nodos, los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configurará de las maneras siguientes:  
+ Dependiendo de cómo se agrupen en clústeres los nodos, la instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configurará de las maneras siguientes:  
   
 -   Nodos en la misma subred o el mismo conjunto de subredes: la dependencia de recursos de dirección IP se establece en AND para estos tipos de configuraciones.  
   
--   Nodos en subredes diferentes: la dependencia de recursos de dirección IP se establece en OR y esta configuración se denomina configuración de clústeres de conmutación por error de varias subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Agrupación en clústeres de varias subredes de SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
+-   Nodos en subredes diferentes: la dependencia de recursos de dirección IP se establece en OR y esta configuración se denomina configuración de instancias de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Agrupación en clústeres de varias subredes de SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
  Las opciones siguientes están disponibles para la instalación de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
- **Opción 1: instalación integrada con Agregar nodo**  
+ **Opción 1: instalación integrada con Agregar nodo**   
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consta de los pasos siguientes:  
   
--   Cree y configure una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de un único nodo. Cuando se configura el nodo correctamente, se tiene una instancia totalmente funcional de clústeres de conmutación por error. En ese momento no tendrá una alta disponibilidad porque solamente hay un nodo en los clústeres de conmutación por error.  
+-   Cree y configure una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de un único nodo. Cuando se configura el nodo correctamente, se tiene una instancia totalmente funcional de clústeres de conmutación por error. En ese momento no tendrá una alta disponibilidad porque solamente hay un nodo en la instancia de clúster de conmutación por error.  
   
--   En cada nodo que se va a agregar al clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ejecute el programa de instalación con la función Agregar nodo para agregar ese nodo.  
+-   En cada nodo que se va a agregar a la instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ejecute el programa de instalación con la funcionalidad Agregar nodo para agregar ese nodo.  
   
-    -   Si el nodo que agrega tiene subredes adicionales o diferentes, el programa de instalación le permite especificar más direcciones IP. Si el nodo que va a agregar está en una subred diferente, también debe confirmar el cambio de dependencias de recursos de dirección IP a OR. Para obtener más información sobre los posibles escenarios durante las operaciones de adición de un nodo, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación)&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+    -   Si el nodo que agrega tiene subredes adicionales o diferentes, el programa de instalación le permite especificar más direcciones IP. Si el nodo que va a agregar está en una subred diferente, también debe confirmar el cambio de dependencias de recursos de dirección IP a OR. Para obtener más información sobre los posibles escenarios durante las operaciones de adición de un nodo, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server (programa de instalación)](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
  **Opción 2: Instalación de Advanced/Enterprise**  
   
@@ -52,22 +54,22 @@ ms.locfileid: "85897723"
   
 -   En cada nodo que es un posible propietario del nuevo clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , siga los pasos de instalación referidos a la preparación de clústeres de conmutación por error que se enumeran en la [sección Preparar](#prepare). Una vez ejecutada la preparación de clústeres de conmutación por error en un nodo, el programa de instalación crea el archivo Configuration.ini, que enumera todos los valores de configuración especificados. En los nodos adicionales que se van a preparar, en lugar de seguir estos pasos, puede proporcionar el archivo Configuration.ini autogenerado del primer nodo como entrada a la línea de comandos del programa de instalación. Para obtener más información, vea [Instalar SQL Server 2016 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md). En este paso se preparan los nodos para su agrupación en clústeres, pero al final de este paso no hay ninguna instancia operativa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   Una vez preparados los nodos para la agrupación en clústeres, ejecute el programa de instalación en uno de los nodos preparados. En este paso se configura y se finaliza la instancia de los clústeres de conmutación por error. Al final de este paso, tendrá una instancia operativa de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y todos los nodos que se prepararon previamente para esa instancia serán los posibles propietarios de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se acaba de crear.  
+-   Una vez preparados los nodos para la agrupación en clústeres, ejecute el programa de instalación en uno de los nodos preparados. En este paso se configura y se finaliza la instancia de los clústeres de conmutación por error. Al final de este paso, tendrá una instancia operativa de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y todos los nodos que se prepararon previamente para esa instancia serán los posibles propietarios de la instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se acaba de crear.  
   
-     Si está agrupando en clústeres nodos en varias subredes, el programa de instalación detectará la unión de todas las subredes en todos los nodos que tienen la instancia en clúster de conmutación por error preparada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Podrá especificar varias direcciones IP para las subredes. Cada nodo preparado debe ser el posible propietario de al menos una dirección IP.  
+     Si está creando una instancia de clúster de conmutación por error que abarca varias subredes, el programa de instalación detectará la unión de todas las subredes en todos los nodos que tienen la instancia en clúster de conmutación por error preparada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Podrá especificar varias direcciones IP para las subredes. Cada nodo preparado debe ser el posible propietario de al menos una dirección IP.  
   
      Si cada una de las direcciones IP especificadas para las subredes se admite en todos los nodos preparados, la dependencia se establece en AND.  
   
      Si cada una de las direcciones IP especificadas para las subredes no se admite en todos los nodos preparados, la dependencia se establece en OR. Para obtener más información, vea [Agrupación en clústeres de varias subredes de SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
     > [!NOTE]  
-    >  La funcionalidad Completar los clústeres de conmutación por error requiere la existencia de los clústeres de conmutación por error de Windows subyacente. Si los clústeres de conmutación por error de Windows no existe, el programa de instalación produce un error y se cierra.  
+    >  La funcionalidad Completar los clústeres de conmutación por error requiere la existencia de los clústeres de conmutación por error de Windows Server subyacente. Si el clúster de conmutación por error de Windows Server no existe, el programa de instalación produce un error y se cierra.  
   
- Para obtener más información sobre cómo agregar o quitar nodos en una instancia de clúster de conmutación por error existente, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ Para obtener más información sobre cómo agregar o quitar nodos en una instancia de clúster de conmutación por error existente, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server (programa de instalación)](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
  Para obtener más información sobre la instalación remota, vea [Actualizaciones de ediciones y versiones admitidas](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- Para obtener más información acerca de cómo instalar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en un clúster de conmutación por error de Windows, vea [Organizar en clúster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Para obtener más información acerca de cómo instalar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en un clúster WSFC, vea [Organizar en clúster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Antes de empezar, revise los siguientes temas de los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -81,9 +83,9 @@ ms.locfileid: "85897723"
 -   [Agrupación en clústeres de varias subredes de SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
 > [!NOTE]  
->  Tome nota de la ubicación de la unidad compartida en el Administrador de clústeres antes de ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Debe tener esta información para crear un nuevo clústeres de conmutación por error.  
+>  Tome nota de la ubicación de la unidad compartida en el Administrador de clústeres antes de ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Debe tener esta información para crear un nueva instancia de clúster de conmutación por error.  
   
-### <a name="to-install-a-new-ssnoversion-failover-cluster-using-integrated-install-with-add-node"></a>Para instalar un nuevo clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando la instalación integrada con Agregar nodo  
+### <a name="to-install-a-new-ssnoversion-failover-cluster-instance-using-integrated-install-with-add-node"></a>Para instalar una nueva instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando la instalación integrada con Agregar nodo.  
   
 1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, desplácese a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe. Para obtener más información acerca de cómo instalar los requisitos previos, vea [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
@@ -124,10 +126,10 @@ ms.locfileid: "85897723"
   
 11. En la página Configuración de instancia, especifique si desea instalar una instancia predeterminada o una instancia con nombre. Para obtener más información, vea [Instance Configuration](../../install/instance-configuration.md).  
   
-     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Nombre de red**: especifique un nombre de red para el nuevo clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este es el nombre que se usa para identificar los clústeres de conmutación por error en la red.  
+     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Nombre de red**: especifique un nombre de red para la nueva instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este es el nombre que se usa para identificar la instancia de clúster de conmutación por error en la red.  
   
     > [!NOTE]  
-    >  Se conoce como el nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtual en versiones anteriores de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+    >  Se conoce como el nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtual en versiones anteriores de instancias de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
      **Id. de instancia** : de manera predeterminada, el nombre de instancia se usa como identificador de la instancia. Se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Con una instancia predeterminada, el nombre y el identificador serían MSSQLSERVER. Para utilizar un identificador de instancia no predeterminado, seleccione el cuadro **Id. de instancia** y proporcione un valor.  
   
@@ -138,13 +140,13 @@ ms.locfileid: "85897723"
   
      **Características e instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detectadas en este equipo**: la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que están en el equipo en el que se ejecuta el programa de instalación. Si ya hay una instancia predeterminada instalada en el equipo, debe instalar una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Haga clic en **Siguiente** para continuar.  
   
-12. Use la página Grupo de recursos de clúster para especificar el nombre del grupo de recursos de clúster donde se ubicarán los recursos de servidor virtual de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para especificar el nombre del grupo de recursos de clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , tiene dos opciones:  
+12. Use la página Grupo de recursos de clúster para especificar el nombre, o rol, del grupo de recursos de clúster donde se ubicarán los recursos de servidor virtual de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para especificar el nombre del grupo de recursos de clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , tiene dos opciones:  
   
     -   Use la lista desplegable para especificar un grupo existente.  
   
     -   Escriba el nombre del grupo que desea crear. Tenga en cuenta que el nombre "Available storage" no es un nombre de grupo válido.  
   
-13. En la página Selección de disco de clúster, seleccione el recurso de disco de clúster compartido para los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El disco de clúster es donde se colocarán los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se puede especificar más de un disco. La cuadrícula Discos compartidos disponibles muestra la lista de discos disponibles, si están calificados todos ellos como discos compartidos, y una descripción de cada recurso de disco. Haga clic en **Siguiente** para continuar.  
+13. En la página Selección de disco de clúster, seleccione el recurso de disco de clúster compartido para la instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El disco de clúster es donde se colocarán los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se puede especificar más de un disco. La cuadrícula Discos compartidos disponibles muestra la lista de discos disponibles, si están calificados todos ellos como discos compartidos, y una descripción de cada recurso de disco. Haga clic en **Siguiente** para continuar.  
   
     > [!NOTE]  
     >  La primera unidad se utiliza como unidad predeterminada para todas las bases de datos, pero se puede cambiar en las páginas de configuración del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] o de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
@@ -192,7 +194,7 @@ ms.locfileid: "85897723"
 20. Use la página Configuración de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - Directorios de datos para especificar los directorios de instalación no predeterminados. Para instalar en los directorios predeterminados, haga clic en **Siguiente**.  
   
     > [!IMPORTANT]  
-    >  Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los directorios de datos se deben encontrar en el disco de clúster compartido para los clústeres de conmutación por error.  
+    >  Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los directorios de datos se deben encontrar en el disco de clúster compartido para la instancia de clúster de conmutación por error.  
   
     > [!NOTE]  
     >  Para especificar un servidor de archivos de Bloque de mensajes del servidor (SMB) como directorio de datos, establezca **directorio raíz predeterminado de datos** en el recurso compartido de archivos con el formato \\\Servername\ShareName\\...  
@@ -206,9 +208,9 @@ ms.locfileid: "85897723"
 23. Use la página Configuración de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Directorios de datos para especificar los directorios de instalación no predeterminados. Para instalar en los directorios predeterminados, haga clic en **Siguiente**.  
   
     > [!IMPORTANT]  
-    >  Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los directorios de datos se deben encontrar en el disco de clúster compartido para los clústeres de conmutación por error.  
+    >  Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los directorios de datos se deben encontrar en el disco de clúster compartido para la instancia de clúster de conmutación por error.  
    
-24. Use la página Configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para especificar el tipo de instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que se creará. Para la instalación del clúster de conmutación por error, la opción se establece en Instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sin configurar. Debe configurar los servicios de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] una vez completada la instalación.  
+24. Use la página Configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para especificar el tipo de instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que se creará. Para instalaciones de instancias de clúster de conmutación por error, la opción se establece en Instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sin configurar. Debe configurar los servicios de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] una vez completada la instalación.  
   
  
 25. El Comprobador de configuración del sistema ejecuta uno o varios conjuntos de reglas para validar la configuración con las características de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se han especificado.  
@@ -221,16 +223,16 @@ ms.locfileid: "85897723"
   
 29. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información sobre los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-30. Para agregar nodos a la conmutación por error de nodo único que acaba de crear, ejecute el programa de instalación en cada nodo adicional y siga los pasos para la operación AddNode. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+30. Para agregar nodos a la conmutación por error de nodo único que acaba de crear, ejecute el programa de instalación en cada nodo adicional y siga los pasos para la operación AddNode. Para más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server (programa de instalación)](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
     > [!NOTE]  
     >  Si va a agregar más de un nodo, puede utilizar el archivo de configuración para implementar las instalaciones. Para obtener más información, vea [Instalar SQL Server 2016 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
     >   
-    >  La edición de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que va a instalar debe coincidir en todos los nodos de un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si agrega un nuevo nodo a un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente, asegúrese de especificar que la edición coincida con la edición de los clústeres de conmutación por error existente.  
+    >  La edición de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que va a instalar debe coincidir en todos los nodos de una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si agrega un nuevo nodo a una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente, asegúrese de especificar que la edición coincida con la edición de la instancia de clúster de conmutación por error existente.  
   
 ##  <a name="prepare"></a><a name="prepare"></a> Preparar  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Paso 1 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Preparación  
+#### <a name="advancedenterprise-failover-cluster-instance-install-step-1-prepare"></a>Paso 1 de la instalación de instancias de clúster de conmutación por error de Advanced/Enterprise: Preparación  
   
 1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, desplácese a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe. Para obtener más información acerca de cómo instalar los requisitos previos, vea [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md). Puede que se le solicite que instale los requisitos previos si no se han instalado previamente.  
   
@@ -251,7 +253,7 @@ ms.locfileid: "85897723"
 8.  En la página Clave del producto, haga clic para indicar si va a instalar una edición gratuita de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, vea [Ediciones y componentes de SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
     > [!NOTE]  
-    >  Debe especificar la misma clave del producto en todos los nodos que va a preparar para el mismo clústeres de conmutación por error.  
+    >  Debe especificar la misma clave del producto en todos los nodos que va a preparar para la misma instancia de clúster de conmutación por error.  
   
 9. En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Haga clic en **Siguiente** para continuar. Para salir del programa de instalación, haga clic en **Cancelar**.  
   
@@ -272,7 +274,7 @@ ms.locfileid: "85897723"
     >  Las instancias independientes típicas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tanto si son predeterminadas como si son instancias con nombre, no usan un valor no predeterminado para el cuadro de texto **Id. de instancia** .  
   
     > [!IMPORTANT]  
-    >  Use el mismo identificador de instancia para todos los nodos que se preparen para los clústeres de conmutación por error  
+    >  Use el mismo identificador de instancia para todos los nodos que se preparen para la instancia de clúster de conmutación por error.  
   
      **Directorio raíz de instancia**: de forma predeterminada, el directorio raíz de la instancia es C:\Archivos de programa\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Para especificar un directorio raíz no predeterminado, utilice el campo proporcionado o haga clic en el botón de puntos suspensivos para buscar una carpeta de instalación.  
   
@@ -304,7 +306,7 @@ ms.locfileid: "85897723"
   
 17. Use **Configuración del servidor - Secuencia de archivo** para habilitar FILESTREAM para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Haga clic en **Siguiente** para continuar.  
   
-18. Use la página Configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para especificar el tipo de instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que se creará. Para la instalación del clúster de conmutación por error, la opción se establece en Instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sin configurar. Debe configurar los servicios de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] una vez completada la instalación.  
+18. Use la página Configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para especificar el tipo de instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que se creará. Para instalaciones de instancias de clúster de conmutación por error, la opción se establece en Instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sin configurar. Debe configurar los servicios de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] una vez completada la instalación.  
    
 19. En la página Informes de errores, especifique la información que desea enviar a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] y que ayudará a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. De forma predeterminada, se habilitan las opciones de informes de errores.  
   
@@ -318,11 +320,11 @@ ms.locfileid: "85897723"
   
 23. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información sobre los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-24. Repita los pasos anteriores para preparar los demás nodos para los clústeres de conmutación por error. También puede utilizar el archivo de configuración autogenerado para ejecutar la preparación en los demás nodos. Para obtener más información, vea [Instalar SQL Server 2016 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
+24. Repita los pasos anteriores para preparar los demás nodos para la instancia de clúster de conmutación por error. También puede utilizar el archivo de configuración autogenerado para ejecutar la preparación en los demás nodos. Para obtener más información, vea [Instalar SQL Server 2016 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
 ## <a name="complete"></a>Operación completada  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Paso 2 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Operación completada  
+#### <a name="advancedenterprise-failover-cluster-instance-install-step-2-complete"></a>Paso 2 de la instalación de instancias de clúster de conmutación por error de Advanced/Enterprise: Operación completada  
   
 1.  Después de preparar todos los nodos como se describe en el [paso de preparación](#prepare), ejecute el programa de instalación en uno de los nodos preparados, preferiblemente el que posee el disco compartido. En la página **Opciones avanzadas** del Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Finalización avanzada de clúster**.  
   
@@ -336,10 +338,10 @@ ms.locfileid: "85897723"
   
      Para continuar, haga clic en **Siguiente**.  
   
-6.  Utilice la página Configuración de nodo de clúster para seleccionar el nombre de instancia preparado para la agrupación en clústeres y especifique el nombre de red para el nuevo clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Este es el nombre que se usa para identificar los clústeres de conmutación por error en la red.  
+6.  Utilice la página Configuración de nodo de clúster para seleccionar el nombre de instancia preparado para la agrupación en clústeres y especifique el nombre de red para la nueva instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este es el nombre que se usa para identificar la instancia de clúster de conmutación por error en la red.  
   
     > [!NOTE]  
-    >  Se conoce como el nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtual en versiones anteriores de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+    >  Se conoce como el nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtual en versiones anteriores de instancias de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ejecuta uno o varios conjuntos de reglas que se basan en las características que seleccionó para validar la configuración.  
   
@@ -349,14 +351,14 @@ ms.locfileid: "85897723"
   
     -   Escriba el nombre del grupo que desea crear. Tenga en cuenta que el nombre "Available storage" no es un nombre de grupo válido.  
   
-9. En la página Selección de disco de clúster, seleccione el recurso de disco de clúster compartido para los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El disco de clúster es donde se colocarán los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se puede especificar más de un disco. La cuadrícula Discos compartidos disponibles muestra la lista de discos disponibles, si están calificados todos ellos como discos compartidos, y una descripción de cada recurso de disco. Haga clic en **Siguiente** para continuar.  
+9. En la página Selección de disco de clúster, seleccione el recurso de disco de clúster compartido para la instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El disco de clúster es donde se colocarán los datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Se puede especificar más de un disco. La cuadrícula Discos compartidos disponibles muestra la lista de discos disponibles, si están calificados todos ellos como discos compartidos, y una descripción de cada recurso de disco. Haga clic en **Siguiente** para continuar.  
   
     > [!NOTE]  
     >  La primera unidad se utiliza como unidad predeterminada para todas las bases de datos, pero se puede cambiar en las páginas de configuración del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] o de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 10. En la página Configuración de red en clúster, especifique los recursos de red para la instancia de clústeres de conmutación por error:  
   
-    -   **Configuración de red**: especifique el tipo de IP y la dirección IP para todos los nodos y subredes de la instancia de clústeres de conmutación por error. Puede especificar varias direcciones IP para un clústeres de conmutación por error de varias subredes, pero solo se admite una dirección IP por subred. Cada nodo preparado debe ser propietario de al menos una dirección IP. Si tiene varias subredes en su clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se le solicitará que establezca la dependencia de recursos de dirección IP en OR.  
+    -   **Configuración de red**: especifique el tipo de IP y la dirección IP para todos los nodos y subredes de la instancia de clústeres de conmutación por error. Puede especificar varias direcciones IP para una instancia de clúster de conmutación por error de varias subredes, pero solo se admite una dirección IP por subred. Cada nodo preparado debe ser propietario de al menos una dirección IP. Si tiene varias subredes en su instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se le solicitará que establezca la dependencia de recursos de dirección IP en OR.  
   
      Haga clic en **Siguiente** para continuar.  
   
@@ -375,7 +377,7 @@ ms.locfileid: "85897723"
 13. Use la página Configuración de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - Directorios de datos para especificar los directorios de instalación no predeterminados. Para instalar en los directorios predeterminados, haga clic en **Siguiente**.  
   
     > [!IMPORTANT]  
-    >  Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los directorios de datos se deben encontrar en el disco de clúster compartido para los clústeres de conmutación por error.  
+    >  Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los directorios de datos se deben encontrar en el disco de clúster compartido para la instancia de clúster de conmutación por error.  
   
   
 14. Use la página Configuración de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Aprovisionamiento de cuentas para especificar los usuarios o las cuentas que tendrán permisos de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Debe especificar al menos un administrador del sistema para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -394,7 +396,7 @@ ms.locfileid: "85897723"
   
 18. La página Progreso de la instalación muestra el estado para que pueda supervisar el progreso de la instalación durante la ejecución del programa de instalación.  
   
-19. Después de la instalación, en la página **Operación completada** se proporciona un vínculo al archivo de registro de resumen de la instalación y a otras notas importantes. Para completar el proceso de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Cerrar**. Con este paso, todos los nodos preparados para el mismo clústeres de conmutación por error forman parte de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completado.  
+19. Después de la instalación, en la página **Operación completada** se proporciona un vínculo al archivo de registro de resumen de la instalación y a otras notas importantes. Para completar el proceso de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Cerrar**. Con este paso, todos los nodos preparados para la misma instancia de clúster de conmutación por error forman parte de la instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completada.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información, vea [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  

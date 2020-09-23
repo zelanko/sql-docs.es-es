@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d98e13b0d42dd61ae87e52ef3cc757d12093f4b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455687"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396694"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
 
@@ -40,7 +40,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  **Tabla 1**  
   
-||Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
+|Tipo de recuperación|Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
 ||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|No|  
@@ -51,7 +51,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
   
  **Tabla 2**  
   
-||Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
+|Tipo de recuperación|Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
 ||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|No|No|  

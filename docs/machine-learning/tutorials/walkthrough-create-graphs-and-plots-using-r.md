@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial de R: Crear gráficos y trazados'
-description: Tutorial en el que se muestra cómo crear gráficos y trazados mediante las funciones del lenguaje R en SQL Server.
+description: Aprenda técnicas para generar trazados y mapas mediante el lenguaje R con datos de SQL Server. Creará un histograma sencillo y luego desarrollará un trazado de mapa más complejo.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 06/13/2019
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781814"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178432"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Crear gráficos y trazados mediante SQL y R (tutorial)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 En esta parte del tutorial, aprenderá técnicas para generar trazados y mapas mediante R con datos de SQL Server. Primero creará un histograma sencillo y luego desarrollará un trazado de mapa más complejo.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 En este paso se da por supuesto que hay una sesión de R en curso basada en los pasos anteriores de este tutorial. Usaremos las cadenas de conexión y los objetos de origen de datos creados en esos pasos. También emplearemos las siguientes herramientas y paquetes para ejecutar el script.
 
@@ -89,7 +89,7 @@ Normalmente, los servidores de bases de datos bloquean el acceso a Internet. Est
 
     + La línea que comienza con `googmap` genera un mapa con las coordenadas especificadas en el centro.
 
-3. Cambie al contexto de proceso de SQL Server y represente los resultados. Para ello, ajuste la función de trazado en [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) como se muestra aquí. La función rxExec forma parte del paquete **RevoScaleR** y admite la ejecución de funciones arbitrarias de R en un contexto de proceso remoto.
+3. Cambie al contexto de proceso de SQL Server y represente los resultados. Para ello, ajuste la función de trazado en [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) como se muestra aquí. La función rxExec forma parte del paquete **RevoScaleR** y admite la ejecución de funciones arbitrarias de R en un contexto de cálculo remoto.
 
     ```R
     rxSetComputeContext(sqlcc)

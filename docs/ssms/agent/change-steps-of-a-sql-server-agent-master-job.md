@@ -1,4 +1,5 @@
 ---
+description: Change Steps of a SQL Server Agent Master Job
 title: Change Steps of a SQL Server Agent Master Job
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -11,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f18e86052d6044741f228c8970e78e680371111e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5499a3332e24fdeffc900530223865b0c10cbba5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418241"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 En este tema se describe cómo cambiar los pasos de un trabajo maestro del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -50,7 +51,7 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 5.  En el cuadro de diálogo **Propiedades del trabajo -** _nombre\_trabajo_, en **Seleccionar una página**, seleccione **Pasos**.  
   
-6.  Para abrir el cuadro de diálogo **Propiedades de paso de trabajo -**_nombre\_paso\_trabajo_, haga clic en **Editar**. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, consulte [Propiedades de paso de trabajo - nuevo paso de trabajo (página General)](../../ssms/agent/job-step-properties-new-job-step-general-page.md) y [Propiedades de paso de trabajo - nuevo paso de trabajo (página Opciones avanzadas)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Para abrir el cuadro de diálogo **Propiedades de paso de trabajo -** _nombre\_paso\_trabajo_, haga clic en **Editar**. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, consulte [Propiedades de paso de trabajo - nuevo paso de trabajo (página General)](../../ssms/agent/job-step-properties-new-job-step-general-page.md) y [Propiedades de paso de trabajo - nuevo paso de trabajo (página Opciones avanzadas)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   

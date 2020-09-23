@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_client_info | Microsoft Docs
+title: sqlsrv_client_info
+description: Referencia de API de la función sqlsrv_client_info en el controlador SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d17d3a49a241ee1ff042fceb3602b1d84f2cca9b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5d1ebcbe7a022d438e1e7e10c42098127496c1f7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920119"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411191"
 ---
 # <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +42,7 @@ sqlsrv_client_info( resource $conn)
 ## <a name="return-value"></a>Valor devuelto  
 Se devuelve una matriz asociativa con las claves descritas en la tabla siguiente, o bien **False** si el valor del recurso de conexión es Null.  
   
-**Para PHP (versiones 3.2 y 3.1 de SQL Server)** :  
+**Para PHP (versiones 3.2 y 3.1 de SQL Server)**:  
   
 |Clave|Descripción|  
 |-------|---------------|  
@@ -50,7 +51,7 @@ Se devuelve una matriz asociativa con las claves descritas en la tabla siguiente
 |DriverVer|Versión de la DLL de ODBC Driver 11 for SQL Server:<br /><br />xx.yy.zzzz (versión 3.2 o 3.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)])|  
 |ExtensionVer|Versión de php_sqlsrv.dll:<br /><br />3.2.xxxx.x (para la versión 3.2 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)])<br /><br />3.1.xxxx.x (para la versión 3.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)])|  
   
-**Para PHP (versiones 3.0 y 2.0 de SQL Server)** :  
+**Para PHP (versiones 3.0 y 2.0 de SQL Server)**:  
   
 |Clave|Descripción|  
 |-------|---------------|  

@@ -1,7 +1,7 @@
 ---
 title: Persistencia de los datos en Kubernetes
 titleSuffix: SQL Server big data clusters
-description: Obtenga información sobre cómo funciona la persistencia de los datos en un clúster de macrodatos de SQL Server 2019.
+description: Obtenga información sobre cómo los volúmenes persistentes proporcionan un modelo de complemento para el almacenamiento en Kubernetes. También, puede obtener información sobre cómo funciona la persistencia de los datos en un clúster de macrodatos de SQL Server 2019.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 970b049ec7933af9fab1d213d7441f101e01f7c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661076"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765694"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes
 
@@ -28,7 +28,7 @@ Un clúster de macrodatos de SQL Server consume estos volúmenes persistentes m
 
 Estos son algunos aspectos importantes que se deben tener en cuenta al planear la configuración de almacenamiento de un clúster de macrodatos:
 
-- Para que una implementación de clúster de macrodatos sea correcta, asegúrese de que hay disponible el número necesario de volúmenes persistentes. Si va a implementar en un clúster de Azure Kubernetes Service (AKS) y usa una clase de almacenamiento integrada (`default` o `managed-premium`), esta clase admite el aprovisionamiento dinámico de volúmenes persistentes. Por lo tanto, no es necesario crear los volúmenes persistentes previamente, pero deberá asegurarse de que los nodos de trabajo disponibles en el clúster de AKS pueden asociar tantos discos como volúmenes persistentes sean necesarios para la implementación. En función del [tamaño de máquina virtual](https://docs.microsoft.com/azure/virtual-machines/linux/sizes) especificado para los nodos de trabajo, cada nodo podrá asociar un número determinado de discos. En un clúster de tamaño predeterminado (sin alta disponibilidad), se requiere un mínimo de 24 discos. Si va a habilitar la alta disponibilidad o a escalar verticalmente un grupo, asegúrese de que haya como mínimo dos volúmenes persistentes por cada réplica de más, con independencia del recurso que se esté escalando verticalmente.
+- Para que una implementación de clúster de macrodatos sea correcta, asegúrese de que hay disponible el número necesario de volúmenes persistentes. Si va a implementar en un clúster de Azure Kubernetes Service (AKS) y usa una clase de almacenamiento integrada (`default` o `managed-premium`), esta clase admite el aprovisionamiento dinámico de volúmenes persistentes. Por lo tanto, no es necesario crear los volúmenes persistentes previamente, pero deberá asegurarse de que los nodos de trabajo disponibles en el clúster de AKS pueden asociar tantos discos como volúmenes persistentes sean necesarios para la implementación. En función del [tamaño de máquina virtual](/azure/virtual-machines/linux/sizes) especificado para los nodos de trabajo, cada nodo podrá asociar un número determinado de discos. En un clúster de tamaño predeterminado (sin alta disponibilidad), se requiere un mínimo de 24 discos. Si va a habilitar la alta disponibilidad o a escalar verticalmente un grupo, asegúrese de que haya como mínimo dos volúmenes persistentes por cada réplica de más, con independencia del recurso que se esté escalando verticalmente.
 
 - Si el aprovisionador de almacenamiento de la clase de almacenamiento que está proporcionando en la configuración no admite el aprovisionamiento dinámico, habrá que crear los volúmenes persistentes previamente. Por ejemplo, el aprovisionador `local-storage` no permite el aprovisionamiento dinámico. Vea este [script de ejemplo](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) para obtener instrucciones cómo llevar esto a cabo en un clúster de Kubernetes implementado con `kubeadm`.
 
@@ -71,7 +71,7 @@ De forma similar a otras personalizaciones, puede especificar opciones de config
     }
 ```
 
-La implementación del clúster de macrodatos usa el almacenamiento persistente para almacenar datos, metadatos y registros para distintos componentes. Puede personalizar el tamaño de las reclamaciones de volúmenes persistentes creadas como parte de la implementación. El procedimiento recomendado es usar clases de almacenamiento con una *directiva de reclamación* de [Conservar](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
+La implementación del clúster de macrodatos usa el almacenamiento persistente para almacenar datos, metadatos y registros para distintos componentes. Puede personalizar el tamaño de las reclamaciones de volúmenes persistentes creadas como parte de la implementación. El procedimiento recomendado es usar clases de almacenamiento con una *directiva de reclamación de * [Conservar](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
 > [!WARNING]
 > La ejecución sin almacenamiento persistente puede funcionar en un entorno de prueba, pero daría como resultado un clúster no funcional. Al reiniciarse el pod, los metadatos del clúster o los datos de usuario se pierden de forma permanente. No se recomienda ejecutar con esta configuración.

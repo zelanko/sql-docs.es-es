@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923421"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864340"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -262,7 +262,7 @@ Esta versión presenta nuevas características para mejorar las operaciones de a
 
 | Nueva característica o actualización | Detalles |
 |:---|:---|
-|Compatibilidad con bases de datos de instancias administradas de Azure SQL Database| Hospeda [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] en una instancia administrada. Vea [Instalación y configuración de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Compatibilidad con bases de datos de Azure SQL Managed Instance| Hospede [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] en Azure SQL Managed Instance. Vea [Instalación y configuración de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
 |Nuevos controles HTML| Los controles HTML reemplazan a los componentes anteriores de Silverlight. Quitada la dependencia de Silverlight.|
 | &nbsp; | &nbsp; |
 

@@ -1,6 +1,6 @@
 ---
 title: Temas de procedimientos de procesamiento de resultados (controlador OLE DB)
-description: Temas de procedimientos de procesamiento de resultados (OLE DB)
+description: Use estos artículos para comprender los resultados del procesamiento en una aplicación de OLE DB Driver for SQL Server, incluidos los comandos que ejecutan procedimientos almacenados.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, processing results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 897d3ce2357d3fd6e6f11bba643bd4d4d0219912
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2a1178d795d90009cf1305aad3fd3d3d9c4495a8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244714"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860275"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Temas de procedimientos de procesamiento de resultados (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

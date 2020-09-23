@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487648"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalación de SQL Server Machine Learning (R y Python) en equipos sin acceso a Internet
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 De forma predeterminada, los instaladores se conectan a sitios de descarga de Microsoft para obtener los componentes necesarios y actualizados de Machine Learning en SQL Server. Si las restricciones del firewall impiden que el instalador acceda a estos sitios, puede usar un dispositivo conectado a Internet para descargar archivos, transferirlos a un servidor sin conexión y, a continuación, ejecutar el programa de instalación.
 
@@ -215,4 +215,4 @@ Una instalación sin conexión inicial de SQL Server R Services requiere la mism
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener ayuda con mensajes o entradas de registro desconocidos, consulte [Preguntas más frecuentes sobre actualización e instalación: Machine Learning Services](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md).
+Para usar Machine Learning Services para ejecutar scripts de Python y R en la base de datos, consulte [Instalación de SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).

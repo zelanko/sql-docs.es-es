@@ -1,4 +1,5 @@
 ---
+description: Instalación del servidor de informes en modo nativo de Reporting Services 2016
 title: Instalación del servidor de informes en modo nativo de Reporting Services 2016 | Microsoft Docs
 ms.date: 12/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2c05251bb8ac19f3c4594a263c7b108a8dbc90a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498090"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalación del servidor de informes en modo nativo de Reporting Services 2016
 
@@ -75,7 +76,7 @@ La opción de configuración predeterminada usa los valores predeterminados con 
 
 - La cuenta de usuario utilizada para ejecutar el programa de instalación debe ser miembro del grupo local de administradores y tener permiso para obtener acceso y crear las bases de datos en la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda las bases de datos del servidor de informes.
 
-- El programa de instalación debe poder usar los valores predeterminados para reservar las direcciones URL que proporcionan acceso al servidor de informes y al [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Estos valores son el puerto 80, un carácter comodín seguro y los nombres de directorios virtuales con el formato **ReportServer_\<***nombre_instancia***>** y **Reports_\<***nombre_instancia***>** .
+- El programa de instalación debe poder usar los valores predeterminados para reservar las direcciones URL que proporcionan acceso al servidor de informes y al [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Estos valores son el puerto 80, un carácter comodín seguro y los nombres de directorio virtual con el formato **ReportServer_\<***instance_name***>** y **Reports_\<***instance_name***>** .
 
 - El programa de instalación debe poder utilizar los valores predeterminados para crear las bases de datos del servidor de informes. Estos valores son **ReportServer** y **ReportServerTempDB**. Si tiene bases de datos de una instalación anterior, el programa de instalación se bloqueará porque no puede configurar el servidor de informes en la configuración predeterminada del modo nativo. Debe cambiar el nombre, mover o eliminar las bases de datos para desbloquear la instalación.
 
@@ -93,7 +94,7 @@ Las reservas de direcciones URL están compuestas de un prefijo, un nombre de ho
 |Prefijo|El prefijo predeterminado es HTTP. Si instaló anteriormente un certificado de Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL), el programa de instalación intentará crear reservas de direcciones URL que usen el prefijo HTTPS.|
 |Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes aceptará cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva como el equipo, incluidos `https://<computername>/reportserver`, `https://localhost/reportserver` o `https://<IPAddress>/reportserver`.|
 |Port|El puerto predeterminado es 80. Tenga en cuenta que si utiliza cualquier puerto distinto del 80, tendrá que agregarlo explícitamente a la dirección URL cuando abra una aplicación web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una ventana del explorador.|
-|Directorio virtual|De forma predeterminada, los directorios virtuales se crean en el formato de ReportServer_\<*nombre_instancia*> para el servicio web del servidor de informes y Reports_\<*nombre_instancia*> para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **reportserver**. Para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], el directorio virtual predeterminado es **reports**.|
+|Directorio virtual|De forma predeterminada, los directorios virtuales se crean en el formato de ReportServer_\<*instance_name*> para el servicio web del servidor de informes y de Reports_\<*instance_name*> para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **reportserver**. Para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], el directorio virtual predeterminado es **reports**.|
 
 Un ejemplo de cadena de dirección URL completa podría ser el siguiente:
 

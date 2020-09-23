@@ -1,4 +1,5 @@
 ---
+description: Conceder a un usuario acceso a un servidor de informes
 title: Conceder a un usuario acceso a un servidor de informes | Microsoft Docs
 ms.date: 05/6/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0eb38550a0fc9e395b651783af4d449626de1d63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373891"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Conceder a un usuario acceso a un servidor de informes
 
@@ -37,7 +38,7 @@ ms.locfileid: "65619621"
 
     Los dos tipos de roles se complementan entre sí y deben usarse juntos. Por esta razón, agregar un usuario a un servidor de informes es una operación con dos partes implicadas. Si asigna un usuario a un rol de nivel de elemento, también deberá asignarlo a un rol de nivel de sistema. Al asignar un usuario a un rol, debe seleccionar un rol que ya esté definido. Para crear, modificar o eliminar roles, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para más información, consulte [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
 
-## <a name="before-you-start"></a>Antes de comenzar
+## <a name="before-you-start"></a>Antes de empezar
 
 Revise la lista siguiente antes de agregar usuarios a un servidor de informes en modo nativo.
 
@@ -61,7 +62,7 @@ Revise la lista siguiente antes de agregar usuarios a un servidor de informes en
 
 4. Seleccione **Agregar grupo o usuario**.
 
-5. En **Grupo o usuario**, especifique una cuenta de grupo o de usuario de dominio de Windows con este formato: \<dominio>\\<cuenta\>.
+5. En **Grupo o usuario**, escriba una cuenta de grupo o usuario de dominio de Windows con este formato: \<domain>\\<cuenta\>.
 
     > [!NOTE]
     > Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.
@@ -87,7 +88,7 @@ Revise la lista siguiente antes de agregar usuarios a un servidor de informes en
     > [!NOTE]
     > Si un elemento hereda la seguridad de un elemento primario, en la barra de herramientas, seleccione **Personalizar seguridad** para cambiar la configuración de seguridad. Luego seleccione **Agregar grupo o usuario**.
 
-6. En **Grupo o usuario**, especifique una cuenta de grupo o de usuario de dominio de Windows con este formato: \<dominio>\\<cuenta\>. Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.
+6. En **Grupo o usuario**, escriba una cuenta de grupo o usuario de dominio de Windows con este formato: \<domain>\\<cuenta\>. Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.
 
 7. Seleccione una o varias definiciones de roles que describan la manera en que el usuario o el grupo debe acceder al elemento y luego seleccione **Aceptar**.
 

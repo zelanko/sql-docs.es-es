@@ -1,7 +1,8 @@
 ---
-title: Tipos de datos PHP predeterminados | Microsoft Docs
+title: Tipos de datos PHP predeterminados
+description: En este tema se enumeran todos los tipos de datos PHP predeterminados con sus tipos de datos de SQL Server correspondientes al usar el controlador SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1e1cf91baf80fd6298eaaca9c9e12a0b5858d9f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928030"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680797"
 ---
 # <a name="default-php-data-types"></a>Tipos de datos PHP predeterminados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +30,7 @@ Cuando se devuelven datos utilizando el controlador PDO_SQLSRV, el tipo de datos
   
 En el resto del contenido de este tema, se describen los tipos de datos predeterminados que utilizan el controlador SQLSRV.  
   
-En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de datos que se recupera del servidor), el tipo de datos PHP predeterminado (el tipo de datos al que se efectúa la conversión) y la codificación predeterminada de secuencias y cadenas. Para obtener información más detallada acerca de cómo especificar los tipos de datos cuando se recuperan datos del servidor, consulte [ Especificación de los tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md).  
+En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de datos que se recupera del servidor), el tipo de datos PHP predeterminado (el tipo de datos al que se efectúa la conversión) y la codificación predeterminada de secuencias y cadenas. Para obtener información más detallada acerca de cómo especificar los tipos de datos cuando se recuperan datos del servidor, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 |Tipo de datos de SQL Server|Tipo de datos PHP predeterminado|Codificación predeterminada|  
 |-------------------|--------------------|--------------------|  
@@ -77,7 +78,7 @@ En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de dato
   
 3.  Los datos se devuelven del servidor como una secuencia de bytes sin procesar, sin que se realicen procesos de codificación o traducción.  
 
-4.  Los tipos de datos de fecha y hora se pueden recuperar como cadenas. Para más información, vea: [Cómo: Recuperación del tipo de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
+4.  Los tipos de datos de fecha y hora se pueden recuperar como cadenas. Para obtener más información, vea [Cómo recuperar el tipo de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
 
 5.  Se trata de un tipo heredado que se asigna al tipo varbinary(max).
 

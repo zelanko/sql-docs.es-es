@@ -1,5 +1,5 @@
 ---
-title: Controladores de Microsoft para PHP para SQL Server | Microsoft Docs
+title: Controladores de Microsoft para PHP para SQL Server
 description: Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP a través de extensiones PHP.
 ms.custom: ''
 ms.date: 03/26/2018
@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 894361044f45d294ad19f7057c57aa741bb0d454
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486753"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680540"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Controladores de Microsoft para PHP para SQL Server
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP. Los controladores son extensiones de PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para acceder a datos en instancias de Azure SQL Database y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). Los controladores hacen uso de las características de PHP, incluidas las secuencias de PHP, para leer y escribir objetos grandes.  
+Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP. Los controladores son extensiones de PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para el acceso a datos en Azure SQL Database y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). Los controladores hacen uso de las características de PHP, incluidas las secuencias de PHP, para leer y escribir objetos grandes.  
   
 ## <a name="getting-started"></a>Introducción  
 * [Paso 1: Configuración del entorno de desarrollo para el desarrollo de PHP](step-1-configure-development-environment-for-php-development.md)  

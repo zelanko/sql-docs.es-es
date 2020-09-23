@@ -1,5 +1,6 @@
 ---
-title: PDO::prepare | Microsoft Docs
+title: PDO::prepare
+description: Referencia de API de la función PDO::prepare en el controlador PDO_SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
 ms.date: 01/31/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8765718829f3df3bca5fd289ec326f9d7aad861
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919200"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435200"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,9 +30,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>Parámetros
-$*statement*: una cadena que contiene la instrucción SQL.
+$*instrucción*: una cadena que contiene la instrucción SQL.
 
-*key_pair*: una matriz que contiene un valor y un nombre de atributo. Para obtener más información, vea la sección Comentarios.
+*key_pair*: una matriz que contiene un valor y un nombre de atributo. Vea la sección Comentarios para obtener más información.
 
 ## <a name="return-value"></a>Valor devuelto
 Devuelve un objeto PDOStatement si se ejecuta correctamente. En caso de error, devuelve un objeto PDOException o false, según el valor de `PDO::ATTR_ERRMODE`.
@@ -49,7 +50,7 @@ En la siguiente tabla se incluyen los posibles valores *key_pair*.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Especifica el número de lugares decimales al dar formato a los valores de moneda obtenidos. Esta opción solo funciona cuando `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` es true. Para más información, vea [Aplicación de formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|Cuando es True, especifica la ejecución de una consulta directa. False implica la ejecución de una instrucción preparada. Para más información sobre `PDO::SQLSRV_ATTR_DIRECT_QUERY`, vea [Ejecución de la instrucción preparada o directa en el controlador PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (valor predeterminado)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Especifica si debe recuperar tipos de fecha y hora como objetos [PHP DateTime](http://php.net/manual/en/class.datetime.php). Para más información, vea [Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Especifica si debe recuperar tipos de fecha y hora como objetos [PHP DateTime](http://php.net/manual/en/class.datetime.php). Para más información, vea: [Cómo: Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Controla los resultados numéricos de las columnas en relación con los tipos SQL numéricos. Para obtener más información, consulte [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Especifica si se agregan ceros iniciales a las cadenas decimales cuando proceda. Si se establece, esta opción habilita la opción `PDO::SQLSRV_ATTR_DECIMAL_PLACES` para aplicar formato a los tipos de divisa. Para más información, vea [Aplicación de formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Para obtener más información, consulte [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|

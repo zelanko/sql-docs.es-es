@@ -1,4 +1,5 @@
 ---
+description: clase MSReportServer_ConfigurationSetting
 title: Clase MSReportServer_ConfigurationSetting | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e7b535ba8ce57cad4ddf1a43d2bfda97e4a26e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454432"
 ---
 # <a name="msreportserver_configurationsetting-class"></a>clase MSReportServer_ConfigurationSetting
   Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.  
@@ -42,7 +43,7 @@ public class MSReportServer_ConfigurationSetting
  Todos los miembros estáticos (**compartidos** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) públicos de este tipo son seguros para operaciones multiproceso. No se garantiza que los miembros de instancia sean seguros para subprocesos.  
   
 ## <a name="example"></a>Ejemplo  
- Para ejecutar el código siguiente, agregue el nombre del servidor en lugar de cada \<*nombreDeServidor*>. Actualice la ruta de acceso para que señale su ubicación de instalación si no es el valor predeterminado. En el ejemplo de código siguiente se recorre en iteración cada propiedad en la clase *MSReportServer_ConfigurationSetting* , imprimiendo el nombre de cada propiedad y su valor en la consola.  
+ Para ejecutar el código siguiente, agregue su nombre de servidor en lugar de cada \<*servername*>. Actualice la ruta de acceso para que señale su ubicación de instalación si no es el valor predeterminado. En el ejemplo de código siguiente se recorre en iteración cada propiedad en la clase *MSReportServer_ConfigurationSetting* , imprimiendo el nombre de cada propiedad y su valor en la consola.  
   
 ```vb  
 Imports System  

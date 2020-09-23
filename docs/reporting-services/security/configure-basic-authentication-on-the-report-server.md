@@ -1,4 +1,5 @@
 ---
+description: Configurar la autenticación básica en el servidor de informes
 title: Configurar la autenticación básica en el servidor de informes | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492645"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar la autenticación básica en el servidor de informes
   De forma predeterminada, Reporting Services acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si su implementación incluye aplicaciones cliente o exploradores que utilizan la autenticación básica, debe agregar esta autenticación a la lista de tipos admitidos. Además, si desea utilizar el Generador de informes, debe permitir el acceso anónimo a los archivos del Generador de informes.  
@@ -36,7 +37,7 @@ ms.locfileid: "81625874"
   
 1.  Abra RSReportServer.config en un editor de texto.  
   
-     El archivo se encuentra en *\<unidad>:* \Archivos de programa\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
+     El archivo se encuentra en *\<drive>:* Archivos de programa\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
   
 2.  Busque \<**Authentication**>.  
   
@@ -63,13 +64,13 @@ ms.locfileid: "81625874"
           </AuthenticationTypes>  
     ```  
   
-4.  Péguela sobre las entradas existentes de \<**Authentication**>.  
+4.  Péguela sobre las entradas existentes para \<**Authentication**>.  
   
      Si usa varios tipos de autenticación, basta con que agregue el elemento **RSWindowsBasic** , pero no elimine las entradas correspondientes a **RSWindowsNegotiate**, **RSWindowsNTLM**o **RSWindowsKerberos**.  
   
      Observe que no puede utilizar **Custom** con otros tipos de autenticación.  
   
-5.  Reemplace los valores vacíos de \<**Dominio**> o \<**DominioPredeterminado**> por valores que sean válidos para su entorno.  
+5.  Reemplace los valores vacíos de \<**Realm**> o \<**DefaultDomain**> por valores que sean válidos para su entorno.  
   
 6.  Guarde el archivo.  
   

@@ -1,4 +1,5 @@
 ---
+description: Proteger Mis informes
 title: Proteger Mis informes | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aba081c02ca027a861ab6c7680e038bac7a18304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498048"
 ---
 # <a name="secure-my-reports"></a>Proteger Mis informes
   La característica Mis informes proporciona un área de trabajo administrada por el usuario para trabajar con informes. A fin de cumplir su propósito, la carpeta Mis informes precisa permisos menos restrictivos que otras carpetas disponibles para uso general. Los usuarios que solo tienen permisos para ver y ejecutar informes en otras carpetas pueden necesitar un conjunto expandido de permisos para administrar sus carpetas Mis informes y el contenido que poseen. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una asignación de roles especializada y una definición de roles para este fin.  
@@ -32,7 +33,7 @@ ms.locfileid: "65570697"
   
  Una asignación de roles de **Mis informes** se compone de los siguientes elementos:  
   
--   La carpeta Mis informes del usuario, que está ubicada en la carpeta Carpetas de usuarios\\ *\<nombre de usuario>* \Mis informes.  
+-   La carpeta Mis Informes del usuario, que se encuentra en Carpetas de usuarios\\ *\<username>* \Mis informes.  
   
 -   La cuenta de usuario, que se determina cuando se activa la carpeta Mis informes. La carpeta se activa cuando un usuario hace clic en una carpeta Mis informes en el Administrador de informes o cuando publica un informe a una carpeta Mis informes desde el Diseñador de informes. Esta carpeta también se activa cuando un usuario solicita propiedades en el vínculo Mis informes.  
   

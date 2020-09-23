@@ -1,6 +1,6 @@
 ---
 title: Usar MSDeploy con el proveedor de dbSqlPackage
-description: Obtenga información sobre el proveedor DbSqlPackage obsoleto de MSDeploy. Vea parámetros, ejemplos y herramientas de publicación de bases de datos alternativas de SQL Server y SQL Azure.
+description: Obtenga información sobre el proveedor DbSqlPackage obsoleto de MSDeploy. Vea parámetros, ejemplos y herramientas de publicación de bases de datos alternativas de SQL Server y Azure SQL Database.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899748"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934090"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usar MSDeploy con el proveedor de dbSqlPackage
 
-**DbSqlPackage** es un proveedor de **MSDeploy** que permite interactuar con bases de datos de SQL Server y SQL Azure. **DbSqlPackage** admite las siguientes acciones:  
+**DbSqlPackage** es un proveedor de **MSDeploy** que permite interactuar con bases de datos de SQL Server y Azure SQL Database. **DbSqlPackage** admite las siguientes acciones:  
   
--   **Extract**: crea un archivo de instantánea de base de datos (.dacpac) a partir de bases de datos de SQL Server o SQL Azure.  
+-   **Extract**: crea un archivo de instantáneas de base de datos (.dacpac) a partir de una base de datos activa de SQL Server o Azure SQL Database.  
   
 -   **Publicar**: actualiza de forma incremental un esquema de la base de datos para coincidir con el esquema de un archivo .dacpac de origen.  
   
@@ -57,7 +57,7 @@ El proveedor de **dbSqlPackage** obtiene una entrada que es una cadena de conexi
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**N/D**|*input* es una cadena de conexión válida de SQL Server o SQL Azure o una ruta de acceso a un archivo .dacpac en el disco.<br /><br />**NOTA:** Las únicas propiedades de cadena de conexión que se admiten cuando se usa una cadena de conexión como origen de entrada son *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* y *ConnectionTimeout*.|  
   
-Si el origen de entrada es una cadena de conexión a una base de datos activa de SQL Server o SQL Azure, **dbSqlPackage** extraerá una instantánea de base de datos con formato de archivo .dacpac a partir de una base de datos de SQL Server o SQL Azure.  
+Si el origen de entrada es una cadena de conexión a una base de datos activa de SQL Server o Azure SQL Database, **dbSqlPackage** extraerá una instantánea de base de datos con formato de archivo .dacpac a partir de Azure SQL Database o SQL Server.  
   
 Los parámetros de **Source** son:  
   

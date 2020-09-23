@@ -1,7 +1,7 @@
 ---
 title: 'Ejecución de trabajos de Spark: Kit de herramientas de Azure para IntelliJ'
 titleSuffix: SQL Server Big Data Clusters
-description: Envíe trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Toolkit for IntelliJ.
+description: Obtenga información sobre cómo enviar trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Toolkit for IntelliJ mediante el envío de un archivo Jar o Py local.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25e200cf5a38a98289dcba91d08a1ce7c0cab340
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ef3a0d73535061ef2c9f2ce32556a0a86202d70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726730"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778544"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Envío de trabajos de Spark en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en IntelliJ
 
@@ -28,7 +28,7 @@ Uno de los escenarios clave para [!INCLUDE[big-data-clusters-2019](../includes/s
 - Clúster de macrodatos de SQL Server.
 - Java Development Kit para Oracle. Puede instalarlo desde el [sitio web de Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 - IntelliJ IDEA. Puede instalarlo desde el [sitio web de JetBrains](https://www.jetbrains.com/idea/download/).
-- Extensión Azure Toolkit for IntelliJ. Para obtener instrucciones de instalación, vea [Instalación del kit de herramientas de Azure para IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
+- Extensión Azure Toolkit for IntelliJ. Para obtener instrucciones de instalación, vea [Instalación del kit de herramientas de Azure para IntelliJ](/azure/azure-toolkit-for-intellij-installation).
 
 ## <a name="link-sql-server-big-data-cluster"></a>Vincular el clúster de macrodatos de SQL Server
 1. Abra la herramienta IntelliJ IDEA.
@@ -118,7 +118,7 @@ Después de vincular un clúster de macrodatos de SQL Server, puede enviarle una
       ![Significado de los archivos Jar del cuadro de diálogo de envío de Spark](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
        > [!NOTE]  
-       > Para cargar los archivos jar y los archivos a los que se hace referencia, vea: [Cómo cargar recursos en un clúster](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
+       > Para cargar los archivos jar y los archivos a los que se hace referencia, vea: [Cómo cargar recursos en un clúster](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
                          
     * **Ruta de acceso de carga**: puede indicar la ubicación de almacenamiento para el envío de recursos de proyecto Jar o Scala. Se admiten varios tipos de almacenamiento: **Use Spark interactive session to upload** (Usar sesión interactiva de Spark para cargar) y **Use WebHDFS to upload** (Usar WebHDFS para cargar)
     

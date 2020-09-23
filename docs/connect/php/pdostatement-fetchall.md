@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetchAll | Microsoft Docs
+title: PDOStatement::fetchAll
+description: Referencia de API de la función PDOStatement::fetchAll en el controlador PDO_SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 71b4bd02d09ee8ab9b4637d0d555cc5b862d84a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0c3ab50febea25e68b634d2f2afeb6a20b71bf82
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928593"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645102"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,11 +31,11 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-$*fetchstyle*: un símbolo (valor entero) que especifica el formato de la fila de datos. Consulte [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) para obtener una lista de valores. También se permite especificar PDO::FETCH_COLUMN. PDO::FETCH_BOTH es el valor predeterminado.  
+$*fetch_style*: un símbolo (valor entero) que especifica el formato de los datos de la fila. Consulte [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) para obtener una lista de valores. También se permite especificar PDO::FETCH_COLUMN. PDO::FETCH_BOTH es el valor predeterminado.  
   
-$*columnindex*: un valor entero que representa la columna que se va a devolver si $*fetch_style* es PDO::FETCH_COLUMN. 0 es el valor predeterminado.  
+$*column_index*: un valor entero que representa la columna que se va a devolver si $*fetch_style* es PDO::FETCH_COLUMN. 0 es el valor predeterminado.  
   
-$*ctorargs*: una matriz de los parámetros de un constructor de clase cuando $*fetch_style* es PDO::FETCH_CLASS o PDO::FETCH_OBJ.  
+$*ctor_args*: una matriz de los parámetros de un constructor de clase cuando $*fetch_style* es PDO::FETCH_CLASS o PDO::FETCH_OBJ.  
   
 ## <a name="return-value"></a>Valor devuelto  
 Una matriz de las filas restantes del conjunto de resultados, o False si se produce un error en la llamada al método.  

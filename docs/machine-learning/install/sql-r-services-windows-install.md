@@ -4,28 +4,29 @@ titleSuffix: ''
 description: Obtenga información sobre cómo instalar SQL Server 2016 R Services en Windows. Puede usar R Services para ejecutar scripts de R en la base de datos.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: af1d1c36971e3c6e47a97874bca26d55694d4491
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487658"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Instalación de SQL Server 2016 R Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 Obtenga información sobre cómo instalar SQL Server 2016 R Services en Windows. Puede usar R Services para ejecutar scripts de R en la base de datos.
 
 > [!NOTE]
-> En SQL Server 2017 y versiones posteriores, R se incluye en [Machine Learning Services](../sql-server-machine-learning-services.md) junto con Python. Si quiere R y tiene SQL Server 2017 o versiones posteriores, vea [Instalación de SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) para agregar la característica.
+> En SQL Server 2017 y versiones posteriores, R se incluye en [Machine Learning Services](../sql-server-machine-learning-services.md) junto con Python. Si quiere R y tiene SQL Server 2017 o versiones posteriores, consulte [Instalación de SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) para agregar la característica.
 
-<a name="bkmk_prereqs"> </a> 
+<a name="bkmk_prereqs"></a>
 
 ## <a name="pre-install-checklist"></a>Lista de comprobación previa a la instalación
 
@@ -188,7 +189,10 @@ En los servidores desconectados, se requieren pasos extra. Para obtener más inf
 
 1. Continúe con los pasos del asistente y acepte los términos de licencia para la distribuciones de R.
 
-<a name="bkmk_FollowUp"></a> 
+> [!NOTE]
+> La actualización acumulativa (CU) 14 y versiones posteriores para SQL Server 2016 SP2 incluye una versión más reciente del entorno de ejecución de R. Para más información, consulte [Cambio a la versión predeterminada del entorno de ejecución del lenguaje](change-default-language-runtime-version.md).
+
+<a name="bkmk_FollowUp"></a>
 
 ## <a name="additional-configuration"></a>Configuración adicional
 
@@ -212,7 +216,7 @@ En la base de datos, puede que necesite las siguientes actualizaciones de config
 * [Agregar SQLRUserGroup como usuario de base de datos](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
-> No se requieren todos los cambios enumerados y no es necesario ninguno de ellos. Los requisitos dependen del esquema de seguridad, del lugar en el que se haya instalado SQL Server y de cómo se espera que los usuarios se conecten a la base de datos y ejecuten scripts externos. Puede encontrar más sugerencias para la solución de problemas aquí: [Preguntas más frecuentes sobre actualización e instalación](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)
+> No se requieren todos los cambios enumerados y no es necesario ninguno de ellos. Los requisitos dependen del esquema de seguridad, del lugar en el que se haya instalado SQL Server y de cómo se espera que los usuarios se conecten a la base de datos y ejecuten scripts externos. Se pueden encontrar instrucciones de instalación adicionales aquí: [Instalación de SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
 ## <a name="suggested-optimizations"></a>Optimizaciones sugeridas
 

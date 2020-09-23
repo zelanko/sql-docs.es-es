@@ -1,6 +1,6 @@
 ---
 title: API de copia masiva para la inserción por lotes en JDBC
-description: Microsoft JDBC Driver para SQL Server admite el uso de la API de copia masiva para las operaciones de inserción por lotes en Azure Data Warehouse.
+description: Microsoft JDBC Driver para SQL Server admite el uso de la copia masiva para las operaciones de inserción por lotes en Azure Data Warehouse para cargar más rápido datos en la base de datos.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633996"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943034"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso de la API de copia masiva para la operación de inserción por lotes
 
@@ -71,7 +71,7 @@ Si se produce un error en la consulta por errores no relacionados con "SQL Serve
 
 ## <a name="example"></a>Ejemplo
 
-A continuación aparece un código de ejemplo que muestra el caso de uso para una operación de inserción por lotes en Azure DW de mil filas, para ambos escenarios (normal frente a API de copia masiva).
+A continuación aparece un código de ejemplo que muestra el caso de uso para una operación de inserción por lotes en Azure Synapse Analytics (SQL DW) de mil filas, para ambos escenarios (normal frente a API de copia masiva).
 
 ```java
     public static void main(String[] args) throws Exception

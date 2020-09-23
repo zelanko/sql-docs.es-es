@@ -1,8 +1,8 @@
 ---
-title: Descarga de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
+title: Descargar los controladores de Microsoft para PHP para SQL Server
 description: Descargue controladores de Microsoft para PHP para SQL Server para desarrollar aplicaciones PHP que se conectan a SQL Server y Azure SQL Database.
 ms.custom: ''
-ms.date: 05/05/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,16 +10,16 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3d583113b07c601010c89ef8796614c177c5e20
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24dfef1b33b2a61c0d82c07ce6306e0b0449b8f3
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487948"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680770"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Descargar los controladores de Microsoft para PHP para SQL Server
 
-Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP. Los controladores son extensiones de PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para acceder a datos en instancias de Azure SQL Database y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). Los controladores hacen uso de las características de PHP, incluidas las secuencias de PHP, para leer y escribir objetos grandes.
+Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP. Los controladores son extensiones de PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para acceder a datos en Azure SQL Database y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). Los controladores hacen uso de las características de PHP, incluidas las secuencias de PHP, para leer y escribir objetos grandes.
 
 En Linux y macOS, los controladores para PHP se descargan e instalan fácilmente con PECL. Consulte el [tutorial de instalación en Linux y macOS](installation-tutorial-linux-mac.md) para más detalles. Si necesita descargar e instalar manualmente los controladores para PHP en Linux y macOS, los paquetes de esas plataformas se pueden encontrar en las etiquetas de la versión de GitHub.
 

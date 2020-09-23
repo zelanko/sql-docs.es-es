@@ -1,6 +1,6 @@
 ---
 title: Asignación de tipos de datos en ITableDefinition (controlador OLE DB) | Microsoft Docs
-description: Asignación de tipos de datos en ITableDefinition
+description: Obtenga información sobre cómo un consumidor de OLE DB Driver for SQL Server puede especificar los tipos de datos de SQL Server al crear tablas con el método ITableDefinition::CreateTable.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data types [OLE DB]
 - CreateTable function
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: af28946406b4bd0fed0c75f85b9e69450dc38434
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fecca9ed46ea35fe45868b8c618b3514f0b04abd
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976603"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860126"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Asignación de tipos de datos en ITableDefinition
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

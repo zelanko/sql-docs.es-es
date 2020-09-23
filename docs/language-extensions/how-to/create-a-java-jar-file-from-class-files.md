@@ -1,6 +1,6 @@
 ---
 title: Creación de un archivo .jar de Java a partir de archivos de clase
-description: Cómo crear un archivo .jar de Java a partir de archivos de clase
+description: Empaquete los archivos de clase en un archivo .jar al usar extensiones de lenguaje de SQL Server para ejecutar código de Java.
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a105dde9046167257a86705f678466872785b4be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c324fca6893af35cafe6e9f65eccd0e8a0e478f9
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735091"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180288"
 ---
 # <a name="create-a-java-jar-file-from-class-files"></a>Creación de un archivo .jar de Java a partir de archivos de clase
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Obtenga información sobre cómo empaquetar los archivos de clase en un archivo jar, al usar las [extensiones de lenguaje de SQL Server](../language-extensions-overview.md) para ejecutar código Java. Se recomienda empaquetar los archivos.
 

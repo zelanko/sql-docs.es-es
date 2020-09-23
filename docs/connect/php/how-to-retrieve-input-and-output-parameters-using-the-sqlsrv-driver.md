@@ -1,7 +1,8 @@
 ---
-title: Recuperación de parámetros de E/S con el controlador SQLSRV | Microsoft Docs
+title: Procedimientos para recuperar los parámetros de E/S con el controlador SQLSRV
+description: En este tema se describe cómo recuperar los parámetros de entrada y salida mediante procedimientos almacenados y el controlador SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 04/12/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2bad5942e98271638b4b929d55c54c1562629e44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916101"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680690"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Recuperación de parámetros de entrada y salida con el controlador SQLSRV
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Procedimientos: Recuperación de los parámetros de entrada y salida con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 En este tema se muestra cómo usar el controlador SQLSRV para llamar a un procedimiento almacenado en el que se ha definido un parámetro como parámetro de entrada/salida, y cómo recuperar los resultados. Cuando se recupera un parámetro de salida o uno de entrada/salida, se deben usar todos los resultados que devuelve el procedimiento almacenado antes de que pueda accederse al valor del parámetro devuelto.  
   
 > [!NOTE]  
-> Las variables que se inicializan o actualizan a **Null**, **DateTime**o tipos de secuencia no se pueden usar como parámetros de salida.  
+>  Las variables que se inicializan o actualizan a **Null**, **DateTime**o tipos de secuencia no se pueden usar como parámetros de salida.  
   
 ## <a name="example-1"></a>Ejemplo 1
 En el ejemplo siguiente se llama un procedimiento almacenado que resta las horas de vacaciones utilizadas de las horas de vacaciones disponibles de un empleado determinado. La variable que representa las horas de vacaciones utilizadas, *$vacationHrs*, se transmite al procedimiento almacenado como un parámetro de entrada. Después de actualizar las horas de vacaciones disponibles, el procedimiento almacenado usa el mismo parámetro para devolver el número de horas de vacaciones restantes.  
@@ -152,9 +153,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Consulte también  
-[Especificación de la dirección del parámetro con el controlador SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Procedimientos: Especificación de la dirección del parámetro con el controlador SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Recuperación de parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Procedimientos: Recuperación de los parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
   

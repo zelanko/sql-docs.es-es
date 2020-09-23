@@ -1,6 +1,6 @@
 ---
 title: Creación de objetos RxSqlServerData
-description: 'Tutorial 2 de RevoScaleR: creación de objetos de datos con el lenguaje R en SQL Server.'
+description: 'Aprenda a usar las funciones de RevoScaleR con SQL Server. Este tutorial es una continuación de la creación de bases de datos: agregar tablas y cargar datos.'
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2c7daa106429f4db1382a3e73aa6b280b14dc57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728611"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178812"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Creación de objetos de datos de SQL Server con RxSqlServerData (tutorial de SQL Server y RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este es el tutorial 2 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
@@ -145,7 +145,7 @@ El paquete **RevoScaleR** contiene funciones específicas de los tipos de oríge
     
     Suponiendo que no existen problemas con su cadena de conexión, después de una breve pausa, debería ver resultados como estos:
   
-    *Total de filas escritas: 10 000, Tiempo total: 0,466* *Filas leídas: 10 000, Total de filas procesadas: 10 000, Tiempo total de fragmentos: 0,577 segundos*
+    *Total de filas escritas: 10 000, tiempo total: 0,466* *Filas leídas: 10 000, total de filas procesadas: 10 000, tiempo total de fragmentos: 0,577 segundos*
   
 5. Actualice la lista de tablas. Para comprobar que cada variable tiene los tipos de datos correctos y que se ha importado correctamente, también puede hacer clic con el botón derecho en la tabla en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y elegir **Seleccionar las 1000 primeras filas**.
 

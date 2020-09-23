@@ -2,7 +2,7 @@
 title: Introducción al controlador JDBC | Microsoft Docs
 description: Microsoft JDBC Driver para SQL Server es un controlador compatible de tipo 4 de Java Database Connectivity (JDBC) 4.2 que proporciona un acceso a datos a las bases de datos SQL.
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,24 +11,24 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5455169782503939330c32829a89bf0701aac25a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529344"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943709"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Introducción al controlador JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver para SQL Server es un controlador compatible de tipo 4 de Java Database Connectivity (JDBC) 4.2 que proporciona un acceso sólido a datos a SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 y Azure SQL Database.  
+Microsoft JDBC Driver para SQL Server es un controlador compatible de tipo 4 de Java Database Connectivity (JDBC) 4.2 que proporciona un acceso sólido a datos a las bases de datos de SQL Azure t SQL Server.  
 
 ## <a name="redistribution"></a>Redistribución
 
-Las versiones 6.0, 6.2, 6.4 y 7.0 del controlador JDBC son redistribuibles. Revise la cláusula _Código distribuible_ en los contratos de licencia.
+Las versiones 6.0 del controlador JDBC son redistribuibles. Revise la cláusula _Código distribuible_ en los contratos de licencia.
 
-Las versiones 4.x del controlador JDBC son antiguas y están obsoletas. La compatibilidad con 4.x expiró antes de 2018.
+Las versiones 4.x del controlador JDBC están obsoletas. La compatibilidad con 4.x expiró antes de 2018.
 
 ## <a name="in-this-section"></a>En esta sección  
 

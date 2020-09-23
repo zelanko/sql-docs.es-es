@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::setAttribute | Microsoft Docs
+title: PDOStatement::setAttribute
+description: Referencia de API de la función PDOStatement::setAttribute en el controlador PDO_SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e5c5c0670ceb9725c04a63a59a09b25cf72c810
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33bd5d23ab35eda7fc6416dc18cf720eabd71f58
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925256"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646535"
 ---
 # <a name="pdostatementsetattribute"></a>PDOStatement::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +30,7 @@ bool PDOStatement::setAttribute ($attribute, $value );
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-$*attribute*: entero; una de las constantes PDO::ATTR_* o PDO::SQLSRV_ATTR_\*. Consulte la sección Comentarios para obtener la lista de atributos disponibles.  
+$*attribute*: un valor entero, una de las constantes PDO::ATTR_* o PDO::SQLSRV_ATTR_\*. Consulte la sección Comentarios para obtener la lista de atributos disponibles.  
   
 $*value*: el valor (mixto) que se establecerá para el parámetro $*attribute* especificado.  
   
@@ -45,7 +46,7 @@ En la tabla siguiente se incluye la lista de atributos disponibles.
 |PDO::SQLSRV_ATTR_DATA_CLASSIFICATION|true o false|Especifica si se deben recuperar los metadatos de clasificación de datos al llamar a [PDOStatement::getColumnMeta](../../connect/php/pdostatement-getcolumnmeta.md). El valor predeterminado es false.|
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Un entero comprendido entre 0 y 4, ambos incluidos|Especifica el número de lugares decimales al dar formato a los valores de moneda obtenidos.<br /><br />Se omitirá cualquier entero negativo o un valor mayor que 4.<br /><br />Esta opción solo funciona si PDO::SQLSRV_ATTR_FORMAT_DECIMALS es true.<br /><br />Esta opción también se puede establecer en el nivel de conexión. Si es así, esta opción invalida la opción de nivel de conexión.<br /><br />Para más información, vea [Aplicación de formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|Entero<br /><br />PDO::SQLSRV_ENCODING_UTF8 (valor predeterminado)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|Establece el juego de caracteres que utiliza el controlador para comunicarse con el servidor.|  
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|true o false|Especifica si debe recuperar tipos de fecha y hora como objetos [PHP DateTime](http://php.net/manual/en/class.datetime.php). Si el valor se deja como false, el comportamiento predeterminado es devolverlos como cadenas.<br /><br />Esta opción también se puede establecer en el nivel de conexión. Si es así, esta opción invalida la opción de nivel de conexión.<br /><br />Para más información, vea [Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|true o false|Especifica si debe recuperar tipos de fecha y hora como objetos [PHP DateTime](http://php.net/manual/en/class.datetime.php). Si el valor se deja como false, el comportamiento predeterminado es devolverlos como cadenas.<br /><br />Esta opción también se puede establecer en el nivel de conexión. Si es así, esta opción invalida la opción de nivel de conexión.<br /><br />Para más información, vea: [Cómo: Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|true o false|Controla los resultados numéricos de las columnas con los tipos SQL numéricos (bit, integer, smallint, tinyint, float o real).<br /><br />Cuando la marca de la opción de conexión ATTR_STRINGIFY_FETCHES está activada, el valor devuelto es una cadena incluso cuando SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está activado.<br /><br />Cuando el tipo devuelto de PDO en la columna de enlace es PDO_PARAM_INT, el valor devuelto de una columna de enteros es un valor int aunque SQLSRV_ATTR_FETCHES_NUMERIC_TYPE esté desactivado.|  
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|true o false|Especifica si se agregan ceros iniciales a las cadenas decimales cuando proceda. Si se establece, esta opción habilita la opción de PDO::SQLSRV_ATTR_DECIMAL_PLACES para aplicar formato a los tipos de divisa. Si el valor se deja como false, se usa el comportamiento predeterminado de devolver la precisión exacta y omitir los ceros iniciales de los valores menores que 1.<br /><br />Esta opción también se puede establecer en el nivel de conexión. Si es así, esta opción invalida la opción de nivel de conexión.<br /><br />Para más información, vea [Aplicación de formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Entero|Establece el tiempo de espera de consulta en segundos.<br /><br />De manera predeterminada, el controlador esperará indefinidamente para obtener resultados. No se permiten números negativos.<br /><br />0 significa sin tiempo de espera.|  

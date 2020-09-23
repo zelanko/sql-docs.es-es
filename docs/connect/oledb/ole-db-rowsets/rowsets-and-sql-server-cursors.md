@@ -1,6 +1,6 @@
 ---
 title: Conjuntos de filas y cursores de SQL Server (controlador OLE DB)
-description: Conjuntos de filas y cursores de SQL Server
+description: Obtenga información sobre cómo SQL Server devuelve los conjuntos de resultados a los consumidores y los conjuntos de resultados predeterminados difieren de los cursores de servidor en OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], cursors
 - properties [OLE DB]
 - cursors [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbcac0300b3abe337e39bccb84a78f74e0de61bb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244160"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859976"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de filas y cursores de servidor de SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -8,12 +8,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: accb94c4fbfe0c7e10b6fdfcaa749e8059b8e498
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4b544e7220d82d8368aec2a44c861e44b1e96398
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812300"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988443"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>Creación de cadenas de conexión de datos - Generador de informes y SSRS
 

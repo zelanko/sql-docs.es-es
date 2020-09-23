@@ -1,6 +1,6 @@
 ---
-title: Actualización de datos en cursores de SQL Server | Microsoft Docs
-description: Actualizar datos en cursores de SQL Server
+title: Actualización de datos en cursores (controlador OLE DB)
+description: Obtenga información sobre cómo funciona una aplicación de consumidor de OLE DB Driver for SQL Server con solicitudes en un conjunto de filas modificable mediante el uso de cursores de SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - immediate update mode [OLE DB]
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7a1a476c9e8588cb5dc14ce7f24b335c0b433b68
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eae7b9119803615a2d18fe4710ff1eda2b91ac5b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999609"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859924"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Actualizar datos en cursores de SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cuando se capturan y actualizan datos mediante cursores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las mismas consideraciones y restricciones que se aplican a cualquier otra aplicación cliente son válidas para una aplicación de consumidor del controlador OLE DB para SQL Server.  
+  Cuando se capturan y actualizan datos mediante cursores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las mismas consideraciones y restricciones que se aplican a cualquier otra aplicación cliente son válidas para una aplicación de consumidor de OLE DB Driver for SQL Server.  
   
  Solo las filas de cursores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participan en el control del acceso simultáneo a datos. Cuando el consumidor solicita un conjunto de filas modificable, DBPROP_LOCKMODE controla el control de simultaneidad. Para modificar el nivel de control de acceso simultáneo, el consumidor establece la propiedad DBPROP_LOCKMODE antes de abrir el conjunto de filas.  
   

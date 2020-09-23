@@ -1,5 +1,5 @@
 ---
-title: Conectar Spark a SQL Server
+title: Uso del conector de Apache Spark para SQL Server y Azure SQL
 titleSuffix: SQL Server big data clusters
 description: Obtenga información sobre cómo usar el conector de Apache Spark para SQL Server y Azure SQL a fin de leer y escribir en SQL Server.
 author: MikeRayMSFT
@@ -9,29 +9,89 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 3cb36c4bdddfaa97b9b6c08015308799d54cb0dc
-ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
+ms.openlocfilehash: 454d5fadaa88d645e9d1c2feec2c9d87c2af29c9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86438077"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645506"
 ---
-# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-apache-spark-connector-for-sql-server-and-azure-sql"></a>Procedimientos para leer y escribir en SQL Server desde Spark mediante el conector de Apache Spark para SQL Server y Azure SQL
+# <a name="use-the-apache-spark-connector-for-sql-server-and-azure-sql"></a>Uso del conector de Apache Spark para SQL Server y Azure SQL
 
-Un patrón clave de uso de macrodatos es un procesamiento de datos de gran volumen en Spark, seguido de la escritura de los datos en SQL Server para acceder a las aplicaciones de línea de negocio. Estos patrones de uso se benefician de un conector que usa las optimizaciones de SQL clave y proporciona un mecanismo de escritura eficaz.
+El [conector de Apache Spark para SQL Server y Azure SQL](https://github.com/microsoft/sql-spark-connector) es un conector de alto rendimiento que le permite usar datos transaccionales en análisis de macrodatos y conservar los resultados para consultas ad hoc o la generación de informes. El conector permite usar cualquier base de datos SQL, local o en la nube, como origen de datos de entrada o receptor de datos de salida para trabajos de Spark. El conector utiliza API de escritura masiva de SQL Server. El usuario puede pasar los parámetros de escritura masiva como parámetros opcionales, y el conector los pasa tal cual a la API subyacente. Para más información sobre las operaciones de escritura masiva, consulte [Uso de la copia masiva con el controlador JDBC]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-En este artículo se proporciona información general sobre la interfaz del conector de Apache Spark para SQL Server y Azure SQL y la creación de instancias a fin de usarlas con el modo sin AD y el modo con AD. Después, se proporciona un ejemplo de cómo usar el conector de Apache Spark para SQL Server y Azure SQL a fin de leer y escribir en las siguientes ubicaciones de un clúster de macrodatos:
-1. La instancia maestra de SQL Server
-1. El grupo de datos de SQL Server
+El conector se incluye de forma predeterminada en los clústeres de macrodatos de SQL Server.
 
-   ![Diagrama del conector de Apache Spark para SQL Server y Azure SQL](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+Más información sobre el conector en el [repositorio de código abierto](https://github.com/microsoft/sql-spark-connector). Puede encontrar ejemplos [aquí](https://github.com/microsoft/sql-spark-connector/tree/master/samples).
 
-## <a name="apache-spark-connector-for-sql-server-and-azure-sql-interface"></a>Interfaz del conector de Apache Spark para SQL Server y Azure SQL
+## <a name="write-to-a-new-sql-table"></a>Escritura en una nueva tabla de SQL
 
-SQL Server 2019 proporciona el [**conector de Apache Spark para SQL Server y Azure SQL**](https://github.com/microsoft/sql-spark-connector) para clústeres de macrodatos, que usa las API de escritura masiva de SQL Server para escrituras de Spark a SQL. El conector de Apache Spark para SQL Server y Azure SQL se basa en las API de origen de datos de Spark y proporciona una interfaz de conector de Spark JDBC conocida. Para los parámetros de interfaz, consulte la [documentación de Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). El nombre **com.microsoft.sqlserver.jdbc.spark** hace referencia al conector de Apache Spark para SQL Server y Azure SQL. El conector de Apache Spark para SQL Server y Azure SQL admite dos modos de seguridad para conectarse con SQL Server, el modo sin Active Directory y el modo con Active Directory (AD):
-### <a name="non-ad-mode"></a>Modo sin AD:
-En la seguridad del modo sin AD, cada usuario tiene un nombre de usuario y una contraseña que se deben proporcionar como parámetros durante la creación de instancias del conector para realizar operaciones de lectura o escritura.
-A continuación se muestra un ejemplo de creación de instancias de conector para el modo sin AD:
+>[!CAUTION]
+> En el modo `overwrite`, el conector descarta primero la tabla si ya existe en la base de datos de forma predeterminada. Use esta opción con cuidado para evitar pérdidas de datos inesperadas.
+> 
+> Cuando se usa el modo `overwrite` sin la opción `truncate`, al volver a crear la tabla se perderán los índices. Por ejemplo, una tabla de almacén de columnas se convierte en un montón. Si quiere mantener la indexación existente, especifique también la opción `truncate` con el valor `true`. Por ejemplo, `.option("truncate",true)`.
+
+```python
+server_name = "jdbc:sqlserver://{SERVER_ADDR}"
+database_name = "database_name"
+url = server_name + ";" + "databaseName=" + database_name + ";"
+
+table_name = "table_name"
+username = "username"
+password = "password123!#" # Please specify password here
+
+try:
+  df.write \
+    .format("com.microsoft.sqlserver.jdbc.spark") \
+    .mode("overwrite") \
+    .option("url", url) \
+    .option("dbtable", table_name) \
+    .option("user", username) \
+    .option("password", password) \
+    .save()
+except ValueError as error :
+    print("Connector write failed", error)
+```
+
+## <a name="append-to-sql-table"></a>Anexión a una tabla SQL
+```python
+try:
+  df.write \
+    .format("com.microsoft.sqlserver.jdbc.spark") \
+    .mode("append") \
+    .option("url", url) \
+    .option("dbtable", table_name) \
+    .option("user", username) \
+    .option("password", password) \
+    .save()
+except ValueError as error :
+    print("Connector write failed", error)
+```
+
+## <a name="specify-the-isolation-level"></a>Especificación del nivel de aislamiento
+
+De forma predeterminada, este conector usa el nivel de aislamiento READ_COMMITTED al realizar la inserción masiva en la base de datos. Si quiere reemplazarlo por otro nivel de aislamiento, use la opción `mssqlIsolationLevel` como se muestra a continuación.
+```python
+    .option("mssqlIsolationLevel", "READ_UNCOMMITTED") \
+```
+
+## <a name="read-from-sql-table"></a>Lectura de una tabla SQL
+
+```python
+jdbcDF = spark.read \
+        .format("com.microsoft.sqlserver.jdbc.spark") \
+        .option("url", url) \
+        .option("dbtable", table_name) \
+        .option("user", username) \
+        .option("password", password).load()
+```
+
+## <a name="non-active-directory-mode"></a>Modo sin Active Directory
+
+En la seguridad del modo sin Active Directory, cada usuario tiene un nombre de usuario y una contraseña que se deben proporcionar como parámetros durante la creación de instancias del conector para realizar operaciones de lectura o escritura.
+
+A continuación, se muestra un ejemplo de creación de instancias del conector para el modo sin Active Directory: Antes de ejecutar el script, reemplace `?` por el valor de su cuenta.
+
 ```python
 # Note: '?' is a placeholder for a necessary user-specified value
 connector_type = "com.microsoft.sqlserver.jdbc.spark" 
@@ -45,12 +105,15 @@ writer = df.write \
    .option("password",?) 
 writer.save() 
 ```
-### <a name="ad-mode"></a>Modo de AD:
-En la seguridad del modo de AD, una vez que un usuario ha generado un archivo keytab, tiene que proporcionar los valores `principal` y `keytab` como parámetros durante la creación de instancias del conector.
+
+## <a name="active-directory-mode"></a>Modo de Active Directory
+
+En la seguridad del modo de Active Directory, una vez que un usuario ha generado un archivo keytab, tiene que proporcionar los valores `principal` y `keytab` como parámetros durante la creación de instancias del conector.
 
 En este modo, el controlador carga el archivo keytab en los contenedores del ejecutor correspondiente. Después, los ejecutores usan el nombre de entidad de seguridad y el archivo keytab para generar un token que se utiliza para crear un conector JDBC para lectura y escritura.
 
-A continuación se muestra un ejemplo de creación de instancias de conector para el modo de AD:
+A continuación, se muestra un ejemplo de creación de instancias del conector para el modo de Active Directory: Antes de ejecutar el script, reemplace `?` por el valor de su cuenta.
+
 ```python
 # Note: '?' is a placeholder for a necessary user-specified value
 connector_type = "com.microsoft.sqlserver.jdbc.spark"
@@ -65,63 +128,6 @@ writer = df.write \
 
 writer.save() 
 ```
-
-En la tabla siguiente se describen los parámetros de interfaz que han cambiado o son nuevos:
-
-| Nombre de propiedad | Opcional | Descripción |
-|---|---|---|
-| **isolationLevel** | Sí | Describe el nivel de aislamiento de la conexión. El valor predeterminado del conector es **READ_COMMITTED**. |
-
-El conector utiliza API de escritura masiva de SQL Server. El usuario puede pasar los parámetros de escritura masiva como parámetros opcionales, y el conector los pasa tal cual a la API subyacente. Para obtener más información sobre las operaciones de escritura masiva, vea [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
-
-## <a name="apache-spark-connector-for-sql-server-and-azure-sql-sample"></a>Ejemplo de conector de Apache Spark para SQL Server y Azure SQL
-En el ejemplo se realizan las tareas siguientes:
-
-- Lectura de un archivo de HDFS y realización de algún procesamiento básico.
-- Escritura de la trama de datos en una instancia maestra de SQL Server como tabla de SQL y, después, lectura de la tabla en una trama de datos.
-- Escritura de la trama de datos en un grupo de datos de SQL Server como tabla externa de SQL y, después, lectura de la tabla externa en una trama de datos.
-### <a name="prerequisites"></a>Prerrequisitos
-
-- Un [clúster de macrodatos de SQL Server](deploy-get-started.md)
-
-- [Azure Data Studio](https://aka.ms/getazuredatastudio)
-
-### <a name="create-the-target-database"></a>Creación de la base de datos de destino
-
-1. Abra Azure Data Studio y [conéctese a la instancia maestra de SQL Server del clúster de macrodatos](connect-to-big-data-cluster.md).
-
-1. Cree una nueva consulta y ejecute el siguiente comando para crear una base de datos de ejemplo denominada **MyTestDatabase**.
-
-   ```sql
-   Create DATABASE MyTestDatabase
-   GO
-   ```
-
-### <a name="load-sample-data-into-hdfs"></a>Carga de datos de muestra en HDFS
-
-1. Descargue [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) en el equipo local.
-
-1. Inicie Azure Data Studio y [conéctese a su clúster de macrodatos](connect-to-big-data-cluster.md).
-
-1. Haga clic con el botón derecho en la carpeta HDFS en el clúster de macrodatos y seleccione **Nuevo directorio**. Asigne al directorio el nombre **spark_data**.
-
-1. Haga clic con el botón derecho en el directorio **spark_data** y seleccione **Cargar archivos**. Cargue el archivo **AdultCensusIncome.csv**.
-
-   ![Archivo CSV AdultCensusIncome](./media/spark-mssql-connector/spark_data.png)
-
-### <a name="run-the-sample-notebook"></a>Ejecución del cuaderno de ejemplo
-
-Para demostrar el uso del conector de Apache Spark para SQL Server y Azure SQL con estos datos en modo sin AD, puede descargar un cuaderno de ejemplo, abrirlo en Azure Data Studio y ejecutar cada bloque de código. Para obtener más información sobre el trabajo con cuadernos, vea [Procedimiento para usar cuadernos con SQL Server](../azure-data-studio/notebooks-guidance.md).
-
-1. Desde una línea de comandos de PowerShell o Bash, ejecute el comando siguiente para descargar el cuaderno de ejemplo **mssql_spark_connector_non_ad_pyspark.ipynb**:
-
-   ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector_non_ad_pyspark.ipynb"
-   ```
-
-1. En Azure Data Studio, abra el archivo de cuaderno de ejemplo. Compruebe que está conectado a la puerta de enlace de HDFS/Spark para el clúster de macrodatos.
-
-1. Ejecute cada celda de código en el ejemplo para ver el uso del conector de Apache Spark para SQL Server y Azure SQL.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

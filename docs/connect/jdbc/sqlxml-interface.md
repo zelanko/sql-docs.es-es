@@ -1,4 +1,5 @@
 ---
+description: Interfaz SQLXML
 title: Interfaz SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 72cccce89d5e30a92f38b956c8b7996949d3bb46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bac370362700a4a5f1b500ebd1b01eb8063d5f03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027701"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396271"
 ---
 # <a name="sqlxml-interface"></a>Interfaz SQLXML
 

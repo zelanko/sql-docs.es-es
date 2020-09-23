@@ -1,4 +1,5 @@
 ---
+description: Pantalla 3 del Asistente para orígenes de datos (ODBC Driver for SQL Server)
 title: Pantalla del Asistente para orígenes de datos 3 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1775d89587522e1ad1036d2f0c514c9439b9403b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48b65f57ac4a47a372ff82db4bc92f5ee631ea36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462200"
 ---
 # <a name="data-source-wizard-screen-3"></a>Pantalla del Asistente para orígenes de datos 3
 
@@ -81,7 +82,7 @@ Habilita el descifrado y el cifrado automáticos de las transferencias de datos 
 
 Use el método de detección de metadatos SET FMTONLY heredado al conectarse a SQL Server 2012 o una versión más reciente. Habilítelo solo cuando se utilicen consultas no admitidas por [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), como las que contienen tablas temporales. 
 
-### <a name="next"></a>Siguiente
+### <a name="next"></a>Siguientes
 
 Avanza a la siguiente pantalla del asistente.
 

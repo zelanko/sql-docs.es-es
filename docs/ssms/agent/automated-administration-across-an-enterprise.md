@@ -1,4 +1,5 @@
 ---
+description: Administración automatizada en una empresa
 title: Administración automatizada en una empresa
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,20 +22,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 17356ab4630dfb981fd359caa48a22dac51f6c94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 447e1c66d9e94f654414ae1c7205772097fe575f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468897"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administración automatizada en una empresa
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
-Automatizar la administración en varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conoce con el nombre de *administración multiservidor*. Utilice la administración multiservidor para realizar lo siguiente:  
+ Automatizar la administración en varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conoce como *administración multiservidor*. Utilice la administración multiservidor para realizar lo siguiente:  
   
 -   Administrar dos o más servidores.  
   

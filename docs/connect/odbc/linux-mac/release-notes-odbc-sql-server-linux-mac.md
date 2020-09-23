@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2fe32e1a86273d071801fed9d2ffb8806d54ce6
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 79c86e34a759e65f858621932fea5772e51756e2
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922198"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899525"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notas de la versión de Microsoft ODBC Driver for SQL Server en Linux y macOS
 
@@ -36,6 +36,18 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+
+## <a name="176-july-2020"></a>17.6 (julio de 2020)
+
+| Nuevo elemento | Detalles |
+| :------- | :------ |
+| Nuevas distribuciones compatibles. | Ubuntu 20.04 |
+| Compatibilidad con la autenticación federada | Consulte [Uso de Azure Active Directory](../using-azure-active-directory.md). |
+| Almacenamiento en caché de metadatos para instrucciones preparadas | Consulte [Uso de Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Atributo de conexión SQL_COPT_SS_AUTOBEGINTXN para controlar si la transacción BEGIN TRANSACTION automática se inicia después de ROLLBACK o COMMIT | Consulte [Atributos y palabras clave de cadena de conexión y DNS](../dsn-connection-string-attribute.md). |
+| Correcciones de errores. | [Correcciones de errores](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2, abril de 2020 (solo Alpine Linux)
 
@@ -91,7 +103,7 @@ Cuando se usa Always Encrypted con enclaves seguros y Azure Key Vault, las longi
 | Nuevo elemento | Detalles |
 | :------- | :------ |
 | Nuevas distribuciones compatibles. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
-| Modo de autenticación de Azure Active Directory Managed Service Identity (del sistema y asignado por el usuario). | Consulte [Uso de Azure Active Directory con el controlador ODBC](../using-azure-active-directory.md). |
+| Modo de autenticación de Azure Active Directory Managed dentity (del sistema y asignado por el usuario). | Consulte [Uso de Azure Active Directory con el controlador ODBC](../using-azure-active-directory.md). |
 | Capacidad de transmitir en secuencias los parámetros de entrada con columnas Always Encrypted. | Para obtener más información, vea [Limitaciones del controlador ODBC al usar Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Transacciones distribuidas XA. | Vea [Uso de las transacciones XA](../use-xa-with-dtc.md).<br/><br/>"XA" son las siglas de _eXtended Architecture (arquitectura ampliada)_ , que es un estándar para la ejecución de una transacción global que accede a más de un sistema de almacenamiento de datos del servidor. |
 | &nbsp; | &nbsp; |

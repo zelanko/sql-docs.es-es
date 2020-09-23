@@ -2,7 +2,7 @@
 title: Matriz de compatibilidad de controladores de Microsoft para PHP
 description: Esta página contiene la matriz de compatibilidad y la directiva de ciclo de vida de soporte técnico de los controladores de Microsoft para PHP para SQL Server.
 ms.custom: ''
-ms.date: 04/15/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 635c6ecbe6404b7e5466ecf5929dd2330183e7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 778d9aa4ee666ba3719095508d5f5e28516f954d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793149"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87942164"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Matriz de compatibilidad de los controladores de Microsoft para PHP para SQL Server
 
@@ -53,26 +53,29 @@ Ya no se admiten los siguientes controladores de Microsoft para PHP.
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>Compatibilidad certificada con la versión de SQL Server
- En la matriz siguiente se enumeran las versiones de SQL Server probadas y certificadas como compatibles con la versión de controlador correspondiente. Nos esforzamos por mantener la compatibilidad con versiones anteriores del controlador, pero solo se prueba y certifica el último controlador compatible con las nuevas versiones de SQL Server, ya que es SQL Server lo que se publica.
+ En la matriz siguiente se enumeran las versiones de base de datos probadas y certificadas como compatibles con la versión de controlador correspondiente. Nos esforzamos por mantener la compatibilidad con versiones anteriores del controlador, pero solo se prueba y certifica el último controlador compatible con las nuevas versiones de SQL Server, ya que es SQL Server lo que se publica.
 
-|Versión del controlador de PHP para SQL Server &#8594;<br />&#8595; versión de SQL Server|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|Versión del controlador&nbsp;&#8594;<br />&#8595; Versión de la base de datos|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Instancia administrada de Azure SQL|Y|Y|Y|Y|Y| | |
-|Azure SQL Data Warehouse|Y|Y|Y|Y|Y| | |
-|SQL Server 2019         |Y| | | | | | |
-|SQL Server 2017         |Y|Y|Y|Y|Y| | |
-|SQL Server 2016         |Y|Y|Y|Y|Y|Y| |
-|SQL Server 2014         |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2012         |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008 R2      | |Y|Y|Y|Y|Y|Y|
-|SQL Server 2008         | | | | | |Y|Y|
+|Azure SQL Database        |Sí|Sí|Sí|Sí|Sí|   |   |
+|Instancia administrada de Azure SQL|Sí|Sí|Sí|Sí|Sí|   |   |
+|Azure Synapse Analytics   |Sí|Sí|Sí|Sí|Sí|   |   |
+|SQL Server 2019           |Sí|   |   |   |   |   |   |
+|SQL Server 2017           |Sí|Sí|Sí|Sí|Sí|   |   |
+|SQL Server 2016           |Sí|Sí|Sí|Sí|Sí|Sí|   |
+|SQL Server 2014           |Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|SQL Server 2012           |Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|SQL Server 2008 R2        |   |Sí|Sí|Sí|Sí|Sí|Sí|
+|SQL Server 2008           |   |   |   |   |   |Sí|Sí|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+Para información sobre el uso de PHP con Azure SQL Database, consulte [Conexión a Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md).
 
 ## <a name="php-version-support"></a>Compatibilidad de versiones de PHP
 
 Se admiten las versiones siguientes de PHP con la versión indicada de los controladores de Microsoft para PHP:
 
-|Versión del controlador de PHP para SQL Server &#8594;<br />&#8595; versión de PHP|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|Versión del controlador&nbsp;&#8594;<br />&#8595; versión de PHP|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |:---:|---|---|---|---|---|---|---|
 |7.4|7.4.0+          |                |                |                |       |        |        |
 |7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
@@ -90,46 +93,47 @@ Se admiten las versiones siguientes de PHP con la versión indicada de los contr
 
 Las versiones siguientes del sistema operativo Windows son compatibles con la versión indicada de los controladores de Microsoft para PHP:
 
-|Versión del controlador de PHP para SQL Server &#8594;<br />&#8595; sistema operativo|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|Versión del controlador&nbsp;&#8594;<br />&#8595; sistema operativo|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Windows Server 2019                 |Y  |Y  |   |   |   |   |   |
-|Windows Server 2016                 |Y  |Y  |Y  |Y  |Y  |   |   |
-|Windows Server 2012 R2              |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
-|Windows Server 2012                 |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
-|Windows Server 2008 R2 SP1          |   |   |   |   |   |Y  |Y  |
+|Windows Server 2019                 |Sí|Sí|   |   |   |   |   |
+|Windows Server 2016                 |Sí|Sí|Sí|Sí|Sí|   |   |
+|Windows Server 2012 R2              |Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|Windows Server 2012                 |Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|Windows Server 2008 R2 SP1          |   |   |   |   |   |Sí|Sí|
 |Windows Server 2008 R2              |   |   |   |   |   |   |   |
-|Windows Server 2008 SP2             |   |   |   |   |   |Y  |Y  |
-|Windows 10                          |Y  |Y  |Y  |Y  |Y  |Y  |   |
-|Windows 8.1                         |Y  |Y  |Y  |Y  |Y  |Y  |Y  |
-|Windows 8                           |   |   |   |   |Y  |Y  |Y  |
-|Windows 7 SP1                       |   |   |   |   |   |Y  |Y  |
-|Windows Vista SP2                   |   |   |   |   |   |Y  |Y  |
+|Windows Server 2008 SP2             |   |   |   |   |   |Sí|Sí|
+|Windows 10                          |Sí|Sí|Sí|Sí|Sí|Sí|   |
+|Windows 8.1                         |Sí|Sí|Sí|Sí|Sí|Sí|Sí|
+|Windows 8                           |   |   |   |   |Sí|Sí|Sí|
+|Windows 7 SP1                       |   |   |   |   |   |Sí|Sí|
+|Windows Vista SP2                   |   |   |   |   |   |Sí|Sí|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 Las versiones siguientes de los sistemas operativos Linux y macOS (solo de 64 bits) son compatibles con la versión indicada de los controladores de Microsoft para PHP:
 
-|Versión del controlador de PHP para SQL Server &#8594;<br />&#8595; sistema operativo|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|Versión del controlador&nbsp;&#8594;<br />&#8595; sistema operativo|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu 19.10 (64 bits)               |Y  |   |   |   |   |   |   |
-|Ubuntu 18.10 (64 bits)               |   |Y  |   |   |   |   |   |
-|Ubuntu 18.04 (64 bits)               |Y  |Y  |Y  |   |   |   |   |
-|Ubuntu 17.10 (64 bits)               |   |   |Y  |Y  |   |   |   |
-|Ubuntu 16.04 (64 bits)               |Y  |Y  |Y  |Y  |Y  |Y  |   |
-|Ubuntu 15.10 (64 bits)               |   |   |   |   |Y  |   |   |
-|Ubuntu 15.04 (64 bits)               |   |   |   |   |   |Y  |   |
-|Debian 10 (64 bits)                  |Y  |   |   |   |   |   |   |
-|Debian 9 (64 bits)                   |Y  |Y  |Y  |Y  |   |   |   |
-|Debian 8 (64 bits)                   |Y  |Y  |Y  |Y  |Y  |   |   |
-|Red Hat Enterprise Linux 8 (64 bits) |Y  |   |   |   |   |   |   |
-|Red Hat Enterprise Linux 7 (64 bits) |Y  |Y  |Y  |Y  |Y  |Y  |   |
-|Suse Enterprise Linux 15 (64 bits)   |Y  |Y  |   |   |   |   |   |
-|Suse Enterprise Linux 12 (64 bits)   |Y  |Y  |Y  |Y  |   |   |   |
-|Alpine Linux 3.11 (64 bits)<sup>1</sup>|Y  |   |   |   |   |   |   |
-|macOS Catalina (64 bits)             |Y  |   |   |   |   |   |   |
-|macOS Mojave (64 bits)               |Y  |Y  |   |   |   |   |   |
-|macOS High Sierra (64 bits)          |Y  |Y  |Y  |   |   |   |   |
-|macOS Sierra (64 bits)               |   |Y  |Y  |Y  |Y  |   |   |
-|macOS El Capitan (64 bits)           |   |   |Y  |Y  |Y  |   |   |
+|Ubuntu 20.04 (64 bits)               |Sí|   |   |   |   |   |   |
+|Ubuntu 19.10 (64 bits)               |Sí|   |   |   |   |   |   |
+|Ubuntu 18.10 (64 bits)               |   |Sí|   |   |   |   |   |
+|Ubuntu 18.04 (64 bits)               |Sí|Sí|Sí|   |   |   |   |
+|Ubuntu 17.10 (64 bits)               |   |   |Sí|Sí|   |   |   |
+|Ubuntu 16.04 (64 bits)               |Sí|Sí|Sí|Sí|Sí|Sí|   |
+|Ubuntu 15.10 (64 bits)               |   |   |   |   |Sí|   |   |
+|Ubuntu 15.04 (64 bits)               |   |   |   |   |   |Sí|   |
+|Debian 10 (64 bits)                  |Sí|   |   |   |   |   |   |
+|Debian 9 (64 bits)                   |Sí|Sí|Sí|Sí|   |   |   |
+|Debian 8 (64 bits)                   |Sí|Sí|Sí|Sí|Sí|   |   |
+|Red Hat Enterprise Linux 8 (64 bits) |Sí|   |   |   |   |   |   |
+|Red Hat Enterprise Linux 7 (64 bits) |Sí|Sí|Sí|Sí|Sí|Sí|   |
+|Suse Enterprise Linux 15 (64 bits)   |Sí|Sí|   |   |   |   |   |
+|Suse Enterprise Linux 12 (64 bits)   |Sí|Sí|Sí|Sí|   |   |   |
+|Alpine Linux 3.11 (64 bits)<sup>1</sup>|Sí|   |   |   |   |   |   |
+|macOS Catalina (64 bits)             |Sí|   |   |   |   |   |   |
+|macOS Mojave (64 bits)               |Sí|Sí|   |   |   |   |   |
+|macOS High Sierra (64 bits)          |Sí|Sí|Sí|   |   |   |   |
+|macOS Sierra (64 bits)               |   |Sí|Sí|Sí|Sí|   |   |
+|macOS El Capitan (64 bits)           |   |   |Sí|Sí|Sí|   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> La compatibilidad con Alpine Linux es experimental para la versión 5.8.0. La versión 5.8.1 presenta soporte técnico de producción.

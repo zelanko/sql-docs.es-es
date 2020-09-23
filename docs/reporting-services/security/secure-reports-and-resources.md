@@ -1,4 +1,5 @@
 ---
+description: Proteger informes y recursos
 title: Proteger informes y recursos | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dc9ee5a8bcdf2afd2ca02703eed1a6d0b782587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454497"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger informes y recursos
   Puede establecer la seguridad para informes y recursos individuales a fin de controlar el grado de acceso de los usuarios a estos elementos. De manera predeterminada, solo los usuarios que pertenezcan al grupo integrado **Administradores** pueden ejecutar informes, ver recursos, modificar propiedades y eliminar elementos. Para los demás usuarios se deben crear asignaciones de roles que concedan acceso a un informe o recurso.  
@@ -51,7 +52,7 @@ ms.locfileid: "65570624"
   
 2.  El informe se publica en un servidor de informes o se hace disponible de cualquier otra forma de manera que el valor del parámetro del informe se puede controlar desde la URL de una página web.  
   
-3.  Un atacante crea un vínculo a la página web o al servidor de informes que especifica el valor del parámetro con el formato "javascript:\<script malintencionado aquí>" y envía ese vínculo a alguien más en un ataque por señuelo.  
+3.  Un atacante crea un vínculo a la página web o al servidor de informes mediante la especificación del valor del parámetro con el formato "javascript:\<malicious script here>" y envía ese vínculo a alguien más en un ataque por señuelo.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Mitigar los ataques con inyección de scripts en hipervínculos en un informe publicado o documento  
  Los informes pueden contener hipervínculos incrustados en el valor de la propiedad Action en un elemento de informe o parte de un elemento de informe. Los hipervínculos se pueden enlazar a datos que se recuperan de un origen de datos externo cuando se procesa el informe. Si un usuario malintencionado modifica los datos subyacentes, el hipervínculo podría hacer peligroso el scripting. Si un usuario hace clic en el vínculo en el informe publicado o exportado, podrían ejecutarse scripts malintencionados.  

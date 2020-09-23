@@ -1,4 +1,5 @@
 ---
+description: Upgrade and Migrate Reporting Services
 title: Actualizar y migrar Reporting Services | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446093"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -114,7 +115,7 @@ ms.locfileid: "82719530"
   
 3.  Si la actualización puede continuar, el programa de instalación le solicita que continúe con el proceso de actualización.  
   
-4.  El programa de instalación crea carpetas para los archivos del programa SQL Server Reporting Services. Las carpetas de programa para una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluyen MSRS13.\<*nombre de instancia*>.  
+4.  El programa de instalación crea carpetas para los archivos del programa SQL Server Reporting Services. Las carpetas de programas para una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluyen MSRS13.\<*instance name*>.  
   
 5.  El programa de instalación agrega los archivos de programa del servidor de informes de SQL Server Reporting Services, las herramientas de configuración y las utilidades de línea de comandos que forman parte de la característica del servidor de informes.  
   

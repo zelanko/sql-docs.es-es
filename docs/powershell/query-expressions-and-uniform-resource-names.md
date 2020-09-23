@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84c9067c00962878d058871151eb0e47d06294f2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26483454e805bf8dcaa780fed352cbe984c61f71
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921231"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714123"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expresiones de consulta y nombres de recursos uniformes
 
@@ -93,7 +93,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  \@*DatePropertyName*= datetime('*DateString*')  
  Enumera todos los objetos en los que el valor de la propiedad de fecha especificada coincide con la fecha especificada en “*DateString*”. *DateString* debe seguir el formato aaaa-mm-dd hh:mi:ss.mmm.  
   
-|||  
+|Componente DateString|Descripción|  
 |-|-|  
 |aaaa|Año de cuatro dígitos.|  
 |MM|Mes de dos dígitos (del 01 al 12).|  

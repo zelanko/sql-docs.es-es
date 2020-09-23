@@ -1,7 +1,8 @@
 ---
-title: PDO::__construct | Microsoft Docs
+title: PDO::__construct
+description: Referencia de API de la función PDO::__construct en el controlador PDO_SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a6a96099a3e0e478fa08dc2aff3af73a0e14f99
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ded33f50037c510fadd5016ffe2c72f664e70e12
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919408"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646233"
 ---
 # <a name="pdo__construct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,13 +31,13 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
 ```  
   
 #### <a name="parameters"></a>Parámetros  
-*$dsn*: cadena que contiene el nombre de prefijo (siempre `sqlsrv`), dos puntos y la palabra clave Server. Por ejemplo, `"sqlsrv:server=(local)"`. También puede especificar otras palabras clave de conexión. Consulte [Connection Options](../../connect/php/connection-options.md) para obtener una descripción de la palabra clave Server y del resto de las palabras clave de conexión. *$dsn* está entre comillas, por lo que no se debe entrecomillar cada palabra clave de conexión.  
+*$dsn*: una cadena que contiene el nombre de prefijo (siempre `sqlsrv`), dos puntos y la palabra clave Server. Por ejemplo, `"sqlsrv:server=(local)"`. También puede especificar otras palabras clave de conexión. Consulte [Connection Options](../../connect/php/connection-options.md) para obtener una descripción de la palabra clave Server y del resto de las palabras clave de conexión. *$dsn* está entre comillas, por lo que no se debe entrecomillar cada palabra clave de conexión.  
   
-*$username*: opcional. Una cadena que contiene el nombre del usuario. Para establecer la conexión utilizando la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique el id. de inicio de sesión. Para establecer la conexión utilizando la autenticación de Windows, especifique `""`.  
+*$username*: Opcional. Una cadena que contiene el nombre del usuario. Para establecer la conexión utilizando la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique el id. de inicio de sesión. Para establecer la conexión utilizando la autenticación de Windows, especifique `""`.  
   
 *$password*: opcional. Una cadena que contiene la contraseña del usuario. Para establecer la conexión utilizando la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique la contraseña. Para establecer la conexión utilizando la autenticación de Windows, especifique `""`.  
   
-*$driver_options*: opcional. Puede especificar atributos del administrador de controladores de PDO y atributos de controladores específicos de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]: PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Los atributos no válidos no generan excepciones, solo lo harán cuando se especifican con [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+*$driver_options*: Opcional. Puede especificar atributos del administrador de controladores de PDO y atributos de controladores específicos de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]: PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Los atributos no válidos no generan excepciones, solo lo harán cuando se especifican con [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
 Devuelve un objeto de PDO. Si se produce un error, devuelve un objeto PDOException.  

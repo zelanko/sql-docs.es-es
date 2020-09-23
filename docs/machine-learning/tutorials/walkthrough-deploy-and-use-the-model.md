@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial de R: Implementación del modelo'
-description: Tutorial donde se muestra cómo implementar un modelo de R en SQL Server para el análisis en bases de datos.
+description: Aprenda a implementar modelos de R en un entorno de producción mediante una llamada a un modelo entrenado desde un procedimiento almacenado.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781788"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179771"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Implementación del modelo de R y su uso en SQL Server (tutorial)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 En esta lección, aprenderá a implementar modelos de R en un entorno de producción mediante una llamada a un modelo entrenado desde un procedimiento almacenado. Puede invocar el procedimiento almacenado de R o de cualquier lenguaje de programación de aplicaciones compatible con [!INCLUDE[tsql](../../includes/tsql-md.md)] (como C#, Java, Python, etc.) y usar el modelo para realizar predicciones a partir de observaciones nuevas.
 
@@ -228,6 +228,6 @@ Ahora que ha aprendido a trabajar con datos de [!INCLUDE[ssNoVersion](../../incl
 Puede que también le interese explorar estos otros ejemplos y recursos:
 
 + [Escenarios de ciencia de datos y plantillas de soluciones](data-science-scenarios-and-solution-templates.md)
-+ [Análisis avanzado en base de datos](sqldev-in-database-r-for-sql-developers.md)
++ [Análisis avanzado en base de datos](r-taxi-classification-introduction.md)
 + [Guías de procedimientos de Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 + [Recursos adicionales de Machine Learning Server](https://docs.microsoft.com//machine-learning-server/resources-more)

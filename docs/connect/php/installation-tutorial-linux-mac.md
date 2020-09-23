@@ -7,26 +7,26 @@ ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: ulvii
-ms.author: v-ulibra
+author: David-Engel
+ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ee4938e8a0d226f668fabf3aaf4db1359ab6bf61
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886282"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807021"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial de instalación de los controladores de Microsoft en Linux y macOS de PHP para SQL Server
-En las instrucciones siguientes se supone que existe un entorno limpio y se explica cómo instalar PHP 7.x, Microsoft ODBC Driver, el servidor web de Apache y los controladores de Microsoft para PHP para SQL Server en Ubuntu  16.04, 18.04 y 19.10, RedHat 7 y 8, Debian 8, 9 y 10, Suse 12 y 15, Alpine 3.11 y macOS 10.13, 10.14 y 10.15. Estas instrucciones aconsejan instalar los controladores con PECL, pero también puede descargar los archivos binarios creados previamente de la página de proyecto de GitHub [Controladores de Microsoft para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases) e instalarlos siguiendo las instrucciones de [Carga de los controladores de Microsoft para PHP para SQL Server](../../connect/php/loading-the-php-sql-driver.md). Para obtener una explicación de la carga de la extensión y por qué no agregar las extensiones en php.ini, vea la sección sobre la [carga de los controladores](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+En las instrucciones siguientes se supone que existe un entorno limpio y se explica cómo instalar PHP 7.x, Microsoft ODBC Driver, el servidor web de Apache y los controladores de Microsoft para PHP en SQL Server en Ubuntu 16.04, 18.04 y 20.04, RedHat 7 y 8, Debian 8, 9 y 10, Suse 12 y 15, Alpine 3.11 y macOS 10.13, 10.14 y 10.15. Estas instrucciones aconsejan instalar los controladores con PECL, pero también puede descargar los archivos binarios creados previamente de la página de proyecto de GitHub [Controladores de Microsoft para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases) e instalarlos siguiendo las instrucciones de [Carga de los controladores de Microsoft para PHP para SQL Server](../../connect/php/loading-the-php-sql-driver.md). Para obtener una explicación de la carga de la extensión y por qué no agregar las extensiones en php.ini, vea la sección sobre la [carga de los controladores](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 Estas instrucciones instalan PHP 7.4 de forma predeterminada mediante `pecl install`. Puede que primero deba ejecutar `pecl channel-update pecl.php.net`. Tenga en cuenta que algunas distribuciones Linux compatibles usan PHP 7.1 o versiones anteriores de forma predeterminada, que no son compatibles con la versión más reciente de los controladores de PHP para SQL Server; consulte las notas que se encuentran al principio de cada sección para instalar PHP 7.2 o 7.3 en su lugar.
 
 También se incluyen instrucciones para instalar el Administrador de procesos FastCGI para PHP, PHP-FPM, en Ubuntu. Esto es necesario si se usa el servidor web nginx en lugar de Apache.
 
-## <a name="contents-of-this-page"></a>Contenido de esta página:
+## <a name="contents-of-this-page"></a>Contenido de esta página
 
-- [Instalación de los controladores en Ubuntu 16.04, 18.04 y 19.10](#installing-the-drivers-on-ubuntu-1604-1804-and-1910)
+- [Instalación de los controladores en Ubuntu 16.04, 18.04 y 20.04](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [Instalación de los controladores con PHP-FPM en Ubuntu](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [Instalación de los controladores en Red Hat 7 y 8](#installing-the-drivers-on-red-hat-7-and-8)
 - [Instalación de los controladores en Debian 8, 9 y 10](#installing-the-drivers-on-debian-8-9-and-10)
@@ -34,7 +34,7 @@ También se incluyen instrucciones para instalar el Administrador de procesos Fa
 - [Instalación de los controladores en Alpine 3.11](#installing-the-drivers-on-alpine-311)
 - [Instalación de los controladores en macOS High Sierra, Mojave y Catalina](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1910"></a>Instalación de los controladores en Ubuntu 16.04, 18.04 y 19.10
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-2004"></a>Instalación de los controladores en Ubuntu 16.04, 18.04 y 20.04
 
 > [!NOTE]
 > Para instalar PHP 7.2 o 7.3, reemplace 7.4 por 7.2 o 7.3 en los comandos siguientes.

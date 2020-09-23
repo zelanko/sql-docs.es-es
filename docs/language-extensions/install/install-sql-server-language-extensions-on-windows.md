@@ -1,7 +1,7 @@
 ---
 title: Instalación de extensiones de lenguaje de SQL Server en Windows
 titleSuffix: ''
-description: Obtenga información sobre cómo instalar las extensiones de lenguaje de SQL Server en Windows.
+description: Obtenga información sobre cómo instalar la característica de extensiones de lenguaje en SQL Server en Windows mediante la ejecución del Asistente para la instalación de SQL Server.
 author: dphansen
 ms.author: davidph
 ms.date: 11/06/2019
@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e32918309d2a51b6bf030d3287b4440d64ee34a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62a4b97216f990d207070e76eaf38d12154757bf
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735102"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173566"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Instalación de extensiones de lenguaje de SQL Server en Windows
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Obtenga información sobre cómo instalar el componente de extensiones de lenguaje en SQL Server ejecutando el asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

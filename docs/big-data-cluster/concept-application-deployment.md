@@ -1,7 +1,7 @@
 ---
 title: ¿Qué es la implementación de la aplicación?
 titleSuffix: SQL Server Big Data Clusters
-description: En este artículo se describe la implementación de la aplicación en clústeres de macrodatos para SQL Server 2019.
+description: Obtenga información sobre cómo la implementación de aplicaciones proporciona interfaces para crear, administrar y ejecutar aplicaciones en un clúster de macrodatos de SQL Server 2019.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215454"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765334"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>¿Qué es la implementación de la aplicación en un clúster de macrodatos?
 
@@ -57,7 +57,7 @@ Cuando se ejecuta una aplicación, el servicio Kubernetes de la aplicación env�
 
 SQL Server 2019 CU5 habilita la compatibilidad con la implementación de clústeres de macrodatos en Red Hat OpenShift, así como un modelo de seguridad actualizado para clústeres de macrodatos, por lo que ya no se necesitan contenedores con privilegios. Aparte de que ya no necesiten privilegios, los contenedores se ejecutan como un usuario que no es de raíz de forma predeterminada para todas las implementaciones nuevas mediante SQL Server 2019 CU5.
 
-En el momento del lanzamiento de la versión CU5, el paso de instalación de las aplicaciones implementadas con las interfaces de [implementación de la aplicación](concept-application-deployment.md) se seguirá ejecutando como usuario *raíz*. Esto es necesario, ya que durante la configuración se instalan paquetes adicionales que usará la aplicación. Otro código de usuario implementado como parte de la aplicación se ejecutará como usuario con pocos privilegios. 
+En el momento del lanzamiento de la versión CU5, el paso de instalación de las aplicaciones implementadas con las interfaces de [implementación de la aplicación]() se seguirá ejecutando como usuario *raíz*. Esto es necesario, ya que durante la configuración se instalan paquetes adicionales que usará la aplicación. Otro código de usuario implementado como parte de la aplicación se ejecutará como usuario con pocos privilegios. 
 
 Además, **CAP_AUDIT_WRITE** es una capacidad opcional necesaria para permitir la programación de aplicaciones SSIS mediante trabajos de Cron. Cuando el archivo de especificación YAML de la aplicación especifica una programación, la aplicación se desencadenará a través de un trabajo Cron, que necesita la capacidad adicional.  Como alternativa, la aplicación se puede desencadenar a petición con *azdata app run* a través de una llamada de servicio web, que no requiere la capacidad CAP_AUDIT_WRITE. 
 
@@ -78,18 +78,18 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>Cómo trabajar con la implementación de la aplicación
 
 Las dos interfaces principales de la implementación de la aplicación son las siguientes: 
-- [Interfaz de línea de comandos`azdata`](big-data-cluster-create-apps.md)
+- [Interfaz de línea de comandos`azdata`](app-create.md)
 - [Extensión de Visual Studio Code y Azure Data Studio](app-deployment-extension.md)
 
-También es posible ejecutar una aplicación mediante un servicio web de RESTful. Para más información, consulte [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md).
+También es posible ejecutar una aplicación mediante un servicio web de RESTful. Para más información, consulte [Consumo de aplicaciones en clústeres de macrodatos](app-consume.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información sobre cómo crear y ejecutar aplicaciones en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vea lo siguiente:
 
-- [Implementar aplicaciones con azdata](big-data-cluster-create-apps.md)
+- [Implementar aplicaciones con azdata](app-create.md)
 - [Implementación de aplicaciones con la extensión de implementación de la aplicación](app-deployment-extension.md)
-- [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md)
+- [Consumo de aplicaciones en clústeres de macrodatos](app-consume.md)
 
 Para obtener más información sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vea la siguiente introducción:
 

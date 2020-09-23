@@ -1,7 +1,8 @@
 ---
-title: Tipos de datos de SQL Server predeterminados | Microsoft Docs
+title: Tipos de datos de SQL Server predeterminados
+description: En este tema se enumeran todos los tipos de datos de SQL Server predeterminados basados en tipos de datos PHP cuando se usa el controlador SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcfe4dd998f320da7e23ea28df99a28c48d2abba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a5f60111e8a98e3f187e4db39eec06ab35e38195
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928016"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680780"
 ---
 # <a name="default-sql-server-data-types"></a>Tipos de datos de SQL Server predeterminados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,12 +34,12 @@ Al enviar datos al servidor, los [!INCLUDE[ssDriverPHP](../../includes/ssdriverp
 |Float|float(24)|no admitido|  
 |String (longitud inferior a 8000 bytes)|varchar(<string length>)|varchar(<string length>)|  
 |String (longitud superior a 8000 bytes)|ntext|ntext|  
-|Resource|No compatible.|No compatible.|  
+|Recurso|No compatible.|No se admite.|  
 |Stream (codificación: no binaria)|ntext|ntext|  
 |Stream (codificación: binaria)|varbinary|varbinary|  
-|Array|No compatible.|No compatible.|  
-|Object|No compatible.|No compatible.|  
-|DateTime (1)|datetime|No compatible.|  
+|Array|No compatible.|No se admite.|  
+|Objeto|No compatible.|No se admite.|  
+|DateTime (1)|datetime|No se admite.|  
   
 ## <a name="see-also"></a>Consulte también  
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

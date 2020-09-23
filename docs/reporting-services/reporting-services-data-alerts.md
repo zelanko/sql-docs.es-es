@@ -10,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a3d3d4cc792afdef44a6c5ff6684e1e6aa4ff14
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bc11c5b511b879e0b1f97987d8ff7a9ff3f435d2
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246684"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928656"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de datos de Reporting Services
 
@@ -117,7 +117,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
 ##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> Instalar alertas de datos  
  La característica de alertas de datos solo está disponible cuando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado en el modo de SharePoint. Cuando se instala [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, el programa de instalación crea automáticamente la base de datos de alertas donde se guardan las definiciones de alertas de datos y los metadatos de las alertas, y dos páginas de SharePoint para administrar alertas; también agrega el Diseñador de alertas de datos al sitio de SharePoint. No hay que realizar pasos especiales ni configurar opciones para las alertas durante la instalación.  
   
- Si desea más información sobre cómo instalar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, incluido el servicio compartido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que es nuevo en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y la aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que debe crear y configurar para poder usar las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) en MSDN Library.  
+ Si desea más información sobre cómo instalar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, incluido el servicio compartido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que es nuevo en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y la aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que debe crear y configurar para poder usar las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode) en MSDN Library.  
   
  Como se muestra en el diagrama del tema anterior, las alertas de datos usan trabajos del Agente SQL Server. Para poder crear los trabajos, es necesario que el Agente SQL Server se esté ejecutando. Es posible que haya configurado el Agente SQL Server para que se inicie automáticamente cuando instaló [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Si no es así, puede iniciar el Agente SQL Server manualmente. Para obtener más información, vea [Configurar el Agente SQL Server](../ssms/agent/configure-sql-server-agent.md) e [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -158,9 +158,8 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
  En la tabla siguiente se resumen los controladores de eventos y cuándo se activará el reintento:  
   
-|Categoría del error|<|\<|Tipo de evento||>|>|>|  
+|Categoría de error/Tipo de evento|FireAlert|FireSchedule|CreateSchedule|UpdateSchedule|DeleteSchedule|GenerateAlert|DeliverAlert|  
 |--------------------|--------|--------|----------------|-|--------|--------|--------|  
-||**FireAlert**|**FireSchedule**|**CreateSchedule**|**UpdateSchedule**|**DeleteSchedule**|**GenerateAlert**|**DeliverAlert**|  
 |No hay memoria suficiente|X|X|X|X|X|X|X|  
 |Anulación de subproceso|X|X|X|X|X|X|X|  
 |El Agente SQL no está en ejecución.|X||X|X|X|||  

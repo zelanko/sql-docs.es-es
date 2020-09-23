@@ -1,4 +1,5 @@
 ---
+description: Guardar como
 title: Guardar como
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8d89f8352f7ab00911a54335825f1bce7a446b7a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 24d23f4c67cfc78dca0c68dae8758ca5543b7997
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007796"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512351"
 ---
 # <a name="save-as"></a>Guardar como
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ Busque la carpeta del proyecto actual en este menú desplegable. Al seleccionar 
 Utilice esta opción para ver el nombre del archivo actual, cambiar el nombre del archivo o filtrar los archivos y las carpetas que aparecen. Para filtrar los archivos y las carpetas que aparecen, escriba un nombre de archivo parcial o completo que sirva de filtro. Puede usar el asterisco (`*`) como carácter comodín.  
   
 > [!TIP]
-> Para mostrar archivos en ubicaciones web o de red, escriba una dirección URL o una ruta de red en el cuadro **Nombre de archivo** . Por ejemplo, "<https://mywebsite>" muestra los archivos disponibles en la ubicación web "miSitioWeb" y "\\\miServidor\miRecursoCompartido" muestra los archivos disponibles en la ubicación "miRecursoCompartido" en "miServidor".  
+> Para mostrar archivos en ubicaciones web o de red, escriba una dirección URL o una ruta de red en el cuadro **Nombre de archivo** . Por ejemplo, `https://mywebsite` muestra los archivos disponibles en la ubicación web "mywebsite" y "\\\myserver\myshare" muestra los archivos disponibles en la ubicación "myshare" en "myserver".  
   
 **Guardar como tipo**  
 Utilice esta opción para seleccionar un nuevo tipo de archivo para el elemento seleccionado. Los tipos de archivo que aparecen incluyen todos los tipos de archivo disponibles a los que puede convertirse el elemento seleccionado.  
@@ -42,7 +43,7 @@ Utilice esta opción para seleccionar un nuevo tipo de archivo para el elemento 
 Para tener acceso al cuadro de diálogo **Opciones avanzadas para guardar**, seleccione el pequeño rectángulo a la derecha del botón **Guardar** y haga clic en **Guardar con codificación**. Utilice este cuadro de diálogo para especificar una codificación para el archivo y los caracteres que se van a usar en los finales de línea.  
   
 ## <a name="left-panel"></a>Panel izquierdo  
-**Escritorio**  
+**Dispositivo de escritorio**  
 Muestra los archivos y las carpetas ubicados del escritorio.  
   
 **Mis proyectos**  

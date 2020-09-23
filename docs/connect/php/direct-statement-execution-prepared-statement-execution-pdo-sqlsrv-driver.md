@@ -1,7 +1,8 @@
 ---
-title: Ejecución de la instrucción preparada y directa en el controlador PDO_SQLSRV | Microsoft Docs
+title: 'Instrucción directa: ejecución de la instrucción preparada en el controlador PDO_SQLSRV'
+description: Aprenda a usar el atributo PDO::SQLSRV_ATTR_DIRECT_QUERY para la ejecución de la instrucción directa al usar el controlador de Microsoft PDO_SQLSRV para PHP en SQL Server.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ca9ab0e2846ddff98b6a0d7b626ae6757517a2d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e781200d74fcd0b34d42a69417546a0aeaf95a9e
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928010"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680800"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdo_sqlsrv-driver"></a>Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (Ejecución de la instrucción preparada o directa en el controlador PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

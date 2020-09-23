@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindColumn | Microsoft Docs
+title: PDOStatement::bindColumn
+description: Referencia de API de la función PDOStatement::bindColumn en el controlador PDO_SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8362edccaf1e2c2a296b7e62f91958170c0bedb6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dd62d4436c5718801dee7b273773b87f6b47eec6
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918920"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645885"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ $*column*: el número (mixto) de la columna (índice basado en 1) o el nombre de
   
 $*type*: el tipo de datos opcional del parámetro, que se representa mediante una constante PDO::PARAM_*.  
   
-$*maxLen*: un valor entero opcional que no usan los controladores de Microsoft para PHP para SQL Server.  
+$*maxLen*: valor entero opcional que no utilizan los controladores de Microsoft para PHP en SQL Server.  
   
 $*driverdata*: parámetros mixtos opcionales del controlador. Por ejemplo, podría especificar PDO::SQLSRV_ENCODING_UTF8 para enlazar la columna a una variable como una cadena codificada en UTF-8.  
   

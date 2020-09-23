@@ -1,4 +1,5 @@
 ---
+description: Roles fijos de base de datos del Agente SQL Server
 title: Roles fijos de base de datos del Agente SQL Server
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,20 +21,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05d0fc9848a74184c0add8acf141e1c78b1c938d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fbae65eadf48114aff4d8a5ef49e4817f019a47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88318241"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Roles fijos de base de datos del Agente SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene los siguientes roles fijos de base de datos de la base de datos **msdb** , que proporcionan a los administradores un control más preciso a la hora de obtener acceso al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los roles enumerados de menor a mayor privilegio de acceso son:  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene los siguientes roles fijos de base de datos de la base de datos **msdb**, que proporcionan a los administradores un control más preciso a la hora de obtener acceso al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los roles enumerados de menor a mayor privilegio de acceso son:  
   
 -   **SQLAgentUserRole**  
   
@@ -50,7 +51,7 @@ Los permisos de los roles de base de datos del Agente [!INCLUDE[ssNoVersion](../
 **SQLAgentUserRole** es el rol con menos privilegios de todos los roles fijos de la base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Solo dispone de permisos para operadores, trabajos locales y programaciones de trabajos. Los miembros de **SQLAgentUserRole** solo tienen permisos en los trabajos locales y en las programaciones de trabajos que les pertenecen. No pueden utilizar trabajos multiservidor (trabajos de servidor de destino y de servidor principal), ni pueden cambiar la propiedad de un trabajo para obtener acceso a trabajos que todavía no les pertenecen. Los miembros de**SQLAgentUserRole** pueden ver una lista de los servidores proxy disponibles únicamente en el cuadro de diálogo **Propiedades de paso de trabajo** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para los miembros de **SQLAgentUserRole** solo está visible el nodo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Trabajos **del Explorador de objetos de**.  
   
 > [!IMPORTANT]  
-> Tenga en cuenta las implicaciones de seguridad antes de conceder acceso mediante proxy a los miembros **de** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**. Los roles **SQLAgentReaderRole** y **SQLAgentOperatorRole** se convierten automáticamente en miembros del rol **SQLAgentUserRole**. Esto significa que los miembros de los roles **SQLAgentReaderRole** y **SQLAgentOperatorRole** tienen acceso a todos los servidores proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo acceso se concedió a **SQLAgentUserRole** y, por tanto, pueden utilizar dichos servidores proxy.  
+> Tenga en cuenta las implicaciones de seguridad antes de conceder acceso mediante proxy a los miembros ** de ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**. Los roles **SQLAgentReaderRole** y **SQLAgentOperatorRole** se convierten automáticamente en miembros del rol **SQLAgentUserRole**. Esto significa que los miembros de los roles **SQLAgentReaderRole** y **SQLAgentOperatorRole** tienen acceso a todos los servidores proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo acceso se concedió a **SQLAgentUserRole** y, por tanto, pueden utilizar dichos servidores proxy.  
   
 En la siguiente tabla encontrará un resumen de los permisos del rol **SQLAgentUserRole** para los objetos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -58,18 +59,18 @@ En la siguiente tabla encontrará un resumen de los permisos del rol **SQLAgentU
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
 |Crear, modificar o eliminar|No|Sí<br /><br />No se puede cambiar la propiedad de un trabajo.|Sí|No|  
 |Ver lista (enumerar)|Sí<br /><br />Se puede obtener la lista de operadores disponibles para utilizar en **sp_notify_operator** y en el cuadro de diálogo **Propiedades del trabajo** de Management Studio.|Sí|Sí|Sí<br /><br />Lista de los servidores proxy disponibles solo en el cuadro de diálogo **Propiedades de paso de trabajo** de Management Studio.|  
-|Habilitar o deshabilitar|No|Sí|Sí|No aplicable|  
+|Habilitar o deshabilitar|No|Sí|Sí|No es aplicable|  
 |Ver propiedades|No|Sí|Sí|No|  
-|Ejecutar, detener o iniciar|No aplicable|Sí|No aplicable|No aplicable|  
-|Ver historial de trabajos|No aplicable|Sí|No aplicable|No aplicable|  
-|Eliminar historial de trabajos|No aplicable|No<br /><br />Es necesario que a los miembros del rol **SQLAgentUserRole** se les conceda explícitamente el permiso EXECUTE para **sp_purge_jobhistory** a fin de eliminar el historial de los trabajos que les pertenecen. No pueden eliminar el historial de ningún otro trabajo.|No aplicable|No aplicable|  
-|Adjuntar o separar|No aplicable|No aplicable|Sí|No aplicable|  
+|Ejecutar, detener o iniciar|No es aplicable|Sí|No aplicable|No aplicable|  
+|Ver historial de trabajos|No es aplicable|Sí|No aplicable|No aplicable|  
+|Eliminar historial de trabajos|No es aplicable|No<br /><br />Es necesario que a los miembros del rol **SQLAgentUserRole** se les conceda explícitamente el permiso EXECUTE para **sp_purge_jobhistory** a fin de eliminar el historial de los trabajos que les pertenecen. No pueden eliminar el historial de ningún otro trabajo.|No aplicable|No aplicable|  
+|Adjuntar o separar|No aplicable|No aplicable|Sí|No es aplicable|  
   
 ### <a name="sqlagentreaderrole-permissions"></a>Permisos de SQLAgentReaderRole  
 El rol**SQLAgentReaderRole** incluye todos los permisos de **SQLAgentUserRole** , así como también los permisos para ver la lista de trabajos multiservidor disponibles, sus propiedades y su historial. Los miembros de este rol también pueden ver la lista de trabajos y programaciones de trabajos disponibles y sus propiedades, y no solo los trabajos y programaciones de trabajos que les pertenecen. Los miembros del rol**SQLAgentReaderRole** no pueden cambiar la propiedad de un trabajo para obtener acceso a trabajos que ya no les pertenecen. Para los miembros del rol **SQLAgentReaderRole** , solo está visible el nodo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Trabajos **del Explorador de objetos de**.  
   
 > [!IMPORTANT]  
-> Tenga en cuenta las implicaciones de seguridad antes de conceder acceso mediante proxy a los miembros **de** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**. Los miembros del rol **SQLAgentReaderRole** se convierten inmediatamente en miembros del rol **SQLAgentUserRole**. Esto significa que los miembros del rol **SQLAgentReaderRole** tienen acceso a todos los servidores proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo acceso se concedió a **SQLAgentUserRole** y, por tanto, pueden usar dichos servidores proxy.  
+> Tenga en cuenta las implicaciones de seguridad antes de conceder acceso mediante proxy a los miembros ** de ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**. Los miembros del rol **SQLAgentReaderRole** se convierten inmediatamente en miembros del rol **SQLAgentUserRole**. Esto significa que los miembros del rol **SQLAgentReaderRole** tienen acceso a todos los servidores proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo acceso se concedió a **SQLAgentUserRole** y, por tanto, pueden usar dichos servidores proxy.  
   
 En la tabla siguiente encontrará un resumen de los permisos de **SQLAgentReaderRole** para los objetos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -81,8 +82,8 @@ En la tabla siguiente encontrará un resumen de los permisos de **SQLAgentReader
 |Ver propiedades|No|Sí|Sí|Sí|No|  
 |Modificar propiedades|No|Sí (solo trabajos que les pertenecen)|No|Sí (solo programaciones que les pertenecen)|No|  
 |Ejecutar, detener o iniciar|No aplicable|Sí (solo trabajos que les pertenecen)|No|No aplicable|No aplicable|  
-|Ver historial de trabajos|No aplicable|Sí|Sí|No aplicable|No aplicable|  
-|Eliminar historial de trabajos|No aplicable|No<br /><br />Es necesario que a los miembros del rol **SQLAgentReaderRole** se les conceda explícitamente el permiso EXECUTE para **sp_purge_jobhistory** a fin de eliminar el historial de los trabajos que les pertenecen. No pueden eliminar el historial de ningún otro trabajo.|No|No aplicable|No aplicable|  
+|Ver historial de trabajos|No es aplicable|Sí|Sí|No aplicable|No aplicable|  
+|Eliminar historial de trabajos|No es aplicable|No<br /><br />Es necesario que a los miembros del rol **SQLAgentReaderRole** se les conceda explícitamente el permiso EXECUTE para **sp_purge_jobhistory** a fin de eliminar el historial de los trabajos que les pertenecen. No pueden eliminar el historial de ningún otro trabajo.|No|No aplicable|No aplicable|  
 |Adjuntar o separar|No aplicable|No aplicable|No aplicable|Sí (solo programaciones que les pertenecen)|No aplicable|  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>Permisos de SQLAgentOperatorRole  
@@ -93,7 +94,7 @@ Los miembros del rol**SQLAgentOperatorRole** tienen permisos adicionales en las 
 Para los miembros del rol **SQLAgentOperatorRole**, están visibles los nodos **Trabajos**, **Alertas**, **Operadores** y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Servidores proxy **del Explorador de objetos de**. El único nodo que no está visible para los miembros de este rol es el nodo **Registros de errores** .  
   
 > [!IMPORTANT]  
-> Tenga en cuenta las implicaciones de seguridad antes de conceder acceso mediante proxy a los miembros **de** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**. Los miembros del rol **SQLAgentOperatorRole** se convierten automáticamente en miembros de los roles **SQLAgentUserRole** y **SQLAgentReaderRole**. Esto significa que los miembros del rol **SQLAgentOperatorRole** tienen acceso a todos los servidores proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo acceso se concedió a **SQLAgentUserRole** o **SQLAgentReaderRole** y, por tanto, pueden usar dichos servidores proxy.  
+> Tenga en cuenta las implicaciones de seguridad antes de conceder acceso mediante proxy a los miembros ** de ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**. Los miembros del rol **SQLAgentOperatorRole** se convierten automáticamente en miembros de los roles **SQLAgentUserRole** y **SQLAgentReaderRole**. Esto significa que los miembros del rol **SQLAgentOperatorRole** tienen acceso a todos los servidores proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuyo acceso se concedió a **SQLAgentUserRole** o **SQLAgentReaderRole** y, por tanto, pueden usar dichos servidores proxy.  
   
 En la siguiente tabla encontrará un resumen de los permisos de **SQLAgentOperatorRole** para los objetos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

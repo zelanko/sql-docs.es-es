@@ -1,4 +1,5 @@
 ---
+description: Configurar una dirección URL (Administrador de configuración de SSRS)
 title: Configuración de una dirección URL (Configuration Manager) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ea8162493584be5d4cb9d312c57af16ff40d08a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427097"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
   Para poder usar el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación.  
@@ -68,7 +69,7 @@ ms.locfileid: "81487174"
   
     -   **::1** es la dirección de retorno con el formato IPv6.  
   
-    -   Las direcciones IP concretas también aparecen en esta lista. Las direcciones IP pueden estar en los formatos IPv4 e IPv6. *Nnn.nnn.nnn.nnn* es la dirección IPv4 de 32 bits de una tarjeta adaptadora de red del equipo. Las direcciones IPv6 son de 128 bits, con ocho campos de 4 bytes separados por dos puntos: el \<prefijo>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Las direcciones IP concretas también aparecen en esta lista. Las direcciones IP pueden estar en los formatos IPv4 e IPv6. *Nnn.nnn.nnn.nnn* es la dirección IPv4 de 32 bits de una tarjeta adaptadora de red del equipo. Las direcciones IPv6 son de 128 bits, con ocho campos de 4 bytes separados por dos puntos: \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          Si tiene varias tarjetas o si la tarjeta de red admite tanto direcciones IPv4 como direcciones IPv6, verá varias direcciones IP. Si selecciona solo una dirección IP, limitará el acceso de la aplicación únicamente a la dirección IP (y a cualquier nombre de host que un servidor de nombres de dominio asigne a esa dirección). No puede utilizar el host local para tener acceso a un servidor de informes y no puede utilizar las direcciones IP de otras tarjetas de adaptadores de red que estén instalados en el equipo del servidor de informes. Normalmente, si selecciona este valor, es porque está configurando varias reservas de direcciones URL que también especifican direcciones IP explícitas o nombres de host (por ejemplo, uno para una tarjeta de un adaptador de red que se use para las conexiones de intranet y un segundo que se use para las conexiones de extranet).  
   

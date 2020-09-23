@@ -1,6 +1,6 @@
 ---
 title: Funciones de R personalizadas mediante rxExec
-description: 'Tutorial 14 de RevoScaleR: Ejecución de scripts de R personalizados en SQL Server mediante las funciones de RevoScaleR.'
+description: Aprenda a usar datos simulados para mostrar la ejecución de una función de R personalizada que se ejecuta en un servidor remoto.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2f4fbaaa82bf1f06819e43e0f3d69094bfb6e81b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c8fab6b5ecc6a548c5213f4401494f6803acc42
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728576"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178792"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec-sql-server-and-revoscaler-tutorial"></a>Ejecución de funciones de R personalizadas en SQL Server mediante rxExec (tutorial de SQL Server y RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Este es el tutorial 14 de la [serie de tutoriales de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de las [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 

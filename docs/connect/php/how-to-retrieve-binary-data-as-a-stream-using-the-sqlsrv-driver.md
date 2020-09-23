@@ -1,7 +1,8 @@
 ---
-title: 'Cómo: Recuperar datos binarios como un flujo mediante el controlador SQLSRV | Microsoft Docs'
+title: Procedimientos para recuperar datos binarios como una secuencia mediante el controlador SQLSRV
+description: En este tema se describe cómo recuperar datos binarios como una secuencia cuando se usa el controlador SQLSRV de Microsoft para PHP en SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 631983a89549913863a5bd284e951b518831bc76
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d509eaf083cf7a16e83506ecf54d99daa8883a62
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916171"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680630"
 ---
-# <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Cómo recuperar datos binarios como una secuencia mediante el controlador SQLSRV
+# <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Procedimientos: Recuperación de datos binarios como secuencia mediante el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 La recuperación de datos como un flujo solo está disponible en el controlador SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], pero no en el controlador PDO_SQLSRV.  

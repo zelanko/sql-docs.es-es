@@ -2,7 +2,7 @@
 title: Notas de la versión de ODBC Driver for SQL Server en Windows
 description: En este artículo sobre notas de la versión se describen los cambios de cada versión de Microsoft ODBC Driver para SQL Server en Windows.
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728461"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898816"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Notas de la versión de Microsoft ODBC Driver for SQL Server en Windows
 
@@ -43,13 +43,34 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="176"></a>17.6
+
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2137027)  
+![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2137028)  
+
+Número de versión: 17.6.1.1  
+Fecha de publicación: 31 de julio de 2020
+
+Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
+Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40a)  
+Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40a)
+
+| Característica agregada | Detalles |
+| :------- | :------ |
+| Almacenamiento en caché de metadatos para instrucciones preparadas | Consulte [Uso de Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Atributo de conexión SQL_COPT_SS_AUTOBEGINTXN para controlar si la transacción BEGIN TRANSACTION automática se inicia después de ROLLBACK o COMMIT | Consulte [Atributos y palabras clave de cadena de conexión y DNS](../dsn-connection-string-attribute.md). |
+| Correcciones de errores. | [Correcciones de errores](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>Versiones anteriores
+
 ## <a name="1752"></a>17.5.2
 
 ![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x64](https://go.microsoft.com/fwlink/?linkid=2120137)  
 ![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120140)  
 
 Número de versión: 17.5.2.1  
-Fecha de publicación: 6 de marzo de 2019
+Fecha de publicación: 6 de marzo de 2020
 
 Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
 Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
@@ -64,8 +85,6 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="previous-releases"></a>Versiones anteriores
-
 Para descargar las versiones anteriores del controlador ODBC, haga clic en los vínculos de descarga de las secciones siguientes:
 
 ## <a name="175"></a>17.5
@@ -74,7 +93,7 @@ Para descargar las versiones anteriores del controlador ODBC, haga clic en los v
 ![descargar](../../../ssms/media/download-icon.png) [Descargar instalador x86](https://go.microsoft.com/fwlink/?linkid=2120353)  
 
 Número de versión: 17.5.1.1  
-Fecha de publicación: 31 de enero de 2019
+Fecha de publicación: 31 de enero de 2020
 
 Si necesita descargar el instalador en un idioma distinto al que se ha detectado, puede usar estos vínculos directos.  
 Para el controlador x64: [Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  
@@ -147,7 +166,7 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| Modo de autenticación de Azure Active Directory Managed Service Identity (del sistema y asignado por el usuario). | Consulte [Uso de Azure Active Directory con el controlador ODBC](../using-azure-active-directory.md). |
+| Modo de autenticación de Azure Active Directory Managed dentity (del sistema y asignado por el usuario). | Consulte [Uso de Azure Active Directory con el controlador ODBC](../using-azure-active-directory.md). |
 | Capacidad de transmitir en secuencias los parámetros de entrada con columnas Always Encrypted. | Vea [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted) (Limitaciones del controlador ODBC al usar Always Encrypted). |
 | Transacciones distribuidas XA. | [Uso de las transacciones XA](../use-xa-with-dtc.md). |
 | Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |

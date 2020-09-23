@@ -1,4 +1,5 @@
 ---
+description: Propiedades de paso de trabajo - Nuevo paso de trabajo (página General)
 title: 'Propiedades de nuevo paso de trabajo: (página general)'
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44b333c1865046f779581265fb49186810f8944c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c16c9895eb6fdcec859a20651f9912b78ee9946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497579"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propiedades de paso de trabajo - Nuevo paso de trabajo (página General)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+> En [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), actualmente son compatibles la mayoría de las características del Agente SQL Server. Consulte [Diferencias entre T-SQL de Azure SQL Managed Instance y SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para más información.
 
 Use esta página para ver y cambiar las propiedades de un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o bien para definir un nuevo paso de trabajo.  
   
@@ -54,13 +55,13 @@ Carga el comando desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado al Portapapeles.  
   
 **Pegar**  
 Pega el contenido del Portapapeles.  
   
-**Analizar**  
+**Parse**  
 Comprueba la sintaxis del comando.  
   
 ## <a name="options-for-activex-script-job-steps"></a>Opciones de pasos de trabajo de scripts ActiveX  
@@ -83,7 +84,7 @@ Carga el comando desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -99,7 +100,7 @@ Carga el comando desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -112,7 +113,7 @@ Carga el script desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del script.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -122,7 +123,7 @@ Pega el contenido del Portapapeles.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -132,7 +133,7 @@ Pega el contenido del Portapapeles.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -145,7 +146,7 @@ La base de datos que se utiliza en el paso de trabajo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -155,7 +156,7 @@ Pega el contenido del Portapapeles.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -165,7 +166,7 @@ Pega el contenido del Portapapeles.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -181,7 +182,7 @@ Carga el comando desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -200,7 +201,7 @@ Carga el comando desde un archivo.
 **Seleccionar todo**  
 Selecciona el texto del comando.  
   
-**Copy**  
+**Copiar**  
 Copia el texto seleccionado.  
   
 **Pegar**  
@@ -232,7 +233,7 @@ Para los inicios de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 > [!IMPORTANT]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se proporciona por motivos de compatibilidad con versiones anteriores. Para mejorar la seguridad, utilice la autenticación de Windows siempre que sea posible.  
   
-**Package**  
+**Paquete**  
 Escriba la ubicación del paquete.  
   
 > [!IMPORTANT]  
@@ -358,7 +359,7 @@ Escriba el Id. del paquete.
 **Comprobar el Id. de versión**  
 Ejecuta solo los paquetes que tienen un identificador de versión concreto. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el identificador de versión especificado.  
   
-**Id. de versión**  
+**Id. de la versión**  
 Escriba el Id. de versión.  
   
 ### <a name="command-line-tab"></a>Línea de comandos (pestaña)  

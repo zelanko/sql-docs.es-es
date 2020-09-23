@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f82420b687c3714c75b69e778c1bcc881aad8e82
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742090"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396114"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deshabilitar o pausar el procesamiento de informes y suscripciones  
-Existen varios enfoques que puede usar para deshabilitar o pausar el procesamiento de informes y suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los enfoques de este artículo comprenden desde deshabilitar una suscripción a interrumpir la conexión del origen de datos. No todos los enfoques son posibles con los dos modos de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En las siguientes tablas se resumen los métodos y modos de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admitidos:  
+Existen varios enfoques que puede usar para deshabilitar o pausar el procesamiento de informes y suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los enfoques de este artículo comprenden desde deshabilitar una suscripción a interrumpir la conexión del origen de datos. No todos los enfoques son posibles con los dos modos de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En la siguiente tabla se resumen los métodos y modos de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admitidos:  
   
 ##  <a name="in-this-article"></a><a name="bkmk_top"></a> En este artículo  
   
-||Modo de servidor admitido|  
+|Enfoque|Modo de servidor admitido|  
 |-|---------------------------|  
 |[Habilitar y deshabilitar suscripciones](#bkmk_disable_subscription)|en modo nativo|  
 |[Pausar una programación compartida](#bkmk_pause_schedule)|Modo nativo y de SharePoint|  

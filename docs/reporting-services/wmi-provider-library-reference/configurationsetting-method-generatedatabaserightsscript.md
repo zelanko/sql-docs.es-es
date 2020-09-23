@@ -1,4 +1,5 @@
 ---
+description: Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
 title: Método GenerateDatabaseRightsScript (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a54cd6367cea9caf2f72ec7412d15e878233a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423269"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Método ConfigurationSetting - GenerateDatabaseRightsScript
   Genera un script SQL que se puede usar para conceder derechos a un usuario sobre la base de datos del servidor de informes y otras bases de datos necesarias para el funcionamiento de un servidor de informes. Se espera que el autor de la llamada se conecte al servidor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecute el script.  
@@ -64,7 +65,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Observaciones  
  Si *DatabaseName* está vacío, *IsRemote* se omite y el valor del archivo de configuración del servidor de informes se usa para el nombre de base de datos.  
   
- Si *IsWindowsUser* está establecido en **true**, *UserName* debe tener el formato \<dominio>\\<nombre de usuario\>.  
+ Si *IsWindowsUser* está establecido en **true**, *UserName* debe tener el formato \<domain>\\<nombre de usuario\>.  
   
  Cuando *IsWindowsUser* está establecido en **true**, el script generado concede derechos de inicio de sesión al usuario para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], estableciendo la base de datos del servidor de informes como base de datos predeterminada, y concede el rol **RSExec** en la base de datos del servidor de informes, la base de datos temporal del servidor de informes, la base de datos maestra y la base de datos del sistema MSDB.  
   
@@ -74,12 +75,12 @@ out Int32 HRESULT);
   
 |Cuenta / SID traducido|Nombre común|Nombre remoto|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Sistema local|\<Dominio>\\<nombreDeEquipo\>$|  
-|.\LocalSystem|Sistema local|\<Dominio>\\<nombreDeEquipo\>$|  
-|NombreDeEquipo\LocalSystem|Sistema local|\<Dominio>\\<nombreDeEquipo\>$|  
-|LocalSystem (Sistema local)|Sistema local|\<Dominio>\\<nombreDeEquipo\>$|  
-|(S-1-5-20)|Servicio de red|\<Dominio>\\<nombreDeEquipo\>$|  
-|NT AUTHORITY\NetworkService|Servicio de red|\<Dominio>\\<nombreDeEquipo\>$|  
+|(S-1-5-18)|Sistema local|\<Domain>\\<Nombre de equipo\>$|  
+|.\LocalSystem|Sistema local|\<Domain>\\<Nombre de equipo\>$|  
+|NombreDeEquipo\LocalSystem|Sistema local|\<Domain>\\<Nombre de equipo\>$|  
+|LocalSystem (Sistema local)|Sistema local|\<Domain>\\<Nombre de equipo\>$|  
+|(S-1-5-20)|Servicio de red|\<Domain>\\<Nombre de equipo\>$|  
+|NT AUTHORITY\NetworkService|Servicio de red|\<Domain>\\<Nombre de equipo\>$|  
 |(S-1-5-19)|Servicio local|Error: vea a continuación.|  
 |NT AUTHORITY\LocalService|Servicio local|Error: vea a continuación.|  
   

@@ -1,4 +1,5 @@
 ---
+description: Configurar el portal web para pasar cookies de autenticación personalizada
 title: Configurar el portal web para pasar cookies de autenticación personalizada | Microsoft Docs
 ms.date: 04/18/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f3200a17f00efedae3f52be7f3b17df31167765
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 19b799424f0c860fb85ca44f3d539edb009b43ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579426"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454507"
 ---
 # <a name="configure-the-web-portal-to-pass-custom-authentication-cookies"></a>Configurar el portal web para pasar cookies de autenticación personalizada
 
@@ -24,7 +25,7 @@ Si usa una extensión de autenticación personalizada, debe configurar el portal
 
 ## <a name="modifying-the-rsreportserverconfig-file"></a>Modificar el archivo RSReportServer.Config
 
-Puede habilitar el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] para transmitir cookies adicionales mediante el servidor de informes si agrega un elemento \<**PassThroughCookies**> a los valores de configuración del portal web del archivo RSReportServer.config. La transmisión de cookies adicionales resulta útil en una solución de autenticación de inicio de sesión único que requiera no solo las cookies de autenticación del servidor de informes, sino también cookies de un sistema de autenticación de otro proveedor.
+Puede habilitar el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] para transmitir cookies adicionales mediante el servidor de informes agregando un elemento \<**PassThroughCookies**> a los valores de configuración del portal web del archivo RSReportServer.config. La transmisión de cookies adicionales resulta útil en una solución de autenticación de inicio de sesión único que requiera no solo las cookies de autenticación del servidor de informes, sino también cookies de un sistema de autenticación de otro proveedor.
 
 Para permitir que se transmitan cookies adicionales mediante solicitudes HTTP al usar el portal web, configure los elementos siguientes en el archivo RSReportServer.config:
   

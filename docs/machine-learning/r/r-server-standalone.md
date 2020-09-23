@@ -1,6 +1,6 @@
 ---
 title: ¿Qué es Machine Learning Server (independiente) o R Server?
-description: Introducción a la R Server independiente y Machine Learning Server en la instalación del SQL Server
+description: Obtenga información sobre las diferencias entre R Server independiente y Machine Learning Server en la instalación de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/13/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f9a001c828eb9f391b51f7d4257641ab99d551
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1259cc5d536e66b95db4e6575237484efafcc581
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753419"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179966"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>¿Qué son Machine Learning Server (independiente) o R Server en SQL Server?
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 SQL Server proporciona soporte de instalación para un servidor R Server o Machine Learning Server independiente que se ejecuta independientemente de SQL Server. En función de la versión de SQL Server, un servidor independiente tiene una base de R de código abierto y posiblemente de Python, superpuestas con bibliotecas de alto rendimiento de Microsoft que agregan análisis predictivos y estadísticos a escala. Las bibliotecas también permiten realizar tareas de aprendizaje automático con scripts en R o Python. 
 

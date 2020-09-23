@@ -1,4 +1,5 @@
 ---
+description: Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint
 title: Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af15f2a0d7116ea82144a42db423de289e771056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492563"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint
   En el caso de un servidor de informes que se ejecuta en el modo integrado de SharePoint, la configuración de seguridad definida en el sitio de SharePoint determina el modo en que se ven y administran los informes, los modelos de informe y los orígenes de datos compartidos. Si usa los grupos, niveles de permiso y asignaciones de permiso predeterminados de SharePoint, puede trabajar con informes y otros documentos mediante la configuración de seguridad actual.  
@@ -49,7 +50,7 @@ ms.locfileid: "65570597"
   
  Si usa niveles de permisos predefinidos no tendrá que realizar ninguna acción, puesto que los permisos anteriores ya se incluyen en Control total, Diseño, Colaborar, Lectura y Acceso limitado. No obstante, si usa niveles de permisos personalizados o edita los permisos asignados a un usuario o grupo concreto, debe agregar el permiso manualmente.  
   
- El permiso "Examinar información de usuario" permite al servidor de informes devolver información acerca del usuario que creó el elemento y el usuario que lo modificó por última vez. Sin este permiso, el servidor de informes devolverá los errores siguientes. Para las operaciones de exploración, el error es: "El servidor de informes encontró un error de SharePoint. ---> System.UnauthorizedAccessException: acceso denegado". Para las operaciones de publicación, el error es: "Los permisos concedidos al usuario "\<dominio>\\<usuario\>" son insuficientes para realizar esta operación".  
+ El permiso "Examinar información de usuario" permite al servidor de informes devolver información acerca del usuario que creó el elemento y el usuario que lo modificó por última vez. Sin este permiso, el servidor de informes devolverá los errores siguientes. Para las operaciones de exploración, el error es: "El servidor de informes encontró un error de SharePoint. ---> System.UnauthorizedAccessException: acceso denegado". En el caso de las operaciones de publicación, el error es: "Los permisos concedidos al usuario '\<domain>\\<usuario\>' son insuficientes para realizar esta operación".  
   
 ##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> Permisos para ver y administrar informes  
  Los permisos de definición de informes se definen mediante permisos de lista de la biblioteca que contiene el informe, pero puede establecer permisos en informes individuales si desea restringir el acceso. En la siguiente tabla se proporciona una lista de las tareas y los permisos compatibles.  
@@ -133,6 +134,6 @@ ms.locfileid: "65570597"
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Uso de la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

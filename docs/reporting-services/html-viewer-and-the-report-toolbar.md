@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b413cf8f3fd5b8e85a94e5ed26add2717dcc2376
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247204"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396486"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visor HTML y la barra de herramientas del informe
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona un Visor HTML que se usa para mostrar informes a petición conforme se solicitan del servidor de informes. El Visor HTML ofrece un marco para ver informes en HTML. Incluye una barra de herramientas de informe, una sección de parámetros, una sección de credenciales y un mapa del documento. La barra de herramientas de informe del Visor HTML incluye características que se pueden usar para trabajar con un informe, incluidas las opciones de exportación para verlo con formatos distintos de HTML. La sección de parámetros y el mapa del documento solamente aparecen cuando se abren informes configurados para usar parámetros y un control de mapa de documento.  
@@ -35,7 +35,7 @@ ms.locfileid: "87247204"
   
  En la tabla siguiente se describen las características más comunes de la barra de herramientas de informe. Cada característica se identifica con el control que se utiliza para obtener acceso a ella.  
   
-|Utilice este icono o control||A|  
+|Icono o control|NOMBRE|Descripción|  
 |------------------------------|-|--------|  
 |![Controles de navegación en páginas](../reporting-services/media/htmlviewer-pagenav.gif "Controles de navegación en páginas")|**Controles de navegación en páginas**|Abrir la primera o la última página de un informe, ver un informe página a página y abrir una página concreta de un informe. Para ver una página específica, escriba el número de página y presione ENTRAR.|  
 |![Controles para mostrar páginas](../reporting-services/media/htmlviewer-pagesize.gif "Controles para mostrar páginas")|**Controles para mostrar páginas**|Aumentar o reducir el tamaño de la página del informe. Además de los cambios basados en porcentajes, puede seleccionar **Ancho de página** para que la página del informe se ajuste al ancho de la ventana del explorador o **Toda la página** para que la página del informe se ajuste al alto de la ventana. **Internet Explorer 5.5 y versiones posteriores admiten la opción** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  

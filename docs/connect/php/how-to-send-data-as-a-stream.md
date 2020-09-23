@@ -1,5 +1,6 @@
 ---
-title: 'Procedimientos: Envío de datos en forma de secuencia | Microsoft Docs'
+title: 'Procedimientos: Envío de datos en forma de secuencia'
+description: Obtenga información sobre cómo usar secuencias para enviar objetos grandes a la base de datos mediante los controladores SQLSRV y PDO_SQLSRV de Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5a0c6fc4c6331dfa0398b2d6faca4ac482ffe3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2d986336a369698b107b2437beae322d91508fb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915951"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411442"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>Procedimientos: Envío de datos en forma de secuencia
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

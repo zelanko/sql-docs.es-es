@@ -1,20 +1,20 @@
 ---
 title: Configuración del usuario y el área de trabajo
 description: Aprenda a usar la configuración para personalizar el editor, la interfaz de usuario y el comportamiento funcional de Azure Data Studio de modo que se adapten a sus preferencias.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 2196bd9c4445f700fd1a697db3edcb5879b1f44b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.reviewer: maghan, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746165"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114524"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificación de la configuración del usuario y el área de trabajo
 
@@ -55,7 +55,6 @@ El archivo de configuración del área de trabajo se encuentra en la carpeta `.A
 De forma predeterminada, Azure Data Studio recuerda los cambios no guardados en los archivos al salir. Este comportamiento es igual que la característica de salida rápida en Visual Studio Code.
 
 De forma predeterminada, la salida rápida está desactivada. Para habilitar la salida rápida, edite la configuración `files.hotExit`. Para obtener más información, consulte [Salida rápida (en la documentación de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
-
 
 ## <a name="tab-color"></a>Color de las pestañas
 

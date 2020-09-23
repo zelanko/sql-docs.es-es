@@ -22,12 +22,12 @@ ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35d727c113b3417aaebcc21b7f512438f6d6f706
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5193c024a12af667e1765abc24a4ffb8961edbc
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417271"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115979"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ### <a name="a-dividing-rows-into-groups"></a>A. Dividir filas en grupos  
  En el ejemplo siguiente se dividen las filas en cuatro grupos de empleados según sus ventas anuales hasta la fecha. Puesto que el número total de filas no es divisible por el número de grupos, los dos primeros grupos tienen cuatro filas y los grupos restantes tienen tres filas cada uno.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT p.FirstName, p.LastName  
@@ -111,10 +111,10 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>B. Dividir el conjunto de resultados mediante PARTITION BY  
  En el ejemplo siguiente se agrega el argumento `PARTITION BY` al código del ejemplo A. Primero se dividen por `PostalCode` y, a continuación, en cuatro grupos dentro de cada `PostalCode`. En el ejemplo también se declara una variable `@NTILE_Var` y se usa esa variable para especificar el valor del parámetro *integer_expression*.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NTILE_Var int = 4;  
+DECLARE @NTILE_Var INT = 4;  
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
@@ -158,7 +158,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 ### <a name="c-dividing-rows-into-groups"></a>C. Dividir filas en grupos  
  En este ejemplo se usa la función NTILE para dividir un conjunto de vendedores en cuatro grupos, según sus cuotas de ventas asignadas para el año 2003. Como el número total de filas no se puede dividir por el número de grupos, el primer grupo tiene cinco filas y los grupos restantes tienen cuatro filas cada uno.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
@@ -198,7 +198,7 @@ Tsoflias          4          867,000.00
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>D. Dividir el conjunto de resultados mediante PARTITION BY  
  En este ejemplo se agrega el argumento PARTITION BY al código del ejemplo A. Primero se dividen las filas por `SalesTerritoryCountry` y, después, se dividen en dos grupos dentro de cada `SalesTerritoryCountry`. Observe que ORDER BY en la cláusula OVER ordena NTILE, y ORDER BY de la instrucción SELECT ordena el conjunto de resultados.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  

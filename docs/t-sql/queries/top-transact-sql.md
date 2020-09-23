@@ -22,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7dbaf282383bfeb83efc1b7ccf6f74ad90ed1764
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 121f3d656a0d40bf97fbf01a47b92e47be9c6adb
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445316"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116639"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ Limita las filas devueltas en un conjunto de resultados de la consulta a un núm
  
  A continuación se muestra la sintaxis de SQL Server y Azure SQL Database:
 
-```sql  
+```syntaxsql  
 [   
     TOP (expression) [PERCENT]  
     [ WITH TIES ]  
@@ -49,7 +49,7 @@ Limita las filas devueltas en un conjunto de resultados de la consulta a un núm
 
 A continuación se muestra la sintaxis para Azure SQL Data Warehouse y Almacenamiento de datos paralelos:
 
-```sql  
+```syntaxsql  
 [   
     TOP ( expression )   
     [ WITH TIES ]  
@@ -92,7 +92,7 @@ Al especificarse en la instrucción MERGE, la cláusula TOP se aplica *después*
 Tenga precaución al especificar la cláusula TOP en una consulta que contiene un operador UNION, UNION ALL, EXCEPT o INTERSECT. Es posible escribir una consulta que devuelva resultados inesperados porque el orden en el que se procesan lógicamente las cláusulas TOP y ORDER BY no siempre es intuitivo cuando estos operadores se utilizan en una operación Select. Por ejemplo, dados los siguientes datos y la siguiente tabla, suponga que desea devolver el coche rojo menos caro y el coche azul menos caro. Es decir, el sedán rojo y la camioneta azul.  
   
 ```sql  
-CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
+CREATE TABLE dbo.Cars(Model VARCHAR(15), Price MONEY, Color VARCHAR(10));  
 INSERT dbo.Cars VALUES  
     ('sedan', 10000, 'red'), ('convertible', 15000, 'blue'),   
     ('coupe', 20000, 'red'), ('van', 8000, 'blue');  
@@ -190,7 +190,7 @@ En el siguiente ejemplo se utiliza una variable para especificar el número de e
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @p AS int = 10;  
+DECLARE @p AS INT = 10;  
 SELECT TOP(@p)JobTitle, HireDate, VacationHours  
 FROM HumanResources.Employee  
 ORDER BY VacationHours DESC;  
@@ -265,10 +265,10 @@ IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL
     DROP TABLE dbo.EmployeeSales;  
 GO  
 CREATE TABLE dbo.EmployeeSales  
-( EmployeeID   nvarchar(11) NOT NULL,  
-  LastName     nvarchar(20) NOT NULL,  
-  FirstName    nvarchar(20) NOT NULL,  
-  YearlySales  money NOT NULL  
+( EmployeeID   NVARCHAR(11) NOT NULL,  
+  LastName     NVARCHAR(20) NOT NULL,  
+  FirstName    NVARCHAR(20) NOT NULL,  
+  YearlySales  MONEY NOT NULL  
  );  
 GO  
 INSERT TOP(5)INTO dbo.EmployeeSales  

@@ -33,12 +33,12 @@ ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38add99e2bbb16aa0d71394317a06c4850fe21a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8cd51d8b728fd12bfcab2a853c6bf3a8a2b7c214
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459214"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116287"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88459214"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 expression IS [ NOT ] NULL  
 ```  
   
@@ -76,7 +76,7 @@ expression IS [ NOT ] NULL
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve el nombre y el peso de todos los productos en los que el peso es menor de `10` libras o se desconoce el color, o es `NULL`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT Name, Weight, Color  
@@ -89,7 +89,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  El ejemplo siguiente devuelve los nombres completos de todos los empleados con la inicial del segundo nombre.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, MiddleName  

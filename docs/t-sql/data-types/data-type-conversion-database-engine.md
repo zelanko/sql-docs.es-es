@@ -22,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b99cb9371269b70dc36eae6361f2d6a805da774
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88368561"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115046"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversión de tipos de datos (motor de base de datos)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ Si bien en el gráfico anterior se muestran todas las conversiones explícitas e
 Como ejemplo, el siguiente script define una variable de tipo `varchar`, asigna un valor de tipo `int` a la variable y, luego, selecciona una concatenación de la variable con una cadena.
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.'
 ```
@@ -74,7 +74,7 @@ El valor `int` de `1` se convierte en `varchar`, por lo que la instrucción `SEL
 En el ejemplo siguiente, se muestra un script similar con una variable `int` en su lugar:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.'
 ```
@@ -87,7 +87,7 @@ En este caso, la instrucción `SELECT` produce el siguiente error:
 Para evaluar la expresión `@notastring + ' is not a string.'`, SQL Server sigue las reglas de prioridad del tipo de datos para completar la conversión implícita antes de que se pueda calcular el resultado de la expresión. Dado que `int` tiene una prioridad más alta que `varchar`, SQL Server intenta convertir la cadena en un entero y produce un error porque esta cadena no se puede convertir en un entero. Si la expresión proporciona una cadena que se puede convertir, la instrucción se ejecuta correctamente, como en el ejemplo siguiente:
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```

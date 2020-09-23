@@ -25,12 +25,12 @@ ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3386f37e4888ee8b0734d60d87359314a7bc9325
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5909334c6a31279760ebb8a91d3b4f7f1841accb
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459677"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115168"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ OBJECT_NAME ( object_id [, database_id ] )
   
  De manera predeterminada, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] considera que *object_id* está en el contexto de la base de datos actual. Una consulta que hace referencia a un parámetro *object_id* de otra base de datos devuelve NULL o resultados incorrectos. Por ejemplo, en la siguiente consulta, el contexto de la base de datos actual es [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] intenta devolver un nombre de objeto para el identificador de objeto especificado en esa base de datos en lugar de en la base de datos especificada en la cláusula FROM de la consulta. Por lo tanto, se devuelve información incorrecta.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DISTINCT OBJECT_NAME(object_id)  
@@ -82,7 +82,7 @@ GO
   
  Puede resolver los nombres de objeto en el contexto de otra base de datos especificando un identificador de base de datos. En el ejemplo siguiente, se especifica el identificador de la base de datos `master` en la función `OBJECT_SCHEMA_NAME` y devuelve los resultados correctos.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id, 1) AS schema_name  
@@ -95,7 +95,7 @@ GO
 ### <a name="a-using-object_name-in-a-where-clause"></a>A. Usar OBJECT_NAME en una cláusula WHERE  
  El siguiente ejemplo devuelve columnas de la vista de catálogo `sys.objects` para el objeto especificado por `OBJECT_NAME` en la cláusula `WHERE` de la instrucción `SELECT`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyID INT;  
@@ -110,7 +110,7 @@ GO
 ### <a name="b-returning-the-object-schema-name-and-object-name"></a>B. Devolver el nombre del esquema de objetos y el nombre del objeto  
  En el ejemplo siguiente se devuelve el nombre del esquema de objetos, el nombre del objeto y el texto SQL para todos los planes de consulta en caché que no sean instrucciones preparadas o ad hoc.  
   
-```  
+```sql  
 SELECT DB_NAME(st.dbid) AS database_name,   
     OBJECT_SCHEMA_NAME(st.objectid, st.dbid) AS schema_name,  
     OBJECT_NAME(st.objectid, st.dbid) AS object_name,   
@@ -124,7 +124,7 @@ GO
 ### <a name="c-returning-three-part-object-names"></a>C. Devolver nombres de objetos de tres partes  
  En el ejemplo siguiente se devuelve el nombre del objeto, esquema o base de datos junto con todas las demás columnas de la vista de administración dinámica `sys.dm_db_index_operational_stats` de todos los objetos de todas las bases de datos.  
   
-```  
+```sql  
 SELECT QUOTENAME(DB_NAME(database_id))   
     + N'.'   
     + QUOTENAME(OBJECT_SCHEMA_NAME(object_id, database_id))   
@@ -140,7 +140,7 @@ GO
 ### <a name="d-using-object_name-in-a-where-clause"></a>D. Usar OBJECT_NAME en una cláusula WHERE  
  El siguiente ejemplo devuelve columnas de la vista de catálogo `sys.objects` para el objeto especificado por `OBJECT_NAME` en la cláusula `WHERE` de la instrucción `SELECT`. (El número de objeto [274100017 en el ejemplo siguiente] será diferente.  Para probar este ejemplo, busque un número de objeto válido mediante la ejecución de `SELECT name, object_id FROM sys.objects;` en la base de datos).  
   
-```  
+```sql  
 SELECT name, object_id, type_desc  
 FROM sys.objects  
 WHERE name = OBJECT_NAME(274100017);  

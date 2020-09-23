@@ -22,12 +22,12 @@ ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0354d701b2f6037fa9f7489dcc67f344e987dbdc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07e79295f8beab364037a6ef7143d95745d3fb30
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459877"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116762"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ Esta función devuelve el rango de cada fila dentro de una partición del conjun
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
@@ -66,7 +66,7 @@ El criterio de ordenación que usa la consulta global determina el orden de las 
 ### <a name="a-ranking-rows-within-a-partition"></a>A. Clasificar filas dentro de una partición  
 En este ejemplo se clasifican los productos de inventario, por las ubicaciones de inventario especificadas, según sus cantidades. `DENSE_RANK` divide el conjunto de resultados por `LocationID` y ordena lógicamente el conjunto de resultados por `Quantity`. Observe que los productos 494 y 495 tienen la misma cantidad. Como los dos tienen el mismo valor de cantidad, los dos tienen un valor de rango de uno.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -103,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Clasificar todas las filas de un conjunto de resultados  
 En este ejemplo se devuelven los diez primeros empleados clasificados por su salario. Como en la instrucción `SELECT` no se ha especificado una cláusula `PARTITION BY`, la función `DENSE_RANK` se ha aplicado a todas las filas del conjunto de resultados.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP(10) BusinessEntityID, Rate,   
@@ -138,7 +138,7 @@ En este ejemplo se muestran las cuatro funciones de categoría
 
 que se usaron en la misma consulta. Vea cada función de categoría para obtener ejemplos específicos de la función.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -180,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ### <a name="d-ranking-rows-within-a-partition"></a>D. Clasificar filas dentro de una partición  
 En este ejemplo se clasifican los representantes de ventas de cada territorio de ventas en función de sus ventas totales. `DENSE_RANK` divide el conjunto de filas por `SalesTerritoryGroup` y ordena el conjunto de resultados por `SalesAmountQuota`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryGroup,  

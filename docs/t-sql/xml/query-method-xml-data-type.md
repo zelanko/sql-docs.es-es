@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a8383e599cde5ab99bdf7238e177196eb059784
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af8a312db85630c9f7e527b47ad876daf9520eef
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496367"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116601"
 ---
 # <a name="query-method-xml-data-type"></a>query() (método de tipo de datos xml)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,6 @@ Especifica una expresión XQuery en una instancia del tipo de datos **xml**. El 
 ## <a name="syntax"></a>Sintaxis  
   
 ```syntaxsql
-  
 query ('XQuery')  
 ```  
   
@@ -49,8 +48,8 @@ En el ejemplo siguiente se declara una variable **\@myDoc** de tipo **xml** y se
 La consulta recupera el elemento secundario <`Features`> del elemento <`ProductDescription`>:  
   
 ```sql
-declare @myDoc xml  
-set @myDoc = '<Root>  
+DECLARE @myDoc XML  
+SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
   <Warranty>1 year parts and labor</Warranty>  
@@ -113,7 +112,6 @@ SELECT CatalogDescription.query('<Product ProductModelID="{ /PD:ProductDescripti
        AS Result  
 FROM Production.ProductModel  
 WHERE CatalogDescription.exist('/PD:ProductDescription/PD:Features/WM:Warranty ') = 1;
-
 ```  
   
 ## <a name="see-also"></a>Consulte también  

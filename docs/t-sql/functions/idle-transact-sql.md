@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 373f01d1d381cccc32d7247c1d576630c9b0ba88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ac8dc223ee53ca51cb5a09836bc5e9f4efea817
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88365541"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115518"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88365541"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 @@IDLE  
 ```  
 
@@ -56,7 +56,7 @@ ms.locfileid: "88365541"
 ## <a name="examples"></a>Ejemplos  
  Este ejemplo muestra el número de milisegundos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha estado inactivo desde que se inició hasta la hora actual. Para evitar el desbordamiento aritmético al convertir el valor a microsegundos, en el ejemplo se convierte uno de los valores al tipo de datos `float`.  
   
-```  
+```sql  
 SELECT @@IDLE * CAST(@@TIMETICKS AS float) AS 'Idle microseconds',  
    GETDATE() AS 'as of';  
 ```  

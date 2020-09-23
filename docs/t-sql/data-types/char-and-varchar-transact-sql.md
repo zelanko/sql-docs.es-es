@@ -25,12 +25,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd9c5fc213462de6c1d4f7ddae0b3948957ffa0e
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 6fcc2f6593a7fc7a72c80ee3fe271cdb392ee747
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042548"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115388"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char y varchar (Transact-SQL)
 
@@ -99,8 +99,8 @@ Cuando una cadena vacía se convierte en un valor **int**, su valor se convierte
 En el ejemplo siguiente se muestra que el valor predeterminado de *n* es 1 para los tipos de datos `char` y `varchar` cuando se usan en una declaración de variable.
 
 ```sql
-DECLARE @myVariable AS varchar = 'abc';
-DECLARE @myNextVariable AS char = 'abc';
+DECLARE @myVariable AS VARCHAR = 'abc';
+DECLARE @myNextVariable AS CHAR = 'abc';
 --The following returns 1
 SELECT DATALENGTH(@myVariable), DATALENGTH(@myNextVariable);
 GO
@@ -111,12 +111,12 @@ GO
 En el ejemplo siguiente se muestra que el valor predeterminado de *n* es 30 cuando se usa el tipo de datos `char` o `varchar` con las funciones `CAST` y `CONVERT`.
 
 ```sql
-DECLARE @myVariable AS varchar(40);
+DECLARE @myVariable AS VARCHAR(40);
 SET @myVariable = 'This string is longer than thirty characters';
-SELECT CAST(@myVariable AS varchar);
-SELECT DATALENGTH(CAST(@myVariable AS varchar)) AS 'VarcharDefaultLength';
-SELECT CONVERT(char, @myVariable);
-SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';
+SELECT CAST(@myVariable AS VARCHAR);
+SELECT DATALENGTH(CAST(@myVariable AS VARCHAR)) AS 'VarcharDefaultLength';
+SELECT CONVERT(CHAR, @myVariable);
+SELECT DATALENGTH(CONVERT(CHAR, @myVariable)) AS 'VarcharDefaultLength';
 ```
 
 ### <a name="c-converting-data-for-display-purposes"></a>C. Convertir datos para mostrarlos
@@ -128,11 +128,11 @@ USE AdventureWorks2012;
 GO
 SELECT BusinessEntityID,
    SalesYTD,
-   CONVERT (varchar(12),SalesYTD,1) AS MoneyDisplayStyle1,
+   CONVERT (VARCHAR(12),SalesYTD,1) AS MoneyDisplayStyle1,
    GETDATE() AS CurrentDate,
-   CONVERT(varchar(12), GETDATE(), 3) AS DateDisplayStyle3
+   CONVERT(VARCHAR(12), GETDATE(), 3) AS DateDisplayStyle3
 FROM Sales.SalesPerson
-WHERE CAST(SalesYTD AS varchar(20) ) LIKE '1%';
+WHERE CAST(SalesYTD AS VARCHAR(20) ) LIKE '1%';
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
@@ -155,13 +155,13 @@ En el ejemplo siguiente se convierte un valor `uniqueidentifier` a un tipo de da
 
 ```sql
 DECLARE @myid uniqueidentifier = NEWID();
-SELECT CONVERT(char(255), @myid) AS 'char';
+SELECT CONVERT(CHAR(255), @myid) AS 'char';
 ```
 
 En el ejemplo siguiente se muestra el truncamiento de los datos cuando el valor es demasiado largo para el tipo de datos al que se va a convertir. Como el tipo **uniqueidentifier** tiene un límite de 36 caracteres, se truncan los caracteres que superan esa longitud.
 
 ```sql
-DECLARE @ID nvarchar(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';
+DECLARE @ID NVARCHAR(max) = N'0E984725-C51C-4BF4-9960-E1C80E27ABA0wrong';
 SELECT @ID, CONVERT(uniqueidentifier, @ID) AS TruncatedValue;
 ```
 

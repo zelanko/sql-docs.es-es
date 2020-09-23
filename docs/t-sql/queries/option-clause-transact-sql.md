@@ -22,12 +22,12 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362909e9cd98536d97751787820a5df0c08ed101
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93981415431e8f42e653f5538ca8dd164f482ba2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459164"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116306"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION (cláusula de Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
 ### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. Usar una cláusula OPTION con una cláusula GROUP BY  
  En el ejemplo siguiente se muestra cómo se usa la cláusula `OPTION` con una cláusula `GROUP BY`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. Instrucción SELECT con una etiqueta en la cláusula OPTION  
  En el ejemplo siguiente se muestra una instrucción SELECT simple de [!INCLUDE[ssDW](../../includes/ssdw-md.md)] con una etiqueta en la cláusula OPTION.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT * FROM FactResellerSales  
@@ -101,7 +101,7 @@ SELECT * FROM FactResellerSales
 ### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. Instrucción SELECT con una sugerencia de consulta en la cláusula OPTION  
  En el ejemplo siguiente se muestra una instrucción SELECT que usa una sugerencia de consulta HASH JOIN en la cláusula OPTION.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -113,7 +113,7 @@ OPTION (HASH JOIN);
 ### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. Instrucción SELECT con una etiqueta y varias sugerencias de consulta en la cláusula OPTION  
  El ejemplo siguiente es una instrucción SELECT de [!INCLUDE[ssDW](../../includes/ssdw-md.md)] que contiene una etiqueta y varias sugerencias de consulta. Cuando se ejecuta la consulta en los nodos de proceso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica una combinación hash o una combinación de mezcla, según la estrategia que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considere óptima.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -125,7 +125,7 @@ OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);
 ### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. Usar una sugerencia de consulta al consultar a una vista  
  En el ejemplo siguiente se crea una vista denominada CustomerView y luego se usa una sugerencia de consulta HASH JOIN en una consulta que hace referencia a una vista y a una tabla.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView  
@@ -137,14 +137,13 @@ INNER JOIN dbo.FactInternetSales b
 ON (a.CustomerKey = b.CustomerKey)  
 OPTION (HASH JOIN);  
   
-DROP VIEW CustomerView;  
-  
+DROP VIEW CustomerView;
 ```  
   
 ### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Consultar con una subselección y una sugerencia de consulta  
  En el ejemplo siguiente se muestra una consulta que contiene una subselección y una sugerencia de consulta. La sugerencia de consulta se aplica de forma global. No se permite anexar sugerencias de consulta a la instrucción de subselección.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView AS  
@@ -160,7 +159,7 @@ OPTION (HASH JOIN);
 ### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Hacer coincidir el orden de combinación con el orden de la consulta  
  En el ejemplo siguiente se usa la sugerencia FORCE ORDER para hacer que el plan de consulta emplee el orden de combinación especificado por la consulta. Esto mejora el rendimiento de algunas consultas, no de todas.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- Obtain partition numbers, boundary values, boundary value types, and rows per boundary  
@@ -181,7 +180,7 @@ OPTION ( FORCE ORDER )
 ### <a name="h-using-externalpushdown"></a>H. Usar EXTERNALPUSHDOWN  
  En el ejemplo siguiente se fuerza a la aplicación de la cláusula WHERE al trabajo MapReduce en la tabla externa de Hadoop.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 1000000  
 OPTION (FORCE EXTERNALPUSHDOWN);  
@@ -189,7 +188,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);
   
  En el ejemplo siguiente se evita la aplicación de la cláusula WHERE al trabajo MapReduce en la tabla externa de Hadoop. Todas las filas se devuelven a PDW, donde se aplica la cláusula WHERE.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 10  
 OPTION (DISABLE EXTERNALPUSHDOWN);  

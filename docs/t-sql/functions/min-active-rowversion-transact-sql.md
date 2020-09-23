@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a1c89e9c841e196079e09eecb4e5f359a7f5d32
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 61304621317ee302585102acdd82198fd90baedd
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093419"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115969"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89093419"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 MIN_ACTIVE_ROWVERSION ( ) 
 ```  
   
@@ -46,7 +46,7 @@ MIN_ACTIVE_ROWVERSION ( )
 ## <a name="return-types"></a>Tipos de valor devuelto
  Devuelve un valor **binary(8)**.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  MIN_ACTIVE_ROWVERSION es una función no determinista que devuelve el valor **rowversion** activo más bajo de la base de datos actual. Normalmente, se genera un nuevo valor **rowversion** cuando se realiza una inserción o una actualización en una tabla que contiene una columna de tipo **rowversion**. Si no hay ningún valor activo en la base de datos, MIN_ACTIVE_ROWVERSION devuelve el mismo valor que @@DBTS + 1.  
   
  MIN_ACTIVE_ROWVERSION es útil en escenarios como la sincronización de datos que usa valores **rowversion** para agrupar conjuntos de cambios. Si una aplicación usa @@DBTS en lugar de MIN_ACTIVE_ROWVERSION, es posible que se pierdan los cambios que están activos cuando se produce la sincronización.  
@@ -56,7 +56,7 @@ MIN_ACTIVE_ROWVERSION ( )
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se devuelven valores **rowversion** al usar `MIN_ACTIVE_ROWVERSION` y `@@DBTS`. Observe que los valores difieren cuando no hay ninguna transacción activa en la base de datos.  
   
-```  
+```sql  
 -- Create a table that has a ROWVERSION column in it.  
 CREATE TABLE RowVersionTestTable (rv ROWVERSION)  
 GO  

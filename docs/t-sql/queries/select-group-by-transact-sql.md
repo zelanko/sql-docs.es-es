@@ -33,12 +33,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf6222a4d50fe0a4086d0ddbdbf06ca34bddfdbe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bdb2964f3881f5f31c451860d4330c05c3c346a0
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445405"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115845"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT: GROUP BY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -148,7 +148,7 @@ Agrupa los resultados de la instrucción SELECT según los valores en una lista 
 Por ejemplo, esta consulta crea una tabla de ventas con columnas para el país, la región y las ventas. Inserta cuatro filas, y dos de las filas tienen valores coincidentes para el país y la región.  
 
 ```sql
-CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
+CREATE TABLE Sales ( Country VARCHAR(50), Region VARCHAR(50), Sales INT );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
 INSERT INTO sales VALUES (N'Canada', N'British Columbia', 200);

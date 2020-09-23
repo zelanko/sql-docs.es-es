@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12e2d3418a021a3ffee5db530d35f0fc8522dec1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aba9b19dd9788eef4f322db198dd7f8f3789a8c8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417231"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115867"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88417231"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 @@OPTIONS  
 ```  
   
@@ -59,7 +59,7 @@ ms.locfileid: "88417231"
 ### <a name="a-demonstration-of-how-changes-affect-behavior"></a>A. Demostración de cómo los cambios repercuten en el comportamiento  
  En el siguiente ejemplo se muestran las diferencias en el comportamiento de concatenación con dos configuraciones distintas de la opción **CONCAT_NULL_YIELDS_NULL**.  
   
-```  
+```sql  
 SELECT @@OPTIONS AS OriginalOptionsValue;  
 SET CONCAT_NULL_YIELDS_NULL OFF;  
 SELECT 'abc' + NULL AS ResultWhen_OFF, @@OPTIONS AS OptionsValueWhen_OFF;  
@@ -71,7 +71,7 @@ SELECT 'abc' + NULL AS ResultWhen_ON, @@OPTIONS AS OptionsValueWhen_ON;
 ### <a name="b-testing-a-client-nocount-setting"></a>B. Probar una configuración NOCOUNT de cliente  
  En el siguiente ejemplo se especifica `NOCOUNT``ON` y, después, se prueba el valor de `@@OPTIONS`. La opción `NOCOUNT``ON` impide que se envíe al cliente que hace la solicitud el mensaje sobre el número de filas afectadas por cada instrucción de una sesión. El valor de `@@OPTIONS` se establece en `512` (0x0200). Esto representa la opción NOCOUNT. En este ejemplo se prueba si la opción NOCOUNT está habilitada en el cliente. Por ejemplo, puede ayudar a hacer un seguimiento de las diferencias de rendimiento de un cliente.  
   
-```  
+```sql  
 SET NOCOUNT ON  
 IF @@OPTIONS & 512 > 0   
 RAISERROR ('Current user has SET NOCOUNT turned on.', 1, 1)  

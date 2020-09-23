@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f2e5a22c943d675de6f71d205ed794c77913fef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e0bb9fd57a5e31ada020b84a55cac0608b5d569
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496398"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116609"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() (método del tipo de datos XML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,7 @@ Puede recuperar varios valores del conjunto de filas. Por ejemplo, puede aplicar
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
-  
+```syntaxsql
 nodes (XQuery) as Table(Column)  
 ```  
   
@@ -53,12 +52,12 @@ Es el nombre de tabla y el nombre de columna del conjunto de filas resultante.
 Por ejemplo, imagine que tiene la tabla siguiente:  
   
 ```sql
-T (ProductModelID int, Instructions xml)  
+T (ProductModelID INT, Instructions XML)  
 ```  
   
 En la tabla se almacena el siguiente documento de instrucciones de fabricación. Solo se muestra un fragmento. Tenga en cuenta que hay tres ubicaciones de fabricación en el documento.  
   
-```sql
+```
 <root>  
   <Location LocationID="10"...>  
      <step>...</step>  
@@ -76,7 +75,7 @@ En la tabla se almacena el siguiente documento de instrucciones de fabricación.
   
 Una invocación del método `nodes()` con la expresión de consulta `/root/Location` devolvería un conjunto de filas con tres filas, cada una de ellas con una copia lógica del documento XML original y con el elemento de contexto establecido en uno de los nodos `<Location>`:  
   
-```sql
+```
 Product  
 ModelID      Instructions  
 ----------------------------------  
@@ -95,13 +94,13 @@ Tras ello, puede consultar este conjunto de filas usando métodos del tipo de da
   
 ```sql
 SELECT T2.Loc.query('.')  
-FROM   T  
-CROSS APPLY Instructions.nodes('/root/Location') as T2(Loc)   
+FROM T  
+CROSS APPLY Instructions.nodes('/root/Location') AS T2(Loc)   
 ```  
   
 Éste es el resultado:  
   
-```sql
+```
 ProductModelID  Instructions  
 ----------------------------------  
 1        <Location LocationID="10" ... />  
@@ -129,7 +128,7 @@ USE AdventureWorks;
 GO  
   
 CREATE FUNCTION XTest()  
-RETURNS xml  
+RETURNS XML  
 AS  
 BEGIN  
 RETURN '<document/>';  
@@ -154,7 +153,7 @@ En el siguiente ejemplo, hay un documento XML que incluye un elemento <`Root`> d
 La consulta devuelve después el nodo de contexto de cada fila:  
   
 ```sql
-DECLARE @x xml   
+DECLARE @x XML   
 SET @x='<Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -167,7 +166,7 @@ GO
   
 En el resultado de ejemplo siguiente, el método de consulta devuelve el elemento de contexto y su contenido:  
   
-```sql
+```
 <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
 <row id="2"><name>moe</name></row>  
 <row id="3"/>  
@@ -178,12 +177,12 @@ Si se aplica el descriptor de acceso primario en los nodos de contexto, devuelve
 ```sql
 SELECT T.c.query('..') AS result  
 FROM   @x.nodes('/Root/row') T(c)  
-go  
+GO  
 ```  
   
 Éste es el resultado:  
   
-```sql
+```
 <Root>  
     <row id="1"><name>Larry</name><oflw>some text</oflw></row>  
     <row id="2"><name>moe</name></row>  
@@ -235,7 +234,7 @@ Tenga en cuenta lo siguiente:
   
   Este es el conjunto de resultados parciales:  
   
-    ```sql
+    ```
     <MI:Location LocationID="10"  ...>  
        <MI:step ... />  
           ...  
@@ -257,22 +256,22 @@ Tenga en cuenta lo siguiente:
 - `nodes()` se aplica al conjunto de filas `T1 (Locations)` y devuelve el conjunto de filas `T2 (steps)`. Este conjunto de filas contiene copias lógicas del documento de instrucciones de fabricación original con el elemento `/root/Location/step` como contexto del elemento.  
   
 ```sql
-SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
-steps.query('.') as Step         
+SELECT ProductModelID, Locations.value('./@LocationID','int') AS LocID,  
+steps.query('.') AS Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
-/MI:root/MI:Location') as T1(Locations)         
+/MI:root/MI:Location') AS T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";         
-./MI:step ') as T2(steps)         
+./MI:step ') AS T2(steps)         
 WHERE ProductModelID=7         
 GO         
 ```  
   
 Éste es el resultado:  
   
-```sql
+```
 ProductModelID LocID Step         
 ----------------------------         
 7      10   <step ... />         
@@ -288,13 +287,13 @@ La consulta declara el prefijo `MI` dos veces. En su lugar, puede utilizar `WITH
   
 ```sql
 WITH XMLNAMESPACES (  
-   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions'  AS MI)  
+   'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions' AS MI)  
   
-SELECT ProductModelID, Locations.value('./@LocationID','int') as LocID,  
-steps.query('.') as Step         
+SELECT ProductModelID, Locations.value('./@LocationID','int') AS LocID,  
+steps.query('.') AS Step         
 FROM Production.ProductModel         
 CROSS APPLY Instructions.nodes('         
-/MI:root/MI:Location') as T1(Locations)         
+/MI:root/MI:Location') AS T1(Locations)         
 CROSS APPLY T1.Locations.nodes('         
 ./MI:step ') as T2(steps)         
 WHERE ProductModelID=7         

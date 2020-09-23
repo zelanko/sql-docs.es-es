@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: 0a715f64c0d6c1adf8ec3bc55b851848dfd1ae2e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027286"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115370"
 ---
 # <a name="constants-transact-sql"></a>Constantes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ Si una cadena de caracteres entre comillas simples contiene una comilla, represe
   
 Éstos son algunos ejemplos de cadenas de caracteres:
   
-```sql
+```
 'Cincinnati'  
 'O''Brien'  
 'Process X is 50% complete.'  
@@ -90,7 +90,7 @@ Las constantes binarias tienen el prefijo `0x` y son cadenas de números hexadec
   
 Éstos son algunos ejemplos de cadenas binarias:
   
-```sql
+```
 0xAE  
 0x12Ef  
 0x69048AEFDD010E  
@@ -108,7 +108,7 @@ Las constantes de tipo **datetime** se representan mediante valores de fecha en 
   
 Estos son algunos ejemplos de constantes **datetime**:
   
-```sql
+```
 'December 5, 1985'  
 '5 December, 1985'  
 '851205'  
@@ -117,7 +117,7 @@ Estos son algunos ejemplos de constantes **datetime**:
   
 Ejemplos de constantes datetime:
   
-```sql
+```
 '14:30:24'  
 '04:24 PM'  
 ```  
@@ -127,7 +127,7 @@ Las constantes de tipo **integer** se representan mediante una cadena de número
   
 Estos son algunos ejemplos de constantes **integer**:
   
-```sql
+```
 1894  
 2  
 ```  
@@ -137,7 +137,7 @@ Las constantes de tipo **decimal** se representan mediante una cadena de número
   
 Estos son algunos ejemplos de constantes **decimal**:
   
-```sql
+```
 1894.1204  
 2.0  
 ```  
@@ -147,7 +147,7 @@ Las constantes de tipo **float** y **real** se representan en notación científ
   
 Estos son algunos ejemplos de valores de **float** o **real**:
   
-```sql
+```
 101.5E5  
 0.5E-2  
 ```  
@@ -162,7 +162,7 @@ Las constantes de tipo **money** se representan como una cadena de números con 
   
 Estos son algunos ejemplos de constantes **money**:
   
-```sql
+```
 $12  
 $542023.14  
 ```  
@@ -172,7 +172,7 @@ Las constantes de tipo **uniqueidentifier** son una cadena que representa un GUI
   
 Estos dos ejemplos especifican el mismo GUID:
   
-```sql
+```
 '6F9619FF-8B86-D011-B42D-00C04FC964FF'  
 0xff19966f868b11d0b42d00c04fc964ff  
 ```  
@@ -182,27 +182,27 @@ Para indicar si un número es positivo o negativo, aplique los operadores unario
   
 Expresiones **integer** con signo:  
   
-```sql
+```
 +145345234
 -2147483648
 ```
 Expresiones **decimal** con signo:  
   
-```sql
+```
 +145345234.2234
 -2147483648.10
 ```
   
 Expresiones **float** con signo:  
   
-```sql
+```
 +123E-3
 -12E5
 ```
   
 Expresiones **money** con signo:  
   
-```sql
+```
 -$45.56
 +$423456.99
 ```

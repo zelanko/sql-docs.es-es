@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f6390d157ab7d352e7ecb355fec4c16114333ea0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d6851056673a896e1b07a26ee5d50142272a31a
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479717"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116422"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -32,7 +32,7 @@ Esta función descomprimirá un valor de expresión de entrada mediante el algor
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql  
 DECOMPRESS ( expression )  
 ```  
   
@@ -50,7 +50,7 @@ Un valor de tipo de datos **varbinary (max)**. `DECOMPRESS` usará el algoritmo 
 ### <a name="a-decompress-data-at-query-time"></a>A. Descomprimir datos en el tiempo de consulta  
 En este ejemplo se muestra cómo devolver datos de tabla comprimidos:  
   
-```  
+```sql  
 SELECT _id, name, surname, datemodified,  
              CAST(DECOMPRESS(info) AS NVARCHAR(MAX)) AS info  
 FROM player;  
@@ -59,13 +59,13 @@ FROM player;
 ### <a name="b-display-compressed-data-using-computed-column"></a>B. Mostrar los datos comprimidos con columna calculada  
 En este ejemplo se muestra cómo crear una tabla para almacenar los datos descomprimidos:  
   
-```  
+```sql  
 CREATE TABLE example_table (  
-    _id int primary key identity,  
-    name nvarchar(max),  
-    surname nvarchar(max),  
-    info varbinary(max),  
-    info_json as CAST(decompress(info) as nvarchar(max))  
+    _id INT PRIMARY KEY IDENTITY,  
+    name NVARCHAR(max),  
+    surname NVARCHAR(max),  
+    info VARBINARY(max),  
+    info_json as CAST(DECOMPRESS(info) as NVARCHAR(max))  
 );  
 ```  
   

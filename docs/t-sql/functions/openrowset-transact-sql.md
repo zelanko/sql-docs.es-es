@@ -26,12 +26,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: ea89fc76512a848dd0a2cd3cbfbc01c69c37d3c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c60e9fb687ffc4cc17626b75462c29a91cdb075
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459668"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115937"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -390,8 +390,8 @@ FROM Northwind.dbo.Customers AS c
  En el ejemplo siguiente se crea una tabla pequeña como ejemplo y se insertan datos de archivo desde un archivo llamado `Text1.txt` ubicado en el directorio raíz `C:` en una columna `varbinary(max)`.
 
 ```sql
-CREATE TABLE myTable(FileName nvarchar(60),
-  FileType nvarchar(60), Document varbinary(max));
+CREATE TABLE myTable(FileName NVARCHAR(60),
+  FileType NVARCHAR(60), Document VARBINARY(max));
 GO
 
 INSERT INTO myTable(FileName, FileType, Document)
@@ -410,7 +410,7 @@ GO
 
 En el ejemplo siguiente se utiliza un archivo de formato para recuperar filas de un archivo de texto delimitado por tabuladores, `values.txt`, que contiene los datos siguientes:
 
-```sql
+```
 1     Data Item 1
 2     Data Item 2
 3     Data Item 3
@@ -418,7 +418,7 @@ En el ejemplo siguiente se utiliza un archivo de formato para recuperar filas de
 
 El archivo de formato, `values.fmt`, describe las columnas en `values.txt`:
 
-```sql
+```
 9.0
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                      SQL_Latin1_General_Cp437_BIN
@@ -469,8 +469,8 @@ SELECT * FROM OPENROWSET(
 ```
 
 ```sql
-select *
-from openrowset
+SELECT *
+FROM OPENROWSET
    (  'MSDASQL'
      ,'Driver={Microsoft Access Text Driver (*.txt, *.csv)}'
      ,'select * from E:\Tlog\TerritoryData.csv')

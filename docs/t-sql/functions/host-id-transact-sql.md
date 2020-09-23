@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 80d5129d2b3165c69b4738414ad5354a324cded1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 099026a22a03c563b8ea176d5fed14d7d936ffc6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417331"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116341"
 ---
 # <a name="host_id-transact-sql"></a>HOST_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88417331"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```syntaxsql
 HOST_ID ()  
 ```  
   
@@ -55,14 +54,14 @@ HOST_ID ()
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se crea una tabla que utiliza `HOST_ID()` en una definición de `DEFAULT` para registrar el identificador de terminal de los equipos que insertan filas en una tabla que registra pedidos.  
   
-```  
+```sql  
 CREATE TABLE Orders  
-   (OrderID     int       PRIMARY KEY,  
-    CustomerID  nchar(5)  REFERENCES Customers(CustomerID),  
-    TerminalID  char(8)   NOT NULL DEFAULT HOST_ID(),  
-    OrderDate   datetime  NOT NULL,  
-    ShipDate    datetime  NULL,  
-    ShipperID   int       NULL REFERENCES Shippers(ShipperID));  
+   (OrderID     INT       PRIMARY KEY,  
+    CustomerID  NCHAR(5)  REFERENCES Customers(CustomerID),  
+    TerminalID  CHAR(8)   NOT NULL DEFAULT HOST_ID(),  
+    OrderDate   DATETIME  NOT NULL,  
+    ShipDate    DATETIME  NULL,  
+    ShipperID   INT       NULL REFERENCES Shippers(ShipperID));  
 GO  
 ```  
   

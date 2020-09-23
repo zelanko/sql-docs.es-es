@@ -32,12 +32,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b918faac1cad445956b85459f72557fde0c13116
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 898fd741dfdcb2a4ababb855a33eaee856a2dd4e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422729"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115466"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 
@@ -89,7 +89,7 @@ ISDATE ( expression )
 ### <a name="a-using-isdate-to-test-for-a-valid-datetime-expression"></a>A. Utilizar ISDATE para probar si una expresión de fecha y hora es válida  
  En este ejemplo se muestra cómo usar `ISDATE` para probar si una cadena de caracteres es un tipo **datetime** válido.  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     PRINT 'VALID'  
 ELSE  
@@ -99,7 +99,7 @@ ELSE
 ### <a name="b-showing-the-effects-of-the-set-dateformat-and-set-language-settings-on-return-values"></a>B. Mostrar los efectos de los parámetros SET DATEFORMAT y SET LANGUAGE en los valores devueltos  
  Las instrucciones siguientes muestran los valores que se devuelven al establecer `SET DATEFORMAT` y `SET LANGUAGE`.  
   
-```  
+```sql  
 /* Use these sessions settings. */  
 SET LANGUAGE us_english;  
 SET DATEFORMAT mdy;  
@@ -149,7 +149,7 @@ SET DATEFORMAT mdy;
 ### <a name="c-using-isdate-to-test-for-a-valid-datetime-expression"></a>C. Utilizar ISDATE para probar si una expresión de fecha y hora es válida  
  En este ejemplo se muestra cómo usar `ISDATE` para probar si una cadena de caracteres es un tipo **datetime** válido.  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     SELECT 'VALID';  
 ELSE  

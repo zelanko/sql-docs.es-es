@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4f48de11f648d48a3d727514718b8bdd6304ad57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39542dd45b9d3aaec1eca6e0fd507f73fe7326a9
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422889"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116952"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precisión, escala y longitud (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ La parte entera (precision-scale = 21) es menor que 32, por lo que este es el ca
 
 La siguiente expresión devuelve resultados `0.000001` que caben en `decimal(38,6)`:
 ```sql
-select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
+SELECT CAST(0.0000009000 AS DECIMAL(30,10)) * CAST(1.0000000000 AS DECIMAL(30,10)) [decimal(38, 6)]
 ```
 En este caso, la precisión es 61 y la escala es 20.
 La escala es mayor que 6 y la parte entera (`precision-scale = 41`) es mayor que 32. Este es el caso (3) de las reglas de multiplicación y el tipo de resultado es `decimal(38,6)`.

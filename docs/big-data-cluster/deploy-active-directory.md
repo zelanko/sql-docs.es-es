@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo actualizar los clústeres de macro
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 92c170e16a05d67f21931479f82f5edb1856b12f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076654"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90687811"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en el modo de Active Directory
 
@@ -24,12 +24,31 @@ En este documento se explica cómo implementar un clúster de macrodatos (BDC) d
 
 >[!Note]
 >Antes de la versión SQL Server 2019 CU5, existe una restricción en los clústeres de macrodatos para que solo se pueda implementar un clúster en un dominio de Active Directory. Esta restricción se quita con la versión CU5. Vea [Concepto: implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](active-directory-deployment-background.md) para obtener información detallada sobre las capacidades nuevas. Los ejemplos de este artículo se ajustan para adaptarse a ambos casos de uso de implementación.
+>
 
 ## <a name="background"></a>Información previa
 
-Para habilitar la autenticación Active Directory (AD), el BDC crea automáticamente los usuarios, los grupos, las cuentas de máquina y los nombres de entidad de seguridad de servicio (SPN) que necesitan los distintos servicios del clúster. Para proporcionar cierta independencia respecto de estas cuentas y posibilitar el uso de permisos de ámbito, elija una unidad organizativa (UO) durante la implementación, donde se crearán todos los objetos de AD relacionados con el BDC. Cree esta UO antes de la implementación del clúster.
+Para habilitar la autenticación Active Directory (AD), el BDC crea automáticamente los usuarios, los grupos, las cuentas de máquina y los nombres de entidad de seguridad de servicio (SPN) que necesitan los distintos servicios del clúster. Para proporcionar cierta independencia respecto de estas cuentas y posibilitar el uso de permisos de ámbito, recomendamos crear una unidad organizativa (UO) antes de la implementación del clúster. Todos los objetos de AD relacionados con BDC se crearán durante la implementación. 
 
-Para crear automáticamente todos los objetos necesarios en Active Directory, el BDC necesita una cuenta de AD durante la implementación. Esta cuenta debe tener permisos para crear usuarios, grupos y cuentas de máquina dentro de la UO proporcionada.
+## <a name="pre-requisites"></a>Requisitos previos
+
+### <a name="organizational-unit-ou"></a>Unidad organizativa (OU)
+Una unidad organizativa (UO) es una subdivisión dentro de una instancia de Active Directory en la que se colocan usuarios, grupos e incluso otras unidades organizativas. Las unidades organizativas de idea general se pueden usar para reflejar la estructura funcional o empresarial de una organización. En este artículo crearemos una unidad organizativa denominada `bdc` como ejemplo. 
+
+>[!NOTE]
+>La unidad organizativa (UO) representa límites administrativos y permite a los clientes controlar el ámbito de autoridad de los administradores de datos. 
+
+
+Puede seguir [principios de diseño de unidad organizativa](/windows-server/identity/ad-ds/plan/reviewing-ou-design-concepts) para decidir cuál es la mejor estructura para trabajar con unidades organizativas dentro de la organización. 
+
+### <a name="ad-account-for-bdc-domain-service-account"></a>Cuenta de AD para la cuenta de servicio de dominio del BDC
+
+Para poder crear todos los objetos necesarios en Active Directory automáticamente, el BDC necesita una cuenta de AD que tenga permisos específicos para crear usuarios, grupos y cuentas del equipo dentro de la unidad organizativa (UO) proporcionada. En este artículo se explicará cómo configurar el permiso de esta cuenta de AD. Usamos una llamada a la cuenta de AD `bdcDSA` como ejemplo en este artículo.
+
+### <a name="auto-generated-active-directory-objects"></a>Objetos de Active Directory generados automáticamente
+La implementación de BDC genera automáticamente los nombres de cuenta y de grupo. Cada una de las cuentas representa un servicio en BDC, que las administrará mientras el clúster de BDC esté en uso. Esas cuentas poseen los nombres de entidad de seguridad de servicio (SPN) necesarios para cada servicio.  Para obtener una lista completa de cuentas, grupos y servicios generados automáticamente de AD, consulte [Objetos de Active Directory generados automáticamente](active-directory-objects.md).
+
+
 
 >[!IMPORTANT]
 >En función de la directiva de expiración de contraseñas establecida en el controlador de dominio, las contraseñas de estas cuentas pueden expirar. La directiva de expiración predeterminada es de 42 días. No hay ningún mecanismo para rotar las credenciales para todas las cuentas del clúster de macrodatos, por lo que el clúster dejará de funcionar cuando se cumpla el período de expiración. Para solucionar este problema, actualice la directiva de expiración de las cuentas de servicio del clúster de macrodatos a "La contraseña nunca expira" en el controlador de dominio. Esta acción se puede realizar antes o después de la fecha de expiración. En el último caso, Active Directory reactivará las contraseñas expiradas.
@@ -38,16 +57,16 @@ Para crear automáticamente todos los objetos necesarios en Active Directory, el
 >
 >:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="Establecimiento de directivas de expiración de contraseñas":::
 
-Para obtener una lista de cuentas y grupos de AD, vea [Objetos de Active Directory generados automáticamente](active-directory-objects.md).
 
 En los pasos siguientes se da por hecho que ya cuenta con un controlador de dominio de Active Directory. Si no se tiene un controlador de dominio, la [guía](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) siguiente incluye pasos que pueden resultar útiles.
+
 
 ## <a name="create-ad-objects"></a>Creación de objetos de AD
 
 Antes de implementar un BDC con la integración de AD, haga lo siguiente:
 
-1. Cree una unidad organizativa (UO) donde se almacenarán todos los objetos de AD del BDC. También puede optar por elegir una UO existente durante la implementación.
-1. Cree una cuenta de AD para el BDC o use una cuenta existente y proporcione los permisos adecuados a esta cuenta de AD del BDC.
+1. Cree una unidad organizativa (UO) donde se almacenarán todos los objetos de AD relacionados con BDC. También puede optar por elegir una UO existente durante la implementación.
+1. Cree una cuenta de AD para el BDC o use una cuenta existente y proporcione a esta cuenta de AD del BDC los permisos adecuados dentro de la unidad organizativa (UO) proporcionada.
 
 ### <a name="create-a-user-in-ad-for-bdc-domain-service-account"></a>Creación de un usuario en AD para la cuenta de servicio de dominio del BDC
 

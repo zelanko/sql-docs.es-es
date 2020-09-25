@@ -20,12 +20,12 @@ ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 288b8213bba3623895c8c600f9b398c6e4f608b2
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: afff4f59dace8695e8b209acb2201a8cddd86069
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90915034"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116078"
 ---
 # <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "90915034"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```syntaxsql
-  
+
+```syntaxsql 
 LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
@@ -72,7 +72,7 @@ LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
 ### <a name="a-using-last_value-over-partitions"></a>A. Usar LAST_VALUE en particiones  
  En el ejemplo siguiente se devuelve la fecha de contratación del último empleado de cada departamento para el sueldo especificado (Rate). La cláusula PARTITION BY divide los empleados por departamento y la función de LAST_VALUE se aplica a cada partición independientemente. La cláusula ORDER BY especificada en la cláusula OVER determina el orden lógico en el que se aplica la función LAST_VALUE a las filas de cada partición.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT Department, LastName, Rate, HireDate,   
@@ -82,8 +82,7 @@ INNER JOIN HumanResources.EmployeePayHistory AS eph
     ON eph.BusinessEntityID = edh.BusinessEntityID  
 INNER JOIN HumanResources.Employee AS e  
     ON e.BusinessEntityID = edh.BusinessEntityID  
-WHERE Department IN (N'Information Services',N'Document Control');  
-  
+WHERE Department IN (N'Information Services',N'Document Control');   
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -115,7 +114,7 @@ Information Services        Trenary                 50.4808      2003-01-12   20
   
  La cláusula "RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" se requiere en este ejemplo para los valores distintos de cero que se devuelve en la columna DifferenceFromLastQuarter, como se muestra debajo. El intervalo predeterminado es "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW". En este ejemplo, mediante ese intervalo predeterminado (o sin incluir un intervalo, lo que produce el valor predeterminado que se utiliza) daría lugar a que en la columna DifferenceFromLastQuarter se devolvieran ceros. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 SELECT BusinessEntityID, DATEPART(QUARTER,QuotaDate)AS Quarter, YEAR(QuotaDate) AS SalesYear,   
     SalesQuota AS QuotaThisQuarter,   
